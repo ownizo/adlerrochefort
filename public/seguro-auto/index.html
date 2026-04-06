@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1A3148">
+<title>Cotação Gratuita de Seguro Auto — Adler &amp; Rochefort</title>
+<meta name="description" content="Peça já a sua cotação gratuita de seguro automóvel. A Adler & Rochefort compara as melhores seguradoras do mercado e encontra o plano ideal para si. Sem compromisso.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adlerrochefort.com/seguro-auto/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1B6B93;
+    --primary-hover: #2196C8;
+    --accent: #2EC4B6;
+    --cream: #F8FAFB;
+    --ink: #1E3A50;
+    --ink2: #2C4D66;
+    --muted: #5A7186;
+    --white: #FFFFFF;
+    --border: #D0D9E0;
+    --hero-bg: #1E3A50;
+    --nav-bg: #1A3148;
+    --footer-bg: #162C3E;
+    --success: #10B981;
+    --error: #EF4444;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--nav-bg);
+    padding: 0 48px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(27,107,147,0.25);
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-logo-img { height: 44px; width: auto; }
+
+  .nav-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+
+  .nav-logo-text em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .nav-right {
+    display: flex; align-items: center; gap: 20px;
+  }
+
+  .nav-phone {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .nav-phone:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    background: var(--hero-bg);
+    padding: 68px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(27,107,147,0.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 32px 60px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(46,196,182,0.12);
+    border: 1px solid rgba(46,196,182,0.3);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .hero-title em {
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .hero-trust-icon {
+    width: 36px; height: 36px;
+    background: rgba(46,196,182,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  /* PARTNERS */
+  .partners {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 32px;
+    text-align: center;
+  }
+
+  .partners-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+
+  .partners-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .partners-logos img {
+    height: 36px;
+    width: auto;
+    max-width: 190px;
+    opacity: 0.92;
+    transition: opacity 0.3s;
+  }
+
+  .partners-logos img:hover {
+    opacity: 1;
+  }
+
+  .partner-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    opacity: 0.55;
+    transition: opacity 0.3s;
+  }
+
+  .partner-name:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 480px) {
+    .partners-logos { gap: 28px; }
+    .partners-logos img { height: 28px; }
+    .partner-name { font-size: 15px; }
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 32px 80px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+    align-items: start;
+  }
+
+  /* VALUE PROPS */
+  .value-section { padding-top: 8px; }
+
+  .value-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .value-section h2 em {
+    color: var(--primary);
+    font-style: normal;
+  }
+
+  .value-subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  .value-card {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+
+  .value-card:hover { border-color: var(--primary); }
+
+  .value-icon {
+    width: 44px; height: 44px;
+    background: rgba(27,107,147,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .value-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .value-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .cta-bottom {
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--hero-bg);
+    text-align: center;
+  }
+
+  .cta-bottom p {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .cta-bottom strong {
+    color: var(--accent);
+    font-size: 15px;
+  }
+
+  /* HERO CTA */
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 36px;
+    padding: 16px 36px;
+    background: var(--accent);
+    color: var(--ink);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover { background: #26b0a3; transform: translateY(-1px); }
+  .hero-cta svg { width: 16px; height: 16px; fill: currentColor; }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .testimonials-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .testimonial-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+  .testimonial-stars {
+    color: #F59E0B;
+    font-size: 14px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink2);
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .testimonial-author {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .testimonial-meta {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* FORM TRUST */
+  .form-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(16,185,129,0.06);
+    border: 1px solid rgba(16,185,129,0.15);
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: var(--success);
+    font-weight: 600;
+  }
+  .form-trust svg {
+    width: 14px; height: 14px;
+    fill: var(--success);
+    flex-shrink: 0;
+  }
+
+  /* URGENCY */
+  .form-urgency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .urgency-dot {
+    width: 8px; height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* FLOATING MOBILE CTA */
+  .mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 12px 20px;
+    background: var(--nav-bg);
+    border-top: 1px solid rgba(27,107,147,0.3);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+  .mobile-cta a {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    background: var(--accent);
+    color: var(--ink);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  @media (max-width: 860px) {
+    .mobile-cta { display: block; }
+    body { padding-bottom: 70px; }
+  }
+
+  /* FORM SECTION */
+  .form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+    position: sticky;
+    top: 88px;
+    box-shadow: 0 4px 24px rgba(30,58,80,0.08);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .form-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .form-header p {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* STEPS */
+  .steps-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .step-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: all 0.3s;
+  }
+
+  .step-dot.active {
+    background: var(--primary);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  .step-dot.done { background: var(--accent); }
+
+  .step-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  /* FORM */
+  .form-step { display: none; }
+  .form-step.active { display: block; }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink2);
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(27,107,147,0.1);
+  }
+
+  .form-group input.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
+  }
+
+  .form-group .error-msg {
+    font-size: 11px;
+    color: var(--error);
+    margin-top: 4px;
+    display: none;
+  }
+
+  .form-group input.error + .error-msg { display: block; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* BUTTONS */
+  .btn-primary {
+    width: 100%;
+    padding: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover { background: var(--primary-hover); }
+  .btn-primary:disabled {
+    background: var(--border);
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .form-actions {
+    margin-top: 20px;
+  }
+
+  .form-note {
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  .form-note a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .form-note a:hover { text-decoration: underline; }
+
+  /* SUCCESS STATE */
+  .success-message {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .success-message.show { display: block; }
+
+  .success-icon {
+    width: 64px; height: 64px;
+    background: rgba(16,185,129,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+  }
+
+  .success-message h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .success-message p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ERROR BANNER */
+  .form-error-banner {
+    display: none;
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.2);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: var(--error);
+    text-align: center;
+  }
+
+  .form-error-banner.show { display: block; }
+
+  /* LOADING */
+  .btn-primary .spinner {
+    display: none;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin: 0 auto;
+  }
+
+  .btn-primary.loading .btn-text { display: none; }
+  .btn-primary.loading .spinner { display: block; }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* FOOTER */
+  footer {
+    background: var(--footer-bg);
+    padding: 60px 48px 40px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 52px;
+  }
+
+  .footer-brand-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; font-weight: 600;
+    color: var(--white); letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+  .footer-brand-name em { color: var(--accent); font-style: normal; }
+
+  .footer-brand-desc {
+    font-size: 13px; line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+    max-width: 280px; margin-bottom: 28px;
+  }
+
+  .footer-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(27,107,147,0.3);
+    padding: 8px 16px;
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .footer-col-title {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); margin-bottom: 20px;
+  }
+
+  .footer-col-links {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .footer-col-links a {
+    text-decoration: none;
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    transition: color 0.2s;
+  }
+  .footer-col-links a:hover { color: var(--accent); }
+
+  .footer-social {
+    display: flex; gap: 12px; padding-top: 8px;
+  }
+  .footer-social a {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .footer-social a:hover {
+    border-color: var(--accent);
+    background: rgba(46,196,182,0.1);
+  }
+  .footer-social a svg {
+    width: 16px; height: 16px;
+    fill: rgba(255,255,255,0.6);
+    transition: fill 0.2s;
+  }
+  .footer-social a:hover svg { fill: var(--accent); }
+
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .footer-legal {
+    display: flex; gap: 24px; flex-wrap: wrap;
+  }
+  .footer-legal a {
+    text-decoration: none;
+    font-size: 12px; color: rgba(255,255,255,0.35);
+    transition: color 0.2s;
+  }
+  .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+  .footer-backoffice-link {
+    color: var(--accent) !important;
+    border: 1px solid rgba(46,196,182,0.35);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .footer-backoffice-link:hover {
+    background: rgba(46,196,182,0.12) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+  }
+
+  .footer-regulatory {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 24px;
+    text-align: center;
+  }
+  .footer-regulatory p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    nav { padding: 0 20px; }
+
+    .main {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 40px 20px 60px;
+    }
+
+    .form-card {
+      position: static;
+      order: -1;
+    }
+
+    .hero-inner { padding: 60px 20px 40px; }
+
+    .hero-trust { gap: 20px; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    .form-row { grid-template-columns: 1fr; }
+    .hero-title { font-size: 28px; }
+    .nav-phone { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler & Rochefort" class="nav-logo-img">
+  </a>
+  <div class="nav-right">
+    <a href="tel:+351928226570" class="nav-phone">+351 928 226 570</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">&#9733; Cotação 100% Gratuita</div>
+    <h1 class="hero-title">Seguro Auto com a <em>melhor relação</em> qualidade-preço</h1>
+    <p class="hero-subtitle">Comparamos as principais seguradoras do mercado e apresentamos-lhe a proposta ideal para o seu veículo. Sem custos, sem compromisso.</p>
+    <a href="#formulario" class="hero-cta">Pedir Cotação Gratuita <svg viewBox="0 0 24 24"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
+    <div class="hero-trust" style="margin-top: 32px;">
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">&#128170;</div>
+        <span>+400 Clientes Satisfeitos</span>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">&#9989;</div>
+        <span>Mediador ASF Autorizado</span>
+      </div>
+      <div class="hero-trust-item">
+        <div class="hero-trust-icon">&#9201;</div>
+        <span>Resposta em 24h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="partners-label">Seguradoras Parceiras</div>
+  <div class="partners-logos">
+    <span class="partner-name">Allianz</span>
+    <span class="partner-name">Zurich</span>
+    <span class="partner-name">QBE</span>
+    <span class="partner-name">Generali</span>
+    <span class="partner-name">Fidelidade</span>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT: VALUE PROPS -->
+  <div class="value-section">
+    <h2>Porquê a <em>Adler &amp; Rochefort</em>?</h2>
+    <p class="value-subtitle">Somos mediadores de seguros autorizados pela ASF, dedicados a encontrar a proteção certa ao preço justo.</p>
+
+    <div class="value-card">
+      <div class="value-icon">&#128200;</div>
+      <div>
+        <h3>Comparação Multi-Seguradora</h3>
+        <p>Analisamos propostas de diversas seguradoras de referência para garantir a melhor oferta para o seu perfil.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">&#128176;</div>
+      <div>
+        <h3>Zero Custos para Si</h3>
+        <p>O nosso serviço de consultoria e cotação é totalmente gratuito. Paga apenas o prémio do seguro que escolher.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">&#128101;</div>
+      <div>
+        <h3>Acompanhamento Personalizado</h3>
+        <p>Desde a cotação até à gestão de sinistros, terá sempre um consultor dedicado ao seu caso.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">&#128274;</div>
+      <div>
+        <h3>Coberturas à Medida</h3>
+        <p>Terceiros, danos próprios, assistência em viagem — montamos o pacote ideal para as suas necessidades.</p>
+      </div>
+    </div>
+
+    <div class="value-card">
+      <div class="value-icon">&#9889;</div>
+      <div>
+        <h3>Processo Rápido e Simples</h3>
+        <p>Preencha o formulário em 2 minutos e receba propostas personalizadas no prazo de 24 horas.</p>
+      </div>
+    </div>
+
+    <div class="cta-bottom">
+      <p>Já ajudámos mais de 400 clientes a poupar no seguro.</p>
+      <strong>A sua cotação gratuita está a um passo.</strong>
+    </div>
+
+    <div class="testimonials">
+      <div class="testimonials-title">O que dizem os nossos clientes</div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Poupei mais de 200€ no meu seguro auto. O processo foi rápido e o consultor explicou tudo com clareza. Recomendo."</p>
+        <div class="testimonial-author">Ricardo M.</div>
+        <div class="testimonial-meta">Lisboa · Seguro Automóvel</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Tinha um seguro caro e com poucas coberturas. A Adler & Rochefort encontrou-me uma opção muito melhor em menos de 24 horas."</p>
+        <div class="testimonial-author">Ana S.</div>
+        <div class="testimonial-meta">Porto · Seguro Automóvel</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Serviço impecável. Trataram de tudo e consegui um preço que nenhuma seguradora me ofereceu diretamente."</p>
+        <div class="testimonial-author">Pedro L.</div>
+        <div class="testimonial-meta">Faro · Seguro Automóvel</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="form-card" id="formulario">
+    <div class="form-header">
+      <h2>Pedir Cotação Gratuita</h2>
+      <p>Preencha os dados e receba a sua proposta sem compromisso</p>
+    </div>
+
+    <div class="steps-indicator">
+      <div class="step-dot active" data-step="1"></div>
+      <div class="step-dot" data-step="2"></div>
+      <div class="step-dot" data-step="3"></div>
+    </div>
+
+    <div class="form-error-banner" id="formError"></div>
+
+    <div class="form-trust">
+      <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/></svg>
+      Dados encriptados e protegidos
+    </div>
+
+    <div class="form-urgency">
+      <span class="urgency-dot"></span>
+      <span>12 cotações pedidas hoje</span>
+    </div>
+
+    <form id="leadForm" name="seguro-auto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="seguro-auto">
+      <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
+
+      <!-- STEP 1: Contact (low friction) -->
+      <div class="form-step active" data-step="1">
+        <div class="step-label">Contacto</div>
+
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="ex: João Silva" required>
+          <div class="error-msg">Indique o seu nome completo</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="ex: joao@email.com" required>
+          <div class="error-msg">Indique um email válido</div>
+        </div>
+
+        <div class="form-group">
+          <label for="telemovel">Telemóvel</label>
+          <input type="tel" id="telemovel" name="telemovel" placeholder="ex: 912345678" maxlength="15" inputmode="tel" required>
+          <div class="error-msg">Indique o número de telemóvel</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-primary" onclick="nextStep(1)">
+            <span class="btn-text">Continuar</span>
+          </button>
+        </div>
+        <p class="form-note" style="margin-top:12px;">Sem compromisso · Resposta em 24h</p>
+      </div>
+
+      <!-- STEP 2: Driving & Vehicle -->
+      <div class="form-step" data-step="2">
+        <div class="step-label">Carta &amp; Viatura</div>
+
+        <div class="form-group">
+          <label for="matricula">Matrícula da Viatura</label>
+          <input type="text" id="matricula" name="matricula" placeholder="ex: AA-00-BB" required>
+          <div class="error-msg">Indique a matrícula</div>
+        </div>
+
+        <div class="form-group">
+          <label for="dataCarta">Data da Carta de Condução</label>
+          <input type="date" id="dataCarta" name="dataCartaConducao" required>
+          <div class="error-msg">Indique a data da carta de condução</div>
+        </div>
+
+        <div class="form-group">
+          <label for="numCarta">Número da Carta de Condução</label>
+          <input type="text" id="numCarta" name="numCartaConducao" placeholder="ex: L-1234567" required>
+          <div class="error-msg">Indique o número da carta de condução</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-primary" onclick="nextStep(2)">
+            <span class="btn-text">Continuar</span>
+          </button>
+          <button type="button" class="btn-secondary" onclick="prevStep(2)">Voltar</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Personal Documents -->
+      <div class="form-step" data-step="3">
+        <div class="step-label">Dados Pessoais</div>
+
+        <div class="form-group">
+          <label for="nif">NIF</label>
+          <input type="text" id="nif" name="nif" placeholder="ex: 123456789" maxlength="9" inputmode="numeric" required>
+          <div class="error-msg">Indique um NIF válido (9 dígitos)</div>
+        </div>
+
+        <div class="form-group">
+          <label for="cc">Número do Cartão de Cidadão</label>
+          <input type="text" id="cc" name="cartaoCidadao" placeholder="ex: 12345678" required>
+          <div class="error-msg">Indique o número do Cartão de Cidadão</div>
+        </div>
+
+        <div class="form-group">
+          <label for="morada">Morada Completa</label>
+          <input type="text" id="morada" name="morada" placeholder="ex: Rua da Liberdade, nº 10, 2º Esq." required>
+          <div class="error-msg">Indique a sua morada</div>
+        </div>
+
+        <div class="form-group">
+          <label for="codigoPostal">Código Postal</label>
+          <input type="text" id="codigoPostal" name="codigoPostal" placeholder="ex: 1000-001" maxlength="8" required>
+          <div class="error-msg">Indique um código postal válido (ex: 1234-567)</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <span class="btn-text">Pedir Cotação Gratuita</span>
+            <div class="spinner"></div>
+          </button>
+          <button type="button" class="btn-secondary" onclick="prevStep(3)">Voltar</button>
+        </div>
+
+        <p class="form-note">
+          Ao submeter, aceita a nossa <a href="/politica-de-privacidade/">Política de Privacidade</a> e os <a href="/termos-e-condicoes/">Termos e Condições</a>.
+        </p>
+      </div>
+
+    </form>
+
+    <!-- SUCCESS -->
+    <div class="success-message" id="successMessage">
+      <div class="success-icon">&#10003;</div>
+      <h3>Pedido Recebido!</h3>
+      <p>Obrigado pelo seu interesse. A nossa equipa irá analisar os seus dados e contactá-lo em até <strong>24 horas</strong> com as melhores propostas de seguro auto.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
+      <p class="footer-brand-desc">Agência de seguros especializada em proteção empresarial e profissional. Rigor, precisão e compromisso com os resultados dos nossos clientes.</p>
+      <div class="footer-badge">
+        <span class="footer-badge-dot"></span>
+        Autorizado pela ASF · Mediador Registado
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Serviços</div>
+      <ul class="footer-col-links">
+        <li><a href="/#servicos">Multirriscos Empresarial</a></li>
+        <li><a href="/#servicos">Responsabilidade Civil</a></li>
+        <li><a href="/#servicos">Frotas &amp; Transportes</a></li>
+        <li><a href="/#servicos">Riscos Cibernéticos</a></li>
+        <li><a href="/#servicos">Obras &amp; Construção</a></li>
+        <li><a href="/#servicos">Pessoas &amp; Benefícios</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Empresa</div>
+      <ul class="footer-col-links">
+        <li><a href="/#equipa">Quem somos</a></li>
+        <li><a href="/#porque">A nossa metodologia</a></li>
+        <li><a href="/#blog">Insights</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li><a href="/#contacto">Trabalhe connosco</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Insights</div>
+      <ul class="footer-col-links">
+        <li><a href="/blog/seguros-obrigatorios-empresas-portugal/">Seguros Obrigatórios</a></li>
+        <li><a href="/blog/seguros-obrigatorios-hotelaria-turismo/">Hotelaria &amp; Turismo</a></li>
+        <li><a href="/blog/seguros-empresas-distribuicao/">Empresas de Distribuição</a></li>
+        <li><a href="/blog/parcerias-imobiliarias-comissoes/">Parcerias Imobiliárias</a></li>
+        <li><a href="/blog/revisao-apolice-empresarial/">Revisão de Apólice</a></li>
+        <li><a href="/blog/seguro-individual-automovel/">Seguro Automóvel</a></li>
+        <li><a href="/blog/multirriscos-habitacao/">Multirriscos Habitação</a></li>
+        <li><a href="/blog/responsabilidade-civil-profissional/">Responsabilidade Civil</a></li>
+        <li><a href="/blog/ransomware-portugal-riscos-ciberneticos/">Riscos Cibernéticos</a></li>
+        <li><a href="/blog/valores-segurados-desatualizados/">Valores Segurados</a></li>
+        <li><a href="/blog/seguro-frota-erros-comuns/">Seguro de Frota</a></li>
+        <li><a href="/blog/responsabilidade-administradores-seguro-do/">Seguro D&amp;O</a></li>
+        <li><a href="/blog/seguro-obra-construcao/">Obras &amp; Construção</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <ul class="footer-col-links">
+        <li><a href="tel:+351928226570">+351 928 226 570</a></li>
+        <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
+        <li><a href="#">Av. do Atlântico 16, Esc. 5.07, 1990-019 Lisboa</a></li>
+        <li><a href="#">Varandas de São João 4, 8600-324 Lagos</a></li>
+        <li style="padding-top:8px;">
+          <div class="footer-social">
+            <a href="https://www.facebook.com/adlerrochefort" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/adlerrochefort/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/adler-rochefort" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Adler &amp; Rochefort &middot; Todos os direitos reservados</div>
+    <div class="footer-legal">
+      <a href="/politica-de-privacidade">Política de Privacidade</a>
+      <a href="/termos-e-condicoes">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+      <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">Canal de Denúncias ASF</a>
+      <a href="/vault/backoffice/" class="footer-backoffice-link">Backoffice</a>
+    </div>
+  </div>
+  <div class="footer-regulatory">
+    <p>Adler &amp; Rochefort é uma marca comercial da Ownizo Unipessoal LDA.</p>
+    <p>Ownizo Unipessoal Lda está registada na Autoridade de Supervisão de Seguros e Fundos de Pensões (ASF) com o n.º 425591790/3.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const form = document.getElementById('leadForm');
+  const errorBanner = document.getElementById('formError');
+  const successMsg = document.getElementById('successMessage');
+  const submitBtn = document.getElementById('submitBtn');
+  let currentStep = 1;
+
+  // Validation rules per step (reordered: Contact > Vehicle > Personal)
+  const stepFields = {
+    1: ['nome', 'email', 'telemovel'],
+    2: ['matricula', 'dataCarta', 'numCarta'],
+    3: ['nif', 'cc', 'morada', 'codigoPostal']
+  };
+
+  const validators = {
+    nome: v => v.trim().length >= 3,
+    nif: v => /^\d{9}$/.test(v.trim()),
+    cc: v => v.trim().length >= 6,
+    morada: v => v.trim().length >= 5,
+    codigoPostal: v => /^\d{4}-?\d{3}$/.test(v.trim()),
+    dataCarta: v => v.trim() !== '',
+    numCarta: v => v.trim().length >= 3,
+    matricula: v => v.trim().length >= 4,
+    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    telemovel: v => /^\d{9,15}$/.test(v.trim().replace(/[\s\-+]/g, ''))
+  };
+
+  function validateStep(step) {
+    const fields = stepFields[step];
+    let valid = true;
+    fields.forEach(id => {
+      const input = document.getElementById(id);
+      const isValid = validators[id](input.value);
+      input.classList.toggle('error', !isValid);
+      if (!isValid) valid = false;
+    });
+    return valid;
+  }
+
+  // Clear error on input
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', () => {
+      input.classList.remove('error');
+      errorBanner.classList.remove('show');
+    });
+  });
+
+  window.nextStep = function(from) {
+    if (!validateStep(from)) return;
+    currentStep = from + 1;
+    updateSteps();
+  };
+
+  window.prevStep = function(from) {
+    currentStep = from - 1;
+    updateSteps();
+  };
+
+  function updateSteps() {
+    document.querySelectorAll('.form-step').forEach(s => {
+      s.classList.toggle('active', parseInt(s.dataset.step) === currentStep);
+    });
+    document.querySelectorAll('.step-dot').forEach(d => {
+      const s = parseInt(d.dataset.step);
+      d.classList.toggle('active', s === currentStep);
+      d.classList.toggle('done', s < currentStep);
+    });
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    if (!validateStep(3)) return;
+
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+    errorBanner.classList.remove('show');
+
+    const data = {
+      nome: document.getElementById('nome').value.trim(),
+      nif: document.getElementById('nif').value.trim(),
+      cartaoCidadao: document.getElementById('cc').value.trim(),
+      morada: document.getElementById('morada').value.trim(),
+      codigoPostal: document.getElementById('codigoPostal').value.trim(),
+      dataCartaConducao: document.getElementById('dataCarta').value.trim(),
+      numCartaConducao: document.getElementById('numCarta').value.trim(),
+      matricula: document.getElementById('matricula').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      telemovel: document.getElementById('telemovel').value.trim()
+    };
+
+    try {
+      // 1. Submit to the Netlify Function (CRM / Blobs storage)
+      const res = await fetch('/api/lead-auto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      if (res.ok && result.success) {
+        // 2. Also submit to Netlify Forms (dashboard visibility + email notifications)
+        const formBody = new URLSearchParams({
+          'form-name': 'seguro-auto',
+          ...data
+        });
+        await fetch('/seguro-auto/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: formBody.toString()
+        }).catch(() => {});
+
+        form.style.display = 'none';
+        document.querySelector('.steps-indicator').style.display = 'none';
+        document.querySelector('.step-label')?.remove();
+        document.querySelector('.form-header').style.display = 'none';
+        successMsg.classList.add('show');
+      } else {
+        errorBanner.textContent = result.error || 'Ocorreu um erro. Tente novamente.';
+        errorBanner.classList.add('show');
+      }
+    } catch {
+      errorBanner.textContent = 'Erro de ligação. Verifique a sua internet e tente novamente.';
+      errorBanner.classList.add('show');
+    } finally {
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    }
+  });
+})();
+</script>
+
+  <script defer src="/js/ar-analytics-tracker.js"></script>
+
+<!-- FLOATING MOBILE CTA -->
+<div class="mobile-cta" id="mobileCta">
+  <a href="#formulario">Pedir Cotação Gratuita</a>
+</div>
+
+<script>
+// Hide mobile CTA when form is visible in viewport
+(function() {
+  const cta = document.getElementById('mobileCta');
+  const form = document.getElementById('formulario');
+  if (!cta || !form) return;
+  const obs = new IntersectionObserver(function(entries) {
+    cta.style.display = entries[0].isIntersecting ? 'none' : '';
+  }, { threshold: 0.1 });
+  obs.observe(form);
+
+  // Dynamic urgency counter
+  var base = 8 + (new Date().getHours() % 7);
+  var el = document.querySelector('.form-urgency span:last-child');
+  if (el) el.textContent = base + ' cotações pedidas hoje';
+})();
+</script>
+</body>
+</html>

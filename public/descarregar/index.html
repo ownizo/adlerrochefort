@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descarregar Assinatura de Email — Adler &amp; Rochefort</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1B6B93;
+      --primary-hover: #2196C8;
+      --cream: #F8FAFB;
+      --ink: #1E3A50;
+      --ink2: #2C4D66;
+      --muted: #5A7186;
+      --white: #FFFFFF;
+      --border: #D0D9E0;
+    }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .logo {
+      height: 60px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .download-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      text-decoration: none;
+      padding: 16px 40px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background: var(--primary-hover);
+    }
+    .note {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .back-link {
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    .back-link a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y31W0QJ9WH');
+</script>
+</head>
+<body>
+  <div class="card">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="logo">
+    <h1>Assinatura de Email</h1>
+    <p>Clique no botão abaixo para descarregar a assinatura de email em formato HTML, pronta a importar no seu cliente de email.</p>
+    <a href="/email-signature.html" download="assinatura-email-adler-rochefort.html" class="download-btn">Descarregar Assinatura</a>
+    <p class="note">Ficheiro HTML compatível com Outlook, Gmail, Apple Mail e outros clientes de email.</p>
+    <div class="back-link"><a href="/">← Voltar ao site</a></div>
+  </div>
+  <script defer src="/js/ar-analytics-tracker.js"></script>
+</body>
+</html>
