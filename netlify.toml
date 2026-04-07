@@ -1,6 +1,18 @@
 [build]
   publish = "public"
 
+[[redirects]]
+  from = "/vault/backoffice/*"
+  to = "https://admin.adlerrochefort.com"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vault/*"
+  to = "https://one.adlerrochefort.com/one/login"
+  status = 301
+  force = true
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
