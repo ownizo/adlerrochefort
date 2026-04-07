@@ -46,14 +46,11 @@ async function main() {
     if (c.nif) {
       clientMap.set(c.nif, {
         nif: c.nif,
-        name: c.name,
+        full_name: c.name,
         email: c.email || null,
         address: c.morada || null,
-        postal_code: c.codigoPostal || null,
-        city: null,
         phone: c.telemovel || null,
-        vault_username: c.username,
-        vault_codigo_cliente: null,
+        status: "active",
       });
     }
   }
@@ -66,24 +63,18 @@ async function main() {
     if (!clientMap.has(nif)) {
       clientMap.set(nif, {
         nif,
-        name: p.tomadorNome,
+        full_name: p.tomadorNome,
         email: p.tomadorEmail || null,
         address: p.tomadorMorada || null,
-        postal_code: p.tomadorCodigoPostal || null,
-        city: p.tomadorCidade || null,
         phone: p.tomadorTelefone || null,
-        vault_username: null,
-        vault_codigo_cliente: p.codigoCliente,
+        status: "active",
       });
     } else {
       // Enrich existing record with insurance data if fields are missing
       const existing = clientMap.get(nif);
       if (!existing.address && p.tomadorMorada) existing.address = p.tomadorMorada;
-      if (!existing.postal_code && p.tomadorCodigoPostal) existing.postal_code = p.tomadorCodigoPostal;
-      if (!existing.city && p.tomadorCidade) existing.city = p.tomadorCidade;
       if (!existing.phone && p.tomadorTelefone) existing.phone = p.tomadorTelefone;
       if (!existing.email && p.tomadorEmail) existing.email = p.tomadorEmail;
-      if (!existing.vault_codigo_cliente && p.codigoCliente) existing.vault_codigo_cliente = p.codigoCliente;
     }
   }
 
@@ -117,19 +108,17 @@ async function main() {
 
     policyRows.push({
       individual_client_id: clientId,
-      numero_apolice: p.numeroApolice,
-      ramo: p.ramo || null,
-      seguradora: p.seguradora || null,
-      premio_total: p.premioTotal ?? null,
-      frequencia_pagamento: p.frequenciaPagamento || null,
-      data_inicio: p.dataInicio || null,
-      data_fim: p.dataFim || null,
-      data_renovacao: p.dataRenovacao || null,
-      comissao_percentagem: p.comissaoPercentagem ?? null,
-      comissao_valor: p.comissaoValor ?? null,
-      estado: p.estado || "ativa",
-      vault_id: p.id,
-      vault_codigo_cliente: p.codigoCliente || null,
+      policy_number: p.numeroApolice,
+      type: p.ramo || null,
+      insurer: p.seguradora || null,
+      annual_premium: p.premioTotal ?? null,
+      payment_frequency: p.frequenciaPagamento || null,
+      start_date: p.dataInicio || null,
+      end_date: p.dataFim || null,
+      renewal_date: p.dataRenovacao || null,
+      commission_percentage: p.comissaoPercentagem ?? null,
+      commission_value: p.comissaoValor ?? null,
+      status: p.estado || "ativa",
     });
   }
 
@@ -137,7 +126,7 @@ async function main() {
   const { data: insertedPolicies, error: policiesError } = await supabase
     .from("policies")
     .insert(policyRows)
-    .select("id, numero_apolice");
+    .select("id, policy_number");
 
   if (policiesError) {
     console.error("Erro ao inserir apólices:", policiesError.message);
@@ -145,6 +134,7 @@ async function main() {
   }
 
   console.log(`✓ ${insertedPolicies.length} apólices inseridas em policies`);
+  insertedPolicies.forEach(p => console.log(`   ${p.policy_number} → ${p.id}`));
   console.log("\nImportação concluída.");
 }
 
