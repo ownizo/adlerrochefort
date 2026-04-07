@@ -1,7 +1,7 @@
 import { getStore } from "@netlify/blobs";
 
-const IX_ACCOUNT = "ownizounipessoall-1";
-const IX_API_KEY = "54f1a16cc8f7183bd955b65f9706fc5c3b44bee4";
+const IX_ACCOUNT = process.env.IX_ACCOUNT;
+const IX_API_KEY = process.env.IX_API_KEY;
 const IX_BASE = `https://${IX_ACCOUNT}.app.invoicexpress.com`;
 
 function corsHeaders() {
