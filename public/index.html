@@ -74,20 +74,23 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
-    height: 68px;
+    height: 76px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-bottom: 1px solid rgba(27,107,147,0.25);
   }
 
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
     text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav-logo-img {
-    height: 44px;
+    height: 60px;
     width: auto;
   }
 
@@ -105,8 +108,18 @@
   }
 
   .nav-links {
-    display: flex; align-items: center; gap: 36px;
+    display: flex; align-items: center; gap: 28px;
     list-style: none;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-links-left {
+    display: flex; align-items: center; gap: 28px;
+  }
+
+  .nav-links-right {
+    display: flex; align-items: center; gap: 20px;
   }
 
   .nav-links a {
@@ -184,7 +197,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 68px;
+    padding-top: 76px;
   }
 
   .hero::before {
@@ -1373,6 +1386,26 @@
     padding-top: 32px;
     border-top: 1px solid rgba(255,255,255,0.08);
     display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+
+  .footer-platforms {
+    display: flex; gap: 12px;
+  }
+  .footer-platform-link {
+    color: var(--accent) !important;
+    border: 1px solid rgba(46,196,182,0.4);
+    padding: 8px 18px;
+    font-size: 11px !important;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-platform-link:hover {
+    background: rgba(46,196,182,0.12);
+    border-color: var(--accent);
   }
 
   .footer-copy {
@@ -1389,21 +1422,6 @@
     transition: color 0.2s;
   }
   .footer-legal a:hover { color: rgba(255,255,255,0.6); }
-  .footer-backoffice-link {
-    color: var(--accent) !important;
-    border: 1px solid rgba(46,196,182,0.35);
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 11px !important;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: all 0.2s;
-  }
-  .footer-backoffice-link:hover {
-    background: rgba(46,196,182,0.12) !important;
-    border-color: var(--accent) !important;
-    color: var(--accent) !important;
-  }
 
   .footer-regulatory {
     padding-top: 24px;
@@ -1420,8 +1438,9 @@
 
   /* ═══════════════ RESPONSIVE ═══════════════ */
   @media (max-width: 1024px) {
-    nav { padding: 0 28px; }
+    nav { padding: 0 28px; justify-content: space-between; }
     .nav-links { display: none; }
+    .nav-logo { position: static; left: auto; transform: none; }
     .nav-burger { display: flex; }
 
     .hero { grid-template-columns: 1fr; }
@@ -1456,7 +1475,7 @@
   /* Mobile nav */
   .mobile-nav {
     display: none;
-    position: fixed; top: 68px; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 76px; left: 0; right: 0; bottom: 0;
     background: var(--nav-bg); z-index: 99;
     padding: 40px 28px;
     flex-direction: column; gap: 8px;
@@ -1871,27 +1890,26 @@
 
 <!-- NAV -->
 <nav role="navigation" aria-label="Navegação principal">
-  <a href="#" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#adler-pro">Adler Pro</a></li>
-    <li><a href="#adler-one">Adler One</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#porque">Porquê nós</a></li>
-    <li><a href="#blog">Insights</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-    <li><a href="https://one.adlerrochefort.com" class="nav-vault-link" target="_blank" rel="noopener noreferrer">Adler One</a></li>
-    <li><a href="https://pro.adlerrochefort.com" class="nav-vault-link" target="_blank" rel="noopener noreferrer">Adler PRO</a></li>
-    <li><a href="#contacto" class="nav-cta">Consulta Gratuita</a></li>
-    <li>
+  <div class="nav-links">
+    <div class="nav-links-left">
+      <a href="#adler-pro">Adler Pro</a>
+      <a href="#adler-one">Adler One</a>
+      <a href="#servicos">Serviços</a>
+    </div>
+    <div class="nav-links-right">
+      <a href="#porque">Porquê nós</a>
+      <a href="#blog">Insights</a>
+      <a href="#contacto" class="nav-cta">Consulta Gratuita</a>
       <div class="lang-switcher">
         <a href="/" class="active">PT</a>
         <span class="lang-switcher-sep">|</span>
         <a href="/en/">EN</a>
       </div>
-    </li>
-  </ul>
+    </div>
+  </div>
+  <a href="#" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img">
+  </a>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -1905,8 +1923,6 @@
   <a href="#porque" onclick="toggleMenu()">Porquê nós</a>
   <a href="#blog" onclick="toggleMenu()">Insights</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-  <a href="https://one.adlerrochefort.com" onclick="toggleMenu()" style="color:var(--primary-hover);" target="_blank" rel="noopener noreferrer">Adler One</a>
-  <a href="https://pro.adlerrochefort.com" onclick="toggleMenu()" style="color:var(--primary-hover);" target="_blank" rel="noopener noreferrer">Adler PRO</a>
   <div class="mobile-lang-switcher">
     <a href="/" class="active">PT</a>
     <a href="/en/">EN</a>
@@ -2791,12 +2807,16 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Adler &amp; Rochefort · Todos os direitos reservados</div>
+    <div class="footer-platforms">
+      <a href="https://one.adlerrochefort.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">Aceder Adler One</a>
+      <a href="https://pro.adlerrochefort.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">Aceder Adler PRO</a>
+    </div>
     <div class="footer-legal">
       <a href="/politica-de-privacidade">Política de Privacidade</a>
       <a href="/termos-e-condicoes">Termos e Condições</a>
       <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">Canal de Denúncias ASF</a>
-      <a href="https://admin.adlerrochefort.com" class="footer-backoffice-link" target="_blank" rel="noopener noreferrer">Backoffice</a>
+
     </div>
   </div>
   <div class="footer-regulatory">
