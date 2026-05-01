@@ -4,8 +4,8 @@
   "description": "Insurtech portuguesa com plataformas de IA para gestão inteligente de seguros. Adler Pro para empresas, Adler One para particulares.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F8FAFB",
-  "theme_color": "#1A3148",
+  "background_color": "#FAF7EE",
+  "theme_color": "#3F4E3A",
   "icons": [
     {
       "src": "/images/favicon-192.png",
