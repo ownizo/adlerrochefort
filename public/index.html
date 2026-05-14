@@ -813,8 +813,78 @@
     display: flex; align-items: center; gap: 8px;
     transition: gap 0.2s;
   }
+  .service-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
   .service-link:hover { gap: 14px; }
-  .service-link::after { content: '→'; }
+  .service-link::after { content: '→'; transition: transform 0.3s; }
+  .service-card.open .service-link::after { transform: rotate(90deg); }
+
+  .service-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .service-detail-inner {
+    padding-top: 20px;
+    border-top: 1px solid var(--primary-dim);
+  }
+  .service-detail-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .service-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .service-detail-list li {
+    font-size: 12px;
+    color: var(--muted);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .service-detail-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 600;
+  }
+  .service-detail-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    background: var(--primary);
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .service-detail-cta:hover { opacity: 0.85; }
+  .service-card.open { transform: none !important; }
+  @media (max-width: 600px) {
+    .service-detail-list { grid-template-columns: 1fr; }
+  }
 
   /* ═══════════════ WHY ═══════════════ */
   .why-section {
@@ -2038,7 +2108,23 @@
         </div>
         <h3 class="service-name">Multirriscos Empresarial</h3>
         <p class="service-desc">Proteção integral do seu espaço, equipamentos, stocks e responsabilidade civil, numa única apólice estruturada ao detalhe para a sua atividade.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Incêndio e explosão</li>
+              <li>Inundação e tempestade</li>
+              <li>Furto e vandalismo</li>
+              <li>Danos elétricos</li>
+              <li>Quebra de vidros</li>
+              <li>Perda de lucros</li>
+              <li>RC exploração</li>
+              <li>Recheio e equipamentos</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.08s;">
@@ -2048,7 +2134,21 @@
         </div>
         <h3 class="service-name">Responsabilidade Civil Profissional</h3>
         <p class="service-desc">Para consultores, advogados, engenheiros, médicos e todos os profissionais cujo conselho tem valor — e pode ter consequências. Proteção contra erros e omissões.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Erros e omissões</li>
+              <li>Negligência profissional</li>
+              <li>Custos de defesa jurídica</li>
+              <li>Danos a terceiros</li>
+              <li>Perda de documentos</li>
+              <li>Violação de confidencialidade</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.16s;">
@@ -2058,7 +2158,21 @@
         </div>
         <h3 class="service-name">Frotas &amp; Transportes</h3>
         <p class="service-desc">Gestão centralizada do seguro de frotas, otimização de prémios por veículo e análise de sinistralidade para empresas de transporte e logística.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Responsabilidade civil</li>
+              <li>Danos próprios</li>
+              <li>Assistência em viagem</li>
+              <li>Proteção de mercadoria</li>
+              <li>Gestão de sinistralidade</li>
+              <li>Otimização de prémios</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.24s;">
@@ -2068,7 +2182,21 @@
         </div>
         <h3 class="service-name">Riscos Cibernéticos</h3>
         <p class="service-desc">Cobertura contra ataques informáticos, ransomware, fuga de dados e responsabilidade digital. Essencial para qualquer empresa com operação online.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Violação de dados</li>
+              <li>Extorsão cibernética</li>
+              <li>Interrupção de negócio</li>
+              <li>Responsabilidade digital</li>
+              <li>Custos de notificação</li>
+              <li>Recuperação de sistemas</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.32s;">
@@ -2078,7 +2206,21 @@
         </div>
         <h3 class="service-name">Obras &amp; Construção</h3>
         <p class="service-desc">Todo o Risco de Construção, responsabilidade civil de empreiteiro e coberturas específicas para projetos de construção, reabilitação e infraestruturas.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Todo o risco construção</li>
+              <li>RC empreiteiro</li>
+              <li>Montagem e desmontagem</li>
+              <li>Garantia pós-obra</li>
+              <li>Equipamento de estaleiro</li>
+              <li>Acidentes de trabalho</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.4s;">
@@ -2088,7 +2230,21 @@
         </div>
         <h3 class="service-name">Pessoas &amp; Benefícios</h3>
         <p class="service-desc">Seguros de saúde, vida e acidentes de trabalho para colaboradores. Benefícios que retêm talento e demonstram responsabilidade como empregador.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Seguro saúde grupo</li>
+              <li>Seguro vida grupo</li>
+              <li>Acidentes de trabalho</li>
+              <li>Complementos de reforma</li>
+              <li>Planos dentários</li>
+              <li>Programas de bem-estar</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.48s;">
@@ -2098,7 +2254,21 @@
         </div>
         <h3 class="service-name">Seguros Auto</h3>
         <p class="service-desc">Proteção completa para o seu veículo, desde cobertura contra terceiros até seguro all-risk. Soluções personalizadas com as melhores condições do mercado.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>RC obrigatória</li>
+              <li>Danos próprios</li>
+              <li>Furto e incêndio</li>
+              <li>Quebra isolada de vidros</li>
+              <li>Assistência em viagem</li>
+              <li>Veículo de substituição</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.56s;">
@@ -2108,7 +2278,21 @@
         </div>
         <h3 class="service-name">Seguro Habitação</h3>
         <p class="service-desc">Proteção para a sua casa contra incêndio, inundação, roubo e outros riscos. Coberturas adaptadas a cada tipo de imóvel, seja próprio ou arrendado.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Incêndio obrigatório</li>
+              <li>Inundação e tempestade</li>
+              <li>Furto e roubo</li>
+              <li>RC familiar</li>
+              <li>Assistência ao lar</li>
+              <li>Fenómenos sísmicos</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.64s;">
@@ -2118,7 +2302,21 @@
         </div>
         <h3 class="service-name">Seguro Saúde</h3>
         <p class="service-desc">Acesso a cuidados médicos de qualidade com coberturas de hospitalização, consultas, exames e medicamentos. Planos individuais e familiares à sua medida.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Hospitalização</li>
+              <li>Consultas e exames</li>
+              <li>Medicamentos</li>
+              <li>Estomatologia</li>
+              <li>Oftalmologia</li>
+              <li>Medicina no estrangeiro</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.72s;">
@@ -2128,7 +2326,21 @@
         </div>
         <h3 class="service-name">Seguro Acidentes Pessoais</h3>
         <p class="service-desc">Proteção financeira em caso de acidente, com coberturas de invalidez, despesas de tratamento e assistência. Tranquilidade para si e para a sua família.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Morte por acidente</li>
+              <li>Invalidez permanente</li>
+              <li>Despesas de tratamento</li>
+              <li>Subsídio diário</li>
+              <li>Repatriamento</li>
+              <li>Assistência 24h</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.8s;">
@@ -2138,7 +2350,21 @@
         </div>
         <h3 class="service-name">Seguro Vida Crédito Habitação</h3>
         <p class="service-desc">Seguro obrigatório associado ao crédito à habitação, garantindo a liquidação do empréstimo em caso de morte ou invalidez. Comparamos as melhores ofertas.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Morte e invalidez</li>
+              <li>Invalidez absoluta e definitiva</li>
+              <li>Cobertura do capital em dívida</li>
+              <li>Transferência de seguradora</li>
+              <li>Melhores condições do mercado</li>
+              <li>Análise comparativa gratuita</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.88s;">
@@ -2148,7 +2374,21 @@
         </div>
         <h3 class="service-name">Seguro Vida Investimento</h3>
         <p class="service-desc">Solução que combina proteção vida com rentabilização do capital. Ideal para quem procura poupança a médio e longo prazo com benefícios fiscais.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Proteção vida</li>
+              <li>Capitalização garantida</li>
+              <li>Benefícios fiscais</li>
+              <li>Resgate parcial ou total</li>
+              <li>Rendimento mínimo garantido</li>
+              <li>Flexibilidade de entregas</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.96s;">
@@ -2158,7 +2398,21 @@
         </div>
         <h3 class="service-name">Seguro Caução</h3>
         <p class="service-desc">Garantia financeira exigida em concursos públicos, contratos e obrigações legais. Alternativa eficiente a garantias bancárias, sem imobilizar capital.</p>
-        <a href="#contacto" class="service-link">Saber mais</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Principais coberturas</div>
+            <ul class="service-detail-list">
+              <li>Garantia de proposta</li>
+              <li>Garantia de boa execução</li>
+              <li>Adiantamentos</li>
+              <li>Retenção</li>
+              <li>Garantia judicial</li>
+              <li>Sem imobilização de capital</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
       </div>
 
     </div>
@@ -2862,6 +3116,13 @@
         <li><a href="#servicos">Riscos Cibernéticos</a></li>
         <li><a href="#servicos">Obras &amp; Construção</a></li>
         <li><a href="#servicos">Pessoas &amp; Benefícios</a></li>
+        <li><a href="#servicos">Seguros Auto</a></li>
+        <li><a href="#servicos">Seguro Habitação</a></li>
+        <li><a href="#servicos">Seguro Saúde</a></li>
+        <li><a href="#servicos">Acidentes Pessoais</a></li>
+        <li><a href="#servicos">Vida Crédito Habitação</a></li>
+        <li><a href="#servicos">Vida Investimento</a></li>
+        <li><a href="#servicos">Seguro Caução</a></li>
       </ul>
     </div>
     <div>
@@ -3025,6 +3286,23 @@
       alert('Ocorreu um erro ao enviar a mensagem. Por favor tente novamente.');
     });
   });
+
+  // Service card toggle
+  function toggleService(btn) {
+    var card = btn.closest('.service-card');
+    var detail = card.querySelector('.service-detail');
+    var isOpen = card.classList.contains('open');
+
+    document.querySelectorAll('.service-card.open').forEach(function(openCard) {
+      openCard.classList.remove('open');
+      openCard.querySelector('.service-detail').style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      card.classList.add('open');
+      detail.style.maxHeight = detail.scrollHeight + 'px';
+    }
+  }
 
   // FAQ toggle
   function toggleFaq(btn) {
