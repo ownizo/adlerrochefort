@@ -813,8 +813,78 @@
     display: flex; align-items: center; gap: 8px;
     transition: gap 0.2s;
   }
+  .service-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
   .service-link:hover { gap: 14px; }
-  .service-link::after { content: '→'; }
+  .service-link::after { content: '→'; transition: transform 0.3s; }
+  .service-card.open .service-link::after { transform: rotate(90deg); }
+
+  .service-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .service-detail-inner {
+    padding-top: 20px;
+    border-top: 1px solid var(--primary-dim);
+  }
+  .service-detail-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 12px;
+  }
+  .service-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .service-detail-list li {
+    font-size: 12px;
+    color: var(--muted);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .service-detail-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 600;
+  }
+  .service-detail-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    background: var(--primary);
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .service-detail-cta:hover { opacity: 0.85; }
+  .service-card.open { transform: none !important; }
+  @media (max-width: 600px) {
+    .service-detail-list { grid-template-columns: 1fr; }
+  }
 
   /* ═══════════════ WHY ═══════════════ */
   .why-section {
@@ -2032,7 +2102,23 @@
         </div>
         <h3 class="service-name">Business Multi-Risk</h3>
         <p class="service-desc">Comprehensive protection of your premises, equipment, stock and liability, in a single policy structured in detail for your activity.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Fire and explosion</li>
+              <li>Flood and storm</li>
+              <li>Theft and vandalism</li>
+              <li>Electrical damage</li>
+              <li>Glass breakage</li>
+              <li>Loss of profits</li>
+              <li>Operational liability</li>
+              <li>Contents and equipment</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.08s;">
@@ -2042,7 +2128,21 @@
         </div>
         <h3 class="service-name">Professional Liability</h3>
         <p class="service-desc">For consultants, lawyers, engineers, doctors and all professionals whose advice has value — and can have consequences. Protection against errors and omissions.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Errors and omissions</li>
+              <li>Professional negligence</li>
+              <li>Defence costs</li>
+              <li>Third-party damages</li>
+              <li>Document loss</li>
+              <li>Breach of confidentiality</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.16s;">
@@ -2052,7 +2152,21 @@
         </div>
         <h3 class="service-name">Fleets &amp; Transport</h3>
         <p class="service-desc">Centralised fleet insurance management, per-vehicle premium optimisation and claims analysis for transport and logistics companies.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Civil liability</li>
+              <li>Own damage</li>
+              <li>Roadside assistance</li>
+              <li>Cargo protection</li>
+              <li>Claims management</li>
+              <li>Premium optimisation</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.24s;">
@@ -2062,7 +2176,21 @@
         </div>
         <h3 class="service-name">Cyber Risks</h3>
         <p class="service-desc">Coverage against cyber attacks, ransomware, data breaches and digital liability. Essential for any business with an online operation.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Data breach</li>
+              <li>Cyber extortion</li>
+              <li>Business interruption</li>
+              <li>Digital liability</li>
+              <li>Notification costs</li>
+              <li>System recovery</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.32s;">
@@ -2072,7 +2200,21 @@
         </div>
         <h3 class="service-name">Construction &amp; Works</h3>
         <p class="service-desc">Contractor's All Risk, contractor liability and specific coverage for construction, renovation and infrastructure projects.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>All-risk construction</li>
+              <li>Contractor liability</li>
+              <li>Assembly and disassembly</li>
+              <li>Post-completion guarantee</li>
+              <li>Site equipment</li>
+              <li>Work accidents</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.4s;">
@@ -2082,7 +2224,21 @@
         </div>
         <h3 class="service-name">People &amp; Benefits</h3>
         <p class="service-desc">Health, life and workplace accident insurance for employees. Benefits that retain talent and demonstrate responsibility as an employer.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Group health insurance</li>
+              <li>Group life insurance</li>
+              <li>Work accidents</li>
+              <li>Pension supplements</li>
+              <li>Dental plans</li>
+              <li>Wellness programmes</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.48s;">
@@ -2092,7 +2248,21 @@
         </div>
         <h3 class="service-name">Auto Insurance</h3>
         <p class="service-desc">Complete vehicle protection, from third-party liability to all-risk coverage. Personalised solutions with the best market conditions.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Mandatory liability</li>
+              <li>Own damage</li>
+              <li>Theft and fire</li>
+              <li>Isolated glass breakage</li>
+              <li>Roadside assistance</li>
+              <li>Replacement vehicle</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.56s;">
@@ -2102,7 +2272,21 @@
         </div>
         <h3 class="service-name">Home Insurance</h3>
         <p class="service-desc">Protection for your home against fire, flood, theft and other risks. Coverage tailored to every property type, whether owned or rented.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Mandatory fire cover</li>
+              <li>Flood and storm</li>
+              <li>Theft and burglary</li>
+              <li>Family liability</li>
+              <li>Home assistance</li>
+              <li>Seismic events</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.64s;">
@@ -2112,7 +2296,21 @@
         </div>
         <h3 class="service-name">Health Insurance</h3>
         <p class="service-desc">Access to quality healthcare with coverage for hospitalisation, consultations, exams and medication. Individual and family plans tailored to you.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Hospitalisation</li>
+              <li>Consultations and exams</li>
+              <li>Medication</li>
+              <li>Dental care</li>
+              <li>Ophthalmology</li>
+              <li>Overseas medical care</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.72s;">
@@ -2122,7 +2320,21 @@
         </div>
         <h3 class="service-name">Personal Accident Insurance</h3>
         <p class="service-desc">Financial protection in case of accident, covering disability, treatment expenses and assistance. Peace of mind for you and your family.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Accidental death</li>
+              <li>Permanent disability</li>
+              <li>Treatment expenses</li>
+              <li>Daily allowance</li>
+              <li>Repatriation</li>
+              <li>24h assistance</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.8s;">
@@ -2132,7 +2344,21 @@
         </div>
         <h3 class="service-name">Mortgage Life Insurance</h3>
         <p class="service-desc">Mandatory insurance linked to your mortgage, ensuring loan settlement in case of death or disability. We compare the best offers available.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Death and disability</li>
+              <li>Absolute disability</li>
+              <li>Outstanding capital cover</li>
+              <li>Insurer transfer</li>
+              <li>Best market rates</li>
+              <li>Free comparative analysis</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.88s;">
@@ -2142,7 +2368,21 @@
         </div>
         <h3 class="service-name">Investment Life Insurance</h3>
         <p class="service-desc">A solution combining life protection with capital growth. Ideal for medium to long-term savings with tax benefits.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Life protection</li>
+              <li>Guaranteed capitalisation</li>
+              <li>Tax benefits</li>
+              <li>Partial or total redemption</li>
+              <li>Minimum guaranteed return</li>
+              <li>Flexible contributions</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.96s;">
@@ -2152,7 +2392,21 @@
         </div>
         <h3 class="service-name">Surety Bond Insurance</h3>
         <p class="service-desc">Financial guarantee required for public tenders, contracts and legal obligations. An efficient alternative to bank guarantees without tying up capital.</p>
-        <a href="#contact" class="service-link">Learn more</a>
+        <div class="service-detail">
+          <div class="service-detail-inner">
+            <div class="service-detail-title">Key coverages</div>
+            <ul class="service-detail-list">
+              <li>Bid bond</li>
+              <li>Performance bond</li>
+              <li>Advance payment</li>
+              <li>Retention guarantee</li>
+              <li>Judicial guarantee</li>
+              <li>No capital lock-up</li>
+            </ul>
+            <button class="service-detail-cta" onclick="openContactForm()">Request a quote</button>
+          </div>
+        </div>
+        <button class="service-link" onclick="toggleService(this)">Learn more</button>
       </div>
 
     </div>
@@ -2856,6 +3110,13 @@
         <li><a href="#services">Cyber Risks</a></li>
         <li><a href="#services">Construction &amp; Works</a></li>
         <li><a href="#services">People &amp; Benefits</a></li>
+        <li><a href="#services">Auto Insurance</a></li>
+        <li><a href="#services">Home Insurance</a></li>
+        <li><a href="#services">Health Insurance</a></li>
+        <li><a href="#services">Personal Accident</a></li>
+        <li><a href="#services">Mortgage Life</a></li>
+        <li><a href="#services">Investment Life</a></li>
+        <li><a href="#services">Surety Bond</a></li>
       </ul>
     </div>
     <div>
@@ -3019,6 +3280,23 @@
       alert('An error occurred while sending the message. Please try again.');
     });
   });
+
+  // Service card toggle
+  function toggleService(btn) {
+    var card = btn.closest('.service-card');
+    var detail = card.querySelector('.service-detail');
+    var isOpen = card.classList.contains('open');
+
+    document.querySelectorAll('.service-card.open').forEach(function(openCard) {
+      openCard.classList.remove('open');
+      openCard.querySelector('.service-detail').style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      card.classList.add('open');
+      detail.style.maxHeight = detail.scrollHeight + 'px';
+    }
+  }
 
   // FAQ toggle
   function toggleFaq(btn) {
