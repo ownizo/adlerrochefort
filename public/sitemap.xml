@@ -73,13 +73,13 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/seguro-automovel-guia-completo/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/seguro-saude-portugal/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -193,7 +193,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -223,7 +223,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -313,13 +313,13 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/car-insurance-complete-guide/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/health-insurance-portugal/</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -342,5 +342,20 @@
     <lastmod>2026-03-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <!-- PT: New Blog Post - Allianz vs APRIL vs Médis -->
+  <url>
+    <loc>https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- EN: New Blog Post - Allianz vs APRIL vs Médis -->
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/allianz-april-medis-health-insurance-portugal-2026/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -71,7 +71,7 @@
 
   /* ═══════════════ NAV ═══════════════ */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 76px;
@@ -197,7 +197,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 76px;
+    padding-top: 112px;
   }
 
   .hero::before {
@@ -1547,7 +1547,7 @@
   /* Mobile nav */
   .mobile-nav {
     display: none;
-    position: fixed; top: 76px; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 112px; left: 0; right: 0; bottom: 0;
     background: var(--nav-bg); z-index: 99;
     padding: 40px 28px;
     flex-direction: column; gap: 8px;
@@ -1644,6 +1644,7 @@
     .partners-section { padding: 60px 24px; }
     .partners-logos { gap: 40px; }
     .partner-logo-text { font-size: 22px; }
+      .asf-top-bar { font-size: 10px; padding: 6px 16px; }
   }
 
   /* ═══════════════ CONTACT MODAL ═══════════════ */
@@ -1961,6 +1962,7 @@
 <body>
 
 <!-- NAV -->
+<div class="asf-top-bar">Corretora registada na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
 <nav role="navigation" aria-label="Navegação principal">
   <div class="nav-links">
     <div class="nav-links-left">
@@ -2716,6 +2718,19 @@
       </div>
     </a>
 
+    <a href="/blog/allianz-april-medis-seguro-saude-portugal-2026/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
+      <div class="blog-card-img">
+        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
+        <div class="blog-card-tag">Seguros de Saúde</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">Maio 2026</div>
+        <h3 class="blog-card-title">Allianz vs APRIL vs Médis: qual o melhor seguro de saúde em Portugal em 2026</h3>
+        <p class="blog-card-excerpt">Comparação independente entre Allianz, APRIL e Médis: prémios, coberturas, períodos de carência e rede convencionada. Cotação em 24h.</p>
+        <span class="blog-card-link">Ler artigo</span>
+      </div>
+    </a>
+
     <a href="/blog/seguro-habitacao-proteger-casa/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
       <div class="blog-card-img">
         <div class="blog-card-img-bg"><img src="/images/blog/seguro-habitacao-proteger-casa.jpg" alt="Imagem do Blog - seguro habitacao proteger casa" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
@@ -3406,6 +3421,25 @@
     .cookie-banner-actions { width: 100%; }
     .cookie-btn { flex: 1; }
   }
+
+  /* ASF TOP BAR */
+  .asf-top-bar {
+    background: #1B2B4B;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 8px 24px;
+    line-height: 1.4;
+  }
+  .asf-top-bar a {
+    color: #C9A84C;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .asf-top-bar a:hover { color: #e0be6a; }
 </style>
 <script>
   (function() {

@@ -56,7 +56,7 @@
 
   /* NAV */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 68px;
@@ -848,11 +848,31 @@
     .hero-title { font-size: 28px; }
     .nav-phone { display: none; }
   }
+
+  /* ASF TOP BAR */
+  .asf-top-bar {
+    background: #1B2B4B;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 8px 24px;
+    line-height: 1.4;
+  }
+  .asf-top-bar a {
+    color: #C9A84C;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  .asf-top-bar a:hover { color: #e0be6a; }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
+<div class="asf-top-bar">Corretora registada na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
 <nav>
   <a href="/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler & Rochefort" class="nav-logo-img">
