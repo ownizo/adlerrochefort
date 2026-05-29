@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3F4E3A">
+<title>Alterar de Mediador — Mude para a Adler &amp; Rochefort em minutos</title>
+<meta name="description" content="Mudar o mediador das suas apólices para a Adler & Rochefort é simples, gratuito e sem alterar as suas coberturas. Preencha os dados, descarregue a carta já preenchida, assine e envie. Tratamos do resto.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adlerrochefort.com/alterarmediador/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adlerrochefort.com/alterarmediador/">
+<meta property="og:title" content="Alterar de Mediador — Adler &amp; Rochefort">
+<meta property="og:description" content="Mudar o mediador das suas apólices para a Adler & Rochefort é simples, gratuito e sem alterar coberturas. Preencha, descarregue a carta, assine e envie.">
+<meta property="og:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Adler &amp; Rochefort">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alterar de Mediador — Adler &amp; Rochefort">
+<meta name="twitter:description" content="Mudar de mediador para a Adler & Rochefort é simples e gratuito.">
+<meta name="twitter:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #7A9A6B;
+    --primary-hover: #94B585;
+    --accent: #D9A668;
+    --cream: #FAF7EE;
+    --ink: #4A5A45;
+    --ink2: #637060;
+    --muted: #8A8B7E;
+    --white: #FFFFFF;
+    --border: #E5DFCB;
+    --hero-bg: #4A5A45;
+    --nav-bg: #3F4E3A;
+    --footer-bg: #33402F;
+    --success: #10B981;
+    --error: #EF4444;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    overflow-x: hidden;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* TOP BAR */
+  .topbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+    background: var(--accent);
+    height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12.5px; font-weight: 600; color: #3a2e16;
+    letter-spacing: 0.02em; text-align: center; padding: 0 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+    background: var(--nav-bg);
+    padding: 0 48px;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(122,154,107,0.25);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo-img { height: 44px; width: auto; }
+  .nav-logo-text { font-size: 18px; font-weight: 600; color: var(--white); letter-spacing: 0.04em; }
+  .nav-logo-text em { color: var(--accent); font-style: normal; }
+  .nav-cta {
+    background: var(--accent); color: #3a2e16; text-decoration: none;
+    padding: 11px 22px; border-radius: 8px; font-size: 13.5px; font-weight: 700;
+    letter-spacing: 0.03em; transition: background 0.2s, transform 0.2s;
+  }
+  .nav-cta:hover { background: #C5934F; transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--hero-bg) 0%, #3a4736 100%);
+    color: var(--white);
+    padding: 150px 48px 80px;
+    text-align: center;
+    position: relative;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(217,166,104,0.16); color: var(--accent);
+    border: 1px solid rgba(217,166,104,0.35);
+    padding: 7px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 26px;
+  }
+  .hero h1 {
+    font-size: clamp(30px, 5vw, 50px); font-weight: 700; line-height: 1.12;
+    max-width: 880px; margin: 0 auto 22px; letter-spacing: -0.01em;
+  }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero p {
+    font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.82);
+    max-width: 660px; margin: 0 auto 36px; font-weight: 400;
+  }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent); color: #3a2e16; text-decoration: none;
+    padding: 16px 32px; border-radius: 10px; font-size: 15px; font-weight: 700;
+    letter-spacing: 0.02em; transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover { background: #C5934F; transform: translateY(-1px); }
+  .hero-cta svg { width: 18px; height: 18px; fill: currentColor; }
+  .hero-cta.ghost { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.35); }
+  .hero-cta.ghost:hover { background: rgba(255,255,255,0.08); }
+
+  .hero-trust {
+    display: flex; gap: 28px; justify-content: center; flex-wrap: wrap;
+    margin-top: 40px; font-size: 13.5px; color: rgba(255,255,255,0.72);
+  }
+  .hero-trust span { display: inline-flex; align-items: center; gap: 7px; }
+  .hero-trust svg { width: 16px; height: 16px; fill: var(--accent); }
+
+  /* SECTION SHELL */
+  .section { padding: 72px 48px; }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+  .section-eyebrow {
+    color: var(--primary); font-size: 13px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;
+  }
+  .section-head h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 700; line-height: 1.18; letter-spacing: -0.01em; }
+  .section-head p { color: var(--ink2); font-size: 16.5px; margin-top: 16px; }
+
+  /* STEPS */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .step-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px;
+    padding: 32px 28px; position: relative;
+  }
+  .step-num {
+    width: 42px; height: 42px; border-radius: 12px; background: var(--hero-bg);
+    color: var(--accent); font-weight: 700; font-size: 18px;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+  }
+  .step-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .step-card p { color: var(--ink2); font-size: 14.5px; }
+
+  /* BENEFITS */
+  .benefits-wrap { background: var(--white); }
+  .benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .benefit {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 24px; border: 1px solid var(--border); border-radius: 14px; background: var(--cream);
+  }
+  .benefit-icon {
+    flex-shrink: 0; width: 44px; height: 44px; border-radius: 11px;
+    background: rgba(122,154,107,0.16); display: flex; align-items: center; justify-content: center;
+  }
+  .benefit-icon svg { width: 22px; height: 22px; fill: var(--primary); }
+  .benefit h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 5px; }
+  .benefit p { color: var(--ink2); font-size: 14.5px; }
+
+  /* DOCS */
+  .docs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .doc-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 32px;
+  }
+  .doc-card .doc-tag {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--primary);
+    background: rgba(122,154,107,0.14); padding: 5px 12px; border-radius: 999px; margin-bottom: 16px;
+  }
+  .doc-card h3 { font-size: 19px; font-weight: 700; margin-bottom: 14px; }
+  .doc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .doc-list li { display: flex; gap: 11px; align-items: flex-start; font-size: 14.5px; color: var(--ink2); }
+  .doc-list li svg { width: 19px; height: 19px; fill: var(--success); flex-shrink: 0; margin-top: 1px; }
+
+  /* FORM SECTION */
+  .form-section { background: var(--hero-bg); }
+  .form-shell {
+    max-width: 760px; margin: 0 auto;
+    background: var(--white); border-radius: 20px; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+  }
+  .form-shell-head {
+    background: var(--nav-bg); color: var(--white); padding: 34px 40px;
+  }
+  .form-shell-head h2 { font-size: 24px; font-weight: 700; }
+  .form-shell-head p { color: rgba(255,255,255,0.78); font-size: 15px; margin-top: 8px; }
+  .form-body { padding: 36px 40px 42px; }
+
+  .field-block { margin-bottom: 24px; }
+  .field-block > label, .field-legend {
+    display: block; font-size: 13px; font-weight: 700; color: var(--ink);
+    letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .field-block input[type="text"],
+  .field-block input[type="email"],
+  .field-block input[type="tel"],
+  .field-block select,
+  .apolice-row input {
+    width: 100%; padding: 14px 16px; font-family: inherit; font-size: 15px; color: var(--ink);
+    background: var(--cream); border: 1.5px solid var(--border); border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .field-block input:focus, .field-block select:focus, .apolice-row input:focus {
+    outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(122,154,107,0.15); background: var(--white);
+  }
+  .field-block input.error, .apolice-row input.error { border-color: var(--error); }
+  .error-msg { display: none; color: var(--error); font-size: 12.5px; margin-top: 6px; font-weight: 500; }
+  .field-hint { color: var(--muted); font-size: 12.5px; margin-top: 7px; }
+
+  /* client type toggle */
+  .toggle-group { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .toggle-opt {
+    position: relative; cursor: pointer;
+    border: 1.5px solid var(--border); border-radius: 12px; padding: 16px 18px;
+    background: var(--cream); transition: all 0.18s; text-align: center;
+  }
+  .toggle-opt input { position: absolute; opacity: 0; pointer-events: none; }
+  .toggle-opt .t-title { font-weight: 700; font-size: 15px; display: block; }
+  .toggle-opt .t-sub { font-size: 12.5px; color: var(--muted); margin-top: 3px; display: block; }
+  .toggle-opt:has(input:checked) {
+    border-color: var(--primary); background: var(--white); box-shadow: 0 0 0 3px rgba(122,154,107,0.15);
+  }
+  .toggle-opt:has(input:checked) .t-title { color: var(--primary); }
+
+  /* apolices */
+  .apolice-row { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+  .apolice-row input { flex: 1; }
+  .apolice-remove {
+    flex-shrink: 0; width: 44px; height: 48px; border-radius: 10px; border: 1.5px solid var(--border);
+    background: var(--cream); color: var(--error); font-size: 22px; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: all 0.18s;
+  }
+  .apolice-remove:hover { background: #fdecec; border-color: var(--error); }
+  .btn-add {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 4px;
+    background: rgba(122,154,107,0.12); color: var(--primary); border: 1.5px dashed var(--primary);
+    padding: 11px 18px; border-radius: 10px; font-family: inherit; font-size: 14px; font-weight: 700;
+    cursor: pointer; transition: all 0.18s;
+  }
+  .btn-add:hover { background: rgba(122,154,107,0.2); }
+  .btn-add svg { width: 16px; height: 16px; fill: currentColor; }
+
+  .divider { height: 1px; background: var(--border); margin: 34px 0; }
+
+  .pdf-cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn-pdf {
+    display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+    background: var(--hero-bg); color: var(--white); border: none;
+    padding: 15px 26px; border-radius: 11px; font-family: inherit; font-size: 15px; font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-pdf:hover { background: #3a4736; transform: translateY(-1px); }
+  .btn-pdf svg { width: 19px; height: 19px; fill: currentColor; }
+  .pdf-note { font-size: 13px; color: var(--ink2); }
+  .pdf-done { display: none; align-items: center; gap: 8px; color: var(--success); font-weight: 600; font-size: 14px; margin-top: 12px; }
+  .pdf-done.show { display: inline-flex; }
+  .pdf-done svg { width: 18px; height: 18px; fill: var(--success); }
+
+  /* upload */
+  .upload-field { margin-bottom: 22px; }
+  .upload-field .up-label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .upload-field .up-label small { display: block; font-weight: 400; color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .file-drop {
+    position: relative; border: 1.5px dashed var(--border); border-radius: 12px;
+    background: var(--cream); padding: 18px; display: flex; align-items: center; gap: 14px;
+    cursor: pointer; transition: all 0.18s;
+  }
+  .file-drop:hover { border-color: var(--primary); background: var(--white); }
+  .file-drop input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .file-drop svg { width: 26px; height: 26px; fill: var(--primary); flex-shrink: 0; }
+  .file-drop .fd-text { font-size: 14px; color: var(--ink2); }
+  .file-drop .fd-text b { color: var(--ink); }
+  .file-drop.has-file { border-color: var(--success); border-style: solid; background: #f0faf4; }
+  .file-drop.error { border-color: var(--error); background: #fdecec; }
+  .file-drop.empresa-only { display: none; }
+
+  .submit-btn {
+    width: 100%; margin-top: 8px; background: var(--accent); color: #3a2e16; border: none;
+    padding: 17px; border-radius: 12px; font-family: inherit; font-size: 16px; font-weight: 700;
+    letter-spacing: 0.02em; cursor: pointer; transition: background 0.2s, transform 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .submit-btn:hover { background: #C5934F; transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+  .submit-btn .spinner { width: 18px; height: 18px; border: 2.5px solid rgba(58,46,22,0.3); border-top-color: #3a2e16; border-radius: 50%; animation: spin 0.7s linear infinite; display: none; }
+  .submit-btn.loading .spinner { display: inline-block; }
+  .submit-btn.loading .btn-text { opacity: 0.7; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .form-banner { display: none; padding: 14px 16px; border-radius: 10px; font-size: 14px; font-weight: 500; margin-bottom: 22px; }
+  .form-banner.error { display: block; background: #fdecec; color: #b42318; border: 1px solid #f5c2c0; }
+  .form-success {
+    display: none; text-align: center; padding: 20px 10px;
+  }
+  .form-success.show { display: block; }
+  .form-success .ok-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(16,185,129,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+  .form-success .ok-icon svg { width: 34px; height: 34px; fill: var(--success); }
+  .form-success h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+  .form-success p { color: var(--ink2); font-size: 15px; max-width: 440px; margin: 0 auto; }
+
+  .privacy-note { font-size: 12.5px; color: var(--muted); margin-top: 18px; text-align: center; }
+  .privacy-note a { color: var(--primary); }
+
+  /* FAQ */
+  .faq-wrap { background: var(--white); }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    padding: 22px 0; font-family: inherit; font-size: 16.5px; font-weight: 600; color: var(--ink);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq-q svg { width: 20px; height: 20px; fill: var(--primary); flex-shrink: 0; transition: transform 0.25s; }
+  .faq-item.open .faq-q svg { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-a p { padding: 0 0 22px; color: var(--ink2); font-size: 15px; }
+  .faq-item.open .faq-a { max-height: 320px; }
+
+  /* FOOTER */
+  footer { background: var(--footer-bg); padding: 64px 48px 32px; }
+  .footer-top { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+  .footer-brand-name { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+  .footer-brand-name em { color: var(--accent); font-style: normal; }
+  .footer-brand-desc { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 360px; }
+  .footer-col-title { color: var(--white); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; }
+  .footer-col-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .footer-col-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+  .footer-col-links a:hover { color: var(--accent); }
+  .footer-bottom { max-width: 1200px; margin: 48px auto 0; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-copy { color: rgba(255,255,255,0.5); font-size: 13px; }
+  .footer-legal { display: flex; gap: 22px; flex-wrap: wrap; }
+  .footer-legal a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+  .footer-regulatory { max-width: 1200px; margin: 24px auto 0; }
+  .footer-regulatory p { color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.7; }
+
+  @media (max-width: 860px) {
+    nav { padding: 0 20px; }
+    .nav-logo-text { font-size: 16px; }
+    .section { padding: 56px 20px; }
+    .hero { padding: 140px 20px 64px; }
+    .steps { grid-template-columns: 1fr; }
+    .benefits { grid-template-columns: 1fr; }
+    .docs { grid-template-columns: 1fr; }
+    .form-body { padding: 28px 22px 34px; }
+    .form-shell-head { padding: 28px 24px; }
+    .footer-top { grid-template-columns: 1fr; gap: 36px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Mediador registado na ASF n.º 425591790 · Mudança de mediador gratuita e sem alterar coberturas</div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-text">Adler <em>&amp;</em> Rochefort</span>
+  </a>
+  <a href="#formulario" class="nav-cta">Iniciar mudança</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="hero-eyebrow">Alteração de Mediador</span>
+  <h1>Mude o mediador das suas apólices para a <em>Adler &amp; Rochefort</em></h1>
+  <p>Mantém exatamente o mesmo seguro, a mesma seguradora e as mesmas coberturas — muda apenas quem gere e acompanha as suas apólices. É simples, gratuito e tratamos de toda a comunicação com a seguradora.</p>
+  <div class="hero-actions">
+    <a href="#formulario" class="hero-cta">Preencher e gerar carta <svg viewBox="0 0 24 24"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
+    <a href="#como-funciona" class="hero-cta ghost">Como funciona</a>
+  </div>
+  <div class="hero-trust">
+    <span><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/></svg> Sem custos</span>
+    <span><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Coberturas mantidas</span>
+    <span><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM13 17h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg> Acompanhamento dedicado</span>
+  </div>
+</header>
+
+<!-- WHY / INTRO -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-eyebrow">Porque mudar</div>
+      <h2>Mudar de mediador é um direito seu — e é mais fácil do que imagina</h2>
+      <p>A lei portuguesa (n.º 4 do artigo 40.º do Decreto-Lei n.º 144/2006) permite que escolha livremente quem gere as suas apólices. Não precisa de cancelar nada, não perde antiguidade e não altera o preço nem as condições do seu seguro. Basta uma carta a indicar que pretende a Adler &amp; Rochefort (marca da Ownizo Unipessoal Lda.) como novo mediador.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+        <div><h3>As coberturas mantêm-se</h3><p>O contrato é exatamente o mesmo. Muda apenas o mediador que o acompanha — nunca a seguradora ou as garantias.</p></div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93C7.06 19.43 4.57 16.94 4.07 13H6v-2H4.07C4.57 7.06 7.06 4.57 11 4.07V6h2V4.07c3.94.5 6.43 2.99 6.93 6.93H18v2h1.93c-.5 3.94-2.99 6.43-6.93 6.86z"/></svg></div>
+        <div><h3>Totalmente gratuito</h3><p>A mudança de mediador não tem qualquer custo associado e não interfere com o pagamento dos seus prémios.</p></div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <div><h3>Aconselhamento próximo</h3><p>Uma equipa dedicada para rever as suas apólices, otimizar coberturas e responder sempre que precisar.</p></div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+        <div><h3>Tratamos de tudo</h3><p>Depois de receber a sua carta assinada, comunicamos diretamente com a seguradora para concluir a alteração.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="como-funciona" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-eyebrow">Como funciona</div>
+      <h2>Três passos simples</h2>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Preencha os seus dados</h3>
+        <p>Indique o seu nome, NIF, morada, a seguradora e o número de cada apólice que pretende transferir.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Descarregue e assine</h3>
+        <p>Geramos automaticamente a carta de alteração de mediador já preenchida. Descarregue-a em PDF e assine.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Envie os documentos</h3>
+        <p>Carregue a carta assinada e os documentos de identificação. Tratamos do resto junto da seguradora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIRED DOCUMENTS -->
+<section class="section benefits-wrap">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-eyebrow">Documentos necessários</div>
+      <h2>O que precisa de ter consigo</h2>
+      <p>Para concluirmos a alteração junto da seguradora, são necessários os seguintes documentos, consoante o tipo de cliente.</p>
+    </div>
+    <div class="docs">
+      <div class="doc-card">
+        <span class="doc-tag">Cliente individual</span>
+        <h3>Particular / pessoa singular</h3>
+        <ul class="doc-list">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Carta de alteração de mediador assinada (gerada nesta página).</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cópia do Cartão de Cidadão do titular da(s) apólice(s).</li>
+        </ul>
+      </div>
+      <div class="doc-card">
+        <span class="doc-tag">Cliente empresa</span>
+        <h3>Empresa / pessoa coletiva</h3>
+        <ul class="doc-list">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Carta de alteração de mediador assinada pelo representante legal.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Certidão permanente da empresa.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Cópia do Cartão de Cidadão da pessoa responsável / representante legal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section form-section" id="formulario">
+  <div class="form-shell">
+    <div class="form-shell-head">
+      <h2>Iniciar a sua mudança de mediador</h2>
+      <p>Preencha os dados, descarregue a carta já preenchida para assinar e envie-nos os documentos.</p>
+    </div>
+    <div class="form-body">
+
+      <div class="form-banner error" id="formBanner"></div>
+
+      <!-- Netlify Form: detected at build time. AJAX multipart submission. -->
+      <form id="mediadorForm" name="alterar-mediador" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="form-name" value="alterar-mediador">
+        <input type="hidden" name="subject" value="Novo pedido de alteração de mediador">
+        <input type="hidden" name="seguradoraDetalhe" id="seguradoraDetalhe">
+        <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
+
+        <!-- Tipo de cliente -->
+        <div class="field-block">
+          <span class="field-legend">Tipo de cliente</span>
+          <div class="toggle-group">
+            <label class="toggle-opt">
+              <input type="radio" name="tipoCliente" value="Individual" checked>
+              <span class="t-title">Individual</span>
+              <span class="t-sub">Pessoa singular</span>
+            </label>
+            <label class="toggle-opt">
+              <input type="radio" name="tipoCliente" value="Empresa">
+              <span class="t-title">Empresa</span>
+              <span class="t-sub">Pessoa coletiva</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Nome -->
+        <div class="field-block">
+          <label for="nome" id="nomeLabel">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="ex: João Manuel Silva" autocomplete="name" required>
+          <div class="error-msg" id="err-nome">Indique o nome completo</div>
+        </div>
+
+        <!-- NIF -->
+        <div class="field-block">
+          <label for="nif">Número de Identificação Fiscal (NIF / NIPC)</label>
+          <input type="text" id="nif" name="nif" placeholder="ex: 123456789" maxlength="9" inputmode="numeric" required>
+          <div class="error-msg" id="err-nif">Indique um NIF/NIPC válido (9 dígitos)</div>
+        </div>
+
+        <!-- Morada -->
+        <div class="field-block">
+          <label for="morada">Morada completa</label>
+          <input type="text" id="morada" name="morada" placeholder="ex: Rua das Flores, 12, 2.º Dto., 1000-001 Lisboa" autocomplete="street-address" required>
+          <div class="error-msg" id="err-morada">Indique a morada completa</div>
+        </div>
+
+        <!-- Seguradora -->
+        <div class="field-block">
+          <label for="seguradora">Seguradora</label>
+          <select id="seguradora" name="seguradora" required>
+            <option value="" disabled selected>Selecione a seguradora</option>
+            <option value="Zurich">Zurich</option>
+            <option value="Allianz">Allianz</option>
+            <option value="Asisa">Asisa</option>
+            <option value="Hiscox">Hiscox</option>
+          </select>
+          <div class="error-msg" id="err-seguradora">Selecione a seguradora</div>
+        </div>
+
+        <!-- Apólices (dinâmico) -->
+        <div class="field-block">
+          <span class="field-legend">Número de apólice(s)</span>
+          <div id="apolicesWrap">
+            <div class="apolice-row">
+              <input type="text" class="apolice-input" placeholder="ex: 0012345678" aria-label="Número de apólice">
+            </div>
+          </div>
+          <div class="error-msg" id="err-apolices" style="margin-top:0;">Indique pelo menos um número de apólice</div>
+          <button type="button" class="btn-add" id="addApolice">
+            <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg> Adicionar outra apólice
+          </button>
+          <!-- Valor consolidado enviado para o Netlify Forms -->
+          <input type="hidden" name="apolices" id="apolicesHidden">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Localidade (para a carta) -->
+        <div class="field-block">
+          <label for="localidade">Localidade (para a carta)</label>
+          <input type="text" id="localidade" name="localidade" placeholder="ex: Lisboa">
+          <div class="field-hint">Usada no cabeçalho da carta (local e data). Opcional.</div>
+        </div>
+
+        <!-- Gerar PDF -->
+        <div class="field-block" style="margin-bottom:0;">
+          <span class="field-legend">Carta de alteração de mediador</span>
+          <p class="pdf-note" style="margin-bottom:14px;">Gere a carta já preenchida com os seus dados, imprima ou abra no telemóvel, e assine no espaço indicado.</p>
+          <div class="pdf-cta-row">
+            <button type="button" class="btn-pdf" id="genPdf">
+              <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Gerar e descarregar carta (PDF)
+            </button>
+          </div>
+          <span class="pdf-done" id="pdfDone"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Carta descarregada. Assine e carregue-a abaixo.</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Uploads -->
+        <span class="field-legend">Enviar documentos</span>
+        <p class="pdf-note" style="margin: -4px 0 18px;">Carregue a carta assinada e os documentos de identificação. Cada ficheiro até 8&nbsp;MB (PDF, JPG ou PNG).</p>
+
+        <div class="upload-field">
+          <span class="up-label">Carta de alteração de mediador assinada
+            <small>O PDF gerado acima, depois de assinado.</small>
+          </span>
+          <label class="file-drop" data-target="cartaAssinada">
+            <input type="file" name="cartaAssinada" accept=".pdf,.jpg,.jpeg,.png" data-file>
+            <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span class="fd-text"><b>Carregar carta assinada</b> ou arraste o ficheiro para aqui</span>
+          </label>
+        </div>
+
+        <div class="upload-field">
+          <span class="up-label">Cartão de Cidadão
+            <small>Do titular (individual) ou da pessoa responsável (empresa).</small>
+          </span>
+          <label class="file-drop" data-target="cartaoCidadao">
+            <input type="file" name="cartaoCidadao" accept=".pdf,.jpg,.jpeg,.png" data-file>
+            <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span class="fd-text"><b>Carregar Cartão de Cidadão</b> ou arraste o ficheiro para aqui</span>
+          </label>
+        </div>
+
+        <div class="upload-field empresa-only" id="certidaoField">
+          <span class="up-label">Certidão permanente <small>Obrigatória para clientes empresa (pessoa coletiva).</small></span>
+          <label class="file-drop empresa-only-drop" data-target="certidaoPermanente">
+            <input type="file" name="certidaoPermanente" accept=".pdf,.jpg,.jpeg,.png" data-file>
+            <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+            <span class="fd-text"><b>Carregar certidão permanente</b> ou arraste o ficheiro para aqui</span>
+          </label>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Contacto -->
+        <div class="field-block">
+          <label for="email">Email de contacto</label>
+          <input type="email" id="email" name="email" placeholder="ex: nome@email.com" autocomplete="email" required>
+          <div class="error-msg" id="err-email">Indique um email válido</div>
+        </div>
+        <div class="field-block">
+          <label for="telefone">Telemóvel <span style="font-weight:400;text-transform:none;color:var(--muted);">(opcional)</span></label>
+          <input type="tel" id="telefone" name="telefone" placeholder="ex: 912 345 678" inputmode="tel" autocomplete="tel">
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="spinner"></span>
+          <span class="btn-text">Enviar pedido de alteração</span>
+        </button>
+
+        <p class="privacy-note">Ao enviar, os seus dados e documentos são tratados pela Adler &amp; Rochefort exclusivamente para processar a alteração de mediador, nos termos da nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+      </form>
+
+      <!-- Success -->
+      <div class="form-success" id="formSuccess">
+        <div class="ok-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+        <h3>Pedido recebido com sucesso</h3>
+        <p>Recebemos o seu pedido de alteração de mediador e os documentos. A nossa equipa irá analisá-lo e comunicar com a seguradora. Entraremos em contacto consigo em breve.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-wrap">
+  <div class="section-inner" style="max-width:780px;">
+    <div class="section-head">
+      <div class="section-eyebrow">Perguntas frequentes</div>
+      <h2>Dúvidas sobre a mudança de mediador</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Mudar de mediador altera o meu seguro ou o preço? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+        <div class="faq-a"><p>Não. A apólice, a seguradora, as coberturas e o prémio mantêm-se exatamente iguais. Altera-se apenas o mediador que passa a gerir e acompanhar o seu contrato.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Tenho de cancelar a apólice atual? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+        <div class="faq-a"><p>Não. Não há qualquer cancelamento nem perda de antiguidade. A alteração produz efeitos a partir do próximo vencimento do contrato, conforme previsto na lei.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso transferir várias apólices ao mesmo tempo? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+        <div class="faq-a"><p>Sim. Use o botão "Adicionar outra apólice" para indicar todas as apólices que pretende transferir. Todas ficam incluídas na mesma carta.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quanto custa? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+        <div class="faq-a"><p>A mudança de mediador é totalmente gratuita e não tem qualquer impacto no pagamento dos seus prémios.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
+      <p class="footer-brand-desc">Mediador de seguros especializado em proteção empresarial e individual. Acompanhamento dedicado e tecnologia ao serviço da gestão das suas apólices.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Mudar de mediador</div>
+      <ul class="footer-col-links">
+        <li><a href="#formulario">Iniciar mudança</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#formulario">Documentos necessários</a></li>
+        <li><a href="/">Página inicial</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <ul class="footer-col-links">
+        <li><a href="tel:+351928226570">+351 928 226 570</a></li>
+        <li><a href="mailto:hugo@adlerrochefort.com">hugo@adlerrochefort.com</a></li>
+        <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Adler &amp; Rochefort &middot; Todos os direitos reservados</div>
+    <div class="footer-legal">
+      <a href="/politica-de-privacidade">Política de Privacidade</a>
+      <a href="/termos-e-condicoes">Termos e Condições</a>
+      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+    </div>
+  </div>
+  <div class="footer-regulatory">
+    <p>Adler &amp; Rochefort é uma marca comercial da Ownizo Unipessoal LDA.</p>
+    <p>Ownizo Unipessoal Lda está registada na Autoridade de Supervisão de Seguros e Fundos de Pensões (ASF) com o n.º 425591790/3.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script>
+(function () {
+  // ---------- helpers ----------
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('mediadorForm');
+  var banner = $('formBanner');
+
+  // ---------- dados legais completos de cada seguradora ----------
+  // Cada entrada é a designação e morada/registo da seguradora, conforme
+  // deve constar na carta de alteração de mediador (zona "À").
+  var SEGURADORAS = {
+    'Zurich': [
+      'Zurich Insurance Europe AG, Sucursal em Portugal',
+      'Registo: Cons. Reg. Comercial de Lisboa',
+      'NIPC: 980 420 636',
+      'Morada: R. Barata Salgueiro, 41, 1269-058 Lisboa, sucursal da Zurich Insurance Europe AG, Sociedade Registada na Alemanha',
+      'Sede: Platz der Einheit 2, 60327 Frankfurt am Main, Alemanha',
+      'Capital Social Autorizado: 125.000.000,00 Euros',
+      'Capital Social Realizado: 8.158.160,00 Euros.'
+    ],
+    'Allianz': [
+      'Companhia de Seguros Allianz Portugal, S.A.',
+      'Rua Andrade Corvo, 32 - 1069-014 Lisboa',
+      'NIPC 500 069 514'
+    ],
+    'Asisa': [
+      'ASISA - ASISTENCIA SANITARIA INTERPROVINCIAL DE SEGUROS, S.A.U. - Sucursal em Portugal, com sede na Calle Juan Ignacio Luca de Tena, n.º 12, 28027, Madrid, Espanha, a operar em Portugal através da sua sucursal em Portugal com sede na Avenida Duque de Ávila, N.º 185-A, 1050-126 Lisboa, registada junto da Conservatória do Registo Comercial sob o número único de pessoa coletiva e identificação fiscal 980602513.'
+    ],
+    'Hiscox': [
+      'Hiscox S.A. - Sucursal em Portugal',
+      'Praça Duque de Saldanha n.º 1, 1050-094 Lisboa, Portugal.'
+    ]
+  };
+
+  function setError(id, on) {
+    var input = $(id);
+    var msg = $('err-' + id);
+    if (input) input.classList.toggle('error', on);
+    if (msg) msg.style.display = on ? 'block' : 'none';
+  }
+
+  // ---------- tipo de cliente: ajusta label do nome + campo certidão ----------
+  var nomeLabel = $('nomeLabel');
+  var certidaoField = $('certidaoField');
+  function tipoCliente() {
+    var sel = form.querySelector('input[name="tipoCliente"]:checked');
+    return sel ? sel.value : 'Individual';
+  }
+  function applyTipo() {
+    var empresa = tipoCliente() === 'Empresa';
+    nomeLabel.textContent = empresa ? 'Nome / denominação social da empresa' : 'Nome completo';
+    $('nome').placeholder = empresa ? 'ex: Exemplo Comércio, Lda.' : 'ex: João Manuel Silva';
+    certidaoField.style.display = empresa ? 'block' : 'none';
+  }
+  form.querySelectorAll('input[name="tipoCliente"]').forEach(function (r) {
+    r.addEventListener('change', applyTipo);
+  });
+  applyTipo();
+
+  // ---------- apólices dinâmicas ----------
+  var apolicesWrap = $('apolicesWrap');
+  $('addApolice').addEventListener('click', function () {
+    var row = document.createElement('div');
+    row.className = 'apolice-row';
+    row.innerHTML =
+      '<input type="text" class="apolice-input" placeholder="ex: 0012345678" aria-label="Número de apólice">' +
+      '<button type="button" class="apolice-remove" aria-label="Remover apólice">&times;</button>';
+    row.querySelector('.apolice-remove').addEventListener('click', function () {
+      row.remove();
+    });
+    apolicesWrap.appendChild(row);
+    row.querySelector('input').focus();
+  });
+
+  function collectApolices() {
+    var vals = [];
+    apolicesWrap.querySelectorAll('.apolice-input').forEach(function (i) {
+      var v = i.value.trim();
+      if (v) vals.push(v);
+    });
+    return vals;
+  }
+
+  // clear errors on input
+  form.querySelectorAll('input, select').forEach(function (i) {
+    i.addEventListener('input', function () {
+      i.classList.remove('error');
+      banner.classList.remove('error');
+      banner.style.display = 'none';
+    });
+  });
+
+  // ---------- file drop feedback ----------
+  document.querySelectorAll('.file-drop input[type="file"]').forEach(function (input) {
+    input.addEventListener('change', function () {
+      var drop = input.closest('.file-drop');
+      var text = drop.querySelector('.fd-text');
+      if (input.files && input.files.length) {
+        drop.classList.add('has-file');
+        drop.classList.remove('error');
+        text.innerHTML = '<b>' + input.files[0].name + '</b> · ficheiro selecionado';
+      } else {
+        drop.classList.remove('has-file');
+      }
+    });
+  });
+
+  // ---------- date helper DD-MM-AAAA ----------
+  function todayPT() {
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2, '0');
+    var mm = String(d.getMonth() + 1).padStart(2, '0');
+    var yy = d.getFullYear();
+    return dd + '-' + mm + '-' + yy;
+  }
+
+  // ---------- validation ----------
+  function validate(forPdf) {
+    var ok = true;
+    var nome = $('nome').value.trim();
+    var nif = $('nif').value.trim();
+    var morada = $('morada').value.trim();
+    var seguradora = $('seguradora').value.trim();
+    var apolices = collectApolices();
+
+    setError('nome', nome.length < 3); if (nome.length < 3) ok = false;
+    setError('nif', !/^\d{9}$/.test(nif)); if (!/^\d{9}$/.test(nif)) ok = false;
+    setError('morada', morada.length < 5); if (morada.length < 5) ok = false;
+    setError('seguradora', seguradora.length < 2); if (seguradora.length < 2) ok = false;
+    var apoErr = $('err-apolices');
+    if (!apolices.length) { apoErr.style.display = 'block'; ok = false; } else { apoErr.style.display = 'none'; }
+
+    if (!forPdf) {
+      var email = $('email').value.trim();
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      setError('email', !emailOk); if (!emailOk) ok = false;
+
+      // Para pessoas coletivas, a certidão permanente é obrigatória.
+      var certInput = form.querySelector('input[name="certidaoPermanente"]');
+      var certDrop = certInput ? certInput.closest('.file-drop') : null;
+      var certOk = !(tipoCliente() === 'Empresa') || (certInput && certInput.files && certInput.files.length);
+      if (certDrop) certDrop.classList.toggle('error', !certOk);
+      if (!certOk) ok = false;
+    }
+    return ok;
+  }
+
+  // ---------- PDF generation ----------
+  $('genPdf').addEventListener('click', function () {
+    if (!validate(true)) {
+      banner.textContent = 'Preencha o nome, NIF, morada, seguradora e pelo menos uma apólice para gerar a carta.';
+      banner.classList.add('error');
+      banner.style.display = 'block';
+      var firstErr = form.querySelector('.error, .error-msg[style*="block"]');
+      (firstErr || form).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      banner.textContent = 'A biblioteca de PDF ainda está a carregar. Aguarde um instante e tente novamente.';
+      banner.classList.add('error');
+      banner.style.display = 'block';
+      return;
+    }
+
+    var nome = $('nome').value.trim();
+    var nif = $('nif').value.trim();
+    var morada = $('morada').value.trim();
+    var seguradora = $('seguradora').value.trim();
+    var apolices = collectApolices();
+    var localidade = $('localidade').value.trim();
+    var localData = (localidade ? localidade + ', ' : '') + todayPT();
+
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    var pageW = 210, marginL = 22, marginR = 22, maxW = pageW - marginL - marginR;
+    var y = 26;
+
+    function line(text, opts) {
+      opts = opts || {};
+      doc.setFont('helvetica', opts.bold ? 'bold' : 'normal');
+      doc.setFontSize(opts.size || 11);
+      var wrapped = doc.splitTextToSize(text, maxW);
+      doc.text(wrapped, marginL, y);
+      y += wrapped.length * (opts.lh || 6);
+      if (opts.after) y += opts.after;
+    }
+
+    // Cabeçalho
+    line('De:', { bold: true });
+    line(nome);
+    line('NIF ' + nif);
+    line(morada, { after: 6 });
+
+    line('À', { bold: true });
+    var segLinhas = SEGURADORAS[seguradora] || [seguradora];
+    segLinhas.forEach(function (l, idx) {
+      line(l, { bold: idx === 0, after: idx === segLinhas.length - 1 ? 6 : 0 });
+    });
+
+    line(localData, { after: 6 });
+
+    var refLabel = 'Ref.ª Contrato(s) n.º(s): ' + apolices.join(', ');
+    line(refLabel, { bold: true, after: 8 });
+
+    line('Exmos. Srs.', { after: 6 });
+
+    line(
+      'De acordo com o que me é facultado no n.º 4 do artigo 40.º do Decreto-Lei n.º 144/2006 de 31 de Julho, ' +
+      'venho solicitar a V. Exas. que, a partir do seu próximo vencimento, o mediador e cobrador do(s) meu(s) ' +
+      'contrato(s) de seguro acima indicado(s), passe a ser OWNIZO UNIPESSOAL LDA., inscrito na Autoridade de ' +
+      'Supervisão de Seguros e Fundos de Pensões na categoria de Agente de Seguros com o Certificado n.º 425591790.',
+      { after: 6, lh: 6 }
+    );
+
+    line('Apresentando os melhores cumprimentos, subscrevo-me com consideração e estima,', { after: 6 });
+    line('De V. Exas.');
+    line('Atentamente', { after: 22 });
+
+    // Assinatura
+    doc.setDrawColor(120);
+    doc.line(marginL, y, marginL + 80, y);
+    y += 6;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(10);
+    doc.text('(Assinatura)', marginL, y);
+    y += 6;
+    doc.setFontSize(11);
+    doc.text(nome, marginL, y);
+
+    var safe = nome.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'cliente';
+    doc.save('alteracao-mediador-' + safe + '.pdf');
+
+    $('pdfDone').classList.add('show');
+  });
+
+  // ---------- submit (Netlify Forms, multipart for files) ----------
+  var submitBtn = $('submitBtn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate(false)) {
+      banner.textContent = 'Verifique os campos assinalados antes de enviar.';
+      banner.classList.add('error');
+      banner.style.display = 'block';
+      var firstErr = form.querySelector('.error');
+      if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // consolida apólices no campo escondido
+    $('apolicesHidden').value = collectApolices().join(', ');
+    // guarda os dados legais completos da seguradora selecionada
+    var segSel = $('seguradora').value.trim();
+    $('seguradoraDetalhe').value = (SEGURADORAS[segSel] || [segSel]).join(' ');
+
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    // FormData inclui texto + ficheiros. Não definir Content-Type (browser trata do boundary).
+    var fd = new FormData(form);
+
+    fetch('/', { method: 'POST', body: fd })
+      .then(function (res) {
+        if (!res.ok) throw new Error('bad status ' + res.status);
+        form.style.display = 'none';
+        $('formSuccess').classList.add('show');
+        $('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      })
+      .catch(function () {
+        banner.textContent = 'Ocorreu um erro ao enviar. Verifique a ligação e o tamanho dos ficheiros (máx. 8 MB) e tente novamente.';
+        banner.classList.add('error');
+        banner.style.display = 'block';
+      })
+      .finally(function () {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      });
+  });
+
+  // ---------- FAQ accordion ----------
+  document.querySelectorAll('.faq-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      q.closest('.faq-item').classList.toggle('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>
