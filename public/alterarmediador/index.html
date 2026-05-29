@@ -168,6 +168,30 @@
   .benefit h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 5px; }
   .benefit p { color: var(--ink2); font-size: 14.5px; }
 
+  /* DEADLINE NOTICE */
+  .notice {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: rgba(217,166,104,0.12); border: 1px solid rgba(217,166,104,0.4);
+    border-left: 4px solid var(--accent); border-radius: 14px;
+    padding: 22px 24px; margin-top: 32px;
+  }
+  .notice-icon {
+    flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(217,166,104,0.2); display: flex; align-items: center; justify-content: center;
+  }
+  .notice-icon svg { width: 22px; height: 22px; fill: var(--accent); }
+  .notice h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 5px; color: var(--ink); }
+  .notice p { color: var(--ink2); font-size: 14.5px; }
+  .notice p a { color: var(--primary); }
+  .form-deadline {
+    display: flex; gap: 11px; align-items: flex-start;
+    background: rgba(217,166,104,0.14); border: 1px solid rgba(217,166,104,0.4);
+    border-radius: 10px; padding: 13px 15px; margin-bottom: 22px;
+    font-size: 13.5px; color: var(--ink2);
+  }
+  .form-deadline svg { width: 18px; height: 18px; fill: var(--accent); flex-shrink: 0; margin-top: 1px; }
+  .form-deadline b { color: var(--ink); }
+
   /* DOCS */
   .docs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .doc-card {
@@ -324,7 +348,7 @@
   .faq-item.open .faq-q svg { transform: rotate(45deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
   .faq-a p { padding: 0 0 22px; color: var(--ink2); font-size: 15px; }
-  .faq-item.open .faq-a { max-height: 320px; }
+  .faq-item.open .faq-a { max-height: 420px; }
 
   /* FOOTER */
   footer { background: var(--footer-bg); padding: 64px 48px 32px; }
@@ -412,6 +436,13 @@
         <div><h3>Tratamos de tudo</h3><p>Depois de receber a sua carta assinada, comunicamos diretamente com a seguradora para concluir a alteração.</p></div>
       </div>
     </div>
+    <div class="notice">
+      <div class="notice-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+      <div>
+        <h3>Atenção ao prazo: até 60 dias antes da renovação</h3>
+        <p>A alteração de mediador só pode ser solicitada até <b>60 dias antes da data de renovação</b> (ou data aniversária) da apólice. A intenção tem de ser comunicada à seguradora com essa antecedência mínima; se o pedido for feito mais tarde, a mudança só produzirá efeitos na renovação seguinte. Este prazo está previsto no artigo 48.º do Regime Jurídico da Distribuição de Seguros e Resseguros (<a href="https://diariodarepublica.pt/dr/detalhe/lei/7-2019-117821873" target="_blank" rel="noopener noreferrer">Lei n.º 7/2019, de 16 de janeiro</a>).</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -482,6 +513,11 @@
     <div class="form-body">
 
       <div class="form-banner error" id="formBanner"></div>
+
+      <div class="form-deadline">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span><b>Prazo:</b> o pedido tem de ser comunicado à seguradora até 60 dias antes da data de renovação da apólice. Após esse prazo, a alteração só produz efeitos na renovação seguinte.</span>
+      </div>
 
       <!-- Netlify Form: detected at build time. AJAX multipart submission. -->
       <form id="mediadorForm" name="alterar-mediador" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
@@ -659,6 +695,10 @@
       <div class="faq-item">
         <button class="faq-q">Mudar de mediador altera o meu seguro ou o preço? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
         <div class="faq-a"><p>Não. A apólice, a seguradora, as coberturas e o prémio mantêm-se exatamente iguais. Altera-se apenas o mediador que passa a gerir e acompanhar o seu contrato.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Até quando posso pedir a alteração de mediador? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+        <div class="faq-a"><p>O pedido tem de ser comunicado à seguradora com uma antecedência mínima de 60 dias relativamente à data de renovação (ou data aniversária) da apólice. É esse o prazo legal previsto no artigo 48.º do Regime Jurídico da Distribuição de Seguros e Resseguros (Lei n.º 7/2019, de 16 de janeiro). Se o pedido for feito com menos de 60 dias, a alteração só produzirá efeitos na renovação seguinte.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Tenho de cancelar a apólice atual? <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
