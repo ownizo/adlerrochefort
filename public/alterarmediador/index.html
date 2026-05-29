@@ -716,6 +716,7 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="/alterarmediador/montserrat-font.js" defer></script>
 <script>
 (function () {
   // ---------- helpers ----------
@@ -748,6 +749,14 @@
       'Hiscox S.A. - Sucursal em Portugal',
       'Praça Duque de Saldanha n.º 1, 1050-094 Lisboa, Portugal.'
     ]
+  };
+
+  // Número de colaborador da Ownizo junto de cada seguradora.
+  var COLABORADOR = {
+    'Allianz': '29133',
+    'Zurich': '12293',
+    'Asisa': 'P8116',
+    'Hiscox': 'HD0002357'
   };
 
   function setError(id, on) {
@@ -893,10 +902,15 @@
     var pageW = 210, marginL = 22, marginR = 22, maxW = pageW - marginL - marginR;
     var y = 26;
 
+    // Toda a carta usa a fonte Montserrat, com o mesmo tamanho e sem negrito.
+    var FONT_SIZE = 11;
+    doc.setFont('Montserrat', 'normal');
+    doc.setFontSize(FONT_SIZE);
+
     function line(text, opts) {
       opts = opts || {};
-      doc.setFont('helvetica', opts.bold ? 'bold' : 'normal');
-      doc.setFontSize(opts.size || 11);
+      doc.setFont('Montserrat', 'normal');
+      doc.setFontSize(FONT_SIZE);
       var wrapped = doc.splitTextToSize(text, maxW);
       doc.text(wrapped, marginL, y);
       y += wrapped.length * (opts.lh || 6);
@@ -922,11 +936,16 @@
 
     line('Exmos. Srs.', { after: 6 });
 
+    var numColaborador = COLABORADOR[seguradora] || '';
+    var fraseColaborador = numColaborador
+      ? ', sendo vosso colaborador com o número ' + numColaborador
+      : '';
     line(
       'De acordo com o que me é facultado no n.º 4 do artigo 40.º do Decreto-Lei n.º 144/2006 de 31 de Julho, ' +
       'venho solicitar a V. Exas. que, a partir do seu próximo vencimento, o mediador e cobrador do(s) meu(s) ' +
       'contrato(s) de seguro acima indicado(s), passe a ser OWNIZO UNIPESSOAL LDA., inscrito na Autoridade de ' +
-      'Supervisão de Seguros e Fundos de Pensões na categoria de Agente de Seguros com o Certificado n.º 425591790.',
+      'Supervisão de Seguros e Fundos de Pensões na categoria de Agente de Seguros com o Certificado n.º 425591790' +
+      fraseColaborador + '.',
       { after: 6, lh: 6 }
     );
 
@@ -938,11 +957,10 @@
     doc.setDrawColor(120);
     doc.line(marginL, y, marginL + 80, y);
     y += 6;
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10);
+    doc.setFont('Montserrat', 'normal');
+    doc.setFontSize(FONT_SIZE);
     doc.text('(Assinatura)', marginL, y);
     y += 6;
-    doc.setFontSize(11);
     doc.text(nome, marginL, y);
 
     var safe = nome.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'cliente';
