@@ -512,7 +512,7 @@
     </div>
     <div class="form-body">
 
-      <div class="form-banner error" id="formBanner"></div>
+      <div class="form-banner" id="formBanner"></div>
 
       <div class="form-deadline">
         <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
@@ -764,6 +764,26 @@
   var form = $('mediadorForm');
   var banner = $('formBanner');
 
+  // ---------- logótipo para o PDF ----------
+  // Pré-carrega o logótipo e converte-o para data URL, para poder ser
+  // inserido na carta gerada pelo jsPDF (que exige a imagem em base64).
+  var LOGO = { dataUrl: null, ratio: 2000 / 707 };
+  (function preloadLogo() {
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function () {
+      try {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+        LOGO.dataUrl = canvas.toDataURL('image/png');
+        LOGO.ratio = img.naturalWidth / img.naturalHeight;
+      } catch (e) { /* sem logótipo, a carta é gerada na mesma */ }
+    };
+    img.src = '/images/logo-adler-rochefort-carta.png';
+  })();
+
   // ---------- dados legais completos de cada seguradora ----------
   // Cada entrada é a designação e morada/registo da seguradora, conforme
   // deve constar na carta de alteração de mediador (zona "À").
@@ -772,10 +792,7 @@
       'Zurich Insurance Europe AG, Sucursal em Portugal',
       'Registo: Cons. Reg. Comercial de Lisboa',
       'NIPC: 980 420 636',
-      'Morada: R. Barata Salgueiro, 41, 1269-058 Lisboa, sucursal da Zurich Insurance Europe AG, Sociedade Registada na Alemanha',
-      'Sede: Platz der Einheit 2, 60327 Frankfurt am Main, Alemanha',
-      'Capital Social Autorizado: 125.000.000,00 Euros',
-      'Capital Social Realizado: 8.158.160,00 Euros.'
+      'Morada: R. Barata Salgueiro, 41, 1269-058 Lisboa, sucursal da Zurich Insurance Europe AG, Sociedade Registada na Alemanha'
     ],
     'Allianz': [
       'Companhia de Seguros Allianz Portugal, S.A.',
@@ -939,8 +956,17 @@
 
     var jsPDF = window.jspdf.jsPDF;
     var doc = new jsPDF({ unit: 'mm', format: 'a4' });
-    var pageW = 210, marginL = 22, marginR = 22, maxW = pageW - marginL - marginR;
+    var pageW = 210, pageH = 297, marginL = 22, marginR = 22, maxW = pageW - marginL - marginR;
     var y = 26;
+
+    // Logótipo centrado no topo, dimensionado para um formato profissional.
+    if (LOGO.dataUrl) {
+      var logoW = 48;                       // largura em mm
+      var logoH = logoW / LOGO.ratio;       // altura proporcional (mantém o rácio)
+      var logoX = (pageW - logoW) / 2;      // centrado horizontalmente
+      doc.addImage(LOGO.dataUrl, 'PNG', logoX, 14, logoW, logoH);
+      y = 14 + logoH + 12;                  // começa o texto abaixo do logótipo
+    }
 
     // Toda a carta usa a fonte Montserrat, com o mesmo tamanho e sem negrito.
     var FONT_SIZE = 11;
@@ -1002,6 +1028,15 @@
     doc.text('(Assinatura)', marginL, y);
     y += 6;
     doc.text(nome, marginL, y);
+
+    // Rodapé legal em letras pequenas, centrado na base da página.
+    doc.setFont('Montserrat', 'normal');
+    doc.setFontSize(7);
+    doc.setTextColor(120);
+    var rodape = 'Adler & Rochefort - marca comercial da Ownizo Unipessoal LDA, NIPC 517169029 e Registo ASF nº 425591790/3. Sede Avenida do Atlântico 16, Escritório 5.07 1990-019 Lisboa.';
+    var rodapeLinhas = doc.splitTextToSize(rodape, pageW - marginL - marginR);
+    doc.text(rodapeLinhas, pageW / 2, pageH - 12, { align: 'center' });
+    doc.setTextColor(0);
 
     var safe = nome.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'cliente';
     doc.save('alteracao-mediador-' + safe + '.pdf');
