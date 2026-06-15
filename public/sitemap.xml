@@ -10,6 +10,12 @@
 
   <!-- PT: Service Pages -->
   <url>
+    <loc>https://adlerrochefort.com/seguros-condominios-algarve/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/seguro-auto/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -29,6 +35,24 @@
   </url>
 
   <!-- PT: Blog Posts -->
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-condominio-obrigatorio-guia/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/obrigacoes-administrador-condominio-seguro/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-condominio-capitais-desatualizados/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://adlerrochefort.com/blog/comparar-propostas-seguro-hotel-erros-comuns/</loc>
     <lastmod>2026-06-01</lastmod>
@@ -269,6 +293,12 @@
   </url>
 
   <!-- EN: Landing Pages -->
+  <url>
+    <loc>https://adlerrochefort.com/en/condominium-insurance-algarve/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://adlerrochefort.com/en/health-insurance-quote/</loc>
     <lastmod>2026-06-15</lastmod>
