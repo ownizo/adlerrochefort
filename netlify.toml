@@ -70,3 +70,50 @@
     Content-Type = "application/javascript"
     Cache-Control = "no-cache, no-store, must-revalidate"
     Service-Worker-Allowed = "/vault/"
+
+
+# ---------------------------------------------------------------------------
+# Short links with UTM tracking (302 redirects)
+# Convention for new short links:
+#   utm_source = channel  (instagram / linkedin / facebook / emailsignature)
+#   utm_medium = format   (social / bio / story / referral)
+#   utm_campaign = theme  (saude-expat / seguro-auto / al-hotelaria /
+#                          comparador-seguradoras / institucional)
+# To add a new short link, copy a block below and adjust from / to.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/go/ig-bio"
+  to = "/en/health-insurance-quote/?utm_source=instagram&utm_medium=bio&utm_campaign=saude-expat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/ig-saude"
+  to = "/blog/seguro-saude-expatriados-portugal/?utm_source=instagram&utm_medium=social&utm_campaign=saude-expat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/ig-story-saude"
+  to = "/en/health-insurance-quote/?utm_source=instagram&utm_medium=story&utm_campaign=saude-expat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/li-al"
+  to = "/blog/seguros-obrigatorios-hotelaria-turismo/?utm_source=linkedin&utm_medium=social&utm_campaign=al-hotelaria"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/fb-home"
+  to = "/?utm_source=facebook&utm_medium=social&utm_campaign=institucional"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/go/email"
+  to = "/?utm_source=emailsignature&utm_medium=referral&utm_campaign=institucional"
+  status = 302
+  force = true

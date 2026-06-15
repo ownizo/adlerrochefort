@@ -1982,6 +1982,7 @@
       <a href="#services">Services</a>
       <a href="#why-us">Why us</a>
       <a href="#adler-pro">Businesses</a>
+      <a href="/en/health-insurance-quote/">Expat Health</a>
     </div>
     <div class="nav-links-right">
       <a href="#adler-one">Individuals</a>
@@ -2008,6 +2009,7 @@
   <a href="#why-us" onclick="toggleMenu()">Why us</a>
   <a href="#adler-pro" onclick="toggleMenu()">Businesses</a>
   <a href="#adler-one" onclick="toggleMenu()">Individuals</a>
+  <a href="/en/health-insurance-quote/" onclick="toggleMenu()">Expat Health</a>
   <a href="#blog" onclick="toggleMenu()">Insights</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
   <div class="mobile-lang-switcher">
@@ -2054,8 +2056,9 @@
   <div class="hero-right">
     <div class="hero-card">
       <div class="hero-card-eyebrow">Free Analysis · No Obligation</div>
-      <div class="hero-card-title">Find out if your business is truly protected</div>
+      <div class="hero-card-title">Find out if you're truly protected — for businesses and individuals</div>
       <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="free-analysis">
         <div class="form-field">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -2074,6 +2077,10 @@
         </div>
         <button type="submit" class="form-submit">Request Free Analysis →</button>
       </form>
+      <div class="hero-card-success" id="analysisSuccess" style="display:none;text-align:center;padding:24px 0;">
+        <p style="color:#fff;font-weight:600;font-size:18px;margin-bottom:8px;">Request received!</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.5;">Thank you. Our team will get back to you within 24 hours.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -3321,10 +3328,32 @@
     }).then(function() {
       form.style.display = 'none';
       document.getElementById('contactSuccess').classList.add('show');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact_modal' });
     }).catch(function() {
       alert('An error occurred while sending the message. Please try again.');
     });
   });
+
+  // Homepage hero "Free Analysis" form — AJAX submit + GA4 lead event
+  var analysisForm = document.querySelector('form[name="free-analysis"]');
+  if (analysisForm) {
+    analysisForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(analysisForm);
+      fetch('/en/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).then(function() {
+        analysisForm.style.display = 'none';
+        var s = document.getElementById('analysisSuccess');
+        if (s) s.style.display = '';
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'homepage_en' });
+      }).catch(function() {
+        alert('An error occurred while sending. Please try again.');
+      });
+    });
+  }
 
   // Service card toggle
   function toggleService(btn) {
