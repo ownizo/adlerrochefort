@@ -2061,8 +2061,9 @@
   <div class="hero-right">
     <div class="hero-card">
       <div class="hero-card-eyebrow">Análise Gratuita · Sem Compromisso</div>
-      <div class="hero-card-title">Descubra se a sua empresa está verdadeiramente protegida</div>
+      <div class="hero-card-title">Descubra se está verdadeiramente protegido — empresa ou particular</div>
       <form class="hero-card-form" name="analise-gratuita" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="analise-gratuita">
         <div class="form-field">
           <label for="nome">Nome *</label>
           <input type="text" id="nome" name="nome" placeholder="O seu nome" required>
@@ -2081,6 +2082,10 @@
         </div>
         <button type="submit" class="form-submit">Solicitar Análise Gratuita →</button>
       </form>
+      <div class="hero-card-success" id="analiseSuccess" style="display:none;text-align:center;padding:24px 0;">
+        <p style="color:#fff;font-weight:600;font-size:18px;margin-bottom:8px;">Pedido recebido!</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.5;">Obrigado. A nossa equipa entrará em contacto consigo em 24 horas.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -3459,10 +3464,32 @@
     }).then(function() {
       form.style.display = 'none';
       document.getElementById('contactSuccess').classList.add('show');
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact_modal' });
     }).catch(function() {
       alert('Ocorreu um erro ao enviar a mensagem. Por favor tente novamente.');
     });
   });
+
+  // Homepage hero "Análise Gratuita" form — AJAX submit + GA4 lead event
+  var analiseForm = document.querySelector('form[name="analise-gratuita"]');
+  if (analiseForm) {
+    analiseForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(analiseForm);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).then(function() {
+        analiseForm.style.display = 'none';
+        var s = document.getElementById('analiseSuccess');
+        if (s) s.style.display = '';
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'homepage_pt' });
+      }).catch(function() {
+        alert('Ocorreu um erro ao enviar. Por favor tente novamente.');
+      });
+    });
+  }
 
   // Service card toggle
   function toggleService(btn) {
