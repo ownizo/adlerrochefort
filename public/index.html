@@ -2033,16 +2033,17 @@
   <div class="hero-left">
     <div class="hero-eyebrow">Mediação de Seguros · Proteção 360 com Inteligência Artificial</div>
     <h1 class="hero-title">
-      Tecnologia que<br>
-      protege o seu<br>
-      <em>negócio.</em>
+      Mediação de seguros<br>
+      especializada<br>
+      <em>em Portugal.</em>
     </h1>
     <p class="hero-subtitle">
-      A Adler &amp; Rochefort é um mediador de seguros que combina tecnologia e IA com mediação especializada. A nossa plataforma Os Meus Seguros oferece proteção 360 para empresas e simplifica a gestão de seguros para particulares. Menos burocracia, mais proteção.
+      Protecção à medida para particulares, expatriados e empresas. A Adler &amp; Rochefort combina conhecimento local e tecnologia para garantir que está verdadeiramente protegido em Portugal — sem burocracia, sem surpresas.
     </p>
     <div class="hero-actions">
       <a href="#contacto" class="btn-primary">Consulta Gratuita</a>
-      <a href="#servicos" class="btn-ghost">Ver serviços</a>
+      <a href="#adler-one" class="btn-primary">Para Particulares</a>
+      <a href="#adler-pro" class="btn-ghost">Para Empresas</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -2056,6 +2057,10 @@
       <div>
         <div class="hero-stat-num">98%</div>
         <div class="hero-stat-label">Taxa de sinistros resolvidos</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">EN</div>
+        <div class="hero-stat-label">Apoio em inglês</div>
       </div>
     </div>
   </div>
@@ -2080,7 +2085,19 @@
         </div>
         <div class="form-field">
           <label for="empresa">Empresa</label>
-          <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+          <input type="text" id="empresa" name="empresa" placeholder="Empresa (opcional)">
+        </div>
+        <div class="form-field">
+          <label for="tipo_seguro">Tipo de Seguro</label>
+          <select id="tipo_seguro" name="tipo_seguro">
+            <option value="">Seleccione o tipo de seguro...</option>
+            <option value="saude">Seguro de Saúde</option>
+            <option value="automovel">Seguro Automóvel</option>
+            <option value="habitacao">Seguro Habitação</option>
+            <option value="vida">Seguro de Vida / Crédito Habitação</option>
+            <option value="empresarial">Seguro Empresarial</option>
+            <option value="outro">Outro / Ainda não sei</option>
+          </select>
         </div>
         <button type="submit" class="form-submit">Solicitar Análise Gratuita →</button>
       </form>
@@ -2688,7 +2705,6 @@
       <div class="section-eyebrow">Insights &amp; Análises</div>
       <h2 class="section-title">O que ninguém lhe diz<br><em>sobre o seu seguro</em></h2>
     </div>
-    <a href="#blog" class="btn-primary" style="background:var(--primary);flex-shrink:0;">Ver todos os artigos</a>
   </div>
 
   <div class="blog-grid">
@@ -3174,6 +3190,15 @@
       </div>
     </a>
 
+  </div>
+  <div class="blog-toggle-wrapper" style="text-align: center; margin-top: 40px;">
+    <button
+      id="blog-toggle-btn"
+      class="btn-primary blog-toggle-btn"
+      onclick="toggleBlog()"
+      aria-expanded="false">
+      VER MAIS ARTIGOS
+    </button>
   </div>
 </section>
 
@@ -3672,6 +3697,50 @@
     transition: color 0.2s;
   }
   .asf-top-bar a:hover { color: #e0be6a; }
+
+  /* Ocultar artigos do blog a partir do 7.º por defeito */
+  #blog .blog-card:nth-child(n+7) {
+    display: none;
+  }
+  /* Estado expandido — mostrar todos */
+  #blog.blog-expanded .blog-card:nth-child(n+7) {
+    display: flex;
+  }
+
+  /* CTA contextual nos artigos do blog */
+  .blog-cta-box {
+    background-color: var(--cream, #FAF7EE);
+    border: 1px solid var(--border, #E5DFCB);
+    border-left: 4px solid var(--accent, #D9A668);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 40px 0;
+  }
+  .blog-cta-box h3 {
+    color: var(--ink, #4A5A45);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .blog-cta-box p {
+    color: var(--ink2, #637060);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Badge de suporte em inglês */
+  .lang-support-badge {
+    display: inline-block;
+    background-color: rgba(217, 166, 104, 0.12);
+    border: 1px solid rgba(217, 166, 104, 0.35);
+    color: var(--accent, #D9A668);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
 </style>
 <script>
   (function() {
@@ -3685,4 +3754,24 @@
   }
 </script>
   <script defer src="/js/ar-analytics-tracker.js"></script>
+<script>
+function toggleBlog() {
+  const blogSection = document.getElementById('blog');
+  const btn = document.getElementById('blog-toggle-btn');
+  const isExpanded = blogSection.classList.contains('blog-expanded');
+  const isPT = !location.pathname.startsWith('/en') &&
+    (document.documentElement.lang || '').toLowerCase().indexOf('en') !== 0;
+
+  if (isExpanded) {
+    blogSection.classList.remove('blog-expanded');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = isPT ? 'VER MAIS ARTIGOS' : 'LOAD MORE ARTICLES';
+    blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    blogSection.classList.add('blog-expanded');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = isPT ? 'VER MENOS ARTIGOS' : 'SHOW LESS';
+  }
+}
+</script>
 </body></html>
