@@ -1807,6 +1807,50 @@
     transition: color 0.2s;
   }
   .asf-top-bar a:hover { color: #e0be6a; }
+
+  /* Hide blog articles from the 7th by default */
+  #blog .blog-card:nth-child(n+7) {
+    display: none;
+  }
+  /* Expanded state — show all */
+  #blog.blog-expanded .blog-card:nth-child(n+7) {
+    display: flex;
+  }
+
+  /* Contextual CTA box inside blog articles */
+  .blog-cta-box {
+    background-color: var(--cream, #FAF7EE);
+    border: 1px solid var(--border, #E5DFCB);
+    border-left: 4px solid var(--accent, #D9A668);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 40px 0;
+  }
+  .blog-cta-box h3 {
+    color: var(--ink, #4A5A45);
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .blog-cta-box p {
+    color: var(--ink2, #637060);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+
+  /* English-speaking support badge */
+  .lang-support-badge {
+    display: inline-block;
+    background-color: rgba(217, 166, 104, 0.12);
+    border: 1px solid rgba(217, 166, 104, 0.35);
+    color: var(--accent, #D9A668);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
 </style>
 
 <!-- Schema.org Structured Data -->
@@ -2028,16 +2072,17 @@
   <div class="hero-left">
     <div class="hero-eyebrow">Insurance Broker · AI-Powered 360 Protection</div>
     <h1 class="hero-title">
-      Technology that<br>
-      protects your<br>
-      <em>business.</em>
+      Expert insurance<br>
+      brokerage<br>
+      <em>in Portugal.</em>
     </h1>
     <p class="hero-subtitle">
-      Adler &amp; Rochefort is an AI-powered insurance broker combining expert brokerage with intelligent technology. Our Os Meus Seguros platform delivers 360 protection for businesses and simplifies insurance management for individuals. Less paperwork, more protection.
+      Tailored protection for expats, individuals and businesses. Adler &amp; Rochefort combines local expertise and technology to ensure you are truly protected in Portugal — in English, from day one.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Free Consultation</a>
-      <a href="#services" class="btn-ghost">View services</a>
+      <a href="#adler-one" class="btn-primary">For Individuals &amp; Expats</a>
+      <a href="#adler-pro" class="btn-ghost">For Businesses</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -2052,11 +2097,16 @@
         <div class="hero-stat-num">98%</div>
         <div class="hero-stat-label">Claims resolution rate</div>
       </div>
+      <div>
+        <div class="hero-stat-num">EN</div>
+        <div class="hero-stat-label">English-speaking team</div>
+      </div>
     </div>
   </div>
 
   <div class="hero-right">
     <div class="hero-card">
+      <div class="lang-support-badge">English-speaking team · Bilingual support</div>
       <div class="hero-card-eyebrow">Free Analysis · No Obligation</div>
       <div class="hero-card-title">Find out if you're truly protected — for businesses and individuals</div>
       <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true">
@@ -2075,7 +2125,19 @@
         </div>
         <div class="form-field">
           <label for="company">Company</label>
-          <input type="text" id="company" name="company" placeholder="Company name">
+          <input type="text" id="company" name="company" placeholder="Company (optional)">
+        </div>
+        <div class="form-field">
+          <label for="insurance_type">Type of Insurance</label>
+          <select id="insurance_type" name="insurance_type">
+            <option value="">Select insurance type...</option>
+            <option value="health">Health Insurance</option>
+            <option value="car">Car Insurance</option>
+            <option value="home">Home Insurance</option>
+            <option value="life">Life / Mortgage Insurance</option>
+            <option value="business">Business Insurance</option>
+            <option value="other">Other / Not sure yet</option>
+          </select>
         </div>
         <button type="submit" class="form-submit">Request Free Analysis →</button>
       </form>
@@ -2683,7 +2745,6 @@
       <div class="section-eyebrow">Insights &amp; Analysis</div>
       <h2 class="section-title">What businesses<br><em>need to know</em></h2>
     </div>
-    <a href="#blog" class="btn-primary" style="background:var(--primary);flex-shrink:0;">View all articles</a>
   </div>
 
   <div class="blog-grid">
@@ -3000,6 +3061,15 @@
       </div>
     </a>
 
+  </div>
+  <div class="blog-toggle-wrapper" style="text-align: center; margin-top: 40px;">
+    <button
+      id="blog-toggle-btn"
+      class="btn-primary blog-toggle-btn"
+      onclick="toggleBlog()"
+      aria-expanded="false">
+      LOAD MORE ARTICLES
+    </button>
   </div>
 </section>
 
@@ -3414,4 +3484,24 @@
   });
 </script>
   <script defer src="/js/ar-analytics-tracker.js"></script>
+<script>
+function toggleBlog() {
+  const blogSection = document.getElementById('blog');
+  const btn = document.getElementById('blog-toggle-btn');
+  const isExpanded = blogSection.classList.contains('blog-expanded');
+  const isPT = !location.pathname.startsWith('/en') &&
+    (document.documentElement.lang || '').toLowerCase().indexOf('en') !== 0;
+
+  if (isExpanded) {
+    blogSection.classList.remove('blog-expanded');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = isPT ? 'VER MAIS ARTIGOS' : 'LOAD MORE ARTICLES';
+    blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    blogSection.classList.add('blog-expanded');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = isPT ? 'VER MENOS ARTIGOS' : 'SHOW LESS';
+  }
+}
+</script>
 </body></html>
