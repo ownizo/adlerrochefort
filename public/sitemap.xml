@@ -240,6 +240,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -430,6 +436,12 @@
   <url>
     <loc>https://adlerrochefort.com/en/blog/professional-indemnity-insurance/</loc>
     <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/cyber-insurance-businesses-portugal/</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

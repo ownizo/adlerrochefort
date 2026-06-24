@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A5A45;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#33402F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D9A668;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8C088;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <circle cx="1050" cy="80" r="200" fill="#7A9A6B" opacity="0.08" />
+  <circle cx="150" cy="550" r="180" fill="#7A9A6B" opacity="0.06" />
+  <circle cx="600" cy="315" r="350" fill="#7A9A6B" opacity="0.04" />
+
+  <line x1="80" y1="100" x2="80" y2="530" stroke="#7A9A6B" stroke-width="1" opacity="0.15" />
+  <line x1="1120" y1="100" x2="1120" y2="530" stroke="#7A9A6B" stroke-width="1" opacity="0.15" />
+
+  <!-- shield icon -->
+  <g transform="translate(980, 150)" opacity="0.9">
+    <path d="M70 0 L140 28 L140 80 C140 130 108 158 70 172 C32 158 0 130 0 80 L0 28 Z" fill="#7A9A6B" opacity="0.18" />
+    <path d="M70 18 L122 39 L122 80 C122 118 98 140 70 151 C42 140 18 118 18 80 L18 39 Z" fill="none" stroke="#D9A668" stroke-width="2" opacity="0.6" />
+    <path d="M48 86 L64 102 L96 64" fill="none" stroke="#D9A668" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <rect x="80" y="100" width="2" height="60" fill="url(#accent)" opacity="0.6" />
+
+  <text x="120" y="140" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#D9A668" opacity="0.9">SEGURO DE CIBERSEGURANÇA · EMPRESAS</text>
+
+  <text x="120" y="215" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">Proteja a sua empresa</text>
+  <text x="120" y="275" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">contra ataques e fugas</text>
+  <text x="120" y="335" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">de dados</text>
+
+  <g transform="translate(120, 390)">
+    <rect width="58" height="58" rx="6" fill="#7A9A6B" opacity="0.18" />
+    <text x="29" y="38" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" fill="#D9A668" text-anchor="middle">360º</text>
+  </g>
+  <text x="200" y="415" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" opacity="0.85">Hiscox CyberClear 360º · Parceiro Adler &amp; Rochefort</text>
+  <text x="200" y="442" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.55">Resposta a incidentes 24/7 · RGPD · Extorsão cibernética</text>
+
+  <rect x="80" y="490" width="1040" height="1" fill="#7A9A6B" opacity="0.15" />
+  <text x="120" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.35" letter-spacing="2">ADLER &amp; ROCHEFORT · MEDIAÇÃO DE SEGUROS</text>
+
+  <text x="1080" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="11" fill="#D9A668" opacity="0.5" letter-spacing="1" text-anchor="end">adlerrochefort.com</text>
+</svg>
