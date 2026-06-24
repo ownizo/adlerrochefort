@@ -3,7 +3,7 @@
   <!-- PT: Homepage -->
   <url>
     <loc>https://adlerrochefort.com/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -276,6 +276,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- PT: Utility Pages -->
+  <url>
+    <loc>https://adlerrochefort.com/descarregar/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- PT: Legal Pages -->
   <url>
     <loc>https://adlerrochefort.com/politica-de-privacidade/</loc>
@@ -293,7 +301,7 @@
   <!-- EN: Homepage -->
   <url>
     <loc>https://adlerrochefort.com/en/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
