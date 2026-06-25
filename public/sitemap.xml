@@ -3,6 +3,9 @@
   <!-- PT: Homepage -->
   <url>
     <loc>https://adlerrochefort.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +13,7 @@
 
   <!-- PT: Service Pages -->
   <url>
-    <loc>https://adlerrochefort.com/seguros-condominios-algarve/</loc>
+    <loc>https://adlerrochefort.com/alterarmediador/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -22,13 +25,19 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/seguros-empresas-lagos/</loc>
+    <loc>https://adlerrochefort.com/seguros-condominios-algarve/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-condominios-algarve/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/condominium-insurance-algarve/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/condominium-insurance-algarve/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/alterarmediador/</loc>
+    <loc>https://adlerrochefort.com/seguros-empresas-lagos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-empresas-lagos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -36,241 +45,374 @@
 
   <!-- PT: Blog Posts -->
   <url>
-    <loc>https://adlerrochefort.com/blog/seguro-condominio-obrigatorio-guia/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/obrigacoes-administrador-condominio-seguro/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-condominio-capitais-desatualizados/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/comparar-propostas-seguro-hotel-erros-comuns/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/alojamento-local-propriedade-horizontal-condominio/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-multiriscos-hotel-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/rc-exploracao-unidades-turisticas/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguros-turismo-rural-hoteis-boutique/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/hotel-fenomenos-climaticos-extremos/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-alojamento-local-decreto-lei-76-2024/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-rc-multirriscos-alojamento-local/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/quanto-custa-seguro-alojamento-local/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://adlerrochefort.com/blog/20-anos-turismo-seguros-hotelaria/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-auto-expatriados/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-tvde-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/20-anos-turismo-seguros-hotelaria/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/20-years-tourism-hospitality-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/20-anos-turismo-seguros-hotelaria/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/adler-pro-plataforma-saas/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-automovel-guia-completo/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-saude-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/adler-pro-plataforma-saas/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/adler-pro-saas-platform/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/adler-pro-plataforma-saas/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/allianz-april-medis-health-insurance-portugal-2026/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/seguro-habitacao-proteger-casa/</loc>
+    <loc>https://adlerrochefort.com/blog/alojamento-local-propriedade-horizontal-condominio/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/alojamento-local-propriedade-horizontal-condominio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/alojamento-local-propriedade-horizontal-condominio/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/</loc>
+    <loc>https://adlerrochefort.com/blog/comparar-propostas-seguro-hotel-erros-comuns/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/comparar-propostas-seguro-hotel-erros-comuns/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/comparar-propostas-seguro-hotel-erros-comuns/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/seguros-empresas-distribuicao/</loc>
+    <loc>https://adlerrochefort.com/blog/hotel-fenomenos-climaticos-extremos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/hotel-fenomenos-climaticos-extremos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/hotel-fenomenos-climaticos-extremos/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/revisao-apolice-empresarial/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-individual-automovel/</loc>
+    <loc>https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/american-investment-luxury-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/multirriscos-habitacao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/multirriscos-habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/multirriscos-habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/responsabilidade-civil-profissional/</loc>
+    <loc>https://adlerrochefort.com/blog/obrigacoes-administrador-condominio-seguro/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/obrigacoes-administrador-condominio-seguro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/obrigacoes-administrador-condominio-seguro/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/</loc>
+    <loc>https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/quanto-custa-seguro-alojamento-local/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/quanto-custa-seguro-alojamento-local/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/quanto-custa-seguro-alojamento-local/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/blog/valores-segurados-desatualizados/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/blog/seguro-frota-erros-comuns/</loc>
+    <loc>https://adlerrochefort.com/blog/rc-exploracao-unidades-turisticas/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/rc-exploracao-unidades-turisticas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/rc-exploracao-unidades-turisticas/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/responsabilidade-administradores-seguro-do/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/responsabilidade-administradores-seguro-do/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/responsabilidade-administradores-seguro-do/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/responsabilidade-civil-profissional/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/responsabilidade-civil-profissional/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/responsabilidade-civil-profissional/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/revisao-apolice-empresarial/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/revisao-apolice-empresarial/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/revisao-apolice-empresarial/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-alojamento-local-decreto-lei-76-2024/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-alojamento-local-decreto-lei-76-2024/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-alojamento-local-decreto-lei-76-2024/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-auto-expatriados/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-auto-expatriados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/car-insurance-expatriates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-auto-expatriados/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-automovel-guia-completo/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-automovel-guia-completo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/car-insurance-complete-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-automovel-guia-completo/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/cyber-insurance-businesses-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-condominio-capitais-desatualizados/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-condominio-capitais-desatualizados/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-condominio-capitais-desatualizados/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-condominio-obrigatorio-guia/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-condominio-obrigatorio-guia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-condominio-obrigatorio-guia/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-frota-erros-comuns/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-frota-erros-comuns/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-frota-erros-comuns/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-legalization/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-habitacao-proteger-casa/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-proteger-casa/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-protect-property/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/home-insurance-protect-property/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-individual-automovel/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-individual-automovel/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-multiriscos-hotel-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-multiriscos-hotel-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-multiriscos-hotel-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/seguro-obra-construcao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-obra-construcao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-obra-construcao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-rc-multirriscos-alojamento-local/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-rc-multirriscos-alojamento-local/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-rc-multirriscos-alojamento-local/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/liability-insurance-complementary-therapies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-saude-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-saude-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-tvde-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-tvde-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/tvde-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-tvde-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/bars-restaurants-insurance-claims/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguros-empresas-distribuicao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-empresas-distribuicao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-empresas-distribuicao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguros-turismo-rural-hoteis-boutique/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-turismo-rural-hoteis-boutique/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-turismo-rural-hoteis-boutique/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/valores-segurados-desatualizados/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/valores-segurados-desatualizados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/valores-segurados-desatualizados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -287,12 +429,18 @@
   <!-- PT: Legal Pages -->
   <url>
     <loc>https://adlerrochefort.com/politica-de-privacidade/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/politica-de-privacidade/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/privacy-policy/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/termos-e-condicoes/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/termos-e-condicoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/terms-and-conditions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/terms-and-conditions/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -301,6 +449,9 @@
   <!-- EN: Homepage -->
   <url>
     <loc>https://adlerrochefort.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -308,229 +459,21 @@
 
   <!-- EN: Landing Pages -->
   <url>
+    <loc>https://adlerrochefort.com/en/aima-health-insurance-proof/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/aima-health-insurance-proof/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/aima-health-insurance-proof/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/condominium-insurance-algarve/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/condominium-insurance-algarve/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-condominios-algarve/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/condominium-insurance-algarve/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/health-insurance-quote/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- EN: Blog Posts -->
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/luxury-car-insurance-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/luxury-home-insurance-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/holiday-home-insurance-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/american-investment-luxury-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/20-years-tourism-hospitality-insurance/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/car-insurance-expatriates/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/tvde-insurance-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/bars-restaurants-insurance-claims/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-legalization/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/liability-insurance-complementary-therapies/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/adler-pro-saas-platform/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/business-insurance-policy-review/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/distribution-companies-insurance/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/construction-works-insurance/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/outdated-insured-values/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/professional-indemnity-insurance/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/cyber-insurance-businesses-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/individual-car-insurance/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-multi-risk/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/car-insurance-complete-guide/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/health-insurance-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/allianz-april-medis-health-insurance-portugal-2026/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-protect-property/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- EN: Landing Pages -->
-  <url>
-    <loc>https://adlerrochefort.com/en/expat-insurance-lagos-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- EN: Legal Pages -->
-  <url>
-    <loc>https://adlerrochefort.com/en/privacy-policy/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/terms-and-conditions/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <!-- EN: Visa Insurance Cluster -->
-  <url>
-    <loc>https://adlerrochefort.com/en/expat-visa-insurance-portugal/</loc>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-visa-insurance-portugal/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/expat-visa-insurance-portugal/" />
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/d7-visa-health-insurance/</loc>
@@ -538,7 +481,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/d7-visa-health-insurance/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/expat-insurance-lagos-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-empresas-lagos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/expat-visa-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-visa-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/expat-visa-insurance-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/golden-visa-insurance-portugal/</loc>
@@ -546,15 +506,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/golden-visa-insurance-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/aima-health-insurance-proof/</loc>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/aima-health-insurance-proof/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/aima-health-insurance-proof/" />
+    <loc>https://adlerrochefort.com/en/health-insurance-quote/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/health-insurance-quote/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/schengen-visa-insurance-portugal/</loc>
@@ -562,73 +521,409 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/schengen-visa-insurance-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
+  <!-- EN: Blog Posts -->
   <url>
-    <loc>https://adlerrochefort.com/en/blog/health-insurance-cost-portugal-2026/</loc>
+    <loc>https://adlerrochefort.com/en/blog/20-years-tourism-hospitality-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/20-years-tourism-hospitality-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/20-anos-turismo-seguros-hotelaria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/20-anos-turismo-seguros-hotelaria/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-cost-algarve-price-drivers/</loc>
+    <loc>https://adlerrochefort.com/en/blog/adler-pro-saas-platform/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/adler-pro-plataforma-saas/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/adler-pro-saas-platform/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/adler-pro-plataforma-saas/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/mortgage-life-insurance-foreign-buyers-portugal/</loc>
+    <loc>https://adlerrochefort.com/en/blog/allianz-april-medis-health-insurance-portugal-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/allianz-april-medis-health-insurance-portugal-2026/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/allianz-april-medis-seguro-saude-portugal-2026/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/d7-visa-health-insurance-valid-proof/</loc>
+    <loc>https://adlerrochefort.com/en/blog/american-investment-luxury-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/american-investment-luxury-portugal/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/investimento-americano-luxo-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/retiring-algarve-health-cover-65-plus/</loc>
+    <loc>https://adlerrochefort.com/en/blog/bars-restaurants-insurance-claims/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/bars-restaurants-insurance-claims/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-bares-restaurantes-sinistros/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/sns-vs-private-insurance-expats-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/insurance-claim-portugal-no-portuguese/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/insurance-guide-americans-moving-to-portugal/</loc>
-    <lastmod>2026-06-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/british-expats-brexit-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/british-expats-brexit-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/british-expats-brexit-insurance-portugal/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/second-home-rent-out-holiday-let-standard-home-cover/</loc>
+    <loc>https://adlerrochefort.com/en/blog/business-insurance-policy-review/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/revisao-apolice-empresarial/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/revisao-apolice-empresarial/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/business-insurance-policy-review/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/car-insurance-complete-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-automovel-guia-completo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/car-insurance-complete-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-automovel-guia-completo/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/car-insurance-expatriates/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-auto-expatriados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/car-insurance-expatriates/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-auto-expatriados/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/condominium-insurance-doesnt-cover-contents/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/condominium-insurance-doesnt-cover-contents/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/condominium-insurance-doesnt-cover-contents/" />
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/construction-works-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-obra-construcao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-obra-construcao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/construction-works-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/cyber-insurance-businesses-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/cyber-insurance-businesses-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-ciberseguranca-empresas-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/d7-visa-health-insurance-valid-proof/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/d7-visa-health-insurance-valid-proof/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/d7-visa-health-insurance-valid-proof/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/responsabilidade-administradores-seguro-do/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/responsabilidade-administradores-seguro-do/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/directors-and-officers-insurance-d-o/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/distribution-companies-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-empresas-distribuicao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-empresas-distribuicao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/distribution-companies-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-frota-erros-comuns/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-frota-erros-comuns/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fleet-insurance-common-mistakes/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/health-insurance-cost-portugal-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-cost-portugal-2026/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/health-insurance-cost-portugal-2026/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/health-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-saude-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/holiday-home-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/holiday-home-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/holiday-home-insurance-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-cost-algarve-price-drivers/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-cost-algarve-price-drivers/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/home-insurance-cost-algarve-price-drivers/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-legalization/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-legalization/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-multi-risk/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/multirriscos-habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/multirriscos-habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-multi-risk/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-protect-property/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-proteger-casa/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-protect-property/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/home-insurance-protect-property/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/individual-car-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-individual-automovel/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/individual-car-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/insurance-claim-portugal-no-portuguese/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/insurance-claim-portugal-no-portuguese/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/insurance-claim-portugal-no-portuguese/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/insurance-guide-americans-moving-to-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/insurance-guide-americans-moving-to-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/insurance-guide-americans-moving-to-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/liability-insurance-complementary-therapies/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/liability-insurance-complementary-therapies/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/luxury-car-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/luxury-car-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/luxury-car-insurance-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/luxury-home-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/luxury-home-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/luxury-home-insurance-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-obrigatorios-empresas-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-companies-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguros-obrigatorios-hotelaria-turismo/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mandatory-insurance-hospitality-tourism/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/mortgage-life-insurance-foreign-buyers-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/mortgage-life-insurance-foreign-buyers-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/mortgage-life-insurance-foreign-buyers-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/outdated-insured-values/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/valores-segurados-desatualizados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/valores-segurados-desatualizados/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/outdated-insured-values/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/professional-indemnity-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/responsabilidade-civil-profissional/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/responsabilidade-civil-profissional/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/professional-indemnity-insurance/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/ransomware-portugal-riscos-ciberneticos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/ransomware-portugal-cyber-risks/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/parcerias-imobiliarias-comissoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/real-estate-partnerships-commissions/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/retiring-algarve-health-cover-65-plus/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/retiring-algarve-health-cover-65-plus/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/retiring-algarve-health-cover-65-plus/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/second-home-rent-out-holiday-let-standard-home-cover/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/second-home-rent-out-holiday-let-standard-home-cover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/second-home-rent-out-holiday-let-standard-home-cover/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/sns-vs-private-insurance-expats-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/sns-vs-private-insurance-expats-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/sns-vs-private-insurance-expats-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/tvde-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-tvde-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/tvde-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-tvde-portugal/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- EN: Legal Pages -->
+  <url>
+    <loc>https://adlerrochefort.com/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/politica-de-privacidade/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/privacy-policy/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/terms-and-conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/termos-e-condicoes/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/terms-and-conditions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/terms-and-conditions/" />
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
