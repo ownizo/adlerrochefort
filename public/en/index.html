@@ -1852,6 +1852,68 @@
     border-radius: 20px;
     margin-bottom: 12px;
   }
+
+  /* ═══════════════ MOBILE RESPONSIVENESS FIXES ═══════════════ */
+  /* Images never overflow their container on narrow screens */
+  .nav-logo-img,
+  .team-photo,
+  .blog-card-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Touch targets: minimum 44px for all interactive controls (Apple/Google guidelines) */
+  .service-link,
+  .service-detail-cta,
+  .btn-primary,
+  .btn-ghost,
+  .contact-form-submit {
+    min-height: 44px;
+  }
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; }
+
+  @media (max-width: 1024px) {
+    /* Keep the hero analysis form visible, stacked below the hero text */
+    .hero-right { display: flex; padding: 0 28px 60px; }
+  }
+
+  @media (max-width: 768px) {
+    /* Hero subtitle should not be capped below the available width */
+    .hero-subtitle { max-width: 100%; }
+    /* Allow the hero action buttons to wrap on narrow screens */
+    .hero-actions { flex-wrap: wrap; gap: 16px; }
+    /* Allow the four hero stats to wrap and tighten the gap */
+    .hero-stats { flex-wrap: wrap; gap: 28px 32px; }
+    /* Responsive CTA strip title */
+    .cta-strip-title { font-size: clamp(26px, 6vw, 42px); }
+  }
+
+  @media (max-width: 480px) {
+    /* Tighter hero/section padding on very small screens */
+    .hero-left { padding: 48px 20px; }
+    .hero-right { padding: 0 20px 48px; }
+    .section { padding: 48px 20px; }
+    .blog-section { padding: 48px 20px; }
+    .cta-strip { padding: 48px 20px; }
+    footer { padding: 48px 20px 28px; }
+
+    /* Reduce oversized titles */
+    .hero-title { font-size: 34px; }
+    .section-title { font-size: 30px; }
+    .cta-strip-title { font-size: 26px; }
+
+    /* Stats layout: tighten further */
+    .hero-stats { gap: 22px 24px; }
+    .hero-stat-num { font-size: 30px; }
+
+    /* Buttons go full-width so they remain easy to tap */
+    .hero-actions { gap: 14px; }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-ghost { width: 100%; }
+
+    /* Footer collapses to a single column */
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  }
 </style>
 
 <!-- Schema.org Structured Data -->
