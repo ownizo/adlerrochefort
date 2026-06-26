@@ -1,0 +1,301 @@
+/* ════════════════════════════════════════════════════════════════
+   Adler & Rochefort — Conversion components (EN blog)
+   Shared, namespaced with .ar- to avoid clashing with per-article CSS.
+   Palette mirrors the site theme (sage / gold / cream / ink).
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  --ar-primary: #7A9A6B;
+  --ar-primary-hover: #94B585;
+  --ar-accent: #D9A668;
+  --ar-accent-hover: #c8924f;
+  --ar-ink: #4A5A45;
+  --ar-ink2: #637060;
+  --ar-cream: #FAF7EE;
+  --ar-cream2: #F2EBDA;
+  --ar-border: #E5DFCB;
+  --ar-wa: #25D366;
+  --ar-wa-hover: #1ebe57;
+}
+
+.ar-cv { font-family: 'Montserrat', sans-serif; }
+.ar-cv * { box-sizing: border-box; }
+
+/* ───────── Inline CTA band (intro / mid) ───────── */
+.ar-cta-inline {
+  margin: 40px 0;
+  background: var(--ar-cream);
+  border: 1px solid var(--ar-cream2);
+  border-left: 4px solid var(--ar-accent);
+  border-radius: 12px;
+  padding: 26px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.ar-cta-inline-text { flex: 1 1 280px; }
+.ar-cta-inline-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ar-ink);
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+.ar-cta-inline-sub {
+  font-size: 14px;
+  color: var(--ar-ink2);
+  line-height: 1.5;
+  margin: 0;
+}
+.ar-cta-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ───────── Buttons ───────── */
+.ar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 13px 22px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+}
+.ar-btn-primary { background: var(--ar-accent); color: #fff; }
+.ar-btn-primary:hover { background: var(--ar-accent-hover); transform: translateY(-1px); }
+.ar-btn-wa { background: var(--ar-wa); color: #fff; }
+.ar-btn-wa:hover { background: var(--ar-wa-hover); transform: translateY(-1px); }
+.ar-btn-wa svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
+
+/* ───────── End form section ───────── */
+.ar-cta-form-wrap {
+  margin: 52px 0 0;
+  background: #fff;
+  border: 1px solid var(--ar-border);
+  border-top: 4px solid var(--ar-primary);
+  border-radius: 14px;
+  padding: 36px;
+}
+.ar-cta-form-wrap h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ar-ink);
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+.ar-cta-form-lead {
+  font-size: 15px;
+  color: var(--ar-ink2);
+  line-height: 1.6;
+  margin: 0 0 22px;
+}
+.ar-cta-form-wa {
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ar-cta-form-wa span { font-size: 13px; color: var(--ar-ink2); }
+.ar-cta-form .ar-field { margin-bottom: 16px; }
+.ar-cta-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ar-ink2);
+  margin-bottom: 7px;
+}
+.ar-cta-form input,
+.ar-cta-form select,
+.ar-cta-form textarea {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: var(--ar-ink);
+  background: var(--ar-cream);
+  border: 1px solid var(--ar-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.ar-cta-form textarea { min-height: 96px; resize: vertical; }
+.ar-cta-form input:focus,
+.ar-cta-form select:focus,
+.ar-cta-form textarea:focus { border-color: var(--ar-primary); background: #fff; }
+.ar-cta-form .ar-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ar-cta-form button[type="submit"] {
+  width: 100%;
+  margin-top: 6px;
+  justify-content: center;
+  font-size: 13px;
+  padding: 15px 22px;
+}
+.ar-cta-form-success {
+  display: none;
+  text-align: center;
+  padding: 24px 8px;
+}
+.ar-cta-form-success.show { display: block; }
+.ar-cta-form-success-icon {
+  width: 52px; height: 52px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--ar-primary);
+  display: flex; align-items: center; justify-content: center;
+}
+.ar-cta-form-success-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 2.5; }
+.ar-cta-form-success h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px; color: var(--ar-ink); margin: 0 0 8px;
+}
+.ar-cta-form-success p { font-size: 15px; color: var(--ar-ink2); margin: 0; }
+.ar-form-smallprint {
+  font-size: 12px;
+  color: var(--ar-ink2);
+  opacity: 0.85;
+  line-height: 1.5;
+  margin: 16px 0 0;
+}
+
+/* ───────── Trust strip ───────── */
+.ar-trust-strip {
+  margin: 18px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: center;
+  font-size: 12.5px;
+  color: var(--ar-ink2);
+  line-height: 1.5;
+}
+.ar-trust-strip .ar-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.ar-trust-strip .ar-trust-item::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--ar-primary);
+  flex-shrink: 0;
+}
+
+/* ───────── FAQ ───────── */
+.ar-faq {
+  margin: 52px 0 0;
+}
+.ar-faq h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ar-ink);
+  margin: 0 0 18px;
+}
+.ar-faq-item {
+  border: 1px solid var(--ar-border);
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.ar-faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ar-ink);
+  position: relative;
+  padding-right: 48px;
+}
+.ar-faq-item > summary::-webkit-details-marker { display: none; }
+.ar-faq-item > summary::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ar-accent);
+}
+.ar-faq-item[open] > summary::after { content: '\2212'; }
+.ar-faq-answer {
+  padding: 0 22px 20px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ar-ink2);
+}
+
+/* ───────── Sticky mobile CTA bar ───────── */
+.ar-sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 9000;
+  background: var(--ar-ink);
+  color: #fff;
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.18);
+  transform: translateY(110%);
+  transition: transform 0.3s ease;
+}
+.ar-sticky-cta.show { transform: translateY(0); }
+.ar-sticky-cta-label {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  flex: 1 1 auto;
+}
+.ar-sticky-cta-label small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.ar-sticky-cta .ar-btn { padding: 11px 16px; font-size: 11px; }
+.ar-sticky-cta-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .ar-sticky-cta { display: flex; }
+  .ar-sticky-cta .ar-sticky-wa-text { display: none; }
+  .ar-cta-inline { flex-direction: column; align-items: stretch; padding: 22px; }
+  .ar-cta-inline-actions .ar-btn { flex: 1 1 auto; justify-content: center; }
+  .ar-cta-form-wrap { padding: 26px 20px; }
+  .ar-cta-form .ar-row { grid-template-columns: 1fr; }
+  /* keep page content clear of the fixed bar */
+  body { padding-bottom: 64px; }
+}
