@@ -30,6 +30,11 @@
     Cache-Control = "no-store"
 
 [[headers]]
+  for = "/api/insurance-chat"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
