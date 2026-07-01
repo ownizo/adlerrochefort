@@ -32,7 +32,7 @@
       placeholder: "Type your message...",
       send: "Send",
       intro:
-        "Hi! I'm the insurance assistant for Adler & Rochefort, an ASF-registered broker (no. 425591790/3). I can help you work out what cover makes sense and give you an indicative estimate.",
+        "Hi! I'm the insurance assistant for Adler & Rochefort. I can help you work out what cover makes sense and give you an indicative estimate.",
       privacyNote:
         "Before asking for your name or other personal data, I'll let you know and ask for your consent. Your data is handled confidentially under GDPR — see our",
       privacyLinkText: "Privacy Policy",
