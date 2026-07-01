@@ -11,9 +11,11 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@anthropic-ai/sdk@0.32",
         "npm:@netlify/blobs@^10.7.4",
         "npm:@resvg/resvg-wasm@^2.6.2",
         "npm:@supabase/supabase-js@^2.102.0",
+        "npm:resend@4",
         "npm:satori@0.26"
       ]
     }

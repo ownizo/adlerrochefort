@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
     "@netlify/blobs": "^10.7.4",
     "@resvg/resvg-wasm": "^2.6.2",
     "@supabase/supabase-js": "^2.102.0",
+    "resend": "^4.0.0",
     "satori": "^0.26.0"
   }
 }

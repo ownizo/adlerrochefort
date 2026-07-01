@@ -1,0 +1,226 @@
+(function () {
+  "use strict";
+  if (typeof window === "undefined" || typeof document === "undefined") return;
+
+  var scriptEl = document.currentScript;
+  var lang = ((scriptEl && scriptEl.dataset.lang) || "pt").toLowerCase() === "en" ? "en" : "pt";
+  var topicsAttr = (scriptEl && scriptEl.dataset.topics) || "";
+  var topics = topicsAttr
+    .split(",")
+    .map(function (t) { return t.trim(); })
+    .filter(Boolean);
+
+  var STRINGS = {
+    pt: {
+      launcherLabel: "Fale connosco",
+      title: "Assistente Adler & Rochefort",
+      placeholder: "Escreva a sua mensagem...",
+      send: "Enviar",
+      intro:
+        "Olá! Sou o assistente de seguros da Adler & Rochefort (mediador registado na ASF nº 425591790/3). Posso ajudar a perceber que seguro faz sentido para si e dar-lhe uma estimativa indicativa.",
+      privacyNote:
+        "Antes de lhe pedir nome ou outros dados pessoais, vou informá-lo(a) e pedir o seu consentimento. Os dados são tratados de forma confidencial nos termos do RGPD — consulte a nossa",
+      privacyLinkText: "Política de Privacidade",
+      privacyUrl: "/politica-de-privacidade/",
+      errorGeneric: "Ocorreu um erro. Tente novamente.",
+      closeLabel: "Fechar",
+      typing: "a escrever...",
+    },
+    en: {
+      launcherLabel: "Chat with us",
+      title: "Adler & Rochefort Assistant",
+      placeholder: "Type your message...",
+      send: "Send",
+      intro:
+        "Hi! I'm the insurance assistant for Adler & Rochefort, an ASF-registered broker (no. 425591790/3). I can help you work out what cover makes sense and give you an indicative estimate.",
+      privacyNote:
+        "Before asking for your name or other personal data, I'll let you know and ask for your consent. Your data is handled confidentially under GDPR — see our",
+      privacyLinkText: "Privacy Policy",
+      privacyUrl: "/en/privacy-policy/",
+      errorGeneric: "Something went wrong. Please try again.",
+      closeLabel: "Close",
+      typing: "typing...",
+    },
+  };
+  var t = STRINGS[lang];
+
+  var CSS =
+    "#ar-chat-launcher{position:fixed;right:20px;bottom:20px;z-index:9998;background:#4A5A45;color:#fff;border:none;" +
+    "border-radius:999px;padding:14px 20px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:600;" +
+    "box-shadow:0 6px 20px rgba(0,0,0,.2);cursor:pointer;display:flex;align-items:center;gap:8px;}" +
+    "#ar-chat-launcher:hover{background:#3c4a38;}" +
+    "#ar-chat-panel{position:fixed;right:20px;bottom:90px;z-index:9999;width:360px;max-width:calc(100vw - 40px);" +
+    "height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.25);" +
+    "display:none;flex-direction:column;overflow:hidden;font-family:Arial,Helvetica,sans-serif;}" +
+    "#ar-chat-panel.ar-open{display:flex;}" +
+    "#ar-chat-header{background:#4A5A45;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}" +
+    "#ar-chat-header h3{margin:0;font-size:15px;font-weight:700;}" +
+    "#ar-chat-close{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;line-height:1;padding:0 4px;}" +
+    "#ar-chat-messages{flex:1;overflow-y:auto;padding:14px;background:#F7F6F2;display:flex;flex-direction:column;gap:10px;}" +
+    ".ar-msg{max-width:85%;padding:10px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word;}" +
+    ".ar-msg-assistant{align-self:flex-start;background:#fff;border:1px solid #e4e2dc;color:#2b2b26;}" +
+    ".ar-msg-user{align-self:flex-end;background:#4A5A45;color:#fff;}" +
+    ".ar-msg-note{align-self:center;background:#eef1ec;color:#4A5A45;font-size:12px;text-align:center;border-radius:10px;}" +
+    ".ar-msg-note a{color:#4A5A45;font-weight:700;}" +
+    ".ar-typing{align-self:flex-start;color:#8a887f;font-size:12px;font-style:italic;padding:0 4px;}" +
+    "#ar-chat-form{display:flex;border-top:1px solid #e4e2dc;padding:10px;gap:8px;background:#fff;}" +
+    "#ar-chat-input{flex:1;border:1px solid #ddd;border-radius:20px;padding:9px 14px;font-size:13.5px;font-family:inherit;resize:none;}" +
+    "#ar-chat-input:focus{outline:none;border-color:#4A5A45;}" +
+    "#ar-chat-send{background:#4A5A45;color:#fff;border:none;border-radius:20px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;}" +
+    "#ar-chat-send:disabled{opacity:.5;cursor:default;}" +
+    "@media (max-width:480px){#ar-chat-panel{right:10px;left:10px;width:auto;bottom:80px;}#ar-chat-launcher{right:10px;bottom:10px;}}";
+
+  var styleTag = document.createElement("style");
+  styleTag.textContent = CSS;
+  document.head.appendChild(styleTag);
+
+  var launcher = document.createElement("button");
+  launcher.id = "ar-chat-launcher";
+  launcher.type = "button";
+  launcher.textContent = t.launcherLabel;
+
+  var panel = document.createElement("div");
+  panel.id = "ar-chat-panel";
+  panel.innerHTML =
+    '<div id="ar-chat-header"><h3></h3><button id="ar-chat-close" type="button" aria-label=""></button></div>' +
+    '<div id="ar-chat-messages"></div>' +
+    '<form id="ar-chat-form">' +
+    '<textarea id="ar-chat-input" rows="1" required></textarea>' +
+    '<button id="ar-chat-send" type="submit"></button>' +
+    "</form>";
+
+  document.body.appendChild(launcher);
+  document.body.appendChild(panel);
+
+  panel.querySelector("#ar-chat-header h3").textContent = t.title;
+  var closeBtn = panel.querySelector("#ar-chat-close");
+  closeBtn.textContent = "×";
+  closeBtn.setAttribute("aria-label", t.closeLabel);
+  var input = panel.querySelector("#ar-chat-input");
+  input.placeholder = t.placeholder;
+  var sendBtn = panel.querySelector("#ar-chat-send");
+  sendBtn.textContent = t.send;
+  var messagesEl = panel.querySelector("#ar-chat-messages");
+  var formEl = panel.querySelector("#ar-chat-form");
+
+  var conversation = [];
+  var leadSent = false;
+  var opened = false;
+  var sending = false;
+
+  function appendBubble(role, text) {
+    var div = document.createElement("div");
+    div.className = "ar-msg ar-msg-" + role;
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return div;
+  }
+
+  function appendPrivacyNote() {
+    var div = document.createElement("div");
+    div.className = "ar-msg ar-msg-note";
+    var link = document.createElement("a");
+    link.href = t.privacyUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = t.privacyLinkText;
+    div.appendChild(document.createTextNode(t.privacyNote + " "));
+    div.appendChild(link);
+    div.appendChild(document.createTextNode("."));
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function showTyping() {
+    var div = document.createElement("div");
+    div.className = "ar-typing";
+    div.id = "ar-typing-indicator";
+    div.textContent = t.typing;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function hideTyping() {
+    var el = document.getElementById("ar-typing-indicator");
+    if (el) el.remove();
+  }
+
+  function setSending(value) {
+    sending = value;
+    sendBtn.disabled = value;
+    input.disabled = value;
+  }
+
+  function sendMessage(text) {
+    conversation.push({ role: "user", content: text });
+    appendBubble("user", text);
+    setSending(true);
+    showTyping();
+
+    fetch("/api/insurance-chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ messages: conversation, lang: lang, topics: topics, leadSent: leadSent }),
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        hideTyping();
+        setSending(false);
+        if (!result.ok) {
+          appendBubble("assistant", (result.data && result.data.error) || t.errorGeneric);
+          return;
+        }
+        leadSent = Boolean(result.data.leadSent) || leadSent;
+        var reply = (result.data && result.data.reply) || t.errorGeneric;
+        conversation.push({ role: "assistant", content: reply });
+        appendBubble("assistant", reply);
+      })
+      .catch(function () {
+        hideTyping();
+        setSending(false);
+        appendBubble("assistant", t.errorGeneric);
+      });
+  }
+
+  formEl.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (sending) return;
+    var text = input.value.trim();
+    if (!text) return;
+    input.value = "";
+    sendMessage(text);
+  });
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      formEl.requestSubmit();
+    }
+  });
+
+  function openPanel() {
+    panel.classList.add("ar-open");
+    if (!opened) {
+      opened = true;
+      appendBubble("assistant", t.intro);
+      appendPrivacyNote();
+    }
+    input.focus();
+  }
+
+  function closePanel() {
+    panel.classList.remove("ar-open");
+  }
+
+  launcher.addEventListener("click", function () {
+    if (panel.classList.contains("ar-open")) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  });
+  closeBtn.addEventListener("click", closePanel);
+})();
