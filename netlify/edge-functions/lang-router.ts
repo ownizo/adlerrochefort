@@ -39,8 +39,17 @@ export default async (request: Request, _context: Context) => {
   const primary = accept.split(",")[0].trim().toLowerCase(); // e.g. "en-gb", "de"
   const lang = primary.split("-")[0]; // e.g. "en", "de"
 
+  // Localized expat landings. German/Dutch/French visitors get their own
+  // language landing; every other non-PT language falls through to English.
+  const landing: Record<string, string> = {
+    de: "/de/",
+    nl: "/nl/",
+    fr: "/fr/",
+    en: "/en/",
+  };
+
   if (lang && lang !== "pt") {
-    return Response.redirect(new URL("/en/", url), 302);
+    return Response.redirect(new URL(landing[lang] || "/en/", url), 302);
   }
 
   // Portuguese browser (or unknown) -> continue to the PT homepage (x-default).
