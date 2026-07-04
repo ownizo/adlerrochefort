@@ -78,6 +78,18 @@
 
 
 # ---------------------------------------------------------------------------
+# Contact — the EN site keeps its contact form in the #contact section of the
+# homepage. Resolve the canonical /en/contact path to that section.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/en/contact"
+  to = "/en/#contact"
+  status = 301
+  force = true
+
+
+# ---------------------------------------------------------------------------
 # Short links with UTM tracking (302 redirects)
 # Convention for new short links:
 #   utm_source = channel  (instagram / linkedin / facebook / emailsignature)
