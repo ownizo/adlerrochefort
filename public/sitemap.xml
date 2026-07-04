@@ -1004,4 +1004,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/do-exposure-non-executive-directors-abroad/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/do-exposure-non-executive-directors-abroad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/do-exposure-non-executive-directors-abroad/" />
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
