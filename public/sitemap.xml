@@ -1012,4 +1012,44 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-staff-quarters-guest-annexes-outbuildings/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-staff-quarters-guest-annexes-outbuildings/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/home-staff-quarters-guest-annexes-outbuildings/" />
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/renovating-listed-heritage-property-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/renovating-listed-heritage-property-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/renovating-listed-heritage-property-portugal/" />
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/golf-resort-properties-insurance-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/golf-resort-properties-insurance-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/golf-resort-properties-insurance-portugal/" />
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/property-held-company-structure-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/property-held-company-structure-insurance/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/property-held-company-structure-insurance/" />
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/wine-cellars-home-storage-valuation-cover/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/wine-cellars-home-storage-valuation-cover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/wine-cellars-home-storage-valuation-cover/" />
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
