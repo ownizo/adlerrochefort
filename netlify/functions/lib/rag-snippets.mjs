@@ -116,6 +116,66 @@ export const RAG_SNIPPETS = {
         "individualizado sem teto máximo, rede de reparação de marca, cobertura para eventos/exposições, " +
         "e modelo pay-per-use (prémio calculado pela utilização real, não por uma assunção anual fixa).",
     },
+    auto_colecao: {
+      fonte: "/en/blog/insuring-car-collection-multiple-vehicles-portugal/",
+      texto:
+        "Quando um particular passa a ter três ou mais viaturas em Portugal, apólices individuais " +
+        "separadas deixam de fazer sentido: renovações desalinhadas, bónus que não comunicam entre " +
+        "apólices, capitais desatualizados e o problema de o carro pouco usado pagar como se andasse " +
+        "todos os dias. Uma apólice de coleção (multi-veículo) agrupa todas as viaturas num só contrato, " +
+        "com um único vencimento, valor acordado por viatura, uma condução nomeada alargada e um prémio " +
+        "baseado na utilização real e limitada — normalmente mais barato do que a soma de apólices " +
+        "avulsas. É indicada para quem tem um carro de uso diário, um clássico de fim de semana e uma " +
+        "viatura de exibição, cada um com um perfil de risco diferente.",
+    },
+    auto_classicos: {
+      fonte: "/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/",
+      texto:
+        "Clássicos e viaturas de coleção em Portugal precisam de matrícula regularizada (matrícula " +
+        "portuguesa ou legalização/importação junto do IMT, com número de identificação e inspeção " +
+        "periódica adequada; veículos históricos podem obter matrícula e classificação próprias através " +
+        "de clubes reconhecidos). O ponto crítico é o valor acordado (agreed value): um seguro comum paga " +
+        "o valor de mercado depreciado, que ignora o restauro e a raridade — a apólice de clássico fixa " +
+        "antecipadamente, com base em avaliação, o montante a pagar em perda total. Apólices de uso " +
+        "limitado (limited-use) com quilometragem anual restrita reduzem muito o prémio, exigindo " +
+        "normalmente uma viatura de uso diário separada e garagem fechada.",
+    },
+    nautica_barco: {
+      fonte: "/en/blog/boat-portuguese-waters-flag-mooring-liability/",
+      texto:
+        "Trazer um barco para águas portuguesas envolve três decisões ligadas ao seguro: a bandeira " +
+        "(pavilhão) sob a qual navega e o registo da embarcação, o local de amarração/estadia (marina, " +
+        "fundeadouro ou seco) e a responsabilidade civil. Em Portugal, a responsabilidade civil por danos " +
+        "a terceiros é a base obrigatória para embarcações de recreio, e as marinas exigem normalmente " +
+        "prova de RC como condição do contrato de amarração. A embarcação deve estar registada e a " +
+        "tripulação empregada segue o regime marítimo, não o doméstico. Uma apólice náutica adequada " +
+        "cobre casco e recheio a valor acordado, RC, remoção de destroços, poluição e a área de navegação " +
+        "efetivamente usada — muitos sinistros surgem em marina (amarração, colisão em manobra), não no mar.",
+    },
+    pessoal_domestico_viagem: {
+      fonte: "/en/blog/insurance-private-staff-travel-household/",
+      texto:
+        "O seguro de acidentes de trabalho do pessoal doméstico é escrito para trabalho realizado em " +
+        "Portugal. Quando uma ama, cuidador, motorista ou governanta viaja com a família para outro país " +
+        "— no verão ou entre duas casas no estrangeiro — o âmbito territorial da cobertura passa a ser " +
+        "decisivo: algumas apólices estendem-se a trabalho temporário no estrangeiro por um período " +
+        "limitado, outras não. Deve confirmar-se antecipadamente o âmbito territorial e temporal, a " +
+        "coordenação com a Segurança Social, e a responsabilidade civil por atos do trabalhador enquanto " +
+        "viaja. Tripulação de barco e pessoal empregado através de estruturas societárias seguem regimes " +
+        "próprios (ver /en/blog/insurance-domestic-staff-portugal/).",
+    },
+    homem_chave: {
+      fonte: "/en/blog/key-person-insurance-businesses-abroad/",
+      texto:
+        "O seguro de homem-chave (key person) paga um capital à empresa se um sócio ou colaborador " +
+        "essencial morrer ou ficar incapacitado, cobrindo a perda de faturação, a transição e o " +
+        "reembolso de dívidas garantidas por essa pessoa. Para residentes em Portugal que mantêm " +
+        "negócios no estrangeiro, o desafio é a articulação: quem é o tomador e o beneficiário " +
+        "(a empresa estrangeira ou a estrutura portuguesa), a residência fiscal do segurado, e o " +
+        "tratamento fiscal do prémio e da indemnização em cada jurisdição. Distingue-se do D&O " +
+        "(que cobre a responsabilidade pessoal do administrador) — o homem-chave protege a continuidade " +
+        "financeira da própria empresa.",
+    },
     frota: {
       fonte: "/blog/seguro-frota-erros-comuns/",
       texto:
@@ -537,6 +597,62 @@ export const RAG_SNIPPETS = {
         "cost. A specialist luxury/collector product offers individualised valuation with no maximum " +
         "capital ceiling, marque-approved repair networks, cover for exhibitions/events, and a " +
         "pay-per-use model priced on real annual mileage rather than a flat assumption.",
+    },
+    auto_colecao: {
+      fonte: "/en/blog/insuring-car-collection-multiple-vehicles-portugal/",
+      texto:
+        "Once a private owner in Portugal keeps three or more vehicles, separate individual policies stop " +
+        "making sense: renewals fall out of sync, no-claims bonuses don't talk to each other, insured " +
+        "values drift, and the rarely-driven car pays as if it were used daily. A collection " +
+        "(multi-vehicle) policy groups every vehicle under one contract with a single renewal date, an " +
+        "agreed value per car, a broader named-driver arrangement, and a premium built on real, limited " +
+        "use — usually cheaper than the sum of standalone policies. It fits an owner with a daily driver, " +
+        "a weekend classic and a show car, each with a different risk profile.",
+    },
+    auto_classicos: {
+      fonte: "/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/",
+      texto:
+        "Classic and collector cars in Portugal need their registration (matrícula) in order: a " +
+        "Portuguese plate or legalisation/import through the IMT, with a valid identification number and " +
+        "appropriate periodic inspection; historic vehicles can obtain their own classification and plate " +
+        "through recognised clubs. The critical point is agreed value: an ordinary policy pays depreciated " +
+        "market value, which ignores restoration and rarity — a classic-car policy fixes in advance, based " +
+        "on a valuation, the amount payable on a total loss. Limited-use policies with a capped annual " +
+        "mileage sharply reduce the premium, but typically require a separate daily-use car and locked garage.",
+    },
+    nautica_barco: {
+      fonte: "/en/blog/boat-portuguese-waters-flag-mooring-liability/",
+      texto:
+        "Bringing a boat into Portuguese waters ties three decisions to insurance: the flag it sails " +
+        "under and the vessel's registration, where it is moored or kept (marina, anchorage or dry stack) " +
+        "and civil liability. In Portugal, third-party liability is the mandatory base for pleasure craft, " +
+        "and marinas usually require proof of liability cover as a condition of the berthing contract. The " +
+        "vessel must be registered, and employed crew fall under the maritime regime, not the domestic " +
+        "one. A proper marine policy covers hull and equipment on an agreed-value basis, liability, wreck " +
+        "removal, pollution and the actual cruising area — many claims arise in the marina (berthing, " +
+        "manoeuvring collisions), not at sea.",
+    },
+    pessoal_domestico_viagem: {
+      fonte: "/en/blog/insurance-private-staff-travel-household/",
+      texto:
+        "Domestic-staff workplace-accident insurance is written for work carried out in Portugal. When a " +
+        "nanny, carer, driver or housekeeper travels with the family to another country — for the summer, " +
+        "or between two homes abroad — the territorial scope of the cover becomes decisive: some policies " +
+        "extend to temporary work abroad for a limited period, others do not. Confirm in advance the " +
+        "territorial and time limits, the coordination with Segurança Social, and the household liability " +
+        "for the worker's acts while travelling. Boat crew and staff employed through company structures " +
+        "follow their own regimes (see /en/blog/insurance-domestic-staff-portugal/).",
+    },
+    homem_chave: {
+      fonte: "/en/blog/key-person-insurance-businesses-abroad/",
+      texto:
+        "Key person insurance pays a capital sum to the business if an essential partner or employee dies " +
+        "or is disabled, covering lost revenue, the transition and the repayment of debts they guaranteed. " +
+        "For residents of Portugal who still own businesses abroad, the challenge is coordination: who is " +
+        "the policyholder and beneficiary (the foreign company or the Portuguese structure), the insured " +
+        "person's tax residence, and the tax treatment of premium and payout in each jurisdiction. It " +
+        "differs from D&O (which covers a director's personal liability) — key person protects the " +
+        "company's own financial continuity.",
     },
     frota: {
       fonte: "/en/blog/fleet-insurance-common-mistakes/",
