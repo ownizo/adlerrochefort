@@ -1092,4 +1092,36 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/moving-to-portugal-pre-existing-condition-health-cover/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/moving-to-portugal-pre-existing-condition-health-cover/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/moving-to-portugal-pre-existing-condition-health-cover/" />
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/long-term-care-planning-foreign-residents-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/long-term-care-planning-foreign-residents-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/long-term-care-planning-foreign-residents-portugal/" />
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/medical-evacuation-repatriation-cover-residents-travel-constantly/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/medical-evacuation-repatriation-cover-residents-travel-constantly/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/medical-evacuation-repatriation-cover-residents-travel-constantly/" />
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/international-health-cover-children-school-abroad/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/international-health-cover-children-school-abroad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/international-health-cover-children-school-abroad/" />
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
