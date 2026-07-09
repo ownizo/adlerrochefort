@@ -1220,4 +1220,22 @@
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/watches-jewellery-travelling-worldwide-all-risks/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/blog/watches-jewellery-travelling-worldwide-all-risks/" />
   </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-titulo-imovel-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-titulo-imovel-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/property-title-risk-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-titulo-imovel-portugal/" />
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/property-title-risk-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-titulo-imovel-portugal/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/property-title-risk-portugal/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/blog/seguro-titulo-imovel-portugal/" />
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
