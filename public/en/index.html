@@ -78,16 +78,15 @@
     height: 76px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 24px;
     border-bottom: 1px solid rgba(122,154,107,0.25);
   }
 
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
     text-decoration: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex-shrink: 0;
   }
 
   .nav-logo-img {
@@ -118,13 +117,19 @@
 
   .nav-links-left {
     display: flex; align-items: center; gap: 28px;
+    flex: 1;
+    justify-content: flex-start;
   }
 
   .nav-links-right {
     display: flex; align-items: center; gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-links-left a,
+  .nav-links-right a {
     text-decoration: none;
     font-size: 12px;
     font-weight: 500;
@@ -134,7 +139,9 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--accent); }
+  .nav-links a:hover,
+  .nav-links-left a:hover,
+  .nav-links-right a:hover { color: var(--accent); }
 
   .nav-cta {
     background: var(--primary);
@@ -1508,8 +1515,8 @@
   /* ═══════════════ RESPONSIVE ═══════════════ */
   @media (max-width: 1024px) {
     nav { padding: 0 28px; justify-content: space-between; }
-    .nav-links { display: none; }
-    .nav-logo { position: static; left: auto; transform: none; }
+    .nav-links-left,
+    .nav-links-right { display: none; }
     .nav-burger { display: flex; }
 
     .hero { grid-template-columns: 1fr; }
@@ -2076,28 +2083,26 @@
 <!-- NAV -->
 <div class="asf-top-bar">ASF-registered broker n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
 <nav role="navigation" aria-label="Main navigation">
-  <div class="nav-links">
-    <div class="nav-links-left">
-      <a href="/en/health-insurance-quote/">Health &amp; Visas</a>
-      <a href="#services">Home</a>
-      <a href="#services">Car</a>
-      <a href="/en/condominium-insurance-algarve/">Condominium</a>
-      <a href="/en/relocation-services/">Relocation</a>
-    </div>
-    <div class="nav-links-right">
-      <a href="#why-us">Why us</a>
-      <a href="#blog">Insights</a>
-      <a href="#contact" class="nav-cta">Free Quote</a>
-      <div class="lang-switcher">
-        <a href="/">PT</a>
-        <span class="lang-switcher-sep">|</span>
-        <a href="/en/" class="active">EN</a>
-      </div>
-    </div>
+  <div class="nav-links-left">
+    <a href="/en/health-insurance-quote/">Health &amp; Visas</a>
+    <a href="#services">Home</a>
+    <a href="#services">Car</a>
+    <a href="/en/condominium-insurance-algarve/">Condominium</a>
+    <a href="/en/relocation-services/">Relocation</a>
   </div>
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img">
   </a>
+  <div class="nav-links-right">
+    <a href="#why-us">Why us</a>
+    <a href="#blog">Insights</a>
+    <a href="#contact" class="nav-cta">Free Quote</a>
+    <div class="lang-switcher">
+      <a href="/">PT</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/en/" class="active">EN</a>
+    </div>
+  </div>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
