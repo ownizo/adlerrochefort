@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
-// site. We only act on the "relocation-services" intake form and email a
+// site. We only act on the intake forms listed in HANDLED_FORMS and email a
 // notification to the team via Resend (same flow used elsewhere on the site).
 // -----------------------------------------------------------------------------
 
@@ -22,8 +22,25 @@ const FIELD_LABELS = {
   email: "Email",
   phone: "Phone",
   country: "Country",
+  tax_residence_country: "Country of tax residence",
+  has_nif: "Already has a NIF",
+  has_representative: "Already has a fiscal representative",
   message: "Message",
   gdpr_consent: "GDPR consent",
+};
+
+// Forms handled by this notification flow, with the wording used in the email.
+const HANDLED_FORMS = {
+  "relocation-services": {
+    heading: "New relocation &amp; company services enquiry",
+    intro: "A new submission was received from the Settle in Portugal landing page.",
+    subjectPrefix: "New relocation enquiry",
+  },
+  "fiscal-representation": {
+    heading: "New fiscal representation enquiry",
+    intro: "A new submission was received from the fiscal representation service page.",
+    subjectPrefix: "New fiscal representation enquiry",
+  },
 };
 
 export default async (req) => {
@@ -37,15 +54,16 @@ export default async (req) => {
   const payload = body && body.payload ? body.payload : {};
   const formName = payload.form_name || payload.formName || "";
 
-  // Only handle the relocation intake form; ignore other site forms.
-  if (formName !== "relocation-services") {
+  // Only handle the known intake forms; ignore other site forms.
+  const formConfig = HANDLED_FORMS[formName];
+  if (!formConfig) {
     return new Response("Ignored", { status: 200 });
   }
 
   const data = payload.data || {};
 
   if (!process.env.RESEND_API_KEY) {
-    console.log("RESEND_API_KEY not set — skipping relocation notification email.");
+    console.log("RESEND_API_KEY not set — skipping intake notification email.");
     return new Response("OK", { status: 200 });
   }
 
@@ -63,8 +81,8 @@ export default async (req) => {
   const name = data.full_name || "unknown";
 
   const html = `
-    <h2 style="font-family:Arial,sans-serif;">New relocation &amp; company services enquiry</h2>
-    <p style="font-family:Arial,sans-serif;">A new submission was received from the Settle in Portugal landing page.</p>
+    <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
+    <p style="font-family:Arial,sans-serif;">${formConfig.intro}</p>
     <hr/>
     <div style="font-family:Arial,sans-serif;font-size:14px;color:#333;">${rows}</div>
     <hr/>
@@ -79,11 +97,11 @@ export default async (req) => {
       from: "leads@adlerrochefort.com",
       to: "insurance@adlerrochefort.com",
       reply_to: data.email || undefined,
-      subject: `New relocation enquiry — ${pkg} — ${name}`,
+      subject: `${formConfig.subjectPrefix} — ${pkg} — ${name}`,
       html,
     });
   } catch (err) {
-    console.error("Failed to send relocation notification email:", err);
+    console.error("Failed to send intake notification email:", err);
     // Do not fail the submission pipeline on email errors.
   }
 
