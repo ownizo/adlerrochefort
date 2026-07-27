@@ -19,6 +19,34 @@
     Cache-Control = "no-cache, no-store, must-revalidate"
     X-Robots-Tag = "noindex, nofollow"
 
+# ---------------------------------------------------------------------------
+# Unpublished drafts. Two articles in the fiscal representation cluster are
+# awaiting review by the independent Certified Accountant and must not be
+# indexed. Each page also carries <meta name="robots" content="noindex,
+# nofollow"> and is absent from public/sitemap.xml. Delete the matching block
+# below when the article is approved for publication.
+# ---------------------------------------------------------------------------
+
+[[headers]]
+  for = "/en/blog/fiscal-representation-property-owners-portugal"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/en/blog/fiscal-representation-property-owners-portugal/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/en/blog/nif-fiscal-representation-d7-visa-health-insurance"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/en/blog/nif-fiscal-representation-d7-visa-health-insurance/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 [[headers]]
   for = "/api/vault/*"
   [headers.values]
