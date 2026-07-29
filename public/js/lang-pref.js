@@ -45,6 +45,13 @@
       if (!link) return;
 
       var href = link.getAttribute("href") || "";
+
+      // Localized landings (NL / DE / FR) are outside the PT|EN preference the
+      // homepage router understands — the cookie only stores "pt" or "en", so
+      // recording anything here would pin the visitor to the wrong language.
+      // Leave whatever preference is already stored untouched.
+      if (/^\/(nl|de|fr)(\/|$|[?#])/.test(href)) return;
+
       if (/^\/en(\/|$|[?#])/.test(href)) {
         setLang("en");
       } else if (/^\//.test(href)) {

@@ -27,6 +27,14 @@ const FIELD_LABELS = {
   has_representative: "Already has a fiscal representative",
   message: "Message",
   gdpr_consent: "GDPR consent",
+  // Dutch landing page (/nl/verzekeringen-portugal/). The visitor writes in
+  // Dutch; the labels stay English because the team works in English.
+  naam: "Name",
+  telefoon: "Phone",
+  type_verzekering: "Type of insurance",
+  opmerkingen: "Notes",
+  toestemming: "GDPR consent",
+  lang: "Page language",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -40,6 +48,13 @@ const HANDLED_FORMS = {
     heading: "New fiscal representation enquiry",
     intro: "A new submission was received from the fiscal representation service page.",
     subjectPrefix: "New fiscal representation enquiry",
+  },
+  "nl-offerte-aanvraag": {
+    heading: "New Dutch quote request",
+    intro:
+      "A new submission was received from the Dutch landing page (/nl/verzekeringen-portugal/). " +
+      "The visitor expects a written reply by email within 24 hours — do not call.",
+    subjectPrefix: "New Dutch quote request",
   },
 };
 
@@ -77,8 +92,10 @@ export default async (req) => {
     )
     .join("");
 
-  const pkg = data.package || "—";
-  const name = data.full_name || "unknown";
+  // Each intake form names these two fields differently; fall back across them
+  // so the subject line is meaningful whichever form fired.
+  const pkg = data.package || data.type_verzekering || "—";
+  const name = data.full_name || data.naam || "unknown";
 
   const html = `
     <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
