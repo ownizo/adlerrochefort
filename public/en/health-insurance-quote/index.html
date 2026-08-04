@@ -1914,6 +1914,42 @@
     .lp-form-card { padding: 36px 24px; }
   }
 
+  .lp-steps { list-style: none; counter-reset: lpstep; margin-top: 8px; }
+  .lp-steps li {
+    position: relative; padding-left: 44px; margin-bottom: 20px;
+    font-size: 16px; line-height: 1.7; color: var(--ink2);
+  }
+  .lp-steps li:last-child { margin-bottom: 0; }
+  .lp-steps li::before {
+    counter-increment: lpstep; content: counter(lpstep);
+    position: absolute; left: 0; top: 2px;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--primary); color: var(--white);
+    font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lp-steps li strong, .lp-list li strong { color: var(--ink); }
+  .lp-list { margin: 14px 0 0; padding-left: 22px; }
+  .lp-list li { font-size: 16px; line-height: 1.9; color: var(--ink2); }
+  .lp-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px; font-weight: 600; color: var(--ink);
+    margin: 24px 0 8px;
+  }
+  .lp-card p + p { margin-top: 14px; }
+  .lp-table-wrap { overflow-x: auto; margin-top: 18px; }
+  .lp-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 660px; }
+  .lp-table th, .lp-table td {
+    border: 1px solid var(--border); padding: 12px 14px;
+    text-align: left; vertical-align: top; line-height: 1.6; color: var(--ink2);
+  }
+  .lp-table th {
+    background: var(--cream); color: var(--ink);
+    font-weight: 700; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .lp-table td:first-child { font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .lp-note { font-size: 14px; line-height: 1.7; color: var(--muted); margin-top: 16px; }
 </style>
 
 <!-- FAQ structured data (reflects the visible FAQ section below) -->
@@ -2010,7 +2046,7 @@
 <section class="lp-hero">
   <div class="lp-hero-inner">
     <div class="lp-eyebrow">Expat Health Insurance · Portugal</div>
-    <h1>Health insurance for expats in Portugal — sorted before you arrive</h1>
+    <h1>Expat health insurance in Portugal — compared and arranged in English</h1>
     <p class="lp-hero-sub">Whether you need proof of cover for your visa or AIMA appointment, or private health insurance for faster access once you're here, we compare Allianz, Médis, APRIL and AdvanceCare and handle everything in English.</p>
     <a href="#quote-form" class="btn-primary">Get my free quote (24h)</a>
     <div class="lp-trust">
@@ -2021,12 +2057,6 @@
 
 <!-- SECTIONS -->
 <section class="lp-sections">
-  <div class="lp-sections-inner" style="margin-bottom:24px;">
-    <div class="lp-card">
-      <h2>Visa insurance guides</h2>
-      <p>Need proof for a Portuguese visa or AIMA appointment? Start with our guides to <a href="/en/expat-visa-insurance-portugal/">expat visa insurance in Portugal</a>, <a href="/en/d7-visa-health-insurance/">D7 visa health insurance</a>, <a href="/en/golden-visa-insurance-portugal/">Golden Visa insurance</a>, <a href="/en/aima-health-insurance-proof/">AIMA health insurance proof</a> and <a href="/en/schengen-visa-insurance-portugal/">Schengen visa insurance</a>.</p>
-    </div>
-  </div>
   <div class="lp-sections-inner">
     <div class="lp-card">
       <h2>For your visa &amp; residence permit</h2>
@@ -2090,6 +2120,97 @@
   </div>
 </section>
 
+<!-- HOW IT WORKS / WHAT WE NEED / COMPARISON / VISA / PRE-EXISTING -->
+<section class="lp-sections">
+  <div class="lp-sections-inner">
+
+    <div class="lp-card">
+      <h2>How it works — four steps</h2>
+      <p>Arranging cover through us is a short, predictable process. You do not need a NIF or a Portuguese bank account to start it, and nothing is committed until you have seen the options in writing.</p>
+      <ol class="lp-steps">
+        <li><strong>Send us your details.</strong> Use the form above and tell us your situation — moving to Portugal soon, already living here, renewing or switching a policy, or insuring a family. A sentence is enough; we come back with questions if we need more.</li>
+        <li><strong>We compare the market for your profile.</strong> We are an independent broker registered with the ASF, so we are not tied to a single insurer. We put your profile to the insurers we work with — Allianz, Médis, APRIL and AdvanceCare among them — and establish which of them will underwrite it, and on what terms.</li>
+        <li><strong>You receive a written comparison within 24 hours.</strong> The options arrive side by side, in plain English, with the practical differences set out: how each plan gives you access to care, what it covers and where it stops. Free, and with no obligation to proceed.</li>
+        <li><strong>We handle the application and issue your documents in English.</strong> Once you have chosen, we complete the paperwork with the insurer, guide you through the medical questionnaire, and get you the policy and the certificate you need — in English, ready for a visa file or an AIMA appointment.</li>
+      </ol>
+      <p>After that we remain your broker rather than disappearing at the signature: we manage claims on your behalf, answer questions in English, and review the policy at renewal as your needs and the market change.</p>
+    </div>
+
+    <div class="lp-card">
+      <h2>What we need from you</h2>
+      <p>To produce a quote we need a small amount of information for each person to be insured. This is the whole list — if an insurer needs anything beyond it, we will tell you before you commit to anything.</p>
+      <ul class="lp-list">
+        <li>Full name</li>
+        <li>Date of birth</li>
+        <li>Address</li>
+        <li>Phone number</li>
+        <li>Email address</li>
+        <li>ID document number — citizen card, residence permit or passport</li>
+      </ul>
+      <p>For a family policy we also need the household composition: who is to be insured, and each person's relationship to the main policyholder.</p>
+      <p>If you are still abroad and have neither a Portuguese address nor a NIF, say so in the message field. We can start the process anyway and issue the documents you need for an application before your relocation paperwork is finished.</p>
+    </div>
+
+    <div class="lp-card">
+      <h2>The insurers we compare</h2>
+      <p>We work with insurers across the Portuguese market. The four below are the names expats shortlist most often, and the table shows where each one is strong. There is no single best insurer — which of them suits you depends on where you will actually use the cover, and that is what the comparison establishes.</p>
+      <div class="lp-table-wrap">
+        <table class="lp-table">
+          <thead>
+            <tr>
+              <th scope="col">Insurer</th>
+              <th scope="col">Network strength</th>
+              <th scope="col">Best suited to</th>
+              <th scope="col">International cover</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Allianz</td>
+              <td>A blend of network access for routine care and reimbursement freedom when you want a particular specialist</td>
+              <td>Professionals and families who want cover that works both inside and outside Portugal</td>
+              <td>A core strength — international network reach, with premium tiers built around it</td>
+            </tr>
+            <tr>
+              <td>Médis</td>
+              <td>Portugal's largest private hospital network, through the CUF group, with small copayments when you stay in network</td>
+              <td>Long-term residents and families settled in Portugal who value network convenience</td>
+              <td>Limited — built around care inside Portugal rather than international use</td>
+            </tr>
+            <tr>
+              <td>APRIL</td>
+              <td>Reimbursement model — you choose the provider and claim back, rather than working inside a fixed network</td>
+              <td>Internationally mobile expats and recent arrivals who want English-language service</td>
+              <td>Designed from the ground up for people living outside their home country</td>
+            </tr>
+            <tr>
+              <td>AdvanceCare</td>
+              <td>Portugal's largest health network manager, with over 18,000 contracted providers nationwide and agreements with Lusíadas, Hospital da Luz and HPA</td>
+              <td>Expats outside the major urban centres — the Algarve, Alentejo, Madeira and the Azores</td>
+              <td><!-- TODO-HUGO: confirm whether AdvanceCare-managed plans include any cover outside Portugal, and on what basis. No claim is published anywhere on the site, so this cell is deliberately blank. --></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lp-note">This table describes cover models and network reach only. Premiums, waiting periods, annual limits and exclusions vary by plan and by applicant, so we set them out for your profile in the written comparison instead of publishing them here.</p>
+    </div>
+
+    <div class="lp-card">
+      <h2>Cover for a visa or an AIMA appointment</h2>
+      <p>When the insurance is for an application rather than for day-to-day care, the certificate matters as much as the policy behind it. It needs to identify the insured person, show the policy dates, make clear that cover applies in Portugal, and be legible to a consular officer or an AIMA desk without a long explanation. We issue documentation in English and check it against the file you are submitting before your appointment.</p>
+      <p>Timing is the part people underestimate. Applications get held up when the certificate arrives after the appointment, or when a low-cost travel policy is offered as substitute proof and is not accepted. Tell us your appointment date in the form above and we work backwards from it. Because you do not need a NIF or a Portuguese bank account for us to start, the documents can be ready before the rest of your relocation admin is.</p>
+      <p>What a file needs differs by route. Our guides cover <a href="/en/expat-visa-insurance-portugal/">expat visa insurance in Portugal</a>, <a href="/en/d7-visa-health-insurance/">D7 visa health insurance</a>, <a href="/en/golden-visa-insurance-portugal/">Golden Visa insurance</a>, <a href="/en/aima-health-insurance-proof/">AIMA health insurance proof</a> and <a href="/en/schengen-visa-insurance-portugal/">Schengen visa insurance</a>. If you are unsure which applies to you, just name the visa you are applying for and we will tell you what the documentation has to show.</p>
+    </div>
+
+    <div class="lp-card">
+      <h2>Pre-existing conditions — in brief</h2>
+      <p>Medical history is assessed at application, on a medical questionnaire that forms the basis of the contract. Outcomes vary genuinely between insurers: the same declared history can be accepted by one and loaded or excluded by another, which is why we put it to several of them rather than to one. Full disclosure matters — if relevant history was not declared, a later claim can be refused and the policy cancelled, so declaring it up front is what gets you a reliable answer.</p>
+      <p>For the detail — how underwriting works, what to expect for a specific condition and how to present one — read our guide to <a href="/en/blog/private-health-insurance-pre-existing-condition-portugal/">private health insurance with a pre-existing condition in Portugal</a>.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="lp-faq-section">
   <div class="lp-faq-inner">
@@ -2138,7 +2259,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
-        <li><a href="/en/health-insurance-quote/">Personal Accident</a></li>
+        <li><a href="/en/#services">Personal Accident</a></li>
         <li><a href="/en/blog/liability-insurance-complementary-therapies/">Liability for therapists</a></li>
       </ul>
     </div>
