@@ -118,6 +118,42 @@
 
 
 # ---------------------------------------------------------------------------
+# Retired visa-insurance sub-pages (consolidated August 2026).
+# /en/d7-visa-health-insurance/, /en/golden-visa-insurance-portugal/,
+# /en/aima-health-insurance-proof/ and /en/schengen-visa-insurance-portugal/
+# each repeated the same ~400 words of shared boilerplate around a few
+# route-specific paragraphs, and used lowercase keyword strings as <h1>. All
+# four are now single <h2> sections of the consolidated page below, which keeps
+# the route-specific content and states the shared requirements once.
+# Deep links: #d7, #golden-visa, #aima, #schengen on the target page.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/en/d7-visa-health-insurance/*"
+  to = "/en/expat-visa-insurance-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/golden-visa-insurance-portugal/*"
+  to = "/en/expat-visa-insurance-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/aima-health-insurance-proof/*"
+  to = "/en/expat-visa-insurance-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/schengen-visa-insurance-portugal/*"
+  to = "/en/expat-visa-insurance-portugal/"
+  status = 301
+  force = true
+
+
+# ---------------------------------------------------------------------------
 # Short links with UTM tracking (302 redirects)
 # Convention for new short links:
 #   utm_source = channel  (instagram / linkedin / facebook / emailsignature)

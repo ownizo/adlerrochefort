@@ -394,6 +394,41 @@
   .who-card h3 { font-size: 21px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
   .who-card p { font-size: 17px; line-height: 1.7; color: var(--ink2); }
 
+  /* SERVICES — one block per service, each independently linkable */
+  .service-anchors { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
+  .service-anchors a {
+    font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none; color: var(--ink); background: var(--white);
+    border: 1px solid var(--border); padding: 9px 16px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .service-anchors a:hover { border-color: var(--primary); color: var(--primary); }
+  .services { display: grid; gap: 22px; }
+  .service {
+    background: var(--white); border: 1px solid var(--border);
+    border-left: 4px solid var(--primary); padding: 30px 32px;
+  }
+  .service:nth-child(even) { border-left-color: var(--accent); }
+  .service h2 {
+    font-size: 24px; font-weight: 700; color: var(--ink);
+    margin-bottom: 12px; line-height: 1.25; scroll-margin-top: 88px;
+  }
+  .service p { font-size: 16.5px; line-height: 1.75; color: var(--ink2); }
+  .service p + p { margin-top: 12px; }
+  .service ul { list-style: none; margin-top: 14px; display: grid; gap: 9px; }
+  .service li { font-size: 15.5px; line-height: 1.6; color: var(--ink2); padding-left: 20px; position: relative; }
+  .service li::before {
+    content: ''; position: absolute; left: 0; top: 10px;
+    width: 7px; height: 7px; background: var(--primary); border-radius: 50%;
+  }
+  .service a { color: var(--primary); font-weight: 600; }
+  .service .service-note {
+    font-size: 14.5px; line-height: 1.65; color: var(--ink2);
+    background: var(--cream); border-left: 3px solid var(--accent);
+    padding: 12px 14px; margin-top: 16px;
+  }
+  .service .service-note strong { color: var(--ink); }
+
   /* PACKAGES */
   .packages { background: var(--navy); }
   .packages .section-head h2 { color: var(--white); }
@@ -719,6 +754,62 @@
   </div>
 </section>
 
+<!-- THE SERVICES — one H2 per service, each with its own anchor -->
+<section class="section alt" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The services</span>
+      <h2>What we actually <em>do</em> for you</h2>
+      <p class="lead">Four pieces of paperwork stand between most people and a working life in Portugal. Here is what each one is, and what we do about it. Adler &amp; Rochefort coordinates the process and is your single point of contact; the technical filings are carried out by an independent certified accountant.</p>
+    </div>
+    <div class="service-anchors">
+      <a href="#nif">NIF</a>
+      <a href="#fiscal-representation">Fiscal representation</a>
+      <a href="#company-formation">Company formation</a>
+      <a href="#bank-account">Bank account</a>
+    </div>
+    <div class="services">
+
+      <div class="service">
+        <h2 id="nif">Portuguese NIF (tax number)</h2>
+        <p>The NIF is the number almost everything else depends on. You need it to open a bank account, sign a lease, buy property, set up utilities or register a company — which is why it is the first thing we deal with. You do not have to be living in Portugal, or to have visited, to get one: we apply on your behalf remotely, before you arrive.</p>
+        <p>We collect your documents, hand them to our partner accountant for the filing, and keep you posted until the number is issued. NIF applications are typically completed within a few business days once we have what we need; priority processing is available if your timeline is tighter than that.</p>
+        <p>If your move is driven by a residency visa, the health insurance proof your application needs can be arranged in parallel rather than afterwards — we do not need a NIF or a Portuguese bank account in place before we start. Ask us for a <a href="/en/health-insurance-quote/">health insurance quote for your visa application</a> at the same time as your NIF and the two run side by side.</p>
+      </div>
+
+      <div class="service">
+        <h2 id="fiscal-representation">Fiscal representation</h2>
+        <p>A fiscal representative is the person who receives your correspondence from Finanças while you are a non-resident with a tax relationship in Portugal. It is not always compulsory — non-residents from outside the EU/EEA can either appoint a representative or subscribe to electronic notifications — and it is generally not required once you become a Portuguese tax resident.</p>
+        <p>Where you do want a representative, we provide it through our partner accountant as part of the Essential and Complete packages, or as a standalone service.</p>
+        <div class="service-note"><strong>This is a recurring annual subscription, not a one-off fee.</strong> It costs <strong>€199 per year, VAT included</strong>, and renews annually on the anniversary of the appointment, for as long as you remain a non-resident for Portuguese tax purposes. You are notified in writing before each renewal and may cancel at any time before renewal, in writing, with no penalty. The <a href="#packages">renewal terms are set out in full below</a>.</div>
+        <p>Full detail, including transfers from another representative, is on our <a href="/en/fiscal-representation-portugal/">fiscal representation page</a>.</p>
+      </div>
+
+      <div class="service">
+        <h2 id="company-formation">Company formation (Lda)</h2>
+        <p>If you are investing rather than only moving, the Corporate package takes a Portuguese company from nothing to trading-ready. We coordinate the whole sequence and you deal with one person throughout:</p>
+        <ul>
+          <li>A NIF for each partner, with fiscal representation where a partner is non-resident.</li>
+          <li>Company name approval (certidão de admissibilidade de firma).</li>
+          <li>Incorporation of the company — Lda or sole-shareholder — and its NIPC.</li>
+          <li>Declaration of commencement of activity with the Tax Authority.</li>
+          <li>Registration of management with Social Security.</li>
+          <li>Beneficial owner declaration (RCBE).</li>
+        </ul>
+        <div class="service-note">The formation fee covers setup and coordination only. <strong>Ongoing monthly accounting is mandatory for a Portuguese company and is contracted and paid directly to the certified accountant</strong> — not to Adler &amp; Rochefort. You are free to choose or change your accountant at any time.</div>
+      </div>
+
+      <div class="service">
+        <h2 id="bank-account">Portuguese bank account</h2>
+        <p>Opening an account as a newcomer is rarely difficult in principle and often awkward in practice: it needs your NIF first, it usually needs a Portuguese address or proof of your address abroad, and the requirements differ between banks. We tell you what a given bank will ask for, help you assemble it, and stay involved until the account is open.</p>
+        <p>Bank account assistance is included in the Complete package for individuals, and in the Corporate package for the company account. Because the account depends on the NIF, it is sequenced after it rather than alongside it.</p>
+        <!-- TODO-HUGO: if you want to name the banks we routinely work with, or state which of them accept a non-resident opening remotely, confirm the current position with each bank and add it here. Left generic on purpose — requirements change and we do not want a stale claim on the page. -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PACKAGES -->
 <section class="section packages" id="packages">
   <div class="container">
@@ -1015,8 +1106,9 @@
       <div class="footer-col-title">Relocation</div>
       <ul class="footer-col-links">
         <li><a href="/en/fiscal-representation-portugal/">Fiscal representation</a></li>
-        <li><a href="#packages">NIF &amp; settle-in</a></li>
-        <li><a href="#packages">Company formation</a></li>
+        <li><a href="#nif">NIF &amp; settle-in</a></li>
+        <li><a href="#company-formation">Company formation</a></li>
+        <li><a href="#bank-account">Bank account</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
