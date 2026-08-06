@@ -1,0 +1,43 @@
+{
+  "generated": "run scripts/nap.mjs to refresh",
+  "canonical": {
+    "name": "Adler & Rochefort",
+    "legalName": "Ownizo, Unipessoal Lda.",
+    "telephone": "+351928226570",
+    "telephoneDisplay": "+351 928 226 570",
+    "email": "insurance@adlerrochefort.com",
+    "asf": "425591790/3",
+    "offices": {
+      "lisboa": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. do Atlântico 16, Esc. 5.07",
+        "addressLocality": "Lisboa",
+        "postalCode": "1990-019",
+        "addressCountry": "PT"
+      },
+      "lagos": {
+        "@type": "PostalAddress",
+        "streetAddress": "Varandas de São João 4",
+        "addressLocality": "Lagos",
+        "addressRegion": "Algarve",
+        "postalCode": "8600-324",
+        "addressCountry": "PT"
+      }
+    }
+  },
+  "stats": {
+    "pages": 220,
+    "ldBlocks": 579,
+    "businessNodes": 42,
+    "addressesChecked": 72,
+    "pagesWithVisiblePhone": 218,
+    "pagesWithVisibleEmail": 219,
+    "pagesWithVisibleAddress": 218,
+    "shapeBoth": 30,
+    "shapeLagosOnly": 12,
+    "shapeNoAddress": 0
+  },
+  "issueCount": 0,
+  "byKind": {},
+  "issues": []
+}

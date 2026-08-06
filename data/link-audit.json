@@ -1,0 +1,18 @@
+{
+  "generated": "run scripts/link-audit.mjs to refresh",
+  "totals": {
+    "htmlFiles": 220,
+    "indexedUrls": 213,
+    "brokenLinks": 0,
+    "linksViaRedirect": 0,
+    "orphans": 0,
+    "singleInbound": 0,
+    "deeperThanThreeClicks": 0
+  },
+  "broken": [],
+  "viaRedirect": [],
+  "orphans": [],
+  "singleInbound": [],
+  "deeperThanThreeClicks": [],
+  "maxClickDepth": 3
+}
