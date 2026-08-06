@@ -4,23 +4,53 @@
      the "expat-health-quote" form and post to
      /en/health-insurance-quote/; home pages carry data-endpoint
      (and data-form-label) so they post to /en/home-insurance-quote/
-     instead. No new backend.
+     instead; the Collections & Valuables cluster uses
+     "valuables-review" and posts to /en/private-clients/. No new backend.
    - Shows/hides the sticky mobile CTA bar on scroll.
    ════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
 
   // ───────── Inline lead forms ─────────
+
+  // A checkbox group is required when its first box carries
+  // data-required-group="<name>" (the valuables form uses this for
+  // "What would you like to review?"). Native `required` on a checkbox
+  // demands that box specifically, so the check is done here instead and
+  // reported through the same browser bubble.
+  function groupsSatisfied(form) {
+    var anchors = form.querySelectorAll('[data-required-group]');
+    var ok = true;
+    Array.prototype.forEach.call(anchors, function (anchor) {
+      var group = anchor.getAttribute('data-required-group');
+      var boxes = form.querySelectorAll('[name="' + group + '"]');
+      var checked = Array.prototype.some.call(boxes, function (b) { return b.checked; });
+      anchor.setCustomValidity(checked ? '' : 'Please choose at least one.');
+      if (!checked && ok) { anchor.reportValidity(); ok = false; }
+    });
+    return ok;
+  }
+
   var forms = document.querySelectorAll('form.ar-cta-form');
   Array.prototype.forEach.call(forms, function (form) {
+    // Clear the group message as soon as the visitor ticks anything.
+    Array.prototype.forEach.call(form.querySelectorAll('[data-required-group]'), function (anchor) {
+      var group = anchor.getAttribute('data-required-group');
+      Array.prototype.forEach.call(form.querySelectorAll('[name="' + group + '"]'), function (b) {
+        b.addEventListener('change', function () { anchor.setCustomValidity(''); });
+      });
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!groupsSatisfied(form)) return;
       var situation = (form.querySelector('[name="situation"]') || {}).value || '';
       var propertyUse = (form.querySelector('[name="property-use"]') || {}).value || '';
       var endpoint = form.getAttribute('data-endpoint') || '/en/health-insurance-quote/';
       var label = form.getAttribute('data-form-label') || 'expat_health_quote';
       var data = new FormData(form);
       var btn = form.querySelector('button[type="submit"]');
+      var btnLabel = btn ? btn.textContent : '';
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
       fetch(endpoint, {
@@ -41,7 +71,7 @@
           gtag('event', 'generate_lead', params);
         }
       }).catch(function () {
-        if (btn) { btn.disabled = false; btn.textContent = 'Request my free quote'; }
+        if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
         alert('An error occurred while sending your request. Please try again, or message us on WhatsApp.');
       });
     });
