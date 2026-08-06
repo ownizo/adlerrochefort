@@ -1,8 +1,10 @@
 /* ════════════════════════════════════════════════════════════════
    Adler & Rochefort — Conversion behaviour (EN blog)
-   - Submits inline lead forms through the existing Netlify Forms
-     endpoint (form name "expat-health-quote", same as the
-     /en/health-insurance-quote/ page). No new backend.
+   - Submits inline lead forms through Netlify Forms. Health pages use
+     the "expat-health-quote" form and post to
+     /en/health-insurance-quote/; home pages carry data-endpoint
+     (and data-form-label) so they post to /en/home-insurance-quote/
+     instead. No new backend.
    - Shows/hides the sticky mobile CTA bar on scroll.
    ════════════════════════════════════════════════════════════════ */
 (function () {
@@ -14,11 +16,14 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var situation = (form.querySelector('[name="situation"]') || {}).value || '';
+      var propertyUse = (form.querySelector('[name="property-use"]') || {}).value || '';
+      var endpoint = form.getAttribute('data-endpoint') || '/en/health-insurance-quote/';
+      var label = form.getAttribute('data-form-label') || 'expat_health_quote';
       var data = new FormData(form);
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
-      fetch('/en/health-insurance-quote/', {
+      fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
@@ -30,8 +35,9 @@
         var success = wrap.querySelector('.ar-cta-form-success');
         if (success) success.classList.add('show');
         if (typeof gtag === 'function') {
-          var params = { form_name: 'expat_health_quote', form_location: 'blog_inline' };
+          var params = { form_name: label, form_location: 'blog_inline' };
           if (situation) params.form_situation = situation;
+          if (propertyUse) params.form_property_use = propertyUse;
           gtag('event', 'generate_lead', params);
         }
       }).catch(function () {
