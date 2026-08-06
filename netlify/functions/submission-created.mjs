@@ -16,15 +16,27 @@ function escapeHtml(value) {
   }[c]));
 }
 
+// Checkbox groups (e.g. "review" on the valuables form) arrive as an array.
+function formatValue(value) {
+  return Array.isArray(value) ? value.join(", ") : value;
+}
+
 const FIELD_LABELS = {
   package: "Interested in (package)",
   full_name: "Full name",
+  // The Collections & Valuables form uses the shorter field names below.
+  name: "Full name",
   email: "Email",
   phone: "Phone",
   country: "Country",
   tax_residence_country: "Country of tax residence",
   has_nif: "Already has a NIF",
   has_representative: "Already has a fiscal representative",
+  review: "Would like to review",
+  location: "Where the items are kept",
+  valuation: "Current valuation",
+  "existing-cover": "Existing cover",
+  source: "Submitted from",
   message: "Message",
   gdpr_consent: "GDPR consent",
   // Dutch landing page (/nl/verzekeringen-portugal/). The visitor writes in
@@ -56,6 +68,14 @@ const HANDLED_FORMS = {
       "The visitor expects a written reply by email within 24 hours — do not call.",
     subjectPrefix: "New Dutch quote request",
   },
+  "valuables-review": {
+    heading: "New Collections &amp; Valuables review request",
+    intro:
+      "A new submission was received from the Collections &amp; Valuables cluster " +
+      "(/en/private-clients/ or one of its articles). The visitor expects a written " +
+      "reply within 24 hours — reply by email or WhatsApp, do not call.",
+    subjectPrefix: "New valuables review request",
+  },
 };
 
 export default async (req) => {
@@ -83,19 +103,19 @@ export default async (req) => {
   }
 
   const rows = Object.keys(FIELD_LABELS)
-    .filter((key) => data[key] != null && String(data[key]).trim() !== "")
+    .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map(
       (key) =>
         `<p style="margin:0 0 8px;"><strong>${escapeHtml(FIELD_LABELS[key])}:</strong> ${escapeHtml(
-          data[key]
+          formatValue(data[key])
         )}</p>`
     )
     .join("");
 
   // Each intake form names these two fields differently; fall back across them
   // so the subject line is meaningful whichever form fired.
-  const pkg = data.package || data.type_verzekering || "—";
-  const name = data.full_name || data.naam || "unknown";
+  const pkg = data.package || data.type_verzekering || formatValue(data.review) || "—";
+  const name = data.full_name || data.naam || data.name || "unknown";
 
   const html = `
     <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>

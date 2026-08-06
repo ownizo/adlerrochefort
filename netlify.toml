@@ -154,6 +154,38 @@
 
 
 # ---------------------------------------------------------------------------
+# Collections & Valuables cluster — consolidated URLs
+# The first two point the slugs proposed for standalone underwriter pages at
+# the existing pages, which were extended rather than duplicated.
+# The last two replace articles that were rewritten under a new slug.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/en/blog/hiscox-high-value-home-art-jewellery-portugal/*"
+  to = "/en/blog/hiscox-home-insurance-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/blog/liberty-mutual-non-standard-property-portugal/*"
+  to = "/en/blog/liberty-mutual-home-insurance-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/blog/american-investment-luxury-portugal/*"
+  to = "/en/blog/us-buyers-property-cover-portugal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/blog/boat-portuguese-waters-flag-mooring-liability/*"
+  to = "/en/blog/importing-registering-a-boat-portugal/"
+  status = 301
+  force = true
+
+
+# ---------------------------------------------------------------------------
 # Short links with UTM tracking (302 redirects)
 # Convention for new short links:
 #   utm_source = channel  (instagram / linkedin / facebook / emailsignature)
