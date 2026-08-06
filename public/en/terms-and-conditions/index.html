@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms and Conditions — Adler &amp; Rochefort</title>
-<meta name="description" content="Terms and Conditions for the use of the Adler &amp; Rochefort website. Learn about the rules of use, responsibilities and general conditions of our insurance brokerage services.">
+<meta name="description" content="Terms and Conditions for the use of the Adler &amp; Rochefort website. Learn about the rules of use, responsibilities and general conditions of our insurance mediation services.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://adlerrochefort.com/en/terms-and-conditions/">
   <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/termos-e-condicoes/">
@@ -178,13 +178,14 @@
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
 <nav>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
     <span class="nav-logo-text">Adler <em>&amp;</em> Rochefort</span>
   </a>
   <div class="lang-switcher">
@@ -222,12 +223,12 @@
     <li>Using automated data collection mechanisms (scraping) without consent</li>
   </ul>
 
-  <h2>4. Insurance Brokerage Services</h2>
-  <p>Adler &amp; Rochefort acts as an insurance broker registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF). Our services include risk analysis, comparison of insurance products from multiple insurers, negotiation of terms, and claims management support.</p>
+  <h2>4. Insurance Intermediaryage Services</h2>
+  <p>Adler &amp; Rochefort acts as an insurance intermediary registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF). Our services include risk analysis, comparison of insurance products from multiple insurers, negotiation of terms, and claims management support.</p>
   <p>The information presented on the website is for informational purposes only and does not constitute financial, legal, or insurance advice. Any contracting decision should be preceded by a personalised analysis.</p>
 
   <h2>5. Fiscal Representation and Recurring Annual Services</h2>
-  <p>In addition to insurance brokerage, Adler &amp; Rochefort coordinates fiscal representation in Portugal and related settle-in services. Fiscal representation is contracted as a <strong>recurring annual service</strong>, not as a single task. The regulated work is carried out by an independent certified accountant, who is fully responsible for it; Adler &amp; Rochefort acts as intermediary, coordinator and single point of contact, and does not provide tax, accounting or legal advice.</p>
+  <p>In addition to insurance mediation, Adler &amp; Rochefort coordinates fiscal representation in Portugal and related settle-in services. Fiscal representation is contracted as a <strong>recurring annual service</strong>, not as a single task. The regulated work is carried out by an independent certified accountant, who is fully responsible for it; Adler &amp; Rochefort acts as intermediary, coordinator and single point of contact, and does not provide tax, accounting or legal advice.</p>
   <p><strong>5.1 Price.</strong> Fiscal representation is charged at €199 per year, VAT included. Where the service is contracted as part of the Complete settle-in package, the first-year fee is €499, VAT included, and covers the additional onboarding services described on that package; renewal years are charged at €199 per year and cover fiscal representation only. The Corporate package is a separate, non-recurring company formation service priced from €1,200 + VAT, and any ongoing accounting is contracted and billed directly by the certified accountant.</p>
   <p><strong>5.2 Duration.</strong> The service runs for an initial term of twelve months, beginning on the date the appointment as fiscal representative is accepted before the Portuguese Tax Authority.</p>
   <p><strong>5.3 Automatic renewal.</strong> At the end of each term the service renews automatically for a further twelve months, on the anniversary of the appointment, at the annual fee then applicable to fiscal representation, for as long as the client remains a non-resident for Portuguese tax purposes.</p>
@@ -292,6 +293,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -335,5 +337,28 @@
 
   <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

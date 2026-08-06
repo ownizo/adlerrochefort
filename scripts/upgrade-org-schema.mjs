@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 /**
- * Block 5 — organisation schema on the two homepages.
+ * Block 5 — organisation schema, everywhere it is declared.
  *
  * The commercial hub at /seguros/ was generated with a complete InsuranceAgency
- * entity. The two homepages predate it and are missing three things:
+ * entity. The two homepages and eight older language and location pages predate
+ * it and are missing three things:
  *
  *   * alternateName — the trading name and the registered company name are not
  *     the same, and only one of them appears in the ASF register;
@@ -11,6 +12,10 @@
  *     load-bearing fact about a regulated intermediary;
  *   * stable @id values, so the homepage, the hub and every landing page refer
  *     to one organisation rather than three lookalikes.
+ *
+ * The pass runs over every page carrying an InsuranceAgency node rather than a
+ * hand-kept list, because the drift it exists to fix is what a hand-kept list
+ * produces. Pages whose entity is already complete are left byte for byte.
  *
  * It also removes aggregateRating. A 5.0 from three reviews cannot be
  * substantiated, and the testimonials it was supposed to summarise were taken
@@ -20,12 +25,19 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PAGES = [
-  { path: 'public/index.html', lang: 'pt' },
-  { path: 'public/en/index.html', lang: 'en' },
-];
+
+// The ASF registration and the registered company name are the same in every
+// language; only the label on the identifier is translated.
+const PAGES = execSync('grep -rl \'"InsuranceAgency"\' public --include="*.html"', { cwd: ROOT })
+  .toString()
+  .trim()
+  .split('\n')
+  .filter(Boolean)
+  .sort()
+  .map((path) => ({ path, lang: path.startsWith('public/en/') ? 'en' : 'pt' }));
 
 const report = [];
 
@@ -83,7 +95,11 @@ for (const { path: rel, lang } of PAGES) {
   );
 
   if (html !== before) await writeFile(path, html);
-  report.push(`${rel}: ${notes.length ? notes.join('; ') : 'already current'}`);
+  report.push([rel, notes]);
 }
 
-report.forEach((line) => console.log(line));
+const changed = report.filter(([, notes]) => notes.length);
+console.log(`pages declaring InsuranceAgency: ${report.length}`);
+console.log(`pages already current:            ${report.length - changed.length}`);
+console.log(`pages updated:                    ${changed.length}`);
+for (const [rel, notes] of changed) console.log(`  ${rel}: ${notes.join('; ')}`);

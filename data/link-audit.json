@@ -1,8 +1,8 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 220,
-    "indexedUrls": 213,
+    "htmlFiles": 221,
+    "indexedUrls": 214,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,

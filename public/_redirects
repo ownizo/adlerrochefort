@@ -2,25 +2,43 @@
 #
 # Rules declared in netlify.toml are evaluated before this file. The paths here
 # do not overlap with any of them, so ordering is not load-bearing; this file
-# holds the redirects created by the blog consolidation.
+# holds every 301 created by the blog consolidation and the service-URL
+# standardisation.
 #
-# Both the slash and no-slash form of each retired URL is listed. Netlify
-# normalises trailing slashes on its own, but the pair is cheap insurance for
-# links already in the wild, and query strings are carried over automatically.
+# Each retired path is listed twice: the bare form, and a splat that covers the
+# trailing slash plus anything ever linked below it. Query strings are carried
+# over by Netlify automatically.
 
 # ---------------------------------------------------------------------------
 # Blog consolidation, August 2026.
 #
 # Two Portuguese articles competed with a stronger article on the same query
 # and split the ranking signal. Their unique sections were folded into the
-# surviving article; the retired URLs point at it permanently.
+# surviving article; the retired URLs point at it permanently. Both carry
+# status: merged in data/articles.json, so no listing, sitemap or feed can
+# reintroduce them.
 # ---------------------------------------------------------------------------
 
-/blog/seguro-individual-automovel      /blog/seguro-automovel-guia-completo/   301!
-/blog/seguro-individual-automovel/     /blog/seguro-automovel-guia-completo/   301!
+/blog/seguro-individual-automovel        /blog/seguro-automovel-guia-completo/   301!
+/blog/seguro-individual-automovel/*      /blog/seguro-automovel-guia-completo/   301!
 
-/blog/seguro-habitacao-proteger-casa   /blog/multirriscos-habitacao/           301!
-/blog/seguro-habitacao-proteger-casa/  /blog/multirriscos-habitacao/           301!
+/blog/seguro-habitacao-proteger-casa     /blog/multirriscos-habitacao/           301!
+/blog/seguro-habitacao-proteger-casa/*   /blog/multirriscos-habitacao/           301!
+
+# ---------------------------------------------------------------------------
+# Service URL standardisation, August 2026.
+#
+# Three URL patterns coexisted for commercial pages. Everything now lives under
+# /seguros/{slug}/. Both retired paths carry organic history — the condominium
+# page in particular — so these redirects are permanent and must not be
+# removed.
+# ---------------------------------------------------------------------------
+
+/seguro-auto                             /seguros/auto/                          301!
+/seguro-auto/*                           /seguros/auto/                          301!
+
+/seguros-condominios-algarve             /seguros/condominios/                   301!
+/seguros-condominios-algarve/*           /seguros/condominios/                   301!
 
 # ---------------------------------------------------------------------------
 # Path-segment truncation.
@@ -31,5 +49,51 @@
 # English home page rather than 404.
 # ---------------------------------------------------------------------------
 
-/en/insurance                          /en/                                    301
-/en/insurance/                         /en/                                    301
+/en/insurance                            /en/                                    301
+/en/insurance/                           /en/                                    301
+
+# ---------------------------------------------------------------------------
+# Moved here from netlify.toml, August 2026.
+#
+# Every permanent redirect on the site is now declared in this one file, so a
+# retired URL can be traced without reading two configurations. The short links
+# under /go/ stay in netlify.toml: they are 302s used for campaign tracking,
+# not part of the URL history.
+#
+# The EN contact path has never been a page — the English contact form lives in
+# a section of the English home page.
+# ---------------------------------------------------------------------------
+
+/en/contact                              /en/#contact                            301!
+/en/contact/                             /en/#contact                            301!
+
+# Retired visa-insurance sub-pages, consolidated into one page whose sections
+# keep the route-specific content: #d7, #golden-visa, #aima, #schengen.
+
+/en/d7-visa-health-insurance             /en/expat-visa-insurance-portugal/      301!
+/en/d7-visa-health-insurance/*           /en/expat-visa-insurance-portugal/      301!
+
+/en/golden-visa-insurance-portugal       /en/expat-visa-insurance-portugal/      301!
+/en/golden-visa-insurance-portugal/*     /en/expat-visa-insurance-portugal/      301!
+
+/en/aima-health-insurance-proof          /en/expat-visa-insurance-portugal/      301!
+/en/aima-health-insurance-proof/*        /en/expat-visa-insurance-portugal/      301!
+
+/en/schengen-visa-insurance-portugal     /en/expat-visa-insurance-portugal/      301!
+/en/schengen-visa-insurance-portugal/*   /en/expat-visa-insurance-portugal/      301!
+
+# Collections & valuables cluster. The first two slugs were proposed for
+# standalone underwriter pages; the existing pages were extended instead. The
+# last two are articles rewritten under a new slug.
+
+/en/blog/hiscox-high-value-home-art-jewellery-portugal    /en/blog/hiscox-home-insurance-portugal/          301!
+/en/blog/hiscox-high-value-home-art-jewellery-portugal/*  /en/blog/hiscox-home-insurance-portugal/          301!
+
+/en/blog/liberty-mutual-non-standard-property-portugal    /en/blog/liberty-mutual-home-insurance-portugal/  301!
+/en/blog/liberty-mutual-non-standard-property-portugal/*  /en/blog/liberty-mutual-home-insurance-portugal/  301!
+
+/en/blog/american-investment-luxury-portugal              /en/blog/us-buyers-property-cover-portugal/       301!
+/en/blog/american-investment-luxury-portugal/*            /en/blog/us-buyers-property-cover-portugal/       301!
+
+/en/blog/boat-portuguese-waters-flag-mooring-liability    /en/blog/importing-registering-a-boat-portugal/   301!
+/en/blog/boat-portuguese-waters-flag-mooring-liability/*  /en/blog/importing-registering-a-boat-portugal/   301!

@@ -178,13 +178,14 @@
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
 <nav>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
     <span class="nav-logo-text">Adler <em>&amp;</em> Rochefort</span>
   </a>
   <div class="lang-switcher">
@@ -221,7 +222,7 @@
   <p>Your personal data is processed for the following purposes:</p>
   <ul>
     <li>Responding to contact requests and information enquiries</li>
-    <li>Providing insurance brokerage services</li>
+    <li>Providing insurance mediation services</li>
     <li>Sending commercial communications (only with your prior consent)</li>
     <li>Complying with legal and regulatory obligations applicable to the insurance sector</li>
     <li>Improving the website browsing experience</li>
@@ -232,7 +233,7 @@
   <p>The processing of your personal data is based on the following legal grounds:</p>
   <ul>
     <li><strong>Consent:</strong> when you fill in the contact form or subscribe to communications</li>
-    <li><strong>Performance of contract:</strong> for the provision of insurance brokerage services</li>
+    <li><strong>Performance of contract:</strong> for the provision of insurance mediation services</li>
     <li><strong>Legitimate interest:</strong> to improve our services and user experience</li>
     <li><strong>Legal obligation:</strong> to comply with regulatory obligations before the ASF and other authorities</li>
   </ul>
@@ -297,6 +298,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -340,5 +342,28 @@
 
   <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

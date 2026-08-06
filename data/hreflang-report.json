@@ -1,7 +1,7 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 220,
+    "htmlFiles": 221,
     "filesChanged": 0,
     "pagesWithHreflang": 74,
     "articlePairs": 28,

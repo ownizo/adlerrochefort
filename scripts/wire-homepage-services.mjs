@@ -20,7 +20,7 @@ const PAGE = join(ROOT, 'public', 'index.html');
 const LANDINGS = {
   'Multirriscos Empresarial': '/seguros/empresarial/',
   'Frotas &amp; Transportes': '/seguros/frota/',
-  'Seguros Auto': '/seguro-auto/',
+  'Seguros Auto': '/seguros/auto/',
   'Seguro Habitação': '/seguros/habitacao/',
   'Seguro TVDE': '/seguros/tvde/',
   'Alojamento Local': '/seguros/alojamento-local/',

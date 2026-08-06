@@ -49,6 +49,17 @@ export const PT_CATEGORIES = [
     landingLabel: 'Seguro de Habitação',
   },
   {
+    // Split out of habitacao-particulares. A condominium policy is bought by an
+    // administrator on behalf of an owners' association, not by a homeowner for
+    // their own dwelling — different reader, different obligations, and its own
+    // commercial page at /seguros/condominios/.
+    slug: 'condominios',
+    title: 'Seguros de Condomínio',
+    short: 'Condomínios',
+    landing: '/seguros/condominios/',
+    landingLabel: 'Seguro de Condomínio',
+  },
+  {
     slug: 'seguros-saude',
     title: 'Seguros de Saúde',
     short: 'Saúde',
@@ -99,10 +110,11 @@ const CATEGORY_OF = {
   'seguro-habitacao-proteger-casa': 'habitacao-particulares',
   'multirriscos-habitacao': 'habitacao-particulares',
   'seguro-habitacao-legalizacao': 'habitacao-particulares',
-  'seguro-condominio-obrigatorio-guia': 'habitacao-particulares',
-  'seguro-condominio-capitais-desatualizados': 'habitacao-particulares',
-  'obrigacoes-administrador-condominio-seguro': 'habitacao-particulares',
   'seguro-titulo-imovel-portugal': 'habitacao-particulares',
+  // Seguros de Condomínio
+  'seguro-condominio-obrigatorio-guia': 'condominios',
+  'seguro-condominio-capitais-desatualizados': 'condominios',
+  'obrigacoes-administrador-condominio-seguro': 'condominios',
   // Seguros de Saúde
   'seguro-saude-portugal': 'seguros-saude',
   'seguro-saude-expatriados-portugal': 'seguros-saude',

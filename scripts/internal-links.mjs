@@ -61,8 +61,8 @@ const LANDING = {
   // Automóvel e TVDE
   'seguro-tvde-portugal': ['/seguros/tvde/', 'seguro TVDE'],
   'seguro-frota-erros-comuns': ['/seguros/frota/', 'seguro de frota'],
-  'seguro-auto-expatriados': ['/seguro-auto/', 'seguro automóvel'],
-  'seguro-automovel-guia-completo': ['/seguro-auto/', 'seguro automóvel'],
+  'seguro-auto-expatriados': ['/seguros/auto/', 'seguro automóvel'],
+  'seguro-automovel-guia-completo': ['/seguros/auto/', 'seguro automóvel'],
   // Alojamento Local
   'alojamento-local-propriedade-horizontal-condominio': [
     '/seguros/alojamento-local/',
@@ -82,6 +82,7 @@ const LANDING = {
 /** Everything else falls back to its cluster's page. */
 const CLUSTER_LANDING = {
   'habitacao-particulares': ['/seguros/habitacao/', 'seguro de habitação'],
+  condominios: ['/seguros/condominios/', 'seguro de condomínio'],
   'seguros-empresariais': ['/seguros/empresarial/', 'multirriscos empresarial'],
   'hotelaria-turismo': ['/seguros/empresarial/', 'multirriscos empresarial para hotelaria'],
 };
@@ -91,6 +92,33 @@ const LANDING_EN = {
   'tvde-insurance-portugal': ['/en/insurance/tvde/', 'TVDE insurance'],
   'fleet-insurance-common-mistakes': ['/en/insurance/tvde/', 'TVDE and ride-hailing fleet insurance'],
   'car-insurance-expatriates': ['/en/insurance/tvde/', 'TVDE insurance'],
+};
+
+/**
+ * Bridges between clusters that the peer ring cannot make, because the peer
+ * ring only ever links inside a cluster. A hotel with a shuttle, a courtesy car
+ * or a staff van is a fleet risk written on a different policy from the one
+ * that covers the building, and nothing in the hotelaria cluster said so.
+ *
+ * Written by hand and in both directions on purpose: an automatic rule would
+ * have to guess which exposures actually overlap, and a wrong bridge is worse
+ * than no bridge.
+ */
+const CROSS = {
+  'seguros-obrigatorios-hotelaria-turismo': [
+    [
+      '/seguros/frota/',
+      'seguro de frota',
+      'Se a unidade tem viaturas de serviço — transfer de aeroporto, carrinha de lavandaria, carro ao dispor da direção —, essas viaturas não estão no multirriscos do edifício: precisam de',
+    ],
+  ],
+  'seguro-frota-erros-comuns': [
+    [
+      '/blog/seguros-obrigatorios-hotelaria-turismo/',
+      'seguros obrigatórios na hotelaria e turismo',
+      'Numa unidade hoteleira a frota é apenas uma das apólices exigidas; as restantes estão reunidas no guia dos',
+    ],
+  ],
 };
 
 const report = {
@@ -204,6 +232,15 @@ for (const lang of ['pt', 'en']) {
       report.noLanding.push(`${lang}:${article.slug} (${cluster || 'no cluster'})`);
     }
 
+    // 2c. hand-written bridges to a neighbouring cluster.
+    for (const [url, label, lead] of CROSS[article.slug] || []) {
+      if (linked.has(url)) continue;
+      parts.push(
+        `<p style="${PEERS_STYLE}">${lead} <a href="${url}" style="${LINK_STYLE}">${label}</a>.</p>`
+      );
+      report.bridges += 1;
+    }
+
     if (parts.length) {
       const block = `\n\n    ${START}\n    ${parts.join('\n    ')}\n    ${END}\n  `;
       html = html.slice(0, bodyClose) + block + html.slice(bodyClose);
@@ -266,6 +303,11 @@ const PAGES = {
         'O edifício e o recheio continuam a precisar de cobertura própria, e o uso turístico tem de estar declarado na apólice.',
       ],
       [
+        '/seguros/condominios/',
+        'seguro de condomínio',
+        'A apólice do condomínio cobre as partes comuns; o que fica dentro da fração e a responsabilidade perante os hóspedes são do titular do AL.',
+      ],
+      [
         '/seguros/empresarial/',
         'multirriscos empresarial',
         'Com várias unidades ou com serviços prestados aos hóspedes, a exposição passa a ser de negócio e não de habitação.',
@@ -283,9 +325,54 @@ const PAGES = {
         'Arrendar a hóspedes muda a natureza do risco e exige responsabilidade civil e coberturas que a apólice de habitação não tem.',
       ],
       [
+        '/seguros/condominios/',
+        'seguro de condomínio',
+        'Numa fração, há duas apólices em jogo: a do condomínio para as partes comuns e a do proprietário para o interior. A fronteira entre as duas é onde os sinistros ficam por pagar.',
+      ],
+      [
         '/seguros/empresarial/',
         'multirriscos empresarial',
         'Vários imóveis detidos por uma sociedade seguram-se melhor como carteira do que um a um.',
+      ],
+    ],
+    todo: null,
+  },
+  '/seguros/condominios/': {
+    title: 'Riscos relacionados',
+    intro:
+      'A apólice do condomínio cobre o edifício. O que acontece dentro de cada fração — e o que o administrador responde pessoalmente — está noutro lado:',
+    links: [
+      [
+        '/seguros/habitacao/',
+        'seguro de habitação',
+        'O recheio, as benfeitorias e a responsabilidade civil do condómino ficam fora da apólice das partes comuns.',
+      ],
+      [
+        '/seguros/alojamento-local/',
+        'seguro de Alojamento Local',
+        'Uma fração explorada como alojamento local altera o risco do prédio inteiro e obriga a coberturas que a apólice do condomínio não tem.',
+      ],
+      [
+        '/seguros/empresarial/',
+        'multirriscos empresarial',
+        'Empresas de administração de condomínios têm exposição própria — responsabilidade civil profissional e responsabilidade dos administradores.',
+      ],
+    ],
+    todo: null,
+  },
+  '/seguros/auto/': {
+    title: 'Riscos relacionados',
+    intro: 'A apólice de um carro deixa de servir assim que o carro deixa de ser só um carro:',
+    links: [
+      [
+        '/seguros/tvde/',
+        'seguro TVDE',
+        'Transporte de passageiros em plataforma exige utilização declarada; sem ela a seguradora pode recusar o sinistro.',
+      ],
+      [
+        '/seguros/frota/',
+        'seguro de frota',
+        'A partir de três viaturas compensa agrupar as apólices: um vencimento, um histórico e negociação sobre o conjunto.',
       ],
     ],
     todo: null,
@@ -340,8 +427,13 @@ ${items}
 </section>
 ${BRIDGE_END}\n`;
 
-  const anchor = html.indexOf('<section class="blog-section"');
-  if (anchor === -1) {
+  // Generated landings end with an Insights strip; the two hand-written pages
+  // moved under /seguros/ in this pass do not, so the block goes in front of
+  // the footer there instead of being skipped.
+  const anchor = ['<section class="blog-section"', '<footer>']
+    .map((m) => html.indexOf(m))
+    .find((i) => i !== -1);
+  if (anchor === undefined) {
     console.warn(`no insertion anchor on ${url}`);
     continue;
   }

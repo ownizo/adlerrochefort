@@ -4,7 +4,7 @@
 <meta name="theme-color" content="#1C2B3A">
 <title>Expat Health Insurance Portugal — Free Quote in 24h | Adler &amp; Rochefort</title>
 <meta name="description" content="Health insurance for expats in Portugal: cover for your visa or AIMA appointment and private health plans once you arrive. Compare Allianz, Médis &amp; APRIL. Free quote in 24h.">
-<meta name="keywords" content="expat health insurance portugal, health insurance for visa portugal, AIMA health insurance, private health insurance portugal expats, Allianz Medis APRIL expat, English speaking insurance broker portugal">
+<meta name="keywords" content="expat health insurance portugal, health insurance for visa portugal, AIMA health insurance, private health insurance portugal expats, Allianz Medis APRIL expat, English speaking insurance intermediary portugal">
 <link rel="canonical" href="https://adlerrochefort.com/en/health-insurance-quote/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="Adler &amp; Rochefort">
@@ -1993,6 +1993,7 @@
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
@@ -2017,7 +2018,7 @@
     </div>
   </div>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -2131,7 +2132,7 @@
         <li><strong>You receive a written comparison within 24 hours.</strong> The options arrive side by side, in plain English, with the practical differences set out: how each plan gives you access to care, what it covers and where it stops. Free, and with no obligation to proceed.</li>
         <li><strong>We handle the application and issue your documents in English.</strong> Once you have chosen, we complete the paperwork with the insurer, guide you through the medical questionnaire, and get you the policy and the certificate you need — in English, ready for a visa file or an AIMA appointment.</li>
       </ol>
-      <p>After that we remain your broker rather than disappearing at the signature: we manage claims on your behalf, answer questions in English, and review the policy at renewal as your needs and the market change.</p>
+      <p>After that we remain your intermediary rather than disappearing at the signature: we manage claims on your behalf, answer questions in English, and review the policy at renewal as your needs and the market change.</p>
     </div>
 
     <div class="lp-card">
@@ -2244,6 +2245,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -2317,5 +2319,28 @@
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="modelos_rede_reembolso,allianz,april,medis,comparacao_precos,erros_comuns"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

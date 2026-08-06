@@ -235,7 +235,15 @@ const BRANCH_CSS = `<style>
 </style>
 </head>`;
 
-const report = { homepage: false, homepageEn: false, articles: [], articlesEn: [], skipped: [] };
+const report = {
+  homepage: false,
+  homepageEn: false,
+  articles: [],
+  articlesEn: [],
+  skipped: [],
+  preselected: 0,
+  noBranch: [],
+};
 
 // --- homepage -----------------------------------------------------------------
 {
@@ -305,17 +313,125 @@ const report = { homepage: false, homepageEn: false, articles: [], articlesEn: [
 }
 
 // --- article CTA forms --------------------------------------------------------
-const OLD_SELECT =
-  '<select name="tipo-seguro" required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Auto">Auto</option><option value="Casa">Casa</option><option value="Empresa">Empresa</option><option value="Outro">Outro</option></select>';
-const NEW_SELECT = `<select name="tipo-seguro" required>${options('Selecionar')}</select>`;
+//
+// The article form gets exactly what the homepage form got: the thirteen
+// branches, the conditional fields, and — because the article already tells us
+// what the reader came for — the matching branch selected on arrival. Someone
+// who has just read the TVDE guide should not have to find "TVDE" in a list of
+// thirteen.
+//
+// The mapping is by article tag first and category second, because a tag is the
+// narrower statement: "Alojamento Local" and "Hotelaria & Turismo" share a
+// category but quote as different branches. Where an article's subject has no
+// branch in the dropdown, nothing is preselected — a wrong preselection is
+// worse than none, and the gaps are reported at the end of the run.
+const TAG_BRANCH = {
+  'Seguros TVDE': 'TVDE (Uber, Bolt, Free Now)',
+  'Seguros Automóvel': 'Automóvel',
+  'Frotas & Transportes': 'Frota de empresa',
+  'Distribuição & Logística': 'Frota de empresa',
+  'Alojamento Local': 'Alojamento Local',
+  'Hotelaria & Turismo': 'Hotelaria e Restauração',
+  'Restauração & Hotelaria': 'Hotelaria e Restauração',
+  'Riscos Cibernéticos': 'Riscos Cibernéticos',
+  'Responsabilidade Civil': 'Responsabilidade Civil Profissional',
+  'Obras & Construção': 'Multirriscos Empresarial',
+  'D&O / Administradores': 'Multirriscos Empresarial',
+  'Guia Legal & Compliance': 'Multirriscos Empresarial',
+  'Gestão de Seguros': 'Multirriscos Empresarial',
+  'Seguros Habitação': 'Habitação',
+  'Seguros Individuais': 'Habitação',
+  'Imobiliário · Titularidade': 'Habitação',
+  'Seguros de Saúde': 'Saúde',
+  'Seguros de Saúde · Expatriados': 'Saúde',
+};
 
-for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
-  const path = join(PUBLIC, rel);
-  let html = await readFile(path, 'utf8');
-  if (!html.includes('name="cotacao-blog"')) continue;
-  const before = html;
+const CATEGORY_BRANCH = {
+  'seguros-auto-tvde': 'Automóvel',
+  'hotelaria-turismo': 'Hotelaria e Restauração',
+  'seguros-empresariais': 'Multirriscos Empresarial',
+  'habitacao-particulares': 'Habitação',
+  'seguros-saude': 'Saúde',
+  // "condominios" is absent on purpose: the dropdown has no condominium
+  // branch, even though /seguros/condominios/ exists and the footer lists the
+  // product. Reported rather than forced into "Outro".
+};
 
-  if (html.includes(OLD_SELECT)) html = html.split(OLD_SELECT).join(NEW_SELECT);
+const CLUSTER_BRANCH_EN = {
+  'health-insurance': 'Health',
+  'home-property': 'Home',
+  motor: 'Car',
+  'business-liability': 'Business combined (multirriscos)',
+  'holiday-lets-hospitality': 'Holiday let (Alojamento Local)',
+  'personal-family': 'Home',
+  // valuables-collections, marine and moving-to-portugal have no branch in the
+  // thirteen; those articles open with nothing selected.
+};
+
+const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
+const enProposal = JSON.parse(
+  await readFile(join(ROOT, 'data', 'en-categories-proposal.json'), 'utf8')
+);
+const enClusterOf = new Map();
+for (const c of enProposal.categories) for (const s of c.articles) enClusterOf.set(s, c.slug);
+
+/** Article page path -> branch to preselect, or undefined. */
+const branchForPage = new Map();
+for (const a of data.articles.pt) {
+  if (a.status !== 'published') continue;
+  const branch = TAG_BRANCH[a.tag] || CATEGORY_BRANCH[a.category];
+  branchForPage.set(a.url, branch);
+}
+for (const a of data.articles.en) {
+  if (a.status !== 'published') continue;
+  branchForPage.set(a.url, CLUSTER_BRANCH_EN[enClusterOf.get(a.slug)]);
+}
+
+/** Marks one option selected, leaving the rest of the markup alone. */
+const preselect = (select, branch) =>
+  branch && select.includes(`<option value="${branch}">`)
+    ? select.replace(`<option value="${branch}">`, `<option value="${branch}" selected>`)
+    : select;
+
+// The article form styles its fields with .cta-field, the homepage with
+// .form-field. Same shape (label + input in a div), different stylesheet, so
+// the shared blocks are re-labelled on the way in rather than given new CSS.
+const articleBlocks = (blocks) => blocks.split('class="form-field"').join('class="cta-field"');
+
+/**
+ * Gives an article's CTA form the homepage treatment: thirteen branches, the
+ * conditional fields, the reader's own branch already selected, the hidden
+ * source URL and the script that reveals the matching block.
+ */
+function upgradeArticleForm(html, { selectName, oldSelect, newSelect, blocks }) {
+  const selectStart = `<select name="${selectName}"`;
+
+  if (html.includes(oldSelect)) {
+    html = html.split(oldSelect).join(newSelect);
+  } else {
+    // Already carries the thirteen branches from an earlier run: swap the whole
+    // select so the preselection and the data-branch-select hook land too.
+    const at = html.indexOf(selectStart);
+    if (at !== -1) {
+      const end = html.indexOf('</select>', at) + '</select>'.length;
+      html = html.slice(0, at) + newSelect + html.slice(end);
+    }
+  }
+
+  // Conditional fields, inserted once, directly after the select's field div.
+  if (!html.includes('class="form-branch-fields"')) {
+    const at = html.indexOf(selectStart);
+    if (at !== -1) {
+      const closeSelect = html.indexOf('</select>', at) + '</select>'.length;
+      const wrapperEnd = html.indexOf('</div>', closeSelect);
+      if (wrapperEnd !== -1) {
+        const cut = wrapperEnd + '</div>'.length;
+        html = html.slice(0, cut) + '\n' + articleBlocks(blocks) + html.slice(cut);
+      }
+    }
+  }
+
+  if (!html.includes('.form-branch-fields')) html = html.replace('</head>', BRANCH_CSS);
 
   if (!html.includes('name="source_url"')) {
     html = html.replace(
@@ -328,10 +444,38 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
     html = html.replace('</body>', '<script defer src="/js/lead-branch-fields.js"></script>\n</body>');
   }
 
+  return html;
+}
+
+const OLD_SELECT =
+  '<select name="tipo-seguro" required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Auto">Auto</option><option value="Casa">Casa</option><option value="Empresa">Empresa</option><option value="Outro">Outro</option></select>';
+
+for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
+  if (rel.startsWith('en/') || rel.startsWith('nl/')) continue;
+  const path = join(PUBLIC, rel);
+  let html = await readFile(path, 'utf8');
+  if (!html.includes('name="cotacao-blog"')) continue;
+  const before = html;
+
+  const url = '/' + rel.replace(/index\.html$/, '');
+  const branch = branchForPage.get(url);
+  if (branchForPage.has(url) && !branch) report.noBranch.push(url);
+
+  html = upgradeArticleForm(html, {
+    selectName: 'tipo-seguro',
+    oldSelect: OLD_SELECT,
+    newSelect: preselect(
+      `<select name="tipo-seguro" data-branch-select required>${options('Selecionar')}</select>`,
+      branch
+    ),
+    blocks: ALL_BRANCH_BLOCKS,
+  });
+
   if (html !== before) {
     await writeFile(path, html);
     report.articles.push(`public/${rel}`);
   }
+  if (branch) report.preselected++;
 }
 
 // --- English homepage ---------------------------------------------------------
@@ -395,7 +539,6 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
 // --- English article CTA forms ------------------------------------------------
 const OLD_SELECT_EN =
   '<select name="insurance-type" required><option value="">Select</option><option value="Health">Health</option><option value="Car">Car</option><option value="Home">Home</option><option value="Business">Business</option><option value="Other">Other</option></select>';
-const NEW_SELECT_EN = `<select name="insurance-type" required>${optionsEn('Select')}</select>`;
 
 for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
   const path = join(PUBLIC, rel);
@@ -403,28 +546,36 @@ for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
   if (!html.includes('value="quote-blog"')) continue;
   const before = html;
 
-  if (html.includes(OLD_SELECT_EN)) html = html.split(OLD_SELECT_EN).join(NEW_SELECT_EN);
+  const url = '/' + rel.replace(/index\.html$/, '');
+  const branch = branchForPage.get(url);
+  if (branchForPage.has(url) && !branch) report.noBranch.push(url);
 
-  if (!html.includes('name="source_url"')) {
-    html = html.replace(
-      /(<input type="hidden" name="source" value="[^"]*">)/,
-      '$1\n      <input type="hidden" name="source_url" value="">'
-    );
-  }
-
-  if (!html.includes('/js/lead-branch-fields.js')) {
-    html = html.replace('</body>', '<script defer src="/js/lead-branch-fields.js"></script>\n</body>');
-  }
+  html = upgradeArticleForm(html, {
+    selectName: 'insurance-type',
+    oldSelect: OLD_SELECT_EN,
+    newSelect: preselect(
+      `<select name="insurance-type" data-branch-select required>${optionsEn('Select')}</select>`,
+      branch
+    ),
+    blocks: ALL_BRANCH_BLOCKS_EN,
+  });
 
   if (html !== before) {
     await writeFile(path, html);
     report.articlesEn.push(`public/${rel}`);
   }
+  if (branch) report.preselected++;
 }
 
 console.log(`PT homepage upgraded: ${report.homepage}`);
 console.log(`EN homepage upgraded: ${report.homepageEn}`);
 console.log(`PT article CTA forms upgraded: ${report.articles.length}`);
 console.log(`EN article CTA forms upgraded: ${report.articlesEn.length}`);
+console.log(`articles opening on their own branch: ${report.preselected}`);
+if (report.noBranch.length)
+  console.log(
+    `no branch in the dropdown for these subjects (nothing preselected):\n  ` +
+      report.noBranch.join('\n  ')
+  );
 if (report.skipped.length) console.log('skipped:\n  ' + report.skipped.join('\n  '));
 

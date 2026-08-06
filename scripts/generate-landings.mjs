@@ -1302,12 +1302,12 @@ const HUB_CARDS = [
     text: 'Edifício, equipamento, existências, responsabilidade civil de exploração e perda de lucros. Com revisão dos capitais antes da cotação.',
   },
   {
-    url: '/seguro-auto/',
+    url: '/seguros/auto/',
     title: 'Seguro automóvel',
     text: 'Responsabilidade civil obrigatória, danos próprios, assistência e proteção do condutor para uso particular.',
   },
   {
-    url: '/seguros-condominios-algarve/',
+    url: '/seguros/condominios/',
     title: 'Seguro de condomínio',
     text: 'Partes comuns, responsabilidade civil do condomínio e obrigações do administrador nos edifícios em propriedade horizontal.',
   },
