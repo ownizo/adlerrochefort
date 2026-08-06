@@ -7,13 +7,16 @@
 <meta name="description" content="Independent insurance advice for expats and businesses in the Algarve. Health, home, motor and commercial cover compared across insurers.">
 <meta name="keywords" content="insurance broker Portugal, expat insurance Portugal, health insurance Portugal, home insurance Portugal, car insurance Portugal, private health insurance pre-existing condition Portugal, insurance before NIF Portugal, insurance before residency Portugal, mortgage life insurance Portugal, luxury home insurance Portugal, classic car insurance Portugal, boat insurance Portugal, personal cyber insurance Portugal, Adler Rochefort">
 <link rel="canonical" href="https://adlerrochefort.com/en/">
+  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/">
+  <link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/">
+  <link rel="alternate" hreflang="de" href="https://adlerrochefort.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://adlerrochefort.com/fr/">
+  <link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Adler &amp; Rochefort">
 <meta name="geo.region" content="PT-08">
 <meta name="geo.placename" content="Lagos, Algarve, Portugal">
-<link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/">
-<link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/">
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- Open Graph -->
@@ -1818,15 +1821,6 @@
   }
   .asf-top-bar a:hover { color: #e0be6a; }
 
-  /* Hide blog articles from the 7th by default */
-  #blog .blog-card:nth-child(n+7) {
-    display: none;
-  }
-  /* Expanded state — show all */
-  #blog.blog-expanded .blog-card:nth-child(n+7) {
-    display: flex;
-  }
-
   /* Contextual CTA box inside blog articles */
   .blog-cta-box {
     background-color: var(--cream, #FAF7EE);
@@ -1930,7 +1924,7 @@
   "@context": "https://schema.org",
   "@type": "InsuranceAgency",
   "name": "Adler & Rochefort",
-  "legalName": "Ownizo Unipessoal LDA",
+  "legalName": "Ownizo, Unipessoal Lda.",
   "url": "https://adlerrochefort.com",
   "logo": "https://adlerrochefort.com/images/logo-adler-rochefort.png",
   "image": "https://adlerrochefort.com/images/logo-adler-rochefort.png",
@@ -1938,12 +1932,19 @@
   "telephone": "+351928226570",
   "email": "insurance@adlerrochefort.com",
   "foundingDate": "2014",
-  "numberOfEmployees": {"@type": "QuantitativeValue", "minValue": 2, "maxValue": 10},
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 2,
+    "maxValue": 10
+  },
   "areaServed": {
     "@type": "Country",
     "name": "Portugal"
   },
-  "knowsLanguage": ["pt", "en"],
+  "knowsLanguage": [
+    "pt",
+    "en"
+  ],
   "sameAs": [
     "https://www.facebook.com/adlerrochefort",
     "https://www.instagram.com/adlerrochefort/",
@@ -1953,7 +1954,7 @@
     {
       "@type": "PostalAddress",
       "streetAddress": "Av. do Atlântico 16, Esc. 5.07",
-      "addressLocality": "Lisbon",
+      "addressLocality": "Lisboa",
       "postalCode": "1990-019",
       "addressCountry": "PT"
     },
@@ -1969,19 +1970,63 @@
     "@type": "OfferCatalog",
     "name": "Personal Insurance",
     "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Health Insurance","description":"Private health insurance for expats, families, visa applications and residency appointments."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Insurance","description":"Building, contents and family liability cover for properties in Portugal."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Car Insurance","description":"Motor insurance for residents, imported vehicles and everyday driving in Portugal."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mortgage Life Insurance","description":"Independent life insurance comparison for Portuguese mortgages."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Luxury Assets Insurance","description":"Specialist cover for luxury homes, luxury cars, classic cars, boats, art and collections."}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Personal Cybersecurity Insurance","description":"Personal cyber protection for online fraud, identity theft and cyber extortion."}}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Health Insurance",
+          "description": "Private health insurance for expats, families, visa applications and residency appointments."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Insurance",
+          "description": "Building, contents and family liability cover for properties in Portugal."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Car Insurance",
+          "description": "Motor insurance for residents, imported vehicles and everyday driving in Portugal."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mortgage Life Insurance",
+          "description": "Independent life insurance comparison for Portuguese mortgages."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Luxury Assets Insurance",
+          "description": "Specialist cover for luxury homes, luxury cars, classic cars, boats, art and collections."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Personal Cybersecurity Insurance",
+          "description": "Personal cyber protection for online fraud, identity theft and cyber extortion."
+        }
+      }
     ]
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "3"
-  }
+  "alternateName": "Ownizo, Unipessoal Lda.",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "ASF registration",
+    "value": "425591790/3"
+  },
+  "@id": "https://adlerrochefort.com/#organization"
 }
 </script>
 
@@ -2035,7 +2080,7 @@
       "name": "Is Adler & Rochefort authorised by the ASF?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We are insurance brokers registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority (ASF), complying with all regulatory requirements of the sector in Portugal."
+        "text": "Yes. We are an insurance intermediary registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority (ASF), complying with all regulatory requirements of the sector in Portugal."
       }
     },
     {
@@ -2061,13 +2106,9 @@
   "description": "English-speaking insurance broker in Portugal for expats, residents, families and property owners.",
   "inLanguage": "en",
   "publisher": {
-    "@type": "Organization",
-    "name": "Adler & Rochefort",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://adlerrochefort.com/images/logo-adler-rochefort.png"
-    }
-  }
+    "@id": "https://adlerrochefort.com/#organization"
+  },
+  "@id": "https://adlerrochefort.com/#website"
 }
 </script>
 <!-- Google Analytics -->
@@ -2079,11 +2120,26 @@
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
+<style>
+  .form-branch-fields[hidden] { display: none; }
+  .form-branch-fields {
+    border-top: 1px solid var(--border, #E5DFCB);
+    margin-top: 4px;
+    padding-top: 14px;
+  }
+  .form-gdpr {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--muted, #8A8B7E);
+  }
+  .form-gdpr a { color: var(--primary, #7A9A6B); }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<div class="asf-top-bar">ASF-registered broker n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
+<div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
 <nav role="navigation" aria-label="Main navigation">
   <div class="nav-links-left">
     <a href="/en/health-insurance-quote/">Health &amp; Visas</a>
@@ -2094,7 +2150,7 @@
     <a href="/en/relocation-services/">Relocation</a>
   </div>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
   </a>
   <div class="nav-links-right">
     <a href="#why-us">Why us</a>
@@ -2105,7 +2161,7 @@
       <span class="lang-switcher-sep">|</span>
       <a href="/en/" class="active">EN</a>
       <span class="lang-switcher-sep">|</span>
-      <a href="/nl/verzekeringen-portugal/" lang="nl">NL</a>
+      <a href="/nl/" lang="nl">NL</a>
     </div>
   </div>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
@@ -2176,8 +2232,10 @@
       <div class="lang-support-badge">English-speaking team · Bilingual support</div>
       <div class="hero-card-eyebrow">Free Analysis · No Obligation</div>
       <div class="hero-card-title">Find out if you're truly protected in Portugal</div>
-      <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true">
+      <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="free-analysis">
+        <input type="hidden" name="source_url" value="">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-field">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -2196,17 +2254,180 @@
         </div>
         <div class="form-field">
           <label for="insurance_type">Type of Insurance</label>
-          <select id="insurance_type" name="insurance_type">
-            <option value="">Select insurance type...</option>
-            <option value="health">Health Insurance</option>
-            <option value="car">Car Insurance</option>
-            <option value="home">Home Insurance</option>
-            <option value="condominium">Condominium Insurance</option>
-            <option value="life">Life / Mortgage Insurance</option>
-            <option value="other">Other / Not sure yet</option>
+          <select id="insurance_type" name="insurance_type" data-branch-select required>
+            <option value="">Select insurance type...</option><option value="Health">Health</option><option value="Car">Car</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Company fleet">Company fleet</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Hospitality &amp; restaurants">Hospitality &amp; restaurants</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Professional indemnity">Professional indemnity</option><option value="Cyber">Cyber</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Workers' compensation">Workers' compensation</option><option value="Other">Other</option>
           </select>
         </div>
+        <div class="form-branch-fields" data-branch="Health" hidden>
+          <div class="form-field">
+            <label for="health_age">Age of the oldest person to insure</label>
+            <input type="number" id="health_age" name="health_age" placeholder="e.g. 42" disabled>
+          </div>
+          <div class="form-field">
+            <label for="health_people">How many people to insure</label>
+            <input type="number" id="health_people" name="health_people" placeholder="e.g. 3" disabled>
+          </div>
+          <div class="form-field">
+            <label for="health_preexisting">Pre-existing conditions to declare</label>
+            <input type="text" id="health_preexisting" name="health_preexisting" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Car" hidden>
+          <div class="form-field">
+            <label for="car_vehicle">Make, model and year</label>
+            <input type="text" id="car_vehicle" name="car_vehicle" placeholder="e.g. Renault Clio 2019" disabled>
+          </div>
+          <div class="form-field">
+            <label for="car_plate">Registration plate</label>
+            <input type="text" id="car_plate" name="car_plate" placeholder="AA-00-AA" disabled>
+          </div>
+          <div class="form-field">
+            <label for="car_licence_years">Years holding a licence</label>
+            <input type="number" id="car_licence_years" name="car_licence_years" placeholder="e.g. 15" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="TVDE (Uber, Bolt, Free Now)" hidden>
+          <div class="form-field">
+            <label for="tvde_role">Driver or operator?</label>
+            <input type="text" id="tvde_role" name="tvde_role" placeholder="Driver / Operator" disabled>
+          </div>
+          <div class="form-field">
+            <label for="tvde_vehicles">Number of vehicles</label>
+            <input type="number" id="tvde_vehicles" name="tvde_vehicles" placeholder="e.g. 1" disabled>
+          </div>
+          <div class="form-field">
+            <label for="tvde_area">Area of operation</label>
+            <input type="text" id="tvde_area" name="tvde_area" placeholder="Lisbon, Porto, Algarve…" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Company fleet" hidden>
+          <div class="form-field">
+            <label for="fleet_company">Company</label>
+            <input type="text" id="fleet_company" name="fleet_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="form-field">
+            <label for="fleet_vehicles">Number of vehicles</label>
+            <input type="number" id="fleet_vehicles" name="fleet_vehicles" placeholder="e.g. 8" disabled>
+          </div>
+          <div class="form-field">
+            <label for="fleet_claims">Claims in the last 3 years</label>
+            <input type="text" id="fleet_claims" name="fleet_claims" placeholder="e.g. 2" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Home" hidden>
+          <div class="form-field">
+            <label for="home_type">Property type</label>
+            <input type="text" id="home_type" name="home_type" placeholder="Apartment / House" disabled>
+          </div>
+          <div class="form-field">
+            <label for="home_postcode">Postcode</label>
+            <input type="text" id="home_postcode" name="home_postcode" placeholder="0000-000" disabled>
+          </div>
+          <div class="form-field">
+            <label for="home_rebuild_value">Estimated rebuild value</label>
+            <input type="text" id="home_rebuild_value" name="home_rebuild_value" placeholder="e.g. €160,000" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Holiday let (Alojamento Local)" hidden>
+          <div class="form-field">
+            <label for="al_unit_type">Type of unit</label>
+            <input type="text" id="al_unit_type" name="al_unit_type" placeholder="Apartment / House / Hostel" disabled>
+          </div>
+          <div class="form-field">
+            <label for="al_licence">AL registration number</label>
+            <input type="text" id="al_licence" name="al_licence" placeholder="If already issued" disabled>
+          </div>
+          <div class="form-field">
+            <label for="al_guests">Capacity (guests)</label>
+            <input type="number" id="al_guests" name="al_guests" placeholder="e.g. 6" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Hospitality &amp; restaurants" hidden>
+          <div class="form-field">
+            <label for="horeca_venue">Type of venue</label>
+            <input type="text" id="horeca_venue" name="horeca_venue" placeholder="Hotel, restaurant, bar…" disabled>
+          </div>
+          <div class="form-field">
+            <label for="horeca_staff">Number of staff</label>
+            <input type="number" id="horeca_staff" name="horeca_staff" placeholder="e.g. 12" disabled>
+          </div>
+          <div class="form-field">
+            <label for="horeca_turnover">Annual turnover</label>
+            <input type="text" id="horeca_turnover" name="horeca_turnover" placeholder="e.g. €700,000" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Business combined (multirriscos)" hidden>
+          <div class="form-field">
+            <label for="business_company">Company</label>
+            <input type="text" id="business_company" name="business_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="form-field">
+            <label for="business_activity">CAE / activity</label>
+            <input type="text" id="business_activity" name="business_activity" placeholder="e.g. 56101" disabled>
+          </div>
+          <div class="form-field">
+            <label for="business_staff">Number of staff</label>
+            <input type="number" id="business_staff" name="business_staff" placeholder="e.g. 14" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Professional indemnity" hidden>
+          <div class="form-field">
+            <label for="pi_profession">Profession or activity</label>
+            <input type="text" id="pi_profession" name="pi_profession" placeholder="e.g. architecture" disabled>
+          </div>
+          <div class="form-field">
+            <label for="pi_limit">Limit of indemnity sought</label>
+            <input type="text" id="pi_limit" name="pi_limit" placeholder="e.g. €500,000" disabled>
+          </div>
+          <div class="form-field">
+            <label for="pi_required">Required by a professional body or contract?</label>
+            <input type="text" id="pi_required" name="pi_required" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Cyber" hidden>
+          <div class="form-field">
+            <label for="cyber_company_en">Company</label>
+            <input type="text" id="cyber_company_en" name="cyber_company_en" placeholder="Registered name" disabled>
+          </div>
+          <div class="form-field">
+            <label for="cyber_seats">Number of workstations</label>
+            <input type="number" id="cyber_seats" name="cyber_seats" placeholder="e.g. 25" disabled>
+          </div>
+          <div class="form-field">
+            <label for="cyber_personal_data">Do you process customer personal data?</label>
+            <input type="text" id="cyber_personal_data" name="cyber_personal_data" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Life &amp; mortgage protection" hidden>
+          <div class="form-field">
+            <label for="life_outstanding">Outstanding mortgage balance</label>
+            <input type="text" id="life_outstanding" name="life_outstanding" placeholder="e.g. €180,000" disabled>
+          </div>
+          <div class="form-field">
+            <label for="life_bank">Bank</label>
+            <input type="text" id="life_bank" name="life_bank" placeholder="Lender" disabled>
+          </div>
+          <div class="form-field">
+            <label for="life_dob">Date of birth</label>
+            <input type="date" id="life_dob" name="life_dob" placeholder="" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Workers' compensation" hidden>
+          <div class="form-field">
+            <label for="wc_company">Company</label>
+            <input type="text" id="wc_company" name="wc_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="form-field">
+            <label for="wc_employees">Number of employees</label>
+            <input type="number" id="wc_employees" name="wc_employees" placeholder="e.g. 9" disabled>
+          </div>
+          <div class="form-field">
+            <label for="wc_payroll">Annual payroll</label>
+            <input type="text" id="wc_payroll" name="wc_payroll" placeholder="e.g. €210,000" disabled>
+          </div>
+        </div>
         <button type="submit" class="form-submit">Request Free Analysis →</button>
+        <p class="form-gdpr">Reply within 24 business hours. Your details are used only to prepare the review and are handled under the GDPR — see our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
       </form>
       <div class="hero-card-success" id="analysisSuccess" style="display:none;text-align:center;padding:24px 0;">
         <p style="color:#fff;font-weight:600;font-size:18px;margin-bottom:8px;">Request received!</p>
@@ -2348,7 +2569,7 @@
     <div class="section-eyebrow">Our difference</div>
     <h2 class="section-title">Not just a policy.<br><em>A broker who works for you.</em></h2>
     <p class="section-subtitle">
-      As an independent, ASF-registered broker we work for you, not the insurer. We compare the whole market, explain everything in plain English and stay by your side through every claim.
+      As an independent, ASF-registered insurance intermediary we work for you, not the insurer. We compare the whole market, explain everything in plain English and stay by your side through every claim.
     </p>
 
     <div class="why-pillars">
@@ -2417,7 +2638,7 @@
 
   <div class="team-profile fade-up">
     <div class="team-photo-wrapper">
-      <img src="/images/hugo-goncalves.png" alt="Hugo Gonçalves — Founder of Adler &amp; Rochefort" class="team-photo">
+      <picture><source type="image/webp" srcset="/images/hugo-goncalves-640.webp"><img src="/images/hugo-goncalves-640.jpg" alt="Hugo Gonçalves — Founder of Adler &amp; Rochefort" class="team-photo" width="640" height="853" loading="lazy" decoding="async"></picture>
     </div>
     <div>
       <h3 class="team-name">Hugo Gonçalves</h3>
@@ -2442,701 +2663,86 @@
   </div>
 
   <div class="blog-grid">
-    <a href="/en/blog/insuring-valuables-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #C9A84C 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Cover for items a standard contents section will not carry</h3><p class="blog-card-excerpt">Valuables sub-limits, the single-article limit, scheduled versus unscheduled items and what changes when a collection is insured on its own terms.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-art-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Insuring art in Portugal: agreed value, restoration and loss in value</h3><p class="blog-card-excerpt">Why a painting is not contents: agreed value against a valuation, cover for damage in transit and on loan, and what a policy pays after a restoration.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-jewellery-watches-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #C9A84C 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Jewellery and watches: worn, travelled and left in a safe</h3><p class="blog-card-excerpt">Where the household policy stops, what a safe rating actually buys, and how cover follows a watch out of the house and abroad.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-antiques-collections-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #22303C 0%, #7A8A96 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Insuring a collection that has no catalogue price</h3><p class="blog-card-excerpt">Blanket cover against scheduled items, the pair-or-set clause, condition and restoration cost, and valuing objects with no comparables.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-musical-instruments-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Cover for an instrument that travels and is played</h3><p class="blog-card-excerpt">Why the household policy fails an instrument, agreed value, air carriage and unattended vehicles, professional use, climate and loans.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/valuations-portugal-who-what-how-often/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2B3440 0%, #8A8271 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Getting a valuation that an underwriter will accept</h3><p class="blog-card-excerpt">Basis of valuation, what the document must contain, who can issue one in Portugal for each class of object, and how often it has to be redone.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/safes-alarms-underwriting-requirements-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #22303C 0%, #7A8A96 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">The security conditions attached to your policy</h3><p class="blog-card-excerpt">Condition or recommendation, safe rating and anchoring, alarm grade and monitoring, the underwriter survey, and keeping the conditions true.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/shipping-a-collection-to-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2B3440 0%, #8A8271 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Moving a collection: the gap between the removals cover and yours</h3><p class="blog-card-excerpt">Carrier liability is not insurance. Declared-value transit cover, general average, packing and condition reports, customs and the storage gap.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/worldwide-cover-personal-possessions-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Cover for possessions when they are not at the insured address</h3><p class="blog-card-excerpt">The temporary removal extension and its limits, scheduled worldwide all-risks, the unattended-vehicle exclusion, and where travel insurance stops.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/outdated-insured-values/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #C9A84C 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">When the insured value stops matching the thing insured</h3><p class="blog-card-excerpt">How the regra proporcional cuts settlements, why rebuild costs and collections drift apart from the schedule, and how often each class needs revaluing.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/how-specialist-risks-are-placed-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #22303C 0%, #7A8A96 100%);"></div><div class="blog-card-tag">Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">When there is no off-the-shelf policy: how a specialist risk is placed</h3><p class="blog-card-excerpt">Broker, underwriting agency and insurer capacity; what delegated authority and a coverholder actually are; what you must supply, and realistic timescales.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/boat-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #16222E 0%, #5C7C8A 100%);"></div><div class="blog-card-tag">Marine</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Insuring a boat kept in Portuguese waters</h3><p class="blog-card-excerpt">Hull on an agreed value and liability to marina requirements, navigation limits, skipper and crew, lay-up periods and what registration changes.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/yacht-insurance-algarve-marinas/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #16222E 0%, #5C7C8A 100%);"></div><div class="blog-card-tag">Marine</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Berthed in the Algarve: what the marina requires and what it does not cover</h3><p class="blog-card-excerpt">The berth contract as an insurance document, marina by marina, local risks alongside, live-aboard declarations and the boat between seasons.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/private-use-vs-charter-boat-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #16222E 0%, #5C7C8A 100%);"></div><div class="blog-card-tag">Marine</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Private use, paid use and the line between them</h3><p class="blog-card-excerpt">What happens to a policy when a private boat carries paying guests, what commercial cover requires, and how mixed use is declared.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/lay-up-lifting-winter-boat-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #16222E 0%, #5C7C8A 100%);"></div><div class="blog-card-tag">Marine</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Lay-up, lifting and the boat out of the water</h3><p class="blog-card-excerpt">What a lay-up period is and the breach owners commit without noticing, cover while craning, yard liability, and ashore against afloat.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/importing-registering-a-boat-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #16222E 0%, #5C7C8A 100%);"></div><div class="blog-card-tag">Marine</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Bringing a boat to Portugal: flag, registration and the delivery passage</h3><p class="blog-card-excerpt">Flag and registration, VAT status and temporary admission, insuring a delivery passage or a road move, and the file to keep aboard.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-a-high-value-apartment-lisbon-cascais/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2B3440 0%, #8A8271 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Where the condominium policy ends and yours begins</h3><p class="blog-card-excerpt">What the building policy covers, the fit-out gap, water damage between three parties, unoccupancy and letting, and the four layers of cover.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/family-liability-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">The liability a household carries without noticing</h3><p class="blog-card-excerpt">Children, dogs, bicycles, contractors and the pool: where personal liability comes from, what limits are realistic, and what the policy excludes.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/personal-fraud-and-extortion-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #22303C 0%, #7A8A96 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Cover for fraud, impersonation and extortion against a household</h3><p class="blog-card-excerpt">Payment diversion on a property purchase, unauthorised against authorised-but-deceived transfers, extortion conditions and the hours after it happens.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/personal-legal-expenses-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2B3440 0%, #8A8271 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Who pays for the dispute: personal legal expenses cover</h3><p class="blog-card-excerpt">What it funds by category, why it matters more to a foreign owner, prospects-of-success and notification conditions, and bundled against standalone.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/us-buyers-property-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">What changes when the buyer is American</h3><p class="blog-card-excerpt">The proportional rule instead of coinsurance, named perils, liability without an umbrella, earthquake by zone, and ownership through a structure.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/best-home-insurance-portugal-2026/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Comparison</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">The best home insurance in Portugal in 2026: Zurich, Allianz, Hiscox and Liberty Mutual compared</h3><p class="blog-card-excerpt">A side-by-side comparison on rebuild value, valuables, letting, unoccupied property and English documentation — with a recommendation by profile.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-multi-risk/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2C4A5A 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Home Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">What a Portuguese multi-risk home policy actually covers, clause by clause</h3><p class="blog-card-excerpt">A technical reading of the standard wording: what is typically covered, what is excluded, and the sub-limits and excesses that decide a claim.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-cost-algarve-price-drivers/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3F4E3A 0%, #D9A668 100%);"></div><div class="blog-card-tag">Pricing</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">How much does home insurance cost in the Algarve?</h3><p class="blog-card-excerpt">Indicative annual premiums by property type, what moves the price up or down, and why the cheapest quote is often the most expensive.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/change-bank-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #B5B1A1 100%);"></div><div class="blog-card-tag">Switching</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Your bank sold you the home insurance. Here is how to change it.</h3><p class="blog-card-excerpt">What the bank can and cannot require, what happens to the rate bonus, and the six steps to move the policy without losing the mortgage terms.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/water-damage-claim-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F4E5F 0%, #7FA8B8 100%);"></div><div class="blog-card-tag">Claims</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">How to claim for water damage on a Portuguese home policy</h3><p class="blog-card-excerpt">The first 48 hours, what the policy actually pays for, the sub-limit that decides the outcome and the reasons settlements get reduced.</p><span class="blog-card-link">Read article</span></div>
-    </a>
     <a href="/en/blog/alojamento-local-insurance-requirements/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Alojamento Local</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Alojamento Local insurance: what the RNAL registration actually requires</h3><p class="blog-card-excerpt">The legal obligation behind an AL registration, why a residential policy does not qualify, and what a compliant policy looks like.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/unoccupied-property-clause-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3A4C5A 0%, #8FB0BF 100%);"></div><div class="blog-card-tag">Second Homes</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">The unoccupancy clause: what happens when your Portuguese home sits empty</h3><p class="blog-card-excerpt">Why theft and water damage cover can lapse after 30, 60 or 90 days, how to find your own number, and five ways to keep the cover intact.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/domestic-staff-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Compliance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Employing domestic staff in Portugal: the insurance you are legally required to have</h3><p class="blog-card-excerpt">Workers&rsquo; compensation is compulsory for a housekeeper or gardener, and your home policy specifically excludes injury to your own employees.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/solar-panels-ev-chargers-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #D9A668 100%);"></div><div class="blog-card-tag">Home Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Solar panels, EV chargers and heat pumps: are they covered by your home policy?</h3><p class="blog-card-excerpt">Whether new installations count as building or contents, the electrical damage sub-limit that caps most claims, and the certification question.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/documents-to-insure-property-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Getting Started</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">What you need to insure a property in Portugal: the document checklist</h3><p class="blog-card-excerpt">The five essentials, what the insurer asks that no certificate shows, and what to do when a licen&ccedil;a de utiliza&ccedil;&atilde;o is missing.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/zurich-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2C4A6B 0%, #5B87AE 100%);"></div><div class="blog-card-tag">Insurer Guide</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Zurich home insurance in Portugal: expat guide 2026</h3><p class="blog-card-excerpt">What Zurich offers on a Portuguese multi-risk policy, where it is strong, and the three things to check before you sign.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/allianz-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F4E5F 0%, #4E8B9B 100%);"></div><div class="blog-card-tag">Insurer Guide</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Allianz home insurance in Portugal: expat guide 2026</h3><p class="blog-card-excerpt">A broad product range and strong assistance, with earthquake optional and theft cover conditional on the security you declared.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/hiscox-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3A2E4A 0%, #7B6A8F 100%);"></div><div class="blog-card-tag">High Value</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Hiscox home insurance in Portugal: cover for high-value homes</h3><p class="blog-card-excerpt">All-risks cover, agreed values, scheduled art and jewellery, and no proportional rule — individually underwritten, and not a retail solution.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/liberty-mutual-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A2C 0%, #8F7455 100%);"></div><div class="blog-card-tag">Insurer Guide</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Liberty Mutual home insurance in Portugal: the specialist route</h3><p class="blog-card-excerpt">Not the former Liberty Seguros retail brand. Where a specialist market answers properties the retail insurers decline.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-lagos/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2C4A5A 0%, #7FA8B8 100%);"></div><div class="blog-card-tag">Lagos</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Home insurance in Lagos: what local property actually needs</h3><p class="blog-card-excerpt">The historic centre, the Porto de M&oacute;s cliff line, the low ground at Meia Praia and the marina rental market each need a different policy.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-lagoa-carvoeiro/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3A4C5A 0%, #8FB0BF 100%);"></div><div class="blog-card-tag">Lagoa &amp; Carvoeiro</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Home insurance in Lagoa and Carvoeiro: a local guide</h3><p class="blog-card-excerpt">The concelho with the most second homes in the Algarve — where the occupancy basis matters more than the premium.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-loule-almancil/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3A3346 0%, #8F7FA8 100%);"></div><div class="blog-card-tag">Loul&eacute; &amp; Almancil</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Home insurance in Loul&eacute; and Almancil: from the resorts to the serra</h3><p class="blog-card-excerpt">Quinta do Lago and Vale do Lobo at one end, converted farmhouses and wildfire exposure at the other.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-    <a href="/en/blog/home-insurance-tavira/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3F4A38 0%, #9BB07A 100%);"></div><div class="blog-card-tag">Tavira</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">August 2026</div><h3 class="blog-card-title">Home insurance in Tavira and the eastern Algarve</h3><p class="blog-card-excerpt">Tidal water from the Ria Formosa, traditional construction in the old town, renovation projects and the corrosion exclusion.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/how-to-get-nif-portugal-non-resident/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #3F4E3A 0%, #D9A668 100%);"></div><div class="blog-card-tag">Relocation</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">How to get a NIF in Portugal as a non-resident</h3><p class="blog-card-excerpt">The complete process for obtaining a Portuguese tax number from abroad, with or without a fiscal representative — and the mistakes to avoid.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/fiscal-representation-portugal-explained/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Fiscal Representation</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Fiscal representation in Portugal, explained</h3><p class="blog-card-excerpt">When a fiscal representative is required, when the obligation ends after residency, what the role covers and how to change representative.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/health-insurance-portugal-residency-visa/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1B2B4B 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Health Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Health insurance for a Portugal residency visa</h3><p class="blog-card-excerpt">What cover your residency visa needs, what consulates and AIMA accept as proof, and how SNS access changes once you have residency.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/setting-up-company-portugal-foreigners/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Company Setup</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Setting up a company in Portugal as a foreigner</h3><p class="blog-card-excerpt">Choosing between a Unipessoal Lda and other forms, Empresa na Hora vs the traditional route, accounting duties and the insurance you must hold.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/destination-wedding-cancellation-insurance-algarve/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Event &amp; Wedding Cover</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insuring a destination wedding in the Algarve</h3><p class="blog-card-excerpt">The couple's lost deposits and the organiser's own liability are two separate exposures. How event cancellation cover differs from travel insurance.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/medical-evacuation-repatriation-cover-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1B2B4B 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Medical &amp; Repatriation</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Medical evacuation and repatriation cover for residents in Portugal</h3><p class="blog-card-excerpt">Why health and travel policies rarely fund an air ambulance or a transfer home, and what residents in the Algarve should check.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/fiduciary-family-office-liability-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #B5B1A1 100%);"></div><div class="blog-card-tag">Fiduciary Liability</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Liability cover for trustees, foundation boards and family offices in Portugal</h3><p class="blog-card-excerpt">How fiduciary liability differs from ordinary D&amp;O, why personal assets are at risk, and what Side A and run-off cover do.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/prize-indemnity-hole-in-one-insurance-algarve/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #D9A668 100%);"></div><div class="blog-card-tag">Events &amp; Promotions</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Prize indemnity and hole-in-one insurance for events in the Algarve</h3><p class="blog-card-excerpt">How clubs and resorts can advertise a large prize — a hole-in-one car, a cash jackpot — for a fixed premium, and the rules that make a claim valid.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/watches-jewellery-travelling-worldwide-all-risks/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Jewellery &amp; Watches</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Watches and jewellery worn while travelling: the worldwide all-risks extension</h3><p class="blog-card-excerpt">High-value items need cover that follows them beyond the front door, with specified values, travel conditions and documentation in place.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/track-days-performance-driving-motor-policy-exclusion/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Motor Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Track days and performance driving: the exclusion hiding in your motor policy</h3><p class="blog-card-excerpt">Why track days, timed events and performance driving can fall outside ordinary motor insurance, even with comprehensive cover.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/high-value-bicycles-e-bikes-cover-away-from-home/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Bicycles &amp; E-bikes</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">High-value bicycles and e-bikes: cover away from home</h3><p class="blog-card-excerpt">How to insure expensive bicycles and e-bikes for theft, accidental damage, accessories, battery risks and liability while riding.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/employing-nanny-driver-gardener-home-employer-obligation/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #94B585 100%);"></div><div class="blog-card-tag">Household Staff</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Employing a nanny, driver or gardener at home: the full employer obligation nobody explains</h3><p class="blog-card-excerpt">Private households in Portugal need to understand registration, social security, workplace accidents and liability before staff start work.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/divorce-separation-jointly-held-cover-unravels/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A5A 0%, #D9A668 100%);"></div><div class="blog-card-tag">Family &amp; Assets</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Divorce and separation: how jointly-held cover unravels</h3><p class="blog-card-excerpt">Home, car, health, life and high-value asset policies can stop matching reality once a couple separates or divides property.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-appreciating-asset-agreed-value-market-value-cars-wine-art/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A5A 0%, #A56A5B 100%);"></div><div class="blog-card-tag">Collectors &amp; Assets</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insuring an appreciating asset: agreed value vs market value for cars, wine and art</h3><p class="blog-card-excerpt">Why agreed value can matter for classic cars, wine, art and other appreciating assets when market value is too uncertain at claim time.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Second Homes</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Second homes that sit empty for months: the unoccupancy clause that voids your cover</h3><p class="blog-card-excerpt">A second home can be perfectly maintained and still fall outside cover if the policy limits how long it may remain empty.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Coastal Property</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Coastal and clifftop properties in the Algarve: subsidence, erosion and flood</h3><p class="blog-card-excerpt">Sea views can bring underwriting questions: slope stability, erosion, flood maps, retaining walls and storm exposure.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Modern Homes</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Solar panels, home batteries and EV chargers: your home is modern, your policy isn't</h3><p class="blog-card-excerpt">Modern upgrades change replacement values, electrical risk and liability, but many home policies still describe an older house.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/building-home-portugal-promoter-insurance-seguro-decenal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Construction</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Building a home in Portugal: promoter insurance and the seguro decenal explained</h3><p class="blog-card-excerpt">Before the home policy exists, construction works, public liability and structural defects need their own insurance plan.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/swimming-pools-jetties-private-access-liability-nobody-insures/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #94B585 100%);"></div><div class="blog-card-tag">Liability</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Swimming pools, jetties and private access: the liability nobody insures</h3><p class="blog-card-excerpt">Pools, jetties, paths and gates feel like lifestyle features, but they can become the most serious liability exposure on the property.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/algarve-home-earns-income-personal-use-vs-al-cover/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A5A 0%, #D9A668 100%);"></div><div class="blog-card-tag">AL Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">When your Algarve home earns income part of the year: personal use vs AL cover</h3><p class="blog-card-excerpt">A home that alternates between family use and paid stays needs wording that follows both realities, not just one of them.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/moving-to-portugal-pre-existing-condition-health-cover/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Health · Relocation</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Moving to Portugal with a pre-existing condition: what changes in your health cover</h3><p class="blog-card-excerpt">What foreign residents should expect when arranging health insurance in Portugal with an existing diagnosis, medication or treatment history.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/long-term-care-planning-foreign-residents-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2F5D8A 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Long-Term Care</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Long-term care planning for foreign residents in Portugal</h3><p class="blog-card-excerpt">How foreign residents in Portugal should think about private health cover, assistance benefits and family planning for later-life care needs.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/medical-evacuation-repatriation-cover-residents-travel-constantly/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Travel · Health</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Medical evacuation and repatriation cover for residents who travel constantly</h3><p class="blog-card-excerpt">Why Portugal-based residents who travel often should check medical evacuation, repatriation and emergency transport wording before relying on a policy abroad.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/international-health-cover-children-school-abroad/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2F5D8A 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Family Health</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">International health cover when your children are at school abroad</h3><p class="blog-card-excerpt">How families based in Portugal should review international health insurance when children study at boarding school, university or school abroad.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-
-    <a href="/en/blog/insuring-car-collection-multiple-vehicles-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Collector Cars</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insuring a car collection: when separate policies stop making sense</h3><p class="blog-card-excerpt">One multi-vehicle contract, alternating driving and named drivers, shared storage and accumulation, and keeping the aggregate value current.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Collector Cars</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Classic and collector cars in Portugal: matriculation, agreed value and limited-use policies</h3><p class="blog-card-excerpt">Getting the car legal at the IMT, why agreed value &mdash; not depreciated market value &mdash; decides a total loss, and how limited-use terms cut the premium.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-
-    <a href="/en/blog/insurance-private-staff-travel-household/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #94B585 100%);"></div><div class="blog-card-tag">Household Staff</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insurance for private staff who travel with the household</h3><p class="blog-card-excerpt">A Portuguese domestic-staff policy is written for work done in Portugal. When a nanny, carer or driver travels with the family, the cover may stop at the border.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/key-person-insurance-businesses-abroad/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Business Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Key person insurance when you still own businesses abroad</h3><p class="blog-card-excerpt">If you live in Portugal but the business you depend on is elsewhere, who holds the policy, who receives the payout and how each side is taxed decides whether the cover works.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/home-staff-quarters-guest-annexes-outbuildings/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Home Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insuring a home with staff quarters, guest annexes and outbuildings</h3><p class="blog-card-excerpt">Every structure on the plot has to be declared and valued: how staff quarters, annexes and outbuildings change the sum insured, the liability and the cover.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/renovating-listed-heritage-property-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Heritage Property</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Renovating a listed or heritage property in Portugal: insurance during and after the works</h3><p class="blog-card-excerpt">Why a home policy doesn't cover a building site, where the builder's cover ends, and the extra cost of restoring protected fabric.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/golf-resort-properties-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Resort Property</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Golf resort properties: where the resort's insurance ends and yours begins</h3><p class="blog-card-excerpt">What the resort and association policy really covers, the gap left for your villa's interior, contents and liability, and the effect of letting.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/property-held-company-structure-insurance/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">Company Ownership</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insurance for properties held through a company structure</h3><p class="blog-card-excerpt">When a Lda, LLC or offshore holding owns the building, the policy has to name the right entity &mdash; or a claim can fail on the mismatch.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/wine-cellars-home-storage-valuation-cover/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A5A 0%, #A56A5B 100%);"></div><div class="blog-card-tag">Household</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Wine cellars at home: storage conditions, valuation and cover</h3><p class="blog-card-excerpt">Spoilage after a cooling failure, the storage conditions an insurer attaches, how a cellar is valued, and wine in transit or bonded storage.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/art-collection-household-policy-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A3A5A 0%, #D9A668 100%);"></div><div class="blog-card-tag">Art &amp; Collections</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">When your art collection outgrows your household policy</h3><p class="blog-card-excerpt">Where a home policy's sub-limits on art, jewellery and collections stop, why agreed value matters, and how cover follows pieces across borders.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/do-exposure-non-executive-directors-abroad/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #33402F 0%, #D9A668 100%);"></div><div class="blog-card-tag">D&amp;O / Directors</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">D&amp;O exposure for non-executive board positions held abroad</h3><p class="blog-card-excerpt">Non-executive does not mean non-liable. Why the company's D&amp;O may not protect you, what Side A cover does, and how run-off and cross-border gaps leave directors exposed.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insuring-property-portfolio-two-jurisdictions/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div><div class="blog-card-tag">Cross-Border Cover</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insuring a property portfolio across two jurisdictions</h3><p class="blog-card-excerpt">Why a Portuguese home needs a Portuguese policy, how occupancy decides the claim, and how to align sums insured across properties in two countries.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/health-insurance-portugal-usa/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2F5D8A 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Americans in Portugal</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Health insurance between Portugal and the United States: what actually covers you</h3><p class="blog-card-excerpt">Why Medicare does not travel, the limits of the SNS, and the difference between plans that include the US and those that cover it only for emergencies.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/insurance-domestic-staff-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Household Staff</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">July 2026</div><h3 class="blog-card-title">Insurance for staff employed at home in Portugal</h3><p class="blog-card-excerpt">Employing household staff makes you an employer: the compulsory workplace-accidents cover, its limits, and the gaps beyond it.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/april-international-health-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #2F5D8A 0%, #5B8FB9 100%);"></div><div class="blog-card-tag">APRIL · Health</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">APRIL International Health Insurance in Portugal: expat guide 2026</h3><p class="blog-card-excerpt">What APRIL offers expats in Portugal: cover, networks, who it suits and how it compares to Allianz and Médis. Free quote in 24h.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/travel-insurance-expats-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1F6F6B 0%, #4FB3A9 100%);"></div><div class="blog-card-tag">Travel Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Travel insurance for expats living in Portugal (2026 guide)</h3><p class="blog-card-excerpt">Trips home, Schengen cover and medical abroad — and how travel insurance differs from your health plan. Free quote in 24h.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/car-insurance-cost-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #B98A5B 100%);"></div><div class="blog-card-tag">Car Insurance</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Average car insurance cost in Portugal 2026 (expat guide)</h3><p class="blog-card-excerpt">Average premiums, what affects the price, and how expats can pay less — including transferring your no-claims history from abroad.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/allianz-health-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #003781 0%, #4A6FA5 100%);"></div><div class="blog-card-tag">Allianz · Health</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Allianz health insurance in Portugal: expat guide 2026</h3><p class="blog-card-excerpt">Allianz international cover, plans, networks and who it suits best — and how it compares to Médis and APRIL.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/medis-health-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Médis · Health</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Médis health insurance in Portugal: expat guide 2026</h3><p class="blog-card-excerpt">The Médis network, plans and who it suits — and how it compares to Allianz and APRIL. Free quote in 24h.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/earthquake-cover-algarve-buildings/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #5A3A3A 0%, #A56A5B 100%);"></div><div class="blog-card-tag">Condominium</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Earthquake cover for Algarve condominium buildings</h3><p class="blog-card-excerpt">Why earthquake cover matters in the Algarve, what mandatory fire insurance leaves out, and how to close the gap. Free policy audit.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/private-health-insurance-pre-existing-condition-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Health · Expats</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Private Health Insurance With a Pre-Existing Condition in Portugal</h3><p class="blog-card-excerpt">How medical history affects private health insurance acceptance, exclusions and waiting periods for expats moving to Portugal.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-    <a href="/en/blog/getting-insurance-portugal-before-nif-residency/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img"><div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div><div class="blog-card-tag">Expat Relocation</div></div>
-      <div class="blog-card-body"><div class="blog-card-date">June 2026</div><h3 class="blog-card-title">Getting Insurance in Portugal Before You Have a NIF or Residency</h3><p class="blog-card-excerpt">What can be arranged before local paperwork is complete, and which policies usually require a NIF, address or residency documents.</p><span class="blog-card-link">Read article</span></div>
-    </a>
-
-
-    <a href="/en/blog/health-insurance-cost-portugal-2026/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
       <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
+        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%);"></div>
+        <div class="blog-card-tag">Alojamento Local</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">August 2026</div>
+        <h3 class="blog-card-title">Alojamento Local insurance: what the RNAL registration actually requires</h3>
+        <p class="blog-card-excerpt">The legal obligation behind an AL registration, why a residential policy does not qualify, and what a compliant policy looks like.</p>
+        <span class="blog-card-link">Read article</span>
+      </div>
+    </a>
+
+    <a href="/en/blog/best-home-insurance-portugal-2026/" class="blog-card fade-up" style="transition-delay: 0.05s; text-decoration: none; color: inherit;">
+      <div class="blog-card-img">
+        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #D9A668 100%);"></div>
+        <div class="blog-card-tag">Comparison</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">August 2026</div>
+        <h3 class="blog-card-title">The best home insurance in Portugal in 2026: Zurich, Allianz, Hiscox and Liberty Mutual compared</h3>
+        <p class="blog-card-excerpt">A side-by-side comparison on rebuild value, valuables, letting, unoccupied property and English documentation — with a recommendation by profile.</p>
+        <span class="blog-card-link">Read article</span>
+      </div>
+    </a>
+
+    <a href="/en/blog/insuring-valuables-portugal/" class="blog-card fade-up" style="transition-delay: 0.1s; text-decoration: none; color: inherit;">
+      <div class="blog-card-img">
+        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1C2B3A 0%, #C9A84C 100%);"></div>
+        <div class="blog-card-tag">Valuables</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">August 2026</div>
+        <h3 class="blog-card-title">Cover for items a standard contents section will not carry</h3>
+        <p class="blog-card-excerpt">Valuables sub-limits, the single-article limit, scheduled versus unscheduled items and what changes when a collection is insured on its own terms.</p>
+        <span class="blog-card-link">Read article</span>
+      </div>
+    </a>
+
+    <a href="/en/blog/health-insurance-portugal-residency-visa/" class="blog-card fade-up" style="transition-delay: 0.15000000000000002s; text-decoration: none; color: inherit;">
+      <div class="blog-card-img">
+        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #1B2B4B 0%, #7A9A6B 100%);"></div>
         <div class="blog-card-tag">Health Insurance</div>
       </div>
       <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">How Much Does Health Insurance Cost in Portugal? Real 2026 Prices by Age</h3>
-        <p class="blog-card-excerpt">Realistic 2026 health insurance cost ranges in Portugal by age, plus the factors that change premiums for expats and families.</p>
+        <div class="blog-card-date">July 2026</div>
+        <h3 class="blog-card-title">Health insurance for a Portugal residency visa</h3>
+        <p class="blog-card-excerpt">What cover your residency visa needs, what consulates and AIMA accept as proof, and how SNS access changes once you have residency.</p>
         <span class="blog-card-link">Read article</span>
       </div>
     </a>
 
-
-    <a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
+    <a href="/en/blog/cyber-insurance-businesses-portugal/" class="blog-card fade-up" style="transition-delay: 0.2s; text-decoration: none; color: inherit;">
       <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Mortgage Life</div>
+        <div class="blog-card-img-bg"><img src="/images/blog/cyber-insurance-businesses-portugal.svg" alt="Cyber insurance for businesses: what it covers and why it is no longer optional" width="640" height="360" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" decoding="async"></div>
+        <div class="blog-card-tag">Cyber Risks</div>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Mortgage Life Insurance for Foreign Buyers: How to Stop Overpaying Your Bank</h3>
-        <p class="blog-card-excerpt">Foreign buyers in Portugal often accept bank life insurance by default. Learn how to compare alternatives and reduce mortgage protection costs.</p>
+        <h3 class="blog-card-title">Cyber insurance for businesses: what it covers and why it is no longer optional</h3>
+        <p class="blog-card-excerpt">A guide to cyber insurance for businesses in Portugal: what it covers, who it is for and how Hiscox CyberClear 360º works, distributed by Adler &amp; Rochefort in partnership with Hiscox.</p>
         <span class="blog-card-link">Read article</span>
       </div>
     </a>
 
-    <a href="/en/blog/d7-visa-health-insurance-valid-proof/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
+    <a href="/en/blog/tvde-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0.25s; text-decoration: none; color: inherit;">
       <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">D7 Visa</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Health Insurance for the D7 Visa: What Counts as Valid Proof</h3>
-        <p class="blog-card-excerpt">A practical guide to health insurance proof for Portugal D7 visa applicants and residents renewing their status.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/retiring-algarve-health-cover-65-plus/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Retirement</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Retiring to the Algarve: Health Cover That Still Accepts You at 65+</h3>
-        <p class="blog-card-excerpt">Health insurance options for retirees moving to the Algarve, including acceptance, exclusions and alternatives after age 65.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/sns-vs-private-insurance-expats-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">SNS vs Private</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">SNS vs Private Insurance: Do Expats Really Need Both?</h3>
-        <p class="blog-card-excerpt">How Portugal’s SNS and private health insurance work together for expats, retirees and families.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/insurance-claim-portugal-no-portuguese/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Claims</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Filing an Insurance Claim in Portugal When You Don't Speak Portuguese</h3>
-        <p class="blog-card-excerpt">How to report an insurance claim in Portugal, what documents to collect and how an English-speaking broker helps avoid delays.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/insurance-guide-americans-moving-to-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Americans</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">A Complete Insurance Guide for Americans Moving to Portugal</h3>
-        <p class="blog-card-excerpt">Essential insurance cover for Americans moving to Portugal: health, home, car, liability, mortgage life and claims support.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/british-expats-brexit-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">British Expats</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">British Expats After Brexit: What Changed for Your Insurance in Portugal</h3>
-        <p class="blog-card-excerpt">What British residents and property owners in Portugal should review after Brexit across health, travel, car and home insurance.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/second-home-rent-out-holiday-let-standard-home-cover/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Holiday Let</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Insuring a Second Home You Rent Out: Holiday-Let vs Standard Home Cover</h3>
-        <p class="blog-card-excerpt">Why a rented second home in Portugal needs declared holiday-let cover instead of ordinary home insurance.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/condominium-insurance-doesnt-cover-contents/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Condominium</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">What Your Condominium Insurance Doesn't Cover (and Why You Still Need Contents Cover)</h3>
-        <p class="blog-card-excerpt">Condominium insurance protects shared building risks, but owners still need contents and private liability cover for their own apartment.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/luxury-car-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/luxury-car-insurance-portugal.svg" alt="Luxury and supercar insurance in Portugal" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Collector Cars</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Insuring a car that is worth more than the market says it is</h3>
-        <p class="blog-card-excerpt">Capital ceilings, settlement by table value and network repairs &mdash; and what an individually underwritten all-risks policy does instead.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/luxury-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/luxury-home-insurance-portugal.svg" alt="Luxury home insurance in Portugal with all-risks cover" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Household</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Above a certain value, a standard home policy stops working</h3>
-        <p class="blog-card-excerpt">Named perils, the proportional rule, valuables sub-limits, gardens and pools, the unoccupancy clause, and what individual underwriting involves.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/holiday-home-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/holiday-home-insurance-portugal.svg" alt="Holiday home insurance in Portugal for second residences" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Holiday Home Insurance</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">June 2026</div>
-        <h3 class="blog-card-title">Holiday home insurance in Portugal: cover built for a second residence</h3>
-        <p class="blog-card-excerpt">A second home is used differently from where you live. See how specialist cover protects buildings, contents, pools and gardens, your liability, and adds emergency travel for owners who live abroad.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-
-    <a href="/en/blog/20-years-tourism-hospitality-insurance/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/20-anos-turismo-seguros-hotelaria.svg" alt="20 years of tourism experience and hospitality insurance" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Hospitality &amp; Tourism</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">May 2026</div>
-        <h3 class="blog-card-title">20 years of tourism experience: how real-world expertise transforms insurance brokerage for hospitality</h3>
-        <p class="blog-card-excerpt">Hugo Gonçalves brings nearly 20 years of global tourism experience to insurance brokerage. Discover how that international background shapes clear, English-speaking advice for expats in Portugal.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/car-insurance-complete-guide/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/car-insurance-complete-guide.jpg" alt="Imagem do Blog - car insurance complete guide" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Car Insurance</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">March 2026</div>
-        <h3 class="blog-card-title">How to choose the best car insurance in Portugal: complete guide 2026</h3>
-        <p class="blog-card-excerpt">Complete guide to choosing the best car insurance in Portugal. Coverage comparison, tips to save on premiums and what changes in 2026.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/health-insurance-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/health-insurance-portugal.jpg" alt="Imagem do Blog - health insurance portugal" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Health Insurance</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">March 2026</div>
-        <h3 class="blog-card-title">Health insurance in Portugal: complete guide to protecting your family</h3>
-        <p class="blog-card-excerpt">Everything you need to know about health insurance in Portugal: how it works, NHS vs private insurance, and how to choose the ideal plan.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/health-insurance-expats-portugal/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/seguro-saude-expatriados.svg" alt="Health insurance for expats in Portugal" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Health · Expats</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">May 2026</div>
-        <h3 class="blog-card-title">Health insurance for expats in Portugal: Allianz, Medis &amp; AdvanceCare</h3>
-        <p class="blog-card-excerpt">The definitive guide for expats: how health insurance works in Portugal, what Allianz, Medis and AdvanceCare cover, and why you need an independent broker.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/allianz-april-medis-health-insurance-portugal-2026/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg" style="background: linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%);"></div>
-        <div class="blog-card-tag">Health Insurance</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">May 2026</div>
-        <h3 class="blog-card-title">Allianz vs APRIL vs Médis: which is the best health insurance in Portugal in 2026</h3>
-        <p class="blog-card-excerpt">Independent 2026 comparison of Allianz, APRIL and Médis: premiums, coverage, waiting periods and network. Personalized quote in 24h.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/home-insurance-protect-property/" class="blog-card fade-up" style="transition-delay: 0s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/home-insurance-protect-property.jpg" alt="Imagem do Blog - home insurance protect property" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Home Insurance</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">March 2026</div>
-        <h3 class="blog-card-title">Home insurance in Portugal: how to choose the right protection for your property</h3>
-        <p class="blog-card-excerpt">Practical guide to home insurance in Portugal: mandatory coverage, building vs contents insurance, and how to protect your property at the best price.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
-    <a href="/en/blog/home-insurance-legalization/" class="blog-card fade-up" style="transition-delay: 1.4s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/home-insurance-legalization.jpg" alt="Imagem do Blog - home insurance legalization" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Home Insurance</div>
+        <div class="blog-card-img-bg"><picture><source type="image/webp" srcset="/images/blog/tvde-insurance-portugal-640.webp"><img src="/images/blog/tvde-insurance-portugal.jpg" alt="TVDE insurance in Portugal: complete guide for Uber, Bolt and Free Now drivers" width="640" height="360" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;" decoding="async"></picture></div>
+        <div class="blog-card-tag">TVDE Insurance</div>
       </div>
       <div class="blog-card-body">
         <div class="blog-card-date">April 2026</div>
-        <h3 class="blog-card-title">Home insurance and legalization: why illegal construction can void your coverage</h3>
-        <p class="blog-card-excerpt">Unlicensed construction can compromise your insurance payout. Learn why having all aspects of your property legally compliant is essential.</p>
+        <h3 class="blog-card-title">TVDE insurance in Portugal: complete guide for Uber, Bolt and Free Now drivers</h3>
+        <p class="blog-card-excerpt">Insurance for TVDE drivers in Portugal (Uber, Bolt): what's mandatory, what it covers and how to insure your vehicle. Independent insurance intermediary, free quote.</p>
         <span class="blog-card-link">Read article</span>
       </div>
     </a>
-
-    <a href="/en/blog/liability-insurance-complementary-therapies/" class="blog-card fade-up" style="transition-delay: 1.5s; text-decoration: none; color: inherit;">
-      <div class="blog-card-img">
-        <div class="blog-card-img-bg"><img src="/images/blog/seguro-terapeuticas-nao-convencionais.svg" alt="Blog Image - liability insurance complementary therapies" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"></div>
-        <div class="blog-card-tag">Therapist Liability</div>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-date">May 2026</div>
-        <h3 class="blog-card-title">Liability insurance for complementary and alternative medicine practitioners</h3>
-        <p class="blog-card-excerpt">Acupuncture, homeopathy, naturopathy or yoga — learn what the law requires and how to protect your practice with the right insurance.</p>
-        <span class="blog-card-link">Read article</span>
-      </div>
-    </a>
-
   </div>
   <div class="blog-toggle-wrapper" style="text-align: center; margin-top: 40px;">
-    <button
-      id="blog-toggle-btn"
-      class="btn-primary blog-toggle-btn"
-      onclick="toggleBlog()"
-      aria-expanded="false">
-      LOAD MORE ARTICLES
-    </button>
+    <a href="/en/blog/" class="btn-primary">View all articles &rarr;</a>
   </div>
 </section>
 
@@ -3205,7 +2811,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Yes. We are insurance brokers registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority (ASF), complying with all regulatory requirements of the sector in Portugal.</div>
+          <div class="faq-answer-inner">Yes. We are an insurance intermediary registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority (ASF), complying with all regulatory requirements of the sector in Portugal.</div>
         </div>
       </div>
 
@@ -3281,7 +2887,7 @@
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">English-speaking, ASF-registered insurance broker in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
+      <p class="footer-brand-desc">English-speaking, ASF-registered insurance intermediary in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
     </div>
     <div>
       <div class="footer-col-title">Services</div>
@@ -3304,7 +2910,7 @@
         <li><a href="/en/#why-us">Our methodology</a></li>
         <li><a href="/en/#blog">Insights</a></li>
         <li><a href="/en/#faq">FAQ</a></li>
-        <li><a href="/en/contact">Contact</a></li>
+        <li><a href="/en/#contact">Contact</a></li>
         <li><a href="https://osmeusseguros.com" target="_blank" rel="noopener noreferrer">Os Meus Seguros</a></li>
       </ul>
     </div>
@@ -3328,8 +2934,8 @@
     </div>
   </div>
   <div class="footer-regulatory">
-    <p>Adler &amp; Rochefort is a commercial brand of Ownizo Unipessoal Lda.</p>
-    <p>Ownizo Unipessoal Lda is registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3.</p>
+    <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda.</p>
+    <p>Ownizo, Unipessoal Lda. is registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3.</p>
   </div>
 </footer>
 
@@ -3501,26 +3107,7 @@
   });
 </script>
   <script defer src="/js/ar-analytics-tracker.js"></script>
-<script>
-function toggleBlog() {
-  const blogSection = document.getElementById('blog');
-  const btn = document.getElementById('blog-toggle-btn');
-  const isExpanded = blogSection.classList.contains('blog-expanded');
-  const isPT = !location.pathname.startsWith('/en') &&
-    (document.documentElement.lang || '').toLowerCase().indexOf('en') !== 0;
-
-  if (isExpanded) {
-    blogSection.classList.remove('blog-expanded');
-    btn.setAttribute('aria-expanded', 'false');
-    btn.textContent = isPT ? 'VER MAIS ARTIGOS' : 'LOAD MORE ARTICLES';
-    blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } else {
-    blogSection.classList.add('blog-expanded');
-    btn.setAttribute('aria-expanded', 'true');
-    btn.textContent = isPT ? 'VER MENOS ARTIGOS' : 'SHOW LESS';
-  }
-}
-</script>
 <script defer src="/js/lang-pref.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="modelos_rede_reembolso,allianz,april,medis,comparacao_precos,auto_geral,casa_geral,alojamento_local"></script>
+<script defer src="/js/lead-branch-fields.js"></script>
 </body></html>

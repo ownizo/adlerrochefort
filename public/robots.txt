@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /.netlify/
+Disallow: /descarregar/
+Disallow: /alterarmediador/
 
 Sitemap: https://adlerrochefort.com/sitemap.xml

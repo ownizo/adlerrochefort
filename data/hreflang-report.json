@@ -1,0 +1,246 @@
+{
+  "generated": "run scripts/hreflang.mjs to refresh",
+  "totals": {
+    "htmlFiles": 220,
+    "filesChanged": 0,
+    "pagesWithHreflang": 74,
+    "articlePairs": 28,
+    "monolingualPt": 12,
+    "monolingualEn": 97,
+    "unilateralDeclarations": 0,
+    "brokenHreflangTargets": 0,
+    "xDefaultPages": 6
+  },
+  "note": "monolingualPt / monolingualEn are informative. PT and EN are separate audiences; an article existing in one language only is the intended state and is not a task.",
+  "articlePairs": [
+    {
+      "pt": "/blog/seguro-saude-doencas-preexistentes-portugal/",
+      "en": "/en/blog/pre-existing-conditions-health-insurance-portugal/"
+    },
+    {
+      "pt": "/blog/seguro-titulo-imovel-portugal/",
+      "en": "/en/blog/property-title-risk-portugal/"
+    },
+    {
+      "pt": "/blog/seguro-ciberseguranca-empresas-portugal/",
+      "en": "/en/blog/cyber-insurance-businesses-portugal/"
+    },
+    {
+      "pt": "/blog/investimento-americano-luxo-portugal/",
+      "en": "/en/blog/us-buyers-property-cover-portugal/"
+    },
+    {
+      "pt": "/blog/quanto-custa-seguro-alojamento-local/",
+      "en": "/en/blog/holiday-home-insurance-portugal/"
+    },
+    {
+      "pt": "/blog/allianz-april-medis-seguro-saude-portugal-2026/",
+      "en": "/en/blog/allianz-april-medis-health-insurance-portugal-2026/"
+    },
+    {
+      "pt": "/blog/20-anos-turismo-seguros-hotelaria/",
+      "en": "/en/blog/20-years-tourism-hospitality-insurance/"
+    },
+    {
+      "pt": "/blog/seguro-saude-expatriados-portugal/",
+      "en": "/en/blog/health-insurance-expats-portugal/"
+    },
+    {
+      "pt": "/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/",
+      "en": "/en/blog/liability-insurance-complementary-therapies/"
+    },
+    {
+      "pt": "/blog/seguro-auto-expatriados/",
+      "en": "/en/blog/car-insurance-expatriates/"
+    },
+    {
+      "pt": "/blog/seguro-tvde-portugal/",
+      "en": "/en/blog/tvde-insurance-portugal/"
+    },
+    {
+      "pt": "/blog/adler-pro-plataforma-saas/",
+      "en": "/en/blog/adler-pro-saas-platform/"
+    },
+    {
+      "pt": "/blog/seguro-habitacao-legalizacao/",
+      "en": "/en/blog/home-insurance-legalization/"
+    },
+    {
+      "pt": "/blog/seguros-bares-restaurantes-sinistros/",
+      "en": "/en/blog/bars-restaurants-insurance-claims/"
+    },
+    {
+      "pt": "/blog/seguro-automovel-guia-completo/",
+      "en": "/en/blog/car-insurance-complete-guide/"
+    },
+    {
+      "pt": "/blog/seguro-saude-portugal/",
+      "en": "/en/blog/health-insurance-portugal/"
+    },
+    {
+      "pt": "/blog/seguros-obrigatorios-empresas-portugal/",
+      "en": "/en/blog/mandatory-insurance-companies-portugal/"
+    },
+    {
+      "pt": "/blog/parcerias-imobiliarias-comissoes/",
+      "en": "/en/blog/real-estate-partnerships-commissions/"
+    },
+    {
+      "pt": "/blog/seguros-empresas-distribuicao/",
+      "en": "/en/blog/distribution-companies-insurance/"
+    },
+    {
+      "pt": "/blog/seguros-obrigatorios-hotelaria-turismo/",
+      "en": "/en/blog/mandatory-insurance-hospitality-tourism/"
+    },
+    {
+      "pt": "/blog/multirriscos-habitacao/",
+      "en": "/en/blog/home-insurance-multi-risk/"
+    },
+    {
+      "pt": "/blog/revisao-apolice-empresarial/",
+      "en": "/en/blog/business-insurance-policy-review/"
+    },
+    {
+      "pt": "/blog/responsabilidade-civil-profissional/",
+      "en": "/en/blog/professional-indemnity-insurance/"
+    },
+    {
+      "pt": "/blog/ransomware-portugal-riscos-ciberneticos/",
+      "en": "/en/blog/ransomware-portugal-cyber-risks/"
+    },
+    {
+      "pt": "/blog/valores-segurados-desatualizados/",
+      "en": "/en/blog/outdated-insured-values/"
+    },
+    {
+      "pt": "/blog/seguro-frota-erros-comuns/",
+      "en": "/en/blog/fleet-insurance-common-mistakes/"
+    },
+    {
+      "pt": "/blog/responsabilidade-administradores-seguro-do/",
+      "en": "/en/blog/directors-and-officers-insurance-d-o/"
+    },
+    {
+      "pt": "/blog/seguro-obra-construcao/",
+      "en": "/en/blog/construction-works-insurance/"
+    }
+  ],
+  "monolingual": {
+    "pt": [
+      "/blog/obrigacoes-administrador-condominio-seguro/",
+      "/blog/seguro-condominio-capitais-desatualizados/",
+      "/blog/seguro-condominio-obrigatorio-guia/",
+      "/blog/alojamento-local-propriedade-horizontal-condominio/",
+      "/blog/comparar-propostas-seguro-hotel-erros-comuns/",
+      "/blog/hotel-fenomenos-climaticos-extremos/",
+      "/blog/rc-exploracao-unidades-turisticas/",
+      "/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/",
+      "/blog/seguro-alojamento-local-decreto-lei-76-2024/",
+      "/blog/seguro-multiriscos-hotel-portugal/",
+      "/blog/seguro-rc-multirriscos-alojamento-local/",
+      "/blog/seguros-turismo-rural-hoteis-boutique/"
+    ],
+    "en": [
+      "/en/blog/allianz-home-insurance-portugal/",
+      "/en/blog/alojamento-local-insurance-requirements/",
+      "/en/blog/best-home-insurance-portugal-2026/",
+      "/en/blog/boat-insurance-portugal/",
+      "/en/blog/change-bank-home-insurance-portugal/",
+      "/en/blog/documents-to-insure-property-portugal/",
+      "/en/blog/domestic-staff-insurance-portugal/",
+      "/en/blog/family-liability-cover-portugal/",
+      "/en/blog/hiscox-home-insurance-portugal/",
+      "/en/blog/home-insurance-lagoa-carvoeiro/",
+      "/en/blog/home-insurance-lagos/",
+      "/en/blog/home-insurance-loule-almancil/",
+      "/en/blog/home-insurance-tavira/",
+      "/en/blog/how-specialist-risks-are-placed-portugal/",
+      "/en/blog/importing-registering-a-boat-portugal/",
+      "/en/blog/insuring-a-high-value-apartment-lisbon-cascais/",
+      "/en/blog/insuring-antiques-collections-portugal/",
+      "/en/blog/insuring-art-portugal/",
+      "/en/blog/insuring-jewellery-watches-portugal/",
+      "/en/blog/insuring-musical-instruments-portugal/",
+      "/en/blog/insuring-valuables-portugal/",
+      "/en/blog/lay-up-lifting-winter-boat-cover-portugal/",
+      "/en/blog/liberty-mutual-home-insurance-portugal/",
+      "/en/blog/luxury-car-insurance-portugal/",
+      "/en/blog/luxury-home-insurance-portugal/",
+      "/en/blog/personal-fraud-and-extortion-cover-portugal/",
+      "/en/blog/personal-legal-expenses-cover-portugal/",
+      "/en/blog/private-use-vs-charter-boat-cover-portugal/",
+      "/en/blog/safes-alarms-underwriting-requirements-portugal/",
+      "/en/blog/shipping-a-collection-to-portugal/",
+      "/en/blog/solar-panels-ev-chargers-home-insurance-portugal/",
+      "/en/blog/unoccupied-property-clause-portugal/",
+      "/en/blog/valuations-portugal-who-what-how-often/",
+      "/en/blog/water-damage-claim-portugal/",
+      "/en/blog/wine-cellars-home-storage-valuation-cover/",
+      "/en/blog/worldwide-cover-personal-possessions-portugal/",
+      "/en/blog/yacht-insurance-algarve-marinas/",
+      "/en/blog/zurich-home-insurance-portugal/",
+      "/en/blog/fiscal-representation-portugal-explained/",
+      "/en/blog/health-insurance-portugal-residency-visa/",
+      "/en/blog/how-to-get-nif-portugal-non-resident/",
+      "/en/blog/setting-up-company-portugal-foreigners/",
+      "/en/blog/insuring-car-collection-multiple-vehicles-portugal/",
+      "/en/blog/health-insurance-portugal-americans/",
+      "/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/",
+      "/en/blog/destination-wedding-cancellation-insurance-algarve/",
+      "/en/blog/fiduciary-family-office-liability-portugal/",
+      "/en/blog/medical-evacuation-repatriation-cover-portugal/",
+      "/en/blog/prize-indemnity-hole-in-one-insurance-algarve/",
+      "/en/blog/algarve-home-earns-income-personal-use-vs-al-cover/",
+      "/en/blog/building-home-portugal-promoter-insurance-seguro-decenal/",
+      "/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/",
+      "/en/blog/international-health-cover-children-school-abroad/",
+      "/en/blog/long-term-care-planning-foreign-residents-portugal/",
+      "/en/blog/medical-evacuation-repatriation-cover-residents-travel-constantly/",
+      "/en/blog/moving-to-portugal-pre-existing-condition-health-cover/",
+      "/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/",
+      "/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/",
+      "/en/blog/swimming-pools-jetties-private-access-liability-nobody-insures/",
+      "/en/blog/divorce-separation-jointly-held-cover-unravels/",
+      "/en/blog/employing-nanny-driver-gardener-home-employer-obligation/",
+      "/en/blog/golf-resort-properties-insurance-portugal/",
+      "/en/blog/high-value-bicycles-e-bikes-cover-away-from-home/",
+      "/en/blog/home-staff-quarters-guest-annexes-outbuildings/",
+      "/en/blog/insurance-private-staff-travel-household/",
+      "/en/blog/insuring-appreciating-asset-agreed-value-market-value-cars-wine-art/",
+      "/en/blog/key-person-insurance-businesses-abroad/",
+      "/en/blog/property-held-company-structure-insurance/",
+      "/en/blog/renovating-listed-heritage-property-portugal/",
+      "/en/blog/track-days-performance-driving-motor-policy-exclusion/",
+      "/en/blog/watches-jewellery-travelling-worldwide-all-risks/",
+      "/en/blog/art-collection-household-policy-portugal/",
+      "/en/blog/do-exposure-non-executive-directors-abroad/",
+      "/en/blog/health-insurance-portugal-usa/",
+      "/en/blog/insurance-domestic-staff-portugal/",
+      "/en/blog/insuring-property-portfolio-two-jurisdictions/",
+      "/en/blog/allianz-health-insurance-portugal/",
+      "/en/blog/april-international-health-insurance-portugal/",
+      "/en/blog/car-insurance-cost-portugal/",
+      "/en/blog/earthquake-cover-algarve-buildings/",
+      "/en/blog/medis-health-insurance-portugal/",
+      "/en/blog/travel-insurance-expats-portugal/",
+      "/en/blog/british-expats-brexit-insurance-portugal/",
+      "/en/blog/condominium-insurance-doesnt-cover-contents/",
+      "/en/blog/d7-visa-health-insurance-valid-proof/",
+      "/en/blog/getting-insurance-portugal-before-nif-residency/",
+      "/en/blog/health-insurance-cost-portugal-2026/",
+      "/en/blog/home-insurance-cost-algarve-price-drivers/",
+      "/en/blog/insurance-claim-portugal-no-portuguese/",
+      "/en/blog/insurance-guide-americans-moving-to-portugal/",
+      "/en/blog/mortgage-life-insurance-foreign-buyers-portugal/",
+      "/en/blog/private-health-insurance-pre-existing-condition-portugal/",
+      "/en/blog/retiring-algarve-health-cover-65-plus/",
+      "/en/blog/second-home-rent-out-holiday-let-standard-home-cover/",
+      "/en/blog/sns-vs-private-insurance-expats-portugal/",
+      "/en/blog/home-insurance-protect-property/",
+      "/en/blog/individual-car-insurance/"
+    ]
+  },
+  "unilateralDeclarations": [],
+  "brokenHreflangTargets": []
+}

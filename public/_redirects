@@ -1,0 +1,35 @@
+# Netlify redirects — adlerrochefort.com
+#
+# Rules declared in netlify.toml are evaluated before this file. The paths here
+# do not overlap with any of them, so ordering is not load-bearing; this file
+# holds the redirects created by the blog consolidation.
+#
+# Both the slash and no-slash form of each retired URL is listed. Netlify
+# normalises trailing slashes on its own, but the pair is cheap insurance for
+# links already in the wild, and query strings are carried over automatically.
+
+# ---------------------------------------------------------------------------
+# Blog consolidation, August 2026.
+#
+# Two Portuguese articles competed with a stronger article on the same query
+# and split the ranking signal. Their unique sections were folded into the
+# surviving article; the retired URLs point at it permanently.
+# ---------------------------------------------------------------------------
+
+/blog/seguro-individual-automovel      /blog/seguro-automovel-guia-completo/   301!
+/blog/seguro-individual-automovel/     /blog/seguro-automovel-guia-completo/   301!
+
+/blog/seguro-habitacao-proteger-casa   /blog/multirriscos-habitacao/           301!
+/blog/seguro-habitacao-proteger-casa/  /blog/multirriscos-habitacao/           301!
+
+# ---------------------------------------------------------------------------
+# Path-segment truncation.
+#
+# /en/insurance/tvde/ is the only page under /en/insurance/, so a visitor who
+# trims the last segment — a habit URLs invite — lands on nothing. Portuguese
+# has a real hub at /seguros/; English does not, so the parent points at the
+# English home page rather than 404.
+# ---------------------------------------------------------------------------
+
+/en/insurance                          /en/                                    301
+/en/insurance/                         /en/                                    301
