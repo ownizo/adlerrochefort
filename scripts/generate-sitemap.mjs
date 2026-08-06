@@ -87,8 +87,11 @@ const priorityFor = (u) => {
   if (u === '/' || u === '/en/') return '1.0';
   if (u === '/seguros/' || u === '/blog/' || u === '/en/blog/') return '0.9';
   if (/^\/seguros\/[^/]+\/$/.test(u) || /^\/en\/insurance\/[^/]+\/$/.test(u)) return '0.9';
-  if (/^\/blog\/categoria\//.test(u)) return '0.7';
+  // Pagination is checked before the category hubs: a paginated category URL
+  // such as /en/blog/category/home-property/page/2/ is a low-value crawl
+  // target, not a hub, and must not inherit the hub's 0.7.
   if (/pagina\/\d+\/$|page\/\d+\/$/.test(u)) return '0.4';
+  if (/^\/blog\/categoria\//.test(u) || /^\/en\/blog\/category\//.test(u)) return '0.7';
   if (/^\/(politica-de-privacidade|termos-e-condicoes|en\/privacy-policy|en\/terms-and-conditions)\//.test(u)) return '0.3';
   return '0.8';
 };
