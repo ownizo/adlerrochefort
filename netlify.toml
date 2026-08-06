@@ -106,83 +106,13 @@
 
 
 # ---------------------------------------------------------------------------
-# Contact — the EN site keeps its contact form in the #contact section of the
-# homepage. Resolve the canonical /en/contact path to that section.
+# Permanent redirects live in public/_redirects, not here.
+#
+# One file per concern: every 301 — retired articles, consolidated visa pages,
+# the standardised /seguros/{slug}/ paths — is declared there, so a retired URL
+# can be traced in one place. What stays below is the campaign short links,
+# which are 302s and are not part of the site's URL history.
 # ---------------------------------------------------------------------------
-
-[[redirects]]
-  from = "/en/contact"
-  to = "/en/#contact"
-  status = 301
-  force = true
-
-
-# ---------------------------------------------------------------------------
-# Retired visa-insurance sub-pages (consolidated August 2026).
-# /en/d7-visa-health-insurance/, /en/golden-visa-insurance-portugal/,
-# /en/aima-health-insurance-proof/ and /en/schengen-visa-insurance-portugal/
-# each repeated the same ~400 words of shared boilerplate around a few
-# route-specific paragraphs, and used lowercase keyword strings as <h1>. All
-# four are now single <h2> sections of the consolidated page below, which keeps
-# the route-specific content and states the shared requirements once.
-# Deep links: #d7, #golden-visa, #aima, #schengen on the target page.
-# ---------------------------------------------------------------------------
-
-[[redirects]]
-  from = "/en/d7-visa-health-insurance/*"
-  to = "/en/expat-visa-insurance-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/golden-visa-insurance-portugal/*"
-  to = "/en/expat-visa-insurance-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/aima-health-insurance-proof/*"
-  to = "/en/expat-visa-insurance-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/schengen-visa-insurance-portugal/*"
-  to = "/en/expat-visa-insurance-portugal/"
-  status = 301
-  force = true
-
-
-# ---------------------------------------------------------------------------
-# Collections & Valuables cluster — consolidated URLs
-# The first two point the slugs proposed for standalone underwriter pages at
-# the existing pages, which were extended rather than duplicated.
-# The last two replace articles that were rewritten under a new slug.
-# ---------------------------------------------------------------------------
-
-[[redirects]]
-  from = "/en/blog/hiscox-high-value-home-art-jewellery-portugal/*"
-  to = "/en/blog/hiscox-home-insurance-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/blog/liberty-mutual-non-standard-property-portugal/*"
-  to = "/en/blog/liberty-mutual-home-insurance-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/blog/american-investment-luxury-portugal/*"
-  to = "/en/blog/us-buyers-property-cover-portugal/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/blog/boat-portuguese-waters-flag-mooring-liability/*"
-  to = "/en/blog/importing-registering-a-boat-portugal/"
-  status = 301
-  force = true
 
 
 # ---------------------------------------------------------------------------

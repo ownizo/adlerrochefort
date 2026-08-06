@@ -61,6 +61,11 @@ const CLUSTER_LANDING = {
     label: 'Seguro de Habitação',
     tag: 'Pedir cotação',
   },
+  condominios: {
+    url: '/seguros/condominios/',
+    label: 'Seguro de Condomínio',
+    tag: 'Pedir cotação',
+  },
 };
 // English has one commercial page, /en/insurance/tvde/, and it answers a
 // narrower question than the whole motor cluster does. Attaching it to every
@@ -196,7 +201,7 @@ const AUTHOR_END = '<!-- /article-author -->';
 // have dominated the LCP measured in block 7.
 const AVATAR = `<picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
-      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" decoding="async">
+      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" loading="lazy" decoding="async">
     </picture>`;
 
 function authorBlock(lang) {
@@ -322,6 +327,7 @@ const report = {
   faqPlaceholder: 0,
   faqExisting: 0,
   authorLd: 0,
+  schemaImage: 0,
   breadcrumbLdRebuilt: 0,
   breadcrumbLdAdded: 0,
   breadcrumbHtml: 0,
@@ -449,6 +455,21 @@ for (const lang of ['pt', 'en']) {
       report.authorLd += 1;
     }
 
+    // 5a-bis. An Article or BlogPosting node with no image is ineligible for the
+    // richer search result. The article's own illustration is used where it has
+    // one; the twenty-three English articles that have none fall back to the
+    // image the page already declares to crawlers — its og:image — rather than
+    // having a picture invented for them.
+    const postingRe = /"@type"\s*:\s*"(Article|BlogPosting)"\s*,/;
+    if (postingRe.test(html) && !/"image"\s*:/.test(html)) {
+      const og = html.match(/property="og:image" content="([^"]+)"/);
+      const src = article.image ? SITE + article.image : og && og[1];
+      if (src) {
+        html = html.replace(postingRe, (m) => `${m}\n  "image": ${JSON.stringify(src)},`);
+        report.schemaImage += 1;
+      }
+    }
+
     // 5b. breadcrumbs, visible and structured, from one definition.
     const crumbs =
       lang === 'pt'
@@ -538,6 +559,7 @@ console.log(`tables of contents added:  ${report.toc}`);
 console.log(`FAQ already present:       ${report.faqExisting}`);
 console.log(`FAQ placeholders inserted: ${report.faqPlaceholder}`);
 console.log(`author JSON-LD -> Person:  ${report.authorLd}`);
+console.log(`Article image from og:image: ${report.schemaImage}`);
 console.log(`BreadcrumbList rebuilt:    ${report.breadcrumbLdRebuilt}`);
 console.log(`BreadcrumbList added:      ${report.breadcrumbLdAdded}`);
 console.log(`visible breadcrumbs:       ${report.breadcrumbHtml}`);

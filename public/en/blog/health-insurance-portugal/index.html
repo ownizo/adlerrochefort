@@ -39,6 +39,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "image": "https://adlerrochefort.com/images/blog/health-insurance-portugal.jpg",
   "headline": "Health Insurance in Portugal: Expat Guide to Plans & Costs 2026",
   "description": "How private health insurance works in Portugal for expats: SNS vs private, costs and premium drivers, waiting periods, pre-existing conditions and how to choose between insurers.",
   "datePublished": "2026-03-25T09:00:00+00:00",
@@ -590,13 +591,29 @@
     .article-author { flex-direction: column; align-items: flex-start; }
   }
 </style>
+<link rel="stylesheet" href="/css/ar-chrome.css">
+<style>
+  .form-branch-fields[hidden] { display: none; }
+  .form-branch-fields {
+    border-top: 1px solid var(--border, #E5DFCB);
+    margin-top: 4px;
+    padding-top: 14px;
+  }
+  .form-gdpr {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--muted, #8A8B7E);
+  }
+  .form-gdpr a { color: var(--primary, #7A9A6B); }
+</style>
 </head>
 <body>
 
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
-<nav>
+<nav role="navigation" aria-label="Article navigation">
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
   <div class="nav-right">
     <a href="/en/#blog" class="nav-back">&larr; Back to Insights</a>
@@ -604,6 +621,8 @@
       <a href="/blog/seguro-saude-portugal/">PT</a>
       <span class="lang-switcher-sep">|</span>
       <a href="/en/blog/health-insurance-portugal/" class="active">EN</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/nl/" class="lang-unavailable" lang="nl">NL</a>
     </div>
   </div>
 </nav>
@@ -621,7 +640,7 @@
   <div class="article-author">
     <picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
-      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" decoding="async">
+      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" loading="lazy" decoding="async">
     </picture>
     <div>
       <div class="article-author-name"><a href="/en/#team">Hugo Gonçalves</a></div>
@@ -641,7 +660,175 @@
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="cta-field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
       <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="you@email.com"></div>
-      <div class="cta-field"><label>Insurance type</label><select name="insurance-type" required><option value="">Select</option><option value="Health">Health</option><option value="Car">Car</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Company fleet">Company fleet</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Hospitality &amp; restaurants">Hospitality &amp; restaurants</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Professional indemnity">Professional indemnity</option><option value="Cyber">Cyber</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Workers' compensation">Workers' compensation</option><option value="Other">Other</option></select></div>
+      <div class="cta-field"><label>Insurance type</label><select name="insurance-type" data-branch-select required><option value="">Select</option><option value="Health" selected>Health</option><option value="Car">Car</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Company fleet">Company fleet</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Hospitality &amp; restaurants">Hospitality &amp; restaurants</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Professional indemnity">Professional indemnity</option><option value="Cyber">Cyber</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Workers' compensation">Workers' compensation</option><option value="Other">Other</option></select></div>
+        <div class="form-branch-fields" data-branch="Health" hidden>
+          <div class="cta-field">
+            <label for="health_age">Age of the oldest person to insure</label>
+            <input type="number" id="health_age" name="health_age" placeholder="e.g. 42" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="health_people">How many people to insure</label>
+            <input type="number" id="health_people" name="health_people" placeholder="e.g. 3" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="health_preexisting">Pre-existing conditions to declare</label>
+            <input type="text" id="health_preexisting" name="health_preexisting" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Car" hidden>
+          <div class="cta-field">
+            <label for="car_vehicle">Make, model and year</label>
+            <input type="text" id="car_vehicle" name="car_vehicle" placeholder="e.g. Renault Clio 2019" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="car_plate">Registration plate</label>
+            <input type="text" id="car_plate" name="car_plate" placeholder="AA-00-AA" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="car_licence_years">Years holding a licence</label>
+            <input type="number" id="car_licence_years" name="car_licence_years" placeholder="e.g. 15" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="TVDE (Uber, Bolt, Free Now)" hidden>
+          <div class="cta-field">
+            <label for="tvde_role">Driver or operator?</label>
+            <input type="text" id="tvde_role" name="tvde_role" placeholder="Driver / Operator" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="tvde_vehicles">Number of vehicles</label>
+            <input type="number" id="tvde_vehicles" name="tvde_vehicles" placeholder="e.g. 1" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="tvde_area">Area of operation</label>
+            <input type="text" id="tvde_area" name="tvde_area" placeholder="Lisbon, Porto, Algarve…" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Company fleet" hidden>
+          <div class="cta-field">
+            <label for="fleet_company">Company</label>
+            <input type="text" id="fleet_company" name="fleet_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="fleet_vehicles">Number of vehicles</label>
+            <input type="number" id="fleet_vehicles" name="fleet_vehicles" placeholder="e.g. 8" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="fleet_claims">Claims in the last 3 years</label>
+            <input type="text" id="fleet_claims" name="fleet_claims" placeholder="e.g. 2" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Home" hidden>
+          <div class="cta-field">
+            <label for="home_type">Property type</label>
+            <input type="text" id="home_type" name="home_type" placeholder="Apartment / House" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="home_postcode">Postcode</label>
+            <input type="text" id="home_postcode" name="home_postcode" placeholder="0000-000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="home_rebuild_value">Estimated rebuild value</label>
+            <input type="text" id="home_rebuild_value" name="home_rebuild_value" placeholder="e.g. €160,000" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Holiday let (Alojamento Local)" hidden>
+          <div class="cta-field">
+            <label for="al_unit_type">Type of unit</label>
+            <input type="text" id="al_unit_type" name="al_unit_type" placeholder="Apartment / House / Hostel" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="al_licence">AL registration number</label>
+            <input type="text" id="al_licence" name="al_licence" placeholder="If already issued" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="al_guests">Capacity (guests)</label>
+            <input type="number" id="al_guests" name="al_guests" placeholder="e.g. 6" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Hospitality &amp; restaurants" hidden>
+          <div class="cta-field">
+            <label for="horeca_venue">Type of venue</label>
+            <input type="text" id="horeca_venue" name="horeca_venue" placeholder="Hotel, restaurant, bar…" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="horeca_staff">Number of staff</label>
+            <input type="number" id="horeca_staff" name="horeca_staff" placeholder="e.g. 12" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="horeca_turnover">Annual turnover</label>
+            <input type="text" id="horeca_turnover" name="horeca_turnover" placeholder="e.g. €700,000" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Business combined (multirriscos)" hidden>
+          <div class="cta-field">
+            <label for="business_company">Company</label>
+            <input type="text" id="business_company" name="business_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="business_activity">CAE / activity</label>
+            <input type="text" id="business_activity" name="business_activity" placeholder="e.g. 56101" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="business_staff">Number of staff</label>
+            <input type="number" id="business_staff" name="business_staff" placeholder="e.g. 14" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Professional indemnity" hidden>
+          <div class="cta-field">
+            <label for="pi_profession">Profession or activity</label>
+            <input type="text" id="pi_profession" name="pi_profession" placeholder="e.g. architecture" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="pi_limit">Limit of indemnity sought</label>
+            <input type="text" id="pi_limit" name="pi_limit" placeholder="e.g. €500,000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="pi_required">Required by a professional body or contract?</label>
+            <input type="text" id="pi_required" name="pi_required" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Cyber" hidden>
+          <div class="cta-field">
+            <label for="cyber_company_en">Company</label>
+            <input type="text" id="cyber_company_en" name="cyber_company_en" placeholder="Registered name" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="cyber_seats">Number of workstations</label>
+            <input type="number" id="cyber_seats" name="cyber_seats" placeholder="e.g. 25" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="cyber_personal_data">Do you process customer personal data?</label>
+            <input type="text" id="cyber_personal_data" name="cyber_personal_data" placeholder="Yes / No" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Life &amp; mortgage protection" hidden>
+          <div class="cta-field">
+            <label for="life_outstanding">Outstanding mortgage balance</label>
+            <input type="text" id="life_outstanding" name="life_outstanding" placeholder="e.g. €180,000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="life_bank">Bank</label>
+            <input type="text" id="life_bank" name="life_bank" placeholder="Lender" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="life_dob">Date of birth</label>
+            <input type="date" id="life_dob" name="life_dob" placeholder="" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Workers' compensation" hidden>
+          <div class="cta-field">
+            <label for="wc_company">Company</label>
+            <input type="text" id="wc_company" name="wc_company" placeholder="Registered name" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="wc_employees">Number of employees</label>
+            <input type="number" id="wc_employees" name="wc_employees" placeholder="e.g. 9" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="wc_payroll">Annual payroll</label>
+            <input type="text" id="wc_payroll" name="wc_payroll" placeholder="e.g. €210,000" disabled>
+          </div>
+        </div>
       <button type="submit" class="cta-btn">Request quote</button>
     </form>
     <div class="cta-topo-micro">Reply within 24 business hours. Your data is handled under GDPR.</div>
@@ -663,7 +850,7 @@
       <li><a href="#waiting-periods-when-your-cover-actually-starts">Waiting periods: when your cover actually starts</a></li>
       <li><a href="#pre-existing-conditions-what-to-declare-and-what-to-expect">Pre-existing conditions: what to declare and what to expect</a></li>
       <li><a href="#how-to-choose-between-insurers">How to choose between insurers</a></li>
-      <li><a href="#the-advantage-of-using-a-broker">The advantage of using a broker</a></li>
+      <li><a href="#the-advantage-of-using-a-broker">The advantage of using an intermediary</a></li>
       <li><a href="#thank-you">Thank you</a></li>
       </ol>
     </nav>
@@ -766,9 +953,9 @@
 
     <blockquote>"The best health insurance plan is not the one with the lowest premium — it is the one that covers what you actually need, when you need it, at a provider you can reach."</blockquote>
 
-    <h3 id="the-advantage-of-using-a-broker">The advantage of using a broker</h3>
+    <h3 id="the-advantage-of-using-a-broker">The advantage of using an intermediary</h3>
 
-    <p>Navigating the Portuguese market on your own can be demanding, especially if you are new to the local healthcare system or the language. An independent broker works for you rather than for a single insurer: an ASF-authorised broker compares plans across the market, weighs your specific needs and points to the option with the best balance of cover, cost and service. A broker also handles the medical questionnaire correctly, can access group or preferential terms, acts as your advocate at claim time, and reviews the policy at renewal as your needs and the market change. If you would rather we did the legwork, request an <a href="/en/health-insurance-quote/">expat health insurance quote</a> and we will come back with a written comparison within 24 hours.</p>
+    <p>Navigating the Portuguese market on your own can be demanding, especially if you are new to the local healthcare system or the language. An independent intermediary works for you rather than for a single insurer: an ASF-authorised intermediary compares plans across the market, weighs your specific needs and points to the option with the best balance of cover, cost and service. An intermediary also handles the medical questionnaire correctly, can access group or preferential terms, acts as your advocate at claim time, and reviews the policy at renewal as your needs and the market change. If you would rather we did the legwork, request an <a href="/en/health-insurance-quote/">expat health insurance quote</a> and we will come back with a written comparison within 24 hours.</p>
 
     <p><em>Adler &amp; Rochefort is an insurance intermediary registered with the ASF — the Portuguese Insurance and Pension Funds Supervisory Authority.</em></p>
   </div>
@@ -879,6 +1066,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -932,5 +1120,28 @@
 <script defer src="/js/ar-conversion.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="sns_vs_privado,tipos_seguro,coberturas"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

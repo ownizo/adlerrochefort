@@ -167,17 +167,22 @@ for (const rel of files) {
     if (!src) return whole;
 
     // -- the nav logo: dimensions only, so the browser can reserve the box ----
+    // Marked eager on purpose. It is the first thing painted on every page, so
+    // deferring it would trade a visible header for nothing: the file is 20 KB.
     if (src === LOGO) {
       if (/\swidth="/.test(tag) && /\sheight="/.test(tag)) {
-        const fixed = strip(tag, 'width', 'height').replace(
+        const fixed = strip(tag, 'width', 'height', 'loading').replace(
           /\s*\/?>$/,
-          ` width="${LOGO_W}" height="${LOGO_H}">`
+          ` width="${LOGO_W}" height="${LOGO_H}" loading="eager">`
         );
         if (fixed !== tag) counts.logoDims += 1;
         return fixed;
       }
       counts.logoDims += 1;
-      return tag.replace(/\s*\/?>$/, ` width="${LOGO_W}" height="${LOGO_H}" decoding="async">`);
+      return tag.replace(
+        /\s*\/?>$/,
+        ` width="${LOGO_W}" height="${LOGO_H}" loading="eager" decoding="async">`
+      );
     }
 
     // -- the founder portrait on the two homepages ---------------------------

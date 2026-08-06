@@ -1,12 +1,16 @@
 /**
- * Pulls the site chrome (styles, top bar, nav, footer, cookie banner) straight
- * out of public/index.html so generated pages stay pixel-identical to the
- * hand-written ones. Nothing here restyles anything — it only relocates the
- * homepage's own CSS into a shared stylesheet the generated pages can link.
+ * Page shell for the generated sections (/blog/, /seguros/, the feeds).
+ *
+ * The chrome fragments themselves live in lib/partials.mjs — the single
+ * definition shared with scripts/unify-chrome.mjs, which pushes the same
+ * markup into the hand-written pages. This module adds what only generated
+ * pages need: the shared stylesheet, the JSON-LD helpers and the page
+ * skeleton.
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CHROME } from './partials.mjs';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const PUBLIC = join(ROOT, 'public');
@@ -21,7 +25,6 @@ function between(html, startMarker, endMarker, { inclusive = true } = {}) {
 }
 
 const home = await readFile(join(PUBLIC, 'index.html'), 'utf8');
-const homeEn = await readFile(join(PUBLIC, 'en', 'index.html'), 'utf8');
 
 // --- Shared stylesheet ------------------------------------------------------
 const styleBlocks = [...home.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]);
@@ -210,53 +213,30 @@ export async function writeSharedStylesheet() {
 }
 
 // --- Chrome fragments -------------------------------------------------------
-const topBarRaw = between(home, '<div class="asf-top-bar">', '</div>');
-const navRaw = between(home, '<nav role="navigation"', '</nav>');
-const mobileNavRaw = between(home, '<div class="mobile-nav" id="mobileNav">', '\n</div>');
-const footerRaw = between(home, '<footer>', '</footer>');
-const cookieRaw = between(home, '<!-- COOKIE CONSENT BANNER -->', '\n</div>');
-
-/** Homepage-relative anchors have to become absolute once we leave "/". */
-function absolutise(html) {
-  return html.replace(/href="#([a-z-]+)"/g, 'href="/#$1"');
-}
-
-export const TOP_BAR = absolutise(topBarRaw);
-export const NAV = absolutise(navRaw);
-export const MOBILE_NAV = absolutise(mobileNavRaw);
-export const FOOTER = absolutise(footerRaw);
-export const COOKIE_BANNER = cookieRaw;
+// These used to be scraped out of the homepages here, with a second copy of the
+// same markers and the same anchor-absolutising logic. They now come from
+// lib/partials.mjs, which is the single definition the whole site is built
+// from — the generators below and scripts/unify-chrome.mjs therefore emit
+// byte-identical chrome by construction rather than by coincidence.
+export const TOP_BAR = CHROME.pt.topBar;
+export const NAV = CHROME.pt.nav;
+export const MOBILE_NAV = CHROME.pt.mobileNav;
+export const FOOTER = CHROME.pt.footer;
+export const COOKIE_BANNER = CHROME.pt.cookie;
 
 // --- English chrome ---------------------------------------------------------
 // The English site is not a translation of the Portuguese one: it has its own
 // navigation, its own service links and its own footer. Generated English
 // pages take their chrome from /en/index.html so they sit inside that site
 // rather than inside the Portuguese one.
-const absolutiseEn = (html) => html.replace(/href="#([a-z-]+)"/g, 'href="/en/#$1"');
+export const TOP_BAR_EN = CHROME.en.topBar;
+export const NAV_EN = CHROME.en.nav;
+export const MOBILE_NAV_EN = CHROME.en.mobileNav;
+export const FOOTER_EN = CHROME.en.footer;
 
-export const TOP_BAR_EN = absolutiseEn(between(homeEn, '<div class="asf-top-bar">', '</div>'));
-export const NAV_EN = absolutiseEn(between(homeEn, '<nav role="navigation"', '</nav>'));
-export const MOBILE_NAV_EN = absolutiseEn(
-  between(homeEn, '<div class="mobile-nav" id="mobileNav">', '\n</div>')
-);
-export const FOOTER_EN = absolutiseEn(between(homeEn, '<footer>', '</footer>'));
-
-// The English homepage carries no cookie notice. Rather than leave the new
-// pages without one, the Portuguese banner's markup is reused verbatim with
-// English wording and the English privacy policy.
-export const COOKIE_BANNER_EN = `<!-- COOKIE CONSENT BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-banner-content">
-    <div class="cookie-banner-text">
-      <strong>This site uses cookies</strong>
-      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
-    </div>
-    <div class="cookie-banner-actions">
-      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
-      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
-    </div>
-  </div>
-</div>`;
+// The English homepage carries no cookie notice of its own; partials.mjs
+// supplies the translated one.
+export const COOKIE_BANNER_EN = CHROME.en.cookie;
 
 export const GA = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
 <script>

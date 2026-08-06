@@ -79,7 +79,8 @@
     "@type": "PropertyValue",
     "name": "ASF registration",
     "value": "425591790/3"
-  }
+  },
+  "alternateName": "Ownizo, Unipessoal Lda."
 }
 </script>
 
@@ -782,6 +783,7 @@
     .choice-grid { grid-template-columns: 1fr; }
   }
 </style>
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
@@ -791,7 +793,7 @@
 <!-- NAV -->
 <nav role="navigation" aria-label="Main navigation">
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — English-speaking fiscal representation and insurance help in Lagos, Algarve, Portugal" class="nav-logo-img" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — English-speaking fiscal representation and insurance help in Lagos, Algarve, Portugal" class="nav-logo-img" width="1000" height="354" loading="eager">
   </a>
   <div class="nav-right">
     <a href="mailto:insurance@adlerrochefort.com" class="nav-phone">insurance@adlerrochefort.com</a>
@@ -1105,6 +1107,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -1213,5 +1216,28 @@
 </script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

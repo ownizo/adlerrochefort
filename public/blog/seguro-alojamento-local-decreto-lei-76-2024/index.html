@@ -37,6 +37,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "image": "https://adlerrochefort.com/images/blog/seguro-alojamento-local-decreto-lei-76-2024.svg",
   "headline": "Seguro Obrigatório para Alojamento Local em 2025: o que mudou com o Decreto-Lei n.º 76/2024",
   "description": "O Decreto-Lei n.º 76/2024 alterou as regras do Alojamento Local. Saiba que seguro é obrigatório em 2025, os capitais mínimos e o que arrisca se não estiver coberto.",
   "datePublished": "2026-06-01T09:00:00+00:00",
@@ -531,20 +532,38 @@
     .article-author { flex-direction: column; align-items: flex-start; }
   }
 </style>
+<link rel="stylesheet" href="/css/ar-chrome.css">
+<style>
+  .form-branch-fields[hidden] { display: none; }
+  .form-branch-fields {
+    border-top: 1px solid var(--border, #E5DFCB);
+    margin-top: 4px;
+    padding-top: 14px;
+  }
+  .form-gdpr {
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--muted, #8A8B7E);
+  }
+  .form-gdpr a { color: var(--primary, #7A9A6B); }
+</style>
 </head>
 <body>
 
 <div class="asf-top-bar">Mediador de seguros registado na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
-<nav>
+<nav role="navigation" aria-label="Navegação do artigo">
   <a href="/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
   <div class="nav-right">
     <a href="/#blog" class="nav-back">&larr; Voltar aos Insights</a>
     <div class="lang-switcher">
       <a href="/blog/seguro-alojamento-local-decreto-lei-76-2024/" class="active">PT</a>
       <span class="lang-switcher-sep">|</span>
-      <a href="/en/blog/">EN</a>
+      <a href="/en/blog/" class="lang-unavailable">EN</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/nl/" class="lang-unavailable" lang="nl">NL</a>
     </div>
   </div>
 </nav>
@@ -563,7 +582,7 @@
   <div class="article-author">
     <picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
-      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" decoding="async">
+      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" loading="lazy" decoding="async">
     </picture>
     <div>
       <div class="article-author-name"><a href="/#equipa">Hugo Gonçalves</a></div>
@@ -583,7 +602,175 @@
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="cta-field"><label>Nome</label><input type="text" name="nome" required placeholder="O seu nome"></div>
       <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
-      <div class="cta-field"><label>Tipo de seguro</label><select name="tipo-seguro" required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
+      <div class="cta-field"><label>Tipo de seguro</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local" selected>Alojamento Local</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
+        <div class="form-branch-fields" data-branch="Saúde" hidden>
+          <div class="cta-field">
+            <label for="saude_idade">Idade da pessoa mais velha a segurar</label>
+            <input type="number" id="saude_idade" name="saude_idade" placeholder="Ex.: 42" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="saude_pessoas">Quantas pessoas a segurar</label>
+            <input type="number" id="saude_pessoas" name="saude_pessoas" placeholder="Ex.: 3" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="saude_preexistentes">Doenças pré-existentes a declarar</label>
+            <input type="text" id="saude_preexistentes" name="saude_preexistentes" placeholder="Sim / Não" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Automóvel" hidden>
+          <div class="cta-field">
+            <label for="auto_veiculo">Marca, modelo e ano</label>
+            <input type="text" id="auto_veiculo" name="auto_veiculo" placeholder="Ex.: Renault Clio 2019" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="auto_matricula">Matrícula</label>
+            <input type="text" id="auto_matricula" name="auto_matricula" placeholder="AA-00-AA" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="auto_anos_carta">Anos de carta</label>
+            <input type="number" id="auto_anos_carta" name="auto_anos_carta" placeholder="Ex.: 15" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="TVDE (Uber, Bolt, Free Now)" hidden>
+          <div class="cta-field">
+            <label for="tvde_perfil">É motorista ou operador?</label>
+            <input type="text" id="tvde_perfil" name="tvde_perfil" placeholder="Motorista / Operador" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="tvde_viaturas">N.º de viaturas</label>
+            <input type="number" id="tvde_viaturas" name="tvde_viaturas" placeholder="Ex.: 1" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="tvde_zona">Zona de operação</label>
+            <input type="text" id="tvde_zona" name="tvde_zona" placeholder="Lisboa, Porto, Algarve…" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Frota de empresa" hidden>
+          <div class="cta-field">
+            <label for="frota_empresa">Empresa</label>
+            <input type="text" id="frota_empresa" name="frota_empresa" placeholder="Designação social" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="frota_viaturas">N.º de viaturas</label>
+            <input type="number" id="frota_viaturas" name="frota_viaturas" placeholder="Ex.: 8" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="frota_sinistros">Sinistros nos últimos 3 anos</label>
+            <input type="text" id="frota_sinistros" name="frota_sinistros" placeholder="Ex.: 2" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Habitação" hidden>
+          <div class="cta-field">
+            <label for="habitacao_tipo">Tipo de imóvel</label>
+            <input type="text" id="habitacao_tipo" name="habitacao_tipo" placeholder="Apartamento / Moradia" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="habitacao_cp">Código postal</label>
+            <input type="text" id="habitacao_cp" name="habitacao_cp" placeholder="0000-000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="habitacao_valor">Valor de reconstrução estimado</label>
+            <input type="text" id="habitacao_valor" name="habitacao_valor" placeholder="Ex.: 160 000 €" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Alojamento Local" hidden>
+          <div class="cta-field">
+            <label for="al_tipo">Tipo de unidade</label>
+            <input type="text" id="al_tipo" name="al_tipo" placeholder="Apartamento / Moradia / Hostel" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="al_registo">N.º de registo AL</label>
+            <input type="text" id="al_registo" name="al_registo" placeholder="Se já emitido" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="al_capacidade">Capacidade (hóspedes)</label>
+            <input type="number" id="al_capacidade" name="al_capacidade" placeholder="Ex.: 6" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Hotelaria e Restauração" hidden>
+          <div class="cta-field">
+            <label for="horeca_tipo">Tipo de estabelecimento</label>
+            <input type="text" id="horeca_tipo" name="horeca_tipo" placeholder="Hotel, restaurante, bar…" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="horeca_colaboradores">N.º de colaboradores</label>
+            <input type="number" id="horeca_colaboradores" name="horeca_colaboradores" placeholder="Ex.: 12" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="horeca_volume">Volume de negócios anual</label>
+            <input type="text" id="horeca_volume" name="horeca_volume" placeholder="Ex.: 700 000 €" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Multirriscos Empresarial" hidden>
+          <div class="cta-field">
+            <label for="empresarial_empresa">Empresa</label>
+            <input type="text" id="empresarial_empresa" name="empresarial_empresa" placeholder="Designação social" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="empresarial_cae">CAE / atividade</label>
+            <input type="text" id="empresarial_cae" name="empresarial_cae" placeholder="Ex.: 56101" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="empresarial_colaboradores">N.º de colaboradores</label>
+            <input type="number" id="empresarial_colaboradores" name="empresarial_colaboradores" placeholder="Ex.: 14" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Responsabilidade Civil Profissional" hidden>
+          <div class="cta-field">
+            <label for="rcp_profissao">Profissão ou atividade</label>
+            <input type="text" id="rcp_profissao" name="rcp_profissao" placeholder="Ex.: arquitetura" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="rcp_capital">Capital pretendido</label>
+            <input type="text" id="rcp_capital" name="rcp_capital" placeholder="Ex.: 500 000 €" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="rcp_obrigatorio">É exigido por ordem profissional ou contrato?</label>
+            <input type="text" id="rcp_obrigatorio" name="rcp_obrigatorio" placeholder="Sim / Não" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Riscos Cibernéticos" hidden>
+          <div class="cta-field">
+            <label for="cyber_empresa">Empresa</label>
+            <input type="text" id="cyber_empresa" name="cyber_empresa" placeholder="Designação social" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="cyber_postos">N.º de postos de trabalho</label>
+            <input type="number" id="cyber_postos" name="cyber_postos" placeholder="Ex.: 25" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="cyber_dados">Trata dados pessoais de clientes?</label>
+            <input type="text" id="cyber_dados" name="cyber_dados" placeholder="Sim / Não" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Vida e Crédito Habitação" hidden>
+          <div class="cta-field">
+            <label for="vida_capital">Capital em dívida</label>
+            <input type="text" id="vida_capital" name="vida_capital" placeholder="Ex.: 180 000 €" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="vida_banco">Banco</label>
+            <input type="text" id="vida_banco" name="vida_banco" placeholder="Instituição de crédito" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="vida_nascimento">Data de nascimento</label>
+            <input type="date" id="vida_nascimento" name="vida_nascimento" placeholder="" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Acidentes de Trabalho" hidden>
+          <div class="cta-field">
+            <label for="at_empresa">Empresa</label>
+            <input type="text" id="at_empresa" name="at_empresa" placeholder="Designação social" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="at_trabalhadores">N.º de trabalhadores</label>
+            <input type="number" id="at_trabalhadores" name="at_trabalhadores" placeholder="Ex.: 9" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="at_massa_salarial">Massa salarial anual</label>
+            <input type="text" id="at_massa_salarial" name="at_massa_salarial" placeholder="Ex.: 210 000 €" disabled>
+          </div>
+        </div>
       <button type="submit" class="cta-btn">Pedir cotação</button>
     </form>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
@@ -684,32 +871,40 @@
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">Mediador de seguros especializado em proteção empresarial e profissional. Rigor, precisão e compromisso com os resultados dos nossos clientes.</p>
+      <p class="footer-brand-desc">Mediador de seguros especializado em proteção empresarial e individual. Tecnologia proprietária com IA para gestão inteligente de apólices com a plataforma Os Meus Seguros — para empresas e particulares.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot"></span>
         Autorizado pela ASF · Mediador Registado
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Serviços</div>
+      <div class="footer-col-title">Tecnologia</div>
       <ul class="footer-col-links">
-        <li><a href="/#servicos">Multirriscos Empresarial</a></li>
-        <li><a href="/#servicos">Responsabilidade Civil</a></li>
-        <li><a href="/#servicos">Frotas &amp; Transportes</a></li>
-        <li><a href="/#servicos">Riscos Cibernéticos</a></li>
-        <li><a href="/#servicos">Obras &amp; Construção</a></li>
-        <li><a href="/#servicos">Pessoas &amp; Benefícios</a></li>
+        <li><a href="/#adler-pro">Empresas</a></li>
+        <li><a href="/#adler-one">Particulares</a></li>
+        <li><a href="https://osmeusseguros.com" target="_blank" rel="noopener noreferrer">Aceder a Os Meus Seguros</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Insights</div>
+      <div class="footer-col-title">Serviços</div>
       <ul class="footer-col-links">
-        <li><a href="/blog/seguros-obrigatorios-hotelaria-turismo/">Hotelaria &amp; Turismo</a></li>
-        <li><a href="/blog/responsabilidade-civil-profissional/">Responsabilidade Civil</a></li>
-        <li><a href="/blog/ransomware-portugal-riscos-ciberneticos/">Riscos Cibernéticos</a></li>
-        <li><a href="/blog/valores-segurados-desatualizados/">Valores Segurados</a></li>
-        <li><a href="/blog/seguro-frota-erros-comuns/">Seguro de Frota</a></li>
-        <li><a href="/blog/seguro-obra-construcao/">Obras &amp; Construção</a></li>
+        <li><a href="/seguros/">Ver todos os seguros</a></li>
+        <li><a href="/seguros/condominios/">Seguros de Condomínio</a></li>
+        <li><a href="/seguros/empresarial/">Multirriscos Empresarial</a></li>
+        <li><a href="/#servicos">Responsabilidade Civil</a></li>
+        <li><a href="/seguros/frota/">Frotas &amp; Transportes</a></li>
+        <li><a href="/seguros/tvde/">Seguro TVDE</a></li>
+        <li><a href="/#servicos">Riscos Cibernéticos</a></li>
+        <li><a href="/#servicos">Obras &amp; Construção</a></li>
+        <li><a href="/#servicos">Pessoas &amp; Benefícios</a></li>
+        <li><a href="/seguros/auto/">Seguros Auto</a></li>
+        <li><a href="/seguros/habitacao/">Seguro Habitação</a></li>
+        <li><a href="/seguros/alojamento-local/">Alojamento Local</a></li>
+        <li><a href="/#servicos">Seguro Saúde</a></li>
+        <li><a href="/#servicos">Acidentes Pessoais</a></li>
+        <li><a href="/#servicos">Vida Crédito Habitação</a></li>
+        <li><a href="/#servicos">Vida Investimento</a></li>
+        <li><a href="/#servicos">Seguro Caução</a></li>
       </ul>
     </div>
     <div>
@@ -717,9 +912,24 @@
       <ul class="footer-col-links">
         <li><a href="/#equipa">Quem somos</a></li>
         <li><a href="/#porque">A nossa metodologia</a></li>
-        <li><a href="/#blog">Insights</a></li>
+        <li><a href="/blog/">Insights</a></li>
         <li><a href="/#faq">FAQ</a></li>
         <li><a href="/#contacto">Contacto</a></li>
+        <li><a href="/#contacto">Trabalhe connosco</a></li>
+        <li><a href="/alterarmediador">Alterar de Mediador</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Insights</div>
+      <ul class="footer-col-links">
+        <li><a href="/blog/categoria/seguros-auto-tvde/">Seguros Automóvel e TVDE</a></li>
+        <li><a href="/blog/categoria/hotelaria-turismo/">Hotelaria, Turismo e AL</a></li>
+        <li><a href="/blog/categoria/condominios/">Seguros de Condomínio</a></li>
+        <li><a href="/blog/categoria/seguros-empresariais/">Seguros Empresariais</a></li>
+        <li><a href="/blog/categoria/habitacao-particulares/">Habitação e Particulares</a></li>
+        <li><a href="/blog/categoria/seguros-saude/">Seguros de Saúde</a></li>
+        <li><a href="/blog/categoria/tecnologia-parcerias/">Tecnologia e Parcerias</a></li>
+        <li><a href="/blog/">Ver todos os Insights →</a></li>
       </ul>
     </div>
     <div>
@@ -727,18 +937,18 @@
       <ul class="footer-col-links">
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
-        <li><a href="#">Av. do Atlântico 16, Esc. 5.07, 1990-019 Lisboa</a></li>
-        <li><a href="#">Varandas de São João 4, 8600-324 Lagos</a></li>
+        <li><a href="/">Av. do Atlântico 16, Esc. 5.07, 1990-019 Lisboa</a></li>
+        <li><a href="/">Varandas de São João 4, 8600-324 Lagos</a></li>
         <li style="padding-top:8px;">
           <div class="footer-social">
             <a href="https://www.facebook.com/adlerrochefort" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
             </a>
             <a href="https://www.instagram.com/adlerrochefort/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
             </a>
             <a href="https://www.linkedin.com/company/adler-rochefort" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
             </a>
           </div>
         </li>
@@ -747,11 +957,15 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Adler &amp; Rochefort · Todos os direitos reservados</div>
+    <div class="footer-platforms">
+      <a href="https://osmeusseguros.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">Aceder a Os Meus Seguros</a>
+    </div>
     <div class="footer-legal">
       <a href="/politica-de-privacidade">Política de Privacidade</a>
       <a href="/termos-e-condicoes">Termos e Condições</a>
       <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">Canal de Denúncias ASF</a>
+
     </div>
   </div>
   <div class="footer-regulatory">
@@ -763,5 +977,28 @@
   <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="pt" data-topics="alojamento_local"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>Este site utiliza cookies</strong>
+      <p>Utilizamos cookies para melhorar a sua experiência de navegação. Ao continuar, concorda com a nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Rejeitar</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Aceitar</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

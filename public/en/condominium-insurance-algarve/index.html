@@ -8,7 +8,7 @@
 <meta name="description" content="Portugal's mandatory fire insurance is only the legal minimum. We audit your building's policy for free: sums insured, earthquake cover and public liability. ASF-registered insurance intermediary.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://adlerrochefort.com/en/condominium-insurance-algarve/">
-  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-condominios-algarve/">
+  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/condominios/">
   <link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/condominium-insurance-algarve/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
@@ -397,21 +397,22 @@
   gtag('js', new Date());
   gtag('config', 'AW-18361722533');
 </script>
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
 <!-- ASF TOP BAR -->
-<div class="asf-top-bar">Insurance broker registered with the ASF under no. 425591790/3 — <a href="#audit">Free condominium insurance audit</a></div>
+<div class="asf-top-bar">Insurance intermediary registered with the ASF under no. 425591790/3 — <a href="#audit">Free condominium insurance audit</a></div>
 
 <!-- NAV -->
 <nav>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — insurance broker in the Algarve" class="nav-logo-img" decoding="async" width="1000" height="354">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — insurance intermediary in the Algarve" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
   <div class="nav-right">
     <a href="tel:+351928226570" class="nav-phone">+351 928 226 570</a>
     <div class="lang-switcher">
-      <a href="/seguros-condominios-algarve/">PT</a>
+      <a href="/seguros/condominios/">PT</a>
       <span class="lang-switcher-sep">|</span>
       <a href="/en/condominium-insurance-algarve/" class="active">EN</a>
     </div>
@@ -578,6 +579,7 @@
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
         <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
         <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
+        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
         <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
         <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
@@ -646,5 +648,28 @@
 </script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>This site uses cookies</strong>
+      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
 </body>
 </html>

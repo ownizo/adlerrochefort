@@ -42,7 +42,7 @@ const PAGE_CLUSTERS = [
   { pt: '/', en: '/en/', de: '/de/', fr: '/fr/', nl: '/nl/' },
   { pt: '/blog/', en: '/en/blog/' },
   { pt: '/seguros/tvde/', en: '/en/insurance/tvde/' },
-  { pt: '/seguros-condominios-algarve/', en: '/en/condominium-insurance-algarve/' },
+  { pt: '/seguros/condominios/', en: '/en/condominium-insurance-algarve/' },
   { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
   { pt: '/politica-de-privacidade/', en: '/en/privacy-policy/' },
   { pt: '/termos-e-condicoes/', en: '/en/terms-and-conditions/' },

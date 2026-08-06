@@ -49,7 +49,7 @@ const PAGE_CLUSTERS = [
   { '/': 'pt-PT', '/en/': 'en-GB', '/de/': 'de', '/fr/': 'fr', '/nl/': 'nl', xDefault: '/' },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
   { '/seguros/tvde/': 'pt-PT', '/en/insurance/tvde/': 'en-GB' },
-  { '/seguros-condominios-algarve/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
+  { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
   {
     '/seguros-empresas-lagos/': 'pt-PT',
     '/en/expat-insurance-lagos-portugal/': 'en-GB',
