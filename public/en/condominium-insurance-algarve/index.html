@@ -500,6 +500,7 @@
     <p class="form-sub">Fill in the form and we'll reply within 24 hours.</p>
     <form class="form-grid" id="auditForm" name="condominium-audit" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="condominium-audit">
+      <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="condominium-insurance-algarve">
       <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
       <div class="form-field">
@@ -671,5 +672,6 @@
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<script defer src="/js/lead-branch-fields.js"></script>
 </body>
 </html>

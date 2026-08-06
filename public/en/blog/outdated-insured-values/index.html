@@ -304,6 +304,7 @@ footer{background:var(--footer-bg);color:rgba(255,255,255,.65);padding:56px 80px
   </div>
   <form class="ar-cta-form" name="valuables-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/en/private-clients/" data-form-label="valuables_review">
     <input type="hidden" name="form-name" value="valuables-review">
+    <input type="hidden" name="source_url" value="">
     <input type="hidden" name="source" value="blog:outdated-insured-values">
     <p style="display:none"><label>Don&rsquo;t fill this in: <input name="bot-field"></label></p>
     <div class="ar-row">
@@ -459,5 +460,6 @@ footer{background:var(--footer-bg);color:rgba(255,255,255,.65);padding:56px 80px
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<script defer src="/js/lead-branch-fields.js"></script>
 </body>
 </html>

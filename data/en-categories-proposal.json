@@ -1,6 +1,6 @@
 {
-  "status": "awaiting-confirmation",
-  "note": "Derived from the English articles that exist today. No category is empty and no Portuguese category is mirrored. Pages are not generated until this list is signed off.",
+  "status": "approved",
+  "note": "Approved in Phase 3. Derived from the English articles that exist today; no category is empty and no Portuguese category is mirrored. This file is the record of the proposal and of its sign-off — it is NOT read by any generator. The live taxonomy is EN_CATEGORIES and EN_CATEGORY_OF in scripts/build-articles-data.mjs; edit it there.",
   "totalEnglishArticles": 125,
   "categories": [
     {

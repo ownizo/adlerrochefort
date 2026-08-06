@@ -25,7 +25,7 @@ import { globSync } from 'node:fs';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
 
-// The thirteen branches, in the order agreed for the dropdown.
+// The fourteen branches, in the order agreed for the dropdown.
 const BRANCHES = [
   'Saúde',
   'Automóvel',
@@ -33,6 +33,7 @@ const BRANCHES = [
   'Frota de empresa',
   'Habitação',
   'Alojamento Local',
+  'Condomínio',
   'Hotelaria e Restauração',
   'Multirriscos Empresarial',
   'Responsabilidade Civil Profissional',
@@ -46,7 +47,7 @@ const options = (placeholder) =>
   `<option value="">${placeholder}</option>` +
   BRANCHES.map((b) => `<option value="${b}">${b}</option>`).join('');
 
-// The same thirteen branches as the English reader would name them.
+// The same fourteen branches as the English reader would name them.
 const BRANCHES_EN = [
   'Health',
   'Car',
@@ -54,6 +55,7 @@ const BRANCHES_EN = [
   'Company fleet',
   'Home',
   'Holiday let (Alojamento Local)',
+  'Condominium',
   'Hospitality &amp; restaurants',
   'Business combined (multirriscos)',
   'Professional indemnity',
@@ -101,6 +103,37 @@ const BRANCH_FIELDS = {
     ['al_registo', 'N.º de registo AL', 'text', 'Se já emitido'],
     ['al_capacidade', 'Capacidade (hóspedes)', 'number', 'Ex.: 6'],
   ],
+  // Condomínio is the one branch that breaks the three-question rule, and on
+  // purpose: an administrator asking for a building quote already has the
+  // minute book in front of them, and the answers below are exactly what an
+  // insurer needs before it will price the risk at all. Asking for them once
+  // here avoids the round trip that every condominium enquiry otherwise costs.
+  'Condomínio': [
+    ['condominio_nome', 'Nome do condomínio', 'text', 'Ex.: Condomínio Edifício Atlântico'],
+    ['condominio_nif', 'NIF do condomínio', 'text', '000 000 000'],
+    ['condominio_morada', 'Morada e código postal', 'text', 'Rua, n.º, 0000-000 Localidade'],
+    ['condominio_fracoes', 'Número de frações', 'number', 'Ex.: 24'],
+    ['condominio_pisos', 'Número de pisos', 'number', 'Ex.: 5'],
+    ['condominio_ano_construcao', 'Ano de construção', 'number', 'Ex.: 1998'],
+    ['condominio_elevador', 'Existe elevador', 'select', 'Selecionar', ['Sim', 'Não']],
+    [
+      'condominio_espacos_exteriores',
+      'Existe piscina ou espaços comuns exteriores',
+      'select',
+      'Selecionar',
+      ['Sim', 'Não'],
+    ],
+    ['condominio_capital', 'Capital seguro atual do edifício', 'text', 'Ex.: 2 400 000 €'],
+    ['condominio_seguradora', 'Seguradora atual', 'text', 'Se já existe apólice'],
+    ['condominio_vencimento', 'Data de vencimento', 'date', ''],
+    [
+      'condominio_contacto',
+      'Quem contacta',
+      'select',
+      'Selecionar',
+      ['Administrador profissional', 'Administrador condómino', 'Condómino'],
+    ],
+  ],
   'Hotelaria e Restauração': [
     ['horeca_tipo', 'Tipo de estabelecimento', 'text', 'Hotel, restaurante, bar…'],
     ['horeca_colaboradores', 'N.º de colaboradores', 'number', 'Ex.: 12'],
@@ -133,15 +166,26 @@ const BRANCH_FIELDS = {
   ],
 };
 
-const branchBlock = (branch, fields) => `        <div class="form-branch-fields" data-branch="${branch}" hidden>
-${fields
-  .map(
-    ([name, label, type, placeholder]) => `          <div class="form-field">
+/**
+ * One conditional field. Ships disabled so the browser leaves it out of the
+ * submission until /js/lead-branch-fields.js reveals and enables the group —
+ * see the comment at the top of that file for why the two must move together.
+ */
+const branchField = ([name, label, type, placeholder, options]) => {
+  const control =
+    type === 'select'
+      ? `<select id="${name}" name="${name}" disabled><option value="">${placeholder}</option>` +
+        options.map((o) => `<option value="${o}">${o}</option>`).join('') +
+        `</select>`
+      : `<input type="${type}" id="${name}" name="${name}" placeholder="${placeholder}" disabled>`;
+  return `          <div class="form-field">
             <label for="${name}">${label}</label>
-            <input type="${type}" id="${name}" name="${name}" placeholder="${placeholder}" disabled>
-          </div>`
-  )
-  .join('\n')}
+            ${control}
+          </div>`;
+};
+
+const branchBlock = (branch, fields) => `        <div class="form-branch-fields" data-branch="${branch}" hidden>
+${fields.map(branchField).join('\n')}
         </div>`;
 
 const ALL_BRANCH_BLOCKS = Object.entries(BRANCH_FIELDS)
@@ -181,6 +225,14 @@ const BRANCH_FIELDS_EN = {
     ['al_licence', 'AL registration number', 'text', 'If already issued'],
     ['al_guests', 'Capacity (guests)', 'number', 'e.g. 6'],
   ],
+  // The English side keeps the three-question shape here: an owner of a single
+  // fraction rarely holds the building's figures, so the detail that the
+  // Portuguese administrator can answer from memory is asked later.
+  'Condominium': [
+    ['condo_units', 'Number of units in the building', 'number', 'e.g. 24'],
+    ['condo_postcode', 'Building postcode', 'text', '0000-000'],
+    ['condo_role', 'Are you the administrator or an owner?', 'text', 'Administrator / Owner'],
+  ],
   'Hospitality &amp; restaurants': [
     ['horeca_venue', 'Type of venue', 'text', 'Hotel, restaurant, bar…'],
     ['horeca_staff', 'Number of staff', 'number', 'e.g. 12'],
@@ -217,6 +269,56 @@ const ALL_BRANCH_BLOCKS_EN = Object.entries(BRANCH_FIELDS_EN)
   .map(([branch, fields]) => branchBlock(branch, fields))
   .join('\n');
 
+// --- re-sync helpers ----------------------------------------------------------
+//
+// The first version of this script inserted the branch markup once and then
+// skipped any page that already had it. That made the run idempotent but also
+// made it inert: adding a branch to the lists above reached new pages only.
+// The helpers below let every run rewrite the select and the conditional-field
+// blocks from the lists, so this file stays the single source of truth for
+// which branches exist and what each one asks.
+
+/** Index just past the `</div>` that closes the `<div>` opening at `start`. */
+function closeOfDiv(html, start) {
+  const re = /<div\b|<\/div>/g;
+  re.lastIndex = start;
+  let depth = 0;
+  let m;
+  while ((m = re.exec(html))) {
+    if (m[0] === '</div>') {
+      if (--depth === 0) return m.index + '</div>'.length;
+    } else {
+      depth++;
+    }
+  }
+  throw new Error('unbalanced <div> while scanning the conditional-field blocks');
+}
+
+/** Replaces the whole run of conditional-field blocks with freshly built ones. */
+function syncBranchBlocks(html, blocks) {
+  const marker = '<div class="form-branch-fields"';
+  const first = html.indexOf(marker);
+  if (first === -1) return html;
+  const lineStart = html.lastIndexOf('\n', first) + 1;
+  let end = closeOfDiv(html, first);
+  for (;;) {
+    const next = html.indexOf(marker, end);
+    // Only absorb the next block if the two are adjacent siblings; anything
+    // else means the run has ended.
+    if (next === -1 || html.slice(end, next).trim() !== '') break;
+    end = closeOfDiv(html, next);
+  }
+  return html.slice(0, lineStart) + blocks + html.slice(end);
+}
+
+/** Replaces the whole `<select …>…</select>` opening at `marker`. */
+function syncSelect(html, marker, replacement) {
+  const at = html.indexOf(marker);
+  if (at === -1) return html;
+  const end = html.indexOf('</select>', at) + '</select>'.length;
+  return html.slice(0, at) + replacement + html.slice(end);
+}
+
 // Shared between the two homepages; built from the tokens already in :root.
 const BRANCH_CSS = `<style>
   .form-branch-fields[hidden] { display: none; }
@@ -240,6 +342,9 @@ const report = {
   homepageEn: false,
   articles: [],
   articlesEn: [],
+  ctaFormAdded: [],
+  sourceUrlAdded: [],
+  honeypotAdded: [],
   skipped: [],
   preselected: 0,
   noBranch: [],
@@ -249,10 +354,9 @@ const report = {
 {
   const path = join(PUBLIC, 'index.html');
   let html = await readFile(path, 'utf8');
+  const before = html;
 
-  if (html.includes('data-branch-select')) {
-    report.skipped.push('public/index.html (already upgraded)');
-  } else {
+  if (!html.includes('data-branch-select')) {
     const oldSelect = html.slice(
       html.indexOf('<select id="tipo_seguro"'),
       html.indexOf('</select>', html.indexOf('<select id="tipo_seguro"')) + '</select>'.length
@@ -306,19 +410,34 @@ const report = {
     if (!html.includes('.form-branch-fields')) {
       html = html.replace('</head>', BRANCH_CSS);
     }
+  }
 
+  // Re-synced on every run, not just the first, so a branch added to the lists
+  // at the top of this file reaches the page that was built before it existed.
+  html = syncSelect(
+    html,
+    '<select id="tipo_seguro"',
+    `<select id="tipo_seguro" name="tipo_seguro" data-branch-select required>
+            ${options('Seleccione o tipo de seguro...')}
+          </select>`
+  );
+  html = syncBranchBlocks(html, ALL_BRANCH_BLOCKS);
+
+  if (html !== before) {
     await writeFile(path, html);
     report.homepage = true;
+  } else {
+    report.skipped.push('public/index.html (already in sync)');
   }
 }
 
 // --- article CTA forms --------------------------------------------------------
 //
-// The article form gets exactly what the homepage form got: the thirteen
+// The article form gets exactly what the homepage form got: the fourteen
 // branches, the conditional fields, and — because the article already tells us
 // what the reader came for — the matching branch selected on arrival. Someone
 // who has just read the TVDE guide should not have to find "TVDE" in a list of
-// thirteen.
+// fourteen.
 //
 // The mapping is by article tag first and category second, because a tag is the
 // narrower statement: "Alojamento Local" and "Hotelaria & Turismo" share a
@@ -344,6 +463,7 @@ const TAG_BRANCH = {
   'Imobiliário · Titularidade': 'Habitação',
   'Seguros de Saúde': 'Saúde',
   'Seguros de Saúde · Expatriados': 'Saúde',
+  'Condomínios': 'Condomínio',
 };
 
 const CATEGORY_BRANCH = {
@@ -352,9 +472,7 @@ const CATEGORY_BRANCH = {
   'seguros-empresariais': 'Multirriscos Empresarial',
   'habitacao-particulares': 'Habitação',
   'seguros-saude': 'Saúde',
-  // "condominios" is absent on purpose: the dropdown has no condominium
-  // branch, even though /seguros/condominios/ exists and the footer lists the
-  // product. Reported rather than forced into "Outro".
+  condominios: 'Condomínio',
 };
 
 const CLUSTER_BRANCH_EN = {
@@ -409,7 +527,7 @@ function upgradeArticleForm(html, { selectName, oldSelect, newSelect, blocks }) 
   if (html.includes(oldSelect)) {
     html = html.split(oldSelect).join(newSelect);
   } else {
-    // Already carries the thirteen branches from an earlier run: swap the whole
+    // Already carries the branch list from an earlier run: swap the whole
     // select so the preselection and the data-branch-select hook land too.
     const at = html.indexOf(selectStart);
     if (at !== -1) {
@@ -418,7 +536,8 @@ function upgradeArticleForm(html, { selectName, oldSelect, newSelect, blocks }) 
     }
   }
 
-  // Conditional fields, inserted once, directly after the select's field div.
+  // Conditional fields: inserted after the select's field div the first time,
+  // re-synced from the lists at the top of this file on every run after.
   if (!html.includes('class="form-branch-fields"')) {
     const at = html.indexOf(selectStart);
     if (at !== -1) {
@@ -429,6 +548,8 @@ function upgradeArticleForm(html, { selectName, oldSelect, newSelect, blocks }) 
         html = html.slice(0, cut) + '\n' + articleBlocks(blocks) + html.slice(cut);
       }
     }
+  } else {
+    html = syncBranchBlocks(html, articleBlocks(blocks));
   }
 
   if (!html.includes('.form-branch-fields')) html = html.replace('</head>', BRANCH_CSS);
@@ -449,6 +570,83 @@ function upgradeArticleForm(html, { selectName, oldSelect, newSelect, blocks }) 
 
 const OLD_SELECT =
   '<select name="tipo-seguro" required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Auto">Auto</option><option value="Casa">Casa</option><option value="Empresa">Empresa</option><option value="Outro">Outro</option></select>';
+
+// --- 3.4 articles that carry no CTA form at all -------------------------------
+//
+// The condominium articles were written before the dropdown had a condominium
+// branch, so they were given a link to the landing page instead of a form —
+// the reader had to change page to ask for anything. Now that the branch
+// exists they get the same in-article form as every other article: the base
+// markup goes in here, and the upgrade loop below then does to it exactly what
+// it does to the forms that were already in the files.
+const CTA_TOPO_CSS = `<style>
+  /* CTA TOPO — same component as the rest of the article set. */
+  .cta-topo { background: #F5F1E8; border-left: 4px solid #C9A84C; padding: 28px 32px; margin-bottom: 36px; }
+  .cta-topo-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #1B2B4B; margin-bottom: 6px; }
+  .cta-topo-subtitle { font-size: 13px; color: #637060; margin-bottom: 18px; }
+  .cta-topo-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+  .cta-topo-form .cta-field { flex: 1; min-width: 140px; }
+  .cta-topo-form .cta-field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #8A8B7E; margin-bottom: 4px; }
+  .cta-topo-form .cta-field input,
+  .cta-topo-form .cta-field select { width: 100%; padding: 10px 12px; border: 1px solid #E5DFCB; background: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; color: #4A5A45; outline: none; transition: border-color 0.2s; }
+  .cta-topo-form .cta-field input:focus,
+  .cta-topo-form .cta-field select:focus { border-color: #C9A84C; }
+  .cta-topo-form .cta-btn { background: #1B2B4B; color: #fff; border: none; padding: 10px 24px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .cta-topo-form .cta-btn:hover { background: #2a3f66; }
+  .cta-topo-micro { font-size: 10px; color: #B5B1A1; margin-top: 10px; }
+  @media (max-width: 768px) {
+    .cta-topo { padding: 20px 18px; }
+    .cta-topo-title { font-size: 17px; }
+    .cta-topo-form { flex-direction: column; }
+    .cta-topo-form .cta-field { min-width: 100%; }
+  }
+</style>
+</head>`;
+
+const ctaTopoBlock = (slug, title, subtitle) => `
+  <div class="cta-topo">
+    <div class="cta-topo-title">${title}</div>
+    <div class="cta-topo-subtitle">${subtitle}</div>
+    <form class="cta-topo-form" name="cotacao-blog" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="cotacao-blog">
+      <input type="hidden" name="source" value="${slug}">
+      <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
+      <div class="cta-field"><label>Nome</label><input type="text" name="nome" required placeholder="O seu nome"></div>
+      <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
+      <div class="cta-field"><label>Tipo de seguro</label>${OLD_SELECT}</div>
+      <button type="submit" class="cta-btn">Pedir cotação</button>
+    </form>
+    <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
+  </div>
+`;
+
+const MISSING_CTA_FORM = {
+  'obrigacoes-administrador-condominio-seguro': [
+    'Auditoria gratuita ao seguro do condomínio',
+    'Revemos capitais, coberturas e responsabilidade civil do edifício. Mediador registado na ASF, sem compromisso.',
+  ],
+  'seguro-condominio-capitais-desatualizados': [
+    'Verificar o capital seguro do seu edifício',
+    'Comparamos o capital em apólice com o custo real de reconstrução. Mediador registado na ASF, sem compromisso.',
+  ],
+  'seguro-condominio-obrigatorio-guia': [
+    'Pedir cotação para o seu condomínio',
+    'Levamos o mesmo edifício a várias seguradoras e apresentamos as propostas lado a lado. Sem compromisso.',
+  ],
+};
+
+for (const [slug, [title, subtitle]] of Object.entries(MISSING_CTA_FORM)) {
+  const path = join(PUBLIC, 'blog', slug, 'index.html');
+  let html = await readFile(path, 'utf8');
+  if (html.includes('name="cotacao-blog"')) continue;
+  const anchor = '<div class="article-body">';
+  const at = html.indexOf(anchor);
+  if (at === -1) throw new Error(`${slug}: article-body not found`);
+  html = html.slice(0, at) + ctaTopoBlock(slug, title, subtitle).trimStart() + '\n  ' + html.slice(at);
+  if (!html.includes('.cta-topo ')) html = html.replace('</head>', CTA_TOPO_CSS);
+  await writeFile(path, html);
+  report.ctaFormAdded.push(`public/blog/${slug}/index.html`);
+}
 
 for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
   if (rel.startsWith('en/') || rel.startsWith('nl/')) continue;
@@ -482,10 +680,9 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
 {
   const path = join(PUBLIC, 'en', 'index.html');
   let html = await readFile(path, 'utf8');
+  const before = html;
 
-  if (html.includes('data-branch-select')) {
-    report.skipped.push('public/en/index.html (already upgraded)');
-  } else {
+  if (!html.includes('data-branch-select')) {
     const selectAt = html.indexOf('<select id="insurance_type"');
     if (selectAt === -1) throw new Error('insurance_type select not found');
     const selectEnd = html.indexOf('</select>', selectAt) + '</select>'.length;
@@ -530,9 +727,23 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
     if (!html.includes('.form-branch-fields')) {
       html = html.replace('</head>', BRANCH_CSS);
     }
+  }
 
+  // Same re-sync as the Portuguese homepage, for the same reason.
+  html = syncSelect(
+    html,
+    '<select id="insurance_type"',
+    `<select id="insurance_type" name="insurance_type" data-branch-select required>
+            ${optionsEn('Select insurance type...')}
+          </select>`
+  );
+  html = syncBranchBlocks(html, ALL_BRANCH_BLOCKS_EN);
+
+  if (html !== before) {
     await writeFile(path, html);
     report.homepageEn = true;
+  } else {
+    report.skipped.push('public/en/index.html (already in sync)');
   }
 }
 
@@ -567,8 +778,76 @@ for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
   if (branch) report.preselected++;
 }
 
+// --- 3.5 source_url on every remaining Netlify form ---------------------------
+//
+// 3.3 gave the homepage and article forms a hidden source_url. The
+// hand-authored landing pages never got one, so a lead from, say,
+// /seguros/condominios/ reached the inbox with no record of the page it came
+// from beyond a static "source" slug — and the pages that lack even that were
+// indistinguishable from each other. Every Netlify form on the site now
+// carries the field, and the page script fills it in on load.
+{
+  const SOURCE_URL_INPUT = '<input type="hidden" name="source_url" value="">';
+  for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
+    const path = join(PUBLIC, rel);
+    let html = await readFile(path, 'utf8');
+    if (!html.includes('data-netlify="true"')) continue;
+    if (html.includes('name="source_url"')) continue;
+    const before = html;
+
+    // One per form: anchor on the form-name field Netlify requires anyway.
+    html = html.replace(
+      /([ \t]*)(<input type="hidden" name="form-name" value="[^"]*">)/g,
+      `$1$2\n$1${SOURCE_URL_INPUT}`
+    );
+    if (!html.includes('/js/lead-branch-fields.js')) {
+      html = html.replace('</body>', '<script defer src="/js/lead-branch-fields.js"></script>\n</body>');
+    }
+
+    if (html !== before) {
+      await writeFile(path, html);
+      report.sourceUrlAdded.push(`public/${rel}`);
+    }
+  }
+}
+
+// --- 3.6 honeypot field on every form that declares one ----------------------
+//
+// `netlify-honeypot="bot-field"` on the form tag does nothing on its own: it
+// names a field the form must also contain. A form that declares the attribute
+// without the field is not protected, and nothing anywhere reports it. This
+// pass closes the gap wherever it opens.
+{
+  const FORM_RE = /<form[^>]*netlify-honeypot="bot-field"[^>]*>([\s\S]*?)<\/form>/g;
+  for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
+    const path = join(PUBLIC, rel);
+    let html = await readFile(path, 'utf8');
+    if (!html.includes('netlify-honeypot="bot-field"')) continue;
+    const before = html;
+    const en = rel.startsWith('en/') || rel.startsWith('nl/');
+    const trap = `<p style="display:none"><label>${
+      en ? "Don't fill this out" : 'Não preencher'
+    }: <input name="bot-field"></label></p>`;
+
+    html = html.replace(FORM_RE, (whole, inner) => {
+      if (inner.includes('name="bot-field"')) return whole;
+      const anchor = inner.match(/([ \t]*)<input type="hidden" name="form-name" value="[^"]*">/);
+      if (!anchor) return whole;
+      return whole.replace(anchor[0], `${anchor[0]}\n${anchor[1]}${trap}`);
+    });
+
+    if (html !== before) {
+      await writeFile(path, html);
+      report.honeypotAdded.push(`public/${rel}`);
+    }
+  }
+}
+
 console.log(`PT homepage upgraded: ${report.homepage}`);
 console.log(`EN homepage upgraded: ${report.homepageEn}`);
+console.log(`CTA form added where there was none: ${report.ctaFormAdded.length}`);
+console.log(`source_url added to forms that lacked it: ${report.sourceUrlAdded.length}`);
+console.log(`honeypot field added where it was declared but absent: ${report.honeypotAdded.length}`);
 console.log(`PT article CTA forms upgraded: ${report.articles.length}`);
 console.log(`EN article CTA forms upgraded: ${report.articlesEn.length}`);
 console.log(`articles opening on their own branch: ${report.preselected}`);

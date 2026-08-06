@@ -75,6 +75,220 @@ export const PT_CATEGORIES = [
   },
 ];
 
+// --- EN taxonomy --------------------------------------------------------------
+// The English side is a separate audience with its own reading order, not a
+// translation of the Portuguese one, so it gets its own nine categories rather
+// than a mapping onto the PT seven. The taxonomy lives here, in the generator,
+// for the same reason the PT one does: data/articles.json is derived output and
+// anything written straight into it is lost on the next run.
+//
+// `landing` points at the English commercial page that serves the category.
+// Two categories have none on purpose — Personal & Family and Moving to
+// Portugal are editorial clusters, not lines of business we quote as such.
+export const EN_CATEGORIES = [
+  {
+    slug: "health-insurance",
+    title: "Health Insurance",
+    short: "Health",
+    landing: "/en/insurance/health/",
+    landingLabel: "Health insurance",
+  },
+  {
+    slug: "home-property",
+    title: "Home & Property",
+    short: "Home & Property",
+    landing: "/en/insurance/home/",
+    landingLabel: "Home insurance",
+  },
+  {
+    slug: "valuables-collections",
+    title: "Valuables & Collections",
+    short: "Valuables",
+    landing: "/en/insurance/high-value/",
+    landingLabel: "High-value & collections",
+  },
+  {
+    slug: "business-liability",
+    title: "Business & Liability",
+    short: "Business",
+    landing: "/en/insurance/business/",
+    landingLabel: "Business insurance",
+  },
+  {
+    slug: "motor",
+    title: "Motor",
+    short: "Motor",
+    landing: "/en/insurance/motor/",
+    landingLabel: "Motor insurance",
+  },
+  {
+    slug: "personal-family",
+    title: "Personal & Family",
+    short: "Personal & Family",
+    landing: null,
+    landingLabel: null,
+  },
+  {
+    slug: "holiday-lets-hospitality",
+    title: "Holiday Lets & Hospitality",
+    short: "Holiday Lets",
+    landing: "/en/insurance/holiday-let/",
+    landingLabel: "Holiday let insurance",
+  },
+  {
+    slug: "moving-to-portugal",
+    title: "Moving to Portugal",
+    short: "Moving to Portugal",
+    landing: null,
+    landingLabel: null,
+  },
+  {
+    slug: "marine",
+    title: "Marine",
+    short: "Marine",
+    landing: "/en/insurance/marine/",
+    landingLabel: "Marine insurance",
+  },
+];
+
+const EN_CATEGORY_OF = {
+  // Health Insurance
+  "allianz-april-medis-health-insurance-portugal-2026": "health-insurance",
+  "allianz-health-insurance-portugal": "health-insurance",
+  "april-international-health-insurance-portugal": "health-insurance",
+  "d7-visa-health-insurance-valid-proof": "health-insurance",
+  "health-insurance-cost-portugal-2026": "health-insurance",
+  "health-insurance-expats-portugal": "health-insurance",
+  "health-insurance-portugal": "health-insurance",
+  "health-insurance-portugal-americans": "health-insurance",
+  "health-insurance-portugal-residency-visa": "health-insurance",
+  "health-insurance-portugal-usa": "health-insurance",
+  "international-health-cover-children-school-abroad": "health-insurance",
+  "long-term-care-planning-foreign-residents-portugal": "health-insurance",
+  "medical-evacuation-repatriation-cover-portugal": "health-insurance",
+  "medical-evacuation-repatriation-cover-residents-travel-constantly": "health-insurance",
+  "medis-health-insurance-portugal": "health-insurance",
+  "moving-to-portugal-pre-existing-condition-health-cover": "health-insurance",
+  "pre-existing-conditions-health-insurance-portugal": "health-insurance",
+  "private-health-insurance-pre-existing-condition-portugal": "health-insurance",
+  "retiring-algarve-health-cover-65-plus": "health-insurance",
+  "sns-vs-private-insurance-expats-portugal": "health-insurance",
+  "travel-insurance-expats-portugal": "health-insurance",
+  // Home & Property
+  "allianz-home-insurance-portugal": "home-property",
+  "best-home-insurance-portugal-2026": "home-property",
+  "building-home-portugal-promoter-insurance-seguro-decenal": "home-property",
+  "change-bank-home-insurance-portugal": "home-property",
+  "coastal-clifftop-properties-algarve-subsidence-erosion-flood": "home-property",
+  "condominium-insurance-doesnt-cover-contents": "home-property",
+  "documents-to-insure-property-portugal": "home-property",
+  "earthquake-cover-algarve-buildings": "home-property",
+  "golf-resort-properties-insurance-portugal": "home-property",
+  "hiscox-home-insurance-portugal": "home-property",
+  "holiday-home-insurance-portugal": "home-property",
+  "home-insurance-cost-algarve-price-drivers": "home-property",
+  "home-insurance-lagoa-carvoeiro": "home-property",
+  "home-insurance-lagos": "home-property",
+  "home-insurance-legalization": "home-property",
+  "home-insurance-loule-almancil": "home-property",
+  "home-insurance-multi-risk": "home-property",
+  "home-insurance-protect-property": "home-property",
+  "home-insurance-tavira": "home-property",
+  "home-staff-quarters-guest-annexes-outbuildings": "home-property",
+  "insuring-a-high-value-apartment-lisbon-cascais": "home-property",
+  "insuring-property-portfolio-two-jurisdictions": "home-property",
+  "liberty-mutual-home-insurance-portugal": "home-property",
+  "luxury-home-insurance-portugal": "home-property",
+  "mortgage-life-insurance-foreign-buyers-portugal": "home-property",
+  "property-held-company-structure-insurance": "home-property",
+  "property-title-risk-portugal": "home-property",
+  "renovating-listed-heritage-property-portugal": "home-property",
+  "safes-alarms-underwriting-requirements-portugal": "home-property",
+  "second-homes-empty-months-unoccupancy-clause-voids-cover": "home-property",
+  "solar-panels-ev-chargers-home-insurance-portugal": "home-property",
+  "solar-panels-home-batteries-ev-chargers-policy-modern": "home-property",
+  "swimming-pools-jetties-private-access-liability-nobody-insures": "home-property",
+  "unoccupied-property-clause-portugal": "home-property",
+  "us-buyers-property-cover-portugal": "home-property",
+  "wine-cellars-home-storage-valuation-cover": "home-property",
+  "zurich-home-insurance-portugal": "home-property",
+  // Valuables & Collections
+  "art-collection-household-policy-portugal": "valuables-collections",
+  "high-value-bicycles-e-bikes-cover-away-from-home": "valuables-collections",
+  "insuring-antiques-collections-portugal": "valuables-collections",
+  "insuring-appreciating-asset-agreed-value-market-value-cars-wine-art": "valuables-collections",
+  "insuring-art-portugal": "valuables-collections",
+  "insuring-jewellery-watches-portugal": "valuables-collections",
+  "insuring-musical-instruments-portugal": "valuables-collections",
+  "insuring-valuables-portugal": "valuables-collections",
+  "outdated-insured-values": "valuables-collections",
+  "shipping-a-collection-to-portugal": "valuables-collections",
+  "valuations-portugal-who-what-how-often": "valuables-collections",
+  "watches-jewellery-travelling-worldwide-all-risks": "valuables-collections",
+  "worldwide-cover-personal-possessions-portugal": "valuables-collections",
+  // Business & Liability
+  "adler-pro-saas-platform": "business-liability",
+  "business-insurance-policy-review": "business-liability",
+  "construction-works-insurance": "business-liability",
+  "cyber-insurance-businesses-portugal": "business-liability",
+  "directors-and-officers-insurance-d-o": "business-liability",
+  "distribution-companies-insurance": "business-liability",
+  "do-exposure-non-executive-directors-abroad": "business-liability",
+  "fiduciary-family-office-liability-portugal": "business-liability",
+  "how-specialist-risks-are-placed-portugal": "business-liability",
+  "key-person-insurance-businesses-abroad": "business-liability",
+  "liability-insurance-complementary-therapies": "business-liability",
+  "mandatory-insurance-companies-portugal": "business-liability",
+  "professional-indemnity-insurance": "business-liability",
+  "ransomware-portugal-cyber-risks": "business-liability",
+  "real-estate-partnerships-commissions": "business-liability",
+  "setting-up-company-portugal-foreigners": "business-liability",
+  // Motor
+  "car-insurance-complete-guide": "motor",
+  "car-insurance-cost-portugal": "motor",
+  "car-insurance-expatriates": "motor",
+  "classic-collector-cars-portugal-matriculation-agreed-value": "motor",
+  "fleet-insurance-common-mistakes": "motor",
+  "individual-car-insurance": "motor",
+  "insuring-car-collection-multiple-vehicles-portugal": "motor",
+  "luxury-car-insurance-portugal": "motor",
+  "track-days-performance-driving-motor-policy-exclusion": "motor",
+  "tvde-insurance-portugal": "motor",
+  // Personal & Family
+  "divorce-separation-jointly-held-cover-unravels": "personal-family",
+  "domestic-staff-insurance-portugal": "personal-family",
+  "employing-nanny-driver-gardener-home-employer-obligation": "personal-family",
+  "family-liability-cover-portugal": "personal-family",
+  "insurance-domestic-staff-portugal": "personal-family",
+  "insurance-private-staff-travel-household": "personal-family",
+  "personal-fraud-and-extortion-cover-portugal": "personal-family",
+  "personal-legal-expenses-cover-portugal": "personal-family",
+  "water-damage-claim-portugal": "personal-family",
+  // Holiday Lets & Hospitality
+  "20-years-tourism-hospitality-insurance": "holiday-lets-hospitality",
+  "algarve-home-earns-income-personal-use-vs-al-cover": "holiday-lets-hospitality",
+  "alojamento-local-insurance-requirements": "holiday-lets-hospitality",
+  "bars-restaurants-insurance-claims": "holiday-lets-hospitality",
+  "destination-wedding-cancellation-insurance-algarve": "holiday-lets-hospitality",
+  "mandatory-insurance-hospitality-tourism": "holiday-lets-hospitality",
+  "prize-indemnity-hole-in-one-insurance-algarve": "holiday-lets-hospitality",
+  "second-home-rent-out-holiday-let-standard-home-cover": "holiday-lets-hospitality",
+  // Moving to Portugal
+  "british-expats-brexit-insurance-portugal": "moving-to-portugal",
+  "fiscal-representation-portugal-explained": "moving-to-portugal",
+  "getting-insurance-portugal-before-nif-residency": "moving-to-portugal",
+  "how-to-get-nif-portugal-non-resident": "moving-to-portugal",
+  "insurance-claim-portugal-no-portuguese": "moving-to-portugal",
+  "insurance-guide-americans-moving-to-portugal": "moving-to-portugal",
+  // Marine
+  "boat-insurance-portugal": "marine",
+  "importing-registering-a-boat-portugal": "marine",
+  "lay-up-lifting-winter-boat-cover-portugal": "marine",
+  "private-use-vs-charter-boat-cover-portugal": "marine",
+  "yacht-insurance-algarve-marinas": "marine",
+};
+
+// --- PT article → category ----------------------------------------------------
 const CATEGORY_OF = {
   // Seguros Automóvel e TVDE
   'seguro-tvde-portugal': 'seguros-auto-tvde',
@@ -225,7 +439,7 @@ function buildArticle(a, lang) {
   const card = cards[a.slug] || null;
   const img = cardImages[a.slug] || null;
   const date = a.published ? new Date(a.published) : null;
-  const category = lang === 'pt' ? CATEGORY_OF[a.slug] || null : null;
+  const category = lang === 'pt' ? CATEGORY_OF[a.slug] || null : EN_CATEGORY_OF[a.slug] || null;
 
   // Translation pairing is only recorded when the counterpart is actually
   // published. A dangling hreflang — or one aimed at a URL that now 301s — is
@@ -302,9 +516,19 @@ if (uncategorised.length) {
   process.exitCode = 1;
 }
 
+const uncategorisedEn = en.filter((a) => a.status === 'published' && !a.category);
+if (uncategorisedEn.length) {
+  console.error('Uncategorised EN articles:', uncategorisedEn.map((a) => a.slug).join(', '));
+  process.exitCode = 1;
+}
+
 await writeFile(
   join(ROOT, 'data', 'articles.json'),
-  JSON.stringify({ categories: { pt: PT_CATEGORIES }, articles: { pt, en } }, null, 2) + '\n'
+  JSON.stringify(
+    { categories: { pt: PT_CATEGORIES, en: EN_CATEGORIES }, articles: { pt, en } },
+    null,
+    2
+  ) + '\n'
 );
 
 const pub = (list) => list.filter((a) => a.status === 'published');
@@ -312,6 +536,9 @@ console.log(`pt published=${pub(pt).length} merged=${pt.filter((a) => a.status =
 console.log(`en published=${pub(en).length} draft=${en.filter((a) => a.status === 'draft').length}`);
 for (const c of PT_CATEGORIES) {
   console.log(`  ${c.slug}: ${pub(pt).filter((a) => a.category === c.slug).length}`);
+}
+for (const c of EN_CATEGORIES) {
+  console.log(`  en/${c.slug}: ${pub(en).filter((a) => a.category === c.slug).length}`);
 }
 console.log(`featured: ${pt.filter((a) => a.featured).length}`);
 console.log(`pt with translation pair: ${pt.filter((a) => a.translationOf).length}`);
