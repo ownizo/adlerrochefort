@@ -533,6 +533,7 @@
       <!-- Netlify Form: detected at build time. AJAX multipart submission. -->
       <form id="mediadorForm" name="alterar-mediador" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" novalidate>
         <input type="hidden" name="form-name" value="alterar-mediador">
+        <input type="hidden" name="source_url" value="">
         <input type="hidden" name="subject" value="Novo pedido de alteração de mediador">
         <input type="hidden" name="seguradoraDetalhe" id="seguradoraDetalhe">
         <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
@@ -1203,5 +1204,6 @@
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<script defer src="/js/lead-branch-fields.js"></script>
 </body>
 </html>

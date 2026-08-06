@@ -1053,6 +1053,7 @@
 
     <form id="leadForm" name="seguro-auto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
       <input type="hidden" name="form-name" value="seguro-auto">
+      <input type="hidden" name="source_url" value="">
       <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
 
       <!-- STEP 1: Contact (low friction) -->
@@ -1467,5 +1468,6 @@
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<script defer src="/js/lead-branch-fields.js"></script>
 </body>
 </html>

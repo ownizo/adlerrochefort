@@ -580,7 +580,7 @@
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="cta-field"><label>Nome</label><input type="text" name="nome" required placeholder="O seu nome"></div>
       <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
-      <div class="cta-field"><label>Tipo de seguro</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local" selected>Alojamento Local</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
+      <div class="cta-field"><label>Tipo de seguro</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local" selected>Alojamento Local</option><option value="Condomínio">Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
         <div class="form-branch-fields" data-branch="Saúde" hidden>
           <div class="cta-field">
             <label for="saude_idade">Idade da pessoa mais velha a segurar</label>
@@ -663,6 +663,56 @@
           <div class="cta-field">
             <label for="al_capacidade">Capacidade (hóspedes)</label>
             <input type="number" id="al_capacidade" name="al_capacidade" placeholder="Ex.: 6" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Condomínio" hidden>
+          <div class="cta-field">
+            <label for="condominio_nome">Nome do condomínio</label>
+            <input type="text" id="condominio_nome" name="condominio_nome" placeholder="Ex.: Condomínio Edifício Atlântico" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_nif">NIF do condomínio</label>
+            <input type="text" id="condominio_nif" name="condominio_nif" placeholder="000 000 000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_morada">Morada e código postal</label>
+            <input type="text" id="condominio_morada" name="condominio_morada" placeholder="Rua, n.º, 0000-000 Localidade" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_fracoes">Número de frações</label>
+            <input type="number" id="condominio_fracoes" name="condominio_fracoes" placeholder="Ex.: 24" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_pisos">Número de pisos</label>
+            <input type="number" id="condominio_pisos" name="condominio_pisos" placeholder="Ex.: 5" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_ano_construcao">Ano de construção</label>
+            <input type="number" id="condominio_ano_construcao" name="condominio_ano_construcao" placeholder="Ex.: 1998" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_elevador">Existe elevador</label>
+            <select id="condominio_elevador" name="condominio_elevador" disabled><option value="">Selecionar</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_espacos_exteriores">Existe piscina ou espaços comuns exteriores</label>
+            <select id="condominio_espacos_exteriores" name="condominio_espacos_exteriores" disabled><option value="">Selecionar</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_capital">Capital seguro atual do edifício</label>
+            <input type="text" id="condominio_capital" name="condominio_capital" placeholder="Ex.: 2 400 000 €" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_seguradora">Seguradora atual</label>
+            <input type="text" id="condominio_seguradora" name="condominio_seguradora" placeholder="Se já existe apólice" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_vencimento">Data de vencimento</label>
+            <input type="date" id="condominio_vencimento" name="condominio_vencimento" placeholder="" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condominio_contacto">Quem contacta</label>
+            <select id="condominio_contacto" name="condominio_contacto" disabled><option value="">Selecionar</option><option value="Administrador profissional">Administrador profissional</option><option value="Administrador condómino">Administrador condómino</option><option value="Condómino">Condómino</option></select>
           </div>
         </div>
         <div class="form-branch-fields" data-branch="Hotelaria e Restauração" hidden>

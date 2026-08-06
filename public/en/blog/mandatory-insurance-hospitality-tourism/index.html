@@ -639,7 +639,7 @@
       <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
       <div class="cta-field"><label>Name</label><input type="text" name="name" required placeholder="Your name"></div>
       <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="you@email.com"></div>
-      <div class="cta-field"><label>Insurance type</label><select name="insurance-type" data-branch-select required><option value="">Select</option><option value="Health">Health</option><option value="Car">Car</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Company fleet">Company fleet</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)" selected>Holiday let (Alojamento Local)</option><option value="Hospitality &amp; restaurants">Hospitality &amp; restaurants</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Professional indemnity">Professional indemnity</option><option value="Cyber">Cyber</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Workers' compensation">Workers' compensation</option><option value="Other">Other</option></select></div>
+      <div class="cta-field"><label>Insurance type</label><select name="insurance-type" data-branch-select required><option value="">Select</option><option value="Health">Health</option><option value="Car">Car</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Company fleet">Company fleet</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)" selected>Holiday let (Alojamento Local)</option><option value="Condominium">Condominium</option><option value="Hospitality &amp; restaurants">Hospitality &amp; restaurants</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Professional indemnity">Professional indemnity</option><option value="Cyber">Cyber</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Workers' compensation">Workers' compensation</option><option value="Other">Other</option></select></div>
         <div class="form-branch-fields" data-branch="Health" hidden>
           <div class="cta-field">
             <label for="health_age">Age of the oldest person to insure</label>
@@ -722,6 +722,20 @@
           <div class="cta-field">
             <label for="al_guests">Capacity (guests)</label>
             <input type="number" id="al_guests" name="al_guests" placeholder="e.g. 6" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Condominium" hidden>
+          <div class="cta-field">
+            <label for="condo_units">Number of units in the building</label>
+            <input type="number" id="condo_units" name="condo_units" placeholder="e.g. 24" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condo_postcode">Building postcode</label>
+            <input type="text" id="condo_postcode" name="condo_postcode" placeholder="0000-000" disabled>
+          </div>
+          <div class="cta-field">
+            <label for="condo_role">Are you the administrator or an owner?</label>
+            <input type="text" id="condo_role" name="condo_role" placeholder="Administrator / Owner" disabled>
           </div>
         </div>
         <div class="form-branch-fields" data-branch="Hospitality &amp; restaurants" hidden>
