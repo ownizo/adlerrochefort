@@ -44,12 +44,29 @@
   };
   var t = STRINGS[lang];
 
+  // Two fixed strips can end up at the bottom of a phone screen: the cookie
+  // notice, and the sticky quote bar on the commercial landing pages. The
+  // launcher used to ignore both and sit at bottom:20px on top of whatever was
+  // there. Against the cookie notice (z-index 9998 vs 200) that meant a tap
+  // aimed at Accept opened the chat instead, so the notice could never be
+  // dismissed at all.
+  //
+  // The notice is answered in one tap and blocks nothing else, so the launcher
+  // simply stands down for as long as it is showing — moving the launcher up
+  // instead would park it over the hero's own call to action. Both elements are
+  // children of <body> and the notice comes first in the markup, so a sibling
+  // selector is enough and no script has to coordinate it.
+  //
+  // The sticky quote bar is permanent once consent is given, so that one is
+  // cleared by height: the landing pages publish it as --ar-bottom-inset.
+  // Defaults to 0, so nothing moves on a page that never sets it.
   var CSS =
-    "#ar-chat-launcher{position:fixed;right:20px;bottom:20px;z-index:9998;background:#4A5A45;color:#fff;border:none;" +
+    "#ar-chat-launcher{position:fixed;right:20px;bottom:calc(20px + var(--ar-bottom-inset, 0px));z-index:9998;background:#4A5A45;color:#fff;border:none;" +
     "border-radius:999px;padding:14px 20px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:600;" +
-    "box-shadow:0 6px 20px rgba(0,0,0,.2);cursor:pointer;display:flex;align-items:center;gap:8px;}" +
+    "box-shadow:0 6px 20px rgba(0,0,0,.2);cursor:pointer;display:flex;align-items:center;gap:8px;transition:bottom .2s ease;}" +
     "#ar-chat-launcher:hover{background:#3c4a38;}" +
-    "#ar-chat-panel{position:fixed;right:20px;bottom:90px;z-index:9999;width:360px;max-width:calc(100vw - 40px);" +
+    "#cookieBanner.show ~ #ar-chat-launcher,#cookieBanner.show ~ #ar-chat-panel{display:none;}" +
+    "#ar-chat-panel{position:fixed;right:20px;bottom:calc(90px + var(--ar-bottom-inset, 0px));z-index:9999;width:360px;max-width:calc(100vw - 40px);" +
     "height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.25);" +
     "display:none;flex-direction:column;overflow:hidden;font-family:Arial,Helvetica,sans-serif;}" +
     "#ar-chat-panel.ar-open{display:flex;}" +
@@ -68,7 +85,7 @@
     "#ar-chat-input:focus{outline:none;border-color:#4A5A45;}" +
     "#ar-chat-send{background:#4A5A45;color:#fff;border:none;border-radius:20px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;}" +
     "#ar-chat-send:disabled{opacity:.5;cursor:default;}" +
-    "@media (max-width:480px){#ar-chat-panel{right:10px;left:10px;width:auto;bottom:80px;}#ar-chat-launcher{right:10px;bottom:10px;}}";
+    "@media (max-width:480px){#ar-chat-panel{right:10px;left:10px;width:auto;bottom:calc(80px + var(--ar-bottom-inset, 0px));}#ar-chat-launcher{right:10px;bottom:calc(10px + var(--ar-bottom-inset, 0px));}}";
 
   var styleTag = document.createElement("style");
   styleTag.textContent = CSS;

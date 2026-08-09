@@ -1,0 +1,476 @@
+/**
+ * Commercial quote landing pages — the layer the phone actually sees.
+ *
+ * Linked after the page's own inline <style> and after /css/ar-chrome.css, so
+ * it is the last word on anything it touches. Everything that changes layout is
+ * inside a max-width media query: the pages must render at 1440px exactly as
+ * they did before. The two rules outside a media query undo a divergence from
+ * the homepage header rather than introducing a new one — see below.
+ *
+ * Consumed by /en/health-insurance-quote/ and /en/home-insurance-quote/.
+ */
+
+/* ═══════════════ HEADER ═══════════════
+ *
+ * The landing pages centred the logo with `position:absolute; left:50%`, which
+ * only works while the logo is the last thing in the nav. Now that the header
+ * comes from the shared partial the logo sits between the two link groups, as
+ * it does on the homepage, so it is centred the way the homepage centres it:
+ * both groups take an equal share of the free space and the logo keeps its
+ * intrinsic width in the middle. Same pixels, no absolute positioning to go
+ * wrong when the groups are hidden. */
+.nav-logo {
+  position: static;
+  left: auto;
+  transform: none;
+  flex-shrink: 0;
+}
+
+.nav-links-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.nav-links-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* The compact mark is the guarantee that a brand element is on screen even if
+ * the logo file cannot be fetched — a slow or failed image request used to
+ * leave the header with nothing in it at all. Hidden while the image is fine. */
+.nav-logo-mark {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.nav-logo.logo-fallback .nav-logo-mark {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* The top bar is a regulatory disclosure and stays, in full. It was being
+   * covered by the nav, which was fixed at top:36px while the bar itself wraps
+   * to two or three lines on a phone and is nearer 50px tall. Both are in flow
+   * now and the nav sticks once the bar has scrolled past, which removes the
+   * overlap and hands 112px of fixed chrome back to the hero. */
+  nav {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .lp-main {
+    padding-top: 0;
+  }
+
+  .nav-logo-img {
+    height: 40px;
+  }
+
+  .nav-burger {
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    margin-right: -10px;
+  }
+
+  /* The drawer covers the whole viewport; the top inset clears the top bar and
+   * the nav, which stay above it. */
+  .mobile-nav {
+    top: 0;
+    padding: 104px 24px 40px;
+    overflow-y: auto;
+  }
+
+  .mobile-nav a {
+    font-size: 20px;
+    padding: 16px 0;
+  }
+}
+
+/* ═══════════════ QUOTE FORM ═══════════════ */
+
+/* Belt and braces on the honeypot: it is hidden inline as Netlify's own
+ * example has it, and again here so no later rule can reveal it. */
+.contact-form-honeypot {
+  display: none !important;
+}
+
+.contact-form-error {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #B3261E;
+}
+
+.contact-form-field.has-error input,
+.contact-form-field.has-error select,
+.contact-form-field.has-error textarea {
+  border-color: #B3261E;
+}
+
+.contact-form-failure {
+  margin: 4px 0 0;
+  padding: 14px 16px;
+  border-left: 3px solid #B3261E;
+  background: rgba(179, 38, 30, 0.06);
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8C1D18;
+}
+
+.contact-form-submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+@media (max-width: 768px) {
+  /* Anything below 16px makes iOS Safari zoom the page in on focus, which
+   * leaves the visitor mid-form at the wrong scale with no way back. */
+  .contact-form-field input,
+  .contact-form-field select,
+  .contact-form-field textarea {
+    font-size: 16px;
+    min-height: 48px;
+    padding: 12px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form-field select {
+    background: var(--white);
+    border: 1px solid var(--border);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+      linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position: calc(100% - 20px) 22px, calc(100% - 14px) 22px;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+
+  .contact-form-field textarea {
+    min-height: 110px;
+  }
+
+  .contact-form-field label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Contrast. The field labels sat at 3.46:1 on white and the small print under
+   * the button at 2.15:1, both short of the 4.5:1 that normal-size text needs —
+   * on the one form the paid traffic is being sent to. These are neutral greys
+   * rather than brand colours, so darkening them changes nothing anyone would
+   * recognise as the design. Scoped to the mobile breakpoint so the desktop
+   * rendering stays pixel-identical, which is the comparison being verified.
+   *
+   * The submit button is the third failure (white on #7A9A6B, 3.15:1) and is
+   * deliberately left alone: it is the brand green, and changing it is a brand
+   * decision rather than a bug fix. */
+  .contact-form-field label {
+    color: #6F7164;
+  }
+
+  .lp-smallprint {
+    color: #6F6C5F;
+  }
+
+  .contact-form {
+    gap: 18px;
+  }
+
+  .contact-form-submit {
+    width: 100%;
+    min-height: 52px;
+    font-size: 14px;
+    padding: 16px 20px;
+  }
+
+  /* Two-up rows on the home quote form stack; side by side they leave each
+   * field around 150px wide on a 390px screen. */
+  .lp-form-row {
+    grid-template-columns: 1fr;
+    display: grid;
+    gap: 18px;
+  }
+}
+
+/* ═══════════════ INSURER COMPARISON ═══════════════
+ *
+ * Below 768px the four-column table becomes one card per insurer: the insurer
+ * name is the card heading and every other cell is a labelled row, its label
+ * taken from the column header via data-label. The table itself is untouched —
+ * same element, same cells, same order — so the desktop view and any screen
+ * reader still get a real table, which is why the roles are written out
+ * explicitly: display:block would otherwise drop the implicit ones. */
+@media (max-width: 768px) {
+  .lp-table-wrap {
+    overflow-x: visible;
+  }
+
+  .lp-table {
+    display: block;
+    min-width: 0;
+    font-size: 15px;
+    border-collapse: separate;
+  }
+
+  .lp-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* The cells inside a 1px thead would still lay out at their full width, so
+   * each one is clipped in its own right. They stay in the accessibility tree;
+   * they just take up no room. */
+  .lp-table thead th {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .lp-table tbody,
+  .lp-table tr,
+  .lp-table td {
+    display: block;
+  }
+
+  .lp-table tr {
+    border: 1px solid var(--border);
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+
+  .lp-table tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .lp-table td {
+    border: 0;
+    padding: 0;
+  }
+
+  /* AdvanceCare has no published claim about cover outside Portugal, so that
+   * cell is deliberately blank. A blank labelled row would read as an omission
+   * rather than an absence, so the card leaves it out entirely. */
+  .lp-table td:empty {
+    display: none;
+  }
+
+  .lp-table td:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    white-space: normal;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .lp-table td + td {
+    margin-top: 16px;
+  }
+
+  .lp-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+}
+
+/* ═══════════════ STICKY MOBILE CTA ═══════════════
+ *
+ * The form is a long way down a long page. On a phone the bar keeps the way
+ * back to it one tap away, and gets out of the way whenever the form itself is
+ * on screen, once the form has been sent, while the drawer is open, or while
+ * the cookie notice is showing — that notice is fixed to the bottom too, and
+ * two stacked strips leave no room for the page. */
+.lp-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .lp-sticky-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    min-height: 52px;
+    padding: 15px 20px;
+    padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+    background: var(--primary);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.16);
+    transition: transform 0.25s ease;
+  }
+
+  .lp-sticky-cta[hidden],
+  body.quote-sent .lp-sticky-cta,
+  body.cookie-open .lp-sticky-cta,
+  body.nav-open .lp-sticky-cta {
+    display: none;
+  }
+
+  /* Room for the bar so it never covers the last of the footer. */
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body.quote-sent {
+    padding-bottom: 0;
+  }
+}
+
+/* ═══════════════ COOKIE NOTICE ═══════════════
+ *
+ * Fixed to the bottom, so on a phone it lands on top of the hero's call to
+ * action — the one thing a paid visitor is meant to tap first. It cannot move
+ * elsewhere without becoming a different component, so instead it is made as
+ * short as it can be while staying readable, and the sticky bar stands down for
+ * as long as it is showing rather than stacking a second fixed strip on top of
+ * the first. Together that keeps the hero's button clear until the notice is
+ * answered, which takes one tap. */
+@media (max-width: 768px) {
+  .cookie-banner {
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .cookie-banner-content {
+    gap: 12px;
+  }
+
+  .cookie-banner-text strong {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .cookie-banner-text p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .cookie-btn {
+    padding: 10px 16px;
+  }
+}
+
+/* ═══════════════ MOBILE HYGIENE ═══════════════ */
+@media (max-width: 768px) {
+  /* Nothing on these pages is wide enough to need a horizontal scrollbar; if
+   * something ever is, clipping it is better than shrinking the whole page. */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Buys the hero's button room above the cookie notice, and gets more of the
+   * page into the first screen now that the header no longer reserves 112px. */
+  .lp-hero {
+    padding: 36px 24px 56px;
+  }
+
+  /* 16px is the floor for anything meant to be read as prose. The selectors
+   * mirror the ones in each page's own <style>, specificity included, because
+   * this file only wins on being later — `.lp-form-card .lp-form-sub` needs two
+   * classes here to beat two classes there. */
+  .lp-hero-sub,
+  .lp-form-card .lp-form-sub,
+  .lp-smallprint,
+  .lp-note,
+  .lp-faq-item p,
+  .lp-table td,
+  .lp-grid-item p,
+  .lp-insurer p,
+  .lp-covers li,
+  .lp-guides li,
+  .lp-disclaimer p,
+  .footer-brand-desc,
+  .contact-form-success p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Left as fine print on purpose: the ASF regulatory footnote is a legal
+   * disclosure rather than something anyone reads end to end, and it is shared
+   * chrome across the whole site. */
+
+  .lp-hero .btn-primary,
+  .lp-hero .lp-btn-wa {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Tap targets. The footer's link columns are shared chrome, so they are
+   * given room here rather than in the chrome stylesheet, which 229 other
+   * pages also load. */
+  .nav-logo,
+  .lang-switcher a,
+  .mobile-lang-switcher a,
+  .footer-col-links a,
+  .footer-legal a,
+  .lp-guides a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* The top bar's link is one line of a bar that is already two lines tall on a
+   * phone, and that bar sits above the fold — growing it costs the hero the
+   * space this whole change set was about. Padding on an inline element enlarges
+   * what a thumb can hit without adding anything to the line box, so the target
+   * grows and the layout does not. */
+  .asf-top-bar a {
+    padding: 10px 4px;
+  }
+
+  .cookie-btn {
+    min-height: 44px;
+  }
+}
