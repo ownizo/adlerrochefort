@@ -135,11 +135,12 @@ CHROME.nl.cookie = `<!-- COOKIE CONSENT BANNER -->
 export const LANG_LABEL = { pt: 'PT', en: 'EN', nl: 'NL' };
 export const LANG_FALLBACK = { pt: '/blog/', en: '/en/blog/', nl: '/nl/' };
 
-export function langSwitcher(current, targets = {}, { mobile = false } = {}) {
+export function langSwitcher(current, targets = {}, { mobile = false, fallback = {} } = {}) {
   const cls = mobile ? 'mobile-lang-switcher' : 'lang-switcher';
+  const near = { ...LANG_FALLBACK, ...fallback };
   const parts = [];
   for (const lang of ['pt', 'en', 'nl']) {
-    const href = lang === current ? targets[lang] || '' : targets[lang] || LANG_FALLBACK[lang];
+    const href = lang === current ? targets[lang] || '' : targets[lang] || near[lang];
     const attrs = [
       `href="${href}"`,
       lang === current ? 'class="active"' : targets[lang] ? '' : 'class="lang-unavailable"',
@@ -151,6 +152,74 @@ export function langSwitcher(current, targets = {}, { mobile = false } = {}) {
     parts.push(`<a ${attrs}>${LANG_LABEL[lang]}</a>`);
   }
   return `<div class="${cls}">\n      ${parts.join('\n      ')}\n    </div>`;
+}
+
+// ---------------------------------------------------------------------------
+// Full site header
+//
+// One definition of the header the homepages use, so the commercial landing
+// pages cannot drift away from it again. The landing pages had grown a fork of
+// this markup with the logo moved to the end of the nav and no burger-driven
+// drawer to fall back on; below the breakpoint that left them with no brand
+// element on screen at all.
+//
+// Only the link sets differ between pages, so they are passed in rather than
+// duplicated: `left` and `right` are the two desktop groups, `cta` the button
+// that ends the right-hand group, and `drawer` the list the burger opens. The
+// source order is the one the layout expects — left group, logo, right group,
+// burger — because `.nav-links-left` / `.nav-links-right` each take `flex: 1`
+// and centre the logo between them.
+//
+// The compact "A&R" mark next to the logo is the last line of defence for the
+// same guarantee: it stays hidden while the image is fine and takes over if the
+// request for it fails, so the header is never brandless.
+// ---------------------------------------------------------------------------
+
+const NAV_ARIA = {
+  pt: 'Navegação principal',
+  en: 'Main navigation',
+  nl: 'Hoofdnavigatie',
+};
+
+const navLink = (l) =>
+  `<a href="${l.href}"${l.cta ? ' class="nav-cta"' : ''}${l.attrs ? ' ' + l.attrs : ''}>${l.label}</a>`;
+
+/**
+ * The header itself. `switcher` is the markup from langSwitcher(); passing it
+ * in keeps the "never link a translation that does not exist" rule in one
+ * place rather than duplicating it per page.
+ */
+export function siteNav({ lang = 'en', home, left = [], right = [], cta, switcher = '' }) {
+  const rightLinks = [...right, ...(cta ? [{ ...cta, cta: true }] : [])];
+  return `<nav role="navigation" aria-label="${NAV_ARIA[lang]}">
+  <div class="nav-links-left">
+${left.map((l) => '    ' + navLink(l)).join('\n')}
+  </div>
+  <a href="${home}" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
+    <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
+  </a>
+  <div class="nav-links-right">
+${rightLinks.map((l) => '    ' + navLink(l)).join('\n')}
+    ${switcher}
+  </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>`;
+}
+
+/**
+ * The drawer the burger opens. Hidden by default by `.mobile-nav`; every entry
+ * closes it again so a same-page anchor does not leave the drawer covering the
+ * section it just jumped to.
+ */
+export function mobileDrawer({ links = [], switcher = '' }) {
+  return `<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+${links.map((l) => `  <a href="${l.href}" onclick="toggleMenu()">${l.label}</a>`).join('\n')}
+  ${switcher}
+</div>`;
 }
 
 // ---------------------------------------------------------------------------
@@ -234,16 +303,31 @@ function topLevelRules(css) {
   return rules.filter(Boolean);
 }
 
+/**
+ * A rule's prelude as the cascade sees it: the selector or at-rule alone.
+ *
+ * topLevelRules() splits on braces, so any section comment sitting above a
+ * rule arrives glued to the front of its prelude. Left in place that comment
+ * made `@media` blocks fail their `startsWith('@media')` test and be dropped —
+ * which is how the homepage's whole "RESPONSIVE" block, and with it the rules
+ * that hide the desktop nav and reveal the burger below 1024px, went missing
+ * from the generated chrome stylesheet while the desktop rules it overrides
+ * were kept.
+ */
+const preludeOf = (rule) =>
+  rule
+    .slice(0, rule.indexOf('{'))
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .trim();
+
 function filterChromeCss(css) {
   const out = [];
   for (const rule of topLevelRules(css)) {
     const brace = rule.indexOf('{');
-    const prelude = rule.slice(0, brace).trim();
+    const prelude = preludeOf(rule);
     if (prelude.startsWith('@media')) {
       const inner = rule.slice(brace + 1, rule.lastIndexOf('}'));
-      const kept = topLevelRules(inner).filter((r) =>
-        isChromeSelector(r.slice(0, r.indexOf('{')).trim())
-      );
+      const kept = topLevelRules(inner).filter((r) => isChromeSelector(preludeOf(r)));
       if (kept.length) out.push(`${prelude} {\n${kept.join('\n')}\n}`);
     } else if (prelude.startsWith('@')) {
       // @font-face, @keyframes and friends — cheap to keep, and the chrome

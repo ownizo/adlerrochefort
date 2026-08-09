@@ -31,7 +31,56 @@ import {
   chromeStylesheet,
   articleNav,
   langSwitcher,
+  siteNav,
+  mobileDrawer,
 } from './lib/partials.mjs';
+
+// ---------------------------------------------------------------------------
+// Commercial landing pages
+//
+// These carry the full site header rather than an article's compact one, and
+// each had its own hand-written copy of it. The copies had drifted: the logo
+// had moved to the end of the nav, where the absolutely-positioned rule that
+// centres it pushed it off the right edge of a phone, and the language
+// switcher had lost NL. Only the link sets genuinely differ between them, so
+// the markup now comes from siteNav()/mobileDrawer() and the links live here.
+//
+// `switcher` lists the pages that really exist in each language. Neither quote
+// page has a Portuguese or Dutch translation, so those entries fall back to
+// the nearest real page in that language and render dimmed
+// (`.lang-unavailable`) rather than pointing at a URL that would 404.
+// ---------------------------------------------------------------------------
+
+const LANDING_LINKS_EN = {
+  left: [
+    { href: '/en/#services', label: 'Services' },
+    { href: '/en/#why-us', label: 'Why us' },
+    { href: '/en/#adler-pro', label: 'Businesses' },
+  ],
+  right: [
+    { href: '/en/#adler-one', label: 'Individuals' },
+    { href: '/en/#blog', label: 'Insights' },
+  ],
+  cta: { href: '#quote-form', label: 'Free Quote' },
+};
+
+const LANDING = {
+  'en/health-insurance-quote/index.html': {
+    lang: 'en',
+    home: '/en/',
+    ...LANDING_LINKS_EN,
+    targets: { en: '/en/health-insurance-quote/' },
+  },
+  'en/home-insurance-quote/index.html': {
+    lang: 'en',
+    home: '/en/',
+    ...LANDING_LINKS_EN,
+    targets: { en: '/en/home-insurance-quote/' },
+  },
+};
+
+/** Nearest real page per language for pages that have no translation. */
+const COMMERCIAL_FALLBACK = { pt: '/', en: '/en/', nl: '/nl/' };
 
 const SOURCES = new Set([
   join(PUBLIC, 'index.html'),
@@ -74,7 +123,7 @@ const files = execSync('find public -name "*.html"', { cwd: ROOT })
   .map((f) => join(ROOT, f))
   .filter((f) => !SOURCES.has(f) && !SKIP.some((re) => re.test(f)));
 
-const stats = { topBar: 0, footer: 0, cookie: 0, nav: 0, css: 0, files: 0 };
+const stats = { topBar: 0, footer: 0, cookie: 0, nav: 0, landingNav: 0, landingDrawer: 0, css: 0, files: 0 };
 
 for (const file of files) {
   const rel = relative(PUBLIC, file);
@@ -112,6 +161,37 @@ for (const file of files) {
       })
     );
     stats.nav++;
+  }
+
+  // --- landing page header -------------------------------------------------
+  // The full site header, rebuilt from the shared partial so it keeps the
+  // homepage's source order: left group, logo, right group, burger, drawer.
+  const landing = LANDING[rel];
+  if (landing) {
+    const switcherOpts = { fallback: COMMERCIAL_FALLBACK };
+    const nav = siteNav({
+      lang: landing.lang,
+      home: landing.home,
+      left: landing.left,
+      right: landing.right,
+      cta: landing.cta,
+      switcher: langSwitcher(landing.lang, landing.targets, switcherOpts),
+    });
+    const drawer = mobileDrawer({
+      links: [...landing.left, ...landing.right, landing.cta],
+      switcher: langSwitcher(landing.lang, landing.targets, { ...switcherOpts, mobile: true }),
+    });
+    const navMatch2 = html.match(/<nav(?:\s[^>]*)?>[\s\S]*?<\/nav>/);
+    if (navMatch2) {
+      html = html.replace(navMatch2[0], nav);
+      stats.landingNav++;
+    }
+    const drawerStart = html.indexOf('<!-- MOBILE NAV -->');
+    if (drawerStart !== -1) {
+      const r = replaceRegion(html, '<!-- MOBILE NAV -->', '\n</div>', drawer);
+      html = r.html;
+      if (r.hit) stats.landingDrawer++;
+    }
   }
 
   // --- footer --------------------------------------------------------------

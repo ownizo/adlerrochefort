@@ -2134,33 +2134,35 @@
   gtag('config', 'AW-18361722533');
 </script>
 <link rel="stylesheet" href="/css/ar-chrome.css">
+<link rel="stylesheet" href="/css/ar-landing.css">
 </head>
 <body>
 
 <!-- NAV -->
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="#quote-form">Free home insurance quote in 24h</a></div>
 <nav role="navigation" aria-label="Main navigation">
-  <div class="nav-links">
-    <div class="nav-links-left">
-      <a href="/en/#services">Services</a>
-      <a href="/en/#why-us">Why us</a>
-      <a href="/en/#adler-pro">Businesses</a>
-    </div>
-    <div class="nav-links-right">
-      <a href="/en/#adler-one">Individuals</a>
-      <a href="/en/#blog">Insights</a>
-      <a href="#quote-form" class="nav-cta">Free Quote</a>
-      <div class="lang-switcher">
-        <a href="/">PT</a>
-        <span class="lang-switcher-sep">|</span>
-        <a href="/en/home-insurance-quote/" class="active">EN</a>
-      </div>
-    </div>
+  <div class="nav-links-left">
+    <a href="/en/#services">Services</a>
+    <a href="/en/#why-us">Why us</a>
+    <a href="/en/#adler-pro">Businesses</a>
   </div>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
+    <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
   </a>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+  <div class="nav-links-right">
+    <a href="/en/#adler-one">Individuals</a>
+    <a href="/en/#blog">Insights</a>
+    <a href="#quote-form" class="nav-cta">Free Quote</a>
+    <div class="lang-switcher">
+      <a href="/" class="lang-unavailable">PT</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/en/home-insurance-quote/" class="active">EN</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/nl/" class="lang-unavailable" lang="nl">NL</a>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -2174,9 +2176,10 @@
   <a href="/en/#blog" onclick="toggleMenu()">Insights</a>
   <a href="#quote-form" onclick="toggleMenu()">Free Quote</a>
   <div class="mobile-lang-switcher">
-    <a href="/">PT</a>
-    <a href="/en/home-insurance-quote/" class="active">EN</a>
-  </div>
+      <a href="/" class="lang-unavailable">PT</a>
+      <a href="/en/home-insurance-quote/" class="active">EN</a>
+      <a href="/nl/" class="lang-unavailable" lang="nl">NL</a>
+    </div>
 </div>
 
 <main class="lp-main">
@@ -2277,29 +2280,29 @@
   <div class="lp-form-card">
     <h2>Get your free home insurance quote</h2>
     <p class="lp-form-sub">Tell us about the property and we&rsquo;ll come back to you within 24 hours with a written comparison.</p>
-    <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="property-use">
       <input type="hidden" name="form-name" value="home-insurance-quote">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="landing:home-insurance-quote">
-      <p style="display:none"><label>Don't fill this in: <input name="bot-field"></label></p>
+      <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="lp-form-row">
         <div class="contact-form-field">
           <label for="q-name">Full name *</label>
-          <input type="text" id="q-name" name="name" placeholder="Your full name" required>
+          <input type="text" id="q-name" name="name" placeholder="Your full name" autocomplete="name" required>
         </div>
         <div class="contact-form-field">
           <label for="q-email">Email *</label>
-          <input type="email" id="q-email" name="email" placeholder="you@email.com" required>
+          <input type="email" id="q-email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required>
         </div>
       </div>
       <div class="lp-form-row">
         <div class="contact-form-field">
           <label for="q-phone">Phone / WhatsApp</label>
-          <input type="tel" id="q-phone" name="phone" placeholder="Optional">
+          <input type="tel" id="q-phone" name="phone" placeholder="Optional" autocomplete="tel" inputmode="tel">
         </div>
         <div class="contact-form-field">
           <label for="q-postcode">Property postcode *</label>
-          <input type="text" id="q-postcode" name="postcode" placeholder="e.g. 8600-324" required>
+          <input type="text" id="q-postcode" name="postcode" placeholder="e.g. 8600-324" autocomplete="postal-code" required>
         </div>
       </div>
       <div class="lp-form-row">
@@ -2498,31 +2501,9 @@
   function toggleMenu() {
     document.getElementById('mobileNav').classList.toggle('open');
   }
-
-  // Netlify form submission via fetch + GA4 lead event
-  document.getElementById('quoteForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var form = e.target;
-    var use = (form.querySelector('[name="property-use"]') || {}).value || '';
-    var formData = new FormData(form);
-    fetch('/en/home-insurance-quote/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    }).then(function() {
-      form.style.display = 'none';
-      document.getElementById('quoteSuccess').classList.add('show');
-      document.querySelector('.lp-smallprint').style.display = 'none';
-      if (typeof gtag === 'function') {
-        var params = { form_name: 'home_insurance_quote' };
-        if (use) params.form_property_use = use;
-        gtag('event', 'generate_lead', params);
-      }
-    }).catch(function() {
-      alert('An error occurred while sending your request. Please try again.');
-    });
-  });
 </script>
+<script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="casa_geral,casa_custo_algarve,casa_luxo,casa_segunda_habitacao,alojamento_local,erros_comuns"></script>
@@ -2549,6 +2530,7 @@
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<a class="lp-sticky-cta" href="#quote-form">Get my free quote (24h)</a>
 <script defer src="/js/lead-branch-fields.js"></script>
 </body>
 </html>
