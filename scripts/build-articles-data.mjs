@@ -90,21 +90,21 @@ export const EN_CATEGORIES = [
     slug: "health-insurance",
     title: "Health Insurance",
     short: "Health",
-    landing: "/en/insurance/health/",
+    landing: "/en/health-insurance-quote/",
     landingLabel: "Health insurance",
   },
   {
     slug: "home-property",
     title: "Home & Property",
     short: "Home & Property",
-    landing: "/en/insurance/home/",
+    landing: "/en/home-insurance-quote/",
     landingLabel: "Home insurance",
   },
   {
     slug: "valuables-collections",
     title: "Valuables & Collections",
     short: "Valuables",
-    landing: "/en/insurance/high-value/",
+    landing: "/en/private-clients/",
     landingLabel: "High-value & collections",
   },
   {
@@ -146,7 +146,7 @@ export const EN_CATEGORIES = [
     slug: "marine",
     title: "Marine",
     short: "Marine",
-    landing: "/en/insurance/marine/",
+    landing: "/en/private-clients/",
     landingLabel: "Marine insurance",
   },
 ];

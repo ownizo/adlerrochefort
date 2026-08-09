@@ -4,4 +4,14 @@ Disallow: /.netlify/
 Disallow: /descarregar/
 Disallow: /alterarmediador/
 
+# AdsBot-Google ignores the User-agent: * group entirely, so the Disallow rules
+# above neither block it nor allow it — without a group naming it explicitly its
+# access is undefined. This group states the permission, and repeats the same
+# three private paths so the exclusions above are not silently widened for it.
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /.netlify/
+Disallow: /descarregar/
+Disallow: /alterarmediador/
+
 Sitemap: https://adlerrochefort.com/sitemap.xml

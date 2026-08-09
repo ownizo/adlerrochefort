@@ -97,3 +97,16 @@
 
 /en/blog/boat-portuguese-waters-flag-mooring-liability    /en/blog/importing-registering-a-boat-portugal/   301!
 /en/blog/boat-portuguese-waters-flag-mooring-liability/*  /en/blog/importing-registering-a-boat-portugal/   301!
+
+# ---------------------------------------------------------------------------
+# Malformed slug reported by Google Search Console, August 2026.
+#
+# An off-site link to the Allianz vs APRIL vs Médis comparison joined "health"
+# and "insurance" without the hyphen the real slug uses, so the crawler hit a
+# 404. The malformed spelling appears nowhere in this repository — nothing on
+# the site ever linked to it — so this rule exists purely to recover the
+# external link equity and the crawler's requests.
+# ---------------------------------------------------------------------------
+
+/en/blog/allianz-april-medis-healthinsurance-portugal-2026    /en/blog/allianz-april-medis-health-insurance-portugal-2026/   301!
+/en/blog/allianz-april-medis-healthinsurance-portugal-2026/*  /en/blog/allianz-april-medis-health-insurance-portugal-2026/   301!
