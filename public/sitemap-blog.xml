@@ -568,8 +568,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-saude-expatriados-portugal/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/zorgverzekering-portugal/" />
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -627,6 +628,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-comporta-melides/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/home-insurance-cost-algarve-price-drivers/</loc>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -639,36 +646,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-comporta-melides/</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-sagres-vila-do-bispo/</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-sintra-cascais-villas/</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/blog/home-insurance-troia-setubal/</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://adlerrochefort.com/en/blog/home-insurance-lagos/</loc>
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -676,8 +653,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/home-insurance-legalization/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-legalization/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguro-habitacao-legalizacao/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/niet-gelegaliseerde-woning-verzekeren-portugal/" />
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -703,8 +681,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-sagres-vila-do-bispo/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-sintra-cascais-villas/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/home-insurance-tavira/</loc>
     <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/home-insurance-troia-setubal/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -862,7 +864,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/luxury-home-insurance-portugal/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1052,7 +1054,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

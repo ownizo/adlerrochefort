@@ -1995,6 +1995,23 @@
 </script>
 <link rel="stylesheet" href="/css/ar-chrome.css">
 <link rel="stylesheet" href="/css/ar-landing.css">
+<style>
+  /* Language policy — self-contained so it renders identically on pages that
+     each carry their own inline design system. */
+  .ar-langpolicy-band { background: #FAF7EE; padding: 44px 24px; }
+  .ar-langpolicy {
+    max-width: 820px; margin: 0 auto; background: #FFFFFF;
+    border: 1px solid #E0D8C2; border-left: 4px solid #C9A84C;
+    padding: 34px 36px; font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  .ar-langpolicy h2 {
+    font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; font-weight: 700;
+    color: #33402F; margin: 0 0 16px; letter-spacing: 0;
+  }
+  .ar-langpolicy p { font-size: 17px; line-height: 1.75; color: #45543F; margin: 0 0 14px; }
+  .ar-langpolicy p:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) { .ar-langpolicy { padding: 26px 22px; } .ar-langpolicy-band { padding: 32px 18px; } }
+</style>
 </head>
 <body>
 
@@ -2056,6 +2073,13 @@
     </div>
   </div>
 </section>
+
+<div class="ar-langpolicy-band">
+  <aside class="ar-langpolicy" aria-labelledby="ar-language-policy">
+    <h2 id="ar-language-policy">Our working language is English</h2>
+    <p>Our working language is English. Quotes, explanation of terms, correspondence and claims are all handled in English. Policies issued by Portuguese insurers are written in Portuguese by law; what we add is that you understand exactly what they say before you sign. All communication is in writing.</p>
+  </aside>
+</div>
 
 <!-- SECTIONS -->
 <section class="lp-sections">
@@ -2176,7 +2200,7 @@
             </tr>
             <tr role="row">
               <td role="cell">Médis</td>
-              <td role="cell" data-label="Network strength">Portugal's largest private hospital network, through the CUF group, with small copayments when you stay in network</td>
+              <td role="cell" data-label="Network strength">A network built around the CUF group, one of Portugal's largest, with small copayments when you stay in network</td>
               <td role="cell" data-label="Best suited to">Long-term residents and families settled in Portugal who value network convenience</td>
               <td role="cell" data-label="International cover">Limited — built around care inside Portugal rather than international use</td>
             </tr>
@@ -2188,7 +2212,7 @@
             </tr>
             <tr role="row">
               <td role="cell">AdvanceCare</td>
-              <td role="cell" data-label="Network strength">Portugal's largest health network manager, with over 18,000 contracted providers nationwide and agreements with Lusíadas, Hospital da Luz and HPA</td>
+              <td role="cell" data-label="Network strength">Portugal's largest health network manager, with over 18,000 contracted providers nationwide and unusually deep coverage away from Lisbon and Porto</td>
               <td role="cell" data-label="Best suited to">Expats outside the major urban centres — the Algarve, Alentejo, Madeira and the Azores</td>
               <td role="cell" data-label="International cover"><!-- TODO-HUGO: confirm whether AdvanceCare-managed plans include any cover outside Portugal, and on what basis. No claim is published anywhere on the site, so this cell is deliberately blank. Below 768px the cell is empty, so the card for this insurer omits the row rather than showing a labelled blank. --></td>
             </tr>
@@ -2196,6 +2220,7 @@
         </table>
       </div>
       <p class="lp-note">This table describes cover models and network reach only. Premiums, waiting periods, annual limits and exclusions vary by plan and by applicant, so we set them out for your profile in the written comparison instead of publishing them here.</p>
+      <p class="lp-note">One caveat specific to the Algarve. CUF acquired 75% of Grupo HPA Saúde in January 2026, and since June 2026 the Alvor, Lagos, Gambelas and Faro units have operated under the CUF brand. Those units were previously contracted by each insurer as a separate network, so an agreement that existed with HPA is not automatically the same agreement, at the same copayment, under CUF. We confirm the current network status and reimbursement level with the insurer for your postcode before quoting, rather than assuming the pre-merger position still holds.</p>
       <p>All four are Portuguese domestic products, written for treatment in Portugal. Where medical care is genuinely split between countries, the relevant market is a separate one: <a href="/en/international-health-insurance-portugal/">international health insurance in Portugal</a>, which we also quote and which is compared against a domestic policy in <a href="/en/blog/portuguese-vs-international-health-insurance/">Portuguese vs international health insurance</a>.</p>
     </div>
 

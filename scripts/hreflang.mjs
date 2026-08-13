@@ -44,6 +44,10 @@ const SITE = 'https://adlerrochefort.com';
  *   * /blog/ and /en/blog/ are paired. They are the same page in two
  *     languages, and the only reason they weren't paired is that the pairing
  *     was never written down.
+ *
+ * The two Dutch landings joined later: the home-insurance trio records the
+ * pt/en pair the markup already had plus the Dutch page that now mirrors it,
+ * and the Alojamento Local pair is declared by the Dutch page itself.
  */
 const PAGE_CLUSTERS = [
   { '/': 'pt-PT', '/en/': 'en-GB', '/de/': 'de', '/fr/': 'fr', '/nl/': 'nl', xDefault: '/' },
@@ -55,6 +59,12 @@ const PAGE_CLUSTERS = [
     '/en/expat-insurance-lagos-portugal/': 'en-GB',
     '/nl/verzekeringen-portugal/': 'nl',
   },
+  {
+    '/seguros/habitacao/': 'pt-PT',
+    '/en/home-insurance-quote/': 'en-GB',
+    '/nl/woonverzekering-portugal/': 'nl',
+  },
+  { '/seguros/alojamento-local/': 'pt-PT', '/nl/alojamento-local-verzekering-portugal/': 'nl' },
   { '/politica-de-privacidade/': 'pt-PT', '/en/privacy-policy/': 'en-GB' },
   { '/termos-e-condicoes/': 'pt-PT', '/en/terms-and-conditions/': 'en-GB' },
 ];
@@ -143,6 +153,40 @@ for (const cluster of PAGE_CLUSTERS) {
       live.map(([p, lang]) => ({ lang, path: p }))
     );
   }
+}
+
+/**
+ * The Dutch cluster.
+ *
+ * Its pages are generated from scripts/nl-cluster.data.mjs and registered in
+ * data/articles.json with an `alternates` field, because a Dutch page's
+ * counterpart can be Portuguese or English and never shares its slug — which
+ * is all `translationOf` can express.
+ *
+ * Each equivalent was confirmed page by page, so the reciprocal declaration is
+ * added to that one target and nowhere else. In particular the target keeps its
+ * own pt/en pair untouched: /en/blog/health-insurance-expats-portugal/ gains a
+ * Dutch alternate, while its Portuguese twin, which nobody has claimed is the
+ * same page as the Dutch one, is left alone.
+ */
+for (const a of data.articles.nl || []) {
+  if (a.status !== 'published' || !onDisk(a.url)) continue;
+  const own = [];
+  for (const [key, target] of Object.entries(a.alternates || {})) {
+    const lang = key === 'pt' ? 'pt-PT' : 'en-GB';
+    if (!onDisk(target)) {
+      report.brokenTargets.push({ from: a.url, target });
+      continue;
+    }
+    own.push({ lang, path: target });
+    const declared = alternates.get(target) || [{ lang, path: target }];
+    if (!declared.some((x) => x.lang === 'nl')) {
+      alternates.set(target, [...declared, { lang: 'nl', path: a.url }]);
+    }
+  }
+  if (!own.length) continue;
+  own.push({ lang: 'nl', path: a.url });
+  alternates.set(a.url, own);
 }
 
 // --- rewrite ------------------------------------------------------------------

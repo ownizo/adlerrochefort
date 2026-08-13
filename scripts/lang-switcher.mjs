@@ -44,6 +44,8 @@ const PAGE_CLUSTERS = [
   { pt: '/seguros/tvde/', en: '/en/insurance/tvde/' },
   { pt: '/seguros/condominios/', en: '/en/condominium-insurance-algarve/' },
   { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
+  { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/' },
+  { pt: '/seguros/alojamento-local/', nl: '/nl/alojamento-local-verzekering-portugal/' },
   { pt: '/politica-de-privacidade/', en: '/en/privacy-policy/' },
   { pt: '/termos-e-condicoes/', en: '/en/terms-and-conditions/' },
 ];
@@ -84,6 +86,25 @@ for (const c of PAGE_CLUSTERS) {
   for (const path of Object.values(c)) cluster.set(path, c);
 }
 
+/**
+ * The Dutch cluster, from data/articles.json.
+ *
+ * Each Dutch page names the counterparts that were confirmed for it, and the
+ * Dutch link is added to those pages only — never to their siblings. The
+ * English article on health insurance for expatriates gains a Dutch link; its
+ * Portuguese twin, which nobody has called the same page as the Dutch one, is
+ * left pointing at the Dutch home. Spread rather than mutate: cluster entries
+ * from PAGE_CLUSTERS are shared between the members of a cluster, so writing to
+ * one in place would leak the Dutch link into all of them.
+ */
+for (const a of data.articles.nl || []) {
+  if (a.status !== 'published' || !existsSync(join(PUBLIC, a.url, 'index.html'))) continue;
+  for (const target of Object.values(a.alternates || {})) {
+    cluster.set(target, { ...(cluster.get(target) || {}), nl: a.url });
+  }
+  cluster.set(a.url, { ...(a.alternates || {}), nl: a.url });
+}
+
 const langOf = (path) => {
   const m = path.match(/^\/(en|de|fr|nl)\//);
   return m ? m[1] : 'pt';
@@ -121,7 +142,11 @@ for (const rel of files) {
   const targets = order.map((l) => {
     if (l === lang) return { l, href: path, active: true };
     const href = pair[l] || FALLBACK[l](isBlog);
-    return href ? { l, href, active: false } : null;
+    // A language with no counterpart still gets a link — to its own home or
+    // archive — but it is marked, because offering it unmarked is a promise the
+    // other language cannot keep. This is the convention the corpus already
+    // uses; the class is styled in the shared chrome.
+    return href ? { l, href, active: false, unavailable: !pair[l] } : null;
   }).filter(Boolean);
 
   // If the page's own language somehow isn't in the list, the selector would
@@ -135,6 +160,7 @@ for (const rel of files) {
       .map((t) => {
         const attrs = [`href="${t.href}"`];
         if (t.active) attrs.push('class="active"');
+        else if (t.unavailable) attrs.push('class="lang-unavailable"');
         if (t.l !== 'pt' && t.l !== 'en') attrs.push(`lang="${t.l}"`);
         return `${indent}<a ${attrs.join(' ')}>${LABEL[t.l]}</a>`;
       })

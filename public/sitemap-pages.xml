@@ -254,6 +254,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/expat-insurance-lagos-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-empresas-lagos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/verzekeringen-portugal/" />
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -278,6 +281,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/home-insurance-quote/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/home-insurance-quote/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/woonverzekering-portugal/" />
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -331,8 +337,80 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/nl/alojamento-local-verzekering-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/alojamento-local/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/alojamento-local-verzekering-portugal/" />
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/auto-importeren-portugal-verzekering/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/bosbrandrisico-woonverzekering-portugal/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/niet-gelegaliseerde-woning-verzekeren-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/home-insurance-legalization/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/niet-gelegaliseerde-woning-verzekeren-portugal/" />
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/s1-formulier-cak-portugal/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/schadevrije-jaren-meenemen-portugal/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/uitschrijven-nederland-zorgverzekering-portugal/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/nl/verzekeringen-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-empresas-lagos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/verzekeringen-portugal/" />
     <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/woonverzekering-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/home-insurance-quote/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/woonverzekering-portugal/" />
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/zorgverzekering-portugal/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/health-insurance-expats-portugal/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/zorgverzekering-portugal/" />
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/nl/zzp-beroepsaansprakelijkheid-portugal/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -344,6 +422,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/seguros-empresas-lagos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros-empresas-lagos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/expat-insurance-lagos-portugal/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/verzekeringen-portugal/" />
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -358,6 +439,8 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/seguros/alojamento-local/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/alojamento-local/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/alojamento-local-verzekering-portugal/" />
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -388,6 +471,9 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/seguros/habitacao/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/habitacao/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/home-insurance-quote/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/woonverzekering-portugal/" />
     <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
