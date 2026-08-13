@@ -73,6 +73,64 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "É possível segurar um imóvel com obras não legalizadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É possível contratar a apólice — a seguradora normalmente não pede a licença na subscrição. O problema surge no sinistro: se a perícia concluir que a área afetada não constava do projeto aprovado, a seguradora pode recusar ou reduzir a indemnização na parte correspondente. Contratar o seguro não valida a construção."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A seguradora verifica mesmo a licença de utilização?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Raramente na contratação, quase sempre num sinistro de valor relevante. O perito compara o que existe no local com a caderneta predial, a certidão permanente e o projeto licenciado. Uma discrepância — uma cave transformada em habitação, um anexo que não consta, um piso acrescentado — é exatamente o que a peritagem procura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que acontece ao crédito habitação se o imóvel não estiver legalizado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O seguro de incêndio ou multirriscos exigido pelo banco é uma condição do contrato de crédito. Se um sinistro for recusado por causa de obras ilegais, a dívida mantém-se integralmente e o imóvel dado em garantia perde valor. O risco não fica na seguradora: fica no proprietário."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Um processo de legalização em curso ajuda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ajuda, e deve ser comunicado por escrito à seguradora. Um processo aberto na câmara municipal, com projeto entregue e taxas pagas, demonstra boa-fé e muda a conversa numa regularização de sinistro. O que não muda é a situação da construção enquanto o processo não estiver concluído."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os valores segurados também são afetados por obras não declaradas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, e este é o efeito menos óbvio. Uma ampliação aumenta a área e o custo de reconstrução. Se o capital seguro não for atualizado, o imóvel fica subseguro e aplica-se a regra proporcional a qualquer sinistro — incluindo os que nada têm a ver com a obra."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Podem rever os meus documentos antes de eu comprar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Comparamos caderneta predial, certidão permanente e licença de utilização com o que existe no local e dizemos onde está a exposição antes da escritura. É um trabalho de mediação, não substitui o advogado nem o técnico, e não tem custo."
+      }
+    }
+  ]
+}
+</script>
+
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -160,6 +218,7 @@
     .article-container { padding: 32px 24px 60px; }
     .article-title { font-size: 30px; }
     .related-section { padding: 0 24px 60px; }
+    .article-faq { padding: 0 24px; }
     .related-grid { grid-template-columns: 1fr; }
     footer { padding: 48px 24px 32px; }
     .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -310,6 +369,14 @@
   .cta-meio-btn:hover { background: #e0be6a; }
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
+
+  /* FAQ */
+  .article-faq { max-width: 780px; margin: 0 auto; padding: 0 80px; }
+  .article-faq h2 { font-size: 26px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); margin-top: 20px; }
+  .faq-item h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .faq-item p { font-size: 15px; line-height: 1.75; color: var(--ink2); }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
@@ -786,7 +853,33 @@
   </div>
 </article>
 
-<!-- TODO: FAQ a redigir — 4 a 6 perguntas frequentes sobre "Seguro de habitação e legalização: porque é que obras ilegais podem anular a sua cobertura", com resposta curta e factual. Ao publicar, acrescentar também o bloco FAQPage em JSON-LD. -->
+<section class="article-faq">
+  <h2>Perguntas frequentes</h2>
+  <div class="faq-item">
+    <h3>É possível segurar um imóvel com obras não legalizadas?</h3>
+    <p>É possível contratar a apólice — a seguradora normalmente não pede a licença na subscrição. O problema surge no sinistro: se a perícia concluir que a área afetada não constava do projeto aprovado, a seguradora pode recusar ou reduzir a indemnização na parte correspondente. Contratar o seguro não valida a construção.</p>
+  </div>
+  <div class="faq-item">
+    <h3>A seguradora verifica mesmo a licença de utilização?</h3>
+    <p>Raramente na contratação, quase sempre num sinistro de valor relevante. O perito compara o que existe no local com a caderneta predial, a certidão permanente e o projeto licenciado. Uma discrepância — uma cave transformada em habitação, um anexo que não consta, um piso acrescentado — é exatamente o que a peritagem procura.</p>
+  </div>
+  <div class="faq-item">
+    <h3>O que acontece ao crédito habitação se o imóvel não estiver legalizado?</h3>
+    <p>O seguro de incêndio ou multirriscos exigido pelo banco é uma condição do contrato de crédito. Se um sinistro for recusado por causa de obras ilegais, a dívida mantém-se integralmente e o imóvel dado em garantia perde valor. O risco não fica na seguradora: fica no proprietário.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Um processo de legalização em curso ajuda?</h3>
+    <p>Ajuda, e deve ser comunicado por escrito à seguradora. Um processo aberto na câmara municipal, com projeto entregue e taxas pagas, demonstra boa-fé e muda a conversa numa regularização de sinistro. O que não muda é a situação da construção enquanto o processo não estiver concluído.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Os valores segurados também são afetados por obras não declaradas?</h3>
+    <p>Sim, e este é o efeito menos óbvio. Uma ampliação aumenta a área e o custo de reconstrução. Se o capital seguro não for atualizado, o imóvel fica subseguro e aplica-se a regra proporcional a qualquer sinistro — incluindo os que nada têm a ver com a obra.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Podem rever os meus documentos antes de eu comprar?</h3>
+    <p>Sim. Comparamos caderneta predial, certidão permanente e licença de utilização com o que existe no local e dizemos onde está a exposição antes da escritura. É um trabalho de mediação, não substitui o advogado nem o técnico, e não tem custo.</p>
+  </div>
+</section>
 
 <section class="related-section">
   <h2 class="related-title">Artigos relacionados</h2>

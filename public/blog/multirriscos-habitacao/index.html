@@ -77,6 +77,64 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual é a diferença entre o seguro de incêndio obrigatório e um multirriscos habitação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O seguro de incêndio é o mínimo legal exigido em propriedade horizontal e cobre apenas incêndio e riscos associados — calor, fumo, explosão e os meios usados no combate ao fogo. O multirriscos parte dessa base e acrescenta danos por água, tempestade, fenómenos sísmicos, danos elétricos, furto e responsabilidade civil. Na prática, a esmagadora maioria dos sinistros participados em Portugal são danos por água, que o seguro de incêndio simplesmente não cobre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que é o capital seguro e porque não deve ser o valor de mercado da casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O capital seguro do edifício deve corresponder ao custo de reconstrução — materiais, mão de obra, demolição e projeto — e não ao valor de mercado nem ao valor da escritura. O terreno não arde. Em zonas de procura elevada, o valor de mercado está muito acima do custo de reconstrução; noutras zonas passa-se o contrário, e é aí que aparece a subseguração."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que acontece se o capital seguro estiver abaixo do valor real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aplica-se a regra proporcional: a seguradora indemniza na mesma proporção entre o capital declarado e o capital que deveria ter sido declarado. Se a casa estava segura por 150.000 € quando o custo de reconstrução era 300.000 €, um sinistro de 40.000 € é pago a 50% — 20.000 €. A regra proporcional aplica-se a qualquer sinistro, não apenas à perda total, e é o motivo mais frequente de indemnizações abaixo do esperado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O seguro de edifício cobre o recheio da casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. São duas coberturas distintas dentro da mesma apólice. O edifício abrange a estrutura, paredes, coberturas, pavimentos e instalações fixas; o recheio abrange mobiliário, eletrodomésticos, roupa, equipamento informático e bens pessoais. Quem arrenda a casa precisa sobretudo de edifício; quem vive em arrendamento precisa sobretudo de recheio e responsabilidade civil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os danos por água causados por infiltração lenta estão cobertos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Regra geral não. A cobertura de danos por água responde a roturas súbitas e acidentais da canalização. A infiltração gradual, a humidade ascendente e a condensação são exclusões praticamente transversais ao mercado português, porque são tratadas como falta de manutenção. O que muitas apólices cobrem — e poucos acionam — é a localização e reparação da própria rotura, sujeita a um sublimite próprio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vale a pena mudar de seguradora só pelo preço?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Só depois de comparar coberturas, sublimites e franquias. Duas propostas com o mesmo capital de edifício podem ter sublimites de danos elétricos, furto ou responsabilidade civil muito diferentes, e é o sublimite que decide o valor recebido no sinistro. Como mediador registado na ASF, comparamos o mercado por si e explicamos onde está a diferença real entre propostas."
+      }
+    }
+  ]
+}
+</script>
+
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -349,6 +407,7 @@
     .article-container { padding: 32px 24px 60px; }
     .article-title { font-size: 30px; }
     .related-section { padding: 0 24px 60px; }
+    .article-faq { padding: 0 24px; }
     .related-grid { grid-template-columns: 1fr; }
     footer { padding: 48px 24px 32px; }
     .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -499,6 +558,14 @@
   .cta-meio-btn:hover { background: #e0be6a; }
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
+
+  /* FAQ */
+  .article-faq { max-width: 780px; margin: 0 auto; padding: 0 80px; }
+  .article-faq h2 { font-size: 26px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); margin-top: 20px; }
+  .faq-item h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .faq-item p { font-size: 15px; line-height: 1.75; color: var(--ink2); }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
@@ -1001,7 +1068,33 @@
   </div>
 </article>
 
-<!-- TODO: FAQ a redigir — 4 a 6 perguntas frequentes sobre "Seguro multirriscos habitação: proteger a casa é proteger o património", com resposta curta e factual. Ao publicar, acrescentar também o bloco FAQPage em JSON-LD. -->
+<section class="article-faq">
+  <h2>Perguntas frequentes</h2>
+  <div class="faq-item">
+    <h3>Qual é a diferença entre o seguro de incêndio obrigatório e um multirriscos habitação?</h3>
+    <p>O seguro de incêndio é o mínimo legal exigido em propriedade horizontal e cobre apenas incêndio e riscos associados — calor, fumo, explosão e os meios usados no combate ao fogo. O multirriscos parte dessa base e acrescenta danos por água, tempestade, fenómenos sísmicos, danos elétricos, furto e responsabilidade civil. Na prática, a esmagadora maioria dos sinistros participados em Portugal são danos por água, que o seguro de incêndio simplesmente não cobre.</p>
+  </div>
+  <div class="faq-item">
+    <h3>O que é o capital seguro e porque não deve ser o valor de mercado da casa?</h3>
+    <p>O capital seguro do edifício deve corresponder ao custo de reconstrução — materiais, mão de obra, demolição e projeto — e não ao valor de mercado nem ao valor da escritura. O terreno não arde. Em zonas de procura elevada, o valor de mercado está muito acima do custo de reconstrução; noutras zonas passa-se o contrário, e é aí que aparece a subseguração.</p>
+  </div>
+  <div class="faq-item">
+    <h3>O que acontece se o capital seguro estiver abaixo do valor real?</h3>
+    <p>Aplica-se a regra proporcional: a seguradora indemniza na mesma proporção entre o capital declarado e o capital que deveria ter sido declarado. Se a casa estava segura por 150.000 € quando o custo de reconstrução era 300.000 €, um sinistro de 40.000 € é pago a 50% — 20.000 €. A regra proporcional aplica-se a qualquer sinistro, não apenas à perda total, e é o motivo mais frequente de indemnizações abaixo do esperado.</p>
+  </div>
+  <div class="faq-item">
+    <h3>O seguro de edifício cobre o recheio da casa?</h3>
+    <p>Não. São duas coberturas distintas dentro da mesma apólice. O edifício abrange a estrutura, paredes, coberturas, pavimentos e instalações fixas; o recheio abrange mobiliário, eletrodomésticos, roupa, equipamento informático e bens pessoais. Quem arrenda a casa precisa sobretudo de edifício; quem vive em arrendamento precisa sobretudo de recheio e responsabilidade civil.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Os danos por água causados por infiltração lenta estão cobertos?</h3>
+    <p>Regra geral não. A cobertura de danos por água responde a roturas súbitas e acidentais da canalização. A infiltração gradual, a humidade ascendente e a condensação são exclusões praticamente transversais ao mercado português, porque são tratadas como falta de manutenção. O que muitas apólices cobrem — e poucos acionam — é a localização e reparação da própria rotura, sujeita a um sublimite próprio.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Vale a pena mudar de seguradora só pelo preço?</h3>
+    <p>Só depois de comparar coberturas, sublimites e franquias. Duas propostas com o mesmo capital de edifício podem ter sublimites de danos elétricos, furto ou responsabilidade civil muito diferentes, e é o sublimite que decide o valor recebido no sinistro. Como mediador registado na ASF, comparamos o mercado por si e explicamos onde está a diferença real entre propostas.</p>
+  </div>
+</section>
 
 <section class="related-section">
   <h2 class="related-title">Artigos relacionados</h2>

@@ -110,3 +110,16 @@
 
 /en/blog/allianz-april-medis-healthinsurance-portugal-2026    /en/blog/allianz-april-medis-health-insurance-portugal-2026/   301!
 /en/blog/allianz-april-medis-healthinsurance-portugal-2026/*  /en/blog/allianz-april-medis-health-insurance-portugal-2026/   301!
+
+# ---------------------------------------------------------------------------
+# Home-insurance cluster consolidation, August 2026.
+#
+# Two pairs of articles covered the same query. The survivor in each pair
+# absorbed the material that only existed on the retired page.
+# ---------------------------------------------------------------------------
+
+/en/blog/unoccupied-property-clause-portugal    /en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/   301!
+/en/blog/unoccupied-property-clause-portugal/*  /en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/   301!
+
+/en/blog/solar-panels-ev-chargers-home-insurance-portugal    /en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/   301!
+/en/blog/solar-panels-ev-chargers-home-insurance-portugal/*  /en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/   301!
