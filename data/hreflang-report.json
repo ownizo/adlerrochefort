@@ -1,12 +1,12 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 221,
+    "htmlFiles": 254,
     "filesChanged": 0,
-    "pagesWithHreflang": 74,
+    "pagesWithHreflang": 81,
     "articlePairs": 28,
     "monolingualPt": 12,
-    "monolingualEn": 97,
+    "monolingualEn": 102,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
     "xDefaultPages": 6
@@ -142,6 +142,8 @@
       "/blog/seguros-turismo-rural-hoteis-boutique/"
     ],
     "en": [
+      "/en/blog/portuguese-vs-international-health-insurance/",
+      "/en/blog/health-insurance-requirements-portuguese-residence-visas/",
       "/en/blog/allianz-home-insurance-portugal/",
       "/en/blog/alojamento-local-insurance-requirements/",
       "/en/blog/best-home-insurance-portugal-2026/",
@@ -172,8 +174,6 @@
       "/en/blog/private-use-vs-charter-boat-cover-portugal/",
       "/en/blog/safes-alarms-underwriting-requirements-portugal/",
       "/en/blog/shipping-a-collection-to-portugal/",
-      "/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/",
-      "/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/",
       "/en/blog/valuations-portugal-who-what-how-often/",
       "/en/blog/water-damage-claim-portugal/",
       "/en/blog/wine-cellars-home-storage-valuation-cover/",
@@ -238,7 +238,12 @@
       "/en/blog/second-home-rent-out-holiday-let-standard-home-cover/",
       "/en/blog/sns-vs-private-insurance-expats-portugal/",
       "/en/blog/home-insurance-protect-property/",
-      "/en/blog/individual-car-insurance/"
+      "/en/blog/individual-car-insurance/",
+      "/en/blog/home-insurance-comporta-melides/",
+      "/en/blog/home-insurance-troia-setubal/",
+      "/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/",
+      "/en/blog/home-insurance-sagres-vila-do-bispo/",
+      "/en/blog/home-insurance-sintra-cascais-villas/"
     ]
   },
   "unilateralDeclarations": [],

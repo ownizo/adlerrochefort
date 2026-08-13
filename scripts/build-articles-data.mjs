@@ -522,10 +522,22 @@ if (uncategorisedEn.length) {
   process.exitCode = 1;
 }
 
+// The Dutch cluster is not extracted from HTML heads like PT and EN: it is
+// generated from scripts/nl-cluster.data.mjs and registered by
+// register-nl-articles.mjs. Carry whatever is on disk over, so rebuilding the
+// PT/EN listings never silently drops it. Re-run register-nl-articles.mjs to
+// refresh it.
+const existing = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
+const nlCategories = existing.categories?.nl;
+const nlArticles = existing.articles?.nl;
+
 await writeFile(
   join(ROOT, 'data', 'articles.json'),
   JSON.stringify(
-    { categories: { pt: PT_CATEGORIES, en: EN_CATEGORIES }, articles: { pt, en } },
+    {
+      categories: { pt: PT_CATEGORIES, en: EN_CATEGORIES, ...(nlCategories ? { nl: nlCategories } : {}) },
+      articles: { pt, en, ...(nlArticles ? { nl: nlArticles } : {}) },
+    },
     null,
     2
   ) + '\n'

@@ -39,9 +39,18 @@ const onDisk = new Set(
   globSync('**/index.html', { cwd: PUBLIC }).map((f) => '/' + f.replace(/index\.html$/, ''))
 );
 const noindex = new Set();
+// What each page declares in its own <head>, written by scripts/hreflang.mjs.
+// Used only where a Dutch alternate is added to a page whose set this script
+// does not otherwise model, so the sitemap lists every member of that set
+// instead of the Dutch one alone.
+const declared = new Map(); // path -> [[hreflang, href]]
 for (const path of onDisk) {
   const html = await readFile(join(PUBLIC, path.slice(1), 'index.html'), 'utf8');
   if (/<meta[^>]+name=["']robots["'][^>]+noindex/i.test(html)) noindex.add(path);
+  const alts = [...html.matchAll(/<link[^>]+rel="alternate"[^>]+hreflang="([^"]+)"[^>]+href="([^"]+)"/g)]
+    .map((m) => [m[1], m[2].replace(ORIGIN, '')])
+    .filter(([, href]) => href.startsWith('/'));
+  if (alts.length) declared.set(path, alts);
 }
 
 // --- translation pairs -------------------------------------------------------
@@ -52,13 +61,44 @@ for (const a of data.articles.pt) {
   if (en) pairs.set(a.url, en.url);
 }
 
-const alternatesFor = (url) => {
+// --- the Dutch cluster -------------------------------------------------------
+// The Dutch pages record their confirmed equivalents in data/articles.json
+// (`alternates`), because a counterpart may be Portuguese or English and never
+// shares the slug that `translationOf` pairs on. The reciprocal declaration goes
+// on that one target and nowhere else, exactly as scripts/hreflang.mjs writes it
+// into the markup: a sitemap that said something different from the pages would
+// be two contradictory annotations of the same set.
+const nlAlternates = new Map(); // url -> [[hreflang, href]]
+for (const a of data.articles.nl || []) {
+  if (a.status !== 'published') continue;
+  const own = [];
+  for (const [key, target] of Object.entries(a.alternates || {})) {
+    own.push([key === 'pt' ? 'pt-PT' : 'en-GB', target]);
+    nlAlternates.set(target, [['nl', a.url]]);
+  }
+  if (!own.length) continue;
+  own.push(['nl', a.url]);
+  nlAlternates.set(a.url, own);
+}
+
+const basePairs = (url) => {
   if (url === '/') return [['pt-PT', '/'], ['en-GB', '/en/'], ['x-default', '/']];
   if (url === '/en/') return [['pt-PT', '/'], ['en-GB', '/en/'], ['x-default', '/']];
   if (url === '/seguros/') return [['pt-PT', '/seguros/'], ['x-default', '/seguros/']];
   if (pairs.has(url)) return [['pt-PT', url], ['en-GB', pairs.get(url)]];
   for (const [pt, en] of pairs) if (en === url) return [['pt-PT', pt], ['en-GB', en]];
   return [];
+};
+
+const alternatesFor = (url) => {
+  const nlAlts = nlAlternates.get(url) || [];
+  // A page that gains a Dutch alternate must still list the rest of its set.
+  // For the landings that set lives in the markup, not in `pairs`.
+  const out = [...(nlAlts.length ? declared.get(url) || basePairs(url) : basePairs(url))];
+  for (const [lang, href] of nlAlts) {
+    if (!out.some(([l, h]) => l === lang && h === href)) out.push([lang, href]);
+  }
+  return out;
 };
 
 const entry = ({ url, lastmod, changefreq, priority }) => {
