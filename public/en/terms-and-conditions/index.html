@@ -36,14 +36,14 @@
     --border: #E5DFCB;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
   }
-  nav {
-    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
     background: #3F4E3A;
     padding: 0 48px;
     height: 68px;
@@ -89,7 +89,7 @@
   .legal-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 120px 24px 80px;
+    padding: 40px 24px 80px;
   }
   .legal-container h1 {
     font-family: 'Montserrat', sans-serif;
@@ -143,8 +143,8 @@
   .footer-legal a:hover { color: #D9A668; }
 
   @media (max-width: 768px) {
-    nav { padding: 0 20px; }
-    .legal-container { padding: 100px 20px 60px; }
+    .site-nav { padding: 0 20px; }
+    .legal-container { padding: 32px 20px 60px; }
     .legal-container h1 { font-size: 28px; }
     footer { padding: 30px 20px; }
       .asf-top-bar { font-size: 10px; padding: 6px 16px; }
@@ -183,7 +183,7 @@
 <body>
 
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
-<nav>
+<nav class="site-nav">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
     <span class="nav-logo-text">Adler <em>&amp;</em> Rochefort</span>

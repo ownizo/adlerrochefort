@@ -47,11 +47,11 @@
 <style>:root{--primary:#1C2B3A;--primary-hover:#2A4056;--accent:#C9A84C;--accent-hover:#B3933D;--cream:#FAF7EE;--cream2:#F1ECDD;--ink:#1C2B3A;--ink2:#4B5A67;--muted:#8A8F95;--white:#fff;--border:#E3DDCC;--nav-bg:#1C2B3A;--footer-bg:#16222E}
 body{--ar-primary:#1C2B3A;--ar-primary-hover:#2A4056;--ar-accent:#C9A84C;--ar-accent-hover:#B3933D;--ar-ink:#1C2B3A;--ar-ink2:#4B5A67;--ar-cream:#FAF7EE;--ar-cream2:#F1ECDD;--ar-border:#E3DDCC}
 *{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);font-family:Montserrat,sans-serif;color:var(--ink)}
-nav{position:fixed;top:36px;left:0;right:0;z-index:10;background:var(--nav-bg);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.site-nav{position:sticky;top:0;z-index:10;background:var(--nav-bg);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}.nav-logo-img{height:44px}.nav-logo-text{font-size:18px;font-weight:600;color:var(--white);letter-spacing:.04em}.nav-logo-text em{color:var(--accent);font-style:normal}
 .nav-right{display:flex;align-items:center;gap:20px}.nav-back{color:rgba(255,255,255,.75);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
 .asf-top-bar{background:#16222E;color:rgba(255,255,255,.85);text-align:center;font-size:12px;font-weight:500;padding:8px 24px;line-height:1.4;position:fixed;top:0;left:0;right:0;z-index:11}.asf-top-bar a{color:var(--accent);text-decoration:none;font-weight:600}
-.breadcrumb{padding:136px 80px 0;font-size:12px;color:var(--muted)}.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb span{margin:0 8px}
+.breadcrumb{padding:32px 80px 0;font-size:12px;color:var(--muted)}.breadcrumb a{color:var(--muted);text-decoration:none}.breadcrumb span{margin:0 8px}
 .article-hero{max-width:900px;margin:28px auto 0;padding:0 80px}
 .article-hero-img{width:100%;height:220px;border-radius:14px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:24px 28px}
 .article-hero-img span{position:relative;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.9)}
@@ -97,7 +97,7 @@ footer{background:var(--footer-bg);color:rgba(255,255,255,.65);padding:56px 80px
 .footer-regulatory{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);margin-top:24px;text-align:center}
 .footer-regulatory p{font-size:11px;color:rgba(255,255,255,.3);margin:0;line-height:1.6}
 .footer-brand-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.5)}
-@media(max-width:760px){nav{top:32px;padding:0 20px}.nav-logo-text{display:none}.breadcrumb{padding:120px 24px 0}.article-hero{padding:0 24px}.article-hero-img{height:150px;padding:18px}.article-container{padding:32px 24px 56px}.article-title{font-size:30px}.article-body h2{font-size:23px}.related-section{padding:0 24px 56px}.related-grid{grid-template-columns:1fr}.ar-check-grid{grid-template-columns:1fr}footer{padding:44px 24px 28px}.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:14px}}</style>
+@media(max-width:760px){.site-nav{top:0;padding:0 20px}.nav-logo-text{display:none}.breadcrumb{padding:20px 24px 0}.article-hero{padding:0 24px}.article-hero-img{height:150px;padding:18px}.article-container{padding:32px 24px 56px}.article-title{font-size:30px}.article-body h2{font-size:23px}.related-section{padding:0 24px 56px}.related-grid{grid-template-columns:1fr}.ar-check-grid{grid-template-columns:1fr}footer{padding:44px 24px 28px}.footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:14px}}</style>
 <link rel="stylesheet" href="/css/ar-conversion.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
@@ -149,7 +149,7 @@ footer{background:var(--footer-bg);color:rgba(255,255,255,.65);padding:56px 80px
 </head>
 <body>
 <div class="asf-top-bar">ASF-registered insurance intermediary n.&ordm; 425591790/3 &mdash; <a href="/en/private-clients/">Collections &amp; Valuables</a></div>
-<nav role="navigation" aria-label="Article navigation">
+<nav class="site-nav" role="navigation" aria-label="Article navigation">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>

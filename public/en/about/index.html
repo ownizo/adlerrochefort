@@ -101,13 +101,13 @@
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
     min-height: 100vh;
   }
 
@@ -131,7 +131,7 @@
   .asf-top-bar a:hover { color: #e0be6a; }
 
   /* NAV */
-  nav {
+  .site-nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
@@ -331,7 +331,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 860px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .breadcrumb { padding: 20px 20px 0; }
     .section { padding: 52px 20px; }
     .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
@@ -362,7 +362,7 @@
 <div class="asf-top-bar">Insurance agency registered with the ASF n.º 425591790/3 — licensed in Portugal, passported into Spain. <a href="mailto:insurance@adlerrochefort.com">Write to us</a></div>
 
 <!-- NAV -->
-<nav role="navigation" aria-label="Main navigation">
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — English-speaking insurance agency in Portugal" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>

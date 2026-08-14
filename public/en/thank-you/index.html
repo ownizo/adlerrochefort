@@ -68,7 +68,7 @@
   }
   .asf-top-bar a { color: var(--rule); font-weight: 600; }
 
-  nav {
+  .site-nav {
     background: var(--nav-bg);
     padding: 0 48px; min-height: 76px;
     display: flex; align-items: center; justify-content: space-between; gap: 20px;
@@ -131,13 +131,13 @@
   .footer-regulatory p + p { margin-top: 8px; }
 
   @media (max-width: 980px) {
-    nav { padding: 0 24px; }
+    .site-nav { padding: 0 24px; }
     .confirm { padding: 84px 24px; }
     footer { padding: 48px 24px 40px; }
   }
   @media (max-width: 520px) {
     body { font-size: 17px; }
-    nav { padding: 0 18px; min-height: 68px; }
+    .site-nav { padding: 0 18px; min-height: 68px; }
     .nav-logo-img { height: 38px; }
     .asf-top-bar { font-size: 15px; padding: 12px 18px; }
     .confirm { padding: 60px 18px; }
@@ -173,7 +173,7 @@
 <div class="asf-top-bar on-dark">Adler &amp; Rochefort &mdash; insurance intermediary registered with the ASF under no. 425591790/3 &middot; Lisbon and Lagos</div>
 
 <header>
-  <nav class="on-dark" aria-label="Main navigation">
+  <nav class="site-nav on-dark" aria-label="Main navigation">
     <a href="/en/" class="nav-logo">
       <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
     </a>

@@ -116,7 +116,7 @@
     --footer-bg: #33402F;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
@@ -124,8 +124,8 @@
   }
 
   /* NAV */
-  nav {
-    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 68px;
@@ -157,7 +157,7 @@
   .nav-right { display: flex; align-items: center; gap: 20px; }
 
   /* BREADCRUMB */
-  .breadcrumb { padding: 136px 80px 0; font-size: 12px; color: var(--muted); }
+  .breadcrumb { padding: 32px 80px 0; font-size: 12px; color: var(--muted); }
   .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .breadcrumb a:hover { color: var(--primary); }
   .breadcrumb span { margin: 0 8px; }
@@ -293,7 +293,7 @@
   .footer-regulatory p { font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; }
 
   @media (max-width: 768px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .breadcrumb { padding: 88px 24px 0; }
     .article-container { padding: 32px 24px 60px; }
     .article-title { font-size: 30px; }
@@ -359,7 +359,7 @@
 
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="/en/#contact">Free review of your current policy</a></div>
 
-<nav role="navigation" aria-label="Article navigation">
+<nav class="site-nav" role="navigation" aria-label="Article navigation">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>

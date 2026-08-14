@@ -93,9 +93,9 @@
     --footer-bg: #33402F;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body { background: var(--cream); font-family: 'Montserrat', sans-serif; color: var(--ink); }
-  nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; background: var(--nav-bg); padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(122,154,107,0.25); }
+  .site-nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(122,154,107,0.25); }
   .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
   .nav-logo-img { height: 44px; width: auto; }
   .nav-back { text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; }
@@ -106,7 +106,7 @@
   .lang-switcher a.active { color: var(--white); background: rgba(122,154,107,0.3); }
   .lang-switcher-sep { color: rgba(255,255,255,0.2); font-size: 11px; user-select: none; }
   .nav-right { display: flex; align-items: center; gap: 20px; }
-  .breadcrumb { padding: 136px 80px 0; font-size: 12px; color: var(--muted); }
+  .breadcrumb { padding: 32px 80px 0; font-size: 12px; color: var(--muted); }
   .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .breadcrumb a:hover { color: var(--primary); }
   .breadcrumb span { margin: 0 8px; }
@@ -155,7 +155,7 @@
   .footer-regulatory { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
   .footer-regulatory p { font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; }
   @media (max-width: 768px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .breadcrumb { padding: 88px 24px 0; }
     .article-container { padding: 32px 24px 60px; }
     .article-title { font-size: 30px; }
@@ -377,7 +377,7 @@
 <body>
 
 <div class="asf-top-bar">Mediador de seguros registado na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
-<nav role="navigation" aria-label="Navegação do artigo">
+<nav class="site-nav" role="navigation" aria-label="Navegação do artigo">
   <a href="/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>

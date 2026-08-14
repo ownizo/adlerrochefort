@@ -100,7 +100,7 @@ const EXTRA_CSS = `
   text-transform: uppercase; margin-bottom: 10px;
 }
 .lp-hero {
-  background: var(--hero-bg); color: var(--white); padding: 100px 60px 80px;
+  background: var(--hero-bg); color: var(--white); padding: 56px 60px 80px;
 }
 .lp-hero-inner {
   max-width: 1400px; margin: 0 auto;
