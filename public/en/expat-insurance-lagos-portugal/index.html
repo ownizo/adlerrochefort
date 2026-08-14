@@ -105,6 +105,9 @@
 </script>
 
 <style>
+html { scroll-padding-top: var(--header-offset, 120px); }
+[id] { scroll-margin-top: var(--header-offset, 120px); }
+
   :root {
     --primary: #7A9A6B;
     --primary-hover: #94B585;
@@ -347,6 +350,7 @@
     .nav-phone { display: none; }
   }
 </style>
+<script defer src="/js/header-offset.js"></script>
 </head>
 <body>
 
