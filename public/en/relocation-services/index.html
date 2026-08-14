@@ -249,13 +249,13 @@
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
     min-height: 100vh;
     font-size: 17px;
     line-height: 1.6;
@@ -276,7 +276,7 @@
   .asf-top-bar a:hover { color: #e0be6a; }
 
   /* NAV */
-  nav {
+  .site-nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
@@ -691,7 +691,7 @@
     .steps { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 860px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .section { padding: 56px 20px; }
     .who-grid { grid-template-columns: 1fr; }
     .reasons { grid-template-columns: 1fr; }
@@ -717,7 +717,7 @@
 <div class="asf-top-bar">English-speaking relocation &amp; insurance help in Lagos, Algarve, Portugal — registered with the ASF nº 425591790/3. <a href="#packages">See our packages</a></div>
 
 <!-- NAV -->
-<nav role="navigation" aria-label="Main navigation">
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — English-speaking relocation and insurance help in Lagos, Algarve, Portugal" class="nav-logo-img" width="1000" height="354" loading="eager">
   </a>

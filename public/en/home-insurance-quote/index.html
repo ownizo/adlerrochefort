@@ -58,18 +58,18 @@
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
   }
 
   /* ═══════════════ NAV ═══════════════ */
-  nav {
-    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 76px;
@@ -195,7 +195,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 112px;
+    padding-top: 0;
   }
 
   .hero::before {
@@ -1503,7 +1503,7 @@
 
   /* ═══════════════ RESPONSIVE ═══════════════ */
   @media (max-width: 1024px) {
-    nav { padding: 0 28px; justify-content: space-between; }
+    .site-nav { padding: 0 28px; justify-content: space-between; }
     .nav-links { display: none; }
     .nav-logo { position: static; left: auto; transform: none; }
     .nav-burger { display: flex; }
@@ -1544,9 +1544,9 @@
   /* Mobile nav */
   .mobile-nav {
     display: none;
-    position: fixed; top: 112px; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: var(--nav-bg); z-index: 99;
-    padding: 40px 28px;
+    padding: 124px 28px 40px; overflow-y: auto;
     flex-direction: column; gap: 8px;
   }
   .mobile-nav.open { display: flex; }
@@ -1807,7 +1807,7 @@
   .asf-top-bar a:hover { color: #e0be6a; }
 
   /* ═══════════════ EXPAT HEALTH LANDING ═══════════════ */
-  .lp-main { padding-top: 112px; }
+  .lp-main { padding-top: 0; }
   .lp-hero {
     background: var(--hero-bg);
     color: var(--white);
@@ -2160,7 +2160,7 @@
 
 <!-- NAV -->
 <div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="#quote-form">Free home insurance quote in 24h</a></div>
-<nav role="navigation" aria-label="Main navigation">
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-links-left">
     <a href="/en/#services">Services</a>
     <a href="/en/#why-us">Why us</a>

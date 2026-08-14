@@ -65,7 +65,7 @@ function extract(lang) {
   const opt = { optional: true };
   return {
     topBar: between(src, '<div class="asf-top-bar">', '</div>', opt),
-    nav: between(src, '<nav role="navigation"', '</nav>', opt) || between(src, '<nav>', '</nav>', opt),
+    nav: between(src, '<nav class="site-nav"', '</nav>', opt),
     mobileNav: between(src, '<div class="mobile-nav" id="mobileNav">', '\n</div>', opt),
     footer: between(src, '<footer>', '</footer>', opt),
     cookie: between(src, '<!-- COOKIE CONSENT BANNER -->', '\n</div>', opt),
@@ -188,10 +188,15 @@ const navLink = (l) =>
  * The header itself. `switcher` is the markup from langSwitcher(); passing it
  * in keeps the "never link a translation that does not exist" rule in one
  * place rather than duplicating it per page.
+ *
+ * `.site-nav` is what the header is styled through, and the only <nav> on the
+ * page that carries it — the breadcrumb, the table of contents, the category
+ * strip and the pagination are navigations too, and used to be styled as
+ * headers because the rules selected the bare element.
  */
 export function siteNav({ lang = 'en', home, left = [], right = [], cta, switcher = '' }) {
   const rightLinks = [...right, ...(cta ? [{ ...cta, cta: true }] : [])];
-  return `<nav role="navigation" aria-label="${NAV_ARIA[lang]}">
+  return `<nav class="site-nav" role="navigation" aria-label="${NAV_ARIA[lang]}">
   <div class="nav-links-left">
 ${left.map((l) => '    ' + navLink(l)).join('\n')}
   </div>
@@ -241,7 +246,7 @@ const BACK_HREF = { pt: '/blog/', en: '/en/blog/', nl: '/nl/' };
 const NAV_HOME = { pt: '/', en: '/en/', nl: '/nl/' };
 
 export function articleNav(lang, { switcher = '', backHref, backLabel } = {}) {
-  return `<nav role="navigation" aria-label="${
+  return `<nav class="site-nav" role="navigation" aria-label="${
     lang === 'pt' ? 'Navegação do artigo' : lang === 'nl' ? 'Artikelnavigatie' : 'Article navigation'
   }">
   <a href="${NAV_HOME[lang]}" class="nav-logo">
@@ -265,8 +270,9 @@ export function articleNav(lang, { switcher = '', backHref, backLabel } = {}) {
 
 const CHROME_SELECTORS = [
   /^:root$/,
+  /^html$/,
   /^\.asf-top-bar\b/,
-  /^nav\b/,
+  /^\.site-nav\b/,
   /^\.nav-/,
   /^\.lang-switcher/,
   /^\.lang-unavailable/,

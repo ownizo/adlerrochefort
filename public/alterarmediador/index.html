@@ -44,13 +44,13 @@
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
     min-height: 100vh;
     line-height: 1.6;
   }
@@ -66,8 +66,8 @@
   }
 
   /* NAV */
-  nav {
-    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 68px;
@@ -89,7 +89,7 @@
   .hero {
     background: linear-gradient(160deg, var(--hero-bg) 0%, #3a4736 100%);
     color: var(--white);
-    padding: 150px 48px 80px;
+    padding: 48px 48px 80px;
     text-align: center;
     position: relative;
   }
@@ -369,10 +369,10 @@
   .footer-regulatory p { color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.7; }
 
   @media (max-width: 860px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .nav-logo-text { font-size: 16px; }
     .section { padding: 56px 20px; }
-    .hero { padding: 140px 20px 64px; }
+    .hero { padding: 60px 20px 64px; }
     .steps { grid-template-columns: 1fr; }
     .benefits { grid-template-columns: 1fr; }
     .docs { grid-template-columns: 1fr; }
@@ -398,7 +398,7 @@
 
 <div class="topbar">Mediador registado na ASF n.º 425591790 · Mudança de mediador gratuita e sem alterar coberturas</div>
 
-<nav>
+<nav class="site-nav">
   <a href="/" class="nav-logo">
     <span class="nav-logo-text">Adler <em>&amp;</em> Rochefort</span>
   </a>

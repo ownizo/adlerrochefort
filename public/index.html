@@ -63,18 +63,18 @@
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
   }
 
   /* ═══════════════ NAV ═══════════════ */
-  nav {
-    position: fixed; top: 36px; left: 0; right: 0; z-index: 100;
+  .site-nav {
+    position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
     height: 76px;
@@ -221,7 +221,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 112px;
+    padding-top: 0;
   }
 
   .hero::before {
@@ -1539,7 +1539,7 @@
 
   /* ═══════════════ RESPONSIVE ═══════════════ */
   @media (max-width: 1024px) {
-    nav { padding: 0 28px; justify-content: space-between; }
+    .site-nav { padding: 0 28px; justify-content: space-between; }
     .nav-links,
     .nav-links-left,
     .nav-links-right { display: none; }
@@ -1581,9 +1581,9 @@
   /* Mobile nav */
   .mobile-nav {
     display: none;
-    position: fixed; top: 112px; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
     background: var(--nav-bg); z-index: 99;
-    padding: 40px 28px;
+    padding: 124px 28px 40px; overflow-y: auto;
     flex-direction: column; gap: 8px;
   }
   .mobile-nav.open { display: flex; }
@@ -1617,6 +1617,22 @@
   .mobile-lang-switcher a.active {
     color: var(--white);
     background: rgba(122,154,107,0.3);
+  }
+
+  /* On a phone the regulatory disclosure above the header wraps to two or three
+     lines, so the header gives back what it can: a shorter bar, a smaller logo,
+     tighter side padding and a burger with a thumb-sized hit area. The drawer's
+     top inset follows the shorter header, which stays above it. */
+  @media (max-width: 768px) {
+    .site-nav { height: 60px; padding: 0 20px; }
+    .nav-logo-img { height: 40px; }
+    .nav-burger {
+      width: 44px; height: 44px;
+      align-items: center; justify-content: center;
+      margin-right: -10px;
+    }
+    .mobile-nav { padding: 104px 24px 40px; }
+    .mobile-nav a { font-size: 20px; padding: 16px 0; }
   }
 
   /* Animate in */
@@ -2152,7 +2168,7 @@
 
 <!-- NAV -->
 <div class="asf-top-bar">Mediador de seguros registado na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
-<nav role="navigation" aria-label="Navegação principal">
+<nav class="site-nav" role="navigation" aria-label="Navegação principal">
   <div class="nav-links-left">
     <a href="#servicos">Serviços</a>
     <a href="/seguros/condominios/">Condomínios</a>

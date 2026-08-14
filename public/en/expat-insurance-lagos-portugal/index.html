@@ -140,13 +140,13 @@
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
   body {
     background: var(--cream);
     font-family: 'Montserrat', sans-serif;
     color: var(--ink);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
     min-height: 100vh;
   }
 
@@ -165,7 +165,7 @@
   .asf-top-bar a:hover { color: #e0be6a; }
 
   /* NAV */
-  nav {
+  .site-nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--nav-bg);
     padding: 0 48px;
@@ -349,7 +349,7 @@
 
   /* RESPONSIVE */
   @media (max-width: 860px) {
-    nav { padding: 0 20px; }
+    .site-nav { padding: 0 20px; }
     .section { padding: 48px 20px; }
     .feature-grid { grid-template-columns: 1fr; }
     .intro-media { grid-template-columns: 1fr; }
@@ -397,7 +397,7 @@
 <div class="asf-top-bar">English-speaking insurance intermediary in Lagos, Algarve, Portugal — registered with the ASF nº 425591790/3. <a href="/alterarmediador/">Free, no-obligation intermediary switch</a></div>
 
 <!-- NAV -->
-<nav>
+<nav class="site-nav">
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — English-speaking insurance intermediary in Lagos, Algarve, Portugal" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>

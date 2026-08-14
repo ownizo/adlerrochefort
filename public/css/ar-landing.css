@@ -58,7 +58,7 @@
    * to two or three lines on a phone and is nearer 50px tall. Both are in flow
    * now and the nav sticks once the bar has scrolled past, which removes the
    * overlap and hands 112px of fixed chrome back to the hero. */
-  nav {
+  .site-nav {
     position: sticky;
     top: 0;
     height: 60px;
@@ -405,7 +405,7 @@
    * something ever is, clipping it is better than shrinking the whole page. */
   html,
   body {
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-x: clip;
   }
 
   /* Buys the hero's button room above the cookie notice, and gets more of the
