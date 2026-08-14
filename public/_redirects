@@ -123,3 +123,15 @@
 
 /en/blog/solar-panels-ev-chargers-home-insurance-portugal    /en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/   301!
 /en/blog/solar-panels-ev-chargers-home-insurance-portugal/*  /en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/   301!
+
+# ---------------------------------------------------------------------------
+# Editorial guide for international residents, August 2026.
+#
+# The piece was commissioned against a /guides/ route, but this site has no
+# /guides/ cluster — long-form editorial lives under /en/blog/. The article was
+# published on the established path and these rules catch the commissioned URL
+# so any reference to it resolves rather than 404s.
+# ---------------------------------------------------------------------------
+
+/guides/insurance-portugal-spain-international-residents    /en/blog/insurance-portugal-spain-international-residents/   301!
+/guides/insurance-portugal-spain-international-residents/*  /en/blog/insurance-portugal-spain-international-residents/   301!
