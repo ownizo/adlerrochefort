@@ -115,6 +115,12 @@
     }
   }
 
+  // Google Ads conversion for a submitted quote request. Deliberately fired
+  // from succeed() only, i.e. after an HTTP-ok response: bidding must learn
+  // from requests that actually reached us, not from page views or from the
+  // 404s this file exists to catch.
+  var ADS_SEND_TO = 'AW-18361722533/HxH6CKqa1uEcEKXNxrNE';
+
   function track(form) {
     if (typeof window.gtag !== 'function') return;
     var params = { form_name: (form.getAttribute('name') || '').replace(/-/g, '_') };
@@ -125,6 +131,11 @@
       if (value) params['form_' + extra.replace(/-/g, '_')] = value;
     }
     window.gtag('event', 'generate_lead', params);
+    window.gtag('event', 'conversion', {
+      send_to: ADS_SEND_TO,
+      value: 1.0,
+      currency: 'EUR',
+    });
   }
 
   function succeed(form) {

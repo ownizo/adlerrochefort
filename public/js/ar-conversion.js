@@ -69,6 +69,13 @@
           if (situation) params.form_situation = situation;
           if (propertyUse) params.form_property_use = propertyUse;
           gtag('event', 'generate_lead', params);
+          // Same Google Ads conversion as the landing-page quote forms, so
+          // bidding counts one submitted request wherever it came from.
+          gtag('event', 'conversion', {
+            send_to: 'AW-18361722533/HxH6CKqa1uEcEKXNxrNE',
+            value: 1.0,
+            currency: 'EUR',
+          });
         }
       }).catch(function () {
         if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
