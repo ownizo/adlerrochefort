@@ -893,6 +893,13 @@
     text-decoration: none;
   }
   .service-detail-cta:hover { opacity: 0.85; }
+  .service-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
   .service-card.open { transform: none !important; }
   @media (max-width: 600px) {
     .service-detail-list { grid-template-columns: 1fr; }
@@ -2512,91 +2519,91 @@
       <div class="service-card fade-up" style="transition-delay: 0.00s;">
         <div class="service-num">01</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Health Insurance</h3><p class="service-desc">Private health insurance for expats, families, retirees, visa applications and AIMA appointments, with clear guidance on networks, waiting periods and medical history.</p>
-        <div class="service-detail" style="max-height:none;"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Hospitalisation</li><li>Consultations and exams</li><li>Dental and optical options</li><li>Visa and residency proof</li><li>Pre-existing condition review</li><li>Family plans</li></ul><a class="service-detail-cta" href="/en/health-insurance-quote/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/health-insurance-expats-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Hospitalisation</li><li>Consultations and exams</li><li>Dental and optical options</li><li>Visa and residency proof</li><li>Pre-existing condition review</li><li>Family plans</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/health-insurance-expats-portugal/">Learn more</a><a class="service-detail-cta" href="/en/health-insurance-quote/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.08s;">
         <div class="service-num">02</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Home Insurance</h3><p class="service-desc">Building, contents and family liability cover for primary homes, apartments, rented homes, villas and second homes in Portugal.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory fire cover</li><li>Water damage</li><li>Theft and burglary</li><li>Contents protection</li><li>Family liability</li><li>Pools, gardens and annexes</li></ul><a class="service-detail-cta" href="/en/home-insurance-quote/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/home-insurance-protect-property/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory fire cover</li><li>Water damage</li><li>Theft and burglary</li><li>Contents protection</li><li>Family liability</li><li>Pools, gardens and annexes</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/home-insurance-protect-property/">Learn more</a><a class="service-detail-cta" href="/en/home-insurance-quote/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.16s;">
         <div class="service-num">03</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Car Insurance</h3><p class="service-desc">Motor insurance for new residents, imported vehicles and everyday driving in Portugal, from mandatory third-party liability to own damage cover.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory liability</li><li>Own damage</li><li>Theft and fire</li><li>Glass breakage</li><li>Roadside assistance</li><li>Replacement vehicle</li></ul><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div></div>
-        <button class="service-link" onclick="toggleService(this)">Learn more</button>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory liability</li><li>Own damage</li><li>Theft and fire</li><li>Glass breakage</li><li>Roadside assistance</li><li>Replacement vehicle</li></ul></div></div>
+        <div class="service-actions"><button class="service-link" onclick="toggleService(this)">Learn more</button><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.24s;">
         <div class="service-num">04</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Boat Insurance</h3><p class="service-desc">Cover for private boats and yachts kept in Portuguese waters: hull on an agreed value, third-party liability to marina requirements, navigation limits and lay-up.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Third-party liability</li><li>Hull damage</li><li>Theft and assistance</li><li>Passenger cover</li><li>Marina requirements</li><li>Navigation area review</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/boat-insurance-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Third-party liability</li><li>Hull damage</li><li>Theft and assistance</li><li>Passenger cover</li><li>Marina requirements</li><li>Navigation area review</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/boat-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.32s;">
         <div class="service-num">05</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Mortgage Life Insurance</h3><p class="service-desc">Life insurance linked to a Portuguese mortgage, with independent comparison outside the bank proposal whenever suitable.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Death and disability</li><li>Outstanding loan protection</li><li>Bank policy comparison</li><li>Insurer transfer support</li><li>Foreign buyer guidance</li><li>Annual premium review</li></ul><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div></div>
-        <button class="service-link" onclick="toggleService(this)">Learn more</button>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Death and disability</li><li>Outstanding loan protection</li><li>Bank policy comparison</li><li>Insurer transfer support</li><li>Foreign buyer guidance</li><li>Annual premium review</li></ul></div></div>
+        <div class="service-actions"><button class="service-link" onclick="toggleService(this)">Learn more</button><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.40s;">
         <div class="service-num">06</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Personal Accident Insurance</h3><p class="service-desc">Financial protection after an accident, including treatment expenses, disability compensation and assistance for active families or frequent travellers.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Accidental death</li><li>Permanent disability</li><li>Treatment expenses</li><li>Daily allowance</li><li>Repatriation</li><li>24h assistance</li></ul><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div></div>
-        <button class="service-link" onclick="toggleService(this)">Learn more</button>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Accidental death</li><li>Permanent disability</li><li>Treatment expenses</li><li>Daily allowance</li><li>Repatriation</li><li>24h assistance</li></ul></div></div>
+        <div class="service-actions"><button class="service-link" onclick="toggleService(this)">Learn more</button><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.48s;">
         <div class="service-num">07</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Art &amp; Collections</h3><p class="service-desc">Cover for fine art, antiques and collections kept in Portuguese homes or moved internationally, scheduled on an agreed value rather than left under a contents sub-limit.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value options</li><li>Accidental damage</li><li>Theft and fire</li><li>Transit cover</li><li>Valuation support</li><li>Worldwide extensions</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/insuring-art-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value options</li><li>Accidental damage</li><li>Theft and fire</li><li>Transit cover</li><li>Valuation support</li><li>Worldwide extensions</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/insuring-art-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.56s;">
         <div class="service-num">08</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Classic &amp; Collector Cars</h3><p class="service-desc">Cover for classic, historic and limited-use vehicles: matriculation through the IMT, agreed value on documented evidence, and rating for the mileage actually driven.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value</li><li>Limited mileage</li><li>Restoration cover</li><li>Garage requirements</li><li>Event use</li><li>Specialist claims handling</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value</li><li>Limited mileage</li><li>Restoration cover</li><li>Garage requirements</li><li>Event use</li><li>Specialist claims handling</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.64s;">
         <div class="service-num">09</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">High-Value Cars</h3><p class="service-desc">Cars above the range a retail motor policy will accept: all-risks own damage with no capital ceiling, individual underwriting, and the repairer named in the wording.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>All-risk options</li><li>No capital ceiling</li><li>Marque repair network</li><li>Track-use exclusions review</li><li>Multiple vehicles</li><li>International assistance</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/luxury-car-insurance-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>All-risk options</li><li>No capital ceiling</li><li>Marque repair network</li><li>Track-use exclusions review</li><li>Multiple vehicles</li><li>International assistance</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/luxury-car-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.72s;">
         <div class="service-num">10</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">High-Value Homes</h3><p class="service-desc">All-risks cover for villas, apartments and homes above the retail range: buildings, contents, scheduled valuables, gardens, pools and outbuildings.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Buildings and contents</li><li>Jewellery and valuables</li><li>Art and collections</li><li>Pools and landscaped gardens</li><li>Domestic staff liability</li><li>No underinsurance review</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/luxury-home-insurance-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Buildings and contents</li><li>Jewellery and valuables</li><li>Art and collections</li><li>Pools and landscaped gardens</li><li>Domestic staff liability</li><li>No underinsurance review</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/luxury-home-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
       <div class="service-card fade-up" style="transition-delay: 0.80s;">
         <div class="service-num">11</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Personal Cyber &amp; Fraud</h3><p class="service-desc">Cover for households exposed to payment diversion on a property purchase, impersonation, identity theft and extortion &mdash; including the response in the hours after it happens.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Identity theft</li><li>Payment diversion fraud</li><li>Cyber extortion</li><li>Data recovery</li><li>Legal support</li><li>Family device exposure</li></ul><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div></div>
-        <a class="service-link" href="/en/blog/personal-fraud-and-extortion-cover-portugal/" style="margin-top:20px;">Learn more</a>
+        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Identity theft</li><li>Payment diversion fraud</li><li>Cyber extortion</li><li>Data recovery</li><li>Legal support</li><li>Family device exposure</li></ul></div></div>
+        <div class="service-actions"><a class="service-link" href="/en/blog/personal-fraud-and-extortion-cover-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
       </div>
 
-      <a class="service-card fade-up" href="/en/condominium-insurance-algarve/" style="transition-delay: 0.88s; text-decoration: none; color: inherit;">
+      <div class="service-card fade-up" style="transition-delay: 0.88s;">
         <div class="service-num">12</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 22V5a2 2 0 012-2h12a2 2 0 012 2v17"></path><path d="M9 22v-4h6v4"></path><path d="M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"></path></svg></div>
         <h3 class="service-name">Condominium Insurance (Algarve)</h3><p class="service-desc">Policy audits for condominium administrators and owners who need the legal minimum and the real risks properly covered.</p>
-        <span class="service-link">Audit your policy</span>
-      </a>
+        <div class="service-actions"><a class="service-link" href="/en/condominium-insurance-algarve/">Audit your policy</a><a class="service-detail-cta" href="/en/condominium-insurance-algarve/">Request a quote</a></div>
+      </div>
 
-      <a class="service-card fade-up" href="/en/blog/liability-insurance-complementary-therapies/" style="transition-delay: 0.96s; text-decoration: none; color: inherit;">
+      <div class="service-card fade-up" style="transition-delay: 0.96s;">
         <div class="service-num">13</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Liability for Therapists</h3><p class="service-desc">Professional liability cover for therapists and complementary-medicine practitioners — acupuncture, homeopathy, naturopathy, massage and yoga — working in Portugal.</p>
-        <span class="service-link">Learn more</span>
-      </a>
+        <div class="service-actions"><a class="service-link" href="/en/blog/liability-insurance-complementary-therapies/">Learn more</a><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
+      </div>
     </div>
   </div>
 </section>
