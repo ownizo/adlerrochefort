@@ -130,21 +130,37 @@ CHROME.nl.cookie = `<!-- COOKIE CONSENT BANNER -->
 // translation that was never written would produce a 404. When there is no
 // counterpart the entry falls back to that language's blog index, which is the
 // nearest useful page.
+//
+// French and German were promoted to full site languages in August 2026. They
+// have a homepage and nothing else, so on every page but that homepage their
+// entry is a dimmed fallback to /fr/ or /de/. That is deliberate: a French
+// speaker who lands on a Portuguese article by way of the language router still
+// needs one click back to a page written for them.
 // ---------------------------------------------------------------------------
 
-export const LANG_LABEL = { pt: 'PT', en: 'EN', nl: 'NL' };
-export const LANG_FALLBACK = { pt: '/blog/', en: '/en/blog/', nl: '/nl/' };
+export const LANG_LABEL = { pt: 'PT', en: 'EN', nl: 'NL', fr: 'FR', de: 'DE' };
+export const LANG_FALLBACK = {
+  pt: '/blog/',
+  en: '/en/blog/',
+  nl: '/nl/',
+  fr: '/fr/',
+  de: '/de/',
+};
+
+/** The order the switcher renders in, and the `lang` attribute each entry carries. */
+export const LANG_ORDER = ['pt', 'en', 'nl', 'fr', 'de'];
+const LANG_ATTR = { pt: 'pt-PT', en: 'en', nl: 'nl', fr: 'fr', de: 'de' };
 
 export function langSwitcher(current, targets = {}, { mobile = false, fallback = {} } = {}) {
   const cls = mobile ? 'mobile-lang-switcher' : 'lang-switcher';
   const near = { ...LANG_FALLBACK, ...fallback };
   const parts = [];
-  for (const lang of ['pt', 'en', 'nl']) {
+  for (const lang of LANG_ORDER) {
     const href = lang === current ? targets[lang] || '' : targets[lang] || near[lang];
     const attrs = [
       `href="${href}"`,
       lang === current ? 'class="active"' : targets[lang] ? '' : 'class="lang-unavailable"',
-      lang === 'nl' ? 'lang="nl"' : '',
+      lang === current ? '' : `lang="${LANG_ATTR[lang]}"`,
     ]
       .filter(Boolean)
       .join(' ');

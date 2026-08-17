@@ -80,7 +80,7 @@ const LANDING = {
 };
 
 /** Nearest real page per language for pages that have no translation. */
-const COMMERCIAL_FALLBACK = { pt: '/', en: '/en/', nl: '/nl/' };
+const COMMERCIAL_FALLBACK = { pt: '/', en: '/en/', nl: '/nl/', fr: '/fr/', de: '/de/' };
 
 const SOURCES = new Set([
   join(PUBLIC, 'index.html'),
@@ -89,6 +89,11 @@ const SOURCES = new Set([
 ]);
 
 // Pages with a chrome of their own that this pass must not flatten.
+//
+// /fr/ and /de/ became full site languages in August 2026. Each is a single
+// hand-maintained homepage and, like the PT/EN/NL homepages in SOURCES, it is a
+// source of chrome rather than a consumer of it — langOf() would otherwise
+// treat both as Portuguese and overwrite their footers with the PT one.
 const SKIP = [/email-signature\.html$/, /\/descarregar\//, /\/de\//, /\/fr\//];
 
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
