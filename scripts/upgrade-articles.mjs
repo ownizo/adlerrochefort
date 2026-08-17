@@ -220,7 +220,7 @@ function authorBlock(lang) {
     <div>
       <div class="article-author-name"><a href="/en/#team">Hugo Gonçalves</a></div>
       <div class="article-author-role">Founder &amp; Risk Management Specialist &middot; Adler &amp; Rochefort</div>
-      <div class="article-author-creds">Insurance intermediary registered with the ASF under no. ${ASF} &middot; Chartered Insurance Institute (CII) trained</div>
+      <div class="article-author-creds">Insurance broker registered with the ASF under no. ${ASF} &middot; Chartered Insurance Institute (CII) trained</div>
     </div>
   </div>${AUTHOR_END}`;
 }

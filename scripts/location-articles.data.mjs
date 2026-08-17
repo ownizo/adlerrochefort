@@ -76,7 +76,7 @@ export const ARTICLES = [
       ['Thatched house, conditions not met', 'frequently declined'],
       ['Estate with main house, annexes and pool', 'from &euro;2,500, individually underwritten'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance intermediary. Thatch and timber are placements rather than quotes, so the useful first step is a description of the construction &mdash; roof, structure, glazing, chimneys, heating and what else stands on the plot. Send that through the form below or on WhatsApp and you will have a written answer, including who will and will not write it, within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker. Thatch and timber are placements rather than quotes, so the useful first step is a description of the construction &mdash; roof, structure, glazing, chimneys, heating and what else stands on the plot. Send that through the form below or on WhatsApp and you will have a written answer, including who will and will not write it, within 24 hours.</p>`,
     faq: [
       [
         'Will a Portuguese insurer cover a thatched house in Comporta?',
@@ -166,7 +166,7 @@ export const ARTICLES = [
       ['Detached villa, private plot and pool', '&euro;700&ndash;&euro;1,500'],
       ['Apartment let short-term', '&euro;350&ndash;&euro;650'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance intermediary and we read condominium policies for a living. Send us the development&rsquo;s <em>condi&ccedil;&otilde;es particulares</em> and a note of what you fitted out, and we will map the two policies against each other and quote the gap. Written reply within 24 hours, in English.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker and we read condominium policies for a living. Send us the development&rsquo;s <em>condi&ccedil;&otilde;es particulares</em> and a note of what you fitted out, and we will map the two policies against each other and quote the gap. Written reply within 24 hours, in English.</p>`,
     faq: [
       [
         'If the condominium already has insurance, do I need my own policy?',
@@ -256,7 +256,7 @@ export const ARTICLES = [
       ['Quinta do Lago or Vale do Lobo villa, high specification', 'from &euro;2,000, individually underwritten'],
       ['Workers&rsquo; compensation, one part-time housekeeper', '&euro;90&ndash;&euro;180'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance intermediary working across the Algarve. For a property in the Golden Triangle the useful starting point is the plot rather than the house: what stands on it, what is let, and who works there. Send that through the form below or on WhatsApp and you will have a written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker working across the Algarve. For a property in the Golden Triangle the useful starting point is the plot rather than the house: what stands on it, what is let, and who works there. Send that through the form below or on WhatsApp and you will have a written comparison within 24 hours.</p>`,
     faq: [
       [
         'Is the swimming pool covered by a standard Portuguese home policy?',
@@ -347,7 +347,7 @@ export const ARTICLES = [
       ['Rural property with off-grid generation, declared', '&euro;450&ndash;&euro;950'],
       ['Property let as Alojamento Local', '&euro;380&ndash;&euro;700'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance intermediary based in Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker based in Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
     faq: [
       [
         'Is wind damage covered in Sagres?',
@@ -434,7 +434,7 @@ export const ARTICLES = [
       ['Quinta with protected or historic elements', 'from &euro;1,800, individually underwritten'],
       ['Workers&rsquo; compensation, one part-time housekeeper', '&euro;90&ndash;&euro;180'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance intermediary. We work across Portugal and everything is handled in writing, in English, with the insurer and the loss adjuster dealt with in Portuguese on your behalf. For a Sintra property, send the building details together with a description of the land around it &mdash; on this side of the serra the two are the same question. Written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker. We work across Portugal and everything is handled in writing, in English, with the insurer and the loss adjuster dealt with in Portuguese on your behalf. For a Sintra property, send the building details together with a description of the land around it &mdash; on this side of the serra the two are the same question. Written comparison within 24 hours.</p>`,
     faq: [
       [
         'Does my policy require me to clear the land around the house?',

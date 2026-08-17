@@ -1,49 +1,73 @@
 #!/usr/bin/env node
 /**
- * Phase A.3 — regulatory terminology.
+ * Regulatory terminology — repeatable enforcement pass.
  *
- * Adler & Rochefort is registered with the ASF as a *mediador de seguros* —
- * an insurance intermediary. "Corretor"/"corretora" (broker) and "agência de
- * seguros" (agency) are different ASF categories, so using them to describe
- * the firm misstates its registration. This pass replaces them across every
- * published page, in Portuguese, English and Dutch.
+ * Adler & Rochefort is registered with the ASF as an *agente de seguros*
+ * (no. 425591790/3) holding agency agreements with several insurers. In
+ * Portuguese the registered umbrella term is *mediador de seguros*;
+ * "corretor"/"corretora" (broker) and "agência de seguros" (agency) are
+ * different ASF categories, so using them to describe the firm misstates its
+ * registration. In English, French, German and Dutch the firm markets itself
+ * with the ordinary market noun — broker, courtier, Versicherungsmakler,
+ * verzekeringsagent — as its peers in the same registered category do.
+ *
+ * This pass re-applies, across every published page and every generator source:
+ *
+ *   - the Portuguese category rules (corretor/agência -> mediador de seguros);
+ *   - the English alignment on "broker";
+ *   - the removal of "independent" as a standalone label, in all five languages,
+ *     replaced by the concrete fact behind it: agency agreements with several
+ *     insurers;
+ *   - the rephrasing of "we work for you, not the insurer", which as an agent we
+ *     cannot assert.
+ *
+ * The rule tables are in scripts/lib/terminology-rules.mjs, shared with
+ * scripts/phase2-terminology.mjs and scripts/block0-compliance.mjs. Before, this
+ * script carried its own PT/EN/NL tables with no FR or DE table at all, which is
+ * how the French and German homepages kept a claim the other three had dropped.
  *
  * Two things are protected from rewriting:
  *
- *   - Anchor slugs. Ten headings have an id containing "broker", each linked
- *     from a table of contents. Renaming them would change a published URL
- *     fragment for no reader benefit, so ids and their matching href="#..."
- *     stay as they are while the visible heading text is rewritten. The same
- *     protection covers the URL-encoded article title inside a WhatsApp share
- *     link, where a replacement containing a space would corrupt the URL.
+ *   - Anchor slugs. Several headings have an id containing "broker" or
+ *     "independente", each linked from a table of contents. Renaming them would
+ *     change a published URL fragment for no reader benefit, so ids and their
+ *     matching href="#..." stay as they are while the visible heading text is
+ *     rewritten. The same protection covers the URL-encoded article title inside
+ *     a WhatsApp share link, where a replacement containing a space would
+ *     corrupt the URL.
  *
  *   - public/alterarmediador/index.html, which quotes the category printed on
- *     the ASF certificate. Rewriting a quoted registration entry is a
- *     regulatory question rather than a copy question; the page already
- *     carries a TODO for Hugo to confirm the exact wording.
+ *     the ASF certificate ("Agente de Seguros") inside a letter the client sends
+ *     to their insurer. Rewriting a quoted registration entry is a regulatory
+ *     question rather than a copy question.
  *
- * Sentences built on the agent-versus-broker contrast are rewritten whole,
- * ahead of the generic rules, so the comparison survives instead of collapsing
- * into "an agent ... an intermediary ... an intermediary".
+ * Idempotent: re-running finds nothing left to change.
+ *
+ * Run: node scripts/terminology.mjs
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { globSync } from 'node:fs';
 import { join } from 'node:path';
-import { execSync } from 'node:child_process';
 import { ROOT } from './lib/partials.mjs';
+import {
+  EXCLUDE as RULE_EXCLUDE,
+  PROTECTED,
+  EN_BROKER,
+  EN_INDEPENDENCE,
+  PT_INDEPENDENCE,
+  NL_INDEPENDENCE,
+  FR_INDEPENDENCE,
+  DE_INDEPENDENCE,
+  EN_RELATIONSHIP,
+  PT_RELATIONSHIP,
+} from './lib/terminology-rules.mjs';
 
-const EXCLUDE = [/alterarmediador/, /email-signature\.html$/];
+const EXCLUDE = [...RULE_EXCLUDE, /email-signature\.html$/];
 
-/** Regions whose text must survive the pass byte for byte. */
-const PROTECTED = [
-  /\sid="[^"]*brok[^"]*"/gi,
-  /\shref="#[^"]*brok[^"]*"/gi,
-  /%[0-9A-Fa-f]{2}[A-Za-z]*brok[A-Za-z]*/gi,
-];
-
-// --- Portuguese -------------------------------------------------------------
-// The Portuguese pages were already corrected in an earlier pass; these rules
-// stay so the pass is repeatable and so a reintroduced phrase is caught.
-const PT = [
+// --- Portuguese category terms ----------------------------------------------
+// The Portuguese pages were corrected in an earlier pass; these rules stay so
+// the pass is repeatable and so a reintroduced phrase is caught.
+const PT_CATEGORY = [
   ['Análise gratuita por corretora registada na ASF', 'Análise gratuita por mediador registado na ASF'],
   ['Corretora registada na ASF', 'Mediador de seguros registado na ASF'],
   ['corretora registada na ASF', 'mediador registado na ASF'],
@@ -63,98 +87,59 @@ const PT = [
   ['corretor de seguros', 'mediador de seguros'],
   ['corretora de seguros', 'mediador de seguros'],
   ['nossa corretora', 'nosso mediador'],
-  ['um corretor independente', 'um mediador independente'],
+  ['um corretor independente', 'um mediador'],
   ['o seu corretor', 'o seu mediador'],
 ];
 
-// --- English ----------------------------------------------------------------
-const EN = [
-  // Contrast sentences, rewritten whole.
-  [
-    'Unlike an agent tied to a single insurer, a broker works for you',
-    'Unlike an agent tied to a single insurer, an independent intermediary works for you',
-  ],
-  [
-    '<strong>a broker works for you, not for the insurance company',
-    '<strong>an independent intermediary works for you, not for the insurance company',
-  ],
-  [
-    'Use an independent broker</strong> &mdash; a broker registered with the ASF works for you',
-    'Use an independent intermediary</strong> &mdash; an intermediary registered with the ASF works for you',
-  ],
-  ['It is an insurance agency registered with the ASF', 'It is an insurance intermediary registered with the ASF'],
-
-  // Firm self-description.
-  ['ASF-registered insurance broker', 'ASF-registered insurance intermediary'],
-  ['Insurance broker registered with the ASF', 'Insurance intermediary registered with the ASF'],
-  ['insurance broker registered with the ASF', 'insurance intermediary registered with the ASF'],
-  ['English-speaking Insurance Broker', 'English-speaking Insurance Intermediary'],
-  ['English-speaking insurance broker', 'English-speaking insurance intermediary'],
-  ['Expat Insurance Broker', 'Expat Insurance Intermediary'],
-  ['Talk to a broker', 'Talk to us'],
-  ['talk to a broker', 'talk to us'],
-  ['this brokerage does not advise on', 'this intermediary does not advise on'],
-  ['traditional brokerage expertise', 'traditional insurance mediation expertise'],
-  ['Insurance brokerage', 'Insurance mediation'],
-  ['insurance brokerage', 'insurance mediation'],
-  ['brokerage', 'insurance mediation'],
-
-  // Generic market usage.
-  ['insurance brokers', 'insurance intermediaries'],
-  ['insurance broker', 'insurance intermediary'],
-  ["An independent broker's", "An independent intermediary's"],
-  ['An independent broker&rsquo;s', 'An independent intermediary&rsquo;s'],
-  ['An independent broker’s', 'An independent intermediary’s'],
-  ['An independent broker', 'An independent intermediary'],
-  ['an independent broker', 'an independent intermediary'],
-  ['an independent local broker', 'an independent local intermediary'],
-  ['a specialised insurance broker', 'a specialised insurance intermediary'],
-  ['a specialist broker', 'a specialist intermediary'],
-  ['Consult a specialist broker', 'Consult a specialist intermediary'],
-  ['a good broker', 'a good intermediary'],
-  ['one broker', 'one intermediary'],
-  ['another broker', 'another intermediary'],
-  ['the broker', 'the intermediary'],
-  ['A broker', 'An intermediary'],
-  ['a broker', 'an intermediary'],
-  ['Brokers', 'Intermediaries'],
-  ['brokers', 'intermediaries'],
-  ['Broker', 'Intermediary'],
-  ['broker', 'intermediary'],
-];
-
-// --- Dutch ------------------------------------------------------------------
-const NL = [
-  ['verzekeringsmakelaar', 'verzekeringsbemiddelaar'],
-  ['Verzekeringsmakelaar', 'Verzekeringsbemiddelaar'],
-  ['makelaar', 'bemiddelaar'],
-  ['Makelaar', 'Bemiddelaar'],
-];
-
-// The three data files are included with the published tree on purpose. They
-// are the sources the listings, the feeds and the sitemap are generated from,
-// so a title or excerpt left saying "broker" in any of them is reintroduced
-// into the HTML the next time a generator runs — which is exactly what happened
-// once already. articles.extracted.json is the raw extraction that
-// build-articles-data.mjs turns into articles.json, so cleaning only the
-// derived file leaves the regression one script run away.
+// The data files are swept with the published tree on purpose. They are the
+// sources the listings, the feeds and the sitemap are generated from, so a title
+// or excerpt left saying "corretor" in any of them is reintroduced into the HTML
+// the next time a generator runs — which is exactly what happened once already.
+// articles.extracted.json is the raw extraction that build-articles-data.mjs
+// turns into articles.json, so cleaning only the derived file leaves the
+// regression one script run away.
 //
-// data/compliance-audit.json is deliberately NOT swept. It is the report this
-// kind of pass writes, and its whole job is to record which phrases were found;
-// rewriting it would make the audit assert something it never observed.
+// Every script under scripts/ is swept for the same reason, not just the ones
+// that own a language tree: build-location-articles.mjs asserts that strings
+// copied out of its template page are still present, generate-blog.mjs
+// hard-codes the blog index description, and internal-links.mjs and
+// upgrade-articles.mjs each carry a self-designation of their own.
+//
+// data/compliance-audit.json is deliberately NOT swept, and neither is
+// lib/terminology-rules.mjs or either pass. The first is the report a pass of
+// this kind writes, and rewriting it would make the audit assert something it
+// never observed; the second is the rule table, and rewriting it with itself
+// would turn every rule's left-hand side into its right-hand side and disarm the
+// pass. All of them are in EXCLUDE.
 const files = [
-  ...execSync('find public \\( -name "*.html" -o -name "*.xml" -o -name "*.txt" \\)', {
-    cwd: ROOT,
-  })
-    .toString()
-    .trim()
-    .split('\n')
-    .filter(Boolean)
-    .filter((f) => !EXCLUDE.some((re) => re.test(f))),
+  ...globSync('public/**/*.html', { cwd: ROOT }),
+  ...globSync('public/**/*.xml', { cwd: ROOT }),
+  ...globSync('public/**/*.txt', { cwd: ROOT }),
   'data/articles.json',
   'data/articles.extracted.json',
   'data/homepage-cards.json',
-];
+  ...globSync('scripts/*.mjs', { cwd: ROOT }),
+  ...globSync('scripts/lib/*.mjs', { cwd: ROOT }),
+  ...globSync('scripts/nl-content/*.mjs', { cwd: ROOT }),
+].filter((f) => !EXCLUDE.some((re) => re.test(f)));
+
+const rulesFor = (rel) => {
+  if (rel.startsWith('public/nl/') || rel.startsWith('scripts/nl-')) return [...NL_INDEPENDENCE, ...PT_CATEGORY];
+  if (rel.startsWith('public/fr/')) return FR_INDEPENDENCE;
+  if (rel.startsWith('public/de/')) return DE_INDEPENDENCE;
+  if (rel.startsWith('public/en/')) return [...EN_BROKER, ...EN_INDEPENDENCE, ...EN_RELATIONSHIP];
+  // Root-level PT pages, the shared data files and the generators carry both
+  // Portuguese and English strings.
+  return [
+    ...EN_BROKER,
+    ...EN_INDEPENDENCE,
+    ...EN_RELATIONSHIP,
+    ...PT_CATEGORY,
+    ...PT_INDEPENDENCE,
+    ...PT_RELATIONSHIP,
+    ...NL_INDEPENDENCE,
+  ];
+};
 
 const applied = new Map();
 const touched = [];
@@ -163,32 +148,30 @@ for (const rel of files) {
   const file = join(ROOT, rel);
   const original = await readFile(file, 'utf8');
 
-  // Park protected regions behind placeholders that no rule can match.
+  // Park protected regions behind a placeholder no rule can match. NUL is used
+  // rather than a space-delimited index, which the earlier version of this
+  // script did: " 12 " also matches any bare figure in body copy, so a
+  // restore could splice a protected id into the middle of a sentence.
   const parked = [];
-  let html = original;
+  let text = original;
   for (const re of PROTECTED) {
-    html = html.replace(re, (m) => {
+    text = text.replace(re, (m) => {
       parked.push(m);
-      return ` ${parked.length - 1} `;
+      return `\u0000${parked.length - 1}\u0000`;
     });
   }
 
-  const rules = rel.startsWith('public/nl/')
-    ? [...NL, ...PT]
-    : rel.startsWith('public/en/')
-      ? EN
-      : [...PT, ...EN];
-
-  for (const [from, to] of rules) {
-    if (from === to || !html.includes(from)) continue;
-    applied.set(from, (applied.get(from) || 0) + html.split(from).length - 1);
-    html = html.split(from).join(to);
+  for (const [from, to] of rulesFor(rel)) {
+    if (from === to || !text.includes(from)) continue;
+    applied.set(from, (applied.get(from) || 0) + text.split(from).length - 1);
+    text = text.split(from).join(to);
   }
 
-  html = html.replace(/ (\d+) /g, (_, i) => parked[Number(i)]);
+  text = text.replace(/\u0000(\d+)\u0000/g, (_, i) => parked[Number(i)]);
+  if (/\u0000/.test(text)) throw new Error(`unrestored placeholder in ${rel}`);
 
-  if (html !== original) {
-    await writeFile(file, html);
+  if (text !== original) {
+    await writeFile(file, text);
     touched.push(rel);
   }
 }
@@ -196,5 +179,5 @@ for (const rel of files) {
 console.log(`files changed: ${touched.length}`);
 console.log('replacements:');
 for (const [k, v] of [...applied].sort((a, b) => b[1] - a[1])) {
-  console.log('  ' + String(v).padStart(4), JSON.stringify(k));
+  console.log('  ' + String(v).padStart(4), JSON.stringify(k.length > 90 ? k.slice(0, 90) + '…' : k));
 }

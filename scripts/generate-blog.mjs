@@ -264,7 +264,7 @@ for (const c of CATEGORIES) {
 // ---------------------------------------------------------------------------
 
 const EN_INTRO = `<p>This is where Adler &amp; Rochefort writes up what we learn from the policies that cross our desk. The audience is the one we actually serve in English: people who have moved to Portugal, or own property here, and are trying to work out how Portuguese insurance behaves when it is tested — what the law requires, what the standard wording quietly excludes, and where an internationally-minded household or business is exposed by a policy written for a domestic one.</p>
-<p>The subjects follow that reality rather than mirroring our Portuguese section: health cover and residency requirements, homes on the Algarve coast and in Lisbon, holiday lets and Alojamento Local, valuables and collections, boats, cross-border company structures and professional liability. We name the applicable Portuguese legislation where it matters and we do not publish price rankings. If something here raises a question about your own policy, ask us — we are an insurance intermediary registered with the ASF under n.º 425591790/3 and the review costs nothing.</p>`;
+<p>The subjects follow that reality rather than mirroring our Portuguese section: health cover and residency requirements, homes on the Algarve coast and in Lisbon, holiday lets and Alojamento Local, valuables and collections, boats, cross-border company structures and professional liability. We name the applicable Portuguese legislation where it matters and we do not publish price rankings. If something here raises a question about your own policy, ask us — we are an insurance broker registered with the ASF under n.º 425591790/3 and the review costs nothing.</p>`;
 
 // One original introduction per English category. These are written for the
 // English reader rather than translated from the Portuguese equivalents, which
@@ -375,7 +375,7 @@ const enPages = await buildListing({
   meta: {
     title: 'Insights — Insurance in Portugal, explained | Adler & Rochefort',
     description:
-      'English-language analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered intermediary.',
+      'English-language analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered broker.',
   },
   crumbs: [
     { name: 'Home', url: '/en/' },

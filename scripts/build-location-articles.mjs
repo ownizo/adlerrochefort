@@ -30,9 +30,9 @@ const T_TITLE_TAG =
 const T_HEADLINE = 'Home insurance in Lagos: what local property actually needs';
 const T_OG_TITLE = 'Home insurance in Lagos, Algarve: what local property actually needs';
 const T_DESC =
-  'Lagos runs from the historic walled centre to the clifftop villas of Porto de M&oacute;s and the flatlands of Meia Praia. Each needs a different policy. An English-speaking intermediary based in Lagos explains.';
+  'Lagos runs from the historic walled centre to the clifftop villas of Porto de M&oacute;s and the flatlands of Meia Praia. Each needs a different policy. An English-speaking broker based in Lagos explains.';
 const T_KEYWORDS =
-  'home insurance Lagos Portugal, seguro habitação Lagos, Meia Praia insurance, Porto de Mós villa insurance, Lagos expat insurance intermediary';
+  'home insurance Lagos Portugal, seguro habitação Lagos, Meia Praia insurance, Porto de Mós villa insurance, Lagos expat insurance broker';
 const T_TOPICS = 'casa_geral,lagos';
 
 const ENTITIES = {
@@ -186,7 +186,7 @@ function buildBody(a) {
     <div>
       <div class="article-author-name"><a href="/en/#team">Hugo Gonçalves</a></div>
       <div class="article-author-role">Founder &amp; Risk Management Specialist &middot; Adler &amp; Rochefort</div>
-      <div class="article-author-creds">Insurance intermediary registered with the ASF under no. 425591790/3 &middot; Chartered Insurance Institute (CII) trained</div>
+      <div class="article-author-creds">Insurance broker registered with the ASF under no. 425591790/3 &middot; Chartered Insurance Institute (CII) trained</div>
     </div>
   </div><!-- /article-author --><div class="article-body">
 <p style="background:#F0F4ED;border-left:4px solid #7A9A6B;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#637060;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across Zurich, Allianz, Hiscox and Liberty Mutual, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>

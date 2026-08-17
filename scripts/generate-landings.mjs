@@ -1128,7 +1128,7 @@ const TVDE_EN = {
     },
     {
       title: 'Going to the market',
-      text: 'We take the same risk, described the same way, to several insurers. As an ASF-registered insurance intermediary we do not represent one company — we negotiate with all of those that underwrite the risk.',
+      text: 'We take the same risk, described the same way, to several insurers. As an ASF-registered insurance broker we do not represent one company — we negotiate with all of those that underwrite the risk.',
     },
     {
       title: 'Side-by-side comparison',
