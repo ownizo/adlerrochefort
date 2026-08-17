@@ -21,14 +21,22 @@
  * the blog index or the homepage in that language.
  *
  * Pairs come from the same source as the hreflang tags, so the two can never
- * disagree. Dutch, German and French appear only where a counterpart genuinely
- * exists — there is no Dutch article archive to fall back to.
+ * disagree.
  *
- * Pages with no selector at all are left alone. /de/, /fr/, /nl/,
- * /seguros-empresas-lagos/ and /en/expat-insurance-lagos-portugal/ carry their
- * own nav design with no .lang-switcher styling, and adding one would mean
- * injecting CSS into pages whose design is out of scope for this work. Their
- * hreflang tags still declare the pairs.
+ * August 2026: French and German were promoted to full site languages, which
+ * reverses the narrower rule this pass used to apply. All five languages are
+ * now offered on every selector, in the order PT | EN | NL | FR | DE, whether
+ * or not a counterpart exists — a French visitor whom the edge router drops on
+ * /fr/ previously had no way back out of it. Where there is no counterpart the
+ * link still goes to that language's home or archive and is still marked
+ * .lang-unavailable, so the selector never promises more than it has.
+ *
+ * Pages with no selector at all are left alone. /seguros-empresas-lagos/ and
+ * /en/expat-insurance-lagos-portugal/ carry their own nav design with no
+ * .lang-switcher styling, and adding one would mean injecting CSS into pages
+ * whose design is out of scope for this work. Their hreflang tags still declare
+ * the pairs. /de/, /fr/ and /nl/ now carry the switcher — their homepages were
+ * given the .lang-switcher rules as part of the same promotion.
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
@@ -112,8 +120,9 @@ const langOf = (path) => {
 
 // --- rewrite ------------------------------------------------------------------
 const SWITCHER = /(<div class="lang-switcher">)([\s\S]*?)(<\/div>)/;
+const MOBILE_SWITCHER = /(<div class="mobile-lang-switcher">)([\s\S]*?)(<\/div>)/;
 const files = globSync('**/*.html', { cwd: PUBLIC }).sort();
-const report = { rewritten: [], unchanged: 0, noSwitcher: [], selfLinkFixed: 0, deadEndFixed: 0 };
+const report = { rewritten: [], unchanged: 0, noSwitcher: [], selfLinkFixed: 0, deadEndFixed: 0, mobileRewritten: 0 };
 
 for (const rel of files) {
   const path = '/' + rel.replace(/index\.html$/, '');
@@ -130,15 +139,10 @@ for (const rel of files) {
   const pair = cluster.get(path) || {};
   const isBlog = path.startsWith('/blog/') || path.startsWith('/en/blog/');
 
-  // PT and EN are always offered — they are the two public sites. Dutch,
-  // German and French are offered only where the selector already offered
-  // them. The point of this pass is to fix where the links go, not to widen
-  // the header: the homepage cluster genuinely spans five languages, but
-  // putting five items in the nav would change the look of the page the brief
-  // asks to leave alone. The hreflang tags declare all five regardless, so
-  // /de/ and /fr/ are still discoverable to a crawler.
-  const alreadyOffered = (l) => new RegExp(`>${LABEL[l]}</a>`).test(before);
-  const order = ['pt', 'en', ...['de', 'fr', 'nl'].filter(alreadyOffered)];
+  // All five languages are offered on every selector now that French and
+  // German are full site languages (see the file header). The order is fixed —
+  // PT | EN | NL | FR | DE — so the control reads the same on every page.
+  const order = ['pt', 'en', 'nl', 'fr', 'de'];
   const targets = order.map((l) => {
     if (l === lang) return { l, href: path, active: true };
     const href = pair[l] || FALLBACK[l](isBlog);
@@ -153,23 +157,30 @@ for (const rel of files) {
   // lose its "you are here" marker. Never observed, but cheap to guard.
   if (!targets.some((t) => t.active)) targets.unshift({ l: lang, href: path, active: true });
 
-  const indent = (match[2].match(/\n([ \t]+)</) || [, '      '])[1];
-  const inner =
-    '\n' +
-    targets
-      .map((t) => {
-        const attrs = [`href="${t.href}"`];
-        if (t.active) attrs.push('class="active"');
-        else if (t.unavailable) attrs.push('class="lang-unavailable"');
-        if (t.l !== 'pt' && t.l !== 'en') attrs.push(`lang="${t.l}"`);
-        return `${indent}<a ${attrs.join(' ')}>${LABEL[t.l]}</a>`;
-      })
-      .join(`\n${indent}<span class="lang-switcher-sep">|</span>\n`) +
-    '\n' +
-    indent.slice(0, -2);
+  // One list of anchors, rendered twice: the desktop selector separates its
+  // items with a pipe, the mobile drawer does not. Both were drifting apart
+  // before — the drawer kept whatever the page was built with, so pages could
+  // offer three languages on a phone and five on a laptop.
+  const anchor = (t, indent) => {
+    const attrs = [`href="${t.href}"`];
+    if (t.active) attrs.push('class="active"');
+    else if (t.unavailable) attrs.push('class="lang-unavailable"');
+    if (t.l !== 'pt' && t.l !== 'en') attrs.push(`lang="${t.l}"`);
+    return `${indent}<a ${attrs.join(' ')}>${LABEL[t.l]}</a>`;
+  };
 
-  const after = `${match[1]}${inner}${match[3]}`;
-  if (after === before) {
+  const render = (m, sep) => {
+    const indent = (m[2].match(/\n([ \t]+)</) || [, '      '])[1];
+    const joiner = sep ? `\n${indent}<span class="lang-switcher-sep">|</span>\n` : '\n';
+    return `${m[1]}\n${targets.map((t) => anchor(t, indent)).join(joiner)}\n${indent.slice(0, -2)}${m[3]}`;
+  };
+
+  const after = render(match, true);
+  const mobileMatch = html.match(MOBILE_SWITCHER);
+  const mobileAfter = mobileMatch ? render(mobileMatch, false) : null;
+  const mobileChanged = mobileMatch && mobileAfter !== mobileMatch[0];
+
+  if (after === before && !mobileChanged) {
     report.unchanged += 1;
     continue;
   }
@@ -181,12 +192,17 @@ for (const rel of files) {
   }
   if ((before.match(/<a /g) || []).length < 2) report.deadEndFixed += 1;
 
-  html = html.replace(SWITCHER, after.replace(/\$/g, '$$$$'));
+  if (after !== before) html = html.replace(SWITCHER, after.replace(/\$/g, '$$$$'));
+  if (mobileChanged) {
+    html = html.replace(MOBILE_SWITCHER, mobileAfter.replace(/\$/g, '$$$$'));
+    report.mobileRewritten += 1;
+  }
   await writeFile(file, html);
   report.rewritten.push(path);
 }
 
 console.log(`selectors rewritten:       ${report.rewritten.length}`);
+console.log(`  mobile drawers rewritten: ${report.mobileRewritten}`);
 console.log(`selectors already correct: ${report.unchanged}`);
 console.log(`  of the rewritten, dead ends (only one language offered): ${report.deadEndFixed}`);
 console.log(`pages with no selector:    ${report.noSwitcher.length}`);

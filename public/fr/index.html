@@ -123,6 +123,7 @@
     --primary-hover: #94B585;
     --accent: #D9A668;
     --cream: #FAF7EE;
+    --cream2: #F2EBDA;
     --ink: #4A5A45;
     --ink2: #637060;
     --muted: #8A8B7E;
@@ -191,6 +192,31 @@
     text-decoration: none; transition: background 0.2s;
   }
   .nav-cta:hover { background: #C5934F; }
+
+  /* LANG SWITCHER — ported verbatim from the Portuguese homepage so the header
+     control looks identical in every language. */
+  .lang-switcher {
+    display: flex; align-items: center; gap: 6px; margin-left: 8px;
+  }
+  .lang-switcher a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 4px 8px;
+    transition: color 0.2s, background 0.2s;
+    color: rgba(255,255,255,0.4);
+  }
+  .lang-switcher a:hover { color: var(--accent); }
+  .lang-switcher a.active {
+    color: var(--white);
+    background: rgba(122,154,107,0.3);
+  }
+  .lang-switcher-sep {
+    color: rgba(255,255,255,0.2);
+    font-size: 11px;
+    user-select: none;
+  }
 
   /* HERO */
   .hero { background: var(--hero-bg); position: relative; overflow: hidden; }
@@ -375,6 +401,22 @@
   .footer-social a:hover { border-color: var(--accent); background: rgba(217,166,104,0.1); }
   .footer-social a svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.6); transition: fill 0.2s; }
   .footer-social a:hover svg { fill: var(--accent); }
+  .footer-platforms { display: flex; gap: 12px; }
+  .footer-platform-link {
+    color: var(--accent) !important;
+    border: 1px solid rgba(217,166,104,0.4);
+    padding: 8px 18px;
+    font-size: 11px !important;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .footer-platform-link:hover {
+    background: rgba(217,166,104,0.12);
+    border-color: var(--accent);
+  }
   .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: space-between; }
   .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
   .footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
@@ -396,6 +438,292 @@
     letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
   }
 
+  /* ═══════════════ PLATFORM SECTION ═══════════════ */
+  /* Ported verbatim from the Portuguese/English homepages so the MyCoverVault
+     section renders identically across all five language homepages. */
+  .btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    padding: 16px 32px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+    transition: color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--accent); }
+  .btn-ghost::after { content: '→'; }
+
+  /* Touch targets: minimum 44px for all interactive controls (Apple/Google guidelines) */
+  .btn-primary,
+  .btn-ghost {
+    min-height: 44px;
+  }
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* ═══════════════ TECHNOLOGY / PLATFORMS ═══════════════ */
+  .tech-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-section--pro {
+    background: var(--hero-bg);
+  }
+
+  .tech-section--one {
+    background: var(--cream2);
+  }
+
+  .tech-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .tech-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(122,154,107,0.15);
+    border: 1px solid rgba(122,154,107,0.3);
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .tech-section--pro .tech-badge {
+    color: var(--accent);
+    background: rgba(217,166,104,0.1);
+    border-color: rgba(217,166,104,0.3);
+  }
+
+  .tech-section--one .tech-badge {
+    color: var(--primary);
+  }
+
+  .tech-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .tech-section--pro .tech-title { color: var(--white); }
+  .tech-section--pro .tech-title em { color: var(--accent); font-style: italic; }
+  .tech-section--one .tech-title { color: var(--ink); }
+  .tech-section--one .tech-title em { color: var(--primary); font-style: italic; }
+
+  .tech-subtitle {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .tech-section--pro .tech-subtitle { color: rgba(255,255,255,0.72); }
+  .tech-section--one .tech-subtitle { color: var(--muted); }
+
+  .tech-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .tech-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 0;
+  }
+
+  .tech-section--pro .tech-feature {
+    background: rgba(122,154,107,0.12);
+    border: 1px solid rgba(122,154,107,0.2);
+  }
+
+  .tech-section--one .tech-feature {
+    background: var(--white);
+    border: 1px solid var(--border);
+  }
+
+  .tech-feature-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+
+  .tech-section--pro .tech-feature-icon svg {
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tech-section--one .tech-feature-icon svg {
+    stroke: var(--primary);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tech-feature-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .tech-section--pro .tech-feature-text { color: rgba(255,255,255,0.85); }
+  .tech-section--one .tech-feature-text { color: var(--ink2); }
+
+  .tech-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tech-visual-card {
+    width: 100%;
+    padding: 48px 40px;
+    position: relative;
+  }
+
+  .tech-section--pro .tech-visual-card {
+    background: rgba(122,154,107,0.08);
+    border: 1px solid rgba(122,154,107,0.2);
+  }
+
+  .tech-section--one .tech-visual-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 40px rgba(74,90,69,0.08);
+  }
+
+  .tech-visual-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .tech-section--pro .tech-visual-label { color: var(--accent); }
+  .tech-section--one .tech-visual-label { color: var(--primary); }
+
+  .tech-visual-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .tech-metric {
+    text-align: center;
+    padding: 20px 12px;
+  }
+
+  .tech-section--pro .tech-metric {
+    background: rgba(217,166,104,0.06);
+    border: 1px solid rgba(217,166,104,0.15);
+  }
+
+  .tech-section--one .tech-metric {
+    background: var(--cream);
+    border: 1px solid var(--border);
+  }
+
+  .tech-metric-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .tech-section--pro .tech-metric-num { color: var(--accent); }
+  .tech-section--one .tech-metric-num { color: var(--primary); }
+
+  .tech-metric-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  .tech-section--pro .tech-metric-label { color: rgba(255,255,255,0.6); }
+  .tech-section--one .tech-metric-label { color: var(--muted); }
+
+  .tech-cta {
+    margin-top: 36px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .tech-cta .btn-primary {
+    background: var(--primary);
+  }
+
+  .tech-section--pro .tech-cta .btn-ghost {
+    color: rgba(255,255,255,0.7);
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  .tech-section--pro .tech-cta .btn-ghost:hover {
+    color: var(--white);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  .tech-section--pro::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(217,166,104,0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Animate in */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   /* RESPONSIVE */
   @media (max-width: 860px) {
     .site-nav { padding: 0 20px; }
@@ -408,6 +736,11 @@
     .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
     .mobile-cta { display: block; }
     body { padding-bottom: 70px; }
+
+    .tech-inner { grid-template-columns: 1fr; gap: 48px; padding: 0 28px; }
+    .tech-section { padding: 60px 0; }
+    .tech-features { grid-template-columns: 1fr; }
+    .tech-visual { order: -1; }
   }
   @media (max-width: 480px) {
     .hero-inner { padding: 60px 20px 48px; }
@@ -436,6 +769,17 @@
   <div class="nav-right">
     <a href="tel:+351928226570" class="nav-phone">+351 928 226 570</a>
     <a href="#devis" class="nav-cta">Demander un devis</a>
+    <div class="lang-switcher">
+      <a href="/">PT</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/en/">EN</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/nl/" lang="nl">NL</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/fr/" class="active" lang="fr">FR</a>
+      <span class="lang-switcher-sep">|</span>
+      <a href="/de/" lang="de">DE</a>
+    </div>
   </div>
 </nav>
 
@@ -503,6 +847,64 @@
       <span class="brand-chip">Zurich</span>
       <span class="brand-chip">APRIL</span>
       <span class="brand-chip">Bupa</span>
+    </div>
+  </div>
+</section>
+
+<!-- MYCOVERVAULT — PARTICULIERS -->
+<section class="tech-section tech-section--one" id="adler-one" aria-label="MyCoverVault — Plateforme de gestion de vos assurances personnelles">
+  <div class="tech-inner">
+    <div class="tech-visual fade-up">
+      <div class="tech-visual-card">
+        <div class="tech-visual-label">MyCoverVault · Votre couverture</div>
+        <div class="tech-visual-metrics">
+          <div class="tech-metric">
+            <div class="tech-metric-num">1</div>
+            <div class="tech-metric-label">Une seule plateforme</div>
+          </div>
+          <div class="tech-metric">
+            <div class="tech-metric-num">IA</div>
+            <div class="tech-metric-label">Suggestions intelligentes</div>
+          </div>
+          <div class="tech-metric">
+            <div class="tech-metric-num">FR</div>
+            <div class="tech-metric-label">Vos documents en français</div>
+          </div>
+          <div class="tech-metric">
+            <div class="tech-metric-num">100%</div>
+            <div class="tech-metric-label">Contrôle total</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tech-content fade-up">
+      <div class="tech-badge">Plateforme individuelle</div>
+      <h2 class="tech-title">MyCoverVault <em>Particuliers</em></h2>
+      <p class="tech-subtitle">
+        La gestion intelligente de vos assurances personnelles. MyCoverVault réunit tous vos contrats en un seul endroit et utilise l’intelligence artificielle pour simplifier les paiements, gérer les sinistres et proposer des améliorations à votre couverture.
+      </p>
+      <div class="tech-features">
+        <div class="tech-feature">
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+          <div class="tech-feature-text">Tous vos contrats en un seul endroit, quel que soit l’assureur</div>
+        </div>
+        <div class="tech-feature">
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+          <div class="tech-feature-text">Gestion simplifiée des sinistres</div>
+        </div>
+        <div class="tech-feature">
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+          <div class="tech-feature-text">Suivi des paiements et des échéances</div>
+        </div>
+        <div class="tech-feature">
+          <div class="tech-feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+          <div class="tech-feature-text">Suggestions par IA pour améliorer votre couverture et son coût</div>
+        </div>
+      </div>
+      <div class="tech-cta">
+        <a href="https://mycovervault.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Accéder à MyCoverVault</a>
+        <a href="#devis" class="btn-ghost">En savoir plus</a>
+      </div>
     </div>
   </div>
 </section>
@@ -645,11 +1047,11 @@
     <div>
       <div class="footer-col-title">Langues</div>
       <ul class="footer-col-links footer-langs">
+        <li><a href="/" lang="pt-PT">PT</a></li>
+        <li><a href="/en/" lang="en">EN</a></li>
+        <li><a href="/nl/" lang="nl">NL</a></li>
         <li><a href="/fr/" aria-current="page">FR</a></li>
-        <li><a href="/de/">DE</a></li>
-        <li><a href="/nl/">NL</a></li>
-        <li><a href="/en/">EN</a></li>
-        <li><a href="/">PT</a></li>
+        <li><a href="/de/" lang="de">DE</a></li>
       </ul>
     </div>
     <div>
@@ -676,6 +1078,9 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">&copy; 2026 Adler &amp; Rochefort &middot; Tous droits réservés</div>
+    <div class="footer-platforms">
+      <a href="https://mycovervault.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">Accéder à MyCoverVault</a>
+    </div>
     <div class="footer-legal">
       <a href="/en/privacy-policy">Politique de confidentialité</a>
       <a href="/en/terms-and-conditions">Conditions générales</a>
@@ -713,6 +1118,23 @@
         alert('Une erreur est survenue lors de l\'envoi. Appelez-nous : +351 928 226 570');
       });
     });
+  })();
+</script>
+<script>
+  // Scroll animations for the MyCoverVault platform section
+  (function () {
+    var els = document.querySelectorAll('.fade-up');
+    if (!els.length) return;
+    if (!('IntersectionObserver' in window)) {
+      Array.prototype.forEach.call(els, function (el) { el.classList.add('visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    Array.prototype.forEach.call(els, function (el) { observer.observe(el); });
   })();
 </script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
