@@ -20,7 +20,7 @@ export const MOTOR_PAGES = [
     standfirst:
       'De import zelf is een administratief traject met een begin en een eind. Het risico zit in het midden: de weken waarin uw auto nog Nederlands staat geregistreerd maar hier al rondrijdt, en uw Nederlandse polis daar strikt genomen niet meer voor bedoeld is.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Auto importeren' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -144,7 +144,7 @@ export const MOTOR_PAGES = [
     standfirst:
       'Vijftien jaar zonder schade is in Nederland veel geld waard. In Portugal is het dat ook — maar alleen als u het kunt bewijzen, bij een verzekeraar die het accepteert. Beide voorwaarden zijn minder vanzelfsprekend dan ze klinken.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Schadevrije jaren meenemen' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -205,7 +205,7 @@ export const MOTOR_PAGES = [
     </div>
     <p>Voor iemand met een lange schadevrije historie kan het verschil tussen de eerste en de derde categorie oplopen tot enkele honderden euro's per jaar, elk jaar, en cumulatief zolang u die auto rijdt.</p>
     <div class="callout">
-      <span class="callout-label">Waarom een onafhankelijke agent hier geld waard is</span>
+      <span class="callout-label">Waarom meerdere agentuurovereenkomsten hier geld waard zijn</span>
       Dit is precies het geval waarin het uitmaakt dat wij niet aan één maatschappij gebonden zijn. Wie rechtstreeks bij één verzekeraar aanklopt, krijgt het beleid van die ene verzekeraar en heeft geen idee wat de rest zou doen. Wij leggen dezelfde royementsverklaring voor aan meerdere maatschappijen en kiezen degene die uw historie het zwaarst laat meewegen. Dat is geen onderhandelingstruc, het is simpelweg weten wie wat accepteert — en dat is de nuchterste vorm van waarde die een tussenpersoon kan leveren.
     </div>
   </div>

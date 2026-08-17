@@ -355,7 +355,7 @@ const FOOTER = `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Onafhankelijk verzekeringsagent in Lagos, Algarve. Wij vergelijken Portugese verzekeraars en leggen alles schriftelijk vast.</p>
+      <p class="footer-brand-desc">Verzekeringsagent in Lagos, Algarve. Wij vergelijken Portugese verzekeraars en leggen alles schriftelijk vast.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Geregistreerd verzekeringsagent — ASF nr. 425591790/3

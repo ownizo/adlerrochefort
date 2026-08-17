@@ -9,7 +9,7 @@ export const HUB_PAGE = {
   url: '/nl/verzekeringen-portugal/',
   title: 'Verzekeringen in Portugal voor Nederlanders | Adler & Rochefort',
   description:
-    'Zorg, auto, woning en ondernemen: wat er verandert als u naar Portugal verhuist, per onderwerp uitgelegd. Onafhankelijk verzekeringsagent in Lagos, Algarve.',
+    'Zorg, auto, woning en ondernemen: wat er verandert als u naar Portugal verhuist, per onderwerp uitgelegd. Verzekeringsagent in Lagos, Algarve.',
   keywords:
     'verzekeringen Portugal Nederlanders, zorgverzekering Portugal, woonverzekering Portugal, autoverzekering Portugal, verzekeringsagent Algarve, emigreren Portugal verzekeringen',
   eyebrow: 'Verzekeringen in Portugal',
@@ -17,7 +17,7 @@ export const HUB_PAGE = {
   standfirst:
     'Verhuizen naar Portugal betekent dat elke verzekering die u had opnieuw moet worden ingericht — en dat een paar ervan op een ander moment ingaan dan u denkt. Hieronder staat per onderwerp wat er verandert, met op elke pagina het detail dat er werkelijk toe doet.',
   heroMeta:
-    'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+    'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
   hreflang: { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/' },
   breadcrumb: [
     { name: 'Home', url: '/nl/' },
@@ -92,7 +92,7 @@ export const HUB_PAGE = {
 <section class="section tint" aria-labelledby="wie-wij-zijn">
   <div class="container narrow article-body">
     <h2 id="wie-wij-zijn">Wie wij zijn</h2>
-    <p>Adler &amp; Rochefort is een onafhankelijk verzekeringsagent in Lagos, in de westelijke Algarve, ingeschreven bij de ASF onder nummer 425591790/3. Onafhankelijk betekent hier iets concreets: wij zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
+    <p>Adler &amp; Rochefort is een verzekeringsagent in Lagos, in de westelijke Algarve, ingeschreven bij de ASF onder nummer 425591790/3. Wij zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
     <p>Wat wij niet doen: fiscaal advies, juridisch advies en de legalisatietrajecten zelf. Daarvoor werkt u met een <em>contabilista</em>, een advocaat of een architect. Wat wij wél doen begint zodra die structuur er is.</p>
   </div>
 </section>`,

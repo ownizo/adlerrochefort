@@ -21,7 +21,7 @@ export const HEALTH_PAGES = [
     standfirst:
       'Uw Nederlandse zorgverzekering eindigt bij uitschrijving uit de BRP. Niet bij aankomst in Portugal, niet bij het opzeggen van uw huurcontract — bij de uitschrijving. Tussen die datum en de dag dat uw Portugese dekking ingaat, zit bij veel mensen een gat dat niemand ze heeft aangewezen.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Uitschrijven en zorgverzekering' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -92,7 +92,7 @@ export const HEALTH_PAGES = [
 <section class="section plain" aria-labelledby="wat-wij-doen">
   <div class="container narrow article-body">
     <h2 id="wat-wij-doen">Wat wij hierin doen</h2>
-    <p>Wij zijn onafhankelijk verzekeringsagent in Lagos en niet gebonden aan één verzekeraar. Voor deze specifieke situatie betekent dat het volgende:</p>
+    <p>Wij zijn verzekeringsagent in Lagos en niet gebonden aan één verzekeraar. Voor deze specifieke situatie betekent dat het volgende:</p>
     <ul>
       <li>Wij rekenen terug vanaf uw uitschrijfdatum wanneer de aanvraag moet lopen, zodat de ingangsdatum aansluit.</li>
       <li>Wij vragen per verzekeraar na hoe uw voorgaande Nederlandse dekking wordt behandeld en of dat de wachttijden beïnvloedt, en geven u het antwoord op schrift.</li>
@@ -155,7 +155,7 @@ export const HEALTH_PAGES = [
     standfirst:
       'Portugal heeft een publiek zorgstelsel dat op papier compleet is en in de praktijk op één punt vastloopt: tijd. Deze pagina zet uiteen wat het SNS wel doet, waar een particuliere polis het verschil maakt, en welke keuzes u heeft als uw leeftijd of medische voorgeschiedenis de acceptatie lastig maakt.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: { en: '/en/blog/health-insurance-expats-portugal/' },
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Zorgverzekering Portugal' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -308,7 +308,7 @@ export const HEALTH_PAGES = [
     standfirst:
       'Ontvangt u AOW of een Nederlands pensioen en woont u in Portugal, dan blijft Nederland verantwoordelijk voor uw zorgkosten. U betaalt een verdragsbijdrage aan het CAK en krijgt toegang tot het Portugese stelsel. Dat is een reële aanspraak — en het is precies zoveel als het Portugese stelsel u kan geven, niet meer.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'S1-formulier en CAK' }],
     published: '2026-08-13T09:00:00+00:00',

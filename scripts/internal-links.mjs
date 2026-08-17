@@ -225,7 +225,7 @@ for (const lang of ['pt', 'en']) {
       parts.push(
         lang === 'pt'
           ? `<p style="${CALLOUT_STYLE}">Precisa de uma proposta? A página de <a href="${url}" style="${LINK_STYLE}">${label}</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>`
-          : `<p style="${CALLOUT_STYLE}">Need a quote? The <a href="${url}" style="${LINK_STYLE}">${label}</a> page sets out what the law requires, the covers policies commonly leave out, and the quote form — answered within one working day by an ASF-registered intermediary.</p>`
+          : `<p style="${CALLOUT_STYLE}">Need a quote? The <a href="${url}" style="${LINK_STYLE}">${label}</a> page sets out what the law requires, the covers policies commonly leave out, and the quote form — answered within one working day by an ASF-registered broker.</p>`
       );
       report.landingCallouts += 1;
     } else if (!landing) {

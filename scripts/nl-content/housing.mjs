@@ -20,7 +20,7 @@ export const HOUSING_PAGES = [
     standfirst:
       'Eén verplichting, één standaardproduct, en één rekenfout die de meeste schade aanricht. Wie in Portugal een huis koopt, moet weten waarom het verzekerde bedrag niets met de aankoopprijs te maken heeft.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/' },
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Woonverzekering Portugal' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -143,7 +143,7 @@ export const HOUSING_PAGES = [
     standfirst:
       'Pedrógão Grande, Góis, Figueiró dos Vinhos. Nederlanders wonen onevenredig vaak precies daar waar de bossen dicht zijn en de huizen ver uit elkaar staan. De verzekering dekt bosbrand — mits u de brandgang rond uw huis heeft onderhouden, en dat wordt bij de schade gecontroleerd.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Bosbrandrisico' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -226,7 +226,7 @@ export const HOUSING_PAGES = [
       },
       {
         q: 'Kan een verzekeraar mijn woning weigeren vanwege bosbrandrisico?',
-        a: '<p>Ja. In de zwaarst belaste zones accepteren sommige verzekeraars niet, of alleen tegen een hogere premie, een verhoogd eigen risico of met aanvullende voorwaarden. Wat er op en direct naast uw perceel staat — eucalyptus en zeeden in het bijzonder — en de afstand tot de bebouwing weegt daarin mee. Als onafhankelijk agent leggen wij het risico voor aan meerdere maatschappijen in plaats van bij één afwijzing te stoppen.</p>',
+        a: '<p>Ja. In de zwaarst belaste zones accepteren sommige verzekeraars niet, of alleen tegen een hogere premie, een verhoogd eigen risico of met aanvullende voorwaarden. Wat er op en direct naast uw perceel staat — eucalyptus en zeeden in het bijzonder — en de afstand tot de bebouwing weegt daarin mee. Wij zijn niet gebonden aan één maatschappij en leggen het risico voor aan meerdere maatschappijen in plaats van bij één afwijzing te stoppen.</p>',
       },
       {
         q: 'Zijn mijn schuur en overkapping meeverzekerd?',
@@ -267,7 +267,7 @@ export const HOUSING_PAGES = [
     standfirst:
       'Er staat een huis op het perceel, u koopt het bij de notaris, en pas maanden later blijkt dat het gebouw formeel niet bestaat. Dat is in Portugal geen zeldzaamheid en het is ook geen ramp — maar het bepaalt wel wat u kunt verzekeren, en wat er gebeurt als er iets misgaat.',
     heroMeta:
-      'Onafhankelijk verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
     hreflang: { en: '/en/blog/home-insurance-legalization/' },
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Niet-gelegaliseerde woning' }],
     published: '2026-08-13T09:00:00+00:00',
