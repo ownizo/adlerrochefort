@@ -65,6 +65,10 @@ const PAGE_CLUSTERS = [
     '/nl/woonverzekering-portugal/': 'nl',
   },
   { '/seguros/alojamento-local/': 'pt-PT', '/nl/alojamento-local-verzekering-portugal/': 'nl' },
+  // Motor. Both pages are the commercial car-insurance quote page for Portugal,
+  // one in Portuguese and one in English; the English side did not exist when
+  // this list was written.
+  { '/seguros/auto/': 'pt-PT', '/en/car-insurance-portugal/': 'en-GB' },
   { '/politica-de-privacidade/': 'pt-PT', '/en/privacy-policy/': 'en-GB' },
   { '/termos-e-condicoes/': 'pt-PT', '/en/terms-and-conditions/': 'en-GB' },
 ];

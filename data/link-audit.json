@@ -1,8 +1,8 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 266,
-    "indexedUrls": 257,
+    "htmlFiles": 268,
+    "indexedUrls": 259,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
@@ -13,12 +13,6 @@
   "viaRedirect": [],
   "orphans": [],
   "singleInbound": [
-    {
-      "url": "/en/blog/insurance-portugal-spain-international-residents/",
-      "from": [
-        "/en/expat-insurance-portugal/"
-      ]
-    },
     {
       "url": "/en/blog/category/business-liability/page/2/",
       "from": [
@@ -35,6 +29,12 @@
       "url": "/en/blog/category/valuables-collections/page/2/",
       "from": [
         "/en/blog/category/valuables-collections/"
+      ]
+    },
+    {
+      "url": "/termos-e-condicoes/",
+      "from": [
+        "/en/terms-and-conditions/"
       ]
     }
   ],

@@ -5,7 +5,13 @@
      /en/health-insurance-quote/; home pages carry data-endpoint
      (and data-form-label) so they post to /en/home-insurance-quote/
      instead; the Collections & Valuables cluster uses
-     "valuables-review" and posts to /en/private-clients/. No new backend.
+     "valuables-review" and posts to /en/private-clients/; the motor
+     cluster uses "car-insurance-quote" and posts to
+     /en/car-insurance-portugal/. No new backend.
+   - Stamps source_url with the article's own URL before posting, so a
+     lead names the page it came from and not the endpoint it was sent
+     to. The hidden field is left empty in the markup on purpose: it is
+     the same mechanism ar-quote-form.js uses on the landing pages.
    - Shows/hides the sticky mobile CTA bar on scroll.
    ════════════════════════════════════════════════════════════════ */
 (function () {
@@ -33,6 +39,9 @@
 
   var forms = document.querySelectorAll('form.ar-cta-form');
   Array.prototype.forEach.call(forms, function (form) {
+    var sourceUrl = form.querySelector('input[name="source_url"]');
+    if (sourceUrl && !sourceUrl.value) sourceUrl.value = window.location.href;
+
     // Clear the group message as soon as the visitor ticks anything.
     Array.prototype.forEach.call(form.querySelectorAll('[data-required-group]'), function (anchor) {
       var group = anchor.getAttribute('data-required-group');

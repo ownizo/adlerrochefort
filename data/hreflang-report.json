@@ -1,12 +1,12 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 266,
+    "htmlFiles": 268,
     "filesChanged": 0,
-    "pagesWithHreflang": 81,
+    "pagesWithHreflang": 83,
     "articlePairs": 28,
     "monolingualPt": 12,
-    "monolingualEn": 103,
+    "monolingualEn": 104,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
     "xDefaultPages": 6
@@ -142,6 +142,7 @@
       "/blog/seguros-turismo-rural-hoteis-boutique/"
     ],
     "en": [
+      "/en/blog/importing-a-car-to-portugal/",
       "/en/blog/portuguese-vs-international-health-insurance/",
       "/en/blog/health-insurance-requirements-portuguese-residence-visas/",
       "/en/blog/allianz-home-insurance-portugal/",

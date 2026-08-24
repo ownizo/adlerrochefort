@@ -118,8 +118,8 @@ export const EN_CATEGORIES = [
     slug: "motor",
     title: "Motor",
     short: "Motor",
-    landing: "/en/insurance/motor/",
-    landingLabel: "Motor insurance",
+    landing: "/en/car-insurance-portugal/",
+    landingLabel: "Car insurance",
   },
   {
     slug: "personal-family",
@@ -249,6 +249,7 @@ const EN_CATEGORY_OF = {
   "car-insurance-expatriates": "motor",
   "classic-collector-cars-portugal-matriculation-agreed-value": "motor",
   "fleet-insurance-common-mistakes": "motor",
+  "importing-a-car-to-portugal": "motor",
   "individual-car-insurance": "motor",
   "insuring-car-collection-multiple-vehicles-portugal": "motor",
   "luxury-car-insurance-portugal": "motor",

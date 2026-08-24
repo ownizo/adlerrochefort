@@ -50,6 +50,10 @@ const PAGE_CLUSTERS = [
   { pt: '/', en: '/en/', de: '/de/', fr: '/fr/', nl: '/nl/' },
   { pt: '/blog/', en: '/en/blog/' },
   { pt: '/seguros/tvde/', en: '/en/insurance/tvde/' },
+  // Motor. The pair was added to scripts/hreflang.mjs when the English car
+  // page was built but not here, so this pass was quietly demoting the
+  // pillar's PT link to the homepage every time it ran.
+  { pt: '/seguros/auto/', en: '/en/car-insurance-portugal/' },
   { pt: '/seguros/condominios/', en: '/en/condominium-insurance-algarve/' },
   { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
   { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/' },

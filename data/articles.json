@@ -84,8 +84,8 @@
         "slug": "motor",
         "title": "Motor",
         "short": "Motor",
-        "landing": "/en/#contact",
-        "landingLabel": "motor insurance quote"
+        "landing": "/en/car-insurance-portugal/",
+        "landingLabel": "Car insurance"
       },
       {
         "slug": "personal-family",
@@ -1374,6 +1374,27 @@
       }
     ],
     "en": [
+      {
+        "slug": "importing-a-car-to-portugal",
+        "lang": "en",
+        "status": "published",
+        "url": "/en/blog/importing-a-car-to-portugal/",
+        "category": "motor",
+        "tag": "Motor Insurance",
+        "title": "Importing a car to Portugal: customs, ISV, matrícula and what happens to your insurance",
+        "metaTitle": "Importing a Car to Portugal: DAV, ISV, Matrícula and Insurance | Adler & Rochefort",
+        "description": "The customs declaration, the ISV, the inspection and the Portuguese plate, in the order they actually happen — and where the motor policy fits while the paperwork is running.",
+        "excerpt": "The customs declaration, the ISV, the inspection and the Portuguese plate, in the order they actually happen — and where the motor policy fits while the paperwork is running.",
+        "image": null,
+        "imageGradient": null,
+        "imageAlt": "Importing a car to Portugal: customs, ISV, matrícula and what happens to your insurance",
+        "published": "2026-08-24T09:00:00+00:00",
+        "modified": "2026-08-24T09:00:00+00:00",
+        "dateLabel": "August 2026",
+        "readingTime": 11,
+        "featured": false,
+        "translationOf": null
+      },
       {
         "slug": "portuguese-vs-international-health-insurance",
         "lang": "en",

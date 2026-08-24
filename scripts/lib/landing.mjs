@@ -19,13 +19,16 @@ ${PARTNERS.map((p) => `    <div class="partner-logo"><span class="partner-logo-t
   </div>
 </section>`;
 
+// The heading names what we actually do. We are not tied to one insurer, but we
+// do not have access to every company operating in Portugal either, and the
+// logo strip below it lists the ones this claim is about.
 export const PARTNERS_PT = partnersSection(
   'Seguradoras parceiras',
-  'Comparamos o <em>mercado</em>'
+  'Comparamos as <em>seguradoras com que trabalhamos</em>'
 );
 export const PARTNERS_EN = partnersSection(
   'Partner insurers',
-  'We compare the <em>market</em>'
+  'We compare the <em>insurers we work with</em>'
 );
 
 /** Renders one form field from a compact spec. */
@@ -82,6 +85,47 @@ ${fields.map((f) => '      ' + field(f)).join('\n')}
   </form>
 </div>`;
 }
+
+/**
+ * The working-language notice, opt-in per page via `spec.langPolicy`.
+ *
+ * It carries its own CSS because the pages that show it do not all load the
+ * same stylesheet — the property cluster and the two English quote pages each
+ * ship their own inline design system. Only pages whose audience is largely
+ * foreign declare it; the rest of the block leaves it undefined and renders
+ * nothing.
+ */
+const LANG_POLICY_CSS = `<style>
+  /* Language policy — self-contained so it renders identically on pages that
+     each carry their own inline design system. */
+  .ar-langpolicy-band { background: #FAF7EE; padding: 44px 24px; }
+  .ar-langpolicy {
+    max-width: 820px; margin: 0 auto; background: #FFFFFF;
+    border: 1px solid #E0D8C2; border-left: 4px solid #C9A84C;
+    padding: 34px 36px; font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  .ar-langpolicy h2 {
+    font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; font-weight: 700;
+    color: #33402F; margin: 0 0 16px; letter-spacing: 0;
+  }
+  .ar-langpolicy p { font-size: 17px; line-height: 1.75; color: #45543F; margin: 0 0 14px; }
+  .ar-langpolicy p:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) { .ar-langpolicy { padding: 26px 22px; } .ar-langpolicy-band { padding: 32px 18px; } }
+</style>`;
+
+const LANG_POLICY_PT = `<div class="ar-langpolicy-band">
+  <aside class="ar-langpolicy" aria-labelledby="ar-language-policy">
+    <h2 id="ar-language-policy">A nossa língua de trabalho é o inglês</h2>
+    <p>A nossa língua de trabalho com clientes internacionais é o inglês. Cotações, explicação de condições, correspondência e sinistros são tratados em inglês. As apólices das seguradoras portuguesas são emitidas em português por imposição legal. Toda a comunicação é feita por escrito.</p>
+  </aside>
+</div>`;
+
+const LANG_POLICY_EN = `<div class="ar-langpolicy-band">
+  <aside class="ar-langpolicy" aria-labelledby="ar-language-policy">
+    <h2 id="ar-language-policy">We work in English</h2>
+    <p>Our working language with international clients is English. Quotes, explanations of policy conditions, correspondence and claims are handled in English. Portuguese insurers issue their policies in Portuguese because the law requires it. All communication is in writing.</p>
+  </aside>
+</div>`;
 
 const list = (items) => `<ul class="lp-list">${items.map((i) => `<li>${i}</li>`).join('')}</ul>`;
 
@@ -149,13 +193,14 @@ export function landingPage(spec, related = []) {
         related: 'Leitura relacionada',
       };
 
-  const head = metaHead({
-    title: spec.metaTitle,
-    description: spec.metaDescription,
-    canonical: spec.url,
-    robots: 'index, follow',
-    hreflang: spec.hreflang || [],
-  });
+  const head =
+    metaHead({
+      title: spec.metaTitle,
+      description: spec.metaDescription,
+      canonical: spec.url,
+      robots: 'index, follow',
+      hreflang: spec.hreflang || [],
+    }) + (spec.langPolicy ? '\n' + LANG_POLICY_CSS : '');
 
   const body = [
     breadcrumbHtml(spec.crumbs),
@@ -178,6 +223,8 @@ ${spec.form}
     </div>
   </div>
 </section>`,
+
+    spec.langPolicy ? (en ? LANG_POLICY_EN : LANG_POLICY_PT) : '',
 
     `<section class="lp-section">
   <h2>${T.law}</h2>

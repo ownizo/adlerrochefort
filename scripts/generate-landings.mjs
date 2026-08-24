@@ -1253,9 +1253,258 @@ TVDE.hreflang = [
 ];
 
 // =============================================================================
+// 2.6 — Automóvel
+//
+// The Portuguese counterpart of /en/car-insurance-portugal/. It is not a
+// translation of the English pillar: the English page leads with the questions
+// a foreign driver asks first (licence, imported car, no-claims history), while
+// this one leads with the statutory obligation and the three levels of cover,
+// which is what a Portuguese-speaking visitor searching "seguro auto" expects
+// to see. The expat and imported-vehicle material is here too, but further
+// down, where it belongs for this audience.
+//
+// The page it replaces was a hand-written one-off with no structured data and
+// its own colour palette. Nothing about its URL changes.
+// =============================================================================
+const AUTO = {
+  lang: 'pt',
+  url: '/seguros/auto/',
+  slug: 'auto',
+  category: 'seguros-auto-tvde',
+  metaTitle: 'Seguro Automóvel em Portugal | Cotação Comparada | Adler & Rochefort',
+  metaDescription:
+    'Seguro automóvel em Portugal: responsabilidade civil obrigatória, terceiros completo e danos próprios. Comparamos as seguradoras com que trabalhamos, incluindo veículos importados e condutores estrangeiros.',
+  h1: 'Seguro <em>automóvel</em>',
+  heroSub:
+    'A responsabilidade civil automóvel é obrigatória; tudo o que vem a seguir é uma escolha. Comparamos as seguradoras com que trabalhamos sobre o mesmo veículo e o mesmo condutor, e mostramos as exclusões antes de assinar.',
+  ctaPrimary: 'Pedir cotação',
+  ctaSecondary: 'Falar por WhatsApp',
+  whatsapp: wa('Olá, gostaria de uma cotação de seguro automóvel.'),
+  trust: ['ASF n.º 425591790/3', 'Residentes e expatriados', 'Resposta em 24h úteis'],
+  serviceName: 'Seguro automóvel',
+  serviceType: 'Seguro de responsabilidade civil automóvel e danos próprios',
+  audience: 'Proprietários de veículos residentes em Portugal, incluindo expatriados',
+  formSourceId: 'seguro-auto-source',
+  hreflang: [
+    { lang: 'pt-PT', url: '/seguros/auto/' },
+    { lang: 'en-GB', url: '/en/car-insurance-portugal/' },
+  ],
+  crumbs: crumbs('Seguro automóvel', 'auto'),
+  langPolicy: true,
+  law: [
+    'Em Portugal, todo o veículo terrestre a motor que circule em vias públicas tem de ter <strong>seguro de responsabilidade civil automóvel</strong>. A obrigação existe desde 1980 e está hoje no <strong>Decreto-Lei n.º 291/2007</strong>. Recai sobre o proprietário do veículo — o usufrutuário, o adquirente com reserva de propriedade e o locatário em locação financeira ocupam o mesmo lugar —, não sobre quem conduz. Um veículo sem seguro em vigor está em infração mesmo parado na via pública.',
+    'O seguro obrigatório cobre os danos causados a terceiros e nada mais. Os <strong>capitais mínimos em vigor desde 1 de junho de 2022</strong> são de 6.450.000 € para danos corporais e 1.300.000 € para danos materiais, por sinistro. Estes montantes são revistos periodicamente, pelo que convém confirmar o valor em vigor à data em que contrata; várias seguradoras oferecem capitais acima do mínimo legal sem diferença relevante de prémio.',
+    'A partir daqui o mercado organiza-se em três níveis. <strong>Responsabilidade civil</strong> é o mínimo legal e só responde por terceiros. <strong>Terceiros completo</strong> acrescenta as coberturas que respondem pelo seu próprio veículo em situações que não dependem de uma colisão — incêndio, furto, fenómenos da natureza, quebra isolada de vidros — e assistência em viagem. <strong>Danos próprios</strong>, também chamado contra todos os riscos, acrescenta a reparação do seu veículo em choque, colisão e capotamento, com franquia e sobre o valor declarado. Tratamos a escolha em detalhe no <a href="/blog/seguro-automovel-guia-completo/">guia completo do seguro automóvel</a>.',
+    'Para <strong>residentes estrangeiros e veículos importados</strong> há duas questões prévias que não são de seguro mas condicionam-no. A primeira é a carta de condução: as cartas da UE/EEE são válidas em Portugal sem troca, embora o titular residente deva registar a morada no IMT, e as cartas de países abrangidos pelas convenções aplicáveis podem ser trocadas no IMT sem exame — os prazos contam-se a partir da emissão do título de residência e foram alterados pelo <strong>Decreto-Lei n.º 46/2022</strong>, pelo que devem ser confirmados no <a href="https://www.imt-ip.pt/" rel="noopener nofollow" target="_blank">IMT</a> antes de conduzir. A segunda é a matrícula: um veículo com matrícula estrangeira e um veículo já matriculado em Portugal são riscos diferentes e nem todas as seguradoras subscrevem o primeiro. Diga-nos em que ponto está o processo e dizemos-lhe o que pode ser emitido agora e o que tem de esperar pela matrícula portuguesa.',
+  ],
+  lawList: [
+    'Seguro de responsabilidade civil automóvel válido, em nome de quem tem a obrigação de segurar',
+    'Capitais mínimos de 6.450.000 € (danos corporais) e 1.300.000 € (danos materiais) por sinistro',
+    'Inspeção periódica obrigatória (IPO) em dia, quando aplicável ao veículo',
+    'Carta de condução válida em Portugal — da UE/EEE, ou trocada no IMT dentro do prazo aplicável',
+    'Documento único automóvel (DUA) ou, num veículo em processo de legalização, a declaração aduaneira de veículo',
+    'Certificado internacional de seguro (carta verde) quando o veículo circula fora do território abrangido',
+  ],
+  essentialIntro:
+    'A base de qualquer apólice automóvel. A primeira é obrigatória; as outras três são o que separa uma apólice mínima de uma apólice utilizável.',
+  essential: [
+    {
+      title: 'Responsabilidade civil obrigatória',
+      text: 'Responde pelos danos corporais e materiais causados a terceiros, dentro dos capitais mínimos legais ou de capitais superiores se os contratar. Não cobre o seu veículo nem os seus próprios ferimentos.',
+    },
+    {
+      title: 'Proteção do condutor',
+      text: 'A responsabilidade civil protege terceiros — por definição, não protege quem conduz. Esta cobertura responde por morte, invalidez e despesas de tratamento do condutor, mesmo quando o acidente foi causado por si.',
+    },
+    {
+      title: 'Assistência em viagem',
+      text: 'Reboque, desempanagem e, consoante a apólice, veículo de substituição. Confirme a partir de que quilómetro a assistência é acionável: a diferença entre o km 0 e o km 25 aparece sempre no pior dia.',
+    },
+    {
+      title: 'Ocupantes e defesa jurídica',
+      text: 'Acidentes pessoais dos ocupantes transportados e o apoio jurídico para reclamar de terceiro ou para se defender de uma reclamação. São coberturas de custo baixo e utilidade desproporcionada.',
+    },
+  ],
+  recommendedIntro:
+    'O que faz sentido acrescentar depende sobretudo do valor do veículo, de como e onde é guardado, e de quanto do prejuízo consegue suportar sozinho.',
+  recommended: [
+    {
+      title: 'Incêndio, furto e roubo',
+      text: 'Existe dentro do terceiros completo e não obriga a contratar danos próprios. É a cobertura mais relevante para quem estaciona na via pública.',
+    },
+    {
+      title: 'Fenómenos da natureza',
+      text: 'Tempestades, cheias, granizo e queda de árvores. Em Portugal são a causa mais frequente de danos que nada têm a ver com colisão.',
+    },
+    {
+      title: 'Quebra isolada de vidros',
+      text: 'Para-brisas, vidros laterais, óculo traseiro e, nalgumas apólices, tejadilho panorâmico. Acionada isoladamente, evita usar os danos próprios e agravar o histórico.',
+    },
+    {
+      title: 'Danos próprios (choque, colisão e capotamento)',
+      text: 'Repara o seu veículo mesmo em acidente de que é responsável. É praticamente incontornável num veículo financiado ou em locação, porque o contrato de financiamento costuma exigi-lo e a dívida não desaparece com o carro.',
+    },
+    {
+      title: 'Veículo de substituição',
+      text: 'Confirme o número de dias e se responde apenas em acidente ou também em avaria e furto. Num agregado com um só carro, é a cobertura que evita reorganizar a vida durante a reparação.',
+    },
+    {
+      title: 'Valor seguro e regra de desvalorização',
+      text: 'Nos danos próprios a indemnização é calculada sobre o valor declarado, sujeito à tabela de desvalorização da apólice. Duas apólices com o mesmo prémio podem indemnizar valores muito diferentes ao terceiro ano.',
+    },
+  ],
+  mistakes: [
+    {
+      title: 'Comparar prémios sem comparar franquias e exclusões',
+      text: 'Duas apólices com o mesmo preço podem ter franquias de danos próprios muito diferentes, capitais de ocupantes distintos e regras de desvalorização opostas. O prémio, sozinho, não é uma comparação.',
+    },
+    {
+      title: 'Manter danos próprios num veículo que já não os justifica',
+      text: 'Quando o valor seguro desce ao ponto em que o prémio de danos próprios somado à franquia se aproxima do valor do carro, o terceiros completo passa a ser a decisão racional. É uma conta que se refaz a cada renovação, não uma decisão para a vida da apólice.',
+    },
+    {
+      title: 'Cancelar a apólice de origem antes de pedir a carta de sinistralidade',
+      text: 'O histórico de sinistros da seguradora anterior — em Portugal ou no estrangeiro — deve ser pedido enquanto a apólice ainda está viva. Depois de cancelada, obter o documento é mais lento e nem sempre possível.',
+    },
+    {
+      title: 'Assumir que o bónus estrangeiro é automaticamente reconhecido',
+      text: 'O reconhecimento de um histórico de sinistros estrangeiro é uma decisão de subscrição de cada seguradora e não uma obrigação legal. Algumas aceitam, outras não, e a percentagem varia. Vale sempre a pena trazer o documento; não vale a pena contar com um desconto antes de o ver escrito.',
+    },
+    {
+      title: 'Não declarar o condutor habitual real',
+      text: 'Se o veículo é habitualmente conduzido por alguém diferente do tomador — um filho recém-encartado, por exemplo — isso tem de constar da apólice. Declarar outra coisa é uma inexatidão que a seguradora pode invocar no sinistro.',
+    },
+    {
+      title: 'Deixar o veículo importado sem enquadramento definido',
+      text: 'Circular com matrícula estrangeira, estar em processo de legalização e já ter matrícula portuguesa são três situações distintas para efeitos de seguro. A apólice tem de refletir a situação real em cada momento, e a atualização depois da matrícula não é automática.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Os dados que precisamos',
+      text: 'Marca, modelo, ano e matrícula (ou o número do quadro, se o veículo ainda não estiver matriculado em Portugal); data de emissão da carta de condução do condutor habitual; código postal onde o veículo fica; sinistros dos últimos anos; e a apólice atual, se existir. Com isto conseguimos cotar; sem isto, qualquer número seria inventado.',
+    },
+    {
+      title: 'Consulta às seguradoras',
+      text: 'Levamos o mesmo risco, descrito da mesma forma, às seguradoras com que trabalhamos e que subscrevem este tipo de veículo e de condutor. Como mediador registado na ASF não representamos uma companhia — mas também não temos acesso a todas as que existem em Portugal, e dizemo-lo à partida.',
+    },
+    {
+      title: 'Comparação lado a lado',
+      text: 'Recebe as propostas numa tabela única: capitais, franquias, regra de desvalorização, exclusões e prémio. É nesta fase que se vê o que separa duas apólices que pareciam iguais.',
+    },
+    {
+      title: 'Emissão e sinistros',
+      text: 'Tratamos da emissão e ficamos como interlocutor em caso de sinistro. A participação, a peritagem e o acompanhamento até ao pagamento passam por nós.',
+    },
+  ],
+  faq: [
+    {
+      q: 'Que seguro automóvel é obrigatório em Portugal?',
+      a: 'Apenas a responsabilidade civil automóvel, que cobre os danos causados a terceiros. Todas as restantes coberturas — incêndio, furto, fenómenos da natureza, quebra de vidros, danos próprios, assistência — são facultativas e agrupam-se comercialmente em terceiros completo e danos próprios.',
+    },
+    {
+      q: 'Quais são os capitais mínimos obrigatórios?',
+      a: '6.450.000 € para danos corporais e 1.300.000 € para danos materiais por sinistro, em vigor desde 1 de junho de 2022 ao abrigo do Decreto-Lei n.º 291/2007. Os montantes são revistos periodicamente, pelo que deve confirmar o valor em vigor à data em que contrata.',
+    },
+    {
+      q: 'Quanto custa um seguro automóvel em Portugal?',
+      a: 'Não publicamos tabelas de preços, porque um valor médio não se aplica a nenhum caso concreto. O prémio depende do veículo, da idade e da antiguidade da carta do condutor habitual, do local onde o veículo fica, da situação de matrícula, do histórico de sinistros, do nível de cobertura escolhido e da franquia. A cotação é feita sobre os seus dados.',
+    },
+    {
+      q: 'Terceiros completo ou danos próprios?',
+      a: 'Depende do valor do veículo e da franquia. Num veículo novo ou financiado, os danos próprios são normalmente incontornáveis. Num veículo mais antigo, chega um ponto em que o prémio de danos próprios somado à franquia se aproxima do valor do carro — a partir daí, o terceiros completo cobre os riscos mais prováveis a um custo muito inferior.',
+    },
+    {
+      q: 'Sou estrangeiro e vivo em Portugal. Posso segurar um carro aqui?',
+      a: 'Sim. Precisa de NIF português, de uma morada em Portugal e de uma carta de condução válida em Portugal. As cartas da UE/EEE são válidas sem troca, com registo da morada no IMT; as cartas de países abrangidos pelas convenções aplicáveis podem ser trocadas no IMT sem exame, dentro dos prazos que correm a partir da emissão do título de residência. Confirme sempre o prazo do seu caso no IMT antes de conduzir.',
+    },
+    {
+      q: 'Posso segurar em Portugal um carro com matrícula estrangeira?',
+      a: 'Nem todas as seguradoras subscrevem veículos com matrícula estrangeira, e as que o fazem aplicam condições próprias, normalmente ligadas ao processo de legalização em curso. Diga-nos em que fase está o processo e confirmamos o que é possível emitir nesse momento e o que só é possível depois da matrícula portuguesa.',
+    },
+    {
+      q: 'O meu bónus de outro país é reconhecido?',
+      a: 'É uma decisão de subscrição de cada seguradora, não uma obrigação legal. Algumas aceitam um histórico estrangeiro comprovado por carta de sinistralidade da seguradora anterior, outras não, e a percentagem reconhecida varia. Peça o documento à seguradora de origem antes de cancelar a apólice, porque depois é mais difícil obtê-lo.',
+    },
+    {
+      q: 'Comparam todas as seguradoras do mercado?',
+      a: 'Não, e não seria verdade dizer que sim. Trabalhamos com um conjunto de seguradoras e comparamos as propostas dessas companhias para o seu perfil. O que garantimos é que não estamos vinculados a uma única seguradora e que lhe dizemos com quem consultámos.',
+    },
+    {
+      q: 'Posso mudar de seguradora a meio da apólice?',
+      a: 'A apólice automóvel é anual e renovável. A denúncia deve ser comunicada por escrito com a antecedência prevista nas condições — normalmente 30 dias antes do vencimento. Tratamos da transferência e sincronizamos as datas para não haver um dia sem cobertura.',
+    },
+    {
+      q: 'Quanto tempo demora a cotação?',
+      a: '24 horas úteis a partir do momento em que temos os dados do veículo e do condutor habitual. A emissão, depois de aceite, costuma ser feita no próprio dia.',
+    },
+  ],
+};
+
+AUTO.form = quoteForm({
+  formName: 'seguro-auto',
+  branch: 'Automóvel',
+  title: 'Cotação de seguro automóvel',
+  subtitle: 'Preencha o essencial. Respondemos em 24 horas úteis.',
+  submit: 'Pedir cotação →',
+  micro: GDPR,
+  fields: [
+    ...COMMON,
+    { name: 'nif', label: 'NIF', placeholder: 'Número de contribuinte' },
+    { name: 'veiculo', label: 'Marca, modelo e ano', placeholder: 'Ex.: Renault Clio 2019' },
+    { name: 'matricula', label: 'Matrícula', placeholder: 'AA-00-AA (ou nº do quadro)' },
+    {
+      name: 'situacao_matricula',
+      label: 'Situação do veículo',
+      type: 'select',
+      required: true,
+      options: [
+        'Matrícula portuguesa',
+        'Matrícula estrangeira, legalização em curso',
+        'Matrícula estrangeira, sem legalização iniciada',
+        'Ainda vou comprar o veículo',
+      ],
+    },
+    { name: 'codigo_postal', label: 'Código postal onde o veículo fica', placeholder: '0000-000' },
+    { name: 'data_carta', label: 'Data de emissão da carta de condução', type: 'date' },
+    { name: 'pais_carta', label: 'País emissor da carta', placeholder: 'Ex.: Portugal, Reino Unido' },
+    {
+      name: 'cobertura',
+      label: 'Nível de cobertura pretendido',
+      type: 'select',
+      required: true,
+      options: [
+        'Responsabilidade civil (mínimo legal)',
+        'Terceiros completo',
+        'Danos próprios (contra todos os riscos)',
+        'Ainda não sei — aconselhem-me',
+      ],
+    },
+    {
+      name: 'sinistros_3_anos',
+      label: 'Sinistros nos últimos 3 anos',
+      type: 'select',
+      placeholder: 'Selecionar',
+      options: ['Nenhum', '1', '2', '3 ou mais'],
+    },
+    { name: 'seguro_atual', label: 'Seguradora atual', placeholder: 'Se existir' },
+    { name: 'vencimento', label: 'Data de vencimento', type: 'date' },
+    { name: 'mensagem', label: 'Notas', type: 'textarea', full: true, placeholder: 'Algo que devamos saber?' },
+  ],
+});
+
+AUTO.finalCta = finalCta(
+  'Pedir cotação<br><em>de seguro automóvel</em>',
+  'Envie os dados do veículo e do condutor habitual. Comparamos as seguradoras com que trabalhamos sobre o mesmo risco e mostramos as franquias e exclusões antes de assinar.',
+  'Preencher o formulário',
+  wa('Olá, gostaria de uma cotação de seguro automóvel.'),
+  'Falar por WhatsApp'
+);
+
+// =============================================================================
 // Render
 // =============================================================================
-const LANDINGS = [TVDE, FROTA, AL, HABITACAO, EMPRESARIAL];
+const LANDINGS = [TVDE, FROTA, AL, HABITACAO, EMPRESARIAL, AUTO];
 
 for (const spec of LANDINGS) {
   const rel = related(spec.category).filter((a) => a.status === 'published');
