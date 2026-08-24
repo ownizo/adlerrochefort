@@ -216,6 +216,9 @@ const QUOTE_LABELS = {
   "construction-year": "Year of construction",
   "rebuild-value": "Rebuild value",
   "current-policy": "Current policy",
+  // Only the national expat hub asks this; the other forms infer the country
+  // from the postcode, which a lead who has not moved yet does not have.
+  owner_location: "Where they live now",
   role: "Role",
   buildings: "Buildings",
   funcao: "Função",
@@ -382,6 +385,17 @@ const HANDLED_FORMS = {
     heading: "Novo pedido de mudança de mediador",
     page: "/alterarmediador/",
     branch: "Mudança de mediador",
+  },
+  // The national expat hub. Its visitors arrive without knowing which product
+  // they need, so insurance_type is often "Not sure — help me work it out";
+  // the branch below is the fallback for those, and quoteSubject uses the
+  // answer itself whenever there is one.
+  "expat-insurance-review": {
+    quote: true,
+    en: true,
+    heading: "New expat insurance review request",
+    page: "/en/expat-insurance-portugal/",
+    branch: "Expat review",
   },
   "lead-nl": { quote: true, en: true, heading: "New lead — Dutch landing page", page: "/nl/" },
   "lead-fr": { quote: true, en: true, heading: "New lead — French landing page", page: "/fr/" },

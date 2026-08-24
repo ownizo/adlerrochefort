@@ -246,6 +246,16 @@ const CASES = [
     formName: 'landlord-insurance-quote',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    // The national expat hub has its own form name and three selects the other
+    // pages do not have, so a dropped select here would lose the only
+    // qualification we get from a visitor who does not yet know what they need.
+    label: '11. /en/expat-insurance-portugal/ — national expat hub',
+    path: 'en/expat-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/expat-insurance-portugal/',
+    formName: 'expat-insurance-review',
+    pageScripts: ['ar-quote-form.js'],
+  },
 ];
 
 let failures = 0;
