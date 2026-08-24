@@ -1,42 +1,18 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1C2B3A">
-<title>Home Insurance in Portugal for Expats | Free Quote in 24h</title>
-<meta name="description" content="English-speaking, ASF-registered insurance broker. We compare Zurich, Allianz, Hiscox and Liberty Mutual home insurance for expats in Portugal. Free quote in 24 hours.">
-<meta name="keywords" content="home insurance portugal, home insurance portugal expats, multi-risk home insurance portugal, villa insurance algarve, seguro multirriscos habitação english, english speaking insurance broker portugal">
-<link rel="canonical" href="https://adlerrochefort.com/en/home-insurance-quote/">
-  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/habitacao/">
-  <link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/home-insurance-quote/">
-  <link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/woonverzekering-portugal/">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="Adler &amp; Rochefort">
-<meta name="geo.region" content="PT">
+/* ---------------------------------------------------------------------------
+   Home & Property landing design system.
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://adlerrochefort.com/en/home-insurance-quote/">
-<meta property="og:title" content="Home Insurance in Portugal for Expats | Free Quote in 24h">
-<meta property="og:description" content="English-speaking, ASF-registered insurance broker. We compare Zurich, Allianz, Hiscox and Liberty Mutual home insurance for expats in Portugal. Free quote in 24 hours.">
-<meta property="og:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_GB">
-<meta property="og:locale:alternate" content="pt_PT">
-<meta property="og:site_name" content="Adler &amp; Rochefort">
+   These rules were the inline <style> of /en/home-insurance-quote/, the
+   Home & Property pillar. The pages added around it — second home,
+   unoccupied, apartment, flood, earthquake, landlord, rental property,
+   non-resident landlord, landlord liability — are the same page shape, so
+   the rules live in one file instead of being pasted nine more times.
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Home Insurance in Portugal for Expats | Free Quote in 24h">
-<meta name="twitter:description" content="We compare Zurich, Allianz, Hiscox and Liberty Mutual home insurance for expats in Portugal. Free written comparison in 24 hours.">
-<meta name="twitter:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
+   Load order on those pages is ar-property.css, then ar-chrome.css, then
+   ar-landing.css. That is the order the pillar already resolves them in
+   (its inline block sits above both <link>s), so the cascade is unchanged
+   and the pillar itself is left exactly as it was.
+   --------------------------------------------------------------------------- */
 
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
   :root {
     --primary: #7A9A6B;
     --primary-hover: #94B585;
@@ -1956,8 +1932,7 @@
     .lp-form-trust { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
     .lp-form-trust span { font-size: 12.5px; font-weight: 600; color: var(--ink); opacity: .78; display: flex; align-items: center; gap: 7px; }
     .lp-form-trust span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
-</style>
-<style>
+
   .lp-hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
   .lp-btn-wa {
     display: inline-flex; align-items: center; gap: 9px;
@@ -2000,145 +1975,7 @@
     .lp-trustbar { padding: 22px 22px; }
     .lp-disclaimer { padding: 26px 22px; }
   }
-</style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Home insurance in Portugal for expats",
-  "serviceType": "Multi-risk home insurance mediation",
-  "description": "ASF-registered insurance brokerage comparing multi-risk home insurance in Portugal for expats and international residents, with a written comparison in English within 24 hours.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Portugal"
-  },
-  "availableLanguage": [
-    "en",
-    "pt"
-  ],
-  "provider": {
-    "@type": "InsuranceAgency",
-    "name": "Adler & Rochefort",
-    "legalName": "Ownizo, Unipessoal Lda.",
-    "identifier": "ASF 425591790/3",
-    "url": "https://adlerrochefort.com/en/",
-    "email": "insurance@adlerrochefort.com",
-    "telephone": "+351928226570",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Varandas de São João 4",
-      "postalCode": "8600-324",
-      "addressLocality": "Lagos",
-      "addressRegion": "Algarve",
-      "addressCountry": "PT"
-    }
-  },
-  "offers": {
-    "@type": "Offer",
-    "description": "Free written home insurance comparison within 24 hours",
-    "price": "0",
-    "priceCurrency": "EUR"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is home insurance compulsory in Portugal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fire cover is compulsory for any autonomous fraction in a horizontal-property building, and every Portuguese mortgage lender requires at least fire cover on the building. In practice almost all owners take a full multi-risk policy, which bundles fire with water damage, theft, storm, civil liability and home assistance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should I insure the market value or the rebuild cost of my property?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The rebuild cost — the cost of reconstructing the building, excluding the land. Insuring the purchase price of a coastal villa usually means over-paying, while insuring an old inherited house at its outdated book value usually means under-insurance and the proportional rule cutting your claim. We work the figure out with you before we go to market."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I take out a Portuguese home policy if I do not live in Portugal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Non-resident owners of second homes, holiday homes and let properties can be insured normally. You will need a Portuguese NIF and the property documents; a Portuguese bank account is convenient for the direct debit but is not always mandatory, depending on the insurer."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I have to tell the insurer that I let the property out?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, always. Long-term letting, holiday letting and registered Alojamento Local are different risks from a permanent home, and a policy issued on the wrong basis can be reduced or refused at claim stage. Declaring the real use costs a little more up front and protects the claim."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will you provide the policy and the claim correspondence in English?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The contractual wording is issued in Portuguese, because that is the language of the contract under Portuguese law. We explain the cover, the sub-limits and the exclusions to you in English, and we run the whole claim with the insurer in Portuguese on your behalf."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is earthquake cover included in a Portuguese home policy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Almost never as standard. Earthquake and seismic phenomena are an optional add-on with their own excess, usually a percentage of the sum insured. For most of the Algarve and the Lisbon area we recommend adding it, and we quote it separately so you can see exactly what it costs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does the quote take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We come back to you within 24 hours with a written comparison across Zurich, Allianz, Hiscox and Liberty Mutual, setting out the sums insured, the sub-limits and the excesses side by side."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://adlerrochefort.com/en/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Home Insurance in Portugal",
-      "item": "https://adlerrochefort.com/en/home-insurance-quote/"
-    }
-  ]
-}
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Y31W0QJ9WH');
-  gtag('config', 'AW-18361722533');
-</script>
-<link rel="stylesheet" href="/css/ar-chrome.css">
-<link rel="stylesheet" href="/css/ar-landing.css">
-<style>
   /* Language policy — self-contained so it renders identically on pages that
      each carry their own inline design system. */
   .ar-langpolicy-band { background: #FAF7EE; padding: 44px 24px; }
@@ -2154,447 +1991,51 @@
   .ar-langpolicy p { font-size: 17px; line-height: 1.75; color: #45543F; margin: 0 0 14px; }
   .ar-langpolicy p:last-child { margin-bottom: 0; }
   @media (max-width: 640px) { .ar-langpolicy { padding: 26px 22px; } .ar-langpolicy-band { padding: 32px 18px; } }
-</style>
-</head>
-<body>
 
-<!-- NAV -->
-<div class="asf-top-bar">ASF-registered insurance broker n.º 425591790/3 — <a href="#quote-form">Free home insurance quote in 24h</a></div>
-<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-links-left">
-    <a href="/en/#services">Services</a>
-    <a href="/en/#why-us">Why us</a>
-    <a href="/en/#adler-pro">Businesses</a>
-  </div>
-  <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
-    <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
-  </a>
-  <div class="nav-links-right">
-    <a href="/en/#adler-one">Individuals</a>
-    <a href="/en/#blog">Insights</a>
-    <a href="#quote-form" class="nav-cta">Free Quote</a>
-    <div class="lang-switcher">
-      <a href="/seguros/habitacao/">PT</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/en/home-insurance-quote/" class="active">EN</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/nl/woonverzekering-portugal/" lang="nl">NL</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/fr/" class="lang-unavailable" lang="fr">FR</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/de/" class="lang-unavailable" lang="de">DE</a>
-    </div>
-  </div>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="/en/#services" onclick="toggleMenu()">Services</a>
-  <a href="/en/#why-us" onclick="toggleMenu()">Why us</a>
-  <a href="/en/#adler-pro" onclick="toggleMenu()">Businesses</a>
-  <a href="/en/#adler-one" onclick="toggleMenu()">Individuals</a>
-  <a href="/en/#blog" onclick="toggleMenu()">Insights</a>
-  <a href="#quote-form" onclick="toggleMenu()">Free Quote</a>
-  <div class="mobile-lang-switcher">
-      <a href="/seguros/habitacao/">PT</a>
-      <a href="/en/home-insurance-quote/" class="active">EN</a>
-      <a href="/nl/woonverzekering-portugal/" lang="nl">NL</a>
-      <a href="/fr/" class="lang-unavailable" lang="fr">FR</a>
-      <a href="/de/" class="lang-unavailable" lang="de">DE</a>
-    </div>
-</div>
-
-<main class="lp-main">
-
-<!-- HERO -->
-<section class="lp-hero">
-  <div class="lp-hero-inner">
-    <div class="lp-eyebrow">Home Insurance · Portugal</div>
-    <h1>Home insurance in Portugal, handled in English</h1>
-    <p class="lp-hero-sub">Multi-risk cover for permanent homes, second homes, villas and rented properties &mdash; compared across the whole market, explained in plain English, and placed with the insurer that actually fits your property.</p>
-    <div class="lp-hero-ctas">
-      <a href="#quote-form" class="btn-primary">Get my free quote</a>
-      <a href="https://wa.me/351928226570?text=Hi%2C%20I'd%20like%20a%20free%20quote%20for%20home%20insurance%20in%20Portugal." target="_blank" rel="noopener" class="lp-btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
-    </div>
-    <div class="lp-trust">
-      <strong>ASF-registered insurance broker</strong> · Zurich · Allianz · Hiscox · Liberty Mutual
-    </div>
-  </div>
-</section>
-
-<div class="ar-langpolicy-band">
-  <aside class="ar-langpolicy" aria-labelledby="ar-language-policy">
-    <h2 id="ar-language-policy">Our working language is English</h2>
-    <p>Our working language is English. Quotes, explanation of terms, correspondence and claims are all handled in English. Policies issued by Portuguese insurers are written in Portuguese by law; what we add is that you understand exactly what they say before you sign. All communication is in writing.</p>
-  </aside>
-</div>
-
-<!-- TRUST BAR -->
-<section class="lp-trustbar">
-  <div class="lp-trustbar-inner">
-    <div class="lp-trustbar-item">ASF-registered insurance broker</div>
-    <div class="lp-trustbar-item">English-speaking team</div>
-    <div class="lp-trustbar-item">Independent &mdash; we compare the market</div>
-    <div class="lp-trustbar-item">Free quote in 24h</div>
-  </div>
-</section>
-
-<!-- WHAT WE INSURE -->
-<section class="lp-sections">
-  <div class="lp-sections-inner">
-    <div class="lp-card">
-      <h2>What we insure</h2>
-      <p>Portuguese multi-risk policies are not interchangeable. A wording built for a two-bedroom flat in Portimão behaves very differently on a clifftop villa with a pool, or on a house that is empty for eight months of the year. We start from what the property actually is.</p>
-      <div class="lp-grid">
-        <div class="lp-grid-item"><h3>Permanent homes</h3><p>Your main residence in Portugal, whether you own an apartment in Lisbon or a house in the Algarve, with building, contents and family civil liability in a single policy.</p></div>
-        <div class="lp-grid-item"><h3>Second and holiday homes</h3><p>Properties occupied part of the year, where the unoccupancy clause, the water shut-off requirement and the key-holder arrangements matter more than the headline premium.</p></div>
-        <div class="lp-grid-item"><h3>Villas with pools and grounds</h3><p>Pool plant, boundary walls, outbuildings, garden structures, solar panels and outdoor equipment — the items most standard policies quietly leave out.</p></div>
-        <div class="lp-grid-item"><h3>Apartments in condominiums</h3><p>Cover that dovetails with the building&rsquo;s condominium policy instead of duplicating it, so that a water leak from the flat above is settled without an argument over who insures what.</p></div>
-        <div class="lp-grid-item"><h3>Rented and Alojamento Local properties</h3><p>Landlord cover with loss of rent, and AL-specific civil liability for guest-caused damage and injury, declared to the insurer on the correct basis.</p></div>
-        <div class="lp-grid-item"><h3>High-value and luxury homes</h3><p>Estates, architect-designed villas and homes with art, jewellery or wine collections, placed with specialist underwriters on all-risks or agreed-value terms.</p></div>
-      </div>
-    </div>
-
-    <div class="lp-card">
-      <h2>What a Portuguese multi-risk policy should include</h2>
-      <p>&ldquo;Multirriscos habitação&rdquo; is a family of covers, not a single fixed product. These are the ones we check on every quote before we put it in front of you.</p>
-      <ul class="lp-covers">
-        <li><strong>Fire, lightning and explosion</strong>The legal minimum and the backbone of the policy. It is also the cover your mortgage lender insists on, and the reason the sum insured has to reflect the real rebuild cost.</li>
-        <li><strong>Water damage</strong>The most frequent claim in Portugal. It covers sudden escape of water from pipes, tanks and appliances, plus the cost of locating and repairing the leak — but not gradual infiltration or condensation damp.</li>
-        <li><strong>Theft and burglary</strong>Contents and, in some wordings, damage caused by forced entry. Nearly every insurer imposes security requirements — locks, security doors, sometimes an alarm — that must be genuinely in place at the time of the loss.</li>
-        <li><strong>Storm and atmospheric phenomena</strong>Wind, hail and torrential rain, usually subject to an intensity threshold. Relevant across the whole Algarve coast, where winter storms drive most non-water claims.</li>
-        <li><strong>Civil liability</strong>Damage you, your household or your property cause to third parties — a leak reaching the flat below, a wall collapsing onto a neighbour&rsquo;s car, a visitor injured at the pool.</li>
-        <li><strong>Electrical damage</strong>Power surges and short circuits affecting wiring, appliances and increasingly heat pumps, EV chargers and solar inverters. Usually sub-limited, so the limit is worth checking.</li>
-        <li><strong>Glass breakage</strong>Windows, glazed doors, shower screens, hobs and mirrors. A small cover that pays for itself quickly in properties with large glazed façades.</li>
-        <li><strong>24h home assistance</strong>Emergency plumber, electrician, locksmith and glazier, plus temporary accommodation if the home becomes uninhabitable. The cover our clients actually use most often.</li>
-        <li><strong>Earthquake (optional add-on)</strong>Rarely included as standard in Portugal. Priced separately, with an excess set as a percentage of the sum insured. Worth taking in the south and the Lisbon region.</li>
-        <li><strong>Loss of rent (landlords)</strong>Pays the rent you lose while an insured event makes a let property uninhabitable, for a defined number of months. Essential for anyone relying on the rental income.</li>
-      </ul>
-      <p class="lp-note">Every one of these covers carries its own sub-limit and its own excess. Two policies with the same headline premium can differ by tens of thousands of euros at claim stage &mdash; which is exactly what the written comparison is for. <a href="/en/blog/home-insurance-multi-risk/">Read the clause-by-clause guide</a>.</p>
-    </div>
-
-    <div class="lp-card">
-      <h2>The three mistakes that cost owners money</h2>
-      <h3>1. Confusing rebuild value with market value</h3>
-      <p>The sum insured on the building should be the cost of rebuilding it, not what you paid for it and not what an estate agent would list it at. Get it wrong on the low side and the proportional rule applies: declare &euro;200,000 on a property that would cost &euro;300,000 to rebuild, and a &euro;30,000 claim is settled at roughly &euro;20,000. The insurer is not being difficult &mdash; that is how the contract works.</p>
-      <h3>2. Contents left uninsured or badly out of date</h3>
-      <p>Plenty of policies we review carry a token contents figure set when the property was bought and never revisited, or no contents cover at all. Furniture, appliances, electronics, bicycles, tools and outdoor furniture add up faster than owners expect, and after a fire or a burglary the gap is immediate and painful.</p>
-      <h3>3. Not declaring how the property is really used</h3>
-      <p>Letting it long-term, running it as Alojamento Local, or leaving it closed up for months at a time all change the risk. A policy issued as a permanent residence and claimed on as a holiday let is the single most common reason we see cover reduced or refused. Declaring the real use costs a modest amount more and keeps the claim payable.</p>
-    </div>
-
-    <div class="lp-card">
-      <h2>Insurers we compare</h2>
-      <p>We are an ASF-registered insurance broker. We are not tied to any one insurer, and we place the risk where the wording fits the property.</p>
-      <div class="lp-insurer"><a href="/en/blog/zurich-home-insurance-portugal/">Zurich</a><p>A global insurer with a long-established Portuguese operation. Solid, conventional multi-risk cover for permanent residences and second homes, with a well-articulated split between building, contents and civil liability and a broad loss-adjusting network.</p></div>
-      <div class="lp-insurer"><a href="/en/blog/allianz-home-insurance-portugal/">Allianz</a><p>A wide product range with particularly strong home assistance and a long list of optional covers. A sensible choice if you want your health, home and motor policies with the same insurer and a single point of renewal.</p></div>
-      <div class="lp-insurer"><a href="/en/blog/hiscox-home-insurance-portugal/">Hiscox</a><p>The international specialist in high-value homes. All-risks wording, agreed value, art, jewellery and collections, gardens and pools, and individual underwriting. Not a retail product — it is for high-value villas and apartments.</p></div>
-      <div class="lp-insurer"><a href="/en/blog/liberty-mutual-home-insurance-portugal/">Liberty Mutual</a><p>Accessed in Portugal through a specialist underwriting agency, for risks the retail market handles badly: unconventional or mixed-use properties, short-term letting exposures and homes with prior claims or non-standard features.</p></div>
-      <p class="lp-note">Not sure which profile you fall into? <a href="/en/blog/best-home-insurance-portugal-2026/">Compare all four side by side</a>.</p>
-    </div>
-
-    <div class="lp-card">
-      <h2>How it works</h2>
-      <ol class="lp-steps">
-        <li><strong>Tell us about the property.</strong> Type, location, how it is used, roughly what it would cost to rebuild. The form below takes about two minutes; if you would rather send us the details on WhatsApp, that works too.</li>
-        <li><strong>We compare the market.</strong> We take your profile to Zurich, Allianz, Hiscox and Liberty Mutual, and to specialist underwriters where the property calls for it.</li>
-        <li><strong>You receive a written comparison within 24 hours.</strong> Sums insured, sub-limits, excesses and exclusions set out side by side in English, with a clear recommendation and no obligation to proceed.</li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE FORM -->
-<section class="lp-form-section" id="quote-form">
-  <div class="lp-form-card">
-    <h2>Get your free home insurance quote</h2>
-    <p class="lp-form-sub">Tell us about the property and we&rsquo;ll come back to you within 24 hours with a written comparison.</p>
-    <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="property-use">
-      <input type="hidden" name="form-name" value="home-insurance-quote">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="source" value="landing:home-insurance-quote">
-      <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-name">Full name *</label>
-          <input type="text" id="q-name" name="name" placeholder="Your full name" autocomplete="name" required>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-email">Email *</label>
-          <input type="email" id="q-email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-phone">Phone / WhatsApp</label>
-          <input type="tel" id="q-phone" name="phone" placeholder="Optional" autocomplete="tel" inputmode="tel">
-        </div>
-        <div class="contact-form-field">
-          <label for="q-postcode">Property postcode *</label>
-          <input type="text" id="q-postcode" name="postcode" placeholder="e.g. 8600-324" autocomplete="postal-code" required>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-property-type">Property type *</label>
-          <select id="q-property-type" name="property-type" required>
-            <option value="">Select an option</option>
-            <option value="Apartment">Apartment</option>
-            <option value="House / townhouse">House / townhouse</option>
-            <option value="Villa">Villa</option>
-            <option value="Villa with pool and grounds">Villa with pool and grounds</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-property-use">How the property is used *</label>
-          <select id="q-property-use" name="property-use" required>
-            <option value="">Select an option</option>
-            <option value="Permanent home">Permanent home</option>
-            <option value="Second / holiday home">Second / holiday home</option>
-            <option value="Rented long-term">Rented long-term</option>
-            <option value="Alojamento Local / short-term rental">Alojamento Local / short-term rental</option>
-            <option value="Under construction or renovation">Under construction or renovation</option>
-          </select>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-rebuild">Approximate rebuild value</label>
-          <select id="q-rebuild" name="rebuild-value">
-            <option value="">Select an option (optional)</option>
-            <option value="Under €150,000">Under &euro;150,000</option>
-            <option value="€150,000–€300,000">&euro;150,000&ndash;&euro;300,000</option>
-            <option value="€300,000–€600,000">&euro;300,000&ndash;&euro;600,000</option>
-            <option value="€600,000–€1,000,000">&euro;600,000&ndash;&euro;1,000,000</option>
-            <option value="Over €1,000,000">Over &euro;1,000,000</option>
-            <option value="Not sure">Not sure</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-year">Year of construction</label>
-          <input type="text" id="q-year" name="construction-year" placeholder="Optional — e.g. 2004">
-        </div>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-current">Do you currently have a policy?</label>
-        <select id="q-current" name="current-policy">
-          <option value="">Select an option (optional)</option>
-          <option value="No">No</option>
-          <option value="Yes, with a bank">Yes, with a bank</option>
-          <option value="Yes, direct with an insurer">Yes, direct with an insurer</option>
-          <option value="Yes, through another intermediary">Yes, through another intermediary</option>
-        </select>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-message">Message</label>
-        <textarea id="q-message" name="message" placeholder="Anything else we should know? (optional)"></textarea>
-      </div>
-      <button type="submit" class="contact-form-submit">Request my free quote →</button>
-    </form>
-    <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
-    <div class="lp-form-trust"><span>ASF-registered insurance broker</span><span>English-speaking team</span><span>Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual</span><span>We handle the claim for you</span><span>We reply within 24h</span></div>
-          <div class="contact-form-success" id="quoteSuccess">
-      <div class="contact-form-success-icon">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-      </div>
-      <h3>Thank you</h3>
-      <p>Your request has been received. Our team will get back to you within 24 hours.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="lp-faq-section">
-  <div class="lp-faq-inner">
-    <h2 class="lp-faq-title">Frequently asked questions</h2>
-    <div class="lp-faq-item">
-      <h3>Is home insurance compulsory in Portugal?</h3>
-      <p>Fire cover is compulsory for any autonomous fraction in a horizontal-property building, and every Portuguese mortgage lender requires at least fire cover on the building. In practice almost all owners take a full multi-risk policy, which bundles fire with water damage, theft, storm, civil liability and home assistance.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>Should I insure the market value or the rebuild cost of my property?</h3>
-      <p>The rebuild cost — the cost of reconstructing the building, excluding the land. Insuring the purchase price of a coastal villa usually means over-paying, while insuring an old inherited house at its outdated book value usually means under-insurance and the proportional rule cutting your claim. We work the figure out with you before we go to market.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>Can I take out a Portuguese home policy if I do not live in Portugal?</h3>
-      <p>Yes. Non-resident owners of second homes, holiday homes and let properties can be insured normally. You will need a Portuguese NIF and the property documents; a Portuguese bank account is convenient for the direct debit but is not always mandatory, depending on the insurer.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>Do I have to tell the insurer that I let the property out?</h3>
-      <p>Yes, always. Long-term letting, holiday letting and registered Alojamento Local are different risks from a permanent home, and a policy issued on the wrong basis can be reduced or refused at claim stage. Declaring the real use costs a little more up front and protects the claim.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>Will you provide the policy and the claim correspondence in English?</h3>
-      <p>The contractual wording is issued in Portuguese, because that is the language of the contract under Portuguese law. We explain the cover, the sub-limits and the exclusions to you in English, and we run the whole claim with the insurer in Portuguese on your behalf.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>Is earthquake cover included in a Portuguese home policy?</h3>
-      <p>Almost never as standard. Earthquake and seismic phenomena are an optional add-on with their own excess, usually a percentage of the sum insured. For most of the Algarve and the Lisbon area we recommend adding it, and we quote it separately so you can see exactly what it costs.</p>
-    </div>
-    <div class="lp-faq-item">
-      <h3>How long does the quote take?</h3>
-      <p>We come back to you within 24 hours with a written comparison across Zurich, Allianz, Hiscox and Liberty Mutual, setting out the sums insured, the sub-limits and the excesses side by side.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CLUSTER -->
-<section class="lp-sections">
-  <div class="lp-sections-inner">
-    <div class="lp-card">
-      <h2>Cover for a specific situation</h2>
-      <p>This page covers the main multi-risk home policy. Where a property is used in a particular way &mdash; empty half the year, let to tenants, in an apartment block &mdash; the underwriting question changes, and these pages deal with each one directly.</p>
-      <ul class="lp-guides">
-        <li><a href="/en/second-home-insurance-portugal/">Second home insurance in Portugal</a> &mdash; properties used only part of the year</li>
-        <li><a href="/en/unoccupied-home-insurance-portugal/">Unoccupied property insurance</a> &mdash; empty houses, renovations, inherited property</li>
-        <li><a href="/en/apartment-insurance-portugal/">Apartment insurance</a> &mdash; where the condominium policy stops and yours begins</li>
-        <li><a href="/en/earthquake-insurance-portugal/">Earthquake insurance</a> &mdash; how to check whether your policy has seismic cover</li>
-        <li><a href="/en/flood-insurance-portugal/">Flood and water damage cover</a> &mdash; five kinds of water, five different answers</li>
-        <li><a href="/en/landlord-insurance-portugal/">Landlord insurance in Portugal</a> &mdash; if someone else lives in the property</li>
-        <li><a href="/en/rental-property-insurance-portugal/">Rental property insurance</a> &mdash; long-term residential lettings</li>
-        <li><a href="/en/blog/alojamento-local-insurance-requirements/">Holiday rental and Alojamento Local</a> &mdash; short stays and paying guests</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- GUIDES -->
-<section class="lp-sections">
-  <div class="lp-sections-inner">
-    <div class="lp-card">
-      <h2>Read before you buy</h2>
-      <p>Our complete guide to insuring a property in Portugal, plus the articles that answer the questions clients ask us most often.</p>
-      <ul class="lp-guides">
-        <li><a href="/en/blog/home-insurance-protect-property/">Home insurance in Portugal: the complete guide</a> &mdash; the pillar guide, start here</li>
-        <li><a href="/en/blog/home-insurance-multi-risk/">What a Portuguese multi-risk policy actually covers, clause by clause</a></li>
-        <li><a href="/en/blog/home-insurance-cost-algarve-price-drivers/">How much does home insurance cost in the Algarve?</a></li>
-        <li><a href="/en/blog/best-home-insurance-portugal-2026/">Zurich vs Allianz vs Hiscox vs Liberty Mutual in 2026</a></li>
-        <li><a href="/en/blog/change-bank-home-insurance-portugal/">Your bank sold you the home insurance &mdash; how to change it</a></li>
-        <li><a href="/en/blog/water-damage-claim-portugal/">How to claim for water damage on a Portuguese home policy</a></li>
-        <li><a href="/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/">The unoccupancy clause: when your Portuguese home sits empty</a></li>
-        <li><a href="/en/blog/alojamento-local-insurance-requirements/">Alojamento Local insurance: what the RNAL registration requires</a></li>
-        <li><a href="/en/blog/documents-to-insure-property-portugal/">The document checklist for insuring a property in Portugal</a></li>
-        <li><a href="/en/blog/luxury-home-insurance-portugal/">Luxury and high-value home insurance in Portugal</a></li>
-        <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday home insurance in Portugal</a></li>
-        <li><a href="/en/condominium-insurance-algarve/">Condominium insurance in the Algarve</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- REGULATORY DISCLAIMER -->
-<section class="lp-disclaimer">
-  <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General guidance only; conditions, premiums and cover vary by insurer and profile.</p>
-</section>
-
-</main>
-
-<footer>
-  <div class="footer-top">
-    <div>
-      <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">English-speaking, ASF-registered insurance broker in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
-    </div>
-    <div>
-      <div class="footer-col-title">Services</div>
-      <ul class="footer-col-links">
-        <li><a href="/en/home-insurance-quote/">Home Insurance</a></li>
-        <li><a href="/en/health-insurance-quote/">Health Insurance</a></li>
-        <li><a href="/en/international-health-insurance-portugal/">International Health Insurance</a></li>
-        <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
-        <li><a href="/en/blog/car-insurance-complete-guide/">Car Insurance</a></li>
-        <li><a href="/en/blog/holiday-home-insurance-portugal/">Holiday Home</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
-        <li><a href="/en/blog/luxury-home-insurance-portugal/">High-Value Homes</a></li>
-        <li><a href="/en/blog/mortgage-life-insurance-foreign-buyers-portugal/">Life &amp; Mortgage</a></li>
-        <li><a href="/en/relocation-services/">Relocation Services</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Company</div>
-      <ul class="footer-col-links">
-        <li><a href="/en/#team">About us</a></li>
-        <li><a href="/en/#why-us">Our methodology</a></li>
-        <li><a href="/en/#blog">Insights</a></li>
-        <li><a href="/en/#faq">FAQ</a></li>
-        <li><a href="/en/#contact">Contact</a></li>
-        <li><a href="https://mycovervault.com" target="_blank" rel="noopener noreferrer">MyCoverVault</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Contact</div>
-      <ul class="footer-col-links">
-        <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
-        <li><a href="https://wa.me/351928226570" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-        <li><a href="tel:+351928226570">+351 928 226 570</a></li>
-        <li>Varandas de S&atilde;o Jo&atilde;o 4, 8600-324 Lagos</li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Languages</div>
-      <ul class="footer-col-links footer-langs">
-        <li><a href="/" lang="pt-PT">PT</a></li>
-        <li><a href="/en/" aria-current="page">EN</a></li>
-        <li><a href="/nl/" lang="nl">NL</a></li>
-        <li><a href="/fr/" lang="fr">FR</a></li>
-        <li><a href="/de/" lang="de">DE</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2026 Adler &amp; Rochefort &middot; All rights reserved</div>
-    <div class="footer-legal">
-      <a href="/en/privacy-policy/">Privacy Policy</a>
-      <a href="/en/terms-and-conditions/">Terms &amp; Conditions</a>
-      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Complaints Book</a>
-      <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">ASF Reporting Channel</a>
-    </div>
-  </div>
-  <div class="footer-regulatory">
-    <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. is registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3.</p>
-  </div>
-</footer>
-
-<script>
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
+  /* Breadcrumb — the cluster pages sit under the Home & Property pillar and say
+     so, both to a reader arriving from search and to the BreadcrumbList in the
+     page's structured data. */
+  .lp-crumb {
+    max-width: 1080px; margin: 0 auto; padding: 22px 48px 0;
+    font-size: 12.5px; color: var(--muted); letter-spacing: 0.02em;
   }
-</script>
-<script defer src="/js/ar-quote-form.js"></script>
-<script defer src="/js/ar-quote-cta.js"></script>
-<script defer src="/js/ar-analytics-tracker.js"></script>
-<script defer src="/js/lang-pref.js"></script>
-<script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="casa_geral,casa_custo_algarve,casa_luxo,casa_segunda_habitacao,alojamento_local,erros_comuns"></script>
-<!-- COOKIE CONSENT BANNER -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-banner-content">
-    <div class="cookie-banner-text">
-      <strong>This site uses cookies</strong>
-      <p>We use cookies to improve your browsing experience. By continuing, you agree to our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
-    </div>
-    <div class="cookie-banner-actions">
-      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Reject</button>
-      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">Accept</button>
-    </div>
-  </div>
-</div>
-<script>
-  (function () {
-    var b = document.getElementById('cookieBanner');
-    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
-  })();
-  function respondCookies(accepted) {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
-    document.getElementById('cookieBanner').classList.remove('show');
+  .lp-crumb a { color: var(--muted); text-decoration: none; }
+  .lp-crumb a:hover { color: var(--primary); }
+  .lp-crumb span { margin: 0 8px; }
+
+  /* Side-by-side comparison used where a page turns on a distinction — a second
+     home against a permanent home, a long let against a holiday let. Two, three
+     or four columns depending on how many the page passes; one on a phone. */
+  .lp-compare { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 20px; }
+  .lp-compare > div {
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 24px;
   }
-</script>
-<a class="lp-sticky-cta" href="#quote-form">Get my free quote (24h)</a>
-<script defer src="/js/lead-branch-fields.js"></script>
-</body>
-</html>
+  .lp-compare h3 { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .lp-compare ul { list-style: none; }
+  .lp-compare li {
+    font-size: 14.5px; line-height: 1.65; color: var(--ink2);
+    padding: 7px 0 7px 18px; position: relative;
+  }
+  .lp-compare li::before {
+    content: ''; position: absolute; left: 0; top: 15px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
+  }
+
+  /* Cluster navigation: the sibling pages, offered as a block rather than
+     buried in prose, on every page in the cluster. */
+  .lp-cluster { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+  .lp-cluster a {
+    display: block; background: var(--white); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px; text-decoration: none;
+    transition: border-color .2s, transform .2s;
+  }
+  .lp-cluster a:hover { border-color: var(--primary); transform: translateY(-1px); }
+  .lp-cluster strong { display: block; font-size: 14.5px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+  .lp-cluster span { display: block; font-size: 13.5px; line-height: 1.6; color: var(--ink2); }
+
+  @media (max-width: 860px) {
+    .lp-crumb { padding: 18px 22px 0; }
+    .lp-compare { grid-template-columns: 1fr; }
+    .lp-cluster { grid-template-columns: 1fr; }
+  }

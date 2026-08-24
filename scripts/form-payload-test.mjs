@@ -44,6 +44,24 @@ try {
 const script = await readFile(join(PUBLIC, 'js', 'lead-branch-fields.js'), 'utf8');
 
 /**
+ * Some pages carry the branch-switching script, some carry the quote-form
+ * script that stamps source_url at wire time, and the /en/ property cluster
+ * carries only the latter. Each case names the scripts its page actually
+ * loads, so the payload is built with the same code the browser would run.
+ */
+const scriptCache = new Map([['lead-branch-fields.js', script]]);
+async function scriptsFor(names) {
+  const out = [];
+  for (const name of names) {
+    if (!scriptCache.has(name)) {
+      scriptCache.set(name, await readFile(join(PUBLIC, 'js', name), 'utf8'));
+    }
+    out.push(scriptCache.get(name));
+  }
+  return out;
+}
+
+/**
  * Builds the DOM and waits for it to finish parsing before returning. Without
  * the wait, readyState is still "loading" and the page script defers itself to
  * a DOMContentLoaded that has not fired yet — every field then looks dropped,
@@ -100,7 +118,7 @@ function fillVisible(form, doc) {
   }
 }
 
-async function run({ label, path, url, formName, branchSelect, branchValue }) {
+async function run({ label, path, url, formName, branchSelect, branchValue, pageScripts = ['lead-branch-fields.js'] }) {
   const html = await readFile(join(PUBLIC, path), 'utf8');
   const dom = await domFor(html, url);
   const { document: doc, window: win } = { document: dom.window.document, window: dom.window };
@@ -112,7 +130,7 @@ async function run({ label, path, url, formName, branchSelect, branchValue }) {
   // only on the general form; the article form arrives preselected.
   const select = branchSelect ? form.querySelector(branchSelect) : null;
 
-  dom.window.eval(script);
+  for (const src of await scriptsFor(pageScripts)) dom.window.eval(src);
 
   if (select && branchValue) {
     select.value = branchValue;
@@ -199,6 +217,34 @@ const CASES = [
     path: 'seguros/condominios/index.html',
     url: 'https://adlerrochefort.com/seguros/condominios/',
     formName: 'auditoria-condominio',
+  },
+  {
+    label: '7. /en/second-home-insurance-portugal/ — Home & Property cluster',
+    path: 'en/second-home-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/second-home-insurance-portugal/',
+    formName: 'home-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '8. /en/landlord-insurance-portugal/ — landlord subcluster hub',
+    path: 'en/landlord-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/landlord-insurance-portugal/',
+    formName: 'landlord-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '9. /en/apartment-insurance-portugal/ — extra fields beyond the pillar set',
+    path: 'en/apartment-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/apartment-insurance-portugal/',
+    formName: 'home-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '10. /en/landlord-liability-insurance-portugal/ — landlord form on a child page',
+    path: 'en/landlord-liability-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/landlord-liability-insurance-portugal/',
+    formName: 'landlord-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
   },
 ];
 

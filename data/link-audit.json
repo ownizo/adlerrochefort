@@ -1,18 +1,48 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 221,
-    "indexedUrls": 214,
+    "htmlFiles": 265,
+    "indexedUrls": 255,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 0,
-    "deeperThanThreeClicks": 0
+    "singleInbound": 4,
+    "deeperThanThreeClicks": 1
   },
   "broken": [],
   "viaRedirect": [],
   "orphans": [],
-  "singleInbound": [],
-  "deeperThanThreeClicks": [],
+  "singleInbound": [
+    {
+      "url": "/en/about/",
+      "from": [
+        "/en/blog/insurance-portugal-spain-international-residents/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/business-liability/page/2/",
+      "from": [
+        "/en/blog/category/business-liability/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/health-insurance/page/2/",
+      "from": [
+        "/en/blog/category/health-insurance/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/valuables-collections/page/2/",
+      "from": [
+        "/en/blog/category/valuables-collections/"
+      ]
+    }
+  ],
+  "deeperThanThreeClicks": [
+    {
+      "url": "/en/about/",
+      "clicks": null
+    }
+  ],
   "maxClickDepth": 3
 }
