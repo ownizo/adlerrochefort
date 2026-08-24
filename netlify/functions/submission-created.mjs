@@ -338,6 +338,13 @@ const HANDLED_FORMS = {
     page: "/en/home-insurance-quote/",
     branch: "Home",
   },
+  "landlord-insurance-quote": {
+    quote: true,
+    en: true,
+    heading: "New landlord insurance quote request",
+    page: "/en/landlord-insurance-portugal/",
+    branch: "Home",
+  },
   "seguro-auto": {
     quote: true,
     heading: "Novo pedido — Seguro Auto",
