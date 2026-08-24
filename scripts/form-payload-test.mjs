@@ -118,19 +118,38 @@ function fillVisible(form, doc) {
   }
 }
 
-async function run({ label, path, url, formName, branchSelect, branchValue, pageScripts = ['lead-branch-fields.js'] }) {
+async function run({ label, path, url, formName, branchSelect, branchValue, pageScripts = ['lead-branch-fields.js'], inlineScripts = false }) {
   const html = await readFile(join(PUBLIC, path), 'utf8');
   const dom = await domFor(html, url);
   const { document: doc, window: win } = { document: dom.window.document, window: dom.window };
 
   const form = doc.querySelector(`form[name="${formName}"]`);
   if (!form) throw new Error(`${label}: form[name="${formName}"] not found`);
+  const inlineErrors = [];
 
   // The visitor picks a branch before the page script has anything to react to
   // only on the general form; the article form arrives preselected.
   const select = branchSelect ? form.querySelector(branchSelect) : null;
 
   for (const src of await scriptsFor(pageScripts)) dom.window.eval(src);
+
+  // The Portuguese landings stamp source_url from a small inline script rather
+  // than from a file in /js/, so a page that carries one has to have it run or
+  // the field looks empty for reasons that have nothing to do with the form.
+  if (inlineScripts) {
+    for (const el of doc.querySelectorAll('script:not([src])')) {
+      if (el.type && el.type !== 'text/javascript') continue;
+      try {
+        dom.window.eval(el.textContent);
+      } catch (err) {
+        // The same pages carry animation and sticky-bar scripts that reach for
+        // browser APIs jsdom does not implement. Those are not what is under
+        // test, and the source_url assertion below still fails loudly if the
+        // script that does matter is the one that threw.
+        inlineErrors.push(String(err.message || err));
+      }
+    }
+  }
 
   if (select && branchValue) {
     select.value = branchValue;
@@ -171,6 +190,7 @@ async function run({ label, path, url, formName, branchSelect, branchValue, page
     sourceUrlOk: sourceUrl === url,
     honeypotPresent,
     honeypotDeclared,
+    inlineErrors,
   };
 }
 
@@ -256,6 +276,48 @@ const CASES = [
     formName: 'expat-insurance-review',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    // The car pillar. Its registration-status and claims-history selects are
+    // the two answers that decide which insurers can be approached at all, so
+    // a dropped select here would cost the lead most of its value.
+    label: '12. /en/car-insurance-portugal/ — car insurance pillar',
+    path: 'en/car-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/car-insurance-portugal/',
+    formName: 'car-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    // An English car article, top form. This is the shared article form: one
+    // form name for every branch, with the branch preselected per article and
+    // the slug in `source`. The check that matters is that the branch it
+    // arrives with is Car, not whatever the article next door preselects.
+    label: '13. /en/blog/car-insurance-complete-guide/ — shared article form, Car preselected',
+    path: 'en/blog/car-insurance-complete-guide/index.html',
+    url: 'https://adlerrochefort.com/en/blog/car-insurance-complete-guide/',
+    formName: 'quote-blog',
+    branchSelect: 'select[data-branch-select]',
+  },
+  {
+    // The same article, bottom form. This one posts under the car form name, so
+    // the branch comes from the form rather than from a select: the regression
+    // it guards against is the CTA reverting to a health form name, which is
+    // how a car lead used to arrive as Expat Health.
+    label: '14. /en/blog/car-insurance-complete-guide/ — bottom CTA, car form name',
+    path: 'en/blog/car-insurance-complete-guide/index.html',
+    url: 'https://adlerrochefort.com/en/blog/car-insurance-complete-guide/',
+    formName: 'car-insurance-quote',
+    pageScripts: ['ar-conversion.js'],
+  },
+  {
+    // The Portuguese motor page. Its source_url is stamped inline rather than
+    // by /js/, so this case runs the page's own inline scripts.
+    label: '15. /seguros/auto/ — Portuguese motor landing',
+    path: 'seguros/auto/index.html',
+    url: 'https://adlerrochefort.com/seguros/auto/',
+    formName: 'seguro-auto',
+    pageScripts: [],
+    inlineScripts: true,
+  },
 ];
 
 let failures = 0;
@@ -314,6 +376,8 @@ for (const c of CASES) {
     `honeypot         : field ${r.honeypotPresent ? 'present' : 'MISSING'}, ` +
       `netlify-honeypot ${r.honeypotDeclared ? 'declared' : 'MISSING'}, empty in payload`
   );
+  if (r.inlineErrors?.length)
+    console.log(`inline scripts   : ${r.inlineErrors.length} threw on unimplemented browser APIs (ignored)`);
   console.log(`payload (${r.payload.length} fields):`);
   for (const [n, v] of r.payload) console.log(`  ${n.padEnd(28)} = ${v}`);
   if (r.branchFieldsExpected.length)

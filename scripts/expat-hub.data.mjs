@@ -168,9 +168,9 @@ export const PAGE = {
           kind: 'cluster',
           items: [
             {
-              href: '/en/blog/car-insurance-expatriates/',
+              href: '/en/car-insurance-portugal/',
               title: 'Car insurance',
-              blurb: 'Portuguese-plated and imported vehicles, foreign licences, and what happens to your claims history. Quotes are arranged through the form on this page.',
+              blurb: 'Portuguese-plated and imported vehicles, foreign licences, and what happens to your claims history.',
             },
             {
               href: '/en/blog/mortgage-life-insurance-foreign-buyers-portugal/',
@@ -221,7 +221,7 @@ export const PAGE = {
             { href: '/en/health-insurance-quote/', text: 'Private health insurance', note: 'usually the first thing arranged, and the one with medical questions attached' },
             { href: '/en/expat-visa-insurance-portugal/', text: 'Insurance for a visa or residence permit', note: 'what the cover behind an application is normally expected to show' },
             { href: '/en/home-insurance-quote/', text: 'Home insurance', note: 'from the day you complete, not the day you move in' },
-            { href: '/en/blog/car-insurance-expatriates/', text: 'Car insurance for new arrivals', note: 'foreign licences, imported cars and no-claims history' },
+            { href: '/en/car-insurance-portugal/', text: 'Car insurance', note: 'foreign licences, imported vehicles and a no-claims record earned somewhere else' },
             { href: '/en/blog/getting-insurance-portugal-before-nif-residency/', text: 'Getting insured before you have a NIF or residency' },
           ],
         },
@@ -232,7 +232,7 @@ export const PAGE = {
             { href: '#quote-form', text: 'Have your existing policies reviewed', note: 'we read what you already hold and tell you plainly whether it is worth changing' },
             { href: '/en/health-insurance-quote/', text: 'Health insurance', note: 'including moving from one insurer to another' },
             { href: '/en/home-insurance-quote/', text: 'Home insurance' },
-            { href: '/en/blog/car-insurance-complete-guide/', text: 'Car insurance, explained end to end' },
+            { href: '/en/car-insurance-portugal/', text: 'Car insurance', note: 'including a review of the policy you already hold' },
           ],
         },
         { kind: 'h3', text: 'I have bought a property in Portugal' },

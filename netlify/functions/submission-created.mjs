@@ -44,6 +44,10 @@ const FIELD_LABELS = {
   valuation: "Current valuation",
   "existing-cover": "Existing cover",
   source: "Submitted from",
+  // Stamped client-side by ar-conversion.js / ar-quote-form.js. Quote forms
+  // render every field, so this only ever mattered for the allow-listed
+  // forms below, where the full URL was being dropped from the email.
+  source_url: "Page URL",
   message: "Message",
   gdpr_consent: "GDPR consent",
   // Dutch landing page (/nl/verzekeringen-portugal/). The visitor writes in
@@ -204,6 +208,16 @@ const QUOTE_LABELS = {
   wc_employees: "Number of employees",
   wc_payroll: "Annual payroll",
 
+  // The English car insurance landing (/en/car-insurance-portugal/). The
+  // registration status and the claims history are the two answers that decide
+  // which insurers can be approached at all, so they are labelled in full
+  // rather than left to humanise().
+  vehicle: "Make, model and year",
+  "registration-status": "Registration status",
+  "licence-country": "Country that issued the licence",
+  "claims-history": "Claims history",
+  "cover-level": "Cover level sought",
+
   // Older intake forms that previously sent no notification at all.
   name: "Name",
   phone: "Phone",
@@ -348,11 +362,21 @@ const HANDLED_FORMS = {
     page: "/en/landlord-insurance-portugal/",
     branch: "Home",
   },
+  // The Portuguese motor page. `page` is only the fallback shown in the email
+  // when the submission carries no source_url, and it used to name a path that
+  // has never existed on this site; the form itself lives at /seguros/auto/.
   "seguro-auto": {
     quote: true,
     heading: "Novo pedido — Seguro Auto",
-    page: "/seguro-auto/",
+    page: "/seguros/auto/",
     branch: "Automóvel",
+  },
+  "car-insurance-quote": {
+    quote: true,
+    en: true,
+    heading: "New car insurance quote request",
+    page: "/en/car-insurance-portugal/",
+    branch: "Car",
   },
   contacto: {
     quote: true,

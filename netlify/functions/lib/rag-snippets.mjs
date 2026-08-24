@@ -90,22 +90,34 @@ export const RAG_SNIPPETS = {
     auto_geral: {
       fonte: "/blog/seguro-automovel-guia-completo/ e /blog/seguro-individual-automovel/",
       texto:
-        "O seguro automóvel é obrigatório em Portugal desde 1980 (capitais mínimos 2026: 6.450.000€ " +
-        "danos corporais, 1.300.000€ danos materiais). Três níveis: Responsabilidade Civil (mínimo " +
-        "legal, só cobre terceiros), Terceiros Completo (+ incêndio, furto, fenómenos da natureza, " +
-        "assistência — melhor relação custo-benefício para veículos com 4-10 anos) e Contra Todos os " +
-        "Riscos (inclui danos próprios, recomendado para veículos novos ou financiados). Franquia mais " +
-        "alta reduz o prémio; agrupar apólices na mesma seguradora pode dar 10-20% de desconto.",
+        "O seguro de responsabilidade civil automóvel é obrigatório em Portugal desde 1980. Os capitais " +
+        "mínimos em vigor desde 1 de junho de 2022 são 6.450.000€ para danos corporais e 1.300.000€ para " +
+        "danos materiais por sinistro (Decreto-Lei n.º 291/2007, na redação dada pela Circular n.º 2/2022 " +
+        "da ASF); estes montantes são revistos periodicamente, pelo que deve confirmar-se o valor em vigor " +
+        "à data. Três níveis: Responsabilidade Civil (mínimo legal, só cobre terceiros), Terceiros Completo " +
+        "(+ incêndio, furto, fenómenos da natureza, assistência — costuma ser a melhor relação " +
+        "custo-benefício para veículos com 4 a 10 anos) e Contra Todos os Riscos (inclui danos próprios, " +
+        "recomendado para veículos novos ou financiados). Uma franquia mais alta reduz o prémio e agrupar " +
+        "apólices na mesma seguradora pode dar desconto, mas a percentagem é uma decisão comercial de cada " +
+        "seguradora. Não publicamos tabelas de preços: o prémio depende do veículo, do condutor, da " +
+        "situação de matrícula, do histórico de sinistros, do nível de cobertura e dos restantes fatores " +
+        "de subscrição.",
     },
     auto_expatriados: {
       fonte: "/blog/seguro-auto-expatriados/",
       texto:
-        "Carta de condução UE/EEE é válida sem troca; carta do Reino Unido é reconhecida 90 dias, " +
-        "depois deve trocar-se no IMT em 2 anos; outras cartas até 185 dias. Documentos necessários: " +
-        "NIF, carta de condução (traduzida se necessário), DUA, comprovativo de morada e carta de " +
-        "experiência de sinistralidade da seguradora anterior (pedir ANTES de cancelar a apólice de " +
-        "origem — pode transferir 20-40% de bónus). Preços indicativos: RC 350€-700€/ano, Terceiros " +
-        "Completo 500€-1.100€/ano, Contra Todos os Riscos 800€-2.000€/ano para um expatriado sem bónus local.",
+        "Cartas de condução da UE/EEE são válidas em Portugal sem necessidade de troca, mas o titular " +
+        "residente deve registar a morada no IMT. Cartas emitidas por países abrangidos pelas convenções " +
+        "aplicáveis (incluindo Reino Unido, EUA, Canadá, Austrália, Suíça, Brasil e PALOP) podem ser " +
+        "trocadas no IMT sem exame. Os prazos para pedir a troca e para continuar a conduzir com a carta " +
+        "estrangeira contam-se a partir da data de emissão do título de residência e foram alterados pelo " +
+        "Decreto-Lei n.º 46/2022 (em vigor desde 1 de agosto de 2022) — confirme sempre o prazo aplicável " +
+        "ao seu caso em imt-ip.pt antes de conduzir. Documentos habitualmente pedidos para o seguro: NIF, " +
+        "carta de condução (traduzida se necessário), documento do veículo (DUA), comprovativo de morada e " +
+        "carta de experiência de sinistralidade da seguradora anterior (pedir ANTES de cancelar a apólice " +
+        "de origem). O reconhecimento de bónus estrangeiro é uma decisão de subscrição de cada seguradora e " +
+        "não uma obrigação legal: algumas aceitam, outras não, e a percentagem varia. Não publicamos preços " +
+        "indicativos — a cotação é feita sobre os dados concretos do condutor e do veículo.",
     },
     auto_luxo: {
       fonte: "/en/blog/luxury-car-insurance-portugal/",
@@ -572,22 +584,34 @@ export const RAG_SNIPPETS = {
     auto_geral: {
       fonte: "/en/blog/car-insurance-complete-guide/ e /en/blog/individual-car-insurance/",
       texto:
-        "Car insurance has been mandatory in Portugal since 1980 (2026 minimums: €6,450,000 bodily " +
-        "injury, €1,300,000 material damage per claim). Three tiers: Third Party Only (legal minimum, " +
-        "only covers others), Third Party Extended (+ fire, theft, natural events, roadside assistance " +
-        "— best value for cars 3-8 years old) and Comprehensive/All Risks (adds own-damage cover, " +
-        "recommended for new or financed vehicles). A higher deductible lowers the premium; bundling " +
-        "policies with the same insurer can unlock 10-20% discounts.",
+        "Third-party motor insurance has been compulsory in Portugal since 1980. The minimum capital sums " +
+        "in force since 1 June 2022 are €6,450,000 for bodily injury and €1,300,000 for material damage " +
+        "per claim (Decreto-Lei n.º 291/2007, as set by ASF Circular n.º 2/2022); those amounts are " +
+        "reviewed periodically, so check the figure applying on the date in question. Three tiers: Third " +
+        "Party Only (legal minimum, only covers others), Third Party Extended (+ fire, theft, natural " +
+        "events, roadside assistance — usually the sensible middle ground for cars around 3-8 years old) " +
+        "and Comprehensive/All Risks (adds own-damage cover, recommended for new or financed vehicles). A " +
+        "higher deductible lowers the premium and bundling policies with one insurer can attract a " +
+        "discount, but the size of it is each insurer's commercial decision. We do not publish premium " +
+        "tables: the price depends on the vehicle, the driver, the registration status, the claims " +
+        "history, the level of cover and the other underwriting factors.",
     },
     auto_expatriados: {
       fonte: "/en/blog/car-insurance-expatriates/ e /en/blog/car-insurance-cost-portugal/",
       texto:
-        "EU/EEA licences are valid without exchange; UK licences are recognised for 90 days then must " +
-        "be exchanged at the IMT within 2 years; other licences up to 185 days. Required documents: " +
-        "NIF, driving licence (translated if needed), vehicle registration (DUA), proof of address, and " +
-        "a claims experience letter from your previous insurer (request it BEFORE cancelling — it can " +
-        "transfer 20-40% of your no-claims bonus). Indicative prices: TPL €350-700/year, third-party " +
-        "extended €500-1,100/year, comprehensive €800-2,000/year for an expat without a local bonus.",
+        "EU/EEA licences stay valid in Portugal without exchange, though a resident holder must register " +
+        "their address with the IMT. Licences issued by countries covered by the applicable conventions " +
+        "(including the UK, the US, Canada, Australia, Switzerland, Brazil and the PALOP countries) can be " +
+        "exchanged at the IMT without a test. The deadlines for requesting the exchange, and for how long " +
+        "the foreign licence still entitles you to drive, run from the date your residence permit was " +
+        "issued and were changed by Decreto-Lei n.º 46/2022 (in force since 1 August 2022) — always check " +
+        "the period that applies to your own case at imt-ip.pt before driving. Documents usually needed " +
+        "for the insurance: NIF, driving licence (translated if required), the vehicle document (DUA), " +
+        "proof of address, and a claims experience letter from your previous insurer (request it BEFORE " +
+        "cancelling the original policy). Recognition of a foreign no-claims record is each insurer's " +
+        "underwriting decision, not a legal entitlement: some accept it, some do not, and the proportion " +
+        "allowed varies. We do not publish indicative prices — the quote is built on the actual driver and " +
+        "vehicle details.",
     },
     auto_luxo: {
       fonte: "/en/blog/luxury-car-insurance-portugal/",
