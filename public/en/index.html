@@ -275,6 +275,17 @@
     margin-bottom: 52px;
   }
 
+  /* The one in-prose link in the hero, to the national expat hub. Underlined
+     rather than colour-only so it reads as a link against the dark panel. */
+  .hero-subtitle a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--accent);
+    transition: color 0.2s;
+  }
+  .hero-subtitle a:hover { color: var(--accent); }
+
   .hero-actions {
     display: flex; align-items: center; gap: 24px;
   }
@@ -2236,7 +2247,7 @@
       <em>in Portugal.</em>
     </h1>
     <p class="hero-subtitle">
-      Tailored protection for expats and international residents in Portugal — health, home, car and condominium insurance, all handled in English. Not tied to a single insurer, and ASF-registered.
+      Tailored protection for expats and international residents in Portugal — health, home, car and condominium insurance, all handled in English. Not tied to a single insurer, and ASF-registered. Not sure what you need yet? Start with <a href="/en/expat-insurance-portugal/">Insurance for Expats in Portugal</a>.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Free Quote</a>

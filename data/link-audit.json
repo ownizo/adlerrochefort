@@ -1,22 +1,22 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 265,
-    "indexedUrls": 255,
+    "htmlFiles": 266,
+    "indexedUrls": 257,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
     "singleInbound": 4,
-    "deeperThanThreeClicks": 1
+    "deeperThanThreeClicks": 0
   },
   "broken": [],
   "viaRedirect": [],
   "orphans": [],
   "singleInbound": [
     {
-      "url": "/en/about/",
+      "url": "/en/blog/insurance-portugal-spain-international-residents/",
       "from": [
-        "/en/blog/insurance-portugal-spain-international-residents/"
+        "/en/expat-insurance-portugal/"
       ]
     },
     {
@@ -38,11 +38,6 @@
       ]
     }
   ],
-  "deeperThanThreeClicks": [
-    {
-      "url": "/en/about/",
-      "clicks": null
-    }
-  ],
+  "deeperThanThreeClicks": [],
   "maxClickDepth": 3
 }

@@ -1,12 +1,12 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 254,
+    "htmlFiles": 266,
     "filesChanged": 0,
     "pagesWithHreflang": 81,
     "articlePairs": 28,
     "monolingualPt": 12,
-    "monolingualEn": 102,
+    "monolingualEn": 103,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
     "xDefaultPages": 6
@@ -243,7 +243,8 @@
       "/en/blog/home-insurance-troia-setubal/",
       "/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/",
       "/en/blog/home-insurance-sagres-vila-do-bispo/",
-      "/en/blog/home-insurance-sintra-cascais-villas/"
+      "/en/blog/home-insurance-sintra-cascais-villas/",
+      "/en/blog/insurance-portugal-spain-international-residents/"
     ]
   },
   "unilateralDeclarations": [],
