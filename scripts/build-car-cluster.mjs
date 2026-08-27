@@ -15,14 +15,26 @@
  * only way that survives the next edit is if one file owns them. The cluster
  * holds one page today; the shape supports more without a rewrite.
  *
- * Content lives in car-cluster.data.mjs. Run:
+ * Content lives in car-cluster.data.mjs. Run, in this order:
  *
  *   node scripts/build-car-cluster.mjs
- *
- * then regenerate the sitemap:
- *
+ *   node scripts/hreflang.mjs        # re-stamps the pt-PT/en-GB alternates
+ *   node scripts/lang-switcher.mjs   # rebuilds the PT|EN|NL|FR|DE selector
  *   node scripts/generate-sitemap.mjs
  *
+ * The middle two are not optional. This generator deliberately does not write
+ * the hreflang alternates itself — scripts/hreflang.mjs owns every pair on the
+ * site, so there is one definition rather than two — which means the page it
+ * writes leaves this step with no <link rel="alternate"> at all. Running the
+ * build alone therefore drops the reciprocal pt-PT link to /seguros/auto/ from
+ * the pillar and breaks the pairing in one direction, silently: nothing fails,
+ * the page just stops declaring its Portuguese counterpart. lang-switcher.mjs
+ * is what turns the nav's language selector into the per-page one that points
+ * at /seguros/auto/ rather than the Portuguese home page.
+ *
+ * With all four run in order the output is byte-for-byte the committed page.
+ *
+
  * Before anything is written the script checks that every page has an H1, that
  * no two pages share a title or an H1, that every JSON-LD block it produced
  * parses, and that every internal link on the page resolves to something that
@@ -675,4 +687,9 @@ for (const [page, html] of rendered) {
   await writeFile(join(dir, 'index.html'), html);
   console.log(`wrote /en/${page.slug}/  (${page.title.length} char title, ${page.faq.length} FAQs)`);
 }
-console.log(`\n${PAGES.length} page(s) written. Next: node scripts/generate-sitemap.mjs`);
+console.log(
+  `\n${PAGES.length} page(s) written. Next, in order:\n` +
+    `  node scripts/hreflang.mjs        (re-stamps the alternates this script does not write)\n` +
+    `  node scripts/lang-switcher.mjs\n` +
+    `  node scripts/generate-sitemap.mjs`
+);
