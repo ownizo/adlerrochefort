@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-08-28T20:23:47.391Z",
+  "status": "no_data",
+  "filesFound": [],
+  "fileErrors": [],
+  "message": "No Search Console export found in scripts/data/search-console/. This is infrastructure only — nothing here is fabricated. See scripts/data/search-console/README.md for the export format and where to place a CSV, then re-run this script.",
+  "opportunities": []
+}

@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-08-28T20:35:13.296Z",
+  "staleDaysThreshold": 180,
+  "articlesScanned": 192,
+  "regulatoryRiskArticles": 31,
+  "findings": [
+    {
+      "url": "/en/blog/construction-works-insurance/",
+      "market": "portugal",
+      "lang": "en",
+      "topics": [
+        "legal_minimums"
+      ],
+      "lastModified": "2025-10-01",
+      "daysSinceModified": 331,
+      "reviewStatus": "due_for_review"
+    }
+  ]
+}

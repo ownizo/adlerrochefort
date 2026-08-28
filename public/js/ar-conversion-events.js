@@ -22,9 +22,30 @@
 (function () {
   'use strict';
 
+  // Phase 9 (SEO/conversion measurement, brief §19/§52): page_type — and,
+  // where the page declares them, market/product — ride along on every
+  // event fired from this file, read once from the data-page-type/
+  // data-market/data-product attributes a page's own <body> tag carries
+  // (see scripts/lib/page-type.mjs for the taxonomy and which generators
+  // stamp these). A page that predates this phase and carries none of
+  // these attributes simply sends events without them, exactly as before —
+  // this is additive, not a breaking change to any event already shipped.
+  var pageContext = (function () {
+    var ds = (document.body && document.body.dataset) || {};
+    var ctx = {};
+    if (ds.pageType) ctx.page_type = ds.pageType;
+    if (ds.market) ctx.market = ds.market;
+    if (ds.product) ctx.product = ds.product;
+    if (ds.situation) ctx.situation = ds.situation;
+    return ctx;
+  })();
+
   function send(name, params) {
     if (typeof window.gtag !== 'function') return;
-    window.gtag('event', name, params || {});
+    var merged = {};
+    for (var k in pageContext) merged[k] = pageContext[k];
+    for (var k2 in params) merged[k2] = params[k2]; // an explicit param always wins over the page default
+    window.gtag('event', name, merged);
   }
 
   var path = window.location.pathname || '';

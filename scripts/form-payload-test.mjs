@@ -128,10 +128,20 @@ async function run({
   pageScripts = ['lead-branch-fields.js'],
   inlineScripts = false,
   checkboxValues,
+  seedSessionStorage,
 }) {
   const html = await readFile(join(PUBLIC, path), 'utf8');
   const dom = await domFor(html, url);
   const { document: doc, window: win } = { document: dom.window.document, window: dom.window };
+
+  // Phase 9 (brief §21/§22, landing_page attribution): simulates arriving at
+  // this page with a session that already has a stored first-touch landing
+  // page from an earlier page, exactly as ar-analytics-tracker.js would have
+  // left it — set BEFORE the page's own scripts run, since ar-quote-form.js
+  // reads it at wire time.
+  if (seedSessionStorage) {
+    for (const [k, v] of Object.entries(seedSessionStorage)) dom.window.sessionStorage.setItem(k, v);
+  }
 
   const form = doc.querySelector(`form[name="${formName}"]`);
   if (!form) throw new Error(`${label}: form[name="${formName}"] not found`);
@@ -206,6 +216,7 @@ async function run({
     .filter((n) => names.includes(n));
 
   const sourceUrl = pairs.find(([n]) => n === 'source_url')?.[1] ?? null;
+  const landingPage = pairs.find(([n]) => n === 'landing_page')?.[1] ?? null;
   const honeypotPresent = !!form.querySelector('[name="bot-field"]');
   const honeypotDeclared = form.getAttribute('netlify-honeypot') === 'bot-field';
 
@@ -220,6 +231,7 @@ async function run({
     otherBranchFieldsLeaked: leaked,
     sourceUrl,
     sourceUrlOk: sourceUrl === url,
+    landingPage,
     honeypotPresent,
     honeypotDeclared,
     inlineErrors,
@@ -513,6 +525,35 @@ const CASES = [
     requireBranch: 'ES · Multi-product',
     skipLeakCheck: true,
   },
+  {
+    // landing_page (Phase 9, brief §21/§22): simulates arriving on this page
+    // in a session that already has a stored first-touch landing page from
+    // an earlier page (exactly what ar-analytics-tracker.js leaves in
+    // sessionStorage) — proving the hidden field survives serialisation
+    // carrying that EARLIER url, genuinely distinct from source_url (which
+    // must still be THIS page, per the existing assertion every other case
+    // already runs). A static read of the markup cannot prove this; it
+    // needs the real script run with a real seeded session, which is what
+    // this case does.
+    label: '30. /en/home-insurance-spain/ — landing_page differs from source_url across a session',
+    path: 'en/home-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/home-insurance-spain/',
+    formName: 'home-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+    seedSessionStorage: { ar_landing_page: 'https://adlerrochefort.com/en/blog/second-home-insurance-spain/' },
+    requireLandingPage: 'https://adlerrochefort.com/en/blog/second-home-insurance-spain/',
+  },
+  {
+    // landing_page — same-page fallback: a session with NO stored first
+    // touch (e.g. this genuinely is the first page) must fall back to the
+    // current page, so the field is never left empty.
+    label: '31. /en/car-insurance-spain/ — landing_page falls back to current page when no prior session',
+    path: 'en/car-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/car-insurance-spain/',
+    formName: 'car-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+    requireLandingPage: 'https://adlerrochefort.com/en/car-insurance-spain/',
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
@@ -583,6 +624,12 @@ for (const c of CASES) {
   const branchValue = r.payload.find(([n]) => n === 'ramo')?.[1] || null;
   const branchOk = !c.requireBranch || branchValue === c.requireBranch;
 
+  // requireLandingPage (Phase 9, brief §21/§22): asserts the hidden
+  // landing_page field carries the pre-seeded first-touch URL from
+  // seedSessionStorage, proving it survives serialisation as a value
+  // genuinely distinct from source_url — not just present.
+  const landingPageOk = c.requireLandingPage === undefined || r.landingPage === c.requireLandingPage;
+
   const ok =
     !r.branchFieldsMissing.length &&
     (!r.otherBranchFieldsLeaked.length || c.skipLeakCheck) &&
@@ -591,7 +638,8 @@ for (const c of CASES) {
     r.honeypotDeclared &&
     countryOk &&
     valuesOk &&
-    branchOk;
+    branchOk &&
+    landingPageOk;
   if (!ok) failures++;
 
   console.log(`\n${'='.repeat(78)}\n${r.label}\n${'='.repeat(78)}`);
@@ -618,6 +666,8 @@ for (const c of CASES) {
     console.log(`ramo (branch tag): ${branchValue}  ${branchOk ? 'OK' : `WRONG (expected ${c.requireBranch})`}`);
   if (c.requireValues)
     console.log(`cross-sell values: ${valuesOk ? 'OK' : 'MISSING one or more expected values'}`);
+  if (c.requireLandingPage !== undefined)
+    console.log(`landing_page     : ${r.landingPage}  ${landingPageOk ? 'OK' : `WRONG (expected ${c.requireLandingPage})`}`);
   console.log(ok ? 'RESULT: PASS' : 'RESULT: FAIL');
 }
 

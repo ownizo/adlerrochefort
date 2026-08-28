@@ -113,6 +113,11 @@ const QUOTE_LABELS = {
   "tipo-seguro": "Tipo de seguro",
   source: "Artigo de origem",
   source_url: "Página de origem",
+  // Phase 9 (brief §21/§22): the first page of the visitor's session, where
+  // it differs from source_url (the page the form itself was submitted
+  // from) — e.g. a lead who read an article, then submitted the review
+  // form, shows the article here and the review page in source_url.
+  landing_page: "Página de entrada (1.ª página da sessão)",
 
   // Branch-specific qualification fields on the homepage form. Same wording as
   // the visible labels, so the email reads back exactly what was asked.
@@ -269,6 +274,10 @@ const QUOTE_LABELS_EN = {
   source: "Source article",
   source_url: "Page it was sent from",
   lang: "Page language",
+  // Phase 9 (brief §21/§22): see the matching entry in QUOTE_LABELS for
+  // what this field is — kept in English here since every form that
+  // carries it (the Spain cluster, Insurance Review) is `en: true`.
+  landing_page: "First page of the visit (if different)",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
