@@ -455,6 +455,42 @@
   }
 }
 
+/* ═══════════════ WHAT HAPPENS NEXT (Phase 9: trust) ═══════════════
+ *
+ * A compact, conversion-confidence component next to the form itself — the
+ * brief's own instruction was "near forms," not a separate page detour.
+ * Reuses the same visual weight as the trust badges above it rather than
+ * competing for attention with the submit button.
+ */
+.lp-next-steps {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--cream2);
+  border-radius: 8px;
+}
+
+.lp-next-steps-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.lp-next-steps ol {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.lp-next-steps li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+
 /* ═══════════════ STICKY MOBILE CTA ═══════════════
  *
  * The form is a long way down a long page. On a phone the bar keeps the way

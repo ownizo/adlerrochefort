@@ -283,6 +283,10 @@ ${nav}
       <h2>Already know exactly what you need?</h2>
       <p>Each product has its own dedicated page and quote form — go straight there instead: <a href="/en/expat-insurance-portugal/">insurance in Portugal</a> or <a href="/en/expat-insurance-spain/">insurance in Spain</a>. Come back here if that turns out to be more than one thing.</p>
     </div>
+    <div class="lp-card">
+      <h2>Who you are dealing with</h2>
+      <p>Adler &amp; Rochefort is the trading name of Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's ASF under no. 425591790/3 — a public registration you can check independently. See <a href="/en/about/">who we are</a>, <a href="/en/how-we-work/">how a review actually works</a>, or <a href="/en/why-use-an-insurance-broker/">why use a broker</a> before you send anything.</p>
+    </div>
   </div>
 </section>
 
@@ -350,7 +354,18 @@ ${needsFieldset('Spain')}
       <button type="submit" class="contact-form-submit">Request My Review &rarr;</button>
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your review, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
+    <p class="lp-smallprint">No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.</p>
     <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>English-speaking team</span><span>One submission, one broker</span><span>We reply within a few working days</span></div>
+    <div class="lp-next-steps">
+      <div class="lp-next-steps-title">What happens next?</div>
+      <ol>
+        <li>We receive your request</li>
+        <li>A broker reviews the information</li>
+        <li>We may contact you for anything missing</li>
+        <li>We explain the available options — you decide whether to proceed</li>
+      </ol>
+    </div>
+    <p class="lp-smallprint">Already insured with us and need help with an existing claim? <a href="/en/claims-support/">Claims support</a> — this form is for new requests.</p>
     <div class="contact-form-success" id="quoteSuccess">
       <div class="contact-form-success-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>

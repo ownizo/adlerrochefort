@@ -538,6 +538,14 @@ const HUB = {
       a: 'That is the normal starting point. Tell us about the property — what it is, where it is, how you use it — and we will tell you what to consider and in what order, rather than sell you a product before we understand the situation.',
     },
     {
+      q: 'Can you help if I need to make a claim?',
+      a: 'Yes, for policies we have arranged — we can help you notify the insurer, pull together the right documentation and follow up on a claim in progress. We are not the insurer and cannot guarantee an outcome or a settlement timeframe. See <a href="/en/claims-support/">claims support</a> for what that looks like in practice.',
+    },
+    {
+      q: 'Can I ask about several types of insurance at once?',
+      a: 'Yes. If you need, say, home and car cover together, tell us both in the same message rather than submitting twice — we will come back with options for each rather than treating them as separate enquiries.',
+    },
+    {
       q: 'Do you also help with business insurance in Spain?',
       a: 'Not yet. This page currently covers health, home, landlord, car, life and private client insurance in Spain. If your question is about business cover, say so in the form and we will tell you honestly whether it is something we can help with.',
     },

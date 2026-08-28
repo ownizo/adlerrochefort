@@ -349,7 +349,19 @@ ${crossSellField(page)}
       <button type="submit" class="contact-form-submit">${esc(page.form.submit)} &rarr;</button>
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
+    <p class="lp-smallprint">No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.</p>
     <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>English-speaking team</span><span>A straight answer on what we can arrange</span><span>We reply within a few working days</span></div>
+    <div class="lp-next-steps">
+      <div class="lp-next-steps-title">What happens next?</div>
+      <ol>
+        <li>We receive your request</li>
+        <li>A broker reviews the information</li>
+        <li>We may contact you for anything missing</li>
+        <li>We explain the available options — you decide whether to proceed</li>
+      </ol>
+      <p class="lp-smallprint">See the full process: <a href="/en/how-we-work/">how we work</a>.</p>
+    </div>
+    <p class="lp-smallprint">Already insured with us and need help with an existing claim? <a href="/en/claims-support/">Claims support</a> — this form is for new requests.</p>
     <div class="contact-form-success" id="quoteSuccess">
       <div class="contact-form-success-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
