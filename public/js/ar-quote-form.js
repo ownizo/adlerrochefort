@@ -142,6 +142,12 @@
     // ar-conversion-events.js) can be built without redefining what
     // generate_lead already means for existing Ads/Analytics reporting.
     window.gtag('event', 'quote_submitted', params);
+    // insurance_review_started/submitted name the same funnel specifically
+    // for /en/insurance-review/, alongside the generic events above rather
+    // than instead of them.
+    if (form.getAttribute('name') === 'international-insurance-review') {
+      window.gtag('event', 'insurance_review_submitted', params);
+    }
   }
 
   function succeed(form) {
