@@ -455,7 +455,7 @@ ${breadcrumbLd(page)}
 <link rel="stylesheet" href="/css/ar-chrome.css">
 <link rel="stylesheet" href="/css/ar-landing.css">
 </head>
-<body>
+<body data-market="portugal" data-page-type="market_hub">
 ${nav(page)}
 
 <main class="lp-main">

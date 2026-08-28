@@ -11,6 +11,21 @@
 
   var sessionKey = "ar_metrics_session_id";
   var visitPrefix = "ar_metrics_visit_";
+  var landingPageKey = "ar_landing_page";
+
+  // Phase 9 (brief §21/§22): first-touch landing-page attribution. Written
+  // once per session, the first time this script runs — read back by
+  // ar-quote-form.js so a lead submitted from /en/insurance-review/ after
+  // arriving from a blog article records the article as landing_page and
+  // the review page as the separate submission page (source_url), rather
+  // than only ever knowing where the form itself lived. First-party
+  // sessionStorage only, under the same cookie/consent model as the rest
+  // of this site's analytics — see brief §23.
+  try {
+    if (!window.sessionStorage.getItem(landingPageKey)) {
+      window.sessionStorage.setItem(landingPageKey, window.location.href);
+    }
+  } catch (_) {}
 
   function safeUUID() {
     if (window.crypto && typeof window.crypto.randomUUID === "function") {

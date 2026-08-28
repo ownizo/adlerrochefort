@@ -121,9 +121,24 @@
   // 404s this file exists to catch.
   var ADS_SEND_TO = 'AW-18361722533/HxH6CKqa1uEcEKXNxrNE';
 
+  // Phase 9 (SEO/conversion measurement): same page-context merge as
+  // ar-conversion-events.js — page_type/market/product from the page's own
+  // <body> attributes, only on events that already carry custom params
+  // (not on the fixed-schema Google Ads `conversion` event below).
+  function pageContext() {
+    var ds = (document.body && document.body.dataset) || {};
+    var ctx = {};
+    if (ds.pageType) ctx.page_type = ds.pageType;
+    if (ds.market) ctx.market = ds.market;
+    if (ds.product) ctx.product = ds.product;
+    return ctx;
+  }
+
   function track(form) {
     if (typeof window.gtag !== 'function') return;
     var params = { form_name: (form.getAttribute('name') || '').replace(/-/g, '_') };
+    var ctx = pageContext();
+    for (var k in ctx) params[k] = ctx[k];
     var extra = form.getAttribute('data-ga-field');
     if (extra) {
       var el = form.querySelector('[name="' + extra + '"]');
@@ -171,6 +186,20 @@
 
     var source = form.querySelector('input[name="source_url"]');
     if (source && !source.value) source.value = window.location.href;
+
+    // Phase 9 (brief §21/§22): landing_page — the first page of this
+    // session, read back from the sessionStorage key ar-analytics-tracker.js
+    // sets on first touch. Only stamped if the form actually carries the
+    // hidden field (older pages that don't have it are untouched). Falls
+    // back to the current page when sessionStorage is unavailable or this
+    // is the first page of the session, so it always ends up either genuinely
+    // useful or harmlessly identical to source_url — never empty.
+    var landing = form.querySelector('input[name="landing_page"]');
+    if (landing && !landing.value) {
+      var stored = null;
+      try { stored = window.sessionStorage.getItem('ar_landing_page'); } catch (err) {}
+      landing.value = stored || window.location.href;
+    }
 
     form.addEventListener('input', function (e) {
       if (fieldWrap(e.target).classList.contains('has-error')) clearError(e.target);

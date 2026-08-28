@@ -47,7 +47,7 @@ import { writeFile, mkdir } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { PAGES, SPAIN_PRODUCTS, SPAIN_CROSS_SELL, SPAIN_CROSS_SELL_PROMPT } from './spain-cluster.data.mjs';
+import { PAGES, SPAIN_PRODUCTS, SPAIN_CROSS_SELL, SPAIN_CROSS_SELL_PROMPT, HUB_SLUG } from './spain-cluster.data.mjs';
 import { FOOTER, WHATSAPP_SVG, PROVIDER } from './lib/spain-chrome.mjs';
 
 // Phase 5 (conversion): resolves a page's own product key from its slug, so
@@ -341,6 +341,7 @@ const formSection = (page) => `
     <form class="contact-form" id="quoteForm" method="POST" name="${esc(page.form.name)}" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="${esc(page.form.gaField)}">
       <input type="hidden" name="form-name" value="${esc(page.form.name)}">
       <input type="hidden" name="source_url" value="">
+      <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="source" value="landing:${esc(page.slug)}">
       <input type="hidden" name="country" value="Spain">
       <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -504,7 +505,7 @@ ${breadcrumbLd(page)}
   .market-switch a { white-space: nowrap; }
 </style>
 </head>
-<body>
+<body data-market="spain" data-page-type="${page.slug === HUB_SLUG ? 'market_hub' : 'commercial_product'}"${page.slug === HUB_SLUG ? '' : ` data-product="${page.slug.replace(/-spain$/, '').replace(/-/g, '_')}"`}>
 ${nav(page)}
 
 <main class="lp-main">

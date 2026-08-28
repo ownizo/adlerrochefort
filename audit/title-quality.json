@@ -1,0 +1,251 @@
+{
+  "generatedAt": "2026-08-28T20:36:42.311Z",
+  "pagesChecked": 220,
+  "bySeverity": {
+    "high": 0,
+    "medium": 5,
+    "low": 23
+  },
+  "findings": [
+    {
+      "type": "duplicate_description",
+      "description": "English-language analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered broker.",
+      "urls": [
+        "/en/blog/",
+        "/en/blog/page/9/",
+        "/en/blog/page/8/",
+        "/en/blog/page/7/",
+        "/en/blog/page/6/",
+        "/en/blog/page/5/",
+        "/en/blog/page/4/",
+        "/en/blog/page/3/",
+        "/en/blog/page/2/",
+        "/en/blog/page/11/",
+        "/en/blog/page/10/"
+      ],
+      "severity": "medium"
+    },
+    {
+      "type": "duplicate_description",
+      "description": "Insuring art, jewellery, watches, instruments, wine and collections in Portugal: sublimits, specified items, agreed value, valuations and worldwide cover.",
+      "urls": [
+        "/en/blog/category/valuables-collections/",
+        "/en/blog/category/valuables-collections/page/2/"
+      ],
+      "severity": "medium"
+    },
+    {
+      "type": "duplicate_description",
+      "description": "Home insurance in Portugal for foreign owners: rebuild value, unoccupancy clauses, earthquake and coastal risk, pools and annexes, and property held through a company.",
+      "urls": [
+        "/en/blog/category/home-property/",
+        "/en/blog/category/home-property/page/4/",
+        "/en/blog/category/home-property/page/3/",
+        "/en/blog/category/home-property/page/2/"
+      ],
+      "severity": "medium"
+    },
+    {
+      "type": "duplicate_description",
+      "description": "English-language analysis of health insurance in Portugal: the SNS alongside private cover, pre-existing conditions, waiting periods, visa proof and evacuation cover.",
+      "urls": [
+        "/en/blog/category/health-insurance/",
+        "/en/blog/category/health-insurance/page/2/"
+      ],
+      "severity": "medium"
+    },
+    {
+      "type": "duplicate_description",
+      "description": "Compulsory business insurance in Portugal plus professional indemnity, D&amp;O, cyber and construction cover — written for foreign-owned companies and their directors.",
+      "urls": [
+        "/en/blog/category/business-liability/",
+        "/en/blog/category/business-liability/page/2/"
+      ],
+      "severity": "medium"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/private-clients/",
+      "title": "High-Value Home, Art, Jewellery &amp; Marine Insurance in Portugal | Adler &amp; Rochefort",
+      "h1": "Cover for things that are difficult to replace",
+      "overlapScore": 0,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/how-we-work/",
+      "title": "How Our Insurance Brokerage Works | Adler &amp; Rochefort",
+      "h1": "From a first message to an ongoing policy",
+      "overlapScore": 0,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/yacht-insurance-algarve-marinas/",
+      "title": "Yacht Insurance in the Algarve: Lagos, Portim&atilde;o, Vilamoura &amp; Albufeira Marinas | Adler &amp; Rochefort",
+      "h1": "Berthed in the Algarve: what the marina requires and what it does not cover",
+      "overlapScore": 0.06,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/worldwide-cover-personal-possessions-portugal/",
+      "title": "Worldwide Cover for Personal Possessions from a Portuguese Policy | Adler &amp; Rochefort",
+      "h1": "Cover for possessions when they are not at the insured address",
+      "overlapScore": 0.14,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/valuations-portugal-who-what-how-often/",
+      "title": "Insurance Valuations in Portugal: Who Issues Them, What They Say, How Often | Adler &amp; Rochefort",
+      "h1": "Getting a valuation that an underwriter will accept",
+      "overlapScore": 0,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/real-estate-partnerships-commissions/",
+      "title": "Insurance Referrals for Real Estate Agents: Earn Commissions on Every Sale | Adler &amp; Rochefort",
+      "h1": "Partnerships with real estate agencies: how client referrals generate revenue and value for everyone",
+      "overlapScore": 0.18,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/outdated-insured-values/",
+      "title": "Underinsurance in Portugal: the Proportional Rule and Outdated Insured Values | Adler &amp; Rochefort",
+      "h1": "When the insured value stops matching the thing insured",
+      "overlapScore": 0.08,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/luxury-home-insurance-portugal/",
+      "title": "Luxury Home Insurance in Portugal | All-Risks Cover for High-Value Villas | Adler &amp; Rochefort",
+      "h1": "Above a certain value, a standard home policy stops working",
+      "overlapScore": 0.07,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/luxury-car-insurance-portugal/",
+      "title": "Luxury &amp; Collector Car Insurance in Portugal | Agreed Value | Adler &amp; Rochefort",
+      "h1": "Insuring a car that is worth more than the market says it is",
+      "overlapScore": 0.07,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-valuables-portugal/",
+      "title": "Insuring Valuables in Portugal: Agreed Value, All-Risks &amp; Scheduled Items | Adler &amp; Rochefort",
+      "h1": "Cover for items a standard contents section will not carry",
+      "overlapScore": 0.07,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-musical-instruments-portugal/",
+      "title": "Musical Instrument Insurance in Portugal: Travel, Performance &amp; Agreed Value | Adler &amp; Rochefort",
+      "h1": "Cover for an instrument that travels and is played",
+      "overlapScore": 0.08,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-jewellery-watches-portugal/",
+      "title": "Jewellery &amp; Watch Insurance in Portugal: Single-Article Limits &amp; Safe Ratings | Adler &amp; Rochefort",
+      "h1": "The single-article limit, and why it decides everything",
+      "overlapScore": 0.08,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-art-portugal/",
+      "title": "Art Insurance in Portugal: Restoration, Depreciation &amp; Transit Cover | Adler &amp; Rochefort",
+      "h1": "What happens to a painting after a claim",
+      "overlapScore": 0,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-antiques-collections-portugal/",
+      "title": "Antiques &amp; Collections Insurance in Portugal: Inventory, Sets &amp; Agreed Value | Adler &amp; Rochefort",
+      "h1": "Insuring a collection that has no catalogue price",
+      "overlapScore": 0,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/insuring-a-high-value-apartment-lisbon-cascais/",
+      "title": "Insuring a High-Value Apartment in Lisbon or Cascais: Condominium Cover and Yours | Adler &amp; Rochefort",
+      "h1": "Where the condominium policy ends and yours begins",
+      "overlapScore": 0.17,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/how-specialist-risks-are-placed-portugal/",
+      "title": "How Specialist Insurance Risks Are Placed in Portugal: Agencies, Coverholders &amp; Individual Underwriting | Adler &amp; Rochefort",
+      "h1": "When there is no off-the-shelf policy: how a specialist risk is placed",
+      "overlapScore": 0.18,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/home-insurance-protect-property/",
+      "title": "Home Insurance in Portugal: Expat Owner's Guide 2026",
+      "h1": "Home insurance in Portugal: how to choose the right protection for your property",
+      "overlapScore": 0.15,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/golf-resort-properties-insurance-portugal/",
+      "title": "Golf Resort Property Insurance in Portugal: What the Resort Covers | Adler &amp; Rochefort",
+      "h1": "Golf resort properties: where the resort's insurance ends and yours begins",
+      "overlapScore": 0.17,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/family-liability-cover-portugal/",
+      "title": "Family and Personal Liability Cover in Portugal: Limits, Scope and Gaps | Adler &amp; Rochefort",
+      "h1": "The liability a household carries without noticing",
+      "overlapScore": 0.08,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/cyber-insurance-businesses-portugal/",
+      "title": "Cyber Insurance for Businesses in Portugal | Adler &amp; Rochefort",
+      "h1": "Cyber insurance for businesses: what it covers and why it is no longer optional",
+      "overlapScore": 0.18,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/boat-insurance-portugal/",
+      "title": "Boat Insurance in Portugal: Agreed Value, Navigation Limits &amp; Third-Party Liability | Adler &amp; Rochefort",
+      "h1": "Insuring a boat kept in Portuguese waters",
+      "overlapScore": 0.08,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/blog/art-collection-household-policy-portugal/",
+      "title": "Insuring Art &amp; Collections in Portugal | Adler &amp; Rochefort",
+      "h1": "When your art collection outgrows your household policy",
+      "overlapScore": 0.1,
+      "severity": "low"
+    },
+    {
+      "type": "title_h1_mismatch",
+      "url": "/en/about/",
+      "title": "About Adler &amp; Rochefort | Insurance Agency for Expats in Portugal",
+      "h1": "You built a life somewhere else. Now protect it here.",
+      "overlapScore": 0,
+      "severity": "low"
+    }
+  ]
+}

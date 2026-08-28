@@ -8,3 +8,9 @@ node_modules
 .env
 .env.*
 *.pem
+
+# Real Search Console exports (Phase 9: SEO consolidation) — local analysis
+# input only, never real performance data committed to the repo. The
+# directory itself, its README and .template.csv are still tracked.
+scripts/data/search-console/*.csv
+!scripts/data/search-console/.template.csv
