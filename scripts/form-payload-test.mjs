@@ -343,6 +343,13 @@ const CASES = [
     formName: 'landlord-insurance-quote-spain',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    label: '19. /en/health-insurance-spain/ — Spain health insurance pillar',
+    path: 'en/health-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/health-insurance-spain/',
+    formName: 'health-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its

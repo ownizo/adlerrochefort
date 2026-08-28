@@ -353,6 +353,16 @@ const EN_CATEGORY_META = {
     description:
       'Boat and yacht insurance in Portugal: importing and registering a vessel, private use versus charter, winter lay-up and berthing in the Algarve marinas.',
   },
+  'spain-health': {
+    title: 'Health Insurance in Spain | Insights | Adler & Rochefort',
+    description:
+      'Private health insurance in Spain for expats: how it sits alongside the public system, pre-existing conditions, and what to check before a visa or residence application.',
+  },
+  'spain-property': {
+    title: 'Property Insurance in Spain | Insights | Adler & Rochefort',
+    description:
+      'Property insurance in Spain for international owners: community buildings cover, non-resident ownership, second homes and renting out a property.',
+  },
 };
 
 const enCategoryNav = (activeSlug) => {
