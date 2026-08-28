@@ -82,6 +82,7 @@ const footer = () => `
         <li><a href="/en/health-insurance-spain/">Health Insurance</a></li>
         <li><a href="/en/home-insurance-spain/">Home Insurance</a></li>
         <li><a href="/en/landlord-insurance-spain/">Landlord Insurance</a></li>
+        <li><a href="/en/car-insurance-spain/">Car Insurance</a></li>
       </ul>
     </div>
     <div>
@@ -374,6 +375,7 @@ const pending = new Set([
   '/en/home-insurance-spain/',
   '/en/landlord-insurance-spain/',
   '/en/health-insurance-spain/',
+  '/en/car-insurance-spain/',
 ]);
 const seenTitle = new Map();
 const seenH1 = new Map();

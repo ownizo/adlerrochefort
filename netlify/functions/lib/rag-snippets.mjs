@@ -1006,6 +1006,31 @@ export const RAG_SNIPPETS = {
         "promised as included. A property managed remotely by the owner, or through a local letting agent, " +
         "is a normal arrangement and does not itself prevent the property being insured.",
     },
+
+    // Spain — Car (Phase 3). Written from scratch for Spain: cites the real
+    // Spanish motor law by name (verified against boe.es) but never restates
+    // a specific statutory minimum capital, since that could not be verified
+    // with the same confidence — see spain-cluster.data.mjs's header comment
+    // on the same page for the full reasoning.
+    spain_car: {
+      fonte: "/en/car-insurance-spain/",
+      texto:
+        "Third-party liability is compulsory for every motor vehicle in Spain, under the consolidated Ley " +
+        "sobre responsabilidad civil y seguro en la circulación de vehículos a motor (Real Decreto " +
+        "Legislativo 8/2004, as amended by Ley 5/2025). The specific statutory minimum liability capitals " +
+        "are not stated here — they are periodically revised and should be confirmed against the current " +
+        "text or with an insurer at quote stage, never guessed. Above the compulsory minimum, cover is a " +
+        "matter of insurer and policy (broader third-party cover, own-damage, roadside assistance, legal " +
+        "cover), not a fixed national menu. Whether a licence lets someone drive in Spain (a DGT matter) " +
+        "and whether a specific insurer will underwrite against it (an underwriting matter) are separate " +
+        "questions — EU/EEA licences are generally usable without exchange while valid; UK licences fall " +
+        "under a bilateral direct-exchange agreement with the DGT in force since 2023. Insuring a vehicle " +
+        "still registered abroad but kept in Spain is more complex than a Spanish-registered car and " +
+        "depends on the vehicle, its habitual location and the individual insurer — availability is never " +
+        "promised in general terms. Foreign no-claims history is not automatically recognised; some " +
+        "insurers consider documented evidence (a claims-experience letter), some do not, and it is an " +
+        "underwriting decision either way.",
+    },
   },
 };
 

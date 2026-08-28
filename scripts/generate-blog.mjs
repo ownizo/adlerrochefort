@@ -363,6 +363,11 @@ const EN_CATEGORY_META = {
     description:
       'Property insurance in Spain for international owners: community buildings cover, non-resident ownership, second homes and renting out a property.',
   },
+  'spain-car': {
+    title: 'Car Insurance in Spain | Insights | Adler & Rochefort',
+    description:
+      'Car insurance in Spain for expats: foreign driving licences, foreign-registered vehicles, importing a car and using foreign no-claims history.',
+  },
 };
 
 const enCategoryNav = (activeSlug) => {
