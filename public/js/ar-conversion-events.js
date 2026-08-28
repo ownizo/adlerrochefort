@@ -34,11 +34,53 @@
   // (structurally, though it never changes) the Spain pages' own fixed
   // country value is not a user choice so is not tracked here.
   var marketSelect = document.querySelector('select[name="country"]');
+  var isReviewPage = path === '/en/insurance-review/';
   if (marketSelect) {
     marketSelect.addEventListener('change', function () {
       if (!marketSelect.value) return;
       send('market_selected', { market: marketSelect.value, source_page: path });
+      // insurance_review_started — the same choice, but named for this one
+      // page specifically, matching the funnel name the brief asks for
+      // alongside insurance_review_submitted (dispatched from
+      // ar-quote-form.js on a successful submission of this same form).
+      if (isReviewPage) send('insurance_review_started', { market: marketSelect.value });
     });
+  }
+
+  // spain_situation_selected — the "What brings you to Spain?" situation grid
+  // on the Spain hub (#situation). Reads the situation from its own card
+  // heading rather than needing a data attribute on every generated link, so
+  // this stays in step with spain-cluster.data.mjs without either file
+  // having to know about the other's markup details beyond the section id.
+  var situationSection = document.getElementById('situation');
+  if (situationSection) {
+    situationSection.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      var card = link.closest('.lp-grid-item');
+      var heading = card ? card.querySelector('h3') : null;
+      var situation = heading
+        ? heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
+        : '';
+      send('spain_situation_selected', { situation: situation, destination: link.getAttribute('href') || '' });
+    });
+  }
+
+  // spain_product_clicked — any link into a Spain product page, wherever it
+  // is clicked from (the homepage's mega-menu, a Spain page's own nav or
+  // footer, a cross-sell block). Scoped to navigation/footer chrome rather
+  // than every in-copy link, so this stays a click signal on "where next"
+  // rather than firing on every citation link inside an article.
+  var navAreas = document.querySelectorAll('.nav-panel, .nav-links-left, .mobile-nav, footer');
+  for (var n = 0; n < navAreas.length; n++) {
+    (function (area) {
+      area.addEventListener('click', function (e) {
+        var link = e.target.closest('a[href*="-spain/"]');
+        if (!link) return;
+        var slug = (link.getAttribute('href') || '').replace(/^\/en\//, '').replace(/\/$/, '');
+        send('spain_product_clicked', { product: slug, source_page: path });
+      });
+    })(navAreas[n]);
   }
 
   // product_selected — any branch-select that is not the market/country

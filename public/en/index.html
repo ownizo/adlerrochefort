@@ -2212,6 +2212,8 @@
   .nav-panel[hidden] { display: none; }
   .nav-panel--sm { min-width: 240px; padding: 14px; }
   .nav-panel-cols { display: grid; grid-template-columns: 1fr 1.4fr 1.2fr; gap: 32px; }
+  .nav-panel-cols--4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .nav-panel:has(.nav-panel-cols--4) { min-width: 680px; }
   .nav-panel-col-title {
     font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
     color: var(--muted); margin: 0 0 10px;
@@ -2229,6 +2231,7 @@
 
   @media (max-width: 1180px) {
     .nav-panel { min-width: 480px; }
+    .nav-panel:has(.nav-panel-cols--4) { min-width: 480px; }
     .nav-panel-cols { grid-template-columns: 1fr 1fr; }
     .nav-panel-col--overview { grid-column: 1 / -1; }
   }
@@ -2278,6 +2281,8 @@
     padding: 5px 12px; border-radius: 20px;
   }
   .country-card .btn-primary { align-self: flex-start; margin-top: 4px; }
+  .country-card-secondary { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ink2); text-decoration: none; margin-top: -4px; }
+  .country-card-secondary:hover { color: var(--primary); }
   @media (max-width: 760px) { .country-router-grid { grid-template-columns: 1fr; } .country-router { padding: 0 20px 48px; } }
 
   /* ═══════════════ PROTECT GRID — cross-market product categories ═══════════════ */
@@ -2336,22 +2341,25 @@
     </div>
     <div class="nav-item">
       <button type="button" class="nav-trigger" id="navTriggerES" aria-expanded="false" aria-controls="navPanelES">
-        Moving to Spain
+        Insurance in Spain
         <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="nav-panel" id="navPanelES" role="menu" aria-label="Spain insurance menu" hidden>
-        <div class="nav-panel-cols">
+        <div class="nav-panel-cols nav-panel-cols--4">
           <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
             <div class="nav-panel-col-title">Overview</div>
             <a href="/en/expat-insurance-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Insurance for Expats in Spain</a>
           </div>
           <div class="nav-panel-col">
-            <div class="nav-panel-col-title">Personal Insurance</div>
+            <div class="nav-panel-col-title">Personal</div>
             <a href="/en/health-insurance-spain/" role="menuitem">Health Insurance</a>
             <a href="/en/home-insurance-spain/" role="menuitem">Home Insurance</a>
             <a href="/en/car-insurance-spain/" role="menuitem">Car Insurance</a>
-            <a href="/en/landlord-insurance-spain/" role="menuitem">Landlord Insurance</a>
             <a href="/en/life-insurance-spain/" role="menuitem">Life Insurance</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Property</div>
+            <a href="/en/landlord-insurance-spain/" role="menuitem">Landlord Insurance</a>
             <a href="/en/mortgage-protection-spain/" role="menuitem">Mortgage Protection</a>
           </div>
           <div class="nav-panel-col">
@@ -2416,7 +2424,7 @@
   </div>
   <div class="mobile-accordion-item">
     <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccES">
-      🇪🇸 Moving to Spain
+      🇪🇸 Insurance in Spain
       <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="mobile-accordion-panel" id="mobAccES" hidden>
@@ -2725,27 +2733,28 @@
 <section class="country-router" id="country-router" aria-label="Choose your country">
   <div class="country-router-inner">
     <div class="country-router-head fade-up">
-      <div class="section-eyebrow">Where are you moving or living?</div>
-      <h2 class="section-title">Two markets.<br><em>One English-speaking broker.</em></h2>
+      <div class="section-eyebrow">Portugal and Spain</div>
+      <h2 class="section-title">Two markets,<br><em>each on its own terms.</em></h2>
     </div>
     <div class="country-router-grid">
       <div class="country-card fade-up">
         <div class="country-card-flag">🇵🇹</div>
-        <div class="country-card-title">Portugal</div>
-        <p class="country-card-desc">Our home market — expats, residents and property owners across Portugal, with several years of experience arranging cover in English.</p>
+        <div class="country-card-title">Moving to Portugal</div>
+        <p class="country-card-desc">Insurance support for international clients relocating to, or already living in, Portugal — our home market, with several years of experience arranging cover in English.</p>
         <div class="country-card-products">
           <span>Health</span><span>Home</span><span>Car</span><span>Life &amp; Mortgage</span><span>Condominium</span>
         </div>
-        <a href="/en/expat-insurance-portugal/" class="btn-primary">Insurance in Portugal →</a>
+        <a href="/en/expat-insurance-portugal/" class="btn-primary">Moving to Portugal →</a>
+        <a href="/en/relocation-services/" class="country-card-secondary">or see relocation &amp; company services →</a>
       </div>
       <div class="country-card fade-up">
         <div class="country-card-flag">🇪🇸</div>
-        <div class="country-card-title">Spain</div>
-        <p class="country-card-desc">Insurance for international residents in Spain, explained in English — we are building our Spanish insurer relationships and will confirm honestly what can currently be arranged.</p>
+        <div class="country-card-title">Insurance in Spain</div>
+        <p class="country-card-desc">Insurance for international residents, property owners and families in Spain, explained in English — we are building our Spanish insurer relationships and will confirm honestly what can currently be arranged.</p>
         <div class="country-card-products">
           <span>Health</span><span>Home</span><span>Car</span><span>Life</span><span>Landlord</span><span>Private Clients</span>
         </div>
-        <a href="/en/expat-insurance-spain/" class="btn-primary">Insurance in Spain →</a>
+        <a href="/en/expat-insurance-spain/" class="btn-primary">Explore Insurance in Spain →</a>
       </div>
     </div>
   </div>

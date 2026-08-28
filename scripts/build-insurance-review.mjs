@@ -405,6 +405,20 @@ ${FOOTER}
     var select = document.getElementById('q-country');
     var ramo = document.getElementById('reviewRamo');
     if (!select || !ramo) return;
+
+    // Optional preselect (brief §20/§21): a link into this page can carry
+    // ?market=Spain or ?market=Portugal so a visitor who already told us
+    // their market on the page they came from does not have to say it
+    // again. This script runs before the deferred /js/lead-branch-fields.js
+    // does (it is not itself deferred, and appears later in the document
+    // than that script tag) — setting select.value here is picked up by
+    // that script's own initial apply() call once it runs, so no manual
+    // change-event dispatch is needed to reveal the right needs checklist.
+    try {
+      var market = new URLSearchParams(window.location.search).get('market');
+      if (market === 'Portugal' || market === 'Spain') select.value = market;
+    } catch (err) {}
+
     function sync() {
       var v = select.value;
       ramo.value = v === 'Spain' ? 'ES · Multi-product' : v === 'Portugal' ? 'PT · Multi-product' : '';
