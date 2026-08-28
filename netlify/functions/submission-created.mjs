@@ -452,6 +452,13 @@ const HANDLED_FORMS = {
     page: "/en/landlord-insurance-spain/",
     branch: "ES · Landlord",
   },
+  "health-insurance-quote-spain": {
+    quote: true,
+    en: true,
+    heading: "New health insurance quote request — Spain",
+    page: "/en/health-insurance-spain/",
+    branch: "ES · Health",
+  },
 };
 
 const humanise = (key) =>

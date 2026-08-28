@@ -115,6 +115,7 @@ const nav = (page) => `
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-links-left">
     <a href="${HUB_URL}">Insurance for expats in Spain</a>
+    <a href="/en/health-insurance-spain/">Health insurance</a>
     <a href="/en/home-insurance-spain/">Home insurance</a>
     <a href="/en/landlord-insurance-spain/">Landlord insurance</a>
   </div>
@@ -139,6 +140,7 @@ const nav = (page) => `
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <a href="${HUB_URL}" onclick="toggleMenu()">Insurance for expats in Spain</a>
+  <a href="/en/health-insurance-spain/" onclick="toggleMenu()">Health insurance</a>
   <a href="/en/home-insurance-spain/" onclick="toggleMenu()">Home insurance</a>
   <a href="/en/landlord-insurance-spain/" onclick="toggleMenu()">Landlord insurance</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
@@ -160,6 +162,7 @@ const FOOTER = `
       <div class="footer-col-title">Spain</div>
       <ul class="footer-col-links">
         <li><a href="${HUB_URL}">Insurance for expats in Spain</a></li>
+        <li><a href="/en/health-insurance-spain/">Health Insurance</a></li>
         <li><a href="/en/home-insurance-spain/">Home Insurance</a></li>
         <li><a href="/en/landlord-insurance-spain/">Landlord Insurance</a></li>
       </ul>

@@ -1,13 +1,13 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 271,
-    "indexedUrls": 262,
+    "htmlFiles": 281,
+    "indexedUrls": 272,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 4,
-    "deeperThanThreeClicks": 2
+    "singleInbound": 5,
+    "deeperThanThreeClicks": 12
   },
   "broken": [],
   "viaRedirect": [],
@@ -26,6 +26,12 @@
       ]
     },
     {
+      "url": "/en/blog/category/spain-health/",
+      "from": [
+        "/en/health-insurance-spain/"
+      ]
+    },
+    {
       "url": "/en/blog/category/valuables-collections/page/2/",
       "from": [
         "/en/blog/category/valuables-collections/"
@@ -40,6 +46,46 @@
   ],
   "deeperThanThreeClicks": [
     {
+      "url": "/en/blog/community-insurance-apartment-owners-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/health-insurance-moving-to-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/non-resident-property-insurance-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/private-health-insurance-spain-expats/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/renting-out-property-in-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/second-home-insurance-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/spain-health-insurance-visa-residency/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/category/spain-health/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/category/spain-property/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/health-insurance-spain/",
+      "clicks": 4
+    },
+    {
       "url": "/en/home-insurance-spain/",
       "clicks": 4
     },
@@ -48,5 +94,5 @@
       "clicks": 4
     }
   ],
-  "maxClickDepth": 4
+  "maxClickDepth": 5
 }

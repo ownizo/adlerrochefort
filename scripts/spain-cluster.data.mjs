@@ -66,7 +66,7 @@ const HUB = {
   stickyCta: 'Get an Insurance Review',
   whatsapp: 'Hello, I am looking into insurance for a property or a move to Spain and would like to talk to someone.',
   market: 'spain',
-  chatTopics: ['spain_general', 'spain_home', 'spain_landlord'],
+  chatTopics: ['spain_general', 'spain_health', 'spain_home', 'spain_landlord'],
   service: {
     name: 'Insurance guidance for expats and property owners in Spain',
     type: 'Insurance intermediation — client qualification and referral',
@@ -105,11 +105,16 @@ const HUB = {
         {
           kind: 'p',
           html:
-            'The two products we can currently discuss properly for Spain are set out below. If your situation is different — car, health, life, a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
+            'The products we can currently discuss properly for Spain are set out below. If your situation is different — car, life, a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
         },
         {
           kind: 'cluster',
           items: [
+            {
+              href: '/en/health-insurance-spain/',
+              title: 'Health insurance',
+              blurb: 'Private medical cover for individuals and families moving to, or already living in, Spain.',
+            },
             {
               href: '/en/home-insurance-spain/',
               title: 'Home insurance',
@@ -125,6 +130,23 @@ const HUB = {
         {
           kind: 'note',
           html: AVAILABILITY_NOTE,
+        },
+      ],
+    },
+
+    {
+      id: 'health',
+      h2: 'Health insurance in Spain',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Private health insurance is one of the most common questions we hear from people moving to Spain — often because a visa or residence application asks for proof of cover, and often simply because private access sits alongside the public system rather than replacing it. What a plan actually includes, and what it costs, depends on the insurer, the plan and the people being covered.',
+        },
+        {
+          kind: 'note',
+          html:
+            'This is covered in full on <a href="/en/health-insurance-spain/">health insurance in Spain</a>, including what typically decides cover, pre-existing conditions, and what to check before a visa or residence application.',
         },
       ],
     },
@@ -337,8 +359,8 @@ const HUB = {
       a: 'That is the normal starting point. Tell us about the property — what it is, where it is, how you use it — and we will tell you what to consider and in what order, rather than sell you a product before we understand the situation.',
     },
     {
-      q: 'Is this page about health, car or life insurance too?',
-      a: 'Not yet. This page currently covers home and landlord insurance for property owners in Spain. If your question is about a different product, say so in the form and we will tell you honestly whether it is something we can help with.',
+      q: 'Is this page about car or life insurance too?',
+      a: 'Not yet. This page currently covers health, home and landlord insurance in Spain. If your question is about a different product, say so in the form and we will tell you honestly whether it is something we can help with.',
     },
     {
       q: 'Do you provide immigration, residency or tax advice?',
@@ -608,6 +630,20 @@ const HOME = {
 
   related: [
     {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/community-insurance-apartment-owners-spain/', text: 'Community insurance and apartment ownership in Spain', note: 'what a comunidad de propietarios policy covers, and what stays your responsibility' },
+            { href: '/en/blog/non-resident-property-insurance-spain/', text: 'Property insurance in Spain for non-resident owners', note: 'what actually matters to an insurer when you live elsewhere' },
+            { href: '/en/blog/second-home-insurance-spain/', text: 'Second home insurance in Spain', note: 'what changes when a property is used seasonally' },
+            { href: '/en/blog/category/spain-property/', text: 'All property guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
       h2: 'Related cover',
       blocks: [
         {
@@ -840,6 +876,19 @@ const LANDLORD = {
 
   related: [
     {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/renting-out-property-in-spain/', text: 'Renting out property in Spain', note: 'why a standard home policy usually stops working the moment you let it' },
+            { href: '/en/blog/second-home-insurance-spain/', text: 'Second home insurance in Spain', note: 'for a property you also use yourself part of the year' },
+            { href: '/en/blog/category/spain-property/', text: 'All property guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
       h2: 'Related cover',
       blocks: [
         {
@@ -855,5 +904,385 @@ const LANDLORD = {
   ],
 };
 
-export const PAGES = [HUB, HOME, LANDLORD];
+// -----------------------------------------------------------------------------
+// HEALTH — /en/health-insurance-spain/
+// -----------------------------------------------------------------------------
+
+const HEALTH = {
+  slug: 'health-insurance-spain',
+  crumb: 'Health insurance',
+  parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
+  title: 'Health Insurance in Spain for Expats | Adler & Rochefort',
+  description:
+    'Private health insurance in Spain for expats and international residents. What it typically covers, how it sits alongside the public system, and what to check before you buy. Free written review.',
+  keywords:
+    'health insurance spain expats, health insurance for expats in spain, private health insurance spain, health insurance for foreigners in spain, expat health insurance spain, private medical insurance spain expats, health insurance spain non residents, medical insurance spain foreigners, english speaking health insurance spain',
+  eyebrow: 'Spain · Health insurance',
+  h1: 'Health Insurance in Spain for Expats',
+  heroSub:
+    'Moving to Spain, or already there and thinking about private cover? We help you work out what actually applies to your situation — individual or family, resident or arriving soon — and tell you honestly what can currently be arranged.',
+  heroCta: 'Get a Health Insurance Quote',
+  heroSecondary: 'Ask About Your Situation',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Get a Health Insurance Quote',
+  stickyCta: 'Get a Health Insurance Quote',
+  whatsapp: 'Hello, I would like a health insurance quote for Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_health'],
+  service: {
+    name: 'Health insurance guidance in Spain',
+    type: 'Private health insurance intermediation',
+    description:
+      'Helping expats, international residents and families in Spain work out what private health cover applies to their situation, and arranging it where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'private-vs-public',
+      h2: 'Private health insurance in Spain',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Spain has a broad, tax-funded public healthcare system, and a large private sector that operates alongside it rather than instead of it. Whether you can register with the public system, and on what basis, depends on your residence status and how you entered it — that is not something this page can answer for you in general terms, and it is worth checking directly with the relevant authority once your situation is clear.',
+        },
+        {
+          kind: 'p',
+          html:
+            'What private medical insurance adds is not a replacement for the public system but a different way in: faster access to a specialist, a choice of clinic or hospital, treatment in English where the insurer’s network supports it, and — for some visa and residence routes — documentation that the application process asks for. Not everyone needs it, and not every foreign resident has identical access to the public system, so we start from your situation rather than a blanket assumption.',
+        },
+        { kind: 'note', html: DISCLAIM_NOTE },
+      ],
+    },
+
+    {
+      id: 'who-for',
+      h2: 'Who this is for',
+      blocks: [
+        {
+          kind: 'p',
+          html: 'People come to this page from several different situations. Say which one is closest and we will ask the right follow-up questions rather than the generic ones.',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Moving to Spain', body: 'Whether cover needs to be in place before you arrive depends on your route — see the visa and residence note below.' },
+            { title: 'Already an international resident', body: 'Reviewing what you have, or arranging cover for the first time now that you are settled.' },
+            { title: 'Foreign professionals and the self-employed', body: 'Individual cover, arranged the same way regardless of who employs you.' },
+            { title: 'Families', body: 'Adults and children together, or as separate policies — see the families section below.' },
+            { title: 'Retirees', body: 'See the dedicated section below — entitlement and requirements vary by circumstances, not by age alone.' },
+            { title: 'Non-Spanish-speaking clients', body: 'The questions, the comparison and the policy explanation are all in English.' },
+          ],
+        },
+      ],
+    },
+
+    {
+      id: 'what-cover-involves',
+      h2: 'What private health insurance can cover',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'What a specific plan actually includes is set by the insurer and the plan, never by this page — the categories below are what plans in this market commonly address, not a guarantee of what any one policy contains:',
+        },
+        {
+          kind: 'covers',
+          items: [
+            { title: 'GP and primary care.', body: ' Access to a general practitioner, in-network or via consultation, depending on the plan.' },
+            { title: 'Specialists.', body: ' Referral to specialist consultations, usually within the insurer’s network.' },
+            { title: 'Diagnostic tests.', body: ' Scans, bloodwork and imaging — scope and any pre-authorisation requirement vary by plan.' },
+            { title: 'Hospital treatment and surgery.', body: ' Typically the core of a private medical plan, with sub-limits that differ by insurer.' },
+            { title: 'Emergency and outpatient care.', body: ' Included on most plans, though territorial scope and network conditions differ.' },
+            { title: 'Maternity, where available.', body: ' Not universal, and frequently subject to a waiting period — confirm before assuming it is included.' },
+            { title: 'Mental health, where available.', body: ' Scope varies significantly by insurer and plan; worth checking explicitly rather than assuming parity with physical health cover.' },
+            { title: 'Physiotherapy, where available.', body: ' Often included with session limits rather than unlimited access.' },
+          ],
+        },
+        { kind: 'note', html: AVAILABILITY_NOTE },
+      ],
+    },
+
+    {
+      id: 'copayments',
+      h2: 'With or without copayments',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Some plans charge a small copayment per consultation or procedure and cost less as a result; others are written with no copayment and a correspondingly different price. Neither is universally "better" — it depends on how often you expect to use the cover and what monthly cost you would rather carry instead. We set out both options where the insurer offers them, rather than defaulting to one.',
+        },
+      ],
+    },
+
+    {
+      id: 'networks',
+      h2: 'Medical networks',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Private insurers work with defined networks of clinics, hospitals and specialists rather than every provider in Spain. Which hospitals and doctors you can access depends on the insurer, the plan and, often, the region — we do not claim access to a specific hospital or network here, because that claim only means anything against an actual policy wording. Ask us for the network detail once we know which insurer and plan is realistic for your case.',
+        },
+      ],
+    },
+
+    {
+      id: 'pre-existing',
+      h2: 'Pre-existing conditions',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Insurers ask medical questions before offering health cover, and how they treat a pre-existing condition is an underwriting decision that varies by insurer and by condition — some exclude it, some cover it after a delay, some price around it. We cannot promise acceptance or promise that a specific condition will be covered before an insurer has actually assessed the case.',
+        },
+        {
+          kind: 'note',
+          html: 'Declare medical history accurately at application. An inaccurate declaration is one of the most common reasons a claim is later declined — understating something to get a better price almost always costs more than it saves.',
+        },
+      ],
+    },
+
+    {
+      id: 'waiting-periods',
+      h2: 'Waiting periods',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Some benefits — maternity is a common example — carry a waiting period before they become active, and some plans apply a general waiting period to new members. We do not state a universal number here because it depends on the insurer and the plan; we will tell you the actual figure once we know which product is being quoted.',
+        },
+      ],
+    },
+
+    {
+      id: 'moving-visa',
+      h2: 'Moving to Spain, visas and residence',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'This is the section that needs the most care, and where we are most likely to say "check with the relevant authority" rather than state a rule. Different residence and visa routes — a non-lucrative visa, a digital nomad visa, an EU citizen exercising free movement, a student route — can carry different requirements for proof of health cover, and those requirements are set and interpreted by the consulate or immigration authority handling the application, not by us.',
+        },
+        {
+          kind: 'note',
+          html:
+            'We do not promise that any policy will be accepted by a consulate or immigration authority simply because it is described as "visa insurance." Requirements depend on the route, the applicant’s circumstances and the authority handling the case, and they can change. Confirm the current position with the relevant consulate or immigration authority before you buy, and read <a href="/en/blog/spain-health-insurance-visa-residency/">health insurance for Spanish visas and residency</a> for what to check.',
+        },
+        {
+          kind: 'p',
+          html:
+            'What we can do is help you get a policy in place with enough lead time, and tell you plainly what the plan does and does not include — the confirmation that it satisfies a specific application belongs with the authority processing it, not with us.',
+        },
+      ],
+    },
+
+    {
+      id: 'international-vs-domestic',
+      h2: 'Domestic Spanish cover or wider international cover?',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'A domestic private medical plan in Spain is built around Spanish providers and Spanish territory. Broader international private medical insurance can extend geographic scope beyond Spain, at a different price point. Which is right depends on where you actually live, whether you travel or split time between countries, the providers you want access to, and budget — not on one being categorically better than the other. Tell us your situation and we will say honestly which shape of product it points to, and whether both are realistic options for your case today.',
+        },
+      ],
+    },
+
+    {
+      id: 'families',
+      h2: 'Families',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Cover for a family usually means separate underwriting per person even when it is billed as one policy — a child\'s plan and an adult\'s plan are not priced or underwritten identically, and paediatric care, where included, is typically a distinct benefit rather than an extension of adult cover. Maternity, where relevant and where available, is worth raising early given the waiting periods noted above. We ask about everyone to be insured individually rather than quote a household as a single unit.',
+        },
+      ],
+    },
+
+    {
+      id: 'retirees',
+      h2: 'Retirees',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Private health insurance is not a universal legal requirement for every foreign retiree in Spain — whether it is required, and what public healthcare entitlement looks like, depends on your specific residence and pension circumstances, including whether a form such as the EU’s S1 applies to your case. We are not the right source for that determination; what we can help with is the private cover itself, once you know what you actually need it to do alongside whatever public entitlement applies to you.',
+        },
+      ],
+    },
+
+    {
+      id: 'price',
+      h2: 'What affects the price',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'We do not publish average health insurance costs for Spain here — a number picked up for its SEO value rather than checked against a real quote is worse than no number at all. What genuinely moves the price:',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Age', body: 'The single largest factor on most personal health plans.' },
+            { title: 'Location', body: 'Available networks and regional pricing both vary.' },
+            { title: 'Insurer and plan', body: 'There is no single "Spanish health policy" — products differ meaningfully between insurers.' },
+            { title: 'Copayments', body: 'A plan with copayments is typically cheaper than an equivalent plan without them.' },
+            { title: 'Medical underwriting', body: 'Declared health history affects both price and terms.' },
+            { title: 'Number of people insured', body: 'Each person is underwritten individually, as noted under Families above.' },
+            { title: 'Geographic scope', body: 'Domestic Spanish cover versus broader international scope changes the price materially.' },
+            { title: 'Benefits selected', body: 'Maternity, dental extensions and higher outpatient limits all move the premium.' },
+          ],
+        },
+      ],
+    },
+
+    {
+      id: 'get-quote',
+      h2: 'How to get a quote',
+      blocks: [
+        {
+          kind: 'steps',
+          items: [
+            { title: 'Who needs to be covered.', body: 'Ages of everyone to be insured, and whether it is an individual or family policy.' },
+            { title: 'Where you are, or will be.', body: 'Current location and, if different, where in Spain you are moving to or already live.' },
+            { title: 'Timing.', body: 'Already resident, or working to a moving date — and whether a visa or residence application is involved.' },
+            { title: 'What you have now.', body: 'Any existing health cover, domestic or international, and its renewal date if applicable.' },
+          ],
+        },
+        {
+          kind: 'p',
+          html:
+            'We ask for this much and no more at quote stage — we do not collect detailed medical history through the website form. Any medical questions an insurer needs answered are handled directly with the insurer as part of underwriting, not gathered upfront on a generic web form.',
+        },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Get a health insurance quote',
+    sub: 'Tell us who needs cover and where you are in the move. We do not ask for medical details here — that stays with the insurer, as part of underwriting.',
+    name: 'health-insurance-quote-spain',
+    gaField: 'moving_status',
+    submit: 'Get my quote',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'current_country', label: 'Where do you currently live?', required: true, placeholder: 'e.g. United Kingdom' },
+      ],
+      [
+        { name: 'spain_location', label: 'Where in Spain?', required: true, placeholder: 'e.g. Alicante, Costa Blanca' },
+        {
+          name: 'people_count',
+          label: 'Number of people to insure',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['1 (just me)', '2', '3', '4', '5 or more'],
+        },
+      ],
+      [
+        { name: 'ages', label: 'Age(s) of those to be insured', required: true, placeholder: 'e.g. 42, 39, 8' },
+        {
+          name: 'moving_status',
+          label: 'Your situation',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['Already resident in Spain', 'Moving to Spain soon', 'Considering a move, no date yet'],
+        },
+      ],
+      [
+        {
+          name: 'cover_type',
+          label: 'Type of cover needed',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Not sure — advise me', 'Individual', 'Family', 'Individual with copayments (lower cost)', 'Individual without copayments'],
+        },
+        {
+          name: 'visa_related',
+          label: 'Is this for a visa or residence application?',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Yes', 'No', 'Not sure'],
+        },
+      ],
+      {
+        name: 'existing_cover',
+        label: 'Existing health insurance, and any notes',
+        type: 'textarea',
+        placeholder: 'Current policy and renewal date if you have one, and anything else that would help us give an accurate answer.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'Do I need private health insurance to live in Spain?',
+      a: 'Not universally — it depends on your residence route and personal circumstances, including whether you can register with the public system. Some visa and residence routes require proof of private cover as part of the application; others do not. We are an insurance intermediary, not an immigration adviser, so for a definitive answer on your specific case, check with the relevant consulate or immigration authority.',
+    },
+    {
+      q: 'Will a policy be accepted for my visa application?',
+      a: 'We cannot promise that. Acceptance depends on the visa or residence route, the applicant’s circumstances and the authority handling the application — a policy being labelled "visa insurance" is not a guarantee it will be accepted. Confirm the current documentary requirements with the relevant authority before you buy, and see our guide to <a href="/en/blog/spain-health-insurance-visa-residency/">health insurance for Spanish visas and residency</a>.',
+    },
+    {
+      q: 'Are pre-existing conditions covered?',
+      a: 'It depends on the insurer, the condition and how it is declared. Some insurers exclude a pre-existing condition, some cover it after a waiting period, and some price around it. We cannot promise acceptance before an insurer has actually assessed your case — declare your history accurately, as an inaccurate declaration is one of the most common reasons a later claim is refused.',
+    },
+    {
+      q: 'Can you name which Spanish health insurers you work with?',
+      a: 'Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than name a panel we do not actually have.',
+    },
+    {
+      q: 'What is the difference between domestic and international health cover?',
+      a: 'Domestic Spanish private medical cover is built around Spanish providers and territory. International private medical insurance extends geographic scope beyond Spain, usually at a higher price. Which is right depends on where you live, whether you travel, and the providers you want — not on one being automatically better.',
+    },
+    {
+      q: 'How much does health insurance in Spain cost?',
+      a: 'We do not publish a generic figure — age, location, insurer, plan, copayments and the number of people insured all move the price meaningfully, and a number picked for a webpage rather than checked against a real quote would not be honest. Tell us who needs cover and we will come back with an actual written quote.',
+    },
+    {
+      q: 'Do you collect medical information through this form?',
+      a: 'No. We ask for ages, location and the basics needed to identify the right product. Any medical questions an insurer needs answered are handled directly with the insurer, as part of underwriting — not collected upfront on a generic website form.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/private-health-insurance-spain-expats/', text: 'Private health insurance in Spain: a guide for expats', note: 'the private-vs-public landscape and how to think about it' },
+            { href: '/en/blog/health-insurance-moving-to-spain/', text: 'Health insurance when moving to Spain', note: 'what to check before and after the move' },
+            { href: '/en/blog/spain-health-insurance-visa-residency/', text: 'Health insurance for Spanish visas and residency', note: 'what to verify before you apply' },
+            { href: '/en/blog/category/spain-health/', text: 'All health guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need? Start at the hub.' },
+            { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'The other line most new arrivals need to sort out.' },
+            { href: '/en/blog/insurance-portugal-spain-international-residents/', title: 'Insurance in Portugal and Spain for international residents', blurb: 'For people with ties to, or moving between, both countries.' },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const PAGES = [HUB, HOME, LANDLORD, HEALTH];
 export const HUB_SLUG = HUB.slug;

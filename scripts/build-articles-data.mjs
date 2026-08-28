@@ -149,6 +149,26 @@ export const EN_CATEGORIES = [
     landing: "/en/private-clients/",
     landingLabel: "Marine insurance",
   },
+  // Spain (Phase 2). Separate from "health-insurance" and "home-property"
+  // deliberately: those two categories' `landing` points at the Portuguese
+  // commercial pages (see generate-blog.mjs's category-page CTA), and mixing
+  // Spain articles into them would send a Spain reader to a Portugal quote
+  // page from the category listing itself. See the Spain audit's navigation
+  // and internal-linking findings.
+  {
+    slug: "spain-health",
+    title: "Spain — Health Insurance",
+    short: "Spain Health",
+    landing: "/en/health-insurance-spain/",
+    landingLabel: "Health insurance in Spain",
+  },
+  {
+    slug: "spain-property",
+    title: "Spain — Property",
+    short: "Spain Property",
+    landing: "/en/home-insurance-spain/",
+    landingLabel: "Home insurance in Spain",
+  },
 ];
 
 const EN_CATEGORY_OF = {
@@ -287,6 +307,15 @@ const EN_CATEGORY_OF = {
   "lay-up-lifting-winter-boat-cover-portugal": "marine",
   "private-use-vs-charter-boat-cover-portugal": "marine",
   "yacht-insurance-algarve-marinas": "marine",
+  // Spain — Health (Phase 2)
+  "private-health-insurance-spain-expats": "spain-health",
+  "health-insurance-moving-to-spain": "spain-health",
+  "spain-health-insurance-visa-residency": "spain-health",
+  // Spain — Property (Phase 2)
+  "community-insurance-apartment-owners-spain": "spain-property",
+  "non-resident-property-insurance-spain": "spain-property",
+  "second-home-insurance-spain": "spain-property",
+  "renting-out-property-in-spain": "spain-property",
 };
 
 // --- PT article → category ----------------------------------------------------
