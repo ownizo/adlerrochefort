@@ -250,6 +250,12 @@ const QUOTE_LABELS = {
   apolices: "Apólices a transferir",
   localidade: "Localidade",
   subject: "Assunto",
+
+  // Cross-sell layer (Phase 5: conversion) — see CROSSSELL_FIELDS below.
+  additional_insurance_needs: "Also interested in",
+  insurance_needs: "What they need help with",
+  preferred_contact: "Preferred contact method",
+  notes: "Notes",
 };
 
 // Never rendered: Netlify plumbing and the honeypot.
@@ -487,22 +493,48 @@ const HANDLED_FORMS = {
     page: "/en/private-clients-spain/",
     branch: "ES · Private Clients",
   },
+
+  // International multi-product review (Phase 5: conversion). One form for
+  // visitors who need more than one product, or do not know which product
+  // page to start from. The market-correct branch ("PT · Multi-product" /
+  // "ES · Multi-product") is stamped client-side into the hidden `ramo`
+  // field from the visible country choice — see build-insurance-review.mjs —
+  // so quoteSubject() picks it up as the first-priority branch field with no
+  // change needed here. "Multi-product" below is only the last-resort
+  // fallback if that field somehow arrives empty.
+  "international-insurance-review": {
+    quote: true,
+    en: true,
+    heading: "New multi-product insurance review request",
+    page: "/en/insurance-review/",
+    branch: "Multi-product",
+  },
 };
 
 const humanise = (key) =>
   key.replace(/[_-]+/g, " ").replace(/^./, (c) => c.toUpperCase());
+
+// Cross-sell fields (Phase 5: conversion) — the one thing in a submission
+// that represents a second, undelivered opportunity rather than a detail of
+// the first one. Rendered with a highlighted box instead of a plain line so
+// it cannot be scanned past in the inbox, per the brief's own instruction
+// that "the email should make the additional opportunities clearly visible."
+// Every other field keeps the flat, single-line rendering it always had.
+const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs"]);
 
 /** Renders every answered field, known label or not, in submission order. */
 export function renderAllFields(data, en = false) {
   return Object.keys(data)
     .filter((key) => !INTERNAL_FIELDS.has(key))
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
-    .map(
-      (key) =>
-        `<p style="margin:0 0 8px;"><strong>${escapeHtml(
-          (en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key)
-        )}:</strong> ${escapeHtml(formatValue(data[key]))}</p>`
-    )
+    .map((key) => {
+      const label = escapeHtml((en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key));
+      const value = escapeHtml(formatValue(data[key]));
+      if (CROSSSELL_FIELDS.has(key)) {
+        return `<p style="margin:0 0 10px;padding:10px 14px;background:#F2EBDA;border-left:3px solid #7A9A6B;"><strong>${label}:</strong> ${value}</p>`;
+      }
+      return `<p style="margin:0 0 8px;"><strong>${label}:</strong> ${value}</p>`;
+    })
     .join("");
 }
 

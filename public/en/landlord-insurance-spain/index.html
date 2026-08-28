@@ -315,6 +315,16 @@
   </div>
 </section>
 
+<section class="lp-crosssell" aria-label="Related insurance in Spain">
+  <div class="lp-crosssell-inner">
+    <p class="lp-crosssell-label">Multiple or higher-value properties?</p>
+    <div class="lp-crosssell-links">
+      <a href="/en/home-insurance-spain/">Home Insurance</a>
+      <a href="/en/private-clients-spain/">Private Client</a>
+    </div>
+  </div>
+</section>
+
 <!-- QUOTE FORM -->
 <section class="lp-form-section" id="quote-form">
   <div class="lp-form-card">
@@ -392,6 +402,17 @@
         <label for="q-message">Anything we should know?</label>
         <textarea id="q-message" name="message" placeholder="Local licensing status if short-term let, how often the property changes occupants, or anything else relevant."></textarea>
       </div>
+      <fieldset class="contact-form-crosssell">
+        <legend>Also need help with anything else?</legend>
+        <div class="contact-form-checkbox-grid">
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Health Insurance"> Health Insurance</label>
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Home Insurance"> Home Insurance</label>
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Car Insurance"> Car Insurance</label>
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Life Insurance"> Life Insurance</label>
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Mortgage Protection"> Mortgage Protection</label>
+          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Private Client Review"> Private Client Review</label>
+        </div>
+      </fieldset>
       <button type="submit" class="contact-form-submit">Get my quote &rarr;</button>
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
@@ -402,6 +423,13 @@
       </div>
       <h3>Thank you</h3>
       <p>Your request has been received. We will come back to you with a written answer.</p>
+      <div class="quoteSuccess-crosssell">
+        <p class="quoteSuccess-crosssell-label">Need help with another type of insurance?</p>
+        <div class="quoteSuccess-crosssell-links">
+          <a href="/en/home-insurance-spain/">Home Insurance</a>
+          <a href="/en/private-clients-spain/">Private Client</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -525,6 +553,7 @@
 </script>
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
+<script defer src="/js/ar-conversion-events.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-market="spain" data-topics="spain_general,spain_landlord"></script>

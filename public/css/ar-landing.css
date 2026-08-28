@@ -312,6 +312,149 @@
   }
 }
 
+/* ═══════════════ CROSS-SELL (Phase 5: conversion) ═══════════════
+ *
+ * Three related components sharing one visual language, deliberately quiet
+ * rather than ecommerce-upsell: the optional "also need help with anything
+ * else?" checkbox group inside the form, the "you may also need" block above
+ * it, and the "need help with another type of insurance?" links after a
+ * successful submission. All three read from the same cross-sell map, so
+ * relevance is curated rather than a dump of every product on the site.
+ */
+.contact-form-crosssell {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin: 4px 0 0;
+}
+
+.contact-form-crosssell legend {
+  padding: 0 6px 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-form-checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-top: 4px;
+}
+
+.contact-form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.contact-form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.quoteSuccess-crosssell {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.quoteSuccess-crosssell-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.quoteSuccess-crosssell-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.quoteSuccess-crosssell-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 7px 16px;
+}
+
+.quoteSuccess-crosssell-links a:hover {
+  border-color: var(--primary);
+  background: var(--primary-dim);
+}
+
+.lp-crosssell {
+  padding: 0 48px;
+}
+
+.lp-crosssell-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--cream2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
+
+.lp-crosssell-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.lp-crosssell-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lp-crosssell-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.lp-crosssell-links a:hover {
+  border-bottom-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contact-form-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-crosssell {
+    padding: 0 24px;
+  }
+
+  .lp-crosssell-inner {
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* ═══════════════ STICKY MOBILE CTA ═══════════════
  *
  * The form is a long way down a long page. On a phone the bar keeps the way
