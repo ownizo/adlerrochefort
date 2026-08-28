@@ -1031,6 +1031,59 @@ export const RAG_SNIPPETS = {
         "insurers consider documented evidence (a claims-experience letter), some do not, and it is an " +
         "underwriting decision either way.",
     },
+
+    // Spain — Life, Mortgage, Private Clients (Phase 4). Same discipline as
+    // spain_car: real Spanish law cited by name where verified, no specific
+    // figures where they could not be, no tax/legal/succession advice, no
+    // insurer named, no investment-linked product implied.
+    spain_life: {
+      fonte: "/en/life-insurance-spain/",
+      texto:
+        "Life insurance is not a legal requirement for residents of Spain in general. It tends to be " +
+        "relevant for people with dependants, a mortgage or debt obligation, a business tied to their " +
+        "life, or a foreign policy that needs reviewing after a move — not everyone needs it, and the " +
+        "assistant should never imply otherwise. There is no universal sum-insured multiplier; the right " +
+        "figure depends on debts, dependants, income and existing cover, worked through case by case. " +
+        "Underwriting depends on age, health, smoking status, occupation, lifestyle, sum insured and term " +
+        "— detailed medical history is never collected in chat, that belongs with the insurer. An existing " +
+        "UK, EU or other foreign life policy does not automatically stop working after a move to Spain and " +
+        "should not be cancelled before its territorial scope, residency conditions and beneficiaries are " +
+        "checked with the insurer that issued it. Beneficiary designation and Spanish succession/tax " +
+        "treatment of a payout are matters for a lawyer or tax adviser, never something this assistant " +
+        "answers directly. Adler & Rochefort does not currently offer investment-linked or savings life " +
+        "insurance — only protection-focused cover.",
+    },
+    spain_mortgage: {
+      fonte: "/en/mortgage-protection-spain/",
+      texto:
+        "Life insurance is NOT a nationwide legal requirement to obtain a mortgage in Spain — what a " +
+        "lender is actually required to insist on is buildings insurance on the property. Lenders " +
+        "commonly request a life policy as additional security and often bundle their own product with a " +
+        "better interest rate, but Ley 5/2019, de 15 de marzo (contratos de crédito inmobiliario), " +
+        "prohibits a lender making the loan itself conditional on buying the bank's own tied product and " +
+        "requires them to accept an equivalent policy from another provider. The assistant must never " +
+        "state as a flat rule that 'life insurance is required for a Spanish mortgage' — it must " +
+        "distinguish the legal requirement (buildings insurance) from the common lender request (life " +
+        "cover) from commercial bundling (a discounted rate for the bank's own product). Decreasing cover " +
+        "(sum insured falling with the mortgage balance) and level cover are both used where the actual " +
+        "product supports it — availability depends on the insurer. No premium figures or bank names are " +
+        "given.",
+    },
+    spain_private_clients: {
+      fonte: "/en/private-clients-spain/",
+      texto:
+        "Private client insurance in Spain is a coordinated review across several risks — property, " +
+        "vehicles, health, life, landlord cover — for a household with more than one policy to manage, " +
+        "not a branded luxury product line and not a claim of specialist capability the business does not " +
+        "actually have. The assistant should describe it as 'one broker, several risks, reviewed together' " +
+        "and never as 'luxury' or 'elite' insurance. Higher-value properties need an accurate rebuilding " +
+        "value, contents sums that reflect what is actually there, and security appropriate to the " +
+        "insurer's expectations — none of these are stated as fixed figures. Fine art, jewellery, " +
+        "collections and similar valuables are covered only where an actual insurer relationship supports " +
+        "it, never promised in general terms — if asked, the assistant should say it needs to confirm what " +
+        "can currently be arranged rather than assume coverage exists. Property owned outside Spain is " +
+        "outside what this business can review or arrange.",
+    },
   },
 };
 

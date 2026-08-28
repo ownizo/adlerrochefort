@@ -119,6 +119,8 @@ const nav = (page) => `
     <a href="/en/home-insurance-spain/">Home insurance</a>
     <a href="/en/landlord-insurance-spain/">Landlord insurance</a>
     <a href="/en/car-insurance-spain/">Car insurance</a>
+    <a href="/en/life-insurance-spain/">Life insurance</a>
+    <a href="/en/private-clients-spain/">Private clients</a>
   </div>
   <a href="/en/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
@@ -145,6 +147,8 @@ const nav = (page) => `
   <a href="/en/home-insurance-spain/" onclick="toggleMenu()">Home insurance</a>
   <a href="/en/landlord-insurance-spain/" onclick="toggleMenu()">Landlord insurance</a>
   <a href="/en/car-insurance-spain/" onclick="toggleMenu()">Car insurance</a>
+  <a href="/en/life-insurance-spain/" onclick="toggleMenu()">Life insurance</a>
+  <a href="/en/private-clients-spain/" onclick="toggleMenu()">Private clients</a>
   <a href="#faq" onclick="toggleMenu()">FAQ</a>
   <a href="#quote-form" onclick="toggleMenu()">${esc(page.topBarCta)}</a>
   <div class="mobile-lang-switcher market-switch">
@@ -168,6 +172,8 @@ const FOOTER = `
         <li><a href="/en/home-insurance-spain/">Home Insurance</a></li>
         <li><a href="/en/landlord-insurance-spain/">Landlord Insurance</a></li>
         <li><a href="/en/car-insurance-spain/">Car Insurance</a></li>
+        <li><a href="/en/life-insurance-spain/">Life Insurance</a></li>
+        <li><a href="/en/private-clients-spain/">Private Clients</a></li>
       </ul>
     </div>
     <div>

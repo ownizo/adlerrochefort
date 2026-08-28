@@ -199,6 +199,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/category/spain-life/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/category/spain-private-clients/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/category/spain-property/</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -397,6 +409,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/life-insurance-spain/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/mortgage-protection-spain/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/non-resident-landlord-insurance-portugal/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -407,6 +431,12 @@
     <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/private-clients-spain/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/en/private-clients/</loc>

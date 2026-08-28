@@ -1,13 +1,13 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 288,
-    "indexedUrls": 279,
+    "htmlFiles": 298,
+    "indexedUrls": 289,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 6,
-    "deeperThanThreeClicks": 19
+    "singleInbound": 8,
+    "deeperThanThreeClicks": 29
   },
   "broken": [],
   "viaRedirect": [],
@@ -35,6 +35,18 @@
       "url": "/en/blog/category/spain-health/",
       "from": [
         "/en/health-insurance-spain/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/spain-life/",
+      "from": [
+        "/en/life-insurance-spain/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/spain-private-clients/",
+      "from": [
+        "/en/private-clients-spain/"
       ]
     },
     {
@@ -72,7 +84,27 @@
       "clicks": 5
     },
     {
+      "url": "/en/blog/high-value-home-insurance-spain/",
+      "clicks": 5
+    },
+    {
       "url": "/en/blog/importing-car-to-spain-insurance/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/insurance-buying-property-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/insurance-review-expats-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/life-insurance-spain-expats/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/mortgage-life-insurance-spain/",
       "clicks": 5
     },
     {
@@ -108,6 +140,14 @@
       "clicks": 5
     },
     {
+      "url": "/en/blog/category/spain-life/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/category/spain-private-clients/",
+      "clicks": 5
+    },
+    {
       "url": "/en/blog/category/spain-property/",
       "clicks": 5
     },
@@ -125,6 +165,18 @@
     },
     {
       "url": "/en/landlord-insurance-spain/",
+      "clicks": 4
+    },
+    {
+      "url": "/en/life-insurance-spain/",
+      "clicks": 4
+    },
+    {
+      "url": "/en/mortgage-protection-spain/",
+      "clicks": 4
+    },
+    {
+      "url": "/en/private-clients-spain/",
       "clicks": 4
     }
   ],

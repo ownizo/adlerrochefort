@@ -368,6 +368,16 @@ const EN_CATEGORY_META = {
     description:
       'Car insurance in Spain for expats: foreign driving licences, foreign-registered vehicles, importing a car and using foreign no-claims history.',
   },
+  'spain-life': {
+    title: 'Life Insurance in Spain | Insights | Adler & Rochefort',
+    description:
+      'Life insurance in Spain for expats: what to consider, existing foreign cover, and the real legal position on life insurance and Spanish mortgages.',
+  },
+  'spain-private-clients': {
+    title: 'Private Client Insurance in Spain | Insights | Adler & Rochefort',
+    description:
+      'Insurance for international households in Spain with more than one risk to manage: high-value homes and a coordinated review across separate policies.',
+  },
 };
 
 const enCategoryNav = (activeSlug) => {

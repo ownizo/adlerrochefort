@@ -176,6 +176,20 @@ export const EN_CATEGORIES = [
     landing: "/en/car-insurance-spain/",
     landingLabel: "Car insurance in Spain",
   },
+  {
+    slug: "spain-life",
+    title: "Spain — Life Insurance",
+    short: "Spain Life",
+    landing: "/en/life-insurance-spain/",
+    landingLabel: "Life insurance in Spain",
+  },
+  {
+    slug: "spain-private-clients",
+    title: "Spain — Private Clients",
+    short: "Spain Private Clients",
+    landing: "/en/private-clients-spain/",
+    landingLabel: "Private client insurance in Spain",
+  },
 ];
 
 const EN_CATEGORY_OF = {
@@ -329,6 +343,14 @@ const EN_CATEGORY_OF = {
   "foreign-registered-car-insurance-spain": "spain-car",
   "importing-car-to-spain-insurance": "spain-car",
   "no-claims-history-car-insurance-spain": "spain-car",
+  // Spain — Life / Mortgage (Phase 4)
+  "life-insurance-spain-expats": "spain-life",
+  "mortgage-life-insurance-spain": "spain-life",
+  // Spain — cross-cluster, filed under Property (buying-property context)
+  "insurance-buying-property-spain": "spain-property",
+  // Spain — Private Clients (Phase 4)
+  "high-value-home-insurance-spain": "spain-private-clients",
+  "insurance-review-expats-spain": "spain-private-clients",
 };
 
 // --- PT article → category ----------------------------------------------------

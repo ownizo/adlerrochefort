@@ -466,6 +466,27 @@ const HANDLED_FORMS = {
     page: "/en/car-insurance-spain/",
     branch: "ES · Car",
   },
+  "life-insurance-review-spain": {
+    quote: true,
+    en: true,
+    heading: "New life insurance review request — Spain",
+    page: "/en/life-insurance-spain/",
+    branch: "ES · Life",
+  },
+  "mortgage-protection-review-spain": {
+    quote: true,
+    en: true,
+    heading: "New mortgage protection review request — Spain",
+    page: "/en/mortgage-protection-spain/",
+    branch: "ES · Mortgage Protection",
+  },
+  "private-client-review-spain": {
+    quote: true,
+    en: true,
+    heading: "New private client review request — Spain",
+    page: "/en/private-clients-spain/",
+    branch: "ES · Private Clients",
+  },
 };
 
 const humanise = (key) =>
