@@ -169,6 +169,13 @@ export const EN_CATEGORIES = [
     landing: "/en/home-insurance-spain/",
     landingLabel: "Home insurance in Spain",
   },
+  {
+    slug: "spain-car",
+    title: "Spain — Car Insurance",
+    short: "Spain Car",
+    landing: "/en/car-insurance-spain/",
+    landingLabel: "Car insurance in Spain",
+  },
 ];
 
 const EN_CATEGORY_OF = {
@@ -316,6 +323,12 @@ const EN_CATEGORY_OF = {
   "non-resident-property-insurance-spain": "spain-property",
   "second-home-insurance-spain": "spain-property",
   "renting-out-property-in-spain": "spain-property",
+  // Spain — Car (Phase 3)
+  "car-insurance-spain-expats": "spain-car",
+  "foreign-driving-licence-car-insurance-spain": "spain-car",
+  "foreign-registered-car-insurance-spain": "spain-car",
+  "importing-car-to-spain-insurance": "spain-car",
+  "no-claims-history-car-insurance-spain": "spain-car",
 };
 
 // --- PT article → category ----------------------------------------------------

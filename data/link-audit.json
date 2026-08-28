@@ -1,13 +1,13 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 281,
-    "indexedUrls": 272,
+    "htmlFiles": 288,
+    "indexedUrls": 279,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 5,
-    "deeperThanThreeClicks": 12
+    "singleInbound": 6,
+    "deeperThanThreeClicks": 19
   },
   "broken": [],
   "viaRedirect": [],
@@ -23,6 +23,12 @@
       "url": "/en/blog/category/health-insurance/page/2/",
       "from": [
         "/en/blog/category/health-insurance/"
+      ]
+    },
+    {
+      "url": "/en/blog/category/spain-car/",
+      "from": [
+        "/en/car-insurance-spain/"
       ]
     },
     {
@@ -46,11 +52,31 @@
   ],
   "deeperThanThreeClicks": [
     {
+      "url": "/en/blog/car-insurance-spain-expats/",
+      "clicks": 5
+    },
+    {
       "url": "/en/blog/community-insurance-apartment-owners-spain/",
       "clicks": 5
     },
     {
+      "url": "/en/blog/foreign-driving-licence-car-insurance-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/foreign-registered-car-insurance-spain/",
+      "clicks": 5
+    },
+    {
       "url": "/en/blog/health-insurance-moving-to-spain/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/importing-car-to-spain-insurance/",
+      "clicks": 5
+    },
+    {
+      "url": "/en/blog/no-claims-history-car-insurance-spain/",
       "clicks": 5
     },
     {
@@ -74,12 +100,20 @@
       "clicks": 5
     },
     {
+      "url": "/en/blog/category/spain-car/",
+      "clicks": 5
+    },
+    {
       "url": "/en/blog/category/spain-health/",
       "clicks": 5
     },
     {
       "url": "/en/blog/category/spain-property/",
       "clicks": 5
+    },
+    {
+      "url": "/en/car-insurance-spain/",
+      "clicks": 4
     },
     {
       "url": "/en/health-insurance-spain/",

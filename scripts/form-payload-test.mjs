@@ -350,6 +350,13 @@ const CASES = [
     formName: 'health-insurance-quote-spain',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    label: '20. /en/car-insurance-spain/ — Spain car insurance pillar',
+    path: 'en/car-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/car-insurance-spain/',
+    formName: 'car-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its

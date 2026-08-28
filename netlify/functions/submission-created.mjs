@@ -459,6 +459,13 @@ const HANDLED_FORMS = {
     page: "/en/health-insurance-spain/",
     branch: "ES · Health",
   },
+  "car-insurance-quote-spain": {
+    quote: true,
+    en: true,
+    heading: "New car insurance quote request — Spain",
+    page: "/en/car-insurance-spain/",
+    branch: "ES · Car",
+  },
 };
 
 const humanise = (key) =>

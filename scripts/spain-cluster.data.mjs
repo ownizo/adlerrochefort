@@ -66,7 +66,7 @@ const HUB = {
   stickyCta: 'Get an Insurance Review',
   whatsapp: 'Hello, I am looking into insurance for a property or a move to Spain and would like to talk to someone.',
   market: 'spain',
-  chatTopics: ['spain_general', 'spain_health', 'spain_home', 'spain_landlord'],
+  chatTopics: ['spain_general', 'spain_health', 'spain_home', 'spain_landlord', 'spain_car'],
   service: {
     name: 'Insurance guidance for expats and property owners in Spain',
     type: 'Insurance intermediation — client qualification and referral',
@@ -105,7 +105,7 @@ const HUB = {
         {
           kind: 'p',
           html:
-            'The products we can currently discuss properly for Spain are set out below. If your situation is different — car, life, a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
+            'The products we can currently discuss properly for Spain are set out below. If your situation is different — life, a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
         },
         {
           kind: 'cluster',
@@ -125,11 +125,33 @@ const HUB = {
               title: 'Landlord insurance',
               blurb: 'Property you let out in Spain, long-term or holiday rental, managed locally or remotely.',
             },
+            {
+              href: '/en/car-insurance-spain/',
+              title: 'Car insurance',
+              blurb: 'For expats, international residents and foreign drivers with a vehicle in Spain.',
+            },
           ],
         },
         {
           kind: 'note',
           html: AVAILABILITY_NOTE,
+        },
+      ],
+    },
+
+    {
+      id: 'car',
+      h2: 'Car insurance in Spain',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Whether you are bringing a car with you, buying one after you arrive, or already driving on a Spanish-registered vehicle, motor cover in Spain has to match the vehicle’s actual situation — where it is registered, who holds the driving licence, and how it is used. Third-party liability is compulsory by law for every vehicle in Spain; what sits above that is a matter of insurer, plan and the profile of the driver.',
+        },
+        {
+          kind: 'note',
+          html:
+            'This is covered in full on <a href="/en/car-insurance-spain/">car insurance in Spain</a>, including foreign driving licences, foreign-registered vehicles, and what actually affects the price.',
         },
       ],
     },
@@ -359,8 +381,8 @@ const HUB = {
       a: 'That is the normal starting point. Tell us about the property — what it is, where it is, how you use it — and we will tell you what to consider and in what order, rather than sell you a product before we understand the situation.',
     },
     {
-      q: 'Is this page about car or life insurance too?',
-      a: 'Not yet. This page currently covers health, home and landlord insurance in Spain. If your question is about a different product, say so in the form and we will tell you honestly whether it is something we can help with.',
+      q: 'Is this page about life insurance too?',
+      a: 'Not yet. This page currently covers health, home, landlord and car insurance in Spain. If your question is about a different product, say so in the form and we will tell you honestly whether it is something we can help with.',
     },
     {
       q: 'Do you provide immigration, residency or tax advice?',
@@ -1284,5 +1306,417 @@ const HEALTH = {
   ],
 };
 
-export const PAGES = [HUB, HOME, LANDLORD, HEALTH];
+// -----------------------------------------------------------------------------
+// CAR — /en/car-insurance-spain/
+// -----------------------------------------------------------------------------
+//
+// Regulatory grounding, verified before writing (not restated from memory or
+// from a competitor site — see the audit's own rule on that):
+//   - The governing law is Real Decreto Legislativo 8/2004, de 29 de octubre
+//     (the consolidated Ley sobre responsabilidad civil y seguro en la
+//     circulación de vehículos a motor), published in BOE no. 267 of 5
+//     November 2004, itself amended since, most recently by Ley 5/2025 —
+//     confirmed directly against boe.es. This page cites the law by name
+//     because that citation is stable; it does not cite specific minimum
+//     liability capitals, because those figures could not be verified with
+//     the same confidence and are exactly the kind of number that goes
+//     stale — the brief's own instruction where a figure can't be safely
+//     verified is to omit it, not estimate it.
+//   - The UK–Spain bilateral direct-exchange licence agreement is described
+//     as in force, with a medical exam required and no test for standard
+//     categories, based on multiple consistent (though secondary) sources —
+//     flagged for the reader to confirm with the DGT regardless, because
+//     bilateral agreements are exactly the sort of thing that can change.
+//   - The three-body registration process (ITV / Agencia Tributaria / DGT)
+//     is consistently described the same way across independent sources and
+//     stated with the same confidence the Portuguese import article gives
+//     its own multi-agency process.
+
+const CAR = {
+  slug: 'car-insurance-spain',
+  crumb: 'Car insurance',
+  parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
+  title: 'Car Insurance in Spain for Expats | Adler & Rochefort',
+  description:
+    'Car insurance in Spain for expats, international residents and foreign drivers. Foreign licences, foreign-registered vehicles and what actually affects the price — explained in English.',
+  keywords:
+    'car insurance spain expats, car insurance for expats in spain, car insurance spain foreigners, car insurance spain international residents, english speaking car insurance spain, spanish car insurance foreign driver, vehicle insurance spain expats',
+  eyebrow: 'Spain · Car insurance',
+  h1: 'Car Insurance in Spain for Expats',
+  heroSub:
+    'Already driving in Spain, bringing a car with you, or buying one after you arrive? We help international clients understand what motor cover actually applies to their situation, and arrange it where it can be honestly confirmed.',
+  heroCta: 'Get a Car Insurance Quote',
+  heroSecondary: 'Ask About Your Vehicle',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Get a Car Insurance Quote',
+  stickyCta: 'Get a Car Insurance Quote',
+  whatsapp: 'Hello, I would like a car insurance quote for a vehicle in Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_car'],
+  service: {
+    name: 'Car insurance guidance in Spain',
+    type: 'Motor insurance intermediation',
+    description:
+      'Helping expats, international residents and foreign drivers in Spain work out what motor cover applies to their situation — foreign licences, foreign-registered vehicles included — and arranging it where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'who-for',
+      h2: 'Who this is for',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Motor insurance questions from international clients in Spain tend to fall into a handful of situations. Say which one is closest and we will ask the right follow-up questions rather than the generic ones.',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Already living in Spain', body: 'Reviewing what you have, or arranging cover for the first time now that you are settled.' },
+            { title: 'Moving to Spain', body: 'Working out the sequence — licence, vehicle, registration, insurance — before you need to drive.' },
+            { title: 'Buying a Spanish-registered vehicle', body: 'The most straightforward case: cover has to be in force before you collect the car.' },
+            { title: 'Foreign licence holder', body: 'EU/EEA, UK or other — see the licences section below for what actually differs.' },
+            { title: 'Second-home owner keeping a car in Spain', body: 'A vehicle kept in Spain year-round while you live elsewhere is a normal, insurable situation.' },
+            { title: 'Bringing a foreign-registered vehicle', body: 'Whether it stays on foreign plates temporarily or moves to Spanish registration — see the dedicated section below.' },
+          ],
+        },
+        { kind: 'note', html: DISCLAIM_NOTE },
+      ],
+    },
+
+    {
+      id: 'basics',
+      h2: 'How car insurance works in Spain',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Third-party liability is compulsory for every motor vehicle in Spain, under the consolidated <em>Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor</em> (Real Decreto Legislativo 8/2004, most recently amended by Ley 5/2025). That compulsory cover pays for injury and damage you cause to <em>other people</em> — it does nothing for your own vehicle and, on most wordings, nothing for you as the driver.',
+        },
+        {
+          kind: 'note',
+          html:
+            'We do not quote the statutory minimum liability capitals here. They are set in the law above and periodically revised, and rather than reprint a figure that could be out of date by the time you read this, we would rather point you to the current text — <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2004-18911" target="_blank" rel="noopener">the consolidated law on boe.es</a> — or confirm the current position with your insurer at quote stage.',
+        },
+        {
+          kind: 'p',
+          html:
+            'Above that compulsory minimum, cover is a matter of insurer and policy, not a fixed national menu. What is actually included, and at what limit, is set by the specific wording — the sections below are what to ask about, not a guarantee of what any particular product contains.',
+        },
+      ],
+    },
+
+    {
+      id: 'cover',
+      h2: 'Cover levels',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'The Spanish motor market is generally organised around a similar shape to other European markets, though insurers package it differently and use different names for the middle tier — the useful question is always "which of these items is actually in the wording, and at what limit?" rather than "which tier is this?"',
+        },
+        {
+          kind: 'covers',
+          items: [
+            { title: 'Third-party liability (seguro obligatorio).', body: ' The legal minimum. Pays for injury and damage you cause to other people; nothing for your own vehicle.' },
+            { title: 'Broader third-party cover.', body: ' Liability plus a selection of named extras — commonly theft, fire and glass, depending on the insurer and policy.' },
+            { title: 'Own-damage / comprehensive-type cover.', body: ' Adds damage to your own vehicle, including at-fault incidents. Written with an excess and rated against the vehicle’s declared value.' },
+            { title: 'Roadside assistance.', body: ' Frequently an option rather than a universal inclusion — territorial scope and the distance-from-home condition are worth checking explicitly.' },
+            { title: 'Legal assistance.', body: ' Cover for the cost of pursuing or defending a claim — low-cost where offered, and easy to overlook.' },
+            { title: 'Driver cover.', body: ' The compulsory cover protects third parties; cover for you as the driver is a separate item where available.' },
+          ],
+        },
+        {
+          kind: 'note',
+          html:
+            'We do not publish fixed package names ("Basic," "Plus," "Premium") here, because doing so would imply a standard product line we do not currently distribute. ' + AVAILABILITY_NOTE,
+        },
+      ],
+    },
+
+    {
+      id: 'licences',
+      h2: 'Foreign driving licences',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Two separate questions get conflated here, and it is worth keeping them apart: whether your licence entitles you to drive in Spain at all, and whether a given insurer is comfortable underwriting against it. The first is a matter of Spanish traffic law and, for some licences, an exchange process with the <abbr title="Dirección General de Tráfico">DGT</abbr>. The second is an underwriting decision an insurer makes when quoting — a licence can be perfectly valid to drive on and still raise questions for a particular insurer.',
+        },
+        {
+          kind: 'grid',
+          items: [
+            {
+              title: 'EU/EEA licences',
+              body: 'Generally usable in Spain without exchange while the licence remains valid, under EU mutual-recognition rules. Confirm your specific position with the DGT if you become a long-term resident, as the position can depend on how long you have been resident.',
+            },
+            {
+              title: 'UK licences',
+              body: 'A bilateral direct-exchange agreement between Spain and the UK has been in force since 2023 and was renewed for an indefinite duration. Residents are generally expected to exchange within a set window after registering residency, and the exchange typically requires a medical fitness certificate but not a new test for standard categories. Confirm the current requirement and deadline with the DGT — bilateral agreements are exactly the kind of arrangement that can be renegotiated.',
+            },
+            {
+              title: 'Other non-EU licences',
+              body: 'Rules vary by country of issue and by whether Spain has an exchange agreement with it. This is a DGT question, not an insurance one — we ask about your licence at quote stage, but the exchange process itself is not something we administer.',
+            },
+          ],
+        },
+        {
+          kind: 'note',
+          html:
+            'Licence validity and any exchange deadline are set by the DGT and can change; confirm your own position with them rather than relying on a summary, including this one. See <a href="/en/blog/foreign-driving-licence-car-insurance-spain/">car insurance in Spain with a foreign driving licence</a> for the fuller version.',
+        },
+      ],
+    },
+
+    {
+      id: 'no-claims',
+      h2: 'Foreign no-claims and claims history',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Arriving in Spain with no local driving record is one of the things that can push a first Spanish premium up, because the insurer cannot see the history you actually have. Some insurers will take documented evidence of a foreign claims-free record into account when quoting; not all of them do, and none of them are obliged to apply it in a specific way.',
+        },
+        {
+          kind: 'covers',
+          items: [
+            { title: 'Ask before you cancel.', body: ' Request a claims-experience letter from your previous insurer while the policy is still live — it becomes slower to obtain once it has lapsed.' },
+            { title: 'Present it at quotation.', body: ' Any recognition of foreign history has to be built into the price when the risk is rated, not added afterwards.' },
+            { title: 'Expect variation.', body: ' Insurers weigh foreign records differently. That is one of the reasons comparing more than one proposal is worth more for an expat than it is for a local driver.' },
+          ],
+        },
+        {
+          kind: 'note',
+          html:
+            'We cannot promise that a given insurer will accept a given foreign record, or that a specific number of years automatically produces a discount — that is an underwriting decision, and it depends on the documentation and the insurer. See <a href="/en/blog/no-claims-history-car-insurance-spain/">using foreign no-claims history for car insurance in Spain</a> for what the evidence typically needs to look like.',
+        },
+      ],
+    },
+
+    {
+      id: 'foreign-registered',
+      h2: 'Foreign-registered vehicles',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Insuring a vehicle that is still registered abroad but kept in Spain is a genuinely more complex situation than insuring a Spanish-registered car, and we are not able to say in general terms that any foreign-registered vehicle can be insured here — it depends on the vehicle, the circumstances and the insurer.',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Country of registration', body: 'Which country the vehicle is currently registered in affects which insurers will even consider it.' },
+            { title: 'Habitual location', body: 'Whether the vehicle genuinely lives in Spain or is only there temporarily changes the risk an insurer is being asked to price.' },
+            { title: 'Ownership', body: 'Whether you are the registered owner, and how that is documented.' },
+            { title: 'Intended registration', body: 'Whether the vehicle will move to Spanish plates, and on what timeline.' },
+            { title: 'Duration in Spain', body: 'A short stay and an indefinite one are different questions, including for whether Spanish registration becomes a legal requirement.' },
+            { title: 'Insurer appetite', body: 'Not every insurer we work with is willing to write a foreign-registered risk, regardless of the other factors.' },
+          ],
+        },
+        {
+          kind: 'note',
+          html:
+            'Tell us about the vehicle and we will confirm what can currently be arranged — see <a href="/en/blog/foreign-registered-car-insurance-spain/">insuring a foreign-registered car in Spain</a> for the detail behind each of these factors.',
+        },
+      ],
+    },
+
+    {
+      id: 'importing',
+      h2: 'Importing and registering a vehicle',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'This page is about insurance, not a substitute for the registration process itself, which runs through the ITV (technical inspection), the Agencia Tributaria (registration tax) and the DGT (final registration and plates) as three separate steps. What matters for insurance is that cover matches the vehicle’s actual registration status at each stage — before, during and after that process — rather than assuming one policy covers all three.',
+        },
+        {
+          kind: 'note',
+          html:
+            'For the registration and tax process itself, see <a href="/en/blog/importing-car-to-spain-insurance/">importing a car to Spain: when do you need insurance?</a>, which covers the sequence and where insurance fits into it. For anything beyond that — customs, tax calculation, technical inspection appeals — the Agencia Tributaria and the DGT are the right authorities, not us.',
+        },
+      ],
+    },
+
+    {
+      id: 'price',
+      h2: 'What affects the price',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'We do not publish indicative Spanish premium figures here — a number quoted for a webpage rather than checked against a real quote would not be honest. What genuinely moves the price:',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Driver age and history', body: 'How long you have held a licence and your recorded claims, including any documented foreign history.' },
+            { title: 'The vehicle', body: 'Value, power, age and how expensive it is to repair.' },
+            { title: 'Location', body: 'Where the car is kept and, for some insurers, the specific postcode.' },
+            { title: 'Use', body: 'Private, business or other declared use — undeclared use is a claim problem, not a saving.' },
+            { title: 'Annual mileage', body: 'Where relevant to the insurer’s rating.' },
+            { title: 'Parking', body: 'Garaged, private drive or street parking all factor into underwriting.' },
+            { title: 'Cover level and excess', body: 'The tier you choose and the excess you accept on own damage.' },
+            { title: 'Insurer underwriting', body: 'The same profile can be priced differently by different insurers — worth comparing rather than assuming one figure applies.' },
+          ],
+        },
+      ],
+    },
+
+    {
+      id: 'documents',
+      h2: 'What we typically need',
+      blocks: [
+        {
+          kind: 'steps',
+          items: [
+            { title: 'The driver.', body: 'Age, the country that issued your licence and roughly how long you have held it.' },
+            { title: 'The vehicle.', body: 'Make, model, year and its current registration status — Spanish plate, foreign plate, or import in progress.' },
+            { title: 'Claims history.', body: 'Claim-free years and whether you have, or can obtain, a letter from your previous insurer.' },
+            { title: 'Where the car is kept.', body: 'Location and whether it is garaged.' },
+            { title: 'What you have now.', body: 'Your current policy, if there is one, and its renewal date.' },
+          ],
+        },
+        {
+          kind: 'p',
+          html:
+            'Not every insurer asks for exactly the same documents — this is the starting list, and we will tell you what else is needed once we know which insurer is realistic for your case.',
+        },
+      ],
+    },
+
+    {
+      id: 'claims',
+      h2: 'If something happens',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'At a high level, the same principles apply whatever the incident: report it to your insurer promptly, gather evidence (photos, third-party details, a police report where relevant), and avoid admitting fault at the scene before the claim has been assessed. The exact process — who to call, what documentation is needed — depends on the insurer and the specific policy, so we do not publish insurer-specific claims numbers here; we give you the right contact once cover is actually in place.',
+        },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Get a car insurance quote',
+    sub: 'Tell us about the driver and the vehicle. Registration status and licence country change the answer more than anything else on this form.',
+    name: 'car-insurance-quote-spain',
+    gaField: 'registration_status',
+    submit: 'Get my quote',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'current_country', label: 'Where do you currently live?', required: true, placeholder: 'e.g. United Kingdom' },
+      ],
+      [
+        { name: 'spain_location', label: 'Where in Spain will the car be kept?', required: true, placeholder: 'e.g. Alicante, Costa Blanca' },
+        {
+          name: 'registration_status',
+          label: 'Vehicle registration status',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['Spanish-registered already', 'Foreign-registered, import in process', 'Foreign-registered, not yet started', 'Buying a car in Spain, not chosen yet', 'Not sure'],
+        },
+      ],
+      [
+        { name: 'vehicle', label: 'Make, model and year', required: true, placeholder: 'e.g. Volkswagen Golf 2019' },
+        { name: 'registration_country', label: 'Vehicle’s country of registration', placeholder: 'e.g. United Kingdom, or "Spain"' },
+      ],
+      [
+        { name: 'licence_country', label: 'Country that issued your driving licence', required: true, placeholder: 'e.g. United Kingdom' },
+        { name: 'licence_year', label: 'Year you first held a full licence', placeholder: 'e.g. 2005' },
+      ],
+      [
+        {
+          name: 'claims_history',
+          label: 'Claims history',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Claim-free, letter from previous insurer available', 'Claim-free, no letter yet', 'One or more claims in the last 5 years', 'Already have a Spanish claims record', 'Newly licensed / no history yet'],
+        },
+        {
+          name: 'use_type',
+          label: 'Intended use',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Private', 'Business', 'Other'],
+        },
+      ],
+      {
+        name: 'message',
+        label: 'Anything we should know?',
+        type: 'textarea',
+        placeholder: 'Current insurer and renewal date, or where you are in the import/registration process.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'Is car insurance compulsory in Spain?',
+      a: 'Yes. Third-party liability is compulsory for every motor vehicle in Spain under the consolidated Ley sobre responsabilidad civil y seguro en la circulación de vehículos a motor (Real Decreto Legislativo 8/2004, as amended). We do not quote the specific statutory minimum capitals here, as they are periodically revised — the current text is available on boe.es, or we can confirm the current position with you at quote stage.',
+    },
+    {
+      q: 'Can I insure a car in Spain with a UK driving licence?',
+      a: 'Generally yes, and there is a bilateral direct-exchange agreement between Spain and the UK that has been in force since 2023. Whether and when you need to exchange your licence with the DGT depends on your residency status, and requirements can change — confirm the current position with the DGT rather than relying on a summary, including this one.',
+    },
+    {
+      q: 'Will my foreign no-claims history be recognised?',
+      a: 'Some insurers will take a documented foreign record into account; not all do, and none are obliged to weigh it the same way. You will normally need a claims-experience letter from your previous insurer. It is worth requesting before you cancel the old policy, and it is an underwriting decision, not a guarantee.',
+    },
+    {
+      q: 'Can you insure a foreign-registered car kept in Spain?',
+      a: 'It depends on the vehicle, how long it has been or will be in Spain, and the insurer — this is genuinely more complex than insuring a Spanish-registered vehicle and we cannot promise availability in general terms. Tell us about the vehicle and we will confirm honestly what can currently be arranged.',
+    },
+    {
+      q: 'Do you name which Spanish motor insurers you work with?',
+      a: 'Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than promise a panel that does not exist yet.',
+    },
+    {
+      q: 'What documents do I need to import and register a car in Spain?',
+      a: 'The registration process runs through the ITV, the Agencia Tributaria and the DGT, and the exact documents depend on the vehicle and your circumstances. That is a registration and tax question, not an insurance one — see our guide to importing a car to Spain, or the DGT and Agencia Tributaria directly for the current procedural requirements.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/car-insurance-spain-expats/', text: 'Car insurance in Spain for expats: complete guide', note: 'the legal baseline, cover types, licences and documents, end to end' },
+            { href: '/en/blog/foreign-driving-licence-car-insurance-spain/', text: 'Car insurance in Spain with a foreign driving licence', note: 'EU/EEA, UK and other licences, and what actually differs' },
+            { href: '/en/blog/foreign-registered-car-insurance-spain/', text: 'Insuring a foreign-registered car in Spain', note: 'foreign plate vs Spanish plate, and what insurers actually ask' },
+            { href: '/en/blog/importing-car-to-spain-insurance/', text: 'Importing a car to Spain: when do you need insurance?', note: 'where insurance fits into the registration sequence' },
+            { href: '/en/blog/no-claims-history-car-insurance-spain/', text: 'Using foreign no-claims history for car insurance in Spain', note: 'what evidence to gather, and when to ask for it' },
+            { href: '/en/blog/category/spain-car/', text: 'All car guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need? Start at the hub.' },
+            { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'The other line most new arrivals need to sort out.' },
+            { href: '/en/blog/insurance-portugal-spain-international-residents/', title: 'Insurance in Portugal and Spain for international residents', blurb: 'For owners with property in, or moving between, both countries.' },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const PAGES = [HUB, HOME, LANDLORD, HEALTH, CAR];
 export const HUB_SLUG = HUB.slug;
