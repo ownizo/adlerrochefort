@@ -338,6 +338,7 @@ const PROP_COMMUNITY = {
 
 const PROP_NON_RESIDENT = {
   slug: 'non-resident-property-insurance-spain',
+  situation: 'non_resident_owner',
   category: 'spain-property',
   tag: 'Non-resident',
   title: 'Property Insurance in Spain for Non-Resident Owners | Adler & Rochefort',
@@ -400,6 +401,7 @@ const PROP_NON_RESIDENT = {
     { href: '/en/blog/second-home-insurance-spain/', tag: 'Second home', title: 'Second home insurance in Spain' },
     { href: '/en/blog/community-insurance-apartment-owners-spain/', tag: 'Community', title: 'Community insurance and apartment ownership in Spain' },
     { href: '/en/landlord-insurance-spain/', tag: 'Landlord', title: 'Landlord insurance in Spain' },
+    { href: '/en/private-clients-spain/', tag: 'Private clients', title: 'Private client insurance in Spain' },
   ],
 };
 
@@ -409,6 +411,7 @@ const PROP_NON_RESIDENT = {
 
 const PROP_SECOND_HOME = {
   slug: 'second-home-insurance-spain',
+  situation: 'second_home',
   category: 'spain-property',
   tag: 'Second home',
   title: 'Second Home Insurance in Spain: What to Check Before You Buy Cover | Adler & Rochefort',
@@ -471,6 +474,7 @@ const PROP_SECOND_HOME = {
     { href: '/en/blog/non-resident-property-insurance-spain/', tag: 'Non-resident', title: 'Property insurance in Spain for non-resident owners' },
     { href: '/en/blog/renting-out-property-in-spain/', tag: 'Renting out', title: 'Renting out property in Spain' },
     { href: '/en/landlord-insurance-spain/', tag: 'Landlord', title: 'Landlord insurance in Spain' },
+    { href: '/en/private-clients-spain/', tag: 'Private clients', title: 'Private client insurance in Spain' },
   ],
 };
 
@@ -480,6 +484,7 @@ const PROP_SECOND_HOME = {
 
 const PROP_RENTING_OUT = {
   slug: 'renting-out-property-in-spain',
+  situation: 'landlord',
   category: 'spain-property',
   tag: 'Renting out',
   title: 'Renting Out Property in Spain: Why Your Home Policy May Not Cover It | Adler & Rochefort',
@@ -1104,6 +1109,7 @@ const MORTGAGE_ARTICLE = {
 
 const BUYING_PROPERTY = {
   slug: 'insurance-buying-property-spain',
+  situation: 'buying_property',
   category: 'spain-property',
   tag: 'Buying property',
   title: 'Insurance to Consider When Buying Property in Spain | Adler &amp; Rochefort',
@@ -1174,6 +1180,7 @@ const BUYING_PROPERTY = {
     { href: '/en/mortgage-protection-spain/', tag: 'Mortgage protection', title: 'Mortgage protection in Spain for international property buyers' },
     { href: '/en/blog/mortgage-life-insurance-spain/', tag: 'Mortgage', title: 'Do you need life insurance for a mortgage in Spain?' },
     { href: '/en/landlord-insurance-spain/', tag: 'Landlord insurance', title: 'Landlord insurance in Spain for international property owners' },
+    { href: '/en/private-clients-spain/', tag: 'Private clients', title: 'Private client insurance in Spain' },
   ],
 };
 
@@ -1183,6 +1190,7 @@ const BUYING_PROPERTY = {
 
 const HIGH_VALUE_HOME = {
   slug: 'high-value-home-insurance-spain',
+  situation: 'private_client',
   category: 'spain-private-clients',
   tag: 'Private clients',
   title: 'Insuring a High-Value Home in Spain: What International Owners Should Check | Adler &amp; Rochefort',
@@ -1298,7 +1306,7 @@ const INSURANCE_REVIEW = {
     <p>Roadside assistance, travel assistance and similar add-ons are often included, sometimes without the policyholder realising, across more than one policy — home, car and even some bank accounts can carry overlapping versions of similar cover. Reviewing everything together is usually the only way this becomes visible.</p>
 
     <h2 id="missing-protection">Missing family protection</h2>
-    <p>The most consequential gap we see is not a small overlap — it is life insurance that was never arranged at all, or a foreign policy nobody has checked since a house purchase or a change in family circumstances. See <a href="/en/life-insurance-spain/">life insurance in Spain</a> if this describes your situation.</p>
+    <p>The most consequential gap we see is not a small overlap — it is life insurance that was never arranged at all, or a foreign policy nobody has checked since a house purchase or a change in family circumstances. See <a href="/en/life-insurance-spain/">life insurance in Spain</a> if this describes your situation, or <a href="/en/blog/family-insurance-spain/">insurance for families living in Spain</a> for how health, home, car and life tend to connect for a family specifically.</p>
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
@@ -1327,7 +1335,88 @@ const INSURANCE_REVIEW = {
     { href: '/en/private-clients-spain/', tag: 'Private clients', title: 'Private client insurance in Spain' },
     { href: '/en/blog/high-value-home-insurance-spain/', tag: 'High-value homes', title: 'Insuring a high-value home in Spain' },
     { href: '/en/life-insurance-spain/', tag: 'Life insurance', title: 'Life insurance in Spain for international residents' },
-    { href: '/en/expat-insurance-spain/', tag: 'Spain', title: 'Insurance for expats in Spain' },
+    { href: '/en/blog/family-insurance-spain/', tag: 'Family', title: 'Insurance for families living in Spain' },
+  ],
+};
+
+// -----------------------------------------------------------------------------
+// L6 — /en/blog/family-insurance-spain/  (Phase 7: situation-based acquisition)
+// -----------------------------------------------------------------------------
+// Deliberately a different angle from insurance-review-expats-spain (above):
+// that article is for someone auditing policies they already hold; this one
+// is for a family working out what to arrange in the first place. Cross-
+// linked in both directions rather than left to compete on the same intent.
+
+const FAMILY_SPAIN = {
+  slug: 'family-insurance-spain',
+  situation: 'family',
+  category: 'spain-health',
+  tag: 'Family',
+  title: 'Insurance for Families Living in Spain | What International Residents Should Review',
+  description:
+    'What insurance actually comes up for a family living in Spain — health, home, car and life — and how to work out which of them apply to your situation rather than assuming you need all four.',
+  h1: 'Insurance for Families Living in Spain: What Should You Review?',
+  standfirst:
+    'Not every family needs every product. Here is how the four that come up most often — health, home, car and life — tend to connect for a family actually living in Spain, so you can work out which apply to you.',
+  published: '2026-08-28T09:00:00+00:00',
+  destination: '/en/health-insurance-spain/',
+  toc: [
+    { href: '#not-a-bundle', label: 'This is not a bundle' },
+    { href: '#health', label: 'Health insurance' },
+    { href: '#home', label: 'Home insurance' },
+    { href: '#car', label: 'Car insurance' },
+    { href: '#life', label: 'Life and family protection' },
+    { href: '#already-hold-cover', label: 'Already hold some of this?' },
+    { href: '#faq', label: 'Frequently asked questions' },
+  ],
+  bodyHtml: `
+    <h2 id="not-a-bundle">This is not a bundle</h2>
+    <p>Families ask us about insurance in Spain for genuinely different reasons — a couple with young children has a different set of questions to a single parent, or to adult siblings who each own a share of a family property. There is no single "family policy," and we do not assume every household needs health, home, car and life cover all at once. What follows is how each one tends to connect to family circumstances specifically, so you can work out which apply to yours.</p>
+
+    <h2 id="health">Health insurance</h2>
+    <p>For a family, health cover usually raises questions that do not come up for a single applicant on their own — whether children are covered on the same policy or a separate one, how maternity is treated if that is relevant, and whether pre-existing conditions across several family members are declared and assessed individually. See <a href="/en/health-insurance-spain/">health insurance in Spain</a> for how cover works in general; the family-specific detail is in how many people are being insured and what each of them actually needs.</p>
+
+    <h2 id="home">Home insurance</h2>
+    <p>The property a family lives in full-time is usually the more straightforward end of home insurance — occupied, lived-in, used daily — but family liability is worth checking specifically: cover for accidental damage or injury caused by a member of the household, including children, to someone outside it. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>
+
+    <h2 id="car">Car insurance</h2>
+    <p>A family with more than one driver, or a driver who has just moved their licence and no-claims history from another country, has questions that a single-driver policy does not. Worth checking: whether every driver in the household needs to be named, and how a foreign licence and driving history are actually treated. See <a href="/en/car-insurance-spain/">car insurance in Spain</a>.</p>
+
+    <h2 id="life">Life and family protection</h2>
+    <p>This is the one families most often postpone rather than decide against — usually not because it does not matter, but because nobody has actually sat down to work out what sum insured makes sense, or whether an existing policy from another country still applies once the family has moved. If there are dependants, or a mortgage on a Spanish property, this is worth deciding rather than leaving open. See <a href="/en/life-insurance-spain/">life insurance in Spain</a>.</p>
+
+    <div class="callout">
+      <div class="callout-title">Where this leads</div>
+      <p>Tell us about your family's situation — who needs to be covered, and for what — and we will tell you honestly which of these actually apply, not sell you all four by default.</p>
+    </div>
+
+    <h2 id="already-hold-cover">Already hold some of this?</h2>
+    <p>If your family already has policies arranged at different times — a health plan from one insurer, home cover from another, life insurance nobody has looked at since it was taken out — the more useful exercise is often a coordinated review of what you already hold, rather than arranging something new. See <a href="/en/blog/insurance-review-expats-spain/">why expats in Spain should review their insurance as a whole</a>. Families with several properties, vehicles or a more complex household picture may also want <a href="/en/private-clients-spain/">private client insurance in Spain</a> — one coordinated relationship rather than several unconnected policies.</p>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <h3>Do we need health, home, car and life insurance all at once?</h3>
+    <p>Not necessarily — it depends on your family's actual circumstances. Some families need all four, others only one or two. Tell us your situation and we will tell you honestly which apply, rather than assume.</p>
+
+    <h3>Can children be added to a health policy, or do they need their own?</h3>
+    <p>This depends on the insurer and plan — some cover a family under one policy, others price and underwrite each person, including children, separately. Confirm this specifically rather than assuming either approach.</p>
+
+    <h3>We already have insurance from another country — does it still count?</h3>
+    <p>Sometimes, in part — a foreign policy is worth checking against what it actually covers in Spain rather than assumed to transfer automatically or assumed to stop working the moment you arrive. See <a href="/en/blog/insurance-review-expats-spain/">reviewing insurance you already hold</a>.</p>
+
+    ${CARE_NOTE_HTML()}
+  `,
+  faq: [
+    { q: 'Do we need health, home, car and life insurance all at once?', a: 'Not necessarily — it depends on your family\'s actual circumstances. Some families need all four, others only one or two. Tell us your situation and we will tell you honestly which apply, rather than assume.' },
+    { q: 'Can children be added to a health policy, or do they need their own?', a: 'This depends on the insurer and plan — some cover a family under one policy, others price and underwrite each person, including children, separately. Confirm this specifically rather than assuming either approach.' },
+    { q: 'We already have insurance from another country — does it still count?', a: 'Sometimes, in part — a foreign policy is worth checking against what it actually covers in Spain rather than assumed to transfer automatically or assumed to stop working the moment you arrive.' },
+  ],
+  related: [
+    { href: '/en/health-insurance-spain/', tag: 'Health insurance', title: 'Health insurance in Spain for expats' },
+    { href: '/en/home-insurance-spain/', tag: 'Home insurance', title: 'Home insurance in Spain for international owners' },
+    { href: '/en/car-insurance-spain/', tag: 'Car insurance', title: 'Car insurance in Spain for expats' },
+    { href: '/en/life-insurance-spain/', tag: 'Life insurance', title: 'Life insurance in Spain for international residents' },
+    { href: '/en/private-clients-spain/', tag: 'Private clients', title: 'Private client insurance in Spain' },
   ],
 };
 
@@ -1349,4 +1438,5 @@ export const ARTICLES = [
   BUYING_PROPERTY,
   HIGH_VALUE_HOME,
   INSURANCE_REVIEW,
+  FAMILY_SPAIN,
 ];

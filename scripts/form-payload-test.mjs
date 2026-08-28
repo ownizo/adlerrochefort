@@ -493,6 +493,26 @@ const CASES = [
     requireBranch: 'PT · Multi-product',
     skipLeakCheck: true,
   },
+  {
+    // entry_situation (Phase 7, brief §31/§32): a situational article's CTA
+    // carries ?situation=buying_property alongside ?market=Spain. The page's
+    // inline script reads it from window.location.search unconditionally —
+    // independent of the country-select reveal timing this test harness
+    // otherwise has to work around — so the assertion here is exactly that:
+    // the hidden field lands in the payload with the value the URL named.
+    label: '29. /en/insurance-review/?situation=buying_property — entry_situation carried through',
+    path: 'en/insurance-review/index.html',
+    url: 'https://adlerrochefort.com/en/insurance-review/?market=Spain&situation=buying_property',
+    formName: 'international-insurance-review',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'Spain',
+    inlineScripts: true,
+    checkboxValues: { insurance_needs: ['Home Insurance'] },
+    requireValues: { insurance_needs: ['Health Insurance', 'Home Insurance'], entry_situation: ['buying_property'] },
+    requireCountry: 'Spain',
+    requireBranch: 'ES · Multi-product',
+    skipLeakCheck: true,
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its

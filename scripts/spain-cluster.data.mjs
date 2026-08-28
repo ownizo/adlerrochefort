@@ -209,16 +209,24 @@ const HUB = {
               body: 'Already resident or settled in? Health, car and home are usually the first three worth checking. See <a href="/en/health-insurance-spain/">health</a>, <a href="/en/car-insurance-spain/">car</a> and <a href="/en/home-insurance-spain/">home</a> insurance.',
             },
             {
+              title: 'Buying a property',
+              body: 'What actually comes up during a purchase — buildings, mortgage protection, and whether you plan to let it out. See <a href="/en/blog/insurance-buying-property-spain/">insurance to consider when buying property in Spain</a>.',
+            },
+            {
               title: 'Owning a home',
               body: 'A property you live in yourself, resident or not. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.',
             },
             {
               title: 'A second home',
-              body: 'Used for part of the year rather than lived in full-time — insurers price that differently. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.',
+              body: 'Used for part of the year rather than lived in full-time — insurers price that differently. See <a href="/en/blog/second-home-insurance-spain/">second-home insurance in Spain</a>.',
             },
             {
               title: 'Renting out a property',
               body: 'Long-term or holiday letting both change what needs to be covered. See <a href="/en/landlord-insurance-spain/">landlord insurance in Spain</a>.',
+            },
+            {
+              title: 'Owning property without living in Spain',
+              body: 'Non-resident ownership is normal and normally insurable. See <a href="/en/blog/non-resident-property-insurance-spain/">property insurance in Spain for non-resident owners</a>.',
             },
             {
               title: 'Private health insurance',
@@ -234,7 +242,7 @@ const HUB = {
             },
             {
               title: 'Protecting your family',
-              body: 'Life cover for dependants, or a review of a policy held elsewhere. See <a href="/en/life-insurance-spain/">life insurance in Spain</a>.',
+              body: 'How health, home, car and life tend to connect for a family, and which of them actually apply to yours. See <a href="/en/blog/family-insurance-spain/">insurance for families living in Spain</a>.',
             },
             {
               title: 'Multiple or higher-value risks',
