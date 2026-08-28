@@ -2211,6 +2211,10 @@
   }
   .nav-panel[hidden] { display: none; }
   .nav-panel--sm { min-width: 240px; padding: 14px; }
+  /* Anchored from the right instead of the left: this trigger sits at the
+     far right of .nav-links-right, and a left-anchored panel would risk
+     overflowing past the viewport edge at narrower desktop widths. */
+  .nav-links-right .nav-panel { left: auto; right: 0; }
   .nav-panel-cols { display: grid; grid-template-columns: 1fr 1.4fr 1.2fr; gap: 32px; }
   .nav-panel-cols--4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .nav-panel:has(.nav-panel-cols--4) { min-width: 680px; }
@@ -2385,7 +2389,19 @@
   </a>
   <div class="nav-links-right">
     <a href="#blog">Insights</a>
-    <a href="#why-us">Why us</a>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerWhy" aria-expanded="false" aria-controls="navPanelWhy">
+        Why us
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelWhy" role="menu" aria-label="Why us menu" hidden>
+        <a href="#why-us" role="menuitem">Our Approach</a>
+        <a href="/en/about/" role="menuitem">About Us</a>
+        <a href="/en/how-we-work/" role="menuitem">How We Work</a>
+        <a href="/en/why-use-an-insurance-broker/" role="menuitem">Why Use a Broker</a>
+        <a href="/en/claims-support/" role="menuitem">Claims Support</a>
+      </div>
+    </div>
     <a href="/en/insurance-review/" class="nav-cta">Request a Review</a>
     <div class="lang-switcher">
       <a href="/">PT</a>
@@ -2449,7 +2465,19 @@
     </div>
   </div>
   <a href="#blog" onclick="toggleMenu()">Insights</a>
-  <a href="#why-us" onclick="toggleMenu()">Why us</a>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccWhy">
+      Why us
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccWhy" hidden>
+      <a href="#why-us" onclick="toggleMenu()">Our Approach</a>
+      <a href="/en/about/" onclick="toggleMenu()">About Us</a>
+      <a href="/en/how-we-work/" onclick="toggleMenu()">How We Work</a>
+      <a href="/en/why-use-an-insurance-broker/" onclick="toggleMenu()">Why Use a Broker</a>
+      <a href="/en/claims-support/" onclick="toggleMenu()">Claims Support</a>
+    </div>
+  </div>
   <a href="/en/insurance-review/" onclick="toggleMenu()">Request a Review</a>
   <div class="mobile-lang-switcher">
     <a href="/">PT</a>
@@ -2719,7 +2747,7 @@
           </div>
         </div>
         <button type="submit" class="form-submit">Request Free Analysis →</button>
-        <p class="form-gdpr">Reply within 24 business hours. Your details are used only to prepare the review and are handled under the GDPR — see our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+        <p class="form-gdpr">No obligation to proceed. Reply within 24 business hours. Your details are used only to prepare the review and are handled under the GDPR — see our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
       </form>
       <div class="hero-card-success" id="analysisSuccess" style="display:none;text-align:center;padding:24px 0;">
         <p style="color:#fff;font-weight:600;font-size:18px;margin-bottom:8px;">Request received!</p>
@@ -2944,6 +2972,45 @@
         <div class="service-num">13</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 class="service-name">Liability for Therapists</h3><p class="service-desc">Professional liability cover for therapists and complementary-medicine practitioners — acupuncture, homeopathy, naturopathy, massage and yoga — working in Portugal.</p>
         <div class="service-actions"><a class="service-link" href="/en/blog/liability-insurance-complementary-therapies/">Learn more</a><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="services-section" aria-label="Insurance advice with a real broker behind it" style="padding-bottom:0;">
+  <div class="services-inner">
+    <div class="services-header fade-up">
+      <div>
+        <div class="section-eyebrow">Who you are dealing with</div>
+        <h2 class="section-title">Insurance advice<br><em>with a real broker behind it</em></h2>
+      </div>
+      <p class="section-subtitle">Adler &amp; Rochefort is the trading name of Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's ASF under no. 425591790/3 — a public registration you can check independently.</p>
+    </div>
+    <div class="protect-grid fade-up">
+      <div class="protect-card">
+        <div class="protect-card-title">Registered intermediary</div>
+        <p class="protect-card-desc">ASF-registered in Portugal, no. 425591790/3, serving Spain under Freedom of Services.</p>
+        <div class="protect-card-links"><a href="/en/about/">About us →</a></div>
+      </div>
+      <div class="protect-card">
+        <div class="protect-card-title">English-speaking service</div>
+        <p class="protect-card-desc">Quotes, explanations, correspondence and claims, all handled in English.</p>
+      </div>
+      <div class="protect-card">
+        <div class="protect-card-title">Portugal &amp; Spain</div>
+        <p class="protect-card-desc">One broker across both markets, with honest differences between the two explained.</p>
+        <div class="protect-card-links"><a href="/en/how-we-work/">How we work →</a></div>
+      </div>
+      <div class="protect-card">
+        <div class="protect-card-title">Multi-product support</div>
+        <p class="protect-card-desc">Health, home, car, life and private-client cover, coordinated rather than sold in isolation.</p>
+        <div class="protect-card-links"><a href="/en/why-use-an-insurance-broker/">Why use a broker →</a></div>
+      </div>
+      <div class="protect-card">
+        <div class="protect-card-title">Claims assistance</div>
+        <p class="protect-card-desc">Support understanding the claims process and communicating with the insurer, where the policy allows.</p>
+        <div class="protect-card-links"><a href="/en/claims-support/">Claims support →</a></div>
       </div>
     </div>
   </div>
@@ -3361,8 +3428,10 @@
     <div>
       <div class="footer-col-title">Company</div>
       <ul class="footer-col-links">
-        <li><a href="/en/#team">About us</a></li>
-        <li><a href="/en/#why-us">Our methodology</a></li>
+        <li><a href="/en/about/">About Us</a></li>
+        <li><a href="/en/how-we-work/">How We Work</a></li>
+        <li><a href="/en/why-use-an-insurance-broker/">Why Use a Broker</a></li>
+        <li><a href="/en/claims-support/">Claims Support</a></li>
         <li><a href="/en/#blog">Insights</a></li>
         <li><a href="/en/#faq">FAQ</a></li>
         <li><a href="/en/#contact">Contact</a></li>
