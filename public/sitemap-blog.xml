@@ -535,8 +535,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/family-insurance-spain/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/family-liability-cover-portugal/</loc>
     <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/family-moving-to-portugal-insurance/</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -785,6 +797,12 @@
   <url>
     <loc>https://adlerrochefort.com/en/blog/individual-car-insurance/</loc>
     <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/insurance-buying-property-portugal/</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

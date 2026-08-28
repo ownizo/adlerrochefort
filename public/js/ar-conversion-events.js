@@ -47,24 +47,48 @@
     });
   }
 
-  // spain_situation_selected — the "What brings you to Spain?" situation grid
-  // on the Spain hub (#situation). Reads the situation from its own card
-  // heading rather than needing a data attribute on every generated link, so
-  // this stays in step with spain-cluster.data.mjs without either file
-  // having to know about the other's markup details beyond the section id.
-  var situationSection = document.getElementById('situation');
-  if (situationSection) {
-    situationSection.addEventListener('click', function (e) {
+  // situation_selected (Phase 7, brief §45) — fires on both the Spain hub's
+  // "What brings you to Spain?" grid (#situation) and the Portugal hub's
+  // "Which situation are you in?" section (#situations). Reads the
+  // situation from the clicked link's own nearby heading — an <h3> for
+  // Portugal's <ul>-per-situation layout, the card's own <h3> for Spain's
+  // grid — rather than needing a data attribute on every generated link, so
+  // this stays in step with the content files without either one having to
+  // know about the other's markup beyond the two section ids. market is
+  // inferred from which section matched, never guessed from language.
+  // spain_situation_selected (from Phase 6) is kept alongside as a
+  // Spain-specific alias, additive rather than a rename, since nothing
+  // about that already-shipped event needed to change.
+  function situationHeadingFor(link) {
+    // Spain's grid: each card is its own <div class="lp-grid-item"> with its
+    // own <h3>. Portugal's layout: a flat run of <h3>situation</h3><ul>...
+    // </ul> pairs, so the link's enclosing <ul> is a sibling of the <h3> that
+    // names it.
+    var card = link.closest('.lp-grid-item');
+    if (card) return card.querySelector('h3');
+    var list = link.closest('ul');
+    var sib = list ? list.previousElementSibling : null;
+    while (sib && sib.tagName !== 'H3') sib = sib.previousElementSibling;
+    return sib;
+  }
+
+  function situationTracking(sectionId, market) {
+    var section = document.getElementById(sectionId);
+    if (!section) return;
+    section.addEventListener('click', function (e) {
       var link = e.target.closest('a');
       if (!link) return;
-      var card = link.closest('.lp-grid-item');
-      var heading = card ? card.querySelector('h3') : null;
+      var heading = situationHeadingFor(link);
       var situation = heading
         ? heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '')
         : '';
-      send('spain_situation_selected', { situation: situation, destination: link.getAttribute('href') || '' });
+      var props = { market: market, situation: situation, destination: link.getAttribute('href') || '', source_page: path };
+      send('situation_selected', props);
+      if (market === 'Spain') send('spain_situation_selected', props);
     });
   }
+  situationTracking('situation', 'Spain');
+  situationTracking('situations', 'Portugal');
 
   // spain_product_clicked — any link into a Spain product page, wherever it
   // is clicked from (the homepage's mega-menu, a Spain page's own nav or

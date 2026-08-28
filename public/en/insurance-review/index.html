@@ -220,6 +220,7 @@
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="landing:insurance-review">
       <input type="hidden" name="ramo" id="reviewRamo" value="">
+      <input type="hidden" name="entry_situation" id="reviewSituation" value="">
       <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
       <div class="contact-form-field market-choice">
@@ -439,9 +440,20 @@
     // than that script tag) — setting select.value here is picked up by
     // that script's own initial apply() call once it runs, so no manual
     // change-event dispatch is needed to reveal the right needs checklist.
+    // entry_situation (brief §31/§32): carries which situational page a
+    // visitor arrived from — e.g. ?situation=buying_property from the Spain
+    // "buying a property" card, or the Portugal "buying property" article's
+    // review CTA — as plain context on the lead, not a visible form field.
+    // A short fixed vocabulary rather than free text, so the lead email and
+    // any reporting built on it can rely on a known set of values.
+    var situation = document.getElementById('reviewSituation');
+
     try {
-      var market = new URLSearchParams(window.location.search).get('market');
+      var params = new URLSearchParams(window.location.search);
+      var market = params.get('market');
       if (market === 'Portugal' || market === 'Spain') select.value = market;
+      var sit = params.get('situation');
+      if (situation && sit) situation.value = sit;
     } catch (err) {}
 
     function sync() {

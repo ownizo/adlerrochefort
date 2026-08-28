@@ -256,6 +256,8 @@ const QUOTE_LABELS = {
   insurance_needs: "What they need help with",
   preferred_contact: "Preferred contact method",
   notes: "Notes",
+  // Situation-based acquisition (Phase 7) — see CROSSSELL_FIELDS below.
+  entry_situation: "Came from",
 };
 
 // Never rendered: Netlify plumbing and the honeypot.
@@ -520,7 +522,7 @@ const humanise = (key) =>
 // it cannot be scanned past in the inbox, per the brief's own instruction
 // that "the email should make the additional opportunities clearly visible."
 // Every other field keeps the flat, single-line rendering it always had.
-const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs"]);
+const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs", "entry_situation"]);
 
 /** Renders every answered field, known label or not, in submission order. */
 export function renderAllFields(data, en = false) {
