@@ -12,10 +12,11 @@
  *   - hreflang alternates are emitted only for confirmed bidirectional pairs
  *   - x-default appears on the homepage pair and the services hub only, and
  *     points at the Portuguese URL
- *   - lastmod is carried over from the previous sitemap where a page has one,
- *     so untouched pages do not all claim to have changed today
+ *   - lastmod is the date of the last commit that touched the page's own file,
+ *     so a page claims to have changed when it did and not otherwise
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import { existsSync, globSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, PUBLIC, ORIGIN } from './lib/chrome.mjs';
@@ -24,6 +25,8 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
 
 // --- previous lastmod values -------------------------------------------------
+// Only a fallback now, for the two cases where git cannot answer: a shallow
+// clone, and a page whose file is not committed yet.
 const previous = new Map();
 for (const file of ['sitemap.xml', 'sitemap-pages.xml', 'sitemap-blog.xml']) {
   const p = join(PUBLIC, file);
@@ -33,6 +36,55 @@ for (const file of ['sitemap.xml', 'sitemap-pages.xml', 'sitemap-blog.xml']) {
     previous.set(m[1].replace(ORIGIN, ''), m[2]);
   }
 }
+
+// --- last-changed dates ------------------------------------------------------
+// lastmod is the date of the most recent commit touching the page's own file.
+// Git is the only record of when a page actually changed; reading the value
+// back out of the previous sitemap — what this script used to do — could
+// preserve a date but never correct one, so a page that was later rewritten
+// went on advertising the date it was first published.
+//
+// One `git log` pass over public/ is walked newest-first, so the first date
+// seen for a path is its latest. A shallow clone has no history to read and a
+// non-repository checkout has no git at all; both fall back to the previous
+// sitemap rather than stamping the whole site with today.
+const git = (args) =>
+  execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+
+const gitDates = new Map(); // 'public/<path>/index.html' -> 'YYYY-MM-DD'
+try {
+  if (git(['rev-parse', '--is-shallow-repository']).trim() === 'false') {
+    let date = null;
+    const log = git(['log', '--date=short', '--pretty=format:C|%ad', '--name-only', '--', 'public']);
+    for (const line of log.split('\n')) {
+      if (line.startsWith('C|')) date = line.slice(2);
+      else if (line && date && !gitDates.has(line)) gitDates.set(line, date);
+    }
+  }
+} catch {
+  // not a repository, or git is not on PATH
+}
+
+// A page edited but not yet committed changed today, whatever git last recorded
+// for it. Without this, regenerating before committing would date a rewritten
+// page to the commit that preceded the rewrite.
+const uncommitted = new Set();
+if (gitDates.size) {
+  try {
+    for (const line of git(['status', '--porcelain', '--', 'public']).split('\n')) {
+      const file = line.slice(3).trim().replace(/^"|"$/g, '');
+      if (file) uncommitted.add(file);
+    }
+  } catch {
+    // a status failure leaves every page on its committed date
+  }
+}
+
+const lastmodFor = (url, fallback) => {
+  const file = `public${url}index.html`;
+  if (uncommitted.has(file)) return TODAY;
+  return gitDates.get(file) || fallback;
+};
 
 // --- what exists on disk -----------------------------------------------------
 const onDisk = new Set(
@@ -149,14 +201,14 @@ const pageUrls = [...onDisk]
   .filter((u) => !/^\/(nl\/bedankt|descarregar|alterarmediador)\//.test(u))
   .sort();
 
-const pageEntries = pageUrls.map((url) =>
-  entry({
-    url,
-    lastmod: previous.get(url) || TODAY,
-    changefreq: changefreqFor(url),
-    priority: priorityFor(url),
-  })
-);
+const pageRecords = pageUrls.map((url) => ({
+  url,
+  lastmod: lastmodFor(url, previous.get(url) || TODAY),
+  changefreq: changefreqFor(url),
+  priority: priorityFor(url),
+}));
+
+const pageEntries = pageRecords.map(entry);
 
 // --- articles ----------------------------------------------------------------
 const articles = [...data.articles.pt, ...data.articles.en]
@@ -164,14 +216,24 @@ const articles = [...data.articles.pt, ...data.articles.en]
   .filter((a) => onDisk.has(a.url) && !noindex.has(a.url))
   .sort((a, b) => a.url.localeCompare(b.url));
 
-const articleEntries = articles.map((a) =>
-  entry({
-    url: a.url,
-    lastmod: (a.modified || a.published || TODAY).slice(0, 10),
-    changefreq: 'monthly',
-    priority: a.featured ? '0.8' : '0.7',
-  })
-);
+// Same fallback chain as the pages above: the previous sitemap's value before
+// the article's own dates in data/articles.json. Those declared dates are the
+// last resort, for an article that no sitemap has listed yet — reaching for
+// them earlier would undo a git-derived date every time the script ran
+// somewhere without history.
+const articleRecords = articles.map((a) => ({
+  url: a.url,
+  lastmod: lastmodFor(a.url, previous.get(a.url) || (a.modified || a.published || TODAY).slice(0, 10)),
+  changefreq: 'monthly',
+  priority: a.featured ? '0.8' : '0.7',
+}));
+
+const articleEntries = articleRecords.map(entry);
+
+// The index dates each child by the newest page inside it. Claiming today for
+// a child that did not change is the same overstatement the carry-over fix
+// removes from the URLs themselves.
+const newest = (records) => records.reduce((max, r) => (r.lastmod > max ? r.lastmod : max), '') || TODAY;
 
 await writeFile(join(PUBLIC, 'sitemap-pages.xml'), wrap(pageEntries));
 await writeFile(join(PUBLIC, 'sitemap-blog.xml'), wrap(articleEntries));
@@ -181,11 +243,11 @@ await writeFile(
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>${ORIGIN}/sitemap-pages.xml</loc>
-    <lastmod>${TODAY}</lastmod>
+    <lastmod>${newest(pageRecords)}</lastmod>
   </sitemap>
   <sitemap>
     <loc>${ORIGIN}/sitemap-blog.xml</loc>
-    <lastmod>${TODAY}</lastmod>
+    <lastmod>${newest(articleRecords)}</lastmod>
   </sitemap>
 </sitemapindex>
 `
