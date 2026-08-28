@@ -93,8 +93,9 @@ function escapeHtml(value) {
   }[c]));
 }
 
-async function registarLead(input, idioma, transcriptMessages) {
+async function registarLead(input, idioma, transcriptMessages, mercado) {
   const resend = new Resend(process.env.RESEND_API_KEY);
+  const isSpain = mercado === "spain";
 
   const transcriptText = transcriptMessages
     .filter((m) => typeof m.content === "string")
@@ -102,13 +103,14 @@ async function registarLead(input, idioma, transcriptMessages) {
     .join("\n\n");
 
   const html = `
+    <p><strong>Mercado:</strong> ${isSpain ? "Spain" : "Portugal"}</p>
     <p><strong>Nome:</strong> ${escapeHtml(input.nome || "-")}</p>
     <p><strong>Email:</strong> ${escapeHtml(input.email || "-")}</p>
     <p><strong>Telefone:</strong> ${escapeHtml(input.telefone || "-")}</p>
     <p><strong>Tipo de seguro:</strong> ${escapeHtml(input.tipo_seguro || "-")}</p>
     <p><strong>Idade:</strong> ${escapeHtml(input.idade ?? "-")}</p>
     <p><strong>Cidade:</strong> ${escapeHtml(input.cidade || "-")}</p>
-    <p><strong>Estimativa:</strong> ${escapeHtml(input.estimativa_min_eur ?? "-")}€ - ${escapeHtml(input.estimativa_max_eur ?? "-")}€</p>
+    <p><strong>Estimativa:</strong> ${isSpain ? "n/a — not priced for Spain" : `${escapeHtml(input.estimativa_min_eur ?? "-")}€ - ${escapeHtml(input.estimativa_max_eur ?? "-")}€`}</p>
     <p><strong>Idioma da página:</strong> ${idioma.toUpperCase()}</p>
     <p><strong>Data:</strong> ${new Date().toISOString()}</p>
     <hr/>
@@ -118,7 +120,7 @@ async function registarLead(input, idioma, transcriptMessages) {
   await resend.emails.send({
     from: "leads@adlerrochefort.com",
     to: "insurance@adlerrochefort.com",
-    subject: `Novo lead (chat) — ${input.tipo_seguro || "seguro"} — ${input.nome || "sem nome"}`,
+    subject: `Novo lead (chat)${isSpain ? " — ES" : ""} — ${input.tipo_seguro || "seguro"} — ${input.nome || "sem nome"}`,
     html,
   });
 }
@@ -149,8 +151,12 @@ export default async (req) => {
     return new Response(JSON.stringify({ error: "Dados inválidos" }), { status: 400, headers });
   }
 
-  const { messages, lang, topics, leadSent } = body || {};
+  const { messages, lang, topics, leadSent, market } = body || {};
   const idioma = lang === "en" ? "en" : "pt";
+  // "spain" only when the widget explicitly says so (Spain pages set
+  // data-market="spain"); every existing page sends nothing, which keeps the
+  // Portuguese behaviour below byte-for-byte unchanged.
+  const mercado = market === "spain" ? "spain" : "portugal";
 
   if (!Array.isArray(messages) || messages.length === 0 || messages.length > MAX_MESSAGES) {
     return new Response(JSON.stringify({ error: "Conversa inválida" }), { status: 400, headers });
@@ -165,9 +171,9 @@ export default async (req) => {
   }
 
   const systemPrompt =
-    getSystemPrompt(idioma) +
+    getSystemPrompt(idioma, mercado) +
     "\n\n---\nContexto de apoio (excertos verificados de artigos do site — usar como base para responder a perguntas sobre seguradoras e coberturas):\n" +
-    getRagContext(idioma, Array.isArray(topics) ? topics : undefined);
+    getRagContext(idioma, Array.isArray(topics) ? topics : undefined, mercado);
 
   const anthropic = new Anthropic();
 
@@ -205,7 +211,7 @@ export default async (req) => {
           toolResults.push({ type: "tool_result", tool_use_id: block.id, content: JSON.stringify(result) });
         } else if (block.name === "registar_lead") {
           if (!leadRegistado) {
-            await registarLead(block.input, idioma, workingMessages).catch((err) => {
+            await registarLead(block.input, idioma, workingMessages, mercado).catch((err) => {
               console.error("registar_lead email failed", err);
             });
             leadRegistado = true;

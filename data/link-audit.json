@@ -1,13 +1,13 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 268,
-    "indexedUrls": 259,
+    "htmlFiles": 271,
+    "indexedUrls": 262,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
     "singleInbound": 4,
-    "deeperThanThreeClicks": 0
+    "deeperThanThreeClicks": 2
   },
   "broken": [],
   "viaRedirect": [],
@@ -38,6 +38,15 @@
       ]
     }
   ],
-  "deeperThanThreeClicks": [],
-  "maxClickDepth": 3
+  "deeperThanThreeClicks": [
+    {
+      "url": "/en/home-insurance-spain/",
+      "clicks": 4
+    },
+    {
+      "url": "/en/landlord-insurance-spain/",
+      "clicks": 4
+    }
+  ],
+  "maxClickDepth": 4
 }

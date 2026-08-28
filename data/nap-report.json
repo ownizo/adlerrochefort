@@ -26,18 +26,28 @@
     }
   },
   "stats": {
-    "pages": 220,
-    "ldBlocks": 579,
-    "businessNodes": 42,
-    "addressesChecked": 72,
-    "pagesWithVisiblePhone": 218,
-    "pagesWithVisibleEmail": 219,
-    "pagesWithVisibleAddress": 218,
-    "shapeBoth": 30,
-    "shapeLagosOnly": 12,
+    "pages": 271,
+    "ldBlocks": 710,
+    "businessNodes": 85,
+    "addressesChecked": 133,
+    "pagesWithVisiblePhone": 270,
+    "pagesWithVisibleEmail": 270,
+    "pagesWithVisibleAddress": 270,
+    "shapeBoth": 48,
+    "shapeLagosOnly": 37,
     "shapeNoAddress": 0
   },
-  "issueCount": 0,
-  "byKind": {},
-  "issues": []
+  "issueCount": 1,
+  "byKind": {
+    "ld+json InsuranceAgency": 1
+  },
+  "issues": [
+    {
+      "url": "/en/about/",
+      "kind": "ld+json InsuranceAgency",
+      "field": "telephone",
+      "found": "(absent)",
+      "expected": "+351928226570"
+    }
+  ]
 }

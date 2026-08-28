@@ -318,7 +318,38 @@ const CASES = [
     pageScripts: [],
     inlineScripts: true,
   },
+  {
+    // Spain market layer (Phase 1). Same shape as the Portuguese/English
+    // quote forms above, built by the same /js/ar-quote-form.js. The field
+    // that matters here is the hidden `country` input — dropped, this would
+    // let a Spain lead reach the inbox looking exactly like a Portugal one.
+    label: '16. /en/expat-insurance-spain/ — Spain national expat hub',
+    path: 'en/expat-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/expat-insurance-spain/',
+    formName: 'expat-insurance-review-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '17. /en/home-insurance-spain/ — Spain home insurance pillar',
+    path: 'en/home-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/home-insurance-spain/',
+    formName: 'home-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '18. /en/landlord-insurance-spain/ — Spain landlord insurance pillar',
+    path: 'en/landlord-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/landlord-insurance-spain/',
+    formName: 'landlord-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
 ];
+
+// Spain-specific assertion: every Spain case must carry country=Spain in its
+// payload, and none of them may be missing it silently.
+for (const c of CASES) {
+  if (c.formName && c.formName.endsWith('-spain')) c.requireCountry = 'Spain';
+}
 
 let failures = 0;
 for (const c of CASES) {
@@ -360,12 +391,16 @@ for (const c of CASES) {
     r = await run(c);
   }
 
+  const countryValue = r.payload?.find(([n]) => n === 'country')?.[1] ?? null;
+  const countryOk = !c.requireCountry || countryValue === c.requireCountry;
+
   const ok =
     !r.branchFieldsMissing.length &&
     !r.otherBranchFieldsLeaked.length &&
     r.sourceUrlOk &&
     r.honeypotPresent &&
-    r.honeypotDeclared;
+    r.honeypotDeclared &&
+    countryOk;
   if (!ok) failures++;
 
   console.log(`\n${'='.repeat(78)}\n${r.label}\n${'='.repeat(78)}`);
@@ -386,6 +421,8 @@ for (const c of CASES) {
     console.log(`  !! DROPPED FROM PAYLOAD: ${r.branchFieldsMissing.join(', ')}`);
   if (r.otherBranchFieldsLeaked.length)
     console.log(`  !! LEAKED FROM ANOTHER BRANCH: ${r.otherBranchFieldsLeaked.join(', ')}`);
+  if (c.requireCountry)
+    console.log(`country          : ${countryValue}  ${countryOk ? 'OK' : `WRONG (expected ${c.requireCountry})`}`);
   console.log(ok ? 'RESULT: PASS' : 'RESULT: FAIL');
 }
 

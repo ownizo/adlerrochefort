@@ -424,6 +424,34 @@ const HANDLED_FORMS = {
   "lead-nl": { quote: true, en: true, heading: "New lead — Dutch landing page", page: "/nl/" },
   "lead-fr": { quote: true, en: true, heading: "New lead — French landing page", page: "/fr/" },
   "lead-de": { quote: true, en: true, heading: "New lead — German landing page", page: "/de/" },
+
+  // Spain market layer (Phase 1). Same shape as the Portuguese/English forms
+  // above — one Netlify form name per page — with `branch` carrying an "ES ·"
+  // prefix so a Spain lead is never labelled the same as a Portugal one in the
+  // inbox. Every field on these forms is rendered generically by
+  // renderAllFields(), including the `country` hidden field the pages set to
+  // "Spain"; nothing below needs to special-case it.
+  "expat-insurance-review-spain": {
+    quote: true,
+    en: true,
+    heading: "New expat insurance review request — Spain",
+    page: "/en/expat-insurance-spain/",
+    branch: "ES · Expat",
+  },
+  "home-insurance-quote-spain": {
+    quote: true,
+    en: true,
+    heading: "New home insurance quote request — Spain",
+    page: "/en/home-insurance-spain/",
+    branch: "ES · Home",
+  },
+  "landlord-insurance-quote-spain": {
+    quote: true,
+    en: true,
+    heading: "New landlord insurance quote request — Spain",
+    page: "/en/landlord-insurance-spain/",
+    branch: "ES · Landlord",
+  },
 };
 
 const humanise = (key) =>
