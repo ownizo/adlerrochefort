@@ -66,7 +66,7 @@ const HUB = {
   stickyCta: 'Get an Insurance Review',
   whatsapp: 'Hello, I am looking into insurance for a property or a move to Spain and would like to talk to someone.',
   market: 'spain',
-  chatTopics: ['spain_general', 'spain_health', 'spain_home', 'spain_landlord', 'spain_car'],
+  chatTopics: ['spain_general', 'spain_health', 'spain_home', 'spain_landlord', 'spain_car', 'spain_life', 'spain_private_clients'],
   service: {
     name: 'Insurance guidance for expats and property owners in Spain',
     type: 'Insurance intermediation — client qualification and referral',
@@ -105,7 +105,7 @@ const HUB = {
         {
           kind: 'p',
           html:
-            'The products we can currently discuss properly for Spain are set out below. If your situation is different — life, a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
+            'The products we can currently discuss properly for Spain are set out below. If your situation is different — a business — say so in the form at the bottom of this page and we will tell you honestly whether it is something we can help with yet.',
         },
         {
           kind: 'cluster',
@@ -130,11 +130,55 @@ const HUB = {
               title: 'Car insurance',
               blurb: 'For expats, international residents and foreign drivers with a vehicle in Spain.',
             },
+            {
+              href: '/en/life-insurance-spain/',
+              title: 'Life insurance',
+              blurb: 'Family and mortgage protection for international residents, and a review of cover you already hold elsewhere.',
+            },
+            {
+              href: '/en/private-clients-spain/',
+              title: 'Private clients',
+              blurb: 'A coordinated review across several risks at once — for households with more than one property, vehicle or jurisdiction to think about.',
+            },
           ],
         },
         {
           kind: 'note',
           html: AVAILABILITY_NOTE,
+        },
+      ],
+    },
+
+    {
+      id: 'life',
+      h2: 'Life insurance and family protection in Spain',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Life insurance tends to come up for the same handful of reasons — dependants, a mortgage, a business partner, or simply a foreign policy that needs reviewing now that you live in Spain. What sum insured makes sense, and what a specific policy actually covers, depends on the individual and the insurer, not on a generic rule.',
+        },
+        {
+          kind: 'note',
+          html:
+            'This is covered in full on <a href="/en/life-insurance-spain/">life insurance in Spain</a>, including what to do about cover you already hold from another country, and how mortgage protection fits in — see <a href="/en/mortgage-protection-spain/">mortgage protection in Spain</a>.',
+        },
+      ],
+    },
+
+    {
+      id: 'private-clients',
+      h2: 'Managing several risks at once',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Some households simply have more moving parts — a property or two, a car, health cover for the family, some landlord exposure — arranged with different insurers at different times, in different languages. Reviewing all of it together, once, tends to surface gaps and duplication that nobody notices when each policy is looked at on its own.',
+        },
+        {
+          kind: 'note',
+          html:
+            'This is covered in full on <a href="/en/private-clients-spain/">private client insurance in Spain</a> — one coordinated review, not a luxury-branded product line.',
         },
       ],
     },
@@ -381,8 +425,8 @@ const HUB = {
       a: 'That is the normal starting point. Tell us about the property — what it is, where it is, how you use it — and we will tell you what to consider and in what order, rather than sell you a product before we understand the situation.',
     },
     {
-      q: 'Is this page about life insurance too?',
-      a: 'Not yet. This page currently covers health, home, landlord and car insurance in Spain. If your question is about a different product, say so in the form and we will tell you honestly whether it is something we can help with.',
+      q: 'Do you also help with business insurance in Spain?',
+      a: 'Not yet. This page currently covers health, home, landlord, car, life and private client insurance in Spain. If your question is about business cover, say so in the form and we will tell you honestly whether it is something we can help with.',
     },
     {
       q: 'Do you provide immigration, residency or tax advice?',
@@ -673,6 +717,9 @@ const HOME = {
           items: [
             { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Start here if you are not sure yet what you need.' },
             { href: '/en/landlord-insurance-spain/', title: 'Landlord insurance in Spain', blurb: 'For property let out to tenants or holiday guests.' },
+            { href: '/en/mortgage-protection-spain/', title: 'Mortgage protection in Spain', blurb: 'Buying with a mortgage? What your lender actually requires versus what it offers.' },
+            { href: '/en/life-insurance-spain/', title: 'Life insurance in Spain', blurb: 'Worth considering alongside a property purchase, beyond just the mortgage.' },
+            { href: '/en/private-clients-spain/', title: 'Private client insurance in Spain', blurb: 'For a higher-value property, or more than one, reviewed alongside your other cover.' },
             { href: '/en/blog/insurance-portugal-spain-international-residents/', title: 'Insurance in Portugal and Spain for international residents', blurb: 'For owners with property in, or moving between, both countries.' },
           ],
         },
@@ -918,6 +965,7 @@ const LANDLORD = {
           items: [
             { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'If the property is not let out, this is the right starting point instead.' },
             { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need? Start at the hub.' },
+            { href: '/en/private-clients-spain/', title: 'Private client insurance in Spain', blurb: 'For more than one rental property, or a higher-value one, reviewed alongside the rest of your cover.' },
             { href: '/en/blog/insurance-portugal-spain-international-residents/', title: 'Insurance in Portugal and Spain for international residents', blurb: 'For owners with property in, or moving between, both countries.' },
           ],
         },
@@ -1718,5 +1766,833 @@ const CAR = {
   ],
 };
 
-export const PAGES = [HUB, HOME, LANDLORD, HEALTH, CAR];
+// -----------------------------------------------------------------------------
+// LIFE — /en/life-insurance-spain/
+// -----------------------------------------------------------------------------
+//
+// Boundary discipline for this page and its two siblings below, stated once:
+// this is an insurance intermediary, not a tax, legal, mortgage or investment
+// adviser. Every section that touches succession, tax treatment, mortgage
+// lending law or investment-linked products says so explicitly and points to
+// the appropriate specialist rather than answering the question itself. No
+// investment-linked or savings life product is described anywhere in this
+// file — Adler does not currently distribute one, and the brief this was
+// built from is explicit that this class of product needs its own compliance
+// review before it can appear on the site at all.
+
+const ADVICE_BOUNDARY_NOTE =
+  'Adler & Rochefort is an insurance intermediary, not a tax, legal, mortgage or investment adviser. Where a question crosses into tax, succession, mortgage lending law or investment advice, this page says so and points you towards the right kind of specialist — it does not attempt to answer it.';
+
+const LIFE = {
+  slug: 'life-insurance-spain',
+  crumb: 'Life insurance',
+  parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
+  title: 'Life Insurance in Spain for International Residents | Adler & Rochefort',
+  description:
+    'Life insurance in Spain for expats and international residents: family protection, mortgage-related cover, and reviewing a policy you already hold from another country. Explained in English.',
+  keywords:
+    'life insurance spain expats, life insurance for expats in spain, life cover spain foreigners, life insurance spain international residents, family protection spain expats',
+  eyebrow: 'Spain · Life insurance',
+  h1: 'Life Insurance in Spain for International Residents',
+  heroSub:
+    'Whether it is protecting a family, a mortgage, or reviewing cover you already hold from another country, we help you work out what actually applies to your situation — and confirm honestly what can currently be arranged.',
+  heroCta: 'Get a Life Insurance Review',
+  heroSecondary: 'Discuss Your Situation',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Get a Life Insurance Review',
+  stickyCta: 'Get a Life Insurance Review',
+  whatsapp: 'Hello, I would like a life insurance review for my situation in Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_life'],
+  service: {
+    name: 'Life insurance guidance in Spain',
+    type: 'Life insurance intermediation',
+    description:
+      'Helping international residents in Spain work out what life and family-protection cover applies to their situation, including reviewing existing foreign cover, and arranging it where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'who-for',
+      h2: 'Who life insurance may be relevant for',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Life insurance is not something everyone needs, and this page does not assume you do. It tends to become genuinely relevant for a specific set of situations — say which is closest and we will ask the right follow-up questions.',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Families with dependants', body: 'Cover that would replace your income, or fund your children’s upbringing, if you were no longer there.' },
+            { title: 'Couples', body: 'Especially where one partner’s income supports the household disproportionately.' },
+            { title: 'Property owners with a mortgage', body: 'See the dedicated page on mortgage protection below — a related but distinct question.' },
+            { title: 'Business owners', body: 'Cover tied to a business obligation or a partner agreement, rather than personal family protection.' },
+            { title: 'People with cross-border financial responsibilities', body: 'Dependants, debts or obligations that sit in more than one country.' },
+            { title: 'Anyone with an existing foreign policy', body: 'See the section below on what to check before assuming it still applies.' },
+          ],
+        },
+        { kind: 'note', html: ADVICE_BOUNDARY_NOTE },
+      ],
+    },
+
+    {
+      id: 'types-of-need',
+      h2: 'What kind of need this is usually about',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'People rarely start with "I want a life insurance policy" — they start with a specific concern, and the right shape of cover follows from that:',
+        },
+        {
+          kind: 'covers',
+          items: [
+            { title: 'Family protection.', body: ' Replacing income or providing a lump sum for dependants if you were no longer there.' },
+            { title: 'Mortgage protection.', body: ' Cover linked conceptually to an outstanding property debt — see <a href="/en/mortgage-protection-spain/">mortgage protection in Spain</a> for the dedicated page.' },
+            { title: 'Income replacement.', body: ' Covering ongoing household costs, not just a one-off debt.' },
+            { title: 'Debt protection.', body: ' Beyond a mortgage — other significant borrowing a family would otherwise be left carrying.' },
+            { title: 'Business or family obligations.', body: ' A partnership agreement, a family loan, or a similar arrangement with a life-insurance component.' },
+            { title: 'Liquidity considerations.', body: ' At a high level only — where a lump sum on death would help a family manage costs or obligations that arise at that point. This is not tax or estate advice, and where those questions come up we say so and point you to a specialist rather than answer them ourselves.' },
+          ],
+        },
+      ],
+    },
+
+    {
+      id: 'term-life',
+      h2: 'Term life insurance, conceptually',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'The core product most people mean by "life insurance" pays a defined sum if you die within a defined term — a straightforward idea, but insurers structure the details differently: level cover that stays the same throughout the term, decreasing cover that reduces over time (often used alongside a repayment mortgage), renewable terms, and convertible options among them. We do not assume every insurer we may work with in Spain offers an identical structure — the products actually available depend on the insurer, and we confirm the real options once we understand your situation.',
+        },
+      ],
+    },
+
+    {
+      id: 'sum-insured',
+      h2: 'Thinking about how much cover you need',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'There is no single multiplier that fits everyone, whatever a quick online calculator might suggest. What genuinely feeds into the number:',
+        },
+        {
+          kind: 'grid',
+          items: [
+            { title: 'Outstanding debts', body: 'Including, but not limited to, a mortgage.' },
+            { title: 'Dependants', body: 'How many, and for how long they would need support.' },
+            { title: 'Household income', body: 'What would actually need replacing, not just a round figure.' },
+            { title: 'Education costs', body: 'Where relevant to your family’s plans.' },
+            { title: 'Existing savings and assets', body: 'What a family could already draw on.' },
+            { title: 'Existing life cover', body: 'From this country or another — see the section below on cover you already hold.' },
+          ],
+        },
+        {
+          kind: 'note',
+          html: 'We work through this with you rather than hand you a formula — the right number depends on your actual circumstances, not a generic rule of thumb.',
+        },
+      ],
+    },
+
+    {
+      id: 'underwriting',
+      h2: 'Health and underwriting',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Insurers assess life insurance applications individually, based on age, health, smoking status, occupation, lifestyle, the sum insured requested and the policy term. We cannot promise a specific outcome before an insurer has actually assessed a case, and we do not collect detailed medical information through the website form below — any medical questions belong with the insurer, as part of underwriting, once a specific application is under way.',
+        },
+      ],
+    },
+
+    {
+      id: 'beneficiaries',
+      h2: 'Beneficiaries',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Who receives the proceeds of a policy, and how, matters — and getting it right generally means naming beneficiaries deliberately rather than leaving a policy to default. Where Spanish succession or tax treatment becomes relevant to how a payout is received, that is a question for a Spanish lawyer or tax adviser, not for us — we can tell you how the policy itself is structured, not how it will be treated on the other side.',
+        },
+        { kind: 'note', html: ADVICE_BOUNDARY_NOTE },
+      ],
+    },
+
+    {
+      id: 'existing-cover',
+      h2: 'If you already hold life cover from another country',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Moving to Spain does not automatically mean your existing UK, EU or other international life policy stops working — and we do not suggest cancelling it before you have actually checked. What is worth confirming with the insurer that issued it:',
+        },
+        {
+          kind: 'covers',
+          items: [
+            { title: 'Territorial scope.', body: ' Whether the policy responds the same way once you live outside the country it was written in.' },
+            { title: 'Residency conditions.', body: ' Some policies have conditions tied to where the policyholder is resident.' },
+            { title: 'Policy terms.', body: ' Whether anything else in the wording assumes a specific country of residence.' },
+            { title: 'Currency.', body: ' Whether the sum insured is fixed in a currency that still makes sense for your situation.' },
+            { title: 'Beneficiaries.', body: ' Whether they are still correctly named and reachable.' },
+            { title: 'Continuation rules.', body: ' Whether the policy has its own rules about what happens on a move abroad.' },
+          ],
+        },
+        {
+          kind: 'note',
+          html: 'We generalise only this far. The actual answer for your policy is in its wording — send it to us and we will tell you plainly what it says, rather than guess based on what is typical.',
+        },
+      ],
+    },
+
+    {
+      id: 'price',
+      h2: 'What affects the price',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'We do not publish indicative premiums here — a figure quoted for a webpage rather than checked against a real underwriting decision would not be honest. Age, health, smoking status, occupation, the sum insured and the policy term all move the price; the only way to get an actual number is a real application.',
+        },
+      ],
+    },
+
+    {
+      id: 'get-review',
+      h2: 'How to request a review',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Tell us roughly who needs to be protected, whether a mortgage or specific debt is involved, and whether you already hold cover elsewhere. We do not need medical detail to start the conversation — that comes later, directly with the insurer, if an application goes ahead.',
+        },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Get a life insurance review',
+    sub: 'Tell us about your situation. We do not collect medical details here — that stays with the insurer, as part of underwriting.',
+    name: 'life-insurance-review-spain',
+    gaField: 'main_objective',
+    submit: 'Request my review',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'current_country', label: 'Current country of residence', required: true, placeholder: 'e.g. United Kingdom' },
+      ],
+      [
+        { name: 'spain_location', label: 'Where in Spain?', required: true, placeholder: 'e.g. Marbella, Costa del Sol' },
+        {
+          name: 'age_range',
+          label: 'Age range',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['Under 30', '30–39', '40–49', '50–59', '60 or over'],
+        },
+      ],
+      [
+        { name: 'dependants', label: 'Number of dependants', placeholder: 'e.g. 2' },
+        { name: 'cover_amount', label: 'Approximate cover required', placeholder: 'e.g. €250,000, or "not sure"' },
+      ],
+      [
+        {
+          name: 'has_mortgage',
+          label: 'Do you have a mortgage in Spain?',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Yes', 'No', 'Not yet, but considering one'],
+        },
+        {
+          name: 'has_existing_cover',
+          label: 'Do you already have life cover elsewhere?',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Yes', 'No', 'Not sure'],
+        },
+      ],
+      [
+        {
+          name: 'main_objective',
+          label: 'Main objective',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Family protection', 'Mortgage protection', 'Business/partnership obligation', 'Reviewing existing cover', 'Not sure — advise me'],
+        },
+        {
+          name: 'smoker',
+          label: 'Smoker? (optional)',
+          type: 'select',
+          placeholder: 'Prefer not to say',
+          options: ['Non-smoker', 'Smoker', 'Prefer not to say'],
+        },
+      ],
+      {
+        name: 'message',
+        label: 'Anything we should know?',
+        type: 'textarea',
+        placeholder: 'Details of any existing policy, or anything else that would help us give an accurate answer.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'Do I need life insurance in Spain?',
+      a: 'Not universally — it depends on your circumstances. It tends to matter most where others depend on your income, where a mortgage or debt would otherwise fall to your family, or where a business or family obligation is tied to it. We work through this with you rather than assume it.',
+    },
+    {
+      q: 'Can I keep my UK or other foreign life insurance policy after moving to Spain?',
+      a: 'Often, yes — but check its territorial scope, residency conditions and currency with the insurer that issued it before assuming it continues to work exactly as before. We do not recommend cancelling an existing policy before you have actually confirmed its terms.',
+    },
+    {
+      q: 'How much life insurance do I need?',
+      a: 'There is no universal formula. It depends on outstanding debts, dependants, household income, existing savings and any cover you already hold — we work through this with you rather than apply a generic multiplier.',
+    },
+    {
+      q: 'Will you ask for my medical history?',
+      a: 'Not through this form. We ask for the basics needed to understand your situation; any medical questions an insurer needs answered are handled directly with the insurer, as part of underwriting.',
+    },
+    {
+      q: 'Can you advise on inheritance tax or succession planning?',
+      a: 'No. We are an insurance intermediary, not a tax or legal adviser. Where a question touches Spanish succession or tax treatment, we say so and point you towards a qualified specialist.',
+    },
+    {
+      q: 'Do you offer investment-linked or savings life insurance?',
+      a: 'Not currently. This page covers protection-focused life insurance — cover in the event of death — not investment or savings products.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/life-insurance-spain-expats/', text: 'Life insurance in Spain for expats: what to consider', note: 'the practical questions before you request a review' },
+            { href: '/en/blog/mortgage-life-insurance-spain/', text: 'Do you need life insurance for a mortgage in Spain?', note: 'legal requirement vs lender request vs bank bundling, properly explained' },
+            { href: '/en/blog/insurance-review-expats-spain/', text: 'Why expats in Spain should review their insurance as a whole', note: 'gaps and duplication across separate policies' },
+            { href: '/en/blog/category/spain-life/', text: 'All life insurance guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/mortgage-protection-spain/', title: 'Mortgage protection in Spain', blurb: 'For property buyers specifically — a related but distinct question.' },
+            { href: '/en/private-clients-spain/', title: 'Private client insurance in Spain', blurb: 'For households managing several risks — property, vehicles, health and life — together.' },
+            { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need? Start at the hub.' },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// -----------------------------------------------------------------------------
+// MORTGAGE — /en/mortgage-protection-spain/
+// -----------------------------------------------------------------------------
+//
+// The one claim this page must never make in general terms: "life insurance
+// is required for a mortgage in Spain." Verified position, checked against
+// Banco de España's own client guidance and against Ley 5/2019, de 15 de
+// marzo (de contratos de crédito inmobiliario):
+//   - Buildings/home insurance is what a Spanish mortgage lender actually
+//     requires, to protect the property securing the loan.
+//   - Life insurance is not a nationwide legal requirement to obtain a
+//     mortgage. Lenders commonly ask for it as loan security and often
+//     bundle their own product with a better headline rate — but Ley 5/2019
+//     prohibits a lender from making the loan itself conditional on buying
+//     the bank's own tied product, and requires them to accept an
+//     equivalent externally-arranged policy.
+// This page states that distinction explicitly rather than a flat yes/no.
+
+const MORTGAGE = {
+  slug: 'mortgage-protection-spain',
+  crumb: 'Mortgage protection',
+  parent: { href: '/en/life-insurance-spain/', label: 'Life insurance in Spain' },
+  title: 'Mortgage Protection in Spain for International Property Buyers | Adler & Rochefort',
+  description:
+    'Mortgage protection in Spain for international buyers: what a lender actually requires by law versus what a bank commonly asks for or bundles, and how to review cover independently.',
+  keywords:
+    'mortgage protection spain expats, life insurance mortgage spain, mortgage life insurance spain, insurance for spanish mortgage expats, property buyer protection spain',
+  eyebrow: 'Spain · Mortgage protection',
+  h1: 'Mortgage Protection in Spain for International Property Buyers',
+  heroSub:
+    'Buying with a mortgage in Spain? We help you understand what your lender actually requires, what it merely offers, and how to protect your family beyond just the loan balance.',
+  heroCta: 'Request a Mortgage Protection Review',
+  heroSecondary: 'Ask About Your Situation',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Request a Mortgage Protection Review',
+  stickyCta: 'Request a Mortgage Protection Review',
+  whatsapp: 'Hello, I would like a mortgage protection review for a property in Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_mortgage', 'spain_life'],
+  service: {
+    name: 'Mortgage protection guidance in Spain',
+    type: 'Life and property insurance intermediation for mortgage-linked cover',
+    description:
+      'Helping international property buyers in Spain understand what their lender actually requires versus what it offers, and arranging independent mortgage-linked life and buildings cover where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'requirement-vs-request',
+      h2: 'What is actually required, and what is a lender request',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'This is the single most confused topic in Spanish mortgage insurance, so we state it plainly rather than let a bank\'s marketing answer it for us. What Spanish mortgage lenders are actually required to insist on is <strong>buildings insurance</strong> — cover protecting the physical property that secures the loan. Life insurance is a different matter: it is <strong>not a nationwide legal requirement</strong> to obtain a mortgage in Spain.',
+        },
+        {
+          kind: 'p',
+          html:
+            'What does happen in practice is that lenders frequently ask for a life insurance policy as additional security for the loan, and often present their own bundled product alongside a better headline interest rate — making it feel obligatory even where it legally is not. Under <em>Ley 5/2019, de 15 de marzo, reguladora de los contratos de crédito inmobiliario</em>, a lender cannot make the loan itself conditional on buying the bank\'s own tied insurance product, and must accept an equivalent policy from another provider offering comparable cover. The rate improvement offered for taking the bank\'s own product is a commercial incentive, not a legal obligation to accept it.',
+        },
+        {
+          kind: 'note',
+          html:
+            'Confirm the specific position with your own lender and, where the numbers are significant, a Spanish lawyer or mortgage adviser — lending practice and any given bank\'s policy can differ, and this page describes the general legal framework, not your specific contract.',
+        },
+      ],
+    },
+
+    {
+      id: 'family-protection',
+      h2: 'Protecting the family, not just the bank',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'A policy sized only to clear the mortgage balance protects the lender\'s interest, not necessarily your family\'s. Worth separating the two questions: what would clear the debt, and what would actually let your family stay in the property and maintain their standard of living. They are not always the same number — see <a href="/en/life-insurance-spain/">life insurance in Spain</a> for how to think about the wider figure.',
+        },
+      ],
+    },
+
+    {
+      id: 'decreasing-vs-level',
+      h2: 'Decreasing versus level cover',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Where the actual products available support it, mortgage-linked life cover is often offered as decreasing cover — the sum insured falls roughly in line with the outstanding mortgage balance over the term, typically at a lower price than level cover for the same starting amount. Level cover keeps the sum insured constant throughout the term instead. Which is appropriate depends on whether your only goal is clearing the mortgage, or whether you also want protection that does not shrink over time — we confirm which structures are actually available once we know the lender and the loan.',
+        },
+      ],
+    },
+
+    {
+      id: 'joint-non-resident',
+      h2: 'Joint borrowers and non-resident buyers',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Where a mortgage is held jointly, cover can sometimes be arranged on a joint-life or first-death basis, or as separate policies on each borrower — the right structure depends on the lender\'s requirement and the couple\'s own preference. Non-resident buyers are not automatically excluded from mortgage-linked life cover, but the underwriting questions and the documentation an insurer wants can differ from a resident applicant\'s — tell us your residency situation at the outset rather than partway through.',
+        },
+      ],
+    },
+
+    {
+      id: 'bank-vs-independent',
+      h2: 'Bank-sold cover versus an independent review',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'A bank\'s own bundled life policy is not automatically the wrong choice, and we do not tell you to reject it on principle. What is worth doing is comparing it against an independent option before signing — the legal right to do so exists under Ley 5/2019, and the two policies are not always priced or structured the same way for an equivalent level of cover. If you already have a bank policy in place, we can review it against the market on the same terms.',
+        },
+      ],
+    },
+
+    {
+      id: 'reviewing-existing',
+      h2: 'Reviewing cover you already have',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'If you already hold mortgage-linked life cover — through your lender or otherwise — send us the policy and we will tell you plainly what it actually covers, at what sum insured, and whether it still matches your current mortgage balance and family situation.',
+        },
+      ],
+    },
+
+    {
+      id: 'ownership',
+      h2: 'Policy ownership and beneficiaries, at a high level',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Who owns a mortgage-linked policy, and who it is written to benefit, is a structural decision worth getting right — a policy assigned directly to the lender works differently from one held by the borrower with the lender named as a beneficiary up to the outstanding balance. This is a decision to make with the specifics of your loan and family situation in view, not a default to accept without asking.',
+        },
+        { kind: 'note', html: ADVICE_BOUNDARY_NOTE },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Request a mortgage protection review',
+    sub: 'Tell us about the property and the mortgage. We will confirm what your lender actually requires versus what it offers, and what independent options exist.',
+    name: 'mortgage-protection-review-spain',
+    gaField: 'mortgage_status',
+    submit: 'Request my review',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'spain_location', label: 'Where is the property?', required: true, placeholder: 'e.g. Valencia' },
+      ],
+      [
+        {
+          name: 'mortgage_status',
+          label: 'Mortgage status',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['Applying now', 'Mortgage approved, not yet completed', 'Already have a Spanish mortgage', 'Considering a purchase'],
+        },
+        {
+          name: 'borrower_type',
+          label: 'Borrower type',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Single borrower', 'Joint borrowers', 'Not sure yet'],
+        },
+      ],
+      [
+        { name: 'loan_amount', label: 'Approximate loan amount', placeholder: 'e.g. €300,000' },
+        {
+          name: 'residency_status',
+          label: 'Residency status',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Resident in Spain', 'Non-resident', 'Becoming resident soon'],
+        },
+      ],
+      {
+        name: 'message',
+        label: 'Anything we should know?',
+        type: 'textarea',
+        placeholder: 'Whether your lender has offered a bundled policy, and any details of cover you already have.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'Is life insurance legally required to get a mortgage in Spain?',
+      a: 'No — not as a nationwide legal requirement. What a lender is required to insist on is buildings insurance for the property. Life insurance is commonly requested by lenders as additional security, and often bundled with a better rate, but Ley 5/2019 prevents a lender making the loan conditional on buying the bank\'s own tied product and requires them to accept an equivalent independent policy.',
+    },
+    {
+      q: 'Can I use my own insurer instead of the one my bank offers?',
+      a: 'Generally yes, under Ley 5/2019, provided the alternative policy offers equivalent cover and conditions. Your lender may offer a better interest rate for taking their own bundled product — that is a commercial incentive, not a legal obligation to accept it.',
+    },
+    {
+      q: 'What is decreasing life cover?',
+      a: 'A structure, where available from the insurer, where the sum insured reduces roughly in line with the outstanding mortgage balance over the term — typically cheaper than level cover for the same starting amount, but the protection reduces over time.',
+    },
+    {
+      q: 'Can non-resident buyers get mortgage protection in Spain?',
+      a: 'Non-residency does not automatically exclude you, but the underwriting questions and documentation can differ from a resident application. Tell us your residency situation when you start the conversation.',
+    },
+    {
+      q: 'Should I keep my bank\'s life insurance or switch to an independent policy?',
+      a: 'It depends on the specific terms and price of each. We compare your bank\'s offer against independent options for an equivalent level of cover rather than assume either is automatically better.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/mortgage-life-insurance-spain/', text: 'Do you need life insurance for a mortgage in Spain?', note: 'legal requirement vs lender request vs bank bundling, in full' },
+            { href: '/en/blog/insurance-buying-property-spain/', text: 'Insurance to consider when buying property in Spain', note: 'the full picture — buildings, mortgage protection, life, landlord' },
+            { href: '/en/blog/life-insurance-spain-expats/', text: 'Life insurance in Spain for expats: what to consider', note: 'the wider family-protection picture beyond the mortgage' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/life-insurance-spain/', title: 'Life insurance in Spain', blurb: 'The wider family-protection picture, beyond the mortgage.' },
+            { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'Buildings cover — the part of this that actually is a lender requirement.' },
+            { href: '/en/private-clients-spain/', title: 'Private client insurance in Spain', blurb: 'For a coordinated review across property, life and other cover together.' },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// -----------------------------------------------------------------------------
+// PRIVATE CLIENTS — /en/private-clients-spain/
+// -----------------------------------------------------------------------------
+
+const PRIVATE_CLIENTS = {
+  slug: 'private-clients-spain',
+  crumb: 'Private clients',
+  parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
+  title: 'Private Client Insurance in Spain | International Clients | Adler & Rochefort',
+  description:
+    'Coordinated insurance review for international households in Spain with more than one property, vehicle or type of cover — one broker, several risks, reviewed together.',
+  keywords:
+    'private client insurance spain, high net worth insurance spain, insurance for wealthy expats spain, high value home insurance spain, international private clients spain',
+  eyebrow: 'Spain · Private clients',
+  h1: 'Private Client Insurance in Spain',
+  heroSub:
+    'For households with more than one property, vehicle or type of cover to manage in Spain — one coordinated review, rather than several unrelated policies arranged at different times with different insurers.',
+  heroCta: 'Request a Private Client Review',
+  heroSecondary: 'Ask About Your Situation',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Request a Private Client Review',
+  stickyCta: 'Request a Private Client Review',
+  whatsapp: 'Hello, I would like a private client insurance review for my household in Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_private_clients'],
+  service: {
+    name: 'Private client insurance review in Spain',
+    type: 'Multi-line insurance intermediation and coordinated review',
+    description:
+      'A coordinated review across property, vehicles, health, life and landlord cover for international households in Spain with more than one policy to manage — arranged where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'fragmentation',
+      h2: 'Complex households need coordination, not more policies',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'This is not a luxury product line, and we do not market it as one. It is a practical observation: households with a home in one insurer\'s hands, a car with another, health cover arranged somewhere else, and a life policy from years ago — each bought at a different time, by a different route, sometimes in a different language — end up with gaps and overlaps that nobody notices until a claim, because nobody has ever looked at the whole picture at once.',
+        },
+        {
+          kind: 'note',
+          html:
+            'The proposition here is simple: one broker, reviewing several risks together, for an international client. Not a branded "wealth insurance" product — a coordinated process.',
+        },
+      ],
+    },
+
+    {
+      id: 'high-value-property',
+      h2: 'High-value property',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'The mechanics are the same as any home insurance question — see <a href="/en/home-insurance-spain/">home insurance in Spain</a> for the full detail — but higher-value properties raise the same questions with higher stakes: an accurate rebuilding value that has not drifted out of date, higher contents sums that actually reflect what is in the property, the security measures an insurer expects at that value, and how occupancy and second-home use are declared. Getting these details precisely right matters more, not less, as the sums involved grow.',
+        },
+      ],
+    },
+
+    {
+      id: 'multiple-properties',
+      h2: 'Multiple properties',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Owning property in Spain alongside property elsewhere is common among the households we hear from. We can review and help coordinate the Spanish side of that picture; we do not claim to arrange or review cover for property in jurisdictions where we do not operate, and we say so plainly rather than imply otherwise.',
+        },
+      ],
+    },
+
+    {
+      id: 'vehicles',
+      h2: 'Vehicles',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'From a single family car to more than one vehicle across a household — see <a href="/en/car-insurance-spain/">car insurance in Spain</a> for the detail, including foreign licences and foreign-registered vehicles, both of which come up regularly at this end of the client base.',
+        },
+      ],
+    },
+
+    {
+      id: 'health',
+      h2: 'Health',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Family and individual private health cover — see <a href="/en/health-insurance-spain/">health insurance in Spain</a>. For larger or more complex families, the same principle applies as elsewhere on this page: each person is underwritten individually, and reviewing everyone together at once surfaces inconsistencies a policy-by-policy approach misses.',
+        },
+      ],
+    },
+
+    {
+      id: 'life-protection',
+      h2: 'Life and family protection',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'See <a href="/en/life-insurance-spain/">life insurance in Spain</a> for family and mortgage-linked protection. For private clients specifically, this is often the policy most likely to be out of date — arranged years ago, in another country, for a sum insured that no longer reflects the household\'s actual circumstances.',
+        },
+      ],
+    },
+
+    {
+      id: 'landlord',
+      h2: 'Landlord and investment property',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Where a household holds one or more investment or rental properties in Spain, see <a href="/en/landlord-insurance-spain/">landlord insurance in Spain</a>. A coordinated review is most useful here when there is more than one investment property, or where a mix of long-term and short-term letting makes the picture genuinely complex.',
+        },
+      ],
+    },
+
+    {
+      id: 'service',
+      h2: 'International client service',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Everything above is arranged and communicated in English, by a single point of contact, whether you live in Spain full-time or manage the household\'s Spanish affairs remotely. Correspondence, comparison and claims all work the same way whether you are down the road or in a different time zone — that is how we work by default, not an exception arranged on request.',
+        },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Request a private client review',
+    sub: 'Tell us what you currently hold, and with whom. We will confirm what can be reviewed together and what can currently be arranged.',
+    name: 'private-client-review-spain',
+    gaField: 'property_ownership',
+    submit: 'Request my review',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'current_country', label: 'Country of residence', required: true, placeholder: 'e.g. United Kingdom' },
+      ],
+      [
+        { name: 'spain_location', label: 'Where in Spain?', required: true, placeholder: 'e.g. Marbella, Costa del Sol' },
+        {
+          name: 'property_ownership',
+          label: 'Property ownership',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['One property in Spain', 'More than one property in Spain', 'Property in Spain and elsewhere', 'Not yet, planning to buy'],
+        },
+      ],
+      [
+        { name: 'property_count', label: 'Number of properties (Spain)', placeholder: 'e.g. 2' },
+        { name: 'vehicles', label: 'Vehicles to consider', placeholder: 'e.g. 2 cars' },
+      ],
+      [
+        {
+          name: 'interests',
+          label: 'Which risks would you like reviewed?',
+          type: 'checkboxes',
+          options: ['Home / property', 'Landlord / rental property', 'Car', 'Health', 'Life'],
+        },
+        {
+          name: 'preferred_contact',
+          label: 'Preferred contact method',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Email', 'Phone', 'WhatsApp'],
+        },
+      ],
+      {
+        name: 'message',
+        label: 'Other risks or notes',
+        type: 'textarea',
+        placeholder: 'Anything else relevant to a coordinated review — we do not need valuations or sensitive details at this stage.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'What does "private client" mean here — is this a luxury product?',
+      a: 'No. It describes a coordinated review across several types of cover for a household with more than one risk to manage — property, vehicles, health, life — rather than a branded luxury insurance product. The underlying products are the same ones covered elsewhere on this site.',
+    },
+    {
+      q: 'Can you insure property I own outside Spain?',
+      a: 'We can review and help coordinate the Spanish side of your situation. We do not claim to arrange or review cover for property in jurisdictions where we do not operate.',
+    },
+    {
+      q: 'Do you insure art, jewellery or collections?',
+      a: 'Only where it can genuinely be arranged and supported by an actual insurer relationship — we do not promise cover for valuables in general terms. Tell us what you have and we will confirm honestly whether it is something we can currently place.',
+    },
+    {
+      q: 'Is there a minimum value or income to use this service?',
+      a: 'No formal threshold. The review is genuinely most useful for households with more than one property, vehicle or line of cover to coordinate — if that describes your situation, this is the right starting point regardless of specific figures.',
+    },
+    {
+      q: 'Will you need detailed financial information to start?',
+      a: 'No — we start with what you currently hold and with whom, not valuations or sensitive financial detail. That level of detail, if needed, comes later and only where genuinely relevant to a specific policy.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/high-value-home-insurance-spain/', text: 'Insuring a high-value home in Spain: what international owners should check', note: 'rebuilding value, security, occupancy and valuables' },
+            { href: '/en/blog/insurance-review-expats-spain/', text: 'Why expats in Spain should review their insurance as a whole', note: 'the gaps a policy-by-policy approach tends to miss' },
+            { href: '/en/blog/insurance-buying-property-spain/', text: 'Insurance to consider when buying property in Spain', note: 'the full picture for a new purchase' },
+            { href: '/en/blog/category/spain-private-clients/', text: 'All private client guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'The starting point for any property in the review.' },
+            { href: '/en/life-insurance-spain/', title: 'Life insurance in Spain', blurb: 'Often the policy most likely to be out of date.' },
+            { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need reviewed? Start at the hub.' },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const PAGES = [HUB, HOME, LANDLORD, HEALTH, CAR, LIFE, MORTGAGE, PRIVATE_CLIENTS];
 export const HUB_SLUG = HUB.slug;

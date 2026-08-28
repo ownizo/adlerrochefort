@@ -357,6 +357,27 @@ const CASES = [
     formName: 'car-insurance-quote-spain',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    label: '21. /en/life-insurance-spain/ — Spain life insurance pillar',
+    path: 'en/life-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/life-insurance-spain/',
+    formName: 'life-insurance-review-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '22. /en/mortgage-protection-spain/ — Spain mortgage protection pillar',
+    path: 'en/mortgage-protection-spain/index.html',
+    url: 'https://adlerrochefort.com/en/mortgage-protection-spain/',
+    formName: 'mortgage-protection-review-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '23. /en/private-clients-spain/ — Spain private client pillar',
+    path: 'en/private-clients-spain/index.html',
+    url: 'https://adlerrochefort.com/en/private-clients-spain/',
+    formName: 'private-client-review-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
