@@ -960,6 +960,52 @@ export const RAG_SNIPPETS = {
         "management and provides an analytics dashboard on cost and loss ratio. It does not replace the " +
         "broker — it frees up time for strategic analysis and negotiation instead of repetitive admin work.",
     },
+
+    // --- Spain (Phase 1) --------------------------------------------------
+    // Deliberately minimal: only the three topics the three published Spain
+    // pages actually need, written from scratch for Spain rather than mirrored
+    // from the Portuguese topics above. No pricing, no named insurer, no
+    // statutory citation — see spain-cluster.data.mjs for why.
+    spain_general: {
+      fonte: "/en/expat-insurance-spain/",
+      texto:
+        "Adler & Rochefort is extending its English-language insurance service to Spain, operating on a " +
+        "cross-border basis from its Portuguese ASF registration (no. 425591790/3) — it does not hold a " +
+        "separate Spanish licence and has no Spanish office. For Spain it currently helps with home " +
+        "insurance and landlord/rental property insurance only; other lines (car, health, life, business) " +
+        "are not yet something it can confirm placement for. Its Spanish insurer relationships are still " +
+        "being built, so it does not name specific Spanish insurers or promise cover before understanding " +
+        "the case — it asks about the property and situation and comes back with a written answer.",
+    },
+    spain_home: {
+      fonte: "/en/home-insurance-spain/",
+      texto:
+        "Home insurance in Spain is not one product: what suits a full-time resident differs from a " +
+        "holiday home used a few weeks a year. Typical components discussed are buildings cover, contents " +
+        "cover, and owner liability where applicable — but exactly what is included, the excess and the " +
+        "exclusions are set by the individual insurer and policy, never stated as universal here. Where a " +
+        "property sits inside a community of owners (comunidad de propietarios), the exterior structure is " +
+        "often already insured under the community's own policy, which is worth confirming rather than " +
+        "assuming. Non-resident ownership is common and normally insurable; what an insurer needs is " +
+        "accurate information about the property and how it is used, not proof of Spanish residency. If " +
+        "the property is let to a tenant or holiday guest, standard home cover is usually not the right " +
+        "product — that is landlord insurance instead.",
+    },
+    spain_landlord: {
+      fonte: "/en/landlord-insurance-spain/",
+      texto:
+        "A standard home policy is written for an owner living in the property; once it is let — " +
+        "long-term or short-term/holiday — the risk changes and a landlord product is usually needed " +
+        "instead. Long-term rental (one tenant for months or years) and short-term/holiday letting " +
+        "(frequent guest changeovers) are different situations. Short-term and holiday letting licensing " +
+        "in Spain varies by autonomous community and municipality — there is no single nationwide rule to " +
+        "state, and this is a matter for the relevant regional or local authority, not something the " +
+        "assistant should advise on. Typical landlord cover components discussed are buildings, the " +
+        "landlord's own contents (not the tenant's belongings), and landlord liability; malicious damage, " +
+        "loss of rent and legal protection are mentioned only as options that exist on some products, never " +
+        "promised as included. A property managed remotely by the owner, or through a local letting agent, " +
+        "is a normal arrangement and does not itself prevent the property being insured.",
+    },
   },
 };
 
@@ -974,12 +1020,20 @@ const DEFAULT_TOPICS = [
 /**
  * Devolve um bloco de texto com os excertos relevantes para os tópicos pedidos,
  * para injectar no contexto da chamada à API (RAG sem vector DB).
+ *
+ * `market` is optional and additive: every existing call site that omits it
+ * keeps the exact previous behaviour (falling back to the Portuguese
+ * DEFAULT_TOPICS when `topics` is empty). When `market === "spain"`, that
+ * fallback is skipped instead of silently substituting Portuguese topics —
+ * a Spain conversation with no topics requested gets no context rather than
+ * Portuguese insurer/pricing content it did not ask for. See the audit's
+ * RAG/chat findings: country isolation here matters more than coverage.
  */
-export function getRagContext(lang, topics) {
+export function getRagContext(lang, topics, market) {
   const idioma = lang === "en" ? "en" : "pt";
   const dicionario = RAG_SNIPPETS[idioma];
-  const listaTopicos =
-    Array.isArray(topics) && topics.length > 0 ? topics : DEFAULT_TOPICS;
+  const hasTopics = Array.isArray(topics) && topics.length > 0;
+  const listaTopicos = hasTopics ? topics : market === "spain" ? [] : DEFAULT_TOPICS;
 
   const blocos = listaTopicos
     .filter((topico) => dicionario[topico])

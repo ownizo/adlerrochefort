@@ -4,6 +4,10 @@
 
   var scriptEl = document.currentScript;
   var lang = ((scriptEl && scriptEl.dataset.lang) || "pt").toLowerCase() === "en" ? "en" : "pt";
+  // Set only by the Spain pages (data-market="spain"); every other page leaves
+  // this unset, which keeps the request payload — and so the backend's
+  // Portuguese behaviour — exactly as it was before this attribute existed.
+  var market = ((scriptEl && scriptEl.dataset.market) || "").toLowerCase();
   var topicsAttr = (scriptEl && scriptEl.dataset.topics) || "";
   var topics = topicsAttr
     .split(",")
@@ -178,7 +182,7 @@
     fetch("/api/insurance-chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: conversation, lang: lang, topics: topics, leadSent: leadSent }),
+      body: JSON.stringify({ messages: conversation, lang: lang, topics: topics, leadSent: leadSent, market: market }),
     })
       .then(function (res) {
         return res.json().then(function (data) { return { ok: res.ok, data: data }; });
