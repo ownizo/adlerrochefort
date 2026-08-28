@@ -378,6 +378,22 @@ const CASES = [
     formName: 'private-client-review-spain',
     pageScripts: ['ar-quote-form.js'],
   },
+  {
+    // International UI/UX rebuild (Phase 5): the /en/ homepage's generic
+    // free-analysis form gained an explicit required Country/Market select
+    // (Portugal / Spain / Not sure / Other) so a lead from this form is never
+    // guessed at from language alone. fillVisible always picks the first
+    // non-empty <option>, which is "Portugal" here — the check that matters is
+    // that the field survives serialisation at all, alongside the pre-existing
+    // insurance_type branch mechanics it sits next to.
+    label: '24. /en/ homepage — general form, new Country/Market field',
+    path: 'en/index.html',
+    url: 'https://adlerrochefort.com/en/',
+    formName: 'free-analysis',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'Health',
+    requireCountry: 'Portugal',
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its

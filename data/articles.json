@@ -1511,7 +1511,7 @@
         "modified": "2026-08-06",
         "dateLabel": "August 2026",
         "readingTime": 11,
-        "featured": true,
+        "featured": false,
         "translationOf": null
       },
       {
@@ -3613,7 +3613,7 @@
         "modified": "2026-06-24T09:00:00+00:00",
         "dateLabel": "June 2026",
         "readingTime": 11,
-        "featured": true,
+        "featured": false,
         "translationOf": "seguro-ciberseguranca-empresas-portugal"
       },
       {
@@ -3760,7 +3760,7 @@
         "modified": "2026-04-08T09:00:00+00:00",
         "dateLabel": "April 2026",
         "readingTime": 15,
-        "featured": true,
+        "featured": false,
         "translationOf": "seguro-tvde-portugal"
       },
       {
@@ -4285,7 +4285,7 @@
         "modified": "2026-08-28T09:00:00+00:00",
         "dateLabel": "August 2026",
         "readingTime": 5,
-        "featured": false,
+        "featured": true,
         "translationOf": null
       },
       {
@@ -4432,7 +4432,7 @@
         "modified": "2026-08-28T09:00:00+00:00",
         "dateLabel": "August 2026",
         "readingTime": 4,
-        "featured": false,
+        "featured": true,
         "translationOf": null
       },
       {
@@ -4579,7 +4579,7 @@
         "modified": "2026-08-28T09:00:00+00:00",
         "dateLabel": "August 2026",
         "readingTime": 3,
-        "featured": false,
+        "featured": true,
         "translationOf": null
       },
       {

@@ -7,7 +7,7 @@
     "linksViaRedirect": 0,
     "orphans": 0,
     "singleInbound": 8,
-    "deeperThanThreeClicks": 29
+    "deeperThanThreeClicks": 0
   },
   "broken": [],
   "viaRedirect": [],
@@ -62,123 +62,6 @@
       ]
     }
   ],
-  "deeperThanThreeClicks": [
-    {
-      "url": "/en/blog/car-insurance-spain-expats/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/community-insurance-apartment-owners-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/foreign-driving-licence-car-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/foreign-registered-car-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/health-insurance-moving-to-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/high-value-home-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/importing-car-to-spain-insurance/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/insurance-buying-property-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/insurance-review-expats-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/life-insurance-spain-expats/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/mortgage-life-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/no-claims-history-car-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/non-resident-property-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/private-health-insurance-spain-expats/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/renting-out-property-in-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/second-home-insurance-spain/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/spain-health-insurance-visa-residency/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/category/spain-car/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/category/spain-health/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/category/spain-life/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/category/spain-private-clients/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/blog/category/spain-property/",
-      "clicks": 5
-    },
-    {
-      "url": "/en/car-insurance-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/health-insurance-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/home-insurance-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/landlord-insurance-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/life-insurance-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/mortgage-protection-spain/",
-      "clicks": 4
-    },
-    {
-      "url": "/en/private-clients-spain/",
-      "clicks": 4
-    }
-  ],
-  "maxClickDepth": 5
+  "deeperThanThreeClicks": [],
+  "maxClickDepth": 3
 }

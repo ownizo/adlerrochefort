@@ -512,7 +512,7 @@ export function renderAllFields(data, en = false) {
  * branch happened to ask for, so the inbox is sortable without opening anything.
  */
 export function quoteSubject(data, fallbackBranch) {
-  const branch =
+  let branch =
     data.ramo ||
     data.tipo_seguro ||
     data["tipo-seguro"] ||
@@ -521,6 +521,19 @@ export function quoteSubject(data, fallbackBranch) {
     data.type_verzekering ||
     fallbackBranch ||
     "Geral";
+
+  // The dedicated Spain landing pages already carry a pre-tagged branch
+  // ("ES · Car Insurance") via their own fallbackBranch, so leads there sort
+  // correctly with no change here. The one form that does not is the /en/
+  // homepage's generic free-analysis form: its branch comes from a
+  // Portugal-shaped `insurance_type` select (e.g. "Health") shared by both
+  // markets, and only the explicit `country` field says which market a lead
+  // is actually in. Tag it the same way here so a Spain lead from that form
+  // is never mistaken for a Portugal one in the inbox.
+  if (data.country === "Spain" && !/^ES\s*·/.test(branch)) {
+    branch = `ES · ${branch}`;
+  }
+
   const name = data.nome || data.name || data.full_name || "sem nome";
 
   const where = [
