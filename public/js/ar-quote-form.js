@@ -136,6 +136,12 @@
       value: 1.0,
       currency: 'EUR',
     });
+    // Phase 5 (conversion): a named event alongside the two above, distinct
+    // from generate_lead so the conversion-journey funnel (market_selected →
+    // product_selected → quote_started → quote_submitted, dispatched by
+    // ar-conversion-events.js) can be built without redefining what
+    // generate_lead already means for existing Ads/Analytics reporting.
+    window.gtag('event', 'quote_submitted', params);
   }
 
   function succeed(form) {

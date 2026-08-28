@@ -43,6 +43,49 @@ const WHY_US_INTRO =
   'Adler & Rochefort is the trading name of Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal’s insurance supervisor, the ASF (Autoridade de Supervisão de Seguros e Fundos de Pensões), under no. 425591790/3. We have spent several years arranging insurance in English for expats, foreign residents and property owners in Portugal, and we are extending that service to cover Spain.';
 
 // -----------------------------------------------------------------------------
+// CROSS-SELL — source of truth (Phase 5: conversion)
+// -----------------------------------------------------------------------------
+// One map drives three things on every product page: the "also need help with"
+// checkbox group on the form, the contextual "you may also need" block, and the
+// links shown after a successful submission. A product's cross-sell
+// relationships therefore live in exactly one place rather than being repeated
+// — and risking drift — across eight separate page objects. Private Clients
+// intentionally has no outbound cross-sell (see brief §22: "no aggressive
+// cross-sell required" — it is already the coordinated-review destination).
+export const SPAIN_PRODUCTS = [
+  { key: 'health', label: 'Health Insurance', slug: 'health-insurance-spain' },
+  { key: 'home', label: 'Home Insurance', slug: 'home-insurance-spain' },
+  { key: 'car', label: 'Car Insurance', slug: 'car-insurance-spain' },
+  { key: 'life', label: 'Life Insurance', slug: 'life-insurance-spain' },
+  { key: 'landlord', label: 'Landlord Insurance', slug: 'landlord-insurance-spain' },
+  { key: 'mortgage', label: 'Mortgage Protection', slug: 'mortgage-protection-spain' },
+  { key: 'private_clients', label: 'Private Client Review', slug: 'private-clients-spain' },
+];
+
+export const SPAIN_CROSS_SELL = {
+  health: ['home', 'car', 'life'],
+  home: ['mortgage', 'landlord', 'private_clients'],
+  car: ['health', 'home'],
+  life: ['health', 'mortgage', 'home'],
+  mortgage: ['life', 'home'],
+  landlord: ['home', 'private_clients'],
+  private_clients: [],
+};
+
+// The prompt shown above the contextual cross-sell links (brief §20). Kept
+// short and specific to why that pairing makes sense, never a generic
+// "other services" label.
+export const SPAIN_CROSS_SELL_PROMPT = {
+  health: 'Moving to Spain? You may also need:',
+  home: 'Buying or owning property? Consider:',
+  car: 'Moving to Spain? Consider:',
+  life: 'Protecting your family? Consider:',
+  mortgage: 'Taking out a mortgage in Spain? Consider:',
+  landlord: 'Multiple or higher-value properties?',
+  private_clients: '',
+};
+
+// -----------------------------------------------------------------------------
 // HUB — /en/expat-insurance-spain/
 // -----------------------------------------------------------------------------
 
@@ -145,6 +188,47 @@ const HUB = {
         {
           kind: 'note',
           html: AVAILABILITY_NOTE,
+        },
+      ],
+    },
+
+    {
+      id: 'moving-journey',
+      h2: 'Moving to Spain? Start with your insurance checklist.',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Not a legal or visa checklist — an insurance one. Most people moving to Spain end up needing more than one of these, in roughly this order, though your own situation may not need all five.',
+        },
+        {
+          kind: 'steps',
+          items: [
+            {
+              title: 'Are you moving to Spain?',
+              body: 'Health cover is usually the first thing to sort out — for peace of mind, and sometimes for a visa or residence application. See <a href="/en/health-insurance-spain/">health insurance in Spain</a>.',
+            },
+            {
+              title: 'Will you own or rent a home?',
+              body: 'Either way, the property needs cover matched to how it is actually used. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>, or <a href="/en/landlord-insurance-spain/">landlord insurance</a> if you are letting it out.',
+            },
+            {
+              title: 'Bringing or buying a car?',
+              body: 'Third-party liability is compulsory in Spain for every vehicle. See <a href="/en/car-insurance-spain/">car insurance in Spain</a>.',
+            },
+            {
+              title: 'Mortgage or family responsibilities?',
+              body: 'Worth reviewing life cover and, if there is a mortgage, what it actually requires versus what a lender simply offers. See <a href="/en/life-insurance-spain/">life insurance</a> and <a href="/en/mortgage-protection-spain/">mortgage protection in Spain</a>.',
+            },
+            {
+              title: 'Multiple properties or more complex risks?',
+              body: 'A coordinated review across everything at once, rather than several policies nobody has looked at together. See <a href="/en/private-clients-spain/">private client insurance in Spain</a>.',
+            },
+          ],
+        },
+        {
+          kind: 'note',
+          html: 'Not sure where you fit? <a href="/en/insurance-review/">Start an insurance review</a> instead and tell us what you need help with — one form, one broker.',
         },
       ],
     },
@@ -377,8 +461,13 @@ const HUB = {
           required: true,
           placeholder: 'Select one',
           options: [
+            'Health insurance',
             'Home insurance for a property in Spain',
             'Landlord / rental property insurance',
+            'Car insurance',
+            'Life insurance',
+            'Mortgage protection',
+            'Private client review — several risks at once',
             'Reviewing a policy I already have',
             'Not sure — help me work it out',
             'Something else (tell us below)',

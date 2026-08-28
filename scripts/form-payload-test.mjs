@@ -118,7 +118,17 @@ function fillVisible(form, doc) {
   }
 }
 
-async function run({ label, path, url, formName, branchSelect, branchValue, pageScripts = ['lead-branch-fields.js'], inlineScripts = false }) {
+async function run({
+  label,
+  path,
+  url,
+  formName,
+  branchSelect,
+  branchValue,
+  pageScripts = ['lead-branch-fields.js'],
+  inlineScripts = false,
+  checkboxValues,
+}) {
   const html = await readFile(join(PUBLIC, path), 'utf8');
   const dom = await domFor(html, url);
   const { document: doc, window: win } = { document: dom.window.document, window: dom.window };
@@ -157,6 +167,28 @@ async function run({ label, path, url, formName, branchSelect, branchValue, page
   }
 
   fillVisible(form, doc);
+
+  // Multi-select checkbox groups (Phase 5's "also need help with" / "what
+  // would you like help with" cross-sell fields): fillVisible only ever
+  // checks the first checkbox in a same-name group, which is enough to prove
+  // the field survives serialisation but not enough to test the
+  // comma-joining Netlify does for a real multi-tick answer. A case that
+  // needs to assert specific values ticks exactly those, on top of whatever
+  // fillVisible already did.
+  if (checkboxValues) {
+    for (const [name, values] of Object.entries(checkboxValues)) {
+      for (const value of values) {
+        // querySelector alone would return the first match in document
+        // order even when it belongs to a disabled, inactive branch group —
+        // exactly the case on /en/insurance-review/, where the Portugal and
+        // Spain checklists deliberately reuse the same field name and value
+        // set. Find the first match that is actually enabled instead.
+        const candidates = form.querySelectorAll(`input[name="${name}"][value="${value}"]`);
+        const el = [...candidates].find((c) => !c.disabled);
+        if (el) el.checked = true;
+      }
+    }
+  }
 
   const pairs = serialise(form);
   const names = pairs.map(([n]) => n);
@@ -394,6 +426,73 @@ const CASES = [
     branchValue: 'Health',
     requireCountry: 'Portugal',
   },
+  {
+    // Conversion phase (Phase 5): the "also need help with anything else?"
+    // cross-sell checkboxes added to every Spain product form. The regression
+    // this guards against is the same one the branch mechanics guard against
+    // elsewhere — a control that looks ticked but is dropped before the
+    // request leaves the page — applied to a brand-new field shape
+    // (same-name checkboxes) rather than a select.
+    label: '25. /en/health-insurance-spain/ — cross-sell: Home + Car ticked',
+    path: 'en/health-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/health-insurance-spain/',
+    formName: 'health-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+    checkboxValues: { additional_insurance_needs: ['Home Insurance', 'Car Insurance'] },
+    requireValues: { additional_insurance_needs: ['Home Insurance', 'Car Insurance'] },
+  },
+  {
+    label: '26. /en/car-insurance-spain/ — cross-sell: Home ticked',
+    path: 'en/car-insurance-spain/index.html',
+    url: 'https://adlerrochefort.com/en/car-insurance-spain/',
+    formName: 'car-insurance-quote-spain',
+    pageScripts: ['ar-quote-form.js'],
+    checkboxValues: { additional_insurance_needs: ['Home Insurance'] },
+    requireValues: { additional_insurance_needs: ['Home Insurance'] },
+  },
+  {
+    // The multi-product review page (brief §9-13, §33 "SPAIN MULTI"). Country
+    // picked first (gates which needs-checklist is even enabled), three needs
+    // ticked, one submission. requireBranch checks the hidden `ramo` field
+    // that the page's own inline script stamps from the country choice — the
+    // same field submission-created.mjs's quoteSubject() reads first.
+    label: '27. /en/insurance-review/ — Spain multi-product (Health + Home + Car)',
+    path: 'en/insurance-review/index.html',
+    url: 'https://adlerrochefort.com/en/insurance-review/',
+    formName: 'international-insurance-review',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'Spain',
+    inlineScripts: true,
+    checkboxValues: { insurance_needs: ['Health Insurance', 'Home Insurance', 'Car Insurance'] },
+    requireValues: { insurance_needs: ['Health Insurance', 'Home Insurance', 'Car Insurance'] },
+    requireCountry: 'Spain',
+    requireBranch: 'ES · Multi-product',
+    // The Portugal and Spain checklists deliberately share field names
+    // (insurance_needs, situation) so the payload shape is identical
+    // regardless of market — the generic name-based leak check this file
+    // uses everywhere else assumes distinct names per branch and produces a
+    // false positive here. requireValues above is the real, value-level
+    // assertion that a genuine leak would fail.
+    skipLeakCheck: true,
+  },
+  {
+    // "PORTUGAL MULTI" (brief §33) — same form, same mechanism, the real
+    // Portugal product set, and the PT · tag rather than ES ·. Proves the
+    // isolation brief §32 asks for holds in both directions on this one form,
+    // not just the direction every other test in this file already covers.
+    label: '28. /en/insurance-review/ — Portugal multi-product (Health + Home + Landlord)',
+    path: 'en/insurance-review/index.html',
+    url: 'https://adlerrochefort.com/en/insurance-review/',
+    formName: 'international-insurance-review',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'Portugal',
+    inlineScripts: true,
+    checkboxValues: { insurance_needs: ['Health Insurance', 'Home Insurance', 'Landlord Insurance'] },
+    requireValues: { insurance_needs: ['Health Insurance', 'Home Insurance', 'Landlord Insurance'] },
+    requireCountry: 'Portugal',
+    requireBranch: 'PT · Multi-product',
+    skipLeakCheck: true,
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
@@ -445,13 +544,34 @@ for (const c of CASES) {
   const countryValue = r.payload?.find(([n]) => n === 'country')?.[1] ?? null;
   const countryOk = !c.requireCountry || countryValue === c.requireCountry;
 
+  // requireValues: every listed value must appear among the payload's pairs
+  // for that field name — the multi-checkbox equivalent of requireCountry,
+  // proving a cross-sell selection actually reaches the payload rather than
+  // being dropped the way a disabled-but-visible control would be.
+  const valuesOk = !c.requireValues
+    ? true
+    : Object.entries(c.requireValues).every(([name, values]) => {
+        const got = r.payload.filter(([n]) => n === name).map(([, v]) => v);
+        return values.every((v) => got.includes(v));
+      });
+
+  // requireBranch: the notification subject's [LEAD branch] tag, computed the
+  // same way submission-created.mjs's quoteSubject() computes it — first
+  // non-empty of ramo / tipo_seguro / insurance_type / fallback — asserting
+  // the ES/PT tag lands on the field this test can actually see (ramo), not
+  // by re-importing the Netlify function into a jsdom test.
+  const branchValue = r.payload.find(([n]) => n === 'ramo')?.[1] || null;
+  const branchOk = !c.requireBranch || branchValue === c.requireBranch;
+
   const ok =
     !r.branchFieldsMissing.length &&
-    !r.otherBranchFieldsLeaked.length &&
+    (!r.otherBranchFieldsLeaked.length || c.skipLeakCheck) &&
     r.sourceUrlOk &&
     r.honeypotPresent &&
     r.honeypotDeclared &&
-    countryOk;
+    countryOk &&
+    valuesOk &&
+    branchOk;
   if (!ok) failures++;
 
   console.log(`\n${'='.repeat(78)}\n${r.label}\n${'='.repeat(78)}`);
@@ -474,6 +594,10 @@ for (const c of CASES) {
     console.log(`  !! LEAKED FROM ANOTHER BRANCH: ${r.otherBranchFieldsLeaked.join(', ')}`);
   if (c.requireCountry)
     console.log(`country          : ${countryValue}  ${countryOk ? 'OK' : `WRONG (expected ${c.requireCountry})`}`);
+  if (c.requireBranch)
+    console.log(`ramo (branch tag): ${branchValue}  ${branchOk ? 'OK' : `WRONG (expected ${c.requireBranch})`}`);
+  if (c.requireValues)
+    console.log(`cross-sell values: ${valuesOk ? 'OK' : 'MISSING one or more expected values'}`);
   console.log(ok ? 'RESULT: PASS' : 'RESULT: FAIL');
 }
 
