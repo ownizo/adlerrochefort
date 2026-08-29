@@ -379,7 +379,14 @@ const RC_HUB_GROUPS = [
   },
   {
     title: 'Por atividade',
-    slugs: ['seguro-responsabilidade-civil-terapeuticas-nao-convencionais', 'responsabilidade-civil-num-evento-portugal'],
+    slugs: [
+      'responsabilidade-civil-massagistas',
+      'seguro-responsabilidade-civil-terapeuticas-nao-convencionais',
+      'seguro-responsabilidade-civil-acupuntores',
+      'seguro-responsabilidade-civil-naturopatas',
+      'responsabilidade-civil-medicina-tradicional-chinesa',
+      'responsabilidade-civil-num-evento-portugal',
+    ],
   },
   {
     title: 'Riscos relacionados',
@@ -427,7 +434,13 @@ for (const c of CLUSTERS) {
     lang: 'pt',
     cta: CTA_PT,
     collectionName: c.title,
-    page1Body: rcHub && rcHub.featured ? topicHubLayout(rcHub) : undefined,
+    page1Body:
+      rcHub && rcHub.featured
+        ? topicHubLayout({
+            ...rcHub,
+            viewAllHref: items.length > PER_PAGE ? `/blog/categoria/${c.slug}/pagina/2/` : undefined,
+          })
+        : undefined,
   });
 }
 

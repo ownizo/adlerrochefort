@@ -100,7 +100,7 @@ ${rows}${viewAll}
  * gets, since it has enough depth now to warrant its own structure:
  * FEATURED / UNDERSTAND THE POLICY / BY ACTIVITY / RELATED RISKS.
  */
-export function topicHubLayout({ featured, groups }) {
+export function topicHubLayout({ featured, groups, viewAllHref }) {
   const rows = groups
     .filter((g) => g.items.length)
     .map(
@@ -114,12 +114,19 @@ ${g.items.map(card).join('\n\n')}
   </div>`
     )
     .join('\n\n');
+  // buildListing() only renders its normal pagination() on page 1 when there
+  // is no page1Body override -- since this hub replaces page 1 entirely,
+  // page 2+ would otherwise be unreachable by any link (a real orphan, not
+  // just a cosmetic gap) when the cluster grows past PER_PAGE articles.
+  const viewAll = viewAllHref
+    ? `\n\n<p class="insights-view-all"><a href="${viewAllHref}">Ver mais artigos &rarr;</a></p>`
+    : '';
   return `<section class="blog-section blog-section--featured" aria-label="Artigo em destaque">
   ${featuredCard(featured)}
 </section>
 
 <section class="insights-clusters" aria-label="Temas dentro de Riscos Profissionais">
-${rows}
+${rows}${viewAll}
 </section>`;
 }
 

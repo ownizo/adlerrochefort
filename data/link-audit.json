@@ -1,18 +1,24 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 324,
-    "indexedUrls": 315,
+    "htmlFiles": 331,
+    "indexedUrls": 322,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 10,
+    "singleInbound": 12,
     "deeperThanThreeClicks": 0
   },
   "broken": [],
   "viaRedirect": [],
   "orphans": [],
   "singleInbound": [
+    {
+      "url": "/blog/checklist-revisao-rc-profissional/",
+      "from": [
+        "/blog/categoria/riscos-profissionais/"
+      ]
+    },
     {
       "url": "/blog/categoria/empresas/pagina/2/",
       "from": [
@@ -23,6 +29,12 @@
       "url": "/blog/categoria/guias-de-seguros/pagina/2/",
       "from": [
         "/blog/categoria/guias-de-seguros/"
+      ]
+    },
+    {
+      "url": "/blog/categoria/riscos-profissionais/pagina/2/",
+      "from": [
+        "/blog/categoria/riscos-profissionais/"
       ]
     },
     {

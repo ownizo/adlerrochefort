@@ -392,6 +392,42 @@ export const RAG_SNIPPETS = {
         "está formalmente na lista mas instrutores enfrentam riscos semelhantes de responsabilidade civil. " +
         "A Adler tem acesso a soluções especializadas para este risco através de parceria com a Innovarisk.",
     },
+    rc_acupuntura: {
+      fonte: "/blog/seguro-responsabilidade-civil-acupuntores/",
+      texto:
+        "O risco da acupunctura está diretamente ligado à técnica com agulhas: hematomas, lesão nervosa, " +
+        "infeção por falhas de esterilização e, raramente, pneumotórax em pontos próximos da cavidade " +
+        "torácica. É uma das sete terapêuticas não convencionais com seguro obrigatório por lei (Lei n.º " +
+        "71/2013). A atividade declarada deve incluir tanto a acupunctura como técnicas associadas " +
+        "(moxabustão, ventosas), quando praticadas.",
+    },
+    rc_naturopatia: {
+      fonte: "/blog/seguro-responsabilidade-civil-naturopatas/",
+      texto:
+        "Ao contrário da acupunctura, o risco da naturopatia está no aconselhamento — não numa técnica " +
+        "invasiva: interações entre suplementos recomendados e medicação prescrita, atraso no " +
+        "encaminhamento para cuidados médicos quando necessário, recomendações alimentares desadequadas. " +
+        "Também uma das sete terapêuticas não convencionais com seguro obrigatório por lei.",
+    },
+    rc_mtc: {
+      fonte: "/blog/responsabilidade-civil-medicina-tradicional-chinesa/",
+      texto:
+        "A Medicina Tradicional Chinesa combina várias técnicas com perfis de risco distintos — " +
+        "acupunctura (agulhas), tuiná (manipulação manual), moxabustão (calor) e fitoterapia chinesa " +
+        "(aconselhamento). Uma apólice que declare apenas 'acupunctura' pode não cobrir uma reclamação " +
+        "originada por tuiná ou por uma recomendação de fitoterapia — todas as técnicas praticadas devem " +
+        "estar declaradas.",
+    },
+    rc_massagista: {
+      fonte: "/seguros/rc-massagistas/ e /blog/responsabilidade-civil-massagistas/",
+      texto:
+        "Massagista NÃO é uma das sete terapêuticas não convencionais reconhecidas pela Lei n.º 71/2013 " +
+        "— não existe, para esta atividade, a mesma obrigação legal de seguro. Isso não torna o seguro " +
+        "dispensável: muitos espaços e clínicas exigem-no contratualmente. A análise depende do tipo de " +
+        "massagem (relaxamento, terapêutica, desportiva) e do local de trabalho (espaço próprio, clínica " +
+        "de terceiros, ao domicílio) — nunca classificar automaticamente um massagista como profissional " +
+        "de terapêutica não convencional; são categorias distintas com rotas de colocação diferentes.",
+    },
     rc_profissoes_especificas: {
       fonte: "/seguros/rc-profissoes-especificas/",
       texto:
