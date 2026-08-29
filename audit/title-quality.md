@@ -1,6 +1,6 @@
 # Title / meta-description quality
 
-Generated: 2026-08-28 · pages checked: 220 (noindex pages excluded) · findings: high 0, medium 5, low 23
+Generated: 2026-08-29 · pages checked: 220 (noindex pages excluded) · findings: high 0, medium 5, low 23
 
 ## duplicate_description (medium)
 {

@@ -160,6 +160,15 @@ const QUOTE_LABELS = {
   rcp_profissao: "Profissão ou atividade",
   rcp_capital: "Capital pretendido",
   rcp_obrigatorio: "É exigido por ordem profissional ou contrato?",
+  // Private Clients page (/private-clients/) — same "review" field name as the
+  // EN Collections & Valuables form (both are a checkbox group), so it reuses
+  // that FIELD_LABELS entry when this form is ever rendered through that path;
+  // "localizacao" and "existing-cover" get a Portuguese label here because
+  // this is a quote:true PT form (QUOTE_LABELS/renderAllFields), not the
+  // FIELD_LABELS/English one "existing-cover" already serves.
+  localizacao: "Onde se encontra o património",
+  "existing-cover": "Já tem seguros em vigor",
+  review: "O que pretende proteger",
   cyber_empresa: "Empresa",
   cyber_postos: "N.º de postos de trabalho",
   cyber_dados: "Trata dados pessoais de clientes?",
@@ -338,6 +347,21 @@ const HANDLED_FORMS = {
     heading: "Novo pedido de análise — Multirriscos Empresarial",
     page: "/seguros/empresarial/",
     branch: "Empresarial",
+  },
+  // Phase 12 (PT repositioning): the two new pillar pages. Same shape as the
+  // other quote:true forms — renderAllFields() handles every field generically,
+  // and the branch below is what sorts these leads in the inbox.
+  "private-clients-review": {
+    quote: true,
+    heading: "Novo pedido — Private Clients",
+    page: "/private-clients/",
+    branch: "Private Clients",
+  },
+  "cotacao-rc-profissional": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Profissional",
+    page: "/seguros/responsabilidade-civil-profissional/",
+    branch: "RC Profissional",
   },
   "quote-tvde-en": {
     quote: true,
