@@ -164,6 +164,72 @@
   "articles": {
     "pt": [
       {
+        "slug": "subseguro-portugal",
+        "lang": "pt",
+        "status": "published",
+        "url": "/blog/subseguro-portugal/",
+        "category": null,
+        "cluster": "private-clients",
+        "tag": "Capitais Seguros",
+        "title": "Subseguro: o erro que pode reduzir uma indemnização",
+        "metaTitle": "Subseguro: o erro que pode reduzir uma indemnização | Adler & Rochefort",
+        "description": "O subseguro acontece quando o capital seguro fica abaixo do valor real do bem. A lei permite à seguradora aplicar a regra proporcional — e pagar menos, mesmo num sinistro parcial.",
+        "excerpt": "O capital seguro desatualizado ativa a regra proporcional: a seguradora paga menos, mesmo num sinistro parcial. Veja onde o subseguro aparece com mais frequência e como evitá-lo.",
+        "image": "/images/blog/subseguro-portugal.svg",
+        "imageGradient": null,
+        "imageAlt": "Subseguro em Portugal: a regra proporcional e o capital seguro desatualizado",
+        "published": "2026-08-10T09:00:00+00:00",
+        "modified": "2026-08-10T09:00:00+00:00",
+        "dateLabel": "Agosto 2026",
+        "readingTime": 10,
+        "featured": false,
+        "translationOf": null
+      },
+      {
+        "slug": "seguros-private-clients-portugal",
+        "lang": "pt",
+        "status": "published",
+        "url": "/blog/seguros-private-clients-portugal/",
+        "category": null,
+        "cluster": "private-clients",
+        "tag": "Private Clients",
+        "title": "Private Clients: como proteger patrimónios com riscos mais complexos",
+        "metaTitle": "Private Clients: como proteger patrimónios com riscos mais complexos | Adler & Rochefort",
+        "description": "Vários imóveis, uma coleção, um automóvel clássico: um património com riscos complexos raramente está protegido por uma única apólice bem desenhada. Veja o que analisar.",
+        "excerpt": "O risco de um património com múltiplos ativos não é o valor — é a fragmentação entre apólices. Veja o que analisamos numa revisão de Private Clients.",
+        "image": "/images/blog/seguros-private-clients-portugal.svg",
+        "imageGradient": null,
+        "imageAlt": "Private Clients: proteção de patrimónios com riscos mais complexos em Portugal",
+        "published": "2026-08-17T09:00:00+00:00",
+        "modified": "2026-08-17T09:00:00+00:00",
+        "dateLabel": "Agosto 2026",
+        "readingTime": 11,
+        "featured": false,
+        "translationOf": null
+      },
+      {
+        "slug": "claims-made-rc-profissional",
+        "lang": "pt",
+        "status": "published",
+        "url": "/blog/claims-made-rc-profissional/",
+        "category": null,
+        "cluster": "riscos-profissionais",
+        "tag": "RC Profissional",
+        "title": "Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional",
+        "metaTitle": "Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional | Adler & Rochefort",
+        "description": "Numa apólice claims-made, o que importa não é quando o erro aconteceu — é quando a reclamação é feita e comunicada à seguradora. Veja o que isso muda ao mudar ou cancelar a apólice.",
+        "excerpt": "Data retroativa, prazo de reporte e notificação de circunstâncias: o que verificar numa apólice claims-made antes de mudar de seguradora ou cessar atividade.",
+        "image": "/images/blog/claims-made-rc-profissional.svg",
+        "imageGradient": null,
+        "imageAlt": "Claims-made em RC Profissional: data retroativa e prazo de reporte",
+        "published": "2026-08-24T09:00:00+00:00",
+        "modified": "2026-08-24T09:00:00+00:00",
+        "dateLabel": "Agosto 2026",
+        "readingTime": 9,
+        "featured": false,
+        "translationOf": null
+      },
+      {
         "slug": "seguro-saude-doencas-preexistentes-portugal",
         "lang": "pt",
         "status": "published",
@@ -182,7 +248,8 @@
         "dateLabel": "Julho 2026",
         "readingTime": 22,
         "featured": true,
-        "translationOf": "pre-existing-conditions-health-insurance-portugal"
+        "translationOf": "pre-existing-conditions-health-insurance-portugal",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-titulo-imovel-portugal",
@@ -203,7 +270,8 @@
         "dateLabel": "Julho 2026",
         "readingTime": 16,
         "featured": false,
-        "translationOf": "property-title-risk-portugal"
+        "translationOf": "property-title-risk-portugal",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-ciberseguranca-empresas-portugal",
@@ -224,7 +292,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 10,
         "featured": true,
-        "translationOf": "cyber-insurance-businesses-portugal"
+        "translationOf": "cyber-insurance-businesses-portugal",
+        "cluster": "riscos-profissionais"
       },
       {
         "slug": "obrigacoes-administrador-condominio-seguro",
@@ -245,7 +314,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 8,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-condominio-capitais-desatualizados",
@@ -266,7 +336,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 8,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-condominio-obrigatorio-guia",
@@ -287,7 +358,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "investimento-americano-luxo-portugal",
@@ -308,7 +380,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 12,
         "featured": false,
-        "translationOf": "us-buyers-property-cover-portugal"
+        "translationOf": "us-buyers-property-cover-portugal",
+        "cluster": "private-clients"
       },
       {
         "slug": "alojamento-local-propriedade-horizontal-condominio",
@@ -329,7 +402,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "comparar-propostas-seguro-hotel-erros-comuns",
@@ -350,7 +424,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "hotel-fenomenos-climaticos-extremos",
@@ -371,7 +446,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "quanto-custa-seguro-alojamento-local",
@@ -392,7 +468,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 12,
         "featured": false,
-        "translationOf": "holiday-home-insurance-portugal"
+        "translationOf": "holiday-home-insurance-portugal",
+        "cluster": "empresas"
       },
       {
         "slug": "rc-exploracao-unidades-turisticas",
@@ -413,7 +490,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-acidentes-pessoais-trabalhadores-hotelaria",
@@ -434,7 +512,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-alojamento-local-decreto-lei-76-2024",
@@ -455,7 +534,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": true,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-multiriscos-hotel-portugal",
@@ -476,7 +556,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-rc-multirriscos-alojamento-local",
@@ -497,7 +578,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "seguros-turismo-rural-hoteis-boutique",
@@ -518,7 +600,8 @@
         "dateLabel": "Junho 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": null
+        "translationOf": null,
+        "cluster": "empresas"
       },
       {
         "slug": "allianz-april-medis-seguro-saude-portugal-2026",
@@ -539,7 +622,8 @@
         "dateLabel": "Maio 2026",
         "readingTime": 15,
         "featured": false,
-        "translationOf": "allianz-april-medis-health-insurance-portugal-2026"
+        "translationOf": "allianz-april-medis-health-insurance-portugal-2026",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "20-anos-turismo-seguros-hotelaria",
@@ -560,7 +644,8 @@
         "dateLabel": "Maio 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "20-years-tourism-hospitality-insurance"
+        "translationOf": "20-years-tourism-hospitality-insurance",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-saude-expatriados-portugal",
@@ -581,7 +666,8 @@
         "dateLabel": "Maio 2026",
         "readingTime": 18,
         "featured": false,
-        "translationOf": "health-insurance-expats-portugal"
+        "translationOf": "health-insurance-expats-portugal",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-responsabilidade-civil-terapeuticas-nao-convencionais",
@@ -602,7 +688,8 @@
         "dateLabel": "Maio 2026",
         "readingTime": 11,
         "featured": false,
-        "translationOf": "liability-insurance-complementary-therapies"
+        "translationOf": "liability-insurance-complementary-therapies",
+        "cluster": "riscos-profissionais"
       },
       {
         "slug": "seguro-auto-expatriados",
@@ -623,7 +710,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 15,
         "featured": false,
-        "translationOf": "car-insurance-expatriates"
+        "translationOf": "car-insurance-expatriates",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-tvde-portugal",
@@ -644,7 +732,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 14,
         "featured": true,
-        "translationOf": "tvde-insurance-portugal"
+        "translationOf": "tvde-insurance-portugal",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "adler-pro-plataforma-saas",
@@ -665,7 +754,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "adler-pro-saas-platform"
+        "translationOf": "adler-pro-saas-platform",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-habitacao-legalizacao",
@@ -686,7 +776,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "home-insurance-legalization"
+        "translationOf": "home-insurance-legalization",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguros-bares-restaurantes-sinistros",
@@ -707,7 +798,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "bars-restaurants-insurance-claims"
+        "translationOf": "bars-restaurants-insurance-claims",
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-automovel-guia-completo",
@@ -728,7 +820,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "car-insurance-complete-guide"
+        "translationOf": "car-insurance-complete-guide",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguro-habitacao-proteger-casa",
@@ -771,7 +864,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "health-insurance-portugal"
+        "translationOf": "health-insurance-portugal",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguros-obrigatorios-empresas-portugal",
@@ -792,7 +886,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 11,
         "featured": true,
-        "translationOf": "mandatory-insurance-companies-portugal"
+        "translationOf": "mandatory-insurance-companies-portugal",
+        "cluster": "empresas"
       },
       {
         "slug": "parcerias-imobiliarias-comissoes",
@@ -813,7 +908,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": "real-estate-partnerships-commissions"
+        "translationOf": "real-estate-partnerships-commissions",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "seguros-empresas-distribuicao",
@@ -834,7 +930,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": "distribution-companies-insurance"
+        "translationOf": "distribution-companies-insurance",
+        "cluster": "empresas"
       },
       {
         "slug": "seguros-obrigatorios-hotelaria-turismo",
@@ -855,7 +952,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 10,
         "featured": false,
-        "translationOf": "mandatory-insurance-hospitality-tourism"
+        "translationOf": "mandatory-insurance-hospitality-tourism",
+        "cluster": "empresas"
       },
       {
         "slug": "multirriscos-habitacao",
@@ -876,7 +974,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 12,
         "featured": true,
-        "translationOf": "home-insurance-multi-risk"
+        "translationOf": "home-insurance-multi-risk",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "revisao-apolice-empresarial",
@@ -897,7 +996,8 @@
         "dateLabel": "Março 2026",
         "readingTime": 12,
         "featured": false,
-        "translationOf": "business-insurance-policy-review"
+        "translationOf": "business-insurance-policy-review",
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-individual-automovel",
@@ -936,11 +1036,12 @@
         "imageGradient": null,
         "imageAlt": "Imagem do Blog - responsabilidade civil profissional",
         "published": "2026-03-01T09:00:00+00:00",
-        "modified": "2026-03-01T09:00:00+00:00",
+        "modified": "2026-08-24T09:00:00+00:00",
         "dateLabel": "Março 2026",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "professional-indemnity-insurance"
+        "translationOf": "professional-indemnity-insurance",
+        "cluster": "riscos-profissionais"
       },
       {
         "slug": "ransomware-portugal-riscos-ciberneticos",
@@ -961,7 +1062,8 @@
         "dateLabel": "Fevereiro 2026",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "ransomware-portugal-cyber-risks"
+        "translationOf": "ransomware-portugal-cyber-risks",
+        "cluster": "riscos-profissionais"
       },
       {
         "slug": "valores-segurados-desatualizados",
@@ -982,7 +1084,8 @@
         "dateLabel": "Janeiro 2026",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "outdated-insured-values"
+        "translationOf": "outdated-insured-values",
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-frota-erros-comuns",
@@ -1003,7 +1106,8 @@
         "dateLabel": "Dezembro 2025",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "fleet-insurance-common-mistakes"
+        "translationOf": "fleet-insurance-common-mistakes",
+        "cluster": "guias-de-seguros"
       },
       {
         "slug": "responsabilidade-administradores-seguro-do",
@@ -1024,7 +1128,8 @@
         "dateLabel": "Novembro 2025",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "directors-and-officers-insurance-d-o"
+        "translationOf": "directors-and-officers-insurance-d-o",
+        "cluster": "riscos-profissionais"
       },
       {
         "slug": "seguro-obra-construcao",
@@ -1045,7 +1150,8 @@
         "dateLabel": "Outubro 2025",
         "readingTime": 9,
         "featured": false,
-        "translationOf": "construction-works-insurance"
+        "translationOf": "construction-works-insurance",
+        "cluster": "empresas"
       },
       {
         "slug": "seguro-tvde-lisboa",
@@ -4942,6 +5048,38 @@
           "pt": "/seguros-empresas-lagos/",
           "en": "/en/expat-insurance-lagos-portugal/"
         }
+      }
+    ]
+  },
+  "clusters": {
+    "pt": [
+      {
+        "slug": "private-clients",
+        "title": "Private Clients",
+        "short": "Private Clients",
+        "landing": "/private-clients/",
+        "landingLabel": "Private Clients"
+      },
+      {
+        "slug": "riscos-profissionais",
+        "title": "Riscos Profissionais",
+        "short": "Riscos Profissionais",
+        "landing": "/seguros/responsabilidade-civil-profissional/",
+        "landingLabel": "RC Profissional"
+      },
+      {
+        "slug": "empresas",
+        "title": "Empresas",
+        "short": "Empresas",
+        "landing": "/seguros/empresarial/",
+        "landingLabel": "Multirriscos Empresarial"
+      },
+      {
+        "slug": "guias-de-seguros",
+        "title": "Guias de Seguros",
+        "short": "Guias de Seguros",
+        "landing": "/seguros/",
+        "landingLabel": "Ver todos os seguros"
       }
     ]
   }

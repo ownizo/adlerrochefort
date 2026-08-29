@@ -1,18 +1,30 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 307,
-    "indexedUrls": 298,
+    "htmlFiles": 316,
+    "indexedUrls": 307,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 0,
-    "singleInbound": 8,
+    "singleInbound": 10,
     "deeperThanThreeClicks": 0
   },
   "broken": [],
   "viaRedirect": [],
   "orphans": [],
   "singleInbound": [
+    {
+      "url": "/blog/categoria/empresas/pagina/2/",
+      "from": [
+        "/blog/categoria/empresas/"
+      ]
+    },
+    {
+      "url": "/blog/categoria/guias-de-seguros/pagina/2/",
+      "from": [
+        "/blog/categoria/guias-de-seguros/"
+      ]
+    },
     {
       "url": "/en/blog/category/business-liability/page/2/",
       "from": [

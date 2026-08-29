@@ -32,6 +32,65 @@ export const grid = (items) =>
     .map(card)
     .join('\n\n')}\n  </div>\n</section>`;
 
+/**
+ * A single large featured card — the lead story on the PT Insights index.
+ * Reuses .blog-card's own classes at a larger size via a wrapper class
+ * rather than a new component, so it inherits every fix already made to
+ * .blog-card (image handling, gradient fallback, hover state).
+ */
+export function featuredCard(a) {
+  const img = a.image
+    ? `<img src="${esc(a.image)}" alt="${esc(a.imageAlt || a.title)}" width="960" height="480" loading="eager" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;">`
+    : '';
+  const bgStyle = !a.image && a.imageGradient ? ` style="background: ${esc(a.imageGradient)};"` : '';
+  return `<a href="${a.url}" class="blog-card blog-card--featured fade-up" style="text-decoration: none; color: inherit;">
+      <div class="blog-card-img">
+        <div class="blog-card-img-bg"${bgStyle}>${img}</div>
+        <div class="blog-card-tag">${esc(a.tag || '')}</div>
+      </div>
+      <div class="blog-card-body">
+        <div class="blog-card-date">${esc(a.dateLabel || '')}</div>
+        <h2 class="blog-card-title">${esc(a.title)}</h2>
+        <p class="blog-card-excerpt">${esc(a.excerpt || a.description || '')}</p>
+        <span class="blog-card-link">Ler artigo</span>
+      </div>
+    </a>`;
+}
+
+/**
+ * The PT Insights index editorial layout: one featured story, then one row
+ * per strategic cluster (up to 3 cards + "Ver todos"), in place of a single
+ * flat wall of every published article. `clusters` is
+ * [{ slug, title, items }] in display order; an empty `items` array is
+ * skipped rather than rendered as a bare heading.
+ */
+export function clusteredHome({ featured, clusters, viewAllHref }) {
+  const rows = clusters
+    .filter((c) => c.items.length)
+    .map(
+      (c) => `  <div class="insights-cluster">
+    <div class="insights-cluster-head">
+      <h2>${esc(c.title)}</h2>
+      <a href="/blog/categoria/${c.slug}/" class="insights-cluster-link">Ver todos &rarr;</a>
+    </div>
+    <div class="blog-grid">
+${c.items.map(card).join('\n\n')}
+    </div>
+  </div>`
+    )
+    .join('\n\n');
+  const viewAll = viewAllHref
+    ? `\n\n<p class="insights-view-all"><a href="${viewAllHref}">Ver mais artigos &rarr;</a></p>`
+    : '';
+  return `<section class="blog-section blog-section--featured" aria-label="Artigo em destaque">
+  ${featuredCard(featured)}
+</section>
+
+<section class="insights-clusters" aria-label="Áreas de especialização">
+${rows}${viewAll}
+</section>`;
+}
+
 export function breadcrumbHtml(items) {
   return `<nav class="breadcrumb" aria-label="Breadcrumb">${items
     .map((it, i) =>
