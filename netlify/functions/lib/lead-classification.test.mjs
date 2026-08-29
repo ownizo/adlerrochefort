@@ -310,16 +310,18 @@ test("cotacao-rc-profissoes-especificas: business signal via pe_empresa, pe_ativ
   );
 });
 
-// ── Organização de Eventos — contextual, defaults to ambiguous (never
-// individual) when there is genuinely no signal, per explicit requirement ──
-test("cotacao-rc-eventos: ambiguous when there is no business signal (organiser type genuinely unknown)", () => {
+// ── Organização de Eventos — contextual: preserves the individual contact
+// whenever there is no business signal, rather than losing the lead. Not an
+// attempt to determine who legally organises the event — just whether this
+// contact can be registered in individual_clients at this stage. ──────────
+test("cotacao-rc-eventos: individual when there is no business signal (preserve the contact, not discard it)", () => {
   assert.equal(
     classifySubmission("cotacao-rc-eventos", {
       nome: "Marta Costa",
       email: "marta@example.com",
       ev_tipo: "Casamento",
     }).entityType,
-    "ambiguous",
+    "individual",
   );
 });
 

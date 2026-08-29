@@ -241,14 +241,26 @@ test("NL/FR/DE forms carry their submitted `lang` field into metadata.language, 
   assert.deepEqual(payload.metadata, { language: "NL" });
 });
 
-test("cotacao-rc-eventos never produces a payload without a business signal (ambiguous, not individual)", () => {
-  const result = buildCrmLeadPayload("cotacao-rc-eventos", {
+test("cotacao-rc-eventos: an individual submitter (no business signal) produces a CRM payload", () => {
+  const { payload, skippedReason } = buildCrmLeadPayload("cotacao-rc-eventos", {
     nome: "Marta Costa",
     email: "marta@example.com",
     ev_tipo: "Casamento",
   });
+  assert.equal(skippedReason, null);
+  assert.ok(payload);
+  assert.equal(payload.name, "Marta Costa");
+  assert.equal(payload.product, "event-liability");
+});
+
+test("cotacao-rc-eventos: a company-shaped submitter is skipped, no individual CRM sync at this stage", () => {
+  const result = buildCrmLeadPayload("cotacao-rc-eventos", {
+    nome: "Eventos Almeida, Lda",
+    email: "geral@eventosalmeida.pt",
+    ev_tipo: "Feira",
+  });
   assert.equal(result.payload, null);
-  assert.equal(result.skippedReason, "entity_type_ambiguous");
+  assert.equal(result.skippedReason, "entity_type_business");
 });
 
 test("PRIVACY: free-text notes/description fields on the new RC forms never reach the CRM payload", () => {

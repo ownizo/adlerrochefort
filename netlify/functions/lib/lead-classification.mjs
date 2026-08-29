@@ -103,13 +103,17 @@ const classifyRcProfissoesEspecificas = (data) =>
 
 // /seguros/responsabilidade-civil-eventos/ — o próprio campo de nome é
 // rotulado "Nome / empresa" e não existe nenhum outro campo capaz de indicar
-// o tipo de entidade (ev_tipo é o tipo de EVENTO, não de organizador). Um
-// organizador pode ser pessoa, empresa ou associação — sem sinal de empresa
-// explícito, não dá para assumir individual: fica ambiguous (nunca
-// sincroniza), como pedido explicitamente para este caso.
+// o tipo de entidade (ev_tipo é o tipo de EVENTO, não de organizador). Não
+// tentamos determinar juridicamente quem organiza o evento — só decidir se
+// este contacto pode ser registado em individual_clients nesta fase. Com
+// sinal de empresa inequívoco -> business (não sincroniza). Sem esse sinal
+// -> individual: preserva o contacto (ex.: "Marta Costa") em vez de o
+// perder, à semelhança dos restantes formulários de RC. Uma futura
+// arquitetura company + individual contact + website lead fica fora deste
+// trabalho.
 function classifyRcEventos(data) {
   if (hasBusinessKeyword(data, ['nome', 'name'])) return 'business';
-  return 'ambiguous';
+  return 'individual';
 }
 
 // Determina o mercado a partir do campo `country` (Portugal | Spain) — usado
