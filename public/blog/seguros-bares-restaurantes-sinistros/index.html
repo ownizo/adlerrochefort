@@ -76,26 +76,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #7A9A6B;
-    --primary-hover: #94B585;
-    --primary-dim: rgba(122,154,107,0.10);
-    --accent: #D9A668;
-    --cream: #FAF7EE;
-    --cream2: #F2EBDA;
-    --ink: #4A5A45;
-    --ink2: #637060;
-    --muted: #8A8B7E;
-    --muted2: #B5B1A1;
+    --primary: #17243D;
+    --primary-hover: #223553;
+    --primary-dim: rgba(23,36,61,0.10);
+    --accent: #B8323E;
+    --cream: #F5F1E8;
+    --cream2: #E8E5DF;
+    --ink: #111927;
+    --ink2: #526984;
+    --muted: #516F94;
+    --muted2: #516F94;
     --white: #FFFFFF;
-    --border: #E5DFCB;
-    --hero-bg: #4A5A45;
-    --nav-bg: #3F4E3A;
-    --footer-bg: #33402F;
+    --border: #DAD5C8;
+    --hero-bg: #17243D;
+    --nav-bg: #17243D;
+    --footer-bg: #111927;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body { background: var(--cream); font-family: 'Montserrat', sans-serif; color: var(--ink); }
-  .site-nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(122,154,107,0.25); }
+  .site-nav { position: sticky; top: 0; z-index: 100; background: var(--nav-bg); padding: 0 48px; height: 68px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(23,36,61,0.25); }
   .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
   .nav-logo-img { height: 44px; width: auto; }
   .nav-back { text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; }
@@ -103,7 +103,7 @@
   .lang-switcher { display: flex; align-items: center; gap: 6px; margin-left: 12px; }
   .lang-switcher a { text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; padding: 4px 8px; transition: color 0.2s, background 0.2s; color: rgba(255,255,255,0.4); }
   .lang-switcher a:hover { color: var(--accent); }
-  .lang-switcher a.active { color: var(--white); background: rgba(122,154,107,0.3); }
+  .lang-switcher a.active { color: var(--white); background: rgba(23,36,61,0.3); }
   .lang-switcher-sep { color: rgba(255,255,255,0.2); font-size: 11px; user-select: none; }
   .nav-right { display: flex; align-items: center; gap: 20px; }
   .breadcrumb { padding: 32px 80px 0; font-size: 12px; color: var(--muted); }
@@ -137,14 +137,14 @@
   .footer-brand-name em { color: var(--accent); font-style: normal; }
   .footer-brand-desc { margin-bottom: 16px; }
   .footer-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); border: 1px solid rgba(255,255,255,0.08); padding: 6px 14px; }
-  .footer-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #4CAF50; }
+  .footer-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #B8323E; }
   .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
   .footer-col-links { list-style: none; }
   .footer-col-links a { text-decoration: none; color: rgba(255,255,255,0.6); display: block; padding: 4px 0; transition: color 0.2s; }
   .footer-col-links a:hover { color: var(--accent); }
   .footer-social { display: flex; gap: 12px; }
   .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; transition: 0.2s; }
-  .footer-social a:hover { border-color: var(--accent); background: rgba(217,166,104,0.1); }
+  .footer-social a:hover { border-color: var(--accent); background: rgba(184,50,62,0.1); }
   .footer-social a svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.5); }
   .footer-social a:hover svg { fill: var(--accent); }
   .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
@@ -177,7 +177,7 @@
 
   /* ASF TOP BAR */
   .asf-top-bar {
-    background: #1B2B4B;
+    background: #17243D;
     color: rgba(255,255,255,0.85);
     text-align: center;
     font-size: 12px;
@@ -187,17 +187,17 @@
     line-height: 1.4;
   }
   .asf-top-bar a {
-    color: #C9A84C;
+    color: #B8323E;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
   }
-  .asf-top-bar a:hover { color: #e0be6a; }
+  .asf-top-bar a:hover { color: #E8919B; }
 
   /* CTA TOPO */
   .cta-topo {
     background: #F5F1E8;
-    border-left: 4px solid #C9A84C;
+    border-left: 4px solid #B8323E;
     padding: 28px 32px;
     margin-bottom: 36px;
   }
@@ -205,12 +205,12 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #1B2B4B;
+    color: #17243D;
     margin-bottom: 6px;
   }
   .cta-topo-subtitle {
     font-size: 13px;
-    color: #637060;
+    color: #526984;
     margin-bottom: 18px;
   }
   .cta-topo-form {
@@ -229,27 +229,27 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #8A8B7E;
+    color: #516F94;
     margin-bottom: 4px;
   }
   .cta-topo-form .cta-field input,
   .cta-topo-form .cta-field select {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #E5DFCB;
+    border: 1px solid #DAD5C8;
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
-    color: #4A5A45;
+    color: #111927;
     outline: none;
     transition: border-color 0.2s;
   }
   .cta-topo-form .cta-field input:focus,
   .cta-topo-form .cta-field select:focus {
-    border-color: #C9A84C;
+    border-color: #B8323E;
   }
   .cta-topo-form .cta-btn {
-    background: #1B2B4B;
+    background: #17243D;
     color: #fff;
     border: none;
     padding: 10px 24px;
@@ -265,13 +265,13 @@
   .cta-topo-form .cta-btn:hover { background: #2a3f66; }
   .cta-topo-micro {
     font-size: 10px;
-    color: #B5B1A1;
+    color: #516F94;
     margin-top: 10px;
   }
 
   /* CTA MEIO */
   .cta-meio {
-    background: #1B2B4B;
+    background: #17243D;
     padding: 28px 32px;
     display: flex;
     align-items: center;
@@ -297,8 +297,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #C9A84C;
-    color: #1B2B4B;
+    background: #B8323E;
+    color: #FFFFFF;
     padding: 12px 24px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
@@ -307,7 +307,7 @@
     white-space: nowrap;
     transition: background 0.2s;
   }
-  .cta-meio-btn:hover { background: #e0be6a; }
+  .cta-meio-btn:hover { background: #872733; }
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
 </style>
@@ -325,34 +325,34 @@
     display: flex; align-items: center; gap: 14px;
     margin: 4px 0 26px; padding: 16px 18px;
     background: var(--white, #FFFFFF);
-    border: 1px solid var(--border, #E5DFCB);
-    border-left: 3px solid var(--primary, #7A9A6B);
+    border: 1px solid var(--border, #DAD5C8);
+    border-left: 3px solid var(--primary, #17243D);
     border-radius: 10px;
   }
   .article-author-photo { border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #4A5A45); line-height: 1.35; }
+  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #111927); line-height: 1.35; }
   .article-author-name a { color: inherit; text-decoration: none; }
-  .article-author-name a:hover { color: var(--primary, #7A9A6B); }
-  .article-author-role { font-size: 13px; color: var(--ink2, #637060); line-height: 1.5; margin-top: 2px; }
-  .article-author-creds { font-size: 12px; color: var(--muted, #8A8B7E); line-height: 1.5; margin-top: 4px; }
+  .article-author-name a:hover { color: var(--primary, #17243D); }
+  .article-author-role { font-size: 13px; color: var(--ink2, #526984); line-height: 1.5; margin-top: 2px; }
+  .article-author-creds { font-size: 12px; color: var(--muted, #516F94); line-height: 1.5; margin-top: 4px; }
   .article-toc {
     margin: 8px 0 32px; padding: 20px 24px;
-    background: var(--cream2, #F2EBDA);
+    background: var(--cream2, #E8E5DF);
     border-radius: 10px;
   }
   .article-toc-title {
     font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink, #4A5A45); margin-bottom: 12px;
+    color: var(--ink, #111927); margin-bottom: 12px;
   }
   .article-toc ol { margin: 0; padding-left: 20px; }
-  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #637060); }
-  .article-toc a { color: var(--ink2, #637060); text-decoration: none; }
-  .article-toc a:hover { color: var(--primary, #7A9A6B); text-decoration: underline; }
+  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #526984); }
+  .article-toc a { color: var(--ink2, #526984); text-decoration: none; }
+  .article-toc a:hover { color: var(--primary, #17243D); text-decoration: underline; }
   .related-card.related-card-landing {
-    background: var(--cream2, #F2EBDA);
-    border-color: var(--accent, #D9A668);
+    background: var(--cream2, #E8E5DF);
+    border-color: var(--accent, #B8323E);
   }
-  .related-card-landing .related-card-tag { color: var(--accent, #D9A668); }
+  .related-card-landing .related-card-tag { color: var(--accent, #B8323E); }
   @media (max-width: 768px) {
     .article-author { flex-direction: column; align-items: flex-start; }
   }
@@ -361,7 +361,7 @@
 <style>
   .form-branch-fields[hidden] { display: none; }
   .form-branch-fields {
-    border-top: 1px solid var(--border, #E5DFCB);
+    border-top: 1px solid var(--border, #DAD5C8);
     margin-top: 4px;
     padding-top: 14px;
   }
@@ -369,9 +369,9 @@
     margin-top: 12px;
     font-size: 11px;
     line-height: 1.55;
-    color: var(--muted, #8A8B7E);
+    color: var(--muted, #516F94);
   }
-  .form-gdpr a { color: var(--primary, #7A9A6B); }
+  .form-gdpr a { color: var(--primary, #17243D); }
 </style>
 </head>
 <body>
@@ -788,15 +788,15 @@
   
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #E5DFCB;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#637060;"><strong>Continuar neste tema:</strong> <a href="/blog/seguros-obrigatorios-hotelaria-turismo/" style="color:#7A9A6B;font-weight:600;">Seguros obrigatórios para hotelaria e turismo: o que a lei exige e o que protege de verdade</a> &middot; <a href="/blog/seguros-turismo-rural-hoteis-boutique/" style="color:#7A9A6B;font-weight:600;">Seguros para turismo rural e hotéis boutique: riscos específicos que os gestores costumam ignorar</a> &middot; <a href="/blog/seguro-rc-multirriscos-alojamento-local/" style="color:#7A9A6B;font-weight:600;">Seguro de RC e Multirriscos para AL: são a mesma coisa? (Não — e esta confusão pode custar-lhe caro)</a></p>
-    <p style="background:#F0F4ED;border-left:4px solid #7A9A6B;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#637060;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/empresarial/" style="color:#7A9A6B;font-weight:600;">multirriscos empresarial para hotelaria</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
+    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/seguros-obrigatorios-hotelaria-turismo/" style="color:#17243D;font-weight:600;">Seguros obrigatórios para hotelaria e turismo: o que a lei exige e o que protege de verdade</a> &middot; <a href="/blog/seguros-turismo-rural-hoteis-boutique/" style="color:#17243D;font-weight:600;">Seguros para turismo rural e hotéis boutique: riscos específicos que os gestores costumam ignorar</a> &middot; <a href="/blog/seguro-rc-multirriscos-alojamento-local/" style="color:#17243D;font-weight:600;">Seguro de RC e Multirriscos para AL: são a mesma coisa? (Não — e esta confusão pode custar-lhe caro)</a></p>
+    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/empresarial/" style="color:#17243D;font-weight:600;">multirriscos empresarial para hotelaria</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
     <!-- /cluster-links -->
   </div>
 
-  <div class="blog-cta" style="margin:48px 0 0;background:#FAF7EE;border:1px solid #F2EBDA;border-left:4px solid #D9A668;border-radius:12px;padding:32px 36px;text-align:center;">
-    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#4A5A45;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
-    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#637060;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
-    <a href="/#contacto" style="display:inline-block;background:#D9A668;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
+  <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #B8323E;border-radius:12px;padding:32px 36px;text-align:center;">
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#111927;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#526984;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
+    <a href="/#contacto" style="display:inline-block;background:#B8323E;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
   </div>
 </article>
 

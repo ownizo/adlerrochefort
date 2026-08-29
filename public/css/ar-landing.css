@@ -177,9 +177,12 @@
    * recognise as the design. Scoped to the mobile breakpoint so the desktop
    * rendering stays pixel-identical, which is the comparison being verified.
    *
-   * The submit button is the third failure (white on #7A9A6B, 3.15:1) and is
-   * deliberately left alone: it is the brand green, and changing it is a brand
-   * decision rather than a bug fix. */
+   * The submit button used to be the third failure (white on the old brand
+   * green #7A9A6B, 3.15:1) and was deliberately left alone here as a brand
+   * decision, not a bug fix. The global Navy/Red rebrand replaced that green
+   * with Midnight Navy #17243D, which puts white text at 15.48:1 — the
+   * failure is resolved as a side effect of the palette change, not by a
+   * separate fix. */
   .contact-form-field label {
     color: #6F7164;
   }

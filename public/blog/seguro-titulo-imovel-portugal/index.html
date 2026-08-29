@@ -95,21 +95,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #7A9A6B;
-    --primary-hover: #94B585;
-    --primary-dim: rgba(122,154,107,0.10);
-    --accent: #D9A668;
-    --cream: #FAF7EE;
-    --cream2: #F2EBDA;
-    --ink: #4A5A45;
-    --ink2: #637060;
-    --muted: #8A8B7E;
-    --muted2: #B5B1A1;
+    --primary: #17243D;
+    --primary-hover: #223553;
+    --primary-dim: rgba(23,36,61,0.10);
+    --accent: #B8323E;
+    --cream: #F5F1E8;
+    --cream2: #E8E5DF;
+    --ink: #111927;
+    --ink2: #526984;
+    --muted: #516F94;
+    --muted2: #516F94;
     --white: #FFFFFF;
-    --border: #E5DFCB;
-    --hero-bg: #4A5A45;
-    --nav-bg: #3F4E3A;
-    --footer-bg: #33402F;
+    --border: #DAD5C8;
+    --hero-bg: #17243D;
+    --nav-bg: #17243D;
+    --footer-bg: #111927;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 96px; }
@@ -126,7 +126,7 @@
     padding: 0 48px;
     height: 68px;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid rgba(122,154,107,0.25);
+    border-bottom: 1px solid rgba(23,36,61,0.25);
   }
   .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
   .nav-logo-img { height: 44px; width: auto; }
@@ -150,7 +150,7 @@
     color: rgba(255,255,255,0.4);
   }
   .lang-switcher a:hover { color: var(--accent); }
-  .lang-switcher a.active { color: var(--white); background: rgba(122,154,107,0.3); }
+  .lang-switcher a.active { color: var(--white); background: rgba(23,36,61,0.3); }
   .lang-switcher-sep { color: rgba(255,255,255,0.2); font-size: 11px; user-select: none; }
   .nav-right { display: flex; align-items: center; gap: 20px; }
 
@@ -201,7 +201,7 @@
   }
   .article-body blockquote {
     margin: 32px 0; padding: 24px 28px;
-    background: rgba(122,154,107,0.08);
+    background: rgba(23,36,61,0.08);
     border-left: 4px solid var(--primary);
     font-size: 17px; font-weight: 600;
     font-style: italic; line-height: 1.65; color: var(--ink);
@@ -212,7 +212,7 @@
 
   /* CTA MEIO */
   .cta-meio {
-    background: #1B2B4B;
+    background: #17243D;
     padding: 28px 32px;
     display: flex; align-items: center; justify-content: space-between;
     gap: 20px; margin: 36px 0;
@@ -225,12 +225,12 @@
   .cta-meio-desc { font-size: 13px; color: rgba(255,255,255,0.7); }
   .cta-meio-btn {
     display: inline-flex; align-items: center; gap: 8px;
-    background: #C9A84C; color: #1B2B4B;
+    background: #B8323E; color: #17243D;
     padding: 12px 24px; font-family: 'Montserrat', sans-serif;
     font-size: 13px; font-weight: 700; text-decoration: none;
     white-space: nowrap; transition: background 0.2s;
   }
-  .cta-meio-btn:hover { background: #e0be6a; }
+  .cta-meio-btn:hover { background: #872733; }
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
   /* RELATED */
@@ -271,7 +271,7 @@
     color: rgba(255,255,255,0.45);
     border: 1px solid rgba(255,255,255,0.08); padding: 6px 14px;
   }
-  .footer-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #4CAF50; }
+  .footer-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #B8323E; }
   .footer-col-title {
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
@@ -289,7 +289,7 @@
     border: 1px solid rgba(255,255,255,0.15);
     display: flex; align-items: center; justify-content: center; transition: 0.2s;
   }
-  .footer-social a:hover { border-color: var(--accent); background: rgba(217,166,104,0.1); }
+  .footer-social a:hover { border-color: var(--accent); background: rgba(184,50,62,0.1); }
   .footer-social a svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.5); }
   .footer-social a:hover svg { fill: var(--accent); }
   .footer-bottom {
@@ -331,39 +331,39 @@
 
   /* ASF TOP BAR */
   .asf-top-bar {
-    background: #1B2B4B; color: rgba(255,255,255,0.85);
+    background: #17243D; color: rgba(255,255,255,0.85);
     text-align: center; font-size: 12px; font-weight: 500;
     letter-spacing: 0.03em; padding: 8px 24px; line-height: 1.4;
   }
-  .asf-top-bar a { color: #C9A84C; text-decoration: none; font-weight: 600; transition: color 0.2s; }
-  .asf-top-bar a:hover { color: #e0be6a; }
+  .asf-top-bar a { color: #B8323E; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+  .asf-top-bar a:hover { color: #E8919B; }
 
   /* CTA TOPO */
-  .cta-topo { background: #F5F1E8; border-left: 4px solid #C9A84C; padding: 28px 32px; margin-bottom: 36px; }
-  .cta-topo-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #1B2B4B; margin-bottom: 6px; }
-  .cta-topo-subtitle { font-size: 13px; color: #637060; margin-bottom: 18px; }
+  .cta-topo { background: #F5F1E8; border-left: 4px solid #B8323E; padding: 28px 32px; margin-bottom: 36px; }
+  .cta-topo-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #17243D; margin-bottom: 6px; }
+  .cta-topo-subtitle { font-size: 13px; color: #526984; margin-bottom: 18px; }
   .cta-topo-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
   .cta-topo-form .cta-field { flex: 1; min-width: 140px; }
   .cta-topo-form .cta-field label {
     display: block; font-size: 11px; font-weight: 600;
-    letter-spacing: 0.06em; text-transform: uppercase; color: #8A8B7E; margin-bottom: 4px;
+    letter-spacing: 0.06em; text-transform: uppercase; color: #516F94; margin-bottom: 4px;
   }
   .cta-topo-form .cta-field input,
   .cta-topo-form .cta-field select {
-    width: 100%; padding: 10px 12px; border: 1px solid #E5DFCB; background: #fff;
-    font-family: 'Montserrat', sans-serif; font-size: 13px; color: #4A5A45;
+    width: 100%; padding: 10px 12px; border: 1px solid #DAD5C8; background: #fff;
+    font-family: 'Montserrat', sans-serif; font-size: 13px; color: #111927;
     outline: none; transition: border-color 0.2s;
   }
   .cta-topo-form .cta-field input:focus,
-  .cta-topo-form .cta-field select:focus { border-color: #C9A84C; }
+  .cta-topo-form .cta-field select:focus { border-color: #B8323E; }
   .cta-topo-form .cta-btn {
-    background: #1B2B4B; color: #fff; border: none; padding: 10px 24px;
+    background: #17243D; color: #fff; border: none; padding: 10px 24px;
     font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600;
     letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
     transition: background 0.2s; white-space: nowrap;
   }
   .cta-topo-form .cta-btn:hover { background: #2a3f66; }
-  .cta-topo-micro { font-size: 10px; color: #B5B1A1; margin-top: 10px; }
+  .cta-topo-micro { font-size: 10px; color: #516F94; margin-top: 10px; }
 </style>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
@@ -379,34 +379,34 @@
     display: flex; align-items: center; gap: 14px;
     margin: 4px 0 26px; padding: 16px 18px;
     background: var(--white, #FFFFFF);
-    border: 1px solid var(--border, #E5DFCB);
-    border-left: 3px solid var(--primary, #7A9A6B);
+    border: 1px solid var(--border, #DAD5C8);
+    border-left: 3px solid var(--primary, #17243D);
     border-radius: 10px;
   }
   .article-author-photo { border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #4A5A45); line-height: 1.35; }
+  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #111927); line-height: 1.35; }
   .article-author-name a { color: inherit; text-decoration: none; }
-  .article-author-name a:hover { color: var(--primary, #7A9A6B); }
-  .article-author-role { font-size: 13px; color: var(--ink2, #637060); line-height: 1.5; margin-top: 2px; }
-  .article-author-creds { font-size: 12px; color: var(--muted, #8A8B7E); line-height: 1.5; margin-top: 4px; }
+  .article-author-name a:hover { color: var(--primary, #17243D); }
+  .article-author-role { font-size: 13px; color: var(--ink2, #526984); line-height: 1.5; margin-top: 2px; }
+  .article-author-creds { font-size: 12px; color: var(--muted, #516F94); line-height: 1.5; margin-top: 4px; }
   .article-toc {
     margin: 8px 0 32px; padding: 20px 24px;
-    background: var(--cream2, #F2EBDA);
+    background: var(--cream2, #E8E5DF);
     border-radius: 10px;
   }
   .article-toc-title {
     font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink, #4A5A45); margin-bottom: 12px;
+    color: var(--ink, #111927); margin-bottom: 12px;
   }
   .article-toc ol { margin: 0; padding-left: 20px; }
-  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #637060); }
-  .article-toc a { color: var(--ink2, #637060); text-decoration: none; }
-  .article-toc a:hover { color: var(--primary, #7A9A6B); text-decoration: underline; }
+  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #526984); }
+  .article-toc a { color: var(--ink2, #526984); text-decoration: none; }
+  .article-toc a:hover { color: var(--primary, #17243D); text-decoration: underline; }
   .related-card.related-card-landing {
-    background: var(--cream2, #F2EBDA);
-    border-color: var(--accent, #D9A668);
+    background: var(--cream2, #E8E5DF);
+    border-color: var(--accent, #B8323E);
   }
-  .related-card-landing .related-card-tag { color: var(--accent, #D9A668); }
+  .related-card-landing .related-card-tag { color: var(--accent, #B8323E); }
   @media (max-width: 768px) {
     .article-author { flex-direction: column; align-items: flex-start; }
   }
@@ -415,7 +415,7 @@
 <style>
   .form-branch-fields[hidden] { display: none; }
   .form-branch-fields {
-    border-top: 1px solid var(--border, #E5DFCB);
+    border-top: 1px solid var(--border, #DAD5C8);
     margin-top: 4px;
     padding-top: 14px;
   }
@@ -423,9 +423,9 @@
     margin-top: 12px;
     font-size: 11px;
     line-height: 1.55;
-    color: var(--muted, #8A8B7E);
+    color: var(--muted, #516F94);
   }
-  .form-gdpr a { color: var(--primary, #7A9A6B); }
+  .form-gdpr a { color: var(--primary, #17243D); }
 </style>
 </head>
 <body>
@@ -779,18 +779,18 @@
 
     <p>Para o comprador, isto significa uma leitura clara de onde está o risco e do que é, ou não, segurável. Para o prescritor, significa um interlocutor que conhece o mercado segurador e que respeita a fronteira da sua competência: a resposta jurídica pertence ao jurista; a resposta seguradora, quando existe, pertence ao mediador.</p>
 
-    <div class="blog-cta" style="margin:48px 0 0;background:#FAF7EE;border:1px solid #F2EBDA;border-left:4px solid #D9A668;border-radius:12px;padding:32px 36px;text-align:center;">
-      <h2 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#4A5A45;margin:0 0 12px;line-height:1.3;">Uma exposição de titularidade que não sabe como tratar?</h2>
-      <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#637060;margin:0 0 24px;line-height:1.6;">Analisamos, em complemento do trabalho jurídico, se existe solução seguradora para o risco específico da sua transação. Comprador ou prescritor, sem compromisso.</p>
-      <a href="/#contacto" style="display:inline-block;background:#D9A668;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Falar connosco →</a>
+    <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #B8323E;border-radius:12px;padding:32px 36px;text-align:center;">
+      <h2 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#111927;margin:0 0 12px;line-height:1.3;">Uma exposição de titularidade que não sabe como tratar?</h2>
+      <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#526984;margin:0 0 24px;line-height:1.6;">Analisamos, em complemento do trabalho jurídico, se existe solução seguradora para o risco específico da sua transação. Comprador ou prescritor, sem compromisso.</p>
+      <a href="/#contacto" style="display:inline-block;background:#B8323E;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Falar connosco →</a>
     </div>
 
     <p class="article-disclaimer">Este artigo tem caráter meramente informativo e não constitui aconselhamento personalizado. Não constitui aconselhamento jurídico, fiscal ou notarial: as questões relativas à titularidade de um imóvel concreto, à cadeia de propriedade, a heranças, ao licenciamento de obras, a estremas e ao cancelamento de encargos são matérias do advogado, solicitador e notário do leitor e devem ser tratadas com estes profissionais. A disponibilidade de qualquer solução de seguro depende de cada transação e não pode ser presumida. A Adler &amp; Rochefort é uma marca comercial da Ownizo, Unipessoal Lda., mediador de seguros registado na Autoridade de Supervisão de Seguros e Fundos de Pensões (ASF) sob o n.º 425591790/3.</p>
   
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #E5DFCB;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#637060;"><strong>Continuar neste tema:</strong> <a href="/blog/seguro-habitacao-legalizacao/" style="color:#7A9A6B;font-weight:600;">Seguro de habitação e legalização: porque é que obras ilegais podem anular a sua cobertura</a> &middot; <a href="/blog/multirriscos-habitacao/" style="color:#7A9A6B;font-weight:600;">Seguro multirriscos habitação: proteger a casa é proteger o património</a></p>
-    <p style="background:#F0F4ED;border-left:4px solid #7A9A6B;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#637060;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/habitacao/" style="color:#7A9A6B;font-weight:600;">seguro de habitação</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
+    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/seguro-habitacao-legalizacao/" style="color:#17243D;font-weight:600;">Seguro de habitação e legalização: porque é que obras ilegais podem anular a sua cobertura</a> &middot; <a href="/blog/multirriscos-habitacao/" style="color:#17243D;font-weight:600;">Seguro multirriscos habitação: proteger a casa é proteger o património</a></p>
+    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/habitacao/" style="color:#17243D;font-weight:600;">seguro de habitação</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
     <!-- /cluster-links -->
   </div>
 </article>

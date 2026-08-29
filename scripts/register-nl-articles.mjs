@@ -31,11 +31,11 @@ const NL_CATEGORIES = [
 // Gradients follow the tag, so the four themes stay visually distinct wherever
 // the cards are rendered. No page in the cluster has a photograph yet.
 const GRADIENT = {
-  Zorg: 'linear-gradient(135deg, #4A5A45 0%, #7A9A6B 100%)',
-  Auto: 'linear-gradient(135deg, #1C2B3A 0%, #4B5A67 100%)',
-  Wonen: 'linear-gradient(135deg, #6B4A2F 0%, #D9A668 100%)',
-  Ondernemen: 'linear-gradient(135deg, #33402F 0%, #D9A668 100%)',
-  Overzicht: 'linear-gradient(135deg, #4A5A45 0%, #D9A668 100%)',
+  Zorg: 'linear-gradient(135deg, #111927 0%, #17243D 100%)',
+  Auto: 'linear-gradient(135deg, #17243D 0%, #4B5A67 100%)',
+  Wonen: 'linear-gradient(135deg, #6B4A2F 0%, #B8323E 100%)',
+  Ondernemen: 'linear-gradient(135deg, #111927 0%, #B8323E 100%)',
+  Overzicht: 'linear-gradient(135deg, #111927 0%, #B8323E 100%)',
 };
 
 const nl = PAGES.map((p) => ({

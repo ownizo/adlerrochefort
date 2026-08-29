@@ -566,7 +566,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#33402F">
+<meta name="theme-color" content="#111927">
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
 <meta name="keywords" content="${esc(page.keywords)}">

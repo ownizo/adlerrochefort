@@ -65,29 +65,29 @@
   // cleared by height: the landing pages publish it as --ar-bottom-inset.
   // Defaults to 0, so nothing moves on a page that never sets it.
   var CSS =
-    "#ar-chat-launcher{position:fixed;right:20px;bottom:calc(20px + var(--ar-bottom-inset, 0px));z-index:9998;background:#4A5A45;color:#fff;border:none;" +
+    "#ar-chat-launcher{position:fixed;right:20px;bottom:calc(20px + var(--ar-bottom-inset, 0px));z-index:9998;background:#111927;color:#fff;border:none;" +
     "border-radius:999px;padding:14px 20px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:600;" +
     "box-shadow:0 6px 20px rgba(0,0,0,.2);cursor:pointer;display:flex;align-items:center;gap:8px;transition:bottom .2s ease;}" +
-    "#ar-chat-launcher:hover{background:#3c4a38;}" +
+    "#ar-chat-launcher:hover{background:#223553;}" +
     "#cookieBanner.show ~ #ar-chat-launcher,#cookieBanner.show ~ #ar-chat-panel{display:none;}" +
     "#ar-chat-panel{position:fixed;right:20px;bottom:calc(90px + var(--ar-bottom-inset, 0px));z-index:9999;width:360px;max-width:calc(100vw - 40px);" +
     "height:520px;max-height:calc(100vh - 120px);background:#fff;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.25);" +
     "display:none;flex-direction:column;overflow:hidden;font-family:Arial,Helvetica,sans-serif;}" +
     "#ar-chat-panel.ar-open{display:flex;}" +
-    "#ar-chat-header{background:#4A5A45;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}" +
+    "#ar-chat-header{background:#111927;color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;}" +
     "#ar-chat-header h3{margin:0;font-size:15px;font-weight:700;}" +
     "#ar-chat-close{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;line-height:1;padding:0 4px;}" +
     "#ar-chat-messages{flex:1;overflow-y:auto;padding:14px;background:#F7F6F2;display:flex;flex-direction:column;gap:10px;}" +
     ".ar-msg{max-width:85%;padding:10px 12px;border-radius:12px;font-size:13.5px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word;}" +
     ".ar-msg-assistant{align-self:flex-start;background:#fff;border:1px solid #e4e2dc;color:#2b2b26;}" +
-    ".ar-msg-user{align-self:flex-end;background:#4A5A45;color:#fff;}" +
-    ".ar-msg-note{align-self:center;background:#eef1ec;color:#4A5A45;font-size:12px;text-align:center;border-radius:10px;}" +
-    ".ar-msg-note a{color:#4A5A45;font-weight:700;}" +
+    ".ar-msg-user{align-self:flex-end;background:#111927;color:#fff;}" +
+    ".ar-msg-note{align-self:center;background:#eef1ec;color:#111927;font-size:12px;text-align:center;border-radius:10px;}" +
+    ".ar-msg-note a{color:#111927;font-weight:700;}" +
     ".ar-typing{align-self:flex-start;color:#8a887f;font-size:12px;font-style:italic;padding:0 4px;}" +
     "#ar-chat-form{display:flex;border-top:1px solid #e4e2dc;padding:10px;gap:8px;background:#fff;}" +
     "#ar-chat-input{flex:1;border:1px solid #ddd;border-radius:20px;padding:9px 14px;font-size:13.5px;font-family:inherit;resize:none;}" +
-    "#ar-chat-input:focus{outline:none;border-color:#4A5A45;}" +
-    "#ar-chat-send{background:#4A5A45;color:#fff;border:none;border-radius:20px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;}" +
+    "#ar-chat-input:focus{outline:none;border-color:#111927;}" +
+    "#ar-chat-send{background:#111927;color:#fff;border:none;border-radius:20px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;}" +
     "#ar-chat-send:disabled{opacity:.5;cursor:default;}" +
     // Phase (mobile UX fix): the launcher is a full desktop-style pill at
     // every width, which on a 390px phone sits directly beside — often

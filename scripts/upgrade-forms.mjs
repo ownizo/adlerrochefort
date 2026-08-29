@@ -323,7 +323,7 @@ function syncSelect(html, marker, replacement) {
 const BRANCH_CSS = `<style>
   .form-branch-fields[hidden] { display: none; }
   .form-branch-fields {
-    border-top: 1px solid var(--border, #E5DFCB);
+    border-top: 1px solid var(--border, #DAD5C8);
     margin-top: 4px;
     padding-top: 14px;
   }
@@ -331,9 +331,9 @@ const BRANCH_CSS = `<style>
     margin-top: 12px;
     font-size: 11px;
     line-height: 1.55;
-    color: var(--muted, #8A8B7E);
+    color: var(--muted, #516F94);
   }
-  .form-gdpr a { color: var(--primary, #7A9A6B); }
+  .form-gdpr a { color: var(--primary, #17243D); }
 </style>
 </head>`;
 
@@ -581,19 +581,19 @@ const OLD_SELECT =
 // it does to the forms that were already in the files.
 const CTA_TOPO_CSS = `<style>
   /* CTA TOPO — same component as the rest of the article set. */
-  .cta-topo { background: #F5F1E8; border-left: 4px solid #C9A84C; padding: 28px 32px; margin-bottom: 36px; }
-  .cta-topo-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #1B2B4B; margin-bottom: 6px; }
-  .cta-topo-subtitle { font-size: 13px; color: #637060; margin-bottom: 18px; }
+  .cta-topo { background: #F5F1E8; border-left: 4px solid #B8323E; padding: 28px 32px; margin-bottom: 36px; }
+  .cta-topo-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #17243D; margin-bottom: 6px; }
+  .cta-topo-subtitle { font-size: 13px; color: #526984; margin-bottom: 18px; }
   .cta-topo-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
   .cta-topo-form .cta-field { flex: 1; min-width: 140px; }
-  .cta-topo-form .cta-field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #8A8B7E; margin-bottom: 4px; }
+  .cta-topo-form .cta-field label { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #516F94; margin-bottom: 4px; }
   .cta-topo-form .cta-field input,
-  .cta-topo-form .cta-field select { width: 100%; padding: 10px 12px; border: 1px solid #E5DFCB; background: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; color: #4A5A45; outline: none; transition: border-color 0.2s; }
+  .cta-topo-form .cta-field select { width: 100%; padding: 10px 12px; border: 1px solid #DAD5C8; background: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px; color: #111927; outline: none; transition: border-color 0.2s; }
   .cta-topo-form .cta-field input:focus,
-  .cta-topo-form .cta-field select:focus { border-color: #C9A84C; }
-  .cta-topo-form .cta-btn { background: #1B2B4B; color: #fff; border: none; padding: 10px 24px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
-  .cta-topo-form .cta-btn:hover { background: #2a3f66; }
-  .cta-topo-micro { font-size: 10px; color: #B5B1A1; margin-top: 10px; }
+  .cta-topo-form .cta-field select:focus { border-color: #B8323E; }
+  .cta-topo-form .cta-btn { background: #17243D; color: #fff; border: none; padding: 10px 24px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .cta-topo-form .cta-btn:hover { background: #223553; }
+  .cta-topo-micro { font-size: 10px; color: #516F94; margin-top: 10px; }
   @media (max-width: 768px) {
     .cta-topo { padding: 20px 18px; }
     .cta-topo-title { font-size: 17px; }

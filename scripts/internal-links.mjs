@@ -38,12 +38,12 @@ const published = {
 const clusterOf = (a) => (a.lang === 'pt' ? a.category : enCluster.get(a.slug));
 
 const CALLOUT_STYLE =
-  'background:#F0F4ED;border-left:4px solid #7A9A6B;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#637060;border-radius:0 6px 6px 0;';
+  'background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;';
 // Deliberately quieter than the callout: two identically-boxed paragraphs in a
 // row read as one block of furniture and stop being read at all.
 const PEERS_STYLE =
-  'border-top:1px solid #E5DFCB;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#637060;';
-const LINK_STYLE = 'color:#7A9A6B;font-weight:600;';
+  'border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;';
+const LINK_STYLE = 'color:#17243D;font-weight:600;';
 const START = '<!-- cluster-links -->';
 const END = '<!-- /cluster-links -->';
 
