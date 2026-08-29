@@ -28,7 +28,7 @@
 <meta property="og:locale" content="pt_PT">
 <meta property="og:site_name" content="Adler &amp; Rochefort">
 <meta property="article:published_time" content="2026-08-24T09:00:00+00:00">
-<meta property="article:modified_time" content="2026-08-24T09:00:00+00:00">
+<meta property="article:modified_time" content="2026-08-29T09:00:00+00:00">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -45,7 +45,7 @@
   "headline": "Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional",
   "description": "Numa apólice claims-made, o que importa não é quando o erro aconteceu — é quando a reclamação é feita e comunicada à seguradora.",
   "datePublished": "2026-08-24T09:00:00+00:00",
-  "dateModified": "2026-08-24T09:00:00+00:00",
+  "dateModified": "2026-08-29T09:00:00+00:00",
   "author": { "@type": "Person", "name": "Hugo Gonçalves", "jobTitle": "Fundador & Especialista em Gestão de Risco", "url": "https://adlerrochefort.com/#equipa", "worksFor": { "@type": "Organization", "name": "Adler & Rochefort" }, "knowsAbout": ["Seguros", "Gestão de risco", "Mediação de seguros"] },
   "publisher": {
     "@type": "Organization",
@@ -210,6 +210,59 @@
   }
   .article-body ul li::before {
     content: '→'; color: var(--primary); flex-shrink: 0; margin-top: 1px;
+  }
+  .article-body ol { margin: 0 0 24px; padding-left: 22px; }
+  .article-body ol li { font-size: 15px; line-height: 1.8; color: var(--ink2); margin-bottom: 10px; }
+
+  /* RC editorial components — timeline, comparison table, decision
+     checklist. Reused across the Riscos Profissionais cluster; print-
+     friendly since the checklist page uses these directly. */
+  .rc-timeline {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 8px; margin: 32px 0 44px; padding: 24px 8px 0; position: relative;
+  }
+  .rc-timeline::before {
+    content: ''; position: absolute; top: 39px; left: 40px; right: 40px; height: 2px;
+    background: var(--border);
+  }
+  .rc-timeline-point { position: relative; flex: 1; text-align: center; z-index: 1; }
+  .rc-timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%; background: var(--white);
+    border: 3px solid var(--primary); margin: 0 auto 14px;
+  }
+  .rc-timeline-point--accent .rc-timeline-dot { border-color: var(--accent); }
+  .rc-timeline-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 4px;
+  }
+  .rc-timeline-value { font-size: 16px; font-weight: 700; color: var(--ink); }
+  .rc-timeline-desc { font-size: 12px; color: var(--ink2); margin-top: 8px; line-height: 1.5; }
+  @media (max-width: 640px) {
+    .rc-timeline { flex-direction: column; align-items: stretch; gap: 28px; padding: 4px 0 4px 28px; }
+    .rc-timeline::before { top: 6px; bottom: 6px; left: 7px; right: auto; width: 2px; height: auto; }
+    .rc-timeline-point { text-align: left; }
+    .rc-timeline-dot { position: absolute; left: -28px; top: 2px; margin: 0; }
+  }
+
+  .rc-compare-wrap { overflow-x: auto; margin: 28px 0; -webkit-overflow-scrolling: touch; }
+  .rc-compare-table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: 14px; }
+  .rc-compare-table th, .rc-compare-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .rc-compare-table th { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--ink); white-space: nowrap; }
+  .rc-compare-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .rc-compare-table tbody tr:hover { background: var(--cream2); }
+
+  .rc-checklist { list-style: none; margin: 24px 0; padding: 0; }
+  .rc-checklist li {
+    display: flex; gap: 12px; align-items: flex-start; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.6; color: var(--ink2);
+  }
+  .rc-checklist li::before {
+    content: ''; flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px;
+    border: 2px solid var(--primary); border-radius: 4px;
+  }
+  @media print {
+    .rc-checklist li::before { border-color: #000; }
+    .cta-topo, .cta-meio, .nav-back, .lang-switcher, .cookie-banner, .blog-cta, .related-section { display: none !important; }
   }
 
   /* CTA */
@@ -586,7 +639,7 @@
 <article class="article-container">
   <div class="article-tag">RC Profissional</div>
   <h1 class="article-title">Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional</h1>
-  <div class="article-date"><time datetime="2026-08-24">Publicado a 24 de agosto de 2026</time> &middot; 9 min de leitura</div>
+  <div class="article-date"><time datetime="2026-08-24">Publicado a 24 de agosto de 2026</time> &middot; <time datetime="2026-08-29">Atualizado a 29 de agosto de 2026</time> &middot; 9 min de leitura</div>
   <div class="article-author">
     <picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
@@ -839,6 +892,35 @@
     <h3>Claims-made vs. occurrence: a diferença que importa</h3>
     <p>Uma apólice occurrence (por ocorrência) cobre o facto danoso pela apólice que estava em vigor no momento em que o erro aconteceu — independentemente de quando a reclamação chega. É o modelo mais comum em responsabilidade civil geral, mas raro em RC Profissional.</p>
     <p>Uma apólice claims-made cobre a reclamação apresentada durante o período de vigência da apólice (ou dentro de um período de reporte alargado, quando existe), desde que o facto que a originou seja posterior à data retroativa definida no contrato. O que determina a cobertura não é quando o erro foi cometido, mas quando a reclamação é feita — e por qual apólice.</p>
+
+    <div class="rc-timeline" role="img" aria-label="Linha do tempo: erro em 2023, data retroativa no início da apólice atual, vigência da apólice atual até 2026, reclamação em 2027">
+      <div class="rc-timeline-point">
+        <div class="rc-timeline-dot"></div>
+        <div class="rc-timeline-label">Erro</div>
+        <div class="rc-timeline-value">2023</div>
+        <div class="rc-timeline-desc">O facto que origina o dano</div>
+      </div>
+      <div class="rc-timeline-point">
+        <div class="rc-timeline-dot"></div>
+        <div class="rc-timeline-label">Data retroativa</div>
+        <div class="rc-timeline-value">Início da apólice</div>
+        <div class="rc-timeline-desc">A partir de quando a apólice atual olha para trás</div>
+      </div>
+      <div class="rc-timeline-point">
+        <div class="rc-timeline-dot"></div>
+        <div class="rc-timeline-label">Apólice atual</div>
+        <div class="rc-timeline-value">Em vigor</div>
+        <div class="rc-timeline-desc">É esta apólice que responde, não a de 2023</div>
+      </div>
+      <div class="rc-timeline-point rc-timeline-point--accent">
+        <div class="rc-timeline-dot"></div>
+        <div class="rc-timeline-label">Reclamação</div>
+        <div class="rc-timeline-value">2027</div>
+        <div class="rc-timeline-desc">O que importa é se a apólice está em vigor agora</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:#516F94;margin-top:-12px;">O ano do erro é irrelevante para a cobertura — o que importa é se existe uma apólice em vigor (ou um prazo de reporte alargado) quando a reclamação chega. Esta é uma ilustração do mecanismo; a aplicação concreta depende sempre das condições da apólice.</p>
+
     <h3>Data retroativa: até onde a apólice olha para trás</h3>
     <p>A data retroativa é o ponto a partir do qual factos ocorridos passam a estar cobertos, mesmo que a reclamação só surja mais tarde, durante a vigência da apólice. Numa apólice nova, sem histórico, a data retroativa costuma coincidir com o início do contrato — o que significa que erros anteriores à contratação não estão cobertos. Ao renovar com a mesma seguradora, a data retroativa mantém-se normalmente inalterada, preservando a cobertura de trabalhos antigos. Ao mudar de seguradora, é frequente a nova apólice não aceitar retroagir à mesma data — criando uma lacuna para trabalhos realizados antes da mudança.</p>
     <h3>O que acontece ao cancelar ou mudar de seguradora</h3>

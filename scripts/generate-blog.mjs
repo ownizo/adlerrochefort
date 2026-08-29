@@ -30,7 +30,7 @@ import {
   breadcrumbLd,
   ORGANIZATION,
 } from './lib/chrome.mjs';
-import { grid, clusteredHome, breadcrumbHtml, pagination, metaHead, CTA_PT, CTA_EN } from './lib/blog-parts.mjs';
+import { grid, clusteredHome, topicHubLayout, breadcrumbHtml, pagination, metaHead, CTA_PT, CTA_EN } from './lib/blog-parts.mjs';
 
 const PER_PAGE = 12;
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
@@ -360,6 +360,33 @@ for (const c of CATEGORIES) {
 // browsing per brief §7 ("old taxonomy may remain as secondary tags").
 const GUIAS_SUBCATEGORIES = ['seguros-auto-tvde', 'habitacao-particulares', 'condominios', 'seguros-saude', 'tecnologia-parcerias'];
 
+// Riscos Profissionais has enough depth now (pillar + policy-mechanics
+// articles + by-activity guides + D&O/Cyber) to earn its own hub layout
+// instead of the flat grid every other cluster page gets — see brief
+// "PROFESSIONAL RISKS AUTHORITY" §26. Article slugs are named explicitly
+// (not derived) because the grouping is editorial judgment, not a data
+// property article records carry.
+const RC_HUB_GROUPS = [
+  {
+    title: 'Perceber a apólice',
+    slugs: [
+      'claims-made-rc-profissional',
+      'rc-profissional-capital-quanto-contratar',
+      'rc-profissional-atividade-declarada',
+      'rc-profissional-exclusoes',
+      'checklist-revisao-rc-profissional',
+    ],
+  },
+  {
+    title: 'Por atividade',
+    slugs: ['seguro-responsabilidade-civil-terapeuticas-nao-convencionais', 'responsabilidade-civil-num-evento-portugal'],
+  },
+  {
+    title: 'Riscos relacionados',
+    slugs: ['responsabilidade-administradores-seguro-do', 'seguro-ciberseguranca-empresas-portugal'],
+  },
+];
+
 for (const c of CLUSTERS) {
   const items = ptArticles.filter((a) => a.cluster === c.slug);
   const landing = c.landing
@@ -374,6 +401,16 @@ for (const c of CLUSTERS) {
           .filter(Boolean)
           .join(' &middot; ')}</p>`
       : '';
+  const rcHub =
+    c.slug === 'riscos-profissionais'
+      ? {
+          featured: ptArticles.find((a) => a.slug === 'responsabilidade-civil-profissional'),
+          groups: RC_HUB_GROUPS.map((g) => ({
+            title: g.title,
+            items: g.slugs.map((slug) => ptArticles.find((a) => a.slug === slug)).filter(Boolean),
+          })),
+        }
+      : null;
   await buildListing({
     articles: items,
     basePath: `/blog/categoria/${c.slug}/`,
@@ -390,6 +427,7 @@ for (const c of CLUSTERS) {
     lang: 'pt',
     cta: CTA_PT,
     collectionName: c.title,
+    page1Body: rcHub && rcHub.featured ? topicHubLayout(rcHub) : undefined,
   });
 }
 

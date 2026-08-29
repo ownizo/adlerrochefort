@@ -29,7 +29,7 @@
 <meta property="og:locale" content="pt_PT">
 <meta property="og:site_name" content="Adler &amp; Rochefort">
 <meta property="article:published_time" content="2026-03-01T09:00:00+00:00">
-<meta property="article:modified_time" content="2026-08-24T09:00:00+00:00">
+<meta property="article:modified_time" content="2026-08-29T09:00:00+00:00">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -46,7 +46,7 @@
   "headline": "O que acontece quando o seu consultor comete um erro de €500.000?",
   "description": "A responsabilidade civil profissional protege muito mais do que a reputação. Analisamos casos reais e o que as empresas devem exigir nas suas apólices.",
   "datePublished": "2026-03-01T09:00:00+00:00",
-  "dateModified": "2026-08-24T09:00:00+00:00",
+  "dateModified": "2026-08-29T09:00:00+00:00",
   "author": { "@type": "Person", "name": "Hugo Gonçalves", "jobTitle": "Fundador & Especialista em Gestão de Risco", "url": "https://adlerrochefort.com/#equipa", "worksFor": { "@type": "Organization", "name": "Adler & Rochefort" }, "knowsAbout": ["Seguros", "Gestão de risco", "Mediação de seguros"] },
   "publisher": {
     "@type": "Organization",
@@ -211,6 +211,59 @@
   }
   .article-body ul li::before {
     content: '→'; color: var(--primary); flex-shrink: 0; margin-top: 1px;
+  }
+  .article-body ol { margin: 0 0 24px; padding-left: 22px; }
+  .article-body ol li { font-size: 15px; line-height: 1.8; color: var(--ink2); margin-bottom: 10px; }
+
+  /* RC editorial components — timeline, comparison table, decision
+     checklist. Reused across the Riscos Profissionais cluster; print-
+     friendly since the checklist page uses these directly. */
+  .rc-timeline {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 8px; margin: 32px 0 44px; padding: 24px 8px 0; position: relative;
+  }
+  .rc-timeline::before {
+    content: ''; position: absolute; top: 39px; left: 40px; right: 40px; height: 2px;
+    background: var(--border);
+  }
+  .rc-timeline-point { position: relative; flex: 1; text-align: center; z-index: 1; }
+  .rc-timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%; background: var(--white);
+    border: 3px solid var(--primary); margin: 0 auto 14px;
+  }
+  .rc-timeline-point--accent .rc-timeline-dot { border-color: var(--accent); }
+  .rc-timeline-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 4px;
+  }
+  .rc-timeline-value { font-size: 16px; font-weight: 700; color: var(--ink); }
+  .rc-timeline-desc { font-size: 12px; color: var(--ink2); margin-top: 8px; line-height: 1.5; }
+  @media (max-width: 640px) {
+    .rc-timeline { flex-direction: column; align-items: stretch; gap: 28px; padding: 4px 0 4px 28px; }
+    .rc-timeline::before { top: 6px; bottom: 6px; left: 7px; right: auto; width: 2px; height: auto; }
+    .rc-timeline-point { text-align: left; }
+    .rc-timeline-dot { position: absolute; left: -28px; top: 2px; margin: 0; }
+  }
+
+  .rc-compare-wrap { overflow-x: auto; margin: 28px 0; -webkit-overflow-scrolling: touch; }
+  .rc-compare-table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: 14px; }
+  .rc-compare-table th, .rc-compare-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .rc-compare-table th { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid var(--ink); white-space: nowrap; }
+  .rc-compare-table td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .rc-compare-table tbody tr:hover { background: var(--cream2); }
+
+  .rc-checklist { list-style: none; margin: 24px 0; padding: 0; }
+  .rc-checklist li {
+    display: flex; gap: 12px; align-items: flex-start; padding: 10px 0;
+    border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.6; color: var(--ink2);
+  }
+  .rc-checklist li::before {
+    content: ''; flex-shrink: 0; width: 18px; height: 18px; margin-top: 2px;
+    border: 2px solid var(--primary); border-radius: 4px;
+  }
+  @media print {
+    .rc-checklist li::before { border-color: #000; }
+    .cta-topo, .cta-meio, .nav-back, .lang-switcher, .cookie-banner, .blog-cta, .related-section { display: none !important; }
   }
 
   /* CTA */
@@ -587,7 +640,7 @@
 <article class="article-container">
   <div class="article-tag">Responsabilidade Civil</div>
   <h1 class="article-title">O que acontece quando o seu consultor comete um erro de €500.000?</h1>
-  <div class="article-date"><time datetime="2026-03-01">Publicado a 1 de março de 2026</time> &middot; <time datetime="2026-08-24">Atualizado a 24 de agosto de 2026</time> &middot; 9 min de leitura</div>
+  <div class="article-date"><time datetime="2026-03-01">Publicado a 1 de março de 2026</time> &middot; <time datetime="2026-08-29">Atualizado a 29 de agosto de 2026</time> &middot; 11 min de leitura</div>
   <div class="article-author">
     <picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
@@ -846,6 +899,13 @@
       <li>Violação de confidencialidade</li>
       <li>Infrações involuntárias de direitos de propriedade intelectual</li>
     </ul>
+    <h3>RC Profissional vs. RC de Exploração</h3>
+    <p>É a confusão mais frequente — e a mais cara, quando descoberta depois de um sinistro. As duas coberturas respondem a naturezas de dano completamente diferentes:</p>
+    <ul>
+      <li><strong>RC de Exploração:</strong> um cliente escorrega e cai dentro do escritório. Um dano físico, causado pela atividade e pelas instalações, independentemente de existir ou não um erro técnico.</li>
+      <li><strong>RC Profissional:</strong> o parecer técnico que a empresa deu estava errado, e o cliente seguiu esse conselho. Não há dano físico — há um prejuízo financeiro causado pelo próprio serviço prestado.</li>
+    </ul>
+    <p>Muitas empresas têm a primeira e assumem, incorretamente, que estão protegidas para a segunda. Consoante a atividade, pode ser necessário ter as duas — e a cobertura efetiva de cada sinistro concreto depende sempre da apólice contratada.</p>
     <h3>Quem precisa obrigatoriamente</h3>
     <p>Em Portugal, certas profissões são legalmente obrigadas a ter RCP: advogados, médicos, engenheiros, arquitetos, contabilistas e mediadores imobiliários, entre outros. Mas a lei é apenas o mínimo.</p>
     <p>Qualquer empresa que preste serviços de consultoria, tecnologia, design, comunicação ou gestão deveria ter uma apólice de RCP adequada ao volume de negócio e à natureza dos riscos que assume para os seus clientes.</p>
@@ -858,27 +918,56 @@
   </div>
 
     <h3>O que verificar na sua apólice</h3>
-    <ul>
-      <li>Capital segurado adequado ao maior contrato que assina</li>
-      <li>Cobertura retroativa (para reclamações de trabalhos passados)</li>
-      <li>Cobertura de colaboradores e subcontratados</li>
-      <li>Cobertura jurídica incluída</li>
-      <li>Prazo de reporte após cessação da apólice</li>
+    <p>Uma apólice de RC Profissional não se avalia pelo prémio. Estes são os elementos que, na prática, decidem se uma reclamação vai ou não ser paga:</p>
+    <ul class="rc-checklist">
+      <li><strong>Capital seguro</strong> — adequado ao maior contrato ou ao maior prejuízo potencial, não ao mínimo exigido. Ver <a href="/blog/rc-profissional-capital-quanto-contratar/" style="color:#17243D;font-weight:600;">que capital deve contratar</a>.</li>
+      <li><strong>Limite por sinistro vs. limite agregado</strong> — se o capital se esgota num único sinistro grande ou é partilhado por todas as reclamações do ano.</li>
+      <li><strong>Sublimites</strong> — capitais mais baixos aplicados a coberturas específicas dentro da apólice geral.</li>
+      <li><strong>Franquia</strong> — o valor que fica sempre a cargo do segurado em cada sinistro.</li>
+      <li><strong>Âmbito territorial e jurisdição</strong> — onde os serviços são prestados e sob que sistema legal uma reclamação pode ser apresentada.</li>
+      <li><strong>Data retroativa</strong> — a partir de quando a apólice cobre factos anteriores à contratação. Ver <a href="/blog/claims-made-rc-profissional/" style="color:#17243D;font-weight:600;">claims-made</a>.</li>
+      <li><strong>Defesa jurídica</strong> — se os custos de defender uma reclamação, mesmo infundada, estão incluídos e até que limite.</li>
+      <li><strong>Cobertura de colaboradores e subcontratados</strong> — se os atos de terceiros que trabalham para si estão cobertos.</li>
+      <li><strong>Exclusões</strong> — o que fica expressamente fora, incluindo circunstâncias já conhecidas antes da contratação.</li>
+      <li><strong>Obrigações de notificação</strong> — prazos e forma de comunicar à seguradora uma reclamação ou uma circunstância que a possa originar.</li>
+      <li><strong>Prazo de reporte após cessação</strong> — o que acontece a reclamações sobre trabalho antigo se mudar de seguradora ou cessar atividade.</li>
+      <li><strong>Atividade declarada</strong> — se a descrição na apólice reflete os serviços que presta hoje, não os que prestava quando contratou.</li>
     </ul>
     <p>Na Adler &amp; Rochefort fazemos gratuitamente uma revisão da sua cobertura atual e identificamos lacunas antes que se tornem problemas. Contacte-nos para agendar.</p>
+
+    <h3>O que comparar entre duas propostas</h3>
+    <p>Quando compara duas propostas de RC Profissional, olhar apenas para o prémio esconde a diferença que realmente importa. Use este quadro como ponto de partida — os valores concretos são sempre os que constam de cada apólice:</p>
+    <div class="rc-compare-wrap">
+      <table class="rc-compare-table">
+        <thead>
+          <tr><th>Elemento</th><th>Proposta A</th><th>Proposta B</th><th>O que verificar</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Capital</td><td>—</td><td>—</td><td>Por sinistro ou agregado?</td></tr>
+          <tr><td>Franquia</td><td>—</td><td>—</td><td>Fixa ou percentual?</td></tr>
+          <tr><td>Data retroativa</td><td>—</td><td>—</td><td>Cobre trabalhos anteriores à mudança?</td></tr>
+          <tr><td>Território</td><td>—</td><td>—</td><td>Cobre todos os países onde presta serviços?</td></tr>
+          <tr><td>Defesa jurídica</td><td>—</td><td>—</td><td>Dentro ou fora do capital seguro?</td></tr>
+          <tr><td>Sublimites</td><td>—</td><td>—</td><td>Reduzem alguma cobertura específica?</td></tr>
+          <tr><td>Exclusões</td><td>—</td><td>—</td><td>Alguma relevante para a sua atividade concreta?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:#516F94;">Este quadro é um guia de análise, não uma comparação de seguradoras reais — preencha-o com os dados de cada proposta concreta que receber.</p>
+
     <h3>Um ponto que a maioria das apólices de RCP não deixa óbvio</h3>
     <p>A generalidade das apólices de responsabilidade civil profissional em Portugal funciona em regime claims-made: o que importa não é quando o erro foi cometido, mas quando a reclamação é feita — e a que apólice. Mudar de seguradora, cessar atividade ou simplesmente deixar de renovar sem negociar um prazo de reporte alargado pode deixar sem cobertura reclamações sobre trabalho já feito. Analisamos este mecanismo, e o que verificar antes de qualquer mudança, no artigo sobre <a href="/blog/claims-made-rc-profissional/" style="color:#17243D;font-weight:600;">claims-made em RC Profissional</a>.</p>
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/claims-made-rc-profissional/" style="color:#17243D;font-weight:600;">Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional</a> &middot; <a href="/blog/valores-segurados-desatualizados/" style="color:#17243D;font-weight:600;">O erro silencioso que custa milhões às empresas portuguesas todos os anos</a> &middot; <a href="/blog/responsabilidade-administradores-seguro-do/" style="color:#17243D;font-weight:600;">Responsabilidade pessoal dos administradores: o risco que poucos conhecem</a></p>
-    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/empresarial/" style="color:#17243D;font-weight:600;">multirriscos empresarial</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
+    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/claims-made-rc-profissional/" style="color:#17243D;font-weight:600;">Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional</a> &middot; <a href="/blog/rc-profissional-capital-quanto-contratar/" style="color:#17243D;font-weight:600;">RC Profissional: que capital deve contratar?</a> &middot; <a href="/blog/rc-profissional-atividade-declarada/" style="color:#17243D;font-weight:600;">Porque a atividade declarada na apólice é tão importante</a></p>
+    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/responsabilidade-civil-profissional/" style="color:#17243D;font-weight:600;">RC Profissional</a> reúne as principais coberturas, as soluções especializadas por atividade e o formulário de análise — resposta em 24 horas úteis, por mediador registado na ASF.</p>
     <!-- /cluster-links -->
   </div>
 
   <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #B8323E;border-radius:12px;padding:32px 36px;text-align:center;">
-    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#111927;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
-    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#526984;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
-    <a href="/#contacto" style="display:inline-block;background:#B8323E;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#111927;margin:0 0 12px;line-height:1.3;">A sua RC Profissional está verdadeiramente protegida?</h3>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#526984;margin:0 0 24px;line-height:1.6;">Analisamos gratuitamente o capital, as exclusões e o âmbito da sua cobertura atual — e apresentamos um plano concreto, sem compromisso.</p>
+    <a href="/seguros/responsabilidade-civil-profissional/" style="display:inline-block;background:#B8323E;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise →</a>
   </div>
 </article>
 
@@ -891,17 +980,17 @@
       <div class="related-card-tag">RC Profissional</div>
       <div class="related-card-title">Claims-made: porque a data da reclamação pode mudar tudo no RC Profissional</div>
     </a>
-    <a href="/blog/valores-segurados-desatualizados/" class="related-card">
-      <div class="related-card-tag">Gestão de Seguros</div>
-      <div class="related-card-title">O erro silencioso que custa milhões às empresas portuguesas todos os anos</div>
+    <a href="/blog/rc-profissional-capital-quanto-contratar/" class="related-card">
+      <div class="related-card-tag">RC Profissional</div>
+      <div class="related-card-title">RC Profissional: que capital deve contratar?</div>
     </a>
-    <a href="/blog/responsabilidade-administradores-seguro-do/" class="related-card">
-      <div class="related-card-tag">D&amp;O / Administradores</div>
-      <div class="related-card-title">Responsabilidade pessoal dos administradores: o risco que poucos conhecem</div>
+    <a href="/blog/rc-profissional-atividade-declarada/" class="related-card">
+      <div class="related-card-tag">RC Profissional</div>
+      <div class="related-card-title">Porque a atividade declarada na apólice é tão importante</div>
     </a>
-    <a href="/seguros/empresarial/" class="related-card related-card-landing">
-      <div class="related-card-tag">Pedir cotação</div>
-      <div class="related-card-title">Multirriscos Empresarial</div>
+    <a href="/seguros/responsabilidade-civil-profissional/" class="related-card related-card-landing">
+      <div class="related-card-tag">Pedir análise</div>
+      <div class="related-card-title">RC Profissional</div>
     </a>
   </div>
 </section>
@@ -1035,7 +1124,7 @@
 </footer>
 
   <script defer src="/js/ar-analytics-tracker.js"></script>
-<script defer src="/js/insurance-chat-widget.js" data-lang="pt" data-topics="rc_profissional"></script>
+<script defer src="/js/insurance-chat-widget.js" data-lang="pt" data-topics="rc_profissional,rc_capital,rc_exclusoes,claims_made"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
 <!-- COOKIE CONSENT BANNER -->
 <div class="cookie-banner" id="cookieBanner">
