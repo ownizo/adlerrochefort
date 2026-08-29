@@ -199,11 +199,21 @@ const AUTHOR_END = '<!-- /article-author -->';
 // A 112px avatar cropped from the existing headshot: 1.4 KB as WebP against the
 // 5.7 MB original, which sits above the fold on 165 pages and would otherwise
 // have dominated the LCP measured in block 7.
+// loading="eager": the LCP concern this comment above documents was about the
+// original 5.7 MB photo, already solved by cropping to this 1.4 KB avatar —
+// not by lazy-loading it. In practice loading="lazy" on an avatar that always
+// sits above the fold (it never has a viewport to defer until) made Chrome
+// fail to schedule the fetch at all in some contexts, rendering as a broken
+// image with the alt text showing instead of the photo. The avatar is small
+// enough that eager-loading it costs nothing worth trading for that risk.
 const AVATAR = `<picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
-      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" loading="lazy" decoding="async">
+      <img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" class="article-author-photo" width="56" height="56" loading="eager" decoding="async">
     </picture>`;
 
+// The ASF registration number is already stated in the top strip and the
+// footer of every article; repeating it a third time in every author card
+// was the "too dominant" complaint. Name, role and brand are enough here.
 function authorBlock(lang) {
   if (lang === 'pt') {
     return `<div class="article-author">
@@ -211,7 +221,6 @@ function authorBlock(lang) {
     <div>
       <div class="article-author-name"><a href="/#equipa">Hugo Gonçalves</a></div>
       <div class="article-author-role">Fundador &amp; Especialista em Gestão de Risco &middot; Adler &amp; Rochefort</div>
-      <div class="article-author-creds">Mediador de seguros registado na ASF n.º ${ASF} &middot; Formação Chartered Insurance Institute (CII)</div>
     </div>
   </div>${AUTHOR_END}`;
   }
@@ -220,7 +229,6 @@ function authorBlock(lang) {
     <div>
       <div class="article-author-name"><a href="/en/#team">Hugo Gonçalves</a></div>
       <div class="article-author-role">Founder &amp; Risk Management Specialist &middot; Adler &amp; Rochefort</div>
-      <div class="article-author-creds">Insurance broker registered with the ASF under no. ${ASF} &middot; Chartered Insurance Institute (CII) trained</div>
     </div>
   </div>${AUTHOR_END}`;
 }
