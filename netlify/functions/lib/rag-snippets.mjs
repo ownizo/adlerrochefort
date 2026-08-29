@@ -382,14 +382,64 @@ export const RAG_SNIPPETS = {
         "retroativa e prazo de reporte após cessação do contrato.",
     },
     rc_terapeuticas: {
-      fonte: "/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/",
+      fonte: "/seguros/rc-terapeuticas-nao-convencionais/ e /blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/",
       texto:
-        "A Lei n.º 71/2013 exige seguro de responsabilidade civil profissional para as seis " +
-        "terapêuticas não convencionais reconhecidas (acupunctura, fitoterapia, homeopatia, medicina " +
-        "tradicional chinesa, naturopatia, osteopatia), condição para a cédula profissional da ACSS. " +
-        "Capitais recomendados: mínimo 50.000€ para profissionais individuais, 100.000€-250.000€ para " +
-        "clínicas. Custo indicativo: 150€-500€/ano. O yoga não está formalmente na lista mas instrutores " +
-        "enfrentam riscos semelhantes de responsabilidade civil.",
+        "A Lei n.º 71/2013 exige seguro de responsabilidade civil profissional (artigo 10.º) para as " +
+        "sete terapêuticas não convencionais reconhecidas (acupunctura, fitoterapia, homeopatia, medicina " +
+        "tradicional chinesa, naturopatia, osteopatia, quiroprática), condição para a cédula profissional " +
+        "da ACSS. Capitais indicativos: mínimo 50.000€ para profissionais individuais, 100.000€-250.000€ " +
+        "para clínicas — as coberturas e limites concretos dependem da solução contratada. O yoga não " +
+        "está formalmente na lista mas instrutores enfrentam riscos semelhantes de responsabilidade civil. " +
+        "A Adler tem acesso a soluções especializadas para este risco através de parceria com a Innovarisk.",
+    },
+    rc_profissoes_especificas: {
+      fonte: "/seguros/rc-profissoes-especificas/",
+      texto:
+        "Algumas atividades profissionais (consultoria de negócio, tecnologia/IT, contabilidade, " +
+        "leiloeiras, sociedades de advogados, entre outras) têm uma exposição de responsabilidade civil " +
+        "que não se enquadra bem num produto de RC profissional genérico. A elegibilidade e as condições " +
+        "dependem da atividade concreta, do volume de negócios, da exposição territorial, dos contratos " +
+        "assumidos e do histórico de sinistros — análise caso a caso, dependente de aceitação da " +
+        "seguradora. A Adler tem acesso a soluções especializadas através de parceria com a Innovarisk.",
+    },
+    rc_eventos: {
+      fonte: "/seguros/responsabilidade-civil-eventos/",
+      texto:
+        "A responsabilidade civil de organização de eventos protege quem organiza feiras, festivais, " +
+        "casamentos, exposições ou eventos desportivos, perante participantes, visitantes, o local e " +
+        "terceiros — consoante o tipo de evento e as coberturas contratadas. Para análise, são precisos " +
+        "dados como tipo de evento, local, datas, número previsto de participantes e atividades " +
+        "realizadas. Soluções específicas podem ter parâmetros próprios (por exemplo, limites de " +
+        "participantes ou duração); eventos maiores ou mais complexos podem exigir subscrição individual.",
+    },
+    claims_made: {
+      fonte: "/blog/claims-made-rc-profissional/",
+      texto:
+        "Numa apólice de RC Profissional em regime claims-made, o que importa não é quando o erro " +
+        "ocorreu, mas quando a reclamação é feita e a que apólice. A data retroativa define a partir de " +
+        "quando factos passados ficam cobertos; ao mudar de seguradora ou cessar atividade sem negociar " +
+        "um prazo de reporte alargado, reclamações sobre trabalho já feito podem ficar sem apólice a " +
+        "responder. Notificar uma circunstância à seguradora enquanto a apólice está em vigor pode " +
+        "preservar a cobertura mesmo que a reclamação formal chegue mais tarde.",
+    },
+    subseguro_capitais: {
+      fonte: "/blog/subseguro-portugal/",
+      texto:
+        "O subseguro (ou infrasseguro) acontece quando o capital seguro fica abaixo do valor real do " +
+        "bem. O artigo 76.º do Regime Jurídico do Contrato de Seguro (DL n.º 72/2008) estabelece a regra " +
+        "proporcional: a seguradora paga a indemnização na proporção entre o capital contratado e o " +
+        "valor real, mesmo num sinistro parcial. É frequente em imóveis (capital desatualizado face ao " +
+        "custo de reconstrução), recheio/coleções e automóveis clássicos.",
+    },
+    private_clients: {
+      fonte: "/private-clients/ e /blog/seguros-private-clients-portugal/",
+      texto:
+        "Private Clients trata patrimónios com riscos complexos — vários imóveis, arte e coleções, " +
+        "automóveis clássicos, embarcações — não por valor, mas pela fragmentação entre apólices " +
+        "contratadas em alturas diferentes, com datas de renovação e seguradoras distintas. A análise " +
+        "cobre capitais seguros, sobreposições e lacunas de cobertura, exclusões específicas (desocupação " +
+        "prolongada, declaração individual de bens de valor) e coordenação de sinistros que envolvam mais " +
+        "do que uma apólice.",
     },
     ciberseguranca: {
       fonte: "/blog/seguro-ciberseguranca-empresas-portugal/ e /blog/ransomware-portugal-riscos-ciberneticos/",
