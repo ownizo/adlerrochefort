@@ -26,14 +26,14 @@
     }
   },
   "stats": {
-    "pages": 324,
-    "ldBlocks": 855,
-    "businessNodes": 102,
-    "addressesChecked": 161,
-    "pagesWithVisiblePhone": 323,
-    "pagesWithVisibleEmail": 323,
-    "pagesWithVisibleAddress": 323,
-    "shapeBoth": 59,
+    "pages": 331,
+    "ldBlocks": 872,
+    "businessNodes": 105,
+    "addressesChecked": 167,
+    "pagesWithVisiblePhone": 330,
+    "pagesWithVisibleEmail": 330,
+    "pagesWithVisibleAddress": 330,
+    "shapeBoth": 62,
     "shapeLagosOnly": 43,
     "shapeNoAddress": 0
   },
