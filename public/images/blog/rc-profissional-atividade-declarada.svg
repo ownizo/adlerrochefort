@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111927;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111927;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B8323E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D98A94;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F1E8;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#F5F1E8;stop-opacity:0.03" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1050" cy="80" r="200" fill="#17243D" opacity="0.08" />
+  <circle cx="150" cy="550" r="180" fill="#17243D" opacity="0.06" />
+  <circle cx="600" cy="315" r="350" fill="#17243D" opacity="0.04" />
+  <line x1="80" y1="100" x2="80" y2="530" stroke="#17243D" stroke-width="1" opacity="0.15" />
+  <line x1="1120" y1="100" x2="1120" y2="530" stroke="#17243D" stroke-width="1" opacity="0.15" />
+  <rect x="80" y="100" width="2" height="60" fill="url(#accent)" opacity="0.6" />
+  <text x="120" y="140" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#B8323E" opacity="0.9">RISCOS PROFISSIONAIS · RC PROFISSIONAL</text>
+  <text x="120" y="210" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="40" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">
+    <tspan x="120" dy="0">A atividade</tspan>
+    <tspan x="120" dy="52">declarada muda</tspan>
+    <tspan x="120" dy="52">a sua cobertura</tspan>
+  </text>
+  <rect x="120" y="354" width="60" height="3" fill="url(#accent)" rx="1.5" />
+  <text x="120" y="394" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="16" fill="#FFFFFF" opacity="0.7" letter-spacing="0.3">
+    <tspan x="120" dy="0">"Consultor" pode significar riscos muito diferentes</tspan>
+  </text>
+  <text x="120" y="419" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="14" fill="#FFFFFF" opacity="0.5" letter-spacing="0.3">
+    <tspan x="120" dy="0">Porque a descrição na apólice tem de refletir o que faz</tspan>
+  </text>
+  <g transform="translate(700, 150)">
+    <rect x="0" y="0" width="380" height="330" rx="4" fill="url(#cardBg)" stroke="#17243D" stroke-width="0.5" opacity="0.4" />
+    <g transform="translate(40, 40)">
+      <rect width="300" height="62" rx="3" fill="#17243D" opacity="0.15" />
+      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#B8323E" letter-spacing="2">ÂMBITO DECLARADO</text>
+      <text x="20" y="48" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" opacity="0.85">O que a apólice cobre é o que foi declarado</text>
+    </g>
+    <g transform="translate(40, 122)">
+      <rect width="300" height="62" rx="3" fill="#17243D" opacity="0.15" />
+      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#B8323E" letter-spacing="2">ALTERAÇÃO DO RISCO</text>
+      <text x="20" y="48" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" opacity="0.85">Novos serviços, mercados ou clientes mudam a exposição</text>
+    </g>
+    <g transform="translate(40, 204)">
+      <rect width="300" height="44" rx="3" fill="#17243D" opacity="0.10" />
+      <text x="20" y="28" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#FFFFFF" opacity="0.55">Uma declaração desatualizada pode invalidar o sinistro</text>
+    </g>
+    <g transform="translate(40, 268)">
+      <rect width="300" height="40" rx="20" fill="#B8323E" opacity="0.9" />
+      <text x="150" y="25" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#111927" text-anchor="middle" letter-spacing="1">REVER A ATIVIDADE DECLARADA</text>
+    </g>
+  </g>
+  <rect x="80" y="490" width="1040" height="1" fill="#17243D" opacity="0.15" />
+  <text x="120" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.35" letter-spacing="2">ADLER &amp; ROCHEFORT · MEDIAÇÃO DE SEGUROS</text>
+  <text x="1080" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="11" fill="#B8323E" opacity="0.5" letter-spacing="1" text-anchor="end">adlerrochefort.com</text>
+</svg>

@@ -99,6 +99,24 @@ const EXTRA_CSS = `
   font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--accent);
   text-transform: uppercase; margin-bottom: 10px;
 }
+/* "Soluções por atividade" routing cards — number / title / short explanation
+   / arrow, used on the RC hub to route to its three specialist commercial
+   pages. Reuses the Navy/Ivory/Red system; not a generic icon-card grid. */
+.lp-route-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.lp-route-card {
+  display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border);
+  padding: 30px 28px; text-decoration: none; transition: border-color 0.2s, transform 0.2s;
+}
+.lp-route-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.lp-route-num {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 16px;
+}
+.lp-route-card h3 { font-size: 19px; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
+.lp-route-card p { font-size: 14px; color: var(--ink2); margin: 0 0 20px; line-height: 1.65; flex-grow: 1; }
+.lp-route-arrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary);
+}
+.lp-route-card:hover .lp-route-arrow { color: var(--accent); }
 .lp-hero {
   background: var(--hero-bg); color: var(--white); padding: 56px 60px 80px;
 }
