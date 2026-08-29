@@ -3,8 +3,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1C2B3A">
-<title>Adler &amp; Rochefort — Mediador de Seguros em Portugal | Empresas e Particulares</title>
-<meta name="description" content="Mediador de seguros em Lisboa e no Algarve. Empresas, expatriados e particulares — saúde, habitação, automóvel, TVDE e comercial comparados entre seguradoras.">
+<title>Adler &amp; Rochefort | Private Clients, Riscos Profissionais e Empresas</title>
+<meta name="description" content="Corretagem de seguros para património privado, responsabilidade profissional e empresas. Análise de risco, consulta ao mercado e acompanhamento de sinistros.">
 <meta name="keywords" content="mediador de seguros Portugal, seguros com inteligência artificial, plataforma gestão seguros, gestão apólices IA, Os Meus Seguros, proteção 360 empresas, software seguros empresariais, gestão sinistros IA, gestão frotas seguros, alertas renovação apólices, risco crédito clientes, alertas meteorológicos seguros, inteligência artificial seguros, seguros empresariais, mediador ASF, responsabilidade civil profissional, seguro multirriscos empresa, seguro de frota, riscos cibernéticos, seguro obras construção, seguro D&amp;O administradores, Adler Rochefort, seguro PME, seguro automóvel, seguro de saúde, seguro habitação, seguros individuais, insurance broker portugal, AI insurance broker">
 <link rel="canonical" href="https://adlerrochefort.com/">
   <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/">
@@ -22,8 +22,8 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://adlerrochefort.com/">
-<meta property="og:title" content="Adler &amp; Rochefort — Mediador de Seguros com IA | Proteção 360 para Empresas e Particulares">
-<meta property="og:description" content="Mediador de seguros registado na ASF n.º 425591790/3 com a plataforma de IA Os Meus Seguros: proteção 360 para empresas e gestão inteligente para particulares.">
+<meta property="og:title" content="Adler &amp; Rochefort | Private Clients, Riscos Profissionais e Empresas">
+<meta property="og:description" content="Corretagem de seguros para património privado, responsabilidade profissional e empresas. Análise de risco, consulta ao mercado e acompanhamento de sinistros.">
 <meta property="og:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -32,8 +32,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Adler &amp; Rochefort — Mediador de Seguros com IA | Proteção 360">
-<meta name="twitter:description" content="Mediador de seguros com a plataforma de IA Os Meus Seguros para gestão inteligente — para empresas e particulares.">
+<meta name="twitter:title" content="Adler &amp; Rochefort | Private Clients, Riscos Profissionais e Empresas">
+<meta name="twitter:description" content="Corretagem de seguros para património privado, responsabilidade profissional e empresas.">
 <meta name="twitter:image" content="https://adlerrochefort.com/images/og-image-adlerrochefort.png">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -211,6 +211,50 @@
     font-size: 11px;
     user-select: none;
   }
+
+  /* ═══════════════ NAV MEGA MENU (desktop) + MOBILE ACCORDION ═══════════════ */
+  .nav-item { position: relative; }
+  .nav-trigger {
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    padding: 8px 0; display: inline-flex; align-items: center; gap: 6px;
+    border-radius: 0; transition: color .15s ease;
+    white-space: nowrap;
+  }
+  .nav-trigger:hover { color: var(--accent); }
+  .nav-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .nav-trigger[aria-expanded="true"] { color: var(--accent); }
+  .nav-trigger .nav-caret { width: 9px; height: 9px; flex-shrink: 0; transition: transform .15s ease; }
+  .nav-trigger[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
+  .nav-panel {
+    position: absolute; top: calc(100% + 12px); left: 0;
+    background: var(--white); border-radius: 12px;
+    box-shadow: 0 24px 56px -16px rgba(0,0,0,.32), 0 0 0 1px rgba(0,0,0,.05);
+    padding: 14px; z-index: 200; min-width: 260px;
+  }
+  .nav-panel[hidden] { display: none; }
+  .nav-panel a {
+    display: block; padding: 9px 10px; color: var(--ink); text-decoration: none;
+    font-size: 14px; line-height: 1.3; border-radius: 6px; font-weight: 500;
+    letter-spacing: normal; text-transform: none;
+  }
+  .nav-panel a:hover, .nav-panel a:focus-visible { color: var(--primary); background: var(--cream2); }
+
+  .mobile-accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .mobile-accordion-trigger {
+    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 600;
+    color: rgba(255,255,255,0.8); padding: 14px 0;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .mobile-accordion-trigger:hover, .mobile-accordion-trigger[aria-expanded="true"] { color: var(--accent); }
+  .mobile-accordion-trigger .nav-caret { width: 13px; height: 13px; flex-shrink: 0; transition: transform .2s ease; }
+  .mobile-accordion-trigger[aria-expanded="true"] .nav-caret { transform: rotate(180deg); }
+  .mobile-accordion-panel[hidden] { display: none; }
+  .mobile-accordion-panel { padding: 0 0 10px 4px; display: flex; flex-direction: column; }
+  .mobile-accordion-panel a { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.65); padding: 8px 0; border-bottom: none; text-decoration: none; }
+  .mobile-accordion-panel a:hover { color: var(--accent); }
 
   /* ═══════════════ HERO ═══════════════ */
   .hero {
@@ -919,6 +963,105 @@
     .service-detail-list { grid-template-columns: 1fr; }
   }
 
+  /* ═══════════════ TRÊS UNIVERSOS ═══════════════
+     Replaces the old 15-card .services-grid catalogue (mass-market and
+     business products mixed with no hierarchy). Editorial rows, not
+     cards — large numerals per the repositioning brief, a restrained list
+     of real destinations per universe rather than a product-card grid. */
+  .universes-section { padding: 100px 0; background: var(--cream); }
+  .universes-inner { max-width: 1100px; margin: 0 auto; padding: 0 80px; }
+  .universes-header { max-width: 680px; margin-bottom: 64px; }
+  .universes-header .section-subtitle a { color: var(--primary); font-weight: 600; }
+  .universe-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 40px;
+    padding: 56px 0;
+    border-top: 1px solid var(--border);
+  }
+  .universe-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--primary);
+    opacity: 0.32;
+    line-height: 1;
+  }
+  .universe-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(26px, 2.6vw, 34px);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .universe-desc { font-size: 16px; line-height: 1.7; color: var(--ink2); max-width: 640px; margin-bottom: 24px; }
+  .universe-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 28px; margin-bottom: 28px; padding: 0; }
+  .universe-list li { font-size: 14px; font-weight: 600; color: var(--ink); position: relative; padding-left: 18px; }
+  .universe-list li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
+  }
+  .universe-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--primary); text-decoration: none;
+  }
+  .universe-cta:hover { color: var(--ink); }
+  @media (max-width: 760px) {
+    .universes-inner { padding: 0 24px; }
+    .universe-row { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; }
+    .universe-num { font-size: 44px; }
+  }
+
+  /* ═══════════════ METODOLOGIA ═══════════════ */
+  .method-section { padding: 100px 0; background: var(--white); }
+  .method-inner { max-width: 1200px; margin: 0 auto; padding: 0 80px; }
+  .method-header { max-width: 680px; margin-bottom: 56px; }
+  .method-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .method-item { background: var(--cream); padding: 32px 22px; }
+  .method-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
+  .method-q { font-size: 16.5px; font-weight: 700; color: var(--ink); margin-bottom: 10px; line-height: 1.35; }
+  .method-a { font-size: 13.5px; line-height: 1.6; color: var(--ink2); }
+  @media (max-width: 1024px) { .method-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .method-inner { padding: 0 24px; } .method-grid { grid-template-columns: 1fr; } }
+
+  /* ═══════════════ ESPECIALIDADES ═══════════════
+     Editorial index, small numerals, not a card grid — same visual
+     language as the universes rows above but for the four specialist
+     destinations that genuinely have a real, existing Portuguese
+     commercial page or article behind them today. */
+  .especialidades-section { padding: 100px 0; background: var(--cream2); }
+  .especialidades-inner { max-width: 900px; margin: 0 auto; padding: 0 80px; }
+  .especialidades-header { margin-bottom: 48px; }
+  .especialidade-row {
+    display: flex; align-items: center; gap: 24px;
+    padding: 26px 0; border-bottom: 1px solid var(--border);
+    text-decoration: none; color: inherit;
+  }
+  .especialidade-row:first-child { padding-top: 0; }
+  .especialidade-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .especialidade-num { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: var(--primary); opacity: 0.6; flex-shrink: 0; width: 22px; }
+  .especialidade-body { flex: 1 1 auto; min-width: 0; }
+  .especialidade-name { display: block; font-family: 'Montserrat', sans-serif; font-size: 19px; font-weight: 700; color: var(--ink); margin-bottom: 6px; transition: color 0.2s ease; }
+  .especialidade-desc { display: block; font-size: 14px; line-height: 1.6; color: var(--ink2); max-width: 460px; }
+  .especialidade-arrow {
+    flex-shrink: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--primary); white-space: nowrap; opacity: 0; transform: translateX(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .especialidade-row:hover .especialidade-arrow, .especialidade-row:focus-visible .especialidade-arrow { opacity: 1; transform: translateX(0); }
+  .especialidade-row:hover .especialidade-name, .especialidade-row:focus-visible .especialidade-name { color: var(--primary); }
+  .especialidade-row:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { .especialidade-name, .especialidade-arrow { transition: none; } }
+  @media (max-width: 760px) { .especialidades-inner { padding: 0 24px; } }
+  @media (max-width: 600px) {
+    .especialidade-row { display: block; padding: 22px 0; }
+    .especialidade-num { display: block; margin-bottom: 8px; }
+    .especialidade-name { margin-bottom: 8px; }
+    .especialidade-desc { max-width: none; margin-bottom: 10px; }
+    .especialidade-arrow { display: inline-block; opacity: 1; transform: none; }
+  }
+
   /* ═══════════════ WHY ═══════════════ */
   .why-section {
     display: grid;
@@ -1412,8 +1555,8 @@
 
   .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.3fr 0.9fr 1fr 1fr 1fr 1fr;
+    gap: 44px;
     margin-bottom: 52px;
   }
 
@@ -1963,8 +2106,17 @@
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Seguros Empresariais",
+    "name": "Áreas de especialização",
     "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Private Clients",
+          "url": "https://adlerrochefort.com/private-clients/",
+          "description": "Proteção integrada do património privado: residências de elevado valor, arte e coleções, automóveis clássicos e embarcações."
+        }
+      },
       {
         "@type": "Offer",
         "itemOffered": {
@@ -1978,7 +2130,8 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Responsabilidade Civil Profissional",
-          "description": "Proteção contra erros e omissões para consultores, advogados, engenheiros e profissionais."
+          "url": "https://adlerrochefort.com/seguros/responsabilidade-civil-profissional/",
+          "description": "Erros e omissões, negligência profissional e custos de defesa jurídica para consultores, advogados, engenheiros e profissionais liberais."
         }
       },
       {
@@ -2051,7 +2204,7 @@
       "name": "O que faz um mediador de seguros e porque devo usar um?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as melhores soluções de proteção para o seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador trabalha para si — compara produtos, negocia condições e acompanha-o na gestão de sinistros, garantindo sempre a defesa dos seus interesses."
+        "text": "Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as soluções de proteção mais adequadas ao seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador não está limitado a uma única companhia — compara propostas, negoceia condições e acompanha a gestão de sinistros."
       }
     },
     {
@@ -2075,7 +2228,7 @@
       "name": "Quanto tempo demora a obter uma proposta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Após a análise inicial, apresentamos um plano concreto com alternativas comparadas em 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para garantir a melhor proposta do mercado."
+        "text": "Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto com alternativas comparadas no prazo de 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para reunir as propostas mais adequadas ao risco."
       }
     },
     {
@@ -2083,7 +2236,7 @@
       "name": "Como funciona o apoio em caso de sinistro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Acompanhamos todo o processo de sinistro do início ao fim. Desde a participação à seguradora até à negociação da indemnização, estamos ao seu lado para garantir que recebe aquilo a que tem direito, de forma rápida e sem burocracia desnecessária."
+        "text": "Acompanhamos todo o processo de sinistro do início ao fim. Desde a participação à seguradora até à negociação da indemnização, ajudamos a documentar o processo e a comunicar com a seguradora, sem burocracia desnecessária."
       }
     },
     {
@@ -2176,19 +2329,47 @@
 <div class="asf-top-bar">Mediador de seguros registado na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
 <nav class="site-nav" role="navigation" aria-label="Navegação principal">
   <div class="nav-links-left">
-    <a href="#servicos">Serviços</a>
-    <a href="/seguros/condominios/">Condomínios</a>
-    <a href="#porque">Porquê nós</a>
-    <a href="#adler-pro">Empresas</a>
-    <a href="#adler-one">Particulares</a>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-private">Private Clients<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-private" hidden>
+        <a href="/private-clients/">Visão geral</a>
+        <a href="/private-clients/#patrimonio">Residências de elevado valor</a>
+        <a href="/private-clients/#arte-coleccoes">Arte, coleções e joalharia</a>
+        <a href="/private-clients/#automoveis">Automóveis clássicos e de valor</a>
+        <a href="/private-clients/#embarcacoes">Embarcações</a>
+        <a href="#adler-one">Os Meus Seguros — Particulares</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-professional">Riscos Profissionais<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-professional" hidden>
+        <a href="/seguros/responsabilidade-civil-profissional/">RC Profissional</a>
+        <a href="/blog/responsabilidade-administradores-seguro-do/">Responsabilidade de Administradores (D&amp;O)</a>
+        <a href="/blog/seguro-ciberseguranca-empresas-portugal/">Riscos Cibernéticos</a>
+        <a href="/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/">Terapeutas e Medicinas Complementares</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-business">Empresas<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-business" hidden>
+        <a href="/seguros/empresarial/">Multirriscos Empresarial</a>
+        <a href="/seguros/frota/">Frotas &amp; Transportes</a>
+        <a href="/seguros/alojamento-local/">Alojamento Local</a>
+        <a href="/seguros/tvde/">TVDE</a>
+        <a href="/seguros/condominios/">Condomínios</a>
+        <a href="#adler-pro">Os Meus Seguros — Empresas</a>
+      </div>
+    </div>
+    <a href="/seguros/">Seguros</a>
     <a href="/blog/">Insights</a>
+    <a href="#porque">Porquê nós</a>
   </div>
   <a href="#" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
   <div class="nav-links-right">
     <a href="/alterarmediador" class="nav-cta nav-cta-mediador">Alterar de Mediador</a>
-    <a href="#contacto" class="nav-cta">Consulta Gratuita</a>
+    <a href="#contacto" class="nav-cta">Pedir análise</a>
     <div class="lang-switcher">
       <a href="/" class="active">PT</a>
       <span class="lang-switcher-sep">|</span>
@@ -2208,12 +2389,40 @@
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="#servicos" onclick="toggleMenu()">Serviços</a>
-  <a href="/seguros/condominios/">Condomínios</a>
-  <a href="#porque" onclick="toggleMenu()">Porquê nós</a>
-  <a href="#adler-pro" onclick="toggleMenu()">Empresas</a>
-  <a href="#adler-one" onclick="toggleMenu()">Particulares</a>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-private">Private Clients<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-private" hidden>
+      <a href="/private-clients/" onclick="toggleMenu()">Visão geral</a>
+      <a href="/private-clients/#patrimonio" onclick="toggleMenu()">Residências de elevado valor</a>
+      <a href="/private-clients/#arte-coleccoes" onclick="toggleMenu()">Arte, coleções e joalharia</a>
+      <a href="/private-clients/#automoveis" onclick="toggleMenu()">Automóveis clássicos e de valor</a>
+      <a href="/private-clients/#embarcacoes" onclick="toggleMenu()">Embarcações</a>
+      <a href="#adler-one" onclick="toggleMenu()">Os Meus Seguros — Particulares</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-professional">Riscos Profissionais<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-professional" hidden>
+      <a href="/seguros/responsabilidade-civil-profissional/" onclick="toggleMenu()">RC Profissional</a>
+      <a href="/blog/responsabilidade-administradores-seguro-do/" onclick="toggleMenu()">Responsabilidade de Administradores (D&amp;O)</a>
+      <a href="/blog/seguro-ciberseguranca-empresas-portugal/" onclick="toggleMenu()">Riscos Cibernéticos</a>
+      <a href="/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/" onclick="toggleMenu()">Terapeutas e Medicinas Complementares</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-business">Empresas<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-business" hidden>
+      <a href="/seguros/empresarial/" onclick="toggleMenu()">Multirriscos Empresarial</a>
+      <a href="/seguros/frota/" onclick="toggleMenu()">Frotas &amp; Transportes</a>
+      <a href="/seguros/alojamento-local/" onclick="toggleMenu()">Alojamento Local</a>
+      <a href="/seguros/tvde/" onclick="toggleMenu()">TVDE</a>
+      <a href="/seguros/condominios/" onclick="toggleMenu()">Condomínios</a>
+      <a href="#adler-pro" onclick="toggleMenu()">Os Meus Seguros — Empresas</a>
+    </div>
+  </div>
+  <a href="/seguros/" onclick="toggleMenu()">Seguros</a>
   <a href="/blog/">Insights</a>
+  <a href="#porque" onclick="toggleMenu()">Porquê nós</a>
   <a href="/alterarmediador">Alterar de Mediador</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
   <div class="mobile-lang-switcher">
@@ -2231,19 +2440,17 @@
   <div class="hero-bg-text">A&amp;R</div>
 
   <div class="hero-left">
-    <div class="hero-eyebrow">Mediação de Seguros · Proteção 360 com Inteligência Artificial</div>
+    <div class="hero-eyebrow">Private Clients · Riscos Profissionais · Empresas</div>
     <h1 class="hero-title">
-      Mediação de seguros<br>
-      especializada<br>
-      <em>em Portugal.</em>
+      Há riscos que não cabem<br>
+      numa proposta <em>standard.</em>
     </h1>
     <p class="hero-subtitle">
-      Protecção à medida para particulares, expatriados e empresas. A Adler &amp; Rochefort combina conhecimento local e tecnologia para garantir que está verdadeiramente protegido em Portugal — sem burocracia, sem surpresas.
+      Corretagem de seguros para património privado, responsabilidade profissional e empresas. Analisamos o risco, consultamos o mercado e comparamos capitais, limites, franquias e exclusões antes de recomendar uma solução.
     </p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn-primary">Consulta Gratuita</a>
-      <a href="#adler-one" class="btn-primary">Para Particulares</a>
-      <a href="#adler-pro" class="btn-ghost">Para Empresas</a>
+      <a href="#contacto" class="btn-primary">Pedir análise</a>
+      <a href="https://wa.me/351928226570?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20corretor." class="btn-ghost" rel="noopener" target="_blank">Falar com um corretor</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -2292,7 +2499,7 @@
         <div class="form-field">
           <label for="tipo_seguro">Tipo de Seguro</label>
           <select id="tipo_seguro" name="tipo_seguro" data-branch-select required>
-            <option value="">Seleccione o tipo de seguro...</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio">Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option>
+            <option value="">Seleccione o tipo de seguro...</option><option value="Património Privado">Património Privado (Private Clients)</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio">Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option>
           </select>
         </div>
         <div class="form-branch-fields" data-branch="Saúde" hidden>
@@ -2555,384 +2762,59 @@
 </div>
 
 <!-- SERVICES -->
-<section class="services-section" id="servicos" aria-label="Serviços de seguros">
-  <div class="services-inner">
-    <div class="services-header fade-up">
-      <div>
-        <div class="section-eyebrow">Áreas de Especialização</div>
-        <h2 class="section-title">Proteção à medida<br><em>de quem não pode falhar</em></h2>
-      </div>
-      <p class="section-subtitle">
-        Cada setor tem riscos específicos. A nossa abordagem começa por compreender o seu negócio em profundidade antes de recomendar qualquer solução.
-      </p>
+<section class="universes-section" id="servicos" aria-label="As três áreas de especialização">
+  <div class="universes-inner">
+    <div class="universes-header fade-up">
+      <div class="section-eyebrow">Três áreas de especialização</div>
+      <h2 class="section-title">Quanto mais complexo o risco,<br><em>mais importante a análise.</em></h2>
+      <p class="section-subtitle">Continuamos a tratar dos seguros do dia a dia — pode vê-los todos em <a href="/seguros/">seguros</a>. É aqui que a análise faz a maior diferença.</p>
     </div>
 
-    <div class="services-grid">
-
-      <div class="service-card fade-up" style="transition-delay: 0.00s;">
-        <div class="service-num">01</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        </div>
-        <h3 class="service-name">Multirriscos Empresarial</h3>
-        <p class="service-desc">Proteção integral do seu espaço, equipamentos, stocks e responsabilidade civil, numa única apólice estruturada ao detalhe para a sua atividade.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Incêndio e explosão</li>
-              <li>Inundação e tempestade</li>
-              <li>Furto e vandalismo</li>
-              <li>Danos elétricos</li>
-              <li>Quebra de vidros</li>
-              <li>Perda de lucros</li>
-              <li>RC exploração</li>
-              <li>Recheio e equipamentos</li>
-            </ul>
-            <a href="/seguros/empresarial/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
+    <div class="universe-row fade-up">
+      <div class="universe-num">01</div>
+      <div class="universe-body">
+        <h3 class="universe-title">Private Clients</h3>
+        <p class="universe-desc">Proteção integrada do património privado. Uma abordagem coordenada para patrimónios que envolvem imóveis, automóveis de valor, arte, coleções, embarcações e proteção pessoal — em vez de apólices avulsas com datas, capitais e exclusões que nunca foram comparados entre si.</p>
+        <ul class="universe-list">
+          <li>Residências de elevado valor</li>
+          <li>Arte, coleções e joalharia</li>
+          <li>Automóveis clássicos e de valor</li>
+          <li>Embarcações</li>
+          <li>Vida e acidentes pessoais</li>
+        </ul>
+        <a href="/private-clients/" class="universe-cta">Conhecer Private Clients →</a>
       </div>
+    </div>
 
-      <div class="service-card fade-up" style="transition-delay: 0.08s;">
-        <div class="service-num">02</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-        </div>
-        <h3 class="service-name">Responsabilidade Civil Profissional</h3>
-        <p class="service-desc">Para consultores, advogados, engenheiros, médicos e todos os profissionais cujo conselho tem valor — e pode ter consequências. Proteção contra erros e omissões.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Erros e omissões</li>
-              <li>Negligência profissional</li>
-              <li>Custos de defesa jurídica</li>
-              <li>Danos a terceiros</li>
-              <li>Perda de documentos</li>
-              <li>Violação de confidencialidade</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
+    <div class="universe-row fade-up">
+      <div class="universe-num">02</div>
+      <div class="universe-body">
+        <h3 class="universe-title">Riscos Profissionais</h3>
+        <p class="universe-desc">A sua profissão também é um risco segurável. Um erro, uma omissão ou uma decisão de gestão pode gerar responsabilidades muito acima do valor dos honorários que a originaram — e muito acima do que uma apólice genérica cobre.</p>
+        <ul class="universe-list">
+          <li>Responsabilidade Civil Profissional</li>
+          <li>Responsabilidade de administradores (D&amp;O)</li>
+          <li>Riscos cibernéticos</li>
+          <li>Terapeutas e medicinas complementares</li>
+        </ul>
+        <a href="/seguros/responsabilidade-civil-profissional/" class="universe-cta">Ver riscos profissionais →</a>
       </div>
+    </div>
 
-      <div class="service-card fade-up" style="transition-delay: 0.16s;">
-        <div class="service-num">03</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h5l2 3v4h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-        </div>
-        <h3 class="service-name">Frotas &amp; Transportes</h3>
-        <p class="service-desc">Gestão centralizada do seguro de frotas, otimização de prémios por veículo e análise de sinistralidade para empresas de transporte e logística.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Responsabilidade civil</li>
-              <li>Danos próprios</li>
-              <li>Assistência em viagem</li>
-              <li>Proteção de mercadoria</li>
-              <li>Gestão de sinistralidade</li>
-              <li>Otimização de prémios</li>
-            </ul>
-            <a href="/seguros/frota/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
+    <div class="universe-row fade-up">
+      <div class="universe-num">03</div>
+      <div class="universe-body">
+        <h3 class="universe-title">Empresas</h3>
+        <p class="universe-desc">Proteger a empresa começa por compreender o risco. Estruturamos a apólice a partir da atividade real — instalações, atividade declarada, colaboradores e continuidade de negócio — não de um modelo genérico.</p>
+        <ul class="universe-list">
+          <li>Multirriscos Empresarial</li>
+          <li>Frotas &amp; Transportes</li>
+          <li>Obras &amp; Construção</li>
+          <li>Alojamento Local &amp; TVDE</li>
+          <li>Os Meus Seguros — gestão de apólices</li>
+        </ul>
+        <a href="/seguros/" class="universe-cta">Seguros para empresas →</a>
       </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.24s;">
-        <div class="service-num">04</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M5 17h14l-1.5-6.5a2 2 0 00-2-1.5h-7a2 2 0 00-2 1.5L5 17z"></path><circle cx="7.5" cy="17.5" r="1.5"></circle><circle cx="16.5" cy="17.5" r="1.5"></circle><path d="M9 6h6"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro TVDE</h3>
-        <p class="service-desc">Cobertura para motoristas e operadores Uber, Bolt e Free Now. A apólice particular não cobre transporte remunerado de passageiros — a utilização TVDE tem de estar declarada.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>RC automóvel com uso profissional</li>
-              <li>Acidentes pessoais de passageiros</li>
-              <li>Acidentes de trabalho de motoristas</li>
-              <li>Danos próprios</li>
-              <li>Veículo de substituição</li>
-              <li>Assistência em viagem 24h</li>
-            </ul>
-            <a href="/seguros/tvde/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-
-      <div class="service-card fade-up" style="transition-delay: 0.32s;">
-        <div class="service-num">05</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-        </div>
-        <h3 class="service-name">Riscos Cibernéticos</h3>
-        <p class="service-desc">Cobertura contra ataques informáticos, ransomware, fuga de dados e responsabilidade digital. Essencial para qualquer empresa com operação online.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Violação de dados</li>
-              <li>Extorsão cibernética</li>
-              <li>Interrupção de negócio</li>
-              <li>Responsabilidade digital</li>
-              <li>Custos de notificação</li>
-              <li>Recuperação de sistemas</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.40s;">
-        <div class="service-num">06</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"></path><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"></path></svg>
-        </div>
-        <h3 class="service-name">Obras &amp; Construção</h3>
-        <p class="service-desc">Todo o Risco de Construção, responsabilidade civil de empreiteiro e coberturas específicas para projetos de construção, reabilitação e infraestruturas.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Todo o risco construção</li>
-              <li>RC empreiteiro</li>
-              <li>Montagem e desmontagem</li>
-              <li>Garantia pós-obra</li>
-              <li>Equipamento de estaleiro</li>
-              <li>Acidentes de trabalho</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.48s;">
-        <div class="service-num">07</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg>
-        </div>
-        <h3 class="service-name">Pessoas &amp; Benefícios</h3>
-        <p class="service-desc">Seguros de saúde, vida e acidentes de trabalho para colaboradores. Benefícios que retêm talento e demonstram responsabilidade como empregador.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Seguro saúde grupo</li>
-              <li>Seguro vida grupo</li>
-              <li>Acidentes de trabalho</li>
-              <li>Complementos de reforma</li>
-              <li>Planos dentários</li>
-              <li>Programas de bem-estar</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.56s;">
-        <div class="service-num">08</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9L18 10l-2.7-3.4A2 2 0 0013.7 6H10a2 2 0 00-1.6.6L5.7 10l-2.2 1.1C2.7 11.3 2 12.1 2 13v3c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle><path d="M9 17h6"></path></svg>
-        </div>
-        <h3 class="service-name">Seguros Auto</h3>
-        <p class="service-desc">Proteção completa para o seu veículo, desde cobertura contra terceiros até seguro all-risk. Soluções personalizadas com as melhores condições do mercado.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>RC obrigatória</li>
-              <li>Danos próprios</li>
-              <li>Furto e incêndio</li>
-              <li>Quebra isolada de vidros</li>
-              <li>Assistência em viagem</li>
-              <li>Veículo de substituição</li>
-            </ul>
-            <a href="/seguros/auto/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.64s;">
-        <div class="service-num">09</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><path d="M9 22V12h6v10"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro Habitação</h3>
-        <p class="service-desc">Proteção para a sua casa contra incêndio, inundação, roubo e outros riscos. Coberturas adaptadas a cada tipo de imóvel, seja próprio ou arrendado.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Incêndio obrigatório</li>
-              <li>Inundação e tempestade</li>
-              <li>Furto e roubo</li>
-              <li>RC familiar</li>
-              <li>Assistência ao lar</li>
-              <li>Fenómenos sísmicos</li>
-            </ul>
-            <a href="/seguros/habitacao/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.72s;">
-        <div class="service-num">10</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M10 21v-6h4v6"></path></svg>
-        </div>
-        <h3 class="service-name">Alojamento Local</h3>
-        <p class="service-desc">Responsabilidade civil exigida pelo regime de AL, multirriscos da unidade e perda de exploração. O seguro do condomínio não cobre o recheio nem os danos causados por hóspedes.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>RC de exploração</li>
-              <li>Incêndio e danos por água</li>
-              <li>Recheio e equipamento</li>
-              <li>Danos causados por hóspedes</li>
-              <li>Perda de exploração</li>
-              <li>RC de piscina</li>
-            </ul>
-            <a href="/seguros/alojamento-local/" class="service-detail-cta">Ver detalhes e pedir cotação</a>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-
-      <div class="service-card fade-up" style="transition-delay: 0.80s;">
-        <div class="service-num">11</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro Saúde</h3>
-        <p class="service-desc">Acesso a cuidados médicos de qualidade com coberturas de hospitalização, consultas, exames e medicamentos. Planos individuais e familiares à sua medida.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Hospitalização</li>
-              <li>Consultas e exames</li>
-              <li>Medicamentos</li>
-              <li>Estomatologia</li>
-              <li>Oftalmologia</li>
-              <li>Medicina no estrangeiro</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.88s;">
-        <div class="service-num">12</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M20 8v6"></path><path d="M23 11h-6"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro Acidentes Pessoais</h3>
-        <p class="service-desc">Proteção financeira em caso de acidente, com coberturas de invalidez, despesas de tratamento e assistência. Tranquilidade para si e para a sua família.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Morte por acidente</li>
-              <li>Invalidez permanente</li>
-              <li>Despesas de tratamento</li>
-              <li>Subsídio diário</li>
-              <li>Repatriamento</li>
-              <li>Assistência 24h</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.96s;">
-        <div class="service-num">13</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><path d="M12 22s4-2 4-6V9l-4-2-4 2v7c0 4 4 6 4 6z"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro Vida Crédito Habitação</h3>
-        <p class="service-desc">Seguro obrigatório associado ao crédito à habitação, garantindo a liquidação do empréstimo em caso de morte ou invalidez. Comparamos as melhores ofertas.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Morte e invalidez</li>
-              <li>Invalidez absoluta e definitiva</li>
-              <li>Cobertura do capital em dívida</li>
-              <li>Transferência de seguradora</li>
-              <li>Melhores condições do mercado</li>
-              <li>Análise comparativa gratuita</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 1.04s;">
-        <div class="service-num">14</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
-        </div>
-        <h3 class="service-name">Seguro Vida Investimento</h3>
-        <p class="service-desc">Solução que combina proteção vida com rentabilização do capital. Ideal para quem procura poupança a médio e longo prazo com benefícios fiscais.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Proteção vida</li>
-              <li>Capitalização garantida</li>
-              <li>Benefícios fiscais</li>
-              <li>Resgate parcial ou total</li>
-              <li>Rendimento mínimo garantido</li>
-              <li>Flexibilidade de entregas</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 1.12s;">
-        <div class="service-num">15</div>
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 15l2 2 4-4"></path></svg>
-        </div>
-        <h3 class="service-name">Seguro Caução</h3>
-        <p class="service-desc">Garantia financeira exigida em concursos públicos, contratos e obrigações legais. Alternativa eficiente a garantias bancárias, sem imobilizar capital.</p>
-        <div class="service-detail">
-          <div class="service-detail-inner">
-            <div class="service-detail-title">Principais coberturas</div>
-            <ul class="service-detail-list">
-              <li>Garantia de proposta</li>
-              <li>Garantia de boa execução</li>
-              <li>Adiantamentos</li>
-              <li>Retenção</li>
-              <li>Garantia judicial</li>
-              <li>Sem imobilização de capital</li>
-            </ul>
-            <button class="service-detail-cta" onclick="openContactForm()">Pedir proposta</button>
-          </div>
-        </div>
-        <button class="service-link" onclick="toggleService(this)">Saber mais</button>
-      </div>
-
     </div>
   </div>
 </section>
@@ -2965,7 +2847,7 @@
         <div class="why-pillar-num">03</div>
         <div>
           <div class="why-pillar-title">Gestão proativa de sinistros</div>
-          <div class="why-pillar-desc">Quando o pior acontece, estamos do seu lado. Gerimos o processo de ponta a ponta para garantir o que tem direito a receber.</div>
+          <div class="why-pillar-desc">Quando o pior acontece, estamos do seu lado. Acompanhamos o processo de ponta a ponta e ajudamos a documentar e a comunicar com a seguradora.</div>
         </div>
       </div>
       <div class="why-pillar">
@@ -3015,11 +2897,93 @@
   </div>
 </section>
 
+<!-- METODOLOGIA -->
+<section class="method-section" aria-label="Como estruturamos uma apólice">
+  <div class="method-inner">
+    <div class="method-header fade-up">
+      <div class="section-eyebrow">Como trabalhamos</div>
+      <h2 class="section-title">O prémio é apenas<br><em>uma linha da proposta.</em></h2>
+      <p class="section-subtitle">Comparar prémios sem comparar o resto da apólice não diz muito. É nestes cinco pontos que a proteção real se decide.</p>
+    </div>
+    <div class="method-grid fade-up">
+      <div class="method-item">
+        <div class="method-label">Capitais</div>
+        <div class="method-q">Está a segurar o valor certo?</div>
+        <p class="method-a">Um capital desatualizado ativa a regra proporcional — metade do valor seguro paga metade da indemnização, mesmo num sinistro parcial.</p>
+      </div>
+      <div class="method-item">
+        <div class="method-label">Limites</div>
+        <div class="method-q">Quanto paga realmente a apólice?</div>
+        <p class="method-a">Um limite por sinistro ou por anuidade pode ficar bem abaixo do capital seguro anunciado — a diferença só aparece quando é preciso acionar a apólice.</p>
+      </div>
+      <div class="method-item">
+        <div class="method-label">Franquias</div>
+        <div class="method-q">Quanto fica do seu lado?</div>
+        <p class="method-a">A franquia é a parte do sinistro que nunca é reembolsada. Prémios mais baixos escondem, com frequência, franquias mais altas.</p>
+      </div>
+      <div class="method-item">
+        <div class="method-label">Exclusões</div>
+        <div class="method-q">O que parece coberto mas não está?</div>
+        <p class="method-a">Lemos as exclusões antes de assinar — não depois do sinistro. É onde a maioria dos conflitos com seguradoras começa.</p>
+      </div>
+      <div class="method-item">
+        <div class="method-label">Sinistro</div>
+        <div class="method-q">Quem acompanha quando é preciso acionar a apólice?</div>
+        <p class="method-a">Ajudamos a documentar o processo e a comunicar com a seguradora, da participação à resposta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="especialidades-section" aria-label="Especialidades">
+  <div class="especialidades-inner">
+    <div class="especialidades-header fade-up">
+      <div class="section-eyebrow">Especialidades</div>
+      <h2 class="section-title">Riscos que exigem<br><em>uma abordagem diferente.</em></h2>
+    </div>
+    <div class="especialidades-list fade-up">
+      <a class="especialidade-row" href="/seguros/responsabilidade-civil-profissional/">
+        <span class="especialidade-num" aria-hidden="true">01</span>
+        <span class="especialidade-body">
+          <span class="especialidade-name">Responsabilidade Civil Profissional</span>
+          <span class="especialidade-desc">Erros e omissões no serviço prestado — obrigatória em várias profissões reguladas, recomendável em qualquer atividade de consultoria.</span>
+        </span>
+        <span class="especialidade-arrow" aria-hidden="true">Saber mais →</span>
+      </a>
+      <a class="especialidade-row" href="/blog/responsabilidade-administradores-seguro-do/">
+        <span class="especialidade-num" aria-hidden="true">02</span>
+        <span class="especialidade-body">
+          <span class="especialidade-name">Responsabilidade de Administradores (D&amp;O)</span>
+          <span class="especialidade-desc">Protege o património pessoal de gerentes e administradores por decisões de gestão, sujeito às condições da apólice.</span>
+        </span>
+        <span class="especialidade-arrow" aria-hidden="true">Saber mais →</span>
+      </a>
+      <a class="especialidade-row" href="/blog/seguro-ciberseguranca-empresas-portugal/">
+        <span class="especialidade-num" aria-hidden="true">03</span>
+        <span class="especialidade-body">
+          <span class="especialidade-name">Riscos Cibernéticos</span>
+          <span class="especialidade-desc">Distribuímos o Hiscox CyberClear 360º em parceria com a Hiscox para empresas expostas a ataques informáticos e fuga de dados.</span>
+        </span>
+        <span class="especialidade-arrow" aria-hidden="true">Saber mais →</span>
+      </a>
+      <a class="especialidade-row" href="/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/">
+        <span class="especialidade-num" aria-hidden="true">04</span>
+        <span class="especialidade-body">
+          <span class="especialidade-name">Terapeutas e Medicinas Complementares</span>
+          <span class="especialidade-desc">RC profissional para acupunctura, homeopatia, naturopatia, massagem e yoga.</span>
+        </span>
+        <span class="especialidade-arrow" aria-hidden="true">Saber mais →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- SEGURADORAS PARCEIRAS -->
 <section class="partners-section">
   <div class="fade-up">
     <div class="section-eyebrow">Seguradoras parceiras</div>
-    <h2 class="section-title">Trabalhamos com as <em>melhores</em></h2>
+    <h2 class="section-title">Seguradoras com que <em>trabalhamos</em></h2>
   </div>
   <div class="partners-logos fade-up">
     <div class="partner-logo"><span class="partner-logo-text">Hiscox</span></div>
@@ -3037,7 +3001,7 @@
       <div class="tech-badge">Plataforma Empresarial</div>
       <h2 class="tech-title">Os Meus Seguros <em>Empresas</em></h2>
       <p class="tech-subtitle">
-        Proteção 360 para empresas, alimentada por inteligência artificial. Uma plataforma única para gerir todas as apólices — independentemente da seguradora — e focar no que importa: proteger o negócio, não preencher papéis.
+        Tecnologia para gerir o risco depois da emissão. Os Meus Seguros reúne todas as apólices da empresa — independentemente da seguradora — numa única plataforma, com apoio de inteligência artificial para simplificar renovações e sinistros.
       </p>
       <div class="tech-features">
         <div class="tech-feature">
@@ -3134,7 +3098,7 @@
       <div class="tech-badge">Plataforma Individual</div>
       <h2 class="tech-title">Os Meus Seguros <em>Particulares</em></h2>
       <p class="tech-subtitle">
-        A gestão inteligente dos seus seguros pessoais. Os Meus Seguros reúne todas as suas apólices num único lugar e usa inteligência artificial para simplificar pagamentos, gerir sinistros e sugerir melhorias à sua proteção.
+        Tecnologia para gerir o risco depois da emissão. Os Meus Seguros reúne todas as suas apólices pessoais num único lugar, com apoio de inteligência artificial para simplificar pagamentos e sinistros.
       </p>
       <div class="tech-features">
         <div class="tech-feature">
@@ -3177,10 +3141,10 @@
       <h3 class="team-name">Hugo Gonçalves</h3>
       <div class="team-role">Fundador &amp; Especialista em Gestão de Risco</div>
       <div class="team-bio">
-        <p>Hugo Gonçalves é a força motriz por trás da Adler &amp; Rochefort, aliando uma vasta experiência em negócios globais a uma especialização singular em <strong>consultoria de seguros</strong> para o exigente mercado português. A sua visão é clara: proporcionar aos clientes particulares e empresariais uma gestão de risco que transcende a apólice tradicional.</p>
-        <p>Com uma licenciatura em Gestão de Empresas pela Universidade de Hertfordshire e formação contínua no prestigiado Chartered Insurance Institute (CII), Hugo personifica o rigor e a excelência. Esta base académica, aliada a quase vinte anos na vanguarda da tecnologia de turismo global em empresas como a Hotelbeds (HBX Group), conferiu-lhe uma perspetiva única sobre as necessidades de clientes de elevado património e as complexidades da proteção de ativos internacionais.</p>
-        <p>Desde a fundação da Adler &amp; Rochefort, Hugo tem redefinido o papel do mediador de seguros em Portugal. Focou-se em cultivar parcerias estratégicas com seguradoras de renome como a Hiscox, Allianz e Zurich, e em integrar soluções tecnológicas de ponta. O resultado é um acesso privilegiado às mais sofisticadas e eficazes soluções de proteção, desde <strong>seguros para empresas</strong> a apólices para clientes particulares.</p>
-        <p>A sua filosofia de trabalho assenta na convicção de que o verdadeiro luxo é a ausência de preocupações. Hugo dedica-se a uma análise meticulosa das necessidades de cada cliente, desenhando soluções de seguro à medida que garantem a segurança do seu património e a continuidade do seu estilo de vida em Portugal, sempre em conformidade com a supervisão da <strong>ASF</strong>.</p>
+        <p>Hugo Gonçalves fundou a Adler &amp; Rochefort depois de uma carreira internacional em gestão de risco e tecnologia, com uma especialização em <strong>consultoria de seguros</strong> para particulares, profissionais e empresas em Portugal.</p>
+        <p>Tem uma licenciatura em Gestão de Empresas pela Universidade de Hertfordshire e formação contínua no Chartered Insurance Institute (CII). Antes de fundar a Adler &amp; Rochefort, passou quase vinte anos em tecnologia de turismo global em empresas como a Hotelbeds (HBX Group) — uma base que lhe deu uma visão direta de como o património, a atividade profissional e os ativos internacionais de um cliente costumam estar espalhados por várias apólices distintas.</p>
+        <p>A Adler &amp; Rochefort é mediador de seguros registado na ASF (n.º 425591790/3) e trabalha com seguradoras como a Hiscox, a Allianz e a Zurich através de acordos de agência, em vez de representar uma única companhia.</p>
+        <p>A abordagem parte de uma análise das necessidades reais de cada cliente antes de recomendar qualquer solução — capitais, limites, franquias e exclusões, não apenas o prémio.</p>
       </div>
     </div>
   </div>
@@ -3294,7 +3258,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as melhores soluções de proteção para o seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador trabalha para si — compara produtos, negocia condições e acompanha-o na gestão de sinistros, garantindo sempre a defesa dos seus interesses.</div>
+          <div class="faq-answer-inner">Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as soluções de proteção mais adequadas ao seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador não está limitado a uma única companhia — compara propostas, negoceia condições e acompanha a gestão de sinistros.</div>
         </div>
       </div>
 
@@ -3324,7 +3288,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Após a análise inicial, apresentamos um plano concreto com alternativas comparadas em 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para garantir a melhor proposta do mercado.</div>
+          <div class="faq-answer-inner">Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto com alternativas comparadas no prazo de 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para reunir as propostas mais adequadas ao risco.</div>
         </div>
       </div>
 
@@ -3334,7 +3298,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Acompanhamos todo o processo de sinistro do início ao fim. Desde a participação à seguradora até à negociação da indemnização, estamos ao seu lado para garantir que recebe aquilo a que tem direito, de forma rápida e sem burocracia desnecessária.</div>
+          <div class="faq-answer-inner">Acompanhamos todo o processo de sinistro do início ao fim. Desde a participação à seguradora até à negociação da indemnização, ajudamos a documentar o processo e a comunicar com a seguradora, sem burocracia desnecessária.</div>
         </div>
       </div>
 
@@ -3433,25 +3397,34 @@
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Serviços</div>
+      <div class="footer-col-title">Private Clients</div>
+      <ul class="footer-col-links">
+        <li><a href="/private-clients/">Visão geral</a></li>
+        <li><a href="/private-clients/#patrimonio">Residências de elevado valor</a></li>
+        <li><a href="/private-clients/#arte-coleccoes">Arte, coleções e joalharia</a></li>
+        <li><a href="/private-clients/#automoveis">Automóveis clássicos e de valor</a></li>
+        <li><a href="/private-clients/#embarcacoes">Embarcações</a></li>
+        <li><a href="#adler-one">Os Meus Seguros — Particulares</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top:24px;">Riscos Profissionais</div>
+      <ul class="footer-col-links">
+        <li><a href="/seguros/responsabilidade-civil-profissional/">RC Profissional</a></li>
+        <li><a href="/blog/responsabilidade-administradores-seguro-do/">Responsabilidade de Administradores (D&amp;O)</a></li>
+        <li><a href="/blog/seguro-ciberseguranca-empresas-portugal/">Riscos Cibernéticos</a></li>
+        <li><a href="/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/">Terapeutas</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Empresas &amp; Seguros</div>
       <ul class="footer-col-links">
         <li><a href="/seguros/">Ver todos os seguros</a></li>
-        <li><a href="/seguros/condominios/">Seguros de Condomínio</a></li>
         <li><a href="/seguros/empresarial/">Multirriscos Empresarial</a></li>
-        <li><a href="#servicos">Responsabilidade Civil</a></li>
         <li><a href="/seguros/frota/">Frotas &amp; Transportes</a></li>
         <li><a href="/seguros/tvde/">Seguro TVDE</a></li>
-        <li><a href="#servicos">Riscos Cibernéticos</a></li>
-        <li><a href="#servicos">Obras &amp; Construção</a></li>
-        <li><a href="#servicos">Pessoas &amp; Benefícios</a></li>
+        <li><a href="/seguros/condominios/">Seguros de Condomínio</a></li>
+        <li><a href="/seguros/alojamento-local/">Alojamento Local</a></li>
         <li><a href="/seguros/auto/">Seguros Auto</a></li>
         <li><a href="/seguros/habitacao/">Seguro Habitação</a></li>
-        <li><a href="/seguros/alojamento-local/">Alojamento Local</a></li>
-        <li><a href="#servicos">Seguro Saúde</a></li>
-        <li><a href="#servicos">Acidentes Pessoais</a></li>
-        <li><a href="#servicos">Vida Crédito Habitação</a></li>
-        <li><a href="#servicos">Vida Investimento</a></li>
-        <li><a href="#servicos">Seguro Caução</a></li>
       </ul>
     </div>
     <div>
@@ -3579,6 +3552,48 @@
   function toggleMenu() {
     document.getElementById('mobileNav').classList.toggle('open');
   }
+
+  // Desktop mega menu — click-to-toggle, keyboard + click-outside + Escape, no hover dependency
+  (function () {
+    var triggers = Array.prototype.slice.call(document.querySelectorAll('.nav-trigger'));
+    function closeAll(except) {
+      triggers.forEach(function (t) {
+        if (t === except) return;
+        t.setAttribute('aria-expanded', 'false');
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = true;
+      });
+    }
+    triggers.forEach(function (trigger) {
+      var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      if (!panel) return;
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        closeAll(trigger);
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        panel.hidden = isOpen;
+      });
+    });
+    document.addEventListener('click', function () { closeAll(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+
+  // Mobile accordion — click-to-toggle, ARIA state, no hover dependency
+  (function () {
+    var accTriggers = Array.prototype.slice.call(document.querySelectorAll('.mobile-accordion-trigger'));
+    accTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        if (!panel) return;
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        panel.hidden = isOpen;
+      });
+    });
+  })();
 
   // Contact form modal
   function openContactForm() {
