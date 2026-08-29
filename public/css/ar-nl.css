@@ -11,23 +11,23 @@
 
 :root {
   /* Light, neutral palette — cream / white / beige with discreet accents. */
-  --cream: #FAF7EE;
+  --cream: #F5F1E8;
   --white: #FFFFFF;
-  --beige: #F3EDDF;
-  --sand: #EDE5D1;
-  --border: #E0D8C2;
-  --border-soft: #EAE3D2;
+  --beige: #F5F1E8;
+  --sand: #E8E5DF;
+  --border: #DAD5C8;
+  --border-soft: #E8E5DF;
   /* Text tones — all >= 4.5:1 on cream, beige and white. */
-  --ink: #2C3628;
-  --ink2: #45543F;
-  --muted: #5C6A57;
-  --primary: #55704A;
-  --gold: #8A6420;
-  --rule: #C9A84C;
+  --ink: #111927;
+  --ink2: #526984;
+  --muted: #516F94;
+  --primary: #17243D;
+  --gold: #B8323E;
+  --rule: #B8323E; --accent-on-dark: #E8919B;
   /* Site chrome (shared with the rest of adlerrochefort.com). */
-  --nav-bg: #3F4E3A;
-  --footer-bg: #33402F;
-  --navy: #1B2B4B;
+  --nav-bg: #17243D;
+  --footer-bg: #111927;
+  --navy: #17243D;
   --error: #A32B1F;
 }
 
@@ -50,7 +50,7 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
   outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
-.on-dark a:focus-visible, .on-dark button:focus-visible { outline-color: var(--rule); }
+.on-dark a:focus-visible, .on-dark button:focus-visible { outline-color: var(--accent-on-dark); }
 
 .skip-link {
   position: absolute; left: 16px; top: -100px; z-index: 200;
@@ -83,7 +83,7 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
   background: var(--nav-bg);
   padding: 0 48px; min-height: 76px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  border-bottom: 1px solid rgba(122,154,107,0.3);
+  border-bottom: 1px solid rgba(23,36,61,0.3);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; padding: 8px 0; }
 .nav-logo-img { height: 46px; width: auto; }
@@ -170,7 +170,7 @@ p { font-size: 19px; line-height: 1.8; }
   text-decoration: none; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
-.btn-cta:hover { background: #1D2519; transform: translateY(-2px); }
+.btn-cta:hover { background: #111927; transform: translateY(-2px); }
 .btn-cta svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
 /* ─────────── LANGUAGE POLICY BLOCK ─────────── */
@@ -365,7 +365,7 @@ p { font-size: 19px; line-height: 1.8; }
   width: 100%; padding: 15px 16px;
   font-family: 'Montserrat', sans-serif; font-size: 18px; line-height: 1.5;
   color: var(--ink); background: var(--white);
-  border: 1px solid #B9AE93; border-radius: 0;
+  border: 1px solid #DAD5C8; border-radius: 0;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .field input::placeholder, .field textarea::placeholder { color: #6E6A5C; }
@@ -396,7 +396,7 @@ p { font-size: 19px; line-height: 1.8; }
   letter-spacing: 0.02em; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s;
 }
-.form-submit:hover { background: #1D2519; }
+.form-submit:hover { background: #111927; }
 .form-submit[disabled] { background: var(--muted); border-color: var(--muted); cursor: progress; }
 .form-footnote { margin-top: 22px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 
@@ -416,11 +416,11 @@ footer { background: var(--footer-bg); padding: 76px 48px 44px; }
 .footer-col-links li { margin: 0; padding-left: 0; }
 .footer-col-links li::before { display: none; }
 .footer-col-links a, .footer-col-links span { font-size: 17px; color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.2s; }
-.footer-col-links a:hover { color: var(--rule); text-decoration: underline; text-underline-offset: 4px; }
+.footer-col-links a:hover { color: var(--accent-on-dark); text-decoration: underline; text-underline-offset: 4px; }
 .footer-langs { flex-direction: row; flex-wrap: wrap; gap: 10px; }
 .footer-langs a { font-size: 16px; border: 1px solid rgba(255,255,255,0.28); padding: 7px 14px; }
-.footer-langs a:hover { border-color: var(--rule); text-decoration: none; }
-.footer-langs a[aria-current="page"] { color: var(--white); border-color: var(--rule); background: rgba(255,255,255,0.12); }
+.footer-langs a:hover { border-color: var(--accent-on-dark); text-decoration: none; }
+.footer-langs a[aria-current="page"] { color: var(--white); border-color: var(--accent-on-dark); background: rgba(255,255,255,0.12); }
 .footer-social { display: flex; gap: 14px; padding-top: 10px; }
 .footer-social a {
   display: flex; align-items: center; justify-content: center;

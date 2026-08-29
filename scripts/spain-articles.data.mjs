@@ -551,7 +551,7 @@ const PROP_RENTING_OUT = {
 };
 
 function CARE_NOTE_HTML() {
-  return `<p style="border-top:1px solid #E5DFCB;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#637060;"><strong>General information only.</strong> ${CARE_NOTE}</p>`;
+  return `<p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>General information only.</strong> ${CARE_NOTE}</p>`;
 }
 
 // -----------------------------------------------------------------------------

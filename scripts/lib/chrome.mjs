@@ -110,7 +110,7 @@ const EXTRA_CSS = `
   font-size: clamp(32px, 4.4vw, 54px); font-weight: 400; line-height: 1.1;
   letter-spacing: -0.03em; margin: 0 0 20px; color: var(--white);
 }
-.lp-hero h1 em { font-style: italic; color: var(--accent); }
+.lp-hero h1 em { font-style: italic; color: var(--accent-on-dark); }
 .lp-hero-sub { font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.75); margin: 0 0 28px; max-width: 620px; }
 .lp-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .lp-trust { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 32px; }
@@ -345,7 +345,7 @@ export function page({ lang = 'pt-PT', head, body, bodyEnd = '' }) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1C2B3A">
+<meta name="theme-color" content="#17243D">
 ${head}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">

@@ -131,7 +131,7 @@ const BODY = `
 
     <p>The request itself is free. What catches people out is what comes after it: under article 47.&ordm; of the C&oacute;digo do ISV, a vehicle admitted with an exemption cannot be sold, given away, rented or lent for twelve months from the date the exemption is granted, and a disposal after that but within five years can still attract tax in proportion to the time remaining. Those are two separate twelve-month periods with two different starting points &mdash; twelve months from the move to <em>ask</em>, twelve months from the grant before you can <em>dispose</em> &mdash; and conflating them is one of the more expensive mistakes in this process.</p>
 
-    <p class="article-note" style="font-size:14px;color:#637060;">Checked in August 2026 against gov.pt and the Autoridade Tribut&aacute;ria's customs information portal. Amounts, periods and country lists in this area are administrative and are revised; we state the shape of the process and link to the authority for the numbers rather than quoting a figure that may have moved.</p>
+    <p class="article-note" style="font-size:14px;color:#526984;">Checked in August 2026 against gov.pt and the Autoridade Tribut&aacute;ria's customs information portal. Amounts, periods and country lists in this area are administrative and are revised; we state the shape of the process and link to the authority for the numbers rather than quoting a figure that may have moved.</p>
 
     <h2 id="matricula">Step 3 &mdash; homologation, inspection and the matr&iacute;cula</h2>
 
@@ -218,7 +218,7 @@ const BODY = `
     <p class="article-disclaimer">This article is provided for general information and does not constitute personalised advice or a statement of your tax position; the customs, ISV and registration treatment of any vehicle depends on its own facts and is decided by the Autoridade Tribut&aacute;ria and the IMT. Deadlines and procedures in this area are revised from time to time &mdash; check the linked official sources before acting. Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., mediador registado na ASF n.&ordm; 425591790/3.</p>
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #E5DFCB;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#637060;"><strong>More on this subject:</strong> <a href="/en/car-insurance-portugal/" style="color:#7A9A6B;font-weight:600;">Car insurance in Portugal</a> &middot; <a href="/en/blog/car-insurance-expatriates/" style="color:#7A9A6B;font-weight:600;">Car insurance for expatriates in Portugal: what you need to know</a> &middot; <a href="/en/blog/car-insurance-complete-guide/" style="color:#7A9A6B;font-weight:600;">How to choose the best car insurance in Portugal: complete guide 2026</a></p>
+    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>More on this subject:</strong> <a href="/en/car-insurance-portugal/" style="color:#17243D;font-weight:600;">Car insurance in Portugal</a> &middot; <a href="/en/blog/car-insurance-expatriates/" style="color:#17243D;font-weight:600;">Car insurance for expatriates in Portugal: what you need to know</a> &middot; <a href="/en/blog/car-insurance-complete-guide/" style="color:#17243D;font-weight:600;">How to choose the best car insurance in Portugal: complete guide 2026</a></p>
     <!-- /cluster-links -->
 `;
 

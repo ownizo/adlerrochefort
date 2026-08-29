@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4A5A45;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#33402F;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#111927;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#111927;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#D9A668;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#E8C088;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#B8323E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D98A94;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#FAF7EE;stop-opacity:0.08" />
-      <stop offset="100%" style="stop-color:#FAF7EE;stop-opacity:0.03" />
+      <stop offset="0%" style="stop-color:#F5F1E8;stop-opacity:0.08" />
+      <stop offset="100%" style="stop-color:#F5F1E8;stop-opacity:0.03" />
     </linearGradient>
   </defs>
 
   <rect width="1200" height="630" fill="url(#bg)" />
 
-  <circle cx="1050" cy="80" r="200" fill="#7A9A6B" opacity="0.08" />
-  <circle cx="150" cy="550" r="180" fill="#7A9A6B" opacity="0.06" />
-  <circle cx="600" cy="315" r="350" fill="#7A9A6B" opacity="0.04" />
+  <circle cx="1050" cy="80" r="200" fill="#17243D" opacity="0.08" />
+  <circle cx="150" cy="550" r="180" fill="#17243D" opacity="0.06" />
+  <circle cx="600" cy="315" r="350" fill="#17243D" opacity="0.04" />
 
-  <line x1="80" y1="100" x2="80" y2="530" stroke="#7A9A6B" stroke-width="1" opacity="0.15" />
-  <line x1="1120" y1="100" x2="1120" y2="530" stroke="#7A9A6B" stroke-width="1" opacity="0.15" />
+  <line x1="80" y1="100" x2="80" y2="530" stroke="#17243D" stroke-width="1" opacity="0.15" />
+  <line x1="1120" y1="100" x2="1120" y2="530" stroke="#17243D" stroke-width="1" opacity="0.15" />
 
   <rect x="80" y="100" width="2" height="60" fill="url(#accent)" opacity="0.6" />
 
-  <text x="120" y="140" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#D9A668" opacity="0.9">TURISMO RURAL · HOTÉIS BOUTIQUE</text>
+  <text x="120" y="140" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#B8323E" opacity="0.9">TURISMO RURAL · HOTÉIS BOUTIQUE</text>
 
   <text x="120" y="210" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">
     <tspan x="120" dy="0">Os riscos que os</tspan>
@@ -43,33 +43,33 @@
   </text>
 
   <g transform="translate(700, 150)">
-    <rect x="0" y="0" width="380" height="330" rx="4" fill="url(#cardBg)" stroke="#7A9A6B" stroke-width="0.5" opacity="0.4" />
+    <rect x="0" y="0" width="380" height="330" rx="4" fill="url(#cardBg)" stroke="#17243D" stroke-width="0.5" opacity="0.4" />
 
     <g transform="translate(40, 40)">
-      <rect width="300" height="62" rx="3" fill="#7A9A6B" opacity="0.15" />
-      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#D9A668" letter-spacing="2">PATRIMÓNIO E RECONSTRUÇÃO</text>
+      <rect width="300" height="62" rx="3" fill="#17243D" opacity="0.15" />
+      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#B8323E" letter-spacing="2">PATRIMÓNIO E RECONSTRUÇÃO</text>
       <text x="20" y="48" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" opacity="0.85">Materiais tradicionais e mão de obra</text>
     </g>
 
     <g transform="translate(40, 122)">
-      <rect width="300" height="62" rx="3" fill="#7A9A6B" opacity="0.15" />
-      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#D9A668" letter-spacing="2">ATIVIDADES COMPLEMENTARES</text>
+      <rect width="300" height="62" rx="3" fill="#17243D" opacity="0.15" />
+      <text x="20" y="26" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#B8323E" letter-spacing="2">ATIVIDADES COMPLEMENTARES</text>
       <text x="20" y="48" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="500" fill="#FFFFFF" opacity="0.85">Passeios, spa, provas, animais</text>
     </g>
 
     <g transform="translate(40, 204)">
-      <rect width="300" height="44" rx="3" fill="#7A9A6B" opacity="0.10" />
+      <rect width="300" height="44" rx="3" fill="#17243D" opacity="0.10" />
       <text x="20" y="28" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#FFFFFF" opacity="0.55">Apólice genérica = lacunas invisíveis</text>
     </g>
 
     <g transform="translate(40, 268)">
-      <rect width="300" height="40" rx="20" fill="#D9A668" opacity="0.9" />
-      <text x="150" y="25" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#33402F" text-anchor="middle" letter-spacing="1">RISCO À MEDIDA</text>
+      <rect width="300" height="40" rx="20" fill="#B8323E" opacity="0.9" />
+      <text x="150" y="25" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="700" fill="#111927" text-anchor="middle" letter-spacing="1">RISCO À MEDIDA</text>
     </g>
   </g>
 
-  <rect x="80" y="490" width="1040" height="1" fill="#7A9A6B" opacity="0.15" />
+  <rect x="80" y="490" width="1040" height="1" fill="#17243D" opacity="0.15" />
   <text x="120" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.35" letter-spacing="2">ADLER &amp; ROCHEFORT · MEDIAÇÃO DE SEGUROS</text>
 
-  <text x="1080" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="11" fill="#D9A668" opacity="0.5" letter-spacing="1" text-anchor="end">adlerrochefort.com</text>
+  <text x="1080" y="530" font-family="'Montserrat', 'Segoe UI', Arial, sans-serif" font-size="11" fill="#B8323E" opacity="0.5" letter-spacing="1" text-anchor="end">adlerrochefort.com</text>
 </svg>

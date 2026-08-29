@@ -4,8 +4,8 @@
   "description": "Mediador de seguros com a plataforma de IA Os Meus Seguros para gestão inteligente de apólices — para empresas e particulares.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF7EE",
-  "theme_color": "#3F4E3A",
+  "background_color": "#F5F1E8",
+  "theme_color": "#17243D",
   "icons": [
     {
       "src": "/images/favicon-192.png",

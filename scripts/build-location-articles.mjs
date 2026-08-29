@@ -188,7 +188,7 @@ function buildBody(a) {
       <div class="article-author-role">Founder &amp; Risk Management Specialist &middot; Adler &amp; Rochefort</div>
     </div>
   </div><!-- /article-author --><div class="article-body">
-<p style="background:#F0F4ED;border-left:4px solid #7A9A6B;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#637060;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across Zurich, Allianz, Hiscox and Liberty Mutual, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>
+<p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across Zurich, Allianz, Hiscox and Liberty Mutual, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>
 ${a.intro}
 ${sections.join('\n')}
 <h2>Indicative premiums &mdash; ${a.heroLabel}</h2>
@@ -197,7 +197,7 @@ ${table}
 <h2>Talk to us</h2>
 ${a.closing}
 <p>If you would rather start from the property than from the article, our <a href="/en/home-insurance-quote/">home insurance comparison for owners in Portugal</a> takes the address, the rebuild figure and how the property is used, and comes back with the market priced side by side.</p>
-<p style="font-size:13px;color:#8A8B7E;margin-top:34px;">Other locations: ${other}</p>
+<p style="font-size:13px;color:#516F94;margin-top:34px;">Other locations: ${other}</p>
 <p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General guidance only; conditions, premiums and cover vary by insurer and profile.</em></p>
 </div>
 `;

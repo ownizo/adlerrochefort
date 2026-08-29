@@ -4,15 +4,15 @@
    Palette mirrors the site theme (sage / gold / cream / ink).
    ════════════════════════════════════════════════════════════════ */
 :root {
-  --ar-primary: #7A9A6B;
-  --ar-primary-hover: #94B585;
-  --ar-accent: #D9A668;
-  --ar-accent-hover: #c8924f;
-  --ar-ink: #4A5A45;
-  --ar-ink2: #637060;
-  --ar-cream: #FAF7EE;
-  --ar-cream2: #F2EBDA;
-  --ar-border: #E5DFCB;
+  --ar-primary: #17243D;
+  --ar-primary-hover: #223553;
+  --ar-accent: #B8323E; --ar-accent-on-dark: #E8919B;
+  --ar-accent-hover: #872733;
+  --ar-ink: #111927;
+  --ar-ink2: #526984;
+  --ar-cream: #F5F1E8;
+  --ar-cream2: #E8E5DF;
+  --ar-border: #DAD5C8;
   --ar-wa: #25D366;
   --ar-wa-hover: #1ebe57;
 }
