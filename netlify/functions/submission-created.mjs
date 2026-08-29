@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { sendLeadToCrm } from "./lib/crm-sync.mjs";
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -11,6 +12,17 @@ import { Resend } from "resend";
 //   * the quote forms on /seguros/ and the article CTAs, whose fields differ by
 //     branch. Those are rendered in full, so a field added to a landing page
 //     shows up in the email without this function needing to change.
+//
+// CRM sync (adlerpro/admin.adlerrochefort.com)
+// After the notification email is sent, and only for submissions classified
+// as an individual (person) lead (see netlify/functions/lib/lead-classification.mjs),
+// this also fires a best-effort, authenticated, server-to-server call to the
+// CRM's lead-intake endpoint (see netlify/functions/lib/crm-sync.mjs). This is
+// strictly additional: it never replaces the email, never blocks the response
+// to Netlify Forms, and any failure (network, timeout, CRM down, wrong
+// secret) is caught and only logged — the visitor-facing flow is unaffected
+// either way. Business/condominium/ambiguous leads are skipped here and keep
+// going through email only; CRM sync for them is a later phase.
 // -----------------------------------------------------------------------------
 
 function escapeHtml(value) {
@@ -290,7 +302,9 @@ const QUOTE_LABELS_EN = {
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
-const HANDLED_FORMS = {
+// Exported so lead-classification.test.mjs can assert every key here also has
+// a CRM classification decision — see "CRM coverage" in that test file.
+export const HANDLED_FORMS = {
   "relocation-services": {
     heading: "New relocation &amp; company services enquiry",
     intro: "A new submission was received from the Settle in Portugal landing page.",
@@ -362,6 +376,35 @@ const HANDLED_FORMS = {
     heading: "Novo pedido de análise — RC Profissional",
     page: "/seguros/responsabilidade-civil-profissional/",
     branch: "RC Profissional",
+  },
+  // RC niche cluster (TNC, Massagistas, Profissões Específicas, Eventos):
+  // these four had no HANDLED_FORMS entry at all before this pass — visitors
+  // filling them in got no email notification and no CRM sync, since a form
+  // not listed here is dropped at the "Ignored" early-return above. Added
+  // now, same shape as cotacao-rc-profissional right above.
+  "cotacao-rc-tnc": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Terapêuticas Não Convencionais",
+    page: "/seguros/rc-terapeuticas-nao-convencionais/",
+    branch: "RC Terapêuticas Não Convencionais",
+  },
+  "cotacao-rc-massagistas": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Massagistas",
+    page: "/seguros/rc-massagistas/",
+    branch: "RC Massagistas",
+  },
+  "cotacao-rc-profissoes-especificas": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Profissões Específicas",
+    page: "/seguros/rc-profissoes-especificas/",
+    branch: "RC Profissões Específicas",
+  },
+  "cotacao-rc-eventos": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Organização de Eventos",
+    page: "/seguros/responsabilidade-civil-eventos/",
+    branch: "RC Organização de Eventos",
   },
   "quote-tvde-en": {
     quote: true,
@@ -674,42 +717,43 @@ export default async (req) => {
 
   const data = payload.data || {};
 
+  // Email is independent from CRM sync below: a missing RESEND_API_KEY (or any
+  // failure sending the email) only skips the email, it must never skip the
+  // CRM sync — and vice-versa, see the CRM sync block after this one.
   if (!process.env.RESEND_API_KEY) {
     console.log("RESEND_API_KEY not set — skipping intake notification email.");
-    return new Response("OK", { status: 200 });
-  }
-
-  let rows;
-  let subject;
-  let intro;
-
-  if (formConfig.quote) {
-    rows = renderAllFields(data, Boolean(formConfig.en));
-    subject = quoteSubject(data, formConfig.branch);
-    const from = data.source_url || formConfig.page || data.source || "—";
-    intro = formConfig.en
-      ? `Submitted from ${escapeHtml(from)}. A reply within one working day was promised.`
-      : `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em 24 horas úteis.`;
   } else {
-    rows = Object.keys(FIELD_LABELS)
-      .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
-      .map(
-        (key) =>
-          `<p style="margin:0 0 8px;"><strong>${escapeHtml(FIELD_LABELS[key])}:</strong> ${escapeHtml(
-            formatValue(data[key])
-          )}</p>`
-      )
-      .join("");
+    let rows;
+    let subject;
+    let intro;
 
-    // Each intake form names these two fields differently; fall back across them
-    // so the subject line is meaningful whichever form fired.
-    const pkg = data.package || data.type_verzekering || formatValue(data.review) || "—";
-    const name = data.full_name || data.naam || data.name || "unknown";
-    subject = `${formConfig.subjectPrefix} — ${pkg} — ${name}`;
-    intro = formConfig.intro;
-  }
+    if (formConfig.quote) {
+      rows = renderAllFields(data, Boolean(formConfig.en));
+      subject = quoteSubject(data, formConfig.branch);
+      const from = data.source_url || formConfig.page || data.source || "—";
+      intro = formConfig.en
+        ? `Submitted from ${escapeHtml(from)}. A reply within one working day was promised.`
+        : `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em 24 horas úteis.`;
+    } else {
+      rows = Object.keys(FIELD_LABELS)
+        .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
+        .map(
+          (key) =>
+            `<p style="margin:0 0 8px;"><strong>${escapeHtml(FIELD_LABELS[key])}:</strong> ${escapeHtml(
+              formatValue(data[key])
+            )}</p>`
+        )
+        .join("");
 
-  const html = `
+      // Each intake form names these two fields differently; fall back across them
+      // so the subject line is meaningful whichever form fired.
+      const pkg = data.package || data.type_verzekering || formatValue(data.review) || "—";
+      const name = data.full_name || data.naam || data.name || "unknown";
+      subject = `${formConfig.subjectPrefix} — ${pkg} — ${name}`;
+      intro = formConfig.intro;
+    }
+
+    const html = `
     <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
     <p style="font-family:Arial,sans-serif;">${intro}</p>
     <hr/>
@@ -720,18 +764,45 @@ export default async (req) => {
     )}</p>
   `;
 
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: "leads@adlerrochefort.com",
+        to: "insurance@adlerrochefort.com",
+        replyTo: data.email || undefined,
+        subject,
+        html,
+      });
+    } catch (err) {
+      console.error("Failed to send intake notification email:", err);
+      // Do not fail the submission pipeline on email errors.
+    }
+  }
+
+  // ── CRM sync (best-effort, additional to the email above) ──────────────────
+  // Netlify Forms' submission-created payload always carries `payload.id`, a
+  // UUID unique to this submission — used as-is as the idempotency key sent
+  // to the CRM (see website_leads.submission_id in the adlerpro repo). The
+  // fallback below only matters if that assumption ever breaks: it builds a
+  // deterministic key from non-sensitive fields (form, email, timestamp) so a
+  // retry of the exact same submission still collides instead of creating a
+  // duplicate lead, even though it would not catch the same person
+  // resubmitting the same form at a different time — an acceptable gap here
+  // since payload.id is expected to always be present in practice.
+  const submissionId =
+    payload.id || (data.email && payload.created_at
+      ? `noid:${formName}:${String(data.email).trim().toLowerCase()}:${payload.created_at}`
+      : undefined);
+
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: "leads@adlerrochefort.com",
-      to: "insurance@adlerrochefort.com",
-      replyTo: data.email || undefined,
-      subject,
-      html,
+    await sendLeadToCrm(formName, data, {
+      submissionId,
+      sourceUrl: data.source_url,
     });
   } catch (err) {
-    console.error("Failed to send intake notification email:", err);
-    // Do not fail the submission pipeline on email errors.
+    // sendLeadToCrm already catches its own errors; this is a last-resort net
+    // so a bug in it can never take the submission pipeline down with it.
+    console.error("[crm-sync] unexpected error:", err);
   }
 
   return new Response("OK", { status: 200 });
