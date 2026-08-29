@@ -91,6 +91,38 @@ ${rows}${viewAll}
 </section>`;
 }
 
+/**
+ * A single topic hub's editorial layout: one featured pillar story, then
+ * named groups of up to 4 cards each (no per-group sub-page, so no "Ver
+ * todos" link — unlike clusteredHome's cluster rows, which each have their
+ * own /blog/categoria/{slug}/ page). Used for the Riscos Profissionais
+ * cluster page instead of the generic flat grid every other cluster page
+ * gets, since it has enough depth now to warrant its own structure:
+ * FEATURED / UNDERSTAND THE POLICY / BY ACTIVITY / RELATED RISKS.
+ */
+export function topicHubLayout({ featured, groups }) {
+  const rows = groups
+    .filter((g) => g.items.length)
+    .map(
+      (g) => `  <div class="insights-cluster">
+    <div class="insights-cluster-head">
+      <h2>${esc(g.title)}</h2>
+    </div>
+    <div class="blog-grid">
+${g.items.map(card).join('\n\n')}
+    </div>
+  </div>`
+    )
+    .join('\n\n');
+  return `<section class="blog-section blog-section--featured" aria-label="Artigo em destaque">
+  ${featuredCard(featured)}
+</section>
+
+<section class="insights-clusters" aria-label="Temas dentro de Riscos Profissionais">
+${rows}
+</section>`;
+}
+
 export function breadcrumbHtml(items) {
   return `<nav class="breadcrumb" aria-label="Breadcrumb">${items
     .map((it, i) =>

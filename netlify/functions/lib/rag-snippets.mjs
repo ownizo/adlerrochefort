@@ -422,6 +422,24 @@ export const RAG_SNIPPETS = {
         "responder. Notificar uma circunstância à seguradora enquanto a apólice está em vigor pode " +
         "preservar a cobertura mesmo que a reclamação formal chegue mais tarde.",
     },
+    rc_capital: {
+      fonte: "/blog/rc-profissional-capital-quanto-contratar/",
+      texto:
+        "Não existe um capital universal de RC Profissional. O capital adequado depende do tipo de " +
+        "profissão, do prejuízo financeiro potencial de um erro, do perfil e das exigências contratuais " +
+        "dos clientes, da dimensão dos contratos, da exposição territorial, de o limite ser por sinistro " +
+        "ou agregado, de existirem sublimites, e de os custos de defesa jurídica consumirem ou não o " +
+        "mesmo capital da indemnização.",
+    },
+    rc_exclusoes: {
+      fonte: "/blog/rc-profissional-exclusoes/",
+      texto:
+        "As exclusões de uma apólice de RC Profissional variam consoante a seguradora e a solução — não " +
+        "há uma lista universal. Categorias comuns incluem circunstâncias já conhecidas antes da " +
+        "contratação, atos intencionais, atividade não declarada na apólice, restrições territoriais/de " +
+        "jurisdição, responsabilidade contratual acima da responsabilidade legal, coimas e penalizações, " +
+        "e atividades de risco específico que exigem soluções especializadas.",
+    },
     subseguro_capitais: {
       fonte: "/blog/subseguro-portugal/",
       texto:
