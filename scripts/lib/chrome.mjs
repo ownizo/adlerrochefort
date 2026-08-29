@@ -192,6 +192,51 @@ const EXTRA_CSS = `
 .article-toc a:hover { color: var(--primary); text-decoration: underline; }
 .article-faq { margin-top: 48px; }
 .lang-unavailable { opacity: 0.55; }
+
+/* ---------------------------------------------------------------------------
+   Insights editorial index (PT /blog/, page 1 only): one featured story,
+   then one row per strategic cluster, instead of a single flat wall of every
+   published article. Reuses .blog-card/.blog-grid throughout — only the
+   featured story and the section chrome around each cluster are new.
+   --------------------------------------------------------------------------- */
+.blog-section--featured { padding-bottom: 0; }
+.blog-card--featured {
+  display: block; padding: 0; border: none; background: var(--white);
+}
+.blog-card--featured:hover { background: var(--white); }
+.blog-card--featured .blog-card-img {
+  width: 100%; height: 320px; min-width: 0; border-radius: 0;
+}
+.blog-card--featured .blog-card-tag {
+  position: static; display: inline-block; width: auto; text-align: left;
+  font-size: 10px; padding: 6px 14px; margin: 24px 0 0 24px; border-radius: 20px;
+}
+.blog-card--featured .blog-card-body { padding: 12px 24px 28px; gap: 8px; }
+.blog-card--featured .blog-card-title {
+  font-size: clamp(24px, 3.2vw, 34px); font-weight: 700; line-height: 1.2;
+}
+.blog-card--featured .blog-card-excerpt { font-size: 16px; max-width: 640px; }
+.insights-clusters { max-width: 1400px; margin: 0 auto; padding: 8px 60px 40px; }
+.insights-cluster { margin-bottom: 48px; }
+.insights-cluster-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 16px; margin-bottom: 4px; padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+}
+.insights-cluster-head h2 {
+  font-size: 20px; font-weight: 700; color: var(--ink); margin: 0;
+}
+.insights-cluster-link {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--accent); text-decoration: none; white-space: nowrap;
+}
+.insights-cluster-link:hover { text-decoration: underline; }
+.insights-view-all { text-align: center; margin-top: 8px; }
+.insights-view-all a {
+  display: inline-block; padding: 12px 28px; border: 1px solid var(--border);
+  color: var(--ink); text-decoration: none; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.insights-view-all a:hover { border-color: var(--primary); color: var(--primary); }
 @media (max-width: 1024px) {
   .lp-hero-inner { grid-template-columns: 1fr; }
 }
@@ -199,6 +244,10 @@ const EXTRA_CSS = `
   .page-head, .breadcrumb, .category-nav, .pagination, .lp-section { padding-left: 24px; padding-right: 24px; }
   .lp-hero { padding: 70px 24px 50px; }
   .lp-form-grid { grid-template-columns: 1fr; }
+  .insights-clusters { padding: 8px 24px 32px; }
+  .blog-card--featured .blog-card-img { height: 200px; }
+  .blog-card--featured .blog-card-tag { margin-left: 16px; }
+  .blog-card--featured .blog-card-body { padding: 12px 16px 24px; }
 }
 `;
 
@@ -249,6 +298,51 @@ export const GA = `<script async src="https://www.googletagmanager.com/gtag/js?i
 
 export const PAGE_SCRIPTS = `<script>
   function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
+
+  // Desktop mega menu — click-to-toggle, keyboard + click-outside + Escape.
+  // Same generic, selector-based wiring as public/index.html; needed here
+  // because CHROME.pt.nav/mobileNav now carry the mega-menu/accordion markup
+  // scraped from the homepage, but that markup's own interactivity lives in
+  // the homepage's <script>, which generated pages never inherit.
+  (function () {
+    var triggers = Array.prototype.slice.call(document.querySelectorAll('.nav-trigger'));
+    function closeAll(except) {
+      triggers.forEach(function (t) {
+        if (t === except) return;
+        t.setAttribute('aria-expanded', 'false');
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = true;
+      });
+    }
+    triggers.forEach(function (trigger) {
+      var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      if (!panel) return;
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        closeAll(trigger);
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        panel.hidden = isOpen;
+      });
+    });
+    document.addEventListener('click', function () { closeAll(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
+  })();
+
+  // Mobile accordion — click-to-toggle, ARIA state.
+  (function () {
+    var accTriggers = Array.prototype.slice.call(document.querySelectorAll('.mobile-accordion-trigger'));
+    accTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
+        if (!panel) return;
+        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
+        trigger.setAttribute('aria-expanded', String(!isOpen));
+        panel.hidden = isOpen;
+      });
+    });
+  })();
+
   (function () {
     if (!localStorage.getItem('cookie_consent')) {
       document.getElementById('cookieBanner').classList.add('show');

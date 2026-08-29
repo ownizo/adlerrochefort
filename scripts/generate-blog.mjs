@@ -30,12 +30,17 @@ import {
   breadcrumbLd,
   ORGANIZATION,
 } from './lib/chrome.mjs';
-import { grid, breadcrumbHtml, pagination, metaHead, CTA_PT, CTA_EN } from './lib/blog-parts.mjs';
+import { grid, clusteredHome, breadcrumbHtml, pagination, metaHead, CTA_PT, CTA_EN } from './lib/blog-parts.mjs';
 
 const PER_PAGE = 12;
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
 const CATEGORIES = data.categories.pt;
 const EN_CATEGORIES = data.categories.en;
+// New PT strategic taxonomy (Private Clients / Riscos Profissionais / Empresas
+// / Guias de Seguros) — separate from CATEGORIES so every existing
+// /blog/categoria/{slug}/ URL keeps working unchanged. See data/articles.json
+// for the article -> cluster assignment (each PT article's `cluster` field).
+const CLUSTERS = data.clusters.pt;
 
 const byDateDesc = (a, b) => (b.published || '').localeCompare(a.published || '');
 const ptArticles = data.articles.pt.filter((a) => a.status === 'published').sort(byDateDesc);
@@ -52,8 +57,7 @@ const chunk = (arr) => {
 // Copy
 // ---------------------------------------------------------------------------
 
-const BLOG_INTRO = `<p>Esta é a secção de análise da Adler &amp; Rochefort. Reunimos aqui o que aprendemos a ler nas apólices que passam pelas nossas mãos: as coberturas que a lei portuguesa impõe, as que as seguradoras oferecem como opção e as que quase ninguém contrata até precisar delas. Escrevemos sobre seguro automóvel e TVDE, hotelaria e alojamento local, riscos empresariais, habitação e saúde — sempre com o enquadramento legal aplicável em Portugal e a referência ao diploma ou norma que o sustenta.</p>
-<p>Não publicamos comparações de preços nem rankings de seguradoras. Publicamos o que muda a decisão: uma exclusão redigida de forma ambígua, um capital seguro desatualizado, uma atividade declarada que já não corresponde à que exerce. Cada artigo indica a data de publicação e, quando o enquadramento legal mudou entretanto, a data da última atualização — a legislação de seguros em Portugal altera-se com frequência e um texto sem data vale pouco. Se um artigo lhe levantar uma dúvida sobre a sua própria apólice, fale connosco — somos um mediador de seguros registado na ASF com o n.º 425591790/3 e a análise não tem custo.</p>`;
+const BLOG_INTRO = `<p>Analisamos coberturas, exclusões, capitais, responsabilidade e situações de sinistro para ajudar particulares, profissionais e empresas a compreender o que uma apólice realmente protege. Sem comparações de preços nem rankings de seguradoras — somos um mediador registado na ASF com o n.º 425591790/3.</p>`;
 
 const CATEGORY_INTROS = {
   'seguros-auto-tvde': `<p>O seguro automóvel é o único seguro obrigatório para quem circula em Portugal, mas a obrigação legal — responsabilidade civil perante terceiros — é também a cobertura mais estreita que existe. Tudo o resto (danos próprios, quebra isolada de vidros, assistência em viagem, veículo de substituição, proteção do condutor) é facultativo e é aí que as apólices se distinguem umas das outras.</p>
@@ -129,6 +133,47 @@ const CATEGORY_META = {
   },
 };
 
+// Intro copy and meta for the four new strategic cluster pages
+// (/blog/categoria/private-clients/, /riscos-profissionais/, /empresas/,
+// /guias-de-seguros/). These sit alongside CATEGORY_INTROS/CATEGORY_META
+// above — not a replacement — so the old seven category URLs keep their own
+// content unchanged.
+const CLUSTER_INTROS = {
+  'private-clients': `<p>Um património composto por vários imóveis, uma coleção, um automóvel clássico ou uma embarcação raramente está protegido por uma única apólice bem desenhada — está protegido por várias apólices contratadas em alturas diferentes, com datas de renovação diferentes e, com frequência, capitais desatualizados. O risco não é a ausência de seguro; é a fragmentação: sobreposições que pagam prémio a mais, e lacunas que só aparecem no sinistro.</p>
+<p>Aqui não falamos de patrimónios pelo seu valor, mas pela complexidade do risco que representam — a avaliação correta de bens, a atualização de capitais seguros, a articulação entre apólices e a coordenação de sinistros que envolvem mais do que uma seguradora.</p>`,
+
+  'riscos-profissionais': `<p>A responsabilidade civil profissional cobre o erro técnico, a omissão e o conselho mal dado — não o acidente. É por isso que a análise de uma apólice de RC Profissional se faz por outros critérios: o âmbito de cobertura, os limites e sublimites, as franquias, o âmbito territorial, e sobretudo o regime claims-made, em que o que importa não é quando o erro aconteceu mas quando a reclamação é feita e comunicada à seguradora.</p>
+<p>Reunimos aqui as análises sobre responsabilidade civil profissional, erros e omissões, responsabilidade de administradores e gerentes (D&amp;O) e riscos cibernéticos — para quem presta serviços profissionais e precisa de saber exatamente o que a apólice cobre antes de precisar dela.</p>`,
+
+  empresas: `<p>Proteger uma empresa não é somar seguros até cobrir todas as hipóteses; é identificar onde está a exposição real — património, interrupção de atividade, responsabilidade civil, frota, obra, capital humano — e dimensionar cada cobertura em função dela. Um multirriscos com capital desatualizado ou uma apólice de perda de exploração mal calculada custam mais no sinistro do que qualquer prémio poupado na contratação.</p>
+<p>Nesta área tratamos os riscos que uma empresa portuguesa efetivamente enfrenta: multirriscos e capitais de reconstrução, perda de exploração, responsabilidade civil de exploração, frotas, obra e construção, e a revisão periódica que evita que a apólice fique desatualizada em relação ao negócio.</p>`,
+
+  'guias-de-seguros': `<p>Nem todo o conteúdo do nosso arquivo se enquadra numa das três áreas estratégicas acima — e não devia. Aqui reunimos os guias mais gerais sobre seguro automóvel e TVDE, habitação, condomínios, saúde e alojamento local: conteúdo útil, muitas vezes o ponto de partida antes de perceber onde encaixa uma situação mais complexa.</p>`,
+};
+
+const CLUSTER_META = {
+  'private-clients': {
+    title: 'Private Clients | Insights | Adler & Rochefort',
+    description:
+      'Análises sobre a proteção de patrimónios com riscos complexos: imóveis de elevado valor, arte, coleções, automóveis clássicos e subseguro.',
+  },
+  'riscos-profissionais': {
+    title: 'Riscos Profissionais | Insights | Adler & Rochefort',
+    description:
+      'Responsabilidade civil profissional, claims-made, limites, franquias, erros e omissões, D&O e riscos cibernéticos — o que analisar antes de contratar.',
+  },
+  empresas: {
+    title: 'Seguros Empresariais | Insights | Adler & Rochefort',
+    description:
+      'Multirriscos, perda de exploração, responsabilidade civil, frotas e obra: como estruturar a proteção de uma empresa em função do risco real.',
+  },
+  'guias-de-seguros': {
+    title: 'Guias de Seguros | Insights | Adler & Rochefort',
+    description:
+      'Guias práticos sobre seguro automóvel e TVDE, habitação, condomínios, saúde e alojamento local em Portugal.',
+  },
+};
+
 // ---------------------------------------------------------------------------
 // PT — /blog/ and /blog/pagina/N/
 // ---------------------------------------------------------------------------
@@ -142,6 +187,22 @@ const categoryNav = (activeSlug) => {
     }),
   ];
   return `<nav class="category-nav" aria-label="Categorias">${chips.join('')}</nav>`;
+};
+
+// Primary chip bar for the PT index and the four new cluster pages —
+// Private Clients / Riscos Profissionais / Empresas / Guias de Seguros. The
+// old seven-category chip bar (categoryNav, above) stays exactly as it was
+// and keeps serving the old category pages; it just isn't the first thing a
+// visitor sees on /blog/ any more.
+const clusterNav = (activeSlug) => {
+  const chips = [
+    `<a class="category-chip${activeSlug ? '' : ' active'}" href="/blog/">Todos<span class="category-chip-count">${ptArticles.length}</span></a>`,
+    ...CLUSTERS.map((c) => {
+      const n = ptArticles.filter((a) => a.cluster === c.slug).length;
+      return `<a class="category-chip${activeSlug === c.slug ? ' active' : ''}" href="/blog/categoria/${c.slug}/">${esc(c.short)}<span class="category-chip-count">${n}</span></a>`;
+    }),
+  ];
+  return `<nav class="category-nav" aria-label="Áreas de especialização">${chips.join('')}</nav>`;
 };
 
 const itemListLd = (items, name) => ({
@@ -169,6 +230,10 @@ async function buildListing({
   cta,
   collectionName,
   feed,
+  // Optional: replaces grid(pages[0]) on page 1 only (pagination pages 2+
+  // keep the plain flat grid). Used once, for the PT Insights index, to
+  // render the featured-story + cluster-rows layout instead of a flat wall.
+  page1Body,
 }) {
   const pages = chunk(articles);
   for (let i = 0; i < pages.length; i++) {
@@ -192,8 +257,8 @@ async function buildListing({
   <div class="page-intro">${n === 1 ? intro : `<p>${esc(collectionName)}${suffix}.</p>`}</div>
 </header>`,
       nav,
-      grid(pages[i]),
-      pagination(n, pages.length, (x) => (x === 1 ? basePath : pageHref(x)), lang),
+      n === 1 && page1Body ? page1Body : grid(pages[i]),
+      n === 1 && page1Body ? '' : pagination(n, pages.length, (x) => (x === 1 ? basePath : pageHref(x)), lang),
       cta,
     ].join('\n\n');
 
@@ -210,25 +275,49 @@ async function buildListing({
 
 await writeSharedStylesheet();
 
+// The featured story: prefer whichever real, substantive strategic-cluster
+// piece exists, in the brief's own priority order (Subseguro > Claims-made >
+// Private Clients pillar > RC Professional), falling back to the newest
+// article if none of those slugs exist yet at generation time.
+const FEATURED_CANDIDATES = [
+  'claims-made-rc-profissional',
+  'seguros-private-clients-portugal',
+  'subseguro-portugal',
+  'responsabilidade-civil-profissional',
+];
+const featuredArticle =
+  FEATURED_CANDIDATES.map((slug) => ptArticles.find((a) => a.slug === slug)).find(Boolean) || ptArticles[0];
+
+const clusterPreview = CLUSTERS.map((c) => ({
+  slug: c.slug,
+  title: c.title,
+  items: ptArticles.filter((a) => a.cluster === c.slug && a.slug !== featuredArticle.slug).slice(0, 3),
+}));
+
 const ptPages = await buildListing({
   articles: ptArticles,
   basePath: '/blog/',
   pageHref: (n) => `/blog/pagina/${n}/`,
-  h1: 'Insights &mdash; <em>Análises sobre seguros em Portugal</em>',
+  h1: 'Risco explicado.<br><em>Antes de se tornar um problema.</em>',
   intro: BLOG_INTRO,
   meta: {
-    title: 'Insights — Análises sobre seguros em Portugal | Adler & Rochefort',
+    title: 'Insights — Risco, coberturas e responsabilidade explicados | Adler & Rochefort',
     description:
-      'Análises sobre seguros em Portugal: obrigações legais, coberturas essenciais e exclusões — automóvel e TVDE, alojamento local, empresas, habitação e saúde.',
+      'Análises sobre risco, património e seguros em Portugal: coberturas, exclusões, capitais e responsabilidade — para Private Clients, Riscos Profissionais e Empresas.',
   },
   crumbs: [
     { name: 'Início', url: '/' },
     { name: 'Insights', url: '/blog/' },
   ],
-  nav: categoryNav(null),
+  nav: clusterNav(null),
   lang: 'pt',
   cta: CTA_PT,
   collectionName: 'Insights',
+  page1Body: clusteredHome({
+    featured: featuredArticle,
+    clusters: clusterPreview,
+    viewAllHref: '/blog/pagina/2/',
+  }),
 });
 
 // ---------------------------------------------------------------------------
@@ -253,6 +342,51 @@ for (const c of CATEGORIES) {
       { name: c.title, url: `/blog/categoria/${c.slug}/` },
     ],
     nav: categoryNav(c.slug),
+    lang: 'pt',
+    cta: CTA_PT,
+    collectionName: c.title,
+  });
+}
+
+// ---------------------------------------------------------------------------
+// PT cluster pages — the four new strategic areas (Private Clients / Riscos
+// Profissionais / Empresas / Guias de Seguros). These are ADDITIONAL URLs;
+// the loop above keeps generating the seven original category pages
+// unchanged, so no existing /blog/categoria/{slug}/ URL is touched.
+// ---------------------------------------------------------------------------
+
+// Guias de Seguros absorbs the old general-interest categories (Auto/TVDE,
+// Habitação, Condomínios, Saúde, Tecnologia) — surface them for drill-down
+// browsing per brief §7 ("old taxonomy may remain as secondary tags").
+const GUIAS_SUBCATEGORIES = ['seguros-auto-tvde', 'habitacao-particulares', 'condominios', 'seguros-saude', 'tecnologia-parcerias'];
+
+for (const c of CLUSTERS) {
+  const items = ptArticles.filter((a) => a.cluster === c.slug);
+  const landing = c.landing
+    ? `\n<p><strong>Precisa de uma proposta?</strong> Veja a página de <a href="${c.landing}">${esc(c.landingLabel)}</a>.</p>`
+    : '';
+  const subLinks =
+    c.slug === 'guias-de-seguros'
+      ? `\n<p class="page-intro-links">${GUIAS_SUBCATEGORIES.map((slug) => {
+          const cat = CATEGORIES.find((cc) => cc.slug === slug);
+          return cat ? `<a href="/blog/categoria/${slug}/">${esc(cat.short)}</a>` : '';
+        })
+          .filter(Boolean)
+          .join(' &middot; ')}</p>`
+      : '';
+  await buildListing({
+    articles: items,
+    basePath: `/blog/categoria/${c.slug}/`,
+    pageHref: (n) => `/blog/categoria/${c.slug}/pagina/${n}/`,
+    h1: esc(c.title),
+    intro: CLUSTER_INTROS[c.slug] + landing + subLinks,
+    meta: CLUSTER_META[c.slug],
+    crumbs: [
+      { name: 'Início', url: '/' },
+      { name: 'Insights', url: '/blog/' },
+      { name: c.title, url: `/blog/categoria/${c.slug}/` },
+    ],
+    nav: clusterNav(c.slug),
     lang: 'pt',
     cta: CTA_PT,
     collectionName: c.title,

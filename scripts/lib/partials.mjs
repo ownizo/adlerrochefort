@@ -293,6 +293,7 @@ const CHROME_SELECTORS = [
   /^\.lang-switcher/,
   /^\.lang-unavailable/,
   /^\.mobile-nav/,
+  /^\.mobile-accordion-/,
   /^\.mobile-lang-switcher/,
   /^footer\b/,
   /^\.footer-/,
