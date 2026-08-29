@@ -45,9 +45,17 @@ export function buildCrmLeadPayload(formName, data, { submissionId, sourceUrl } 
   if (!name) return { payload: null, skippedReason: "missing_name" };
   if (!isValidEmail(email)) return { payload: null, skippedReason: "missing_or_invalid_email" };
 
+  // `language` != `market`: várias páginas em inglês (ou NL/FR/DE) têm
+  // mercado PT — ver lead-classification.mjs FORM_CLASSIFICATION. Quando a
+  // classificação já sabe o idioma da página (páginas EN fixas), usa-o;
+  // senão cai no campo `lang` submetido pelas landing pages NL/FR/DE
+  // (public/nl|fr|de/*), normalizado para o mesmo formato. Nunca gravado no
+  // campo `market`.
+  const language = classification.language || (data?.lang ? String(data.lang).trim().toUpperCase().slice(0, 5) : undefined);
+
   const metadata = {};
   if (classification.branchLabel) metadata.branchLabel = classification.branchLabel;
-  if (data?.lang) metadata.lang = String(data.lang).trim().slice(0, 20);
+  if (language) metadata.language = language;
 
   const payload = {
     submissionId,

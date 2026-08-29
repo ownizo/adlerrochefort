@@ -302,7 +302,9 @@ const QUOTE_LABELS_EN = {
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
-const HANDLED_FORMS = {
+// Exported so lead-classification.test.mjs can assert every key here also has
+// a CRM classification decision — see "CRM coverage" in that test file.
+export const HANDLED_FORMS = {
   "relocation-services": {
     heading: "New relocation &amp; company services enquiry",
     intro: "A new submission was received from the Settle in Portugal landing page.",
@@ -374,6 +376,35 @@ const HANDLED_FORMS = {
     heading: "Novo pedido de análise — RC Profissional",
     page: "/seguros/responsabilidade-civil-profissional/",
     branch: "RC Profissional",
+  },
+  // RC niche cluster (TNC, Massagistas, Profissões Específicas, Eventos):
+  // these four had no HANDLED_FORMS entry at all before this pass — visitors
+  // filling them in got no email notification and no CRM sync, since a form
+  // not listed here is dropped at the "Ignored" early-return above. Added
+  // now, same shape as cotacao-rc-profissional right above.
+  "cotacao-rc-tnc": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Terapêuticas Não Convencionais",
+    page: "/seguros/rc-terapeuticas-nao-convencionais/",
+    branch: "RC Terapêuticas Não Convencionais",
+  },
+  "cotacao-rc-massagistas": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Massagistas",
+    page: "/seguros/rc-massagistas/",
+    branch: "RC Massagistas",
+  },
+  "cotacao-rc-profissoes-especificas": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Profissões Específicas",
+    page: "/seguros/rc-profissoes-especificas/",
+    branch: "RC Profissões Específicas",
+  },
+  "cotacao-rc-eventos": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Organização de Eventos",
+    page: "/seguros/responsabilidade-civil-eventos/",
+    branch: "RC Organização de Eventos",
   },
   "quote-tvde-en": {
     quote: true,

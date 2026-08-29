@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { classifySubmission, extractContact, CRM_HANDLED_FORMS } from "./lead-classification.mjs";
+import { HANDLED_FORMS } from "../submission-created.mjs";
 
 test("fixed-branch individual forms classify as individual", () => {
   assert.equal(classifySubmission("cotacao-habitacao", {}).entityType, "individual");
@@ -172,4 +173,234 @@ test("CRM_HANDLED_FORMS matches exactly the forms this function classifies", () 
   assert.ok(CRM_HANDLED_FORMS.has("cotacao-frota"));
   assert.ok(CRM_HANDLED_FORMS.has("auditoria-condominio"));
   assert.equal(CRM_HANDLED_FORMS.has("insurance-chat"), false);
+});
+
+// ── Coverage: every HANDLED_FORMS key must have an explicit CRM decision ────
+// This is the guard requested to stop the exact failure mode we hit with the
+// rebase: a form is added to HANDLED_FORMS (so its email works), but nobody
+// updates FORM_CLASSIFICATION, so the CRM silently never receives it. A
+// classification of 'business'/'condominium'/'ambiguous' is a perfectly fine,
+// deliberate answer — what fails this test is a form with NO answer at all.
+test("CRM coverage: every form in HANDLED_FORMS (email flow) has an explicit CRM classification", () => {
+  const missing = Object.keys(HANDLED_FORMS).filter((formName) => !CRM_HANDLED_FORMS.has(formName));
+  assert.deepEqual(
+    missing,
+    [],
+    `Form(s) wired to the email flow but missing from lead-classification.mjs FORM_CLASSIFICATION: ${missing.join(", ")}. ` +
+      "Add an entry (even if it resolves to 'business'/'condominium'/'ambiguous') before merging.",
+  );
+});
+
+// And the reverse direction — a stale classification entry for a form that
+// was removed/renamed should not silently linger unnoticed either.
+test("CRM coverage: FORM_CLASSIFICATION has no stale entries for forms no longer in HANDLED_FORMS", () => {
+  const stale = [...CRM_HANDLED_FORMS].filter((formName) => !(formName in HANDLED_FORMS));
+  assert.deepEqual(stale, [], `Classified form(s) no longer present in HANDLED_FORMS: ${stale.join(", ")}`);
+});
+
+// ── Fail-safe: an entirely unknown form (never added to either structure)
+// must never resolve to 'individual' just because it looks like a person's
+// name+email submission. This is the runtime backstop the coverage test
+// above cannot fully replace (it only catches drift between the two maps,
+// not a form nobody wired up anywhere yet). ─────────────────────────────────
+test("fail-safe: a completely unknown form is always ambiguous, never individual, even with name+email present", () => {
+  const result = classifySubmission("some-form-nobody-registered-anywhere", {
+    name: "Maria Silva",
+    email: "maria@example.com",
+  });
+  assert.equal(result.entityType, "ambiguous");
+});
+
+// ── RC Profissional dedicated form (cotacao-rc-profissional) ────────────────
+test("cotacao-rc-profissional: individual professional with no business signal", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-profissional", {
+      nome: "Rui Almeida",
+      email: "rui@example.com",
+      rcp_profissao: "Engenharia",
+    }).entityType,
+    "individual",
+  );
+  // The dual-purpose "empresa ou nome individual" field: a personal name (or
+  // "N/A"/empty) here must NOT be treated as a business signal by itself —
+  // only an actual company-shaped value should.
+  assert.equal(
+    classifySubmission("cotacao-rc-profissional", {
+      nome: "Rui Almeida",
+      email: "rui@example.com",
+      rcp_profissao: "Consultoria",
+      empresa: "Rui Almeida",
+    }).entityType,
+    "individual",
+  );
+});
+
+test("cotacao-rc-profissional: business signal in `empresa` or in the profession text", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-profissional", {
+      nome: "Rui Almeida",
+      email: "rui@example.com",
+      rcp_profissao: "Consultoria",
+      empresa: "Almeida Consultoria, Lda",
+    }).entityType,
+    "business",
+  );
+  assert.equal(
+    classifySubmission("cotacao-rc-profissional", {
+      nome: "Rui Almeida",
+      email: "rui@example.com",
+      rcp_profissao: "Sociedade de Advocacia Almeida & Associados",
+    }).entityType,
+    "business",
+  );
+});
+
+// ── TNC / Massagistas — always individual, no signal field exists at all ──
+test("cotacao-rc-tnc and cotacao-rc-massagistas: always individual (no business-signal field on these forms)", () => {
+  for (const activity of ["Acupunctura", "Naturopatia", "Medicina Tradicional Chinesa", "Osteopatia"]) {
+    assert.equal(
+      classifySubmission("cotacao-rc-tnc", {
+        nome: "Sofia Martins",
+        email: "sofia@example.com",
+        tnc_atividade: activity,
+      }).entityType,
+      "individual",
+      `expected TNC activity "${activity}" to classify as individual`,
+    );
+  }
+  assert.equal(
+    classifySubmission("cotacao-rc-massagistas", {
+      nome: "Sofia Martins",
+      email: "sofia@example.com",
+      mas_tipo: "Massagem terapêutica",
+    }).entityType,
+    "individual",
+  );
+});
+
+// ── Profissões Específicas — contextual, same pattern as RC Profissional ──
+test("cotacao-rc-profissoes-especificas: individual when no business signal", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-profissoes-especificas", {
+      nome: "Carla Nunes",
+      email: "carla@example.com",
+      pe_atividade: "Consultoria",
+    }).entityType,
+    "individual",
+  );
+});
+
+test("cotacao-rc-profissoes-especificas: business signal via pe_empresa, pe_atividade or pe_outra", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-profissoes-especificas", {
+      nome: "Carla Nunes",
+      email: "carla@example.com",
+      pe_atividade: "Sociedade de Advogados",
+    }).entityType,
+    "business",
+  );
+  assert.equal(
+    classifySubmission("cotacao-rc-profissoes-especificas", {
+      nome: "Carla Nunes",
+      email: "carla@example.com",
+      pe_atividade: "Outra profissão",
+      pe_empresa: "Nunes & Associados, Lda",
+    }).entityType,
+    "business",
+  );
+});
+
+// ── Organização de Eventos — contextual, defaults to ambiguous (never
+// individual) when there is genuinely no signal, per explicit requirement ──
+test("cotacao-rc-eventos: ambiguous when there is no business signal (organiser type genuinely unknown)", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-eventos", {
+      nome: "Marta Costa",
+      email: "marta@example.com",
+      ev_tipo: "Casamento",
+    }).entityType,
+    "ambiguous",
+  );
+});
+
+test("cotacao-rc-eventos: business when the name/organiser field carries a company signal", () => {
+  assert.equal(
+    classifySubmission("cotacao-rc-eventos", {
+      nome: "Eventos Almeida, Lda",
+      email: "geral@eventosalmeida.pt",
+      ev_tipo: "Feira",
+    }).entityType,
+    "business",
+  );
+});
+
+// ── Private Clients / Landlord (PT) ─────────────────────────────────────────
+test("private-clients-review (PT) is always individual", () => {
+  const result = classifySubmission("private-clients-review", { nome: "Beatriz Lopes", email: "beatriz@example.com" });
+  assert.equal(result.entityType, "individual");
+  assert.equal(result.market, "PT");
+  assert.equal(result.product, "private-clients");
+});
+
+test("landlord-insurance-quote (PT market, EN language) is individual, not business, and market is PT not EN", () => {
+  const result = classifySubmission("landlord-insurance-quote", { name: "James Carter", email: "james@example.com" });
+  assert.equal(result.entityType, "individual");
+  assert.equal(result.market, "PT");
+  assert.equal(result.language, "EN");
+});
+
+// ── Re-confirm the business/condominium forms are unaffected by this pass ──
+test("cotacao-frota and cotacao-empresarial are still business; auditoria-condominio still condominium", () => {
+  assert.equal(classifySubmission("cotacao-frota", {}).entityType, "business");
+  assert.equal(classifySubmission("cotacao-empresarial", {}).entityType, "business");
+  assert.equal(classifySubmission("auditoria-condominio", {}).entityType, "condominium");
+  assert.equal(classifySubmission("condominium-audit", {}).entityType, "condominium");
+});
+
+// ── market vs. language: no EN-language PT-market form leaks "EN" into market
+test("no form ever resolves market to 'EN' — EN is a language, not a market", () => {
+  for (const formName of Object.keys(HANDLED_FORMS)) {
+    // Skip forms with no fixed sample data need — every classification is
+    // exercised with an empty payload here (contextual/branch ones just fall
+    // back to their base market or undefined, never 'EN').
+    const result = classifySubmission(formName, {});
+    assert.notEqual(result.market, "EN", `${formName} resolved market to 'EN' — market/language must not be conflated`);
+  }
+});
+
+// ── Spain cluster ────────────────────────────────────────────────────────
+test("Spain forms classify as individual with market ES", () => {
+  const spainForms = [
+    "expat-insurance-review-spain",
+    "home-insurance-quote-spain",
+    "landlord-insurance-quote-spain",
+    "health-insurance-quote-spain",
+    "car-insurance-quote-spain",
+    "life-insurance-review-spain",
+    "mortgage-protection-review-spain",
+    "private-client-review-spain",
+  ];
+  for (const formName of spainForms) {
+    const result = classifySubmission(formName, { name: "Laura Fernández", email: "laura@example.com" });
+    assert.equal(result.entityType, "individual", `${formName} should be individual`);
+    assert.equal(result.market, "ES", `${formName} should have market ES`);
+  }
+});
+
+// ── international-insurance-review: market is derived from `country`,
+// language (English copy) never overrides it. ──────────────────────────────
+test("international-insurance-review: market PT or ES depending on the selected country, never EN", () => {
+  const pt = classifySubmission("international-insurance-review", { name: "Anna Weber", email: "anna@example.com", country: "Portugal" });
+  assert.equal(pt.entityType, "individual");
+  assert.equal(pt.market, "PT");
+  assert.equal(pt.language, "EN");
+
+  const es = classifySubmission("international-insurance-review", { name: "Anna Weber", email: "anna@example.com", country: "Spain" });
+  assert.equal(es.entityType, "individual");
+  assert.equal(es.market, "ES");
+});
+
+test("international-insurance-review: unrecognized/missing country leaves market undefined rather than guessing", () => {
+  const result = classifySubmission("international-insurance-review", { name: "Anna Weber", email: "anna@example.com" });
+  assert.equal(result.market, undefined);
 });

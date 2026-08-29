@@ -130,7 +130,7 @@ test("Responsabilidade Civil Profissional syncs as individual for a specific-pro
   });
   assert.equal(skippedReason, null);
   assert.ok(payload);
-  assert.equal(payload.product, "professional-indemnity");
+  assert.equal(payload.product, "professional-liability");
 });
 
 test("Responsabilidade Civil Profissional is skipped (no payload) when the submission is clearly a business", () => {
@@ -200,4 +200,66 @@ test("sendLeadToCrm never throws when the CRM rejects with 401 (wrong secret)", 
     global.fetch = originalFetch;
   }
   assert.equal(calledAuthHeader, "Bearer wrong-secret");
+});
+
+test("Spain forms produce a payload with market ES and language EN in metadata, never market EN", () => {
+  const { payload, skippedReason } = buildCrmLeadPayload("home-insurance-quote-spain", {
+    name: "Laura Fernández",
+    email: "laura@example.com",
+    country: "Spain",
+  });
+  assert.equal(skippedReason, null);
+  assert.equal(payload.market, "ES");
+  assert.equal(payload.product, "home");
+  assert.deepEqual(payload.metadata, { language: "EN" });
+});
+
+test("international-insurance-review payload carries market PT or ES from the country field, language always in metadata", () => {
+  const pt = buildCrmLeadPayload("international-insurance-review", {
+    name: "Anna Weber",
+    email: "anna@example.com",
+    country: "Portugal",
+  });
+  assert.equal(pt.payload.market, "PT");
+  assert.deepEqual(pt.payload.metadata, { language: "EN" });
+
+  const es = buildCrmLeadPayload("international-insurance-review", {
+    name: "Anna Weber",
+    email: "anna@example.com",
+    country: "Spain",
+  });
+  assert.equal(es.payload.market, "ES");
+});
+
+test("NL/FR/DE forms carry their submitted `lang` field into metadata.language, market stays PT", () => {
+  const { payload } = buildCrmLeadPayload("lead-nl", {
+    naam: "Jan Jansen",
+    email: "jan@example.nl",
+    lang: "nl",
+  });
+  assert.equal(payload.market, "PT");
+  assert.deepEqual(payload.metadata, { language: "NL" });
+});
+
+test("cotacao-rc-eventos never produces a payload without a business signal (ambiguous, not individual)", () => {
+  const result = buildCrmLeadPayload("cotacao-rc-eventos", {
+    nome: "Marta Costa",
+    email: "marta@example.com",
+    ev_tipo: "Casamento",
+  });
+  assert.equal(result.payload, null);
+  assert.equal(result.skippedReason, "entity_type_ambiguous");
+});
+
+test("PRIVACY: free-text notes/description fields on the new RC forms never reach the CRM payload", () => {
+  const { payload, skippedReason } = buildCrmLeadPayload("cotacao-rc-massagistas", {
+    nome: "Sofia Martins",
+    email: "sofia@example.com",
+    mas_tipo: "Massagem terapêutica",
+    mensagem: "Tenho uma lesão no ombro direito e tomo anti-inflamatórios diariamente",
+  });
+  assert.equal(skippedReason, null);
+  assert.ok(payload);
+  assert.equal(JSON.stringify(payload).includes("ombro"), false);
+  assert.equal(JSON.stringify(payload).includes("anti-inflamatórios"), false);
 });
