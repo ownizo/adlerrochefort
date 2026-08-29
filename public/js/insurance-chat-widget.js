@@ -89,7 +89,17 @@
     "#ar-chat-input:focus{outline:none;border-color:#4A5A45;}" +
     "#ar-chat-send{background:#4A5A45;color:#fff;border:none;border-radius:20px;padding:0 18px;font-size:13.5px;font-weight:600;cursor:pointer;}" +
     "#ar-chat-send:disabled{opacity:.5;cursor:default;}" +
-    "@media (max-width:480px){#ar-chat-panel{right:10px;left:10px;width:auto;bottom:calc(80px + var(--ar-bottom-inset, 0px));}#ar-chat-launcher{right:10px;bottom:calc(10px + var(--ar-bottom-inset, 0px));}}";
+    // Phase (mobile UX fix): the launcher is a full desktop-style pill at
+    // every width, which on a 390px phone sits directly beside — often
+    // felt as "on top of" — a sticky commercial CTA bar the same height.
+    // Below 480px it shrinks to a smaller pill (less padding, smaller
+    // type) rather than the full-size one, so the two controls read as
+    // clearly separate, appropriately-sized actions instead of competing
+    // for the same strip of screen. Text stays rather than icon-only —
+    // "Chat with us"/"Fale connosco" are already short, and a label is
+    // clearer than a bare icon for a first-time visitor.
+    "@media (max-width:480px){#ar-chat-panel{right:10px;left:10px;width:auto;bottom:calc(80px + var(--ar-bottom-inset, 0px));}" +
+    "#ar-chat-launcher{right:10px;bottom:calc(10px + var(--ar-bottom-inset, 0px));padding:10px 16px;font-size:13px;gap:6px;}}";
 
   var styleTag = document.createElement("style");
   styleTag.textContent = CSS;

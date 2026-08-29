@@ -105,8 +105,32 @@
         bar.classList.remove('show');
         dismissed = true;
         try { sessionStorage.setItem('arStickyClosed', '1'); } catch (err) {}
+        syncBottomInset();
       });
     }
+
+    // Publishes this bar's own height as --ar-bottom-inset, the same
+    // mechanism the commercial landing pages' sticky quote bar
+    // (ar-quote-cta.js) already uses, so insurance-chat-widget.js's
+    // launcher sits above whichever strip actually owns the bottom edge
+    // instead of on top of it. Was missing here — the two sticky-CTA
+    // systems (this article one, and the landing pages' .lp-sticky-cta)
+    // grew separately and only one of them fed the launcher's inset.
+    // The cookie banner is handled the same way ar-quote-cta.js handles
+    // it: while the banner is up the launcher hides itself entirely (see
+    // insurance-chat-widget.js's own stylesheet), so the inset only ever
+    // needs to answer for this bar.
+    var cookieBanner = document.getElementById('cookieBanner');
+    function syncBottomInset() {
+      var bannerUp = !!(cookieBanner && cookieBanner.classList.contains('show'));
+      var shown = bar.classList.contains('show') && !bannerUp;
+      var inset = shown ? bar.getBoundingClientRect().height : 0;
+      document.documentElement.style.setProperty('--ar-bottom-inset', Math.round(inset) + 'px');
+    }
+    if (cookieBanner) {
+      new MutationObserver(syncBottomInset).observe(cookieBanner, { attributes: true, attributeFilter: ['class'] });
+    }
+    window.addEventListener('resize', syncBottomInset);
 
     var onScroll = function () {
       if (dismissed) return;
@@ -115,8 +139,10 @@
       } else {
         bar.classList.remove('show');
       }
+      syncBottomInset();
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    syncBottomInset();
     onScroll();
   }
 
