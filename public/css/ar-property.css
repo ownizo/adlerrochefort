@@ -1944,7 +1944,7 @@
   .lp-btn-wa svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
   .lp-trustbar { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 26px 48px; }
   .lp-trustbar-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .lp-trustbar-item { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+  .lp-trustbar-item { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.4; min-width: 0; }
   .lp-trustbar-item::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
   .lp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
   .lp-grid-item { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; }
@@ -1969,11 +1969,40 @@
   .lp-form-card .contact-form-field select { width: 100%; }
   .lp-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 860px) {
-    .lp-trustbar-inner { grid-template-columns: 1fr 1fr; }
     .lp-grid { grid-template-columns: 1fr; }
     .lp-form-row { grid-template-columns: 1fr; gap: 0; }
     .lp-trustbar { padding: 22px 22px; }
     .lp-disclaimer { padding: 26px 22px; }
+  }
+
+  /* Trustbar at tablet/mobile: below 768px the four-column desktop grid
+     squeezes each item into a column too narrow to hold "heading + full
+     sentence" as a single flex row — the dot vertically centers against a
+     multi-line block and the heading/sentence wrap into their own narrow
+     sub-columns instead of stacking. Fixed by switching the item from a
+     flex row to a block box: `strong` becomes its own line (a block-level
+     element always starts a new line among inline/text siblings, so this
+     needs no HTML change — the sentence that follows it in the markup
+     flows onto the next line automatically), and the dot moves to an
+     absolutely-positioned marker so it no longer participates in that flow
+     at all. One column only, per the mobile-fix brief: a two-column tablet
+     state was tried and did not leave enough width for the longer items
+     ("We compare the market...") to read as a single readable column, so
+     this goes straight to one column at the same breakpoint every other
+     rule in this file already uses. */
+  @media (max-width: 768px) {
+    .lp-trustbar { padding: 24px 20px; }
+    .lp-trustbar-inner { grid-template-columns: 1fr; gap: 0; max-width: 560px; }
+    .lp-trustbar-item {
+      display: block;
+      position: relative;
+      padding: 16px 0 16px 22px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 400;
+    }
+    .lp-trustbar-item:last-child { border-bottom: none; }
+    .lp-trustbar-item::before { position: absolute; left: 0; top: 20px; margin: 0; }
+    .lp-trustbar-item strong { display: block; font-size: 15px; margin-bottom: 4px; }
   }
 
   /* Language policy — self-contained so it renders identically on pages that

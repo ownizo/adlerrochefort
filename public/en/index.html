@@ -916,6 +916,123 @@
     .service-detail-list { grid-template-columns: 1fr; }
   }
 
+  /* ═══════════════ SPECIALIST INSURANCE ═══════════════
+     Editorial index, not a card grid — modelled on the same
+     numbered-list language as .why-pillars below, but on a quiet cream
+     ground rather than the dark "why" panel, and with small (not giant)
+     numerals per the brief's own instruction. Two-part layout: an intro
+     panel plus a four-row index, the same split .why-section already
+     uses, so the homepage doesn't introduce a second unrelated layout
+     pattern for what is structurally the same kind of section. */
+  .specialist-section {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 0;
+    background: var(--cream);
+    border-top: 1px solid rgba(74,90,69,0.12);
+    border-bottom: 1px solid rgba(74,90,69,0.12);
+  }
+  .specialist-left {
+    padding: 88px 60px 88px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .specialist-left .section-subtitle { max-width: 420px; }
+  .specialist-right {
+    padding: 60px 80px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .specialist-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(74,90,69,0.14);
+    text-decoration: none;
+    color: inherit;
+  }
+  .specialist-row:first-child { padding-top: 0; }
+  .specialist-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .specialist-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+    opacity: 0.6;
+    flex-shrink: 0;
+    width: 22px;
+  }
+  .specialist-body { flex: 1 1 auto; min-width: 0; }
+  .specialist-name {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    transition: color 0.2s ease;
+  }
+  .specialist-desc {
+    display: block;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 420px;
+  }
+  .specialist-arrow {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .specialist-row:hover .specialist-arrow,
+  .specialist-row:focus-visible .specialist-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .specialist-row:hover .specialist-name,
+  .specialist-row:focus-visible .specialist-name {
+    color: var(--primary);
+  }
+  .specialist-row:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 6px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .specialist-name, .specialist-arrow { transition: none; }
+  }
+  @media (max-width: 900px) {
+    .specialist-section { grid-template-columns: 1fr; }
+    .specialist-left { padding: 64px 28px 8px; }
+    .specialist-left .section-subtitle { max-width: none; }
+    .specialist-right { padding: 8px 28px 56px; }
+  }
+  @media (max-width: 600px) {
+    .specialist-row {
+      display: block;
+      padding: 24px 0;
+    }
+    .specialist-num { display: block; margin-bottom: 8px; }
+    .specialist-name { margin-bottom: 8px; }
+    .specialist-desc { max-width: none; margin-bottom: 12px; }
+    .specialist-arrow {
+      display: inline-block;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   /* ═══════════════ WHY ═══════════════ */
   .why-section {
     display: grid;
@@ -2877,103 +2994,65 @@
       </div>
     </div>
 
-    <div class="services-header fade-up" style="margin-top:56px;">
-      <div>
-        <div class="section-eyebrow">Portugal — full range</div>
-        <h2 class="section-title">Personal cover<br><em>for life in Portugal</em></h2>
-      </div>
-      <p class="section-subtitle">The complete range of cover we arrange in Portugal, including specialist and private-client lines. Looking for Spain? See the categories above.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-up" style="transition-delay: 0.00s;">
-        <div class="service-num">01</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Health Insurance</h3><p class="service-desc">Private health insurance for expats, families, retirees, visa applications and AIMA appointments, with clear guidance on networks, waiting periods and medical history.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Hospitalisation</li><li>Consultations and exams</li><li>Dental and optical options</li><li>Visa and residency proof</li><li>Pre-existing condition review</li><li>Family plans</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/health-insurance-expats-portugal/">Learn more</a><a class="service-detail-cta" href="/en/health-insurance-quote/">Request a quote</a></div>
-      </div>
+  </div>
+</section>
 
-      <div class="service-card fade-up" style="transition-delay: 0.08s;">
-        <div class="service-num">02</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Home Insurance</h3><p class="service-desc">Building, contents and family liability cover for primary homes, apartments, rented homes, villas and second homes in Portugal.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory fire cover</li><li>Water damage</li><li>Theft and burglary</li><li>Contents protection</li><li>Family liability</li><li>Pools, gardens and annexes</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/home-insurance-protect-property/">Learn more</a><a class="service-detail-cta" href="/en/home-insurance-quote/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.16s;">
-        <div class="service-num">03</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Car Insurance</h3><p class="service-desc">Motor insurance for new residents, imported vehicles and everyday driving in Portugal, from mandatory third-party liability to own damage cover.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Mandatory liability</li><li>Own damage</li><li>Theft and fire</li><li>Glass breakage</li><li>Roadside assistance</li><li>Replacement vehicle</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/car-insurance-complete-guide/">Learn more</a><a class="service-detail-cta" href="/en/car-insurance-portugal/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.24s;">
-        <div class="service-num">04</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Boat Insurance</h3><p class="service-desc">Cover for private boats and yachts kept in Portuguese waters: hull on an agreed value, third-party liability to marina requirements, navigation limits and lay-up.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Third-party liability</li><li>Hull damage</li><li>Theft and assistance</li><li>Passenger cover</li><li>Marina requirements</li><li>Navigation area review</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/boat-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.32s;">
-        <div class="service-num">05</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Mortgage Life Insurance</h3><p class="service-desc">Life insurance linked to a Portuguese mortgage, with independent comparison outside the bank proposal whenever suitable.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Death and disability</li><li>Outstanding loan protection</li><li>Bank policy comparison</li><li>Insurer transfer support</li><li>Foreign buyer guidance</li><li>Annual premium review</li></ul></div></div>
-        <div class="service-actions"><button class="service-link" onclick="toggleService(this)">Learn more</button><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.40s;">
-        <div class="service-num">06</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Personal Accident Insurance</h3><p class="service-desc">Financial protection after an accident, including treatment expenses, disability compensation and assistance for active families or frequent travellers.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Accidental death</li><li>Permanent disability</li><li>Treatment expenses</li><li>Daily allowance</li><li>Repatriation</li><li>24h assistance</li></ul></div></div>
-        <div class="service-actions"><button class="service-link" onclick="toggleService(this)">Learn more</button><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.48s;">
-        <div class="service-num">07</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Art &amp; Collections</h3><p class="service-desc">Cover for fine art, antiques and collections kept in Portuguese homes or moved internationally, scheduled on an agreed value rather than left under a contents sub-limit.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value options</li><li>Accidental damage</li><li>Theft and fire</li><li>Transit cover</li><li>Valuation support</li><li>Worldwide extensions</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/insuring-art-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.56s;">
-        <div class="service-num">08</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Classic &amp; Collector Cars</h3><p class="service-desc">Cover for classic, historic and limited-use vehicles: matriculation through the IMT, agreed value on documented evidence, and rating for the mileage actually driven.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Agreed value</li><li>Limited mileage</li><li>Restoration cover</li><li>Garage requirements</li><li>Event use</li><li>Specialist claims handling</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.64s;">
-        <div class="service-num">09</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">High-Value Cars</h3><p class="service-desc">Cars above the range a retail motor policy will accept: all-risks own damage with no capital ceiling, individual underwriting, and the repairer named in the wording.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>All-risk options</li><li>No capital ceiling</li><li>Marque repair network</li><li>Track-use exclusions review</li><li>Multiple vehicles</li><li>International assistance</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/luxury-car-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.72s;">
-        <div class="service-num">10</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">High-Value Homes</h3><p class="service-desc">All-risks cover for villas, apartments and homes above the retail range: buildings, contents, scheduled valuables, gardens, pools and outbuildings.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Buildings and contents</li><li>Jewellery and valuables</li><li>Art and collections</li><li>Pools and landscaped gardens</li><li>Domestic staff liability</li><li>No underinsurance review</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/luxury-home-insurance-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.80s;">
-        <div class="service-num">11</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Personal Cyber &amp; Fraud</h3><p class="service-desc">Cover for households exposed to payment diversion on a property purchase, impersonation, identity theft and extortion &mdash; including the response in the hours after it happens.</p>
-        <div class="service-detail"><div class="service-detail-inner"><div class="service-detail-title">Typical cover areas</div><ul class="service-detail-list"><li>Identity theft</li><li>Payment diversion fraud</li><li>Cyber extortion</li><li>Data recovery</li><li>Legal support</li><li>Family device exposure</li></ul></div></div>
-        <div class="service-actions"><a class="service-link" href="/en/blog/personal-fraud-and-extortion-cover-portugal/">Learn more</a><a class="service-detail-cta" href="/en/private-clients/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.88s;">
-        <div class="service-num">12</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 22V5a2 2 0 012-2h12a2 2 0 012 2v17"></path><path d="M9 22v-4h6v4"></path><path d="M8 7h.01M12 7h.01M16 7h.01M8 11h.01M12 11h.01M16 11h.01"></path></svg></div>
-        <h3 class="service-name">Condominium Insurance (Algarve)</h3><p class="service-desc">Policy audits for condominium administrators and owners who need the legal minimum and the real risks properly covered.</p>
-        <div class="service-actions"><a class="service-link" href="/en/condominium-insurance-algarve/">Audit your policy</a><a class="service-detail-cta" href="/en/condominium-insurance-algarve/">Request a quote</a></div>
-      </div>
-
-      <div class="service-card fade-up" style="transition-delay: 0.96s;">
-        <div class="service-num">13</div><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 class="service-name">Liability for Therapists</h3><p class="service-desc">Professional liability cover for therapists and complementary-medicine practitioners — acupuncture, homeopathy, naturopathy, massage and yoga — working in Portugal.</p>
-        <div class="service-actions"><a class="service-link" href="/en/blog/liability-insurance-complementary-therapies/">Learn more</a><button class="service-detail-cta" onclick="openContactForm()">Request a quote</button></div>
-      </div>
-    </div>
+<!-- SPECIALIST INSURANCE -->
+<!-- Replaces the old "Portugal — full range" 13-card catalogue (brief:
+     mobile-fix + homepage redesign). That catalogue duplicated products
+     already reachable through the market hubs and header mega-menu
+     (Health/Home/Car/Life etc.), and its scale no longer fit an
+     international homepage serving two markets. The four everyday-product
+     dropped rows are unchanged elsewhere: /en/health-insurance-quote/,
+     /en/home-insurance-quote/, /en/car-insurance-portugal/ and the
+     Portugal hub all still carry them. What is kept here is the specific
+     set the brief asked to remain prominent — real, existing pages, not
+     new ones — presented as a compact editorial index rather than another
+     card grid. Boat, Mortgage Life, Personal Accident, High-Value Homes
+     and Personal Cyber & Fraud (five of the old thirteen) are not
+     reproduced here; each already has its own route in from elsewhere
+     (Private Clients, the relevant guide articles) and restoring all
+     thirteen as an "editorial" list would just be the same catalogue in a
+     new skin. -->
+<section class="specialist-section" aria-label="Specialist insurance">
+  <div class="specialist-left fade-up">
+    <div class="section-eyebrow">Specialist insurance</div>
+    <h2 class="section-title">Cover for<br><em>the less ordinary.</em></h2>
+    <p class="section-subtitle">Beyond everyday insurance, Adler &amp; Rochefort arranges cover for specialist vehicles, collections and professional risks — available in Portugal.</p>
+  </div>
+  <div class="specialist-right fade-up">
+    <a class="specialist-row" href="/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/">
+      <span class="specialist-num" aria-hidden="true">01</span>
+      <span class="specialist-body">
+        <span class="specialist-name">Classic Cars</span>
+        <span class="specialist-desc">Agreed-value and specialist cover for collectible and enthusiast vehicles.</span>
+      </span>
+      <span class="specialist-arrow" aria-hidden="true">Explore →</span>
+    </a>
+    <a class="specialist-row" href="/en/blog/insuring-art-portugal/">
+      <span class="specialist-num" aria-hidden="true">02</span>
+      <span class="specialist-body">
+        <span class="specialist-name">Fine Art</span>
+        <span class="specialist-desc">Insurance for collections and individual works, scheduled on an agreed value.</span>
+      </span>
+      <span class="specialist-arrow" aria-hidden="true">Explore →</span>
+    </a>
+    <a class="specialist-row" href="/en/blog/luxury-car-insurance-portugal/">
+      <span class="specialist-num" aria-hidden="true">03</span>
+      <span class="specialist-body">
+        <span class="specialist-name">Luxury &amp; Performance Cars</span>
+        <span class="specialist-desc">All-risks cover for higher-value and specialist vehicles, individually underwritten.</span>
+      </span>
+      <span class="specialist-arrow" aria-hidden="true">Explore →</span>
+    </a>
+    <a class="specialist-row" href="/en/blog/liability-insurance-complementary-therapies/">
+      <span class="specialist-num" aria-hidden="true">04</span>
+      <span class="specialist-body">
+        <span class="specialist-name">Therapist Professional Liability</span>
+        <span class="specialist-desc">Professional liability cover for therapists and complementary-medicine practitioners in Portugal.</span>
+      </span>
+      <span class="specialist-arrow" aria-hidden="true">Explore →</span>
+    </a>
   </div>
 </section>
 

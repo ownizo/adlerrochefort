@@ -258,7 +258,7 @@
   display: none;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
   box-shadow: 0 -4px 18px rgba(0,0,0,0.18);
   transform: translateY(110%);
   transition: transform 0.3s ease;
