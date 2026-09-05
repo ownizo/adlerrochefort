@@ -478,6 +478,29 @@
   }
   .form-submit:hover { background: #872733; color: #FFFFFF; border-color: #872733; }
 
+  .hero-form-note {
+    margin: 0 0 20px;
+    padding: 18px 20px;
+    background: #F5F1E8;
+    border-left: 3px solid #B8323E;
+  }
+
+  .hero-form-note h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111927;
+  }
+
+  .hero-form-note p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #3E4A5E;
+  }
+
+  .hero-form-note p:last-child { margin-bottom: 0; }
+
   /* ═══════════════ MARQUEE ═══════════════ */
   .marquee-strip {
     background: var(--primary);
@@ -2204,7 +2227,7 @@
       "name": "O que faz um mediador de seguros e porque devo usar um?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as soluções de proteção mais adequadas ao seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador não está limitado a uma única companhia — compara propostas, negoceia condições e acompanha a gestão de sinistros."
+        "text": "Um mediador de seguros é um profissional autorizado pela ASF que analisa a exposição real de um cliente e coloca o risco junto de seguradoras adequadas a esse risco. O nosso trabalho não é procurar o prémio mais baixo do mercado: é identificar as coberturas que a situação exige, colocá-las junto de companhias cujas condições contratuais e cujo comportamento em sinistros conhecemos, e acompanhar o processo quando for preciso acionar a apólice."
       }
     },
     {
@@ -2228,7 +2251,7 @@
       "name": "Quanto tempo demora a obter uma proposta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto com alternativas comparadas no prazo de 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para reunir as propostas mais adequadas ao risco."
+        "text": "Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto no prazo de 48 horas, com as coberturas, os capitais, as franquias e as exclusões explicadas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior."
       }
     },
     {
@@ -2454,7 +2477,7 @@
       numa proposta <em>standard.</em>
     </h1>
     <p class="hero-subtitle">
-      Corretagem de seguros para património privado, responsabilidade profissional e empresas. Analisamos o risco, consultamos o mercado e comparamos capitais, limites, franquias e exclusões antes de recomendar uma solução.
+      Corretagem de seguros para património privado, responsabilidade profissional e empresas. Analisamos o risco e construímos a solução a partir dos capitais, limites, franquias e exclusões que a exposição exige — não a partir do prémio.
     </p>
     <div class="hero-actions">
       <a href="#contacto" class="btn-primary">Pedir análise</a>
@@ -2484,6 +2507,12 @@
     <div class="hero-card">
       <div class="hero-card-eyebrow">Análise Gratuita · Sem Compromisso</div>
       <div class="hero-card-title">Descubra se está verdadeiramente protegido — empresa ou particular</div>
+      <div class="hero-form-note">
+        <h3>Antes de preencher</h3>
+        <p>As nossas propostas partem das coberturas que o risco exige. O prémio é o resultado dessa análise, nunca o ponto de partida.</p>
+        <p>Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pela solidez das condições contratuais e pela forma como respondem a um sinistro. Isso significa, com toda a franqueza, que raramente seremos a proposta mais barata que vai receber.</p>
+        <p>Se o seu critério de decisão for o prémio mais baixo, encontrará melhores valores noutro lado e preferimos dizê-lo já. Se for estar efetivamente protegido no dia em que precisar, é exatamente esse o trabalho que fazemos.</p>
+      </div>
       <form class="hero-card-form" name="analise-gratuita" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="analise-gratuita">
         <input type="hidden" name="source_url" value="">
@@ -2839,8 +2868,8 @@
       <div class="why-pillar">
         <div class="why-pillar-num">02</div>
         <div>
-          <div class="why-pillar-title">Negociação direta com seguradoras</div>
-          <div class="why-pillar-desc">Levamos o mesmo risco a várias seguradoras em simultâneo e comparamos as propostas lado a lado — coberturas, franquias, exclusões e prémio.</div>
+          <div class="why-pillar-title">Painel restrito de seguradoras</div>
+          <div class="why-pillar-desc">Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pelas condições contratuais que praticam e pela forma como respondem a um sinistro. Um painel maior daria prémios mais baixos. Não daria melhores sinistros.</div>
         </div>
       </div>
       <div class="why-pillar">
@@ -2889,9 +2918,9 @@
         <div class="testimonial-role">Ownizo, Unipessoal Lda. · Adler &amp; Rochefort</div>
       </div>
       <div class="testimonial fade-up">
-        <div class="testimonial-text">Fundador com formação do Chartered Insurance Institute (CII). Trabalhamos com Hiscox, Allianz, Zurich, Asisa e Innovarisk — comparamos o mercado em vez de representar uma única seguradora.</div>
+        <div class="testimonial-text">Fundador com formação do Chartered Insurance Institute (CII). Trabalhamos com Hiscox, Allianz, Zurich, Asisa e Innovarisk — um painel restrito de seguradoras internacionais, escolhido pela qualidade das condições e do serviço de sinistros.</div>
         <div class="testimonial-author">Formação e mercado</div>
-        <div class="testimonial-role">Multi-seguradora · Apoio bilingue PT + EN</div>
+        <div class="testimonial-role">Painel restrito · Apoio bilingue PT + EN</div>
       </div>
     </div>
   </div>
@@ -3056,7 +3085,7 @@
           </div>
           <div class="tech-metric">
             <div class="tech-metric-num">Multi</div>
-            <div class="tech-metric-label">Comparamos o mercado</div>
+            <div class="tech-metric-label">Seguradoras internacionais</div>
           </div>
           <div class="tech-metric">
             <div class="tech-metric-num">ASF</div>
@@ -3219,7 +3248,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Um mediador de seguros é um profissional autorizado pela ASF que analisa o mercado de forma independente para encontrar as soluções de proteção mais adequadas ao seu caso. Ao contrário de um agente vinculado a uma seguradora, o mediador não está limitado a uma única companhia — compara propostas, negoceia condições e acompanha a gestão de sinistros.</div>
+          <div class="faq-answer-inner">Um mediador de seguros é um profissional autorizado pela ASF que analisa a exposição real de um cliente e coloca o risco junto de seguradoras adequadas a esse risco. O nosso trabalho não é procurar o prémio mais baixo do mercado: é identificar as coberturas que a situação exige, colocá-las junto de companhias cujas condições contratuais e cujo comportamento em sinistros conhecemos, e acompanhar o processo quando for preciso acionar a apólice.</div>
         </div>
       </div>
 
@@ -3249,7 +3278,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto com alternativas comparadas no prazo de 48 horas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior para reunir as propostas mais adequadas ao risco.</div>
+          <div class="faq-answer-inner">Após um primeiro contacto, habitualmente em 24 horas úteis, apresentamos um plano concreto no prazo de 48 horas, com as coberturas, os capitais, as franquias e as exclusões explicadas. Em casos mais complexos, como grandes frotas ou riscos industriais, pode ser necessário um prazo ligeiramente superior.</div>
         </div>
       </div>
 

@@ -2256,6 +2256,13 @@
 .lp-form-card { background: var(--white); padding: 32px; }
 .lp-form-card h2 { font-size: 20px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
 .lp-form-card .lp-form-sub { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
+.lp-form-note {
+  margin: 0 0 22px; padding: 18px 20px; background: var(--cream2);
+  border-left: 3px solid var(--accent); color: var(--ink2);
+}
+.lp-form-note h3 { margin: 0 0 10px; color: var(--ink); font-size: 15px; font-weight: 700; }
+.lp-form-note p { margin: 0 0 10px; color: var(--ink2); font-size: 13px; line-height: 1.65; }
+.lp-form-note p:last-child { margin-bottom: 0; }
 .lp-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .lp-form-grid .full { grid-column: 1 / -1; }
 .lp-form-card label {
