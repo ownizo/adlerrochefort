@@ -20,6 +20,14 @@
  *   - the article reading header's shape (logo + back link), which stays
  *     compact by design but now comes from one definition
  *   - the homepage navigations, which are the source being copied
+ *
+ * --dry-run: computes and reports every change exactly as a real run would,
+ * including the regenerated public/css/ar-chrome.css, but writes nothing to
+ * disk. Prints the same stats block a real run does, plus the full list of
+ * files it would touch grouped by which region(s) changed on each. Use this
+ * before every run that follows more than a trivial chrome edit — the diff
+ * this script produces is one shot across every consumer page at once, so
+ * it is worth seeing the full shape of it before committing to it.
  */
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, relative } from 'node:path';
@@ -34,6 +42,10 @@ import {
   siteNav,
   mobileDrawer,
 } from './lib/partials.mjs';
+
+const DRY_RUN = process.argv.includes('--dry-run');
+const write = DRY_RUN ? async () => {} : writeFile;
+if (DRY_RUN) console.error('--- DRY RUN: no files will be written ---');
 
 // ---------------------------------------------------------------------------
 // Commercial landing pages
@@ -94,7 +106,26 @@ const SOURCES = new Set([
 // hand-maintained homepage and, like the PT/EN/NL homepages in SOURCES, it is a
 // source of chrome rather than a consumer of it — langOf() would otherwise
 // treat both as Portuguese and overwrite their footers with the PT one.
-const SKIP = [/email-signature\.html$/, /\/descarregar\//, /\/de\//, /\/fr\//];
+//
+// The Spain cluster (8 commercial pages + 20 blog/category pages) and
+// /en/insurance-review/ carry their own footer, defined once in
+// scripts/lib/spain-chrome.mjs specifically because it is NOT the Portugal
+// footer: it shows both markets' product links side by side and has no
+// Company/Languages columns, since these pages have no PT/NL/FR/DE
+// translation to switch to. Sweeping them into this pass would replace that
+// deliberately market-neutral footer with the fuller EN-homepage one — which
+// also carries a PT/EN/NL/FR/DE language switcher that would be actively
+// misleading on a page that only exists in English — for no gain, since
+// these pages already link across both markets. Excluded on the same
+// principle as /de/ and /fr/ above: a chrome of their own, not a gap to fill.
+const SKIP = [
+  /email-signature\.html$/,
+  /\/descarregar\//,
+  /\/de\//,
+  /\/fr\//,
+  /\/en\/insurance-review\//,
+  /spain/,
+];
 
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
 const bySlug = { pt: new Map(), en: new Map() };
@@ -129,6 +160,16 @@ const files = execSync('find public -name "*.html"', { cwd: ROOT })
   .filter((f) => !SOURCES.has(f) && !SKIP.some((re) => re.test(f)));
 
 const stats = { topBar: 0, footer: 0, cookie: 0, nav: 0, landingNav: 0, landingDrawer: 0, css: 0, files: 0 };
+// Per-file record of which regions changed, keyed by the path relative to
+// public/ — this is what --dry-run (and the summary at the end of a real
+// run) reports, so a change can be reviewed as "what kind of edit, on which
+// files" rather than as one large diff.
+const changes = new Map();
+const mark = (file, region) => {
+  const rel = relative(PUBLIC, file);
+  if (!changes.has(rel)) changes.set(rel, []);
+  changes.get(rel).push(region);
+};
 
 for (const file of files) {
   const rel = relative(PUBLIC, file);
@@ -143,7 +184,10 @@ for (const file of files) {
   // normalised; a bar linking somewhere other than the contact anchor stays.
   const topMatch = html.match(/<div class="asf-top-bar">[\s\S]*?<\/div>/);
   if (chrome.topBar && topMatch && /#contacto|#contact|apólice atual|current policy/i.test(topMatch[0])) {
-    html = html.replace(topMatch[0], chrome.topBar);
+    if (topMatch[0] !== chrome.topBar) {
+      html = html.replace(topMatch[0], chrome.topBar);
+      mark(file, 'topBar');
+    }
     stats.topBar++;
   }
 
@@ -157,14 +201,15 @@ for (const file of files) {
     const targets = { [lang]: url };
     const counterpart = pair.get(url);
     if (counterpart) targets[counterpart.startsWith('/en/') ? 'en' : 'pt'] = counterpart;
-    html = html.replace(
-      navMatch[0],
-      articleNav(lang, {
-        switcher: langSwitcher(lang, targets),
-        backHref: hrefMatch ? hrefMatch[1] : undefined,
-        backLabel: backMatch ? backMatch[1].trim() : undefined,
-      })
-    );
+    const rebuiltNav = articleNav(lang, {
+      switcher: langSwitcher(lang, targets),
+      backHref: hrefMatch ? hrefMatch[1] : undefined,
+      backLabel: backMatch ? backMatch[1].trim() : undefined,
+    });
+    if (navMatch[0] !== rebuiltNav) {
+      html = html.replace(navMatch[0], rebuiltNav);
+      mark(file, 'articleNav');
+    }
     stats.nav++;
   }
 
@@ -190,28 +235,40 @@ for (const file of files) {
     if (navMatch2) {
       html = html.replace(navMatch2[0], nav);
       stats.landingNav++;
+      mark(file, 'landingNav');
     }
     const drawerStart = html.indexOf('<!-- MOBILE NAV -->');
     if (drawerStart !== -1) {
       const r = replaceRegion(html, '<!-- MOBILE NAV -->', '\n</div>', drawer);
       html = r.html;
-      if (r.hit) stats.landingDrawer++;
+      if (r.hit) {
+        stats.landingDrawer++;
+        mark(file, 'landingDrawer');
+      }
     }
   }
 
   // --- footer --------------------------------------------------------------
   if (chrome.footer) {
+    const beforeFooter = html;
     const r = replaceRegion(html, '<footer>', '</footer>', chrome.footer);
     html = r.html;
-    if (r.hit) stats.footer++;
+    if (r.hit) {
+      if (html !== beforeFooter) mark(file, 'footer');
+      stats.footer++;
+    }
   }
 
   // --- cookie notice -------------------------------------------------------
   if (chrome.cookie) {
     if (html.includes('id="cookieBanner"')) {
+      const beforeCookie = html;
       const r = replaceRegion(html, '<!-- COOKIE CONSENT BANNER -->', '\n</div>', chrome.cookie);
       html = r.html;
-      if (r.hit) stats.cookie++;
+      if (r.hit) {
+        if (html !== beforeCookie) mark(file, 'cookie');
+        stats.cookie++;
+      }
     } else if (html.includes('</body>')) {
       // No notice at all — the whole of /blog/ was in this state.
       const handlers = `<script>
@@ -226,6 +283,7 @@ for (const file of files) {
 </script>`;
       html = html.replace(/<\/body>/, `${chrome.cookie}\n${handlers}\n</body>`);
       stats.cookie++;
+      mark(file, 'cookie-inserted');
     }
   }
 
@@ -242,19 +300,36 @@ for (const file of files) {
   ) {
     html = html.replace(/<\/head>/, '<link rel="stylesheet" href="/css/ar-chrome.css">\n</head>');
     stats.css++;
+    mark(file, 'css-link-added');
   }
 
   if (html !== before) {
-    await writeFile(file, html);
+    await write(file, html);
     stats.files++;
   }
 }
 
 await mkdir(join(PUBLIC, 'css'), { recursive: true });
 const css = chromeStylesheet();
-await writeFile(join(PUBLIC, 'css', 'ar-chrome.css'), css);
+if (!DRY_RUN) await writeFile(join(PUBLIC, 'css', 'ar-chrome.css'), css);
 
-console.log(JSON.stringify({ ...stats, chromeCssBytes: css.length }, null, 2));
+console.log(JSON.stringify({ ...stats, chromeCssBytes: css.length, dryRun: DRY_RUN }, null, 2));
+
+if (DRY_RUN) {
+  const byRegion = new Map();
+  for (const [rel, regions] of changes) {
+    for (const region of regions) {
+      if (!byRegion.has(region)) byRegion.set(region, []);
+      byRegion.get(region).push(rel);
+    }
+  }
+  console.log('\n--- files that would change, grouped by region ---');
+  for (const [region, relFiles] of byRegion) {
+    console.log(`\n${region} (${relFiles.length}):`);
+    for (const f of relFiles) console.log(`  ${f}`);
+  }
+  console.log(`\nTotal distinct files that would change: ${changes.size}`);
+}
 
 // ---------------------------------------------------------------------------
 // Second pass — pages that carried no top bar or no footer at all.
@@ -265,6 +340,7 @@ console.log(JSON.stringify({ ...stats, chromeCssBytes: css.length }, null, 2));
 // footer.
 // ---------------------------------------------------------------------------
 const filled = { topBar: 0, footer: 0 };
+const filledFiles = [];
 for (const file of files) {
   const rel = relative(PUBLIC, file);
   const lang = langOf(rel);
@@ -275,11 +351,17 @@ for (const file of files) {
   if (chrome.topBar && !html.includes('class="asf-top-bar"') && /<body[^>]*>/.test(html)) {
     html = html.replace(/(<body[^>]*>)/, `$1\n\n${chrome.topBar}`);
     filled.topBar++;
+    filledFiles.push(`${rel} (topBar inserted)`);
   }
   if (chrome.footer && !html.includes('<footer>') && html.includes('</body>')) {
     html = html.replace(/<\/body>/, `${chrome.footer}\n</body>`);
     filled.footer++;
+    filledFiles.push(`${rel} (footer inserted)`);
   }
-  if (html !== before) await writeFile(file, html);
+  if (html !== before) await write(file, html);
 }
-console.log('filled gaps:', JSON.stringify(filled));
+console.log('filled gaps:', JSON.stringify({ ...filled, dryRun: DRY_RUN }));
+if (DRY_RUN && filledFiles.length) {
+  console.log('\n--- gap-fill would touch ---');
+  for (const f of filledFiles) console.log(`  ${f}`);
+}
