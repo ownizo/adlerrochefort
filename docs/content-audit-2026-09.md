@@ -528,3 +528,162 @@ and then resumed.)*
 One new item is open — the Innovarisk finding immediately above — and is
 being tracked the same way: flagged, not guessed at, not blocking the rest
 of the plan.
+
+---
+
+## Block 3 — coverage matrix (1F) and risk list (1G)
+
+Method: slug/title/body search per candidate, conservative — PARTIAL when a
+topic exists but not as its own resource, EXISTS only when a page already
+does the job the candidate describes.
+
+### 5.1 Proportional rule / underinsurance (EN)
+
+| Candidate | Status | Path | Note |
+|---|---|---|---|
+| Pillar (proportional rule, partial + total loss examples, retail vs individually-underwritten wording) | **PARTIAL — extend, don't duplicate** | `/en/blog/outdated-insured-values/` | 492 lines. Already has: the rule explained, a worked **partial**-loss example, over-insurance, a revaluation-cadence table, indexation limits, FAQ schema. Missing: a **total**-loss worked example (demolition/fees/VAT/alternative accommodation), and the retail-vs-individually-underwritten-wording distinction the brief asks for. |
+| Total-loss settlement mechanics (demolition, fees, VAT, alternative accommodation) | MISSING | — | Not covered as a worked example anywhere in EN. |
+| Setting the rebuild value | PARTIAL | `/en/blog/outdated-insured-values/` §"How often each class actually needs revaluing" | Table gives cadence, not method. A dedicated "how to actually get to the number" satellite is still missing. |
+| Waiver of average | PARTIAL | `/en/blog/outdated-insured-values/` (one paragraph) | Named and explained in one paragraph; not its own resource. |
+| Bank insuring to loan amount rather than rebuild cost | MISSING | — | No EN page addresses this specifically; the mortgage-protection pages found are about life cover, not the sum-insured-vs-loan-amount problem. |
+| Disputing the sum insured (perito de parte, CIMPAS, Livro de Reclamações, ASF) | MISSING | — | Zero matches for any of the four named mechanisms anywhere in `public/en/`. |
+| Named adjacent pages (`luxury-home-insurance-portugal`, `us-buyers-property-cover-portugal`, `hiscox-home-insurance-portugal`, `liberty-mutual-home-insurance-portugal`, `best-home-insurance-portugal-2026`) | EXISTS, unaffected | — | All confirmed present; the new satellites should link to these, not replace them. |
+
+**Decision, logged rather than assumed:** no new pillar page. Extending
+`outdated-insured-values` with a "total loss" section and a "retail vs.
+individually underwritten" section risks the least (one edit to an
+existing page, explicit "your yes required page by page" per the
+standing rule — **holding that edit for your go-ahead**, not making it
+unasked). Writing the two clearly-missing satellites (rebuild-value method,
+disputing the sum insured) as new pages linking into the existing pillar
+does not require that same permission and is lower risk. Bank-insures-
+to-loan-amount is genuinely new ground; no existing page to collide with.
+
+### 5.2 MGEN health
+
+**Confirmed: no dedicated MGEN page in any language** — zero `<title>`
+matches site-wide.
+
+| Candidate | Status | Path | Note |
+|---|---|---|---|
+| Pillar (no questionnaire, no age limit, no pre-existing exclusion, honest waiting-period trade-off) | MISSING (the facts exist, the page doesn't) | — | See below — the underlying facts are already established and consistent across 3 live pages. |
+| — existing EN source | EXISTS | `/en/blog/pre-existing-conditions-health-insurance-portugal/` | States MGEN by name: mutual/membership-based acceptance, no medical questionnaire, no exclusion, **365-day waiting period** for the pre-existing condition once covered. |
+| — existing NL source (age angle) | EXISTS | `/nl/zorgverzekering-portugal/#mutualista`, `/nl/s1-formulier-cak-portugal/` | Same mechanism, framed around the regular market's maximum entry age rather than pre-existing conditions. Internally consistent with the EN page — same "membership not individual risk-selection" explanation. |
+| — existing DE source | MISSING | — | Zero MGEN content on `/de/` beyond the partner-strip mention added in Block 1. |
+| Declined → what's left | MISSING | — | |
+| Cover at 70 and 75 | PARTIAL | `/nl/zorgverzekering-portugal/`, `/nl/s1-formulier-cak-portugal/` | Covered for NL audience via the age angle; no EN equivalent. |
+| Acceptance-not-price comparison | MISSING | — | |
+| Waiting periods product by product | PARTIAL | pre-existing-conditions page states the 365-day figure once, for pre-existing conditions specifically; not a full product-by-product table. |
+| Moving with a chronic condition | PARTIAL | Same EN page covers the core mechanism; not written as its own "moving with X" narrative. |
+| Link insertion into pillar from the two existing articles | Per brief — link only, no rewrite | Applies to `pre-existing-conditions-health-insurance-portugal` (EN) and `zorgverzekering-portugal`/`s1-formulier-cak-portugal` (NL) once the pillar exists. |
+
+**Risk:** none found — the 365-day figure and the "membership not
+individual underwriting" mechanism are already asserted identically across
+3 live pages in 2 languages, so the pillar can reuse them as established
+fact rather than needing fresh `[VERIFY]` tags for the core mechanism.
+
+### 5.3 Professional liability — therapies and professions — **on hold, Innovarisk**
+
+| Candidate | Status | Path |
+|---|---|---|
+| EN pillar | **EXISTS, strong** | `/en/blog/liability-insurance-complementary-therapies/` — 1,115 lines. Covers Lei 71/2013 + Lei 45/2003, the six regulated practices, ACSS licensing, and explicitly addresses yoga's unregulated-but-exposed status. |
+| PT pillar-equivalent | EXISTS | `/seguros/responsabilidade-civil-profissional/`, `/seguros/rc-profissoes-especificas/` |
+| Acupuncture/TCM | EXISTS (PT only) | `/blog/seguro-responsabilidade-civil-acupuntores/` |
+| Naturopathy | EXISTS (PT only) | `/blog/seguro-responsabilidade-civil-naturopatas/` |
+| General "non-conventional therapies" | EXISTS (PT only) | `/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/` |
+| Osteopathy/chiropractic, homeopathy, yoga, Pilates/Tai Chi, massage/spa, retreat organisers, personal trainers, psychologists/psychotherapists, nutritionists | MISSING in every language | — |
+| NL/DE versions of `liability-insurance-complementary-therapies` | MISSING | Confirmed, as the brief asked. |
+| Reference table of which PT professional bodies require cover | MISSING | — |
+
+**One citation discrepancy worth a second look, not something I'm
+correcting myself:** the existing EN pillar cites **"Article 5"** of Lei
+71/2013 as establishing the insurance requirement. The brief pre-approves
+**"art. 10.º n.º 1"** (paired with Portaria n.º 200/2014's EUR 150,000
+minimum) for the same requirement. These may both be correct — Article 5
+could be the general licensing clause, Article 10º n.º1 the specific
+insurance-minimum clause — but I haven't read the statute itself to
+confirm, and I'm not editing the existing page on my own judgment either
+way. Any *new* copy I write uses the brief's citation (art. 10.º n.º1 +
+Portaria 200/2014) as instructed; flagging the existing page's "Article 5"
+in case it's worth a look separately.
+
+**Not writing anything for 5.3 this pass** — see the Innovarisk finding
+above. The pillar and 3 PT satellites all state the specialised cover is
+accessed "through the partnership with Innovarisk"; I can't write new
+satellite pages (or extend the pillar) for the same product line without
+either repeating a claim I've been told may be wrong, or inventing a
+replacement mechanism.
+
+### 5.4 US audience hub
+
+| Candidate | Status | Path |
+|---|---|---|
+| Hub | MISSING | Confirmed — no `american`/`usa`/`united-states`-named page exists outside blog posts; nothing plays the "Overview" role Spain's `expat-insurance-spain` does. |
+| `us-buyers-property-cover-portugal` | EXISTS | Strong, per the brief's own list. |
+| `property-title-risk-portugal` | EXISTS | |
+| `health-insurance-portugal-americans` | EXISTS | |
+| `health-insurance-portugal-usa` | EXISTS | |
+| US umbrella vs. Portuguese liability limits | MISSING | |
+| US driving record transfer | MISSING | (Spain has a "no-claims-history" article; nothing about a US record specifically, for either country.) |
+| Claiming in Portugal vs. a US adjuster | MISSING | |
+| D7/D8/Golden Visa owners taking cover pre-residency | MISSING | Visa-linked health-insurance content exists generically; nothing framed around US applicants pre-residency specifically. |
+
+**Risk:** low. No existing hub-shaped page to collide with, four solid
+existing articles to link from once the hub exists, four genuinely new
+satellites.
+
+### 5.5 DE tree — confirmed greenfield
+
+`/de/` is one page (Block 0/A). Every item in the brief's list — hub,
+Abmeldung/GKV/PKV + Anwartschaftsversicherung, S1 for pensioners,
+Vorerkrankungen, Unterversicherung/Proportionalregel, Privathaftpflicht,
+Erdbebenversicherung, SF-Klasse transfer, car import/ISV, Waldbrandrisiko,
+unlegalised-property insurance, Alojamento Local, Berufshaftpflicht — is
+**MISSING** in German. None collide with anything existing (there's
+nothing in German to collide with). Two items are explicitly designed to
+link into pillars from other blocks: Vorerkrankungen → 5.2's MGEN pillar,
+Unterversicherung/Proportionalregel → 5.1's `outdated-insured-values`.
+Berufshaftpflicht is the German label for the same professional-liability
+line as 5.3 — **on hold for the same Innovarisk reason**, not because the
+German content itself has a problem.
+
+Scale note for the writing plan: the 13 existing NL pages this is meant to
+mirror run 719–757 lines each (full page, chrome included). A
+same-fidelity 13-page German cluster is a large body of work — see the
+Block 5 writing report below for what's actually been written this pass
+versus queued.
+
+### 5.6 NL tree — extend only
+
+| Candidate | Status | Path | Note |
+|---|---|---|---|
+| evenredigheidsregel bij totaal verlies (proportional rule) | MISSING as own page | — | No NL equivalent of `outdated-insured-values` at all yet. |
+| aardbevingsdekking (earthquake cover) | PARTIAL | `/nl/woonverzekering-portugal/`, `/nl/verzekeringen-portugal/` | Mentioned, not a dedicated resource — `bosbrandrisico-woonverzekering-portugal` (forest fire) is the closest existing single-peril deep-dive to mirror the structure of. |
+| bestaande aandoening (pre-existing condition) | PARTIAL | `/nl/zorgverzekering-portugal/#mutualista` | Covers the mechanism via the age angle; a pre-existing-condition-specific framing (mirroring the EN page in 5.2) is still missing. |
+| AVP vs Portuguese liability | MISSING | — | |
+| beroepsaansprakelijkheid voor therapeuten en yogadocenten | MISSING | — | **On hold — same Innovarisk reason as 5.3.** |
+| ORV bij een Portugese hypotheek (mortgage life) | MISSING as own page | `/nl/woonverzekering-portugal/`, `/nl/niet-gelegaliseerde-woning-verzekeren-portugal/`, `/nl/bosbrandrisico-woonverzekering-portugal/` mention "hypotheek" in passing (building-insurance context, not mortgage-life) | |
+| VvE (condominium) | PARTIAL | `/nl/woonverzekering-portugal/` | Mentioned, no dedicated page. |
+| leegstandsclausule (vacancy clause) | MISSING | — | EN has the underlying facts (`second-homes-empty-months-unoccupancy-clause-voids-cover`, formerly `unoccupied-property-clause-portugal`) to translate the *concept* from — not the text itself. |
+| boot verzekeren (boat) | MISSING | — | |
+
+**Risk:** none found beyond the shared Innovarisk hold. "Extend only,
+change nothing existing" is straightforward here since 6 of 8 candidates
+have no dedicated NL page to collide with.
+
+### 5.7 FR
+
+Per the brief: no pages this round. Clone plan queued below in the Block 5
+report rather than written now.
+
+### 5.8 hreflang
+
+From Phase 1D: 0 broken hreflang targets, hreflang computed per real
+translated file (never hardcoded to a homepage), Spain correctly carries
+none (market variant, not a translation). **Nothing needs fixing.**
+New pages from this plan should follow the same rule confirmed there: a
+US-audience EN page is a market variant like Spain (no hreflang); a new
+DE or FR page is a genuine language translation only if it translates an
+existing page 1:1 (none of the candidates here do — they're new topics),
+so none of the new pages in this plan should declare hreflang alternates
+to each other. **Item closed, no code change.**
