@@ -459,6 +459,58 @@ professional-liability copy that would depend on the answer.
 
 ---
 
+## Block 2 — the B discrepancy, reconciled
+
+**Cause, confirmed by direct comparison: there is no discrepancy. The
+registry is internally consistent — I miscounted in Phase 1 by not reading
+its own `status` field before declaring a mismatch, and caught this myself
+mid-fix, before committing anything.**
+
+154 real article directories exist under `public/en/blog/` (Spain's 19
+included). All 154 carry `"status": "published"` in `data/articles.json`
+and are correctly registered. The registry's total of 156 is exactly
+154 + 2 — and those 2 are not drift, they're a deliberate design I hadn't
+noticed: `data/articles.json` uses `status` as a real taxonomy
+(`published` / `draft` / `merged`), and the 2 extra rows both carry
+`"status": "merged"` plus a `mergedInto` field pointing at the article's
+current slug:
+
+| Old slug (`status: merged`) | `mergedInto` | Matches `public/_redirects`? |
+|---|---|---|
+| `unoccupied-property-clause-portugal` | `/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/` | Yes, 301, exact match |
+| `solar-panels-ev-chargers-home-insurance-portugal` | `/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/` | Yes, 301, exact match |
+
+So the registry keeps a tombstone record for a merged article on purpose —
+old slug, `mergedInto` pointer, matching the live redirect — rather than
+silently deleting history. (The same field also surfaced 2 `status: draft`
+entries, `fiscal-representation-property-owners-portugal` and
+`nif-fiscal-representation-d7-visa-health-insurance` — exactly the two
+pages `netlify.toml` noindexes as unpublished drafts, which cross-checks
+the taxonomy as accurate elsewhere too.)
+
+**What actually happened here, stated plainly:** I ran a Python one-off
+that deleted the two `merged` rows from `data/articles.json`, treating
+them as leftover duplicates without reading past the `slug` field. The
+diff (44 deletions, reviewed before committing) showed `"status": "merged"`
+and `"mergedInto"` on both removed entries, which is what caught the
+mistake — I reverted with `git checkout -- data/articles.json` immediately
+and nothing was committed. Leaving this paragraph in rather than quietly
+fixing my own workflow, since the task record should show what actually
+happened, not a tidied version of it.
+
+**Fix applied: none needed.** `data/articles.json` is unchanged from
+`main`. My original Phase 1 flag was itself the error, now closed.
+
+**Checked PT and NL with the corrected method (reading `status`, not just
+counting slugs) before writing anything about them:** the PT registry
+(`articles.pt`, 72 rows) has the same 52 on-disk rows correctly registered,
+plus 20 rows not on disk — all 20 accounted for, 18 `status: draft`
+(planned/unpublished, not yet built) and 2 `status: merged`. No orphaned or
+inaccurate rows. NL's registry (11 rows) matches its 11 published articles
+exactly. Both clean; nothing to fix in either.
+
+---
+
 ## Status update — both original blockers resolved, work resumed
 
 *(This section originally said Phase 2 was blocked on the missing plan and
