@@ -853,3 +853,111 @@ support — where the coverage matrix showed a fact already established
 elsewhere on the live site (the MGEN mechanism), I treated it as reusable;
 where it didn't, I either wrote around it honestly or flagged it and
 stopped, per the standing rule.
+
+---
+
+## Round 2 — Innovarisk resolved, 5.3 unblocked, 5.4 built, 5.5/5.6/5.7 stopped
+
+### 1. Innovarisk — category confusion, not a conflict. Confirmed, nothing changed.
+
+The seven-name list governs **insurers** — the partner-logo strips. Innovarisk
+is an underwriting agency (an MGA), the *channel* through which some cover is
+reached, not an insurer on that list. It was never in scope for removal.
+`data/partners.json`, `scripts/lib/landing.mjs` and every page touched in
+Block 1 are unchanged from that finding — no new edit was needed, because
+none of them ever listed Innovarisk as a partner logo in the first place
+(confirmed again by re-reading the Block 1 report above: the removals were
+Médis, Liberty Mutual and Bupa; Innovarisk's non-logo uses were flagged,
+not removed). This unblocks 5.3 in full, plus the one NL and one DE item
+that were held for the same reason (still not built — see below).
+
+### 2. Legal citation — fixed in both pages, verified against primary sources
+
+Detailed in the two commits above (`fix(content): correct Lei 71/2013
+citation...` and `fix(content): source and correct [VERIFY] 1 and 2...`).
+Summary: `Artigo 10.º, n.º 1` of Lei 71/2013 imposes the insurance
+obligation (not Artigo 5.º, which governs professional access — the degree
+requirement); Portaria n.º 200/2014 sets the €150,000 minimum. Verified
+against pgdlisboa.pt's consolidated text (reflecting amendments by Lei
+1/2017 and Lei 109/2019). The EN pillar had the wrong article; the PT
+equivalent already had the right one — checked before assuming both were
+wrong, and only the EN page needed correcting.
+
+`[VERIFY]` 1 (peritagem's statutory basis) is now fully sourced: RJCS,
+Decreto-Lei n.º 72/2008, Artigo 50.º (*Perícia arbitral*) — cited directly
+in `disputing-sum-insured-portugal`.
+
+`[VERIFY]` 2 (CIMPAS) — the original text was factually **wrong**, not just
+unconfirmed: it described CIMPAS as a claims-history/anti-fraud database.
+CIMPAS is actually the Centro de Informação, Mediação e Arbitragem de
+Seguros, a Ministry-of-Justice-authorised consumer ADR body for insurance
+disputes generally (information → mediation → arbitration). Corrected. A
+narrower residual `[VERIFY]` remains — whether its arbitration stage
+routinely covers settlement-*amount* disputes specifically, its cost, and
+its relationship to court action are not confirmed to the precision the
+page would need to recommend it as a specific next step.
+
+`[VERIFY]` 3 (MGEN waiting periods, broken down by product) — left open as
+instructed; you're sourcing it.
+
+### 3. 5.3 — pillar confirmed solid, 3 of 11 profession satellites written
+
+Written: yoga instructors, Pilates/Tai Chi instructors, massage & spa
+therapists — the three "not one of the six regulated therapies, but
+genuinely exposed and increasingly required contractually" topics, chosen
+first because they share one clean framing and, for massage, an existing
+PT article (`responsabilidade-civil-massagistas`) to draw verified facts
+from rather than invent. Each carries a `[VERIFY]` on capital minimums
+(none exists by law for these three, unlike the regulated six under
+Portaria 200/2014) rather than a guessed figure. Cross-linked to each
+other and to the pillar; one link inserted into the pillar's existing
+yoga paragraph, extended to mention all three (not rewritten).
+
+**Not written this pass:** acupuncture/TCM, osteopathy/chiropractic,
+naturopathy/phytotherapy, homeopathy (EN versions — PT exists for
+naturopathy and acupuncture already), retreat organisers, personal
+trainers, psychologists/psychotherapists, nutritionists, and the reference
+table of which Portuguese professional bodies require cover. Flagging one
+thing rather than guessing at it: **psychologists and psychotherapists in
+Portugal are regulated by the Ordem dos Psicólogos Portugueses, a
+different regulatory framework entirely from Lei 71/2013's ACSS-licensed
+complementary therapies** — I have not verified that framework's own
+insurance requirements, and writing that satellite with the same Lei
+71/2013/Portaria 200/2014 framing the other pages use would risk exactly
+the kind of citation error just corrected above. Worth its own verification
+pass before it's written, not a same-afternoon extension of this batch.
+
+### 4. 5.4 — hub and all 4 satellites written (reported above, restated briefly)
+
+`/en/insurance-for-americans-in-portugal/` built via `landing.mjs`, plus 4
+new satellites (US umbrella vs. PT liability, US driving record, claiming
+in Portugal vs. a US adjuster, cover before D7/D8/Golden Visa residency).
+Full detail in the 5 commits above.
+
+### 5. 5.5, 5.6, 5.7 — stopped, exactly as instructed
+
+**5.5 (DE tree): all 12 buildable pages on indefinite hold.** Not touched.
+The build plan from Round 1 stays in this doc for when the competitor
+analysis is done and the German cluster's design is actually decided
+against it, rather than written blind now and possibly reworked later.
+
+**5.6 (NL extensions): not touched, and the existing NL cluster itself was
+not touched either** (correctly — none of this round's edits touched any
+`/nl/*` page). Waiting on your topic selection.
+
+**5.7 (FR): still deferred**, per Round 1's plan and this round's
+instruction alike.
+
+### What I'm still unsure about, stated plainly
+
+- Whether CIMPAS's arbitration stage specifically handles settlement-amount
+  disputes (narrowed from Round 1's broader uncertainty about what CIMPAS
+  even is, which is now resolved).
+- The psychologists/psychotherapists regulatory framework (Ordem dos
+  Psicólogos Portugueses) — flagged above, not written into, not guessed at.
+- Nothing else in this round required inventing a fact. Where I drew on an
+  existing page's already-established content (the PT massagistas article,
+  the EN pillar's own yoga paragraph), I treated it as reusable; everything
+  else new either cites a source fetched and checked this round (RJCS Art.
+  50.º, Lei 71/2013 Art. 10.º, Portaria 200/2014, CIMPAS's actual role) or
+  carries a visible `[VERIFY]`.
