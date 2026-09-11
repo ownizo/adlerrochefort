@@ -762,3 +762,94 @@ DE or FR page is a genuine language translation only if it translates an
 existing page 1:1 (none of the candidates here do — they're new topics),
 so none of the new pages in this plan should declare hreflang alternates
 to each other. **Item closed, no code change.**
+
+---
+
+## Block 6 — final consolidated report
+
+**Files changed in Block 1, and where the partner list was hardcoded:**
+`data/partners.json` (new, single source of truth), `scripts/lib/landing.mjs`
+(now reads it), `scripts/apply-partner-list.mjs` (new sync script), plus 15
+pages hand-edited where the list was hardcoded in markup or prose —
+`public/en/index.html` (linked logos), the 11 pages the sync script fixed
+(`public/index.html`, `public/private-clients/index.html`,
+`public/en/insurance/tvde/index.html`, 8 of the `public/seguros/*` pages),
+and `public/nl/index.html` / `public/de/index.html` / `public/fr/index.html`
+(hardcoded prose — hero-trust line, brand-chip row, feature copy, FAQ
+answers, meta descriptions). `public/de/index.html` and `public/fr/index.html`
+also got the working-language disclosure block, since both promised
+advice/claims handling entirely in German/French with no disclosure present.
+Full detail in the Block 1 report above.
+
+**The B discrepancy:** not a real discrepancy. `data/articles.json` uses
+`status: merged` and `status: draft` as a deliberate taxonomy; the two
+"extra" EN rows I originally flagged are `merged` tombstones with matching
+live redirects. I caught my own mistake mid-fix (a script that would have
+deleted them) before committing anything. `data/articles.json` is unchanged
+from `main`. Full detail in the Block 2 section above.
+
+**Coverage matrix outcome — everything classified EXISTS or PARTIAL and
+therefore not (re)written:**
+- 5.1 pillar: **PARTIAL** — `outdated-insured-values` already covers the
+  rule and a worked partial-loss example; not duplicated, extension held
+  for your go-ahead.
+- 5.2: the core MGEN facts **EXISTS** across `pre-existing-conditions-
+  health-insurance-portugal` (EN) and `zorgverzekering-portugal` /
+  `s1-formulier-cak-portugal` (NL) — reused as established fact, linked
+  rather than rewritten.
+- 5.3 pillar: **EXISTS, strong** — `liability-insurance-complementary-
+  therapies` (EN, 1,115 lines) plus 3 PT satellites — untouched, held on
+  Innovarisk.
+- 5.4: the 4 named existing articles (`us-buyers-property-cover-portugal`,
+  `property-title-risk-portugal`, `health-insurance-portugal-americans`,
+  `health-insurance-portugal-usa`) **EXIST** and were left alone; only the
+  hub and 4 new satellites are planned as new pages.
+- Named adjacent pages across the whole brief (`luxury-home-insurance-
+  portugal`, `hiscox-home-insurance-portugal`, `liberty-mutual-home-
+  insurance-portugal`, `best-home-insurance-portugal-2026`, and all of
+  5.5/5.6's "mirrors" targets in the existing NL cluster) — confirmed
+  **EXISTS**, none touched, none duplicated.
+
+**Every page created this pass (3):**
+1. `/en/blog/disputing-sum-insured-portugal/`
+2. `/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/`
+3. `/en/blog/mgen-health-insurance-portugal/`
+
+All three: registered in `data/articles.json`, one commit each, linked
+into their nearest existing pillar/neighbours. None are yet wired into
+`/en/blog/`'s index, category pages, RSS feed or `sitemap.xml` — those are
+produced by `scripts/generate-blog.mjs` and `scripts/generate-sitemap.mjs`,
+which touch many existing files per run. Deliberately queued for one
+reviewed run once this branch's content is otherwise settled, rather than
+run three times, once per page, each producing its own wide diff.
+
+**Every `[VERIFY]` placeholder left, consolidated:**
+1. `disputing-sum-insured-portugal` — exact statutory basis (RJCS article)
+   for the peritagem/arbitration mechanism.
+2. `disputing-sum-insured-portugal` — CIMPAS's precise role in a disputed-
+   settlement scenario specifically.
+3. `mgen-health-insurance-portugal` — whether waiting periods vary by
+   product beyond the confirmed 365-day pre-existing-condition figure.
+
+Three. All inline in the published HTML as visible `[VERIFY]` boxes, not
+buried in a comment — easy to grep for (`grep -rn '\[VERIFY\]' public/`)
+when you're ready to work through them.
+
+**Open items, not guessed at either direction:**
+- **Innovarisk** (Block 1) — blocks all of 5.3 and 2 of 5.5/5.6's items.
+  Needs your call on whether it's in scope for the partner-list change at
+  all.
+- **5.4's hub template** — commercial `lp-*` page vs. blog-shaped hub;
+  a quick steer avoids building the wrong shared-component shape.
+- **The "Article 5" vs. "art. 10.º n.º1" citation discrepancy** on the
+  existing `liability-insurance-complementary-therapies` page (Block 3,
+  5.3) — found, not corrected, flagged for whoever owns that page.
+
+**Anything else I was unsure about:** the exact article number for the
+peritagem/arbitration mechanism (flagged as `[VERIFY]` rather than
+guessed), and CIMPAS's specific procedural role in a settlement dispute
+(same). Nothing else in this pass required inventing a fact I couldn't
+support — where the coverage matrix showed a fact already established
+elsewhere on the live site (the MGEN mechanism), I treated it as reusable;
+where it didn't, I either wrote around it honestly or flagged it and
+stopped, per the standing rule.
