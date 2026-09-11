@@ -5011,6 +5011,27 @@
         "readingTime": 8,
         "featured": false,
         "translationOf": null
+      },
+      {
+        "slug": "mortgage-sum-insured-vs-rebuild-cost-portugal",
+        "lang": "en",
+        "status": "published",
+        "url": "/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/",
+        "category": "home-property",
+        "tag": "Underinsurance",
+        "title": "Insuring to the bank's figure is not the same as insuring to rebuild cost",
+        "metaTitle": "Insuring to the Bank's Figure Is Not the Same as Insuring to Rebuild Cost | Adler & Rochefort",
+        "description": "Portuguese mortgage lenders require buildings cover for at least the outstanding loan. That figure is not rebuild cost, and as the loan amortises the two drift apart — in the direction that leaves the owner, not the bank, exposed to the proportional rule.",
+        "excerpt": "Why a lender's minimum insurance requirement and actual rebuild cost are different numbers, and why the gap tends to widen as the mortgage is paid down.",
+        "image": null,
+        "imageGradient": "linear-gradient(135deg, #17243D 0%, #B8323E 100%)",
+        "imageAlt": "Insuring to the bank's figure is not the same as insuring to rebuild cost",
+        "published": "2026-09-11",
+        "modified": "2026-09-11",
+        "dateLabel": "September 2026",
+        "readingTime": 7,
+        "featured": false,
+        "translationOf": null
       }
     ],
     "nl": [
