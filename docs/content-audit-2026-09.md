@@ -961,3 +961,38 @@ instruction alike.
   else new either cites a source fetched and checked this round (RJCS Art.
   50.º, Lei 71/2013 Art. 10.º, Portaria 200/2014, CIMPAS's actual role) or
   carries a visible `[VERIFY]`.
+
+---
+
+## Round 3 — status re-verified, generator pass attempted and reverted
+
+### Status corrections (verified against git log/file contents, not memory)
+
+Two corrections to the round-2 status request's own framing, found while verifying rather than assumed:
+
+1. **5.1's pillar was never extended.** `git log main..content/market-expansion-2026 -- public/en/blog/outdated-insured-values/index.html` returns nothing — the file is untouched. Only the two satellites exist, linking to it one-directionally.
+2. **Lei 71/2013 recognises seven therapies, not six.** Re-verified Artigo 2.º directly (pgdlisboa.pt): Acupuncture, Phytotherapy, Homeopathy, Traditional Chinese Medicine, Naturopathy, Osteopathy, **and Chiropractic (Quiropraxia)** — the existing EN pillar (`liability-insurance-complementary-therapies`) currently says "six practices" and omits Chiropractic from its own list. Found, not yet fixed.
+3. Also found while checking 5.2: a pre-existing, pre-branch article (`retiring-algarve-health-cover-65-plus`) already covers the general 65+ angle — missed in the original coverage matrix.
+
+### The generator task — attempted, reverted, blocked on a real finding
+
+Ran `node scripts/generate-blog.mjs` then `node scripts/generate-sitemap.mjs` against a clean baseline (commit `127c727`). Result: 37 modified + 3 new files. Diff summary by type:
+
+| Type | Count | Expected? |
+|---|---|---|
+| EN blog index + pagination (`/en/blog/`, `/en/blog/page/2-11/`, 3 new page/12-14/) | 14 | Yes — new articles push pagination out |
+| EN category pages (10 categories, some with page/2) | 15 | Yes — new articles need to appear here |
+| RSS (`/en/blog/feed.xml`) | 1 | Yes |
+| Sitemap (`sitemap.xml`, `sitemap-pages.xml`, `sitemap-blog.xml`) | 3 | Yes |
+| `data/generated-blog-pages.json` (registry) | 1 | Yes |
+| `public/css/ar-site.css` (shared stylesheet, regenerated as a side effect of `generate-blog.mjs`) | 1 | **No — see below** |
+| PT blog pages | 0 | Correct — none of this branch's new content is PT |
+| Individual article/commercial/landing pages | 0 | Correct — confirmed by direct grep, none touched |
+
+**Two problems found before committing anything, both now reverted, nothing committed:**
+
+1. **`ar-site.css` regeneration would break 4 live PT pages.** The regenerated stylesheet drops the `.lp-form-note` rule (23 insertions, 7 deletions net). That class is still referenced by 4 live pages this branch never touched — `public/seguros/rc-massagistas/`, `responsabilidade-civil-profissional/`, `rc-terapeuticas-nao-convencionais/`, `tvde/`. The rule seems to have been renamed to `.hero-form-note` in `public/index.html`'s own source `<style>` block by an earlier, unrelated commit (`70a9c38`, on `main` before this branch existed) without the 4 dependent pages being updated to match — a real, pre-existing bug, not something this branch caused. Committing the regenerated CSS as-is would silently break those 4 pages' form styling. **Reverted; not committed.**
+
+2. **Every one of the 30 EN blog HTML files carries an unrelated, large nav overhaul, not just my new articles.** `chrome.mjs`'s `NAV_EN` constant already contains the current 3-column mega-menu (with the Spain panel) that's live on `public/en/index.html` — but the EN blog index/category/pagination pages were last generated *before* that menu existed, and nobody has re-run `generate-blog.mjs` since. So regenerating them for my new articles necessarily also rewrites their entire chrome to match the current mega-menu — confirmed present in the diff of **all 30** modified HTML files, including ones with none of my new content (e.g. `spain-car`, `marine`, `holiday-lets-hospitality`). This is the same "edited the source, never re-ran the generator" pattern `SPAIN-DIAGNOSIS.md` already found for `unify-chrome.mjs`'s footer — here it's `generate-blog.mjs`'s nav, on a set of pages that diagnosis didn't cover. **Reverted; not committed.**
+
+**Current state: exactly as before this round started.** `git rev-parse HEAD` = `127c727...`, `git status` clean. Nothing from the generator pass is committed. The branch's reviewability is still blocked on this — see the chat response for the decision this needs.
