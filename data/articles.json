@@ -4990,6 +4990,27 @@
         "readingTime": 6,
         "featured": false,
         "translationOf": null
+      },
+      {
+        "slug": "disputing-sum-insured-portugal",
+        "lang": "en",
+        "status": "published",
+        "url": "/en/blog/disputing-sum-insured-portugal/",
+        "category": "home-property",
+        "tag": "Claims",
+        "title": "When you disagree with the insurer's figure, not just the value you declared",
+        "metaTitle": "Disputing a Property Claim Settlement in Portugal: Perito de Parte and the Escalation Path | Adler & Rochefort",
+        "description": "What to do when you disagree with an insurer's assessment of a loss or the sum insured applied to it: appointing your own perito de parte, the arbitration clause that follows, and where the Livro de Reclamações and the ASF fit.",
+        "excerpt": "The written challenge, the perito de parte arbitration clause, and where CIMPAS, the Livro de Reclamações and the ASF actually fit.",
+        "image": null,
+        "imageGradient": "linear-gradient(135deg, #17243D 0%, #B8323E 100%)",
+        "imageAlt": "When you disagree with the insurer's figure, not just the value you declared",
+        "published": "2026-09-11",
+        "modified": "2026-09-11",
+        "dateLabel": "September 2026",
+        "readingTime": 8,
+        "featured": false,
+        "translationOf": null
       }
     ],
     "nl": [
