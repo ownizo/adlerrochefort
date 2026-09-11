@@ -353,14 +353,126 @@ read, or the task's instruction is the one that's stale).
 
 ---
 
-## What I need back before Phase 2
+---
 
-1. **The plan** — the actual list of candidate pages/topics for the US, NL
-   and DE markets ("the four topics" referenced in the brief).
-2. **The rest of the compliance-constraints paragraph**, starting from
-   "in French 'intermédiaire…'" — and a decision on the Makler/
-   Versicherungsvermittler and courtier/intermédiaire conflict above.
+## Block 1 report — partner list
 
-Everything in A–E is safe to treat as current groundwork regardless of how
-those two land. Nothing has been written to `public/`, `netlify/`, or
-`scripts/`; the only new file on this branch is this one.
+Approved list applied: Hiscox, Allianz, Zurich, MGEN, Asisa, April, Chubb,
+now defined once in `data/partners.json`.
+
+**Files changed** (4 commits):
+- `data/partners.json` — new, the single source of truth.
+- `scripts/lib/landing.mjs` — `PARTNERS` now reads the JSON file instead of
+  a hardcoded array.
+- `scripts/apply-partner-list.mjs` — new, one-off sync script; mechanically
+  rewrote 11 hand-authored pages carrying the same `.partners-logos`
+  markup the generator emits but that aren't themselves generator output
+  (`public/index.html`, `public/private-clients/index.html`,
+  `public/en/insurance/tvde/index.html`, and 8 of the 9 `public/seguros/*`
+  pages — `responsabilidade-civil-profissional` included, it uses the same
+  markup despite not being in `data/generated-landing-pages.json`).
+- `public/en/index.html` — hand-edited (its partner strip links three
+  names to editorial blog articles, which the mechanical pass wasn't safe
+  to touch); removed Médis and Liberty Mutual, added Asisa and Chubb, kept
+  the Allianz/Zurich/Hiscox article links.
+- `public/nl/index.html`, `public/de/index.html`, `public/fr/index.html` —
+  hand-edited. Insurer names on these three pages are hardcoded into prose
+  (hero-trust line, brand-chip row, feature-card copy, FAQ answers, both
+  meta descriptions) rather than sourced from `landing.mjs`, so each
+  occurrence needed a direct edit — 11 on NL, 8 on DE, 8 on FR. Bupa (the
+  only non-approved name on these three pages) is now at zero occurrences
+  site-wide; MGEN and Hiscox take its place in the affected sentences.
+- `public/de/index.html`, `public/fr/index.html` — separately, added the
+  working-language disclosure block (`#sprachpolitik` / `#politique-
+  linguistique`), mirroring `public/en/index.html`'s `#ar-language-policy`
+  and `public/nl/index.html`'s fuller `#taalbeleid` version. Both pages
+  promised advice, explanations and claims handling entirely in
+  German/French (hero subtitle, meta description) with no disclosure
+  anywhere on the page before this.
+
+**Where the list was hardcoded** (found by direct grep, not assumed):
+`scripts/lib/landing.mjs` (now fixed) and, as prose rather than a list
+variable, the five homepages above. No other `data/*.json` file, Netlify
+function, or script held a duplicate copy.
+
+**Not changed, and not a removal of the list's intent — an editorial
+reference left alone as instructed:** the ~80–130 files (per insurer) that
+mention Hiscox, Allianz, Zurich, Médis, Liberty Mutual, AdvanceCare or
+similar in blog-article body text (e.g. `hiscox-home-insurance-portugal`,
+`medis-health-insurance-portugal`, `liberty-mutual-home-insurance-
+portugal`). These are named-insurer guides, not partnership claims, and
+the task's own scope boundary says leave them alone.
+
+### Found, not resolved: "Innovarisk" is not a simple removal — flagging per the stop conditions
+
+`Innovarisk` was on the old 5-name list, is not on the new 7-name list, and
+so reads at first like a straightforward removal alongside Médis/Liberty
+Mutual/Bupa/AdvanceCare. It **is not one**, and I did not touch it. Direct
+reads of every remaining occurrence (9 files, all still present) show it
+is not a partner-logo decoration anywhere — it is described, in running
+commercial-page copy, as the **specific mechanism** by which two live
+product lines are delivered:
+
+1. **Non-standard/high-value property placement.** `public/en/private-
+   clients/index.html:205-211` and `public/en/blog/liberty-mutual-home-
+   insurance-portugal/index.html` (a 2026-dated article, not a legacy
+   leftover) describe "Liberty Mutual, through Innovarisk" as the current,
+   named route to specialty underwriting capacity for non-conventional
+   construction, mixed use, short-term letting/Alojamento Local and
+   properties with a prior claims record — explicitly contrasted with
+   "Liberty Seguros" (the unrelated retail brand, since sold to Generali).
+2. **Professional-liability niches.** `public/seguros/responsabilidade-
+   civil-profissional/index.html:267-268`, `public/seguros/rc-profissoes-
+   especificas/index.html:265-266`, `public/seguros/responsabilidade-
+   civil-eventos/index.html:217`, and two articles
+   (`seguro-responsabilidade-civil-naturopatas`,
+   `seguro-responsabilidade-civil-acupuntores`) all state that access to
+   specialised cover for non-conventional therapies and specific
+   professions comes "através da parceria com a Innovarisk" (through the
+   partnership with Innovarisk).
+
+This is squarely one of the three stop conditions in the brief: **a
+factual claim cannot be written without inventing something.** If
+Innovarisk is genuinely removed as a partner, the pages above lose their
+stated mechanism for delivering those two product lines, and I have no
+truthful replacement to put there — I don't know which, if any, of the
+seven approved names (Hiscox, Allianz, Zurich, MGEN, Asisa, April, Chubb)
+underwrites non-standard high-value property or takes on naturopath/
+acupuncturist professional-liability risk, and inventing that pairing is
+exactly what I'm told not to do. It also intersects directly with block
+5.3 below (professional liability — therapies and professions), which
+asks me to check whether this exact page already covers the topic before
+writing anything new — it does, and its "how we access this cover"
+explanation rests entirely on the relationship in question.
+
+**What I need:** is "Innovarisk" in scope for this list at all, or is it a
+different kind of relationship (a specialist MGA/capacity channel, not a
+"partner we display a logo for") that the new 7-name list was never meant
+to touch? If it does need to change, what replaces it as the stated
+mechanism on those five pages — I can write the copy once I'm not
+inventing the insurer.
+
+**Holding, not blocking everything downstream:** block 5.3's coverage-
+matrix entries below are written and are true regardless of how this
+resolves (the pages EXIST either way). I have not written any new
+professional-liability copy that would depend on the answer.
+
+---
+
+## Status update — both original blockers resolved, work resumed
+
+*(This section originally said Phase 2 was blocked on the missing plan and
+the terminology conflict. Both arrived in the follow-up message. Recorded
+here rather than deleted, so the branch history explains why work paused
+and then resumed.)*
+
+1. **The plan** arrived as block 5 of the follow-up (candidates 5.1–5.8
+   below). Coverage matrix and risk list follow in the next section.
+2. **The terminology conflict** was resolved by the follow-up message
+   itself: `scripts/lib/terminology-rules.mjs` is confirmed authoritative
+   and frozen (German "Versicherungsmakler/Makler", French "courtier").
+   Not revisited, not re-proposed.
+
+One new item is open — the Innovarisk finding immediately above — and is
+being tracked the same way: flagged, not guessed at, not blocking the rest
+of the plan.
