@@ -676,6 +676,81 @@ have no dedicated NL page to collide with.
 Per the brief: no pages this round. Clone plan queued below in the Block 5
 report rather than written now.
 
+---
+
+## Block 5 — writing report
+
+**Written this pass (5.1, 5.2 — "write in this order" honoured):**
+
+| Page | Slug | Status |
+|---|---|---|
+| Disputing a property claim settlement (perito de parte, CIMPAS, Livro de Reclamações, ASF) | `/en/blog/disputing-sum-insured-portugal/` | Published, registered, linked from/to `outdated-insured-values` and `claims-support` |
+| Bank's insurance requirement vs. rebuild cost | `/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/` | Published, registered, linked from/to `outdated-insured-values` and `mortgage-life-insurance-foreign-buyers-portugal` |
+| MGEN health insurance pillar | `/en/blog/mgen-health-insurance-portugal/` | Published, registered; link insertion (not rewrite) into 3 existing pages that already stated these facts |
+
+**Held, not written:**
+- The "total-loss worked example" and "retail vs. individually underwritten wording" additions to `outdated-insured-values/` itself — extending an existing page needs your explicit per-page go-ahead under the standing rule. Ready to do the moment you confirm.
+- A dedicated "setting the rebuild value" satellite — lower priority than the two written, queued below.
+- Everything in 5.3 — held on the Innovarisk finding.
+
+**Not yet started, with a concrete plan for each so the pattern already proven above can be picked up directly:**
+
+### 5.4 build plan — US audience hub
+
+- **Hub**, new: `/en/us-buyers-insurance-portugal/` (commercial `lp-*` template, matching `expat-insurance-spain`'s role — Overview entry, breadcrumb parent, own lead form) or `/en/blog/insurance-guide-americans-portugal/` as a lighter blog-shaped hub if a full commercial page isn't wanted yet — **this choice is worth a quick steer from you**, since it decides which shared component (`landing.mjs` vs. the blog template used for 5.1/5.2) governs the page. Links out to the 4 existing articles (`us-buyers-property-cover-portugal`, `property-title-risk-portugal`, `health-insurance-portugal-americans`, `health-insurance-portugal-usa`).
+- **Satellite: US umbrella vs. Portuguese liability limits.** Explains that a US umbrella policy does not travel with the owner to a Portuguese property; Portuguese household/RC limits are structured differently. No specific PT limit figures asserted without a source — `[VERIFY]` any number used.
+- **Satellite: what a US driving record does and doesn't transfer.** No-claims history is not portable the way it is between some EU states (compare the existing Spain article `no-claims-history-car-insurance-spain` for the adjacent EU case, which does not apply the same way to a US record) — `[VERIFY]` before asserting exactly what Portuguese insurers accept as evidence from a US record.
+- **Satellite: claiming in Portugal vs. a US adjuster.** Practical-expectations piece: no direct equivalent of a US-style adjuster relationship; written, non-native-language claims correspondence; realistic timelines. No statutory citation needed.
+- **Satellite: D7/D8/Golden Visa owners taking cover before residency.** Ties into the existing `health-insurance-portugal-residency-visa` and `nif-fiscal-representation-d7-visa-health-insurance` articles — link, don't duplicate their visa-process detail; this satellite's own job is the "before you're resident" cover gap specifically.
+
+### 5.5 build plan — DE tree (confirmed greenfield)
+
+Mirrors the 13-page NL cluster's shape (`scripts/generate-nl-cluster.mjs` + `scripts/nl-content/*.mjs` + `scripts/nl-cluster.data.mjs` is the closest generator precedent, though — per Block 4's rule — a new DE cluster should follow whichever mechanism its nearest neighbour uses, and `/de/` currently has no generator of its own, so hand-authoring each page from the NL page's structure, the way the 3 pages above were built from the EN blog template, is the safer default unless you'd rather a `build-de-cluster.mjs` be written first). Proposed slugs, mirroring NL's naming pattern:
+
+| Topic | Proposed slug | Links to |
+|---|---|---|
+| Hub | `/de/versicherungen-portugal/` | all of the below |
+| Abmeldung + GKV/PKV + Anwartschaftsversicherung | `/de/gkv-pkv-abmeldung-portugal/` | — |
+| S1 for pensioners | `/de/s1-formular-portugal/` | mirrors `/nl/s1-formulier-cak-portugal/`'s structure |
+| Vorerkrankungen | `/de/vorerkrankung-krankenversicherung-portugal/` | **into 5.2's pillar** (`mgen-health-insurance-portugal`) |
+| Unterversicherung / Proportionalregel | `/de/unterversicherung-portugal/` | **into 5.1's pillar** (`outdated-insured-values`) |
+| Privathaftpflicht in Portugal | `/de/privathaftpflicht-portugal/` | — |
+| Erdbebenversicherung | `/de/erdbebenversicherung-portugal/` | — |
+| SF-Klasse (no-claims) transfer | `/de/sf-klasse-uebertragen-portugal/` | mirrors `/nl/schadevrije-jaren-meenemen-portugal/` |
+| Car import / ISV | `/de/auto-import-portugal-versicherung/` | mirrors `/nl/auto-importeren-portugal-verzekering/` |
+| Waldbrandrisiko | `/de/waldbrandrisiko-hausversicherung-portugal/` | mirrors `/nl/bosbrandrisico-woonverzekering-portugal/` |
+| Unlegalised property | `/de/nicht-legalisierte-immobilie-versichern-portugal/` | mirrors `/nl/niet-gelegaliseerde-woning-verzekeren-portugal/` |
+| Alojamento Local | `/de/ferienvermietung-versicherung-portugal/` | mirrors `/nl/alojamento-local-verzekering-portugal/` |
+| Berufshaftpflicht | — | **on hold, Innovarisk** |
+
+12 of 13 buildable now (Berufshaftpflicht held). Not started this pass —
+13 full pages at NL's ~700–760-line fidelity is a substantial body of
+work better done deliberately than rushed alongside everything else in
+this response.
+
+### 5.6 build plan — NL extensions
+
+7 of 8 buildable now (`beroepsaansprakelijkheid voor therapeuten en yogadocenten` held on Innovarisk):
+
+| Topic | Proposed slug | Note |
+|---|---|---|
+| evenredigheidsregel bij totaal verlies | `/nl/onderverzekering-evenredigheidsregel-portugal/` | Translate the *mechanism* from `outdated-insured-values`, don't machine-translate the English text; link back to it as the EN reference. |
+| aardbevingsdekking | `/nl/aardbevingsdekking-portugal/` | Mirrors `/nl/bosbrandrisico-woonverzekering-portugal/`'s single-peril structure. |
+| bestaande aandoening | `/nl/bestaande-aandoening-zorgverzekering-portugal/` | Link into 5.2's EN pillar the same way `zorgverzekering-portugal` and `s1-formulier-cak-portugal` now do. |
+| AVP vs Portuguese liability | `/nl/aansprakelijkheidsverzekering-particulieren-portugal/` | |
+| ORV bij een Portugese hypotheek | `/nl/overlijdensrisicoverzekering-hypotheek-portugal/` | |
+| VvE | `/nl/vve-verzekering-portugal/` | |
+| leegstandsclausule | `/nl/leegstandsclausule-portugal/` | Translate the concept from the EN unoccupancy-clause article (`second-homes-empty-months-unoccupancy-clause-voids-cover`), not its text. |
+| boot verzekeren | `/nl/boot-verzekeren-portugal/` | |
+
+### 5.7 FR clone plan (per the brief: no pages this round)
+
+Once DE (5.5) is complete and reviewed, the same 13-topic list translates
+directly to French with the same slug pattern (`/fr/assurances-portugal/`
+as hub, etc.) — holding this until DE is done and approved rather than
+running two greenfield trees in parallel, since DE was named first and a
+reviewed DE pattern is a better template for FR than an unreviewed one.
+
 ### 5.8 hreflang
 
 From Phase 1D: 0 broken hreflang targets, hreflang computed per real
