@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node --test 'netlify/functions/**/*.test.mjs'"
+    "test": "node --test 'netlify/functions/**/*.test.mjs'",
+    "check:freshness": "node scripts/check-generator-freshness.mjs"
   },
   "keywords": [],
   "author": "",
