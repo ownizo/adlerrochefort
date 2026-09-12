@@ -29,6 +29,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { globSync, existsSync } from 'node:fs';
+import { MARKET_PRODUCT_CLUSTERS } from './lib/market-hreflang.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -48,9 +49,39 @@ const SITE = 'https://adlerrochefort.com';
  * The two Dutch landings joined later: the home-insurance trio records the
  * pt/en pair the markup already had plus the Dutch page that now mirrors it,
  * and the Alojamento Local pair is declared by the Dutch page itself.
+ *
+ * September 2026 — Poland, Sweden and Denmark, then China. The homepage
+ * cluster grows to nine, because /pl/, /se/, /dk/ and /zh/ are the same page
+ * for a different reader and each declares the other eight back. Chinese is
+ * declared zh-CN, not bare zh: the pages are Simplified Chinese, and a reader
+ * of Traditional Chinese should not be told this is their page. Note the values: the market segment
+ * is /se/ and /dk/ but the language is sv-SE and da-DK. "se" and "dk" are
+ * country codes; a page declaring hreflang="se" would be offering itself in
+ * Northern Sami.
+ *
+ * Their seven product and guide pages pair only with each other, and those
+ * groups are imported from scripts/lib/market-hreflang.mjs, which derives them
+ * from the page objects the generator renders. So a pairing cannot be asserted
+ * here for a market page that was never written — which is the same guarantee
+ * onDisk() gives the clusters below, applied one step earlier. There is
+ * deliberately no claim that any of them pairs with an /en/ or /de/ page: no
+ * English page answers "ansvarsforsikring i Portugal", and pointing one at a
+ * Danish reader's question would be the unilateral declaration this whole
+ * script exists to remove.
  */
 const PAGE_CLUSTERS = [
-  { '/': 'pt-PT', '/en/': 'en-GB', '/de/': 'de', '/fr/': 'fr', '/nl/': 'nl', xDefault: '/' },
+  {
+    '/': 'pt-PT',
+    '/en/': 'en-GB',
+    '/de/': 'de',
+    '/fr/': 'fr',
+    '/nl/': 'nl',
+    '/pl/': 'pl-PL',
+    '/se/': 'sv-SE',
+    '/dk/': 'da-DK',
+    '/zh/': 'zh-CN',
+    xDefault: '/',
+  },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
   { '/seguros/tvde/': 'pt-PT', '/en/insurance/tvde/': 'en-GB' },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
@@ -71,6 +102,7 @@ const PAGE_CLUSTERS = [
   { '/seguros/auto/': 'pt-PT', '/en/car-insurance-portugal/': 'en-GB' },
   { '/politica-de-privacidade/': 'pt-PT', '/en/privacy-policy/': 'en-GB' },
   { '/termos-e-condicoes/': 'pt-PT', '/en/terms-and-conditions/': 'en-GB' },
+  ...MARKET_PRODUCT_CLUSTERS,
 ];
 
 /**
@@ -85,6 +117,10 @@ const X_DEFAULT = new Map([
   ['/de/', '/'],
   ['/fr/', '/'],
   ['/nl/', '/'],
+  ['/pl/', '/'],
+  ['/se/', '/'],
+  ['/dk/', '/'],
+  ['/zh/', '/'],
   ['/seguros/', '/seguros/'],
 ]);
 

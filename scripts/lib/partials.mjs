@@ -23,6 +23,7 @@
  *     rather than 190 copies.
  */
 import { readFile } from 'node:fs/promises';
+import { langSelectorHtml, selectorTargets, LANG_BY_KEY } from './lang-selector.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -124,50 +125,92 @@ CHROME.nl.cookie = `<!-- COOKIE CONSENT BANNER -->
 // ---------------------------------------------------------------------------
 // Language switcher
 //
-// A switcher entry is only rendered as a link when the target page actually
-// exists. Portuguese, English and Dutch address different audiences and it is
-// intentional that many articles exist in one language only; pointing at a
-// translation that was never written would produce a 404. When there is no
-// counterpart the entry falls back to that language's blog index, which is the
-// nearest useful page.
+// A switcher entry is only rendered as a real counterpart when the target page
+// actually exists. Portuguese, English and Dutch address different audiences
+// and it is intentional that many articles exist in one language only; pointing
+// at a translation that was never written would produce a 404. When there is no
+// counterpart the entry falls back to that language's blog index or home page,
+// and the control says so in the row rather than implying a translation.
 //
-// French and German were promoted to full site languages in August 2026. They
-// have a homepage and nothing else, so on every page but that homepage their
-// entry is a dimmed fallback to /fr/ or /de/. That is deliberate: a French
-// speaker who lands on a Portuguese article by way of the language router still
-// needs one click back to a page written for them.
+// September 2026: the control itself moved to scripts/lib/lang-selector.mjs.
+// Polish, Swedish and Danish brought the site to eight languages, which a row
+// of two-letter codes separated by pipes cannot hold on a phone — so the row
+// became a disclosure button listing each language under its own name. The
+// markup is defined once there and rendered from three places: here (for
+// scripts/unify-chrome.mjs), scripts/lang-switcher.mjs (the canonical pass over
+// every page in public/) and scripts/lib/market-cluster.mjs (the PL/SE/DK
+// generator). All three emit the same bytes for the same inputs, so no two of
+// them can undo each other's work.
+//
+// The `<div class="lang-switcher">` / `<div class="mobile-lang-switcher">`
+// wrapper is kept: public/js/lang-pref.js delegates its nf_lang cookie writes
+// off `.lang-switcher a`, and 192 pages carry their own inline copy of the
+// switcher CSS. Only the inside changed.
 // ---------------------------------------------------------------------------
 
-export const LANG_LABEL = { pt: 'PT', en: 'EN', nl: 'NL', fr: 'FR', de: 'DE' };
+/**
+ * Nearest real page per language for a page with no counterpart.
+ *
+ * Portuguese and English have an article archive worth landing in, but only
+ * for a reader who is already in one: sending someone reading /en/about/ to
+ * /blog/ is a worse answer than the Portuguese home page. So those two are a
+ * function of where the reader is, exactly as scripts/lang-switcher.mjs
+ * decides it — the two emitters have to agree or each run of one would undo
+ * the other. The seven localised markets have a home page each and nothing
+ * else, whatever the page.
+ */
 export const LANG_FALLBACK = {
   pt: '/blog/',
   en: '/en/blog/',
   nl: '/nl/',
   fr: '/fr/',
   de: '/de/',
+  pl: '/pl/',
+  se: '/se/',
+  dk: '/dk/',
+  zh: '/zh/',
 };
 
-/** The order the switcher renders in, and the `lang` attribute each entry carries. */
-export const LANG_ORDER = ['pt', 'en', 'nl', 'fr', 'de'];
-const LANG_ATTR = { pt: 'pt-PT', en: 'en', nl: 'nl', fr: 'fr', de: 'de' };
+const isBlogPath = (url) => url.startsWith('/blog/') || url.startsWith('/en/blog/');
 
-export function langSwitcher(current, targets = {}, { mobile = false, fallback = {} } = {}) {
+function fallbacksFor(pageUrl) {
+  return isBlogPath(pageUrl)
+    ? LANG_FALLBACK
+    : { ...LANG_FALLBACK, pt: '/', en: '/en/' };
+}
+
+/** The order the switcher renders in — the canonical one, from the selector module. */
+export const LANG_ORDER = Object.keys(LANG_BY_KEY);
+
+/**
+ * `closeIndent` is where the wrapper's closing tag sits, and it differs between
+ * the two containers this switcher goes into: siteNav and articleNav open it at
+ * four spaces, mobileDrawer at two. Getting it wrong is invisible on the page
+ * but not to scripts/lang-switcher.mjs, which preserves whatever indentation a
+ * page already has — the two passes would then rewrite the same two bytes back
+ * and forth on every run.
+ */
+export function langSwitcher(
+  current,
+  targets = {},
+  { mobile = false, fallback = {}, closeIndent = mobile ? '  ' : '    ' } = {}
+) {
   const cls = mobile ? 'mobile-lang-switcher' : 'lang-switcher';
-  const near = { ...LANG_FALLBACK, ...fallback };
-  const parts = [];
-  for (const lang of LANG_ORDER) {
-    const href = lang === current ? targets[lang] || '' : targets[lang] || near[lang];
-    const attrs = [
-      `href="${href}"`,
-      lang === current ? 'class="active"' : targets[lang] ? '' : 'class="lang-unavailable"',
-      lang === current ? '' : `lang="${LANG_ATTR[lang]}"`,
-    ]
-      .filter(Boolean)
-      .join(' ');
-    if (!mobile && parts.length) parts.push('<span class="lang-switcher-sep">|</span>');
-    parts.push(`<a ${attrs}>${LANG_LABEL[lang]}</a>`);
-  }
-  return `<div class="${cls}">\n      ${parts.join('\n      ')}\n    </div>`;
+  const pageUrl = targets[current] || LANG_BY_KEY[current]?.home || '/';
+  const pairs = { ...targets };
+  delete pairs[current];
+  const selector = langSelectorHtml({
+    pageLang: current,
+    targets: selectorTargets({
+      pageLang: current,
+      pageUrl,
+      pairs,
+      fallbacks: { ...fallbacksFor(pageUrl), ...fallback },
+    }),
+    mobile,
+    indent: '      ',
+  });
+  return `<div class="${cls}">\n${selector}\n${closeIndent}</div>`;
 }
 
 // ---------------------------------------------------------------------------

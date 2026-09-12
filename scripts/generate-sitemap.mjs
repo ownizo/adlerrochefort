@@ -176,7 +176,12 @@ ${entries.join('\n')}
 const isArticle = (u) => /^\/(en\/)?blog\/[^/]+\/$/.test(u) && !u.startsWith('/blog/categoria/') && !u.startsWith('/blog/pagina/');
 
 const priorityFor = (u) => {
-  if (u === '/' || u === '/en/' || u === '/de/') return '1.0';
+  // The market homepages. Each is the entry point for a whole language's
+  // cluster, so it carries the same weight as / and /en/ — /pl/, /se/ and /dk/
+  // joined /de/ here when their clusters were built. /nl/ and /fr/ are left at
+  // the default on purpose: /nl/ is a single landing whose cluster hangs off
+  // sibling URLs rather than off it, and /fr/ is one page.
+  if (['/', '/en/', '/de/', '/pl/', '/se/', '/dk/', '/zh/'].includes(u)) return '1.0';
   if (u === '/seguros/' || u === '/blog/' || u === '/en/blog/') return '0.9';
   if (/^\/seguros\/[^/]+\/$/.test(u) || /^\/en\/insurance\/[^/]+\/$/.test(u)) return '0.9';
   // Pagination is checked before the category hubs: a paginated category URL

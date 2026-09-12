@@ -39,12 +39,25 @@ export default async (request: Request, _context: Context) => {
   const primary = accept.split(",")[0].trim().toLowerCase(); // e.g. "en-gb", "de"
   const lang = primary.split("-")[0]; // e.g. "en", "de"
 
-  // Localized expat landings. German/Dutch/French visitors get their own
-  // language landing; every other non-PT language falls through to English.
+  // Localized expat landings. A visitor whose browser is in one of the seven
+  // languages the site is actually written in gets that language's homepage;
+  // every other non-PT language falls through to English.
+  //
+  // The keys are language codes, not market segments, which is why Swedish is
+  // "sv" and Danish is "da" even though the pages live at /se/ and /dk/. A key
+  // of "se" would match Northern Sami and never match a Stockholm browser.
   const landing: Record<string, string> = {
     de: "/de/",
     nl: "/nl/",
     fr: "/fr/",
+    pl: "/pl/",
+    sv: "/se/",
+    da: "/dk/",
+    // Chinese. The primary tag is matched on its language subtag, so zh-CN,
+    // zh-Hans, zh-SG and zh-TW all land here. The pages are Simplified
+    // Chinese; sending a Traditional-Chinese browser to them is still a better
+    // answer than English, and the selector is one click away either way.
+    zh: "/zh/",
     en: "/en/",
   };
 

@@ -266,7 +266,11 @@ const rel = (f) => 'public/' + f;
   const reportPath = join(ROOT, 'data', 'hreflang-report.json');
   const report = JSON.parse(await readFile(reportPath, 'utf8').catch(() => '{}'));
   if (report.totals) {
-    const currentHtmlFiles = allHtmlFiles.length;
+    // scripts/hreflang.mjs records what it scanned, which is every .html file
+    // in public/ — not only the index.html pages allHtmlFiles collects. Count
+    // the same set here or this check reports a permanent off-by-one for
+    // public/email-signature.html, which is not a page and never drifts.
+    const currentHtmlFiles = globSync('**/*.html', { cwd: PUBLIC }).length;
     // Same pairing logic generate-sitemap.mjs uses: a PT article's
     // translationOf resolving to a published EN article of that slug.
     const enBySlug = new Map(data.articles.en.filter((a) => a.status === 'published').map((a) => [a.slug, a]));

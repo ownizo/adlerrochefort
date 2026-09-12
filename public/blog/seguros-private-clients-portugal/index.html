@@ -8,7 +8,6 @@
 <meta name="keywords" content="seguro private clients portugal, seguro património elevado valor, seguro arte e coleções, seguro automóvel clássico portugal">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://adlerrochefort.com/blog/seguros-private-clients-portugal/">
-  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/seguros-private-clients-portugal/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -552,6 +551,7 @@
   }
   .form-gdpr a { color: var(--primary, #17243D); }
 </style>
+<link rel="stylesheet" href="/css/ar-langsel.css">
 </head>
 <body>
 
@@ -563,15 +563,20 @@
   <div class="nav-right">
     <a href="/#blog" class="nav-back">&larr; Voltar aos Insights</a>
     <div class="lang-switcher">
-      <a href="/blog/seguros-private-clients-portugal/" class="active">PT</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/en/blog/" class="lang-unavailable" lang="en">EN</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/nl/" class="lang-unavailable" lang="nl">NL</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/fr/" class="lang-unavailable" lang="fr">FR</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/de/" class="lang-unavailable" lang="de">DE</a>
+      <div class="ar-langsel" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Idioma: Português. Escolher outro idioma."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Português</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
+          <li><a href="/blog/seguros-private-clients-portugal/" lang="pt-PT" hreflang="pt-PT" aria-current="true"><span>Português</span></a></li>
+          <li><a href="/en/blog/" lang="en" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">blog</span></a></li>
+          <li><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/pl/" lang="pl" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/se/" lang="sv" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/dk/" lang="da" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">página inicial</span></a></li>
+          <li><a href="/zh/" lang="zh-CN" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">página inicial</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
@@ -1059,5 +1064,6 @@
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
+<script defer src="/js/ar-langsel.js"></script>
 </body>
 </html>
