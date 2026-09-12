@@ -119,13 +119,13 @@ export const HEALTH_PAGE = {
   <div class="container narrow article-body">
     <h2 id="lista-kontrolna-zdrowie">Lista kontrolna</h2>
     <ol class="process-steps">
-      <li><strong>Rejestracja w SNS</strong> zrobiona lub zaplanowana: <em>centro de saúde</em>, <em>número de utente</em>.</li>
-      <li><strong>Sprawa NFZ</strong> uporządkowana i potwierdzona na piśmie; sprawdzone, czy dotyczy Państwa dokument S1.</li>
-      <li><strong>Sieć placówek</strong> prywatnego ubezpieczyciela obejmuje szpital i przychodnie w rozsądnej odległości od domu.</li>
-      <li><strong>Karencje</strong> znane dla każdego istotnego świadczenia — zwłaszcza przy planach okołoporodowych lub zabiegach.</li>
-      <li><strong>Ankieta medyczna</strong> wypełniona zgodnie z prawdą; decyzja ubezpieczyciela znana na piśmie przed startem polisy.</li>
-      <li><strong>Limity roczne i współpłacenie</strong> zrozumiane osobno dla części ambulatoryjnej i szpitalnej.</li>
-      <li><strong>Podróże do Polski</strong>: wiadomo, czy i w jakim trybie polisa działa poza Portugalią.</li>
+      <li><div><strong>Rejestracja w SNS</strong><span> zrobiona lub zaplanowana: <em>centro de saúde</em>, <em>número de utente</em>.</span></div></li>
+      <li><div><strong>Sprawa NFZ</strong><span> uporządkowana i potwierdzona na piśmie; sprawdzone, czy dotyczy Państwa dokument S1.</span></div></li>
+      <li><div><strong>Sieć placówek</strong><span> prywatnego ubezpieczyciela obejmuje szpital i przychodnie w rozsądnej odległości od domu.</span></div></li>
+      <li><div><strong>Karencje</strong><span> znane dla każdego istotnego świadczenia — zwłaszcza przy planach okołoporodowych lub zabiegach.</span></div></li>
+      <li><div><strong>Ankieta medyczna</strong><span> wypełniona zgodnie z prawdą; decyzja ubezpieczyciela znana na piśmie przed startem polisy.</span></div></li>
+      <li><div><strong>Limity roczne i współpłacenie</strong><span> zrozumiane osobno dla części ambulatoryjnej i szpitalnej.</span></div></li>
+      <li><div><strong>Podróże do Polski</strong><span>: wiadomo, czy i w jakim trybie polisa działa poza Portugalią.</span></div></li>
     </ol>
   </div>
 </section>`,

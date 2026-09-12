@@ -82,11 +82,11 @@ export const MOTOR_PAGE = {
     <h2 id="mai-che">在葡萄牙买车</h2>
     <p>买车的流程与保险是扣在一起的：车辆过户登记通常需要有效的保险，而保险需要车辆识别信息。实务上的顺序是：</p>
     <ol class="process-steps">
-      <li><strong>确认车辆信息。</strong>行车证（<em>Documento Único Automóvel</em>，简称 DUA）上的车架号、排量、首次登记日期、目前的登记人。</li>
-      <li><strong>确认没有未结清的负担。</strong>车辆上可能存在保留所有权登记（融资未结清）或税费欠缴，过户前应当核实。</li>
-      <li><strong>投保。</strong>保险以您为投保人，从交付当天生效。日期不要留空档：卖方的保单在过户后不保护您。</li>
-      <li><strong>办理过户登记。</strong>在登记机构（<em>IRN</em> / <em>Conservatória do Registo Automóvel</em>）完成所有权变更。</li>
-      <li><strong>确认年检状态。</strong>车辆定期检验（<em>inspeção periódica</em>，即 IPO）的有效期，逾期会影响上路与理赔中的争议。</li>
+      <li><div><strong>确认车辆信息。</strong><span>行车证（<em>Documento Único Automóvel</em>，简称 DUA）上的车架号、排量、首次登记日期、目前的登记人。</span></div></li>
+      <li><div><strong>确认没有未结清的负担。</strong><span>车辆上可能存在保留所有权登记（融资未结清）或税费欠缴，过户前应当核实。</span></div></li>
+      <li><div><strong>投保。</strong><span>保险以您为投保人，从交付当天生效。日期不要留空档：卖方的保单在过户后不保护您。</span></div></li>
+      <li><div><strong>办理过户登记。</strong><span>在登记机构（<em>IRN</em> / <em>Conservatória do Registo Automóvel</em>）完成所有权变更。</span></div></li>
+      <li><div><strong>确认年检状态。</strong><span>车辆定期检验（<em>inspeção periódica</em>，即 IPO）的有效期，逾期会影响上路与理赔中的争议。</span></div></li>
     </ol>
     <p>从经销商买新车时，对方通常会提供一份保险方案。与房贷保险的情形类似：可以用，但值得比较范围，尤其是自负额、救援覆盖区域和代步车条款这三项。</p>
   </div>
@@ -138,11 +138,11 @@ export const MOTOR_PAGE = {
   <div class="container narrow article-body">
     <h2 id="lipei-liucheng">出了事故怎么办</h2>
     <ol class="process-steps">
-      <li><strong>现场安全与记录。</strong>放置三角警示牌、穿反光背心（葡萄牙法律要求车内常备）、拍照记录现场与双方车辆、记下对方车牌与保险公司。</li>
-      <li><strong>填写友好事故声明书（<em>Declaração Amigável de Acidente Automóvel</em>）。</strong>这是欧洲通用的标准表格，双方共同填写并签字。它不是认责书，而是事实记录——但它填得是否清楚，会直接影响责任划分。车内常备一份。</li>
-      <li><strong>涉及人员受伤或有争议时报警。</strong>由 GNR 或 PSP 出具记录。</li>
-      <li><strong>在时限内报案。</strong>葡萄牙保单通常要求在事故发生后很短的时间内通知保险公司（常见为八天，具体以保单为准）。</li>
-      <li><strong>查勘与维修。</strong>由保险公司指定或认可的查勘人员评估，之后确定维修方案或按全损处理。</li>
+      <li><div><strong>现场安全与记录。</strong><span>放置三角警示牌、穿反光背心（葡萄牙法律要求车内常备）、拍照记录现场与双方车辆、记下对方车牌与保险公司。</span></div></li>
+      <li><div><strong>填写友好事故声明书（<em>Declaração Amigável de Acidente Automóvel</em>）。</strong><span>这是欧洲通用的标准表格，双方共同填写并签字。它不是认责书，而是事实记录——但它填得是否清楚，会直接影响责任划分。车内常备一份。</span></div></li>
+      <li><div><strong>涉及人员受伤或有争议时报警。</strong><span>由 GNR 或 PSP 出具记录。</span></div></li>
+      <li><div><strong>在时限内报案。</strong><span>葡萄牙保单通常要求在事故发生后很短的时间内通知保险公司（常见为八天，具体以保单为准）。</span></div></li>
+      <li><div><strong>查勘与维修。</strong><span>由保险公司指定或认可的查勘人员评估，之后确定维修方案或按全损处理。</span></div></li>
     </ol>
     <p>我们在这个环节的作用是对接：协助报案、说明表格怎么填、跟进查勘与定损、在责任划分或赔付金额有争议时与保险公司沟通。</p>
   </div>

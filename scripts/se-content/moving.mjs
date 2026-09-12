@@ -68,27 +68,27 @@ export const MOVING_PAGE = {
     <h2 id="ordning">Ordningen som fungerar</h2>
     <h3>Före flytten — tre till sex månader</h3>
     <ol class="process-steps">
-      <li><strong>NIF</strong> (portugisiskt skattenummer) — förutsättningen för nästan allt: hyresavtal, bankkonto, fastighetsköp, försäkring.</li>
-      <li><strong>Skriftliga svar</strong> från varje svenskt bolag om vad som gäller efter utflyttningen.</li>
-      <li><strong>Intyg om skadefria år</strong> från bilförsäkringsbolaget, gärna på engelska. Begär det medan avtalet löper.</li>
-      <li><strong>Din ställning hos Försäkringskassan</strong> klarlagd skriftligt, och kontrollerat om S1 gäller dig.</li>
-      <li><strong>Sjukvårdsförsäkring</strong> tecknad medan hälsan är oproblematisk — hälsoprövningen blir inte enklare av att man väntar.</li>
-      <li><strong>ISV-kalkyl</strong> om bilen ska med. För äldre bilar av vanliga modeller är det ofta billigare att sälja i Sverige.</li>
+      <li><div><strong>NIF</strong><span> (portugisiskt skattenummer) — förutsättningen för nästan allt: hyresavtal, bankkonto, fastighetsköp, försäkring.</span></div></li>
+      <li><div><strong>Skriftliga svar</strong><span> från varje svenskt bolag om vad som gäller efter utflyttningen.</span></div></li>
+      <li><div><strong>Intyg om skadefria år</strong><span> från bilförsäkringsbolaget, gärna på engelska. Begär det medan avtalet löper.</span></div></li>
+      <li><div><strong>Din ställning hos Försäkringskassan</strong><span> klarlagd skriftligt, och kontrollerat om S1 gäller dig.</span></div></li>
+      <li><div><strong>Sjukvårdsförsäkring</strong><span> tecknad medan hälsan är oproblematisk — hälsoprövningen blir inte enklare av att man väntar.</span></div></li>
+      <li><div><strong>ISV-kalkyl</strong><span> om bilen ska med. För äldre bilar av vanliga modeller är det ofta billigare att sälja i Sverige.</span></div></li>
     </ol>
     <h3>Vid flytten</h3>
     <ol class="process-steps">
-      <li><strong>Flyttfirmans ansvar</strong> skriftligt, och separat transportförsäkring om beloppet är för lågt.</li>
-      <li><strong>Hemförsäkring på den portugisiska bostaden</strong> från inflyttningsdagen — även vid hyra, där hyresvärden försäkrar byggnaden men inte ditt lösöre eller ditt ansvar.</li>
-      <li><strong>Bilen</strong>: svenskt skydd bekräftat under mellanperioden, portugisisk försäkring startad på <em>matrículans</em> datum.</li>
-      <li><strong>Utflyttningsanmälan</strong> till Skatteverket, med de försäkringsfrågorna redan avklarade.</li>
+      <li><div><strong>Flyttfirmans ansvar</strong><span> skriftligt, och separat transportförsäkring om beloppet är för lågt.</span></div></li>
+      <li><div><strong>Hemförsäkring på den portugisiska bostaden</strong><span> från inflyttningsdagen — även vid hyra, där hyresvärden försäkrar byggnaden men inte ditt lösöre eller ditt ansvar.</span></div></li>
+      <li><div><strong>Bilen</strong><span>: svenskt skydd bekräftat under mellanperioden, portugisisk försäkring startad på <em>matrículans</em> datum.</span></div></li>
+      <li><div><strong>Utflyttningsanmälan</strong><span> till Skatteverket, med de försäkringsfrågorna redan avklarade.</span></div></li>
     </ol>
     <h3>Efter flytten — de första månaderna</h3>
     <ol class="process-steps">
-      <li><strong>Uppehållsregistrering</strong> hos behörig myndighet, och därefter registrering i SNS på vårdcentralen.</li>
-      <li><strong>Körkortet registrerat</strong> hos IMT inom den frist som räknas från uppehållsregistreringen.</li>
-      <li><strong>Bilimporten</strong> avslutad: tull, ISV eller befrielse, teknisk kontroll, homologering.</li>
-      <li><strong>Ansvarsskydd</strong> kontrollerat — privat, och för yrkesverksamhet om du arbetar härifrån.</li>
-      <li><strong>Genomgång efter sex månader</strong>: bostad, adress och verksamhet ser sällan ut som planen gjorde.</li>
+      <li><div><strong>Uppehållsregistrering</strong><span> hos behörig myndighet, och därefter registrering i SNS på vårdcentralen.</span></div></li>
+      <li><div><strong>Körkortet registrerat</strong><span> hos IMT inom den frist som räknas från uppehållsregistreringen.</span></div></li>
+      <li><div><strong>Bilimporten</strong><span> avslutad: tull, ISV eller befrielse, teknisk kontroll, homologering.</span></div></li>
+      <li><div><strong>Ansvarsskydd</strong><span> kontrollerat — privat, och för yrkesverksamhet om du arbetar härifrån.</span></div></li>
+      <li><div><strong>Genomgång efter sex månader</strong><span>: bostad, adress och verksamhet ser sällan ut som planen gjorde.</span></div></li>
     </ol>
   </div>
 </section>

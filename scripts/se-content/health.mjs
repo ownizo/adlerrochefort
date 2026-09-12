@@ -117,13 +117,13 @@ export const HEALTH_PAGE = {
   <div class="container narrow article-body">
     <h2 id="checklista">Checklista</h2>
     <ol class="process-steps">
-      <li><strong>Registrering i SNS</strong> gjord eller planerad: <em>centro de saúde</em>, <em>número de utente</em>.</li>
-      <li><strong>Din svenska situation</strong> klarlagd skriftligt hos Försäkringskassan; kontrollerat om S1 gäller dig.</li>
-      <li><strong>Vårdnätverket</strong> innehåller sjukhus och mottagningar på rimligt avstånd från hemmet.</li>
-      <li><strong>Kvalificeringstiderna</strong> kända för varje förmån som betyder något — särskilt vid planerade ingrepp eller graviditet.</li>
-      <li><strong>Hälsodeklarationen</strong> ifylld sanningsenligt; bolagets beslut skriftligt innan försäkringen startar.</li>
-      <li><strong>Årstak och egenavgifter</strong> förstådda separat för öppenvård och sjukhusvård.</li>
-      <li><strong>Resor till Sverige</strong>: du vet om och hur försäkringen gäller utanför Portugal.</li>
+      <li><div><strong>Registrering i SNS</strong><span> gjord eller planerad: <em>centro de saúde</em>, <em>número de utente</em>.</span></div></li>
+      <li><div><strong>Din svenska situation</strong><span> klarlagd skriftligt hos Försäkringskassan; kontrollerat om S1 gäller dig.</span></div></li>
+      <li><div><strong>Vårdnätverket</strong><span> innehåller sjukhus och mottagningar på rimligt avstånd från hemmet.</span></div></li>
+      <li><div><strong>Kvalificeringstiderna</strong><span> kända för varje förmån som betyder något — särskilt vid planerade ingrepp eller graviditet.</span></div></li>
+      <li><div><strong>Hälsodeklarationen</strong><span> ifylld sanningsenligt; bolagets beslut skriftligt innan försäkringen startar.</span></div></li>
+      <li><div><strong>Årstak och egenavgifter</strong><span> förstådda separat för öppenvård och sjukhusvård.</span></div></li>
+      <li><div><strong>Resor till Sverige</strong><span>: du vet om och hur försäkringen gäller utanför Portugal.</span></div></li>
     </ol>
   </div>
 </section>`,

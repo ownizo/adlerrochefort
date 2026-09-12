@@ -118,11 +118,11 @@ export const MOTOR_PAGE = {
   <div class="container narrow article-body">
     <h2 id="szkoda">Co robić po stłuczce</h2>
     <ol class="process-steps">
-      <li><strong>Wypełnić <em>Declaração Amigável</em></strong> — portugalski odpowiednik europejskiego oświadczenia o zdarzeniu drogowym. Formularz jest dwujęzyczny w standardzie europejskim i wystarcza w miejsce wzywania policji przy szkodach bez ofiar i bez sporu.</li>
-      <li><strong>Zrobić zdjęcia</strong> — pozycji pojazdów przed ich przestawieniem, uszkodzeń, tablic, dokumentów drugiego uczestnika.</li>
-      <li><strong>Wezwać policję</strong>, jeśli są osoby poszkodowane, jest spór o przebieg zdarzenia albo drugi uczestnik odmawia podpisania oświadczenia.</li>
-      <li><strong>Zgłosić szkodę w terminie.</strong> Terminy są krótkie i liczone od dnia zdarzenia; są zapisane w warunkach polisy.</li>
-      <li><strong>Nie oddawać pojazdu do naprawy przed uzgodnieniem trybu</strong> — przy <em>danos próprios</em> zwykle obowiązuje wskazanie warsztatu lub oględziny rzeczoznawcy.</li>
+      <li><div><strong>Wypełnić <em>Declaração Amigável</em></strong><span> — portugalski odpowiednik europejskiego oświadczenia o zdarzeniu drogowym. Formularz jest dwujęzyczny w standardzie europejskim i wystarcza w miejsce wzywania policji przy szkodach bez ofiar i bez sporu.</span></div></li>
+      <li><div><strong>Zrobić zdjęcia</strong><span> — pozycji pojazdów przed ich przestawieniem, uszkodzeń, tablic, dokumentów drugiego uczestnika.</span></div></li>
+      <li><div><strong>Wezwać policję</strong><span>, jeśli są osoby poszkodowane, jest spór o przebieg zdarzenia albo drugi uczestnik odmawia podpisania oświadczenia.</span></div></li>
+      <li><div><strong>Zgłosić szkodę w terminie.</strong><span> Terminy są krótkie i liczone od dnia zdarzenia; są zapisane w warunkach polisy.</span></div></li>
+      <li><div><strong>Nie oddawać pojazdu do naprawy przed uzgodnieniem trybu</strong><span> — przy <em>danos próprios</em> zwykle obowiązuje wskazanie warsztatu lub oględziny rzeczoznawcy.</span></div></li>
     </ol>
     <p>To ta część, w której obecność agenta ma największe znaczenie. Zgłoszenie, korespondencja, pilnowanie terminów i dopytywanie ubezpieczyciela prowadzimy za Państwa, po angielsku i pisemnie.</p>
   </div>

@@ -113,11 +113,11 @@ export const MOTOR_PAGE = {
     <h2 id="skada">Vid en olycka: <em>Declaração Amigável</em></h2>
     <p>Portugals motsvarighet till den europeiska skadeanmälan heter <em>Declaração Amigável de Acidente Automóvel</em> och ska ligga i bilen. Den är tvåspråkig i sin uppställning men ifylls på portugisiska, och den ifyllda blanketten styr i praktiken hur ansvaret bedöms.</p>
     <ol class="process-steps">
-      <li><strong>Säkra platsen</strong> och tillkalla myndighet om någon skadats eller parterna är oense. Vid personskada, ring 112.</li>
-      <li><strong>Fyll i blanketten tillsammans</strong> med motparten — skiss, kryssrutor, registreringsnummer, försäkringsbolag och båda underskrifterna. Skriv under bara det du är införstådd med.</li>
-      <li><strong>Fotografera</strong> fordonens placering före flytt, skadorna, skyltarna och vägmärkena.</li>
-      <li><strong>Anmäl inom den tid villkoren anger</strong>, normalt några få dagar. Ring oss — vi anmäler åt dig och följer ärendet.</li>
-      <li><strong>Verkstad:</strong> kontrollera om försäkringen kräver verkstad inom bolagets nätverk innan reparationen beställs.</li>
+      <li><div><strong>Säkra platsen</strong><span> och tillkalla myndighet om någon skadats eller parterna är oense. Vid personskada, ring 112.</span></div></li>
+      <li><div><strong>Fyll i blanketten tillsammans</strong><span> med motparten — skiss, kryssrutor, registreringsnummer, försäkringsbolag och båda underskrifterna. Skriv under bara det du är införstådd med.</span></div></li>
+      <li><div><strong>Fotografera</strong><span> fordonens placering före flytt, skadorna, skyltarna och vägmärkena.</span></div></li>
+      <li><div><strong>Anmäl inom den tid villkoren anger</strong><span>, normalt några få dagar. Ring oss — vi anmäler åt dig och följer ärendet.</span></div></li>
+      <li><div><strong>Verkstad:</strong><span> kontrollera om försäkringen kräver verkstad inom bolagets nätverk innan reparationen beställs.</span></div></li>
     </ol>
     <p>Har du inte blanketten i bilen: dokumentera ändå allt med bilder och anteckningar och kontakta oss samma dag.</p>
   </div>

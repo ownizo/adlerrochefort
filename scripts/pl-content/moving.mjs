@@ -56,12 +56,12 @@ export const MOVING_PAGE = {
     <h2 id="przed-wyjazdem">Etap 1: przed wyjazdem z Polski</h2>
     <p>Tu wykonuje się wszystko, co po wyjeździe staje się trudne lub niemożliwe. To najważniejszy etap, choć wydaje się najmniej pilny.</p>
     <ol class="process-steps">
-      <li><strong>Zaświadczenie o przebiegu ubezpieczenia komunikacyjnego.</strong> Proszę poprosić polskiego ubezpieczyciela o dokument z liczbą lat bezszkodowych i historią szkód, <em>przed</em> zakończeniem umowy. Po jej zakończeniu bywa to bardzo trudne.</li>
-      <li><strong>Pisemna informacja o działaniu polis po zmianie miejsca zamieszkania.</strong> Dotyczy polis komunikacyjnych, mieszkaniowych i zdrowotnych — proszę pytać na piśmie i zachować odpowiedź. To jest podstawa do zaplanowania przejścia.</li>
-      <li><strong>Dokumentacja medyczna.</strong> Historia leczenia, aktualne rozpoznania, lista przyjmowanych leków. Przydaje się przy ankiecie medycznej i u portugalskiego lekarza.</li>
-      <li><strong>Sprawdzenie, czy dotyczy Państwa dokument S1.</strong> Przy polskiej emeryturze lub oddelegowaniu zmienia on całą kalkulację dotyczącą zdrowia.</li>
-      <li><strong>Decyzja o samochodzie.</strong> Rachunek ISV plus koszt procedury kontra wartość pojazdu. Bywa, że sprzedaż w Polsce i zakup na miejscu wychodzi taniej — i wtedy nie trzeba się zajmować niczym z sekcji o przerejestrowaniu.</li>
-      <li><strong>Ubezpieczenie przewozu rzeczy.</strong> Firma przeprowadzkowa ma własną odpowiedzialność, zwykle ograniczoną wagowo i dużo niższą niż wartość przewożonych rzeczy. Warto sprawdzić jej limit i rozważyć osobne ubezpieczenie transportu, zwłaszcza przy przedmiotach o dużej wartości.</li>
+      <li><div><strong>Zaświadczenie o przebiegu ubezpieczenia komunikacyjnego.</strong><span> Proszę poprosić polskiego ubezpieczyciela o dokument z liczbą lat bezszkodowych i historią szkód, <em>przed</em> zakończeniem umowy. Po jej zakończeniu bywa to bardzo trudne.</span></div></li>
+      <li><div><strong>Pisemna informacja o działaniu polis po zmianie miejsca zamieszkania.</strong><span> Dotyczy polis komunikacyjnych, mieszkaniowych i zdrowotnych — proszę pytać na piśmie i zachować odpowiedź. To jest podstawa do zaplanowania przejścia.</span></div></li>
+      <li><div><strong>Dokumentacja medyczna.</strong><span> Historia leczenia, aktualne rozpoznania, lista przyjmowanych leków. Przydaje się przy ankiecie medycznej i u portugalskiego lekarza.</span></div></li>
+      <li><div><strong>Sprawdzenie, czy dotyczy Państwa dokument S1.</strong><span> Przy polskiej emeryturze lub oddelegowaniu zmienia on całą kalkulację dotyczącą zdrowia.</span></div></li>
+      <li><div><strong>Decyzja o samochodzie.</strong><span> Rachunek ISV plus koszt procedury kontra wartość pojazdu. Bywa, że sprzedaż w Polsce i zakup na miejscu wychodzi taniej — i wtedy nie trzeba się zajmować niczym z sekcji o przerejestrowaniu.</span></div></li>
+      <li><div><strong>Ubezpieczenie przewozu rzeczy.</strong><span> Firma przeprowadzkowa ma własną odpowiedzialność, zwykle ograniczoną wagowo i dużo niższą niż wartość przewożonych rzeczy. Warto sprawdzić jej limit i rozważyć osobne ubezpieczenie transportu, zwłaszcza przy przedmiotach o dużej wartości.</span></div></li>
     </ol>
   </div>
 </section>
@@ -71,12 +71,12 @@ export const MOVING_PAGE = {
     <h2 id="pierwsze-tygodnie">Etap 2: pierwsze tygodnie w Portugalii</h2>
     <p>Kolejność jest tu wymuszona przez administrację: prawie nic nie da się zrobić bez NIF, a wiele rzeczy dodatkowo wymaga adresu.</p>
     <ol class="process-steps">
-      <li><strong>NIF</strong> (<em>número de identificação fiscal</em>) — numer identyfikacji podatkowej. Bez niego nie da się zawrzeć umowy ubezpieczenia, wynająć mieszkania ani otworzyć konta.</li>
-      <li><strong>Adres i umowa najmu lub akt nabycia.</strong> Punkt odniesienia dla rejestracji pobytu, rejestracji w SNS i dla polisy mieszkaniowej.</li>
-      <li><strong>Rachunek bankowy w Portugalii.</strong> Większość ubezpieczycieli pobiera składki polskim przelewem bez problemu, ale polecenie zapłaty z portugalskiego IBAN upraszcza życie i bywa warunkiem rabatu.</li>
-      <li><strong>Rejestracja pobytu</strong> we właściwym urzędzie. Od tej daty biegną terminy dotyczące prawa jazdy i ewentualnego zwolnienia z ISV.</li>
-      <li><strong>Ubezpieczenie zdrowotne.</strong> Jeśli rejestracja w SNS jeszcze nie doszła do skutku, jest to moment, w którym prywatna polisa zamyka lukę. Proszę pamiętać o okresach karencji — polisa zawarta dzisiaj nie daje natychmiastowego dostępu do wszystkiego.</li>
-      <li><strong>Polisa mieszkaniowa</strong> — przy najmie ubezpiecza się ruchomości domowe i odpowiedzialność cywilną, bo mury ubezpiecza właściciel. Przy zakupie zob. <a href="/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/">stronę o zakupie nieruchomości</a>.</li>
+      <li><div><strong>NIF</strong><span> (<em>número de identificação fiscal</em>) — numer identyfikacji podatkowej. Bez niego nie da się zawrzeć umowy ubezpieczenia, wynająć mieszkania ani otworzyć konta.</span></div></li>
+      <li><div><strong>Adres i umowa najmu lub akt nabycia.</strong><span> Punkt odniesienia dla rejestracji pobytu, rejestracji w SNS i dla polisy mieszkaniowej.</span></div></li>
+      <li><div><strong>Rachunek bankowy w Portugalii.</strong><span> Większość ubezpieczycieli pobiera składki polskim przelewem bez problemu, ale polecenie zapłaty z portugalskiego IBAN upraszcza życie i bywa warunkiem rabatu.</span></div></li>
+      <li><div><strong>Rejestracja pobytu</strong><span> we właściwym urzędzie. Od tej daty biegną terminy dotyczące prawa jazdy i ewentualnego zwolnienia z ISV.</span></div></li>
+      <li><div><strong>Ubezpieczenie zdrowotne.</strong><span> Jeśli rejestracja w SNS jeszcze nie doszła do skutku, jest to moment, w którym prywatna polisa zamyka lukę. Proszę pamiętać o okresach karencji — polisa zawarta dzisiaj nie daje natychmiastowego dostępu do wszystkiego.</span></div></li>
+      <li><div><strong>Polisa mieszkaniowa</strong><span> — przy najmie ubezpiecza się ruchomości domowe i odpowiedzialność cywilną, bo mury ubezpiecza właściciel. Przy zakupie zob. <a href="/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/">stronę o zakupie nieruchomości</a>.</span></div></li>
     </ol>
     <div class="callout">
       <span class="callout-label">Najczęstsze pytanie w tym momencie</span>
@@ -89,12 +89,12 @@ export const MOVING_PAGE = {
   <div class="container narrow article-body">
     <h2 id="pierwsze-miesiace">Etap 3: pierwsze miesiące</h2>
     <ol class="process-steps">
-      <li><strong>Rejestracja w SNS</strong> w przychodni rejonowej i uzyskanie <em>número de utente</em>.</li>
-      <li><strong>Rejestracja prawa jazdy w IMT.</strong> Dokumentu unijnego się nie wymienia, ale rezydent go rejestruje, w terminie liczonym od rejestracji pobytu.</li>
-      <li><strong>Przerejestrowanie samochodu</strong>, jeśli została podjęta taka decyzja: zgłoszenie celne i ISV lub wniosek o zwolnienie, badanie techniczne, homologacja w IMT. Szczegóły na <a href="/pl/ubezpieczenie-samochodu-portugalia/">stronie o ubezpieczeniu samochodu</a>.</li>
-      <li><strong>Uporządkowanie spraw w Polsce.</strong> Wypowiedzenie polis, które przestały mieć podstawę, wyrejestrowanie z NFZ, aktualizacja adresu do korespondencji. Zawsze po ustaleniu, co przejmuje ochronę — nigdy przed.</li>
-      <li><strong>Odpowiedzialność cywilna.</strong> Jeśli rozpoczynają Państwo w Portugalii działalność zawodową, to moment na <a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">OC zawodową</a>; jeśli nie, warto sprawdzić, czy OC w życiu prywatnym rzeczywiście jest w polisie mieszkaniowej.</li>
-      <li><strong>Weryfikacja po roku.</strong> Sumy ubezpieczenia, zmiana wartości nieruchomości, nowy sprzęt, zmiana sposobu użytkowania. Pół godziny raz w roku wystarcza.</li>
+      <li><div><strong>Rejestracja w SNS</strong><span> w przychodni rejonowej i uzyskanie <em>número de utente</em>.</span></div></li>
+      <li><div><strong>Rejestracja prawa jazdy w IMT.</strong><span> Dokumentu unijnego się nie wymienia, ale rezydent go rejestruje, w terminie liczonym od rejestracji pobytu.</span></div></li>
+      <li><div><strong>Przerejestrowanie samochodu</strong><span>, jeśli została podjęta taka decyzja: zgłoszenie celne i ISV lub wniosek o zwolnienie, badanie techniczne, homologacja w IMT. Szczegóły na <a href="/pl/ubezpieczenie-samochodu-portugalia/">stronie o ubezpieczeniu samochodu</a>.</span></div></li>
+      <li><div><strong>Uporządkowanie spraw w Polsce.</strong><span> Wypowiedzenie polis, które przestały mieć podstawę, wyrejestrowanie z NFZ, aktualizacja adresu do korespondencji. Zawsze po ustaleniu, co przejmuje ochronę — nigdy przed.</span></div></li>
+      <li><div><strong>Odpowiedzialność cywilna.</strong><span> Jeśli rozpoczynają Państwo w Portugalii działalność zawodową, to moment na <a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">OC zawodową</a>; jeśli nie, warto sprawdzić, czy OC w życiu prywatnym rzeczywiście jest w polisie mieszkaniowej.</span></div></li>
+      <li><div><strong>Weryfikacja po roku.</strong><span> Sumy ubezpieczenia, zmiana wartości nieruchomości, nowy sprzęt, zmiana sposobu użytkowania. Pół godziny raz w roku wystarcza.</span></div></li>
     </ol>
   </div>
 </section>

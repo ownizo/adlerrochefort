@@ -344,12 +344,12 @@
     <h2 id="ruhe-tou">投保时保险公司会问什么</h2>
     <p>职业责任的报价不是按“行业”给的，而是按您具体做什么给的。通常需要提供：</p>
     <ol class="process-steps">
-      <li><strong>活动的具体描述。</strong>越具体越好。“咨询”不够，“为制造业客户做 ERP 系统选型与实施管理，不承担编程开发”才是可以写进保单的描述。</li>
-      <li><strong>资质与注册情况。</strong>相关的执业资格、专业协会注册、在葡萄牙的经营登记（<em>atividade</em> 的分类）。</li>
-      <li><strong>年营业额与客户结构。</strong>营业额是主要定价因素之一；客户所在国家决定地域范围。</li>
-      <li><strong>单笔合同的规模。</strong>影响单次索赔上限的选择。</li>
-      <li><strong>过往索赔情况。</strong>需要如实申报，包括已发生但尚未被索赔的情形。</li>
-      <li><strong>是否有分包或团队成员。</strong>决定谁被列为被保险人。</li>
+      <li><div><strong>活动的具体描述。</strong><span>越具体越好。“咨询”不够，“为制造业客户做 ERP 系统选型与实施管理，不承担编程开发”才是可以写进保单的描述。</span></div></li>
+      <li><div><strong>资质与注册情况。</strong><span>相关的执业资格、专业协会注册、在葡萄牙的经营登记（<em>atividade</em> 的分类）。</span></div></li>
+      <li><div><strong>年营业额与客户结构。</strong><span>营业额是主要定价因素之一；客户所在国家决定地域范围。</span></div></li>
+      <li><div><strong>单笔合同的规模。</strong><span>影响单次索赔上限的选择。</span></div></li>
+      <li><div><strong>过往索赔情况。</strong><span>需要如实申报，包括已发生但尚未被索赔的情形。</span></div></li>
+      <li><div><strong>是否有分包或团队成员。</strong><span>决定谁被列为被保险人。</span></div></li>
     </ol>
     <p>如实且具体地描述活动，是这类保险里最重要的一步。描述过窄，实际做的业务可能落在保障之外；描述含糊，理赔时保险公司有空间主张该活动未被承保。</p>
   </div>
@@ -621,17 +621,33 @@
     </div>
     <div>
       <div class="footer-col-title">语言</div>
-      <ul class="footer-col-links footer-langs">
-        <li><a href="/" lang="pt-PT">Português</a></li>
-        <li><a href="/en/" lang="en">English</a></li>
-        <li><a href="/nl/" lang="nl">Nederlands</a></li>
-        <li><a href="/fr/" lang="fr">Français</a></li>
-        <li><a href="/de/" lang="de">Deutsch</a></li>
-        <li><a href="/pl/" lang="pl">Polski</a></li>
-        <li><a href="/se/" lang="sv">Svenska</a></li>
-        <li><a href="/dk/" lang="da">Dansk</a></li>
-        <li><a href="/zh/" lang="zh-CN" aria-current="true">简体中文</a></li>
-      </ul>
+      <div class="ar-langsel ar-langsel-footer" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselFooterBtn" aria-expanded="false" aria-controls="arLangselFooterMenu" aria-label="语言：简体中文。选择其他语言。"><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">简体中文</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselFooterMenu" aria-labelledby="arLangselFooterBtn" hidden>
+          <li><a href="/" lang="pt-PT" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">首页</span></a></li>
+          <li><a href="/en/" lang="en" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">首页</span></a></li>
+          <li><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">首页</span></a></li>
+          <li><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">首页</span></a></li>
+          <li><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">首页</span></a></li>
+          <li><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/" lang="pl" hreflang="pl-PL"><span>Polski</span></a></li>
+          <li><a href="/se/ansvarsforsakring-portugal/" lang="sv" hreflang="sv-SE"><span>Svenska</span></a></li>
+          <li><a href="/dk/ansvarsforsikring-portugal/" lang="da" hreflang="da-DK"><span>Dansk</span></a></li>
+          <li><a href="/zh/liability-insurance-portugal/" lang="zh-CN" hreflang="zh-CN" aria-current="true"><span>简体中文</span></a></li>
+        </ul>
+      </div>
+      <noscript>
+        <ul class="footer-col-links footer-langs ar-langsel-fallback">
+          <li><a href="/" lang="pt-PT">Português</a></li>
+          <li><a href="/en/" lang="en">English</a></li>
+          <li><a href="/nl/" lang="nl">Nederlands</a></li>
+          <li><a href="/fr/" lang="fr">Français</a></li>
+          <li><a href="/de/" lang="de">Deutsch</a></li>
+          <li><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/" lang="pl">Polski</a></li>
+          <li><a href="/se/ansvarsforsakring-portugal/" lang="sv">Svenska</a></li>
+          <li><a href="/dk/ansvarsforsikring-portugal/" lang="da">Dansk</a></li>
+          <li><a href="/zh/liability-insurance-portugal/" lang="zh-CN" aria-current="true">简体中文</a></li>
+        </ul>
+      </noscript>
     </div>
     <div>
       <div class="footer-col-title">联系我们</div>

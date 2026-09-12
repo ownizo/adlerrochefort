@@ -150,14 +150,27 @@ export const HUB_PAGE = {
     <h2 id="sa-arbetar-vi">Så arbetar vi</h2>
     <p>Vi är en försäkringsagentur registrerad i Portugal och ger rådgivning inom vår portfölj av försäkringsbolag. Vi är inte en prisjämförelsesajt och bygger inte erbjudandet kring lägsta premie. Arbetet består av något annat: att anpassa omfattningen till situationen, förklara de portugisiska villkoren på engelska och skriftligt, och att ha någon på din sida som kan ärendet den dag en skada inträffar.</p>
     <ol class="process-steps">
-      <li><strong>Samtal om situationen.</strong> Vad ska skyddas, vilket värde, vilka bor i bostaden, finns bolån, bedrivs verksamhet.</li>
-      <li><strong>Omfattning före pris.</strong> Först avgör vi vad försäkringen måste täcka och vad som medvetet kan utelämnas. Sedan jämför vi alternativ.</li>
-      <li><strong>Villkoren på engelska.</strong> Innan något skrivs under får du försäkringsbelopp, självrisker, undantag och tidsfrister förklarade skriftligt.</li>
-      <li><strong>Skadehantering.</strong> Anmälan, kontakt med bolaget, bevakning av frister. Det är den delen som gör en förmedlare värd namnet.</li>
+      <li><div><strong>Samtal om situationen.</strong><span> Vad ska skyddas, vilket värde, vilka bor i bostaden, finns bolån, bedrivs verksamhet.</span></div></li>
+      <li><div><strong>Omfattning före pris.</strong><span> Först avgör vi vad försäkringen måste täcka och vad som medvetet kan utelämnas. Sedan jämför vi alternativ.</span></div></li>
+      <li><div><strong>Villkoren på engelska.</strong><span> Innan något skrivs under får du försäkringsbelopp, självrisker, undantag och tidsfrister förklarade skriftligt.</span></div></li>
+      <li><div><strong>Skadehantering.</strong><span> Anmälan, kontakt med bolaget, bevakning av frister. Det är den delen som gör en förmedlare värd namnet.</span></div></li>
     </ol>
     <p class="legal-note">Vilket skydd som gäller beror på försäkringsbolag och vald variant. Sidan beskriver hur den portugisiska marknaden normalt fungerar och är inte en bekräftelse av villkoren i ett enskilt avtal.</p>
   </div>
 </section>`,
+  // Porträttbandet och försäkringsbolagsraden nedanför renderas av
+  // scripts/lib/site-sections.mjs; bara den svenska texten bor här.
+  audience: {
+    heading: 'Vilka vi <em>finns här för</em>',
+    body:
+      'Vi sköter försäkringarna för svenskar i Portugal: pensionärer, familjer, bostadsköpare, fritidshusägare och yrkesverksamma. Oavsett om du flyttade hit i år eller har bott här i decennier är det vi som sköter den portugisiska försäkringssidan — rådgivning, jämförelse av de alternativ som passar, tecknande, löpande service och hjälp vid skada, hos samma person hela vägen.',
+    alt: 'Försäkringsrådgivare för utlandsboende i Portugal',
+  },
+  insurers: {
+    heading: 'Vi jämför <em>ledande försäkringsbolag</em>',
+    lead:
+      'Som förmedlare är vi inte bundna till ett enda bolag. Vi ger råd inom vår portfölj av försäkringsbolag och letar efter den lösning som passar din situation — inte bara den lägsta premien.',
+  },
   faqTitle: 'Försäkring i Portugal — svenskars frågor',
   faq: [
     {

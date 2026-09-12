@@ -117,13 +117,13 @@ export const HEALTH_PAGE = {
   <div class="container narrow article-body">
     <h2 id="checkliste">Checkliste</h2>
     <ol class="process-steps">
-      <li><strong>Registrering i SNS</strong> gennemført eller planlagt: <em>centro de saúde</em>, <em>número de utente</em>.</li>
-      <li><strong>Din danske situation</strong> oplyst skriftligt, og undersøgt om S1 gælder dig.</li>
-      <li><strong>Behandlernetværket</strong> indeholder hospital og klinikker i rimelig afstand fra boligen.</li>
-      <li><strong>Kvalifikationsperioderne</strong> kendt for hver dækning, der betyder noget — særligt ved planlagte indgreb eller graviditet.</li>
-      <li><strong>Helbredserklæringen</strong> udfyldt sandt, og selskabets beslutning på skrift, før policen starter.</li>
-      <li><strong>Årsmaksimum og egenbetaling</strong> forstået adskilt for ambulant og for hospital.</li>
-      <li><strong>Ophold i Danmark</strong>: du ved, om og hvordan policen dækker uden for Portugal.</li>
+      <li><div><strong>Registrering i SNS</strong><span> gennemført eller planlagt: <em>centro de saúde</em>, <em>número de utente</em>.</span></div></li>
+      <li><div><strong>Din danske situation</strong><span> oplyst skriftligt, og undersøgt om S1 gælder dig.</span></div></li>
+      <li><div><strong>Behandlernetværket</strong><span> indeholder hospital og klinikker i rimelig afstand fra boligen.</span></div></li>
+      <li><div><strong>Kvalifikationsperioderne</strong><span> kendt for hver dækning, der betyder noget — særligt ved planlagte indgreb eller graviditet.</span></div></li>
+      <li><div><strong>Helbredserklæringen</strong><span> udfyldt sandt, og selskabets beslutning på skrift, før policen starter.</span></div></li>
+      <li><div><strong>Årsmaksimum og egenbetaling</strong><span> forstået adskilt for ambulant og for hospital.</span></div></li>
+      <li><div><strong>Ophold i Danmark</strong><span>: du ved, om og hvordan policen dækker uden for Portugal.</span></div></li>
     </ol>
   </div>
 </section>`,

@@ -113,10 +113,10 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="po-zakupie">Po zakupie: cztery rzeczy w pierwszych miesiącach</h2>
     <ol class="process-steps">
-      <li><strong>Aktualizacja sumy po remoncie.</strong> Nowa kuchnia, klimatyzacja, panele fotowoltaiczne, basen — każda z tych pozycji zmienia koszt odbudowy i powinna trafić do polisy.</li>
-      <li><strong>Ruchomości domowe policzone po wprowadzeniu.</strong> Przy zakupie zwykle podaje się szacunek; po wniesieniu rzeczy warto go poprawić.</li>
-      <li><strong>Sposób użytkowania zgłoszony zgodnie z rzeczywistością.</strong> Jeśli nieruchomość ma stać puste przez część roku albo być wynajmowana krótkoterminowo, zmienia to zakres i musi być zgłoszone.</li>
-      <li><strong>Odpowiedzialność cywilna sprawdzona.</strong> Właściciel nieruchomości odpowiada za szkody wyrządzone osobom trzecim przez jej stan — zob. <a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">stronę o odpowiedzialności cywilnej</a>.</li>
+      <li><div><strong>Aktualizacja sumy po remoncie.</strong><span> Nowa kuchnia, klimatyzacja, panele fotowoltaiczne, basen — każda z tych pozycji zmienia koszt odbudowy i powinna trafić do polisy.</span></div></li>
+      <li><div><strong>Ruchomości domowe policzone po wprowadzeniu.</strong><span> Przy zakupie zwykle podaje się szacunek; po wniesieniu rzeczy warto go poprawić.</span></div></li>
+      <li><div><strong>Sposób użytkowania zgłoszony zgodnie z rzeczywistością.</strong><span> Jeśli nieruchomość ma stać puste przez część roku albo być wynajmowana krótkoterminowo, zmienia to zakres i musi być zgłoszone.</span></div></li>
+      <li><div><strong>Odpowiedzialność cywilna sprawdzona.</strong><span> Właściciel nieruchomości odpowiada za szkody wyrządzone osobom trzecim przez jej stan — zob. <a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">stronę o odpowiedzialności cywilnej</a>.</span></div></li>
     </ol>
     <p class="legal-note">Nie prowadzimy obsługi prawnej transakcji ani doradztwa podatkowego. Ta strona opisuje, jak w tym procesie działa ubezpieczenie; kwestie własnościowe, podatkowe i administracyjne należy skonsultować z prawnikiem prowadzącym zakup.</p>
   </div>

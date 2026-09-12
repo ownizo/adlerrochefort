@@ -132,10 +132,10 @@ export const HUB_PAGE = {
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
     <p>Jesteśmy agencją ubezpieczeniową zarejestrowaną w Portugalii i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy. Nie jesteśmy porównywarką cen i nie budujemy oferty wokół najniższej składki. Nasza praca polega na czymś innym: na dopasowaniu zakresu do sytuacji, wyjaśnieniu portugalskich warunków po angielsku i pisemnie, oraz na tym, żeby przy szkodzie mieć po swojej stronie kogoś, kto zna akta sprawy.</p>
     <ol class="process-steps">
-      <li><strong>Rozmowa o sytuacji.</strong> Co ma być chronione, jaka jest wartość, kto mieszka w nieruchomości, czy jest kredyt, czy prowadzona jest działalność.</li>
-      <li><strong>Zakres przed ceną.</strong> Najpierw ustalamy, co polisa musi obejmować, a co może zostać pominięte świadomie. Dopiero potem porównujemy warianty.</li>
-      <li><strong>Warunki po angielsku.</strong> Zanim cokolwiek zostanie podpisane, dostaje Pan lub Pani wyjaśnienie sumy ubezpieczenia, franszyz, wyłączeń i terminów — pisemnie.</li>
-      <li><strong>Obsługa szkody.</strong> Zgłoszenie, kontakt z ubezpieczycielem, pilnowanie terminów. To ta część, dla której w ogóle warto mieć agenta.</li>
+      <li><div><strong>Rozmowa o sytuacji.</strong><span> Co ma być chronione, jaka jest wartość, kto mieszka w nieruchomości, czy jest kredyt, czy prowadzona jest działalność.</span></div></li>
+      <li><div><strong>Zakres przed ceną.</strong><span> Najpierw ustalamy, co polisa musi obejmować, a co może zostać pominięte świadomie. Dopiero potem porównujemy warianty.</span></div></li>
+      <li><div><strong>Warunki po angielsku.</strong><span> Zanim cokolwiek zostanie podpisane, dostaje Pan lub Pani wyjaśnienie sumy ubezpieczenia, franszyz, wyłączeń i terminów — pisemnie.</span></div></li>
+      <li><div><strong>Obsługa szkody.</strong><span> Zgłoszenie, kontakt z ubezpieczycielem, pilnowanie terminów. To ta część, dla której w ogóle warto mieć agenta.</span></div></li>
     </ol>
     <p class="legal-note">Zakres ochrony zależy od ubezpieczyciela i wybranego wariantu polisy. Na tej stronie opisujemy, jak zwykle działa portugalski rynek — nie jest to potwierdzenie warunków konkretnej umowy.</p>
   </div>
@@ -153,6 +153,19 @@ export const HUB_PAGE = {
     </ul>
   </div>
 </section>`,
+  // The portrait band and the insurer row below it are rendered by
+  // scripts/lib/site-sections.mjs; only the Polish copy lives here.
+  audience: {
+    heading: 'Dla kogo <em>tu jesteśmy</em>',
+    body:
+      'Prowadzimy ubezpieczenia Polakom mieszkającym w Portugalii: rodzinom, osobom kupującym mieszkanie lub dom, pracownikom, samozatrudnionym i przedsiębiorcom. Niezależnie od tego, czy przyjechał Pan lub Pani w tym roku, czy mieszka tu od lat, portugalską stronę ubezpieczeń prowadzimy my — doradztwo, porównanie odpowiednich wariantów, zawarcie polisy, bieżąca obsługa i pomoc przy szkodzie u tej samej osoby.',
+    alt: 'Doradca ubezpieczeniowy dla obcokrajowców w Portugalii',
+  },
+  insurers: {
+    heading: 'Porównujemy <em>wiodących ubezpieczycieli</em>',
+    lead:
+      'Jako broker nie jesteśmy związani z jedną firmą. Doradzamy w ramach naszego portfela ubezpieczycieli i szukamy rozwiązania dopasowanego do Pana lub Pani sytuacji — nie tylko najtańszej składki.',
+  },
   faqTitle: 'Ubezpieczenia w Portugalii — pytania Polaków',
   faq: [
     {

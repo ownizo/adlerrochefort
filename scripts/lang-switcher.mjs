@@ -66,6 +66,7 @@ import {
   LANGSEL_SCRIPT_TAG,
   LANGSEL_STYLESHEET,
   LANGSEL_SCRIPT,
+  footerSelectorHtml,
   langSelectorHtml,
   selectorTargets,
 } from './lib/lang-selector.mjs';
@@ -152,6 +153,34 @@ function findSwitcher(html, className) {
   return null;
 }
 
+/**
+ * Find the footer's language list.
+ *
+ * The footer carried the control the header used to: a flat row of two-letter
+ * chips, `<ul class="footer-col-links footer-langs">`. 324 pages have it, all
+ * with the same attribute string and the same six-space indent, under their own
+ * localised `.footer-col-title`. That title is content and is left alone; only
+ * the list is replaced, by the selector plus its <noscript> copy.
+ *
+ * The attribute string is matched exactly, which is what keeps this off the
+ * `footer-langs ar-langsel-fallback` list the replacement itself emits — a
+ * rerun must not wrap the control in a second control.
+ */
+function findFooterLangs(html) {
+  const open = '<ul class="footer-col-links footer-langs">';
+  const start = html.indexOf(open);
+  if (start === -1) return null;
+  const close = html.indexOf('</ul>', start);
+  if (close === -1) return null;
+  const lineStart = html.lastIndexOf('\n', start) + 1;
+  const before = html.slice(lineStart, start);
+  return {
+    start: lineStart < start && /^[ \t]*$/.test(before) ? lineStart : start,
+    end: close + '</ul>'.length,
+    indent: /^[ \t]*$/.test(before) ? before : '      ',
+  };
+}
+
 // --- rewrite ------------------------------------------------------------------
 const files = globSync('**/*.html', { cwd: PUBLIC }).sort();
 const report = {
@@ -159,6 +188,7 @@ const report = {
   unchanged: 0,
   noSwitcher: [],
   mobileRewritten: 0,
+  footersRewritten: 0,
   cssInjected: 0,
   scriptInjected: 0,
 };
@@ -168,10 +198,11 @@ for (const rel of files) {
   const file = join(PUBLIC, rel);
   let html = await readFile(file, 'utf8');
   const desktop = findSwitcher(html, 'lang-switcher');
-  if (!desktop) {
-    report.noSwitcher.push(path);
-    continue;
-  }
+  const footer = findFooterLangs(html);
+  if (!desktop) report.noSwitcher.push(path);
+  // A page with neither control is not this pass's business — no markup to
+  // rewrite and therefore no assets to inject.
+  if (!desktop && !footer) continue;
 
   const lang = langOf(path);
   const isBlog = path.startsWith('/blog/') || path.startsWith('/en/blog/');
@@ -197,20 +228,45 @@ for (const rel of files) {
     return `${found.open}\n${body}\n${found.wrapperIndent}</div>`;
   };
 
-  const desktopAfter = render(desktop, false);
-  const desktopChanged = desktopAfter !== html.slice(desktop.start, desktop.end);
-  if (desktopChanged) {
-    html = html.slice(0, desktop.start) + desktopAfter + html.slice(desktop.end);
+  // The footer's chip row becomes the same control, from the same targets. It
+  // goes first because it sits below the header wrappers, so rewriting it does
+  // not move the offsets the header rewrite is about to use.
+  //
+  // Note that this runs whether or not the page has a header switcher. Six
+  // pages carry their own nav with no .lang-switcher — the four English
+  // service pages, /seguros-empresas-lagos/ and /alterarmediador/ — and
+  // leaving their footers on five two-letter chips would be the one place in
+  // the corpus where a visitor is offered five languages instead of nine. The
+  // footer control needs nothing from the nav's stylesheet, only the two
+  // assets this pass injects below.
+  let footerChanged = false;
+  if (footer) {
+    const footerAfter = footerSelectorHtml({ pageLang: lang, targets, indent: footer.indent });
+    footerChanged = footerAfter !== html.slice(footer.start, footer.end);
+    if (footerChanged) {
+      html = html.slice(0, footer.start) + footerAfter + html.slice(footer.end);
+      report.footersRewritten += 1;
+    }
   }
 
-  const mobile = findSwitcher(html, 'mobile-lang-switcher');
+  let desktopChanged = false;
   let mobileChanged = false;
-  if (mobile) {
-    const mobileAfter = render(mobile, true);
-    mobileChanged = mobileAfter !== html.slice(mobile.start, mobile.end);
-    if (mobileChanged) {
-      html = html.slice(0, mobile.start) + mobileAfter + html.slice(mobile.end);
-      report.mobileRewritten += 1;
+  if (desktop) {
+    const found = findSwitcher(html, 'lang-switcher');
+    const desktopAfter = render(found, false);
+    desktopChanged = desktopAfter !== html.slice(found.start, found.end);
+    if (desktopChanged) {
+      html = html.slice(0, found.start) + desktopAfter + html.slice(found.end);
+    }
+
+    const mobile = findSwitcher(html, 'mobile-lang-switcher');
+    if (mobile) {
+      const mobileAfter = render(mobile, true);
+      mobileChanged = mobileAfter !== html.slice(mobile.start, mobile.end);
+      if (mobileChanged) {
+        html = html.slice(0, mobile.start) + mobileAfter + html.slice(mobile.end);
+        report.mobileRewritten += 1;
+      }
     }
   }
 
@@ -230,7 +286,7 @@ for (const rel of files) {
     assetsAdded = true;
   }
 
-  if (!desktopChanged && !mobileChanged && !assetsAdded) {
+  if (!desktopChanged && !mobileChanged && !footerChanged && !assetsAdded) {
     report.unchanged += 1;
     continue;
   }
@@ -241,6 +297,7 @@ for (const rel of files) {
 
 console.log(`pages updated:             ${report.rewritten.length}`);
 console.log(`  mobile drawers rewritten: ${report.mobileRewritten}`);
+console.log(`  footer lists rewritten:   ${report.footersRewritten}`);
 console.log(`  stylesheet injected:      ${report.cssInjected}`);
 console.log(`  script injected:          ${report.scriptInjected}`);
 console.log(`pages already correct:     ${report.unchanged}`);

@@ -147,15 +147,15 @@ export const HOME_PAGE = {
   <div class="container narrow article-body">
     <h2 id="checkliste">Checkliste før du skriver under</h2>
     <ol class="process-steps">
-      <li><strong>Genopførelsesprisen</strong> er beregnet ud fra byggeomkostninger, ikke købsprisen eller ejendomsvurderingen.</li>
-      <li><strong>Indbosummen</strong> er opgjort rum for rum, ikke gættet.</li>
-      <li><strong>Ansvarsdækningen</strong> er valgt til, og du kender summen.</li>
-      <li><strong>Retshjælp</strong> er taget med eller bevidst udeladt.</li>
-      <li><strong>Vandskadeafsnittet</strong> er læst, inkl. aldersgrænser for installationer og udgiften til at finde utætheden.</li>
-      <li><strong>Jordskælvsdækning</strong> er valgt til eller fra på grundlag af et konkret præmietillæg.</li>
-      <li><strong>Perioder uden beboelse</strong> er oplyst, som boligen faktisk bruges.</li>
-      <li><strong>Condomínio-policen</strong> er indhentet, hvis det er en lejlighed, så du ikke betaler dobbelt eller efterlader et hul.</li>
-      <li><strong>Selvrisikoen</strong> er kendt pr. dækning — og du ved, om den er et beløb eller en procent.</li>
+      <li><div><strong>Genopførelsesprisen</strong><span> er beregnet ud fra byggeomkostninger, ikke købsprisen eller ejendomsvurderingen.</span></div></li>
+      <li><div><strong>Indbosummen</strong><span> er opgjort rum for rum, ikke gættet.</span></div></li>
+      <li><div><strong>Ansvarsdækningen</strong><span> er valgt til, og du kender summen.</span></div></li>
+      <li><div><strong>Retshjælp</strong><span> er taget med eller bevidst udeladt.</span></div></li>
+      <li><div><strong>Vandskadeafsnittet</strong><span> er læst, inkl. aldersgrænser for installationer og udgiften til at finde utætheden.</span></div></li>
+      <li><div><strong>Jordskælvsdækning</strong><span> er valgt til eller fra på grundlag af et konkret præmietillæg.</span></div></li>
+      <li><div><strong>Perioder uden beboelse</strong><span> er oplyst, som boligen faktisk bruges.</span></div></li>
+      <li><div><strong>Condomínio-policen</strong><span> er indhentet, hvis det er en lejlighed, så du ikke betaler dobbelt eller efterlader et hul.</span></div></li>
+      <li><div><strong>Selvrisikoen</strong><span> er kendt pr. dækning — og du ved, om den er et beløb eller en procent.</span></div></li>
     </ol>
   </div>
 </section>`,

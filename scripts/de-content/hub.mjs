@@ -8,6 +8,10 @@
  * the methodology and content-block brief in Part 6.
  */
 
+// The insurer row is the site's one list, in scripts/lib/site-sections.mjs.
+// The heading and lead below it stay German and stay here.
+import { insurerPanel } from '../lib/site-sections.mjs';
+
 export const HUB_PAGE = {
   slug: 'de-hub',
   url: '/de/',
@@ -149,21 +153,12 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section brands" aria-labelledby="versicherer">
-  <div class="container">
-    <h2 id="versicherer">Wir vergleichen die <em>führenden Versicherer</em></h2>
-    <p class="lead">Als Makler sind wir nicht an einen einzigen Versicherer gebunden. Wir beraten innerhalb unseres Versichererportfolios und wählen die passende Lösung für Ihre Situation.</p>
-    <div class="brands-row">
-      <span class="brand-chip">Hiscox</span>
-      <span class="brand-chip">Allianz</span>
-      <span class="brand-chip">Zurich</span>
-      <span class="brand-chip">MGEN</span>
-      <span class="brand-chip">Asisa</span>
-      <span class="brand-chip">APRIL</span>
-      <span class="brand-chip">Chubb</span>
-    </div>
-  </div>
-</section>
+${insurerPanel({
+  id: 'versicherer',
+  heading: 'Wir vergleichen die <em>führenden Versicherer</em>',
+  lead:
+    'Als Makler sind wir nicht an einen einzigen Versicherer gebunden. Wir beraten innerhalb unseres Versichererportfolios und wählen die passende Lösung für Ihre Situation.',
+})}
 
 <section class="section tint" aria-labelledby="warum">
   <div class="container narrow article-body">

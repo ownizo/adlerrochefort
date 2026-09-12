@@ -134,11 +134,11 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="efter">Efter <em>escritura</em>: de fem sakerna</h2>
     <ol class="process-steps">
-      <li><strong>Kontrollera att försäkringen gäller från kontraktsdagen</strong>, inte från dagen den betalades.</li>
-      <li><strong>Lägg till lösöret</strong> när inredningen är på plats. Möbler, vitvaror, elektronik, cyklar och verktyg summerar snabbare än man tror.</li>
-      <li><strong>Kontrollera ansvarsdelen</strong> — den finns inte automatiskt så som i den svenska hemförsäkringen.</li>
-      <li><strong>Anmäl uthyrning</strong> om det är planen. En oanmäld korttidsuthyrning är ett återkommande skäl till att en skada inte ersätts. Se <a href="/se/ansvarsforsakring-portugal/">ansvarsförsäkring i Portugal</a>.</li>
-      <li><strong>Se över beloppet årligen</strong> — byggkostnaderna rör sig, och indexklausulen i försäkringen följer inte alltid med verkligheten.</li>
+      <li><div><strong>Kontrollera att försäkringen gäller från kontraktsdagen</strong><span>, inte från dagen den betalades.</span></div></li>
+      <li><div><strong>Lägg till lösöret</strong><span> när inredningen är på plats. Möbler, vitvaror, elektronik, cyklar och verktyg summerar snabbare än man tror.</span></div></li>
+      <li><div><strong>Kontrollera ansvarsdelen</strong><span> — den finns inte automatiskt så som i den svenska hemförsäkringen.</span></div></li>
+      <li><div><strong>Anmäl uthyrning</strong><span> om det är planen. En oanmäld korttidsuthyrning är ett återkommande skäl till att en skada inte ersätts. Se <a href="/se/ansvarsforsakring-portugal/">ansvarsförsäkring i Portugal</a>.</span></div></li>
+      <li><div><strong>Se över beloppet årligen</strong><span> — byggkostnaderna rör sig, och indexklausulen i försäkringen följer inte alltid med verkligheten.</span></div></li>
     </ol>
   </div>
 </section>`,

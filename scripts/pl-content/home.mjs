@@ -135,15 +135,15 @@ export const HOME_PAGE = {
   <div class="container narrow article-body">
     <h2 id="lista-kontrolna">Lista kontrolna przed podpisaniem polisy</h2>
     <ol class="process-steps">
-      <li><strong>Suma ubezpieczenia budynku</strong> odpowiada kosztowi odbudowy, nie cenie zakupu ani kwocie kredytu.</li>
-      <li><strong>Suma ruchomości</strong> była policzona, a nie przyjęta z domysłu. Wystarczy przejść mieszkanie pokój po pokoju.</li>
-      <li><strong>Zalania</strong>: wiadomo, czy objęte jest <em>procura de avaria</em> i przeciekanie przez taras.</li>
-      <li><strong>Ryzyko sejsmiczne</strong>: wiadomo, czy jest w zakresie, z jaką franszyzą i czy bank tego wymaga.</li>
-      <li><strong>Odpowiedzialność cywilna</strong>: wiadomo, czy polisa obejmuje szkody wyrządzone sąsiadom i osobom trzecim, i do jakiej kwoty.</li>
-      <li><strong>Status zamieszkania</strong> zgłoszony zgodnie z rzeczywistością, wraz z okresami nieobecności.</li>
-      <li><strong>Elementy nietypowe</strong> — basen, panele, pergola, mur — wymienione w polisie z wartościami.</li>
-      <li><strong>Franszyzy</strong> znane kwotowo dla każdego głównego ryzyka.</li>
-      <li><strong>Termin zgłoszenia szkody</strong> i numer kontaktowy zapisane tam, gdzie będą pod ręką.</li>
+      <li><div><strong>Suma ubezpieczenia budynku</strong><span> odpowiada kosztowi odbudowy, nie cenie zakupu ani kwocie kredytu.</span></div></li>
+      <li><div><strong>Suma ruchomości</strong><span> była policzona, a nie przyjęta z domysłu. Wystarczy przejść mieszkanie pokój po pokoju.</span></div></li>
+      <li><div><strong>Zalania</strong><span>: wiadomo, czy objęte jest <em>procura de avaria</em> i przeciekanie przez taras.</span></div></li>
+      <li><div><strong>Ryzyko sejsmiczne</strong><span>: wiadomo, czy jest w zakresie, z jaką franszyzą i czy bank tego wymaga.</span></div></li>
+      <li><div><strong>Odpowiedzialność cywilna</strong><span>: wiadomo, czy polisa obejmuje szkody wyrządzone sąsiadom i osobom trzecim, i do jakiej kwoty.</span></div></li>
+      <li><div><strong>Status zamieszkania</strong><span> zgłoszony zgodnie z rzeczywistością, wraz z okresami nieobecności.</span></div></li>
+      <li><div><strong>Elementy nietypowe</strong><span> — basen, panele, pergola, mur — wymienione w polisie z wartościami.</span></div></li>
+      <li><div><strong>Franszyzy</strong><span> znane kwotowo dla każdego głównego ryzyka.</span></div></li>
+      <li><div><strong>Termin zgłoszenia szkody</strong><span> i numer kontaktowy zapisane tam, gdzie będą pod ręką.</span></div></li>
     </ol>
   </div>
 </section>`,

@@ -23,7 +23,7 @@
  *     rather than 190 copies.
  */
 import { readFile } from 'node:fs/promises';
-import { langSelectorHtml, selectorTargets, LANG_BY_KEY } from './lang-selector.mjs';
+import { footerSelectorHtml, langSelectorHtml, selectorTargets, LANG_BY_KEY } from './lang-selector.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -211,6 +211,40 @@ export function langSwitcher(
     indent: '      ',
   });
   return `<div class="${cls}">\n${selector}\n${closeIndent}</div>`;
+}
+
+/**
+ * The footer, with its language selector rebuilt for one page.
+ *
+ * The footer partial is read out of a homepage, and the selector inside it is
+ * the homepage's: its `aria-current` row points at `/`, and its nine links
+ * point at that page's counterparts. Installing that partial verbatim on 291
+ * other pages would put the wrong targets in every one of their footers — and
+ * scripts/lang-switcher.mjs, which rebuilds the same control from the same
+ * data, would correct them on its next run, so the two passes would rewrite
+ * the same block back and forth for ever. This is the footer equivalent of
+ * langSwitcher() above, and it exists for the same reason.
+ *
+ * Everything outside the language column is the partial unchanged.
+ */
+export function footerFor(lang, targets = {}) {
+  const base = CHROME[lang]?.footer;
+  if (!base) return base;
+  const pageUrl = targets[lang] || LANG_BY_KEY[lang]?.home || '/';
+  const pairs = { ...targets };
+  delete pairs[lang];
+  const selector = footerSelectorHtml({
+    pageLang: lang,
+    targets: selectorTargets({ pageLang: lang, pageUrl, pairs, fallbacks: fallbacksFor(pageUrl) }),
+    indent: '      ',
+  });
+  // A function replacement, so a label or href containing `$` cannot be read
+  // as a capture reference. The pattern eats the control's own indentation
+  // because footerSelectorHtml emits its own.
+  return base.replace(
+    /[ \t]*<div class="ar-langsel ar-langsel-footer"[\s\S]*?<\/noscript>/,
+    () => selector
+  );
 }
 
 // ---------------------------------------------------------------------------

@@ -152,12 +152,12 @@ export const HUB_PAGE = {
   <div class="container narrow article-body">
     <h2 id="saadan">Sådan arbejder vi</h2>
     <ol class="process-steps">
-      <li><strong>Vi starter med situationen, ikke med produktet.</strong> Hvor bor du, hvor længe, hvad ejer du, hvem skal dækkes, og hvad arbejder du med. Produktet følger af svarene.</li>
-      <li><strong>Vi sætter summerne, før vi taler om præmie.</strong> Genopførelsespris på bygningen, gensalgsværdi på indboet. En forkert sum gør en billig police ubrugelig.</li>
-      <li><strong>Vi læser undtagelserne højt.</strong> Skriftligt, på engelsk, før du skriver under — de tre vigtigste undtagelser i netop den police.</li>
-      <li><strong>Vi indhenter tilbud inden for vores portefølje af selskaber</strong> og forklarer, hvad forskellen i dækning består i, ikke kun forskellen i pris.</li>
-      <li><strong>Vi anmelder skaden for dig.</strong> På portugisisk, over for taksator, og vi følger sagen til den er afsluttet.</li>
-      <li><strong>Vi gennemgår policerne én gang om året.</strong> Boligen, adressen og arbejdet ser sjældent ud, som planen gjorde.</li>
+      <li><div><strong>Vi starter med situationen, ikke med produktet.</strong><span> Hvor bor du, hvor længe, hvad ejer du, hvem skal dækkes, og hvad arbejder du med. Produktet følger af svarene.</span></div></li>
+      <li><div><strong>Vi sætter summerne, før vi taler om præmie.</strong><span> Genopførelsespris på bygningen, gensalgsværdi på indboet. En forkert sum gør en billig police ubrugelig.</span></div></li>
+      <li><div><strong>Vi læser undtagelserne højt.</strong><span> Skriftligt, på engelsk, før du skriver under — de tre vigtigste undtagelser i netop den police.</span></div></li>
+      <li><div><strong>Vi indhenter tilbud inden for vores portefølje af selskaber</strong><span> og forklarer, hvad forskellen i dækning består i, ikke kun forskellen i pris.</span></div></li>
+      <li><div><strong>Vi anmelder skaden for dig.</strong><span> På portugisisk, over for taksator, og vi følger sagen til den er afsluttet.</span></div></li>
+      <li><div><strong>Vi gennemgår policerne én gang om året.</strong><span> Boligen, adressen og arbejdet ser sjældent ud, som planen gjorde.</span></div></li>
     </ol>
   </div>
 </section>
@@ -174,6 +174,19 @@ export const HUB_PAGE = {
     </ul>
   </div>
 </section>`,
+  // Portrætbåndet og forsikringsselskabsrækken nedenunder renderes af
+  // scripts/lib/site-sections.mjs; kun den danske tekst bor her.
+  audience: {
+    heading: 'Hvem vi <em>er her for</em>',
+    body:
+      'Vi står for forsikringerne for danskere i Portugal: pensionister, boligkøbere, ejere af feriebolig, familier og erhvervsaktive. Uanset om du flyttede hertil i år eller har boet her i årtier, er det os, der tager den portugisiske forsikringsside — rådgivning, sammenligning af de dækninger, der passer, tegning, løbende service og hjælp ved skade, hos den samme person hele vejen.',
+    alt: 'Forsikringsrådgiver for udlandsdanskere og andre udlændinge i Portugal',
+  },
+  insurers: {
+    heading: 'Vi sammenligner <em>førende forsikringsselskaber</em>',
+    lead:
+      'Som mægler er vi ikke bundet til ét selskab. Vi rådgiver inden for vores portefølje af forsikringsselskaber og finder den løsning, der passer til din situation — ikke blot den laveste præmie.',
+  },
   faqTitle: 'Forsikring i Portugal — ofte stillede spørgsmål',
   faq: [
     {

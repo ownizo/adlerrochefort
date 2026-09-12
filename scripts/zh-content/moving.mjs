@@ -84,15 +84,15 @@ export const MOVING_PAGE = {
   <div class="container narrow article-body">
     <h2 id="dadao-zhihou">落地之后：按这个顺序</h2>
     <ol class="process-steps">
-      <li><strong>NIF。</strong>其他一切的前提。</li>
-      <li><strong>银行账户。</strong>多数保险公司通过葡萄牙账户的直接扣款（<em>débito direto</em>）收取保费；是否必须是本地账户取决于保险公司，但有本地账户会让流程顺很多。</li>
-      <li><strong>卫生中心登记。</strong>取得 <em>número de utente</em>，这是使用 SNS 公立体系的前提，通常需要居住地址证明。</li>
-      <li><strong>私人医疗保险。</strong>拿到 NIF 后尽快出单，让等待期开始计算。同时确认所在城市的网络机构（详见<a href="/zh/health-insurance-portugal/">私人医疗保险</a>）。</li>
-      <li><strong>租房的财物与责任保险。</strong>如果先租房，一份 <em>seguro de recheio</em> 覆盖自己的财物，并附带对房东与邻居的责任保障。租住公寓时尤其值得安排——漏水泡到楼下是葡萄牙最常见的责任事故。</li>
-      <li><strong>汽车。</strong>买车与投保同步进行，保险从交付当天生效，之后完成过户登记。驾照状态请先按 IMT 的现行规定确认。</li>
-      <li><strong>房屋保险。</strong>如果买房，保障必须在签署产权转让书（<em>escritura</em>）当天已经生效，有房贷时银行会作为受益人（详见<a href="/zh/buying-property-portugal/">在葡萄牙买房</a>）。</li>
-      <li><strong>责任保险。</strong>如果在葡萄牙从事执业或经营活动，职业责任通常需要在开始接单前就安排好，有些行业是法定强制（详见<a href="/zh/liability-insurance-portugal/">民事责任保险</a>）。</li>
-      <li><strong>半年后的复核。</strong>安顿下来之后，实际情况往往与计划时不同：住的地方变了、买了车、财物增加了、开始了新的业务。把几份保单一起复核一次，通常能发现一两处缺口或重复。</li>
+      <li><div><strong>NIF。</strong><span>其他一切的前提。</span></div></li>
+      <li><div><strong>银行账户。</strong><span>多数保险公司通过葡萄牙账户的直接扣款（<em>débito direto</em>）收取保费；是否必须是本地账户取决于保险公司，但有本地账户会让流程顺很多。</span></div></li>
+      <li><div><strong>卫生中心登记。</strong><span>取得 <em>número de utente</em>，这是使用 SNS 公立体系的前提，通常需要居住地址证明。</span></div></li>
+      <li><div><strong>私人医疗保险。</strong><span>拿到 NIF 后尽快出单，让等待期开始计算。同时确认所在城市的网络机构（详见<a href="/zh/health-insurance-portugal/">私人医疗保险</a>）。</span></div></li>
+      <li><div><strong>租房的财物与责任保险。</strong><span>如果先租房，一份 <em>seguro de recheio</em> 覆盖自己的财物，并附带对房东与邻居的责任保障。租住公寓时尤其值得安排——漏水泡到楼下是葡萄牙最常见的责任事故。</span></div></li>
+      <li><div><strong>汽车。</strong><span>买车与投保同步进行，保险从交付当天生效，之后完成过户登记。驾照状态请先按 IMT 的现行规定确认。</span></div></li>
+      <li><div><strong>房屋保险。</strong><span>如果买房，保障必须在签署产权转让书（<em>escritura</em>）当天已经生效，有房贷时银行会作为受益人（详见<a href="/zh/buying-property-portugal/">在葡萄牙买房</a>）。</span></div></li>
+      <li><div><strong>责任保险。</strong><span>如果在葡萄牙从事执业或经营活动，职业责任通常需要在开始接单前就安排好，有些行业是法定强制（详见<a href="/zh/liability-insurance-portugal/">民事责任保险</a>）。</span></div></li>
+      <li><div><strong>半年后的复核。</strong><span>安顿下来之后，实际情况往往与计划时不同：住的地方变了、买了车、财物增加了、开始了新的业务。把几份保单一起复核一次，通常能发现一两处缺口或重复。</span></div></li>
     </ol>
   </div>
 </section>

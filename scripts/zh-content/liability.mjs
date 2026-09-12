@@ -129,12 +129,12 @@ export const LIABILITY_PAGE = {
     <h2 id="ruhe-tou">投保时保险公司会问什么</h2>
     <p>职业责任的报价不是按“行业”给的，而是按您具体做什么给的。通常需要提供：</p>
     <ol class="process-steps">
-      <li><strong>活动的具体描述。</strong>越具体越好。“咨询”不够，“为制造业客户做 ERP 系统选型与实施管理，不承担编程开发”才是可以写进保单的描述。</li>
-      <li><strong>资质与注册情况。</strong>相关的执业资格、专业协会注册、在葡萄牙的经营登记（<em>atividade</em> 的分类）。</li>
-      <li><strong>年营业额与客户结构。</strong>营业额是主要定价因素之一；客户所在国家决定地域范围。</li>
-      <li><strong>单笔合同的规模。</strong>影响单次索赔上限的选择。</li>
-      <li><strong>过往索赔情况。</strong>需要如实申报，包括已发生但尚未被索赔的情形。</li>
-      <li><strong>是否有分包或团队成员。</strong>决定谁被列为被保险人。</li>
+      <li><div><strong>活动的具体描述。</strong><span>越具体越好。“咨询”不够，“为制造业客户做 ERP 系统选型与实施管理，不承担编程开发”才是可以写进保单的描述。</span></div></li>
+      <li><div><strong>资质与注册情况。</strong><span>相关的执业资格、专业协会注册、在葡萄牙的经营登记（<em>atividade</em> 的分类）。</span></div></li>
+      <li><div><strong>年营业额与客户结构。</strong><span>营业额是主要定价因素之一；客户所在国家决定地域范围。</span></div></li>
+      <li><div><strong>单笔合同的规模。</strong><span>影响单次索赔上限的选择。</span></div></li>
+      <li><div><strong>过往索赔情况。</strong><span>需要如实申报，包括已发生但尚未被索赔的情形。</span></div></li>
+      <li><div><strong>是否有分包或团队成员。</strong><span>决定谁被列为被保险人。</span></div></li>
     </ol>
     <p>如实且具体地描述活动，是这类保险里最重要的一步。描述过窄，实际做的业务可能落在保障之外；描述含糊，理赔时保险公司有空间主张该活动未被承保。</p>
   </div>
