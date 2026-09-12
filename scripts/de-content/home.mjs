@@ -130,6 +130,7 @@ export const HOME_PAGE = {
     },
   ],
   related: [
+    { url: '/de/nicht-legalisierte-immobilie-versichern-portugal/', label: 'Eine nicht legalisierte Immobilie versichern' },
     { url: '/de/umzug-deutschland-portugal-versicherung/', label: 'Versicherungen beim Umzug von Deutschland nach Portugal' },
     { url: '/de/private-clients-portugal/', label: 'Private Clients: Luxusimmobilien und komplexe Risiken' },
     { url: '/en/blog/outdated-insured-values/', label: 'Underinsurance in Portugal: the Proportional Rule and Outdated Insured Values (Englisch)', hreflang: 'en' },
