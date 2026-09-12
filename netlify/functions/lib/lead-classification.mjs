@@ -200,9 +200,12 @@ const BRANCH_FIELD_NAMES = ['tipo_seguro', 'tipo-seguro', 'insurance_type', 'ins
 //
 // `language`: só definido quando a língua da página difere do português —
 // propagado para website_leads.metadata.language por crm-sync.mjs. Os
-// formulários nl-offerte-aanvraag/lead-nl/lead-fr/lead-de já submetem o seu
-// próprio campo `lang` (ver public/nl|fr|de/*), que crm-sync.mjs usa
-// diretamente; não precisam de `language` fixo aqui.
+// formulários nl-offerte-aanvraag/lead-nl/lead-fr já submetem o seu próprio
+// campo `lang` (ver public/nl|fr/*), que crm-sync.mjs usa diretamente; não
+// precisam de `language` fixo aqui. de-angebot-anfrage (público em public/de/*)
+// é a exceção: o seu campo de atribuição chama-se `language`, não `lang`
+// (brief Parte 11), por isso leva `language: 'DE'` fixo abaixo, tal como
+// quote-blog/free-analysis/expat-health-quote fixam o seu próprio idioma.
 const FORM_CLASSIFICATION = {
   // ── PT, língua PT ──────────────────────────────────────────────────────
   contacto: { entityType: 'individual', market: 'PT', product: 'contact' },
@@ -275,7 +278,10 @@ const FORM_CLASSIFICATION = {
   'nl-offerte-aanvraag': { entityType: 'individual', market: 'PT', product: 'general' },
   'lead-nl': { entityType: 'individual', market: 'PT', product: 'general' },
   'lead-fr': { entityType: 'individual', market: 'PT', product: 'general' },
-  'lead-de': { entityType: 'individual', market: 'PT', product: 'general' },
+  // de-angebot-anfrage (scripts/generate-de-cluster.mjs) submits `language`,
+  // not `lang` — see the comment above this block. Fixed here instead, same
+  // as quote-blog/free-analysis/expat-health-quote do for their own language.
+  'de-angebot-anfrage': { entityType: 'individual', market: 'PT', product: 'general', language: 'DE' },
 
   // ── Espanha — mesmo CRM, market: 'ES'. Confirmado por leitura de cada
   // página: todas têm `<input type="hidden" name="country" value="Spain">`
