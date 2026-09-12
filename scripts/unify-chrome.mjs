@@ -316,19 +316,28 @@ for (const file of files) {
   }
 
   // --- article reading header ---------------------------------------------
-  // Rebuild the switcher from the data source so it can never 404.
+  // Rebuild the switcher from the data source so it can never 404. The
+  // back-link is matched structurally (matchElement, same helper as
+  // topBar/footer above) rather than by the literal string
+  // class="nav-back" this used to require immediately after href="..." —
+  // no page currently gives that link a second class or reorders its
+  // attributes, but nothing stopped one from starting to, and the failure
+  // mode is identical to the topBar/footer bug this file just spent two
+  // commits fixing: the link reads as absent and the whole reading header
+  // silently stops rebuilding. matchElement's `attrs`/`inner` let href and
+  // label be pulled out regardless of attribute order.
   const url = '/' + rel.replace(/index\.html$/, '');
   const navMatch = html.match(/<nav(?:\s[^>]*)?>[\s\S]*?<\/nav>/);
-  if (navMatch && /class="nav-back"/.test(navMatch[0])) {
-    const backMatch = navMatch[0].match(/class="nav-back">([\s\S]*?)<\/a>/);
-    const hrefMatch = navMatch[0].match(/<a href="([^"]+)" class="nav-back"/);
+  const backLink = navMatch && matchElement(navMatch[0], 'a', { className: 'nav-back' });
+  if (navMatch && backLink) {
+    const hrefMatch = /\bhref="([^"]+)"/.exec(backLink.attrs);
     const targets = { [lang]: url };
     const counterpart = pair.get(url);
     if (counterpart) targets[counterpart.startsWith('/en/') ? 'en' : 'pt'] = counterpart;
     const rebuiltNav = articleNav(lang, {
       switcher: langSwitcher(lang, targets),
       backHref: hrefMatch ? hrefMatch[1] : undefined,
-      backLabel: backMatch ? backMatch[1].trim() : undefined,
+      backLabel: backLink.inner.trim() || undefined,
     });
     if (navMatch[0] !== rebuiltNav) {
       html = html.replace(navMatch[0], rebuiltNav);
