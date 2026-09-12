@@ -7,9 +7,11 @@
  * scripts/nl-cluster.data.mjs.
  *
  * Part 13 of the brief: "Start with the hub and the anchor page, then
- * report... then after every three pages." All eleven pages of this round's
- * scope are built: hub, anchor (Umzug), Kranken, Haus, Auto, Leben, Private
- * Clients, and the four local pages (Algarve, Lagos, Lissabon, Cascais).
+ * report... then after every three pages." All eleven pages of the original
+ * round's scope are built: hub, anchor (Umzug), Kranken, Haus, Auto, Leben,
+ * Private Clients, and the four local pages (Algarve, Lagos, Lissabon,
+ * Cascais). A twelfth page, Anwartschaftsversicherung, was split out of the
+ * anchor page's PKV section on the following round (its own request).
  */
 import { HUB_PAGE } from './de-content/hub.mjs';
 import { MOVING_PAGE } from './de-content/moving.mjs';
@@ -19,12 +21,14 @@ import { MOTOR_PAGE } from './de-content/motor.mjs';
 import { LIFE_PAGE } from './de-content/life.mjs';
 import { PRIVATE_CLIENTS_PAGE } from './de-content/private-clients.mjs';
 import { LOCAL_PAGES } from './de-content/local.mjs';
+import { ANWARTSCHAFT_PAGE } from './de-content/anwartschaft.mjs';
 
 export { LANG_POLICY_DE, BREADCRUMB_ROOT } from './de-content/shared.mjs';
 
 export const PAGES = [
   HUB_PAGE,
   MOVING_PAGE,
+  ANWARTSCHAFT_PAGE,
   HEALTH_PAGE,
   HOME_PAGE,
   MOTOR_PAGE,

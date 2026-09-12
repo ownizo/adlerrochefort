@@ -71,13 +71,7 @@ export const MOVING_PAGE = {
     <p>Die Mitgliedschaft in der gesetzlichen Krankenversicherung hängt am Wohnsitz und in der Regel an einer Beschäftigung oder einem Rentenbezug in Deutschland. Geben Sie Ihren deutschen Wohnsitz endgültig auf und arbeiten oder beziehen keine Rente mehr aus Deutschland, endet die GKV-Mitgliedschaft grundsätzlich mit der Abmeldung. Es gibt eine wichtige Ausnahme: Rentner, die ausschließlich eine deutsche Rente beziehen, können ihre gesetzliche Versicherung über das <strong>S1-Formular</strong> behalten — dazu weiter unten mehr.</p>
     <h3>Privat Versicherte (PKV)</h3>
     <p>Ein PKV-Vertrag endet nicht automatisch mit dem Wegzug. Das ist zugleich das Problem: Viele PKV-Tarife bieten im Ausland gar keinen oder nur einen zeitlich begrenzten Schutz (etwa für Urlaubsreisen), nicht für einen dauerhaften Wohnsitz in Portugal. Sie zahlen dann womöglich weiter volle Beiträge für eine Deckung, die im Ernstfall nicht greift.</p>
-    <div class="callout">
-      <span class="callout-label">Die Anwartschaftsversicherung — die Entscheidung, die selten erklärt wird</span>
-      <p style="margin-bottom:10px;">Wer die PKV nicht komplett kündigen will (eine Kündigung ist oft schwer rückgängig zu machen, besonders mit zunehmendem Alter oder bei Vorerkrankungen), kann sie in eine <strong>Anwartschaftsversicherung</strong> umwandeln: ein reduzierter Beitrag ohne Leistungsanspruch, der das Recht auf Rückkehr in den ursprünglichen Tarif sichert.</p>
-      <p style="margin-bottom:10px;"><strong>Kleine Anwartschaft:</strong> sichert die Rückkehr in den alten Tarif ohne neue Gesundheitsprüfung — aber die Alterungsrückstellungen wachsen währenddessen nicht weiter. Bei Rückkehr zahlen Sie den Beitrag Ihres dann erreichten Alters, nicht des Alters beim ursprünglichen Eintritt.</p>
-      <p style="margin-bottom:0;"><strong>Große Anwartschaft:</strong> friert zusätzlich Ihr Eintrittsalter ein — teurer während der Auslandszeit, aber bei Rückkehr zahlen Sie so, als wären Sie durchgehend versichert gewesen. Je länger der Auslandsaufenthalt und je wahrscheinlicher eine Rückkehr im höheren Alter, desto eher lohnt sich die große Variante.</p>
-    </div>
-    <p>Das ist der Kern der "teuren, schwer umkehrbaren Entscheidung", die in den meisten portugiesischen Ratgebern fehlt: Einmal gekündigt statt in Anwartschaft überführt, ist die Rückkehr in die PKV nicht mehr garantiert — insbesondere nicht zu den ursprünglichen Bedingungen. Welche Variante für Sie sinnvoll ist, hängt von Ihrem Alter, Ihrem Gesundheitszustand und davon ab, wie sicher eine Rückkehr nach Deutschland ist. Das ist eine Entscheidung, die Sie mit Ihrem deutschen PKV-Versicherer und idealerweise einem unabhängigen Berater in Deutschland treffen — wir beraten zur portugiesischen Seite, nicht zur deutschen Vertragsgestaltung.</p>
+    <p>Wer die PKV nicht komplett kündigen will — eine Kündigung ist oft schwer rückgängig zu machen, besonders mit zunehmendem Alter oder bei Vorerkrankungen —, kann sie stattdessen über eine <strong>Anwartschaftsversicherung</strong> ruhend stellen: ein reduzierter Beitrag ohne Leistungsanspruch, der das Recht auf spätere Rückkehr in den ursprünglichen Tarif ohne neue Gesundheitsprüfung sichert. Die Wahl zwischen kleiner und großer Anwartschaft ist genau die "teure, schwer umkehrbare Entscheidung", die in den meisten portugiesischen Ratgebern fehlt — wir behandeln sie ausführlich, mit dem Unterschied zwischen beiden Varianten und wovon die Wahl tatsächlich abhängt, auf der Seite zur <a href="/de/anwartschaftsversicherung-portugal/">Anwartschaftsversicherung beim Umzug nach Portugal</a>.</p>
   </div>
 </section>
 
@@ -157,6 +151,7 @@ export const MOVING_PAGE = {
     },
   ],
   related: [
+    { url: '/de/anwartschaftsversicherung-portugal/', label: 'Anwartschaftsversicherung beim Umzug nach Portugal' },
     { url: '/de/krankenversicherung-portugal/', label: 'Krankenversicherung in Portugal' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/autoversicherung-portugal/', label: 'Autoversicherung in Portugal' },

@@ -123,7 +123,7 @@ export const HEALTH_PAGE = {
     },
     {
       q: 'Was passiert mit meiner deutschen Versicherung?',
-      a: '<p>Das hängt davon ab, ob Sie gesetzlich oder privat versichert sind. Details und die Anwartschaftsversicherung als mögliche Zwischenlösung stehen auf unserer Seite zum <a href="/de/umzug-deutschland-portugal-versicherung/">Umzug von Deutschland nach Portugal</a>.</p>',
+      a: '<p>Das hängt davon ab, ob Sie gesetzlich oder privat versichert sind. Bei PKV ist die Anwartschaftsversicherung oft die richtige Zwischenlösung statt einer Kündigung — Details dazu auf unserer Seite zur <a href="/de/anwartschaftsversicherung-portugal/">Anwartschaftsversicherung beim Umzug nach Portugal</a>. Die Reihenfolge und Fristen rund um den Umzug insgesamt stehen auf unserer Seite zum <a href="/de/umzug-deutschland-portugal-versicherung/">Umzug von Deutschland nach Portugal</a>.</p>',
     },
     {
       q: 'Kann ich mich mit Vorerkrankungen versichern?',
@@ -140,6 +140,7 @@ export const HEALTH_PAGE = {
   ],
   related: [
     { url: '/de/umzug-deutschland-portugal-versicherung/', label: 'Versicherungen beim Umzug von Deutschland nach Portugal' },
+    { url: '/de/anwartschaftsversicherung-portugal/', label: 'Anwartschaftsversicherung beim Umzug nach Portugal' },
     { url: '/de/private-clients-portugal/', label: 'Private Clients: komplexe Risiken' },
     { url: '/en/blog/medis-health-insurance-portugal/', label: 'Médis Health Insurance in Portugal (Englisch)', hreflang: 'en' },
   ],
