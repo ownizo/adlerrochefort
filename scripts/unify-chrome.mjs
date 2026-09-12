@@ -118,6 +118,33 @@ const SOURCES = new Set([
 // misleading on a page that only exists in English — for no gain, since
 // these pages already link across both markets. Excluded on the same
 // principle as /de/ and /fr/ above: a chrome of their own, not a gap to fill.
+//
+// The eleven Dutch cluster pages below (scripts/generate-nl-cluster.mjs) are
+// excluded for the same reason, discovered while running this pass: they
+// carry a genuine topBar and footer, but styled with an `on-dark` class
+// suffix (`class="asf-top-bar on-dark"`, `<footer class="on-dark">`) that
+// this script's exact-string detection does not recognise. Left unexcluded,
+// the gap-fill pass below reads that as "missing entirely" and inserts a
+// *second* topBar and footer alongside the existing one — confirmed by
+// running the sweep and inspecting the diff before adding this list, not
+// assumed. /nl/index.html and /nl/bedankt/ are not in this list: the former
+// is already a SOURCE, and the latter already carries a *pre-existing*
+// duplicate topBar/footer of its own (unrelated to this on-dark issue —
+// see the next exclusion group) that this pass should not paper over.
+const NL_CLUSTER_PAGES = [
+  'alojamento-local-verzekering-portugal',
+  'auto-importeren-portugal-verzekering',
+  'bosbrandrisico-woonverzekering-portugal',
+  'niet-gelegaliseerde-woning-verzekeren-portugal',
+  's1-formulier-cak-portugal',
+  'schadevrije-jaren-meenemen-portugal',
+  'uitschrijven-nederland-zorgverzekering-portugal',
+  'verzekeringen-portugal',
+  'woonverzekering-portugal',
+  'zorgverzekering-portugal',
+  'zzp-beroepsaansprakelijkheid-portugal',
+];
+
 const SKIP = [
   /email-signature\.html$/,
   /\/descarregar\//,
@@ -125,6 +152,17 @@ const SKIP = [
   /\/fr\//,
   /\/en\/insurance-review\//,
   /spain/,
+  ...NL_CLUSTER_PAGES.map((slug) => new RegExp(`/nl/${slug}/`)),
+  // Pre-existing, unrelated to the on-dark issue above: each of these three
+  // "thank you" pages already carries two topBars and two footers (one
+  // legitimate, one stale) on main, predating both branches this sweep
+  // follows. Sweeping them would silently refresh one of the two copies
+  // without resolving the underlying duplication, which is a page-content
+  // bug this pass should not paper over either — flagged for its own fix
+  // instead of bundled here.
+  /\/obrigado\//,
+  /\/en\/thank-you\//,
+  /\/nl\/bedankt\//,
 ];
 
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
