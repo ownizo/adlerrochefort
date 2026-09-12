@@ -1193,3 +1193,32 @@ articles against 11 that exist. Both have been live for some time,
 unnoticed, before this branch started. Both resolve automatically once
 this branch merges, since this branch already fixes both — noted here so
 that fact isn't lost, not because either needs action before then.
+
+---
+
+## Addendum — [VERIFY] 3 resolved, competitor-language sweep
+
+`[VERIFY] 3` (MGEN waiting periods) is closed: the placeholder on
+`mgen-health-insurance-portugal` is replaced with a new section, "Where the
+mechanism has to sit", per your exact editorial brief — the 365-day figure
+stated plainly (unchanged, it already was), the anti-selection mechanism
+explained as a design choice, the reader given a general test for reading
+any acceptance-without-limits proposal, closing on our own position. No
+`[VERIFY]` markers remain anywhere on this branch.
+
+**Competitor-language sweep, as instructed — one near-miss found, not
+rewritten, flagged for you:** `pre-existing-conditions-health-insurance-
+portugal` (a pre-existing article, only touched this branch for a single
+link insertion, its prose otherwise untouched) contains: *"This is not a
+free lunch, and it would be misleading to present it as one... on several
+of those measures the commercial insurers are more competitive."* Read
+closely, this isn't the pattern you ruled out — it's Adler & Rochefort
+declining to oversell its own description of MGEN, and a structural
+comparison to "commercial insurers" as a market segment, not a conduct
+claim about other brokers or a named competitor's product. No "unlike
+other brokers" construction, no named competitor. I've left it exactly as
+it was; flagging it because it was the only match a broad grep turned up,
+and it's close enough to the pattern that it deserved your eyes rather
+than my own judgment call. Full sweep otherwise clean: no other match for
+"unlike other/most/many", "other brokers/intermediaries", "competitors",
+"we are the only", or similar, anywhere in the files this branch touched.
