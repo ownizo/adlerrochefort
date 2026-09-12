@@ -1056,3 +1056,140 @@ part of the nav-sync commit since it's mechanically the same regeneration,
 or something else.
 
 Step 3 (article wiring) not started — waiting on step 2.
+
+---
+
+## Branch summary — closing for review
+
+32 commits, `content/market-expansion-2026` off `main` at `bddcc7e`. Zero
+failures on `node scripts/check-generator-freshness.mjs` was the condition
+for closing the branch; that's now true. `main` is untouched throughout —
+verified repeatedly, most recently by running the freshness checker against
+it in a disposable `git worktree` that was removed afterward.
+
+### What shipped
+
+**Partner list (Block 1).** `data/partners.json` — Hiscox, Allianz, Zurich,
+MGEN, Asisa, April, Chubb — as the single source of truth, wired into
+`scripts/lib/landing.mjs`. 15 pages synced off the old hardcoded lists (11
+via a new one-off sync script, `public/en/index.html` and the NL/DE/FR
+homepages by hand). Working-language disclosure added to DE/FR, matching
+the pattern already on EN/NL. Innovarisk resolved as a category confusion,
+not a conflict — it's the MGA channel to some of the seven insurers, never
+itself one of them; nothing was ever removed there.
+
+**5.1 — proportional rule.** Two satellites shipped: disputing a settlement
+figure (perito de parte, sourced to RJCS Art. 50.º; CIMPAS corrected after
+the original description turned out to be factually wrong, not just
+unconfirmed) and the bank's-figure-vs-rebuild-cost distinction. The pillar
+(`outdated-insured-values`) was **not** extended — only linked to,
+reciprocally, via its existing cluster-links line. Total-loss mechanics,
+the rebuild-value-setting method, and waiver of average as its own resource
+remain queued; extending the pillar itself still needs your explicit
+go-ahead, not given this branch.
+
+**5.2 — MGEN.** One pillar, consolidating facts already live and consistent
+across 3 pre-existing pages before this branch touched anything. Declined-
+and-what's-left and waiting-periods-by-product ([VERIFY] 3, staying with
+you) were never written, even as pillar sections. Cover-at-70/75 and
+moving-with-a-chronic-condition exist only as sections inside the pillar,
+not their own pages — and a pre-existing, pre-branch article
+(`retiring-algarve-health-cover-65-plus`) already covers the 65+ angle
+generally, missed in the original coverage matrix and disclosed once found.
+
+**5.3 — therapist liability.** Three satellites (yoga, Pilates/Tai Chi,
+massage & spa) — the "not one of the regulated seven, still exposed"
+cluster, chosen first because massage had an existing PT article to draw
+verified facts from rather than invent. Two citation errors found and
+swept across every page stating them, not patched on the one page found
+first: Lei 71/2013's insurance obligation is Art. 10.º n.º 1, not Art.
+5.º (5 pages); the law recognises **seven** therapies, not six — Chiropractic
+(Quiropraxia) was missing from both the EN and PT pillars' own lists (5
+pages, one of which — the PT pillar — was internally self-contradictory,
+agreeing with itself only after the fix). Both verified against pgdlisboa.pt's
+consolidated text before writing anything. Remaining: the other six of the
+seven regulated professions (zero EN satellites for any), the combined
+psychologist/nutritionist page (queued — separate regulatory bodies, Ordem
+dos Psicólogos and Ordem dos Nutricionistas, not Lei 71/2013 — needs its
+own verification pass before writing, not a same-afternoon extension of
+this batch), retreat organisers, personal trainers, and the reference
+table of which professional bodies require cover.
+
+**5.4 — US audience.** Complete: hub (`/en/insurance-for-americans-in-portugal/`,
+built via `landing.mjs`, the same renderer `/seguros/*` uses) plus all 4
+satellites (US umbrella vs. PT liability, US driving record, claiming in
+Portugal vs. a US adjuster, cover before D7/D8/Golden Visa residency).
+Nothing outstanding.
+
+**Generator wiring**, sequenced exactly as directed rather than as one
+blind regeneration: CSS class fix (4 `/seguros/*` pages moved off the
+retired `.lp-form-note`, `ar-site.css` regenerated clean) → nav sync (31
+EN blog pages, chrome only, confirmed via line-by-line diff) → article
+wiring (this branch's 10 new articles into index/categories/sitemap) →
+feed + pagination together at the final count (166 registered, 162
+published, 14 index pages, up from 11).
+
+**The staleness tool.** `scripts/check-generator-freshness.mjs`
+(`npm run check:freshness`) — read-only, five checks. FAIL: a class a
+rebuild would drop that a page still uses (the three-way committed-vs-
+rebuilt-vs-markup comparison, not a blanket "every class needs a rule",
+which produced ~300 false positives against structural classes like
+`landing.mjs`'s own `.field` before being narrowed); pagination count vs.
+published articles. WARN: chrome partials (delegated to
+`unify-chrome.mjs --dry-run`, not reimplemented), the two rebuildable
+stylesheets vs. their builder functions, RSS feed contents vs. the true
+latest-30, `hreflang-report.json`'s recorded totals vs. two independently
+recomputed proxy figures. Required one small, verified-behaviour-preserving
+split in `scripts/lib/chrome.mjs` (`buildSharedStylesheet()` extracted as a
+pure function). Confirmed by running it against `main`: it independently
+rediscovers the exact 4-page CSS break and the EN pagination gap this
+branch already found and fixed — the tool would have caught the original
+incident before a client did.
+
+### The 5 warnings deliberately left on this branch, untouched per instruction
+
+1–2. **Chrome partials** — 237 files stale (topBar 205, footer 294, cookie
+   289, nav 202, landingNav 2, landingDrawer 2, css 2), plus 11 files (all
+   `/nl/*`) missing topBar/footer entirely. Pre-existing, predates this
+   branch, gets its own pass after this one merges. Not touched.
+3–4. **RSS feeds** — both PT and EN feeds carry one article each just past
+   the true latest-30-by-date window. Minor, self-correcting on the next
+   real regeneration. Not touched.
+5. **`data/hreflang-report.json`** — recorded `htmlFiles: 268` vs. 344
+   current. Stale since Phase 1, predates this branch. Not touched.
+
+### Queued work, explicit
+
+- **5.1**: pillar extension (total-loss mechanics, retail-vs-individually-
+  underwritten wording) pending your go-ahead; rebuild-value-setting method
+  and waiver-of-average as their own satellites.
+- **5.2**: declined-and-what's-left, `[VERIFY]` 3 (waiting periods by
+  product, staying with you), and whether cover-at-70/75 /
+  moving-with-a-chronic-condition warrant their own pages or stay as
+  pillar sections.
+- **5.3**: the other six of the seven regulated therapies in English
+  (acupuncture, phytotherapy, homeopathy, TCM, naturopathy, osteopathy —
+  none have an EN satellite yet), the psychologist/nutritionist page
+  (own regulatory bodies, needs its own verification pass first),
+  retreat organisers, personal trainers, the professional-bodies
+  reference table.
+- **5.5 (DE)**: all 13 pages stopped — competitor analysis (C1 Broker's
+  60+ page German cluster) needed before designing against it, not an
+  Innovarisk question any more.
+- **5.6 (NL)**: 8 extensions stopped, topic selection pending; existing
+  NL cluster untouched throughout this branch.
+- **5.7 (FR)**: stopped, clone plan deferred until DE is built and reviewed.
+- **Chrome sweep**: running `unify-chrome.mjs` for real (not `--dry-run`)
+  across the 237+11 stale files — its own header already recommends a
+  dry-run diff review "before every run that follows more than a trivial
+  chrome edit," which this qualifies as.
+
+### For the record — `main`'s own state, not urgent, not touched
+
+`node scripts/check-generator-freshness.mjs` reports **5 failures on `main`
+right now**, independent of this branch: the same 4 `.lp-form-note`
+class-drop pages, plus `/en/blog/` needing 13 pages for its 152 published
+articles against 11 that exist. Both have been live for some time,
+unnoticed, before this branch started. Both resolve automatically once
+this branch merges, since this branch already fixes both — noted here so
+that fact isn't lost, not because either needs action before then.
