@@ -4,10 +4,16 @@
  * sections stay comparable and the schema stays consistent; the copy itself
  * comes from the spec object passed in.
  */
-import { esc, ORIGIN, jsonLd, breadcrumbLd, ORGANIZATION, page } from './chrome.mjs';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { esc, ORIGIN, jsonLd, breadcrumbLd, ORGANIZATION, page, ROOT } from './chrome.mjs';
 import { breadcrumbHtml, metaHead, card } from './blog-parts.mjs';
 
-const PARTNERS = ['Hiscox', 'Allianz', 'Zurich', 'Asisa', 'Innovarisk'];
+// Single source of truth for the partner list: data/partners.json. Do not
+// hardcode names here — edit that file and every consumer (this generator,
+// and the hand-authored pages listed in its own header comment) picks up
+// the change the next time it's built or mechanically re-synced.
+const PARTNERS = JSON.parse(readFileSync(join(ROOT, 'data', 'partners.json'), 'utf8')).partners;
 
 const partnersSection = (eyebrow, title) => `<section class="partners-section">
   <div class="fade-up">
