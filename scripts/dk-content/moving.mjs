@@ -69,27 +69,27 @@ export const MOVING_PAGE = {
     <h2 id="raekkefoelge">Den rækkefølge, der fungerer</h2>
     <h3>Før flytningen — tre til seks måneder</h3>
     <ol class="process-steps">
-      <li><strong>NIF</strong> (portugisisk skattenummer) — forudsætningen for næsten alt: lejekontrakt, bankkonto, ejendomskøb, forsikring.</li>
-      <li><strong>Skriftlige svar</strong> fra hvert dansk selskab om, hvad der gælder efter udrejsen.</li>
-      <li><strong>Skadesattest</strong> fra bilforsikringsselskabet, gerne på engelsk. Bed om den, mens aftalen løber.</li>
-      <li><strong>Din situation i den danske sygesikring</strong> oplyst skriftligt, og undersøgt om S1 gælder dig.</li>
-      <li><strong>Sundhedsforsikring</strong> tegnet, mens helbredet er uproblematisk — helbredsvurderingen bliver ikke lettere af at vente.</li>
-      <li><strong>ISV-beregning</strong>, hvis bilen skal med. For mange er det billigere at sælge i Danmark og købe her.</li>
+      <li><div><strong>NIF</strong><span> (portugisisk skattenummer) — forudsætningen for næsten alt: lejekontrakt, bankkonto, ejendomskøb, forsikring.</span></div></li>
+      <li><div><strong>Skriftlige svar</strong><span> fra hvert dansk selskab om, hvad der gælder efter udrejsen.</span></div></li>
+      <li><div><strong>Skadesattest</strong><span> fra bilforsikringsselskabet, gerne på engelsk. Bed om den, mens aftalen løber.</span></div></li>
+      <li><div><strong>Din situation i den danske sygesikring</strong><span> oplyst skriftligt, og undersøgt om S1 gælder dig.</span></div></li>
+      <li><div><strong>Sundhedsforsikring</strong><span> tegnet, mens helbredet er uproblematisk — helbredsvurderingen bliver ikke lettere af at vente.</span></div></li>
+      <li><div><strong>ISV-beregning</strong><span>, hvis bilen skal med. For mange er det billigere at sælge i Danmark og købe her.</span></div></li>
     </ol>
     <h3>Under flytningen</h3>
     <ol class="process-steps">
-      <li><strong>Flyttefirmaets ansvar</strong> skriftligt, og særskilt transportforsikring, hvis beløbet er for lavt.</li>
-      <li><strong>Boligforsikring på den portugisiske bolig</strong> fra indflytningsdagen — også ved leje, hvor udlejer forsikrer bygningen, men ikke dit indbo og ikke dit ansvar.</li>
-      <li><strong>Bilen</strong>: dansk dækning bekræftet i mellemperioden, portugisisk police startet på <em>matrículans</em> dato.</li>
-      <li><strong>Framelding</strong> af Folkeregisteret, med forsikringsspørgsmålene allerede afklaret.</li>
+      <li><div><strong>Flyttefirmaets ansvar</strong><span> skriftligt, og særskilt transportforsikring, hvis beløbet er for lavt.</span></div></li>
+      <li><div><strong>Boligforsikring på den portugisiske bolig</strong><span> fra indflytningsdagen — også ved leje, hvor udlejer forsikrer bygningen, men ikke dit indbo og ikke dit ansvar.</span></div></li>
+      <li><div><strong>Bilen</strong><span>: dansk dækning bekræftet i mellemperioden, portugisisk police startet på <em>matrículans</em> dato.</span></div></li>
+      <li><div><strong>Framelding</strong><span> af Folkeregisteret, med forsikringsspørgsmålene allerede afklaret.</span></div></li>
     </ol>
     <h3>Efter flytningen — de første måneder</h3>
     <ol class="process-steps">
-      <li><strong>Opholdsregistrering</strong> hos den kompetente myndighed, og derefter registrering i SNS på sundhedscentret.</li>
-      <li><strong>Kørekortet registreret</strong> hos IMT inden for den frist, der regnes fra opholdsregistreringen.</li>
-      <li><strong>Bilimporten</strong> afsluttet: told, ISV eller fritagelse, teknisk kontrol, homologering.</li>
-      <li><strong>Ansvarsdækning</strong> kontrolleret — privat, og erhverv hvis du arbejder herfra.</li>
-      <li><strong>Gennemgang efter seks måneder</strong>: bolig, adresse og arbejde ser sjældent ud, som planen gjorde.</li>
+      <li><div><strong>Opholdsregistrering</strong><span> hos den kompetente myndighed, og derefter registrering i SNS på sundhedscentret.</span></div></li>
+      <li><div><strong>Kørekortet registreret</strong><span> hos IMT inden for den frist, der regnes fra opholdsregistreringen.</span></div></li>
+      <li><div><strong>Bilimporten</strong><span> afsluttet: told, ISV eller fritagelse, teknisk kontrol, homologering.</span></div></li>
+      <li><div><strong>Ansvarsdækning</strong><span> kontrolleret — privat, og erhverv hvis du arbejder herfra.</span></div></li>
+      <li><div><strong>Gennemgang efter seks måneder</strong><span>: bolig, adresse og arbejde ser sjældent ud, som planen gjorde.</span></div></li>
     </ol>
   </div>
 </section>

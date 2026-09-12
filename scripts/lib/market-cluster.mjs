@@ -28,8 +28,16 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { LANGSEL_CSS_LINK, LANGSEL_SCRIPT_TAG, langSelectorHtml, selectorTargets, LANG_BY_KEY } from './lang-selector.mjs';
+import {
+  LANGSEL_CSS_LINK,
+  LANGSEL_SCRIPT_TAG,
+  footerSelectorHtml,
+  langSelectorHtml,
+  selectorTargets,
+  LANG_BY_KEY,
+} from './lang-selector.mjs';
 import { marketPairs } from './market-hreflang.mjs';
+import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
@@ -160,13 +168,32 @@ function jsonLd(market, page) {
 
 /* ─────────────── chrome ─────────────── */
 
-function langSelector(market, page, mobile = false) {
-  const targets = selectorTargets({
+/**
+ * One routing helper for every instance of the selector on the page.
+ *
+ * The header, the mobile drawer and the footer all resolve their nine targets
+ * through this function, so a language that has a counterpart for this page
+ * links to it from all three and a language that does not falls back to its
+ * home page in all three. Giving the footer its own routing would be a second
+ * answer to the same question, and the two would eventually disagree.
+ */
+function langTargets(market, page) {
+  return selectorTargets({
     pageLang: market.key,
     pageUrl: page.url,
     pairs: marketPairs(page.url) || {},
   });
-  return langSelectorHtml({ pageLang: market.key, targets, mobile, indent: '      ' });
+}
+
+function langSelector(market, page, { mobile = false, variant = '', id = '', indent = '      ' } = {}) {
+  return langSelectorHtml({
+    pageLang: market.key,
+    targets: langTargets(market, page),
+    mobile,
+    variant,
+    id,
+    indent,
+  });
 }
 
 function breadcrumbHtml(market, page) {
@@ -586,17 +613,24 @@ const SOCIAL_SVGS = `<div class="footer-social">
           </div>`;
 
 /**
- * The footer language column lists all eight languages by their own names, so
- * a visitor who lands here from search has a second route out of the language
- * they were dropped into even before the selector's JavaScript has run.
+ * The footer language column.
+ *
+ * It used to be nine bordered chips in a `.footer-col-links` list, which the
+ * footer's own `flex-direction: column` stacked into a tall ladder — one
+ * language per line, most of the column's height spent on a control. It is now
+ * the same selector the header carries, built by the same module and routed
+ * through the same targets, so the column is one button deep and the two
+ * controls cannot send a visitor to different places.
  */
-function footerLangs(market) {
-  return Object.values(LANG_BY_KEY)
-    .map((l) => `        <li><a href="${l.home}" lang="${l.html}"${l.key === market.key ? ' aria-current="true"' : ''}>${l.label}</a></li>`)
-    .join('\n');
+function footerLangs(market, page) {
+  return footerSelectorHtml({
+    pageLang: market.key,
+    targets: langTargets(market, page),
+    indent: '      ',
+  });
 }
 
-function footerHtml(market) {
+function footerHtml(market, page) {
   const ft = market.ui.footer;
   return `<footer class="on-dark">
   <div class="footer-top">
@@ -616,9 +650,7 @@ ${ft.coverLinks.map((l) => `        <li><a href="${l.url}">${l.label}</a></li>`)
     </div>
     <div>
       <div class="footer-col-title">${ft.langsTitle}</div>
-      <ul class="footer-col-links footer-langs">
-${footerLangs(market)}
-      </ul>
+${footerLangs(market, page)}
     </div>
     <div>
       <div class="footer-col-title">${ft.contactTitle}</div>
@@ -666,6 +698,24 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
   </div>
 </section>`
     : '';
+
+  /*
+   * The portrait band and the insurer row. Both are shared components
+   * (scripts/lib/site-sections.mjs) and both are opt-in per page: only the
+   * homepages carry the copy for them, so the seven cluster articles are
+   * unchanged. The bands continue the page's own cream/white alternation
+   * rather than a fixed pair, so each market keeps its rhythm.
+   */
+  const audienceHtml = page.audience
+    ? audienceBand({ ...page.audience, id: 'audience-title', band: nextBand(page.sections) })
+    : '';
+  const insurersHtml = page.insurers
+    ? insurerPanel({ ...page.insurers, id: 'insurers-title', band: nextBand(page.sections + audienceHtml) })
+    : '';
+
+  // Joined here rather than interpolated one per line so that a page without
+  // these sections keeps exactly the blank-line rhythm it had before.
+  const extraSections = [audienceHtml, insurersHtml].filter(Boolean).map((h) => `\n${h}\n`).join('');
 
   const quote = page.pullquote
     ? `<section class="pullquote-band" aria-label="${esc(ui.pullquoteAria)}">
@@ -762,7 +812,7 @@ ${breadcrumbHtml(market, page)}
 ${langPolicyHtml(market)}
 
 ${page.sections}
-
+${extraSections}
 ${quote}
 
 ${faqHtml(market, page)}
@@ -774,7 +824,7 @@ ${formHtml(market, page)}
 
 </main>
 
-${footerHtml(market)}
+${footerHtml(market, page)}
 
 <div class="mobile-cta">
   <a href="#${ui.formId}">${ui.mobileCta}</a>

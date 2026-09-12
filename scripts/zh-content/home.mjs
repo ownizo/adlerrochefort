@@ -177,18 +177,18 @@ export const HOME_PAGE = {
     <h2 id="jiancha-qingdan">接受保险方案之前，中国买家应该核对的几项</h2>
     <p>拿到一份报价或保单草案时，可以按这个顺序逐项对照。这不需要懂葡萄牙语，只需要知道该找哪几个数字。</p>
     <ol class="process-steps">
-      <li><strong>建筑保额（<em>capital edifício</em>）。</strong>它是否接近真实的重建费用，而不是成交价、不是银行估值、不是房产税籍价值（<em>valor patrimonial tributário</em>）？</li>
-      <li><strong>室内财物保额（<em>capital recheio</em>）。</strong>如果全部重新购置一遍，这个数字够吗？</li>
-      <li><strong>地震保障。</strong>是否包含？如果包含，保额与自负额是多少？如果不包含，明确知道这是一个选择，而不是一次遗漏。</li>
-      <li><strong>除外责任（<em>exclusões</em>）。</strong>至少读清楚水渍、逐渐渗漏、维护不足、施工这几项的写法。</li>
-      <li><strong>自负额（<em>franquia</em>）。</strong>是固定金额还是百分比？两者并列时按哪一项适用？水渍的自负额常常单独更高。</li>
-      <li><strong>贵重物品限额。</strong>珠宝、现金、艺术品的分项上限是多少，是否附带安防条件？</li>
-      <li><strong>空置条款。</strong>连续无人居住多少天之后保障受限？这个天数与您的实际使用方式是否吻合？</li>
-      <li><strong>出租用途。</strong>如果房产会出租（长租或短租），保单上是否写明？没写明就等于没有。</li>
-      <li><strong>民事责任。</strong>额度多少？范围是否只限同楼邻居，还是覆盖更广的第三方？</li>
-      <li><strong>投保人与被保险人信息。</strong>姓名拼写、NIF、房产地址是否与产权文件一致？共同持有时是否两人都在保单上？</li>
-      <li><strong>房贷受益人条款。</strong>如果有贷款，银行是否已按要求列为受益人？</li>
-      <li><strong>生效日期。</strong>保障从哪一天开始？签署产权转让书（<em>escritura</em>）当天必须已经生效。</li>
+      <li><div><strong>建筑保额（<em>capital edifício</em>）。</strong><span>它是否接近真实的重建费用，而不是成交价、不是银行估值、不是房产税籍价值（<em>valor patrimonial tributário</em>）？</span></div></li>
+      <li><div><strong>室内财物保额（<em>capital recheio</em>）。</strong><span>如果全部重新购置一遍，这个数字够吗？</span></div></li>
+      <li><div><strong>地震保障。</strong><span>是否包含？如果包含，保额与自负额是多少？如果不包含，明确知道这是一个选择，而不是一次遗漏。</span></div></li>
+      <li><div><strong>除外责任（<em>exclusões</em>）。</strong><span>至少读清楚水渍、逐渐渗漏、维护不足、施工这几项的写法。</span></div></li>
+      <li><div><strong>自负额（<em>franquia</em>）。</strong><span>是固定金额还是百分比？两者并列时按哪一项适用？水渍的自负额常常单独更高。</span></div></li>
+      <li><div><strong>贵重物品限额。</strong><span>珠宝、现金、艺术品的分项上限是多少，是否附带安防条件？</span></div></li>
+      <li><div><strong>空置条款。</strong><span>连续无人居住多少天之后保障受限？这个天数与您的实际使用方式是否吻合？</span></div></li>
+      <li><div><strong>出租用途。</strong><span>如果房产会出租（长租或短租），保单上是否写明？没写明就等于没有。</span></div></li>
+      <li><div><strong>民事责任。</strong><span>额度多少？范围是否只限同楼邻居，还是覆盖更广的第三方？</span></div></li>
+      <li><div><strong>投保人与被保险人信息。</strong><span>姓名拼写、NIF、房产地址是否与产权文件一致？共同持有时是否两人都在保单上？</span></div></li>
+      <li><div><strong>房贷受益人条款。</strong><span>如果有贷款，银行是否已按要求列为受益人？</span></div></li>
+      <li><div><strong>生效日期。</strong><span>保障从哪一天开始？签署产权转让书（<em>escritura</em>）当天必须已经生效。</span></div></li>
     </ol>
     <div class="callout">
       <span class="callout-label">最值得问的一个问题</span>

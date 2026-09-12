@@ -110,14 +110,14 @@ export const LIABILITY_PAGE = {
     <h2 id="fragor">Vad bolaget kommer att fråga</h2>
     <p>Så att du kan förbereda svaren i stället för att gissa:</p>
     <ol class="process-steps">
-      <li><strong>Verksamhetsbeskrivning</strong> — vad du faktiskt gör, med egna ord. Underlaget för hela bedömningen.</li>
-      <li><strong>Omsättning</strong> och fördelningen mellan kundtyper och länder.</li>
-      <li><strong>Var arbetet utförs</strong> — hemma, i egen lokal, hos kund, på distans.</li>
-      <li><strong>Kundernas geografi</strong> — särskilt om någon kund finns i USA eller Kanada, vilket ofta påverkar både premie och möjlighet.</li>
-      <li><strong>Anställda eller underleverantörer</strong>, och hur de är kopplade till verksamheten.</li>
-      <li><strong>Yrkeskvalifikationer och registrering</strong> där verksamheten är reglerad.</li>
-      <li><strong>Skadehistorik</strong> — tidigare anspråk eller kända omständigheter som kan leda till anspråk.</li>
-      <li><strong>Önskat ansvarsbelopp</strong>, ofta styrt av vad kundavtalen kräver.</li>
+      <li><div><strong>Verksamhetsbeskrivning</strong><span> — vad du faktiskt gör, med egna ord. Underlaget för hela bedömningen.</span></div></li>
+      <li><div><strong>Omsättning</strong><span> och fördelningen mellan kundtyper och länder.</span></div></li>
+      <li><div><strong>Var arbetet utförs</strong><span> — hemma, i egen lokal, hos kund, på distans.</span></div></li>
+      <li><div><strong>Kundernas geografi</strong><span> — särskilt om någon kund finns i USA eller Kanada, vilket ofta påverkar både premie och möjlighet.</span></div></li>
+      <li><div><strong>Anställda eller underleverantörer</strong><span>, och hur de är kopplade till verksamheten.</span></div></li>
+      <li><div><strong>Yrkeskvalifikationer och registrering</strong><span> där verksamheten är reglerad.</span></div></li>
+      <li><div><strong>Skadehistorik</strong><span> — tidigare anspråk eller kända omständigheter som kan leda till anspråk.</span></div></li>
+      <li><div><strong>Önskat ansvarsbelopp</strong><span>, ofta styrt av vad kundavtalen kräver.</span></div></li>
     </ol>
   </div>
 </section>`,

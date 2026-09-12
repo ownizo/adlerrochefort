@@ -109,14 +109,14 @@ export const LIABILITY_PAGE = {
     <h2 id="spoergsmaal">Hvad selskabet vil spørge om</h2>
     <p>Så du kan forberede svarene i stedet for at gætte:</p>
     <ol class="process-steps">
-      <li><strong>Beskrivelse af aktiviteten</strong> — hvad du faktisk gør, med dine egne ord. Grundlaget for hele vurderingen.</li>
-      <li><strong>Omsætning</strong> og fordelingen mellem kundetyper og lande.</li>
-      <li><strong>Hvor arbejdet udføres</strong> — hjemme, i egne lokaler, hos kunden, på afstand.</li>
-      <li><strong>Kundernes geografi</strong> — især om nogen kunde er i USA eller Canada, hvilket ofte påvirker både præmie og mulighed.</li>
-      <li><strong>Ansatte eller underleverandører</strong>, og hvordan de er tilknyttet virksomheden.</li>
-      <li><strong>Faglige kvalifikationer og registrering</strong>, hvor aktiviteten er lovreguleret.</li>
-      <li><strong>Skadeshistorik</strong> — tidligere krav eller kendte forhold, der kan føre til krav.</li>
-      <li><strong>Ønsket ansvarssum</strong>, ofte styret af, hvad kundekontrakterne kræver.</li>
+      <li><div><strong>Beskrivelse af aktiviteten</strong><span> — hvad du faktisk gør, med dine egne ord. Grundlaget for hele vurderingen.</span></div></li>
+      <li><div><strong>Omsætning</strong><span> og fordelingen mellem kundetyper og lande.</span></div></li>
+      <li><div><strong>Hvor arbejdet udføres</strong><span> — hjemme, i egne lokaler, hos kunden, på afstand.</span></div></li>
+      <li><div><strong>Kundernes geografi</strong><span> — især om nogen kunde er i USA eller Canada, hvilket ofte påvirker både præmie og mulighed.</span></div></li>
+      <li><div><strong>Ansatte eller underleverandører</strong><span>, og hvordan de er tilknyttet virksomheden.</span></div></li>
+      <li><div><strong>Faglige kvalifikationer og registrering</strong><span>, hvor aktiviteten er lovreguleret.</span></div></li>
+      <li><div><strong>Skadeshistorik</strong><span> — tidligere krav eller kendte forhold, der kan føre til krav.</span></div></li>
+      <li><div><strong>Ønsket ansvarssum</strong><span>, ofte styret af, hvad kundekontrakterne kræver.</span></div></li>
     </ol>
   </div>
 </section>`,

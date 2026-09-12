@@ -22,7 +22,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_NL } from './nl-cluster.data.mjs';
-import { langSelectorHtml, selectorTargets, LANGSEL_CSS_LINK, LANGSEL_SCRIPT_TAG } from './lib/lang-selector.mjs';
+import { footerSelectorHtml, langSelectorHtml, selectorTargets, LANGSEL_CSS_LINK, LANGSEL_SCRIPT_TAG } from './lib/lang-selector.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -75,21 +75,35 @@ const ORG_LD = {
  * pairs than any single cluster does. Both emit the same bytes here: contents
  * indented eight, the wrapper closed at six, matching this file's nav template.
  */
-function langSwitcher(page) {
+function langTargets(page) {
   const pairs = {};
   if (page.hreflang?.pt) pairs.pt = page.hreflang.pt;
   if (page.hreflang?.en) pairs.en = page.hreflang.en;
+  return selectorTargets({
+    pageLang: 'nl',
+    pageUrl: page.url,
+    pairs,
+    fallbacks: { pt: '/', en: '/en/' },
+  });
+}
+
+function langSwitcher(page) {
   const selector = langSelectorHtml({
     pageLang: 'nl',
-    targets: selectorTargets({
-      pageLang: 'nl',
-      pageUrl: page.url,
-      pairs,
-      fallbacks: { pt: '/', en: '/en/' },
-    }),
+    targets: langTargets(page),
     indent: '        ',
   });
   return `<div class="lang-switcher">\n${selector}\n      </div>`;
+}
+
+/**
+ * The footer's language column, which used to be five two-letter chips. Same
+ * argument as the header above: emitting the shared control here means a
+ * regenerated page already carries what scripts/lang-switcher.mjs would write,
+ * so the two passes do not take turns rewriting it.
+ */
+function footerLangs(page) {
+  return footerSelectorHtml({ pageLang: 'nl', targets: langTargets(page), indent: '      ' });
 }
 
 /**
@@ -368,7 +382,7 @@ ${branchGroupsHtml()}
 
 /* ─────────────── footer ─────────────── */
 
-const FOOTER = `<footer class="on-dark">
+const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
@@ -402,13 +416,7 @@ const FOOTER = `<footer class="on-dark">
     </div>
     <div>
       <div class="footer-col-title">Talen</div>
-      <ul class="footer-col-links footer-langs">
-        <li><a href="/" lang="pt-PT">PT</a></li>
-        <li><a href="/en/" lang="en">EN</a></li>
-        <li><a href="/nl/verzekeringen-portugal/" lang="nl">NL</a></li>
-        <li><a href="/fr/" lang="fr">FR</a></li>
-        <li><a href="/de/" lang="de">DE</a></li>
-      </ul>
+${footerLangs(page)}
     </div>
   </div>
   <div class="footer-bottom">
@@ -663,7 +671,7 @@ ${formHtml(page)}
 
 </main>
 
-${FOOTER}
+${FOOTER(page)}
 
 <div class="mobile-cta">
   <a href="#offerte">Vraag een offerte aan</a>

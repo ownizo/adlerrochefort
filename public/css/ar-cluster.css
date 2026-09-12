@@ -217,21 +217,58 @@ body {
 .compare-table td { color: var(--ink2); }
 .compare-table tr:last-child td { border-bottom: none; }
 
-/* PROCESS STEPS */
+/* PROCESS STEPS
+ * ---------------------------------------------------------------------------
+ * The counter is positioned, not placed in a grid track, and this is the
+ * decision that matters here.
+ *
+ * The earlier rule made the `li` itself a two-column grid (`44px 1fr`) and let
+ * `::before` take the first track. That works only for an `li` whose content
+ * is exactly one element: grid wraps every run of text in an anonymous item,
+ * so an item written the natural way —
+ *
+ *     <li><strong>Title.</strong> Body sentence.</li>
+ *
+ * — produced three items, not two. `::before` took (row 1, col 1), `<strong>`
+ * took (row 1, col 2), and the body sentence was auto-placed into (row 2, col
+ * 1): the 44px counter track. A paragraph in a 44px column is a column of
+ * one or two characters, which is what stacked the Polish, Swedish, Danish and
+ * Chinese steps down the page and inflated those pages by several thousand
+ * pixels.
+ *
+ * Taking the counter out of flow removes the class of bug rather than the
+ * instance: the item's content is now normal block flow at a normal width
+ * whatever the markup does, so no future step has to be written in a
+ * particular shape to lay out correctly. Padding reserves the counter's gutter
+ * (24px page padding + 44px disc + 18px gap), so the geometry is unchanged.
+ *
+ * `padding-inline-start` rather than `padding-left`, and `inset-inline-start`
+ * rather than `left`, so the gutter follows the writing direction instead of
+ * being pinned to the left edge.
+ */
 .process-steps { list-style: none; counter-reset: step; margin-top: 36px; display: grid; gap: 18px; }
 .process-steps li {
   counter-increment: step;
-  display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start;
-  background: var(--white); border: 1px solid var(--border); padding: 22px 24px;
+  position: relative;
+  display: block;
+  min-width: 0;
+  background: var(--white); border: 1px solid var(--border);
+  padding: 22px 24px;
+  padding-inline-start: 86px;
+  color: var(--ink2); font-size: 14px; line-height: 1.6;
 }
 .process-steps li::before {
   content: counter(step);
+  position: absolute;
+  top: 22px; inset-inline-start: 24px;
   width: 44px; height: 44px; border-radius: 50%;
   background: var(--primary); color: var(--white);
   display: flex; align-items: center; justify-content: center;
   font-size: 17px; font-weight: 700;
 }
-.process-steps strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 4px; }
+/* The step title keeps the tight leading it has always had. The 1.6 above is
+ * for body copy, and inheriting it here would add 7px to every card. */
+.process-steps strong { display: block; color: var(--ink); font-size: 16px; line-height: normal; margin-bottom: 4px; }
 .process-steps span { color: var(--ink2); font-size: 14px; line-height: 1.6; }
 
 /* INTRO MEDIA */
@@ -391,8 +428,8 @@ body {
   .feature-grid { grid-template-columns: 1fr; }
   .intro-media { grid-template-columns: 1fr; }
   .intro-media img { max-width: 240px; margin: 0 auto; }
-  .process-steps li { grid-template-columns: 36px 1fr; padding: 18px; }
-  .process-steps li::before { width: 36px; height: 36px; font-size: 15px; }
+  .process-steps li { padding: 18px; padding-inline-start: 72px; }
+  .process-steps li::before { top: 18px; inset-inline-start: 18px; width: 36px; height: 36px; font-size: 15px; }
   .form-shell { padding: 26px 22px; }
   .mobile-cta { display: block; }
   body { padding-bottom: 70px; }
@@ -455,6 +492,7 @@ html[lang="zh-CN"] .feature-card p,
 html[lang="zh-CN"] .hub-item p,
 html[lang="zh-CN"] .reasons li span,
 html[lang="zh-CN"] .process-steps span { line-height: 1.9; }
+html[lang="zh-CN"] .process-steps strong { line-height: 1.6; }
 html[lang="zh-CN"] h1 { line-height: 1.35; }
 html[lang="zh-CN"] h2,
 html[lang="zh-CN"] h3 { line-height: 1.5; }

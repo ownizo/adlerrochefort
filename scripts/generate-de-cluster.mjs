@@ -27,6 +27,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_DE } from './de-cluster.data.mjs';
 import {
+  footerSelectorHtml,
   langSelectorHtml,
   selectorTargets,
   LANGSEL_CSS_LINK,
@@ -94,21 +95,35 @@ const ORG_LD = {
  * canonical pass — both emit the same bytes for this file's nav template:
  * contents indented eight, wrapper closed at six.
  */
-function langSwitcher(page) {
+function langTargets(page) {
   const L = page.langLinks || {};
   const pairs = {};
   for (const key of ['pt', 'en', 'nl', 'fr', 'pl', 'se', 'dk', 'zh']) if (L[key]) pairs[key] = L[key];
+  return selectorTargets({
+    pageLang: 'de',
+    pageUrl: page.url,
+    pairs,
+    fallbacks: { pt: '/', en: '/en/' },
+  });
+}
+
+function langSwitcher(page) {
   const selector = langSelectorHtml({
     pageLang: 'de',
-    targets: selectorTargets({
-      pageLang: 'de',
-      pageUrl: page.url,
-      pairs,
-      fallbacks: { pt: '/', en: '/en/' },
-    }),
+    targets: langTargets(page),
     indent: '        ',
   });
   return `<div class="lang-switcher">\n${selector}\n      </div>`;
+}
+
+/**
+ * The footer's language column, which used to be five two-letter chips. Same
+ * argument as the header above: emitting the shared control here means a
+ * regenerated page already carries what scripts/lang-switcher.mjs would write,
+ * so the two passes do not take turns rewriting it.
+ */
+function footerLangs(page) {
+  return footerSelectorHtml({ pageLang: 'de', targets: langTargets(page), indent: '      ' });
 }
 
 /**
@@ -423,7 +438,7 @@ ${branchGroupsHtml()}
 
 /* ─────────────── footer ─────────────── */
 
-const FOOTER = `<footer class="on-dark">
+const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
@@ -445,13 +460,7 @@ const FOOTER = `<footer class="on-dark">
     </div>
     <div>
       <div class="footer-col-title">Sprachen</div>
-      <ul class="footer-col-links footer-langs">
-        <li><a href="/" lang="pt-PT">PT</a></li>
-        <li><a href="/en/" lang="en">EN</a></li>
-        <li><a href="/nl/" lang="nl">NL</a></li>
-        <li><a href="/fr/" lang="fr">FR</a></li>
-        <li><a href="/de/" lang="de">DE</a></li>
-      </ul>
+${footerLangs(page)}
     </div>
     <div>
       <div class="footer-col-title">Kontakt</div>
@@ -772,7 +781,7 @@ ${formHtml(page)}
 
 </main>
 
-${FOOTER}
+${FOOTER(page)}
 
 <div class="mobile-cta">
   <a href="#angebot">Angebot anfragen</a>

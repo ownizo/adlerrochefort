@@ -79,9 +79,9 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="jiaoge-dangtian">交割当天：三项必须核对</h2>
     <ol class="process-steps">
-      <li><strong>生效日期。</strong>保单的起保日必须是 <em>escritura</em> 当天或之前。卖方的保单在产权转移后不再保护您，中间的空档没有任何保障。</li>
-      <li><strong>投保人与被保险人信息。</strong>姓名拼写要与身份文件一致（中文姓名的拼音顺序在葡萄牙的文件里经常被写反，值得特别核对）、NIF 正确、房产地址与产权文件一致。如果是共同持有，两位持有人都应在保单上，否则理赔时另一方可能无权主张。</li>
-      <li><strong>房贷受益人条款。</strong>有贷款时，银行必须按贷款合同的要求被列为受益人（<em>beneficiário</em>），并且银行通常要在放款前看到保险证明。这一项漏掉会直接卡住交割。</li>
+      <li><div><strong>生效日期。</strong><span>保单的起保日必须是 <em>escritura</em> 当天或之前。卖方的保单在产权转移后不再保护您，中间的空档没有任何保障。</span></div></li>
+      <li><div><strong>投保人与被保险人信息。</strong><span>姓名拼写要与身份文件一致（中文姓名的拼音顺序在葡萄牙的文件里经常被写反，值得特别核对）、NIF 正确、房产地址与产权文件一致。如果是共同持有，两位持有人都应在保单上，否则理赔时另一方可能无权主张。</span></div></li>
+      <li><div><strong>房贷受益人条款。</strong><span>有贷款时，银行必须按贷款合同的要求被列为受益人（<em>beneficiário</em>），并且银行通常要在放款前看到保险证明。这一项漏掉会直接卡住交割。</span></div></li>
     </ol>
     <div class="callout">
       <span class="callout-label">一个容易忽略的细节</span>
@@ -130,12 +130,12 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="liu-ge-cuowu">在葡萄牙买房时最常见的六个保险错误</h2>
     <ol class="process-steps">
-      <li><strong>按成交价投保，而不是按重建费用。</strong>多付保费，赔付并不增加。反过来按明显偏低的金额投保，则可能触发比例赔付，即使局部损失也按不足比例打折。</li>
-      <li><strong>以为地震已经包含。</strong>在葡萄牙它通常是可选项。里斯本、塞图巴尔与阿尔加维都不属于低风险地区，值得明确确认。</li>
-      <li><strong>只保了建筑，忘了室内财物。</strong>银行只要求建筑部分，于是很多买家的保单里 <em>recheio</em> 保额是零，或者是一个随手填的数字。</li>
-      <li><strong>出租用途没有申报。</strong>自住条款的保单覆盖不了出租——尤其是短租。这是理赔被拒最常见的原因之一。</li>
-      <li><strong>装修后没有更新保额。</strong>翻新与扩建改变了重建费用，而保单上还是旧数字，理赔时按旧数字算。</li>
-      <li><strong>忽略空置条款。</strong>第二居所长期无人居住时，盗窃与水渍等保障可能受限。保单上要写明实际使用方式，而不是写成常住房。</li>
+      <li><div><strong>按成交价投保，而不是按重建费用。</strong><span>多付保费，赔付并不增加。反过来按明显偏低的金额投保，则可能触发比例赔付，即使局部损失也按不足比例打折。</span></div></li>
+      <li><div><strong>以为地震已经包含。</strong><span>在葡萄牙它通常是可选项。里斯本、塞图巴尔与阿尔加维都不属于低风险地区，值得明确确认。</span></div></li>
+      <li><div><strong>只保了建筑，忘了室内财物。</strong><span>银行只要求建筑部分，于是很多买家的保单里 <em>recheio</em> 保额是零，或者是一个随手填的数字。</span></div></li>
+      <li><div><strong>出租用途没有申报。</strong><span>自住条款的保单覆盖不了出租——尤其是短租。这是理赔被拒最常见的原因之一。</span></div></li>
+      <li><div><strong>装修后没有更新保额。</strong><span>翻新与扩建改变了重建费用，而保单上还是旧数字，理赔时按旧数字算。</span></div></li>
+      <li><div><strong>忽略空置条款。</strong><span>第二居所长期无人居住时，盗窃与水渍等保障可能受限。保单上要写明实际使用方式，而不是写成常住房。</span></div></li>
     </ol>
     <p class="legal-note">以上为葡萄牙市场的通常情况，具体条款取决于保险公司与所选方案，并以保单文件为准。买房流程、税费与贷款条件属于法律与银行事务，本页不构成这些方面的意见。</p>
   </div>

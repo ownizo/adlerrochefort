@@ -60,10 +60,10 @@ export const GUIDE_PAGE = {
     <h2 id="budowa-polisy">Jak zbudowana jest portugalska polisa</h2>
     <p>Polisa nie jest jednym dokumentem, a zestawem. Przy szkodzie czyta się je w określonej kolejności, a wygrywa zawsze ten bardziej szczegółowy.</p>
     <ol class="process-steps">
-      <li><strong><em>Condições gerais</em></strong> — ogólne warunki ubezpieczenia. Definicje, zakres, wyłączenia, obowiązki stron. Dokument obszerny i podstawowy.</li>
-      <li><strong><em>Condições especiais</em></strong> — warunki szczególne dla poszczególnych ryzyk lub modułów, modyfikujące warunki ogólne.</li>
-      <li><strong><em>Condições particulares</em></strong> — warunki indywidualne Państwa umowy: dane, sumy, franszyzy, wykupione moduły. To jedyna kartka, na której widać, co konkretnie zostało kupione.</li>
-      <li><strong><em>Ata adicional</em></strong> — aneks, który zmienia którykolwiek z powyższych dokumentów w trakcie trwania umowy.</li>
+      <li><div><strong><em>Condições gerais</em></strong><span> — ogólne warunki ubezpieczenia. Definicje, zakres, wyłączenia, obowiązki stron. Dokument obszerny i podstawowy.</span></div></li>
+      <li><div><strong><em>Condições especiais</em></strong><span> — warunki szczególne dla poszczególnych ryzyk lub modułów, modyfikujące warunki ogólne.</span></div></li>
+      <li><div><strong><em>Condições particulares</em></strong><span> — warunki indywidualne Państwa umowy: dane, sumy, franszyzy, wykupione moduły. To jedyna kartka, na której widać, co konkretnie zostało kupione.</span></div></li>
+      <li><div><strong><em>Ata adicional</em></strong><span> — aneks, który zmienia którykolwiek z powyższych dokumentów w trakcie trwania umowy.</span></div></li>
     </ol>
     <div class="callout">
       <span class="callout-label">Jak czytać to sensownie</span>
@@ -92,11 +92,11 @@ export const GUIDE_PAGE = {
   <div class="container narrow article-body">
     <h2 id="szkoda">Zgłoszenie szkody: procedura i terminy</h2>
     <ol class="process-steps">
-      <li><strong>Zabezpieczyć sytuację.</strong> Zakręcić wodę, wyłączyć prąd, wezwać służby. Obowiązek minimalizowania szkody jest zapisany w warunkach.</li>
-      <li><strong>Udokumentować.</strong> Zdjęcia przed sprzątaniem i przed naprawą, to najczęstszy błąd. Faktury, wycena szkody, dane świadków.</li>
-      <li><strong>Zgłosić w terminie.</strong> Terminy są krótkie i liczone od dnia zdarzenia lub od dnia jego wykrycia; są wskazane w warunkach. Przy kradzieży wymagane jest zgłoszenie na policję, zwykle niezwłocznie.</li>
-      <li><strong>Poczekać na oględziny.</strong> Przy szkodach powyżej pewnej wartości ubezpieczyciel wysyła rzeczoznawcę (<em>peritagem</em>). Naprawa przed oględzinami może być problemem, poza działaniami awaryjnymi.</li>
-      <li><strong>Odpowiedź ubezpieczyciela.</strong> Jeśli decyzja jest niekorzystna, przysługuje reklamacja do ubezpieczyciela, a następnie droga przez ASF, <em>Livro de Reclamações</em> oraz alternatywne rozwiązywanie sporów. Prowadzimy tę korespondencję za klientów, także po niekorzystnej pierwszej decyzji — na tym polega obsługa szkody.</li>
+      <li><div><strong>Zabezpieczyć sytuację.</strong><span> Zakręcić wodę, wyłączyć prąd, wezwać służby. Obowiązek minimalizowania szkody jest zapisany w warunkach.</span></div></li>
+      <li><div><strong>Udokumentować.</strong><span> Zdjęcia przed sprzątaniem i przed naprawą, to najczęstszy błąd. Faktury, wycena szkody, dane świadków.</span></div></li>
+      <li><div><strong>Zgłosić w terminie.</strong><span> Terminy są krótkie i liczone od dnia zdarzenia lub od dnia jego wykrycia; są wskazane w warunkach. Przy kradzieży wymagane jest zgłoszenie na policję, zwykle niezwłocznie.</span></div></li>
+      <li><div><strong>Poczekać na oględziny.</strong><span> Przy szkodach powyżej pewnej wartości ubezpieczyciel wysyła rzeczoznawcę (<em>peritagem</em>). Naprawa przed oględzinami może być problemem, poza działaniami awaryjnymi.</span></div></li>
+      <li><div><strong>Odpowiedź ubezpieczyciela.</strong><span> Jeśli decyzja jest niekorzystna, przysługuje reklamacja do ubezpieczyciela, a następnie droga przez ASF, <em>Livro de Reclamações</em> oraz alternatywne rozwiązywanie sporów. Prowadzimy tę korespondencję za klientów, także po niekorzystnej pierwszej decyzji — na tym polega obsługa szkody.</span></div></li>
     </ol>
   </div>
 </section>

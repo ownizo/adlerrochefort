@@ -130,11 +130,11 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="efter">Efter <em>escritura</em>: de fem ting</h2>
     <ol class="process-steps">
-      <li><strong>Kontrollér, at policen gælder fra dagen for <em>escritura</em></strong>, ikke fra den dag den blev betalt.</li>
-      <li><strong>Tilføj indboet</strong>, når boligen er indrettet. Møbler, hvidevarer, elektronik, cykler og værktøj lægger sig hurtigere sammen, end man tror.</li>
-      <li><strong>Kontrollér ansvarsdelen</strong> — den er ikke automatisk med, som i den danske indboforsikring.</li>
-      <li><strong>Oplys udlejning</strong>, hvis det er planen. En uoplyst korttidsudlejning er en tilbagevendende årsag til, at en skade ikke erstattes. Se <a href="/dk/ansvarsforsikring-portugal/">ansvarsforsikring i Portugal</a>.</li>
-      <li><strong>Se summen efter én gang om året</strong> — byggeomkostningerne flytter sig, og indeksklausulen i policen følger ikke altid virkeligheden.</li>
+      <li><div><strong>Kontrollér, at policen gælder fra dagen for <em>escritura</em></strong><span>, ikke fra den dag den blev betalt.</span></div></li>
+      <li><div><strong>Tilføj indboet</strong><span>, når boligen er indrettet. Møbler, hvidevarer, elektronik, cykler og værktøj lægger sig hurtigere sammen, end man tror.</span></div></li>
+      <li><div><strong>Kontrollér ansvarsdelen</strong><span> — den er ikke automatisk med, som i den danske indboforsikring.</span></div></li>
+      <li><div><strong>Oplys udlejning</strong><span>, hvis det er planen. En uoplyst korttidsudlejning er en tilbagevendende årsag til, at en skade ikke erstattes. Se <a href="/dk/ansvarsforsikring-portugal/">ansvarsforsikring i Portugal</a>.</span></div></li>
+      <li><div><strong>Se summen efter én gang om året</strong><span> — byggeomkostningerne flytter sig, og indeksklausulen i policen følger ikke altid virkeligheden.</span></div></li>
     </ol>
   </div>
 </section>`,

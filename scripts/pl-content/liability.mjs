@@ -109,13 +109,13 @@ export const LIABILITY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="o-co-zapyta">O co zapyta ubezpieczyciel</h2>
     <ol class="process-steps">
-      <li><strong>Dokładny opis działalności</strong> — nie nazwa zawodu, ale wykonywane czynności.</li>
-      <li><strong>Roczne przychody</strong> lub ich prognoza; to zwykle podstawa taryfy.</li>
-      <li><strong>Gdzie są klienci</strong> i jakiemu prawu podlegają umowy.</li>
-      <li><strong>Wymagana suma gwarancyjna</strong>, jeśli wynika z kontraktu — warto przesłać odpowiedni fragment umowy.</li>
-      <li><strong>Historia szkód i roszczeń</strong> z ostatnich lat, także tych zgłoszonych, a nieuznanych.</li>
-      <li><strong>Kwalifikacje i rejestracje zawodowe</strong>, jeśli branża je przewiduje.</li>
-      <li><strong>Liczba pracowników i podwykonawców</strong> oraz zakres ich prac.</li>
+      <li><div><strong>Dokładny opis działalności</strong><span> — nie nazwa zawodu, ale wykonywane czynności.</span></div></li>
+      <li><div><strong>Roczne przychody</strong><span> lub ich prognoza; to zwykle podstawa taryfy.</span></div></li>
+      <li><div><strong>Gdzie są klienci</strong><span> i jakiemu prawu podlegają umowy.</span></div></li>
+      <li><div><strong>Wymagana suma gwarancyjna</strong><span>, jeśli wynika z kontraktu — warto przesłać odpowiedni fragment umowy.</span></div></li>
+      <li><div><strong>Historia szkód i roszczeń</strong><span> z ostatnich lat, także tych zgłoszonych, a nieuznanych.</span></div></li>
+      <li><div><strong>Kwalifikacje i rejestracje zawodowe</strong><span>, jeśli branża je przewiduje.</span></div></li>
+      <li><div><strong>Liczba pracowników i podwykonawców</strong><span> oraz zakres ich prac.</span></div></li>
     </ol>
     <p class="legal-note">Przyjęcie ryzyka i ostateczny zakres zależą od decyzji ubezpieczyciela po ocenie ryzyka. Ta strona opisuje typową praktykę rynkową i nie stanowi potwierdzenia warunków konkretnej polisy ani porady prawnej co do obowiązków zawodowych.</p>
   </div>

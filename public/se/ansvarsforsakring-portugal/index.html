@@ -325,14 +325,14 @@
     <h2 id="fragor">Vad bolaget kommer att fråga</h2>
     <p>Så att du kan förbereda svaren i stället för att gissa:</p>
     <ol class="process-steps">
-      <li><strong>Verksamhetsbeskrivning</strong> — vad du faktiskt gör, med egna ord. Underlaget för hela bedömningen.</li>
-      <li><strong>Omsättning</strong> och fördelningen mellan kundtyper och länder.</li>
-      <li><strong>Var arbetet utförs</strong> — hemma, i egen lokal, hos kund, på distans.</li>
-      <li><strong>Kundernas geografi</strong> — särskilt om någon kund finns i USA eller Kanada, vilket ofta påverkar både premie och möjlighet.</li>
-      <li><strong>Anställda eller underleverantörer</strong>, och hur de är kopplade till verksamheten.</li>
-      <li><strong>Yrkeskvalifikationer och registrering</strong> där verksamheten är reglerad.</li>
-      <li><strong>Skadehistorik</strong> — tidigare anspråk eller kända omständigheter som kan leda till anspråk.</li>
-      <li><strong>Önskat ansvarsbelopp</strong>, ofta styrt av vad kundavtalen kräver.</li>
+      <li><div><strong>Verksamhetsbeskrivning</strong><span> — vad du faktiskt gör, med egna ord. Underlaget för hela bedömningen.</span></div></li>
+      <li><div><strong>Omsättning</strong><span> och fördelningen mellan kundtyper och länder.</span></div></li>
+      <li><div><strong>Var arbetet utförs</strong><span> — hemma, i egen lokal, hos kund, på distans.</span></div></li>
+      <li><div><strong>Kundernas geografi</strong><span> — särskilt om någon kund finns i USA eller Kanada, vilket ofta påverkar både premie och möjlighet.</span></div></li>
+      <li><div><strong>Anställda eller underleverantörer</strong><span>, och hur de är kopplade till verksamheten.</span></div></li>
+      <li><div><strong>Yrkeskvalifikationer och registrering</strong><span> där verksamheten är reglerad.</span></div></li>
+      <li><div><strong>Skadehistorik</strong><span> — tidigare anspråk eller kända omständigheter som kan leda till anspråk.</span></div></li>
+      <li><div><strong>Önskat ansvarsbelopp</strong><span>, ofta styrt av vad kundavtalen kräver.</span></div></li>
     </ol>
   </div>
 </section>
@@ -587,16 +587,33 @@
     </div>
     <div>
       <div class="footer-col-title">Språk</div>
-      <ul class="footer-col-links footer-langs">
-        <li><a href="/" lang="pt-PT">Português</a></li>
-        <li><a href="/en/" lang="en">English</a></li>
-        <li><a href="/nl/" lang="nl">Nederlands</a></li>
-        <li><a href="/fr/" lang="fr">Français</a></li>
-        <li><a href="/de/" lang="de">Deutsch</a></li>
-        <li><a href="/pl/" lang="pl">Polski</a></li>
-        <li><a href="/se/" lang="sv" aria-current="true">Svenska</a></li>
-        <li><a href="/dk/" lang="da">Dansk</a></li>
-      </ul>
+      <div class="ar-langsel ar-langsel-footer" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselFooterBtn" aria-expanded="false" aria-controls="arLangselFooterMenu" aria-label="Språk: Svenska. Välj ett annat språk."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Svenska</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselFooterMenu" aria-labelledby="arLangselFooterBtn" hidden>
+          <li><a href="/" lang="pt-PT" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">startsida</span></a></li>
+          <li><a href="/en/" lang="en" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">startsida</span></a></li>
+          <li><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">startsida</span></a></li>
+          <li><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">startsida</span></a></li>
+          <li><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">startsida</span></a></li>
+          <li><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/" lang="pl" hreflang="pl-PL"><span>Polski</span></a></li>
+          <li><a href="/se/ansvarsforsakring-portugal/" lang="sv" hreflang="sv-SE" aria-current="true"><span>Svenska</span></a></li>
+          <li><a href="/dk/ansvarsforsikring-portugal/" lang="da" hreflang="da-DK"><span>Dansk</span></a></li>
+          <li><a href="/zh/liability-insurance-portugal/" lang="zh-CN" hreflang="zh-CN"><span>简体中文</span></a></li>
+        </ul>
+      </div>
+      <noscript>
+        <ul class="footer-col-links footer-langs ar-langsel-fallback">
+          <li><a href="/" lang="pt-PT">Português</a></li>
+          <li><a href="/en/" lang="en">English</a></li>
+          <li><a href="/nl/" lang="nl">Nederlands</a></li>
+          <li><a href="/fr/" lang="fr">Français</a></li>
+          <li><a href="/de/" lang="de">Deutsch</a></li>
+          <li><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/" lang="pl">Polski</a></li>
+          <li><a href="/se/ansvarsforsakring-portugal/" lang="sv" aria-current="true">Svenska</a></li>
+          <li><a href="/dk/ansvarsforsikring-portugal/" lang="da">Dansk</a></li>
+          <li><a href="/zh/liability-insurance-portugal/" lang="zh-CN">简体中文</a></li>
+        </ul>
+      </noscript>
     </div>
     <div>
       <div class="footer-col-title">Kontakt</div>

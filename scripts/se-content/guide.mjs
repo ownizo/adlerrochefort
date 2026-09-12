@@ -59,9 +59,9 @@ export const GUIDE_PAGE = {
     <h2 id="apolice">Vad ett portugisiskt försäkringsbrev består av</h2>
     <p>En <em>apólice</em> är sällan ett dokument utan tre, och de har olika rang:</p>
     <ol class="process-steps">
-      <li><strong><em>Condições gerais</em> — allmänna villkor.</strong> Den tryckta grunden för produkten: definitioner, generella undantag, skyldigheter, skadeförfarande. Läses en gång, gäller hela avtalstiden.</li>
-      <li><strong><em>Condições especiais</em> — särskilda villkor.</strong> Regler per moment: vad vattenskadeskyddet omfattar, hur stöld definieras, vilka undantag som gäller ansvarsdelen.</li>
-      <li><strong><em>Condições particulares</em> — dina uppgifter.</strong> Försäkringstagare, objekt, försäkringsbelopp, självrisker, valda moment, premie, avtalstid. <strong>Detta är det blad som avgör din situation</strong>, och det enda som är unikt för dig.</li>
+      <li><div><strong><em>Condições gerais</em> — allmänna villkor.</strong><span> Den tryckta grunden för produkten: definitioner, generella undantag, skyldigheter, skadeförfarande. Läses en gång, gäller hela avtalstiden.</span></div></li>
+      <li><div><strong><em>Condições especiais</em> — särskilda villkor.</strong><span> Regler per moment: vad vattenskadeskyddet omfattar, hur stöld definieras, vilka undantag som gäller ansvarsdelen.</span></div></li>
+      <li><div><strong><em>Condições particulares</em> — dina uppgifter.</strong><span> Försäkringstagare, objekt, försäkringsbelopp, självrisker, valda moment, premie, avtalstid. <strong>Detta är det blad som avgör din situation</strong>, och det enda som är unikt för dig.</span></div></li>
     </ol>
     <p>Vid en avvikelse mellan dokumenten går de särskilda och de personliga villkoren normalt före de allmänna. Praktisk följd: läser du bara det snygga produktbladet har du inte läst din försäkring. Vi går igenom <em>condições particulares</em> rad för rad med dig, på engelska, innan du tecknar.</p>
     <p>Försäkringsbrev utfärdas på portugisiska. Det är ett lagkrav och inte något en förmedlare kan välja bort. Vad vi kan göra är att se till att du förstår exakt vad som står — skriftligt, på engelska, före underskrift.</p>
@@ -88,12 +88,12 @@ export const GUIDE_PAGE = {
   <div class="container narrow article-body">
     <h2 id="skada">Hur ett skadeärende går</h2>
     <ol class="process-steps">
-      <li><strong>Anmäl inom villkorens tid.</strong> Fristerna är korta och anges per moment — ofta några dagar, ibland åtta. Vid stöld eller skadegörelse krävs normalt polisanmälan (<em>participação</em>), och den ska göras omedelbart.</li>
-      <li><strong>Begränsa skadan.</strong> Stäng av vattnet, säkra det som kan förstöras ytterligare. Det är en skyldighet i villkoren, inte en artighet.</li>
-      <li><strong>Dokumentera.</strong> Bilder före något åtgärdas, kvitton, offerter, journaler. Underlag som tas fram senare är svagare underlag.</li>
-      <li><strong>Skadereglerare (<em>peritagem</em>).</strong> Bolaget skickar normalt en besiktningsman. Rapporten styr utfallet, och den är alltid på portugisiska. Här biträder vi.</li>
-      <li><strong>Beslut och ersättning.</strong> Ersättning i pengar eller reparation via bolagets nätverk, beroende på produkt och val.</li>
-      <li><strong>Vid avslag eller för lågt belopp:</strong> begär beslutet skriftligt med hänvisning till villkorspunkt, och begär omprövning. Många ärenden vänder i det ledet, med rätt underlag.</li>
+      <li><div><strong>Anmäl inom villkorens tid.</strong><span> Fristerna är korta och anges per moment — ofta några dagar, ibland åtta. Vid stöld eller skadegörelse krävs normalt polisanmälan (<em>participação</em>), och den ska göras omedelbart.</span></div></li>
+      <li><div><strong>Begränsa skadan.</strong><span> Stäng av vattnet, säkra det som kan förstöras ytterligare. Det är en skyldighet i villkoren, inte en artighet.</span></div></li>
+      <li><div><strong>Dokumentera.</strong><span> Bilder före något åtgärdas, kvitton, offerter, journaler. Underlag som tas fram senare är svagare underlag.</span></div></li>
+      <li><div><strong>Skadereglerare (<em>peritagem</em>).</strong><span> Bolaget skickar normalt en besiktningsman. Rapporten styr utfallet, och den är alltid på portugisiska. Här biträder vi.</span></div></li>
+      <li><div><strong>Beslut och ersättning.</strong><span> Ersättning i pengar eller reparation via bolagets nätverk, beroende på produkt och val.</span></div></li>
+      <li><div><strong>Vid avslag eller för lågt belopp:</strong><span> begär beslutet skriftligt med hänvisning till villkorspunkt, och begär omprövning. Många ärenden vänder i det ledet, med rätt underlag.</span></div></li>
     </ol>
     <p>Går ärendet ändå inte att lösa finns <em>livro de reclamações</em> — det nationella klagomålsregistret, i elektronisk form — och därefter klagomål till ASF. Det är en annan väg än den svenska via ARN eller Konsumenternas försäkringsbyrå, och den fungerar bara på portugisiska. Vi upprättar och följer sådana ärenden åt våra kunder.</p>
   </div>
@@ -117,13 +117,13 @@ export const GUIDE_PAGE = {
     <h2 id="fragor">Sju frågor att ställa varje förmedlare</h2>
     <p>Också oss. Får du inte klara svar bör du gå någon annanstans.</p>
     <ol class="process-steps">
-      <li><strong>Är du registrerad hos ASF, och under vilket nummer?</strong> Registret är offentligt och sökbart.</li>
-      <li><strong>Vilka bolag kan du placera hos?</strong> Ett enda bolag är inte diskvalificerande, men det bör sägas rakt ut.</li>
-      <li><strong>Får jag villkoren före tecknandet, och på ett språk jag förstår?</strong> Vi lämnar en skriftlig genomgång på engelska.</li>
-      <li><strong>Hur är försäkringsbeloppet beräknat?</strong> Kommer talet från köpeskillingen är det troligen fel.</li>
-      <li><strong>Vilka är de tre viktigaste undantagen i just den här försäkringen?</strong> Kan de inte nämnas har villkoren inte lästs.</li>
-      <li><strong>Vad händer när jag anmäler en skada — vem talar jag med?</strong> Svaret avgör vad rådgivningen är värd.</li>
-      <li><strong>Hur ser du över försäkringen över tiden?</strong> Ett avtal som aldrig granskas blir fel av sig självt.</li>
+      <li><div><strong>Är du registrerad hos ASF, och under vilket nummer?</strong><span> Registret är offentligt och sökbart.</span></div></li>
+      <li><div><strong>Vilka bolag kan du placera hos?</strong><span> Ett enda bolag är inte diskvalificerande, men det bör sägas rakt ut.</span></div></li>
+      <li><div><strong>Får jag villkoren före tecknandet, och på ett språk jag förstår?</strong><span> Vi lämnar en skriftlig genomgång på engelska.</span></div></li>
+      <li><div><strong>Hur är försäkringsbeloppet beräknat?</strong><span> Kommer talet från köpeskillingen är det troligen fel.</span></div></li>
+      <li><div><strong>Vilka är de tre viktigaste undantagen i just den här försäkringen?</strong><span> Kan de inte nämnas har villkoren inte lästs.</span></div></li>
+      <li><div><strong>Vad händer när jag anmäler en skada — vem talar jag med?</strong><span> Svaret avgör vad rådgivningen är värd.</span></div></li>
+      <li><div><strong>Hur ser du över försäkringen över tiden?</strong><span> Ett avtal som aldrig granskas blir fel av sig självt.</span></div></li>
     </ol>
   </div>
 </section>

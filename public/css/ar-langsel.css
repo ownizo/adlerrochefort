@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   LANGUAGE SELECTOR — eight languages, one compact control
+   LANGUAGE SELECTOR — nine languages, one compact control
    ---------------------------------------------------------------------------
    Rendered by scripts/lib/lang-selector.mjs (used both by the post-processor
    scripts/lang-switcher.mjs and by scripts/lib/market-cluster.mjs), so the
@@ -233,13 +233,75 @@
   font-size: 11px;
 }
 
+/* ── footer variant ─────────────────────────────────────────────────────── */
+/*
+ * The footer copy replaces the flat row of bordered chips that used to sit in
+ * the footer's language column. With five languages that row was one line;
+ * with nine it wrapped into a block several rows deep, and on the localised
+ * pages `.footer-col-links { flex-direction: column }` stacked it into a
+ * ~150px vertical ladder. One control is both shorter and the same control the
+ * header offers, so a visitor only has to learn it once.
+ *
+ * Two differences from the header copy, both forced by the placement:
+ *
+ *   * The menu opens upward. A 9-row panel dropped below a control this close
+ *     to the end of the document would extend past it, so `bottom` replaces
+ *     `top`; the chevron points up when open for the same reason.
+ *   * It aligns to its left edge, because the column it sits in is at the left
+ *     of the footer grid, not the right of the header.
+ *
+ * The footer is `.on-dark`, so the button inherits the light-on-dark treatment
+ * above without an override.
+ */
+
+.ar-langsel.ar-langsel-footer {
+  /* The column is narrow; the control must not be what makes it wider. */
+  max-width: 100%;
+}
+
+.ar-langsel.ar-langsel-footer .ar-langsel-btn {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+}
+
+.ar-langsel.ar-langsel-footer .ar-langsel-btn:hover,
+.ar-langsel.ar-langsel-footer .ar-langsel-btn[aria-expanded="true"] {
+  color: #FFFFFF;
+}
+
+.ar-langsel.ar-langsel-footer .ar-langsel-menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+  right: auto;
+  left: 0;
+  /* Never wider than the viewport at 320px, where the footer keeps 20px of
+     padding on each side. */
+  max-width: calc(100vw - 40px);
+}
+
+.ar-langsel.ar-langsel-footer .ar-langsel-btn[aria-expanded="true"] .ar-langsel-chevron {
+  /* Open means "the panel is up there", so the chevron points at it. */
+  transform: rotate(180deg);
+}
+
+/* The no-script list behind the footer control. `.footer-col-links` is a
+   column, which is right for the link columns beside it and wrong for nine
+   language chips, so the row direction is restored here rather than in the
+   generated ar-chrome.css. */
+.ar-langsel-fallback {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 /* ── narrow viewports (320px upward) ────────────────────────────────────── */
 
 @media (max-width: 420px) {
   /* The header keeps the burger, the logo and the CTA at 320px; the label is
      the one thing that can be dropped without losing the control. The globe
      plus the chevron stay, and aria-label still names the current language. */
-  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-label {
+  .ar-langsel:not(.ar-langsel-mobile):not(.ar-langsel-footer) .ar-langsel-label {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -252,12 +314,12 @@
     border: 0;
   }
 
-  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-btn {
+  .ar-langsel:not(.ar-langsel-mobile):not(.ar-langsel-footer) .ar-langsel-btn {
     padding: 7px 8px;
     gap: 5px;
   }
 
-  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-menu {
+  .ar-langsel:not(.ar-langsel-mobile):not(.ar-langsel-footer) .ar-langsel-menu {
     min-width: 0;
     /* Never wider than the viewport, never off the left edge. */
     width: max-content;

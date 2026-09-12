@@ -118,11 +118,11 @@ export const MOTOR_PAGE = {
     <h2 id="skade">Ved en ulykke: <em>Declaração Amigável</em></h2>
     <p>Portugals udgave af den europæiske skadesanmeldelsesblanket hedder <em>Declaração Amigável de Acidente Automóvel</em> og bør ligge i bilen. Opstillingen er flersproget, men den udfyldes på portugisisk, og den udfyldte blanket styrer i praksis, hvordan ansvaret vurderes.</p>
     <ol class="process-steps">
-      <li><strong>Sikr stedet</strong> og tilkald myndighederne, hvis nogen er kommet til skade, eller parterne er uenige. Ved personskade: ring 112.</li>
-      <li><strong>Udfyld blanketten sammen</strong> med modparten — skitse, afkrydsningsfelter, nummerplader, selskaber og begge underskrifter. Skriv kun under på det, du er indforstået med.</li>
-      <li><strong>Fotografér</strong> bilernes placering før de flyttes, skaderne, nummerpladerne og skiltningen.</li>
-      <li><strong>Anmeld inden for betingelsernes frist</strong>, normalt få dage. Ring til os — vi anmelder for dig og følger sagen.</li>
-      <li><strong>Værksted:</strong> undersøg, om policen kræver værksted inden for selskabets netværk, før reparationen bestilles.</li>
+      <li><div><strong>Sikr stedet</strong><span> og tilkald myndighederne, hvis nogen er kommet til skade, eller parterne er uenige. Ved personskade: ring 112.</span></div></li>
+      <li><div><strong>Udfyld blanketten sammen</strong><span> med modparten — skitse, afkrydsningsfelter, nummerplader, selskaber og begge underskrifter. Skriv kun under på det, du er indforstået med.</span></div></li>
+      <li><div><strong>Fotografér</strong><span> bilernes placering før de flyttes, skaderne, nummerpladerne og skiltningen.</span></div></li>
+      <li><div><strong>Anmeld inden for betingelsernes frist</strong><span>, normalt få dage. Ring til os — vi anmelder for dig og følger sagen.</span></div></li>
+      <li><div><strong>Værksted:</strong><span> undersøg, om policen kræver værksted inden for selskabets netværk, før reparationen bestilles.</span></div></li>
     </ol>
     <p>Har du ikke blanketten i bilen: dokumentér alligevel alt med billeder og noter, og kontakt os samme dag.</p>
   </div>

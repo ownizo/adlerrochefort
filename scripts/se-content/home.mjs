@@ -140,15 +140,15 @@ export const HOME_PAGE = {
   <div class="container narrow article-body">
     <h2 id="checklista">Checklista innan du skriver under</h2>
     <ol class="process-steps">
-      <li><strong>Byggnadens försäkringsbelopp</strong> motsvarar återuppbyggnadskostnaden, inte köpeskillingen eller lånebeloppet.</li>
-      <li><strong>Lösörets belopp</strong> är räknat, inte gissat. Gå rum för rum, det tar tjugo minuter.</li>
-      <li><strong>Vattenskador</strong>: du vet om <em>procura de avaria</em> och läckage genom terrass ingår.</li>
-      <li><strong>Jordskalv</strong>: du vet om det ingår, med vilken självrisk, och om banken kräver det.</li>
-      <li><strong>Ansvar</strong>: du vet om försäkringen täcker skador utanför bostaden och med vilket belopp.</li>
-      <li><strong>Rättsskydd</strong>: du har medvetet valt eller avstått, inte antagit.</li>
-      <li><strong>Användningen</strong> är anmäld som den faktiskt är, med frånvaroperioder.</li>
-      <li><strong>Gränsfallen</strong> — pool, solceller, pergola, mur — står i försäkringsbrevet med värde.</li>
-      <li><strong>Självriskerna</strong> är kända i kronor och ören per moment.</li>
+      <li><div><strong>Byggnadens försäkringsbelopp</strong><span> motsvarar återuppbyggnadskostnaden, inte köpeskillingen eller lånebeloppet.</span></div></li>
+      <li><div><strong>Lösörets belopp</strong><span> är räknat, inte gissat. Gå rum för rum, det tar tjugo minuter.</span></div></li>
+      <li><div><strong>Vattenskador</strong><span>: du vet om <em>procura de avaria</em> och läckage genom terrass ingår.</span></div></li>
+      <li><div><strong>Jordskalv</strong><span>: du vet om det ingår, med vilken självrisk, och om banken kräver det.</span></div></li>
+      <li><div><strong>Ansvar</strong><span>: du vet om försäkringen täcker skador utanför bostaden och med vilket belopp.</span></div></li>
+      <li><div><strong>Rättsskydd</strong><span>: du har medvetet valt eller avstått, inte antagit.</span></div></li>
+      <li><div><strong>Användningen</strong><span> är anmäld som den faktiskt är, med frånvaroperioder.</span></div></li>
+      <li><div><strong>Gränsfallen</strong><span> — pool, solceller, pergola, mur — står i försäkringsbrevet med värde.</span></div></li>
+      <li><div><strong>Självriskerna</strong><span> är kända i kronor och ören per moment.</span></div></li>
     </ol>
   </div>
 </section>`,

@@ -38,6 +38,7 @@ import {
   CHROME,
   chromeStylesheet,
   articleNav,
+  footerFor,
   langSwitcher,
   siteNav,
   mobileDrawer,
@@ -422,7 +423,9 @@ for (const file of files) {
   // for whatever attributes (on-dark or otherwise) the opening tag carries.
   if (chrome.footer) {
     const beforeFooter = html;
-    const r = replaceElement(html, 'footer', chrome.footer);
+    // footerFor(), not chrome.footer: the footer now carries a language
+    // selector whose targets are this page's, not the source homepage's.
+    const r = replaceElement(html, 'footer', footerFor(lang, targetsFor(url, lang)));
     html = r.html;
     if (r.hit) {
       if (html !== beforeFooter) mark(file, 'footer');

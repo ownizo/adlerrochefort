@@ -117,11 +117,25 @@ export function selectorTargets({ pageLang, pageUrl, pairs = {}, fallbacks = {} 
  * drop it inside the `<div class="lang-switcher">` / `<div
  * class="mobile-lang-switcher">` wrappers the corpus already has and the
  * generators can wrap it themselves.
+ *
+ * `variant` adds an `ar-langsel-<variant>` class for a placement that needs
+ * different geometry — the footer instance opens upward, because a menu
+ * hanging below a control near the bottom of the document would fall off it.
+ * `id` overrides the element ids, which matters once a page carries three
+ * instances: the button/menu pair is wired by id, so duplicates would point
+ * every control at the first menu.
  */
-export function langSelectorHtml({ pageLang, targets, mobile = false, indent = '      ' }) {
+export function langSelectorHtml({
+  pageLang,
+  targets,
+  mobile = false,
+  variant = '',
+  id: idBase = '',
+  indent = '      ',
+}) {
   const ui = SELECTOR_UI[pageLang] || SELECTOR_UI.en;
   const self = targets.find((t) => t.current) || targets[0];
-  const id = mobile ? 'arLangselMobile' : 'arLangsel';
+  const id = idBase || (mobile ? 'arLangselMobile' : 'arLangsel');
   const pad = indent;
   const p2 = `${pad}  `;
   const p3 = `${pad}    `;
@@ -137,10 +151,60 @@ export function langSelectorHtml({ pageLang, targets, mobile = false, indent = '
     })
     .join('\n');
 
-  return `${pad}<div class="ar-langsel${mobile ? ' ar-langsel-mobile' : ''}" data-ar-langsel>
+  const classes = ['ar-langsel'];
+  if (mobile) classes.push('ar-langsel-mobile');
+  if (variant) classes.push(`ar-langsel-${variant}`);
+
+  return `${pad}<div class="${classes.join(' ')}" data-ar-langsel>
 ${p2}<button type="button" class="ar-langsel-btn" id="${id}Btn" aria-expanded="false" aria-controls="${id}Menu" aria-label="${esc(ui.aria(self.label))}">${GLOBE}<span class="ar-langsel-label">${esc(self.label)}</span>${CHEVRON}</button>
 ${p2}<ul class="ar-langsel-menu" id="${id}Menu" aria-labelledby="${id}Btn" hidden>
 ${rows}
 ${p2}</ul>
 ${pad}</div>`;
+}
+
+/**
+ * The footer instance: the control, plus a plain list behind <noscript>.
+ *
+ * The footer's language column used to be a flat row of bordered two-letter
+ * chips — PT | EN | NL | FR | DE. Nine languages do not fit that shape: the row
+ * wraps into a block, two-letter codes for Polish, Swedish, Danish and Chinese
+ * are unrecognisable to the people they are for ("SE" is not a language and
+ * "CN" is not one either), and on the pages whose footer column is a flex
+ * column the chips stack one per line into a ladder taller than the column
+ * beside it. So the footer gets the same control the header has, from the same
+ * markup and the same targets.
+ *
+ * The <noscript> list is what the chips were actually good for: the menu only
+ * opens with script, and a visitor dropped into a language they cannot read
+ * needs a link out whether or not the script ran. It carries the same nine
+ * targets, so the two routes agree.
+ *
+ * Both callers — scripts/lang-switcher.mjs for the existing corpus and
+ * scripts/lib/market-cluster.mjs for the generated market pages — render this,
+ * which is what makes the post-processing pass a no-op on a freshly generated
+ * page.
+ */
+export function footerSelectorHtml({ pageLang, targets, indent = '      ' }) {
+  const pad = indent;
+  const rows = targets
+    .map((t) => {
+      const attrs = [`href="${esc(t.href)}"`, `lang="${t.html}"`];
+      if (t.current) attrs.push('aria-current="true"');
+      return `${pad}    <li><a ${attrs.join(' ')}>${esc(t.label)}</a></li>`;
+    })
+    .join('\n');
+
+  return `${langSelectorHtml({
+    pageLang,
+    targets,
+    variant: 'footer',
+    id: 'arLangselFooter',
+    indent: pad,
+  })}
+${pad}<noscript>
+${pad}  <ul class="footer-col-links footer-langs ar-langsel-fallback">
+${rows}
+${pad}  </ul>
+${pad}</noscript>`;
 }
