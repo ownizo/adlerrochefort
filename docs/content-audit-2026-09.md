@@ -996,3 +996,63 @@ Ran `node scripts/generate-blog.mjs` then `node scripts/generate-sitemap.mjs` ag
 2. **Every one of the 30 EN blog HTML files carries an unrelated, large nav overhaul, not just my new articles.** `chrome.mjs`'s `NAV_EN` constant already contains the current 3-column mega-menu (with the Spain panel) that's live on `public/en/index.html` — but the EN blog index/category/pagination pages were last generated *before* that menu existed, and nobody has re-run `generate-blog.mjs` since. So regenerating them for my new articles necessarily also rewrites their entire chrome to match the current mega-menu — confirmed present in the diff of **all 30** modified HTML files, including ones with none of my new content (e.g. `spain-car`, `marine`, `holiday-lets-hospitality`). This is the same "edited the source, never re-ran the generator" pattern `SPAIN-DIAGNOSIS.md` already found for `unify-chrome.mjs`'s footer — here it's `generate-blog.mjs`'s nav, on a set of pages that diagnosis didn't cover. **Reverted; not committed.**
 
 **Current state: exactly as before this round started.** `git rev-parse HEAD` = `127c727...`, `git status` clean. Nothing from the generator pass is committed. The branch's reviewability is still blocked on this — see the chat response for the decision this needs.
+
+---
+
+## Round 4 — the two independent fixes done; generator task still blocked, new finding
+
+### Fix 1: 5.1 pillar reciprocal links — done
+
+`outdated-insured-values` now links to both satellites via its existing
+cluster-links line. Link insertion only, confirmed by diff: exactly one
+line changed, no prose touched.
+
+### Fix 2: seven-therapies sweep — done, 5 pages
+
+Swept rather than patched, per instruction. Found and fixed:
+`liability-insurance-complementary-therapies` (EN pillar — both the prose
+enumeration and its bulleted list said six and omitted Chiropractic),
+`seguro-responsabilidade-civil-terapeuticas-nao-convencionais` (PT pillar
+— only the opening paragraph was wrong; its own later bulleted list
+already correctly said seven and already had Quiroprática, citing Artigo
+2.º — the article was internally inconsistent with itself, now isn't),
+and this branch's own three satellites (yoga, Pilates/Tai Chi, massage —
+each said "six" between 9 and 11 times across meta/JSON-LD/visible copy).
+Checked and correctly left alone: `public/seguros/rc-terapeuticas-nao-
+convencionais/` already had all seven, including Quiroprática, in both
+its form dropdown and its FAQ — nothing to fix there.
+
+### Generator task, step 1 (CSS fix) — done and committed
+
+Renamed `.lp-form-note` → `.hero-form-note` on the 4 affected `/seguros/*`
+pages to match the already-current source, then regenerated
+`public/css/ar-site.css` — confirmed the regeneration is now a clean,
+expected diff (old rule dropped, nothing left referencing it).
+
+### Generator task, step 2 (nav sync) — attempted, found a third pre-existing gap, stopped as instructed
+
+Per the instruction ("if step 2 turns out to carry anything beyond the nav
+change, stop again and tell me before committing"): ran the nav-only
+regeneration by temporarily swapping in `main`'s exact `data/articles.json`
+(confirmed via `git diff main -- data/articles.json` that the only
+difference between the two is this branch's 10 new EN articles — nothing
+else changed, so `main`'s file is a valid stand-in for "the article set as
+currently committed"). Regenerating against that unchanged article set
+should have produced a nav-only diff. It didn't:
+
+**`main`'s own EN blog pagination is already short by 2 pages.** The
+generator computed 13 EN index pages are needed for the 154 currently-
+published EN articles (154 ÷ 12 = 12.83 → 13); only pages 2–11 are
+committed, on `main` and on this branch alike. Confirmed via
+`git ls-tree main -- public/en/blog/page/` and the same on `HEAD` — both
+stop at 11. This is a third instance of the same "content added, generator
+never re-run" family as the CSS class and the nav menu, but it's not the
+nav change itself — it's a pagination gap that predates this branch and
+has nothing to do with chrome. Reverted everything from this attempt
+(`data/articles.json`, all regenerated blog/sitemap files); `HEAD` and
+working tree confirmed unchanged. **Nothing committed. Waiting on how you
+want this folded in** — as a fourth scoped commit before the nav sync, as
+part of the nav-sync commit since it's mechanically the same regeneration,
+or something else.
+
+Step 3 (article wiring) not started — waiting on step 2.
