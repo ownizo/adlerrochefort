@@ -185,6 +185,76 @@ function replaceRegion(html, startMarker, endMarker, replacement) {
   return { html: html.slice(0, s) + replacement + html.slice(e + endMarker.length), hit: true };
 }
 
+// ---------------------------------------------------------------------------
+// Structural element matching.
+//
+// The topBar/footer detection below used to match a literal attribute
+// string — class="asf-top-bar" exactly, a bare <footer> exactly. Any page
+// whose element carried an *additional* class (class="asf-top-bar on-dark")
+// read as having neither at all, and the gap-fill pass at the bottom of this
+// file inserted a second one next to the first — the defect fixed across
+// three earlier branches (docs/chrome-detection-fragility.md has the full
+// history). matchElement() matches the element and its role instead of the
+// literal markup: the tag name, and — only where the tag alone isn't unique
+// enough to identify the role (a bare <div> isn't a topBar; a bare <footer>
+// always is, this site never has more than one) — a class *token*, tolerant
+// of whatever else rides along on the attribute and in whatever order.
+// "asf-top-bar-secondary" is a different class and correctly does not match
+// "asf-top-bar".
+// ---------------------------------------------------------------------------
+
+/** True if `attrs` (an opening tag's raw attribute string) carries
+ *  `className` as one of its class="..." tokens — a token match, not a
+ *  substring one, so "asf-top-bar-secondary" does not match "asf-top-bar". */
+function hasClassToken(attrs, className) {
+  const classAttr = /\bclass="([^"]*)"/.exec(attrs);
+  return !!classAttr && classAttr[1].split(/\s+/).includes(className);
+}
+
+/**
+ * Finds the first `<tag ...>...</tag>` block in `html`. With `className`,
+ * only matches an opening tag carrying it as a class token (see
+ * hasClassToken); without it, the tag name alone is the match.
+ *
+ * Assumes no nested element of the same tag name appears before the
+ * matching close tag — true for every topBar/footer/nav-back link this file
+ * touches, and the same assumption replaceRegion() above already made via
+ * plain indexOf.
+ *
+ * Returns null, or `{ start, end, full, attrs, inner }`: `attrs` is the
+ * opening tag's raw attribute string (so a caller can pull e.g. href out of
+ * it without assuming attribute order or position), `inner` is the content
+ * between the tags.
+ */
+function matchElement(html, tag, { className } = {}) {
+  const openTag = new RegExp(`<${tag}\\b([^>]*)>`, 'g');
+  let m;
+  while ((m = openTag.exec(html))) {
+    if (className && !hasClassToken(m[1], className)) continue;
+    const openEnd = m.index + m[0].length;
+    const closeTag = `</${tag}>`;
+    const closeIdx = html.indexOf(closeTag, openEnd);
+    if (closeIdx === -1) continue;
+    const end = closeIdx + closeTag.length;
+    return {
+      start: m.index,
+      end,
+      full: html.slice(m.index, end),
+      attrs: m[1],
+      inner: html.slice(openEnd, closeIdx),
+    };
+  }
+  return null;
+}
+
+/** Replaces the element matchElement() finds with `replacement`. No-op
+ *  ({html, hit:false}) if no such element exists. */
+function replaceElement(html, tag, replacement, opts) {
+  const found = matchElement(html, tag, opts);
+  if (!found) return { html, hit: false };
+  return { html: html.slice(0, found.start) + replacement + html.slice(found.end), hit: true };
+}
+
 const files = execSync('find public -name "*.html"', { cwd: ROOT })
   .toString()
   .trim()
@@ -215,10 +285,10 @@ for (const file of files) {
   // Some pages carry a campaign-specific top bar pointing at their own offer.
   // Those are page content, not chrome, so only the generic ASF wording is
   // normalised; a bar linking somewhere other than the contact anchor stays.
-  const topMatch = html.match(/<div class="asf-top-bar">[\s\S]*?<\/div>/);
-  if (chrome.topBar && topMatch && /#contacto|#contact|apólice atual|current policy/i.test(topMatch[0])) {
-    if (topMatch[0] !== chrome.topBar) {
-      html = html.replace(topMatch[0], chrome.topBar);
+  const topFound = matchElement(html, 'div', { className: 'asf-top-bar' });
+  if (chrome.topBar && topFound && /#contacto|#contact|apólice atual|current policy/i.test(topFound.full)) {
+    if (topFound.full !== chrome.topBar) {
+      html = html.slice(0, topFound.start) + chrome.topBar + html.slice(topFound.end);
       mark(file, 'topBar');
     }
     stats.topBar++;
@@ -282,9 +352,12 @@ for (const file of files) {
   }
 
   // --- footer --------------------------------------------------------------
+  // The tag name alone identifies the role — this site never has more than
+  // one footer per page — so no class token is needed here, only tolerance
+  // for whatever attributes (on-dark or otherwise) the opening tag carries.
   if (chrome.footer) {
     const beforeFooter = html;
-    const r = replaceRegion(html, '<footer>', '</footer>', chrome.footer);
+    const r = replaceElement(html, 'footer', chrome.footer);
     html = r.html;
     if (r.hit) {
       if (html !== beforeFooter) mark(file, 'footer');
@@ -381,12 +454,12 @@ for (const file of files) {
   let html = await readFile(file, 'utf8');
   const before = html;
 
-  if (chrome.topBar && !html.includes('class="asf-top-bar"') && /<body[^>]*>/.test(html)) {
+  if (chrome.topBar && !matchElement(html, 'div', { className: 'asf-top-bar' }) && /<body[^>]*>/.test(html)) {
     html = html.replace(/(<body[^>]*>)/, `$1\n\n${chrome.topBar}`);
     filled.topBar++;
     filledFiles.push(`${rel} (topBar inserted)`);
   }
-  if (chrome.footer && !html.includes('<footer>') && html.includes('</body>')) {
+  if (chrome.footer && !matchElement(html, 'footer') && html.includes('</body>')) {
     html = html.replace(/<\/body>/, `${chrome.footer}\n</body>`);
     filled.footer++;
     filledFiles.push(`${rel} (footer inserted)`);
