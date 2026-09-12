@@ -85,7 +85,7 @@ export const PRIVATE_CLIENTS_PAGE = {
       <div class="feature-card wide">
         <span class="fc-tag">Marine</span>
         <h3>Yachten und Boote</h3>
-        <p>Was Algarve-Marinas vor der Liegeplatzvergabe an Nachweisen verlangen, behandelt unser englischsprachiger Leitfaden im Detail. [VERIFY: eigenständige deutsche Yacht-Versicherungsseite, falls Nachfrage das rechtfertigt]</p>
+        <p>Was Algarve-Marinas vor der Liegeplatzvergabe an Nachweisen verlangen, behandelt unser englischsprachiger Leitfaden im Detail — sprechen Sie uns direkt an, wenn es um Ihr Boot oder Ihre Yacht geht.</p>
       </div>
     </div>
   </div>
