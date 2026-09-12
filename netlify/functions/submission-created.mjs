@@ -70,6 +70,17 @@ const FIELD_LABELS = {
   opmerkingen: "Notes",
   toestemming: "GDPR consent",
   lang: "Page language",
+  // German cluster (/de/*, scripts/generate-de-cluster.mjs). `language` and
+  // `market` are the GA4-style attribution fields from brief Part 11, not the
+  // `lang` shortcut above — de-angebot-anfrage carries a fixed `language: 'DE'`
+  // classification in lead-classification.mjs instead, so these two are only
+  // ever shown in the notification email, not read by crm-sync.mjs.
+  telefon: "Phone",
+  versicherungsart: "Type of insurance",
+  nachricht: "Notes",
+  einwilligung: "GDPR consent",
+  product_interest: "Product interest",
+  market: "Market segment",
 };
 
 // Labels for the quote forms. Anything not listed is still rendered, using the
@@ -322,6 +333,13 @@ export const HANDLED_FORMS = {
       "The visitor expects a written reply by email within 24 hours — do not call.",
     subjectPrefix: "New Dutch quote request",
   },
+  "de-angebot-anfrage": {
+    heading: "New German quote request",
+    intro:
+      "A new submission was received from the German cluster (/de/*). " +
+      "The visitor expects a written reply by email within 24 hours — do not call.",
+    subjectPrefix: "New German quote request",
+  },
   "valuables-review": {
     heading: "New Collections &amp; Valuables review request",
     intro:
@@ -507,7 +525,10 @@ export const HANDLED_FORMS = {
   },
   "lead-nl": { quote: true, en: true, heading: "New lead — Dutch landing page", page: "/nl/" },
   "lead-fr": { quote: true, en: true, heading: "New lead — French landing page", page: "/fr/" },
-  "lead-de": { quote: true, en: true, heading: "New lead — German landing page", page: "/de/" },
+  // "lead-de" (the old, single hand-authored /de/ homepage form) is retired as
+  // of scripts/generate-de-cluster.mjs: /de/ is now generated and posts
+  // "de-angebot-anfrage" like every other page in the German cluster — see
+  // that name below, next to "nl-offerte-aanvraag", which it mirrors.
 
   // Spain market layer (Phase 1). Same shape as the Portuguese/English forms
   // above — one Netlify form name per page — with `branch` carrying an "ES ·"
