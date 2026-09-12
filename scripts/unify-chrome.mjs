@@ -127,10 +127,15 @@ const SOURCES = new Set([
 // the gap-fill pass below reads that as "missing entirely" and inserts a
 // *second* topBar and footer alongside the existing one — confirmed by
 // running the sweep and inspecting the diff before adding this list, not
-// assumed. /nl/index.html and /nl/bedankt/ are not in this list: the former
-// is already a SOURCE, and the latter already carries a *pre-existing*
-// duplicate topBar/footer of its own (unrelated to this on-dark issue —
-// see the next exclusion group) that this pass should not paper over.
+// assumed. /nl/index.html is not in this list because it is already a
+// SOURCE. /nl/bedankt/ — along with /obrigado/ and /en/thank-you/ — used to
+// need its own exclusion too, for an unrelated, now-fixed reason: each
+// carried a genuine on-dark chrome plus a second, stale, plain-classed
+// duplicate a much earlier bot commit had inserted next to it, invisible to
+// this same on-dark blind spot. Deduplicated by hand (see that commit); all
+// three are back in scope below the on-dark exclusions this file still
+// needs, exactly like every other page whose chrome partials.mjs is
+// authoritative for.
 const NL_CLUSTER_PAGES = [
   'alojamento-local-verzekering-portugal',
   'auto-importeren-portugal-verzekering',
@@ -153,16 +158,6 @@ const SKIP = [
   /\/en\/insurance-review\//,
   /spain/,
   ...NL_CLUSTER_PAGES.map((slug) => new RegExp(`/nl/${slug}/`)),
-  // Pre-existing, unrelated to the on-dark issue above: each of these three
-  // "thank you" pages already carries two topBars and two footers (one
-  // legitimate, one stale) on main, predating both branches this sweep
-  // follows. Sweeping them would silently refresh one of the two copies
-  // without resolving the underlying duplication, which is a page-content
-  // bug this pass should not paper over either — flagged for its own fix
-  // instead of bundled here.
-  /\/obrigado\//,
-  /\/en\/thank-you\//,
-  /\/nl\/bedankt\//,
 ];
 
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
