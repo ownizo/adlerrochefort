@@ -176,7 +176,7 @@ ${entries.join('\n')}
 const isArticle = (u) => /^\/(en\/)?blog\/[^/]+\/$/.test(u) && !u.startsWith('/blog/categoria/') && !u.startsWith('/blog/pagina/');
 
 const priorityFor = (u) => {
-  if (u === '/' || u === '/en/') return '1.0';
+  if (u === '/' || u === '/en/' || u === '/de/') return '1.0';
   if (u === '/seguros/' || u === '/blog/' || u === '/en/blog/') return '0.9';
   if (/^\/seguros\/[^/]+\/$/.test(u) || /^\/en\/insurance\/[^/]+\/$/.test(u)) return '0.9';
   // Pagination is checked before the category hubs: a paginated category URL
