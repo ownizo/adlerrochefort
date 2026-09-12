@@ -1,0 +1,490 @@
+/*
+ * Adler & Rochefort — shared market-cluster stylesheet.
+ *
+ * Carries the body design system for the generated language-market clusters:
+ * Polish (/pl/*), Swedish (/se/*) and Danish (/dk/*). One file for all three
+ * rather than three near-identical ones — the markets differ in language and
+ * content, not in typography, spacing, cards or buttons, and tripling the CSS
+ * would have tripled the drift.
+ *
+ * The rules are the same design system the German cluster uses
+ * (public/css/ar-de.css), which is itself the design system lifted out of the
+ * inline styles on /de/index.html. Nothing here is new visual language: same
+ * brand tokens, same scale, same components. A follow-up worth doing is
+ * pointing /de/ and /nl/ at this file too and deleting the two per-cluster
+ * copies; that was left out of this pass because it means regenerating two
+ * clusters that are working today for no visitor-visible gain.
+ *
+ * Chrome (top bar, nav, footer, cookie banner) is NOT here — that is
+ * public/css/ar-chrome.css, generated from scripts/lib/partials.mjs and shared
+ * with the rest of the site. The language selector is public/css/ar-langsel.css.
+ *
+ * Generated pages are emitted by scripts/generate-market-clusters.mjs.
+ */
+
+:root {
+  --primary: #17243D;
+  --primary-hover: #223553;
+  --accent: #B8323E;
+  --accent-on-dark: #E8919B;
+  --cream: #F5F1E8;
+  --cream2: #E8E5DF;
+  --ink: #111927;
+  --ink2: #526984;
+  --muted: #516F94;
+  --white: #FFFFFF;
+  --border: #DAD5C8;
+  --hero-bg: #17243D;
+  --nav-bg: #17243D;
+  --footer-bg: #111927;
+  --navy: #17243D;
+  --success: #10B981;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+
+body {
+  background: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ink);
+  overflow-x: hidden; overflow-x: clip;
+  min-height: 100vh;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; z-index: 200;
+  background: var(--white); color: var(--ink);
+  padding: 12px 20px; font-size: 13px; font-weight: 600;
+}
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* NAV additions — ar-chrome.css supplies .site-nav, .nav-logo, .nav-cta and
+   most of .lang-switcher already (it loads after this file, so its rules win
+   for anything declared in both); these three are the ones it doesn't carry,
+   because the shared chrome assumes the full mega-menu layout rather than
+   this cluster's simpler header. Mirrors ar-nl.css's own additions. */
+.site-header { position: sticky; top: 0; z-index: 100; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.lang-switcher span.lang-na { color: rgba(255,255,255,0.35); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; padding: 4px 8px; cursor: default; }
+
+/* HERO */
+.hero { background: var(--hero-bg); position: relative; overflow: hidden; }
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(23,36,61,0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 32px 64px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge, .hero .eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(184,50,62,0.12);
+  border: 1px solid rgba(184,50,62,0.3);
+  color: var(--accent-on-dark);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 8px 20px; margin-bottom: 28px;
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700; line-height: 1.1;
+  color: var(--white); margin-bottom: 22px;
+  text-wrap: balance;
+}
+.hero h1 em { color: var(--accent-on-dark); font-style: normal; }
+.hero-subtitle {
+  font-size: 16px; line-height: 1.75;
+  color: rgba(255,255,255,0.78);
+  max-width: 680px; margin: 0 auto 20px;
+}
+.hero-meta {
+  font-size: 12px; letter-spacing: 0.06em; color: rgba(255,255,255,0.5);
+  margin-bottom: 28px;
+}
+.btn-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 36px;
+  background: var(--accent); color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  min-height: 44px;
+}
+.btn-cta:hover { background: #872733; transform: translateY(-1px); }
+.btn-cta svg { width: 16px; height: 16px; fill: currentColor; }
+.btn-cta-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.75);
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  margin-left: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 2px;
+}
+.btn-cta-secondary:hover { color: var(--white); border-color: var(--white); }
+.hero-trust { margin-top: 26px; font-size: 12px; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); text-transform: uppercase; }
+
+/* LANGUAGE POLICY */
+.lang-policy-band { background: var(--cream); padding: 44px 20px 0; }
+.lang-policy {
+  max-width: 820px; margin: 0 auto;
+  background: var(--white); border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  padding: 34px 36px;
+}
+.lang-policy h2 {
+  font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3;
+  color: var(--ink); margin: 0 0 16px;
+}
+.lang-policy p {
+  font-size: 17px; line-height: 1.75; color: var(--ink2);
+  margin: 0 0 14px;
+}
+.lang-policy p:last-child { margin-bottom: 0; }
+@media (max-width: 640px) { .lang-policy { padding: 26px 22px; } }
+
+/* BREADCRUMB */
+.breadcrumb { background: var(--cream); padding: 18px 32px 0; }
+.breadcrumb ol {
+  max-width: 960px; margin: 0 auto;
+  list-style: none; display: flex; flex-wrap: wrap; gap: 6px;
+  font-size: 12px; color: var(--ink2);
+}
+.breadcrumb li:not(:last-child)::after { content: '›'; margin-left: 6px; color: var(--border); }
+.breadcrumb a { color: var(--ink2); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb [aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* CONTENT */
+.section { padding: 64px 32px; }
+.section.tint { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.section.plain { background: var(--cream); }
+.container { max-width: 960px; margin: 0 auto; }
+.container.narrow { max-width: 760px; }
+.section h2 {
+  font-size: clamp(24px, 3.4vw, 32px);
+  font-weight: 700; color: var(--ink);
+  margin-bottom: 18px; line-height: 1.2;
+  text-wrap: balance;
+}
+.section h2 em { color: var(--primary); font-style: normal; }
+.section p.lead { font-size: 16px; line-height: 1.8; color: var(--ink2); }
+.section p.lead + p.lead { margin-top: 16px; }
+
+.article-body h2 { font-size: clamp(21px, 2.8vw, 26px); margin-top: 8px; }
+.article-body h3 { font-size: 18px; font-weight: 700; color: var(--ink); margin: 24px 0 10px; }
+.article-body p { font-size: 16px; line-height: 1.8; color: var(--ink2); margin-bottom: 16px; }
+.article-body ul, .article-body ol { margin: 0 0 16px 22px; color: var(--ink2); font-size: 16px; line-height: 1.75; }
+.article-body li { margin-bottom: 8px; }
+.article-body li strong { color: var(--ink); }
+.article-body a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+.article-body a:hover { color: var(--accent); }
+.eyebrow {
+  display: inline-block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 12px;
+}
+
+/* CALLOUT */
+.callout {
+  background: var(--cream2); border-left: 4px solid var(--primary);
+  padding: 20px 24px; margin: 24px 0;
+  font-size: 15px; line-height: 1.7; color: var(--ink2);
+}
+.callout-label {
+  display: block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary);
+  margin-bottom: 8px;
+}
+
+/* COMPARISON TABLE */
+.compare-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--border); }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; background: var(--white); }
+.compare-table caption { text-align: left; padding: 12px 16px; font-size: 12px; color: var(--ink2); background: var(--cream2); }
+.compare-table th, .compare-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.compare-table th { background: var(--cream2); font-weight: 700; color: var(--ink); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; }
+.compare-table td { color: var(--ink2); }
+.compare-table tr:last-child td { border-bottom: none; }
+
+/* PROCESS STEPS */
+.process-steps { list-style: none; counter-reset: step; margin-top: 36px; display: grid; gap: 18px; }
+.process-steps li {
+  counter-increment: step;
+  display: grid; grid-template-columns: 44px 1fr; gap: 18px; align-items: start;
+  background: var(--white); border: 1px solid var(--border); padding: 22px 24px;
+}
+.process-steps li::before {
+  content: counter(step);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; font-weight: 700;
+}
+.process-steps strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 4px; }
+.process-steps span { color: var(--ink2); font-size: 14px; line-height: 1.6; }
+
+/* INTRO MEDIA */
+.intro-media { display: grid; grid-template-columns: 1fr 220px; gap: 40px; align-items: center; }
+.intro-media img { width: 100%; height: auto; border: 1px solid var(--border); }
+
+/* FEATURE LIST */
+.feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 36px; }
+.feature-card {
+  background: var(--cream); border: 1px solid var(--border);
+  padding: 24px; transition: border-color 0.2s;
+}
+.feature-card.wide { grid-column: 1 / -1; }
+.feature-card:hover { border-color: var(--primary); }
+.feature-card .fc-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+.feature-card h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+.feature-card p { font-size: 14px; line-height: 1.65; color: var(--ink2); }
+.feature-card a.fc-link { font-size: 13px; font-weight: 600; color: var(--primary); text-decoration: none; display: inline-block; margin-top: 10px; }
+.feature-card a.fc-link:hover { color: var(--accent); }
+.feature-card a.fc-link::after { content: ' →'; }
+
+/* HUB LISTS */
+.hub-list { list-style: none; display: grid; gap: 14px; margin-top: 20px; }
+.hub-item {
+  background: var(--white); border: 1px solid var(--border); padding: 18px 22px;
+  display: block;
+}
+.hub-item a { font-size: 16px; font-weight: 700; color: var(--ink); text-decoration: none; display: block; margin-bottom: 6px; }
+.hub-item a:hover { color: var(--accent); }
+.hub-item span { font-size: 14px; line-height: 1.65; color: var(--ink2); display: block; }
+
+/* RELATED / TEXT LINK */
+.related { list-style: none; display: grid; gap: 10px; margin-top: 16px; }
+.text-link { color: var(--primary); font-weight: 600; text-decoration: none; }
+.text-link:hover { color: var(--accent); text-decoration: underline; }
+
+/* BRANDS */
+.brands { text-align: center; }
+.brands-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 28px; }
+.brand-chip {
+  border: 1px solid var(--border); background: var(--cream);
+  padding: 14px 28px; font-size: 16px; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+/* REASONS */
+.reasons { list-style: none; margin-top: 32px; display: grid; gap: 14px; }
+.reasons li {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--white); border: 1px solid var(--border); padding: 20px;
+}
+.reasons li .check {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(23,36,61,0.12); color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
+}
+.reasons li strong { color: var(--ink); display: block; margin-bottom: 4px; font-size: 15px; }
+.reasons li span { color: var(--ink2); font-size: 14px; line-height: 1.6; }
+
+/* PULLQUOTE */
+.pullquote-band { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 32px; }
+.pullquote {
+  max-width: 720px; margin: 0 auto; text-align: center;
+  font-size: clamp(19px, 2.4vw, 24px); line-height: 1.5; color: var(--ink);
+  font-style: italic;
+}
+.pullquote cite {
+  display: block; margin-top: 16px; font-size: 12px; font-style: normal;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink2);
+}
+
+/* FORM */
+.form-section { background: var(--hero-bg); }
+.form-shell { max-width: 640px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); padding: 40px; }
+.form-shell h2 { color: var(--ink); }
+.form-intro { font-size: 15px; line-height: 1.7; color: var(--ink2); margin-bottom: 6px; }
+.form-lang-note { font-size: 12px; color: var(--muted); margin-bottom: 26px; }
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.02em; }
+.field .req { color: var(--accent); }
+.field-help { font-size: 12px; color: var(--muted); margin-bottom: 6px; line-height: 1.5; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 12px 14px; font-family: 'Montserrat', sans-serif;
+  font-size: 14px; color: var(--ink); background: var(--cream);
+  border: 1px solid var(--border); border-radius: 0; transition: border-color 0.2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--primary); }
+.field textarea { resize: vertical; min-height: 90px; }
+.field-error { display: block; font-size: 12px; color: var(--accent); margin-top: 6px; min-height: 0; }
+.field-error.show { min-height: 1em; }
+.form-branch-fields { border-top: 1px dashed var(--border); padding-top: 16px; margin-top: 4px; margin-bottom: 8px; }
+.form-branch-legend { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary); margin-bottom: 14px; }
+.consent-block .consent { display: flex; gap: 10px; align-items: flex-start; }
+.consent-block input[type="checkbox"] { width: auto; margin-top: 3px; }
+.consent-block label { font-size: 12px; line-height: 1.6; color: var(--ink2); font-weight: 400; }
+.consent-block a { color: var(--primary); }
+.form-submit {
+  width: 100%; padding: 16px; background: var(--accent); color: var(--white);
+  font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; border: none; cursor: pointer;
+  transition: background 0.2s; min-height: 48px;
+}
+.form-submit:hover { background: #872733; }
+.form-footnote { font-size: 11px; line-height: 1.6; color: var(--muted); margin-top: 16px; text-align: center; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.form-success { display: none; text-align: center; padding: 30px 10px; }
+.form-success.show { display: block; }
+.form-success .tick { width: 56px; height: 56px; border-radius: 50%; background: rgba(16,185,129,0.12); color: var(--success); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; font-size: 28px; }
+.form-success h3 { color: var(--ink); margin-bottom: 8px; }
+.form-success p { color: var(--ink2); font-size: 14px; line-height: 1.6; }
+
+/* FAQ */
+.faq-list { margin-top: 8px; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+.faq-item:first-of-type { border-top: 1px solid var(--border); }
+.faq-item h3 { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+.faq-answer { font-size: 15px; line-height: 1.75; color: var(--ink2); }
+.faq-answer p { margin-bottom: 10px; }
+.faq-answer p:last-child { margin-bottom: 0; }
+
+/* FINAL CTA */
+.final-cta { background: var(--navy); text-align: center; padding: 72px 32px; }
+.final-cta h2 { color: var(--white); margin-bottom: 14px; }
+.final-cta p { color: rgba(255,255,255,0.75); font-size: 16px; margin-bottom: 32px; }
+.legal-note {
+  max-width: 760px; margin: 28px auto 0; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.5);
+}
+
+/* FOOTER — column-count override and the regulatory notice, which
+   ar-chrome.css does not carry (it assumes the six-column layout of the main
+   site's footer). Mirrors how ar-nl.css overrides the same two things. */
+.footer-top { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+.footer-regulatory { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 24px; text-align: center; }
+.footer-regulatory p { font-size: 11px; color: rgba(255,255,255,0.3); margin: 0; line-height: 1.6; }
+.footer-regulatory p + p { margin-top: 6px; }
+@media (max-width: 860px) { .footer-top { grid-template-columns: 1fr 1fr; } }
+
+/* MOBILE CTA (chrome carries its own; kept here only as a fallback name-match) */
+.mobile-cta {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
+  padding: 12px 20px; background: var(--nav-bg);
+  border-top: 1px solid rgba(23,36,61,0.3); box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+}
+.mobile-cta a {
+  display: block; width: 100%; padding: 14px; text-align: center;
+  background: var(--accent); color: var(--white);
+  font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .section { padding: 48px 20px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .intro-media { grid-template-columns: 1fr; }
+  .intro-media img { max-width: 240px; margin: 0 auto; }
+  .process-steps li { grid-template-columns: 36px 1fr; padding: 18px; }
+  .process-steps li::before { width: 36px; height: 36px; font-size: 15px; }
+  .form-shell { padding: 26px 22px; }
+  .mobile-cta { display: block; }
+  body { padding-bottom: 70px; }
+}
+@media (max-width: 480px) {
+  .hero-inner { padding: 60px 20px 48px; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+ * SIMPLIFIED CHINESE (/zh/*)
+ *
+ * Scoped to html[lang="zh-CN"], so it costs the other clusters nothing and
+ * adds no extra request. No webfont is downloaded: a Simplified Chinese
+ * webfont is several megabytes even subsetted, which would undo the site's
+ * Core Web Vitals for the one market least likely to be on a fast European
+ * connection. Instead the stack names the CJK UI font that is already
+ * installed on each platform — PingFang SC on Apple, Microsoft YaHei on
+ * Windows, Noto Sans CJK / Source Han Sans on Android and Linux — and keeps
+ * Montserrat first so Latin runs (Adler & Rochefort, the Portuguese terms,
+ * ASF numbers, EUR figures) still render in the brand face.
+ *
+ * The rest is what CJK typesetting needs and Latin typesetting does not:
+ *
+ *   * more leading, because Chinese glyphs fill their em box and lines set at
+ *     Latin leading look cramped;
+ *   * almost no letter-spacing, because tracking that flatters small-caps
+ *     Latin makes Chinese look like it has been pulled apart. The uppercase
+ *     transforms are left alone — they are inert on Chinese and still apply
+ *     to the Latin words inside the same element;
+ *   * `word-break: normal` with `overflow-wrap: anywhere` off: Chinese wraps
+ *     between any two characters by itself, and forcing a break strategy is
+ *     how Latin brand names end up split down the middle.
+ * ─────────────────────────────────────────────────────────────────────────── */
+html[lang="zh-CN"] {
+  --font-cjk: 'Montserrat', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans SC', 'WenQuanYi Micro Hei',
+    system-ui, sans-serif;
+}
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] input,
+html[lang="zh-CN"] select,
+html[lang="zh-CN"] textarea,
+html[lang="zh-CN"] button,
+html[lang="zh-CN"] .form-submit,
+html[lang="zh-CN"] .btn-cta,
+html[lang="zh-CN"] .nav-cta {
+  font-family: var(--font-cjk);
+}
+
+/* Leading. Chinese needs more of it than the Latin scale gives. */
+html[lang="zh-CN"] .article-body p,
+html[lang="zh-CN"] .section p.lead,
+html[lang="zh-CN"] .faq-answer,
+html[lang="zh-CN"] .hero-subtitle { line-height: 1.95; }
+html[lang="zh-CN"] .article-body ul,
+html[lang="zh-CN"] .article-body ol,
+html[lang="zh-CN"] .callout,
+html[lang="zh-CN"] .compare-table td,
+html[lang="zh-CN"] .feature-card p,
+html[lang="zh-CN"] .hub-item p,
+html[lang="zh-CN"] .reasons li span,
+html[lang="zh-CN"] .process-steps span { line-height: 1.9; }
+html[lang="zh-CN"] h1 { line-height: 1.35; }
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3 { line-height: 1.5; }
+
+/* Tracking. Keep a hair of it on the eyebrows so the Latin words in them still
+ * breathe, and take it off the Chinese-only elements entirely. */
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .fc-tag,
+html[lang="zh-CN"] .callout-label,
+html[lang="zh-CN"] .form-branch-legend,
+html[lang="zh-CN"] .compare-table th,
+html[lang="zh-CN"] .hero-meta,
+html[lang="zh-CN"] .form-submit,
+html[lang="zh-CN"] .btn-cta { letter-spacing: 0.02em; }
+html[lang="zh-CN"] .field label { letter-spacing: 0; font-size: 13px; }
+
+/* Body copy one step up: 16px Latin and 16px Chinese are not the same size to
+ * read, because the glyphs are denser and squarer. */
+html[lang="zh-CN"] .article-body p,
+html[lang="zh-CN"] .article-body ul,
+html[lang="zh-CN"] .article-body ol { font-size: 16.5px; }
+html[lang="zh-CN"] .faq-answer,
+html[lang="zh-CN"] .feature-card p,
+html[lang="zh-CN"] .hub-item span,
+html[lang="zh-CN"] .hub-item p { font-size: 15px; }
+
+/* Buttons. Chinese CTA labels are short, but the uppercase tracking plus a
+ * long Latin fragment ("MyCoverVault") can still push a narrow button past
+ * the viewport, so let them wrap rather than overflow. */
+html[lang="zh-CN"] .btn-cta,
+html[lang="zh-CN"] .form-submit,
+html[lang="zh-CN"] .nav-cta,
+html[lang="zh-CN"] .mobile-cta a { word-break: normal; overflow-wrap: break-word; }

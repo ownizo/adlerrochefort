@@ -35,6 +35,7 @@
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
+<link rel="stylesheet" href="/css/ar-langsel.css">
 </head>
 <body>
 
@@ -129,15 +130,20 @@
     </div>
     <a href="/en/insurance-review/" class="nav-cta">Request a Review</a>
     <div class="lang-switcher">
-      <a href="/">PT</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/en/" class="active">EN</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/nl/" lang="nl">NL</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/fr/" lang="fr">FR</a>
-      <span class="lang-switcher-sep">|</span>
-      <a href="/de/" lang="de">DE</a>
+      <div class="ar-langsel" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Language: English. Choose another language."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">English</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
+          <li><a href="/blog/" lang="pt-PT" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">blog</span></a></li>
+          <li><a href="/en/blog/page/11/" lang="en" hreflang="en-GB" aria-current="true"><span>English</span></a></li>
+          <li><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/pl/" lang="pl" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/se/" lang="sv" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/dk/" lang="da" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">home page</span></a></li>
+          <li><a href="/zh/" lang="zh-CN" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">home page</span></a></li>
+        </ul>
+      </div>
     </div>
   </div>
   <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
@@ -203,11 +209,20 @@
   </div>
   <a href="/en/insurance-review/" onclick="toggleMenu()">Request a Review</a>
   <div class="mobile-lang-switcher">
-    <a href="/">PT</a>
-    <a href="/en/" class="active">EN</a>
-    <a href="/nl/" lang="nl">NL</a>
-    <a href="/fr/" lang="fr">FR</a>
-    <a href="/de/" lang="de">DE</a>
+    <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
+      <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="Language: English. Choose another language."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">English</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+      <ul class="ar-langsel-menu" id="arLangselMobileMenu" aria-labelledby="arLangselMobileBtn" hidden>
+        <li><a href="/blog/" lang="pt-PT" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">blog</span></a></li>
+        <li><a href="/en/blog/page/11/" lang="en" hreflang="en-GB" aria-current="true"><span>English</span></a></li>
+        <li><a href="/nl/" lang="nl" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/fr/" lang="fr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/de/" lang="de" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/pl/" lang="pl" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/se/" lang="sv" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/dk/" lang="da" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">home page</span></a></li>
+        <li><a href="/zh/" lang="zh-CN" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">home page</span></a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -725,5 +740,6 @@
   ]
 }
 </script>
+<script defer src="/js/ar-langsel.js"></script>
 </body>
 </html>

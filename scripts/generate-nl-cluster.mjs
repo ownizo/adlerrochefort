@@ -22,6 +22,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_NL } from './nl-cluster.data.mjs';
+import { langSelectorHtml, selectorTargets, LANGSEL_CSS_LINK, LANGSEL_SCRIPT_TAG } from './lib/lang-selector.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -61,29 +62,34 @@ const ORG_LD = {
  *
  * French and German became full site languages in August 2026 but have a
  * homepage only, so no cluster article has an equivalent in either. They render
- * unavailable here for that reason; the footer's Talen column still links both
- * homepages, which is the escape route for a visitor who wants the site in
- * their own language.
+ * as a labelled fall-back to that homepage for that reason; the footer's Talen
+ * column still links both, which is the escape route for a visitor who wants
+ * the site in their own language.
+ *
+ * September 2026: the control is now the eight-language disclosure selector
+ * defined in scripts/lib/lang-selector.mjs — Polish, Swedish and Danish joined
+ * the site and a row of two-letter codes could no longer hold them on a phone.
+ * Rendering from the shared module rather than from a local template is what
+ * keeps this generator from reverting the work of scripts/lang-switcher.mjs,
+ * which is still the canonical pass and still knows more about cross-language
+ * pairs than any single cluster does. Both emit the same bytes here: contents
+ * indented eight, the wrapper closed at six, matching this file's nav template.
  */
 function langSwitcher(page) {
-  const pt = page.hreflang?.pt
-    ? `<a href="${esc(page.hreflang.pt)}" hreflang="pt-PT" lang="pt-PT">PT</a>`
-    : `<span class="lang-na" lang="pt-PT" title="Deze pagina bestaat niet in het Portugees">PT</span>`;
-  const en = page.hreflang?.en
-    ? `<a href="${esc(page.hreflang.en)}" hreflang="en-GB" lang="en">EN</a>`
-    : `<span class="lang-na" lang="en" title="This page is not available in English">EN</span>`;
-  const sep = '<span class="lang-switcher-sep" aria-hidden="true">|</span>';
-  return `<div class="lang-switcher">
-        ${pt}
-        ${sep}
-        ${en}
-        ${sep}
-        <a href="${esc(page.url)}" aria-current="page" lang="nl">NL</a>
-        ${sep}
-        <span class="lang-na" lang="fr" title="Cette page n'existe pas en français">FR</span>
-        ${sep}
-        <span class="lang-na" lang="de" title="Diese Seite ist nicht auf Deutsch verfügbar">DE</span>
-      </div>`;
+  const pairs = {};
+  if (page.hreflang?.pt) pairs.pt = page.hreflang.pt;
+  if (page.hreflang?.en) pairs.en = page.hreflang.en;
+  const selector = langSelectorHtml({
+    pageLang: 'nl',
+    targets: selectorTargets({
+      pageLang: 'nl',
+      pageUrl: page.url,
+      pairs,
+      fallbacks: { pt: '/', en: '/en/' },
+    }),
+    indent: '        ',
+  });
+  return `<div class="lang-switcher">\n${selector}\n      </div>`;
 }
 
 /**
@@ -607,6 +613,7 @@ ${jsonLd(page)}
   gtag('js', new Date());
   gtag('config', 'AW-18361722533');
 </script>
+${LANGSEL_CSS_LINK}
 </head>
 <body>
 
@@ -666,6 +673,7 @@ ${FORM_SCRIPT}
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${COOKIE_BANNER}
+${LANGSEL_SCRIPT_TAG}
 </body>
 </html>
 `;

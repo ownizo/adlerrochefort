@@ -26,6 +26,13 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_DE } from './de-cluster.data.mjs';
+import {
+  langSelectorHtml,
+  selectorTargets,
+  LANGSEL_CSS_LINK,
+  LANGSEL_SCRIPT_TAG,
+  LANG_BY_KEY,
+} from './lib/lang-selector.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -75,43 +82,57 @@ const ORG_LD = {
  * while every product and local page does not — there is no /en/ page that
  * answers "Autoversicherung Portugal" the way /de/autoversicherung-portugal/
  * does, so pretending otherwise would send a visitor to an approximate page
- * instead of the one that answers what they asked. Unavailable languages
- * render as inert labels, same convention the Dutch cluster uses.
+ * instead of the one that answers what they asked. A language with no
+ * counterpart is offered as a labelled fall-back to its own home page, which is
+ * the convention the whole corpus now uses.
+ *
+ * September 2026: the control is the eight-language disclosure selector defined
+ * in scripts/lib/lang-selector.mjs. Polish, Swedish and Danish joined the site
+ * and five two-letter codes in a row was already tight at 375px; eight would
+ * have wrapped the header. Rendering from the shared module is also what keeps
+ * this generator from reverting scripts/lang-switcher.mjs, which remains the
+ * canonical pass — both emit the same bytes for this file's nav template:
+ * contents indented eight, wrapper closed at six.
  */
 function langSwitcher(page) {
   const L = page.langLinks || {};
-  const item = (code, lang, title) =>
-    L[code]
-      ? `<a href="${esc(L[code])}" lang="${lang}">${code.toUpperCase()}</a>`
-      : `<span class="lang-na" lang="${lang}" title="${esc(title)}">${code.toUpperCase()}</span>`;
-  const sep = '<span class="lang-switcher-sep" aria-hidden="true">|</span>';
-  return `<div class="lang-switcher">
-        ${item('pt', 'pt-PT', 'Diese Seite ist nicht auf Portugiesisch verfügbar')}
-        ${sep}
-        ${item('en', 'en', 'This page is not available in English')}
-        ${sep}
-        ${item('nl', 'nl', 'Deze pagina is niet beschikbaar in het Nederlands')}
-        ${sep}
-        ${item('fr', 'fr', "Cette page n'est pas disponible en français")}
-        ${sep}
-        <a href="${esc(page.url)}" aria-current="page" class="active" lang="de">DE</a>
-      </div>`;
+  const pairs = {};
+  for (const key of ['pt', 'en', 'nl', 'fr', 'pl', 'se', 'dk', 'zh']) if (L[key]) pairs[key] = L[key];
+  const selector = langSelectorHtml({
+    pageLang: 'de',
+    targets: selectorTargets({
+      pageLang: 'de',
+      pageUrl: page.url,
+      pairs,
+      fallbacks: { pt: '/', en: '/en/' },
+    }),
+    indent: '        ',
+  });
+  return `<div class="lang-switcher">\n${selector}\n      </div>`;
 }
 
 /**
  * hreflang, matching the rule scripts/hreflang.mjs enforces on the rest of the
  * corpus: declare a set only where a confirmed counterpart exists, never a
- * self-only declaration. Only the hub has genuine counterparts (the other four
+ * self-only declaration. Only the hub has genuine counterparts (the other seven
  * homepages); every product and local page emits nothing beyond the canonical.
+ *
+ * The order below is the order scripts/hreflang.mjs uses for the homepage
+ * cluster, self included in position, so a regenerated hub already carries the
+ * block the post-processor would write rather than one it has to reorder. The
+ * hreflang values come from LANG_BY_KEY so there is one record of them: `se`
+ * and `dk` are URL segments and their hreflang values are sv-SE and da-DK.
  */
+const HREFLANG_ORDER = ['pt', 'en', 'de', 'fr', 'nl', 'pl', 'se', 'dk', 'zh'];
+
 function hreflangTags(page) {
-  const h = page.hreflang || {};
-  const keys = ['pt', 'en', 'fr', 'nl'];
-  if (!keys.some((k) => h[k])) return '';
-  const map = { pt: 'pt-PT', en: 'en-GB', fr: 'fr', nl: 'nl' };
+  const h = { ...(page.hreflang || {}), de: page.url };
+  if (!HREFLANG_ORDER.some((k) => k !== 'de' && h[k])) return '';
   const out = [];
-  for (const k of keys) if (h[k]) out.push(`  <link rel="alternate" hreflang="${map[k]}" href="${ORIGIN}${h[k]}">`);
-  out.push(`  <link rel="alternate" hreflang="de" href="${ORIGIN}${page.url}">`);
+  for (const k of HREFLANG_ORDER) {
+    if (!h[k]) continue;
+    out.push(`  <link rel="alternate" hreflang="${LANG_BY_KEY[k].hreflang}" href="${ORIGIN}${h[k]}">`);
+  }
   if (h.xDefault) out.push(`  <link rel="alternate" hreflang="x-default" href="${ORIGIN}${h.xDefault}">`);
   return out.join('\n') + '\n';
 }
@@ -701,6 +722,7 @@ ${jsonLd(page)}
   gtag('js', new Date());
   gtag('config', 'AW-18361722533');
 </script>
+${LANGSEL_CSS_LINK}
 </head>
 <body>
 
@@ -760,6 +782,7 @@ ${FORM_SCRIPT}
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${COOKIE_BANNER}
+${LANGSEL_SCRIPT_TAG}
 </body>
 </html>
 `;

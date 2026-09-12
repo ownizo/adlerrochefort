@@ -310,6 +310,47 @@ const QUOTE_LABELS_EN = {
   // what this field is — kept in English here since every form that
   // carries it (the Spain cluster, Insurance Review) is `en: true`.
   landing_page: "First page of the visit (if different)",
+
+  // The Polish, Swedish, Danish and Chinese clusters (/pl/*, /se/*, /dk/*,
+  // /zh/*). The visitor
+  // writes in their own language; the labels are English because the team reads
+  // the inbox in English, which is the same rule the Dutch and German entries
+  // in FIELD_LABELS already follow.
+  //
+  // These forms are `quote: true`, so renderAllFields() shows every answer and
+  // a field added to a market page appears in the email without this function
+  // changing. That is the reason they are quote forms rather than allow-listed
+  // ones: de-angebot-anfrage and nl-offerte-aanvraag go through FIELD_LABELS,
+  // and their branch qualification answers (kv_*, hv_*, av_*, lv_*) are
+  // therefore dropped from the notification entirely.
+  market: "Source market",
+  language: "Page language",
+  product_interest: "Product interest",
+  insurance_type: "Type of insurance",
+  residence_status: "Status in Portugal",
+  start_date: "Cover should start",
+  preferred_language: "Preferred language for correspondence",
+  localidade: "Town in Portugal",
+  country: "Country they live in now",
+  consent: "GDPR consent",
+  subject: "Subject",
+  message: "What we should know",
+
+  // Branch qualification fields. The ids are shared by all four markets on
+  // purpose, so one label serves Warsaw, Stockholm, Copenhagen and Shanghai
+  // and the inbox reads the same whichever cluster the lead came from.
+  // Reusing the ids is also why the Chinese cluster needed no new labels
+  // here: its form asks the same questions, in Chinese.
+  home_property_type: "Type of property",
+  home_rebuild_value: "Estimated rebuild cost",
+  home_contents_value: "Approximate value of the contents",
+  health_household: "Who is to be covered",
+  health_history: "Chronic conditions or ongoing treatment",
+  motor_vehicle: "Make, model and year",
+  motor_plate: "Current registration",
+  motor_claims_history: "Claims-free history",
+  liability_activity: "Activity or situation to cover",
+  liability_clients: "Where the clients or third parties are",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -607,6 +648,52 @@ export const HANDLED_FORMS = {
     heading: "New multi-product insurance review request",
     page: "/en/insurance-review/",
     branch: "Multi-product",
+  },
+
+  // Poland, Sweden and Denmark (September 2026). One Netlify form per market,
+  // shared by all eight pages of that market's cluster.
+  //
+  // `quote: true` rather than the FIELD_LABELS allow-list the Dutch and German
+  // landings use, so renderAllFields() renders every answer — including the
+  // branch qualification fields, which the allow-listed path silently drops.
+  // `en: true` so the labels come from QUOTE_LABELS_EN: the visitor writes in
+  // Polish, Swedish or Danish and the team reads the result in English.
+  //
+  // `branch` is only the last-resort fallback. Every one of these forms carries
+  // a market-tagged `insurance_type` ("SE · Bil", "DK · Bolig"), which
+  // quoteSubject() already reads first, so a Swedish motor lead arrives as
+  // "[LEAD SE · Bil] Anna Svensson — Cascais" with no change to that function —
+  // the same convention the Spain cluster established with its "ES ·" prefix.
+  //
+  // No `intro` key: quote forms build their own opening line from `page` and
+  // the submitted source_url, so an `intro` here would never be read.
+  "pl-zapytanie-ofertowe": {
+    quote: true,
+    en: true,
+    heading: "New Polish quote request",
+    page: "/pl/",
+    branch: "PL · Inne",
+  },
+  "se-offertforfragan": {
+    quote: true,
+    en: true,
+    heading: "New Swedish quote request",
+    page: "/se/",
+    branch: "SE · Annat",
+  },
+  "dk-forespoergsel": {
+    quote: true,
+    en: true,
+    heading: "New Danish quote request",
+    page: "/dk/",
+    branch: "DK · Andet",
+  },
+  "zh-baojia-shenqing": {
+    quote: true,
+    en: true,
+    heading: "New Chinese quote request",
+    page: "/zh/",
+    branch: "ZH · Other",
   },
 };
 

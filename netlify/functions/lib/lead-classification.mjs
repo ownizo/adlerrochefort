@@ -282,6 +282,21 @@ const FORM_CLASSIFICATION = {
   // not `lang` — see the comment above this block. Fixed here instead, same
   // as quote-blog/free-analysis/expat-health-quote do for their own language.
   'de-angebot-anfrage': { entityType: 'individual', market: 'PT', product: 'general', language: 'DE' },
+  // Os clusters polaco, sueco e dinamarquês (scripts/generate-market-clusters.mjs)
+  // seguem o mesmo padrão do alemão: o campo de atribuição chama-se `language`,
+  // não `lang`, por isso a língua é fixada aqui. O código é o da LÍNGUA
+  // (sv/da), não o do segmento de URL (/se/, /dk/) — ver
+  // scripts/lib/market-registry.mjs. `market` continua 'PT': as três páginas
+  // vendem seguros portugueses a residentes em Portugal, e o país de origem
+  // do lead viaja no campo `market` submetido (poland | sweden | denmark),
+  // que chega ao e-mail de notificação como "Source market".
+  'pl-zapytanie-ofertowe': { entityType: 'individual', market: 'PT', product: 'general', language: 'PL' },
+  'se-offertforfragan': { entityType: 'individual', market: 'PT', product: 'general', language: 'SV' },
+  'dk-forespoergsel': { entityType: 'individual', market: 'PT', product: 'general', language: 'DA' },
+  // O cluster chinês (/zh/*) segue exactamente o mesmo padrão. O código de
+  // língua é 'ZH' — chinês simplificado; 'CN' seria o país, não a língua. O
+  // país de origem do lead viaja no campo `market` submetido ('china').
+  'zh-baojia-shenqing': { entityType: 'individual', market: 'PT', product: 'general', language: 'ZH' },
 
   // ── Espanha — mesmo CRM, market: 'ES'. Confirmado por leitura de cada
   // página: todas têm `<input type="hidden" name="country" value="Spain">`

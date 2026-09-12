@@ -1,17 +1,20 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 331,
-    "indexedUrls": 322,
+    "htmlFiles": 388,
+    "indexedUrls": 379,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
-    "orphans": 0,
-    "singleInbound": 12,
-    "deeperThanThreeClicks": 0
+    "orphans": 2,
+    "singleInbound": 10,
+    "deeperThanThreeClicks": 4
   },
   "broken": [],
   "viaRedirect": [],
-  "orphans": [],
+  "orphans": [
+    "/de/versicherung-cascais/",
+    "/de/versicherung-lagos/"
+  ],
   "singleInbound": [
     {
       "url": "/blog/checklist-revisao-rc-profissional/",
@@ -38,6 +41,18 @@
       ]
     },
     {
+      "url": "/de/versicherung-algarve/",
+      "from": [
+        "/de/versicherung-lagos/"
+      ]
+    },
+    {
+      "url": "/de/versicherung-lissabon/",
+      "from": [
+        "/de/versicherung-cascais/"
+      ]
+    },
+    {
       "url": "/en/blog/category/business-liability/page/2/",
       "from": [
         "/en/blog/category/business-liability/"
@@ -47,30 +62,6 @@
       "url": "/en/blog/category/health-insurance/page/2/",
       "from": [
         "/en/blog/category/health-insurance/"
-      ]
-    },
-    {
-      "url": "/en/blog/category/spain-car/",
-      "from": [
-        "/en/car-insurance-spain/"
-      ]
-    },
-    {
-      "url": "/en/blog/category/spain-health/",
-      "from": [
-        "/en/health-insurance-spain/"
-      ]
-    },
-    {
-      "url": "/en/blog/category/spain-life/",
-      "from": [
-        "/en/life-insurance-spain/"
-      ]
-    },
-    {
-      "url": "/en/blog/category/spain-private-clients/",
-      "from": [
-        "/en/private-clients-spain/"
       ]
     },
     {
@@ -86,6 +77,23 @@
       ]
     }
   ],
-  "deeperThanThreeClicks": [],
+  "deeperThanThreeClicks": [
+    {
+      "url": "/de/versicherung-algarve/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-cascais/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-lagos/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-lissabon/",
+      "clicks": null
+    }
+  ],
   "maxClickDepth": 3
 }

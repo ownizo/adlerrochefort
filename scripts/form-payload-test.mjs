@@ -554,6 +554,69 @@ const CASES = [
     pageScripts: ['ar-quote-form.js'],
     requireLandingPage: 'https://adlerrochefort.com/en/car-insurance-spain/',
   },
+  // ── The Polish, Swedish, Danish and Chinese clusters ─────────────────────
+  // One case per market, each on the product page whose branch is preselected
+  // in the markup, so the assertion covers the thing that is genuinely new:
+  // four localised forms sharing one branch-field mechanism with the rest of
+  // the site, each stamping its own market/language attribution. The branch
+  // fields are the reason this matters — they arrive `disabled` and are
+  // enabled by /js/lead-branch-fields.js, which is exactly the silent-drop
+  // failure this file exists to catch. requireValues pins the attribution
+  // fields the notification email and the CRM read (see
+  // netlify/functions/submission-created.mjs and lib/lead-classification.mjs):
+  // `language` is the language code (sv, da, zh), never the URL segment — and
+  // for the Chinese market `market` is the origin market ('china') while
+  // `language` is the language of the enquiry, which are two different facts.
+  {
+    label: '32. /pl/ubezpieczenie-domu-portugalia/ — Polish cluster, home branch',
+    path: 'pl/ubezpieczenie-domu-portugalia/index.html',
+    url: 'https://adlerrochefort.com/pl/ubezpieczenie-domu-portugalia/',
+    formName: 'pl-zapytanie-ofertowe',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'PL · Dom',
+    inlineScripts: true,
+    requireValues: { market: ['poland'], language: ['pl'], insurance_type: ['PL · Dom'] },
+  },
+  {
+    label: '33. /se/bilforsakring-portugal/ — Swedish cluster, motor branch',
+    path: 'se/bilforsakring-portugal/index.html',
+    url: 'https://adlerrochefort.com/se/bilforsakring-portugal/',
+    formName: 'se-offertforfragan',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'SE · Bil',
+    inlineScripts: true,
+    requireValues: { market: ['sweden'], language: ['sv'], insurance_type: ['SE · Bil'] },
+  },
+  {
+    // Switching branch mid-form: the health answers the visitor typed before
+    // changing their mind must not reach the payload alongside the liability
+    // ones. Same mechanism as case 13, proven once on the new markup.
+    label: '34. /dk/ansvarsforsikring-portugal/ — Danish cluster, health → liability switch',
+    path: 'dk/ansvarsforsikring-portugal/index.html',
+    url: 'https://adlerrochefort.com/dk/ansvarsforsikring-portugal/',
+    formName: 'dk-forespoergsel',
+    branchSelect: 'select[data-branch-select]',
+    switchFrom: 'DK · Sundhed',
+    branchValue: 'DK · Ansvar',
+    inlineScripts: true,
+    requireValues: { market: ['denmark'], language: ['da'], insurance_type: ['DK · Ansvar'] },
+    requireLandingPage: 'https://adlerrochefort.com/dk/ansvarsforsikring-portugal/',
+  },
+  {
+    // The Chinese cluster reuses the other markets' branch field ids, so this
+    // case doubles as proof that the shared mechanism survives a form whose
+    // labels are CJK: the branch fields are found by id, not by label text.
+    label: '35. /zh/buying-property-portugal/ — Chinese cluster, home → liability switch',
+    path: 'zh/buying-property-portugal/index.html',
+    url: 'https://adlerrochefort.com/zh/buying-property-portugal/',
+    formName: 'zh-baojia-shenqing',
+    branchSelect: 'select[data-branch-select]',
+    switchFrom: 'ZH · Home',
+    branchValue: 'ZH · Liability',
+    inlineScripts: true,
+    requireValues: { market: ['china'], language: ['zh'], insurance_type: ['ZH · Liability'] },
+    requireLandingPage: 'https://adlerrochefort.com/zh/buying-property-portugal/',
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
@@ -574,6 +637,21 @@ for (const c of CASES) {
     const form = doc.querySelector(`form[name="${c.formName}"]`);
     const select = form.querySelector(c.branchSelect);
     dom.window.eval(script);
+    // Pages whose attribution is stamped by an inline script rather than by a
+    // file in /js/ need it run here too, or landing_page looks dropped for a
+    // reason that has nothing to do with switching branch.
+    if (c.inlineScripts) {
+      for (const el of doc.querySelectorAll('script:not([src])')) {
+        if (el.type && el.type !== 'text/javascript') continue;
+        try {
+          dom.window.eval(el.textContent);
+        } catch {
+          // Animation and cookie-banner scripts reach for APIs jsdom does not
+          // implement; the assertions below still fail loudly if the script
+          // that matters is the one that threw.
+        }
+      }
+    }
     select.value = c.switchFrom;
     select.dispatchEvent(new dom.window.Event('change', { bubbles: true }));
     fillVisible(form, doc);
@@ -583,7 +661,16 @@ for (const c of CASES) {
     fillVisible(form, doc);
     const pairs = serialise(form);
     const names = pairs.map(([n]) => n);
-    const stale = firstValues.filter(([n, v]) => v && names.includes(n) && n.startsWith('tvde_'));
+    // Anything the visitor typed into a group that is no longer the selected
+    // one and that still reaches the payload is a leak. Derived from the
+    // markup rather than from a field-name prefix, so a new cluster's branch
+    // fields are covered without the list being extended by hand.
+    const abandoned = new Set(
+      [...form.querySelectorAll('[data-branch]')]
+        .filter((g) => g.getAttribute('data-branch') !== select.value)
+        .flatMap((g) => [...g.querySelectorAll('input,select,textarea')].map((e) => e.name))
+    );
+    const stale = firstValues.filter(([n, v]) => v && names.includes(n) && abandoned.has(n));
     r = {
       label: c.label,
       url: c.url,
@@ -595,6 +682,7 @@ for (const c of CASES) {
       otherBranchFieldsLeaked: stale.map(([n]) => n),
       sourceUrl: pairs.find(([n]) => n === 'source_url')?.[1] ?? null,
       sourceUrlOk: pairs.find(([n]) => n === 'source_url')?.[1] === c.url,
+      landingPage: pairs.find(([n]) => n === 'landing_page')?.[1] ?? null,
       honeypotPresent: !!form.querySelector('[name="bot-field"]'),
       honeypotDeclared: form.getAttribute('netlify-honeypot') === 'bot-field',
     };

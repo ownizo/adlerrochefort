@@ -42,6 +42,8 @@ import {
   siteNav,
   mobileDrawer,
 } from './lib/partials.mjs';
+import { buildPairMap } from './lib/lang-pairs.mjs';
+import { marketPairs } from './lib/market-hreflang.mjs';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const write = DRY_RUN ? async () => {} : writeFile;
@@ -81,13 +83,13 @@ const LANDING = {
     lang: 'en',
     home: '/en/',
     ...LANDING_LINKS_EN,
-    targets: { en: '/en/health-insurance-quote/' },
+    url: '/en/health-insurance-quote/',
   },
   'en/home-insurance-quote/index.html': {
     lang: 'en',
     home: '/en/',
     ...LANDING_LINKS_EN,
-    targets: { en: '/en/home-insurance-quote/' },
+    url: '/en/home-insurance-quote/',
   },
 };
 
@@ -170,6 +172,16 @@ const NL_CLUSTER_PAGES = [
 // not the bug.
 const THANK_YOU_PAGES = [/\/obrigado\//, /\/en\/thank-you\//, /\/nl\/bedankt\//];
 
+// The Polish, Swedish and Danish clusters are excluded for the same reason as
+// /de/ and /fr/: their chrome is localised. The footer this script would
+// install is the Portuguese/English one, so unifying them would replace
+// "Ubezpieczenia w Portugalii" and "Ansvarsforsikring" with Portuguese
+// headings and send a Danish reader to a Portuguese privacy policy. Their
+// single source of truth is scripts/lib/market-cluster.mjs; the language
+// selector inside that chrome is kept current by scripts/lang-switcher.mjs,
+// which does run over them.
+const MARKET_CLUSTERS = [/\/pl\//, /\/se\//, /\/dk\//, /\/zh\//];
+
 const SKIP = [
   /email-signature\.html$/,
   /\/descarregar\//,
@@ -177,6 +189,7 @@ const SKIP = [
   /\/fr\//,
   /\/en\/insurance-review\//,
   /spain/,
+  ...MARKET_CLUSTERS,
   ...NL_CLUSTER_PAGES.map((slug) => new RegExp(`/nl/${slug}/`)),
   ...THANK_YOU_PAGES,
 ];
@@ -194,6 +207,29 @@ for (const a of data.articles.pt) {
   if (!other || other.status !== 'published' || a.status !== 'published') continue;
   pair.set(a.url, other.url);
   pair.set(other.url, a.url);
+}
+
+/**
+ * Every counterpart of a page, in every language, from the same record
+ * scripts/lang-switcher.mjs reads.
+ *
+ * The `pair` map above only knows PT<->EN articles, which was enough while the
+ * selector was a PT|EN control. It is not enough now: rebuilding the header of
+ * /en/blog/home-insurance-legalization/ from `pair` alone replaced its real
+ * Dutch counterpart with a dimmed "home page" row, and the next run of
+ * lang-switcher.mjs put it back — two passes undoing each other on every run.
+ * `pair` is left in place because the reading header's "back to" link and the
+ * article-pair statistics still use it.
+ */
+const clusterPairs = await buildPairMap();
+
+/** The selector targets for one page: its own url, plus every counterpart. */
+function targetsFor(url, lang) {
+  return {
+    ...(clusterPairs.get(url) || {}),
+    ...(marketPairs(url) || {}),
+    [lang]: url,
+  };
 }
 
 const langOf = (rel) => (rel.startsWith('en/') ? 'en' : rel.startsWith('nl/') ? 'nl' : 'pt');
@@ -331,9 +367,7 @@ for (const file of files) {
   const backLink = navMatch && matchElement(navMatch[0], 'a', { className: 'nav-back' });
   if (navMatch && backLink) {
     const hrefMatch = /\bhref="([^"]+)"/.exec(backLink.attrs);
-    const targets = { [lang]: url };
-    const counterpart = pair.get(url);
-    if (counterpart) targets[counterpart.startsWith('/en/') ? 'en' : 'pt'] = counterpart;
+    const targets = targetsFor(url, lang);
     const rebuiltNav = articleNav(lang, {
       switcher: langSwitcher(lang, targets),
       backHref: hrefMatch ? hrefMatch[1] : undefined,
@@ -352,17 +386,18 @@ for (const file of files) {
   const landing = LANDING[rel];
   if (landing) {
     const switcherOpts = { fallback: COMMERCIAL_FALLBACK };
+    const landingTargets = targetsFor(landing.url, landing.lang);
     const nav = siteNav({
       lang: landing.lang,
       home: landing.home,
       left: landing.left,
       right: landing.right,
       cta: landing.cta,
-      switcher: langSwitcher(landing.lang, landing.targets, switcherOpts),
+      switcher: langSwitcher(landing.lang, landingTargets, switcherOpts),
     });
     const drawer = mobileDrawer({
       links: [...landing.left, ...landing.right, landing.cta],
-      switcher: langSwitcher(landing.lang, landing.targets, { ...switcherOpts, mobile: true }),
+      switcher: langSwitcher(landing.lang, landingTargets, { ...switcherOpts, mobile: true }),
     });
     const navMatch2 = html.match(/<nav(?:\s[^>]*)?>[\s\S]*?<\/nav>/);
     if (navMatch2) {

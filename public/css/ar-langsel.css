@@ -1,0 +1,309 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LANGUAGE SELECTOR — eight languages, one compact control
+   ---------------------------------------------------------------------------
+   Rendered by scripts/lib/lang-selector.mjs (used both by the post-processor
+   scripts/lang-switcher.mjs and by scripts/lib/market-cluster.mjs), so the
+   markup below is the only markup this file has to style.
+
+   Why its own stylesheet rather than an addition to ar-chrome.css: the flat
+   "PT | EN | NL | FR | DE" row it replaces is styled in six stylesheets AND
+   inline in the <head> of ~190 pages, and ar-chrome.css is itself generated
+   from scripts/lib/partials.mjs (hand-editing it is reported as drift by
+   scripts/check-generator-freshness.mjs). New class names in a new file mean
+   none of that has to be found and rewritten, and none of it can fight this.
+
+   Every declaration is scoped under .ar-langsel with two classes of
+   specificity where a legacy rule could reach the same element — the inline
+   blocks carry `.lang-switcher a` and the mobile drawer carries
+   `.mobile-nav a`, both (0,1,1), so `.ar-langsel .ar-langsel-menu a` at
+   (0,2,1) wins regardless of source order. No !important is needed anywhere.
+
+   Colours are literal hex rather than custom properties: the selector sits on
+   pages that do not all declare the brand variables, and a control that loses
+   its contrast on a subset of the corpus is worse than a duplicated hex.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.ar-langsel {
+  position: relative;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1;
+}
+
+/* ── the button ─────────────────────────────────────────────────────────── */
+
+.ar-langsel .ar-langsel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 7px 10px 7px 11px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.88);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ar-langsel .ar-langsel-btn:hover {
+  color: #FFFFFF;
+  border-color: rgba(232, 145, 155, 0.65);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ar-langsel .ar-langsel-btn:focus-visible {
+  outline: 2px solid #E8919B;
+  outline-offset: 2px;
+}
+
+.ar-langsel .ar-langsel-btn[aria-expanded="true"] {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.ar-langsel .ar-langsel-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+.ar-langsel .ar-langsel-label {
+  white-space: nowrap;
+}
+
+.ar-langsel .ar-langsel-chevron {
+  width: 9px;
+  height: 6px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  /* Rotation only — the button reserves its own box, so opening the menu
+     never reflows the header. */
+  transition: transform 0.2s ease;
+}
+
+.ar-langsel .ar-langsel-btn[aria-expanded="true"] .ar-langsel-chevron {
+  transform: rotate(180deg);
+}
+
+/* ── the menu ───────────────────────────────────────────────────────────── */
+
+.ar-langsel .ar-langsel-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 300;
+  min-width: 208px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #FFFFFF;
+  border: 1px solid #DAD5C8;
+  border-radius: 4px;
+  box-shadow: 0 14px 34px rgba(17, 25, 39, 0.22);
+}
+
+.ar-langsel .ar-langsel-menu[hidden] {
+  display: none;
+}
+
+.ar-langsel .ar-langsel-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ar-langsel .ar-langsel-menu a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  color: #111927;
+  background: transparent;
+  opacity: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ar-langsel .ar-langsel-menu a:hover,
+.ar-langsel .ar-langsel-menu a:focus-visible {
+  background: #F5F1E8;
+  color: #17243D;
+  text-decoration: none;
+}
+
+.ar-langsel .ar-langsel-menu a:focus-visible {
+  outline: 2px solid #B8323E;
+  outline-offset: -2px;
+}
+
+.ar-langsel .ar-langsel-menu a[aria-current="true"] {
+  color: #17243D;
+  font-weight: 700;
+  background: #E8E5DF;
+}
+
+/* The honest part of the control: a language that has no counterpart for this
+   page still gets a link, but it goes to that language's home page, and it
+   says so rather than implying a translation exists. */
+.ar-langsel .ar-langsel-menu .ar-langsel-note {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #516F94;
+  white-space: nowrap;
+}
+
+.ar-langsel .ar-langsel-menu a:hover .ar-langsel-note,
+.ar-langsel .ar-langsel-menu a:focus-visible .ar-langsel-note {
+  color: #526984;
+}
+
+/* ── mobile drawer variant ──────────────────────────────────────────────── */
+/*
+ * .mobile-nav is a scroll container (overflow-y: auto), so an absolutely
+ * positioned panel inside it would be clipped. The drawer copy therefore
+ * expands in flow: full width, no shadow, no absolute positioning.
+ */
+
+.ar-langsel.ar-langsel-mobile {
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 13px 14px;
+  font-size: 15px;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-chevron {
+  width: 11px;
+  height: 7px;
+  margin-left: auto;
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-menu {
+  position: static;
+  top: auto;
+  right: auto;
+  min-width: 0;
+  width: 100%;
+  margin-top: 8px;
+  box-shadow: none;
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-menu a {
+  padding: 13px 12px;
+  font-size: 15px;
+}
+
+.ar-langsel.ar-langsel-mobile .ar-langsel-menu .ar-langsel-note {
+  font-size: 11px;
+}
+
+/* ── narrow viewports (320px upward) ────────────────────────────────────── */
+
+@media (max-width: 420px) {
+  /* The header keeps the burger, the logo and the CTA at 320px; the label is
+     the one thing that can be dropped without losing the control. The globe
+     plus the chevron stay, and aria-label still names the current language. */
+  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-btn {
+    padding: 7px 8px;
+    gap: 5px;
+  }
+
+  .ar-langsel:not(.ar-langsel-mobile) .ar-langsel-menu {
+    min-width: 0;
+    /* Never wider than the viewport, never off the left edge. */
+    width: max-content;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ar-langsel .ar-langsel-chevron,
+  .ar-langsel .ar-langsel-btn,
+  .ar-langsel .ar-langsel-menu a {
+    transition: none;
+  }
+}
+
+/* ── Simplified Chinese ──────────────────────────────────────────────────────
+   The 简体中文 row appears on all 370-odd pages of the corpus, not only on the
+   Chinese ones, so the CJK stack is attached to the row's own lang attribute
+   rather than to the page's. Without it a Latin-only face resolves the four
+   glyphs through whatever the browser picks last, which on some Windows
+   installs is a serif that sits visibly lower than its neighbours.
+
+   No webfont: these are the CJK UI faces already installed on each platform.
+   Montserrat stays first so a mixed row keeps its Latin in the brand face.
+
+   The 13px the Latin rows use reads small in Chinese — the glyphs are denser
+   — so the row and, on a Chinese page, the button label go up two points.
+   Neither change moves the box: the menu is 208px wide and the longest label
+   in it is Nederlands. */
+.ar-langsel .ar-langsel-menu a[lang="zh-CN"],
+html[lang="zh-CN"] .ar-langsel .ar-langsel-label,
+html[lang="zh-CN"] .ar-langsel .ar-langsel-note {
+  font-family: 'Montserrat', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans SC', 'WenQuanYi Micro Hei',
+    system-ui, sans-serif;
+}
+
+.ar-langsel .ar-langsel-menu a[lang="zh-CN"] > span:first-child,
+html[lang="zh-CN"] .ar-langsel .ar-langsel-label {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+/* The note beside a fallback row ("首页") is two glyphs at 10px, which is
+   below comfortable reading size for Chinese. */
+.ar-langsel .ar-langsel-menu a[lang="zh-CN"] .ar-langsel-note,
+html[lang="zh-CN"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
+  font-size: 12px;
+}

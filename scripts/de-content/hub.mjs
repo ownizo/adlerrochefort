@@ -23,8 +23,18 @@ export const HUB_PAGE = {
   heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Versicherung anfragen',
   heroCtaSecondary: 'Beratung anfragen',
-  hreflang: { pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/', xDefault: '/' },
-  langLinks: { pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/' },
+  // Die Startseiten-Gruppe umfasst inzwischen acht Sprachen (siehe
+  // scripts/hreflang.mjs und scripts/lib/market-hreflang.mjs). /se/ und /dk/
+  // sind URL-Segmente, keine Sprachcodes — ausgeliefert wird sv bzw. da.
+  hreflang: {
+    pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/',
+    pl: '/pl/', se: '/se/', dk: '/dk/', zh: '/zh/',
+    xDefault: '/',
+  },
+  langLinks: {
+    pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/',
+    pl: '/pl/', se: '/se/', dk: '/dk/', zh: '/zh/',
+  },
   breadcrumb: [],
   published: '2026-09-12T09:00:00+00:00',
   modified: '2026-09-12T09:00:00+00:00',
