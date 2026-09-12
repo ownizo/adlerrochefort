@@ -39,7 +39,7 @@ export const HOUSING_PAGES = [
     <p>Portugal kent één wettelijke verzekeringsplicht voor woningeigenaren, en die is smaller dan mensen denken. Bezit u een fractie in een gebouw dat is gesplitst in <em>propriedade horizontal</em> — in Nederlandse termen: een appartementsrecht binnen een VvE — dan bent u verplicht een <strong>brandverzekering</strong> (<em>seguro de incêndio</em>) te hebben op uw eigen fractie én naar rato op de gemeenschappelijke delen.</p>
     <p>Twee misverstanden die daaruit voortkomen:</p>
     <ul>
-      <li><strong>&ldquo;Het condomínio heeft toch een polis?&rdquo;</strong> Die dekt de gemeenschappelijke delen. Uw eigen fractie valt daar niet zonder meer onder, en de inboedel zeker niet. In de praktijk is een polis van het condomínio bovendien vaak op een verouderd kapitaal verzekerd.</li>
+      <li><strong>&ldquo;Het condomínio heeft toch een polis?&rdquo;</strong> Die dekt de gemeenschappelijke delen. Uw eigen fractie valt daar niet zonder meer onder, en de inboedel zeker niet. In de praktijk is een polis van het condomínio bovendien vaak op een verouderd kapitaal verzekerd. Zie <a href="/nl/vve-verzekering-portugal/">onze pagina over VvE-verzekering</a> voor waar de polis van de VvE precies eindigt en uw eigen dekking begint.</li>
       <li><strong>&ldquo;Ik heb een vrijstaand huis, dus ik hoef niets.&rdquo;</strong> Klopt juridisch — er is dan geen wettelijke plicht. Rust er een hypotheek op, dan eist de bank vrijwel altijd een polis, en die eis is voor u even bindend als de wet.</li>
     </ul>
     <p>De wettelijke plicht is dus het minimum en niet de norm. Vrijwel niemand verzekert alleen brand, om de simpele reden dat het gros van de schades in Portugese woningen geen brand is maar water, storm of diefstal.</p>
@@ -77,6 +77,7 @@ export const HOUSING_PAGES = [
     <p>Hier bijt de fout. Is uw woning voor een lager bedrag verzekerd dan de werkelijke herbouwwaarde, dan vergoedt de verzekeraar <strong>elke schade naar evenredigheid</strong> — ook een kleine.</p>
     <p>Een voorbeeld dat wij te vaak in het echt tegenkomen. De herbouwwaarde is € 250.000. De polis staat op € 150.000, omdat het kapitaal ooit is overgenomen van de vorige eigenaar en nooit is geactualiseerd. Er ontstaat waterschade van € 20.000. De dekkingsgraad is 60%, dus de uitkering is € 12.000 minus het eigen risico. De resterende € 8.000 betaalt u zelf — niet omdat de schade niet gedekt was, maar omdat het kapitaal te laag stond.</p>
     <p>Twee praktische gevolgen: <strong>controleer het kapitaal bij aankoop</strong> in plaats van de polis van de verkoper over te nemen, en <strong>laat het jaarlijks indexeren</strong>. De bouwkosten in de Algarve zijn de afgelopen jaren aanzienlijk gestegen; een kapitaal uit 2019 is vandaag zelden nog toereikend.</p>
+    <p>Voor de volledige uitwerking van wat een uitkering bij <strong>totaal verlies</strong> precies omvat — sloop, bijkomende kosten, btw en tijdelijke huisvesting, en de volgorde waarin de expert dit doorrekent — zie <a href="/nl/evenredigheidsregel-totaal-verlies-portugal/">onze pagina over de evenredigheidsregel bij totaal verlies</a>. Voor rekenvoorbeelden en een uitgewerkte toelichting op de herbouwwaarde: <a href="/en/blog/outdated-insured-values/" hreflang="en">Underinsurance in Portugal: the Proportional Rule and Outdated Insured Values</a> en <a href="/en/blog/setting-rebuild-value-portugal/" hreflang="en">Setting the Rebuild Value</a> (beide Engels).</p>
   </div>
 </section>
 
@@ -86,7 +87,7 @@ export const HOUSING_PAGES = [
     <p>Aardbevingsdekking (<em>fenómenos sísmicos</em>) zit in Portugal <strong>niet</strong> standaard in een multirriscos. Het is een aanvullende dekking die u apart aanvinkt en waarvoor u apart betaalt.</p>
     <p>Voor het zuidwesten van Portugal is dat geen abstracte overweging. Het epicentrum van de aardbeving van 1755, die Lissabon verwoestte en de Algarve-kust met een tsunami trof, lag voor de kust van de Kaap Sint-Vincent — enkele tientallen kilometers van Lagos. De regio ligt op een actieve breukzone en de seismische risicokaarten geven het zuiden een hogere klasse dan het noorden.</p>
     <p>De premie voor deze dekking hangt af van de zone, het bouwjaar en het constructietype. Voor een moderne woning die volgens de huidige aardbevingsnormen is gebouwd, is het een relatief bescheiden opslag. Voor een oud pand met dragende steenmuren zonder verstevigingen ligt dat hoger — en juist daar is het risico op werkelijke schade het grootst.</p>
-    <p>Onze positie: in de Algarve is dit een dekking die u bewust moet afwijzen, niet een die u per ongeluk mist omdat niemand hem noemde.</p>
+    <p>Onze positie: in de Algarve is dit een dekking die u bewust moet afwijzen, niet een die u per ongeluk mist omdat niemand hem noemde. Zie <a href="/nl/aardbevingsdekking-portugal/">onze pagina over aardbevingsdekking</a> voor de volledige toelichting.</p>
   </div>
 </section>`,
     faqTitle: 'Woonverzekering Portugal — veelgestelde vragen',
@@ -115,6 +116,10 @@ export const HOUSING_PAGES = [
     related: [
       { url: '/nl/bosbrandrisico-woonverzekering-portugal/', label: 'Bosbrandrisico en uw woonverzekering' },
       { url: '/nl/niet-gelegaliseerde-woning-verzekeren-portugal/', label: 'Een niet-gelegaliseerde woning verzekeren' },
+      { url: '/nl/evenredigheidsregel-totaal-verlies-portugal/', label: 'De evenredigheidsregel bij totaal verlies' },
+      { url: '/nl/aardbevingsdekking-portugal/', label: 'Aardbevingsdekking in Portugal' },
+      { url: '/nl/vve-verzekering-portugal/', label: 'VvE-verzekering: waar de gebouwenpolis eindigt' },
+      { url: '/nl/schade-melden-en-betwisten-portugal/', label: 'Schade melden en betwisten' },
       { url: '/en/home-insurance-quote/', label: 'Home insurance in Portugal (Engels)' },
     ],
     article: {

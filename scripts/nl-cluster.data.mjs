@@ -15,6 +15,7 @@ import { MOTOR_PAGES } from './nl-content/motor.mjs';
 import { HOUSING_PAGES } from './nl-content/housing.mjs';
 import { BUSINESS_PAGES } from './nl-content/business.mjs';
 import { HUB_PAGE } from './nl-content/hub.mjs';
+import { PHASE2_NL_PAGES } from './nl-content/phase2.mjs';
 
 export { LANG_POLICY_NL, BREADCRUMB_ROOT } from './nl-content/shared.mjs';
 
@@ -23,5 +24,6 @@ export const PAGES = [
   ...MOTOR_PAGES,
   ...HOUSING_PAGES,
   ...BUSINESS_PAGES,
+  ...PHASE2_NL_PAGES,
   HUB_PAGE,
 ];
