@@ -7,9 +7,9 @@
  * scripts/nl-cluster.data.mjs.
  *
  * Part 13 of the brief: "Start with the hub and the anchor page, then
- * report... then after every three pages." Built so far: hub, anchor
- * (Umzug), Kranken, Haus, Auto, Leben, Private Clients, Algarve. Remaining:
- * Lagos, Lissabon, Cascais.
+ * report... then after every three pages." All eleven pages of this round's
+ * scope are built: hub, anchor (Umzug), Kranken, Haus, Auto, Leben, Private
+ * Clients, and the four local pages (Algarve, Lagos, Lissabon, Cascais).
  */
 import { HUB_PAGE } from './de-content/hub.mjs';
 import { MOVING_PAGE } from './de-content/moving.mjs';

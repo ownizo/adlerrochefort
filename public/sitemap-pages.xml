@@ -172,6 +172,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/de/versicherung-cascais/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/de/versicherung-lagos/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/de/versicherung-lissabon/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/" />
