@@ -1,8 +1,9 @@
 # Chrome detection fragility — history, fix, and what's still open
 
 **Repo:** `ownizo/adlerrochefort`. **Branches involved:** `chore/chrome-sweep`,
-`chore/thankyou-chrome-dedupe`, `fix/chrome-detection` (this fix), all merged
-to `main`. Written from `fix/chrome-detection` so the next person who hits one
+`chore/thankyou-chrome-dedupe`, `fix/chrome-detection` (this fix),
+`fix/unify-chrome-exclusions` (the exclusion-list gaps below), all merged to
+`main`. Written from `fix/chrome-detection` so the next person who hits one
 of the still-open items below has the diagnosis instead of rediscovering it.
 
 ## The bug
@@ -124,3 +125,85 @@ old gap-fill behaviour) or silently duplicating (what that silent nothing
 turned into once a second pass was added later). Neither
 `build-location-articles.mjs` nor `internal-links.mjs` has that safety net
 today.
+
+## `unify-chrome.mjs`'s exclusion lists: two more gaps, found and closed
+
+A different bug from the exact-string detection above, but the same *kind*
+of problem as the lang-switcher drift this file's companion note (on
+`docs/langswitcher-drift`, not yet merged to `main` as of this section) — a
+list that describes a moving target and stops moving with it.
+
+### What diverged
+
+`scripts/unify-chrome.mjs` carries two hand-maintained exclusion lists for
+page groups that deliberately carry their own chrome instead of the sitewide
+one: `MARKET_CLUSTERS` (a regex per language-market cluster: `/pl/`, `/se/`,
+`/dk/`, `/zh/`) and `NL_CLUSTER_PAGES` (an array of eleven Dutch-cluster
+slugs). Both are correct in intent — these pages should never receive the
+sitewide institutional footer — and both went stale the moment the page
+group they describe grew without the list growing with it:
+
+- The Hebrew hub (`/il/`, commit `977c6a7`) landed a day after `/pl/`, `/se/`,
+  `/dk/` and `/zh/` and was never added to `MARKET_CLUSTERS`. `langOf()`
+  does not recognise the `/il/` prefix and falls through to `'pt'` for it
+  like any other unrecognised path — so a real (non-`--dry-run`) sweep would
+  have overwritten all eight Hebrew pages' footers with the Portuguese one.
+  For `/il/` specifically this is worse than the wrong-language footer the
+  other four markets were already protected against: its footer is RTL,
+  built for a `dir="rtl"` document, and is not interchangeable with the LTR
+  Portuguese/English one this script installs everywhere else — the swap
+  would not just say the wrong thing, it would render backwards.
+- `content/cluster-completion` (commit `ef1340d`) added five pages to the
+  Dutch cluster — `aardbevingsdekking-portugal`,
+  `evenredigheidsregel-totaal-verlies-portugal`,
+  `schade-melden-en-betwisten-portugal`, `vve-verzekering-portugal`,
+  `zorgverzekering-bestaande-aandoening-portugal` — and `NL_CLUSTER_PAGES`
+  was never extended to cover them. A real sweep would have replaced their
+  correct, cluster-specific footer (`ar-nl.css`) with the generic sitewide
+  one, on exactly the five newest pages in the site's most carefully built
+  cluster.
+
+To be clear about what these lists are and are not: **the exclusion itself
+is not a workaround for a bug.** These pages carry their own chrome by
+design — a market cluster's footer is deliberately not the sitewide one,
+and Hebrew's is deliberately RTL. The bug was narrower than that: the lists
+recording that design intent were written once and not kept in step with
+the page groups they describe. `check:freshness`'s `chrome-partials` warning
+reported this honestly the whole time — it went from 10 files to 318 the
+moment the market-expansion round landed — but a warning that fires on 318
+files nobody expects to look at individually is not the same as catching
+the two files' worth of *new* risk hiding inside that number.
+
+### What was done
+
+Both gaps closed on `fix/unify-chrome-exclusions`: `/\/il\//` added to
+`MARKET_CLUSTERS`, the five new slugs added to `NL_CLUSTER_PAGES`. Verified
+two ways — `--dry-run` now reports those thirteen files as out of scope
+rather than as pending changes (318 → 305), and a real, non-dry-run sweep
+run against the fix in a detached, throwaway `git worktree` (never against
+the working tree) left all eight `/il/` pages and all five new `/nl/` pages
+untouched, confirmed by `git status` inside that worktree before it was
+discarded.
+
+### The pattern, named plainly
+
+This is the sixth time this shape of bug has shown up on this branch and its
+neighbours: a new language tree or page group is added, and something that
+has to know the full membership of an existing tree — a template's local
+chrome, a lang-switcher pair map, an exclusion list — is not updated in the
+same change. Each instance so far has been caught by inspection before it
+shipped broken; none of them were caught by tooling. **The rule going
+forward: any new language tree or self-contained page group must be added to
+every exclusion list, pair map or membership list that names its siblings,
+in the same commit that creates it — not as a followup.**
+
+A cheap way to make the next omission fail loudly instead of silently, for
+someone to build rather than something built here: teach `check:freshness`
+to read each cluster's own `PAGES` (or market descriptor) export as the
+source of truth for its membership, and flag any page in that export whose
+directory does **not** appear in `unify-chrome.mjs`'s corresponding
+exclusion list — a `[chrome-exclusion-stale]` check next to the existing
+`[chrome-partials]` one. That would have caught both gaps in this section on
+the commit that created them, at the same `npm test`/`check:freshness` gate
+every commit already goes through, instead of waiting for someone to think
+to run `--dry-run` and read the output by hand.
