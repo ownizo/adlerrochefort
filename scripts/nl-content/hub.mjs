@@ -7,9 +7,9 @@
 export const HUB_PAGE = {
   slug: 'verzekeringen-portugal',
   url: '/nl/verzekeringen-portugal/',
-  title: 'Verzekeringen in Portugal voor Nederlanders | Adler & Rochefort',
+  title: 'Verzekeringen in Portugal: de juiste volgorde | Adler & Rochefort',
   description:
-    'Zorg, auto, woning en ondernemen: wat er verandert als u naar Portugal verhuist, per onderwerp uitgelegd. Verzekeringsagent in Lagos, Algarve.',
+    'Bijna niets gaat mis door een verkeerde polis, maar door verkeerde timing: de BRP-uitschrijving, de royementsverklaring, het S1-formulier. Zorg, auto en woning in de juiste volgorde. Verzekeringsagent in Lagos, Algarve.',
   keywords:
     'verzekeringen Portugal Nederlanders, zorgverzekering Portugal, woonverzekering Portugal, autoverzekering Portugal, verzekeringsagent Algarve, emigreren Portugal verzekeringen',
   eyebrow: 'Verzekeringen in Portugal',
