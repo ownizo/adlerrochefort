@@ -105,7 +105,7 @@ export const HEALTH_PAGE = {
     <h2 id="mutualista">Die mutualistische Route: wenn die reguläre Aufnahme nicht gelingt</h2>
     <p>Für zwei Gruppen führt der reguläre Weg nicht zum Ziel: wer über dem Höchstaufnahmealter liegt, und wer eine Vorgeschichte hat, die zur Ablehnung führt. Für sie gibt es in Portugal einen zweiten Weg — die <em>associações mutualistas</em>, Versicherungsvereine auf Gegenseitigkeit, von denen MGEN die bekannteste für nicht-portugiesische Residenten ist.</p>
     <p>Der wesentliche Unterschied liegt in der Aufnahme: Eine mutualistische Mitgliedschaft funktioniert über die Mitgliedschaft selbst statt über individuelle Risikoprüfung, wodurch das Höchstaufnahmealter der klassischen Versicherer dort nicht in gleicher Form gilt. Für jemanden Anfang siebzig, der gerade in Portugal ankommt, ist das oft der einzige realistische Weg zu privater Deckung.</p>
-    <p>Dem steht gegenüber, dass es sich nicht um eine Versicherung im klassischen Sinn handelt: Struktur, Beitragsaufbau und Reichweite der Deckung unterscheiden sich wesentlich von einer Police bei Allianz oder Médis. Das ist kein Nachteil, aber etwas, das Sie vor dem Beitritt verstehen sollten, nicht danach. Wir stellen beide Wege gegenüber, wenn Ihre Situation das erfordert.</p>
+    <p>Dem steht gegenüber, dass es sich nicht um eine Versicherung im klassischen Sinn handelt: Struktur, Beitragsaufbau und Reichweite der Deckung unterscheiden sich wesentlich von einer Police bei Allianz oder Médis. Das ist kein Nachteil, aber etwas, das Sie vor dem Beitritt verstehen sollten, nicht danach. Wir stellen beide Wege gegenüber, wenn Ihre Situation das erfordert. Ausführlich zur Gesundheitsprüfung selbst und zum Unterschied zwischen Ausschluss und Ablehnung: <a href="/de/vorerkrankungen-krankenversicherung-portugal/">Krankenversicherung mit Vorerkrankungen</a>. Für Rentner mit ausschließlich deutscher Rente kommt zusätzlich das <a href="/de/s1-formular-rentner-portugal/">S1-Formular</a> ins Spiel.</p>
   </div>
 </section>
 
@@ -139,6 +139,8 @@ export const HEALTH_PAGE = {
     },
   ],
   related: [
+    { url: '/de/vorerkrankungen-krankenversicherung-portugal/', label: 'Krankenversicherung mit Vorerkrankungen' },
+    { url: '/de/s1-formular-rentner-portugal/', label: 'Das S1-Formular für Rentner' },
     { url: '/de/umzug-deutschland-portugal-versicherung/', label: 'Versicherungen beim Umzug von Deutschland nach Portugal' },
     { url: '/de/anwartschaftsversicherung-portugal/', label: 'Anwartschaftsversicherung beim Umzug nach Portugal' },
     { url: '/de/private-clients-portugal/', label: 'Private Clients: komplexe Risiken' },

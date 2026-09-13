@@ -91,6 +91,7 @@ export const MOVING_PAGE = {
       <span class="callout-label">Was das S1 gibt und was nicht</span>
       Das S1 öffnet den Zugang zum staatlichen System. Es ersetzt keine private Zusatzversicherung — dieselben praktischen Einschränkungen des SNS (Wartezeiten, Sprache) gelten auch mit S1. Viele Rentner kombinieren das S1 daher mit einer schlanken privaten Police für Zusatzleistungen, statt sich ausschließlich auf das SNS zu verlassen.
     </div>
+    <p>Ausführlich, mit der genauen Gegenüberstellung von Leistung und Lücke sowie der Altersgrenze bei regulären Versicherern: <a href="/de/s1-formular-rentner-portugal/">Das S1-Formular für Rentner</a>.</p>
   </div>
 </section>
 
@@ -98,7 +99,7 @@ export const MOVING_PAGE = {
   <div class="container narrow article-body">
     <h2 id="auto">Kann ich mein Auto mitbringen?</h2>
     <p>Grundsätzlich ja — die Frage ist, ob sich die Ummeldung auf ein portugiesisches Kennzeichen lohnt oder ob ein Neukauf vor Ort sinnvoller ist. Solange das Fahrzeug deutsch zugelassen bleibt, muss die deutsche Kfz-Versicherung fortbestehen, bis eine portugiesische Deckung greift — eine Lücke zwischen beiden ist der teuerste und am leichtesten vermeidbare Fehler in diesem Prozess.</p>
-    <p>Ihre deutsche <strong>Schadenfreiheitsklasse</strong> ist bei einem portugiesischen Versicherer wirtschaftlich wertvoll, aber ihre Anerkennung ist nicht garantiert und hängt vom jeweiligen Versicherer ab. Lassen Sie sich die Schadenfreiheitsklasse von Ihrem deutschen Versicherer schriftlich bestätigen, <strong>bevor</strong> der Vertrag endet — dieser Nachweis ist im Nachhinein schwer zu beschaffen. Details zu Kennzeichenwahl, Import und Dokumenten behandelt die Seite zur <a href="/de/autoversicherung-portugal/">Autoversicherung in Portugal</a>.</p>
+    <p>Ihre deutsche <strong>Schadenfreiheitsklasse</strong> ist bei einem portugiesischen Versicherer wirtschaftlich wertvoll, aber ihre Anerkennung ist nicht garantiert und hängt vom jeweiligen Versicherer ab. Lassen Sie sich die Schadenfreiheitsklasse von Ihrem deutschen Versicherer schriftlich bestätigen, <strong>bevor</strong> der Vertrag endet — dieser Nachweis ist im Nachhinein schwer zu beschaffen. Details zu Kennzeichenwahl, Import und Dokumenten behandelt die Seite zur <a href="/de/autoversicherung-portugal/">Autoversicherung in Portugal</a>; zur ISV-Befreiung bei dauerhafter Wohnsitzverlegung im Detail siehe <a href="/de/isv-befreiung-fahrzeugimport-portugal/">ISV-Befreiung beim Fahrzeugimport</a>.</p>
   </div>
 </section>
 
@@ -106,7 +107,7 @@ export const MOVING_PAGE = {
   <div class="container narrow article-body">
     <h2 id="haus">Wie versichere ich ein Haus in Portugal?</h2>
     <p>Zwei Konzepte, die deutschen Käufern selten vorher erklärt werden. Erstens: In Deutschland ist der Unterversicherungsverzicht bei vielen Wohngebäudeversicherungen üblich. In Portugal gilt stattdessen die <em>regra proporcional</em> — bei einer zu niedrig angesetzten Versicherungssumme wird jede Schadenzahlung anteilig gekürzt, unabhängig von der Schadenhöhe. Zweitens: Die in Deutschland fast selbstverständliche Privathaftpflicht existiert in Portugal nicht in derselben automatischen Form, und Erdbebendeckung ist optional und separat bepreist.</p>
-    <p>Wenn Sie kaufen: Die Versicherungssumme sollte vor dem Notartermin (escritura) auf Basis der Wiederaufbaukosten festgelegt sein, nicht auf Basis des Kaufpreises. Vertiefend, mit Beispielen zur Wiederaufbaukoste-Berechnung: <a href="/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/" hreflang="en">Insuring to the Bank's Figure Is Not the Same as Insuring to Rebuild Cost</a> (Englisch). Alle Details zur Hausversicherung selbst stehen auf <a href="/de/hausversicherung-portugal/">Hausversicherung in Portugal</a>.</p>
+    <p>Wenn Sie kaufen: Die Versicherungssumme sollte vor dem Notartermin (escritura) auf Basis der Wiederaufbaukosten festgelegt sein, nicht auf Basis des Kaufpreises. Vertiefend, mit Beispielen zur Wiederaufbaukoste-Berechnung: <a href="/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/" hreflang="en">Insuring to the Bank's Figure Is Not the Same as Insuring to Rebuild Cost</a> (Englisch). Alle Details zur Hausversicherung selbst stehen auf <a href="/de/hausversicherung-portugal/">Hausversicherung in Portugal</a>. Kaufen Sie eine Bestandsimmobilie im Hinterland oder auf einem größeren Grundstück, prüfen Sie zudem die Legalisierung vor der escritura — siehe <a href="/de/nicht-legalisierte-immobilie-versichern-portugal/">eine nicht legalisierte Immobilie versichern</a>.</p>
   </div>
 </section>
 

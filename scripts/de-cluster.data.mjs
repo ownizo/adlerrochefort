@@ -12,6 +12,11 @@
  * Private Clients, and the four local pages (Algarve, Lagos, Lissabon,
  * Cascais). A twelfth page, Anwartschaftsversicherung, was split out of the
  * anchor page's PKV section on the following round (its own request).
+ *
+ * German Phase 2 (content/cluster-completion): the four satellites named in
+ * the original strategy brief's own slug-level plan — Vorerkrankungen,
+ * Rentner/S1, non-legalised property and the ISV exemption — see
+ * ./de-content/phase2.mjs.
  */
 import { HUB_PAGE } from './de-content/hub.mjs';
 import { MOVING_PAGE } from './de-content/moving.mjs';
@@ -22,6 +27,7 @@ import { LIFE_PAGE } from './de-content/life.mjs';
 import { PRIVATE_CLIENTS_PAGE } from './de-content/private-clients.mjs';
 import { LOCAL_PAGES } from './de-content/local.mjs';
 import { ANWARTSCHAFT_PAGE } from './de-content/anwartschaft.mjs';
+import { PHASE2_PAGES } from './de-content/phase2.mjs';
 
 export { LANG_POLICY_DE, BREADCRUMB_ROOT } from './de-content/shared.mjs';
 
@@ -35,4 +41,5 @@ export const PAGES = [
   LIFE_PAGE,
   PRIVATE_CLIENTS_PAGE,
   ...LOCAL_PAGES,
+  ...PHASE2_PAGES,
 ];

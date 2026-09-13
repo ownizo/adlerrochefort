@@ -266,7 +266,7 @@ export const HEALTH_PAGES = [
       },
       {
         q: 'Wat gebeurt er met een aandoening die ik al heb?',
-        a: '<p>U vult een gezondheidsverklaring in. Bestaande aandoeningen worden meestal uitgesloten, soms tegen een toeslag alsnog gedekt, en in enkele gevallen leidt het tot afwijzing. Vermeld alles volledig: iets weglaten komt bij de eerste gerelateerde claim aan het licht, en dan staat niet de claim ter discussie maar de polis zelf.</p>',
+        a: '<p>U vult een gezondheidsverklaring in. Bestaande aandoeningen worden meestal uitgesloten, soms tegen een toeslag alsnog gedekt, en in enkele gevallen leidt het tot afwijzing. Vermeld alles volledig: iets weglaten komt bij de eerste gerelateerde claim aan het licht, en dan staat niet de claim ter discussie maar de polis zelf. Zie <a href="/nl/zorgverzekering-bestaande-aandoening-portugal/">onze pagina over zorgverzekering met een bestaande aandoening</a> voor de volledige toelichting en de mutualistische route als de reguliere aanvraag niet lukt.</p>',
       },
       {
         q: 'Ik ben in de zeventig. Kan ik nog een polis krijgen?',
@@ -280,6 +280,7 @@ export const HEALTH_PAGES = [
     related: [
       { url: '/nl/uitschrijven-nederland-zorgverzekering-portugal/', label: 'Uitschrijven uit Nederland: wat gebeurt er met uw zorgverzekering?' },
       { url: '/nl/s1-formulier-cak-portugal/', label: 'Het S1-formulier en het CAK' },
+      { url: '/nl/zorgverzekering-bestaande-aandoening-portugal/', label: 'Zorgverzekering met een bestaande aandoening' },
       { url: '/en/blog/health-insurance-expats-portugal/', label: 'Health insurance for expats in Portugal (Engels)' },
     ],
     article: {

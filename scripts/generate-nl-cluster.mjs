@@ -533,7 +533,7 @@ const COOKIE_BANNER = `<div class="cookie-banner" id="cookieBanner">
   <div class="cookie-banner-content">
     <div class="cookie-banner-text">
       <strong>Deze site gebruikt cookies</strong>
-      <p>We gebruiken cookies om uw surfervaring te verbeteren. Door verder te gaan, gaat u akkoord met ons <a href="/politica-de-privacidade/">privacybeleid</a>.</p>
+      <p>We gebruiken cookies om uw surfervaring te verbeteren. Door verder te gaan, gaat u akkoord met ons <a href="/en/privacy-policy" hreflang="en">privacybeleid</a>.</p>
     </div>
     <div class="cookie-banner-actions">
       <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">Weigeren</button>
