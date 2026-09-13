@@ -297,6 +297,11 @@ const FORM_CLASSIFICATION = {
   // língua é 'ZH' — chinês simplificado; 'CN' seria o país, não a língua. O
   // país de origem do lead viaja no campo `market` submetido ('china').
   'zh-baojia-shenqing': { entityType: 'individual', market: 'PT', product: 'general', language: 'ZH' },
+  // O cluster hebraico (/il/*) segue o mesmo padrão. O código de língua é 'HE'
+  // — hebraico; 'IL' seria o país, não a língua, e é precisamente essa
+  // distinção que o campo `market` submetido ('israel') já carrega. O `market`
+  // aqui continua 'PT': o negócio é português, seja o lead de onde for.
+  'il-bakashat-hatzaa': { entityType: 'individual', market: 'PT', product: 'general', language: 'HE' },
 
   // ── Espanha — mesmo CRM, market: 'ES'. Confirmado por leitura de cada
   // página: todas têm `<input type="hidden" name="country" value="Spain">`

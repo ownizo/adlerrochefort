@@ -1,15 +1,15 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 388,
-    "filesChanged": 0,
-    "pagesWithHreflang": 115,
+    "htmlFiles": 419,
+    "filesChanged": 50,
+    "pagesWithHreflang": 123,
     "articlePairs": 28,
     "monolingualPt": 24,
-    "monolingualEn": 134,
+    "monolingualEn": 146,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
-    "xDefaultPages": 10
+    "xDefaultPages": 11
   },
   "note": "monolingualPt / monolingualEn are informative. PT and EN are separate audiences; an article existing in one language only is the intended state and is not a task.",
   "articlePairs": [
@@ -287,7 +287,19 @@
       "/en/blog/insurance-before-residency-d7-d8-golden-visa/",
       "/en/blog/yoga-instructor-liability-insurance-portugal/",
       "/en/blog/pilates-tai-chi-instructor-liability-insurance-portugal/",
-      "/en/blog/massage-spa-therapist-liability-insurance-portugal/"
+      "/en/blog/massage-spa-therapist-liability-insurance-portugal/",
+      "/en/blog/total-loss-settlement-portugal/",
+      "/en/blog/setting-rebuild-value-portugal/",
+      "/en/blog/waiver-of-average-portugal/",
+      "/en/blog/declined-health-cover-portugal/",
+      "/en/blog/health-cover-70-75-portugal/",
+      "/en/blog/mgen-medis-allianz-april-acceptance-comparison/",
+      "/en/blog/health-insurance-waiting-periods-portugal/",
+      "/en/blog/relocating-with-chronic-condition-portugal/",
+      "/en/blog/lei-71-2013-therapies-liability-portugal/",
+      "/en/blog/psychologists-nutritionists-liability-portugal/",
+      "/en/blog/retreat-organisers-liability-portugal/",
+      "/en/blog/professional-indemnity-requirements-portugal/"
     ]
   },
   "unilateralDeclarations": [],

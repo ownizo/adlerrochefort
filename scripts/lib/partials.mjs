@@ -169,6 +169,7 @@ export const LANG_FALLBACK = {
   se: '/se/',
   dk: '/dk/',
   zh: '/zh/',
+  il: '/il/',
 };
 
 const isBlogPath = (url) => url.startsWith('/blog/') || url.startsWith('/en/blog/');

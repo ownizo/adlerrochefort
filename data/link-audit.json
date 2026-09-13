@@ -1,12 +1,12 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 388,
-    "indexedUrls": 379,
+    "htmlFiles": 419,
+    "indexedUrls": 410,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 2,
-    "singleInbound": 10,
+    "singleInbound": 14,
     "deeperThanThreeClicks": 4
   },
   "broken": [],
@@ -59,15 +59,39 @@
       ]
     },
     {
-      "url": "/en/blog/category/health-insurance/page/2/",
-      "from": [
-        "/en/blog/category/health-insurance/"
-      ]
-    },
-    {
       "url": "/en/blog/category/valuables-collections/page/2/",
       "from": [
         "/en/blog/category/valuables-collections/"
+      ]
+    },
+    {
+      "url": "/nl/aardbevingsdekking-portugal/",
+      "from": [
+        "/nl/woonverzekering-portugal/"
+      ]
+    },
+    {
+      "url": "/nl/evenredigheidsregel-totaal-verlies-portugal/",
+      "from": [
+        "/nl/woonverzekering-portugal/"
+      ]
+    },
+    {
+      "url": "/nl/schade-melden-en-betwisten-portugal/",
+      "from": [
+        "/nl/woonverzekering-portugal/"
+      ]
+    },
+    {
+      "url": "/nl/vve-verzekering-portugal/",
+      "from": [
+        "/nl/woonverzekering-portugal/"
+      ]
+    },
+    {
+      "url": "/nl/zorgverzekering-bestaande-aandoening-portugal/",
+      "from": [
+        "/nl/zorgverzekering-portugal/"
       ]
     },
     {

@@ -50,14 +50,21 @@ const SITE = 'https://adlerrochefort.com';
  * pt/en pair the markup already had plus the Dutch page that now mirrors it,
  * and the Alojamento Local pair is declared by the Dutch page itself.
  *
- * September 2026 — Poland, Sweden and Denmark, then China. The homepage
- * cluster grows to nine, because /pl/, /se/, /dk/ and /zh/ are the same page
- * for a different reader and each declares the other eight back. Chinese is
- * declared zh-CN, not bare zh: the pages are Simplified Chinese, and a reader
- * of Traditional Chinese should not be told this is their page. Note the values: the market segment
- * is /se/ and /dk/ but the language is sv-SE and da-DK. "se" and "dk" are
- * country codes; a page declaring hreflang="se" would be offering itself in
- * Northern Sami.
+ * September 2026 — Poland, Sweden and Denmark, then China, then Hebrew. The
+ * homepage cluster grows to ten, because /pl/, /se/, /dk/, /zh/ and /il/ are
+ * the same page for a different reader and each declares the other nine back.
+ * Chinese is declared zh-CN, not bare zh: the pages are Simplified Chinese, and
+ * a reader of Traditional Chinese should not be told this is their page. Note
+ * the values: the market segment is /se/ and /dk/ but the language is sv-SE and
+ * da-DK. "se" and "dk" are country codes; a page declaring hreflang="se" would
+ * be offering itself in Northern Sami.
+ *
+ * /il/ is the sharpest version of that distinction and the one most likely to
+ * be got wrong later: the segment is the market (Israel), the language is
+ * Hebrew, and the declared value is he-IL. Not "il" or "IL", which are country
+ * codes and not languages at all, and not "he-PT" — the region subtag names the
+ * variety of the language and the audience's own is the Israeli one, whatever
+ * country the pages happen to describe.
  *
  * Their seven product and guide pages pair only with each other, and those
  * groups are imported from scripts/lib/market-hreflang.mjs, which derives them
@@ -80,6 +87,7 @@ const PAGE_CLUSTERS = [
     '/se/': 'sv-SE',
     '/dk/': 'da-DK',
     '/zh/': 'zh-CN',
+    '/il/': 'he-IL',
     xDefault: '/',
   },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
@@ -121,6 +129,7 @@ const X_DEFAULT = new Map([
   ['/se/', '/'],
   ['/dk/', '/'],
   ['/zh/', '/'],
+  ['/il/', '/'],
   ['/seguros/', '/seguros/'],
 ]);
 

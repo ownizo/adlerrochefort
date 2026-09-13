@@ -84,9 +84,9 @@ const cluster = await buildPairMap();
 
 /**
  * Where a language sends a visitor when this page has no counterpart in it.
- * Portuguese and English have an article archive to land in; the seven localised
- * markets have their own home page, which the selector labels as such so the
- * row never implies a translation that was not written.
+ * Portuguese and English have an article archive to land in; the eight
+ * localised markets have their own home page, which the selector labels as such
+ * so the row never implies a translation that was not written.
  */
 const FALLBACK = {
   pt: (isBlog) => (isBlog ? '/blog/' : '/'),
@@ -98,6 +98,7 @@ const FALLBACK = {
   se: () => '/se/',
   dk: () => '/dk/',
   zh: () => '/zh/',
+  il: () => '/il/',
 };
 
 /**
@@ -109,9 +110,12 @@ const FALLBACK = {
  * top of scripts/lib/lang-selector.mjs. /zh/ is the one segment that is also
  * the language subtag, but it still has to be listed here: leave it out and
  * the Chinese pages are read as Portuguese and offer themselves as the PT row.
+ * /il/ is the opposite extreme — the segment is a country, the language is
+ * Hebrew — and the same consequence applies: omit it and every Hebrew page
+ * would render the selector as though it were Portuguese.
  */
 const langOf = (path) => {
-  const m = path.match(/^\/(en|de|fr|nl|pl|se|dk|zh)\//);
+  const m = path.match(/^\/(en|de|fr|nl|pl|se|dk|zh|il)\//);
   return m ? m[1] : 'pt';
 };
 

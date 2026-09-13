@@ -1,5 +1,5 @@
 /**
- * The language selector — single source of markup for all nine languages.
+ * The language selector — single source of markup for all ten languages.
  *
  * Two callers render it and they must not drift apart:
  *   * scripts/lang-switcher.mjs rewrites the selector into every page already
@@ -25,6 +25,21 @@
  *     nothing about script) and never `cn` (which is a country, not a
  *     language). The row's own label is 简体中文, the name of the written
  *     language rather than of a country.
+ *   * Hebrew joined in September 2026 as /il/, and is the clearest case yet of
+ *     why `key` is not a language code: the market is Israel (il) and the
+ *     language is Hebrew (he). The HTML language is `he`, the hreflang is
+ *     `he-IL`, and the URL segment is /il/ — three different strings for three
+ *     different things. The row's label is עברית, the language's own name.
+ *   * Hebrew is also the first right-to-left row, which is why every row
+ *     carries an explicit `dir`. `lang` does not set direction — it describes
+ *     the language, and nothing obliges a browser to infer one from the other.
+ *     `dir` says it outright, in both directions: "Português" stays
+ *     left-to-right when the menu is rendered on a Hebrew page, and עברית
+ *     stays right-to-left in the nine left-to-right menus. The attribute is
+ *     inert on every page that existed before Hebrew did, which is why it
+ *     could be added to all ten rows rather than special-cased for one. The
+ *     labels themselves are never touched: reversing a string by hand would be
+ *     the bug, not the fix.
  *   * URL segment and language code are different things. Swedish is served
  *     from /se/ because that is the market, but its HTML language is `sv` and
  *     its hreflang is `sv-SE`; Danish is /dk/, `da`, `da-DK`. "se" and "dk"
@@ -40,7 +55,7 @@
  *     because the globe alone is not a label.
  */
 
-/** The nine languages, in the order the control presents them. */
+/** The ten languages, in the order the control presents them. */
 export const LANGS = [
   { key: 'pt', label: 'Português', html: 'pt-PT', hreflang: 'pt-PT', home: '/' },
   { key: 'en', label: 'English', html: 'en', hreflang: 'en-GB', home: '/en/' },
@@ -51,6 +66,7 @@ export const LANGS = [
   { key: 'se', label: 'Svenska', html: 'sv', hreflang: 'sv-SE', home: '/se/' },
   { key: 'dk', label: 'Dansk', html: 'da', hreflang: 'da-DK', home: '/dk/' },
   { key: 'zh', label: '简体中文', html: 'zh-CN', hreflang: 'zh-CN', home: '/zh/' },
+  { key: 'il', label: 'עברית', html: 'he', hreflang: 'he-IL', home: '/il/', dir: 'rtl' },
 ];
 
 export const LANG_KEYS = LANGS.map((l) => l.key);
@@ -76,6 +92,10 @@ export const SELECTOR_UI = {
   // Chinese takes no space around the punctuation and no article before the
   // noun; the row note is 首页 (home page), not a translation of "home page".
   zh: { aria: (n) => `语言：${n}。选择其他语言。`, home: '首页', blog: '博客' },
+  // Hebrew. Written for a reader of Hebrew, not transliterated from the
+  // English row: `aria` uses the verbal noun (בחירת) the way Hebrew interface
+  // copy does rather than an imperative addressed to one gender.
+  il: { aria: (n) => `שפה: ${n}. בחירת שפה אחרת.`, home: 'דף הבית', blog: 'בלוג' },
 };
 
 /** Assets the control needs. Both callers inject exactly these two lines. */
@@ -91,7 +111,7 @@ const GLOBE = `<svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria
 const CHEVRON = `<svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg>`;
 
 /**
- * Build the nine rows for one page.
+ * Build the ten rows for one page.
  *
  * @param {string} pageLang   URL-segment key of the page's own language.
  * @param {string} pageUrl    The page's own path, for the "you are here" row.
@@ -142,7 +162,12 @@ export function langSelectorHtml({
 
   const rows = targets
     .map((t) => {
-      const attrs = [`href="${esc(t.href)}"`, `lang="${t.html}"`, `hreflang="${t.hreflang}"`];
+      const attrs = [
+        `href="${esc(t.href)}"`,
+        `lang="${t.html}"`,
+        `dir="${t.dir || 'ltr'}"`,
+        `hreflang="${t.hreflang}"`,
+      ];
       if (t.current) attrs.push('aria-current="true"');
       const note = t.fallback
         ? `<span class="ar-langsel-note">${esc(t.isBlog ? ui.blog : ui.home)}</span>`
@@ -167,17 +192,18 @@ ${pad}</div>`;
  * The footer instance: the control, plus a plain list behind <noscript>.
  *
  * The footer's language column used to be a flat row of bordered two-letter
- * chips — PT | EN | NL | FR | DE. Nine languages do not fit that shape: the row
- * wraps into a block, two-letter codes for Polish, Swedish, Danish and Chinese
- * are unrecognisable to the people they are for ("SE" is not a language and
- * "CN" is not one either), and on the pages whose footer column is a flex
+ * chips — PT | EN | NL | FR | DE. Ten languages do not fit that shape: the row
+ * wraps into a block, two-letter codes for Polish, Swedish, Danish, Chinese
+ * and Hebrew are unrecognisable to the people they are for ("SE" is not a
+ * language, "CN" is not one either, and "IL" names a country rather than
+ * עברית), and on the pages whose footer column is a flex
  * column the chips stack one per line into a ladder taller than the column
  * beside it. So the footer gets the same control the header has, from the same
  * markup and the same targets.
  *
  * The <noscript> list is what the chips were actually good for: the menu only
  * opens with script, and a visitor dropped into a language they cannot read
- * needs a link out whether or not the script ran. It carries the same nine
+ * needs a link out whether or not the script ran. It carries the same ten
  * targets, so the two routes agree.
  *
  * Both callers — scripts/lang-switcher.mjs for the existing corpus and
@@ -189,7 +215,7 @@ export function footerSelectorHtml({ pageLang, targets, indent = '      ' }) {
   const pad = indent;
   const rows = targets
     .map((t) => {
-      const attrs = [`href="${esc(t.href)}"`, `lang="${t.html}"`];
+      const attrs = [`href="${esc(t.href)}"`, `lang="${t.html}"`, `dir="${t.dir || 'ltr'}"`];
       if (t.current) attrs.push('aria-current="true"');
       return `${pad}    <li><a ${attrs.join(' ')}>${esc(t.label)}</a></li>`;
     })
