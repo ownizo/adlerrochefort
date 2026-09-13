@@ -695,6 +695,18 @@ export const HANDLED_FORMS = {
     page: "/zh/",
     branch: "ZH · Other",
   },
+  // Hebrew (/il/*). The form is named for what it is in Hebrew — a quote
+  // request — transliterated, because form names travel through Netlify's
+  // dashboard, the function's own keys and the CRM classification table, and
+  // an ASCII key is the one that reads the same in all three. The reply is
+  // English like every other market: `en: true`.
+  "il-bakashat-hatzaa": {
+    quote: true,
+    en: true,
+    heading: "New Hebrew quote request",
+    page: "/il/",
+    branch: "IL · Other",
+  },
 };
 
 const humanise = (key) =>

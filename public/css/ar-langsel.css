@@ -105,7 +105,7 @@
 .ar-langsel .ar-langsel-menu {
   position: absolute;
   top: calc(100% + 8px);
-  right: 0;
+  inset-inline-end: 0;
   z-index: 300;
   min-width: 208px;
   margin: 0;
@@ -211,13 +211,13 @@
 .ar-langsel.ar-langsel-mobile .ar-langsel-chevron {
   width: 11px;
   height: 7px;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .ar-langsel.ar-langsel-mobile .ar-langsel-menu {
   position: static;
   top: auto;
-  right: auto;
+  inset-inline-end: auto;
   min-width: 0;
   width: 100%;
   margin-top: 8px;
@@ -273,8 +273,8 @@
 .ar-langsel.ar-langsel-footer .ar-langsel-menu {
   top: auto;
   bottom: calc(100% + 8px);
-  right: auto;
-  left: 0;
+  inset-inline-end: auto;
+  inset-inline-start: 0;
   /* Never wider than the viewport at 320px, where the footer keeps 20px of
      padding on each side. */
   max-width: calc(100vw - 40px);
@@ -286,7 +286,7 @@
 }
 
 /* The no-script list behind the footer control. `.footer-col-links` is a
-   column, which is right for the link columns beside it and wrong for nine
+   column, which is right for the link columns beside it and wrong for ten
    language chips, so the row direction is restored here rather than in the
    generated ar-chrome.css. */
 .ar-langsel-fallback {
@@ -368,4 +368,44 @@ html[lang="zh-CN"] .ar-langsel .ar-langsel-label {
 .ar-langsel .ar-langsel-menu a[lang="zh-CN"] .ar-langsel-note,
 html[lang="zh-CN"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
   font-size: 12px;
+}
+
+/* ── Hebrew ─────────────────────────────────────────────────────────────────
+
+   Same shape as the Chinese block above and the same reasoning: the Hebrew
+   row needs a face that carries Hebrew, and on a Hebrew page the button label
+   and the row notes need it too. Montserrat stays first so the nine Latin
+   rows in the menu are unaffected on every page, including this one.
+
+   Direction is not set here. Each row carries its own `dir` from
+   scripts/lib/lang-selector.mjs, which is what keeps "Português" reading
+   left-to-right inside a right-to-left menu and עברית reading right-to-left
+   inside a left-to-right one — the label is isolated either way, so neither
+   the language names nor the notes beside them can be reordered by the
+   direction of the page they happen to be rendered on.
+
+   The geometry needs nothing: the menu is positioned with inset-inline-end,
+   so on a Hebrew page it hangs from the button's own start edge and stays
+   inside the viewport at every width the footer and header are tested at. */
+.ar-langsel .ar-langsel-menu a[lang="he"],
+html[lang="he"] .ar-langsel .ar-langsel-label,
+html[lang="he"] .ar-langsel .ar-langsel-note {
+  font-family: 'Montserrat', system-ui, 'Segoe UI', 'Arial Hebrew',
+    'Noto Sans Hebrew', 'Noto Sans Hebrew UI', 'Alef', Arial, sans-serif;
+}
+
+/* עברית is four letters where Nederlands is ten, and Hebrew sets with a
+   larger x-height, so the row reads small at the Latin size. Two points up,
+   tracking off. The menu's 208px minimum is unchanged. */
+.ar-langsel .ar-langsel-menu a[lang="he"] > span:first-child,
+html[lang="he"] .ar-langsel .ar-langsel-label {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+/* The note beside a fallback row is "דף הבית" — five glyphs at 10px. */
+.ar-langsel .ar-langsel-menu a[lang="he"] .ar-langsel-note,
+html[lang="he"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
+  font-size: 11.5px;
+  letter-spacing: 0;
 }

@@ -51,6 +51,41 @@ const ADS_CONVERSION = 'AW-18361722533/HxH6CKqa1uEcEKXNxrNE';
 export const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+/* ─────────────── bidirectional text ─────────────── */
+
+/**
+ * Isolate a left-to-right run inside a right-to-left page.
+ *
+ * Every market except Hebrew is left-to-right, so this returns its argument
+ * untouched for them and the four existing clusters regenerate byte-identical.
+ * On a Hebrew page it wraps the run in <bdi>, which carries
+ * `unicode-bidi: isolate` from the HTML rendering rules: the run is ordered
+ * internally as left-to-right and treated as a single neutral object by the
+ * text around it.
+ *
+ * It is used for the strings that are Latin in every language and so cannot be
+ * localised away — the trading name, the mailbox, the phone number, the Lagos
+ * address, the ASF registration. Those are exactly the strings that break
+ * without it: "+351 928 226 570" has its digit groups reordered by the
+ * algorithm because the spaces between them take the paragraph's direction,
+ * and "Varandas de São João 4" loses its house number to the far side of the
+ * line. Nothing is reversed by hand anywhere; the isolate marks the boundary
+ * and the Unicode algorithm does the ordering, which is the only correct way
+ * to do this.
+ */
+const iso = (market, s) => (market.dir === 'rtl' ? `<bdi>${s}</bdi>` : s);
+
+/**
+ * `dir="ltr"` for an input whose content is never Hebrew.
+ *
+ * Email addresses, phone numbers and URLs are typed left-to-right whatever the
+ * surrounding form is. Without this, a visitor typing +972… into a
+ * right-to-left input watches the caret and the digit groups jump around. The
+ * label, the help text and the error message stay right-to-left — only the
+ * value's own direction changes, which is what the reader expects.
+ */
+const ltrInput = (market) => (market.dir === 'rtl' ? ' dir="ltr"' : '');
+
 /* ─────────────── organisation schema ─────────────── */
 
 /**
@@ -58,9 +93,11 @@ export const esc = (s) =>
  * Every value here is already on the site: the ASF registration number, the
  * Lagos address, the founding year, the three social profiles. Nothing was
  * added for these markets — no partnerships, no awards, no customer counts,
- * and in particular no `knowsLanguage` entry for Polish, Swedish or Danish,
- * because the working language is English and claiming otherwise in structured
- * data would be the same false claim as claiming it in prose.
+ * and in particular no `knowsLanguage` entry for Polish, Swedish, Danish,
+ * Chinese or Hebrew, because the working language is English and claiming
+ * otherwise in structured data would be the same false claim as claiming it in
+ * prose. There is no Israeli branch node either: the agency has one address,
+ * in Lagos, and the /il/ cluster being in Hebrew does not give it a second.
  */
 const ORG_LD = {
   '@type': 'InsuranceAgency',
@@ -340,7 +377,7 @@ function formHtml(market, page) {
 
       <div class="field">
         <label for="f-email">${f.email} <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
+        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"${ltrInput(market)}
                required aria-required="true" aria-describedby="err-email">
         <span class="field-error" id="err-email" aria-live="polite"></span>
       </div>
@@ -348,7 +385,7 @@ function formHtml(market, page) {
       <div class="field">
         <label for="f-phone">${f.phone} <span class="req" aria-hidden="true">*</span></label>
         <p class="field-help" id="help-phone">${f.phoneHelp}</p>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"${ltrInput(market)}
                pattern="[0-9+ ()-]{6,}"
                required aria-required="true" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
@@ -635,7 +672,7 @@ function footerHtml(market, page) {
   return `<footer class="on-dark">
   <div class="footer-top">
     <div>
-      <div class="footer-brand-name">Adler &amp; Rochefort</div>
+      <div class="footer-brand-name">${iso(market, 'Adler &amp; Rochefort')}</div>
       <p class="footer-brand-desc">${ft.desc}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
@@ -655,9 +692,9 @@ ${footerLangs(market, page)}
     <div>
       <div class="footer-col-title">${ft.contactTitle}</div>
       <ul class="footer-col-links">
-        <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
-        <li><a href="tel:+351928226570">+351 928 226 570</a></li>
-        <li><span>Varandas de São João 4<br>8600-324 Lagos, Algarve, Portugal</span></li>
+        <li><a href="mailto:insurance@adlerrochefort.com">${iso(market, 'insurance@adlerrochefort.com')}</a></li>
+        <li><a href="tel:+351928226570">${iso(market, '+351 928 226 570')}</a></li>
+        <li><span>${iso(market, 'Varandas de São João 4<br>8600-324 Lagos, Algarve, Portugal')}</span></li>
         <li><a href="#${market.ui.formId}">${ft.contactCta}</a></li>
         <li>
           ${SOCIAL_SVGS}
@@ -666,7 +703,7 @@ ${footerLangs(market, page)}
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">&copy; 2026 Adler &amp; Rochefort · ${ft.copy}</div>
+    <div class="footer-copy">${iso(market, '&copy; 2026 Adler &amp; Rochefort')} · ${ft.copy}</div>
     <div class="footer-platforms">
       <a href="https://mycovervault.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">${ft.vault}</a>
     </div>
@@ -721,13 +758,13 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
     ? `<section class="pullquote-band" aria-label="${esc(ui.pullquoteAria)}">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>Adler &amp; Rochefort · Lagos, Algarve</cite>
+    <cite>${iso(market, 'Adler &amp; Rochefort · Lagos, Algarve')}</cite>
   </blockquote>
 </section>`
     : '';
 
   return `<!DOCTYPE html>
-<html lang="${market.htmlLang}">
+<html lang="${market.htmlLang}"${market.dir ? ` dir="${market.dir}"` : ''}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

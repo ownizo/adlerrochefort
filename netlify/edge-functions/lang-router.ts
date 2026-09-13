@@ -39,7 +39,7 @@ export default async (request: Request, _context: Context) => {
   const primary = accept.split(",")[0].trim().toLowerCase(); // e.g. "en-gb", "de"
   const lang = primary.split("-")[0]; // e.g. "en", "de"
 
-  // Localized expat landings. A visitor whose browser is in one of the seven
+  // Localized expat landings. A visitor whose browser is in one of the nine
   // languages the site is actually written in gets that language's homepage;
   // every other non-PT language falls through to English.
   //
@@ -58,6 +58,12 @@ export default async (request: Request, _context: Context) => {
     // Chinese; sending a Traditional-Chinese browser to them is still a better
     // answer than English, and the selector is one click away either way.
     zh: "/zh/",
+    // Hebrew. The language subtag is "he", so he, he-IL and the legacy "iw"
+    // that some older browsers still send would all need to be matched here —
+    // "il" would never appear as a language tag at all, which is why the market
+    // segment /il/ is on the value side of this pair and not the key side.
+    he: "/il/",
+    iw: "/il/",
     en: "/en/",
   };
 
