@@ -2156,6 +2156,7 @@
 </script>
 <link rel="stylesheet" href="/css/ar-chrome.css">
 <link rel="stylesheet" href="/css/ar-landing.css">
+<link rel="stylesheet" href="/css/ar-quote-wizard.css">
 <style>
   /* Language policy — self-contained so it renders identically on pages that
      each carry their own inline design system. */
@@ -2348,101 +2349,167 @@
   <div class="lp-form-card">
     <h2>Get your free home insurance quote</h2>
     <p class="lp-form-sub">Tell us about the property and we&rsquo;ll come back to you within 24 hours with a written comparison.</p>
-    <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="property-use">
+    <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard data-ga-field="regime_ocupacao">
       <input type="hidden" name="form-name" value="home-insurance-quote">
+      <input type="hidden" name="ramo" value="Home">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="landing:home-insurance-quote">
+      <input type="hidden" name="dados_dinamicos" value="">
       <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Your details</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. The property</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Confirmation</span></li>
+      </ol>
+
+      <div data-wizard-step>
       <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-name">Full name *</label>
-          <input type="text" id="q-name" name="name" placeholder="Your full name" autocomplete="name" required>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-email">Email *</label>
-          <input type="email" id="q-email" name="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-phone">Phone / WhatsApp</label>
-          <input type="tel" id="q-phone" name="phone" placeholder="Optional" autocomplete="tel" inputmode="tel">
-        </div>
-        <div class="contact-form-field">
-          <label for="q-postcode">Property postcode *</label>
-          <input type="text" id="q-postcode" name="postcode" placeholder="e.g. 8600-324" autocomplete="postal-code" required>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-property-type">Property type *</label>
-          <select id="q-property-type" name="property-type" required>
-            <option value="">Select an option</option>
-            <option value="Apartment">Apartment</option>
-            <option value="House / townhouse">House / townhouse</option>
-            <option value="Villa">Villa</option>
-            <option value="Villa with pool and grounds">Villa with pool and grounds</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-property-use">How the property is used *</label>
-          <select id="q-property-use" name="property-use" required>
-            <option value="">Select an option</option>
-            <option value="Permanent home">Permanent home</option>
-            <option value="Second / holiday home">Second / holiday home</option>
-            <option value="Rented long-term">Rented long-term</option>
-            <option value="Alojamento Local / short-term rental">Alojamento Local / short-term rental</option>
-            <option value="Under construction or renovation">Under construction or renovation</option>
-          </select>
-        </div>
-      </div>
-      <div class="lp-form-row">
-        <div class="contact-form-field">
-          <label for="q-rebuild">Approximate rebuild value</label>
-          <select id="q-rebuild" name="rebuild-value">
-            <option value="">Select an option (optional)</option>
-            <option value="Under €150,000">Under &euro;150,000</option>
-            <option value="€150,000–€300,000">&euro;150,000&ndash;&euro;300,000</option>
-            <option value="€300,000–€600,000">&euro;300,000&ndash;&euro;600,000</option>
-            <option value="€600,000–€1,000,000">&euro;600,000&ndash;&euro;1,000,000</option>
-            <option value="Over €1,000,000">Over &euro;1,000,000</option>
-            <option value="Not sure">Not sure</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="q-year">Year of construction</label>
-          <input type="text" id="q-year" name="construction-year" placeholder="Optional — e.g. 2004">
-        </div>
+      <div class="contact-form-field">
+        <label for="q-name">Full name *</label>
+        <input type="text" id="q-name" name="name" placeholder="Your full name" autocomplete="name" required>
       </div>
       <div class="contact-form-field">
-        <label for="q-current">Do you currently have a policy?</label>
-        <select id="q-current" name="current-policy">
-          <option value="">Select an option (optional)</option>
-          <option value="No">No</option>
-          <option value="Yes, with a bank">Yes, with a bank</option>
-          <option value="Yes, direct with an insurer">Yes, direct with an insurer</option>
-          <option value="Yes, through another intermediary">Yes, through another intermediary</option>
+        <label for="q-email">Email *</label>
+        <input type="email" id="q-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+      </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-phone">Phone / WhatsApp *</label>
+        <input type="tel" id="q-phone" name="phone" placeholder="+351 000 000 000" autocomplete="tel" required>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-nif">Portuguese tax number (NIF) *</label>
+        <input type="text" id="q-nif" name="nif" placeholder="9 digits" inputmode="numeric" data-validate="nif" required>
+      </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-dob">Date of birth *</label>
+        <input type="date" id="q-dob" name="date_of_birth" data-validate="birth-date" required>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-postcode">Property postcode *</label>
+        <input type="text" id="q-postcode" name="postcode" placeholder="e.g. 8600-324" autocomplete="postal-code" data-validate="postal-code" required>
+      </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-address">Full address *</label>
+        <input type="text" id="q-address" name="address" autocomplete="street-address" required>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-town">Town / city *</label>
+        <input type="text" id="q-town" name="town" autocomplete="address-level2" required>
+      </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-nationality">Nationality *</label>
+        <input type="text" id="q-nationality" name="nationality_name" list="nationality-list" data-code-target="q-nationality-code" autocomplete="off" required>
+        <input type="hidden" name="nationality" id="q-nationality-code">
+      </div>
+      <div class="contact-form-field">
+        <label for="q-tax-resident">Are you a tax resident in Portugal? *</label>
+        <select id="q-tax-resident" name="tax_resident_pt" data-required-copy="residenteFiscal" required>
+          <option value="">Select one</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
       </div>
-      <div class="contact-form-field">
-        <label for="q-message">Message</label>
-        <textarea id="q-message" name="message" placeholder="Anything else we should know? (optional)"></textarea>
       </div>
-      <button type="submit" class="contact-form-submit">Request my free quote →</button>
+      <p class="wizard-helper" id="q-tax-resident-info" hidden>We still need your address. Without Portuguese tax residency it may not be possible to issue the policy in every case &mdash; we&rsquo;ll review your specific situation regardless.</p>
+      <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Next &rarr;</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-regime">Occupancy *</label>
+        <select id="q-regime" name="regime_ocupacao" data-branch-select required>
+          <option value="">Select one</option>
+          <option value="permanente">Main home</option>
+          <option value="holiday_home">Holiday home</option>
+          <option value="alojamento_local">Short-term rental (Alojamento Local)</option>
+        </select>
+      </div>
+      <div data-branch="alojamento_local" hidden>
+        <div class="contact-form-field">
+          <label for="q-al-regime">Short-term rental regime *</label>
+          <select id="q-al-regime" name="al_regime" required disabled>
+            <option value="">Select one</option>
+            <option value="tempo_inteiro">Whole property</option>
+            <option value="parcial">Partial (room-sharing)</option>
+          </select>
+        </div>
+      </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-year">Year of construction *</label>
+        <input type="number" id="q-year" name="ano_construcao" min="1800" required>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-area">Gross construction area (m&sup2;) *</label>
+        <input type="number" id="q-area" name="area_bruta" min="1" required>
+      </div>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-bathrooms">Number of bathrooms *</label>
+        <input type="number" id="q-bathrooms" name="casas_banho" min="0" required>
+      </div>
+      <div class="contact-form-field">
+        <label class="contact-form-checkbox" for="q-renovation-check"><input type="checkbox" id="q-renovation-check" data-field-toggle="q-renovation-group"> Have you renovated in the last few years?</label>
+      </div>
+      <div id="q-renovation-group" hidden>
+        <div class="lp-form-row">
+        <div class="contact-form-field">
+          <label for="q-renovation-year">Year of the renovation *</label>
+          <input type="number" id="q-renovation-year" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled>
+        </div>
+        </div>
+        <div class="contact-form-field">
+          <label for="q-renovation-desc">Describe the renovation work *</label>
+          <textarea id="q-renovation-desc" name="obras_descricao" minlength="10" required disabled></textarea>
+        </div>
+      </div>
+      <div class="lp-form-row">
+      <div class="contact-form-field">
+        <label for="q-capital-building">Sum insured &mdash; building (&euro;) *</label>
+        <input type="number" id="q-capital-building" name="capital_edificio" min="0" step="1000" required>
+      </div>
+      <div class="contact-form-field">
+        <label for="q-capital-contents">Sum insured &mdash; contents (&euro;) *</label>
+        <input type="number" id="q-capital-contents" name="capital_conteudo" min="0" step="500" required>
+      </div>
+      </div>
+      <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>&larr; Back</button><button type="button" class="wizard-nav-next" data-wizard-next>Next &rarr;</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+      <div class="contact-form-field">
+        <label for="q-start-date">Requested policy start date *</label>
+        <input type="date" id="q-start-date" name="start_date" data-validate="start-date" required>
+      </div>
+      <div class="contact-form-field">
+        <label class="contact-form-checkbox" for="q-rgpd"><input type="checkbox" id="q-rgpd" name="rgpd" value="yes" data-required-copy="rgpd" required> I agree that my details may be used to prepare this quote, under GDPR. *</label>
+      </div>
+      <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>&larr; Back</button><button type="submit" class="contact-form-submit">Request my free quote &rarr;</button></div>
+      </div>
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
     <div class="lp-form-trust"><span>ASF-registered insurance broker</span><span>English-speaking team</span><span>Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual</span><span>We handle the claim for you</span><span>We reply within 24h</span></div>
-          <div class="contact-form-success" id="quoteSuccess">
+    <div class="contact-form-success" id="quoteSuccess">
       <div class="contact-form-success-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
       </div>
       <h3>Thank you</h3>
       <p>Your request has been received. Our team will get back to you within 24 hours.</p>
     </div>
+    <datalist id="nationality-list"><option value="Afghanistan" data-code="AF"></option><option value="Åland Islands" data-code="AX"></option><option value="Albania" data-code="AL"></option><option value="Algeria" data-code="DZ"></option><option value="American Samoa" data-code="AS"></option><option value="Andorra" data-code="AD"></option><option value="Angola" data-code="AO"></option><option value="Anguilla" data-code="AI"></option><option value="Antarctica" data-code="AQ"></option><option value="Antigua and Barbuda" data-code="AG"></option><option value="Argentina" data-code="AR"></option><option value="Armenia" data-code="AM"></option><option value="Aruba" data-code="AW"></option><option value="Australia" data-code="AU"></option><option value="Austria" data-code="AT"></option><option value="Azerbaijan" data-code="AZ"></option><option value="Bahamas" data-code="BS"></option><option value="Bahrain" data-code="BH"></option><option value="Bangladesh" data-code="BD"></option><option value="Barbados" data-code="BB"></option><option value="Belarus" data-code="BY"></option><option value="Belgium" data-code="BE"></option><option value="Belize" data-code="BZ"></option><option value="Benin" data-code="BJ"></option><option value="Bermuda" data-code="BM"></option><option value="Bhutan" data-code="BT"></option><option value="Bolivia" data-code="BO"></option><option value="Bonaire, Sint Eustatius and Saba" data-code="BQ"></option><option value="Bosnia and Herzegovina" data-code="BA"></option><option value="Botswana" data-code="BW"></option><option value="Bouvet Island" data-code="BV"></option><option value="Brazil" data-code="BR"></option><option value="British Indian Ocean Territory" data-code="IO"></option><option value="Brunei Darussalam" data-code="BN"></option><option value="Bulgaria" data-code="BG"></option><option value="Burkina Faso" data-code="BF"></option><option value="Burundi" data-code="BI"></option><option value="Cabo Verde" data-code="CV"></option><option value="Cambodia" data-code="KH"></option><option value="Cameroon" data-code="CM"></option><option value="Canada" data-code="CA"></option><option value="Cayman Islands" data-code="KY"></option><option value="Central African Republic" data-code="CF"></option><option value="Chad" data-code="TD"></option><option value="Chile" data-code="CL"></option><option value="China" data-code="CN"></option><option value="Christmas Island" data-code="CX"></option><option value="Cocos (Keeling) Islands" data-code="CC"></option><option value="Colombia" data-code="CO"></option><option value="Comoros" data-code="KM"></option><option value="Congo" data-code="CG"></option><option value="Congo, Democratic Republic of the" data-code="CD"></option><option value="Cook Islands" data-code="CK"></option><option value="Costa Rica" data-code="CR"></option><option value="Côte d'Ivoire" data-code="CI"></option><option value="Croatia" data-code="HR"></option><option value="Cuba" data-code="CU"></option><option value="Curaçao" data-code="CW"></option><option value="Cyprus" data-code="CY"></option><option value="Czechia" data-code="CZ"></option><option value="Denmark" data-code="DK"></option><option value="Djibouti" data-code="DJ"></option><option value="Dominica" data-code="DM"></option><option value="Dominican Republic" data-code="DO"></option><option value="Ecuador" data-code="EC"></option><option value="Egypt" data-code="EG"></option><option value="El Salvador" data-code="SV"></option><option value="Equatorial Guinea" data-code="GQ"></option><option value="Eritrea" data-code="ER"></option><option value="Estonia" data-code="EE"></option><option value="Eswatini" data-code="SZ"></option><option value="Ethiopia" data-code="ET"></option><option value="Falkland Islands" data-code="FK"></option><option value="Faroe Islands" data-code="FO"></option><option value="Fiji" data-code="FJ"></option><option value="Finland" data-code="FI"></option><option value="France" data-code="FR"></option><option value="French Guiana" data-code="GF"></option><option value="French Polynesia" data-code="PF"></option><option value="French Southern Territories" data-code="TF"></option><option value="Gabon" data-code="GA"></option><option value="Gambia" data-code="GM"></option><option value="Georgia" data-code="GE"></option><option value="Germany" data-code="DE"></option><option value="Ghana" data-code="GH"></option><option value="Gibraltar" data-code="GI"></option><option value="Greece" data-code="GR"></option><option value="Greenland" data-code="GL"></option><option value="Grenada" data-code="GD"></option><option value="Guadeloupe" data-code="GP"></option><option value="Guam" data-code="GU"></option><option value="Guatemala" data-code="GT"></option><option value="Guernsey" data-code="GG"></option><option value="Guinea" data-code="GN"></option><option value="Guinea-Bissau" data-code="GW"></option><option value="Guyana" data-code="GY"></option><option value="Haiti" data-code="HT"></option><option value="Heard Island and McDonald Islands" data-code="HM"></option><option value="Holy See" data-code="VA"></option><option value="Honduras" data-code="HN"></option><option value="Hong Kong" data-code="HK"></option><option value="Hungary" data-code="HU"></option><option value="Iceland" data-code="IS"></option><option value="India" data-code="IN"></option><option value="Indonesia" data-code="ID"></option><option value="Iran" data-code="IR"></option><option value="Iraq" data-code="IQ"></option><option value="Ireland" data-code="IE"></option><option value="Isle of Man" data-code="IM"></option><option value="Israel" data-code="IL"></option><option value="Italy" data-code="IT"></option><option value="Jamaica" data-code="JM"></option><option value="Japan" data-code="JP"></option><option value="Jersey" data-code="JE"></option><option value="Jordan" data-code="JO"></option><option value="Kazakhstan" data-code="KZ"></option><option value="Kenya" data-code="KE"></option><option value="Kiribati" data-code="KI"></option><option value="Korea, North" data-code="KP"></option><option value="Korea, South" data-code="KR"></option><option value="Kuwait" data-code="KW"></option><option value="Kyrgyzstan" data-code="KG"></option><option value="Laos" data-code="LA"></option><option value="Latvia" data-code="LV"></option><option value="Lebanon" data-code="LB"></option><option value="Lesotho" data-code="LS"></option><option value="Liberia" data-code="LR"></option><option value="Libya" data-code="LY"></option><option value="Liechtenstein" data-code="LI"></option><option value="Lithuania" data-code="LT"></option><option value="Luxembourg" data-code="LU"></option><option value="Macao" data-code="MO"></option><option value="Madagascar" data-code="MG"></option><option value="Malawi" data-code="MW"></option><option value="Malaysia" data-code="MY"></option><option value="Maldives" data-code="MV"></option><option value="Mali" data-code="ML"></option><option value="Malta" data-code="MT"></option><option value="Marshall Islands" data-code="MH"></option><option value="Martinique" data-code="MQ"></option><option value="Mauritania" data-code="MR"></option><option value="Mauritius" data-code="MU"></option><option value="Mayotte" data-code="YT"></option><option value="Mexico" data-code="MX"></option><option value="Micronesia" data-code="FM"></option><option value="Moldova" data-code="MD"></option><option value="Monaco" data-code="MC"></option><option value="Mongolia" data-code="MN"></option><option value="Montenegro" data-code="ME"></option><option value="Montserrat" data-code="MS"></option><option value="Morocco" data-code="MA"></option><option value="Mozambique" data-code="MZ"></option><option value="Myanmar" data-code="MM"></option><option value="Namibia" data-code="NA"></option><option value="Nauru" data-code="NR"></option><option value="Nepal" data-code="NP"></option><option value="Netherlands" data-code="NL"></option><option value="New Caledonia" data-code="NC"></option><option value="New Zealand" data-code="NZ"></option><option value="Nicaragua" data-code="NI"></option><option value="Niger" data-code="NE"></option><option value="Nigeria" data-code="NG"></option><option value="Niue" data-code="NU"></option><option value="Norfolk Island" data-code="NF"></option><option value="North Macedonia" data-code="MK"></option><option value="Northern Mariana Islands" data-code="MP"></option><option value="Norway" data-code="NO"></option><option value="Oman" data-code="OM"></option><option value="Pakistan" data-code="PK"></option><option value="Palau" data-code="PW"></option><option value="Palestine, State of" data-code="PS"></option><option value="Panama" data-code="PA"></option><option value="Papua New Guinea" data-code="PG"></option><option value="Paraguay" data-code="PY"></option><option value="Peru" data-code="PE"></option><option value="Philippines" data-code="PH"></option><option value="Pitcairn" data-code="PN"></option><option value="Poland" data-code="PL"></option><option value="Portugal" data-code="PT"></option><option value="Puerto Rico" data-code="PR"></option><option value="Qatar" data-code="QA"></option><option value="Réunion" data-code="RE"></option><option value="Romania" data-code="RO"></option><option value="Russian Federation" data-code="RU"></option><option value="Rwanda" data-code="RW"></option><option value="Saint Barthélemy" data-code="BL"></option><option value="Saint Helena, Ascension and Tristan da Cunha" data-code="SH"></option><option value="Saint Kitts and Nevis" data-code="KN"></option><option value="Saint Lucia" data-code="LC"></option><option value="Saint Martin (French part)" data-code="MF"></option><option value="Saint Pierre and Miquelon" data-code="PM"></option><option value="Saint Vincent and the Grenadines" data-code="VC"></option><option value="Samoa" data-code="WS"></option><option value="San Marino" data-code="SM"></option><option value="Sao Tome and Principe" data-code="ST"></option><option value="Saudi Arabia" data-code="SA"></option><option value="Senegal" data-code="SN"></option><option value="Serbia" data-code="RS"></option><option value="Seychelles" data-code="SC"></option><option value="Sierra Leone" data-code="SL"></option><option value="Singapore" data-code="SG"></option><option value="Sint Maarten (Dutch part)" data-code="SX"></option><option value="Slovakia" data-code="SK"></option><option value="Slovenia" data-code="SI"></option><option value="Solomon Islands" data-code="SB"></option><option value="Somalia" data-code="SO"></option><option value="South Africa" data-code="ZA"></option><option value="South Georgia and the South Sandwich Islands" data-code="GS"></option><option value="South Sudan" data-code="SS"></option><option value="Spain" data-code="ES"></option><option value="Sri Lanka" data-code="LK"></option><option value="Sudan" data-code="SD"></option><option value="Suriname" data-code="SR"></option><option value="Svalbard and Jan Mayen" data-code="SJ"></option><option value="Sweden" data-code="SE"></option><option value="Switzerland" data-code="CH"></option><option value="Syrian Arab Republic" data-code="SY"></option><option value="Taiwan" data-code="TW"></option><option value="Tajikistan" data-code="TJ"></option><option value="Tanzania" data-code="TZ"></option><option value="Thailand" data-code="TH"></option><option value="Timor-Leste" data-code="TL"></option><option value="Togo" data-code="TG"></option><option value="Tokelau" data-code="TK"></option><option value="Tonga" data-code="TO"></option><option value="Trinidad and Tobago" data-code="TT"></option><option value="Tunisia" data-code="TN"></option><option value="Türkiye" data-code="TR"></option><option value="Turkmenistan" data-code="TM"></option><option value="Turks and Caicos Islands" data-code="TC"></option><option value="Tuvalu" data-code="TV"></option><option value="Uganda" data-code="UG"></option><option value="Ukraine" data-code="UA"></option><option value="United Arab Emirates" data-code="AE"></option><option value="United Kingdom" data-code="GB"></option><option value="United States Minor Outlying Islands" data-code="UM"></option><option value="United States of America" data-code="US"></option><option value="Uruguay" data-code="UY"></option><option value="Uzbekistan" data-code="UZ"></option><option value="Vanuatu" data-code="VU"></option><option value="Venezuela" data-code="VE"></option><option value="Viet Nam" data-code="VN"></option><option value="Virgin Islands (British)" data-code="VG"></option><option value="Virgin Islands (U.S.)" data-code="VI"></option><option value="Wallis and Futuna" data-code="WF"></option><option value="Western Sahara" data-code="EH"></option><option value="Yemen" data-code="YE"></option><option value="Zambia" data-code="ZM"></option><option value="Zimbabwe" data-code="ZW"></option></datalist>
   </div>
 </section>
-
 <!-- FAQ -->
 <section class="lp-faq-section">
   <div class="lp-faq-inner">
@@ -2633,10 +2700,27 @@
     document.getElementById('mobileNav').classList.toggle('open');
   }
 </script>
+<script defer src="/js/quote-validators.js"></script>
 <script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/quote-nationality.js"></script>
+<script defer src="/js/lead-branch-fields.js"></script>
+<script defer src="/js/quote-field-toggle.js"></script>
+<script defer src="/js/quote-wizard.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lang-pref.js"></script>
+<script>
+  // Step 1: "not a tax resident" doesn't block submission (address stays
+  // required either way) — just shows the informational note inline.
+  document.addEventListener('DOMContentLoaded', function () {
+    var select = document.getElementById('q-tax-resident');
+    var info = document.getElementById('q-tax-resident-info');
+    if (!select || !info) return;
+    var sync = function () { info.hidden = select.value !== 'no'; };
+    select.addEventListener('change', sync);
+    sync();
+  });
+</script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="casa_geral,casa_custo_algarve,casa_luxo,casa_segunda_habitacao,alojamento_local,erros_comuns"></script>
 <!-- COOKIE CONSENT BANNER -->
 <div class="cookie-banner" id="cookieBanner">

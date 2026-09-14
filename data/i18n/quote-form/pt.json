@@ -38,7 +38,8 @@
       "data_nascimento_invalida": "A data de nascimento não pode ser no futuro.",
       "carta_invalida": "A data da carta não pode ser anterior ao 18.º aniversário do tomador.",
       "residente_fiscal_obrigatorio": "Indique se é residente fiscal em Portugal.",
-      "rgpd_obrigatorio": "Tem de aceitar para podermos preparar a cotação."
+      "rgpd_obrigatorio": "Tem de aceitar para podermos preparar a cotação.",
+      "descricao_curta": "Escreva pelo menos {min} caracteres."
     },
     "success": {
       "titulo": "Pedido recebido",
@@ -52,13 +53,33 @@
       "matricula": "Matrícula",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Data de emissão da carta de condução"
+    },
+    "habitacao": {
+      "titulo": "Cotação de seguro de habitação",
+      "subtitulo": "Preencha o essencial. Respondemos em 24 horas úteis.",
+      "regime_ocupacao": "Regime de ocupação",
+      "regime_ocupacao_permanente": "Habitação própria permanente",
+      "regime_ocupacao_holiday_home": "Holiday home",
+      "regime_ocupacao_al": "Alojamento local",
+      "al_regime": "Regime de Alojamento Local",
+      "al_regime_tempo_inteiro": "Tempo inteiro",
+      "al_regime_parcial": "Parcial (partilha da habitação)",
+      "ano_construcao": "Ano de construção",
+      "area_bruta": "Área bruta de construção (m²)",
+      "casas_banho": "Número de casas de banho",
+      "obras_renovacao_check": "Fez obras de renovação nos últimos anos?",
+      "obras_ano": "Ano das obras",
+      "obras_descricao": "Descreva as obras realizadas",
+      "capital_edificio": "Capital seguro do edifício (€)",
+      "capital_conteudo": "Capital seguro do conteúdo (€)"
     }
   },
   "pt_only": {
     "antes_de_preencher": {
       "titulo": "Antes de preencher",
       "geral": "Trabalhamos com um painel restrito de seguradoras internacionais especializadas, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação — não pelo prémio mais baixo.",
-      "auto": "Trabalhamos com um painel restrito de seguradoras especializadas em risco automóvel, escolhidas pelas condições de franquia, veículo de substituição e assistência em viagem que praticam — não pelo prémio mais baixo."
+      "auto": "Trabalhamos com um painel restrito de seguradoras especializadas em risco automóvel, escolhidas pelas condições de franquia, veículo de substituição e assistência em viagem que praticam — não pelo prémio mais baixo.",
+      "habitacao": "Trabalhamos com um painel restrito de seguradoras especializadas em risco habitacional, escolhidas pelo capital de reconstrução que aceitam segurar e pela forma como tratam sinistros de água e fenómenos da natureza — não pelo prémio mais baixo."
     }
   },
   "countries": {

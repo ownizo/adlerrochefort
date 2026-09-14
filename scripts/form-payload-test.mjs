@@ -629,6 +629,41 @@ const CASES = [
     requireValues: { market: ['china'], language: ['zh'], insurance_type: ['ZH · Liability'] },
     requireLandingPage: 'https://adlerrochefort.com/zh/buying-property-portugal/',
   },
+  {
+    // Fase 2 (Habitação). Same wizard shape as case 15's Auto page, plus a
+    // conditional branch group inside step 2 (regime de ocupação → AL-only
+    // fields, via lead-branch-fields.js) and a checkbox-toggled group (obras
+    // de renovação, via quote-field-toggle.js) — neither of those two
+    // mechanisms is exercised by a plain payload fill; the residue check
+    // below (case 38) is what proves the clearing actually happens.
+    label: '36. /seguros/habitacao/ — Portuguese home landing (wizard, Fase 2)',
+    path: 'seguros/habitacao/index.html',
+    url: 'https://adlerrochefort.com/seguros/habitacao/',
+    formName: 'cotacao-habitacao',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    label: '37. /en/home-insurance-quote/ — English home insurance pillar (wizard, Fase 2)',
+    path: 'en/home-insurance-quote/index.html',
+    url: 'https://adlerrochefort.com/en/home-insurance-quote/',
+    formName: 'home-insurance-quote',
+    pageScripts: ['ar-quote-form.js'],
+  },
+  {
+    // The conditional-clearing acceptance criterion itself: fill the AL-only
+    // field while regime_ocupacao is "alojamento_local", switch to
+    // "permanente", and confirm al_regime does not survive into the final
+    // payload. Reuses the same switchFrom machinery the market clusters use
+    // for their own branch-select fields — lead-branch-fields.js is the same
+    // file, unmodified, driving both.
+    label: '38. /seguros/habitacao/ — regime de ocupação switch clears the AL-only field',
+    path: 'seguros/habitacao/index.html',
+    url: 'https://adlerrochefort.com/seguros/habitacao/',
+    formName: 'cotacao-habitacao',
+    branchSelect: 'select[data-branch-select]',
+    switchFrom: 'alojamento_local',
+    branchValue: 'permanente',
+  },
 ];
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
@@ -667,7 +702,11 @@ for (const c of CASES) {
     select.value = c.switchFrom;
     select.dispatchEvent(new dom.window.Event('change', { bubbles: true }));
     fillVisible(form, doc);
-    const firstValues = [...form.querySelectorAll('[data-branch] input')].map((e) => [e.name, e.value]);
+    // input,select,textarea — not just input — or a <select> branch field
+    // (Fase 2, Habitação: "regime de Alojamento Local") would never be
+    // caught here even if it leaked, since this array is what the residue
+    // check below compares against.
+    const firstValues = [...form.querySelectorAll('[data-branch] input, [data-branch] select, [data-branch] textarea')].map((e) => [e.name, e.value]);
     select.value = c.branchValue;
     select.dispatchEvent(new dom.window.Event('change', { bubbles: true }));
     fillVisible(form, doc);

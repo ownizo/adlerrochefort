@@ -49,6 +49,7 @@
       residenteFiscal: "Let us know whether you're a tax resident in Portugal.",
       rgpd: 'You need to agree before we can prepare the quote.',
       birthDate: 'The date of birth cannot be in the future.',
+      tooShort: 'Please write at least {min} characters.',
     },
     pt: {
       required: 'Preencha este campo.',
@@ -66,6 +67,7 @@
       residenteFiscal: 'Indique se é residente fiscal em Portugal.',
       rgpd: 'Tem de aceitar para podermos preparar a cotação.',
       birthDate: 'A data de nascimento não pode ser no futuro.',
+      tooShort: 'Escreva pelo menos {min} caracteres.',
     },
     nl: {
       required: 'Vul dit veld in.',
@@ -129,6 +131,16 @@
 
   function fieldError(el, form) {
     if (el.type === 'hidden' || el.name === 'bot-field') return null;
+    // A disabled control is excluded from the submission (native browser
+    // behaviour for FormData, and the explicit contract public/js/
+    // lead-branch-fields.js documents for its own branch groups) — so it
+    // must be excluded from validation too, or a required field inside a
+    // branch/conditional group the visitor didn't pick would block
+    // navigation for an answer that will never actually be submitted. No
+    // page combining data-quote-form with a branch group had a required
+    // field inside one until Fase 2 (Habitação's AL-only fields), which is
+    // what surfaced this.
+    if (el.disabled) return null;
 
     // Checkboxes: `.value` is the static `value` attribute regardless of
     // `.checked` state, so the generic required/empty check below (which
@@ -145,6 +157,14 @@
     if (!value) return null; // optional and empty: nothing further to check
 
     if (el.type === 'email' && !EMAIL.test(value)) return t.email;
+
+    // Native `minlength` (Fase 2, Habitação: the free-text description that
+    // "obras de renovação" reveals needs at least 10 characters to mean
+    // anything) — a plain HTML attribute, not a data-validate kind, since
+    // it's a generic rule rather than one of quote-validators.js's
+    // Portugal-specific formats.
+    var minLength = el.getAttribute('minlength');
+    if (minLength && value.length < parseInt(minLength, 10)) return t.tooShort.replace('{min}', minLength);
 
     var kind = el.getAttribute('data-validate');
     var QV = window.QuoteValidators;

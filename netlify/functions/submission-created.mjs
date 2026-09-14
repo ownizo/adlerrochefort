@@ -138,6 +138,15 @@ const QUOTE_LABELS = {
   ocupacao: "Perfil de ocupação",
   valor_reconstrucao: "Valor de reconstrução",
   seguranca: "Sistemas de segurança",
+  // Especificação v2 — Passo 2 (Habitação), Fase 2.
+  regime_ocupacao: "Regime de ocupação",
+  al_regime: "Regime de Alojamento Local",
+  area_bruta: "Área bruta de construção (m²)",
+  casas_banho: "N.º de casas de banho",
+  obras_ano: "Ano das obras",
+  obras_descricao: "Descrição das obras",
+  capital_edificio: "Capital seguro do edifício",
+  capital_conteudo: "Capital seguro do conteúdo",
   n_colaboradores: "N.º de colaboradores",
   volume_negocios: "Volume de negócios",
   n_estabelecimentos: "N.º de estabelecimentos",
@@ -280,6 +289,20 @@ const QUOTE_LABELS = {
   matricula: "Registration plate",
   data_carta: "Driving licence issue date",
   rgpd: "GDPR consent",
+
+  // Especificação v2 — Passo 2 (Habitação, Fase 2). Same language-neutral
+  // field names as PT (see the QUOTE_LABELS entries above); listed here too
+  // so the English notification email doesn't fall back to those PT labels.
+  town: "Town / city",
+  regime_ocupacao: "Occupancy",
+  al_regime: "Short-term rental regime",
+  ano_construcao: "Year of construction",
+  area_bruta: "Gross construction area (m²)",
+  casas_banho: "Number of bathrooms",
+  obras_ano: "Year of the renovation",
+  obras_descricao: "Renovation work description",
+  capital_edificio: "Sum insured — building",
+  capital_conteudo: "Sum insured — contents",
 
   // Older intake forms that previously sent no notification at all.
   name: "Name",
