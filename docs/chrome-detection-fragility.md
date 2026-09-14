@@ -207,3 +207,75 @@ exclusion list — a `[chrome-exclusion-stale]` check next to the existing
 the commit that created them, at the same `npm test`/`check:freshness` gate
 every commit already goes through, instead of waiting for someone to think
 to run `--dry-run` and read the output by hand.
+
+## `lang-switcher.mjs` resolves landing-page hubs to the wrong self-reference
+
+A third shape of the same underlying problem — a page outside the script's
+registry — found while building and cross-linking the US, Irish and Canadian
+market-variant hubs (`/en/insurance-for-americans-in-portugal/`,
+`/en/insurance-for-irish-residents-portugal/`,
+`/en/insurance-for-canadians-portugal/`).
+
+### What diverged
+
+Every page's language selector marks its own language's entry with
+`aria-current="true"` and, correctly, an `href` pointing at that exact page —
+confirmed as the sitewide convention on `/en/expat-insurance-portugal/` and
+`/en/car-insurance-portugal/`, both of which self-reference. The three hub
+pages above are rendered through `scripts/lib/landing.mjs`, which in turn
+calls `scripts/lib/chrome.mjs`'s `page()` — the same shared function
+`generate-blog.mjs` uses, and the same one missing the `ar-langsel.css` link
+documented above.
+
+Running `lang-switcher.mjs` over these hub pages — needed anyway, to add that
+missing stylesheet — resolves their English slot to the generic `/en/`
+homepage instead of self-referencing the hub's own URL, on all four widget
+instances (header, mobile drawer, footer, noscript fallback). This is not a
+broken link — `/en/` is a valid English page — but it is a real deviation
+from the sitewide convention, and it silently regressed the US hub's
+own previously-correct self-reference the first time its file was touched by
+this pass since it was originally built.
+
+### Why the workaround was used
+
+Fixing `lang-switcher.mjs`'s own resolution logic was not investigated —
+out of scope for the branch that found it, and the shape (a page the script
+doesn't recognise in whatever registry it consults for "what is this page's
+own canonical URL") matches the other two gaps in this file closely enough
+that it did not seem to need a separate root-cause pass before deciding how
+to handle it. Instead: after each `lang-switcher.mjs` run, all four widget
+instances on all three hub pages were corrected back to self-referencing,
+surgically, by script — checked against `/en/expat-insurance-portugal/` and
+`/en/car-insurance-portugal/` first to confirm what "correct" actually looks
+like sitewide, not assumed.
+
+### What a proper fix would involve
+
+Landing-page hubs built through `landing.mjs`/`chrome.mjs`'s `page()` need to
+be in whatever set `lang-switcher.mjs` treats as "this page's own URL is
+itself, not a fallback." Blog articles (in `data/articles.json`) and cluster
+pages (each generator's own `PAGES` export) already are; hub pages built via
+`build-us-hub.mjs`, `build-irish-hub.mjs` and `build-canadian-hub.mjs` are
+not, and neither, presumably, are `/seguros/*` or `/en/insurance/tvde/`,
+which share the same `landingPage()` renderer and were not checked. Not
+chased further here — recorded so the next person regenerating one of these
+pages knows to check the self-reference before trusting the diff, rather
+than rediscovering it.
+
+## `scripts/terminology.mjs` crashes on an unrelated file
+
+Found while preparing the regulatory-status-wording fixes, not caused by
+them: `node scripts/terminology.mjs` throws `Error: unrestored placeholder
+in scripts/search-opportunities.mjs` and exits before finishing its file
+list, on `main` as of this branch's base — reproduced against a clean
+checkout, not introduced this round. `search-opportunities.mjs` itself
+contains no "broker" or "independen*" text the `PROTECTED` regexes in
+`scripts/lib/terminology-rules.mjs` should be parking, so the cause is not
+obvious from that file alone. Because the script writes each changed file as
+it goes rather than batching writes to the end, a run that crashes partway
+through the (alphabetically globbed) file list can leave files processed
+before the crash point genuinely fixed and everything after it untouched —
+worth knowing before assuming a completed run means a completed sweep.
+Not root-caused or fixed here — the DE and FR fixes in this round were
+applied directly to the affected files and rule tables instead, verified by
+hand rather than by running this pass to completion.
