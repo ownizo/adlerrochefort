@@ -279,3 +279,37 @@ worth knowing before assuming a completed run means a completed sweep.
 Not root-caused or fixed here — the DE and FR fixes in this round were
 applied directly to the affected files and rule tables instead, verified by
 hand rather than by running this pass to completion.
+
+**Update:** root-caused and fixed — see the `terminology.mjs` commit that
+added this line. `scripts/search-opportunities.mjs` carries a literal NUL
+in its own source (a composite map-key separator), unrelated to parking and
+present regardless of what the pass sweeps for; the safety check assumed
+zero NUL bytes should ever survive restoration, which is false for that one
+file. Fixed by comparing the NUL count before and after instead of against
+zero. Verified: a full run completes, and a second immediate run finds
+nothing further to change.
+
+## EN trust badges, sticky-CTA label, "registered in Portugal" strength line — left alone, deliberately
+
+The ASF registration number now pairs with "insurance broker" in two places
+on every EN page that has both: the top bar and, as of this round, the
+footer. A third and fourth placement exist on most of the ~212 individual
+blog articles — the `ar-trust-item` badge strip and the sticky-CTA label,
+both reading "ASF-registered insurance broker" or a close variant, with no
+number — plus the open question of adding a sentence stating the Portugal
+registration as a strength.
+
+Decided against, not overlooked: these live in the hand-authored body of
+each article, with no generator or shared template to edit once — unlike
+the top bar and footer, which come from `public/en/index.html` via
+`partials.mjs`. Fixing them means editing ~212 static files individually
+(the tool that would otherwise do this kind of sweep,
+`scripts/terminology.mjs`, only handles exact-phrase replacement, not
+inserting new content, and was broken until the fix above besides). Two
+placements per page already state the registration; a third and fourth say
+nothing a reader hasn't already been told twice.
+
+If these strings ever get a generator source — a rewrite of the blog-article
+template, for instance — revisit the badge, sticky-CTA and strength-line
+question then. Until they do, this is the standing decision, not a gap
+waiting to be closed.
