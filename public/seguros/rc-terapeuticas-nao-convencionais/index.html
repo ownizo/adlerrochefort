@@ -109,6 +109,8 @@
       <div class="nav-panel nav-panel--sm" id="nav-panel-professional" hidden>
         <a href="/seguros/responsabilidade-civil-profissional/">RC Profissional</a>
         <a href="/seguros/rc-terapeuticas-nao-convencionais/">Terapêuticas Não Convencionais</a>
+        <a href="/seguros/rc-yoga-pilates-bem-estar/">Yoga, Pilates e Bem-Estar</a>
+        <a href="/seguros/rc-massagistas/">Massagistas</a>
         <a href="/seguros/rc-profissoes-especificas/">Profissões Específicas</a>
         <a href="/seguros/responsabilidade-civil-eventos/">Organização de Eventos</a>
         <a href="/blog/responsabilidade-administradores-seguro-do/">Responsabilidade de Administradores (D&amp;O)</a>
@@ -175,6 +177,8 @@
     <div class="mobile-accordion-panel" id="macc-professional" hidden>
       <a href="/seguros/responsabilidade-civil-profissional/" onclick="toggleMenu()">RC Profissional</a>
       <a href="/seguros/rc-terapeuticas-nao-convencionais/" onclick="toggleMenu()">Terapêuticas Não Convencionais</a>
+      <a href="/seguros/rc-yoga-pilates-bem-estar/" onclick="toggleMenu()">Yoga, Pilates e Bem-Estar</a>
+      <a href="/seguros/rc-massagistas/" onclick="toggleMenu()">Massagistas</a>
       <a href="/seguros/rc-profissoes-especificas/" onclick="toggleMenu()">Profissões Específicas</a>
       <a href="/seguros/responsabilidade-civil-eventos/" onclick="toggleMenu()">Organização de Eventos</a>
       <a href="/blog/responsabilidade-administradores-seguro-do/" onclick="toggleMenu()">Responsabilidade de Administradores (D&amp;O)</a>
@@ -254,7 +258,7 @@
       <div class="field"><label for="nome">Nome *</label><input type="text" id="nome" name="nome" placeholder="O seu nome" required></div>
       <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="o.seu@email.com" required></div>
       <div class="field"><label for="telefone">Telefone / WhatsApp *</label><input type="tel" id="telefone" name="telefone" placeholder="+351 …" required></div>
-      <div class="field"><label for="tnc_atividade">Atividade profissional *</label><select id="tnc_atividade" name="tnc_atividade" required><option value="">Selecione…</option><option value="Acupunctura">Acupunctura</option><option value="Fitoterapia">Fitoterapia</option><option value="Homeopatia">Homeopatia</option><option value="Medicina Tradicional Chinesa">Medicina Tradicional Chinesa</option><option value="Naturopatia">Naturopatia</option><option value="Osteopatia">Osteopatia</option><option value="Quiroprática">Quiroprática</option><option value="Yoga / bem-estar">Yoga / bem-estar</option><option value="Outra">Outra</option></select></div>
+      <div class="field"><label for="tnc_atividade">Atividade profissional *</label><select id="tnc_atividade" name="tnc_atividade" required><option value="">Selecione…</option><option value="Acupunctura">Acupunctura</option><option value="Fitoterapia">Fitoterapia</option><option value="Homeopatia">Homeopatia</option><option value="Medicina Tradicional Chinesa">Medicina Tradicional Chinesa</option><option value="Naturopatia">Naturopatia</option><option value="Osteopatia">Osteopatia</option><option value="Quiroprática">Quiroprática</option><option value="Outra">Outra</option></select></div>
       <div class="field"><label for="tnc_situacao">Situação</label><select id="tnc_situacao" name="tnc_situacao"><option value="">Selecione…</option><option value="Primeira contratação">Primeira contratação</option><option value="Renovação">Renovação</option><option value="Pretendo rever a cobertura atual">Pretendo rever a cobertura atual</option></select></div>
       <div class="field"><label for="tnc_local">Local de atendimento</label><select id="tnc_local" name="tnc_local"><option value="">Selecione…</option><option value="Consultório próprio">Consultório próprio</option><option value="Domicílio">Domicílio</option><option value="Ambos / múltiplas localizações">Ambos / múltiplas localizações</option></select></div>
       <div class="field full"><label for="mensagem">Observações</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="Algo que devamos saber?"></textarea></div>
@@ -310,6 +314,18 @@
   <p>Nem todas estas situações estão automaticamente cobertas — dependem da apólice contratada, das exclusões aplicáveis e da atividade declarada.</p>
 </section>
 
+<section class="lp-section">
+  <h2>O que a lei garante nesta apólice</h2>
+  <p>Por ser um seguro obrigatório, esta apólice tem garantias que uma RC profissional comum não tem:</p>
+  <ul class="lp-list">
+    <li>Capital nunca inferior a 150.000 € por sinistro e anuidade, qualquer que seja o limite contratado</li>
+    <li>A franquia não é oponível ao lesado nem aos seus herdeiros — o paciente recebe a indemnização integral, e é depois consigo que a seguradora acerta contas</li>
+    <li>O lesado pode exigir o pagamento da indemnização diretamente à seguradora, nos termos do artigo 146.º do Regime Jurídico do Contrato de Seguro</li>
+    <li>Extensão automática do período de reclamação de 24 meses após o termo da apólice, desde que não seja substituída por outro contrato que garanta a mesma responsabilidade</li>
+    <li>Diversas exclusões habituais deixam de se aplicar até ao limite legal de 150.000 €</li>
+  </ul>
+</section>
+
 <section class="lp-section" style="background:var(--cream2);max-width:none;">
   <div style="max-width:1400px;margin:0 auto;">
     <h2>O que deve verificar na apólice</h2>
@@ -331,12 +347,21 @@
   <h2>O que a apólice pode cobrir</h2>
   <p>As coberturas e limites variam consoante a solução contratada. Dependendo da apólice, poderá contemplar:</p>
   <ul class="lp-list">
-    <li>Erro ou omissão negligente no exercício da atividade terapêutica</li>
-    <li>Violação de confidencialidade ou uso indevido de informação de um paciente</li>
-    <li>Defesa jurídica e custos judiciais associados</li>
-    <li>Determinadas extensões relacionadas com perdas próprias, quando previstas nas condições da apólice</li>
+    <li>Negligência ou violação do dever de diligência</li>
+    <li>Erro, omissão ou inexatidão negligente no exercício da atividade</li>
+    <li>Quebra de confidencialidade ou uso indevido de informação de um paciente</li>
+    <li>Difamação</li>
+    <li>Infração de direitos de propriedade intelectual e industrial</li>
+    <li>Atos de desonestidade de empregados ou colaboradores sob a sua supervisão</li>
+    <li>Custos de defesa jurídica de uma reclamação</li>
   </ul>
+  <p>Como perdas próprias, quando contratadas: desonestidade de empregados e perda de documentos.</p>
   <p>Confirme sempre as coberturas e os limites concretos nas condições gerais e particulares da apólice proposta — não presuma que uma cobertura existe apenas por ser comum no mercado.</p>
+</section>
+
+<section class="lp-section">
+  <h2>O que fica de fora</h2>
+  <p>A apólice não responde por atos médicos ou de enfermagem — diagnóstico, análises clínicas, rastreios, primeiros socorros e técnicas de reanimação estão expressamente excluídos. Ficam também de fora os danos ao próprio espaço ou a bens à sua guarda, a responsabilidade enquanto empregador, e quaisquer factos ou circunstâncias de que já tivesse conhecimento antes da contratação.</p>
 </section>
 
 <section class="lp-section">
@@ -358,9 +383,9 @@
   <h2>Perguntas frequentes</h2>
   <div class="lp-faq">
     <details><summary>O seguro de RC é obrigatório para terapêuticas não convencionais?</summary><p>Sim. A Lei n.º 71/2013 exige que os profissionais das sete terapêuticas não convencionais reconhecidas disponham de um seguro de responsabilidade civil profissional — condição para a emissão da cédula profissional pela ACSS.</p></details>
-    <details><summary>Que terapêuticas são abrangidas?</summary><p>Acupunctura, fitoterapia, homeopatia, medicina tradicional chinesa, naturopatia, osteopatia e quiroprática. O yoga não está formalmente na lista da Lei n.º 71/2013, mas muitos instrutores enfrentam exposição semelhante e podem contratar cobertura equivalente.</p></details>
-    <details><summary>Qual o capital seguro recomendado?</summary><p>A Portaria n.º 200/2014 fixa o mínimo legal em 150.000 € por anuidade e sinistro para os profissionais com cédula emitida pela ACSS. As soluções que colocamos partem de um capital de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa. Clínicas com vários terapeutas, prática com populações de risco ou técnicas de manipulação com maior exposição justificam capitais superiores. A análise é feita caso a caso.</p></details>
-    <details><summary>Esta apólice é diferente de uma RC profissional genérica?</summary><p>Sim. Uma apólice de RC genérica pode não cobrir atos terapêuticos específicos. A solução para terapêuticas não convencionais é desenhada para a prática terapêutica, incluindo, consoante a solução contratada, responsabilidade pela atividade exercida e pelo espaço de atendimento.</p></details>
+    <details><summary>Que terapêuticas são abrangidas?</summary><p>Acupunctura, fitoterapia, homeopatia, medicina tradicional chinesa, naturopatia, osteopatia e quiroprática. O yoga, o pilates, o tai chi e o qigong não constam da Lei n.º 71/2013 e não se enquadram nesta apólice — o clausulado exclui bens ou atividades sujeitos a seguro obrigatório fora do regime das terapêuticas não convencionais. Para essas atividades existe uma solução própria, que pode consultar em <a href="/seguros/rc-yoga-pilates-bem-estar/" style="color:var(--primary);font-weight:600;">RC para Instrutores de Yoga, Pilates e Bem-Estar</a>.</p></details>
+    <details><summary>Qual o capital seguro recomendado?</summary><p>A Portaria n.º 200/2014 fixa o mínimo legal em 150.000 € por sinistro e anuidade para os profissionais com cédula profissional emitida pela ACSS. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização, a peritagem e os custos de defesa. Clínicas com vários terapeutas, prática com populações de risco ou técnicas de manipulação com maior exposição justificam capitais superiores. A análise é feita caso a caso.</p></details>
+    <details><summary>Esta apólice é diferente de uma RC profissional genérica?</summary><p>Sim. Uma apólice de RC genérica pode não cobrir atos terapêuticos específicos. A solução para terapêuticas não convencionais é desenhada para a prática terapêutica, incluindo, consoante a solução contratada, responsabilidade pela atividade exercida. A responsabilidade pelo espaço de atendimento não está incluída neste módulo — o clausulado exclui a propriedade, posse ou uso de terreno ou edifício. Essa cobertura vem do módulo de Responsabilidade Civil Geral, que se contrata em conjunto quando existe consultório próprio.</p></details>
     <details><summary>Quanto tempo demora a análise?</summary><p>Um primeiro contacto, habitualmente em 24 horas úteis, seguido de uma proposta concreta.</p></details>
     <details><summary>Encontrei uma apólice mais barata. Vale a pena?</summary><p>Vale sempre a pena perceber porquê. Uma diferença significativa de prémio no mesmo risco explica-se quase sempre por uma destas razões: capital inferior ao mínimo exigido pela Portaria n.º 200/2014, defesa jurídica incluída dentro do capital em vez de acrescer a ele, ausência de data retroativa, ou âmbito de atividade declarado mais estreito do que a prática real. Analisamos gratuitamente qualquer proposta concorrente e dizemos-lhe onde está a diferença — mesmo que a conclusão seja que deve ficar com a outra.</p></details>
   </div>
@@ -371,7 +396,7 @@
   <h2>Outras soluções de Riscos Profissionais</h2>
   <ul>
       <li style="margin-bottom:12px;"><a href="/seguros/responsabilidade-civil-profissional/" style="color:var(--primary);font-weight:600;">RC Profissional</a> — a cobertura geral de erros e omissões, para quem não se enquadra numa das soluções especializadas.</li>
-      <li style="margin-bottom:12px;"><a href="/seguros/rc-profissoes-especificas/" style="color:var(--primary);font-weight:600;">Profissões Específicas</a> — consultoria, tecnologia, contabilidade e outras atividades com análise própria.</li>
+      <li style="margin-bottom:12px;"><a href="/seguros/rc-yoga-pilates-bem-estar/" style="color:var(--primary);font-weight:600;">Yoga, Pilates e Bem-Estar</a> — para quem ensina sem cédula da ACSS, fora do regime obrigatório.</li>
       <li style="margin-bottom:12px;"><a href="/seguros/responsabilidade-civil-eventos/" style="color:var(--primary);font-weight:600;">Organização de Eventos</a> — se também organiza workshops, retiros ou eventos com participantes.</li>
   </ul>
 </section>
@@ -445,6 +470,7 @@
       <ul class="footer-col-links">
         <li><a href="/seguros/responsabilidade-civil-profissional/">RC Profissional</a></li>
         <li><a href="/seguros/rc-terapeuticas-nao-convencionais/">Terapêuticas Não Convencionais</a></li>
+        <li><a href="/seguros/rc-yoga-pilates-bem-estar/">Yoga, Pilates e Bem-Estar</a></li>
         <li><a href="/seguros/rc-massagistas/">Massagistas</a></li>
         <li><a href="/seguros/rc-profissoes-especificas/">Profissões Específicas</a></li>
         <li><a href="/seguros/responsabilidade-civil-eventos/">Organização de Eventos</a></li>
@@ -751,7 +777,7 @@
       "name": "Que terapêuticas são abrangidas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Acupunctura, fitoterapia, homeopatia, medicina tradicional chinesa, naturopatia, osteopatia e quiroprática. O yoga não está formalmente na lista da Lei n.º 71/2013, mas muitos instrutores enfrentam exposição semelhante e podem contratar cobertura equivalente."
+        "text": "Acupunctura, fitoterapia, homeopatia, medicina tradicional chinesa, naturopatia, osteopatia e quiroprática. O yoga, o pilates, o tai chi e o qigong não constam da Lei n.º 71/2013 e não se enquadram nesta apólice — o clausulado exclui bens ou atividades sujeitos a seguro obrigatório fora do regime das terapêuticas não convencionais. Para essas atividades existe uma solução própria, RC para Instrutores de Yoga, Pilates e Bem-Estar."
       }
     },
     {
@@ -759,7 +785,7 @@
       "name": "Qual o capital seguro recomendado?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Portaria n.º 200/2014 fixa o mínimo legal em 150.000 € por anuidade e sinistro para os profissionais com cédula emitida pela ACSS. As soluções que colocamos partem de um capital de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa. Clínicas com vários terapeutas, prática com populações de risco ou técnicas de manipulação com maior exposição justificam capitais superiores. A análise é feita caso a caso."
+        "text": "A Portaria n.º 200/2014 fixa o mínimo legal em 150.000 € por sinistro e anuidade para os profissionais com cédula profissional emitida pela ACSS. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização, a peritagem e os custos de defesa. Clínicas com vários terapeutas, prática com populações de risco ou técnicas de manipulação com maior exposição justificam capitais superiores. A análise é feita caso a caso."
       }
     },
     {
@@ -767,7 +793,7 @@
       "name": "Esta apólice é diferente de uma RC profissional genérica?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Uma apólice de RC genérica pode não cobrir atos terapêuticos específicos. A solução para terapêuticas não convencionais é desenhada para a prática terapêutica, incluindo, consoante a solução contratada, responsabilidade pela atividade exercida e pelo espaço de atendimento."
+        "text": "Sim. Uma apólice de RC genérica pode não cobrir atos terapêuticos específicos. A solução para terapêuticas não convencionais é desenhada para a prática terapêutica, incluindo, consoante a solução contratada, responsabilidade pela atividade exercida. A responsabilidade pelo espaço de atendimento não está incluída neste módulo — o clausulado exclui a propriedade, posse ou uso de terreno ou edifício. Essa cobertura vem do módulo de Responsabilidade Civil Geral, que se contrata em conjunto quando existe consultório próprio."
       }
     },
     {
