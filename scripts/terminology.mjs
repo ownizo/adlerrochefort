@@ -153,6 +153,19 @@ for (const rel of files) {
   // rather than a space-delimited index, which the earlier version of this
   // script did: " 12 " also matches any bare figure in body copy, so a
   // restore could splice a protected id into the middle of a sentence.
+  //
+  // The safety check below used to be "no NUL survives restoration" — true
+  // for every file except scripts/search-opportunities.mjs, which carries a
+  // literal NUL in its own source as a composite map-key separator
+  // (`${r.query}\u0000${r.page}`), unrelated to parking and present before
+  // this pass ever touches the file. That made the pass throw on every run
+  // at that one file, regardless of whether it had any broker/independence
+  // wording to sweep — see docs/chrome-detection-fragility.md. The correct
+  // invariant isn't "zero NUL bytes remain", it's "the NUL count is
+  // unchanged from before parking started": parking and restoring a
+  // protected region should be a no-op on any NUL that was never part of a
+  // placeholder.
+  const originalNulCount = (original.match(/\u0000/g) || []).length;
   const parked = [];
   let text = original;
   for (const re of PROTECTED) {
@@ -169,7 +182,8 @@ for (const rel of files) {
   }
 
   text = text.replace(/\u0000(\d+)\u0000/g, (_, i) => parked[Number(i)]);
-  if (/\u0000/.test(text)) throw new Error(`unrestored placeholder in ${rel}`);
+  const finalNulCount = (text.match(/\u0000/g) || []).length;
+  if (finalNulCount !== originalNulCount) throw new Error(`unrestored placeholder in ${rel}`);
 
   if (text !== original) {
     await writeFile(file, text);
