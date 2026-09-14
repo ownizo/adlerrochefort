@@ -263,6 +263,53 @@ test("cotacao-rc-eventos: a company-shaped submitter is skipped, no individual C
   assert.equal(result.skippedReason, "entity_type_business");
 });
 
+test("PRIVACY (Fase 1 — quote_requests wizard): a fully-populated Auto submission still produces a restricted CRM payload, even though quote-requests-sync.mjs's own row for the same data is complete", () => {
+  // Every field the Fase 1 Auto wizard collects (Especificação v2 §2/§3),
+  // in one submission — the point is that buildCrmLeadPayload's allowlist
+  // doesn't change shape just because the source data got richer.
+  const fullAutoSubmission = {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    telefone: "912345678",
+    nif: "501442600",
+    data_nascimento: "1990-05-20",
+    morada: "Rua Exemplo, 123",
+    localidade: "Lagos",
+    codigo_postal: "8600-324",
+    nacionalidade: "PT",
+    residente_fiscal: "sim",
+    matricula: "AA-00-BB",
+    data_carta: "2008-05-20",
+    data_inicio: "2026-10-01",
+    rgpd: "sim",
+    dados_dinamicos: "[]",
+  };
+  const { payload, skippedReason } = buildCrmLeadPayload("seguro-auto", fullAutoSubmission);
+  assert.equal(skippedReason, null);
+  assert.ok(payload);
+  assert.equal(payload.name, "Ana Costa");
+  assert.equal(payload.email, "ana@example.com");
+
+  const serialized = JSON.stringify(payload);
+  for (const forbidden of [
+    "501442600", // nif
+    "Rua Exemplo", // morada
+    "8600-324", // codigo_postal
+    "AA-00-BB", // matricula
+    "1990-05-20", // data_nascimento
+    "2008-05-20", // data_carta
+  ]) {
+    assert.equal(serialized.includes(forbidden), false, `CRM payload must never contain "${forbidden}"`);
+  }
+  // Only name/email/phone/form/product/market/UTM/metadata may cross into
+  // the CRM payload — assert its keys are exactly that allowlisted shape,
+  // not just that a few named strings are absent from it.
+  assert.deepEqual(
+    Object.keys(payload).sort(),
+    ["email", "formName", "market", "metadata", "name", "phone", "product", "source", "sourceUrl", "submissionId", "utm"].sort(),
+  );
+});
+
 test("PRIVACY: free-text notes/description fields on the new RC forms never reach the CRM payload", () => {
   const { payload, skippedReason } = buildCrmLeadPayload("cotacao-rc-massagistas", {
     nome: "Sofia Martins",

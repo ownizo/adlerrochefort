@@ -57,6 +57,16 @@ test("richer PII (NIF, morada, matrícula) lands here — the opposite of crm-sy
   assert.equal(row.dados_risco.matricula, "AA-00-BB");
 });
 
+test("localidade (Especificação v2, Passo 1) is lifted to dados_comuns like morada/codigo_postal, not left in dados_risco", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    localidade: "Lagos",
+  });
+  assert.equal(row.dados_comuns.localidade, "Lagos");
+  assert.equal("localidade" in row.dados_risco, false);
+});
+
 test("dados_risco carries whatever the form actually sent, minus plumbing and the fields already lifted to dados_comuns", () => {
   const row = buildQuoteRequestRow("seguro-auto", {
     nome: "Ana Costa",

@@ -92,6 +92,20 @@ const QUOTE_LABELS = {
   email: "Email",
   telefone: "Telefone / WhatsApp",
   nif: "NIF",
+  // Especificação v2 — Passo 1 (Identificação, transversal a todos os ramos)
+  // and the Auto-specific Passo 2 fields (public/seguros/auto/,
+  // public/en/car-insurance-portugal/). `nacionalidade` and `data_carta`
+  // reuse the same names on both language pages by design — see this
+  // session's PR notes for why, in short: risk-specific fields that are not
+  // part of COMMON_FIELD_ALIASES (netlify/functions/lib/quote-requests-sync.mjs)
+  // don't need a language-specific alias, so keeping one name everywhere
+  // keeps quote_requests.dados_risco consistent across languages.
+  data_nascimento: "Data de nascimento",
+  nacionalidade: "Nacionalidade",
+  residente_fiscal: "Residente fiscal em Portugal",
+  data_carta: "Data de emissão da carta de condução",
+  data_inicio: "Data de início pretendida",
+  rgpd: "Consentimento RGPD",
   empresa: "Empresa",
   cae: "CAE / atividade",
   perfil: "Motorista ou operador",
@@ -256,6 +270,17 @@ const QUOTE_LABELS = {
   "claims-history": "Claims history",
   "cover-level": "Cover level sought",
 
+  // Especificação v2 — Passo 1/2 (Fase 1: Auto pilot). `matricula` and
+  // `data_carta` are the two intentionally language-neutral field names
+  // documented next to their QUOTE_LABELS (PT) entries above.
+  address: "Address",
+  date_of_birth: "Date of birth",
+  nationality: "Nationality",
+  tax_resident_pt: "Tax resident in Portugal",
+  matricula: "Registration plate",
+  data_carta: "Driving licence issue date",
+  rgpd: "GDPR consent",
+
   // Older intake forms that previously sent no notification at all.
   name: "Name",
   phone: "Phone",
@@ -299,7 +324,21 @@ const QUOTE_LABELS = {
 };
 
 // Never rendered: Netlify plumbing and the honeypot.
-const INTERNAL_FIELDS = new Set(["form-name", "bot-field", "formName"]);
+const INTERNAL_FIELDS = new Set([
+  "form-name",
+  "bot-field",
+  "formName",
+  // Especificação v2 (quote-request wizard, public/js/quote-wizard.js /
+  // quote-nationality.js): structured for quote_requests
+  // (netlify/functions/lib/quote-requests-sync.mjs), not for a human-read
+  // email row. `nacionalidade_nome` is the wizard's free-text country
+  // search box — `nacionalidade` (the hidden field next to it) already
+  // carries the ISO code that matters; showing both would just duplicate
+  // the same answer in the email.
+  "dados_dinamicos",
+  "nacionalidade_nome",
+  "nationality_name",
+]);
 
 // The handful of field names shared by both languages need an English label
 // when the lead came from an English page.
