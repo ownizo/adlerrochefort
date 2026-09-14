@@ -384,6 +384,34 @@ export const FR_INDEPENDENCE = [
     "<div><strong>Indépendants.</strong> <span>Nous comparons les assureurs et travaillons pour vous — pas pour une seule compagnie.</span></div>",
     "<div><strong>Non liés à un seul assureur.</strong> <span>Nous disposons d'accords d'agence auprès de plusieurs compagnies.</span></div>",
   ],
+
+  // Tightened per instruction: describes the commercial relationship (no
+  // exclusivity contract, several insurers) rather than implying
+  // whole-of-market analysis. Supersedes the "nous choisissons la solution
+  // qui vous convient" framing above once Change 2's own rule has already
+  // landed on "En tant que courtier, nous ne sommes pas liés à un seul
+  // assureur" — this rule catches the full sentence as found on the page.
+  [
+    'En tant que courtier, nous ne sommes pas liés à un seul assureur — nous choisissons la solution qui vous convient.',
+    "Nous ne sommes liés par aucun contrat d'exclusivité et travaillons avec plusieurs assureurs.",
+  ],
+];
+
+/**
+ * FR pairing: "Courtier en assurances" stays (Change 2 above already strips
+ * "indépendant" from it); these pair the noun with the ASF registration
+ * number wherever it appears in the hero or footer. The top bar already
+ * carries the pairing and needs no rule.
+ */
+export const FR_ASF_PAIRING = [
+  [
+    "Adler &amp; Rochefort est votre courtier francophone : nous comparons le marché pour vous et vous expliquons tout clairement en français — en assurance santé, habitation et auto.",
+    "Adler &amp; Rochefort est votre courtier francophone, enregistré auprès de l'ASF sous le nº 425591790/3 : nous comparons le marché pour vous et vous expliquons tout clairement en français — en assurance santé, habitation et auto.",
+  ],
+  [
+    'Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal. Un conseil clair en français, aux normes internationales.',
+    "Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal — enregistré auprès de l'ASF sous le nº 425591790/3. Un conseil clair en français, aux normes internationales.",
+  ],
 ];
 
 export const DE_INDEPENDENCE = [

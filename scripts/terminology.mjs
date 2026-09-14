@@ -57,6 +57,7 @@ import {
   PT_INDEPENDENCE,
   NL_INDEPENDENCE,
   FR_INDEPENDENCE,
+  FR_ASF_PAIRING,
   DE_INDEPENDENCE,
   EN_RELATIONSHIP,
   PT_RELATIONSHIP,
@@ -125,7 +126,7 @@ const files = [
 
 const rulesFor = (rel) => {
   if (rel.startsWith('public/nl/') || rel.startsWith('scripts/nl-')) return [...NL_INDEPENDENCE, ...PT_CATEGORY];
-  if (rel.startsWith('public/fr/')) return FR_INDEPENDENCE;
+  if (rel.startsWith('public/fr/')) return [...FR_INDEPENDENCE, ...FR_ASF_PAIRING];
   if (rel.startsWith('public/de/')) return DE_INDEPENDENCE;
   if (rel.startsWith('public/en/')) return [...EN_BROKER, ...EN_INDEPENDENCE, ...EN_RELATIONSHIP];
   // Root-level PT pages, the shared data files and the generators carry both
