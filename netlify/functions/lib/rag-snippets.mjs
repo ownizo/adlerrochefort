@@ -387,10 +387,11 @@ export const RAG_SNIPPETS = {
         "A Lei n.º 71/2013 exige seguro de responsabilidade civil profissional (artigo 10.º) para as " +
         "sete terapêuticas não convencionais reconhecidas (acupunctura, fitoterapia, homeopatia, medicina " +
         "tradicional chinesa, naturopatia, osteopatia, quiroprática), condição para a cédula profissional " +
-        "da ACSS. Capitais indicativos: mínimo 50.000€ para profissionais individuais, 100.000€-250.000€ " +
-        "para clínicas — as coberturas e limites concretos dependem da solução contratada. O yoga não " +
-        "está formalmente na lista mas instrutores enfrentam riscos semelhantes de responsabilidade civil. " +
-        "A Adler tem acesso a soluções especializadas para este risco através de parceria com a Innovarisk.",
+        "da ACSS. A Portaria n.º 200/2014 fixa o capital mínimo em 150.000€ por sinistro e anuidade; as " +
+        "soluções que colocamos partem de 250.000€ — as coberturas e limites concretos dependem da " +
+        "solução contratada. O yoga, o pilates, o tai chi e o qigong não constam desta lista, não exigem " +
+        "cédula nem seguro obrigatório, e têm uma solução própria em /seguros/rc-yoga-pilates-bem-estar/. " +
+        "A Adler tem acesso a soluções especializadas para este risco junto de seguradoras internacionais.",
     },
     rc_acupuntura: {
       fonte: "/blog/seguro-responsabilidade-civil-acupuntores/",
@@ -436,7 +437,7 @@ export const RAG_SNIPPETS = {
         "que não se enquadra bem num produto de RC profissional genérico. A elegibilidade e as condições " +
         "dependem da atividade concreta, do volume de negócios, da exposição territorial, dos contratos " +
         "assumidos e do histórico de sinistros — análise caso a caso, dependente de aceitação da " +
-        "seguradora. A Adler tem acesso a soluções especializadas através de parceria com a Innovarisk.",
+        "seguradora. A Adler tem acesso a soluções especializadas junto de seguradoras internacionais.",
     },
     rc_eventos: {
       fonte: "/seguros/responsabilidade-civil-eventos/",
