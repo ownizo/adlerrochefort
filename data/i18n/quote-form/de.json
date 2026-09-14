@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design.",
+  "common": {
+    "fields": {
+      "nome_completo": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "telefone": "Telefonnummer",
+      "data_inicio": "Gewünschtes Startdatum"
+    },
+    "errors": {
+      "campo_obrigatorio": "Dieses Feld ist erforderlich.",
+      "email_invalido": "Geben Sie eine gültige E-Mail-Adresse ein, zum Beispiel name@email.com.",
+      "nif_invalido": "Geben Sie eine gültige portugiesische Steuernummer (NIF) mit 9 Ziffern ein.",
+      "codigo_postal_invalido": "Geben Sie eine Postleitzahl im Format 0000-000 ein.",
+      "matricula_invalida": "Geben Sie ein gültiges portugiesisches Kennzeichen ein.",
+      "data_inicio_invalida": "Das Startdatum darf nicht vor heute liegen."
+    },
+    "success": {
+      "titulo": "Anfrage erhalten",
+      "corpo": "Vielen Dank. Wir prüfen Ihre Anfrage und antworten innerhalb von 24 Arbeitsstunden."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design. Simplified Chinese, matching the site's existing 简体中文 convention.",
+  "common": {
+    "fields": {
+      "nome_completo": "全名",
+      "email": "电子邮箱",
+      "telefone": "电话号码",
+      "data_inicio": "希望的生效日期"
+    },
+    "errors": {
+      "campo_obrigatorio": "此字段为必填项。",
+      "email_invalido": "请输入有效的电子邮箱地址，例如 name@email.com。",
+      "nif_invalido": "请输入有效的葡萄牙税号（NIF），共9位数字。",
+      "codigo_postal_invalido": "请输入格式为 0000-000 的邮政编码。",
+      "matricula_invalida": "请输入有效的葡萄牙车牌号。",
+      "data_inicio_invalida": "生效日期不能早于今天。"
+    },
+    "success": {
+      "titulo": "已收到您的申请",
+      "corpo": "感谢您的申请。我们将在24个工作小时内审核并回复。"
+    }
+  }
+}

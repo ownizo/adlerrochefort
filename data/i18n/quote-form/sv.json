@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design. Language code 'sv' (Swedish); the URL segment is /se/, kept distinct per scripts/hreflang.mjs's own convention.",
+  "common": {
+    "fields": {
+      "nome_completo": "Fullständigt namn",
+      "email": "E-postadress",
+      "telefone": "Telefonnummer",
+      "data_inicio": "Önskat startdatum"
+    },
+    "errors": {
+      "campo_obrigatorio": "Detta fält är obligatoriskt.",
+      "email_invalido": "Ange en giltig e-postadress, till exempel namn@email.com.",
+      "nif_invalido": "Ange ett giltigt portugisiskt skattenummer (NIF), 9 siffror.",
+      "codigo_postal_invalido": "Ange ett postnummer i formatet 0000-000.",
+      "matricula_invalida": "Ange ett giltigt portugisiskt registreringsnummer.",
+      "data_inicio_invalida": "Startdatumet kan inte vara tidigare än idag."
+    },
+    "success": {
+      "titulo": "Förfrågan mottagen",
+      "corpo": "Tack. Vi går igenom din förfrågan och svarar inom 24 arbetstimmar."
+    }
+  }
+}

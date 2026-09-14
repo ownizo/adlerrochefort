@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test 'netlify/functions/**/*.test.mjs'",
-    "check:freshness": "node scripts/check-generator-freshness.mjs"
+    "test:quote-validators": "node --test scripts/quote-validators.test.mjs",
+    "check:freshness": "node scripts/check-generator-freshness.mjs",
+    "check:i18n": "node scripts/check-i18n-parity.mjs"
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { sendLeadToCrm } from "./lib/crm-sync.mjs";
+import { insertQuoteRequest } from "./lib/quote-requests-sync.mjs";
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -465,6 +466,15 @@ export const HANDLED_FORMS = {
     page: "/seguros/responsabilidade-civil-eventos/",
     branch: "RC Organização de Eventos",
   },
+  // Added with the same gap the comment above describes: this page didn't
+  // exist yet when that pass ran, so it never got a HANDLED_FORMS entry —
+  // submissions were silently "Ignored" (no email, no CRM sync) since launch.
+  "cotacao-rc-yoga": {
+    quote: true,
+    heading: "Novo pedido de análise — RC Yoga, Pilates e Bem-Estar",
+    page: "/seguros/rc-yoga-pilates-bem-estar/",
+    branch: "RC Yoga, Pilates e Bem-Estar",
+  },
   "quote-tvde-en": {
     quote: true,
     en: true,
@@ -923,6 +933,16 @@ export default async (req) => {
     // sendLeadToCrm already catches its own errors; this is a last-resort net
     // so a bug in it can never take the submission pipeline down with it.
     console.error("[crm-sync] unexpected error:", err);
+  }
+
+  // ── quote_requests (Supabase, best-effort, additional to the above) ────────
+  // Formulários de Cotação v2, Fase 0. Nunca deve afetar a resposta ao
+  // Netlify Forms nem o email/CRM sync acima — ver netlify/functions/lib/
+  // quote-requests-sync.mjs.
+  try {
+    await insertQuoteRequest(formName, data, { submissionId });
+  } catch (err) {
+    console.error("[quote-requests-sync] unexpected error:", err);
   }
 
   return new Response("OK", { status: 200 });

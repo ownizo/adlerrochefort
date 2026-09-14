@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design. Language code 'da' (Danish); the URL segment is /dk/, kept distinct per scripts/hreflang.mjs's own convention.",
+  "common": {
+    "fields": {
+      "nome_completo": "Fulde navn",
+      "email": "E-mailadresse",
+      "telefone": "Telefonnummer",
+      "data_inicio": "Ønsket startdato"
+    },
+    "errors": {
+      "campo_obrigatorio": "Dette felt er påkrævet.",
+      "email_invalido": "Indtast en gyldig e-mailadresse, for eksempel navn@email.com.",
+      "nif_invalido": "Indtast et gyldigt portugisisk skattenummer (NIF), 9 cifre.",
+      "codigo_postal_invalido": "Indtast et postnummer i formatet 0000-000.",
+      "matricula_invalida": "Indtast et gyldigt portugisisk nummerplade.",
+      "data_inicio_invalida": "Startdatoen kan ikke ligge før i dag."
+    },
+    "success": {
+      "titulo": "Anmodning modtaget",
+      "corpo": "Tak. Vi gennemgår din anmodning og svarer inden for 24 arbejdstimer."
+    }
+  }
+}

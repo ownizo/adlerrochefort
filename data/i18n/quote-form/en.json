@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json (the canonical structure — see scripts/lib/i18n.mjs). No pt_only section: the 'Antes de preencher' framing block is Portuguese-only by design (spec v2, section 1.2).",
+  "common": {
+    "fields": {
+      "nome_completo": "Full name",
+      "email": "Email",
+      "telefone": "Phone",
+      "data_inicio": "Requested start date"
+    },
+    "errors": {
+      "campo_obrigatorio": "This field is required.",
+      "email_invalido": "Enter a valid email address, for example name@email.com.",
+      "nif_invalido": "Enter a valid Portuguese tax number (NIF), 9 digits.",
+      "codigo_postal_invalido": "Enter a postal code in the format 0000-000.",
+      "matricula_invalida": "Enter a valid Portuguese vehicle plate.",
+      "data_inicio_invalida": "The start date cannot be before today."
+    },
+    "success": {
+      "titulo": "Request received",
+      "corpo": "Thank you. We'll review your request and reply within 24 business hours."
+    }
+  }
+}
