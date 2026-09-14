@@ -1800,6 +1800,248 @@
       .asf-top-bar { font-size: 10px; padding: 6px 16px; }
   }
 
+  /* ═══════════════ REGULATORY AUTHORITIES ═══════════════
+     Institutional band between the closing CTA and the footer. Deliberately
+     quieter than the marketing sections above it — the heading is stepped
+     down from the standard .section-title scale and the surface is white, so
+     it reads as regulatory information rather than another pitch.
+
+     The two marks are nothing alike: the ASF logo is line art on a
+     transparent canvas at 355×191 (1.86:1), while the Spanish government
+     banner is a solid filled rectangle at 357×89 (4.01:1). Forcing them to
+     a shared width or height would wreck one or both, so each gets its own
+     max-height inside a common box, picked so the two occupy comparable
+     visual area. object-fit: contain guarantees neither is cropped. */
+  .regulators-section {
+    padding: 76px 48px;
+    background: var(--white);
+    text-align: center;
+  }
+
+  .regulators-header { max-width: 620px; margin: 0 auto; }
+  .regulators-header .section-eyebrow { justify-content: center; }
+  .regulators-header .section-title {
+    font-size: clamp(26px, 2.6vw, 34px);
+    margin-bottom: 16px;
+  }
+  .regulators-header .section-subtitle { margin: 0 auto; font-size: 15px; }
+
+  .regulators-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 64px;
+    justify-items: center;
+    max-width: 840px;
+    margin: 52px auto 0;
+  }
+
+  .regulator-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 12px;
+    max-width: 320px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px;
+    transition: transform 0.25s ease;
+  }
+
+  .regulator-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    width: 100%;
+  }
+
+  .regulator-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.92;
+    transition: opacity 0.25s ease;
+  }
+
+  .regulator-logo--asf img { max-height: 90px; }
+  .regulator-logo--dgs img { max-height: 60px; }
+
+  .regulator-country {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .regulator-name {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink2);
+    margin-top: -8px;
+  }
+
+  .regulator-item:hover,
+  .regulator-item:focus-visible { transform: translateY(-2px); }
+  .regulator-item:hover .regulator-logo img,
+  .regulator-item:focus-visible .regulator-logo img { opacity: 1; }
+  .regulator-item:hover .regulator-name,
+  .regulator-item:focus-visible .regulator-name { color: var(--primary); }
+  .regulator-item:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; }
+
+  .regulators-note {
+    max-width: 640px;
+    margin: 44px auto 0;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+    opacity: 0.85;
+  }
+
+  @media (max-width: 700px) {
+    .regulators-section { padding: 56px 24px; }
+    .regulators-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 340px;
+      margin-top: 40px;
+    }
+    .regulator-logo { height: 86px; }
+    .regulator-logo--asf img { max-height: 80px; }
+    .regulator-logo--dgs img { max-height: 54px; }
+    .regulators-note { margin-top: 34px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .regulator-item, .regulator-logo img, .regulator-name { transition: none; }
+    .regulator-item:hover, .regulator-item:focus-visible { transform: none; }
+  }
+
+  /* ═══════════════ MEMBERSHIPS / ASSOCIATIONS ═══════════════
+     Trust band sitting directly under the partner insurers so the two
+     credibility blocks read as a pair. Cream rather than a second white
+     panel, and no card chrome — the marks carry it.
+
+     Logo sizing: every box is the same height and each mark is centred in
+     it with object-fit: contain, so nothing is stretched or cropped. The
+     four PNGs carry very different amounts of transparent padding, though
+     (NCA fills its canvas edge to edge; the afpop wordmark occupies barely
+     a third of its own height), so one shared cap height would leave the
+     wordmarks looking shrunken beside the badge. Each mark therefore gets
+     its own max-height, chosen so the visible ink — not the canvas —
+     lands on a comparable cap height. */
+  .memberships-section {
+    padding: 88px 48px;
+    background: var(--cream);
+    text-align: center;
+  }
+
+  .memberships-header { max-width: 860px; margin: 0 auto; }
+  .memberships-header .section-eyebrow { justify-content: center; }
+  .memberships-header .section-subtitle { margin: 0 auto; }
+
+  .memberships-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px 32px;
+    align-items: start;
+    max-width: 1160px;
+    margin: 56px auto 0;
+  }
+
+  .membership-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 4px;
+    transition: transform 0.25s ease;
+  }
+
+  .membership-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 116px;
+    width: 100%;
+  }
+
+  .membership-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.25s ease;
+  }
+
+  .membership-logo--bpcc img   { max-height: 86px; }
+  .membership-logo--afpop img  { max-height: 116px; }
+  .membership-logo--nca img    { max-height: 64px; }
+  .membership-logo--aprose img { max-height: 88px; }
+
+  .membership-name {
+    font-size: 13px;
+    line-height: 1.55;
+    font-weight: 500;
+    color: var(--ink2);
+    max-width: 230px;
+    transition: color 0.25s ease;
+  }
+
+  .membership-item:hover,
+  .membership-item:focus-visible { transform: translateY(-2px); }
+  .membership-item:hover .membership-logo img,
+  .membership-item:focus-visible .membership-logo img { opacity: 1; }
+  .membership-item:hover .membership-name,
+  .membership-item:focus-visible .membership-name { color: var(--primary); }
+  .membership-item:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; }
+
+  @media (max-width: 1024px) {
+    .memberships-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px 32px;
+      max-width: 660px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .memberships-section { padding: 60px 24px; }
+    .memberships-grid { margin-top: 40px; gap: 30px 20px; }
+    .membership-logo { height: 92px; }
+    .membership-logo--bpcc img   { max-height: 68px; }
+    .membership-logo--afpop img  { max-height: 92px; }
+    .membership-logo--nca img    { max-height: 52px; }
+    .membership-logo--aprose img { max-height: 70px; }
+    .membership-name { font-size: 12px; max-width: 200px; }
+  }
+
+  /* One column below this width: the APROSE line is too long to read in a
+     140px-wide cell. Box heights come down and the gap tightens so four
+     stacked entries do not turn into a scroll. */
+  @media (max-width: 460px) {
+    .memberships-grid { grid-template-columns: 1fr; max-width: 320px; gap: 20px; }
+    .membership-item { gap: 12px; padding: 4px 8px; }
+    .membership-logo { height: 84px; }
+    .membership-logo--bpcc img   { max-height: 64px; }
+    .membership-logo--afpop img  { max-height: 84px; }
+    .membership-logo--nca img    { max-height: 52px; }
+    .membership-logo--aprose img { max-height: 66px; }
+    .membership-name { max-width: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .membership-item, .membership-logo img, .membership-name { transition: none; }
+    .membership-item:hover, .membership-item:focus-visible { transform: none; }
+  }
+
   /* ═══════════════ CONTACT MODAL ═══════════════ */
   .contact-modal-overlay {
     display: none;
@@ -3184,6 +3426,33 @@
   <p class="fade-up" style="max-width:640px;margin:20px auto 0;text-align:center;font-size:13px;line-height:1.6;color:var(--muted);">Insurer relationships and product availability vary by market — the insurers above operate in Portugal. Our Spanish insurer relationships are still being built; tell us what you need and we will confirm honestly what can currently be arranged in Spain.</p>
 </section>
 
+<!-- PROFESSIONAL MEMBERSHIPS &amp; ASSOCIATIONS -->
+<section class="memberships-section" id="memberships" aria-labelledby="memberships-title">
+  <div class="memberships-header fade-up">
+    <div class="section-eyebrow">Memberships</div>
+    <h2 class="section-title" id="memberships-title">Professional memberships &amp; <em>associations</em></h2>
+    <p class="section-subtitle">Adler &amp; Rochefort is a member of recognised business, expatriate and insurance industry organisations in Portugal.</p>
+  </div>
+  <div class="memberships-grid fade-up">
+    <a class="membership-item" href="https://bpcc.pt/members-directory/business-listing/adler-rochefort/" target="_blank" rel="noopener noreferrer">
+      <span class="membership-logo membership-logo--bpcc"><img src="/images/BPCC.png" alt="British-Portuguese Chamber of Commerce" width="481" height="214" loading="lazy" decoding="async"></span>
+      <span class="membership-name">British-Portuguese Chamber of Commerce</span>
+    </a>
+    <a class="membership-item" href="https://connect.afpop.com/adler-rochefort/" target="_blank" rel="noopener noreferrer">
+      <span class="membership-logo membership-logo--afpop"><img src="/images/AFPOP.png" alt="Association of Foreign Property Owners in Portugal" width="228" height="136" loading="lazy" decoding="async"></span>
+      <span class="membership-name">Association of Foreign Property Owners in Portugal</span>
+    </a>
+    <a class="membership-item" href="https://www.ncaportugal.pt/" target="_blank" rel="noopener noreferrer">
+      <span class="membership-logo membership-logo--nca"><img src="/images/NCA.png" alt="Nederlandstalige Club" width="130" height="128" loading="lazy" decoding="async"></span>
+      <span class="membership-name">Nederlandstalige Club</span>
+    </a>
+    <a class="membership-item" href="https://www.aprose.pt/" target="_blank" rel="noopener noreferrer">
+      <span class="membership-logo membership-logo--aprose"><img src="/images/APROSE.png" alt="APROSE - Associação Nacional de Agentes e Corretores de Seguros" width="466" height="213" loading="lazy" decoding="async"></span>
+      <span class="membership-name">Sócio 5858 da Associação Nacional de Agentes e Corretores de Seguros</span>
+    </a>
+  </div>
+</section>
+
 <!-- MYCOVERVAULT — PRIVATE CLIENTS -->
 <section class="tech-section tech-section--one" id="adler-one" aria-label="MyCoverVault — Personal insurance management platform">
   <div class="tech-inner">
@@ -3492,6 +3761,28 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- REGULATORY AUTHORITIES -->
+<section class="regulators-section" id="regulatory-authorities" aria-labelledby="regulators-title">
+  <div class="regulators-header fade-up">
+    <div class="section-eyebrow">Supervision</div>
+    <h2 class="section-title" id="regulators-title">Regulatory <em>authorities</em></h2>
+    <p class="section-subtitle">Insurance distribution activities are supervised by the competent regulatory authorities.</p>
+  </div>
+  <div class="regulators-grid fade-up">
+    <a class="regulator-item" href="https://www.asf.com.pt/" target="_blank" rel="noopener noreferrer">
+      <span class="regulator-logo regulator-logo--asf"><img src="/images/Logo_ASF.png" alt="ASF — Autoridade de Supervisão de Seguros e Fundos de Pensões, the Portuguese insurance and pension funds supervisory authority" width="355" height="191" loading="lazy" decoding="async"></span>
+      <span class="regulator-country">Portugal</span>
+      <span class="regulator-name">Autoridade de Supervisão de Seguros e Fundos de Pensões</span>
+    </a>
+    <a class="regulator-item" href="https://dgsfp.mineco.gob.es/" target="_blank" rel="noopener noreferrer">
+      <span class="regulator-logo regulator-logo--dgs"><img src="/images/logoDGS.png" alt="Dirección General de Seguros y Fondos de Pensiones — Gobierno de España, the Spanish insurance and pension funds supervisory authority" width="357" height="89" loading="lazy" decoding="async"></span>
+      <span class="regulator-country">España</span>
+      <span class="regulator-name">Dirección General de Seguros y Fondos de Pensiones</span>
+    </a>
+  </div>
+  <p class="regulators-note fade-up">Ownizo, Unipessoal Lda. is registered with the ASF under no. 425591790/3 and operates in Spain on a cross-border basis from that registration.</p>
 </section>
 
 <!-- FOOTER -->
