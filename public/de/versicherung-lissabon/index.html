@@ -318,6 +318,7 @@
           <option value="Lebensversicherung">Lebensversicherung</option>
           <option value="Private Clients">Private Clients (komplexe Risiken)</option>
           <option value="Unternehmen">Unternehmen / Selbstständige</option>
+          <option value="Therapeuten &amp; Wellness">Therapeuten &amp; Wellness-Instruktoren</option>
           <option value="Sonstiges">Sonstiges / mehrere Bereiche</option>
         </select>
         <span class="field-error" id="err-typ" aria-live="polite"></span>
@@ -469,6 +470,21 @@
             <input type="text" id="f-un_standort" name="un_standort" placeholder="z. B.: Faro" disabled>
           </div>
         </div>
+        <div class="form-branch-fields" data-branch="Therapeuten &amp; Wellness" hidden>
+          <span class="form-branch-legend">Zu Ihrer Tätigkeit</span>
+          <div class="field">
+            <label for="f-tw_taetigkeit">Tätigkeit</label>
+            <input type="text" id="f-tw_taetigkeit" name="tw_taetigkeit" placeholder="z. B.: Osteopathie, Akupunktur, Yoga, Pilates" disabled>
+          </div>
+          <div class="field">
+            <label for="f-tw_cedula">Besitzen Sie eine ACSS-Zulassung (cédula profissional)?</label>
+            <input type="text" id="f-tw_cedula" name="tw_cedula" placeholder="Ja / Nein / in Beantragung" disabled>
+          </div>
+          <div class="field">
+            <label for="f-tw_ort">Wo üben Sie die Tätigkeit aus?</label>
+            <input type="text" id="f-tw_ort" name="tw_ort" placeholder="z. B.: eigene Praxis, Studio, mobil, auch im Ausland" disabled>
+          </div>
+        </div>
 
       <div class="field">
         <label for="f-nachricht">Ihre Nachricht</label>
@@ -517,6 +533,7 @@
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
+        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
       </ul>
     </div>
     <div>

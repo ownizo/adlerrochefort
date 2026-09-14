@@ -323,6 +323,16 @@ const BRANCHES = [
       { id: 'un_standort', label: 'Standort des Betriebs', type: 'text', placeholder: 'z. B.: Faro' },
     ],
   },
+  {
+    value: 'Therapeuten & Wellness',
+    label: 'Therapeuten & Wellness-Instruktoren',
+    legend: 'Zu Ihrer Tätigkeit',
+    fields: [
+      { id: 'tw_taetigkeit', label: 'Tätigkeit', type: 'text', placeholder: 'z. B.: Osteopathie, Akupunktur, Yoga, Pilates' },
+      { id: 'tw_cedula', label: 'Besitzen Sie eine ACSS-Zulassung (cédula profissional)?', type: 'text', placeholder: 'Ja / Nein / in Beantragung' },
+      { id: 'tw_ort', label: 'Wo üben Sie die Tätigkeit aus?', type: 'text', placeholder: 'z. B.: eigene Praxis, Studio, mobil, auch im Ausland' },
+    ],
+  },
 ];
 
 function branchGroupsHtml() {
@@ -456,6 +466,7 @@ const FOOTER = (page) => `<footer class="on-dark">
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
+        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
       </ul>
     </div>
     <div>
