@@ -42,6 +42,7 @@ import {
   DE_INDEPENDENCE,
   EN_RELATIONSHIP,
   PT_RELATIONSHIP,
+  EN_INTERMEDIARY_REVIEWED,
 } from './lib/terminology-rules.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -230,10 +231,16 @@ for (const rel of files) {
   // "intermediary" or reintroduced an "independent" label. Report only — these
   // are read by a human, because a generic or statutory use of either word is
   // legitimate and must not be swept.
+  //
+  // EN_INTERMEDIARY_REVIEWED holds phrases already read by a human and
+  // confirmed as exactly that kind of legitimate generic use, so they stop
+  // being reported every run — not swept, just no longer flagged as open.
+  const isReviewed = (snippet) => EN_INTERMEDIARY_REVIEWED.some(([phrase]) => snippet.includes(phrase));
   for (const m of html.matchAll(/[^<>]{0,60}\bcorretor[ae]?s?\b[^<>]{0,60}/gi)) {
     residualTerminology.push(`${rel} :: ${m[0].replace(/\s+/g, ' ').trim()}`);
   }
   for (const m of html.matchAll(/[^<>]{0,60}\b(?:intermediar(?:y|ies)|independen\w*|onafhankelijk\w*|ind[ée]pendan\w*|unabh[äa]ngig\w*)\b[^<>]{0,60}/gi)) {
+    if (isReviewed(m[0])) continue;
     residualTerminology.push(`${rel} :: ${m[0].replace(/\s+/g, ' ').trim()}`);
   }
 }

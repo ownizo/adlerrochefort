@@ -511,3 +511,31 @@ export const PT_RELATIONSHIP = [
     'Um mediador autorizado pela ASF apresenta o seu caso às seguradoras com quem trabalha:',
   ],
 ];
+
+/**
+ * Reviewed exceptions for block0-compliance.mjs's residual-terminology audit
+ * (the `intermediar(y|ies)` half of it — matches no EN_BROKER rule's exact
+ * left-hand side, so this pass never rewrites them, but the audit's separate
+ * regex keeps surfacing them for review on every run regardless). Each entry
+ * is a stable substring guaranteed to fall inside that regex's ±60-character
+ * match window, checked against the two live occurrences on
+ * public/en/index.html before being added here — not guessed at.
+ *
+ * These are read-only: nothing in the tables above rewrites this text, and
+ * nothing should. Listing them here only tells the audit to stop flagging
+ * wording that has already been reviewed and confirmed as not a status claim.
+ */
+export const EN_INTERMEDIARY_REVIEWED = [
+  [
+    'the role of the insurance intermediary in Portugal',
+    'Biographical prose about an approach ("redefining the role of..."), not a statement of status. Claims no registration and no category; "intermediary" is a common noun here, not a regulatory designation.',
+  ],
+  [
+    'What does an insurance intermediary do and why should I use one?',
+    'Generic category explanation — same case as the PL/SE/DK guide pages. Explains what the role does, not our registration.',
+  ],
+  [
+    'An insurance intermediary is a professional authorised by the ASF',
+    'Generic category explanation, the FAQ answer that follows the question above — defines the profession, then correctly switches to "a broker" for the sentence that describes what we specifically do.',
+  ],
+];
