@@ -41,6 +41,15 @@ export const PAGE_CLUSTERS = [
   // pillar's PT link to the homepage every time it ran.
   { pt: '/seguros/auto/', en: '/en/car-insurance-portugal/' },
   { pt: '/seguros/condominios/', en: '/en/condominium-insurance-algarve/' },
+  // Professional liability — therapies and wellbeing. The EN side is
+  // article-shaped (each with its own quote form), not a /seguros/-style
+  // landing page, and liability-insurance-complementary-therapies already
+  // has its own true translationOf pair with the PT blog article — that
+  // pairing is untouched. These two entries give the PT *product* pages
+  // (built in September 2026, after the EN cluster existed) an EN
+  // counterpart of their own, since neither had one before.
+  { pt: '/seguros/rc-terapeuticas-nao-convencionais/', en: '/en/blog/liability-insurance-complementary-therapies/' },
+  { pt: '/seguros/rc-yoga-pilates-bem-estar/', en: '/en/blog/yoga-instructor-liability-insurance-portugal/' },
   { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
   { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/' },
   { pt: '/seguros/alojamento-local/', nl: '/nl/alojamento-local-verzekering-portugal/' },
