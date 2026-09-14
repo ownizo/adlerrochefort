@@ -93,9 +93,23 @@
 
     function goNext() {
       var API = window.ArQuoteForm;
-      var bad = API ? API.validate(form, steps[current]) : [];
+      if (!API) {
+        // Fail CLOSED: no validator available is the worst case this
+        // function can be in, not a free pass. The previous version read
+        // this exact case as "nothing to check" (`bad = []` when API is
+        // falsy) and advanced anyway — so if ar-quote-form.js ever fails to
+        // finish wiring for any reason, every required field on every step
+        // becomes silently optional and a visitor can click straight
+        // through to a submission with all of them empty. Confirmed in
+        // production on /seguros/auto/ (see the bug report this fixes).
+        if (window.console && console.error) {
+          console.error('[quote-wizard] window.ArQuoteForm is unavailable — refusing to advance past step ' + (current + 1) + ' rather than skip validation.');
+        }
+        return;
+      }
+      var bad = API.validate(form, steps[current]);
       if (bad.length) {
-        if (API) API.focusFirst(bad[0]);
+        API.focusFirst(bad[0]);
         return;
       }
       if (current < steps.length - 1) showStep(current + 1);
@@ -155,10 +169,26 @@
         var el = form.querySelector('[name="' + name + '"]');
         if (!el) continue;
         if (el.type === 'checkbox' || el.type === 'radio') {
-          if (el.value === data[name]) el.checked = true;
+          if (el.value !== data[name]) continue;
+          el.checked = true;
         } else {
           el.value = data[name];
         }
+        // Dispatch as if the visitor had just entered this themselves —
+        // setting .value/.checked directly fires no events at all, and a
+        // restored field is silently incomplete for anything that only
+        // reacts to input/change: public/js/quote-nationality.js's hidden
+        // ISO-code mirror never resyncs (the visible search box shows the
+        // right country, the hidden field the payload actually reads stays
+        // empty), and Fase 2's conditional groups (public/js/
+        // lead-branch-fields.js, public/js/quote-field-toggle.js) never
+        // re-evaluate which fields should be enabled/visible — a restored
+        // "alojamento local" answer leaves its own follow-up field stuck
+        // disabled and excluded from the payload. Confirmed in production
+        // for the nationality case; same root cause, so fixed once here
+        // rather than patched separately in each dependent script.
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
       }
       if (typeof data.__step === 'number' && data.__step >= 0 && data.__step < steps.length) {
         current = data.__step;
@@ -196,6 +226,64 @@
       }
     }
     form.addEventListener('submit', serializeDynamicBlocks, true);
+
+    // ── Last-resort submit guard ─────────────────────────────────────────
+    // "Seguinte" gates each step on the way in, but nothing here previously
+    // stood between an incomplete form and an actual submission — that was
+    // entirely ar-quote-form.js's job, on the assumption its own submit
+    // listener always attaches. It doesn't always: if that file fails to
+    // finish wiring this form for any reason (a network hiccup on the
+    // deferred script, a future markup change that makes wire() throw), no
+    // listener ever calls preventDefault(), `novalidate` may or may not
+    // have been set, and the browser's native form submission goes through
+    // with whatever the fields currently hold — steps hidden by the wizard
+    // included, since a `hidden` attribute never excluded a field from a
+    // submission, by design (see the markup contract above). Capture phase,
+    // ahead of ar-quote-form.js's own listener, and deliberately minimal:
+    // it doesn't know NIF/plate/date format rules the way that file does,
+    // and isn't meant to replace it — only to guarantee that a `required`
+    // field with no value, or an unticked required checkbox, can never
+    // leave this form by any path, degraded or not. Skips entirely when
+    // window.ArQuoteForm is present, so the normal case (its own listener
+    // runs right after this and shows the real, per-field error) is
+    // unchanged.
+    function firstEmptyRequiredField() {
+      var controls = form.querySelectorAll('[required]');
+      for (var i = 0; i < controls.length; i++) {
+        var el = controls[i];
+        if (el.disabled) continue;
+        if (el.type === 'checkbox' || el.type === 'radio') {
+          if (!el.checked) return el;
+        } else if (!(el.value || '').trim()) {
+          return el;
+        }
+      }
+      return null;
+    }
+    form.addEventListener(
+      'submit',
+      function (e) {
+        if (window.ArQuoteForm) return;
+        var missing = firstEmptyRequiredField();
+        if (!missing) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        if (window.console && console.error) {
+          console.error(
+            '[quote-wizard] blocked a submission: window.ArQuoteForm never attached, and "' +
+              (missing.name || missing.id) +
+              '" is required and empty.'
+          );
+        }
+        try {
+          missing.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          missing.focus();
+        } catch (err) {
+          /* best-effort — the block above is what actually matters */
+        }
+      },
+      true
+    );
 
     restoreDraft();
     showStep(current);
