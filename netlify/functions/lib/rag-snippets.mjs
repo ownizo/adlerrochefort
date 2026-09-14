@@ -966,13 +966,16 @@ export const RAG_SNIPPETS = {
         "policy sized to its turnover, with retroactive cover and a reporting period after the contract ends.",
     },
     rc_terapeuticas: {
-      fonte: "/en/blog/liability-insurance-complementary-therapies/",
+      fonte: "/en/blog/liability-insurance-complementary-therapies/ e /en/blog/lei-71-2013-therapies-liability-portugal/",
       texto:
-        "Law No. 71/2013 requires professional liability insurance for the six recognised complementary " +
+        "Law No. 71/2013 requires professional liability insurance for the seven recognised complementary " +
         "therapies (acupuncture, phytotherapy, homeopathy, traditional Chinese medicine, naturopathy, " +
-        "osteopathy), a condition for the ACSS professional licence. Recommended sums insured: minimum " +
-        "€50,000 for solo practitioners, €100,000-250,000 for clinics. Indicative cost: €150-500/year. " +
-        "Yoga is not formally on the list but instructors face similar liability exposure.",
+        "osteopathy, chiropractic), a condition for the ACSS professional licence (the cédula profissional). " +
+        "Portaria n.º 200/2014 sets the minimum sum insured at €150,000 per claim and per annuity; the " +
+        "solutions we place start from €250,000. Yoga, Pilates, Tai Chi and Qigong are not on this list, " +
+        "require no cédula and no statutory insurance minimum, and have their own dedicated pages " +
+        "(/en/blog/yoga-instructor-liability-insurance-portugal/ and " +
+        "/en/blog/pilates-tai-chi-instructor-liability-insurance-portugal/).",
     },
     ciberseguranca: {
       fonte: "/en/blog/cyber-insurance-businesses-portugal/ e /en/blog/ransomware-portugal-cyber-risks/",
