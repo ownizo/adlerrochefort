@@ -134,6 +134,17 @@ export const EN_BROKER = [
     'an insurance intermediary registered with the Portuguese authority (ASF)',
     'an insurance broker registered with the Portuguese authority (ASF)',
   ],
+  // The homepage trust strip's own subtitle, found next to the "Registered
+  // intermediary" card the pass already caught — the section-subtitle sentence
+  // wasn't an exact match for any existing rule's left-hand side, so it had
+  // never been touched despite sitting one line above a card this table
+  // already corrects. Rewritten to the settled EN status phrase in full,
+  // not just the noun, since "under no. 425591790/3" is part of what needed
+  // to read as "ASF-registered insurance broker n.º 425591790/3".
+  [
+    "Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's ASF under no. 425591790/3",
+    'Ownizo, Unipessoal Lda., ASF-registered insurance broker n.º 425591790/3',
+  ],
   ['A technology-driven insurance intermediary is not a technology company', 'A technology-driven insurance broker is not a technology company'],
   ['looking for an insurance intermediary who truly understands', 'looking for a broker who truly understands'],
 
@@ -384,6 +395,34 @@ export const FR_INDEPENDENCE = [
     "<div><strong>Indépendants.</strong> <span>Nous comparons les assureurs et travaillons pour vous — pas pour une seule compagnie.</span></div>",
     "<div><strong>Non liés à un seul assureur.</strong> <span>Nous disposons d'accords d'agence auprès de plusieurs compagnies.</span></div>",
   ],
+
+  // Tightened per instruction: describes the commercial relationship (no
+  // exclusivity contract, several insurers) rather than implying
+  // whole-of-market analysis. Supersedes the "nous choisissons la solution
+  // qui vous convient" framing above once Change 2's own rule has already
+  // landed on "En tant que courtier, nous ne sommes pas liés à un seul
+  // assureur" — this rule catches the full sentence as found on the page.
+  [
+    'En tant que courtier, nous ne sommes pas liés à un seul assureur — nous choisissons la solution qui vous convient.',
+    "Nous ne sommes liés par aucun contrat d'exclusivité et travaillons avec plusieurs assureurs.",
+  ],
+];
+
+/**
+ * FR pairing: "Courtier en assurances" stays (Change 2 above already strips
+ * "indépendant" from it); these pair the noun with the ASF registration
+ * number wherever it appears in the hero or footer. The top bar already
+ * carries the pairing and needs no rule.
+ */
+export const FR_ASF_PAIRING = [
+  [
+    "Adler &amp; Rochefort est votre courtier francophone : nous comparons le marché pour vous et vous expliquons tout clairement en français — en assurance santé, habitation et auto.",
+    "Adler &amp; Rochefort est votre courtier francophone, enregistré auprès de l'ASF sous le nº 425591790/3 : nous comparons le marché pour vous et vous expliquons tout clairement en français — en assurance santé, habitation et auto.",
+  ],
+  [
+    'Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal. Un conseil clair en français, aux normes internationales.',
+    "Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal — enregistré auprès de l'ASF sous le nº 425591790/3. Un conseil clair en français, aux normes internationales.",
+  ],
 ];
 
 export const DE_INDEPENDENCE = [
@@ -398,6 +437,19 @@ export const DE_INDEPENDENCE = [
   [
     '<div><strong>Unabhängig.</strong> <span>Wir vergleichen die Versicherer und arbeiten für Sie — nicht für ein einzelnes Unternehmen.</span></div>',
     '<div><strong>Nicht an einen Versicherer gebunden.</strong> <span>Wir arbeiten mit Agenturverträgen bei mehreren Gesellschaften.</span></div>',
+  ],
+
+  // The German cluster's own regression guard, not this pass's original fix:
+  // scripts/generate-de-cluster.mjs's shared FOOTER template carried
+  // "Versicherungsmakler" unpaired with the registration number in its
+  // footer-brand-desc paragraph (top bar and hero-meta already paired it).
+  // Fixed at the generator source directly, since it is templated there —
+  // this rule exists only so a hand-edit of a published /de/ page back to
+  // the old wording, or a future person running this pass expecting it to
+  // cover /de/, lands on the corrected form rather than reintroducing the gap.
+  [
+    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal. Klare Beratung, in unserem Versichererportfolio.',
+    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.',
   ],
 ];
 
