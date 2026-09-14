@@ -359,13 +359,25 @@
     });
   }
 
-  var forms = document.querySelectorAll('form[data-quote-form]');
-  for (var i = 0; i < forms.length; i++) wire(forms[i]);
-
   // Small surface for public/js/quote-wizard.js to reuse this file's
   // validation/error-display/success/conversion-tracking instead of
   // duplicating any of it — see that file's own comment for why the wizard
   // only ever adds step navigation on top of what's here.
+  //
+  // Exposed BEFORE wiring any individual form, deliberately: quote-wizard.js
+  // treats a missing window.ArQuoteForm as "cannot validate, so refuse to
+  // advance or submit" (fail closed) rather than "nothing to check" (fail
+  // open) — but that guard is only as good as this object actually being
+  // here. If it were assigned after the wire() loop below and wire() threw
+  // partway through for any one form (a markup issue on a page we haven't
+  // seen yet, a future edit that assumes an element exists), every function
+  // above this line still exists (they're hoisted declarations) but the
+  // object that publishes them would never be built — silently disabling
+  // the wizard's entire validation and step-gating on every page that
+  // loads this file, not just the one whose markup triggered it. Assigning
+  // first means that failure mode can only ever cost one form its
+  // source_url/landing_page autofill and its own submit handler — never
+  // the shared validator every other page's wizard depends on.
   window.ArQuoteForm = {
     validateField: validateOneField,
     validate: validate,
@@ -376,4 +388,18 @@
     succeed: succeed,
     t: t,
   };
+
+  var forms = document.querySelectorAll('form[data-quote-form]');
+  for (var i = 0; i < forms.length; i++) {
+    try {
+      wire(forms[i]);
+    } catch (err) {
+      // One form's markup issue must never take down every other quote
+      // form on the same page (the /en/insurance-review/ page alone can
+      // carry more than one). Loud in the console, since a form silently
+      // missing its submit handler is exactly the kind of thing that
+      // needs to surface fast, not disappear into "it seemed to work."
+      if (window.console && console.error) console.error('[ar-quote-form] failed to wire a form:', err);
+    }
+  }
 })();
