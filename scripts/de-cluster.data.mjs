@@ -28,6 +28,7 @@ import { PRIVATE_CLIENTS_PAGE } from './de-content/private-clients.mjs';
 import { LOCAL_PAGES } from './de-content/local.mjs';
 import { ANWARTSCHAFT_PAGE } from './de-content/anwartschaft.mjs';
 import { PHASE2_PAGES } from './de-content/phase2.mjs';
+import { THERAPEUTEN_WELLNESS_PAGE } from './de-content/therapeuten-wellness.mjs';
 
 export { LANG_POLICY_DE, BREADCRUMB_ROOT } from './de-content/shared.mjs';
 
@@ -40,6 +41,7 @@ export const PAGES = [
   MOTOR_PAGE,
   LIFE_PAGE,
   PRIVATE_CLIENTS_PAGE,
+  THERAPEUTEN_WELLNESS_PAGE,
   ...LOCAL_PAGES,
   ...PHASE2_PAGES,
 ];

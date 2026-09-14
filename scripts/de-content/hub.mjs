@@ -98,7 +98,7 @@ export const HUB_PAGE = {
   <div class="container">
     <span class="eyebrow">Ihre Absicherung im Überblick</span>
     <h2 id="themen">Wofür wir Sie beraten</h2>
-    <p class="lead">Acht Themen, die für deutsche Expats in Portugal am häufigsten zur Frage stehen — jedes mit eigenen Fallstricken, die eine allgemeine Übersetzung aus dem Deutschen nicht abdeckt.</p>
+    <p class="lead">Neun Themen, die für deutsche Expats in Portugal am häufigsten zur Frage stehen — jedes mit eigenen Fallstricken, die eine allgemeine Übersetzung aus dem Deutschen nicht abdeckt.</p>
     <div class="feature-grid">
       <div class="feature-card">
         <span class="fc-tag">Gesundheit</span>
@@ -134,6 +134,12 @@ export const HUB_PAGE = {
         <span class="fc-tag">Selbstständige &amp; Betriebe</span>
         <h3>Unternehmen</h3>
         <p>Betriebs- und Berufshaftpflicht für Selbstständige und kleine Unternehmen in Portugal. Sprechen Sie uns direkt an — die eigene Themenseite ist in Vorbereitung.</p>
+      </div>
+      <div class="feature-card">
+        <span class="fc-tag">Therapie &amp; Wellness</span>
+        <h3>Therapeuten &amp; Wellness-Instruktoren</h3>
+        <p>Osteopathie, Akupunktur &amp; Co. mit ACSS-Zulassung unterliegen der gesetzlichen Pflichtversicherung; Yoga, Pilates und Meditation nicht — zwei Rechtsrahmen, oft verwechselt.</p>
+        <a class="fc-link" href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Mehr erfahren</a>
       </div>
       <div class="feature-card wide">
         <span class="fc-tag">Umzug</span>
