@@ -399,6 +399,19 @@ export const DE_INDEPENDENCE = [
     '<div><strong>Unabhängig.</strong> <span>Wir vergleichen die Versicherer und arbeiten für Sie — nicht für ein einzelnes Unternehmen.</span></div>',
     '<div><strong>Nicht an einen Versicherer gebunden.</strong> <span>Wir arbeiten mit Agenturverträgen bei mehreren Gesellschaften.</span></div>',
   ],
+
+  // The German cluster's own regression guard, not this pass's original fix:
+  // scripts/generate-de-cluster.mjs's shared FOOTER template carried
+  // "Versicherungsmakler" unpaired with the registration number in its
+  // footer-brand-desc paragraph (top bar and hero-meta already paired it).
+  // Fixed at the generator source directly, since it is templated there —
+  // this rule exists only so a hand-edit of a published /de/ page back to
+  // the old wording, or a future person running this pass expecting it to
+  // cover /de/, lands on the corrected form rather than reintroducing the gap.
+  [
+    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal. Klare Beratung, in unserem Versichererportfolio.',
+    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.',
+  ],
 ];
 
 // ---------------------------------------------------------------------------
