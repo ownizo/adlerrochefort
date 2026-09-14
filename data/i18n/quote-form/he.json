@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design. Hebrew — RTL rendering handled at the page/CSS level (dir=\"rtl\"), not by this file; values here are plain strings, no directional markup embedded.",
+  "common": {
+    "fields": {
+      "nome_completo": "שם מלא",
+      "email": "כתובת אימייל",
+      "telefone": "מספר טלפון",
+      "data_inicio": "תאריך התחלה מבוקש"
+    },
+    "errors": {
+      "campo_obrigatorio": "שדה זה הינו חובה.",
+      "email_invalido": "יש להזין כתובת אימייל תקינה, לדוגמה name@email.com.",
+      "nif_invalido": "יש להזין מספר זיהוי מס פורטוגלי (NIF) תקין בן 9 ספרות.",
+      "codigo_postal_invalido": "יש להזין מיקוד בפורמט 0000-000.",
+      "matricula_invalida": "יש להזין מספר רישוי רכב פורטוגלי תקין.",
+      "data_inicio_invalida": "תאריך ההתחלה אינו יכול להיות לפני היום."
+    },
+    "success": {
+      "titulo": "הבקשה התקבלה",
+      "corpo": "תודה. נבחן את בקשתך ונשיב בתוך 24 שעות עבודה."
+    }
+  }
+}

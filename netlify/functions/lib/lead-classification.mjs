@@ -234,6 +234,9 @@ const FORM_CLASSIFICATION = {
   // apontar para business.
   'cotacao-rc-tnc': { entityType: 'individual', market: 'PT', product: 'professional-liability' },
   'cotacao-rc-massagistas': { entityType: 'individual', market: 'PT', product: 'professional-liability' },
+  // Same shape as the two above: no company/business field, just a closed
+  // select of individual wellness activities (yoga, Pilates, tai chi...).
+  'cotacao-rc-yoga': { entityType: 'individual', market: 'PT', product: 'professional-liability' },
   'cotacao-rc-profissoes-especificas': {
     entityType: 'contextual',
     market: 'PT',

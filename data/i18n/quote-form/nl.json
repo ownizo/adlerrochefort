@@ -1,0 +1,23 @@
+{
+  "_comment": "Same key structure as pt.json — see scripts/lib/i18n.mjs. No pt_only section by design.",
+  "common": {
+    "fields": {
+      "nome_completo": "Volledige naam",
+      "email": "E-mailadres",
+      "telefone": "Telefoonnummer",
+      "data_inicio": "Gewenste ingangsdatum"
+    },
+    "errors": {
+      "campo_obrigatorio": "Dit veld is verplicht.",
+      "email_invalido": "Voer een geldig e-mailadres in, bijvoorbeeld naam@email.com.",
+      "nif_invalido": "Voer een geldig Portugees fiscaal nummer (NIF) in, 9 cijfers.",
+      "codigo_postal_invalido": "Voer een postcode in het formaat 0000-000 in.",
+      "matricula_invalida": "Voer een geldig Portugees kenteken in.",
+      "data_inicio_invalida": "De ingangsdatum mag niet voor vandaag liggen."
+    },
+    "success": {
+      "titulo": "Aanvraag ontvangen",
+      "corpo": "Bedankt. We bekijken uw aanvraag en reageren binnen 24 werkuren."
+    }
+  }
+}

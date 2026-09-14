@@ -1,0 +1,29 @@
+{
+  "_comment": "Fonte de chaves (estrutura canónica) para os formulários de cotação — ver scripts/lib/i18n.mjs. Fase 0: scaffolding com um pequeno conjunto de chaves comuns, para provar o mecanismo antes das chaves de produto completas (Fase 1+, por ramo).",
+  "common": {
+    "fields": {
+      "nome_completo": "Nome completo",
+      "email": "Email",
+      "telefone": "Telefone",
+      "data_inicio": "Data de início pretendida"
+    },
+    "errors": {
+      "campo_obrigatorio": "Este campo é obrigatório.",
+      "email_invalido": "Introduza um email válido, por exemplo nome@email.com.",
+      "nif_invalido": "Introduza um NIF válido, com 9 dígitos.",
+      "codigo_postal_invalido": "Introduza um código postal no formato 0000-000.",
+      "matricula_invalida": "Introduza uma matrícula portuguesa válida.",
+      "data_inicio_invalida": "A data de início não pode ser anterior a hoje."
+    },
+    "success": {
+      "titulo": "Pedido recebido",
+      "corpo": "Obrigado. Vamos analisar o seu pedido e responder em 24 horas úteis."
+    }
+  },
+  "pt_only": {
+    "antes_de_preencher": {
+      "titulo": "Antes de preencher",
+      "geral": "Trabalhamos com um painel restrito de seguradoras internacionais especializadas, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação — não pelo prémio mais baixo."
+    }
+  }
+}

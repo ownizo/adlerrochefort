@@ -1,0 +1,187 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+
+import { buildQuoteRequestRow, insertQuoteRequest } from "./quote-requests-sync.mjs";
+
+function withEnv(vars, fn) {
+  const previous = {};
+  for (const key of Object.keys(vars)) previous[key] = process.env[key];
+  Object.assign(process.env, vars);
+  return Promise.resolve(fn()).finally(() => {
+    for (const key of Object.keys(vars)) {
+      if (previous[key] === undefined) delete process.env[key];
+      else process.env[key] = previous[key];
+    }
+  });
+}
+
+test("builds a row for a name+email submission, mapping product to one of the four ramos", () => {
+  const row = buildQuoteRequestRow("cotacao-habitacao", {
+    nome: "Maria Silva",
+    email: "maria@example.com",
+    telefone: "912345678",
+    nif: "501442600",
+    codigo_postal: "8600-324",
+  });
+  assert.ok(row);
+  assert.equal(row.ramo, "habitacao"); // product 'home' maps to 'habitacao'
+  assert.equal(row.lingua, "pt");
+  assert.equal(row.form_name, "cotacao-habitacao");
+  assert.equal(row.dados_comuns.nome_completo, "Maria Silva");
+  assert.equal(row.dados_comuns.email, "maria@example.com");
+  assert.equal(row.dados_comuns.nif, "501442600");
+  assert.equal(row.dados_comuns.codigo_postal, "8600-324");
+  assert.equal(row.estado, "novo");
+});
+
+test("returns null when there is no name and no email — nothing worth a row", () => {
+  assert.equal(buildQuoteRequestRow("cotacao-habitacao", { telefone: "912345678" }), null);
+});
+
+test("richer PII (NIF, morada, matrícula) lands here — the opposite of crm-sync.mjs's allowlist", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    telemovel: "912345678",
+    nif: "501442600",
+    matricula: "AA-00-BB",
+    morada: "Rua Exemplo, 123",
+    codigo_postal: "1000-001",
+  });
+  assert.ok(row);
+  assert.equal(row.dados_comuns.nif, "501442600");
+  assert.equal(row.dados_comuns.morada, "Rua Exemplo, 123");
+  assert.equal(row.dados_comuns.codigo_postal, "1000-001");
+  // matricula isn't one of the lifted common fields — it's risk-specific,
+  // so it stays in dados_risco, not dados_comuns.
+  assert.equal(row.dados_risco.matricula, "AA-00-BB");
+});
+
+test("dados_risco carries whatever the form actually sent, minus plumbing and the fields already lifted to dados_comuns", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    "form-name": "seguro-auto",
+    "bot-field": "",
+    matricula: "AA-00-BB",
+    cobertura: "Terceiros",
+    sinistros_3_anos: "Não",
+  });
+  assert.deepEqual(row.dados_risco, { matricula: "AA-00-BB", cobertura: "Terceiros", sinistros_3_anos: "Não" });
+  assert.equal("form-name" in row.dados_risco, false);
+  assert.equal("bot-field" in row.dados_risco, false);
+  assert.equal("nome" in row.dados_risco, false); // lifted into dados_comuns already
+});
+
+test("empty/undefined field values are dropped from dados_risco rather than stored as noise", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    mensagem: "",
+    seguro_atual: undefined,
+  });
+  assert.deepEqual(row.dados_risco, {});
+});
+
+test("ramo falls back to the classifier's raw product name for forms outside the four core ramos", () => {
+  const row = buildQuoteRequestRow("cotacao-frota", {
+    nome: "Empresa Lda",
+    email: "geral@empresa.pt",
+  });
+  // 'fleet' has no entry in RAMO_BY_PRODUCT — Fase 0 still records the row,
+  // just not forced into one of the four ramos the spec defines.
+  assert.equal(row.ramo, "fleet");
+});
+
+test("language resolution: fixed-language page, then submitted lang field, then pt default — same order as crm-sync.mjs", () => {
+  const en = buildQuoteRequestRow("home-insurance-quote", { name: "John Smith", email: "john@example.com" });
+  assert.equal(en.lingua, "en");
+
+  const nl = buildQuoteRequestRow("lead-nl", { naam: "Jan Jansen", email: "jan@example.nl", lang: "nl" });
+  assert.equal(nl.lingua, "nl");
+
+  const pt = buildQuoteRequestRow("contacto", { nome: "Maria Silva", email: "maria@example.com" });
+  assert.equal(pt.lingua, "pt");
+});
+
+test("submissionId is carried through untouched, for idempotency downstream", () => {
+  const row = buildQuoteRequestRow(
+    "contacto",
+    { nome: "Maria Silva", email: "maria@example.com" },
+    { submissionId: "abc-123" },
+  );
+  assert.equal(row.submission_id, "abc-123");
+});
+
+test("insertQuoteRequest never throws when Supabase env vars are not configured", async () => {
+  await withEnv({ SUPABASE_URL: "", SUPABASE_SERVICE_ROLE_KEY: "" }, async () => {
+    await assert.doesNotReject(
+      insertQuoteRequest("contacto", { nome: "Maria Silva", email: "maria@example.com" }),
+    );
+  });
+});
+
+test("insertQuoteRequest never throws when the Supabase REST endpoint is unreachable (network error)", async () => {
+  const originalFetch = global.fetch;
+  global.fetch = async () => {
+    throw new Error("simulated network failure");
+  };
+  try {
+    await withEnv(
+      { SUPABASE_URL: "https://example.invalid.supabase.co", SUPABASE_SERVICE_ROLE_KEY: "x" },
+      async () => {
+        await assert.doesNotReject(
+          insertQuoteRequest("contacto", { nome: "Maria Silva", email: "maria@example.com" }),
+        );
+      },
+    );
+  } finally {
+    global.fetch = originalFetch;
+  }
+});
+
+test("insertQuoteRequest never throws when Supabase rejects with a 4xx, and posts to the REST endpoint with the service-role key — never a browser-facing anon key", async () => {
+  const originalFetch = global.fetch;
+  let calledUrl;
+  let calledHeaders;
+  global.fetch = async (url, options) => {
+    calledUrl = url;
+    calledHeaders = options.headers;
+    return new Response(JSON.stringify({ message: "permission denied" }), { status: 401 });
+  };
+  try {
+    await withEnv(
+      { SUPABASE_URL: "https://example.invalid.supabase.co", SUPABASE_SERVICE_ROLE_KEY: "service-role-secret" },
+      async () => {
+        await assert.doesNotReject(
+          insertQuoteRequest("contacto", { nome: "Maria Silva", email: "maria@example.com" }),
+        );
+      },
+    );
+  } finally {
+    global.fetch = originalFetch;
+  }
+  assert.equal(calledUrl, "https://example.invalid.supabase.co/rest/v1/quote_requests");
+  assert.equal(calledHeaders.apikey, "service-role-secret");
+  assert.equal(calledHeaders.Authorization, "Bearer service-role-secret");
+});
+
+test("insertQuoteRequest skips silently (no request sent) when there is no name/email to build a row from", async () => {
+  const originalFetch = global.fetch;
+  let called = false;
+  global.fetch = async () => {
+    called = true;
+    return new Response(null, { status: 200 });
+  };
+  try {
+    await withEnv(
+      { SUPABASE_URL: "https://example.invalid.supabase.co", SUPABASE_SERVICE_ROLE_KEY: "x" },
+      async () => {
+        await insertQuoteRequest("contacto", { telefone: "912345678" });
+      },
+    );
+  } finally {
+    global.fetch = originalFetch;
+  }
+  assert.equal(called, false);
+});
