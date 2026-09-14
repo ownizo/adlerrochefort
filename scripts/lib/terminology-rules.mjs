@@ -134,6 +134,17 @@ export const EN_BROKER = [
     'an insurance intermediary registered with the Portuguese authority (ASF)',
     'an insurance broker registered with the Portuguese authority (ASF)',
   ],
+  // The homepage trust strip's own subtitle, found next to the "Registered
+  // intermediary" card the pass already caught — the section-subtitle sentence
+  // wasn't an exact match for any existing rule's left-hand side, so it had
+  // never been touched despite sitting one line above a card this table
+  // already corrects. Rewritten to the settled EN status phrase in full,
+  // not just the noun, since "under no. 425591790/3" is part of what needed
+  // to read as "ASF-registered insurance broker n.º 425591790/3".
+  [
+    "Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's ASF under no. 425591790/3",
+    'Ownizo, Unipessoal Lda., ASF-registered insurance broker n.º 425591790/3',
+  ],
   ['A technology-driven insurance intermediary is not a technology company', 'A technology-driven insurance broker is not a technology company'],
   ['looking for an insurance intermediary who truly understands', 'looking for a broker who truly understands'],
 
