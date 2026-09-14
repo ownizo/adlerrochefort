@@ -1,0 +1,188 @@
+/**
+ * Especificação dos Formulários de Cotação v2 — the 3-step wizard
+ * (public/js/quote-wizard.js) on top of the existing quote-form styling.
+ *
+ * Linked on the Fase 1 pilot pages only (public/seguros/auto/,
+ * public/en/car-insurance-portugal/) — every rule here is either brand new
+ * (the wizard progress bar, step nav, the nationality/residency helper text)
+ * or fills in error/honeypot states that ar-site.css's own .contact-form-*
+ * block (written for the "Fale connosco" modal) never needed, so nothing
+ * here redefines a selector ar-site.css or ar-landing.css already styles —
+ * see this file's own PR for the audit.
+ */
+
+/* ═══════════════ FIELD ERROR / HONEYPOT STATES ═══════════════
+ * ar-landing.css already has these for the pages that load it; ar-site.css
+ * (public/seguros/*, no ar-landing.css) does not, so the Portuguese Auto
+ * page needs them from here. Loading this on the English page too is
+ * harmless: same selectors, same declarations. */
+
+.contact-form-honeypot {
+  display: none !important;
+}
+
+.contact-form-error {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #B3261E;
+}
+
+.contact-form-field.has-error input,
+.contact-form-field.has-error select,
+.contact-form-field.has-error textarea {
+  border-color: #B3261E;
+}
+
+.contact-form-failure {
+  margin: 4px 0 16px;
+  padding: 14px 16px;
+  border-left: 3px solid #B3261E;
+  background: rgba(179, 38, 30, 0.06);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #8C1D18;
+}
+
+.contact-form-submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* Same class/shape as the checkbox groups on the EN market-cluster pages
+ * (ar-landing.css) — reused here rather than a new name, for the one
+ * required checkbox this phase adds (RGPD consent, Passo 3). */
+.contact-form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.contact-form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ═══════════════ WIZARD PROGRESS ═══════════════ */
+
+.wizard-progress {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+}
+
+.wizard-progress-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wizard-progress-item-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.wizard-progress-item.is-active .wizard-progress-item-bar,
+.wizard-progress-item.is-done .wizard-progress-item-bar {
+  background: var(--primary);
+}
+
+.wizard-progress-item-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+
+.wizard-progress-item.is-active .wizard-progress-item-label,
+.wizard-progress-item.is-done .wizard-progress-item-label {
+  color: var(--ink);
+}
+
+/* ═══════════════ STEP NAVIGATION ═══════════════ */
+
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.wizard-nav-back {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.wizard-nav-back:hover {
+  border-color: var(--primary);
+}
+
+.wizard-nav-next {
+  flex: 1;
+  background: var(--primary);
+  border: none;
+  padding: 14px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.wizard-nav-next:hover {
+  background: var(--primary-hover);
+}
+
+/* Step 1 has no back button — its "next" takes the full row. */
+[data-wizard-step]:first-of-type .wizard-nav-next {
+  flex: 1;
+}
+
+/* ═══════════════ HELPER / INFO TEXT ═══════════════ */
+
+.wizard-helper {
+  margin: -6px 0 4px;
+  padding: 10px 14px;
+  background: var(--cream2);
+  border-left: 3px solid var(--primary);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .wizard-nav {
+    flex-direction: column-reverse;
+  }
+
+  .wizard-nav-back,
+  .wizard-nav-next {
+    width: 100%;
+    min-height: 48px;
+  }
+}

@@ -95,7 +95,16 @@ function fillVisible(form, doc) {
   for (const el of form.querySelectorAll('input, select, textarea')) {
     if (!el.name || el.disabled || el.type === 'hidden') continue;
     if (el.name === 'bot-field') continue; // the honeypot stays empty, as a human leaves it
-    if (el.closest('[hidden]')) continue; // the visitor cannot type into a hidden group
+    // A branch group hidden by lead-branch-fields.js really is off-limits — a
+    // human can't type into it, and its fields are `disabled` anyway so they
+    // never reach the payload regardless. A wizard step (Especificação v2,
+    // public/js/quote-wizard.js) is different: it's hidden only because it's
+    // not the *current* step, not because it's excluded — the visitor fills
+    // it a moment later and it submits with everything else on step 3. Since
+    // this test builds the end-state payload rather than replaying the
+    // wizard's own step-by-step navigation, its fields get filled too.
+    const hiddenAncestor = el.closest('[hidden]');
+    if (hiddenAncestor && !hiddenAncestor.hasAttribute('data-wizard-step')) continue;
     if (el.tagName === 'SELECT') {
       if (!el.value && el.options.length > 1) el.value = el.options[1].value;
       continue;
@@ -321,10 +330,11 @@ const CASES = [
     pageScripts: ['ar-quote-form.js'],
   },
   {
-    // The car pillar. Its registration-status and claims-history selects are
-    // the two answers that decide which insurers can be approached at all, so
-    // a dropped select here would cost the lead most of its value.
-    label: '12. /en/car-insurance-portugal/ — car insurance pillar',
+    // The car pillar. Especificação v2 Fase 1: now the 3-step wizard
+    // (public/js/quote-wizard.js) — tax_resident_pt is the field that plays
+    // registration-status's old role of "an answer that would be expensive
+    // to lose silently."
+    label: '12. /en/car-insurance-portugal/ — car insurance pillar (wizard, Fase 1)',
     path: 'en/car-insurance-portugal/index.html',
     url: 'https://adlerrochefort.com/en/car-insurance-portugal/',
     formName: 'car-insurance-quote',
@@ -353,14 +363,16 @@ const CASES = [
     pageScripts: ['ar-conversion.js'],
   },
   {
-    // The Portuguese motor page. Its source_url is stamped inline rather than
-    // by /js/, so this case runs the page's own inline scripts.
-    label: '15. /seguros/auto/ — Portuguese motor landing',
+    // The Portuguese motor page. Especificação v2 Fase 1: now the 3-step
+    // wizard (public/js/quote-wizard.js) on public/js/ar-quote-form.js, same
+    // as the English pillar below — source_url is stamped by wire(), not by
+    // a page-local inline script, since Fase 1 rewired this page onto the
+    // same shared handler the English pages already used.
+    label: '15. /seguros/auto/ — Portuguese motor landing (wizard, Fase 1)',
     path: 'seguros/auto/index.html',
     url: 'https://adlerrochefort.com/seguros/auto/',
     formName: 'seguro-auto',
-    pageScripts: [],
-    inlineScripts: true,
+    pageScripts: ['ar-quote-form.js'],
   },
   {
     // Spain market layer (Phase 1). Same shape as the Portuguese/English

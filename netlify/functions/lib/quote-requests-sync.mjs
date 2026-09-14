@@ -1,4 +1,5 @@
 import { classifySubmission, extractContact } from "./lead-classification.mjs";
+import { applyDynamicFields } from "./dynamic-fields.mjs";
 
 // -----------------------------------------------------------------------------
 // quote-requests-sync.mjs — grava cada submissão relevante na tabela
@@ -55,6 +56,7 @@ const RAMO_BY_PRODUCT = {
 // `dados_comuns` column rather than staying loose in `dados_risco`.
 const COMMON_FIELD_ALIASES = {
   morada: ["morada", "address", "adres", "adresse", "hv_lage"],
+  localidade: ["localidade", "town", "city"],
   codigo_postal: ["codigo_postal", "postcode", "postal_code", "cp"],
   data_nascimento: ["data_nascimento", "date_of_birth", "kv_geburtsdatum", "lv_geburtsdatum"],
   nacionalidade: ["nacionalidade", "nationality", "nationaliteit", "nationalite"],
@@ -75,6 +77,14 @@ const NEVER_IN_DADOS_RISCO = new Set([
   "phone",
   "telefoon",
   "einwilligung",
+  "dados_dinamicos", // handled separately, see applyDynamicFields below
+  // The wizard's free-text nationality search box (public/js/
+  // quote-nationality.js) — the hidden "nacionalidade" field next to it,
+  // already in COMMON_FIELD_ALIASES.nacionalidade below, carries the ISO
+  // code that becomes dados_comuns.nacionalidade; the search text itself
+  // would just be a redundant near-duplicate in dados_risco.
+  "nacionalidade_nome",
+  "nationality_name",
   ...Object.values(COMMON_FIELD_ALIASES).flat(),
 ]);
 
@@ -106,6 +116,7 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
     telefone: phone,
     nif: data?.nif,
     morada: pickFirst(data, COMMON_FIELD_ALIASES.morada),
+    localidade: pickFirst(data, COMMON_FIELD_ALIASES.localidade),
     codigo_postal: pickFirst(data, COMMON_FIELD_ALIASES.codigo_postal),
     data_nascimento: pickFirst(data, COMMON_FIELD_ALIASES.data_nascimento),
     nacionalidade: pickFirst(data, COMMON_FIELD_ALIASES.nacionalidade),
@@ -123,19 +134,24 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
     dados_risco[k] = v;
   }
 
-  return {
+  // Checkbox values arrive as whatever string the field's `value` attribute
+  // declares — never the JS boolean `true` — and that string varies by
+  // language/page: "sim" (the wizard's own PT pages), "yes" (EN), "ja" (the
+  // DE cluster's existing einwilligung field). A form with no such field yet
+  // (most of the site, still Fase 1's "accept what forms already send")
+  // simply leaves this undefined — never assumed true.
+  const CONSENT_TRUE_VALUES = new Set(["sim", "yes", "ja", "true"]);
+  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung"]);
+
+  const row = {
     ramo,
     lingua,
     form_name: formName,
     dados_comuns,
     dados_risco,
-    pessoas_seguras: null, // ligado numa fase posterior, quando o repetidor de saúde existir
+    pessoas_seguras: null, // preenchido abaixo por applyDynamicFields quando ramo === 'saude'
     consentimento: {
-      // Netlify Forms exige o campo obrigatório para submeter, mas nem todos
-      // os formulários atuais têm uma checkbox de RGPD explícita ainda (isso
-      // é trabalho das fases seguintes) — não se assume aceite, só se regista
-      // o que o formulário realmente trouxe.
-      aceite: data?.einwilligung === "ja" || data?.rgpd === true || undefined,
+      aceite: consentValue ? CONSENT_TRUE_VALUES.has(consentValue.toLowerCase()) : undefined,
       timestamp: new Date().toISOString(),
       ip: null, // não disponível de forma fiável no payload do webhook Netlify Forms
       versao_politica: null, // por fixar quando a versão da política passar a ser rastreada
@@ -143,6 +159,8 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
     estado: "novo",
     submission_id: submissionId,
   };
+
+  return applyDynamicFields(row, ramo, data?.dados_dinamicos);
 }
 
 const DEFAULT_TIMEOUT_MS = 5000;

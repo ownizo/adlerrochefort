@@ -31,6 +31,24 @@
       failed:
         'Your request could not be sent. Please check your connection and try again — ' +
         'nothing you typed has been lost.',
+      // Added for the quote-request wizard (Especificação v2) — mirrors
+      // data/i18n/quote-form/en.json's common.errors.* wording exactly. That
+      // JSON file is the source of truth checked by
+      // scripts/check-i18n-parity.mjs; this object is the runtime copy, same
+      // relationship the four messages above already have with the spec.
+      nif: 'Enter a valid Portuguese tax number (NIF), 9 digits.',
+      postalCode: 'Enter a postal code in the format 0000-000.',
+      plate: 'Enter a valid Portuguese vehicle plate.',
+      startDate: 'The start date cannot be before today.',
+      licenceDate: "The licence date can't be earlier than the policyholder's 18th birthday.",
+      renovationYear: "The renovation year can't be before construction or after the current year.",
+      // `data-required-copy` overrides — mirrors data/i18n/quote-form/en.json's
+      // common.errors.residente_fiscal_obrigatorio/rgpd_obrigatorio, for the
+      // two required fields (Fase 1) whose generic "Please complete this
+      // field." isn't specific enough to act on.
+      residenteFiscal: "Let us know whether you're a tax resident in Portugal.",
+      rgpd: 'You need to agree before we can prepare the quote.',
+      birthDate: 'The date of birth cannot be in the future.',
     },
     pt: {
       required: 'Preencha este campo.',
@@ -39,6 +57,15 @@
       failed:
         'Não foi possível enviar o seu pedido. Verifique a ligação e tente novamente — ' +
         'não perdeu nada do que escreveu.',
+      nif: 'Introduza um NIF válido, com 9 dígitos.',
+      postalCode: 'Introduza um código postal no formato 0000-000.',
+      plate: 'Introduza uma matrícula portuguesa válida.',
+      startDate: 'A data de início não pode ser anterior a hoje.',
+      licenceDate: 'A data da carta não pode ser anterior ao 18.º aniversário do tomador.',
+      renovationYear: 'O ano das obras não pode ser anterior à construção nem posterior ao ano atual.',
+      residenteFiscal: 'Indique se é residente fiscal em Portugal.',
+      rgpd: 'Tem de aceitar para podermos preparar a cotação.',
+      birthDate: 'A data de nascimento não pode ser no futuro.',
     },
     nl: {
       required: 'Vul dit veld in.',
@@ -84,22 +111,81 @@
     el.setAttribute('aria-invalid', 'true');
   }
 
-  /** Returns the offending controls, in document order. */
-  function validate(form) {
+  /**
+   * The message for one field, or null if it passes — required/email (the
+   * original two checks) plus, when the field carries `data-validate`, the
+   * matching public/js/quote-validators.js check. `data-validate` is opt-in
+   * per field, so every one of the ~40 existing pages using this file keeps
+   * behaving exactly as before: none of their fields carry the attribute.
+   *
+   * `licence-date` and `renovation-year` are cross-field (Especificação v2,
+   * secção 8) — `data-validate-ref` names the other field to read, by
+   * `name`, from the same form.
+   */
+  function requiredMessage(el) {
+    var key = el.getAttribute('data-required-copy');
+    return (key && t[key]) || t.required;
+  }
+
+  function fieldError(el, form) {
+    if (el.type === 'hidden' || el.name === 'bot-field') return null;
+
+    // Checkboxes: `.value` is the static `value` attribute regardless of
+    // `.checked` state, so the generic required/empty check below (which
+    // reads `.value`) would silently accept an unticked required box — no
+    // prior page using this file had a required checkbox, so this never
+    // showed up until the wizard's RGPD consent field (Fase 1) needed one.
+    if (el.type === 'checkbox') {
+      if (el.hasAttribute('required') && !el.checked) return requiredMessage(el);
+      return null;
+    }
+
+    var value = (el.value || '').trim();
+    if (el.hasAttribute('required') && !value) return requiredMessage(el);
+    if (!value) return null; // optional and empty: nothing further to check
+
+    if (el.type === 'email' && !EMAIL.test(value)) return t.email;
+
+    var kind = el.getAttribute('data-validate');
+    var QV = window.QuoteValidators;
+    if (kind && QV) {
+      var ref = el.getAttribute('data-validate-ref');
+      var refEl = ref && form ? form.querySelector('[name="' + ref + '"]') : null;
+      var refValue = refEl ? (refEl.value || '').trim() : '';
+      if (kind === 'nif' && !QV.isValidNif(value)) return t.nif;
+      if (kind === 'postal-code' && !QV.isValidPostalCode(value)) return t.postalCode;
+      if (kind === 'plate' && !QV.isValidPlate(value)) return t.plate;
+      if (kind === 'start-date' && !QV.isStartDateValid(value)) return t.startDate;
+      // Not the ≥18-years-old rule — that's enforced indirectly by
+      // licence-date's cross-check against this same field (a licence dated
+      // ≥18 years after birth implies an adult policyholder). This is only
+      // the plain "not in the future" check, matching data/i18n/quote-form/
+      // {lang}.json's common.errors.data_nascimento_invalida wording.
+      if (kind === 'birth-date' && !QV.isNotFutureDate(value)) return t.birthDate;
+      if (kind === 'licence-date' && (!refValue || !QV.isLicenceDateValid(value, refValue))) return t.licenceDate;
+      if (kind === 'renovation-year' && (!refValue || !QV.isRenovationYearValid(value, refValue))) return t.renovationYear;
+    }
+    return null;
+  }
+
+  function validateOneField(el, form) {
+    clearError(el);
+    var message = fieldError(el, form || el.form);
+    if (message) {
+      showError(el, message);
+      return false;
+    }
+    return true;
+  }
+
+  /** Returns the offending controls, in document order. `scope` defaults to
+   *  the whole form — the wizard passes a single step's container so "Next"
+   *  only validates the fields the visitor can currently see. */
+  function validate(form, scope) {
     var bad = [];
-    var controls = form.querySelectorAll('input, select, textarea');
+    var controls = (scope || form).querySelectorAll('input, select, textarea');
     for (var i = 0; i < controls.length; i++) {
-      var el = controls[i];
-      if (el.type === 'hidden' || el.name === 'bot-field') continue;
-      clearError(el);
-      var value = (el.value || '').trim();
-      if (el.hasAttribute('required') && !value) {
-        showError(el, t.required);
-        bad.push(el);
-      } else if (el.type === 'email' && value && !EMAIL.test(value)) {
-        showError(el, t.email);
-        bad.push(el);
-      }
+      if (!validateOneField(controls[i], form)) bad.push(controls[i]);
     }
     return bad;
   }
@@ -179,6 +265,12 @@
     // Retires the sticky mobile bar: there is nothing left to scroll down to.
     document.body.classList.add('quote-sent');
     track(form);
+    // Additive: nothing currently listens for this on any of the ~40 pages
+    // using this file, so dispatching it changes nothing for them. Added so
+    // public/js/quote-wizard.js can clear its localStorage draft on a
+    // genuine success — reaching in from outside this closure has no other
+    // way to know the fetch actually succeeded, only that submit fired.
+    form.dispatchEvent(new CustomEvent('ar-quote-form:success', { bubbles: true }));
   }
 
   function wire(form) {
@@ -254,7 +346,13 @@
           note.className = 'contact-form-failure';
           note.setAttribute('role', 'alert');
           note.textContent = t.failed;
-          if (button) form.insertBefore(note, button);
+          // button.parentNode, not form: on the wizard (public/js/
+          // quote-wizard.js) the submit button sits inside a
+          // .wizard-nav wrapper on the last step, not directly under
+          // <form>, and insertBefore requires the reference node to be a
+          // direct child of the node it's called on. Falls back to the
+          // form itself the same as when there's no button at all.
+          if (button) button.parentNode.insertBefore(note, button);
           else form.appendChild(note);
           focusFirst(note);
         });
@@ -263,4 +361,19 @@
 
   var forms = document.querySelectorAll('form[data-quote-form]');
   for (var i = 0; i < forms.length; i++) wire(forms[i]);
+
+  // Small surface for public/js/quote-wizard.js to reuse this file's
+  // validation/error-display/success/conversion-tracking instead of
+  // duplicating any of it — see that file's own comment for why the wizard
+  // only ever adds step navigation on top of what's here.
+  window.ArQuoteForm = {
+    validateField: validateOneField,
+    validate: validate,
+    clearError: clearError,
+    showError: showError,
+    fieldWrap: fieldWrap,
+    focusFirst: focusFirst,
+    succeed: succeed,
+    t: t,
+  };
 })();
