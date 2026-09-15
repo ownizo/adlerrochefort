@@ -95,6 +95,28 @@ const PAGES = [
       "nationality_name", "tax_resident_pt", "matricula", "data_carta", "start_date", "rgpd",
     ],
   },
+  {
+    label: "PT /seguros/habitacao/",
+    path: "seguros/habitacao/index.html",
+    expectedFormName: "cotacao-habitacao",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "EN /en/home-insurance-quote/",
+    path: "en/home-insurance-quote/index.html",
+    expectedFormName: "home-insurance-quote-wizard",
+    requiredFields: [
+      "name", "email", "phone", "nif", "date_of_birth", "postcode", "address", "town",
+      "nationality_name", "tax_resident_pt", "regime_ocupacao", "al_regime", "ano_construcao",
+      "area_bruta", "casas_banho", "obras_ano", "obras_descricao", "capital_edificio",
+      "capital_conteudo", "start_date", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

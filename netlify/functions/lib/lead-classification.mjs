@@ -267,6 +267,12 @@ const FORM_CLASSIFICATION = {
   'valuables-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'private-clients' },
   'quote-tvde-en': { entityType: 'individual', market: 'PT', language: 'EN', product: 'tvde' },
   'expat-health-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  // "home-insurance-quote-wizard" is the /en/home-insurance-quote/ page's
+  // own, exclusive form-name (Especificação v2 hotfix, mirrors
+  // "car-insurance-quote-wizard" below) — the plain "home-insurance-quote"
+  // form-name stays shared with the many generated secondary pages and
+  // blog CTAs that always used it, unaffected by this.
+  'home-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
   'home-insurance-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
   'contact-en': { entityType: 'individual', market: 'PT', language: 'EN', product: 'contact' },
   'condominium-audit': { entityType: 'condominium', market: 'PT', language: 'EN', product: 'condominium' },

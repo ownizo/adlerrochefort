@@ -650,10 +650,18 @@ const CASES = [
     pageScripts: ['ar-quote-form.js'],
   },
   {
+    // Form-name renamed to "home-insurance-quote-wizard" (hotfix, mirrors
+    // the car pillar's own rename): this page used to share the plain
+    // "home-insurance-quote" name with dozens of secondary Home & Property
+    // cluster pages (cases 7 and 9 above are two of them) and blog CTAs —
+    // harmless while all those forms asked for a similar handful of
+    // fields, not once this page's field set diverged into the richer
+    // wizard shape. This page's form-name is now exclusive to it; cases 7
+    // and 9 keep the shared name exactly as they always had it.
     label: '37. /en/home-insurance-quote/ — English home insurance pillar (wizard, Fase 2)',
     path: 'en/home-insurance-quote/index.html',
     url: 'https://adlerrochefort.com/en/home-insurance-quote/',
-    formName: 'home-insurance-quote',
+    formName: 'home-insurance-quote-wizard',
     pageScripts: ['ar-quote-form.js'],
   },
   {

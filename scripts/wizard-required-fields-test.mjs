@@ -186,7 +186,7 @@ const PAGES = [
     label: 'EN /en/home-insurance-quote/',
     path: 'en/home-insurance-quote/index.html',
     url: 'https://adlerrochefort.com/en/home-insurance-quote/',
-    formName: 'home-insurance-quote',
+    formName: 'home-insurance-quote-wizard',
     scripts: [
       'quote-validators.js',
       'ar-quote-form.js',

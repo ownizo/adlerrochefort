@@ -563,6 +563,21 @@ export const HANDLED_FORMS = {
     heading: "New expat health quote request",
     branch: "Health",
   },
+  // "home-insurance-quote" (no suffix) is also the shared HOME_FORM name
+  // scripts/property-cluster.data.mjs's generated secondary pages use
+  // (unoccupied/second-home/apartment/earthquake/flood-insurance-portugal
+  // and dozens of blog CTAs) — the same pre-existing "lighter lead funnels
+  // into the pillar's Netlify Forms bucket" convention documented next to
+  // "car-insurance-quote-wizard" below, and the same reason it needs a
+  // form-name of its own now that this page asks for NIF, date of birth,
+  // nationality, occupancy and more that none of those simpler forms send.
+  "home-insurance-quote-wizard": {
+    quote: true,
+    en: true,
+    heading: "New home insurance quote request",
+    page: "/en/home-insurance-quote/",
+    branch: "Home",
+  },
   "home-insurance-quote": {
     quote: true,
     en: true,
