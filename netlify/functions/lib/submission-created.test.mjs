@@ -103,3 +103,41 @@ test("renderAllFields uses the EN label for the same Habitação fields when en=
   assert.match(html, /Sum insured — contents/);
   assert.doesNotMatch(html, /Regime de ocupação/);
 });
+
+// Especificação v2, Fase 2 C4 (Saúde) — dados_dinamicos is excluded from the
+// plain field loop (it's raw JSON, not a human-readable value), so without
+// dedicated handling the email would say nothing about who is actually
+// being insured. This is the regression test for that gap.
+test("renderAllFields shows each pessoa segura block from dados_dinamicos (PT)", () => {
+  const html = renderAllFields({
+    nome: "Hugo Teste",
+    dados_dinamicos: JSON.stringify([
+      { nome: "Hugo Teste", data_nascimento: "1985-03-15", nif: "501442600" },
+      { nome: "Maria Teste", data_nascimento: "2015-06-01", nif: "501442601" },
+    ]),
+  }, false);
+  assert.match(html, /Pessoas a segurar/);
+  assert.match(html, /Pessoa 1/);
+  assert.match(html, /Hugo Teste/);
+  assert.match(html, /1985-03-15/);
+  assert.match(html, /501442600/);
+  assert.match(html, /Pessoa 2/);
+  assert.match(html, /Maria Teste/);
+});
+
+test("renderAllFields shows each person block from dados_dinamicos (EN)", () => {
+  const html = renderAllFields({
+    name: "Jane Smith",
+    dados_dinamicos: JSON.stringify([{ nome: "Jane Smith", data_nascimento: "1980-01-01", nif: "501442600" }]),
+  }, true);
+  assert.match(html, /People to insure/);
+  assert.match(html, /Person 1/);
+  assert.match(html, /Jane Smith/);
+});
+
+test("renderAllFields never throws and shows nothing extra when dados_dinamicos is absent, empty, or malformed", () => {
+  assert.doesNotThrow(() => renderAllFields({ nome: "X" }, false));
+  assert.doesNotMatch(renderAllFields({ nome: "X", dados_dinamicos: "" }, false), /Pessoas a segurar/);
+  assert.doesNotThrow(() => renderAllFields({ nome: "X", dados_dinamicos: "{not json" }, false));
+  assert.doesNotMatch(renderAllFields({ nome: "X", dados_dinamicos: "{not json" }, false), /Pessoas a segurar/);
+});

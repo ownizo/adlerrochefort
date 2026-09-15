@@ -127,6 +127,33 @@ const PAGES = [
       "faturacao_anual", "data_inicio", "rgpd",
     ],
   },
+  // Saúde (Especificação v2, Fase 2 C4) — only the static, named fields go
+  // here. The "pessoa segura" repeater's own fields (nome/data_nascimento/
+  // nif per block) carry no `name` attribute on purpose (public/js/
+  // quote-health-persons.js's own comment explains why) and don't exist in
+  // the markup at all until that script runs — this file never runs
+  // scripts (see the top comment), so they can't be listed or checked here.
+  // scripts/wizard-required-fields-test.mjs covers them instead, at
+  // runtime, including that each one blocks submission when left empty.
+  {
+    label: "PT /seguros/saude/",
+    path: "seguros/saude/index.html",
+    expectedFormName: "cotacao-saude",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "EN /en/health-insurance-quote/",
+    path: "en/health-insurance-quote/index.html",
+    expectedFormName: "health-insurance-quote-wizard",
+    requiredFields: [
+      "name", "email", "phone", "nif", "date_of_birth", "postcode", "address", "town",
+      "nationality_name", "tax_resident_pt", "start_date", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked
