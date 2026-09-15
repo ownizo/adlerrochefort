@@ -39,7 +39,8 @@
       "data_nascimento_invalida": "The date of birth cannot be in the future.",
       "carta_invalida": "The licence date can't be before the policyholder's date of birth, or in the future.",
       "residente_fiscal_obrigatorio": "Let us know whether you're a tax resident in Portugal.",
-      "rgpd_obrigatorio": "You need to agree before we can prepare the quote."
+      "rgpd_obrigatorio": "You need to agree before we can prepare the quote.",
+      "descricao_curta": "Please write at least {min} characters."
     },
     "success": {
       "titulo": "Request received",
@@ -53,6 +54,25 @@
       "matricula": "Number plate",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Driving licence issue date"
+    },
+    "habitacao": {
+      "titulo": "Home insurance quote",
+      "subtitulo": "Fill in the essentials. We reply within 24 business hours.",
+      "regime_ocupacao": "Occupancy",
+      "regime_ocupacao_permanente": "Main home",
+      "regime_ocupacao_holiday_home": "Holiday home",
+      "regime_ocupacao_al": "Short-term rental (Alojamento Local)",
+      "al_regime": "Short-term rental regime",
+      "al_regime_tempo_inteiro": "Whole property",
+      "al_regime_parcial": "Partial (room-sharing)",
+      "ano_construcao": "Year of construction",
+      "area_bruta": "Gross construction area (m²)",
+      "casas_banho": "Number of bathrooms",
+      "obras_renovacao_check": "Have you renovated in the last few years?",
+      "obras_ano": "Year of the renovation",
+      "obras_descricao": "Describe the renovation work",
+      "capital_edificio": "Sum insured — building (€)",
+      "capital_conteudo": "Sum insured — contents (€)"
     }
   },
   "countries": {

@@ -33,11 +33,23 @@
  *      fetch(), the harness itself is broken and every other result here is
  *      meaningless.
  *
- *   2. Degraded path — the actual regression: window.ArQuoteForm is deleted
- *      right after the real scripts load, exactly the state a failed
- *      wire() call leaves behind. A fully-filled form must still be refused
- *      (the submit guard's job), and clicking "Seguinte" on an empty first
- *      step must not advance past it (goNext()'s job).
+ *   2. Degraded path — the actual regression: ar-quote-form.js is not
+ *      loaded at all, exactly the state a failed deferred <script> leaves
+ *      behind (deleting window.ArQuoteForm after wire() already ran is not
+ *      the same thing — its submit listener is a closure over its own
+ *      `validate`, not a lookup of the global, so it keeps working fine
+ *      regardless of what happens to the global afterward). A fully-filled
+ *      form must still be refused (the submit guard's job), and clicking
+ *      "Seguinte" on an empty first step must not advance past it
+ *      (goNext()'s job).
+ *
+ * Covers every page with a quote-wizard form (Auto: Fase 1; Habitação:
+ * Fase 2 B1 — the two conditional-field mechanisms that phase adds,
+ * public/js/lead-branch-fields.js and public/js/quote-field-toggle.js, are
+ * activated via each page's `activateIds` before values are applied, or
+ * their own required fields would stay `disabled` and untestable).
+ * Extensible by design — add a PAGES entry once Profissional/RC and Saúde
+ * exist, rather than writing a new test file per ramo.
  *
  *   3. Reload mid-fill — the third bug the same incident surfaced: a
  *      visitor fills step 1 (PAGES' `firstBatch`), the page reloads (a
@@ -149,6 +161,87 @@ const PAGES = [
       rgpd: true,
     },
   },
+  {
+    label: 'PT /seguros/habitacao/',
+    path: 'seguros/habitacao/index.html',
+    url: 'https://adlerrochefort.com/seguros/habitacao/',
+    formName: 'cotacao-habitacao',
+    scripts: [
+      'quote-validators.js',
+      'ar-quote-form.js',
+      'quote-nationality.js',
+      'lead-branch-fields.js',
+      'quote-field-toggle.js',
+      'quote-wizard.js',
+    ],
+    // Both conditional groups (regime → AL-only field, obras checkbox →
+    // year+description) are activated by `activateIds` below before values
+    // are applied, so al_regime/obras_ano/obras_descricao are enabled —
+    // otherwise they'd be `disabled` and this test couldn't tell "correctly
+    // exempt because inactive" apart from "wrongly exempt because broken".
+    activateIds: ['hab-obras-check'],
+    values: {
+      nome: 'Hugo Teste',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+351 910000000',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Portugal',
+      residente_fiscal: 'sim',
+      regime_ocupacao: 'alojamento_local',
+      al_regime: 'tempo_inteiro',
+      ano_construcao: '1990',
+      area_bruta: '150',
+      casas_banho: '2',
+      obras_ano: '2015',
+      obras_descricao: 'Renovação completa da cozinha e casas de banho',
+      capital_edificio: '200000',
+      capital_conteudo: '40000',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+  },
+  {
+    label: 'EN /en/home-insurance-quote/',
+    path: 'en/home-insurance-quote/index.html',
+    url: 'https://adlerrochefort.com/en/home-insurance-quote/',
+    formName: 'home-insurance-quote-wizard',
+    scripts: [
+      'quote-validators.js',
+      'ar-quote-form.js',
+      'quote-nationality.js',
+      'lead-branch-fields.js',
+      'quote-field-toggle.js',
+      'quote-wizard.js',
+    ],
+    activateIds: ['q-renovation-check'],
+    values: {
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      phone: '+44 7700 900000',
+      nif: '501442600',
+      date_of_birth: '1985-03-15',
+      postcode: '8600-100',
+      address: '10 Example Street',
+      town: 'Lagos',
+      nationality_name: 'United Kingdom',
+      tax_resident_pt: 'yes',
+      regime_ocupacao: 'alojamento_local',
+      al_regime: 'tempo_inteiro',
+      ano_construcao: '1990',
+      area_bruta: '150',
+      casas_banho: '2',
+      obras_ano: '2015',
+      obras_descricao: 'Full kitchen and bathroom renovation',
+      capital_edificio: '200000',
+      capital_conteudo: '40000',
+      start_date: '2026-10-01',
+      rgpd: true,
+    },
+  },
 ];
 
 async function domFor(html, url) {
@@ -161,11 +254,11 @@ async function domFor(html, url) {
 
 /** Real clicks (not a synthetic .checked=true) on each id in `activateIds`
  *  — the checkboxes public/js/lead-branch-fields.js's <select> and
- *  public/js/quote-field-toggle.js key off of, so a page with a Fase 2
- *  conditional group can enable it before `values` tries to fill fields
- *  inside it. No PAGES entry here needs this yet (Fase 1: Auto only has
- *  none), but it stays defined so a page config can opt in without every
- *  call site needing an existence check first. */
+ *  public/js/quote-field-toggle.js key off of, so conditional groups are
+ *  enabled before `values` tries to fill fields inside them. The Habitação
+ *  (Fase 2, B1) entries below are the first PAGES config to use this —
+ *  Fase 1 (Auto) has no conditional groups, so its entries just leave
+ *  `activateIds` undefined. */
 function activateConditionalGroups(doc, activateIds) {
   for (const id of activateIds || []) {
     const el = doc.getElementById(id);
@@ -235,6 +328,7 @@ for (const page of PAGES) {
     for (const src of await Promise.all(page.scripts.map(loadScript))) win.eval(src);
     const form = doc.querySelector(`form[name="${page.formName}"]`);
     if (!form) throw new Error(`${page.label}: form[name="${page.formName}"] not found`);
+    activateConditionalGroups(doc, page.activateIds);
     applyValues(win, form, page.values, null);
     let fetched = false;
     win.fetch = () => {
@@ -258,6 +352,7 @@ for (const page of PAGES) {
     const { document: doc, window: win } = dom.window;
     for (const src of await Promise.all(page.scripts.map(loadScript))) win.eval(src);
     const form = doc.querySelector(`form[name="${page.formName}"]`);
+    activateConditionalGroups(doc, page.activateIds);
     applyValues(win, form, page.values, name);
     let fetched = false;
     win.fetch = () => {
@@ -315,6 +410,7 @@ for (const page of PAGES) {
     const doc2 = win2.document;
     for (const src of await Promise.all(degradedScripts.map(loadScript))) win2.eval(src);
     const form2 = doc2.querySelector(`form[name="${page.formName}"]`);
+    activateConditionalGroups(doc2, page.activateIds);
     applyValues(win2, form2, page.values, null);
     let fetched2 = false;
     win2.fetch = () => {
