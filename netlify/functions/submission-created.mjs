@@ -563,6 +563,30 @@ export const HANDLED_FORMS = {
     page: "/seguros/auto/",
     branch: "Automóvel",
   },
+  // "car-insurance-quote" (no suffix) is also the form-name of a much
+  // simpler CTA embedded at the bottom of five EN car-insurance blog
+  // articles (data-endpoint="/en/car-insurance-portugal/") — a pre-existing
+  // site convention of funnelling a lighter lead into the same Netlify
+  // Forms bucket as the page it links to, harmless while both forms asked
+  // for roughly the same handful of fields. The wizard (Especificação v2,
+  // Fase 1) no longer does: it asks for NIF, date of birth, nationality,
+  // registration plate and more, none of which the blog CTA has any way to
+  // send. Sharing one form-name between the two meant Netlify's own
+  // field-detection, and this file's rendering of a submission's answers,
+  // could reflect either form depending on which one happened to be
+  // submitted last — confirmed in production: a real submission from the
+  // /en/car-insurance-portugal/ page itself arrived shaped like the old,
+  // pre-wizard field set. The fix is this page's own, exclusive form-name;
+  // the plain "car-insurance-quote" entry above stays untouched and keeps
+  // serving the five blog CTAs exactly as before — they were never part of
+  // this project and are out of scope for it.
+  "car-insurance-quote-wizard": {
+    quote: true,
+    en: true,
+    heading: "New car insurance quote request",
+    page: "/en/car-insurance-portugal/",
+    branch: "Car",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,

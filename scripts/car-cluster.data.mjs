@@ -371,6 +371,23 @@ export const PAGE = {
     },
   ],
 
+  // ⚠️ STALE — do not run scripts/build-car-cluster.mjs against this `form`
+  // block without reading this first. The published page,
+  // public/en/car-insurance-portugal/index.html, no longer uses this form
+  // at all: Especificação v2 (Fase 1) replaced it with a hand-authored
+  // 3-step wizard (public/js/quote-wizard.js) asking for NIF, date of
+  // birth, nationality, registration plate and more — none of which exists
+  // below. That rewrite was applied directly to the built HTML, not routed
+  // through this generator, because the generator did not support a
+  // multi-step form when Fase 1 shipped. Re-running build-car-cluster.mjs
+  // as-is would silently overwrite the wizard with this stale single-step
+  // form and delete months of validation/i18n/server-side work with it.
+  // Before ever running it again: either port the wizard's markup into the
+  // template this file feeds, or change build-car-cluster.mjs to leave the
+  // <!-- QUOTE FORM --> section alone. Do not treat a passing
+  // check-generator-freshness.mjs as clearance either — it does not know
+  // about this generator (confirmed: grep the file, there is no mention of
+  // car-cluster), so it cannot and does not flag this drift.
   form: {
     heading: 'Get a car insurance quote',
     sub: 'Tell us about the car and how you came to own it. The registration status and your claims history change the price more than anything else on this form.',
