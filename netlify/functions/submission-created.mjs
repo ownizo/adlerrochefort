@@ -1,6 +1,16 @@
 import { Resend } from "resend";
 import { sendLeadToCrm } from "./lib/crm-sync.mjs";
 import { insertQuoteRequest } from "./lib/quote-requests-sync.mjs";
+// Static JSON imports, not a computed require()/fs.readFileSync() of a path
+// under data/ — same reasoning as netlify/functions/lib/plate.mjs: esbuild
+// only inlines a *static* import at bundle time, and a static one crossing
+// out of netlify/functions/ bundles just fine (unlike a dynamic require,
+// which esbuild never even tries to resolve). Used only to turn a
+// nationality ISO code into a readable name for the notification email
+// (B3, Especificação v2) — dados_comuns.nacionalidade in quote_requests
+// keeps the raw code either way, see quote-requests-sync.mjs.
+import ptQuoteFormStrings from "../../data/i18n/quote-form/pt.json" with { type: "json" };
+import enQuoteFormStrings from "../../data/i18n/quote-form/en.json" with { type: "json" };
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -864,13 +874,32 @@ const humanise = (key) =>
 const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs", "entry_situation"]);
 
 /** Renders every answered field, known label or not, in submission order. */
+// B3 (Especificação v2): the wizard's nationality fields (`nacionalidade`
+// on PT pages, `nationality` on EN pages — see quote-nationality.js) submit
+// an ISO 3166-1 alpha-2 code ("AT"), because that's what belongs in
+// quote_requests.dados_comuns.nacionalidade (a stable, language-independent
+// value). The notification email is for a human, so it shows the country
+// name instead — the same lookup table the combobox itself uses
+// client-side (data/i18n/quote-form/{lang}.json's countries.<CODE>),
+// falling back to the raw code for anything not in that table rather than
+// showing nothing.
+const NATIONALITY_FIELDS = new Set(["nacionalidade", "nationality"]);
+
+function displayValue(key, value, en) {
+  if (NATIONALITY_FIELDS.has(key)) {
+    const table = en ? enQuoteFormStrings.countries : ptQuoteFormStrings.countries;
+    return table?.[value] || value;
+  }
+  return formatValue(value);
+}
+
 export function renderAllFields(data, en = false) {
   return Object.keys(data)
     .filter((key) => !INTERNAL_FIELDS.has(key))
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map((key) => {
       const label = escapeHtml((en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key));
-      const value = escapeHtml(formatValue(data[key]));
+      const value = escapeHtml(displayValue(key, data[key], en));
       if (CROSSSELL_FIELDS.has(key)) {
         return `<p style="margin:0 0 10px;padding:10px 14px;background:#F2EBDA;border-left:3px solid #7A9A6B;"><strong>${label}:</strong> ${value}</p>`;
       }
