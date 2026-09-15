@@ -39,6 +39,18 @@ import { normalizePlate } from "./plate.mjs";
 // Supabase e trata erros — nunca lança para o chamador.
 // -----------------------------------------------------------------------------
 
+// Versão da política de privacidade vigente no momento da submissão, gravada
+// em consentimento.versao_politica (Especificação v2, B2: sem isto não é
+// possível demonstrar a que texto exato o cliente consentiu). Não há um
+// número de versão formal nem um CMS a publicar a política — a única fonte
+// de verdade é a data "Última atualização"/"Last updated" impressa no rodapé
+// de public/politica-de-privacidade/index.html e public/en/privacy-policy/
+// index.html (texto idêntico nas duas línguas, mesma data). Esta constante
+// TEM de ser atualizada em conjunto sempre que essa data mudar — de outra
+// forma uma linha gravada passa a apontar para uma versão da política que já
+// não é a que está publicada.
+const PRIVACY_POLICY_VERSION = "2026-03-05";
+
 function firstNonEmpty(values) {
   for (const v of values) {
     if (v != null && String(v).trim() !== "") return String(v).trim();
@@ -180,7 +192,7 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
       aceite: consentValue ? CONSENT_TRUE_VALUES.has(consentValue.toLowerCase()) : undefined,
       timestamp: new Date().toISOString(),
       ip: null, // não disponível de forma fiável no payload do webhook Netlify Forms
-      versao_politica: null, // por fixar quando a versão da política passar a ser rastreada
+      versao_politica: PRIVACY_POLICY_VERSION,
     },
     estado: "novo",
     submission_id: submissionId,

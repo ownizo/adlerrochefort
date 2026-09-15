@@ -153,6 +153,13 @@ test("submissionId is carried through untouched, for idempotency downstream", ()
   assert.equal(row.submission_id, "abc-123");
 });
 
+test("consentimento.versao_politica is stamped with the current privacy policy version, not null (Especificação v2, B2)", () => {
+  const row = buildQuoteRequestRow("contacto", { nome: "Maria Silva", email: "maria@example.com", rgpd: "sim" });
+  assert.equal(typeof row.consentimento.versao_politica, "string");
+  assert.notEqual(row.consentimento.versao_politica, null);
+  assert.match(row.consentimento.versao_politica, /^\d{4}-\d{2}-\d{2}$/);
+});
+
 test("insertQuoteRequest never throws when Supabase env vars are not configured", async () => {
   await withEnv({ SUPABASE_URL: "", SUPABASE_SERVICE_ROLE_KEY: "" }, async () => {
     await assert.doesNotReject(
