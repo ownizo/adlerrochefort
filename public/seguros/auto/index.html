@@ -191,6 +191,7 @@
     <div data-wizard-step hidden>
       <div class="contact-form-field"><label for="auto-matricula">Matrícula *</label><input type="text" id="auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
       <div class="contact-form-field"><label for="auto-carta">Data de emissão da carta de condução *</label><input type="date" id="auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+      <p class="wizard-helper" id="auto-carta-idade-info" hidden>É anterior ao 16.º aniversário do tomador — aceitamos na mesma, mas confirme se a data está correta.</p>
       <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Anterior</button><button type="button" class="wizard-nav-next" data-wizard-next>Seguinte →</button></div>
     </div>
 
@@ -748,6 +749,23 @@
     if (!select || !info) return;
     var sync = function () { info.hidden = select.value !== 'nao'; };
     select.addEventListener('change', sync);
+    sync();
+  });
+  // Passo 2: a licence dated before the 16th birthday is unusual but not
+  // invalid (Especificação v2 hotfix — the 18-year floor this used to
+  // enforce rejected genuine licences issued abroad at 16 or younger).
+  // Informational only, never blocks "Seguinte".
+  document.addEventListener('DOMContentLoaded', function () {
+    var carta = document.getElementById('auto-carta');
+    var nascimento = document.getElementById('auto-nascimento');
+    var info = document.getElementById('auto-carta-idade-info');
+    if (!carta || !nascimento || !info) return;
+    var sync = function () {
+      var QV = window.QuoteValidators;
+      info.hidden = !(QV && carta.value && nascimento.value && QV.isLicenceBeforeAge16(carta.value, nascimento.value));
+    };
+    carta.addEventListener('change', sync);
+    nascimento.addEventListener('change', sync);
     sync();
   });
 </script>

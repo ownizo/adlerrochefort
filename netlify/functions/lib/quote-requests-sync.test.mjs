@@ -57,6 +57,36 @@ test("richer PII (NIF, morada, matrícula) lands here — the opposite of crm-sy
   assert.equal(row.dados_risco.matricula, "AA-00-BB");
 });
 
+// Especificação v2 hotfix: a real submission recorded the plate as
+// "55VB18" instead of "55-VB-18" — data-validate is opt-in per field, so a
+// value can reach the server without ever passing through
+// quote-validators.js's normalizePlate() in the browser first.
+test("matricula is normalised to hyphenated form at save time, regardless of how it arrived", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    matricula: "55VB18",
+  });
+  assert.equal(row.dados_risco.matricula, "55-VB-18");
+});
+
+test("matricula already hyphenated, or in any of the other three known shapes, is left exactly as it was", () => {
+  const shapes = ["AA-00-AA", "00-AA-00", "00-00-AA", "AA-00-00"];
+  for (const plate of shapes) {
+    const row = buildQuoteRequestRow("seguro-auto", { nome: "Ana Costa", email: "ana@example.com", matricula: plate });
+    assert.equal(row.dados_risco.matricula, plate);
+  }
+});
+
+test("matricula that matches none of the four known shapes is kept as typed, not dropped", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    matricula: "not a real plate",
+  });
+  assert.equal(row.dados_risco.matricula, "not a real plate");
+});
+
 test("localidade (Especificação v2, Passo 1) is lifted to dados_comuns like morada/codigo_postal, not left in dados_risco", () => {
   const row = buildQuoteRequestRow("seguro-auto", {
     nome: "Ana Costa",

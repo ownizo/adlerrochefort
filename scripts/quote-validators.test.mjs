@@ -119,10 +119,44 @@ test('isNotFutureDate: today is fine, tomorrow is not — used for insured-perso
   assert.equal(V.isNotFutureDate(tomorrow.toISOString().slice(0, 10)), false);
 });
 
-test('isLicenceDateValid: licence must not predate the 18th birthday', () => {
-  assert.equal(V.isLicenceDateValid('2000-01-01', '1980-01-01'), true); // 20 years old, fine
-  assert.equal(V.isLicenceDateValid('1995-01-01', '1980-01-01'), false); // licence at age 15
+// Rewritten: the rule used to require the licence date to be at least 18
+// years after birth, which rejected genuine licences — several countries
+// outside Europe issue one at 16 or younger, and clients moving to Portugal
+// from those countries hold one legitimately. The only things actually
+// impossible are a licence dated before birth, or in the future.
+test('isLicenceDateValid: on or after birth, not in the future — no age floor', () => {
+  assert.equal(V.isLicenceDateValid('2000-01-01', '1980-01-01'), true); // age 20, fine
+  assert.equal(V.isLicenceDateValid('1995-01-01', '1980-01-01'), true); // age 15 — no longer rejected
   assert.equal(V.isLicenceDateValid('1998-01-01', '1980-01-01'), true); // exactly 18th birthday
+  assert.equal(V.isLicenceDateValid('1980-01-01', '1980-01-01'), true); // same day as birth — edge, still valid
+  assert.equal(V.isLicenceDateValid('1979-12-31', '1980-01-01'), false); // one day before birth
+});
+
+test('isLicenceDateValid: rejects a licence date in the future', () => {
+  const now = new Date();
+  const tomorrow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+  assert.equal(V.isLicenceDateValid(tomorrow.toISOString().slice(0, 10), '1980-01-01'), false);
+});
+
+test('isLicenceDateValid: rejects malformed input rather than throwing', () => {
+  assert.equal(V.isLicenceDateValid('not-a-date', '1980-01-01'), false);
+  assert.equal(V.isLicenceDateValid('2000-01-01', 'not-a-date'), false);
+});
+
+// Non-blocking: this never feeds into isLicenceDateValid's result, only
+// into a separate, informational UI note (Especificação v2 hotfix).
+test('isLicenceBeforeAge16: flags a licence dated before the 16th birthday, without invalidating it', () => {
+  assert.equal(V.isLicenceBeforeAge16('1995-01-01', '1980-01-01'), true); // age 15
+  assert.equal(V.isLicenceBeforeAge16('1996-01-01', '1980-01-01'), false); // exactly 16th birthday
+  assert.equal(V.isLicenceBeforeAge16('2000-01-01', '1980-01-01'), false); // age 20
+  // Still a valid licence date by isLicenceDateValid's own rule — the two
+  // functions are independent, and a "before 16" flag never means "invalid".
+  assert.equal(V.isLicenceDateValid('1995-01-01', '1980-01-01'), true);
+});
+
+test('isLicenceBeforeAge16: rejects malformed input rather than throwing', () => {
+  assert.equal(V.isLicenceBeforeAge16('not-a-date', '1980-01-01'), false);
+  assert.equal(V.isLicenceBeforeAge16('2000-01-01', 'not-a-date'), false);
 });
 
 test('isStartDateValid: rejects a start date in the past', () => {

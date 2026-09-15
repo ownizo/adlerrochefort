@@ -333,11 +333,18 @@ const CASES = [
     // The car pillar. Especificação v2 Fase 1: now the 3-step wizard
     // (public/js/quote-wizard.js) — tax_resident_pt is the field that plays
     // registration-status's old role of "an answer that would be expensive
-    // to lose silently."
+    // to lose silently." Form-name renamed to "car-insurance-quote-wizard"
+    // (hotfix, Fase 1 follow-up): this page used to share the plain
+    // "car-insurance-quote" name with five blog CTAs (case 14 below is one
+    // of them) — harmless while both forms asked for a similar handful of
+    // fields, not once this page's field set diverged into the richer
+    // wizard shape. A real production submission confirmed the collision:
+    // it arrived shaped like the old, pre-wizard form. This page's
+    // form-name is now exclusive to it; case 14's stays exactly as it was.
     label: '12. /en/car-insurance-portugal/ — car insurance pillar (wizard, Fase 1)',
     path: 'en/car-insurance-portugal/index.html',
     url: 'https://adlerrochefort.com/en/car-insurance-portugal/',
-    formName: 'car-insurance-quote',
+    formName: 'car-insurance-quote-wizard',
     pageScripts: ['ar-quote-form.js'],
   },
   {

@@ -120,7 +120,7 @@ const PAGES = [
     label: 'EN /en/car-insurance-portugal/',
     path: 'en/car-insurance-portugal/index.html',
     url: 'https://adlerrochefort.com/en/car-insurance-portugal/',
-    formName: 'car-insurance-quote',
+    formName: 'car-insurance-quote-wizard',
     scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
     values: {
       name: 'Jane Smith',

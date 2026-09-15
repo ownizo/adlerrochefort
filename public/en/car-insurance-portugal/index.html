@@ -444,8 +444,8 @@
   <div class="lp-form-card">
     <h2>Get a car insurance quote</h2>
     <p class="lp-form-sub">Tell us about the car and how you came to own it. The registration status and your claims history change the price more than anything else on this form.</p>
-    <form class="contact-form" id="quoteForm" method="POST" name="car-insurance-quote" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard data-ga-field="tax_resident_pt">
-      <input type="hidden" name="form-name" value="car-insurance-quote">
+    <form class="contact-form" id="quoteForm" method="POST" name="car-insurance-quote-wizard" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard data-ga-field="tax_resident_pt">
+      <input type="hidden" name="form-name" value="car-insurance-quote-wizard">
       <input type="hidden" name="ramo" value="Car">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="landing:car-insurance-portugal">
@@ -529,6 +529,7 @@
         <input type="date" id="q-licence-date" name="data_carta" data-validate="licence-date" data-validate-ref="date_of_birth" required>
       </div>
       </div>
+      <p class="wizard-helper" id="q-licence-age-info" hidden>That's before the policyholder's 16th birthday &mdash; we'll still take it, but please double-check the date is correct.</p>
       <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>&larr; Back</button><button type="button" class="wizard-nav-next" data-wizard-next>Next &rarr;</button></div>
       </div>
 
@@ -752,6 +753,23 @@
     if (!select || !info) return;
     var sync = function () { info.hidden = select.value !== 'no'; };
     select.addEventListener('change', sync);
+    sync();
+  });
+  // Step 2: a licence dated before the 16th birthday is unusual but not
+  // invalid (Especificação v2 hotfix — the 18-year floor this used to
+  // enforce rejected genuine licences issued abroad at 16 or younger).
+  // Informational only, never blocks "Next".
+  document.addEventListener('DOMContentLoaded', function () {
+    var licence = document.getElementById('q-licence-date');
+    var dob = document.getElementById('q-dob');
+    var info = document.getElementById('q-licence-age-info');
+    if (!licence || !dob || !info) return;
+    var sync = function () {
+      var QV = window.QuoteValidators;
+      info.hidden = !(QV && licence.value && dob.value && QV.isLicenceBeforeAge16(licence.value, dob.value));
+    };
+    licence.addEventListener('change', sync);
+    dob.addEventListener('change', sync);
     sync();
   });
 </script>
