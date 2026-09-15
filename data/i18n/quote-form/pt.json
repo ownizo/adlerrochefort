@@ -85,6 +85,12 @@
       "pessoa_nif": "NIF",
       "pessoa_remover": "Remover esta pessoa",
       "pessoa_adicionar": "+ Adicionar pessoa"
+    },
+    "profissional": {
+      "titulo": "Cotação de RC Profissional",
+      "subtitulo": "Preencha o essencial. Cotação em 48 a 72 horas úteis.",
+      "faturacao_anual": "Faturação anual",
+      "faturacao_anual_placeholder": "Ex.: 85000"
     }
   },
   "pt_only": {
@@ -92,7 +98,8 @@
       "titulo": "Antes de preencher",
       "geral": "Trabalhamos com um painel restrito de seguradoras internacionais especializadas, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação — não pelo prémio mais baixo.",
       "auto": "Trabalhamos com um painel restrito de seguradoras especializadas em risco automóvel, escolhidas pelas condições de franquia, veículo de substituição e assistência em viagem que praticam — não pelo prémio mais baixo.",
-      "habitacao": "Trabalhamos com um painel restrito de seguradoras especializadas em risco habitacional, escolhidas pelo capital de reconstrução que aceitam segurar e pela forma como tratam sinistros de água e fenómenos da natureza — não pelo prémio mais baixo."
+      "habitacao": "Trabalhamos com um painel restrito de seguradoras especializadas em risco habitacional, escolhidas pelo capital de reconstrução que aceitam segurar e pela forma como tratam sinistros de água e fenómenos da natureza — não pelo prémio mais baixo.",
+      "profissional": "Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação — não pelo prémio mais baixo."
     }
   },
   "countries": {

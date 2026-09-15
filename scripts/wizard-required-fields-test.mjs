@@ -269,6 +269,36 @@ const PAGES = [
     },
   },
   {
+    // Especificação v2, Fase 2 C2 — RC Profissional's dedicated EN page.
+    // Same field set as the PT wizard above (no `empresa`/profession field,
+    // no persons repeater), translated field names, matching the EN health
+    // wizard's own naming convention (name/email/phone/nif/date_of_birth/...).
+    label: 'EN /en/professional-liability-insurance-portugal/',
+    path: 'en/professional-liability-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/en/professional-liability-insurance-portugal/',
+    formName: 'professional-liability-quote-wizard',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'name', 'email', 'phone', 'nif', 'date_of_birth',
+      'postcode', 'address', 'town', 'nationality_name', 'tax_resident_pt',
+    ],
+    values: {
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      phone: '+44 7700 900000',
+      nif: '501442600',
+      date_of_birth: '1985-03-15',
+      postcode: '8600-100',
+      address: '10 Example Street',
+      town: 'Lagos',
+      nationality_name: 'United Kingdom',
+      tax_resident_pt: 'yes',
+      faturacao_anual: '85000',
+      start_date: '2026-10-01',
+      rgpd: true,
+    },
+  },
+  {
     label: 'PT /seguros/saude/',
     path: 'seguros/saude/index.html',
     url: 'https://adlerrochefort.com/seguros/saude/',

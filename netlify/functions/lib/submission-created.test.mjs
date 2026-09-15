@@ -162,7 +162,21 @@ test("quoteIntro promises 48-72h for a form with slaHours set (the 6 RC forms)",
   assert.doesNotMatch(text, /\b24 horas\b/);
 });
 
-test("quoteIntro never applies slaHours wording to an EN form (none of the 6 RC forms are EN today, but the branch must stay ramo-agnostic)", () => {
+test("quoteIntro defaults to 'one working day' for an EN form with no slaHours", () => {
   const text = quoteIntro({ page: "/en/car-insurance-portugal/", en: true }, "https://adlerrochefort.com/en/car-insurance-portugal/");
   assert.match(text, /A reply within one working day was promised/);
+});
+
+// Especificação v2, C2: "professional-liability-quote-wizard" (/en/
+// professional-liability-insurance-portugal/) is the first EN HANDLED_FORMS
+// entry to set slaHours — the EN branch above used to ignore slaHours
+// entirely and always say "one working day" (~24h), which would have been a
+// silent wrong promise for this 48-72h form. Regression test for that fix.
+test("quoteIntro honours slaHours on an EN form too, translating the PT-style '48 a 72' into English wording", () => {
+  const text = quoteIntro(
+    { page: "/en/professional-liability-insurance-portugal/", en: true, slaHours: "48 a 72" },
+    "https://adlerrochefort.com/en/professional-liability-insurance-portugal/"
+  );
+  assert.match(text, /A reply within 48 to 72 business hours was promised/);
+  assert.doesNotMatch(text, /one working day/);
 });

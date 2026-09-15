@@ -85,6 +85,12 @@
       "pessoa_nif": "Portuguese tax number (NIF)",
       "pessoa_remover": "Remove this person",
       "pessoa_adicionar": "+ Add a person"
+    },
+    "profissional": {
+      "titulo": "Professional liability insurance quote",
+      "subtitulo": "Fill in the essentials. We reply within 48 to 72 business hours.",
+      "faturacao_anual": "Annual turnover",
+      "faturacao_anual_placeholder": "E.g. 85000"
     }
   },
   "countries": {
