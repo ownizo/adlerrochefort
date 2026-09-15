@@ -116,6 +116,8 @@ const PAGE_CLUSTERS = [
     '/seguros/habitacao/': 'pt-PT',
     '/en/home-insurance-quote/': 'en-GB',
     '/nl/woonverzekering-portugal/': 'nl',
+    // Especificação v2, "restantes línguas" Parte C — de-hausversicherung-wizard.
+    '/de/hausversicherung-portugal/': 'de',
   },
   { '/seguros/alojamento-local/': 'pt-PT', '/nl/alojamento-local-verzekering-portugal/': 'nl' },
   // Motor. Both pages are the commercial car-insurance quote page for Portugal,
@@ -259,6 +261,24 @@ for (const a of data.articles.nl || []) {
   }
   if (!own.length) continue;
   own.push({ lang: 'nl', path: a.url });
+  // Especificação v2, "restantes línguas" — merge with whatever PAGE_CLUSTERS
+  // already computed for this same path, the same way the loop above already
+  // merges 'nl' into each *target*'s own alternates (lines above) instead of
+  // overwriting them. Without this, a.url's own entry was being clobbered
+  // wholesale: /nl/woonverzekering-portugal/ is both a PAGE_CLUSTERS member
+  // (pt/en/nl/de, once de-hausversicherung-wizard existed) and a
+  // data.articles.nl entry (pt/en only, articles.json has no 'de' key) — this
+  // loop ran after PAGE_CLUSTERS and silently dropped the 'de' leg from the
+  // Dutch page's own declared alternates until this fix, confirmed by a
+  // temporary debug trace showing the correct 4-lang set right after the
+  // PAGE_CLUSTERS loop and the wrong 3-lang set (no 'de') by the time the
+  // page was actually written.
+  const existingOwn = alternates.get(a.url);
+  if (existingOwn) {
+    for (const alt of existingOwn) {
+      if (!own.some((x) => x.lang === alt.lang)) own.push(alt);
+    }
+  }
   alternates.set(a.url, own);
 }
 

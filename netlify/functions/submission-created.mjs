@@ -500,6 +500,17 @@ const QUOTE_LABELS_DE = {
   data_inicio: "Gewünschtes Startdatum",
   rgpd: "DSGVO-Einwilligung",
   source_url: "Seite, von der aus gesendet wurde",
+
+  // Especificação v2, "restantes línguas" Parte C — Hausversicherung DE.
+  regime_ocupacao: "Nutzungsart",
+  al_regime: "Art der Kurzzeitvermietung",
+  ano_construcao: "Baujahr",
+  area_bruta: "Bruttobaufläche (m²)",
+  casas_banho: "Anzahl der Badezimmer",
+  obras_ano: "Jahr der Renovierung",
+  obras_descricao: "Beschreibung der Renovierung",
+  capital_edificio: "Versicherungssumme Gebäude",
+  capital_conteudo: "Versicherungssumme Hausrat",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -789,6 +800,18 @@ export const HANDLED_FORMS = {
     heading: "New German Auto quote request",
     page: "/de/autoversicherung-portugal/",
     branch: "Auto (DE)",
+  },
+  // Especificação v2, "restantes línguas" Parte C — same pattern as
+  // de-autoversicherung-wizard right above: exclusive form-name, own copy
+  // of the shared de-angebot-anfrage form removed, `lang: "de"` for German
+  // labels in the intake email.
+  "de-hausversicherung-wizard": {
+    quote: true,
+    en: true,
+    lang: "de",
+    heading: "New German Home quote request",
+    page: "/de/hausversicherung-portugal/",
+    branch: "Habitação (DE)",
   },
   "car-insurance-quote": {
     quote: true,

@@ -119,6 +119,19 @@ const PAGES = [
       "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, "restantes línguas" Parte C — same shared field
+  // names as PT/EN/NL Habitação above, labels in German.
+  {
+    label: "DE /de/hausversicherung-portugal/",
+    path: "de/hausversicherung-portugal/index.html",
+    expectedFormName: "de-hausversicherung-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
   {
     label: "EN /en/home-insurance-quote/",
     path: "en/home-insurance-quote/index.html",

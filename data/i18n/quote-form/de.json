@@ -54,6 +54,25 @@
       "matricula": "Kennzeichen",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Datum der Führerscheinausstellung"
+    },
+    "habitacao": {
+      "titulo": "Hausversicherung anfragen",
+      "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 24 Arbeitsstunden.",
+      "regime_ocupacao": "Nutzungsart",
+      "regime_ocupacao_permanente": "Eigene Hauptwohnung",
+      "regime_ocupacao_holiday_home": "Ferienwohnsitz",
+      "regime_ocupacao_al": "Alojamento Local (Kurzzeitvermietung)",
+      "al_regime": "Art der Kurzzeitvermietung",
+      "al_regime_tempo_inteiro": "Vollständig",
+      "al_regime_parcial": "Teilweise (gemeinsame Nutzung der Wohnung)",
+      "ano_construcao": "Baujahr",
+      "area_bruta": "Bruttobaufläche (m²)",
+      "casas_banho": "Anzahl der Badezimmer",
+      "obras_renovacao_check": "Haben Sie in den letzten Jahren renoviert?",
+      "obras_ano": "Jahr der Renovierung",
+      "obras_descricao": "Beschreiben Sie die durchgeführten Arbeiten",
+      "capital_edificio": "Versicherungssumme Gebäude (€)",
+      "capital_conteudo": "Versicherungssumme Hausrat (€)"
     }
   },
   "countries": {
