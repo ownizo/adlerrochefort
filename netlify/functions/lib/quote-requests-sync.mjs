@@ -1,19 +1,18 @@
-import { createRequire } from "node:module";
 import { classifySubmission, extractContact } from "./lead-classification.mjs";
 import { applyDynamicFields } from "./dynamic-fields.mjs";
+import { normalizePlate } from "./plate.mjs";
 
-// public/js/quote-validators.js is a plain browser script (no ES module
-// syntax — house style, see that file's own comment), but its bottom
-// explicitly also exports via `module.exports` "for Node — a future
-// server-side reuse". This is that reuse: normalizePlate() needs to run
-// here too, not just in the browser, because a value that reaches this
-// function did not necessarily pass through the client-side validator
-// first (data-validate is opt-in per field, and best-effort submissions
-// from any form sharing dados_risco's generic bag are accepted as-is — see
-// the file-level comment below). createRequire, not a static import,
-// because the file has no `export` statement — the same technique
-// scripts/form-payload-test.mjs uses to load jsdom.
-const QuoteValidators = createRequire(import.meta.url)("../../../public/js/quote-validators.js");
+// normalizePlate() needs to run here too, not just in the browser, because
+// a value that reaches this function did not necessarily pass through the
+// client-side validator first (data-validate is opt-in per field, and
+// best-effort submissions from any form sharing dados_risco's generic bag
+// are accepted as-is — see the file-level comment below). ./plate.mjs is a
+// small, deliberate duplication of public/js/quote-validators.js's own
+// normalizePlate() — see that file's own comment for why this isn't a
+// cross-directory require() of the browser file instead (it was, briefly;
+// it broke every submission on the site in production — esbuild does not
+// bundle a dynamically-constructed require the way it bundles a static
+// import, so the deployed function bundle didn't ship the file it needed).
 
 // -----------------------------------------------------------------------------
 // quote-requests-sync.mjs — grava cada submissão relevante na tabela
@@ -158,7 +157,7 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
   // doesn't match one of the four known shapes at all — kept as originally
   // typed then, for a human to look at, rather than silently dropped.
   if (typeof dados_risco.matricula === "string") {
-    dados_risco.matricula = QuoteValidators.normalizePlate(dados_risco.matricula) || dados_risco.matricula;
+    dados_risco.matricula = normalizePlate(dados_risco.matricula) || dados_risco.matricula;
   }
 
   // Checkbox values arrive as whatever string the field's `value` attribute

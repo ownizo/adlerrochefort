@@ -51,6 +51,16 @@
  * Extensible by design — add a PAGES entry once Profissional/RC and Saúde
  * exist, rather than writing a new test file per ramo.
  *
+ *   3. Reload mid-fill — the third bug the same incident surfaced: a
+ *      visitor fills step 1 (PAGES' `firstBatch`), the page reloads (a
+ *      fresh JSDOM instance with the same localStorage draft already
+ *      present, since restoreDraft() runs at page-load time either way),
+ *      they complete the rest, and submit. The hidden nationality ISO-code
+ *      field — populated only by an input/change listener in
+ *      quote-nationality.js, never by restoreDraft() setting .value
+ *      directly — has to come out non-empty on both ends: right after
+ *      restore, and in the final submitted payload.
+ *
  * Requires jsdom, deliberately not a dependency of this repository — same
  * ad hoc install as scripts/form-payload-test.mjs:
  *   npm install --no-save jsdom
@@ -99,6 +109,14 @@ const PAGES = [
     url: 'https://adlerrochefort.com/seguros/auto/',
     formName: 'seguro-auto',
     scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    // Step 1 (transversal) — the batch a visitor fills before the page
+    // might get reloaded, used by the "reload mid-fill" scenario below.
+    // Deliberately includes nacionalidade_nome, the field that exposed the
+    // third production bug.
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
     values: {
       nome: 'Hugo Teste',
       nif: '501442600',
@@ -122,6 +140,10 @@ const PAGES = [
     url: 'https://adlerrochefort.com/en/car-insurance-portugal/',
     formName: 'car-insurance-quote-wizard',
     scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'name', 'email', 'phone', 'nif', 'date_of_birth',
+      'postcode', 'address', 'town', 'nationality_name', 'tax_resident_pt',
+    ],
     values: {
       name: 'Jane Smith',
       email: 'jane@example.com',
@@ -233,8 +255,10 @@ async function domFor(html, url) {
 /** Real clicks (not a synthetic .checked=true) on each id in `activateIds`
  *  — the checkboxes public/js/lead-branch-fields.js's <select> and
  *  public/js/quote-field-toggle.js key off of, so conditional groups are
- *  enabled before `values` tries to fill fields inside them. A page with no
- *  conditional groups just passes an empty/undefined list. */
+ *  enabled before `values` tries to fill fields inside them. The Habitação
+ *  (Fase 2, B1) entries below are the first PAGES config to use this —
+ *  Fase 1 (Auto) has no conditional groups, so its entries just leave
+ *  `activateIds` undefined. */
 function activateConditionalGroups(doc, activateIds) {
   for (const id of activateIds || []) {
     const el = doc.getElementById(id);
@@ -407,6 +431,84 @@ for (const page of PAGES) {
     console.log(`${page.label} — degraded path (ar-quote-form.js never wired) OK\n`);
   } else {
     console.log('');
+  }
+
+  // ── Reload mid-fill: hidden fields dependent on input/change must resync ──
+  // The nationality-desync bug needs no field withheld — it needs a reload
+  // between filling the search box and submitting. Neither the positive
+  // control above (fills everything in one pass, never touches
+  // restoreDraft()) nor the withheld-field loop would ever exercise it.
+  if (page.firstBatch) {
+    const draftKey = 'ar_quote_draft_' + page.formName;
+    const firstValues = {};
+    for (const name of page.firstBatch) firstValues[name] = page.values[name];
+    const remainingValues = {};
+    for (const [name, value] of Object.entries(page.values)) {
+      if (!(name in firstValues)) remainingValues[name] = value;
+    }
+
+    // "First visit": fill step 1, capture the draft exactly as saveDraft()
+    // would have written it to localStorage.
+    const dom1 = await domFor(html, page.url);
+    const win1 = dom1.window;
+    const doc1 = win1.document;
+    for (const src of await Promise.all(page.scripts.map(loadScript))) win1.eval(src);
+    const form1 = doc1.querySelector(`form[name="${page.formName}"]`);
+    activateConditionalGroups(doc1, page.activateIds);
+    applyValues(win1, form1, firstValues, null);
+    const draft = win1.localStorage.getItem(draftKey);
+    if (!draft) {
+      failures++;
+      console.log(`${page.label} — RELOAD TEST FAILED: no draft was saved after filling step 1\n`);
+    } else {
+      // "Reload": a fresh page load, draft already in localStorage before
+      // the scripts run — exactly what a real reload restores from.
+      const dom2 = await domFor(html, page.url);
+      const win2 = dom2.window;
+      const doc2 = win2.document;
+      win2.localStorage.setItem(draftKey, draft);
+      for (const src of await Promise.all(page.scripts.map(loadScript))) win2.eval(src);
+      const form2 = doc2.querySelector(`form[name="${page.formName}"]`);
+
+      // The one field this scenario exists for: the hidden ISO code has to
+      // already be correct right after restore, before anything else runs.
+      const nameField = form2.querySelector('[data-code-target]');
+      const codeField = nameField && doc2.getElementById(nameField.getAttribute('data-code-target'));
+      if (!codeField || !codeField.value) {
+        failures++;
+        console.log(
+          `${page.label} — RELOAD TEST FAILED: hidden nationality code is empty right after restore ` +
+            `(visible field shows "${nameField ? nameField.value : '(field not found)'}")`
+        );
+      }
+
+      // Complete the rest, exactly as a visitor resuming their draft would.
+      activateConditionalGroups(doc2, page.activateIds);
+      applyValues(win2, form2, remainingValues, null);
+
+      let fetched = false;
+      let body = null;
+      win2.fetch = (url, opts) => {
+        fetched = true;
+        body = opts && opts.body;
+        return Promise.reject(new Error('intercepted-for-test'));
+      };
+      driveWizardToSubmit(win2, doc2, form2);
+
+      if (!fetched) {
+        failures++;
+        console.log(`${page.label} — RELOAD TEST FAILED: completing the draft after reload never reached fetch()\n`);
+      } else {
+        const codeName = codeField ? codeField.name : null;
+        const submittedCode = codeName ? new URLSearchParams(body).get(codeName) : null;
+        if (!submittedCode) {
+          failures++;
+          console.log(`${page.label} — RELOAD TEST FAILED: submitted payload's "${codeName}" field is empty`);
+        } else {
+          console.log(`${page.label} — reload mid-fill OK (nationality code "${submittedCode}" survives restore + completion + submit)\n`);
+        }
+      }
+    }
   }
 }
 
