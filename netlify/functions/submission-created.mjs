@@ -552,6 +552,10 @@ export const HANDLED_FORMS = {
   "cotacao-rc-profissional": {
     quote: true,
     heading: "Novo pedido de análise — RC Profissional",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/responsabilidade-civil-profissional/",
     branch: "RC Profissional",
   },
@@ -563,24 +567,40 @@ export const HANDLED_FORMS = {
   "cotacao-rc-tnc": {
     quote: true,
     heading: "Novo pedido de análise — RC Terapêuticas Não Convencionais",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/rc-terapeuticas-nao-convencionais/",
     branch: "RC Terapêuticas Não Convencionais",
   },
   "cotacao-rc-massagistas": {
     quote: true,
     heading: "Novo pedido de análise — RC Massagistas",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/rc-massagistas/",
     branch: "RC Massagistas",
   },
   "cotacao-rc-profissoes-especificas": {
     quote: true,
     heading: "Novo pedido de análise — RC Profissões Específicas",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/rc-profissoes-especificas/",
     branch: "RC Profissões Específicas",
   },
   "cotacao-rc-eventos": {
     quote: true,
     heading: "Novo pedido de análise — RC Organização de Eventos",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/responsabilidade-civil-eventos/",
     branch: "RC Organização de Eventos",
   },
@@ -590,6 +610,10 @@ export const HANDLED_FORMS = {
   "cotacao-rc-yoga": {
     quote: true,
     heading: "Novo pedido de análise — RC Yoga, Pilates e Bem-Estar",
+    // Especificação v2, A3: RC's real turnaround is 48-72 working hours,
+    // not the 24h every other ramo promises — the intake email's intro
+    // line reads this instead of assuming 24h (see slaHours below).
+    slaHours: "48 a 72",
     page: "/seguros/rc-yoga-pilates-bem-estar/",
     branch: "RC Yoga, Pilates e Bem-Estar",
   },
@@ -1048,6 +1072,23 @@ export function quoteSubject(data, fallbackBranch) {
   return ["[LEAD " + branch + "] " + name, where, size].filter(Boolean).join(" — ");
 }
 
+/**
+ * The intake email's opening line for a quote form. Especificação v2, A3:
+ * RC's real turnaround is 48-72 working hours, not the 24h every other
+ * ramo promises — formConfig.slaHours (set only on the 6 RC form
+ * HANDLED_FORMS entries) is the single source of truth for this, so this
+ * function never has to know which ramo it's looking at beyond that one
+ * field. Pure and exported so the PT/EN, 24h/48-72h combinations are each
+ * a one-line test rather than something only visible by reading a real
+ * email.
+ */
+export function quoteIntro(formConfig, from) {
+  const slaText = formConfig.slaHours ? `${formConfig.slaHours} horas úteis` : "24 horas úteis";
+  return formConfig.en
+    ? `Submitted from ${escapeHtml(from)}. A reply within one working day was promised.`
+    : `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em ${slaText}.`;
+}
+
 export default async (req) => {
   let body;
   try {
@@ -1081,9 +1122,7 @@ export default async (req) => {
       rows = renderAllFields(data, Boolean(formConfig.en));
       subject = quoteSubject(data, formConfig.branch);
       const from = data.source_url || formConfig.page || data.source || "—";
-      intro = formConfig.en
-        ? `Submitted from ${escapeHtml(from)}. A reply within one working day was promised.`
-        : `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em 24 horas úteis.`;
+      intro = quoteIntro(formConfig, from);
     } else {
       rows = Object.keys(FIELD_LABELS)
         .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
