@@ -520,6 +520,12 @@ export const HANDLED_FORMS = {
     page: "/seguros/habitacao/",
     branch: "Habitação",
   },
+  "cotacao-saude": {
+    quote: true,
+    heading: "Novo pedido de cotação — Saúde",
+    page: "/seguros/saude/",
+    branch: "Saúde",
+  },
   "cotacao-empresarial": {
     quote: true,
     heading: "Novo pedido de análise — Multirriscos Empresarial",

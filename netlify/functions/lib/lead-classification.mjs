@@ -213,6 +213,7 @@ const FORM_CLASSIFICATION = {
   'cotacao-frota': { entityType: 'business', market: 'PT', product: 'fleet' },
   'cotacao-alojamento-local': { entityType: 'individual', market: 'PT', product: 'short-term-rental' },
   'cotacao-habitacao': { entityType: 'individual', market: 'PT', product: 'home' },
+  'cotacao-saude': { entityType: 'individual', market: 'PT', product: 'health' },
   'cotacao-empresarial': { entityType: 'business', market: 'PT', product: 'business-multirisk' },
   'seguro-auto': { entityType: 'individual', market: 'PT', product: 'auto' },
   'auditoria-condominio': { entityType: 'condominium', market: 'PT', product: 'condominium' },

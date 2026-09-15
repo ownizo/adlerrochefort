@@ -92,6 +92,7 @@ const PAGE_CLUSTERS = [
   },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
   { '/seguros/tvde/': 'pt-PT', '/en/insurance/tvde/': 'en-GB' },
+  { '/seguros/saude/': 'pt-PT', '/en/health-insurance-quote/': 'en-GB' },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
   {
     '/seguros-empresas-lagos/': 'pt-PT',
