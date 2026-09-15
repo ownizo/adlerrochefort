@@ -34,10 +34,15 @@ export const HEALTH_PAGE = {
   formBranch: 'Krankenversicherung',
   formSubject: 'Krankenversicherung Portugal',
   formCta: 'Deckung prüfen lassen',
+  // Especificação v2, A1/A2: "ob es etwas Medizinisches zu melden gibt" and
+  // "bestehende Vorerkrankungen" removed — same reasoning and wording as
+  // scripts/{dk,se,pl,zh,il}-content/health.mjs, which already say
+  // explicitly that health details are handled separately, never via the
+  // form.
   formIntro:
-    'Nennen Sie uns Alter und Familienzusammensetzung und ob es etwas Medizinisches zu melden gibt — wir stellen Ihnen mehrere Versicherer gegenüber, einschließlich der mutualistischen Route, falls die reguläre Aufnahme schwierig ist.',
+    'Nennen Sie uns Alter und Familienzusammensetzung — medizinische Details besprechen wir separat, nie über das Formular.',
   formPlaceholder:
-    'Zum Beispiel: Alter der zu versichernden Personen, bestehende Vorerkrankungen, ob Sie ein S1-Formular haben, und in welcher Gemeinde Sie wohnen.',
+    'Zum Beispiel: Alter der zu versichernden Personen, ob Sie ein S1-Formular haben, und in welcher Gemeinde Sie wohnen.',
   sections: `
 <section class="section plain" aria-labelledby="sns">
   <div class="container narrow article-body">

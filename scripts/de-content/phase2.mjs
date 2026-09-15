@@ -44,10 +44,17 @@ const VORERKRANKUNGEN_PAGE = {
   formBranch: 'Krankenversicherung',
   formSubject: 'Krankenversicherung mit Vorerkrankung',
   formCta: 'Deckung prüfen lassen',
+  // Especificação v2, A1/A2: no clinical detail invited here on purpose —
+  // "Art der Vorerkrankung" (what condition) and "aktuelle Behandlung"
+  // (current treatment) used to be in formPlaceholder, exactly the kind of
+  // question a public lead form must never ask. Age and prior insurer
+  // response are enough to start; the condition itself is discussed
+  // separately, same as scripts/{dk,se,pl,zh,il}-content/health.mjs already
+  // say explicitly.
   formIntro:
-    'Nennen Sie uns die Vorerkrankung und wie sie aktuell behandelt wird — wir sagen Ihnen ehrlich, welcher Weg realistisch ist.',
+    'Nennen Sie uns Ihr Alter und ob Sie bereits eine Absage von einem Versicherer erhalten haben — die Vorerkrankung selbst besprechen wir separat, nie über das Formular.',
   formPlaceholder:
-    'Zum Beispiel: Art der Vorerkrankung, aktuelle Behandlung, Alter, und ob Sie bereits eine Absage von einem Versicherer erhalten haben.',
+    'Zum Beispiel: Ihr Alter, ob Sie bereits eine Absage von einem Versicherer erhalten haben, und ob ein Wechsel von Ihrer bisherigen Versicherung infrage kommt.',
   sections: `
 <section class="section plain" aria-labelledby="gesundheitspruefung">
   <div class="container narrow article-body">
@@ -129,8 +136,11 @@ const S1_PAGE = {
   formBranch: 'Krankenversicherung',
   formSubject: 'S1-Formular und Zusatzdeckung',
   formCta: 'Beratung anfragen',
+  // Especificação v2, A1/A2: "ob es etwas Medizinisches zu melden gibt"
+  // removed — the placeholder below never asked for it in the first place,
+  // so the intro shouldn't either.
   formIntro:
-    'Haben Sie bereits ein S1 oder beantragen es gerade? Nennen Sie uns Ihr Alter und ob es etwas Medizinisches zu melden gibt — wir sagen Ihnen, was eine sinnvolle Zusatzdeckung kostet.',
+    'Haben Sie bereits ein S1 oder beantragen es gerade? Nennen Sie uns Ihr Alter — wir sagen Ihnen, was eine sinnvolle Zusatzdeckung kostet.',
   formPlaceholder:
     'Zum Beispiel: Ihr Alter, ob Sie bereits ein S1 haben oder beantragen, ob Ihr Ehepartner mitversichert werden muss, und in welcher Gemeinde Sie wohnen.',
   sections: `

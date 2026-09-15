@@ -84,11 +84,12 @@ export const IL_BRANCHES = [
         label: 'מספר הנפשות והגילים',
         placeholder: 'למשל: שני מבוגרים (42 ו־39) ושני ילדים (9 ו־5)',
       },
-      {
-        id: 'health_history',
-        label: 'יש מצב רפואי מתמשך או טיפול קיים?',
-        placeholder: 'שורה אחת מספיקה. פרטים רפואיים נסגור בשיחה נפרדת, לא דרך הטופס',
-      },
+      // 'health_history' removed (Especificação v2, A1) — a clinical
+      // question ("chronic conditions or ongoing treatment") has no place
+      // in a public lead form; see the matching removal in
+      // scripts/upgrade-forms.mjs for the full reasoning. Same 40-page
+      // one-off removal already applied to the generated HTML across all
+      // five market clusters (pl/se/dk/zh/il).
     ],
   },
   {
