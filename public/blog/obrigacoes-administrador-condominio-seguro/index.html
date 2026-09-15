@@ -311,9 +311,9 @@
       <p style="display:none"><label>Não preencher: <input name="bot-field"></label></p>
       <input type="hidden" name="source" value="obrigacoes-administrador-condominio-seguro">
       <input type="hidden" name="source_url" value="">
-      <div class="cta-field"><label>Nome</label><input type="text" name="nome" required placeholder="O seu nome"></div>
-      <div class="cta-field"><label>Email</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
-      <div class="cta-field"><label>Tipo de seguro</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio" selected>Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
+      <div class="cta-field"><label>Nome *</label><input type="text" name="nome" required placeholder="O seu nome"></div>
+      <div class="cta-field"><label>Email *</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
+      <div class="cta-field"><label>Tipo de seguro *</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio" selected>Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro">Outro</option></select></div>
         <div class="form-branch-fields" data-branch="Saúde" hidden>
           <div class="cta-field">
             <label for="saude_idade">Idade da pessoa mais velha a segurar</label>
@@ -358,7 +358,7 @@
             <input type="text" id="frota_empresa" name="frota_empresa" placeholder="Designação social" disabled>
           </div>
           <div class="cta-field">
-            <label for="frota_viaturas">N.º de viaturas</label>
+            <label for="frota_viaturas">N.º de viaturas da frota</label>
             <input type="number" id="frota_viaturas" name="frota_viaturas" placeholder="Ex.: 8" disabled>
           </div>
           <div class="cta-field">
@@ -468,7 +468,7 @@
             <input type="text" id="empresarial_cae" name="empresarial_cae" placeholder="Ex.: 56101" disabled>
           </div>
           <div class="cta-field">
-            <label for="empresarial_colaboradores">N.º de colaboradores</label>
+            <label for="empresarial_colaboradores">N.º de colaboradores da empresa</label>
             <input type="number" id="empresarial_colaboradores" name="empresarial_colaboradores" placeholder="Ex.: 14" disabled>
           </div>
         </div>

@@ -100,7 +100,7 @@ const BRANCH_FIELDS = {
   ],
   'Frota de empresa': [
     ['frota_empresa', 'Empresa', 'text', 'Designação social'],
-    ['frota_viaturas', 'N.º de viaturas', 'number', 'Ex.: 8'],
+    ['frota_viaturas', 'N.º de viaturas da frota', 'number', 'Ex.: 8'],
     ['frota_sinistros', 'Sinistros nos últimos 3 anos', 'text', 'Ex.: 2'],
   ],
   'Habitação': [
@@ -152,7 +152,7 @@ const BRANCH_FIELDS = {
   'Multirriscos Empresarial': [
     ['empresarial_empresa', 'Empresa', 'text', 'Designação social'],
     ['empresarial_cae', 'CAE / atividade', 'text', 'Ex.: 56101'],
-    ['empresarial_colaboradores', 'N.º de colaboradores', 'number', 'Ex.: 14'],
+    ['empresarial_colaboradores', 'N.º de colaboradores da empresa', 'number', 'Ex.: 14'],
   ],
   'Responsabilidade Civil Profissional': [
     ['rcp_profissao', 'Profissão ou atividade', 'text', 'Ex.: arquitetura'],
@@ -223,7 +223,7 @@ const BRANCH_FIELDS_EN = {
   ],
   'Company fleet': [
     ['fleet_company', 'Company', 'text', 'Registered name'],
-    ['fleet_vehicles', 'Number of vehicles', 'number', 'e.g. 8'],
+    ['fleet_vehicles', 'Number of fleet vehicles', 'number', 'e.g. 8'],
     ['fleet_claims', 'Claims in the last 3 years', 'text', 'e.g. 2'],
   ],
   'Home': [
@@ -252,7 +252,7 @@ const BRANCH_FIELDS_EN = {
   'Business combined (multirriscos)': [
     ['business_company', 'Company', 'text', 'Registered name'],
     ['business_activity', 'CAE / activity', 'text', 'e.g. 56101'],
-    ['business_staff', 'Number of staff', 'number', 'e.g. 14'],
+    ['business_staff', 'Number of employees', 'number', 'e.g. 14'],
   ],
   'Professional indemnity': [
     ['pi_profession', 'Profession or activity', 'text', 'e.g. architecture'],
