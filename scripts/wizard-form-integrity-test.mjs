@@ -180,6 +180,20 @@ const PAGES = [
       "nationality_name", "tax_resident_pt", "start_date", "rgpd",
     ],
   },
+  // Especificação v2, "restantes línguas" Parte C — same shared field
+  // names as PT/EN Saúde above (the "pessoa segura" repeater's own fields
+  // carry no `name` attribute — see the comment on the PT/EN entries'
+  // equivalent, not repeated here).
+  {
+    label: "DE /de/krankenversicherung-portugal/",
+    path: "de/krankenversicherung-portugal/index.html",
+    expectedFormName: "de-krankenversicherung-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
   // RC Profissional's dedicated EN page (Especificação v2, Fase 2 C2) — same
   // field set as the PT wizard above, no persons repeater.
   {

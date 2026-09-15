@@ -41,6 +41,29 @@
 (function () {
   'use strict';
 
+  // Especificação v2, "restantes línguas" — found while building the German
+  // Saúde wizard: this file's visible text (labels, placeholder, "Pessoa N",
+  // the remove button) was hardcoded Portuguese unconditionally, with no
+  // language branch at all — unlike every other UI string in the wizard
+  // (public/js/ar-quote-form.js's own COPY object). That meant the "pessoa
+  // segura" repeater on the live, in-production /en/health-insurance-quote/
+  // page has been showing "Nome completo"/"Data de nascimento"/"NIF"/
+  // "Pessoa 1"/"Remover esta pessoa" in Portuguese to English-speaking
+  // visitors since Fase 2 shipped it — nothing before this exercised the
+  // repeater's own rendered text, only field values and validation
+  // behaviour (wizard-required-fields-test.mjs), so it went uncaught.
+  // Fixed here, for EN too, not just the new DE page — same lang-keyed
+  // pattern as ar-quote-form.js, same default ('pt', matching what every
+  // page silently got before this fix, so no currently-correct page's
+  // behaviour changes).
+  var COPY = {
+    pt: { name: 'Nome completo', dob: 'Data de nascimento', nif: 'NIF', nifPlaceholder: 'Número de contribuinte', remove: 'Remover esta pessoa', person: 'Pessoa' },
+    en: { name: 'Full name', dob: 'Date of birth', nif: 'Portuguese tax number (NIF)', nifPlaceholder: '9 digits', remove: 'Remove this person', person: 'Person' },
+    de: { name: 'Vollständiger Name', dob: 'Geburtsdatum', nif: 'NIF (portugiesische Steuernummer)', nifPlaceholder: '9 Ziffern', remove: 'Diese Person entfernen', person: 'Person' },
+  };
+  var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
+  var t = COPY[lang] || COPY.pt;
+
   var MAX_PERSONS = 10;
   var uid = 0;
 
@@ -54,18 +77,18 @@
     card.innerHTML =
       '<p class="person-block-label" data-person-label style="font-weight:600;margin:0 0 12px;"></p>' +
       '<div class="contact-form-field">' +
-      '<label for="pessoa-' + n + '-nome">Nome completo *</label>' +
+      '<label for="pessoa-' + n + '-nome">' + t.name + ' *</label>' +
       '<input type="text" id="pessoa-' + n + '-nome" data-person-field="nome" required>' +
       '</div>' +
       '<div class="contact-form-field">' +
-      '<label for="pessoa-' + n + '-nascimento">Data de nascimento *</label>' +
+      '<label for="pessoa-' + n + '-nascimento">' + t.dob + ' *</label>' +
       '<input type="date" id="pessoa-' + n + '-nascimento" data-person-field="data_nascimento" data-validate="birth-date" required>' +
       '</div>' +
       '<div class="contact-form-field">' +
-      '<label for="pessoa-' + n + '-nif">NIF *</label>' +
-      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" inputmode="numeric" placeholder="Número de contribuinte" data-validate="nif" required>' +
+      '<label for="pessoa-' + n + '-nif">' + t.nif + ' *</label>' +
+      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" inputmode="numeric" placeholder="' + t.nifPlaceholder + '" data-validate="nif" required>' +
       '</div>' +
-      '<button type="button" class="wizard-nav-back" data-person-remove style="margin-top:4px;">Remover esta pessoa</button>';
+      '<button type="button" class="wizard-nav-back" data-person-remove style="margin-top:4px;">' + t.remove + '</button>';
     return card;
   }
 
@@ -89,7 +112,7 @@
     var cards = list.querySelectorAll('[data-person-block]');
     for (var i = 0; i < cards.length; i++) {
       var label = cards[i].querySelector('[data-person-label]');
-      if (label) label.textContent = 'Pessoa ' + (i + 1);
+      if (label) label.textContent = t.person + ' ' + (i + 1);
       var removeBtn = cards[i].querySelector('[data-person-remove]');
       if (removeBtn) removeBtn.hidden = cards.length <= 1;
     }

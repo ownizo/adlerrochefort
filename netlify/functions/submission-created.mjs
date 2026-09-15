@@ -813,6 +813,19 @@ export const HANDLED_FORMS = {
     page: "/de/hausversicherung-portugal/",
     branch: "Habitação (DE)",
   },
+  // Especificação v2, "restantes línguas" Parte C — same pattern as the two
+  // above. The "pessoa segura" repeater (dados_dinamicos) needs no new
+  // wiring here — renderDynamicBlocksSection already has a `lang: "de"`
+  // branch (DYNAMIC_BLOCKS_COPY.de), added in the Parte A fix in
+  // anticipation of this exact form.
+  "de-krankenversicherung-wizard": {
+    quote: true,
+    en: true,
+    lang: "de",
+    heading: "New German Health quote request",
+    page: "/de/krankenversicherung-portugal/",
+    branch: "Saúde (DE)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,

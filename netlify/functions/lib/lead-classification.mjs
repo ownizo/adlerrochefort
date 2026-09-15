@@ -317,6 +317,7 @@ const FORM_CLASSIFICATION = {
   // comment next to this form's HANDLED_FORMS entry).
   'de-autoversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'auto' },
   'de-hausversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'home' },
+  'de-krankenversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'health' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
