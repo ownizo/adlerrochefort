@@ -121,7 +121,12 @@ const PAGE_CLUSTERS = [
   // Motor. Both pages are the commercial car-insurance quote page for Portugal,
   // one in Portuguese and one in English; the English side did not exist when
   // this list was written.
-  { '/seguros/auto/': 'pt-PT', '/en/car-insurance-portugal/': 'en-GB' },
+  // Especificação v2, "restantes línguas" Parte 2 — autoversicherung-portugal
+  // gained its own wizard (de-autoversicherung-wizard), the first of the 7
+  // remaining languages to become a genuine dedicated-page equivalent of
+  // /seguros/auto/ rather than a page sharing the German cluster's single
+  // branch-select form.
+  { '/seguros/auto/': 'pt-PT', '/en/car-insurance-portugal/': 'en-GB', '/de/autoversicherung-portugal/': 'de' },
   { '/politica-de-privacidade/': 'pt-PT', '/en/privacy-policy/': 'en-GB' },
   { '/termos-e-condicoes/': 'pt-PT', '/en/terms-and-conditions/': 'en-GB' },
   ...MARKET_PRODUCT_CLUSTERS,

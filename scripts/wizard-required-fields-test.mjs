@@ -161,6 +161,35 @@ const PAGES = [
       rgpd: true,
     },
   },
+  // Especificação v2, "restantes línguas" Parte 2 — same shared field
+  // names as PT/EN Auto above, first non-PT-non-EN wizard.
+  {
+    label: 'DE /de/autoversicherung-portugal/',
+    path: 'de/autoversicherung-portugal/index.html',
+    url: 'https://adlerrochefort.com/de/autoversicherung-portugal/',
+    formName: 'de-autoversicherung-wizard',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Hans Müller',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+49 30 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Deutschland',
+      residente_fiscal: 'sim',
+      matricula: 'AA-00-AA',
+      data_carta: '2005-06-15',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+  },
   {
     label: 'PT /seguros/habitacao/',
     path: 'seguros/habitacao/index.html',

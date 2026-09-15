@@ -95,6 +95,19 @@ const PAGES = [
       "nationality_name", "tax_resident_pt", "matricula", "data_carta", "start_date", "rgpd",
     ],
   },
+  // Especificação v2, "restantes línguas" Parte 2 — same shared field
+  // names as PT/EN Auto (nome/nif/matricula/data_carta/…), labels in
+  // German.
+  {
+    label: "DE /de/autoversicherung-portugal/",
+    path: "de/autoversicherung-portugal/index.html",
+    expectedFormName: "de-autoversicherung-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
   {
     label: "PT /seguros/habitacao/",
     path: "seguros/habitacao/index.html",
