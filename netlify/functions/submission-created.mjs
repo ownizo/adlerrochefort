@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import { sendLeadToCrm } from "./lib/crm-sync.mjs";
 import { insertQuoteRequest } from "./lib/quote-requests-sync.mjs";
+import { parseDynamicFields } from "./lib/dynamic-fields.mjs";
 // Static JSON imports, not a computed require()/fs.readFileSync() of a path
 // under data/ — same reasoning as netlify/functions/lib/plate.mjs: esbuild
 // only inlines a *static* import at bundle time, and a static one crossing
@@ -618,6 +619,20 @@ export const HANDLED_FORMS = {
     heading: "New expat health quote request",
     branch: "Health",
   },
+  // "health-insurance-quote-wizard" is /en/health-insurance-quote/'s own,
+  // exclusive form-name (Especificação v2, Fase 2 C4) — same
+  // "lighter lead funnels into a shared bucket, pillar page needs its own
+  // name once its field set diverges" pattern as "home-insurance-quote-
+  // wizard"/"car-insurance-quote-wizard" below. "expat-health-quote" above
+  // stays untouched, still shared with the 30+ blog CTAs that already used
+  // it.
+  "health-insurance-quote-wizard": {
+    quote: true,
+    en: true,
+    heading: "New health insurance quote request",
+    page: "/en/health-insurance-quote/",
+    branch: "Health",
+  },
   // "home-insurance-quote" (no suffix) is also the shared HOME_FORM name
   // scripts/property-cluster.data.mjs's generated secondary pages use
   // (unoccupied/second-home/apartment/earthquake/flood-insurance-portugal
@@ -906,8 +921,37 @@ function displayValue(key, value, en) {
   return formatValue(value);
 }
 
+// Especificação v2, Fase 2 C4 (Saúde) — `dados_dinamicos` is excluded from
+// the plain field loop below (INTERNAL_FIELDS) because it's raw JSON meant
+// for quote_requests.pessoas_seguras (see netlify/functions/lib/
+// dynamic-fields.mjs and public/js/quote-wizard.js's own serialisation),
+// not for a human to read as-is. Without this, the email for a Saúde
+// submission would say nothing at all about who is actually being insured
+// — the one thing that ramo's wizard step exists to collect. Reuses
+// dynamic-fields.mjs's own parser so a malformed value is handled exactly
+// the same way here as when the row is built (silently, never thrown).
+function renderDynamicBlocksSection(data, en) {
+  const { blocks } = parseDynamicFields(data?.dados_dinamicos);
+  if (!blocks.length) return "";
+  const heading = en ? "People to insure" : "Pessoas a segurar";
+  const nameLabel = en ? "Name" : "Nome";
+  const dobLabel = en ? "Date of birth" : "Data de nascimento";
+  const rows = blocks
+    .map((block, i) => {
+      const nome = escapeHtml(block?.nome || "");
+      const nascimento = escapeHtml(block?.data_nascimento || "");
+      const nif = escapeHtml(block?.nif || "");
+      return (
+        `<p style="margin:0 0 8px;"><strong>${en ? "Person" : "Pessoa"} ${i + 1}:</strong> ` +
+        `${nameLabel} ${nome} · ${dobLabel} ${nascimento} · NIF ${nif}</p>`
+      );
+    })
+    .join("");
+  return `<p style="margin:16px 0 8px;"><strong>${heading}</strong></p>${rows}`;
+}
+
 export function renderAllFields(data, en = false) {
-  return Object.keys(data)
+  const fields = Object.keys(data)
     .filter((key) => !INTERNAL_FIELDS.has(key))
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map((key) => {
@@ -919,6 +963,7 @@ export function renderAllFields(data, en = false) {
       return `<p style="margin:0 0 8px;"><strong>${label}:</strong> ${value}</p>`;
     })
     .join("");
+  return fields + renderDynamicBlocksSection(data, en);
 }
 
 /**

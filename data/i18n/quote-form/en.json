@@ -73,6 +73,18 @@
       "obras_descricao": "Describe the renovation work",
       "capital_edificio": "Sum insured — building (€)",
       "capital_conteudo": "Sum insured — contents (€)"
+    },
+    "saude": {
+      "titulo": "Health insurance quote",
+      "subtitulo": "Fill in the essentials. We reply within 24 business hours.",
+      "passo_2_titulo": "Who to insure",
+      "pessoas_aviso_nif": "A Portuguese tax number (NIF) is required for every person to insure, including children — without it the insurer cannot issue a proposal. We don't ask for any medical information here: the health questionnaire is done directly with the insurer, at the adhesion stage.",
+      "pessoa_label": "Person",
+      "pessoa_nome": "Full name",
+      "pessoa_nascimento": "Date of birth",
+      "pessoa_nif": "Portuguese tax number (NIF)",
+      "pessoa_remover": "Remove this person",
+      "pessoa_adicionar": "+ Add a person"
     }
   },
   "countries": {

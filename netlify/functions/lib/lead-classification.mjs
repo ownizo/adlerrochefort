@@ -268,6 +268,13 @@ const FORM_CLASSIFICATION = {
   'valuables-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'private-clients' },
   'quote-tvde-en': { entityType: 'individual', market: 'PT', language: 'EN', product: 'tvde' },
   'expat-health-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  // "health-insurance-quote-wizard" is the /en/health-insurance-quote/
+  // page's own, exclusive form-name (Especificação v2, Fase 2 C4 — same
+  // pattern as "home-insurance-quote-wizard"/"car-insurance-quote-wizard"
+  // below). "expat-health-quote" above stayed shared with the 30+ blog
+  // CTAs that already used it — confirmed by grep before this change,
+  // unaffected by it.
+  'health-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
   // "home-insurance-quote-wizard" is the /en/home-insurance-quote/ page's
   // own, exclusive form-name (Especificação v2 hotfix, mirrors
   // "car-insurance-quote-wizard" below) — the plain "home-insurance-quote"

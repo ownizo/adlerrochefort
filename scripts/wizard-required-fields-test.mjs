@@ -268,6 +268,72 @@ const PAGES = [
       rgpd: true,
     },
   },
+  {
+    label: 'PT /seguros/saude/',
+    path: 'seguros/saude/index.html',
+    url: 'https://adlerrochefort.com/seguros/saude/',
+    formName: 'cotacao-saude',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Hugo Teste',
+      nif: '501442600',
+      // ≥18 required here (birth-date-adult, tomador-only) — deliberately
+      // not the case for personValues.data_nascimento below.
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+351 910000000',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Portugal',
+      residente_fiscal: 'sim',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+    // The one "pessoa segura" block quote-health-persons.js's own init()
+    // already creates before this test ever touches the DOM — no minimum
+    // age on purpose (a child's date of birth), unlike the tomador's field
+    // above.
+    personValues: {
+      nome: 'Maria Teste',
+      data_nascimento: '2015-06-01',
+      nif: '200000012',
+    },
+  },
+  {
+    label: 'EN /en/health-insurance-quote/',
+    path: 'en/health-insurance-quote/index.html',
+    url: 'https://adlerrochefort.com/en/health-insurance-quote/',
+    formName: 'health-insurance-quote-wizard',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
+    firstBatch: [
+      'name', 'email', 'phone', 'nif', 'date_of_birth',
+      'postcode', 'address', 'town', 'nationality_name', 'tax_resident_pt',
+    ],
+    values: {
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      phone: '+44 7700 900000',
+      nif: '501442600',
+      date_of_birth: '1985-03-15',
+      postcode: '8600-100',
+      address: '10 Example Street',
+      town: 'Lagos',
+      nationality_name: 'United Kingdom',
+      tax_resident_pt: 'yes',
+      start_date: '2026-10-01',
+      rgpd: true,
+    },
+    personValues: {
+      nome: 'Tom Smith',
+      data_nascimento: '2015-06-01',
+      nif: '200000012',
+    },
+  },
 ];
 
 async function domFor(html, url) {
@@ -312,6 +378,33 @@ function applyValues(win, form, values, omit) {
   }
 }
 
+/** Fills the FIRST [data-person-block] of a public/js/quote-health-persons.js
+ *  repeater (Saúde, Especificação v2 C4) — a page's own script already
+ *  creates that one block at init, before this ever runs. Those fields
+ *  carry no `name` attribute on purpose (see that file's own comment on
+ *  why), so applyValues() above can never find or fill them; this is the
+ *  dedicated equivalent, keyed by `data-person-field` instead. `omit`, when
+ *  it names one of `personValues`' own keys, is what the withheld-field
+ *  loop below uses to test that a person block's own required fields block
+ *  submission exactly like any other required field — same contract as
+ *  applyValues()' omit, just a separate namespace (PAGES.personValues,
+ *  not PAGES.values) so the two never collide on a shared key name. A page
+ *  with no repeater (everything but Saúde, today) passes no personValues
+ *  at all, and this is a no-op. */
+function applyPersonValues(win, form, personValues, omit) {
+  if (!personValues) return;
+  const block = form.querySelector('[data-person-block]');
+  if (!block) throw new Error('applyPersonValues: PAGES.personValues is set but no [data-person-block] exists yet');
+  for (const [field, value] of Object.entries(personValues)) {
+    if (field === omit) continue;
+    const el = block.querySelector(`[data-person-field="${field}"]`);
+    if (!el) throw new Error(`person field "${field}" not found — PAGES.personValues is out of date`);
+    el.value = value;
+    el.dispatchEvent(new win.Event('input', { bubbles: true }));
+    el.dispatchEvent(new win.Event('change', { bubbles: true }));
+  }
+}
+
 /** Drives the wizard exactly as a visitor would: click whichever button is
  *  live on the currently-visible step, real DOM click events only — never
  *  calling goNext()/the submit handler directly, since what is under test
@@ -343,9 +436,29 @@ function driveWizardToSubmit(win, doc, form) {
 
 let failures = 0;
 
+// Splits one withheld-field "name" into the (values-omit, personValues-omit)
+// pair applyValues()/applyPersonValues() each expect — see the `person:`
+// prefix note next to requiredNames below for why this exists at all: a
+// page's own `nome`/`data_nascimento`/`nif` (the tomador, Passo 1) and a
+// person block's fields of the same name (Passo 2, a completely different
+// person) would otherwise collide on one shared omit value.
+function splitOmit(name) {
+  if (name && name.startsWith('person:')) return { valuesOmit: null, personOmit: name.slice('person:'.length) };
+  return { valuesOmit: name, personOmit: null };
+}
+
 for (const page of PAGES) {
   const html = await readFile(join(PUBLIC, page.path), 'utf8');
-  const requiredNames = Object.keys(page.values);
+  // A person block's own required fields (Saúde's repeater, Especificação
+  // v2 C4) share names with the page's own transversal fields — `nome`,
+  // `data_nascimento`, `nif` all exist both as the tomador's own Passo 1
+  // answer and inside every "pessoa segura" block. The `person:` prefix
+  // keeps the two apart everywhere below (splitOmit, applyPersonValues),
+  // rather than requiring PAGES.personValues to invent different field
+  // names than the real markup uses just to avoid the collision.
+  const requiredNames = Object.keys(page.values).concat(
+    page.personValues ? Object.keys(page.personValues).map((k) => 'person:' + k) : []
+  );
 
   // ── Positive control: fully filled must actually reach fetch() ─────────
   {
@@ -356,9 +469,12 @@ for (const page of PAGES) {
     if (!form) throw new Error(`${page.label}: form[name="${page.formName}"] not found`);
     activateConditionalGroups(doc, page.activateIds);
     applyValues(win, form, page.values, null);
+    applyPersonValues(win, form, page.personValues, null);
     let fetched = false;
-    win.fetch = () => {
+    let body = null;
+    win.fetch = (url, opts) => {
       fetched = true;
+      body = opts && opts.body;
       return Promise.reject(new Error('intercepted-for-test'));
     };
     driveWizardToSubmit(win, doc, form);
@@ -367,6 +483,31 @@ for (const page of PAGES) {
       console.log(`\n${page.label} — POSITIVE CONTROL FAILED`);
       console.log('  A fully-filled form never reached fetch() — the test harness itself is broken;');
       console.log('  every other result for this page is meaningless until this is fixed.');
+    } else if (page.personValues) {
+      // The repeater's own end of the contract: dados_dinamicos must carry
+      // the block quote-health-persons.js built, not just "something truthy"
+      // — this is the payload netlify/functions/lib/dynamic-fields.mjs
+      // parses into quote_requests.pessoas_seguras.
+      const dinamicos = new URLSearchParams(body).get('dados_dinamicos');
+      let blocks = null;
+      try {
+        blocks = dinamicos ? JSON.parse(dinamicos) : null;
+      } catch {
+        blocks = null;
+      }
+      const ok =
+        Array.isArray(blocks) &&
+        blocks.length === 1 &&
+        blocks[0].nome === page.personValues.nome &&
+        blocks[0].data_nascimento === page.personValues.data_nascimento &&
+        blocks[0].nif === page.personValues.nif;
+      if (!ok) {
+        failures++;
+        console.log(`\n${page.label} — POSITIVE CONTROL FAILED: dados_dinamicos in the submitted payload is not the expected pessoa segura block`);
+        console.log(`  got: ${dinamicos}`);
+      } else {
+        console.log(`${page.label} — positive control OK (fully filled reaches submit, dados_dinamicos carries the pessoa segura block)`);
+      }
     } else {
       console.log(`${page.label} — positive control OK (fully filled reaches submit)`);
     }
@@ -379,7 +520,9 @@ for (const page of PAGES) {
     for (const src of await Promise.all(page.scripts.map(loadScript))) win.eval(src);
     const form = doc.querySelector(`form[name="${page.formName}"]`);
     activateConditionalGroups(doc, page.activateIds);
-    applyValues(win, form, page.values, name);
+    const { valuesOmit, personOmit } = splitOmit(name);
+    applyValues(win, form, page.values, valuesOmit);
+    applyPersonValues(win, form, page.personValues, personOmit);
     let fetched = false;
     win.fetch = () => {
       fetched = true;
@@ -438,6 +581,7 @@ for (const page of PAGES) {
     const form2 = doc2.querySelector(`form[name="${page.formName}"]`);
     activateConditionalGroups(doc2, page.activateIds);
     applyValues(win2, form2, page.values, null);
+    applyPersonValues(win2, form2, page.personValues, null);
     let fetched2 = false;
     win2.fetch = () => {
       fetched2 = true;
@@ -509,8 +653,13 @@ for (const page of PAGES) {
       }
 
       // Complete the rest, exactly as a visitor resuming their draft would.
+      // The person block (Saúde's repeater) is entirely Passo 2, never part
+      // of firstBatch/remainingValues (those only ever cover Passo 1
+      // transversal fields) — filled here unconditionally, same as every
+      // other page's Passo 2/3 fields this step already completes.
       activateConditionalGroups(doc2, page.activateIds);
       applyValues(win2, form2, remainingValues, null);
+      applyPersonValues(win2, form2, page.personValues, null);
 
       let fetched = false;
       let body = null;

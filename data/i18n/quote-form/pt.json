@@ -73,6 +73,18 @@
       "obras_descricao": "Descreva as obras realizadas",
       "capital_edificio": "Capital seguro do edifício (€)",
       "capital_conteudo": "Capital seguro do conteúdo (€)"
+    },
+    "saude": {
+      "titulo": "Cotação de seguro de saúde",
+      "subtitulo": "Preencha o essencial. Respondemos em 24 horas úteis.",
+      "passo_2_titulo": "Pessoas a segurar",
+      "pessoas_aviso_nif": "É necessário o NIF português de cada pessoa a segurar, incluindo menores — sem ele não é possível emitir a proposta. Não pedimos aqui informação clínica: o questionário de saúde é feito diretamente com a seguradora, na fase de adesão.",
+      "pessoa_label": "Pessoa",
+      "pessoa_nome": "Nome completo",
+      "pessoa_nascimento": "Data de nascimento",
+      "pessoa_nif": "NIF",
+      "pessoa_remover": "Remover esta pessoa",
+      "pessoa_adicionar": "+ Adicionar pessoa"
     }
   },
   "pt_only": {

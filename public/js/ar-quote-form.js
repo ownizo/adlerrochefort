@@ -50,6 +50,10 @@
       residenteFiscal: "Let us know whether you're a tax resident in Portugal.",
       rgpd: 'You need to agree before we can prepare the quote.',
       birthDate: 'The date of birth cannot be in the future.',
+      // Fase 2 (Saúde, Especificação v2 C4) — the ≥18 rule applies to the
+      // tomador (policyholder) only, never to a "pessoa segura" block (see
+      // public/js/quote-health-persons.js), which uses plain `birth-date`.
+      birthDateAdult: 'The policyholder must be at least 18 years old.',
       tooShort: 'Please write at least {min} characters.',
     },
     pt: {
@@ -69,6 +73,7 @@
       residenteFiscal: 'Indique se é residente fiscal em Portugal.',
       rgpd: 'Tem de aceitar para podermos preparar a cotação.',
       birthDate: 'A data de nascimento não pode ser no futuro.',
+      birthDateAdult: 'O tomador tem de ter pelo menos 18 anos.',
       tooShort: 'Escreva pelo menos {min} caracteres.',
     },
     nl: {
@@ -178,12 +183,25 @@
       if (kind === 'postal-code' && !QV.isValidPostalCode(value)) return t.postalCode;
       if (kind === 'plate' && !QV.isValidPlate(value)) return t.plate;
       if (kind === 'start-date' && !QV.isStartDateValid(value)) return t.startDate;
-      // Not the ≥18-years-old rule — that's enforced indirectly by
-      // licence-date's cross-check against this same field (a licence dated
-      // ≥18 years after birth implies an adult policyholder). This is only
-      // the plain "not in the future" check, matching data/i18n/quote-form/
-      // {lang}.json's common.errors.data_nascimento_invalida wording.
+      // Not the ≥18-years-old rule — this is only the plain "not in the
+      // future" check, matching data/i18n/quote-form/{lang}.json's
+      // common.errors.data_nascimento_invalida wording. Used for a "pessoa
+      // segura" block's own date of birth (no age minimum — see
+      // public/js/quote-health-persons.js) and, historically, for the
+      // policyholder's own field on every other ramo. It used to be true
+      // that Auto's licence-date cross-check enforced ≥18 indirectly (a
+      // licence dated 18 years after birth implied an adult) — no longer:
+      // that rule was removed (Especificação v2 hotfix, #170) because
+      // licences are legitimately issued under 18 outside Europe, so
+      // nothing here implied adulthood by accident even before
+      // `birth-date-adult` existed to say so explicitly.
       if (kind === 'birth-date' && !QV.isNotFutureDate(value)) return t.birthDate;
+      // The tomador-only ≥18 rule (Fase 2, Saúde — Especificação v2 C4),
+      // opted into per field with a distinct `data-validate` kind rather
+      // than folded into plain `birth-date`, so a "pessoa segura" block
+      // (deliberately no age minimum) can never pick this up by accident
+      // just by reusing the same markup pattern.
+      if (kind === 'birth-date-adult' && !QV.isAtLeast18(value)) return t.birthDateAdult;
       if (kind === 'licence-date' && (!refValue || !QV.isLicenceDateValid(value, refValue))) return t.licenceDate;
       if (kind === 'renovation-year' && (!refValue || !QV.isRenovationYearValid(value, refValue))) return t.renovationYear;
     }
