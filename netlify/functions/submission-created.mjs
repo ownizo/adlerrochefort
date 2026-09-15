@@ -300,19 +300,17 @@ const QUOTE_LABELS = {
   nationality: "Nationality",
   tax_resident_pt: "Tax resident in Portugal",
 
-  // Especificação v2 — Passo 2 (Habitação, Fase 2). Same language-neutral
-  // field names as PT (see the QUOTE_LABELS entries above); listed here too
-  // so the English notification email doesn't fall back to those PT labels.
+  // Especificação v2 — Passo 2 (Habitação, Fase 2). `town` is genuinely
+  // EN-only (the EN page does not reuse `localidade`), so it stays here
+  // without a duplicate-key hazard. The other nine keys below are
+  // language-neutral (same PT/EN QUOTE_LABELS entries above) — their English
+  // wording moved to QUOTE_LABELS_EN, same fix as matricula/data_carta/rgpd
+  // below: this branch was written before that fix and reproduced the exact
+  // same mistake independently, appending them here instead, which would
+  // have clobbered the PT labels for these nine Habitação fields the same
+  // way. Caught by the same esbuild "Duplicate key" bundling check, before
+  // any deploy this time.
   town: "Town / city",
-  regime_ocupacao: "Occupancy",
-  al_regime: "Short-term rental regime",
-  ano_construcao: "Year of construction",
-  area_bruta: "Gross construction area (m²)",
-  casas_banho: "Number of bathrooms",
-  obras_ano: "Year of the renovation",
-  obras_descricao: "Renovation work description",
-  capital_edificio: "Sum insured — building",
-  capital_conteudo: "Sum insured — contents",
 
   // Older intake forms that previously sent no notification at all.
   name: "Name",
@@ -434,6 +432,20 @@ const QUOTE_LABELS_EN = {
   matricula: "Registration plate",
   data_carta: "Driving licence issue date",
   rgpd: "GDPR consent",
+
+  // Especificação v2 — Passo 2 (Habitação, Fase 2). Language-neutral field
+  // names shared by the PT and EN Habitação wizard pages (see the matching
+  // comment next to QUOTE_LABELS above, where the PT wording for these same
+  // nine keys lives).
+  regime_ocupacao: "Occupancy",
+  al_regime: "Short-term rental regime",
+  ano_construcao: "Year of construction",
+  area_bruta: "Gross construction area (m²)",
+  casas_banho: "Number of bathrooms",
+  obras_ano: "Year of the renovation",
+  obras_descricao: "Renovation work description",
+  capital_edificio: "Sum insured — building",
+  capital_conteudo: "Sum insured — contents",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
