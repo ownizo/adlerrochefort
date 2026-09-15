@@ -32,7 +32,12 @@ export const PL_BRANCHES = [
     legend: 'Kto ma być objęty ochroną',
     fields: [
       { id: 'health_household', label: 'Liczba osób i ich wiek', placeholder: 'np. 2 osoby dorosłe (41 i 39 lat) oraz dziecko (7 lat)' },
-      { id: 'health_history', label: 'Czy są choroby przewlekłe lub leczenie w toku?', placeholder: 'Krótko — szczegóły omówimy indywidualnie, nie na tym etapie' },
+      // 'health_history' removed (Especificação v2, A1) — a clinical
+      // question ("chronic conditions or ongoing treatment") has no place
+      // in a public lead form; see the matching removal in
+      // scripts/upgrade-forms.mjs for the full reasoning. Same 40-page
+      // one-off removal already applied to the generated HTML across all
+      // five market clusters (pl/se/dk/zh/il).
     ],
   },
   {

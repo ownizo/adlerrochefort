@@ -29,7 +29,12 @@ export const DK_BRANCHES = [
     legend: 'Hvem skal være dækket',
     fields: [
       { id: 'health_household', label: 'Antal personer og aldre', placeholder: 'f.eks. to voksne (43 og 41) og et barn (6)' },
-      { id: 'health_history', label: 'Er der kroniske lidelser eller igangværende behandling?', placeholder: 'Kort — detaljerne tager vi separat, ikke via formularen' },
+      // 'health_history' removed (Especificação v2, A1) — a clinical
+      // question ("chronic conditions or ongoing treatment") has no place
+      // in a public lead form; see the matching removal in
+      // scripts/upgrade-forms.mjs for the full reasoning. Same 40-page
+      // one-off removal already applied to the generated HTML across all
+      // five market clusters (pl/se/dk/zh/il).
     ],
   },
   {

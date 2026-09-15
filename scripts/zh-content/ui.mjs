@@ -41,7 +41,12 @@ export const ZH_BRANCHES = [
     legend: '需要投保的人',
     fields: [
       { id: 'health_household', label: '人数与年龄', placeholder: '例如：两位成人（42 岁、39 岁）与两个孩子（9 岁、5 岁）' },
-      { id: 'health_history', label: '是否有长期病症或正在进行的治疗？', placeholder: '简单说明即可；具体病史我们单独沟通，不通过表单收集' },
+      // 'health_history' removed (Especificação v2, A1) — a clinical
+      // question ("chronic conditions or ongoing treatment") has no place
+      // in a public lead form; see the matching removal in
+      // scripts/upgrade-forms.mjs for the full reasoning. Same 40-page
+      // one-off removal already applied to the generated HTML across all
+      // five market clusters (pl/se/dk/zh/il).
     ],
   },
   {

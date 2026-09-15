@@ -73,10 +73,20 @@ const optionsEn = (placeholder) =>
 // Deliberately short: three questions per branch is what can be answered from
 // memory in the hero. Anything deeper belongs on the branch's landing page.
 const BRANCH_FIELDS = {
+  // 'saude_preexistentes' ("Doenças pré-existentes a declarar") removed
+  // here (Especificação v2, A1) — collecting a health-status answer in a
+  // public lead form is special-category data under the RGPD, and the
+  // dedicated Saúde wizard (/seguros/saude/, Fase 2 C4) deliberately never
+  // asks it either; the medical questionnaire belongs to the insurer, at
+  // adhesion, through a different channel. This BRANCH_FIELDS map is what
+  // upgrade-forms.mjs stamps onto the homepage and every blog article's
+  // CTA form (idempotent — re-running only adds what's missing, never
+  // removes what's already there), so removing it here only stops it from
+  // being reintroduced; the 81 pages that already had it needed a separate,
+  // one-off removal, done in the same change as this edit.
   'Saúde': [
     ['saude_idade', 'Idade da pessoa mais velha a segurar', 'number', 'Ex.: 42'],
     ['saude_pessoas', 'Quantas pessoas a segurar', 'number', 'Ex.: 3'],
-    ['saude_preexistentes', 'Doenças pré-existentes a declarar', 'text', 'Sim / Não'],
   ],
   'Automóvel': [
     ['auto_veiculo', 'Marca, modelo e ano', 'text', 'Ex.: Renault Clio 2019'],
@@ -195,10 +205,11 @@ const ALL_BRANCH_BLOCKS = Object.entries(BRANCH_FIELDS)
 // English equivalents. Distinct field names so the notification email can label
 // them in English without guessing which homepage the lead came from.
 const BRANCH_FIELDS_EN = {
+  // 'health_preexisting' removed — see the matching comment next to
+  // BRANCH_FIELDS['Saúde'] above, same reasoning, same 81-page removal.
   'Health': [
     ['health_age', 'Age of the oldest person to insure', 'number', 'e.g. 42'],
     ['health_people', 'How many people to insure', 'number', 'e.g. 3'],
-    ['health_preexisting', 'Pre-existing conditions to declare', 'text', 'Yes / No'],
   ],
   'Car': [
     ['car_vehicle', 'Make, model and year', 'text', 'e.g. Renault Clio 2019'],

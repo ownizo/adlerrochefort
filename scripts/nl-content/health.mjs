@@ -163,10 +163,15 @@ export const HEALTH_PAGES = [
     pullquote: 'Het SNS is een vangnet, geen afspraak binnen een redelijke termijn.',
     formBranch: 'Zorgverzekering',
     formSubject: 'zorgverzekering Portugal',
+    // Especificação v2, A1/A2: "of er iets medisch te melden is" and
+    // "bestaande aandoeningen" removed — same reasoning and wording as
+    // scripts/{dk,se,pl,zh,il}-content/health.mjs, which already say
+    // explicitly that health details are handled separately, never via
+    // the form.
     formIntro:
-      'Vertel ons de leeftijden en of er iets medisch te melden is, dan leggen wij u meerdere verzekeraars naast elkaar — inclusief de mutualistische route als reguliere acceptatie lastig ligt.',
+      'Vertel ons de leeftijden, dan leggen wij u meerdere verzekeraars naast elkaar — inclusief de mutualistische route als reguliere acceptatie lastig ligt. Medische details bespreken we apart, nooit via het formulier.',
     formPlaceholder:
-      'Bijvoorbeeld: leeftijd van de te verzekeren personen, bestaande aandoeningen, of u een S1 van het CAK heeft, en in welke gemeente u woont.',
+      'Bijvoorbeeld: leeftijd van de te verzekeren personen, of u een S1 van het CAK heeft, en in welke gemeente u woont.',
     sections: `
 <section class="section plain" aria-labelledby="sns">
   <div class="container narrow article-body">
@@ -317,8 +322,9 @@ export const HEALTH_PAGES = [
     pullquote: 'Het S1 geeft u de wachtlijst van een Portugese ingezetene. Meer niet, en ook niet minder.',
     formBranch: 'Zorgverzekering',
     formSubject: 'S1 / CAK en aanvullende dekking',
+    // Especificação v2, A1/A2: "of er iets medisch te melden is" removed.
     formIntro:
-      'Heeft u een S1 en wilt u weten wat een aanvullende particuliere dekking daarbovenop kost? Geef uw leeftijd door en of er iets medisch te melden is.',
+      'Heeft u een S1 en wilt u weten wat een aanvullende particuliere dekking daarbovenop kost? Geef uw leeftijd door.',
     formPlaceholder:
       'Bijvoorbeeld: uw leeftijd, of u al een S1 heeft of deze nog aanvraagt, of uw partner ook meeverzekerd moet worden, en in welke gemeente u woont.',
     sections: `
