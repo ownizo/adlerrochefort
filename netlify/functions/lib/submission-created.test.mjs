@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { renderAllFields } from "./submission-created.mjs";
+import { renderAllFields } from "../submission-created.mjs";
 
 // Regression test for a bug found while verifying the quote-requests-sync.mjs
 // crash fix (Especificação v2 hotfix) by bundling submission-created.mjs with
