@@ -84,6 +84,32 @@
         'Uw aanvraag kon niet worden verzonden. Controleer uw verbinding en probeer het ' +
         'opnieuw — er is niets verloren gegaan.',
     },
+    // Especificação v2, "restantes línguas" Parte 2 — DE Auto wizard is the
+    // first form to actually need these (every DE page until now used the
+    // shared de-angebot-anfrage form, plain required/email only, no
+    // data-validate). Mirrors data/i18n/quote-form/de.json's
+    // common.errors.* wording exactly, same relationship the pt/en objects
+    // above already have with their own JSON files.
+    de: {
+      required: 'Bitte füllen Sie dieses Feld aus.',
+      email: 'Geben Sie eine gültige E-Mail-Adresse ein, zum Beispiel name@email.com.',
+      sending: 'Wird gesendet…',
+      failed:
+        'Ihre Anfrage konnte nicht gesendet werden. Bitte überprüfen Sie Ihre Verbindung und ' +
+        'versuchen Sie es erneut — nichts von dem, was Sie eingegeben haben, ist verloren gegangen.',
+      nif: 'Geben Sie eine gültige portugiesische Steuernummer (NIF) mit 9 Ziffern ein.',
+      postalCode: 'Geben Sie eine Postleitzahl im Format 0000-000 ein.',
+      plate: 'Geben Sie ein gültiges portugiesisches Kennzeichen ein.',
+      startDate: 'Das Startdatum darf nicht vor heute liegen.',
+      licenceDate: 'Das Datum des Führerscheins darf nicht vor dem Geburtsdatum des Versicherungsnehmers liegen, noch in der Zukunft.',
+      licenceBeforeAge16: 'Das liegt vor dem 16. Geburtstag des Versicherungsnehmers — wir akzeptieren es trotzdem, bitte prüfen Sie aber, ob das Datum korrekt ist.',
+      renovationYear: 'Das Renovierungsjahr darf nicht vor dem Baujahr liegen oder nach dem aktuellen Jahr.',
+      residenteFiscal: 'Geben Sie an, ob Sie in Portugal steuerlich ansässig sind.',
+      rgpd: 'Sie müssen zustimmen, damit wir das Angebot vorbereiten können.',
+      birthDate: 'Das Geburtsdatum darf nicht in der Zukunft liegen.',
+      birthDateAdult: 'Der Versicherungsnehmer muss mindestens 18 Jahre alt sein.',
+      tooShort: 'Schreiben Sie mindestens {min} Zeichen.',
+    },
   };
 
   var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);

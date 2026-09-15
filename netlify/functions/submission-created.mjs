@@ -733,6 +733,25 @@ export const HANDLED_FORMS = {
     page: "/en/car-insurance-portugal/",
     branch: "Car",
   },
+  // Especificação v2, "restantes línguas" Parte 2 — the first DE page to
+  // become a genuine wizard, exclusive form-name, instead of sharing the
+  // German cluster's single branch-select form ("de-angebot-anfrage",
+  // still used by the other 21 pages, this one's own copy removed).
+  // `en: true` for the same reason de-angebot-anfrage/nl-offerte-aanvraag
+  // already read English internally (see their own HANDLED_FORMS entries
+  // below): staff review German-cluster submissions in English, and this
+  // wizard's own field names (nome/nif/matricula/data_carta/rgpd/…) are the
+  // same shared, language-neutral names PT/EN Auto already use, so
+  // QUOTE_LABELS_EN resolves every one of them with no new label table
+  // needed — a German-typed value with an English label, exactly like
+  // every other non-PT-non-EN form in HANDLED_FORMS already is.
+  "de-autoversicherung-wizard": {
+    quote: true,
+    en: true,
+    heading: "New German Auto quote request",
+    page: "/de/autoversicherung-portugal/",
+    branch: "Auto (DE)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,

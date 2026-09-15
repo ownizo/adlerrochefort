@@ -309,6 +309,13 @@ const FORM_CLASSIFICATION = {
   // CTAs also still use and keep using.
   'car-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
   'car-insurance-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
+  // Especificação v2, "restantes línguas" Parte 2 — de-autoversicherung-wizard's
+  // own exclusive form-name. `language: 'DE'` (not 'EN'): this field is CRM
+  // segmentation for the visitor's actual language, unrelated to
+  // submission-created.mjs's own `en: true` on the same form (that one is
+  // only about which internal-email label table staff read from — see the
+  // comment next to this form's HANDLED_FORMS entry).
+  'de-autoversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'auto' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
