@@ -270,16 +270,26 @@ const QUOTE_LABELS = {
   "claims-history": "Claims history",
   "cover-level": "Cover level sought",
 
-  // Especificação v2 — Passo 1/2 (Fase 1: Auto pilot). `matricula` and
-  // `data_carta` are the two intentionally language-neutral field names
-  // documented next to their QUOTE_LABELS (PT) entries above.
+  // Especificação v2 — Passo 1/2 (Fase 1: Auto pilot). `matricula`,
+  // `data_carta` and `rgpd` are intentionally language-neutral field names
+  // (same key submitted by both the PT and EN wizard pages — see their
+  // QUOTE_LABELS (PT) entries above and COMMON_FIELD_ALIASES in
+  // quote-requests-sync.mjs). Their English wording belongs in
+  // QUOTE_LABELS_EN below, NOT here: an earlier edit added it here instead,
+  // which — since later duplicate keys win in a JS object literal — silently
+  // overwrote the correct PT entries above for these three keys, so every
+  // PT-language quote email (en=false in renderAllFields) showed "Registration
+  // plate"/"Driving licence issue date"/"GDPR consent" instead of "Matrícula"/
+  // "Data de emissão da carta de condução"/"Consentimento RGPD". Confirmed via
+  // esbuild's own "Duplicate key" bundler warnings, which plain `node --check`
+  // and `node --test` never surface. `address`, `date_of_birth`, `nationality`
+  // and `tax_resident_pt` below ARE genuinely EN-only field names (the EN
+  // wizard page does not reuse `morada`/`data_nascimento`/`nacionalidade`/
+  // `residente_fiscal`), so those stay here without a duplicate-key hazard.
   address: "Address",
   date_of_birth: "Date of birth",
   nationality: "Nationality",
   tax_resident_pt: "Tax resident in Portugal",
-  matricula: "Registration plate",
-  data_carta: "Driving licence issue date",
-  rgpd: "GDPR consent",
 
   // Older intake forms that previously sent no notification at all.
   name: "Name",
@@ -391,6 +401,16 @@ const QUOTE_LABELS_EN = {
   motor_claims_history: "Claims-free history",
   liability_activity: "Activity or situation to cover",
   liability_clients: "Where the clients or third parties are",
+
+  // Especificação v2 — language-neutral field names shared by the PT and EN
+  // Auto wizard pages (see the matching comment next to QUOTE_LABELS above,
+  // where the PT wording for these same three keys lives). Moved here after
+  // being found, via esbuild's "Duplicate key" bundler warning, mistakenly
+  // appended to QUOTE_LABELS instead — that silently clobbered the correct PT
+  // labels for every PT-language submission using these fields.
+  matricula: "Registration plate",
+  data_carta: "Driving licence issue date",
+  rgpd: "GDPR consent",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
