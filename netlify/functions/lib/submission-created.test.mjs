@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { renderAllFields } from "../submission-created.mjs";
+import { renderAllFields, quoteIntro } from "../submission-created.mjs";
 
 // Regression test for a bug found while verifying the quote-requests-sync.mjs
 // crash fix (Especificação v2 hotfix) by bundling submission-created.mjs with
@@ -140,4 +140,29 @@ test("renderAllFields never throws and shows nothing extra when dados_dinamicos 
   assert.doesNotMatch(renderAllFields({ nome: "X", dados_dinamicos: "" }, false), /Pessoas a segurar/);
   assert.doesNotThrow(() => renderAllFields({ nome: "X", dados_dinamicos: "{not json" }, false));
   assert.doesNotMatch(renderAllFields({ nome: "X", dados_dinamicos: "{not json" }, false), /Pessoas a segurar/);
+});
+
+// Especificação v2, A3: RC's real turnaround is 48-72 working hours, not
+// the 24h every other ramo promises. quoteIntro() is what the intake
+// email's opening line comes from — this is the regression test for the
+// bug the prompt reported (RC Yoga's email said 24h) and for it not
+// leaking onto ramos that never asked for it.
+test("quoteIntro promises 24h for a form with no slaHours (every ramo but RC)", () => {
+  const text = quoteIntro({ page: "/seguros/auto/" }, "https://adlerrochefort.com/seguros/auto/");
+  assert.match(text, /24 horas úteis/);
+  assert.doesNotMatch(text, /48/);
+});
+
+test("quoteIntro promises 48-72h for a form with slaHours set (the 6 RC forms)", () => {
+  const text = quoteIntro(
+    { page: "/seguros/rc-yoga-pilates-bem-estar/", slaHours: "48 a 72" },
+    "https://adlerrochefort.com/seguros/rc-yoga-pilates-bem-estar/"
+  );
+  assert.match(text, /48 a 72 horas úteis/);
+  assert.doesNotMatch(text, /\b24 horas\b/);
+});
+
+test("quoteIntro never applies slaHours wording to an EN form (none of the 6 RC forms are EN today, but the branch must stay ramo-agnostic)", () => {
+  const text = quoteIntro({ page: "/en/car-insurance-portugal/", en: true }, "https://adlerrochefort.com/en/car-insurance-portugal/");
+  assert.match(text, /A reply within one working day was promised/);
 });
