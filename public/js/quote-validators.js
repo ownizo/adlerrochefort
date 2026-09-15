@@ -125,13 +125,31 @@
     return d.getTime() <= todayUTC().getTime();
   }
 
-  /** Driving licence date must be after the subscriber turned 18 — i.e. no
-   *  earlier than (birth date + 18 years). */
+  /** Driving licence date must be on or after the subscriber's own date of
+   *  birth, and not in the future. Deliberately NOT tied to age 18 — an
+   *  earlier version of this rule required the licence date to be at least
+   *  18 years after birth, which rejected genuine licences: several
+   *  countries outside Europe issue a driving licence at 16 or younger, and
+   *  clients moving to Portugal from those countries hold one legitimately.
+   *  A licence dated before birth, or in the future, is what's actually
+   *  impossible — see isLicenceBeforeAge16 below for the non-blocking case
+   *  this leaves open (a genuinely early licence, flagged for a human to
+   *  see, never refused by this check). */
   function isLicenceDateValid(licenceDateISO, birthDateISO) {
     var licence = parseISODate(licenceDateISO);
     var birth = parseISODate(birthDateISO);
     if (!licence || !birth) return false;
-    return licence.getTime() >= addYears(birth, 18).getTime();
+    return licence.getTime() >= birth.getTime() && licence.getTime() <= todayUTC().getTime();
+  }
+
+  /** True when the licence date implies the subscriber was under 16 at the
+   *  time — unusual, but not invalid (see isLicenceDateValid above). Used to
+   *  show an informational note, never to block submission. */
+  function isLicenceBeforeAge16(licenceDateISO, birthDateISO) {
+    var licence = parseISODate(licenceDateISO);
+    var birth = parseISODate(birthDateISO);
+    if (!licence || !birth) return false;
+    return licence.getTime() < addYears(birth, 16).getTime();
   }
 
   /** Policy start date must not be before today. */
@@ -160,6 +178,7 @@
     isAtLeast18: isAtLeast18,
     isNotFutureDate: isNotFutureDate,
     isLicenceDateValid: isLicenceDateValid,
+    isLicenceBeforeAge16: isLicenceBeforeAge16,
     isStartDateValid: isStartDateValid,
     isRenovationYearValid: isRenovationYearValid,
   };

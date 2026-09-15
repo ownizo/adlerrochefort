@@ -40,7 +40,8 @@
       postalCode: 'Enter a postal code in the format 0000-000.',
       plate: 'Enter a valid Portuguese vehicle plate.',
       startDate: 'The start date cannot be before today.',
-      licenceDate: "The licence date can't be earlier than the policyholder's 18th birthday.",
+      licenceDate: "The licence date can't be before the policyholder's date of birth, or in the future.",
+      licenceBeforeAge16: "That's before the policyholder's 16th birthday — we'll still take it, but please double-check the date is correct.",
       renovationYear: "The renovation year can't be before construction or after the current year.",
       // `data-required-copy` overrides — mirrors data/i18n/quote-form/en.json's
       // common.errors.residente_fiscal_obrigatorio/rgpd_obrigatorio, for the
@@ -61,7 +62,8 @@
       postalCode: 'Introduza um código postal no formato 0000-000.',
       plate: 'Introduza uma matrícula portuguesa válida.',
       startDate: 'A data de início não pode ser anterior a hoje.',
-      licenceDate: 'A data da carta não pode ser anterior ao 18.º aniversário do tomador.',
+      licenceDate: 'A data da carta não pode ser anterior à data de nascimento do tomador, nem no futuro.',
+      licenceBeforeAge16: 'É anterior ao 16.º aniversário do tomador — aceitamos na mesma, mas confirme se a data está correta.',
       renovationYear: 'O ano das obras não pode ser anterior à construção nem posterior ao ano atual.',
       residenteFiscal: 'Indique se é residente fiscal em Portugal.',
       rgpd: 'Tem de aceitar para podermos preparar a cotação.',

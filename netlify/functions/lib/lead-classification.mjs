@@ -274,6 +274,12 @@ const FORM_CLASSIFICATION = {
   // (ver secção 9 do pedido) — nenhuma das 4 páginas que usam este form-name
   // pede dados de empresa.
   'landlord-insurance-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'landlord' },
+  // "car-insurance-quote-wizard" is the /en/car-insurance-portugal/ page's
+  // own, exclusive form-name (Especificação v2 hotfix) — see
+  // submission-created.mjs's HANDLED_FORMS entry for why it needed one
+  // separate from the plain "car-insurance-quote" below, which five blog
+  // CTAs also still use and keep using.
+  'car-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
   'car-insurance-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 

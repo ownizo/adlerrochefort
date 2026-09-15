@@ -1,5 +1,19 @@
+import { createRequire } from "node:module";
 import { classifySubmission, extractContact } from "./lead-classification.mjs";
 import { applyDynamicFields } from "./dynamic-fields.mjs";
+
+// public/js/quote-validators.js is a plain browser script (no ES module
+// syntax — house style, see that file's own comment), but its bottom
+// explicitly also exports via `module.exports` "for Node — a future
+// server-side reuse". This is that reuse: normalizePlate() needs to run
+// here too, not just in the browser, because a value that reaches this
+// function did not necessarily pass through the client-side validator
+// first (data-validate is opt-in per field, and best-effort submissions
+// from any form sharing dados_risco's generic bag are accepted as-is — see
+// the file-level comment below). createRequire, not a static import,
+// because the file has no `export` statement — the same technique
+// scripts/form-payload-test.mjs uses to load jsdom.
+const QuoteValidators = createRequire(import.meta.url)("../../../public/js/quote-validators.js");
 
 // -----------------------------------------------------------------------------
 // quote-requests-sync.mjs — grava cada submissão relevante na tabela
@@ -132,6 +146,19 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
     if (NEVER_IN_DADOS_RISCO.has(k)) continue;
     if (v === undefined || v === null || String(v).trim() === "") continue;
     dados_risco[k] = v;
+  }
+
+  // Normalise the plate to AA-00-AA/00-AA-00/etc. (Especificação v2 §8) at
+  // the point of saving, not just on the client: a value can reach here
+  // without ever passing through public/js/quote-validators.js in the
+  // browser — data-validate is opt-in per field, and dados_risco is a
+  // best-effort generic bag for whatever a form sends (see the file-level
+  // comment above). Confirmed in production: a plate arrived as "55VB18"
+  // instead of "55-VB-18". normalizePlate() returns null for a value that
+  // doesn't match one of the four known shapes at all — kept as originally
+  // typed then, for a human to look at, rather than silently dropped.
+  if (typeof dados_risco.matricula === "string") {
+    dados_risco.matricula = QuoteValidators.normalizePlate(dados_risco.matricula) || dados_risco.matricula;
   }
 
   // Checkbox values arrive as whatever string the field's `value` attribute

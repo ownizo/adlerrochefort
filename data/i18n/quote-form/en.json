@@ -26,7 +26,8 @@
       "rgpd_consentimento": "I agree that my details may be used to prepare this quote, under GDPR."
     },
     "helpers": {
-      "residente_fiscal_nao_info": "We still need your address. Without Portuguese tax residency it may not be possible to issue the policy in every case — we'll review your specific situation regardless."
+      "residente_fiscal_nao_info": "We still need your address. Without Portuguese tax residency it may not be possible to issue the policy in every case — we'll review your specific situation regardless.",
+      "carta_idade_baixa_info": "That's before the policyholder's 16th birthday — we'll still take it, but please double-check the date is correct."
     },
     "errors": {
       "campo_obrigatorio": "This field is required.",
@@ -36,7 +37,7 @@
       "matricula_invalida": "Enter a valid Portuguese vehicle plate.",
       "data_inicio_invalida": "The start date cannot be before today.",
       "data_nascimento_invalida": "The date of birth cannot be in the future.",
-      "carta_invalida": "The licence date can't be earlier than the policyholder's 18th birthday.",
+      "carta_invalida": "The licence date can't be before the policyholder's date of birth, or in the future.",
       "residente_fiscal_obrigatorio": "Let us know whether you're a tax resident in Portugal.",
       "rgpd_obrigatorio": "You need to agree before we can prepare the quote."
     },
