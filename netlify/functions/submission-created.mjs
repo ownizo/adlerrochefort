@@ -13,6 +13,7 @@ import { isTestModeSubmission } from "./lib/lead-classification.mjs";
 // keeps the raw code either way, see quote-requests-sync.mjs.
 import ptQuoteFormStrings from "../../data/i18n/quote-form/pt.json" with { type: "json" };
 import enQuoteFormStrings from "../../data/i18n/quote-form/en.json" with { type: "json" };
+import deQuoteFormStrings from "../../data/i18n/quote-form/de.json" with { type: "json" };
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -467,6 +468,40 @@ const QUOTE_LABELS_EN = {
   capital_conteudo: "Sum insured — contents",
 };
 
+// Especificação v2, "restantes línguas" Parte A ponto 2 — unlike
+// QUOTE_LABELS_EN above (staff read the German cluster's shared
+// de-angebot-anfrage/nl-offerte-aanvraag forms in English, an existing,
+// unrelated convention), a dedicated-wizard German form's own intake email
+// must show German labels, confirmed by direct inspection of the first
+// de-autoversicherung-wizard test-mode submission's payload_teste: it read
+// "Registration plate"/"Page it was sent from" (QUOTE_LABELS_EN, via the
+// `en: true` this form's HANDLED_FORMS entry carried at first) instead of
+// German. Selected via `formConfig.lang === 'de'` in renderAllFields/
+// quoteIntro/displayValue below — `en: true` stays on the form config too
+// (unchanged meaning: which nationality-country-name table and quoteIntro
+// fallback wording to use when `lang` doesn't name a table of its own),
+// but `lang` takes priority for the label lookup itself. Only the fields a
+// German wizard page can actually send need an entry here — grown one
+// ramo at a time, the same way QUOTE_LABELS/QUOTE_LABELS_EN were.
+const QUOTE_LABELS_DE = {
+  ramo: "Bereich",
+  nome: "Name",
+  email: "E-Mail",
+  telefone: "Telefon / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "Geburtsdatum",
+  morada: "Anschrift",
+  localidade: "Ort",
+  codigo_postal: "Postleitzahl",
+  nacionalidade: "Staatsangehörigkeit",
+  residente_fiscal: "Steuerlich ansässig in Portugal",
+  matricula: "Kennzeichen",
+  data_carta: "Datum der Führerscheinausstellung",
+  data_inicio: "Gewünschtes Startdatum",
+  rgpd: "DSGVO-Einwilligung",
+  source_url: "Seite, von der aus gesendet wurde",
+};
+
 // Forms handled by this notification flow, with the wording used in the email.
 // Exported so lead-classification.test.mjs can assert every key here also has
 // a CRM classification decision — see "CRM coverage" in that test file.
@@ -737,17 +772,20 @@ export const HANDLED_FORMS = {
   // become a genuine wizard, exclusive form-name, instead of sharing the
   // German cluster's single branch-select form ("de-angebot-anfrage",
   // still used by the other 21 pages, this one's own copy removed).
-  // `en: true` for the same reason de-angebot-anfrage/nl-offerte-aanvraag
-  // already read English internally (see their own HANDLED_FORMS entries
-  // below): staff review German-cluster submissions in English, and this
-  // wizard's own field names (nome/nif/matricula/data_carta/rgpd/…) are the
-  // same shared, language-neutral names PT/EN Auto already use, so
-  // QUOTE_LABELS_EN resolves every one of them with no new label table
-  // needed — a German-typed value with an English label, exactly like
-  // every other non-PT-non-EN form in HANDLED_FORMS already is.
+  // `lang: "de"` (Parte A ponto 2 of the follow-up prompt, after the first
+  // test-mode submission's payload_teste showed English/Portuguese labels
+  // instead of German): a dedicated wizard's own intake email reads in
+  // German — see QUOTE_LABELS_DE, and the `lang === "de"` branches in
+  // renderAllFields/displayValue/quoteIntro. `en: true` stays too, unlike
+  // `lang` it is NOT about label choice for this form any more — it only
+  // still selects `heading`/`subjectPrefix`-adjacent EN-vs-PT plumbing
+  // elsewhere that has no German branch yet (there is none for this form,
+  // kept for forward-compatibility with any shared code path that still
+  // reads it before `lang`).
   "de-autoversicherung-wizard": {
     quote: true,
     en: true,
+    lang: "de",
     heading: "New German Auto quote request",
     page: "/de/autoversicherung-portugal/",
     branch: "Auto (DE)",
@@ -970,9 +1008,12 @@ const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs
 // showing nothing.
 const NATIONALITY_FIELDS = new Set(["nacionalidade", "nationality"]);
 
-function displayValue(key, value, en) {
+function displayValue(key, value, en, lang) {
   if (NATIONALITY_FIELDS.has(key)) {
-    const table = en ? enQuoteFormStrings.countries : ptQuoteFormStrings.countries;
+    // Especificação v2, "restantes línguas" — `lang` names an actual
+    // language-specific country table (currently only 'de'); `en` stays the
+    // PT/EN fallback for every form that predates `lang` existing at all.
+    const table = lang === "de" ? deQuoteFormStrings.countries : en ? enQuoteFormStrings.countries : ptQuoteFormStrings.countries;
     return table?.[value] || value;
   }
   return formatValue(value);
@@ -987,40 +1028,50 @@ function displayValue(key, value, en) {
 // — the one thing that ramo's wizard step exists to collect. Reuses
 // dynamic-fields.mjs's own parser so a malformed value is handled exactly
 // the same way here as when the row is built (silently, never thrown).
-function renderDynamicBlocksSection(data, en) {
+// Especificação v2, "restantes línguas" — `lang` currently only ever names
+// 'de' (the one language with dynamic-block ramos — Saúde — converted so
+// far); every other caller passes it undefined and gets the pre-existing
+// en/pt behaviour unchanged.
+const DYNAMIC_BLOCKS_COPY = {
+  de: { heading: "Zu versichernde Personen", person: "Person", name: "Name", dob: "Geburtsdatum" },
+  en: { heading: "People to insure", person: "Person", name: "Name", dob: "Date of birth" },
+  pt: { heading: "Pessoas a segurar", person: "Pessoa", name: "Nome", dob: "Data de nascimento" },
+};
+
+function renderDynamicBlocksSection(data, en, lang) {
   const { blocks } = parseDynamicFields(data?.dados_dinamicos);
   if (!blocks.length) return "";
-  const heading = en ? "People to insure" : "Pessoas a segurar";
-  const nameLabel = en ? "Name" : "Nome";
-  const dobLabel = en ? "Date of birth" : "Data de nascimento";
+  const t = DYNAMIC_BLOCKS_COPY[lang] || (en ? DYNAMIC_BLOCKS_COPY.en : DYNAMIC_BLOCKS_COPY.pt);
   const rows = blocks
     .map((block, i) => {
       const nome = escapeHtml(block?.nome || "");
       const nascimento = escapeHtml(block?.data_nascimento || "");
       const nif = escapeHtml(block?.nif || "");
       return (
-        `<p style="margin:0 0 8px;"><strong>${en ? "Person" : "Pessoa"} ${i + 1}:</strong> ` +
-        `${nameLabel} ${nome} · ${dobLabel} ${nascimento} · NIF ${nif}</p>`
+        `<p style="margin:0 0 8px;"><strong>${t.person} ${i + 1}:</strong> ` +
+        `${t.name} ${nome} · ${t.dob} ${nascimento} · NIF ${nif}</p>`
       );
     })
     .join("");
-  return `<p style="margin:16px 0 8px;"><strong>${heading}</strong></p>${rows}`;
+  return `<p style="margin:16px 0 8px;"><strong>${t.heading}</strong></p>${rows}`;
 }
 
-export function renderAllFields(data, en = false) {
+export function renderAllFields(data, en = false, lang) {
   const fields = Object.keys(data)
     .filter((key) => !INTERNAL_FIELDS.has(key))
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map((key) => {
-      const label = escapeHtml((en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key));
-      const value = escapeHtml(displayValue(key, data[key], en));
+      const label = escapeHtml(
+        (lang === "de" && QUOTE_LABELS_DE[key]) || (en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key)
+      );
+      const value = escapeHtml(displayValue(key, data[key], en, lang));
       if (CROSSSELL_FIELDS.has(key)) {
         return `<p style="margin:0 0 10px;padding:10px 14px;background:#F2EBDA;border-left:3px solid #7A9A6B;"><strong>${label}:</strong> ${value}</p>`;
       }
       return `<p style="margin:0 0 8px;"><strong>${label}:</strong> ${value}</p>`;
     })
     .join("");
-  return fields + renderDynamicBlocksSection(data, en);
+  return fields + renderDynamicBlocksSection(data, en, lang);
 }
 
 /**
@@ -1124,6 +1175,14 @@ export function quoteIntro(formConfig, from) {
   // promise for this form. slaHours is stored PT-style ("48 a 72"); " a " is
   // translated to " to " for the English sentence, everything else about the
   // string (the two numbers) carries over unchanged.
+  // Especificação v2, "restantes línguas" Parte A ponto 2 — `lang === 'de'`
+  // checked before `en`, same priority as renderAllFields/displayValue
+  // above: a dedicated German wizard's intake email reads in German, not
+  // the English de-angebot-anfrage/nl-offerte-aanvraag convention.
+  if (formConfig.lang === "de") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " bis ")} Arbeitsstunden` : "24 Arbeitsstunden";
+    return `Gesendet von ${escapeHtml(from)}. Eine Antwort innerhalb von ${slaText} wurde zugesagt.`;
+  }
   if (formConfig.en) {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";
     return `Submitted from ${escapeHtml(from)}. A reply within ${slaText} was promised.`;
@@ -1143,7 +1202,7 @@ export function buildIntakeEmail(formConfig, data, payload) {
   let intro;
 
   if (formConfig.quote) {
-    rows = renderAllFields(data, Boolean(formConfig.en));
+    rows = renderAllFields(data, Boolean(formConfig.en), formConfig.lang);
     subject = quoteSubject(data, formConfig.branch);
     const from = data.source_url || formConfig.page || data.source || "—";
     intro = quoteIntro(formConfig, from);
