@@ -121,7 +121,7 @@ function pickFirst(data, aliases) {
  * Constrói a linha a inserir em quote_requests, ou devolve `null` quando não
  * há dados de contacto suficientes para valer a pena guardar (nunca lança).
  */
-export function buildQuoteRequestRow(formName, data, { language, submissionId, isTest } = {}) {
+export function buildQuoteRequestRow(formName, data, { language, submissionId, isTest, testPayload } = {}) {
   const classification = classifySubmission(formName, data);
   const { name, email, phone } = extractContact(data);
   if (!name && !email) return null;
@@ -202,6 +202,17 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
     // a caller that forgets to pass isTest still writes `teste: false`
     // rather than leaving the column to its table default silently.
     teste: Boolean(isTest),
+    // Especificação v2, "restantes línguas" Parte 1 ponto 1 — replaces
+    // relying on function-log reading (unreliable in this project's
+    // sessions so far) as the way to verify a test-mode submission's email/
+    // CRM payloads: they land here instead, readable by direct query.
+    // `undefined` on a real row so the key is omitted from the JSON body
+    // entirely (never sent, column keeps its null default) — the database
+    // also enforces this with quote_requests_payload_teste_only_when_teste,
+    // see the migration. Never set from a caller-supplied value directly:
+    // only ever `testPayload` when isTest is true, so there is exactly one
+    // path that can populate this column.
+    payload_teste: isTest ? testPayload || null : undefined,
   };
 
   return applyDynamicFields(row, ramo, data?.dados_dinamicos);
