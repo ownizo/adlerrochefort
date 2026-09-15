@@ -154,6 +154,17 @@ const PAGES = [
       "nationality_name", "tax_resident_pt", "start_date", "rgpd",
     ],
   },
+  // RC Profissional's dedicated EN page (Especificação v2, Fase 2 C2) — same
+  // field set as the PT wizard above, no persons repeater.
+  {
+    label: "EN /en/professional-liability-insurance-portugal/",
+    path: "en/professional-liability-insurance-portugal/index.html",
+    expectedFormName: "professional-liability-quote-wizard",
+    requiredFields: [
+      "name", "email", "phone", "nif", "date_of_birth", "postcode", "address", "town",
+      "nationality_name", "tax_resident_pt", "faturacao_anual", "start_date", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

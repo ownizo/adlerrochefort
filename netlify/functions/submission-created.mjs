@@ -657,6 +657,19 @@ export const HANDLED_FORMS = {
     page: "/en/health-insurance-quote/",
     branch: "Health",
   },
+  // Especificação v2, Fase 2 C2: the new dedicated EN page for RC
+  // Profissional, /en/professional-liability-insurance-portugal/ — its own
+  // exclusive form-name, same reasoning as "health-insurance-quote-wizard"
+  // right above. Mirrors "cotacao-rc-profissional" (its PT counterpart)
+  // including the 48-72h SLA.
+  "professional-liability-quote-wizard": {
+    quote: true,
+    en: true,
+    heading: "New professional liability insurance quote request",
+    slaHours: "48 a 72",
+    page: "/en/professional-liability-insurance-portugal/",
+    branch: "RC Profissional",
+  },
   // "home-insurance-quote" (no suffix) is also the shared HOME_FORM name
   // scripts/property-cluster.data.mjs's generated secondary pages use
   // (unoccupied/second-home/apartment/earthquake/flood-insurance-portugal
@@ -1083,10 +1096,20 @@ export function quoteSubject(data, fallbackBranch) {
  * email.
  */
 export function quoteIntro(formConfig, from) {
+  // Especificação v2, C2: "professional-liability-quote-wizard" is the first
+  // EN form to carry a real slaHours (48-72h, same as its PT counterpart
+  // "cotacao-rc-profissional") — until now every EN HANDLED_FORMS entry left
+  // slaHours unset, so the branch below never had to honour it and always
+  // said "one working day" (≈24h), which would have been a silent wrong
+  // promise for this form. slaHours is stored PT-style ("48 a 72"); " a " is
+  // translated to " to " for the English sentence, everything else about the
+  // string (the two numbers) carries over unchanged.
+  if (formConfig.en) {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";
+    return `Submitted from ${escapeHtml(from)}. A reply within ${slaText} was promised.`;
+  }
   const slaText = formConfig.slaHours ? `${formConfig.slaHours} horas úteis` : "24 horas úteis";
-  return formConfig.en
-    ? `Submitted from ${escapeHtml(from)}. A reply within one working day was promised.`
-    : `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em ${slaText}.`;
+  return `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em ${slaText}.`;
 }
 
 export default async (req) => {

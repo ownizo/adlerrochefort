@@ -100,6 +100,12 @@ const PAGE_CLUSTERS = [
   // never got one, per the C1 audit (Especificação v2 prompt).
   { '/seguros/rc-yoga-pilates-bem-estar/': 'pt-PT', '/en/blog/yoga-instructor-liability-insurance-portugal/': 'en-GB' },
   { '/seguros/saude/': 'pt-PT', '/en/health-insurance-quote/': 'en-GB' },
+  // Especificação v2, C2 — the dedicated EN page for RC Profissional. Distinct
+  // from the pre-existing '/blog/responsabilidade-civil-profissional/' ↔
+  // '/en/blog/professional-indemnity-insurance/' article pair below (which
+  // stays as-is): this pair is /seguros/ page ↔ its EN quote-wizard
+  // equivalent, the same "dedicated page" pattern as Auto/Habitação/Saúde.
+  { '/seguros/responsabilidade-civil-profissional/': 'pt-PT', '/en/professional-liability-insurance-portugal/': 'en-GB' },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
   {
     '/seguros-empresas-lagos/': 'pt-PT',

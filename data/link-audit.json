@@ -1,19 +1,18 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 419,
-    "indexedUrls": 410,
+    "htmlFiles": 437,
+    "indexedUrls": 428,
     "brokenLinks": 0,
     "linksViaRedirect": 0,
-    "orphans": 2,
-    "singleInbound": 14,
-    "deeperThanThreeClicks": 4
+    "orphans": 1,
+    "singleInbound": 18,
+    "deeperThanThreeClicks": 9
   },
   "broken": [],
   "viaRedirect": [],
   "orphans": [
-    "/de/versicherung-cascais/",
-    "/de/versicherung-lagos/"
+    "/de/versicherung-cascais/"
   ],
   "singleInbound": [
     {
@@ -41,15 +40,21 @@
       ]
     },
     {
-      "url": "/de/versicherung-algarve/",
+      "url": "/de/versicherung-carvoeiro/",
       "from": [
-        "/de/versicherung-lagos/"
+        "/de/versicherung-algarve/"
       ]
     },
     {
-      "url": "/de/versicherung-lissabon/",
+      "url": "/de/versicherung-comporta/",
       "from": [
-        "/de/versicherung-cascais/"
+        "/de/versicherung-lissabon/"
+      ]
+    },
+    {
+      "url": "/de/versicherung-lagos/",
+      "from": [
+        "/de/versicherung-portimao/"
       ]
     },
     {
@@ -59,9 +64,21 @@
       ]
     },
     {
+      "url": "/en/blog/category/motor/page/2/",
+      "from": [
+        "/en/blog/category/motor/"
+      ]
+    },
+    {
       "url": "/en/blog/category/valuables-collections/page/2/",
       "from": [
         "/en/blog/category/valuables-collections/"
+      ]
+    },
+    {
+      "url": "/en/professional-liability-insurance-portugal/",
+      "from": [
+        "/seguros/responsabilidade-civil-profissional/"
       ]
     },
     {
@@ -95,6 +112,12 @@
       ]
     },
     {
+      "url": "/seguros/saude/",
+      "from": [
+        "/en/health-insurance-quote/"
+      ]
+    },
+    {
       "url": "/termos-e-condicoes/",
       "from": [
         "/en/terms-and-conditions/"
@@ -107,7 +130,15 @@
       "clicks": null
     },
     {
+      "url": "/de/versicherung-carvoeiro/",
+      "clicks": null
+    },
+    {
       "url": "/de/versicherung-cascais/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-comporta/",
       "clicks": null
     },
     {
@@ -116,6 +147,18 @@
     },
     {
       "url": "/de/versicherung-lissabon/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-portimao/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-quinta-do-lago/",
+      "clicks": null
+    },
+    {
+      "url": "/de/versicherung-vilamoura/",
       "clicks": null
     }
   ],

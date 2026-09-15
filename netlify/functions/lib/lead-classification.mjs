@@ -275,6 +275,20 @@ const FORM_CLASSIFICATION = {
   // CTAs that already used it — confirmed by grep before this change,
   // unaffected by it.
   'health-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  // "professional-liability-quote-wizard" is the /en/professional-liability-
+  // insurance-portugal/ page's own, exclusive form-name (Especificação v2,
+  // Fase 2 C2). Its field set mirrors the PT wizard's — no `empresa`/
+  // profession field either — so it reuses `classifyRcProfissionalDedicated`
+  // and inherits the same accepted degraded-classifier trade-off already
+  // flagged next to 'cotacao-rc-profissional' above (always falls through to
+  // individual; not fixed here, same reasoning as the PT wizard).
+  'professional-liability-quote-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'EN',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
   // "home-insurance-quote-wizard" is the /en/home-insurance-quote/ page's
   // own, exclusive form-name (Especificação v2 hotfix, mirrors
   // "car-insurance-quote-wizard" below) — the plain "home-insurance-quote"
