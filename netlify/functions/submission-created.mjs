@@ -1,7 +1,8 @@
 import { Resend } from "resend";
-import { sendLeadToCrm } from "./lib/crm-sync.mjs";
+import { sendLeadToCrm, buildCrmLeadPayload } from "./lib/crm-sync.mjs";
 import { insertQuoteRequest } from "./lib/quote-requests-sync.mjs";
 import { parseDynamicFields } from "./lib/dynamic-fields.mjs";
+import { isTestModeSubmission } from "./lib/lead-classification.mjs";
 // Static JSON imports, not a computed require()/fs.readFileSync() of a path
 // under data/ — same reasoning as netlify/functions/lib/plate.mjs: esbuild
 // only inlines a *static* import at bundle time, and a static one crossing
@@ -1112,6 +1113,54 @@ export function quoteIntro(formConfig, from) {
   return `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em ${slaText}.`;
 }
 
+// Especificação v2, "restantes línguas" Parte 4: a construção do conteúdo do
+// email precisa de correr tanto no envio real (quando RESEND_API_KEY está
+// configurada) como no modo de teste (para ficar registada em log, mesmo sem
+// nunca ser enviada) — extraída para não duplicar a lógica nos dois sítios.
+// Pura: não faz I/O nenhum.
+export function buildIntakeEmail(formConfig, data, payload) {
+  let rows;
+  let subject;
+  let intro;
+
+  if (formConfig.quote) {
+    rows = renderAllFields(data, Boolean(formConfig.en));
+    subject = quoteSubject(data, formConfig.branch);
+    const from = data.source_url || formConfig.page || data.source || "—";
+    intro = quoteIntro(formConfig, from);
+  } else {
+    rows = Object.keys(FIELD_LABELS)
+      .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
+      .map(
+        (key) =>
+          `<p style="margin:0 0 8px;"><strong>${escapeHtml(FIELD_LABELS[key])}:</strong> ${escapeHtml(
+            formatValue(data[key])
+          )}</p>`
+      )
+      .join("");
+
+    // Each intake form names these two fields differently; fall back across them
+    // so the subject line is meaningful whichever form fired.
+    const pkg = data.package || data.type_verzekering || formatValue(data.review) || "—";
+    const name = data.full_name || data.naam || data.name || "unknown";
+    subject = `${formConfig.subjectPrefix} — ${pkg} — ${name}`;
+    intro = formConfig.intro;
+  }
+
+  const html = `
+    <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
+    <p style="font-family:Arial,sans-serif;">${intro}</p>
+    <hr/>
+    <div style="font-family:Arial,sans-serif;font-size:14px;color:#333;">${rows}</div>
+    <hr/>
+    <p style="font-family:Arial,sans-serif;font-size:12px;color:#888;">Submitted: ${escapeHtml(
+      payload.created_at || new Date().toISOString()
+    )}</p>
+  `;
+
+  return { subject, html };
+}
+
 export default async (req) => {
   let body;
   try {
@@ -1131,51 +1180,33 @@ export default async (req) => {
 
   const data = payload.data || {};
 
+  // Especificação v2, "restantes línguas" Parte 0 ponto 3 / Parte 4: o Hugo
+  // não faz submissões manuais nesta fase, em nenhuma língua — o modo de
+  // teste é a via de validação que o substitui. Uma submissão em modo de
+  // teste grava em quote_requests na mesma (marcada `teste = true`, ver
+  // insertQuoteRequest abaixo), mas NUNCA dispara o email nem a
+  // sincronização real com o CRM: em vez disso, os dois payloads são
+  // construídos e registados em log tal como seriam para uma submissão
+  // real, para que a construção do email e do payload do CRM continue a ser
+  // verificada mesmo sem envio — ver lead-classification.mjs's
+  // TEST_MODE_SENTINEL/isTestModeSubmission() para o valor convencionado.
+  const isTest = isTestModeSubmission(data);
+
   // Email is independent from CRM sync below: a missing RESEND_API_KEY (or any
   // failure sending the email) only skips the email, it must never skip the
-  // CRM sync — and vice-versa, see the CRM sync block after this one.
-  if (!process.env.RESEND_API_KEY) {
+  // CRM sync — and vice-versa, see the CRM sync block after this one. Test
+  // mode is independent of RESEND_API_KEY too: content is built and logged
+  // whether or not a real key is configured, since the whole point is to
+  // verify construction without ever actually sending.
+  if (isTest) {
+    const { subject, html } = buildIntakeEmail(formConfig, data, payload);
+    console.log(`[submission-created] TEST MODE formName=${formName} — email and CRM sync not sent, both payloads logged below instead`);
+    console.log(`[submission-created] TEST_EMAIL subject=${JSON.stringify(subject)}`);
+    console.log(`[submission-created] TEST_EMAIL_HTML ${html}`);
+  } else if (!process.env.RESEND_API_KEY) {
     console.log("RESEND_API_KEY not set — skipping intake notification email.");
   } else {
-    let rows;
-    let subject;
-    let intro;
-
-    if (formConfig.quote) {
-      rows = renderAllFields(data, Boolean(formConfig.en));
-      subject = quoteSubject(data, formConfig.branch);
-      const from = data.source_url || formConfig.page || data.source || "—";
-      intro = quoteIntro(formConfig, from);
-    } else {
-      rows = Object.keys(FIELD_LABELS)
-        .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
-        .map(
-          (key) =>
-            `<p style="margin:0 0 8px;"><strong>${escapeHtml(FIELD_LABELS[key])}:</strong> ${escapeHtml(
-              formatValue(data[key])
-            )}</p>`
-        )
-        .join("");
-
-      // Each intake form names these two fields differently; fall back across them
-      // so the subject line is meaningful whichever form fired.
-      const pkg = data.package || data.type_verzekering || formatValue(data.review) || "—";
-      const name = data.full_name || data.naam || data.name || "unknown";
-      subject = `${formConfig.subjectPrefix} — ${pkg} — ${name}`;
-      intro = formConfig.intro;
-    }
-
-    const html = `
-    <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
-    <p style="font-family:Arial,sans-serif;">${intro}</p>
-    <hr/>
-    <div style="font-family:Arial,sans-serif;font-size:14px;color:#333;">${rows}</div>
-    <hr/>
-    <p style="font-family:Arial,sans-serif;font-size:12px;color:#888;">Submitted: ${escapeHtml(
-      payload.created_at || new Date().toISOString()
-    )}</p>
-  `;
-
+    const { subject, html } = buildIntakeEmail(formConfig, data, payload);
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
       await resend.emails.send({
@@ -1206,23 +1237,40 @@ export default async (req) => {
       ? `noid:${formName}:${String(data.email).trim().toLowerCase()}:${payload.created_at}`
       : undefined);
 
-  try {
-    await sendLeadToCrm(formName, data, {
+  if (isTest) {
+    // buildCrmLeadPayload is pure and untouched (see the file-level comment
+    // on it in crm-sync.mjs) — calling it directly here, instead of
+    // sendLeadToCrm, is what lets test mode log the exact same
+    // privacy-restricted payload a real submission would send, without ever
+    // making the network call sendLeadToCrm wraps it in.
+    const { payload: crmPayload, skippedReason } = buildCrmLeadPayload(formName, data, {
       submissionId,
       sourceUrl: data.source_url,
     });
-  } catch (err) {
-    // sendLeadToCrm already catches its own errors; this is a last-resort net
-    // so a bug in it can never take the submission pipeline down with it.
-    console.error("[crm-sync] unexpected error:", err);
+    console.log(
+      `[submission-created] TEST_CRM_PAYLOAD ${crmPayload ? JSON.stringify(crmPayload) : `null (skippedReason=${skippedReason})`}`
+    );
+  } else {
+    try {
+      await sendLeadToCrm(formName, data, {
+        submissionId,
+        sourceUrl: data.source_url,
+      });
+    } catch (err) {
+      // sendLeadToCrm already catches its own errors; this is a last-resort net
+      // so a bug in it can never take the submission pipeline down with it.
+      console.error("[crm-sync] unexpected error:", err);
+    }
   }
 
   // ── quote_requests (Supabase, best-effort, additional to the above) ────────
   // Formulários de Cotação v2, Fase 0. Nunca deve afetar a resposta ao
   // Netlify Forms nem o email/CRM sync acima — ver netlify/functions/lib/
-  // quote-requests-sync.mjs.
+  // quote-requests-sync.mjs. Grava sempre, modo de teste incluído — é o que
+  // torna uma submissão de teste verificável por leitura direta da tabela;
+  // isTest flui para a coluna `teste` da linha.
   try {
-    await insertQuoteRequest(formName, data, { submissionId });
+    await insertQuoteRequest(formName, data, { submissionId, isTest });
   } catch (err) {
     console.error("[quote-requests-sync] unexpected error:", err);
   }

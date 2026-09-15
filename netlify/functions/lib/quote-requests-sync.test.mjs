@@ -232,3 +232,43 @@ test("insertQuoteRequest skips silently (no request sent) when there is no name/
   }
   assert.equal(called, false);
 });
+
+// Especificação v2, "restantes línguas" Parte 0 ponto 3 / Parte 4 — the
+// `teste` column (supabase/migrations/20260915131000_quote_requests_add_
+// teste_flag.sql). A test-mode submission must still land a row, just
+// flagged, so it is verifiable by direct read without ever being mistaken
+// for a real lead by the backoffice.
+test("buildQuoteRequestRow stamps teste=true when isTest is passed, teste=false otherwise (never undefined)", () => {
+  const base = { nome: "Hugo Teste", email: "hugo@example.com" };
+  assert.equal(buildQuoteRequestRow("cotacao-rc-yoga", base, { isTest: true }).teste, true);
+  assert.equal(buildQuoteRequestRow("cotacao-rc-yoga", base, { isTest: false }).teste, false);
+  assert.equal(buildQuoteRequestRow("cotacao-rc-yoga", base, {}).teste, false);
+  assert.equal(buildQuoteRequestRow("cotacao-rc-yoga", base).teste, false);
+});
+
+test("insertQuoteRequest posts teste=true in the row body when isTest is passed through, still to the same REST endpoint with the service-role key", async () => {
+  const originalFetch = global.fetch;
+  let calledUrl;
+  let calledBody;
+  global.fetch = async (url, options) => {
+    calledUrl = url;
+    calledBody = JSON.parse(options.body);
+    return new Response(null, { status: 201 });
+  };
+  try {
+    await withEnv(
+      { SUPABASE_URL: "https://example.invalid.supabase.co", SUPABASE_SERVICE_ROLE_KEY: "service-role-secret" },
+      async () => {
+        await insertQuoteRequest("cotacao-rc-yoga", { nome: "Hugo Teste", email: "hugo@example.com" }, {
+          submissionId: "sub-123",
+          isTest: true,
+        });
+      },
+    );
+  } finally {
+    global.fetch = originalFetch;
+  }
+  assert.equal(calledUrl, "https://example.invalid.supabase.co/rest/v1/quote_requests");
+  assert.equal(calledBody.teste, true);
+  assert.equal(calledBody.submission_id, "sub-123");
+});

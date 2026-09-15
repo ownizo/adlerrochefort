@@ -1,6 +1,30 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { renderAllFields, quoteIntro } from "../submission-created.mjs";
+import handler, { renderAllFields, quoteIntro, buildIntakeEmail, HANDLED_FORMS } from "../submission-created.mjs";
+import { TEST_MODE_SENTINEL } from "./lead-classification.mjs";
+
+/** A minimal stand-in for the Netlify Forms `submission-created` event
+ *  Request the default export expects — only `.json()` is ever called on
+ *  it. */
+function mockRequest(payload) {
+  return { json: async () => ({ payload }) };
+}
+
+/** Runs `fn` with console.log intercepted, returning every line logged
+ *  during the call alongside fn's own return value — used below to assert
+ *  on what the handler actually logged without silencing real test output
+ *  for anything else. */
+async function captureLogs(fn) {
+  const lines = [];
+  const original = console.log;
+  console.log = (...args) => lines.push(args.join(" "));
+  try {
+    const result = await fn();
+    return { result, lines };
+  } finally {
+    console.log = original;
+  }
+}
 
 // Regression test for a bug found while verifying the quote-requests-sync.mjs
 // crash fix (Especificação v2 hotfix) by bundling submission-created.mjs with
@@ -179,4 +203,90 @@ test("quoteIntro honours slaHours on an EN form too, translating the PT-style '4
   );
   assert.match(text, /A reply within 48 to 72 business hours was promised/);
   assert.doesNotMatch(text, /one working day/);
+});
+
+// Especificação v2, "restantes línguas" Parte 0 ponto 3 / Parte 4 — the
+// test-mode mechanism the Hugo now uses instead of manual submissions.
+// buildIntakeEmail is pure (extracted from the default handler precisely so
+// test mode can build the same content a real send would, without sending);
+// covered directly here in addition to through the handler below.
+test("buildIntakeEmail builds the same subject/html shape for a quote form regardless of who calls it", () => {
+  const formConfig = HANDLED_FORMS["cotacao-rc-yoga"];
+  const data = { nome: "Hugo Teste", email: "hugo@example.com", nif: "501442600" };
+  const { subject, html } = buildIntakeEmail(formConfig, data, { created_at: "2026-09-15T10:00:00Z" });
+  assert.match(subject, /Hugo Teste/);
+  assert.match(html, /Novo pedido de análise/);
+  assert.match(html, /48 a 72 horas úteis/);
+  assert.match(html, /Hugo Teste/);
+});
+
+test("test-mode submission (name = TEST_MODE_SENTINEL): logs both the email and CRM payloads, sends neither, still attempts the quote_requests write", async () => {
+  const req = mockRequest({
+    form_name: "cotacao-rc-yoga",
+    id: "sub-test-1",
+    created_at: "2026-09-15T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      morada: "Rua Teste 123",
+      codigo_postal: "8600-100",
+      rgpd: "sim",
+    },
+  });
+
+  const { result: response, lines } = await captureLogs(() => handler(req));
+
+  assert.equal(response.status, 200);
+  assert.equal(await response.text(), "OK");
+
+  const joined = lines.join("\n");
+  assert.match(joined, /TEST MODE formName=cotacao-rc-yoga/);
+  assert.match(joined, /TEST_EMAIL subject=/);
+  assert.match(joined, /TEST_EMAIL_HTML/);
+  assert.match(joined, /TEST_CRM_PAYLOAD/);
+
+  // Neither real path was taken: no CRM_SYNC_* line (only sendLeadToCrm's
+  // logEvent emits those, and test mode never calls it), and no "Failed to
+  // send intake notification email" (only a real resend.emails.send() call
+  // could produce that, and test mode never constructs a Resend client).
+  assert.doesNotMatch(joined, /CRM_SYNC_(OK|FAILED|SKIPPED)/);
+  assert.doesNotMatch(joined, /Failed to send intake notification email/);
+
+  // The logged CRM payload is still the real, privacy-restricted one
+  // (crm-sync.mjs's buildCrmLeadPayload is untouched) — confirm none of the
+  // fields it must never carry leaked into the log line.
+  const crmLine = lines.find((l) => l.includes("TEST_CRM_PAYLOAD"));
+  assert.ok(crmLine);
+  for (const forbidden of ["501442600", "Rua Teste 123", "8600-100"]) {
+    assert.doesNotMatch(crmLine, new RegExp(forbidden.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  // quote_requests write was attempted (not skipped for lack of contact
+  // data) — with no SUPABASE_URL/SERVICE_ROLE_KEY set in this test process,
+  // it logs SKIPPED reason=not_configured rather than making a network
+  // call; the isTest=true -> teste=true wiring itself is covered directly
+  // in quote-requests-sync.test.mjs.
+  assert.match(joined, /\[quote-requests-sync\] SKIPPED reason=not_configured/);
+});
+
+test("a normal (non-test) submission never logs any TEST_* line, and still attempts the real email/CRM paths", async () => {
+  const req = mockRequest({
+    form_name: "cotacao-rc-yoga",
+    id: "sub-real-1",
+    created_at: "2026-09-15T10:00:00Z",
+    data: { nome: "Maria Real", email: "maria@example.com", nif: "501442600", rgpd: "sim" },
+  });
+
+  const { result: response, lines } = await captureLogs(() => handler(req));
+
+  assert.equal(response.status, 200);
+  const joined = lines.join("\n");
+  assert.doesNotMatch(joined, /TEST MODE/);
+  assert.doesNotMatch(joined, /TEST_EMAIL/);
+  assert.doesNotMatch(joined, /TEST_CRM_PAYLOAD/);
+  // Real paths attempted (and skipped only for lack of env vars, same as
+  // every other test in this suite runs without credentials configured).
+  assert.match(joined, /RESEND_API_KEY not set/);
+  assert.match(joined, /\[quote-requests-sync\] SKIPPED reason=not_configured/);
 });

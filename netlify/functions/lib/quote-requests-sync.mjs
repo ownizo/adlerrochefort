@@ -121,7 +121,7 @@ function pickFirst(data, aliases) {
  * Constrói a linha a inserir em quote_requests, ou devolve `null` quando não
  * há dados de contacto suficientes para valer a pena guardar (nunca lança).
  */
-export function buildQuoteRequestRow(formName, data, { language, submissionId } = {}) {
+export function buildQuoteRequestRow(formName, data, { language, submissionId, isTest } = {}) {
   const classification = classifySubmission(formName, data);
   const { name, email, phone } = extractContact(data);
   if (!name && !email) return null;
@@ -196,6 +196,12 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId } 
     },
     estado: "novo",
     submission_id: submissionId,
+    // Especificação v2, "restantes línguas" Parte 0/4 — ver
+    // lead-classification.mjs's TEST_MODE_SENTINEL/isTestModeSubmission()
+    // for where this comes from. Always a real boolean, never undefined, so
+    // a caller that forgets to pass isTest still writes `teste: false`
+    // rather than leaving the column to its table default silently.
+    teste: Boolean(isTest),
   };
 
   return applyDynamicFields(row, ramo, data?.dados_dinamicos);
@@ -253,7 +259,7 @@ export async function insertQuoteRequest(formName, data, opts = {}) {
       return;
     }
 
-    logEvent("OK", { formName, ramo: row.ramo, lingua: row.lingua });
+    logEvent("OK", { formName, ramo: row.ramo, lingua: row.lingua, teste: row.teste });
   } catch (err) {
     const reason = err?.name === "AbortError" ? "timeout" : "network_error";
     logEvent("FAILED", { reason, formName });
