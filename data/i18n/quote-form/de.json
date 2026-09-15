@@ -73,6 +73,18 @@
       "obras_descricao": "Beschreiben Sie die durchgeführten Arbeiten",
       "capital_edificio": "Versicherungssumme Gebäude (€)",
       "capital_conteudo": "Versicherungssumme Hausrat (€)"
+    },
+    "saude": {
+      "titulo": "Krankenversicherung anfragen",
+      "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 24 Arbeitsstunden.",
+      "passo_2_titulo": "Zu versichernde Personen",
+      "pessoas_aviso_nif": "Für jede zu versichernde Person wird eine portugiesische Steuernummer (NIF) benötigt, auch für Kinder — ohne sie kann kein Angebot erstellt werden. Wir fragen hier keine medizinischen Angaben ab: der Gesundheitsfragebogen erfolgt direkt mit dem Versicherer, im Rahmen des Beitritts.",
+      "pessoa_label": "Person",
+      "pessoa_nome": "Vollständiger Name",
+      "pessoa_nascimento": "Geburtsdatum",
+      "pessoa_nif": "NIF (portugiesische Steuernummer)",
+      "pessoa_remover": "Diese Person entfernen",
+      "pessoa_adicionar": "+ Person hinzufügen"
     }
   },
   "countries": {

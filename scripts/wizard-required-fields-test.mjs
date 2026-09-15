@@ -373,6 +373,7 @@ const PAGES = [
     path: 'seguros/saude/index.html',
     url: 'https://adlerrochefort.com/seguros/saude/',
     formName: 'cotacao-saude',
+    expectPersonNameLabel: 'Nome completo',
     scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
     firstBatch: [
       'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
@@ -409,6 +410,7 @@ const PAGES = [
     path: 'en/health-insurance-quote/index.html',
     url: 'https://adlerrochefort.com/en/health-insurance-quote/',
     formName: 'health-insurance-quote-wizard',
+    expectPersonNameLabel: 'Full name',
     scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
     firstBatch: [
       'name', 'email', 'phone', 'nif', 'date_of_birth',
@@ -430,6 +432,43 @@ const PAGES = [
     },
     personValues: {
       nome: 'Tom Smith',
+      data_nascimento: '2015-06-01',
+      nif: '200000012',
+    },
+  },
+  // Especificação v2, "restantes línguas" Parte C — same shared field
+  // names as PT/EN Saúde above, first non-PT-non-EN Saúde wizard. Also the
+  // regression test for quote-health-persons.js's own language fix (found
+  // while building this page — see that file's top comment): its repeater
+  // labels are German here, not the hardcoded Portuguese every page,
+  // including the EN one above, silently got before that fix.
+  {
+    label: 'DE /de/krankenversicherung-portugal/',
+    path: 'de/krankenversicherung-portugal/index.html',
+    url: 'https://adlerrochefort.com/de/krankenversicherung-portugal/',
+    formName: 'de-krankenversicherung-wizard',
+    expectPersonNameLabel: 'Vollständiger Name',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Hans Müller',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+49 30 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Deutschland',
+      residente_fiscal: 'sim',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+    personValues: {
+      nome: 'Klara Müller',
       data_nascimento: '2015-06-01',
       nif: '200000012',
     },
@@ -607,6 +646,23 @@ for (const page of PAGES) {
         console.log(`  got: ${dinamicos}`);
       } else {
         console.log(`${page.label} — positive control OK (fully filled reaches submit, dados_dinamicos carries the pessoa segura block)`);
+      }
+      // Especificação v2, "restantes línguas" — quote-health-persons.js's
+      // own regression: its repeater labels were hardcoded Portuguese with
+      // no language branch at all, silently, on every page including the
+      // EN one — found while building the German Saúde page. `nome`'s own
+      // <label> text is enough to catch that class of bug reappearing on
+      // any page in this list, without hand-checking every string.
+      if (page.expectPersonNameLabel) {
+        const nameField = doc.querySelector('[data-person-field="nome"]');
+        const label = nameField && doc.querySelector(`label[for="${nameField.id}"]`);
+        const text = label ? label.textContent : null;
+        if (!text || !text.startsWith(page.expectPersonNameLabel)) {
+          failures++;
+          console.log(`\n${page.label} — FAILED: person block's own name label is "${text}", expected to start with "${page.expectPersonNameLabel}"`);
+        } else {
+          console.log(`${page.label} — person block labels are in the page's own language ("${text}")`);
+        }
       }
     } else {
       console.log(`${page.label} — positive control OK (fully filled reaches submit)`);

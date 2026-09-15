@@ -99,7 +99,12 @@ const PAGE_CLUSTERS = [
   // not a dedicated /en/seguros/ page — Yoga/Pilates/Bem-Estar liability
   // never got one, per the C1 audit (Especificação v2 prompt).
   { '/seguros/rc-yoga-pilates-bem-estar/': 'pt-PT', '/en/blog/yoga-instructor-liability-insurance-portugal/': 'en-GB' },
-  { '/seguros/saude/': 'pt-PT', '/en/health-insurance-quote/': 'en-GB' },
+  {
+    '/seguros/saude/': 'pt-PT',
+    '/en/health-insurance-quote/': 'en-GB',
+    // Especificação v2, "restantes línguas" Parte C — de-krankenversicherung-wizard.
+    '/de/krankenversicherung-portugal/': 'de',
+  },
   // Especificação v2, C2 — the dedicated EN page for RC Profissional. Distinct
   // from the pre-existing '/blog/responsabilidade-civil-profissional/' ↔
   // '/en/blog/professional-indemnity-insurance/' article pair below (which

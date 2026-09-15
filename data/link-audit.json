@@ -6,7 +6,7 @@
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 1,
-    "singleInbound": 18,
+    "singleInbound": 17,
     "deeperThanThreeClicks": 9
   },
   "broken": [],
@@ -109,12 +109,6 @@
       "url": "/nl/zorgverzekering-bestaande-aandoening-portugal/",
       "from": [
         "/nl/zorgverzekering-portugal/"
-      ]
-    },
-    {
-      "url": "/seguros/saude/",
-      "from": [
-        "/en/health-insurance-quote/"
       ]
     },
     {
