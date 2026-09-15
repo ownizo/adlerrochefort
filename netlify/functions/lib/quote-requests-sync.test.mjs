@@ -272,3 +272,58 @@ test("insertQuoteRequest posts teste=true in the row body when isTest is passed 
   assert.equal(calledBody.teste, true);
   assert.equal(calledBody.submission_id, "sub-123");
 });
+
+// Especificação v2, "restantes línguas" Parte 1 ponto 1 — payload_teste,
+// replacing function-log reading (unreliable in this project's sessions so
+// far) as the way to verify a test-mode submission's email/CRM payloads:
+// they get written onto the row itself instead, readable by direct query.
+test("buildQuoteRequestRow stamps payload_teste with testPayload when isTest is true, and omits the key entirely otherwise", () => {
+  const base = { nome: "Hugo Teste", email: "hugo@example.com" };
+  const testPayload = { email: { subject: "x", html: "<p>y</p>" }, crm: { payload: { name: "Hugo Teste" }, skippedReason: null } };
+
+  const testRow = buildQuoteRequestRow("cotacao-rc-yoga", base, { isTest: true, testPayload });
+  assert.deepEqual(testRow.payload_teste, testPayload);
+
+  // payload_teste is `undefined` (not absent) on the JS object for a real
+  // row — JSON.stringify is what actually omits an `undefined` value from
+  // the wire body insertQuoteRequest posts, so that is what this checks,
+  // the same way the request body itself gets built.
+  const realRow = buildQuoteRequestRow("cotacao-rc-yoga", base, { isTest: false, testPayload });
+  assert.equal(
+    "payload_teste" in JSON.parse(JSON.stringify(realRow)),
+    false,
+    "a real row must never carry payload_teste on the wire, even if a caller mistakenly passed testPayload alongside isTest: false"
+  );
+
+  const defaultRow = buildQuoteRequestRow("cotacao-rc-yoga", base);
+  assert.equal("payload_teste" in JSON.parse(JSON.stringify(defaultRow)), false);
+});
+
+test("insertQuoteRequest posts payload_teste in the row body for a test-mode call, and never includes the key for a normal one", async () => {
+  const originalFetch = global.fetch;
+  const bodies = [];
+  global.fetch = async (url, options) => {
+    bodies.push(JSON.parse(options.body));
+    return new Response(null, { status: 201 });
+  };
+  const testPayload = { email: { subject: "Novo pedido", html: "<p>...</p>" }, crm: { payload: { name: "Hugo Teste", email: "hugo@example.com" }, skippedReason: null } };
+  try {
+    await withEnv(
+      { SUPABASE_URL: "https://example.invalid.supabase.co", SUPABASE_SERVICE_ROLE_KEY: "service-role-secret" },
+      async () => {
+        await insertQuoteRequest("cotacao-rc-yoga", { nome: "Hugo Teste", email: "hugo@example.com" }, {
+          isTest: true,
+          testPayload,
+        });
+        await insertQuoteRequest("cotacao-rc-yoga", { nome: "Maria Real", email: "maria@example.com" }, {
+          isTest: false,
+        });
+      },
+    );
+  } finally {
+    global.fetch = originalFetch;
+  }
+  assert.equal(bodies.length, 2);
+  assert.deepEqual(bodies[0].payload_teste, testPayload);
+  assert.equal("payload_teste" in bodies[1], false);
+});

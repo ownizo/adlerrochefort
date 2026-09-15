@@ -290,3 +290,51 @@ test("a normal (non-test) submission never logs any TEST_* line, and still attem
   assert.match(joined, /RESEND_API_KEY not set/);
   assert.match(joined, /\[quote-requests-sync\] SKIPPED reason=not_configured/);
 });
+
+// Especificação v2, "restantes línguas" Parte 1 ponto 1 — payload_teste
+// end-to-end through the real handler, with Supabase env vars set and
+// fetch mocked, so this confirms what actually lands in the row body, not
+// just the console.log lines (which the other test-mode test already
+// covers). The two channels must agree: what gets logged is what gets
+// written.
+test("test-mode submission writes payload_teste onto the quote_requests row, matching what was logged", async () => {
+  const originalFetch = global.fetch;
+  const originalUrl = process.env.SUPABASE_URL;
+  const originalKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  process.env.SUPABASE_URL = "https://example.invalid.supabase.co";
+  process.env.SUPABASE_SERVICE_ROLE_KEY = "service-role-secret";
+  let postedBody;
+  global.fetch = async (url, options) => {
+    postedBody = JSON.parse(options.body);
+    return new Response(null, { status: 201 });
+  };
+
+  const req = mockRequest({
+    form_name: "cotacao-rc-yoga",
+    id: "sub-test-2",
+    created_at: "2026-09-15T10:00:00Z",
+    data: { nome: TEST_MODE_SENTINEL, email: "agente-teste@example.com", nif: "501442600", rgpd: "sim" },
+  });
+
+  const { result: response, lines } = await captureLogs(() => handler(req));
+
+  global.fetch = originalFetch;
+  if (originalUrl === undefined) delete process.env.SUPABASE_URL;
+  else process.env.SUPABASE_URL = originalUrl;
+  if (originalKey === undefined) delete process.env.SUPABASE_SERVICE_ROLE_KEY;
+  else process.env.SUPABASE_SERVICE_ROLE_KEY = originalKey;
+
+  assert.equal(response.status, 200);
+  assert.equal(postedBody.teste, true);
+  assert.ok(postedBody.payload_teste, "row body must carry payload_teste for a test-mode row");
+  assert.match(postedBody.payload_teste.email.subject, /Hugo Teste|TESTE-AGENTE-NAO-PROCESSAR/);
+  assert.equal(typeof postedBody.payload_teste.email.html, "string");
+  assert.ok(postedBody.payload_teste.crm, "crm key must be present even when the payload itself is null");
+
+  // The logged subject and the written subject are the exact same string —
+  // the two verification channels (log line, database column) must never
+  // disagree about what was actually constructed.
+  const loggedSubjectLine = lines.find((l) => l.includes("TEST_EMAIL subject="));
+  assert.ok(loggedSubjectLine);
+  assert.equal(loggedSubjectLine.includes(JSON.stringify(postedBody.payload_teste.email.subject)), true);
+});

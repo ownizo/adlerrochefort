@@ -1198,8 +1198,21 @@ export default async (req) => {
   // mode is independent of RESEND_API_KEY too: content is built and logged
   // whether or not a real key is configured, since the whole point is to
   // verify construction without ever actually sending.
+  // Especificação v2, "restantes línguas" Parte 1 ponto 1 — function-log
+  // reading has not returned useful content in this project's sessions so
+  // far (several attempts via `netlify logs`, always one empty INFO line
+  // regardless of the window asked for), which left the two payloads below
+  // unverifiable in practice despite being logged. testPayload collects them
+  // as this handler builds them anyway, so insertQuoteRequest can write them
+  // onto the test row itself (payload_teste column) — readable by direct
+  // query, not dependent on any log tool. The console.log lines stay too,
+  // for whichever environment log reading does work in; the database column
+  // is the reliable channel from here on.
+  const testPayload = isTest ? {} : undefined;
+
   if (isTest) {
     const { subject, html } = buildIntakeEmail(formConfig, data, payload);
+    testPayload.email = { subject, html };
     console.log(`[submission-created] TEST MODE formName=${formName} — email and CRM sync not sent, both payloads logged below instead`);
     console.log(`[submission-created] TEST_EMAIL subject=${JSON.stringify(subject)}`);
     console.log(`[submission-created] TEST_EMAIL_HTML ${html}`);
@@ -1247,6 +1260,7 @@ export default async (req) => {
       submissionId,
       sourceUrl: data.source_url,
     });
+    testPayload.crm = { payload: crmPayload, skippedReason };
     console.log(
       `[submission-created] TEST_CRM_PAYLOAD ${crmPayload ? JSON.stringify(crmPayload) : `null (skippedReason=${skippedReason})`}`
     );
@@ -1270,7 +1284,7 @@ export default async (req) => {
   // torna uma submissão de teste verificável por leitura direta da tabela;
   // isTest flui para a coluna `teste` da linha.
   try {
-    await insertQuoteRequest(formName, data, { submissionId, isTest });
+    await insertQuoteRequest(formName, data, { submissionId, isTest, testPayload });
   } catch (err) {
     console.error("[quote-requests-sync] unexpected error:", err);
   }
