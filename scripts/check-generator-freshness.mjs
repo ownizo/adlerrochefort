@@ -303,14 +303,15 @@ const rel = (f) => 'public/' + f;
 // Check 7 (WARN): a car-cluster page's <form name="..."> no longer matches
 // what scripts/car-cluster.data.mjs would generate for it.
 //
-// Deliberately a form-name comparison, not a full HTML diff: the page's
-// wizard rewrite (Fase 1) touches structure the generator has no source of
-// truth for at all (steps, validators, i18n-driven copy), so "does the
-// generator's own idea of this form still match reality" is the one
-// question this check can answer cheaply and unambiguously. A mismatch
-// here is proof the generator has drifted — see that page's own PAGE.form
-// comment in car-cluster.data.mjs for what to do before ever running
-// scripts/build-car-cluster.mjs again.
+// Currently a no-op in practice: car-cluster.data.mjs's PAGES is empty
+// (the "restantes línguas" prompt's Parte 0 retired build-car-cluster.mjs —
+// see the "RETIRED" comment next to PAGE.form there for the full story), so
+// this loop has nothing to iterate. Left in place as a generic guard for
+// whatever gets added to PAGES next: deliberately a form-name comparison,
+// not a full HTML diff, so "does the generator's own idea of a page's form
+// still match reality" is the one question it answers cheaply and
+// unambiguously. A mismatch here is proof that page has drifted — do not
+// run scripts/build-car-cluster.mjs against it as-is.
 // -----------------------------------------------------------------------
 {
   for (const page of CAR_CLUSTER_PAGES) {
