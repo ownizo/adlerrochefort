@@ -92,6 +92,13 @@ const PAGE_CLUSTERS = [
   },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
   { '/seguros/tvde/': 'pt-PT', '/en/insurance/tvde/': 'en-GB' },
+  // Especificação v2, B2 — a real, working pair that existed in the markup
+  // on both sides but was never registered here, so a routine run of this
+  // script silently deleted it (see the wouldDrop safety check above, added
+  // in the same change that adds this entry). The EN side is a blog article,
+  // not a dedicated /en/seguros/ page — Yoga/Pilates/Bem-Estar liability
+  // never got one, per the C1 audit (Especificação v2 prompt).
+  { '/seguros/rc-yoga-pilates-bem-estar/': 'pt-PT', '/en/blog/yoga-instructor-liability-insurance-portugal/': 'en-GB' },
   { '/seguros/saude/': 'pt-PT', '/en/health-insurance-quote/': 'en-GB' },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
   {
@@ -146,6 +153,11 @@ const report = {
   unilateral: [],
   brokenTargets: [],
   changed: [],
+  // Especificação v2, B2 — pages this run left untouched because rewriting
+  // them would have silently dropped an existing hreflang declaration
+  // PAGE_CLUSTERS doesn't know about. Never empty-and-ignored: see the
+  // loud console output below and the top of the per-file loop for why.
+  wouldDrop: [],
 };
 
 const onDisk = (p) => existsSync(join(PUBLIC, p, 'index.html')) || existsSync(join(PUBLIC, p));
@@ -254,6 +266,31 @@ for (const rel of files) {
   const before = html;
   scanned += 1;
 
+  // Safety check, before anything else touches this page: PAGE_CLUSTERS
+  // ("no pairing is invented" — see the file's own top comment) is deliberately
+  // the only source of truth for what `alternates` computes below, so a page
+  // whose *markup* already declares an hreflang target this run's computed set
+  // doesn't know about would otherwise just lose it — silently, the same way
+  // the whole point of rewriting HREFLANG_TAG to nothing first and rebuilding
+  // from scratch works for every legitimate correction. That's exactly what
+  // happened to /seguros/rc-yoga-pilates-bem-estar/ and its EN counterpart: a
+  // real, working, reciprocal pair, never added to PAGE_CLUSTERS, wiped by a
+  // routine run with nothing in this script's own report to say so — the
+  // "falham em silêncio, que é o que as torna perigosas" this check exists
+  // for (Especificação v2, B2). A target this script cannot currently resolve
+  // to a lang (declared here, but the *other* side of a pair this run doesn't
+  // know about either) is exactly the case worth stopping for, not silently
+  // resolving by deleting the only record of the relationship.
+  const existingHreflangHrefs = [...before.matchAll(/<link\b[^>]*\bhreflang="([^"]*)"[^>]*\bhref="([^"]*)"[^>]*>/g)]
+    .filter((m) => m[1] !== 'x-default')
+    .map((m) => m[2].replace(SITE, ''));
+  const newHreflangHrefs = new Set((alternates.get(path) || []).map((alt) => alt.path));
+  const droppedHrefs = existingHreflangHrefs.filter((href) => href !== path && !newHreflangHrefs.has(href));
+  if (droppedHrefs.length) {
+    report.wouldDrop.push({ page: path, drops: droppedHrefs });
+    continue; // page left untouched — see report.wouldDrop in the printed summary
+  }
+
   // Whether the head is pretty-printed or minified decides only how the block
   // is spaced; the minified English articles have no newlines to anchor on.
   const pretty = /\n[ \t]*<(?:link|meta|title)\b/.test(html);
@@ -328,6 +365,7 @@ await writeFile(
         unilateralDeclarations: report.unilateral.length,
         brokenHreflangTargets: report.brokenTargets.length,
         xDefaultPages: X_DEFAULT.size,
+        pagesLeftUntouchedToAvoidDroppingAPair: report.wouldDrop.length,
       },
       note:
         'monolingualPt / monolingualEn are informative. PT and EN are separate ' +
@@ -337,6 +375,7 @@ await writeFile(
       monolingual: report.monolingual,
       unilateralDeclarations: report.unilateral,
       brokenHreflangTargets: report.brokenTargets,
+      wouldDrop: report.wouldDrop,
     },
     null,
     2
@@ -354,3 +393,13 @@ report.unilateral.forEach((u) => console.log(`  ${u.url} -> ${u.declares}  (${u.
 console.log(`broken hreflang targets:  ${report.brokenTargets.length}`);
 report.brokenTargets.forEach((b) => console.log(`  ${JSON.stringify(b)}`));
 console.log(`x-default pages:          ${X_DEFAULT.size}`);
+if (report.wouldDrop.length) {
+  // Loud on purpose (Especificação v2, B2) — this is the difference between
+  // a page losing a working hreflang pair with nothing in this script's own
+  // output to say so, and a run that stops to tell a human exactly what it
+  // refused to delete and why. Register the pair in PAGE_CLUSTERS (both
+  // pages, both directions) if it's real, then re-run.
+  console.log(`\n⚠ pages left untouched — would have dropped an unregistered hreflang pair: ${report.wouldDrop.length}`);
+  report.wouldDrop.forEach((d) => console.log(`  ${d.page} -> ${d.drops.join(', ')}`));
+  console.log('  Add these to PAGE_CLUSTERS (both sides) if the pair is real, then re-run.');
+}
