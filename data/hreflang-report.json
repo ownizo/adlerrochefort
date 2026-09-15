@@ -1,15 +1,16 @@
 {
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
-    "htmlFiles": 419,
-    "filesChanged": 50,
-    "pagesWithHreflang": 123,
+    "htmlFiles": 436,
+    "filesChanged": 0,
+    "pagesWithHreflang": 127,
     "articlePairs": 28,
     "monolingualPt": 24,
-    "monolingualEn": 146,
+    "monolingualEn": 152,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
-    "xDefaultPages": 11
+    "xDefaultPages": 11,
+    "pagesLeftUntouchedToAvoidDroppingAPair": 0
   },
   "note": "monolingualPt / monolingualEn are informative. PT and EN are separate audiences; an article existing in one language only is the intended state and is not a task.",
   "articlePairs": [
@@ -299,9 +300,16 @@
       "/en/blog/lei-71-2013-therapies-liability-portugal/",
       "/en/blog/psychologists-nutritionists-liability-portugal/",
       "/en/blog/retreat-organisers-liability-portugal/",
-      "/en/blog/professional-indemnity-requirements-portugal/"
+      "/en/blog/professional-indemnity-requirements-portugal/",
+      "/en/blog/vhi-laya-irish-life-portugal-health-insurance/",
+      "/en/blog/irish-no-claims-bonus-car-insurance-portugal/",
+      "/en/blog/irish-owners-algarve-holiday-home-insurance/",
+      "/en/blog/canadian-provincial-health-coverage-portugal/",
+      "/en/blog/canadian-driving-record-car-insurance-portugal/",
+      "/en/blog/canadian-non-resident-property-insurance-portugal/"
     ]
   },
   "unilateralDeclarations": [],
-  "brokenHreflangTargets": []
+  "brokenHreflangTargets": [],
+  "wouldDrop": []
 }

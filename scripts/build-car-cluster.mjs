@@ -681,6 +681,36 @@ for (const page of PAGES) {
   rendered.push([page, html]);
 }
 
+// Especificação v2, B2 — this generator's own template (render(), above)
+// still produces the pre-wizard, single-step form: PAGE.form here has no
+// source of truth at all for the wizard's steps, validators or i18n-driven
+// copy (Fase 1 rewrote the published page directly, not through this
+// file — see check-generator-freshness.mjs's Check 7, which already warns
+// about exactly this). A plain `npm run` of this script used to overwrite
+// that work silently, with nothing here to say so. Hard-stop instead of
+// writing: any page whose *published* <form name> already differs from
+// what PAGE.form.name would produce is presumed to have been hand-evolved
+// past this generator, and this script has no business touching it until
+// that's reconciled (rewrite PAGE.form and render() to match the live
+// wizard markup, or drop the page from PAGES here if it's no longer this
+// generator's to own).
+for (const [page] of rendered) {
+  const existing = join(PUBLIC, 'en', page.slug, 'index.html');
+  if (!existsSync(existing)) continue; // first-ever write — nothing to drift from
+  const match = readFileSync(existing, 'utf8').match(/<form\b[^>]*\bname="([^"]+)"/);
+  const actualFormName = match ? match[1] : null;
+  if (actualFormName !== page.form.name) {
+    console.error(
+      `\nRefusing to write public/en/${page.slug}/index.html: its published <form> is named ` +
+        `"${actualFormName ?? '(none found)'}", but this generator's PAGE.form.name is "${page.form.name}". ` +
+        `That mismatch means the published page has moved on from what this generator produces (see the ` +
+        `comment just above this check) — running it as-is would silently overwrite that work. Reconcile ` +
+        `PAGE.form / render() in car-cluster.data.mjs with the live markup first, then re-run.`
+    );
+    process.exit(1);
+  }
+}
+
 for (const [page, html] of rendered) {
   const dir = join(PUBLIC, 'en', page.slug);
   await mkdir(dir, { recursive: true });
