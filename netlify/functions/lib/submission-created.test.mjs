@@ -338,3 +338,57 @@ test("test-mode submission writes payload_teste onto the quote_requests row, mat
   assert.ok(loggedSubjectLine);
   assert.equal(loggedSubjectLine.includes(JSON.stringify(postedBody.payload_teste.email.subject)), true);
 });
+
+// Especificação v2, "restantes línguas" Parte A ponto 2 — regression test
+// for the real bug the first de-autoversicherung-wizard test-mode
+// submission surfaced: renderAllFields/quoteIntro read English/Portuguese
+// labels for a German wizard form (via `en: true`, the de-angebot-anfrage/
+// nl-offerte-aanvraag convention this wizard's HANDLED_FORMS entry
+// inherited by copying that pattern) instead of German. Fixed by adding
+// `lang: "de"` to the form config and a `lang === "de"` branch, checked
+// before `en`, in all three functions.
+test("a German wizard form (formConfig.lang === 'de') renders German labels, not English or Portuguese", () => {
+  const formConfig = HANDLED_FORMS["de-autoversicherung-wizard"];
+  assert.equal(formConfig.lang, "de");
+  const html = renderAllFields(
+    { nome: "Hans Müller", matricula: "AA-00-AA", data_carta: "2005-06-15", rgpd: "sim", nacionalidade: "DE" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Kennzeichen/);
+  assert.match(html, /Datum der Führerscheinausstellung/);
+  assert.match(html, /DSGVO-Einwilligung/);
+  assert.match(html, /Deutschland/); // German country name, not "Germany"
+  assert.doesNotMatch(html, /Registration plate/);
+  assert.doesNotMatch(html, /Driving licence issue date/);
+  assert.doesNotMatch(html, /GDPR consent/);
+  assert.doesNotMatch(html, />Germany</);
+});
+
+test("quoteIntro promises 24 Arbeitsstunden in German for a lang: 'de' form with no slaHours", () => {
+  const text = quoteIntro({ page: "/de/autoversicherung-portugal/", lang: "de", en: true }, "https://adlerrochefort.com/de/autoversicherung-portugal/");
+  assert.match(text, /24 Arbeitsstunden/);
+  assert.doesNotMatch(text, /one working day/);
+  assert.doesNotMatch(text, /24 horas úteis/);
+});
+
+test("test-mode submission on the DE Auto wizard writes German labels into payload_teste.email", async () => {
+  const req = mockRequest({
+    form_name: "de-autoversicherung-wizard",
+    id: "sub-test-de-1",
+    created_at: "2026-09-15T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      matricula: "AA-00-AA",
+      data_carta: "2005-06-15",
+      rgpd: "sim",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /Kennzeichen/);
+  assert.doesNotMatch(htmlLine, /Registration plate/);
+});
