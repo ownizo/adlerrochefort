@@ -1,45 +1,46 @@
 #!/usr/bin/env node
 /**
- * Builds the Car Insurance commercial cluster under /en/.
+ * RETIRED — writes zero pages. Kept only because the rendering machinery
+ * below (chrome, validation, JSON-LD, link checks) is still useful reference
+ * for a future car-insurance secondary-page cluster, the same role
+ * build-property-cluster.mjs's own template plays for its nine secondary
+ * pages. Running this script (`node scripts/build-car-cluster.mjs`) is safe
+ * and does nothing: PAGES, in car-cluster.data.mjs, is an empty array.
  *
- * The English side of the site had five substantial motor guides and no
- * commercial destination: the footer's "Car Insurance" entry pointed at an
- * article and the homepage's car service card opened a generic contact modal.
- * This generator writes the page those two were missing — /en/car-insurance-portugal/,
- * the national pillar — using the same chrome, design system and Netlify form
- * plumbing as the Home & Property cluster.
- *
- * It is a generator rather than a hand-written file for the same reason
+ * What this used to build: /en/car-insurance-portugal/, the national motor
+ * pillar — the destination the footer's "Car Insurance" link and the
+ * homepage's car service card were missing before this generator existed.
+ * It was a generator rather than a hand-written file for the same reason
  * build-property-cluster.mjs is: the chrome, the ASF small print, the form
- * scaffolding and the footer have to stay identical to their siblings, and the
- * only way that survives the next edit is if one file owns them. The cluster
- * holds one page today; the shape supports more without a rewrite.
+ * scaffolding and the footer have to stay identical to their siblings, and
+ * the only way that survives the next edit is if one file owns them.
  *
- * Content lives in car-cluster.data.mjs. Run, in this order:
+ * Why it is retired rather than fixed: Especificação v2 Fase 1 replaced the
+ * page's single-step form with a hand-authored 3-step wizard
+ * (public/js/quote-wizard.js) directly in the built HTML, because this
+ * generator did not support a multi-step form at the time. Porting the
+ * wizard's steps/validators/i18n-driven copy back into render() below was
+ * considered twice (Especificação v2 B2, then again in the "restantes
+ * línguas" prompt's Parte 0) and judged not worth it for a generator that
+ * only ever owned this one page — see the matching "RETIRED" comment next
+ * to PAGE.form in car-cluster.data.mjs. /en/car-insurance-portugal/ is now
+ * hand-maintained, the same arrangement /en/home-insurance-quote/ already
+ * has with build-property-cluster.mjs.
+ *
+ * If a car-insurance secondary-page cluster is ever built (PAGES gaining
+ * real entries again), the four-step pipeline documented in
+ * build-property-cluster.mjs still applies here unchanged:
  *
  *   node scripts/build-car-cluster.mjs
  *   node scripts/hreflang.mjs        # re-stamps the pt-PT/en-GB alternates
  *   node scripts/lang-switcher.mjs   # rebuilds the PT|EN|NL|FR|DE selector
  *   node scripts/generate-sitemap.mjs
  *
- * The middle two are not optional. This generator deliberately does not write
- * the hreflang alternates itself — scripts/hreflang.mjs owns every pair on the
- * site, so there is one definition rather than two — which means the page it
- * writes leaves this step with no <link rel="alternate"> at all. Running the
- * build alone therefore drops the reciprocal pt-PT link to /seguros/auto/ from
- * the pillar and breaks the pairing in one direction, silently: nothing fails,
- * the page just stops declaring its Portuguese counterpart. lang-switcher.mjs
- * is what turns the nav's language selector into the per-page one that points
- * at /seguros/auto/ rather than the Portuguese home page.
- *
- * With all four run in order the output is byte-for-byte the committed page.
- *
-
- * Before anything is written the script checks that every page has an H1, that
- * no two pages share a title or an H1, that every JSON-LD block it produced
- * parses, and that every internal link on the page resolves to something that
- * exists on disk. Any of those failing throws, so a broken page never reaches
- * public/.
+ * Before anything is written the script checks that every page has an H1,
+ * that no two pages share a title or an H1, that every JSON-LD block it
+ * produced parses, and that every internal link on the page resolves to
+ * something that exists on disk. Any of those failing throws, so a broken
+ * page never reaches public/.
  */
 import { writeFile, mkdir } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
@@ -681,19 +682,16 @@ for (const page of PAGES) {
   rendered.push([page, html]);
 }
 
-// Especificação v2, B2 — this generator's own template (render(), above)
-// still produces the pre-wizard, single-step form: PAGE.form here has no
-// source of truth at all for the wizard's steps, validators or i18n-driven
-// copy (Fase 1 rewrote the published page directly, not through this
-// file — see check-generator-freshness.mjs's Check 7, which already warns
-// about exactly this). A plain `npm run` of this script used to overwrite
-// that work silently, with nothing here to say so. Hard-stop instead of
-// writing: any page whose *published* <form name> already differs from
-// what PAGE.form.name would produce is presumed to have been hand-evolved
-// past this generator, and this script has no business touching it until
-// that's reconciled (rewrite PAGE.form and render() to match the live
-// wizard markup, or drop the page from PAGES here if it's no longer this
-// generator's to own).
+// Especificação v2, B2 — a generic drift guard, not specific to the retired
+// pillar entry above (PAGES is empty now, so this loop currently runs zero
+// times — see the top-of-file comment for why). Kept for whatever gets
+// added to PAGES next: any page whose *published* <form name> already
+// differs from what that page's own PAGE.form.name would produce is
+// presumed to have been hand-evolved past this generator, and this script
+// has no business overwriting it silently until that's reconciled (rewrite
+// PAGE.form / render() to match the live markup, or drop the page from
+// PAGES if it is no longer this generator's to own — exactly what happened
+// to the car-insurance-portugal pillar, see car-cluster.data.mjs).
 for (const [page] of rendered) {
   const existing = join(PUBLIC, 'en', page.slug, 'index.html');
   if (!existsSync(existing)) continue; // first-ever write — nothing to drift from
@@ -718,8 +716,11 @@ for (const [page, html] of rendered) {
   console.log(`wrote /en/${page.slug}/  (${page.title.length} char title, ${page.faq.length} FAQs)`);
 }
 console.log(
-  `\n${PAGES.length} page(s) written. Next, in order:\n` +
-    `  node scripts/hreflang.mjs        (re-stamps the alternates this script does not write)\n` +
-    `  node scripts/lang-switcher.mjs\n` +
-    `  node scripts/generate-sitemap.mjs`
+  PAGES.length
+    ? `\n${PAGES.length} page(s) written. Next, in order:\n` +
+        `  node scripts/hreflang.mjs        (re-stamps the alternates this script does not write)\n` +
+        `  node scripts/lang-switcher.mjs\n` +
+        `  node scripts/generate-sitemap.mjs`
+    : `\n0 page(s) written — PAGES is empty, this generator is retired (see the top-of-file comment). ` +
+        `Nothing else to run.`
 );

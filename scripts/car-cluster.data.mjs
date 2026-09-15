@@ -1,13 +1,15 @@
 /**
  * Content for the Car Insurance commercial pillar (/en/).
  *
- * Consumed by build-car-cluster.mjs. The cluster currently has one page: the
- * national commercial pillar. It exists because the English side of the site
- * had substantial motor *content* — five guides plus the classic, collection
- * and track-day articles — and no commercial destination at all. The footer's
- * "Car Insurance" entry pointed at an article, and the homepage's car service
- * card opened a generic contact form. This page is the destination those two
- * were missing; the articles stay exactly as they are.
+ * Consumed by build-car-cluster.mjs, which currently writes zero pages — see
+ * PAGES below and the comment next to it. This file exists because the
+ * English side of the site had substantial motor *content* — five guides
+ * plus the classic, collection and track-day articles — and no commercial
+ * destination at all. The footer's "Car Insurance" entry pointed at an
+ * article, and the homepage's car service card opened a generic contact
+ * form. /en/car-insurance-portugal/ was built to be that destination, and
+ * is still it today — it is just no longer built *from this file*; the
+ * articles stay exactly as they are.
  *
  * Editorial rules that apply to every string in this file:
  *
@@ -371,23 +373,23 @@ export const PAGE = {
     },
   ],
 
-  // ⚠️ STALE — do not run scripts/build-car-cluster.mjs against this `form`
-  // block without reading this first. The published page,
-  // public/en/car-insurance-portugal/index.html, no longer uses this form
-  // at all: Especificação v2 (Fase 1) replaced it with a hand-authored
-  // 3-step wizard (public/js/quote-wizard.js) asking for NIF, date of
-  // birth, nationality, registration plate and more — none of which exists
-  // below. That rewrite was applied directly to the built HTML, not routed
-  // through this generator, because the generator did not support a
-  // multi-step form when Fase 1 shipped. Re-running build-car-cluster.mjs
-  // as-is would silently overwrite the wizard with this stale single-step
-  // form and delete months of validation/i18n/server-side work with it.
-  // Before ever running it again: either port the wizard's markup into the
-  // template this file feeds, or change build-car-cluster.mjs to leave the
-  // <!-- QUOTE FORM --> section alone. Do not treat a passing
-  // check-generator-freshness.mjs as clearance either — it does not know
-  // about this generator (confirmed: grep the file, there is no mention of
-  // car-cluster), so it cannot and does not flag this drift.
+  // RETIRED, kept for reference only — this `form` block, and render()'s
+  // template for it, describe the pre-wizard single-step form. The published
+  // page, public/en/car-insurance-portugal/index.html, has not used it since
+  // Especificação v2 Fase 1 replaced it with a hand-authored 3-step wizard
+  // (public/js/quote-wizard.js) asking for NIF, date of birth, nationality,
+  // registration plate and more — none of which exists below. That rewrite
+  // was applied directly to the built HTML, not routed through this
+  // generator, because the generator did not support a multi-step form when
+  // Fase 1 shipped, and porting the wizard's steps/validators/i18n-driven
+  // copy back into this template was judged (Especificação v2, B2, then
+  // again in the "restantes línguas" prompt's Parte 0) not worth doing for
+  // a generator that has only ever owned this one page. Resolution: `PAGE`
+  // was dropped from `PAGES` below, so this generator now writes nothing —
+  // the pillar is hand-maintained from here on, the same arrangement
+  // build-property-cluster.mjs already has with its own pillar,
+  // /en/home-insurance-quote/. This block stays only as a record of the
+  // pre-wizard copy/structure; nothing reads it any more.
   form: {
     heading: 'Get a car insurance quote',
     sub: 'Tell us about the car and how you came to own it. The registration status and your claims history change the price more than anything else on this form.',
@@ -545,4 +547,9 @@ export const PAGE = {
   ],
 };
 
-export const PAGES = [PAGE];
+// Empty on purpose — see the "RETIRED" comment on PAGE.form above.
+// build-car-cluster.mjs's writeFile loop iterates PAGES, so this is what
+// makes running that script a documented no-op rather than a silent
+// overwrite of the hand-maintained wizard. PAGE itself is kept, unused, as
+// the last record of the pre-wizard page's copy and structure.
+export const PAGES = [];
