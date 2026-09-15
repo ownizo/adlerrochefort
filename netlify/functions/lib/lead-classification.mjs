@@ -402,4 +402,21 @@ export function extractContact(data) {
   return { name, email, phone };
 }
 
+// Especificação v2, "restantes línguas" — Parte 0 ponto 3 / Parte 4: o Hugo
+// deixa de fazer submissões manuais nesta fase, em nenhuma língua. O modo de
+// teste é a via de validação que o substitui, e este é o valor convencionado
+// que o marca — colocado no campo de nome (extractContact() acima já sabe
+// resolver esse campo em qualquer variante de formulário/língua), exato e
+// sensível a maiúsculas para que nada que um visitante real escreveria por
+// acaso o dispare. submission-created.mjs usa isTestModeSubmission() para
+// decidir, logo à entrada, se uma submissão segue o caminho normal (email +
+// CRM sync reais) ou o caminho de teste (constrói e regista em log os dois
+// payloads, sem os enviar; grava em quote_requests na mesma, marcada
+// `teste = true` — ver netlify/functions/lib/quote-requests-sync.mjs).
+export const TEST_MODE_SENTINEL = "TESTE-AGENTE-NAO-PROCESSAR";
+
+export function isTestModeSubmission(data) {
+  return extractContact(data).name === TEST_MODE_SENTINEL;
+}
+
 export const CRM_HANDLED_FORMS = new Set(Object.keys(FORM_CLASSIFICATION));

@@ -1,8 +1,26 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { classifySubmission, extractContact, CRM_HANDLED_FORMS } from "./lead-classification.mjs";
+import { classifySubmission, extractContact, CRM_HANDLED_FORMS, TEST_MODE_SENTINEL, isTestModeSubmission } from "./lead-classification.mjs";
 import { HANDLED_FORMS } from "../submission-created.mjs";
+
+// Especificação v2, "restantes línguas" Parte 0/4 — the test-mode sentinel.
+// One check per name-field alias extractContact() itself resolves, so a
+// future alias added there is automatically covered here too, not just
+// documented as "should work".
+test("isTestModeSubmission recognises the sentinel in any of extractContact's name-field aliases", () => {
+  for (const field of ["nome", "name", "full_name", "naam"]) {
+    assert.equal(isTestModeSubmission({ [field]: TEST_MODE_SENTINEL, email: "x@example.com" }), true, `field "${field}"`);
+  }
+});
+
+test("isTestModeSubmission is exact and case-sensitive — nothing a real visitor would plausibly type triggers it", () => {
+  assert.equal(isTestModeSubmission({ name: "Hugo Gonçalves" }), false);
+  assert.equal(isTestModeSubmission({ name: TEST_MODE_SENTINEL.toLowerCase() }), false);
+  assert.equal(isTestModeSubmission({ name: `${TEST_MODE_SENTINEL} extra` }), false);
+  assert.equal(isTestModeSubmission({ name: `prefix ${TEST_MODE_SENTINEL}` }), false);
+  assert.equal(isTestModeSubmission({}), false);
+});
 
 test("fixed-branch individual forms classify as individual", () => {
   assert.equal(classifySubmission("cotacao-habitacao", {}).entityType, "individual");
