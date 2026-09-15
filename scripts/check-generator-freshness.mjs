@@ -27,6 +27,15 @@
  *        date" window than data/articles.json currently implies.
  *     6. data/hreflang-report.json's recorded totals (file count, article
  *        pairs) no longer matching the corpus as it stands.
+ *     7. A generator's own data file claiming a form-name/field-name for a
+ *        page whose published HTML has since diverged onto a different
+ *        form entirely (Especificação v2, Fase 1: /en/car-insurance-portugal/
+ *        got a hand-authored 3-step wizard that scripts/build-car-cluster.mjs
+ *        was never taught to emit). Re-running that generator would
+ *        silently overwrite the wizard with the generator's stale
+ *        single-step form — this check exists so that risk is never again
+ *        invisible to a "0 failures" run of this script the way it was
+ *        before this check existed.
  *
  * Deliberately NOT covered, on purpose rather than by oversight:
  *   - The Spain cluster's chrome (scripts/lib/spain-chrome.mjs) and the
@@ -69,6 +78,7 @@ import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 import { ROOT, PUBLIC, buildSharedStylesheet } from './lib/chrome.mjs';
 import { chromeStylesheet } from './lib/partials.mjs';
+import { PAGES as CAR_CLUSTER_PAGES } from './car-cluster.data.mjs';
 
 const QUIET = process.argv.includes('--quiet');
 const FAILS = [];
@@ -286,6 +296,37 @@ const rel = (f) => 'public/' + f;
     }
   } else {
     warn('hreflang-report-stale', 'data/hreflang-report.json has no totals block to compare');
+  }
+}
+
+// -----------------------------------------------------------------------
+// Check 7 (WARN): a car-cluster page's <form name="..."> no longer matches
+// what scripts/car-cluster.data.mjs would generate for it.
+//
+// Deliberately a form-name comparison, not a full HTML diff: the page's
+// wizard rewrite (Fase 1) touches structure the generator has no source of
+// truth for at all (steps, validators, i18n-driven copy), so "does the
+// generator's own idea of this form still match reality" is the one
+// question this check can answer cheaply and unambiguously. A mismatch
+// here is proof the generator has drifted — see that page's own PAGE.form
+// comment in car-cluster.data.mjs for what to do before ever running
+// scripts/build-car-cluster.mjs again.
+// -----------------------------------------------------------------------
+{
+  for (const page of CAR_CLUSTER_PAGES) {
+    const pagePath = join(PUBLIC, 'en', page.slug, 'index.html');
+    const html = await readFile(pagePath, 'utf8').catch(() => null);
+    if (html === null) continue; // page doesn't exist on disk — not this check's concern
+    const match = html.match(/<form\b[^>]*\bname="([^"]+)"/);
+    const actualFormName = match ? match[1] : null;
+    if (actualFormName !== page.form.name) {
+      warn(
+        'generator-page-drift',
+        `public/en/${page.slug}/index.html's <form> is named "${actualFormName ?? '(none found)'}", ` +
+          `but car-cluster.data.mjs's PAGE.form.name is "${page.form.name}" — the generator's own record of ` +
+          `this page's form no longer matches what's published; do not run build-car-cluster.mjs against it as-is`
+      );
+    }
   }
 }
 
