@@ -217,6 +217,13 @@ const QUOTE_LABELS = {
   rcp_profissao: "Profissão ou atividade",
   rcp_capital: "Capital pretendido",
   rcp_obrigatorio: "É exigido por ordem profissional ou contrato?",
+  // Especificação v2 — Passo 2 (RC Profissional), Fase 2 C3. O único campo
+  // que o bloco do ramo acrescenta aos transversais — profissão, capital e
+  // obrigatoriedade continuam a existir como campos (acima, herdados da
+  // versão anterior da página, não removidos do formulário partilhado da
+  // homepage), mas deixaram de ser pedidos neste wizard dedicado; ficam
+  // para o contacto manual de 48-72h que a página agora anuncia.
+  faturacao_anual: "Faturação anual",
   // Private Clients page (/private-clients/) — same "review" field name as the
   // EN Collections & Valuables form (both are a checkbox group), so it reuses
   // that FIELD_LABELS entry when this form is ever rendered through that path;
