@@ -66,6 +66,27 @@ test("renderAllFields keeps the PT label for Habitação fields shared with the 
   assert.doesNotMatch(html, /Sum insured/);
 });
 
+// B3 (Especificação v2): the ISO code is what quote_requests stores
+// (dados_comuns.nacionalidade), but a human reading the notification email
+// shouldn't have to decode "AT" — show the country name instead, same
+// lookup table the wizard's own combobox uses.
+test("renderAllFields shows the country name for nacionalidade (PT), not the raw ISO code", () => {
+  const html = renderAllFields({ nacionalidade: "AT" }, false);
+  assert.match(html, /Áustria/);
+  assert.doesNotMatch(html, />AT</);
+});
+
+test("renderAllFields shows the country name for nationality (EN), not the raw ISO code", () => {
+  const html = renderAllFields({ nationality: "AT" }, true);
+  assert.match(html, /Austria/);
+  assert.doesNotMatch(html, />AT</);
+});
+
+test("renderAllFields falls back to the raw code for a nationality value not in the lookup table, rather than showing nothing", () => {
+  const html = renderAllFields({ nacionalidade: "ZZ-not-a-real-code" }, false);
+  assert.match(html, /ZZ-not-a-real-code/);
+});
+
 test("renderAllFields uses the EN label for the same Habitação fields when en=true", () => {
   const html = renderAllFields(
     {
