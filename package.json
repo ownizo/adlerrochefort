@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "node scripts/check-esbuild-bundle.mjs",
     "test": "node --test 'netlify/functions/**/*.test.mjs'",
     "test:quote-validators": "node --test scripts/quote-validators.test.mjs",
+    "check:esbuild-bundle": "node scripts/check-esbuild-bundle.mjs",
     "check:freshness": "node scripts/check-generator-freshness.mjs",
     "check:i18n": "node scripts/check-i18n-parity.mjs"
   },
