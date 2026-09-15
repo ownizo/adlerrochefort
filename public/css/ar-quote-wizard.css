@@ -2,13 +2,38 @@
  * Especificação dos Formulários de Cotação v2 — the 3-step wizard
  * (public/js/quote-wizard.js) on top of the existing quote-form styling.
  *
- * Linked on the Fase 1 pilot pages only (public/seguros/auto/,
- * public/en/car-insurance-portugal/) — every rule here is either brand new
- * (the wizard progress bar, step nav, the nationality/residency helper text)
- * or fills in error/honeypot states that ar-site.css's own .contact-form-*
- * block (written for the "Fale connosco" modal) never needed, so nothing
- * here redefines a selector ar-site.css or ar-landing.css already styles —
- * see this file's own PR for the audit.
+ * Every rule here is either brand new (the wizard progress bar, step nav,
+ * the nationality/residency helper text) or fills in error/honeypot states
+ * the base .contact-form-* block (written for the "Fale connosco" modal)
+ * never needed — nothing here redefines a selector that block already
+ * styles.
+ *
+ * That base block itself — `.contact-form-field { display: flex; … }` and
+ * the rest of .contact-form/.contact-form-field/.lp-form-card — is NOT in
+ * this file, and is not in ar-landing.css either, despite an earlier
+ * version of this comment claiming so (corrected during Especificação v2,
+ * "restantes línguas" Parte B, after a real, empirically-confirmed miss on
+ * the DE Auto wizard: the form rendered with zero layout — display: block
+ * throughout — because the page's own stylesheet set genuinely had no rule
+ * providing it, and nobody had actually checked which file the working PT/
+ * EN pages get it from until then). It lives in exactly two places:
+ *
+ *   - public/seguros/*  → ar-site.css has its own native copy.
+ *   - everywhere else (public/en/*, and every one of the "restantes
+ *     línguas" clusters: de/nl/pl/se/dk/zh/il) → ar-property.css, confirmed
+ *     by direct DOM inspection of the live /en/car-insurance-portugal/ page
+ *     (getComputedStyle + which stylesheet's ownerNode actually matched).
+ *     None of ar-chrome.css, ar-landing.css, ar-de.css, ar-nl.css or
+ *     ar-cluster.css carry it — checked directly, not assumed, for all
+ *     seven "restantes línguas" clusters before any of them were converted.
+ *
+ * A page converting its form to this wizard therefore needs BOTH this file
+ * AND ar-property.css linked, unless it already loads ar-site.css. Loading
+ * ar-property.css on a page whose cluster never used it before pulls in a
+ * large stylesheet (it was written for the "Fale connosco" contact modal)
+ * — harmless in practice (nothing else on the page matches its other
+ * selectors), but worth knowing before wondering why a wizard page needs a
+ * stylesheet named for a different component entirely.
  */
 
 /* ═══════════════ FIELD ERROR / HONEYPOT STATES ═══════════════
