@@ -459,6 +459,17 @@ const PAGES = [
       "matricula", "data_carta", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte C — Hebrew, third ramo.
+  {
+    label: "IL /il/car-insurance-portugal/",
+    path: "il/car-insurance-portugal/index.html",
+    expectedFormName: "il-car-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together. Liability (RC Profissional) is the fourth and
   // last of the four ramos, same field set as PT/EN/DE/NL RC Profissional.

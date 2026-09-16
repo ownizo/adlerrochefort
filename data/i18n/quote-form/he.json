@@ -78,6 +78,13 @@
       "pessoa_nif": "⁦NIF⁩",
       "pessoa_remover": "הסרת מבוטח זה",
       "pessoa_adicionar": "+ הוספת מבוטח"
+    },
+    "auto": {
+      "titulo": "בקשת הצעה לביטוח רכב",
+      "subtitulo": "נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.",
+      "matricula": "מספר רישוי",
+      "matricula_placeholder": "AA-00-AA",
+      "data_carta": "תאריך הנפקת רישיון הנהיגה"
     }
   },
   "countries": {

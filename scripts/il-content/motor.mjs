@@ -50,14 +50,25 @@ export const MOTOR_PAGE = {
   pullquote:
     'שכבת החובה בפורטוגל מכסה את מי שנפגע מכם. את הרכב שלכם היא לא מכסה בכלל.',
   schemaType: 'Article',
-  formHeading: 'הצעה לביטוח רכב',
-  formBranch: 'IL · Motor',
-  formSubject: 'ביטוח רכב (IL)',
-  formCta: 'בקשת הצעה לרכב',
-  formIntro:
-    'כתבו איזה רכב, מה מצב הרישום שלו, ומי ינהג בו. אם עוד לא קניתם — גם זה בסדר, אפשר לעבוד עם דגם משוער.',
-  formPlaceholder:
-    'למשל: קונים Volvo XC60 משנת 2021 מסוחר בליסבון, הרכב רשום בפורטוגל, שני נהגים בגילי 45 ו־43, בלי תביעות בחמש השנים האחרונות.',
+  // Especificação v2, Parte C — wizard config. matricula's placeholder
+  // ("AA-00-AA") and value are pure Latin/digits, no embedded Hebrew word,
+  // so dir="ltr" carries none of the bidi-reordering risk fixed in
+  // quote-health-persons.js's own NIF placeholder (see PR that fixed it).
+  // Hebrew text mirrored from data/i18n/quote-form/he.json's ramos.auto.
+  wizard: {
+    idPrefix: 'il-auto',
+    formName: 'il-car-insurance-wizard',
+    ramo: 'Motor',
+    heading: 'בקשת הצעה לביטוח רכב',
+    intro: 'נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.',
+    stepLabel2: 'פרטי הרכב',
+    submitLabel: 'שליחת הבקשה',
+    microNote:
+      'נשיב בתוך 24 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="il-auto-matricula">מספר רישוי *</label><input type="text" id="il-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-auto-carta">תאריך הנפקת רישיון הנהיגה *</label><input type="date" id="il-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="il-auto-carta-idade-info" hidden>זה לפני יום ההולדת ה־16 של המבוטח — אנחנו נקבל את זה בכל זאת, אבל כדאי לוודא שהתאריך נכון.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="hova-shona">
   <div class="container narrow article-body">

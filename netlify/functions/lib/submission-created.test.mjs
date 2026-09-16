@@ -680,6 +680,7 @@ test("PL/SE/DK/ZH Auto wizards render matricula/data_carta labels in their own l
     { form: "se-bilforsakring-wizard", label: /Registreringsnummer/ },
     { form: "dk-bilforsikring-wizard", label: /Nummerplade/ },
     { form: "zh-car-insurance-wizard", label: /车牌号/ },
+    { form: "il-car-insurance-wizard", label: /מספר רישוי/ },
   ];
   for (const c of cases) {
     const formConfig = HANDLED_FORMS[c.form];
