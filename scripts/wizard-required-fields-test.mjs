@@ -544,6 +544,40 @@ const PAGES = [
       nif: '200000012',
     },
   },
+  // Especificação v2, Parte 2 continuação (NL) — second NL page converted
+  // from the shared nl-offerte-aanvraag branch-select form to its own
+  // exclusive wizard, with the "pessoa segura" repeater.
+  {
+    label: 'NL /nl/zorgverzekering-portugal/',
+    path: 'nl/zorgverzekering-portugal/index.html',
+    url: 'https://adlerrochefort.com/nl/zorgverzekering-portugal/',
+    formName: 'nl-zorgverzekering-wizard',
+    expectPersonNameLabel: 'Volledige naam',
+    scripts: ['lead-branch-fields.js', 'quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Jan de Vries',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+31 6 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Nederland',
+      residente_fiscal: 'sim',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+    personValues: {
+      nome: 'Klara de Vries',
+      data_nascimento: '2015-06-01',
+      nif: '200000012',
+    },
+  },
 ];
 
 async function domFor(html, url) {
