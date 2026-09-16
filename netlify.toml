@@ -67,6 +67,18 @@
   [headers.values]
     Cache-Control = "public, max-age=2592000"
 
+# Brand icons are referenced by unversioned filenames, so they must revalidate
+# instead of sitting in caches for the 30 days granted to /images/* above.
+[[headers]]
+  for = "/images/favicon*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/images/apple-touch-icon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
