@@ -641,3 +641,32 @@ test("quoteIntro renders the 24h SLA in Polish, Swedish, Danish and Chinese for 
     /24个工作小时/
   );
 });
+
+// Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+// converted together. Health (Saúde) is the second of the four ramos;
+// confirms DYNAMIC_BLOCKS_COPY.pl/sv/da/zh each render in their own
+// language.
+test("a PL/SE/DK/ZH Saúde wizard's dynamic-blocks section (dados_dinamicos) renders in the page's own language", () => {
+  const cases = [
+    { form: "pl-ubezpieczenie-zdrowotne-wizard", heading: /Osoby do ubezpieczenia/, dob: /Data urodzenia/, name: "Anna Kowalska" },
+    { form: "se-sjukvardsforsakring-wizard", heading: /Personer som ska försäkras/, dob: /Födelsedatum/, name: "Anna Andersson" },
+    { form: "dk-sundhedsforsikring-wizard", heading: /Personer der skal forsikres/, dob: /Fødselsdato/, name: "Anna Nielsen" },
+    { form: "zh-health-insurance-wizard", heading: /需投保人员/, dob: /出生日期/, name: "李娜" },
+  ];
+  for (const c of cases) {
+    const formConfig = HANDLED_FORMS[c.form];
+    const html = renderAllFields(
+      {
+        nome: "Teste",
+        rgpd: "sim",
+        dados_dinamicos: JSON.stringify([{ nome: c.name, data_nascimento: "2015-06-01", nif: "200000012" }]),
+      },
+      Boolean(formConfig.en),
+      formConfig.lang
+    );
+    assert.match(html, c.heading, `${c.form}: heading`);
+    assert.match(html, c.dob, `${c.form}: dob label`);
+    assert.match(html, new RegExp(c.name), `${c.form}: person name`);
+    assert.doesNotMatch(html, /People to insure/, `${c.form}: no English leak`);
+  }
+});

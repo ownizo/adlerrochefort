@@ -39,14 +39,26 @@ export const HEALTH_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: '私人医疗保险' }],
   pullquote: '在葡萄牙，私人医疗保险买到的主要不是钱，而是时间和选择权。',
   schemaType: 'Article',
-  formHeading: '私人医疗保险咨询',
-  formBranch: 'ZH · Health',
-  formSubject: '葡萄牙私人医疗保险',
-  formCta: '提交咨询',
-  formIntro:
-    '我们需要知道投保人数与年龄，以及大致的居住地区（医疗网络按地区差异很大）。健康细节请不要写在表单里，我们会单独沟通。',
-  formPlaceholder:
-    '例如：两位成年人（43 岁、41 岁）和一个 6 岁的孩子，住在里斯本，希望有儿科与门诊保障。',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared zh-inquiry branch-select form.
+  wizard: {
+    idPrefix: 'zh-sau',
+    formName: 'zh-health-insurance-wizard',
+    ramo: 'Health insurance',
+    heading: '申请医疗保险报价',
+    intro: '请填写基本信息。我们将在24个工作小时内回复。',
+    stepLabel2: '需投保人员',
+    submitLabel: '提交申请',
+    adultBirthDate: true,
+    microNote:
+      '我们将在24个工作小时内回复。您的信息仅用于准备本报价，并根据《通用数据保护条例》（GDPR）处理——请参阅<a href="/en/privacy-policy" hreflang="en">隐私政策</a>。',
+    scripts: ['quote-health-persons.js'],
+    fieldsHtml: `        <p class="wizard-helper" style="margin-bottom:16px;">每位需投保人员都需要提供葡萄牙税号（NIF），儿童也不例外——没有此号码将无法准备报价。我们在此不询问任何医疗信息：健康问卷将在加入保险时直接与保险公司完成。</p>
+        <div data-persons-repeater>
+          <div data-persons-list></div>
+          <button type="button" class="wizard-nav-back" data-persons-add>+ 添加人员</button>
+        </div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="liang-ceng-jiegou">
   <div class="container narrow article-body">

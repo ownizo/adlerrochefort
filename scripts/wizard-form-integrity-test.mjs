@@ -347,6 +347,51 @@ const PAGES = [
       "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+  // converted together. Health (Saúde) is the second of the four ramos,
+  // same field set as PT/EN/DE/NL Saúde (the "pessoa segura" repeater's
+  // own fields carry no `name` attribute — see the comment on those
+  // entries, not repeated here).
+  {
+    label: "PL /pl/ubezpieczenie-zdrowotne-portugalia/",
+    path: "pl/ubezpieczenie-zdrowotne-portugalia/index.html",
+    expectedFormName: "pl-ubezpieczenie-zdrowotne-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "SE /se/sjukvardsforsakring-portugal/",
+    path: "se/sjukvardsforsakring-portugal/index.html",
+    expectedFormName: "se-sjukvardsforsakring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "DK /dk/sundhedsforsikring-portugal/",
+    path: "dk/sundhedsforsikring-portugal/index.html",
+    expectedFormName: "dk-sundhedsforsikring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "ZH /zh/health-insurance-portugal/",
+    path: "zh/health-insurance-portugal/index.html",
+    expectedFormName: "zh-health-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

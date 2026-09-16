@@ -66,6 +66,18 @@
       "obras_descricao": "Beskriv de utförda arbetena",
       "capital_edificio": "Försäkringsbelopp byggnad (€)",
       "capital_conteudo": "Försäkringsbelopp lösöre (€)"
+    },
+    "saude": {
+      "titulo": "Begär offert på sjukvårdsförsäkring",
+      "subtitulo": "Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.",
+      "passo_2_titulo": "Personer som ska försäkras",
+      "pessoas_aviso_nif": "För varje person som ska försäkras behövs ett portugisiskt skattenummer (NIF), även för barn — utan det kan ingen offert upprättas. Vi frågar inte efter några medicinska uppgifter här: hälsodeklarationen sker direkt med försäkringsbolaget, vid anslutningen.",
+      "pessoa_label": "Person",
+      "pessoa_nome": "Fullständigt namn",
+      "pessoa_nascimento": "Födelsedatum",
+      "pessoa_nif": "NIF (portugisiskt skattenummer)",
+      "pessoa_remover": "Ta bort denna person",
+      "pessoa_adicionar": "+ Lägg till person"
     }
   },
   "countries": {

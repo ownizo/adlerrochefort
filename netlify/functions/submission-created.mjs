@@ -1131,6 +1131,37 @@ export const HANDLED_FORMS = {
     page: "/zh/home-insurance-portugal/",
     branch: "Habitação (ZH)",
   },
+  // The "pessoa segura" repeater (dados_dinamicos) needs no new wiring
+  // here — renderDynamicBlocksSection already has pl/sv/da/zh branches in
+  // DYNAMIC_BLOCKS_COPY, added alongside the Home ramo in anticipation.
+  "pl-ubezpieczenie-zdrowotne-wizard": {
+    quote: true,
+    lang: "pl",
+    heading: "New Polish Health quote request",
+    page: "/pl/ubezpieczenie-zdrowotne-portugalia/",
+    branch: "Saúde (PL)",
+  },
+  "se-sjukvardsforsakring-wizard": {
+    quote: true,
+    lang: "sv",
+    heading: "New Swedish Health quote request",
+    page: "/se/sjukvardsforsakring-portugal/",
+    branch: "Saúde (SE)",
+  },
+  "dk-sundhedsforsikring-wizard": {
+    quote: true,
+    lang: "da",
+    heading: "New Danish Health quote request",
+    page: "/dk/sundhedsforsikring-portugal/",
+    branch: "Saúde (DK)",
+  },
+  "zh-health-insurance-wizard": {
+    quote: true,
+    lang: "zh",
+    heading: "New Chinese Health quote request",
+    page: "/zh/health-insurance-portugal/",
+    branch: "Saúde (ZH)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,
@@ -1385,6 +1416,12 @@ function displayValue(key, value, en, lang) {
 const DYNAMIC_BLOCKS_COPY = {
   de: { heading: "Zu versichernde Personen", person: "Person", name: "Name", dob: "Geburtsdatum" },
   nl: { heading: "Te verzekeren personen", person: "Persoon", name: "Naam", dob: "Geboortedatum" },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+  // converted together.
+  pl: { heading: "Osoby do ubezpieczenia", person: "Osoba", name: "Imię i nazwisko", dob: "Data urodzenia" },
+  sv: { heading: "Personer som ska försäkras", person: "Person", name: "Namn", dob: "Födelsedatum" },
+  da: { heading: "Personer der skal forsikres", person: "Person", name: "Navn", dob: "Fødselsdato" },
+  zh: { heading: "需投保人员", person: "被保险人", name: "姓名", dob: "出生日期" },
   en: { heading: "People to insure", person: "Person", name: "Name", dob: "Date of birth" },
   pt: { heading: "Pessoas a segurar", person: "Pessoa", name: "Nome", dob: "Data de nascimento" },
 };

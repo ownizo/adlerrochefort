@@ -30,14 +30,26 @@ export const HEALTH_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sjukvårdsförsäkring' }],
   pullquote: 'Sjukvårdsförsäkring tecknas när man är frisk. Senare köper man bara det bolaget väljer att erbjuda.',
   schemaType: 'Article',
-  formHeading: 'Begär offert på sjukvårdsförsäkring',
-  formBranch: 'SE · Sjukvård',
-  formSubject: 'Sjukvårdsförsäkring i Portugal',
-  formCta: 'Begär offert',
-  formIntro:
-    'Antal personer och åldrar räcker för att börja. Hälsouppgifter tar vi enskilt, aldrig via formuläret.',
-  formPlaceholder:
-    'Till exempel: två vuxna 62 och 60 år, bosatta i Lagos sedan i januari, svensk pension.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared se-forfragan branch-select form.
+  wizard: {
+    idPrefix: 'se-sau',
+    formName: 'se-sjukvardsforsakring-wizard',
+    ramo: 'Sjukvårdsförsäkring',
+    heading: 'Begär offert på sjukvårdsförsäkring',
+    intro: 'Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.',
+    stepLabel2: 'Personer som ska försäkras',
+    submitLabel: 'Begär offert',
+    adultBirthDate: true,
+    microNote:
+      'Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.',
+    scripts: ['quote-health-persons.js'],
+    fieldsHtml: `        <p class="wizard-helper" style="margin-bottom:16px;">För varje person som ska försäkras behövs ett portugisiskt skattenummer (NIF), även för barn — utan det kan ingen offert upprättas. Vi frågar inte efter några medicinska uppgifter här: hälsodeklarationen sker direkt med försäkringsbolaget, vid anslutningen.</p>
+        <div data-persons-repeater>
+          <div data-persons-list></div>
+          <button type="button" class="wizard-nav-back" data-persons-add>+ Lägg till person</button>
+        </div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="sns">
   <div class="container narrow article-body">
