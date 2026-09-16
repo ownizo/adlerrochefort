@@ -70,7 +70,17 @@
     da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF (portugisisk skattenummer)', nifPlaceholder: '9 cifre', remove: 'Fjern denne person', person: 'Person' },
     zh: { name: '全名', dob: '出生日期', nif: 'NIF（葡萄牙税号）', nifPlaceholder: '9位数字', remove: '移除此人', person: '被保险人' },
     // Especificação v2, Parte C — Hebrew, Saúde ramo.
-    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF (מספר זיהוי פורטוגזי)', nifPlaceholder: '9 ספרות', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
+    // nifPlaceholder is bare "9", not "9 ספרות" ("9 digits") — matches the
+    // main wizard's own NIF field placeholder (scripts/lib/market-
+    // cluster.mjs's wizardFormHtml uses `placeholder="9"` for every
+    // language). Found live: with this field's dir="ltr" (see ltrAttr
+    // above), a placeholder mixing a digit with a following Hebrew word —
+    // "9 ספרות" — reordered under the forced LTR base direction (rendered
+    // "ספרות 9", the word before the number) exactly the bug iso()'s own
+    // comment describes for phone numbers, just with a word instead of a
+    // second digit group. A bare digit has no Hebrew content to reorder
+    // against, so it renders correctly regardless of dir.
+    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF (מספר זיהוי פורטוגזי)', nifPlaceholder: '9', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
   };
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;
