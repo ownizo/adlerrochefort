@@ -19,6 +19,7 @@ import plQuoteFormStrings from "../../data/i18n/quote-form/pl.json" with { type:
 import svQuoteFormStrings from "../../data/i18n/quote-form/sv.json" with { type: "json" };
 import daQuoteFormStrings from "../../data/i18n/quote-form/da.json" with { type: "json" };
 import zhQuoteFormStrings from "../../data/i18n/quote-form/zh.json" with { type: "json" };
+import heQuoteFormStrings from "../../data/i18n/quote-form/he.json" with { type: "json" };
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -711,6 +712,47 @@ const QUOTE_LABELS_ZH = {
   faturacao_anual: "年营业额",
 };
 
+// Especificação v2, Parte C — Hebrew. `nif`/`rgpd` stay the bare Latin
+// abbreviation, same as every other language's table (see QUOTE_LABELS_DA's
+// nif above) — a short, unbroken Latin run renders fine inside an RTL line
+// with no isolation needed, unlike the compound Latin+space/Latin+digit
+// runs he.json's common.errors.* isolates (e.g. a full postal-code or
+// phone example). Only Home's fields are filled in so far (regime_ocupacao
+// through capital_conteudo); matricula/data_carta/faturacao_anual are
+// listed now, matching QUOTE_LABELS_PL/SV/DA/ZH's own precedent of writing
+// the full label set up front, ready for the Motor/Liability ramos.
+const QUOTE_LABELS_HE = {
+  ramo: "ענף",
+  nome: "שם",
+  email: "דוא״ל",
+  telefone: "טלפון",
+  nif: "NIF",
+  data_nascimento: "תאריך לידה",
+  morada: "כתובת",
+  localidade: "עיר",
+  codigo_postal: "מיקוד",
+  nacionalidade: "אזרחות",
+  residente_fiscal: "תושבות מס בפורטוגל",
+  data_inicio: "מועד תחילה מבוקש",
+  rgpd: "הסכמה (GDPR)",
+  source_url: "עמוד המקור",
+
+  regime_ocupacao: "אופן השימוש בנכס",
+  al_regime: "סוג ההשכרה לטווח קצר",
+  ano_construcao: "שנת בנייה",
+  area_bruta: "שטח ברוטו (מ״ר)",
+  casas_banho: "מספר חדרי רחצה",
+  obras_ano: "שנת השיפוץ",
+  obras_descricao: "תיאור העבודות",
+  capital_edificio: "סכום ביטוח המבנה",
+  capital_conteudo: "סכום ביטוח התכולה",
+
+  matricula: "מספר רישוי",
+  data_carta: "תאריך הנפקת הרישיון",
+
+  faturacao_anual: "מחזור שנתי",
+};
+
 // Lookup by `lang`, refactored from a growing if/else-if chain in
 // renderAllFields once PL/SE/DK/ZH brought the count to six — same
 // reasoning as LANG_COUNTRY_TABLES above. `lang` is undefined for every
@@ -722,6 +764,7 @@ const QUOTE_LABELS_BY_LANG = {
   sv: QUOTE_LABELS_SV,
   da: QUOTE_LABELS_DA,
   zh: QUOTE_LABELS_ZH,
+  he: QUOTE_LABELS_HE,
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -1151,6 +1194,21 @@ export const HANDLED_FORMS = {
     page: "/zh/home-insurance-portugal/",
     branch: "Habitação (ZH)",
   },
+  // Especificação v2, Parte C — Hebrew, first ramo. Same shape as the
+  // PL/SE/DK/ZH entries above, `lang: "he"` for the internal notification
+  // email — independent of the page's own formLangNote promise to the
+  // *customer* that correspondence happens in English (see the header
+  // comment in scripts/il-content/ui.mjs); the PL/SE/DK/ZH pages make the
+  // identical promise to their own visitors and still use their own
+  // language for this internal email, which is read by the team, not sent
+  // to the lead.
+  "il-home-insurance-wizard": {
+    quote: true,
+    lang: "he",
+    heading: "New Hebrew Home quote request",
+    page: "/il/home-insurance-portugal/",
+    branch: "Habitação (IL)",
+  },
   // The "pessoa segura" repeater (dados_dinamicos) needs no new wiring
   // here — renderDynamicBlocksSection already has pl/sv/da/zh branches in
   // DYNAMIC_BLOCKS_COPY, added alongside the Home ramo in anticipation.
@@ -1471,6 +1529,7 @@ const LANG_COUNTRY_TABLES = {
   sv: svQuoteFormStrings.countries,
   da: daQuoteFormStrings.countries,
   zh: zhQuoteFormStrings.countries,
+  he: heQuoteFormStrings.countries,
 };
 
 function displayValue(key, value, en, lang) {
@@ -1506,6 +1565,14 @@ const DYNAMIC_BLOCKS_COPY = {
   sv: { heading: "Personer som ska försäkras", person: "Person", name: "Namn", dob: "Födelsedatum" },
   da: { heading: "Personer der skal forsikres", person: "Person", name: "Navn", dob: "Fødselsdato" },
   zh: { heading: "需投保人员", person: "被保险人", name: "姓名", dob: "出生日期" },
+  // Especificação v2, Parte C — unused until the Hebrew Saúde ramo ships
+  // (only Home has a wizard config so far), added alongside the rest of the
+  // Hebrew infrastructure per the same "infra bundled with the first ramo"
+  // precedent PL/SE/DK/ZH followed. Not isolated for bidi: this heading is
+  // plain Hebrew with no embedded Latin/numeric run, unlike the `nome`/`nif`
+  // labels rendered per-person in renderDynamicBlocksSection below, which
+  // stay untranslated "NIF" for every language including this one.
+  he: { heading: "מבוטחים", person: "מבוטח", name: "שם", dob: "תאריך לידה" },
   en: { heading: "People to insure", person: "Person", name: "Name", dob: "Date of birth" },
   pt: { heading: "Pessoas a segurar", person: "Pessoa", name: "Nome", dob: "Data de nascimento" },
 };
@@ -1684,6 +1751,17 @@ export function quoteIntro(formConfig, from) {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " 至 ")}个工作小时` : "24个工作小时";
     return `发送自 ${escapeHtml(from)}。承诺将在${slaText}内回复。`;
   }
+  // Especificação v2, Parte C — same priority and reasoning as the branches
+  // above: a dedicated Hebrew wizard's intake email reads in Hebrew. `from`
+  // is wrapped in the U+2066/U+2069 isolate pair (see he.json's own
+  // _comment and scripts/il-content/ui.mjs's header) because this string
+  // goes through escapeHtml() into an RTL-rendered HTML email — a URL's
+  // slash-separated segments would otherwise take the paragraph's
+  // right-to-left direction and print in reverse order.
+  if (formConfig.lang === "he") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " עד ")} שעות עבודה` : "24 שעות עבודה";
+    return `נשלח מ־⁦${escapeHtml(from)}⁩. הובטחה תשובה בתוך ${slaText}.`;
+  }
   if (formConfig.en) {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";
     return `Submitted from ${escapeHtml(from)}. A reply within ${slaText} was promised.`;
@@ -1726,7 +1804,14 @@ export function buildIntakeEmail(formConfig, data, payload) {
     intro = formConfig.intro;
   }
 
+  // Especificação v2, Parte C — the one RTL language this inbox receives.
+  // Without `dir="rtl"` here, mail clients that don't auto-detect direction
+  // from the first strong character left-align the Hebrew rows, which is
+  // legible but reads wrong; every other language leaves this unset because
+  // none of them need it.
+  const dirAttr = formConfig.lang === "he" ? ' dir="rtl"' : "";
   const html = `
+    <div${dirAttr}>
     <h2 style="font-family:Arial,sans-serif;">${formConfig.heading}</h2>
     <p style="font-family:Arial,sans-serif;">${intro}</p>
     <hr/>
@@ -1735,6 +1820,7 @@ export function buildIntakeEmail(formConfig, data, payload) {
     <p style="font-family:Arial,sans-serif;font-size:12px;color:#888;">Submitted: ${escapeHtml(
       payload.created_at || new Date().toISOString()
     )}</p>
+    </div>
   `;
 
   return { subject, html };

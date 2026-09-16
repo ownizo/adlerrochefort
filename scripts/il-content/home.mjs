@@ -51,14 +51,57 @@ export const HOME_PAGE = {
   pullquote:
     'סכום הביטוח של המבנה אינו מה ששילמתם על הנכס. הוא מה שיעלה לבנות אותו מחדש.',
   schemaType: 'Article',
-  formHeading: 'הצעה לביטוח דירה',
-  formBranch: 'IL · Home',
-  formSubject: 'ביטוח דירה (IL)',
-  formCta: 'בקשת הצעה לדירה',
-  formIntro:
-    'ספרו לנו על הנכס: איפה הוא, מה השטח, מי גר בו, יש משכנתה, ומה בערך שווי התכולה. אם משהו לא ידוע — כתבו את זה, זה חלק מהעבודה.',
-  formPlaceholder:
-    'למשל: דירת 3 חדרים בקשקאיש, 110 מ״ר, בניין משנת 2005 עם condomínio, יש משכנתה, אנחנו גרים בה כל השנה.',
+  // Especificação v2, Parte C — wizard config, same three-step shape as the
+  // PL/SE/DK/ZH cluster (scripts/lib/market-cluster.mjs's wizardFormHtml),
+  // Hebrew field text mirrored exactly from data/i18n/quote-form/he.json's
+  // ramos.habitacao block, which check-i18n-parity.mjs holds as the source
+  // of truth. `fieldsHtml` is inserted as raw HTML (not run through esc()),
+  // so Latin terms embedded in a Hebrew label use <bdi> here rather than
+  // the isolate characters he.json needs for its esc()/textContent-shared
+  // strings — see the reasoning in scripts/il-content/ui.mjs's header.
+  wizard: {
+    idPrefix: 'il-hab',
+    formName: 'il-home-insurance-wizard',
+    ramo: 'Home insurance',
+    heading: 'בקשת הצעה לביטוח דירה',
+    intro: 'נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.',
+    stepLabel2: 'פרטי הנכס',
+    submitLabel: 'שליחת הבקשה',
+    microNote:
+      'נשיב בתוך 24 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.',
+    scripts: ['quote-field-toggle.js'],
+    fieldsHtml: `        <div class="contact-form-field">
+          <label for="il-hab-regime">אופן השימוש בנכס *</label>
+          <select id="il-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">בחרו אפשרות</option>
+            <option value="permanente">מגורי קבע</option>
+            <option value="holiday_home">בית שני / בית חופשה</option>
+            <option value="alojamento_local"><bdi>Alojamento Local</bdi> (השכרה לטווח קצר)</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="il-hab-al-regime">סוג ההשכרה לטווח קצר *</label>
+            <select id="il-hab-al-regime" name="al_regime" required disabled>
+              <option value="">בחרו אפשרות</option>
+              <option value="tempo_inteiro">מלא</option>
+              <option value="parcial">חלקי (שימוש משותף בדירה)</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="il-hab-ano-construcao">שנת בנייה *</label><input type="number" id="il-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="il-hab-area">שטח ברוטו (מ״ר) *</label><input type="number" id="il-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="il-hab-wc">מספר חדרי רחצה *</label><input type="number" id="il-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="il-hab-obras-check"><input type="checkbox" id="il-hab-obras-check" data-field-toggle="il-hab-obras-group"> בוצע שיפוץ בשנים האחרונות?</label>
+        </div>
+        <div id="il-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="il-hab-obras-ano">שנת השיפוץ *</label><input type="number" id="il-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="il-hab-obras-desc">נא לתאר את העבודות שבוצעו *</label><textarea id="il-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="il-hab-capital-edificio">סכום ביטוח המבנה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="il-hab-capital-conteudo">סכום ביטוח התכולה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="mivne-vetchula">
   <div class="container narrow article-body">

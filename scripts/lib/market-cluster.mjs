@@ -42,6 +42,7 @@ import plQuoteFormStrings from '../../data/i18n/quote-form/pl.json' with { type:
 import svQuoteFormStrings from '../../data/i18n/quote-form/sv.json' with { type: 'json' };
 import daQuoteFormStrings from '../../data/i18n/quote-form/da.json' with { type: 'json' };
 import zhQuoteFormStrings from '../../data/i18n/quote-form/zh.json' with { type: 'json' };
+import heQuoteFormStrings from '../../data/i18n/quote-form/he.json' with { type: 'json' };
 
 /**
  * Especificação v2, Parte B — the quote-form i18n strings (labels, errors,
@@ -57,6 +58,7 @@ const QUOTE_FORM_STRINGS = {
   sv: svQuoteFormStrings,
   da: daQuoteFormStrings,
   zh: zhQuoteFormStrings,
+  he: heQuoteFormStrings,
 };
 const wizardStrings = (market) => QUOTE_FORM_STRINGS[market.htmlLang.slice(0, 2)];
 
@@ -513,6 +515,13 @@ function wizardFormHtml(market, page) {
   const c = t.common;
   const ui = market.ui;
   const idp = w.idPrefix;
+  // Especificação v2, Parte C — arrow glyphs are literal characters, not
+  // text the Unicode bidi algorithm reorders, so `dir="rtl"` alone does not
+  // flip them. "Forward" points left and "back" points right when the
+  // reading direction itself is right-to-left — swapped here rather than
+  // left for the algorithm to get wrong silently.
+  const fwdArrow = market.dir === 'rtl' ? '←' : '→';
+  const backArrow = market.dir === 'rtl' ? '→' : '←';
   const steps = [c.wizard.passo_1, w.stepLabel2, c.wizard.passo_3];
   const stepCount = steps.length;
 
@@ -556,18 +565,18 @@ function wizardFormHtml(market, page) {
         <div class="contact-form-field">
           <label for="${idp}-residente-fiscal">${esc(c.fields.residente_fiscal)} *</label>
           <select id="${idp}-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-            <option value="">${esc(ui.selectPlaceholder)}</option>
+            <option value="">${esc(ui.f.selectPlaceholder)}</option>
             <option value="sim">${esc(c.fields.residente_fiscal_sim)}</option>
             <option value="nao">${esc(c.fields.residente_fiscal_nao)}</option>
           </select>
         </div>
         <p class="wizard-helper" id="${idp}-residente-fiscal-info" hidden>${esc(c.helpers.residente_fiscal_nao_info)}</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} →</button></div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} ${fwdArrow}</button></div>
       </div>
 
       <div data-wizard-step hidden>
 ${w.fieldsHtml}
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← ${esc(c.wizard.anterior)}</button><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} →</button></div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>${backArrow} ${esc(c.wizard.anterior)}</button><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} ${fwdArrow}</button></div>
       </div>
 
       <div data-wizard-step hidden>
@@ -575,7 +584,7 @@ ${w.fieldsHtml}
         <div class="contact-form-field">
           <label class="contact-form-checkbox" for="${idp}-rgpd"><input type="checkbox" id="${idp}-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> ${esc(c.fields.rgpd_consentimento)} *</label>
         </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← ${esc(c.wizard.anterior)}</button><button type="submit" class="contact-form-submit">${esc(w.submitLabel || ui.formSubmit)} →</button></div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>${backArrow} ${esc(c.wizard.anterior)}</button><button type="submit" class="contact-form-submit">${esc(w.submitLabel || ui.formSubmit)} ${fwdArrow}</button></div>
       </div>
 
       <p class="lp-form-micro">${esc(w.microNote)}</p>
