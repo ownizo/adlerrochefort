@@ -376,6 +376,8 @@ const FORM_CLASSIFICATION = {
   'se-bilforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'auto' },
   'dk-bilforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'auto' },
   'zh-car-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'auto' },
+  // Especificação v2, Parte C — Hebrew, third ramo.
+  'il-car-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'HE', product: 'auto' },
   // Fourth and last of the four ramos shared by the PL/SE/DK/ZH generator:
   // Liability (RC Profissional). Same field set as the PT/EN/DE/NL
   // dedicated RC Profissional wizards (no `empresa`/profession field at

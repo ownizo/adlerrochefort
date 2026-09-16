@@ -1277,6 +1277,14 @@ export const HANDLED_FORMS = {
     page: "/zh/car-insurance-portugal/",
     branch: "Auto (ZH)",
   },
+  // Especificação v2, Parte C — Hebrew, third ramo.
+  "il-car-insurance-wizard": {
+    quote: true,
+    lang: "he",
+    heading: "New Hebrew Car quote request",
+    page: "/il/car-insurance-portugal/",
+    branch: "Auto (IL)",
+  },
   // Fourth and last of the four ramos shared by the PL/SE/DK/ZH generator:
   // Liability (RC Profissional). Same 48-72h SLA as its PT/EN/DE/NL
   // counterparts — see slaHours.
