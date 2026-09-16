@@ -31,14 +31,22 @@ export const LIABILITY_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsförsäkring' }],
   pullquote: 'Ansvarsskyddet är det du aldrig tänker på — till den dag det är det enda som betyder något.',
   schemaType: 'Article',
-  formHeading: 'Begär offert på ansvarsförsäkring',
-  formBranch: 'SE · Ansvar',
-  formSubject: 'Ansvarsförsäkring i Portugal',
-  formCta: 'Begär offert',
-  formIntro:
-    'Beskriv verksamheten eller situationen med egna ord. Vi återkommer med vad som faktiskt går att teckna och vad som inte gör det.',
-  formPlaceholder:
-    'Till exempel: IT-konsult med svenska och tyska kunder, arbetar hemifrån i Cascais, portugisisk enskild firma sedan i våras.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared se-forfragan branch-select form. Same faturacao_anual field as
+  // PT/EN/DE/NL RC Profissional, and the same 48-72h SLA.
+  wizard: {
+    idPrefix: 'se-rcp',
+    formName: 'se-ansvarsforsakring-wizard',
+    ramo: 'Ansvarsförsäkring',
+    heading: 'Begär offert på ansvarsförsäkring',
+    intro: 'Fyll i det viktigaste. Vi svarar inom 48 till 72 arbetstimmar.',
+    stepLabel2: 'Verksamheten',
+    submitLabel: 'Begär offert',
+    microNote:
+      'Svar inom 48 till 72 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="se-rcp-faturacao">Årsomsättning *</label><input type="number" id="se-rcp-faturacao" name="faturacao_anual" placeholder="T.ex. 85000" required></div>
+        <p class="wizard-helper">Verksamhetstyp, önskat försäkringsbelopp och om policyn krävs enligt avtal eller av en branschorganisation går vi igenom i kontakten som följer.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="tre-slag">
   <div class="container narrow article-body">

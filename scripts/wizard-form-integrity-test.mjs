@@ -435,6 +435,49 @@ const PAGES = [
       "matricula", "data_carta", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+  // converted together. Liability (RC Profissional) is the fourth and
+  // last of the four ramos, same field set as PT/EN/DE/NL RC Profissional.
+  {
+    label: "PL /pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/",
+    path: "pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/index.html",
+    expectedFormName: "pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "SE /se/ansvarsforsakring-portugal/",
+    path: "se/ansvarsforsakring-portugal/index.html",
+    expectedFormName: "se-ansvarsforsakring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "DK /dk/ansvarsforsikring-portugal/",
+    path: "dk/ansvarsforsikring-portugal/index.html",
+    expectedFormName: "dk-ansvarsforsikring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "ZH /zh/liability-insurance-portugal/",
+    path: "zh/liability-insurance-portugal/index.html",
+    expectedFormName: "zh-liability-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

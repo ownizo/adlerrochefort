@@ -32,14 +32,22 @@ export const LIABILITY_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Odpowiedzialność cywilna' }],
   pullquote: 'Odpowiedzialność cywilna to jedno z niewielu ryzyk bez górnej granicy. Dlatego kupuje się ją zanim się jej potrzebuje.',
   schemaType: 'Article',
-  formHeading: 'Zapytaj o ubezpieczenie odpowiedzialności cywilnej',
-  formBranch: 'PL · OC ogólna',
-  formSubject: 'Odpowiedzialność cywilna w Portugalii',
-  formCta: 'Zapytaj o ofertę',
-  formIntro:
-    'Proszę opisać działalność albo sytuację. Przy OC zawodowej zakres zależy od tego, co dokładnie Państwo robią, a nie od nazwy zawodu.',
-  formPlaceholder:
-    'Na przykład: konsultantka IT, klienci w Portugalii i w Niemczech, kontrakt wymaga OC zawodowej na 500 000 EUR.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared pl-zapytanie-ofertowe branch-select form. Same faturacao_anual
+  // field as PT/EN/DE/NL RC Profissional, and the same 48-72h SLA.
+  wizard: {
+    idPrefix: 'pl-rcp',
+    formName: 'pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard',
+    ramo: 'Odpowiedzialność cywilna',
+    heading: 'Zapytaj o ubezpieczenie odpowiedzialności cywilnej',
+    intro: 'Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 48 do 72 godzin roboczych.',
+    stepLabel2: 'Działalność',
+    submitLabel: 'Zapytaj o ofertę',
+    microNote:
+      'Odpowiedź w ciągu 48 do 72 godzin roboczych. Dane są wykorzystywane wyłącznie do przygotowania oferty i przetwarzane zgodnie z RODO — patrz <a href="/en/privacy-policy" hreflang="en">polityka prywatności</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="pl-rcp-faturacao">Roczny obrót *</label><input type="number" id="pl-rcp-faturacao" name="faturacao_anual" placeholder="Np. 85000" required></div>
+        <p class="wizard-helper">Rodzaj działalności, pożądaną sumę ubezpieczenia oraz to, czy polisa jest wymagana umową lub przez izbę zawodową, ustalimy podczas kontaktu, który nastąpi później.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="dwie-kategorie">
   <div class="container narrow article-body">

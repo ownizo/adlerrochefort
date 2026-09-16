@@ -85,6 +85,12 @@
       "matricula": "Numer rejestracyjny",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Data wydania prawa jazdy"
+    },
+    "profissional": {
+      "titulo": "Zapytaj o ubezpieczenie odpowiedzialności cywilnej",
+      "subtitulo": "Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 48 do 72 godzin roboczych.",
+      "faturacao_anual": "Roczny obrót",
+      "faturacao_anual_placeholder": "Np. 85000"
     }
   },
   "countries": {

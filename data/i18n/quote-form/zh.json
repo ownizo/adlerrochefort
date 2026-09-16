@@ -85,6 +85,12 @@
       "matricula": "车牌号",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "驾照签发日期"
+    },
+    "profissional": {
+      "titulo": "申请责任保险报价",
+      "subtitulo": "请填写基本信息。我们将在48至72个工作小时内回复。",
+      "faturacao_anual": "年营业额",
+      "faturacao_anual_placeholder": "例如：85000"
     }
   },
   "countries": {

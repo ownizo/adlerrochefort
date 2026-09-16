@@ -85,6 +85,12 @@
       "matricula": "Registreringsnummer",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Datum för körkortets utfärdande"
+    },
+    "profissional": {
+      "titulo": "Begär offert på ansvarsförsäkring",
+      "subtitulo": "Fyll i det viktigaste. Vi svarar inom 48 till 72 arbetstimmar.",
+      "faturacao_anual": "Årsomsättning",
+      "faturacao_anual_placeholder": "T.ex. 85000"
     }
   },
   "countries": {

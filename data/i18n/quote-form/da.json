@@ -85,6 +85,12 @@
       "matricula": "Nummerplade",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "Kørekortets udstedelsesdato"
+    },
+    "profissional": {
+      "titulo": "Anmod om ansvarsforsikring",
+      "subtitulo": "Udfyld det væsentligste. Vi svarer inden for 48 til 72 arbejdstimer.",
+      "faturacao_anual": "Årlig omsætning",
+      "faturacao_anual_placeholder": "F.eks. 85000"
     }
   },
   "countries": {
