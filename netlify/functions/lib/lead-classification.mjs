@@ -349,6 +349,11 @@ const FORM_CLASSIFICATION = {
   // to resolve from free-text keywords. Same product taxonomy value as
   // 'Multirriscos Empresarial' in BRANCH_CLASSIFICATION below.
   'nl-bedrijfsverzekering-wizard': { entityType: 'business', market: 'PT', language: 'NL', product: 'business-multirisk' },
+  // Especificação v2, Parte D1 — Lebensversicherung DE, built from the
+  // generic "Lebensversicherung" branch (no `empresa`/company field on
+  // this form at all) — same product taxonomy value as 'Vida e Crédito
+  // Habitação' in BRANCH_CLASSIFICATION below.
+  'de-lebensversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'life' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

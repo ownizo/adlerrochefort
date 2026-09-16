@@ -101,6 +101,16 @@
       "ramos_pretendidos_acidentes_trabalho": "Acidentes de Trabalho",
       "ramos_pretendidos_multirriscos": "Multirriscos",
       "ramos_pretendidos_responsabilidade_civil": "Responsabilidade Civil"
+    },
+    "vida": {
+      "titulo": "Pedir consultoria de seguro de vida",
+      "subtitulo": "Preencha o essencial. Respondemos em 24 horas úteis.",
+      "capital": "Capital pretendido (€)",
+      "capital_placeholder": "Ex.: 150000"
+    },
+    "private_clients": {
+      "titulo": "Pedir consultoria Private Clients",
+      "subtitulo": "Preencha o essencial. Respondemos em 24 horas úteis."
     }
   },
   "pt_only": {

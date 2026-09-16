@@ -521,3 +521,28 @@ test("test-mode submission on the NL Bedrijfsverzekering wizard writes Dutch lab
   assert.match(htmlLine, /Multirisicoverzekering/);
   assert.match(htmlLine, /48 tot 72 werkuren/);
 });
+
+// Especificação v2, Parte D1 — Lebensversicherung DE, built from the
+// generic "Lebensversicherung" branch (page already existed, only the
+// form itself was dedicated). Confirms the label renders in German and,
+// deliberately, that no health/lifestyle field ever appears.
+test("test-mode submission on the DE Lebensversicherung wizard writes German labels into payload_teste.email, with no health fields", async () => {
+  const req = mockRequest({
+    form_name: "de-lebensversicherung-wizard",
+    id: "sub-test-de-2",
+    created_at: "2026-09-16T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      capital: "150000",
+      rgpd: "sim",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /Gewünschtes Kapital/);
+  assert.doesNotMatch(htmlLine, /Sum insured/i);
+  assert.doesNotMatch(htmlLine, /(smoking|raucher|fumador)/i);
+});
