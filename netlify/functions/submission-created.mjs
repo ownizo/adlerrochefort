@@ -912,6 +912,15 @@ export const HANDLED_FORMS = {
     page: "/nl/zorgverzekering-portugal/",
     branch: "Saúde (NL)",
   },
+  // Same 48-72h SLA as its PT/EN/DE counterparts — see slaHours.
+  "nl-zzp-beroepsaansprakelijkheid-wizard": {
+    quote: true,
+    lang: "nl",
+    heading: "New Dutch professional liability quote request",
+    slaHours: "48 a 72",
+    page: "/nl/zzp-beroepsaansprakelijkheid-portugal/",
+    branch: "RC Profissional (NL)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,

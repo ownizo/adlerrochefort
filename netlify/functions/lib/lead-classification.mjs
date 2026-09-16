@@ -333,6 +333,16 @@ const FORM_CLASSIFICATION = {
   // entries above, first of four NL wizard forms in this pass.
   'nl-woonverzekering-wizard': { entityType: 'individual', market: 'PT', language: 'NL', product: 'home' },
   'nl-zorgverzekering-wizard': { entityType: 'individual', market: 'PT', language: 'NL', product: 'health' },
+  // Same field set as the PT/EN/DE dedicated RC Profissional wizards (no
+  // `empresa`/profession field at all) — reuses their classifier for
+  // consistency, same as de-berufshaftpflicht-freiberufler-wizard above.
+  'nl-zzp-beroepsaansprakelijkheid-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'NL',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

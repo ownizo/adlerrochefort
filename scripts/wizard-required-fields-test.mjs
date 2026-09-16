@@ -578,6 +578,35 @@ const PAGES = [
       nif: '200000012',
     },
   },
+  {
+    // Especificação v2, Parte 2 continuação (NL) — third and final
+    // "existing dedicated page" NL conversion. Same field set as the
+    // PT/EN/DE dedicated wizards above.
+    label: 'NL /nl/zzp-beroepsaansprakelijkheid-portugal/',
+    path: 'nl/zzp-beroepsaansprakelijkheid-portugal/index.html',
+    url: 'https://adlerrochefort.com/nl/zzp-beroepsaansprakelijkheid-portugal/',
+    formName: 'nl-zzp-beroepsaansprakelijkheid-wizard',
+    scripts: ['lead-branch-fields.js', 'quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Jan de Vries',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+31 6 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Nederland',
+      residente_fiscal: 'sim',
+      faturacao_anual: '85000',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+  },
 ];
 
 async function domFor(html, url) {
