@@ -135,6 +135,93 @@
       tooShort: 'Schreiben Sie mindestens {min} Zeichen.',
       requiredGroup: 'Wählen Sie mindestens eine Option aus.',
     },
+    // Especificação v2, Parte B — PL/SE/DK/ZH share one generator
+    // (scripts/lib/market-cluster.mjs) and are converted together. Mirrors
+    // data/i18n/quote-form/{pl,sv,da,zh}.json's common.errors.* wording
+    // exactly, same relationship the other language objects above already
+    // have with their own JSON files.
+    pl: {
+      required: 'To pole jest wymagane.',
+      email: 'Proszę podać prawidłowy adres e-mail, np. imie@email.com.',
+      sending: 'Wysyłanie…',
+      failed:
+        'Nie udało się wysłać zapytania. Proszę sprawdzić połączenie i spróbować ponownie — ' +
+        'nic z tego, co Państwo napisali, nie zostało utracone.',
+      nif: 'Proszę podać prawidłowy portugalski numer podatkowy (NIF), 9 cyfr.',
+      postalCode: 'Proszę podać kod pocztowy w formacie 0000-000.',
+      plate: 'Proszę podać prawidłową portugalską tablicę rejestracyjną.',
+      startDate: 'Data rozpoczęcia nie może być wcześniejsza niż dzisiaj.',
+      licenceDate: 'Data wydania prawa jazdy nie może być wcześniejsza niż data urodzenia ubezpieczającego ani przypadać w przyszłości.',
+      licenceBeforeAge16: 'To przed 16. urodzinami ubezpieczającego — mimo to akceptujemy tę datę, prosimy jednak o sprawdzenie jej poprawności.',
+      renovationYear: 'Rok remontu nie może być wcześniejszy niż rok budowy ani późniejszy niż bieżący rok.',
+      residenteFiscal: 'Proszę wskazać, czy jest Pan/Pani rezydentem podatkowym w Portugalii.',
+      rgpd: 'Musi Pan/Pani wyrazić zgodę, abyśmy mogli przygotować ofertę.',
+      birthDate: 'Data urodzenia nie może być w przyszłości.',
+      birthDateAdult: 'Ubezpieczający musi mieć co najmniej 18 lat.',
+      tooShort: 'Proszę napisać co najmniej {min} znaków.',
+      requiredGroup: 'Proszę wybrać co najmniej jedną opcję.',
+    },
+    sv: {
+      required: 'Fyll i detta fält.',
+      email: 'Ange en giltig e-postadress, till exempel namn@email.com.',
+      sending: 'Skickar…',
+      failed:
+        'Din förfrågan kunde inte skickas. Kontrollera din anslutning och försök igen — ' +
+        'inget du har skrivit har gått förlorat.',
+      nif: 'Ange ett giltigt portugisiskt skattenummer (NIF), 9 siffror.',
+      postalCode: 'Ange ett postnummer i formatet 0000-000.',
+      plate: 'Ange ett giltigt portugisiskt registreringsnummer.',
+      startDate: 'Startdatumet får inte vara före dagens datum.',
+      licenceDate: 'Körkortsdatumet får inte vara före försäkringstagarens födelsedatum, och inte heller i framtiden.',
+      licenceBeforeAge16: 'Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.',
+      renovationYear: 'Renoveringsåret får inte vara före byggåret eller efter innevarande år.',
+      residenteFiscal: 'Ange om du är skattemässigt bosatt i Portugal.',
+      rgpd: 'Du måste godkänna innan vi kan förbereda offerten.',
+      birthDate: 'Födelsedatumet får inte vara i framtiden.',
+      birthDateAdult: 'Försäkringstagaren måste vara minst 18 år.',
+      tooShort: 'Skriv minst {min} tecken.',
+      requiredGroup: 'Välj minst ett alternativ.',
+    },
+    da: {
+      required: 'Udfyld dette felt.',
+      email: 'Indtast en gyldig e-mailadresse, for eksempel navn@email.com.',
+      sending: 'Sender…',
+      failed:
+        'Din anmodning kunne ikke sendes. Kontrollér din forbindelse og prøv igen — ' +
+        'intet af det, du har skrevet, er gået tabt.',
+      nif: 'Indtast et gyldigt portugisisk skattenummer (NIF), 9 cifre.',
+      postalCode: 'Indtast et postnummer i formatet 0000-000.',
+      plate: 'Indtast en gyldig portugisisk nummerplade.',
+      startDate: 'Startdatoen må ikke være før i dag.',
+      licenceDate: 'Kørekortdatoen må ikke være før forsikringstagerens fødselsdato, og heller ikke i fremtiden.',
+      licenceBeforeAge16: 'Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.',
+      renovationYear: 'Renoveringsåret må ikke være før byggeåret eller efter indeværende år.',
+      residenteFiscal: 'Angiv, om du er skattemæssigt hjemmehørende i Portugal.',
+      rgpd: 'Du skal acceptere, før vi kan forberede tilbuddet.',
+      birthDate: 'Fødselsdatoen må ikke være i fremtiden.',
+      birthDateAdult: 'Forsikringstageren skal være mindst 18 år.',
+      tooShort: 'Skriv mindst {min} tegn.',
+      requiredGroup: 'Vælg mindst én mulighed.',
+    },
+    zh: {
+      required: '请填写此字段。',
+      email: '请输入有效的电子邮箱地址，例如 name@email.com。',
+      sending: '正在发送…',
+      failed: '您的申请无法发送。请检查您的网络连接并重试——您填写的内容不会丢失。',
+      nif: '请输入有效的葡萄牙税号（NIF），共9位数字。',
+      postalCode: '请输入格式为 0000-000 的邮政编码。',
+      plate: '请输入有效的葡萄牙车牌号。',
+      startDate: '起保日期不能早于今天。',
+      licenceDate: '驾照签发日期不能早于投保人的出生日期，也不能是将来的日期。',
+      licenceBeforeAge16: '该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。',
+      renovationYear: '翻修年份不能早于建造年份，也不能晚于当前年份。',
+      residenteFiscal: '请说明您是否为葡萄牙税务居民。',
+      rgpd: '您必须同意后我们才能准备报价。',
+      birthDate: '出生日期不能是将来的日期。',
+      birthDateAdult: '投保人必须年满18岁。',
+      tooShort: '请至少输入 {min} 个字符。',
+      requiredGroup: '请至少选择一项。',
+    },
   };
 
   var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);

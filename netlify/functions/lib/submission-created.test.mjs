@@ -569,3 +569,75 @@ test("test-mode submission on the DE Private Clients wizard writes German labels
   assert.match(htmlLine, /24 Arbeitsstunden/);
   assert.match(htmlLine, /DSGVO-Einwilligung/);
 });
+
+// Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+// converted together. Same regression-test shape as the DE/NL tests above,
+// one per language, for the first ramo (Home).
+test("a Polish wizard form (formConfig.lang === 'pl') renders Polish labels, not English or Portuguese", () => {
+  const formConfig = HANDLED_FORMS["pl-ubezpieczenie-domu-wizard"];
+  assert.equal(formConfig.lang, "pl");
+  const html = renderAllFields(
+    { nome: "Jan Kowalski", capital_edificio: "250000", rgpd: "sim", nacionalidade: "PL" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Suma ubezpieczenia budynku/);
+  assert.match(html, /Polska/); // Polish country name, not "Poland"
+  assert.doesNotMatch(html, /Building insured sum/);
+  assert.doesNotMatch(html, />Poland</);
+});
+
+test("a Swedish wizard form (formConfig.lang === 'sv') renders Swedish labels", () => {
+  const formConfig = HANDLED_FORMS["se-hemforsakring-wizard"];
+  assert.equal(formConfig.lang, "sv");
+  const html = renderAllFields(
+    { nome: "Erik Andersson", capital_edificio: "250000", rgpd: "sim", nacionalidade: "SE" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Försäkringsbelopp byggnad/);
+  assert.match(html, /Sverige/);
+});
+
+test("a Danish wizard form (formConfig.lang === 'da') renders Danish labels", () => {
+  const formConfig = HANDLED_FORMS["dk-husforsikring-wizard"];
+  assert.equal(formConfig.lang, "da");
+  const html = renderAllFields(
+    { nome: "Anders Nielsen", capital_edificio: "250000", rgpd: "sim", nacionalidade: "DK" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Forsikringssum bygning/);
+  assert.match(html, /Danmark/);
+});
+
+test("a Chinese wizard form (formConfig.lang === 'zh') renders Chinese labels", () => {
+  const formConfig = HANDLED_FORMS["zh-home-insurance-wizard"];
+  assert.equal(formConfig.lang, "zh");
+  const html = renderAllFields(
+    { nome: "Li Wei", capital_edificio: "250000", rgpd: "sim", nacionalidade: "CN" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /建筑保险金额/);
+  assert.match(html, /中国/);
+});
+
+test("quoteIntro renders the 24h SLA in Polish, Swedish, Danish and Chinese for lang forms with no slaHours", () => {
+  assert.match(
+    quoteIntro({ page: "/pl/ubezpieczenie-domu-portugalia/", lang: "pl" }, "https://adlerrochefort.com/pl/ubezpieczenie-domu-portugalia/"),
+    /24 godzin roboczych/
+  );
+  assert.match(
+    quoteIntro({ page: "/se/hemforsakring-portugal/", lang: "sv" }, "https://adlerrochefort.com/se/hemforsakring-portugal/"),
+    /24 arbetstimmar/
+  );
+  assert.match(
+    quoteIntro({ page: "/dk/husforsikring-portugal/", lang: "da" }, "https://adlerrochefort.com/dk/husforsikring-portugal/"),
+    /24 arbejdstimer/
+  );
+  assert.match(
+    quoteIntro({ page: "/zh/home-insurance-portugal/", lang: "zh" }, "https://adlerrochefort.com/zh/home-insurance-portugal/"),
+    /24个工作小时/
+  );
+});

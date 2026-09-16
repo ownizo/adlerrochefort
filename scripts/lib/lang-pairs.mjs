@@ -39,7 +39,14 @@ export const PAGE_CLUSTERS = [
   // Motor. The pair was added to scripts/hreflang.mjs when the English car
   // page was built but not here, so this pass was quietly demoting the
   // pillar's PT link to the homepage every time it ran.
-  { pt: '/seguros/auto/', en: '/en/car-insurance-portugal/' },
+  // `de` added Especificação v2, Parte 2 continuação — synced from
+  // scripts/hreflang.mjs's own PAGE_CLUSTERS after this file's stale copy
+  // was caught silently reverting /seguros/auto/'s DE switcher link back
+  // to the homepage on every scripts/lang-switcher.mjs run (found running
+  // that pass for the Parte B PL/SE/DK/ZH work — same "two passes undoing
+  // each other" failure this file's own top comment describes, just
+  // between this file and scripts/hreflang.mjs rather than unify-chrome).
+  { pt: '/seguros/auto/', en: '/en/car-insurance-portugal/', de: '/de/autoversicherung-portugal/' },
   { pt: '/seguros/condominios/', en: '/en/condominium-insurance-algarve/' },
   // Professional liability — therapies and wellbeing. The EN side is
   // article-shaped (each with its own quote form), not a /seguros/-style
@@ -51,7 +58,12 @@ export const PAGE_CLUSTERS = [
   { pt: '/seguros/rc-terapeuticas-nao-convencionais/', en: '/en/blog/liability-insurance-complementary-therapies/' },
   { pt: '/seguros/rc-yoga-pilates-bem-estar/', en: '/en/blog/yoga-instructor-liability-insurance-portugal/' },
   { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
-  { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/' },
+  // `de` added, same reasoning as /seguros/auto/ above.
+  { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/', de: '/de/hausversicherung-portugal/' },
+  // Missing entirely before this pass, same reasoning as /seguros/auto/
+  // above — synced from scripts/hreflang.mjs.
+  { pt: '/seguros/saude/', en: '/en/health-insurance-quote/', nl: '/nl/zorgverzekering-portugal/', de: '/de/krankenversicherung-portugal/' },
+  { pt: '/seguros/responsabilidade-civil-profissional/', en: '/en/professional-liability-insurance-portugal/', de: '/de/berufshaftpflicht-freiberufler-portugal/' },
   { pt: '/seguros/alojamento-local/', nl: '/nl/alojamento-local-verzekering-portugal/' },
   { pt: '/politica-de-privacidade/', en: '/en/privacy-policy/' },
   { pt: '/termos-e-condicoes/', en: '/en/terms-and-conditions/' },

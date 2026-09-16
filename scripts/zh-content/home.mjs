@@ -41,14 +41,51 @@ export const HOME_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: '房屋保险' }],
   pullquote: '保额不是您付了多少钱买这套房，而是把烧掉的部分重新盖起来要花多少钱。',
   schemaType: 'Article',
-  formHeading: '房屋保险咨询',
-  formBranch: 'ZH · Home',
-  formSubject: '葡萄牙房屋保险',
-  formCta: '提交咨询',
-  formIntro:
-    '我们需要几项关于房产的基本信息：类型、面积、建成年份、是自住还是第二居所、有没有房贷。',
-  formPlaceholder:
-    '例如：里斯本 Parque das Nações 一套 95 平方米公寓，2006 年建成，在 condomínio 内，有 Millennium 房贷，平时自住。',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared zh-inquiry branch-select form.
+  wizard: {
+    idPrefix: 'zh-hab',
+    formName: 'zh-home-insurance-wizard',
+    ramo: 'Home insurance',
+    heading: '申请房屋保险报价',
+    intro: '请填写基本信息。我们将在24个工作小时内回复。',
+    stepLabel2: '房产信息',
+    submitLabel: '提交申请',
+    microNote:
+      '我们将在24个工作小时内回复。您的信息仅用于准备本报价，并根据《通用数据保护条例》（GDPR）处理——请参阅<a href="/en/privacy-policy" hreflang="en">隐私政策</a>。',
+    scripts: ['quote-field-toggle.js'],
+    fieldsHtml: `        <div class="contact-form-field">
+          <label for="zh-hab-regime">房屋使用方式 *</label>
+          <select id="zh-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">请选择</option>
+            <option value="permanente">主要住所</option>
+            <option value="holiday_home">度假屋 / 第二居所</option>
+            <option value="alojamento_local">Alojamento Local（短期出租）</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="zh-hab-al-regime">短期出租类型 *</label>
+            <select id="zh-hab-al-regime" name="al_regime" required disabled>
+              <option value="">请选择</option>
+              <option value="tempo_inteiro">全部</option>
+              <option value="parcial">部分（与房东共用住所）</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="zh-hab-ano-construcao">建造年份 *</label><input type="number" id="zh-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="zh-hab-area">建筑总面积（平方米） *</label><input type="number" id="zh-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="zh-hab-wc">卫生间数量 *</label><input type="number" id="zh-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="zh-hab-obras-check"><input type="checkbox" id="zh-hab-obras-check" data-field-toggle="zh-hab-obras-group"> 近年是否进行过翻修？</label>
+        </div>
+        <div id="zh-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="zh-hab-obras-ano">翻修年份 *</label><input type="number" id="zh-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="zh-hab-obras-desc">请描述已完成的工程 *</label><textarea id="zh-hab-obras-desc" name="obras_descricao" minlength="4" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="zh-hab-capital-edificio">建筑保险金额（欧元） *</label><input type="number" id="zh-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="zh-hab-capital-conteudo">室内财产保险金额（欧元） *</label><input type="number" id="zh-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="weishenme-yao-bao">
   <div class="container narrow article-body">

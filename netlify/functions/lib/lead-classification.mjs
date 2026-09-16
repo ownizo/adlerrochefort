@@ -358,6 +358,12 @@ const FORM_CLASSIFICATION = {
   // generic "Private Clients" branch (no `empresa`/company field on this
   // form — it is a personal-wealth product, always individual).
   'de-private-clients-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'private-clients' },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+  // converted together.
+  'pl-ubezpieczenie-domu-wizard': { entityType: 'individual', market: 'PT', language: 'PL', product: 'home' },
+  'se-hemforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'home' },
+  'dk-husforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'home' },
+  'zh-home-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'home' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

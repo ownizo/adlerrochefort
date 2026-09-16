@@ -299,6 +299,54 @@ const PAGES = [
       "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator
+  // (scripts/lib/market-cluster.mjs) and are converted together. Home
+  // (Habitação) is the first of the four ramos, same field set as
+  // PT/EN/DE/NL Habitação.
+  {
+    label: "PL /pl/ubezpieczenie-domu-portugalia/",
+    path: "pl/ubezpieczenie-domu-portugalia/index.html",
+    expectedFormName: "pl-ubezpieczenie-domu-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "SE /se/hemforsakring-portugal/",
+    path: "se/hemforsakring-portugal/index.html",
+    expectedFormName: "se-hemforsakring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "DK /dk/husforsikring-portugal/",
+    path: "dk/husforsikring-portugal/index.html",
+    expectedFormName: "dk-husforsikring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "ZH /zh/home-insurance-portugal/",
+    path: "zh/home-insurance-portugal/index.html",
+    expectedFormName: "zh-home-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked
