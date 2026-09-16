@@ -91,6 +91,16 @@
       "subtitulo": "Preencha o essencial. Cotação em 48 a 72 horas úteis.",
       "faturacao_anual": "Faturação anual",
       "faturacao_anual_placeholder": "Ex.: 85000"
+    },
+    "empresarial": {
+      "titulo": "Pedir cotação de seguro empresarial",
+      "subtitulo": "Preencha o essencial. Respondemos em 48 a 72 horas úteis.",
+      "nome_empresa": "Nome da empresa",
+      "nif_empresa": "NIF da empresa",
+      "ramos_pretendidos": "Ramos pretendidos",
+      "ramos_pretendidos_acidentes_trabalho": "Acidentes de Trabalho",
+      "ramos_pretendidos_multirriscos": "Multirriscos",
+      "ramos_pretendidos_responsabilidade_civil": "Responsabilidade Civil"
     }
   },
   "pt_only": {

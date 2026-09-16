@@ -83,6 +83,24 @@
       failed:
         'Uw aanvraag kon niet worden verzonden. Controleer uw verbinding en probeer het ' +
         'opnieuw — er is niets verloren gegaan.',
+      // Especificação v2, Parte A (NL) — the NL wizard pages are the first NL
+      // forms to need these (every previous NL page used the shared
+      // nl-offerte-aanvraag form, plain required/email only, no
+      // data-validate). Mirrors data/i18n/quote-form/nl.json's
+      // common.errors.* wording exactly, same relationship the pt/en/de
+      // objects above already have with their own JSON files.
+      nif: 'Voer een geldig Portugees fiscaal nummer (NIF) in, 9 cijfers.',
+      postalCode: 'Voer een postcode in het formaat 0000-000 in.',
+      plate: 'Voer een geldig Portugees kenteken in.',
+      startDate: 'De ingangsdatum mag niet vóór vandaag liggen.',
+      licenceDate: 'De datum van het rijbewijs mag niet vóór de geboortedatum van de verzekeringnemer liggen, noch in de toekomst.',
+      licenceBeforeAge16: 'Dat is vóór de 16de verjaardag van de verzekeringnemer — wij accepteren het toch, controleer wel of de datum juist is.',
+      renovationYear: 'Het jaar van de verbouwing mag niet vóór het bouwjaar liggen, noch na het huidige jaar.',
+      residenteFiscal: 'Geef aan of u fiscaal ingezetene bent van Portugal.',
+      rgpd: 'U moet akkoord gaan voordat wij de offerte kunnen voorbereiden.',
+      birthDate: 'De geboortedatum mag niet in de toekomst liggen.',
+      birthDateAdult: 'De verzekeringnemer moet ten minste 18 jaar oud zijn.',
+      tooShort: 'Schrijf ten minste {min} tekens.',
     },
     // Especificação v2, "restantes línguas" Parte 2 — DE Auto wizard is the
     // first form to actually need these (every DE page until now used the

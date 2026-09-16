@@ -218,6 +218,20 @@ const PAGES = [
       "faturacao_anual", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte 2 continuação (NL) — first NL page converted
+  // from the shared nl-offerte-aanvraag branch-select form to its own
+  // exclusive wizard. Same shared field names as the other Habitação pages.
+  {
+    label: "NL /nl/woonverzekering-portugal/",
+    path: "nl/woonverzekering-portugal/index.html",
+    expectedFormName: "nl-woonverzekering-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked
