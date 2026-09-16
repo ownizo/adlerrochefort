@@ -392,3 +392,49 @@ test("test-mode submission on the DE Auto wizard writes German labels into paylo
   assert.match(htmlLine, /Kennzeichen/);
   assert.doesNotMatch(htmlLine, /Registration plate/);
 });
+
+// Especificação v2, Parte 2 continuação (NL) — same regression-test shape as
+// the DE tests above, for the first NL dedicated wizard form.
+test("a Dutch wizard form (formConfig.lang === 'nl') renders Dutch labels, not English or Portuguese", () => {
+  const formConfig = HANDLED_FORMS["nl-woonverzekering-wizard"];
+  assert.equal(formConfig.lang, "nl");
+  const html = renderAllFields(
+    { nome: "Jan de Vries", capital_edificio: "250000", rgpd: "ja", nacionalidade: "NL" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Verzekerd bedrag gebouw/);
+  assert.match(html, /AVG-toestemming/);
+  assert.match(html, /Nederland/); // Dutch country name, not "Netherlands"
+  assert.doesNotMatch(html, /Building insured sum/);
+  assert.doesNotMatch(html, /GDPR consent/);
+  assert.doesNotMatch(html, />Netherlands</);
+});
+
+test("quoteIntro promises 24 uur in Dutch for a lang: 'nl' form with no slaHours", () => {
+  const text = quoteIntro({ page: "/nl/woonverzekering-portugal/", lang: "nl" }, "https://adlerrochefort.com/nl/woonverzekering-portugal/");
+  assert.match(text, /24 uur/);
+  assert.doesNotMatch(text, /one working day/);
+  assert.doesNotMatch(text, /24 Arbeitsstunden/);
+});
+
+test("test-mode submission on the NL Habitação wizard writes Dutch labels into payload_teste.email", async () => {
+  const req = mockRequest({
+    form_name: "nl-woonverzekering-wizard",
+    id: "sub-test-nl-1",
+    created_at: "2026-09-16T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      capital_edificio: "250000",
+      capital_conteudo: "40000",
+      rgpd: "ja",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /Verzekerd bedrag gebouw/);
+  assert.doesNotMatch(htmlLine, /Building insured sum/);
+});

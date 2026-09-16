@@ -14,6 +14,7 @@ import { isTestModeSubmission } from "./lib/lead-classification.mjs";
 import ptQuoteFormStrings from "../../data/i18n/quote-form/pt.json" with { type: "json" };
 import enQuoteFormStrings from "../../data/i18n/quote-form/en.json" with { type: "json" };
 import deQuoteFormStrings from "../../data/i18n/quote-form/de.json" with { type: "json" };
+import nlQuoteFormStrings from "../../data/i18n/quote-form/nl.json" with { type: "json" };
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -518,6 +519,48 @@ const QUOTE_LABELS_DE = {
   faturacao_anual: "Jahresumsatz",
 };
 
+// Especificação v2, Parte 2 continuação (NL) — same pattern as
+// QUOTE_LABELS_DE above, grown for the four NL ramos converted in this
+// pass: Habitação, Saúde, RC Profissional, and the new Bedrijfsverzekering
+// (Especificação v2, Parte D2 — no dedicated NL page existed before).
+const QUOTE_LABELS_NL = {
+  ramo: "Verzekeringstak",
+  nome: "Naam",
+  email: "E-mail",
+  telefone: "Telefoon / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "Geboortedatum",
+  morada: "Adres",
+  localidade: "Woonplaats",
+  codigo_postal: "Postcode",
+  nacionalidade: "Nationaliteit",
+  residente_fiscal: "Fiscaal ingezetene van Portugal",
+  data_inicio: "Gewenste ingangsdatum",
+  rgpd: "AVG-toestemming",
+  source_url: "Pagina van waaruit verzonden",
+
+  // Habitação (woonverzekering) NL.
+  regime_ocupacao: "Gebruik van de woning",
+  al_regime: "Soort kortetermijnverhuur",
+  ano_construcao: "Bouwjaar",
+  area_bruta: "Bruto woonoppervlak (m²)",
+  casas_banho: "Aantal badkamers",
+  obras_ano: "Jaar van de verbouwing",
+  obras_descricao: "Beschrijving van de werkzaamheden",
+  capital_edificio: "Verzekerd bedrag gebouw",
+  capital_conteudo: "Verzekerd bedrag inboedel",
+
+  // RC Profissional (beroepsaansprakelijkheid) NL.
+  faturacao_anual: "Jaaromzet",
+
+  // Bedrijfsverzekering NL (Especificação v2, Parte D2) — no `empresa`/nif
+  // pessoal ambiguity here: nome/nif above are the contact person's own,
+  // nome_empresa/nif_empresa below are the company's, always both present.
+  nome_empresa: "Bedrijfsnaam",
+  nif_empresa: "NIF van het bedrijf",
+  ramos_pretendidos: "Gewenste dekkingen",
+};
+
 // Forms handled by this notification flow, with the wording used in the email.
 // Exported so lead-classification.test.mjs can assert every key here also has
 // a CRM classification decision — see "CRM coverage" in that test file.
@@ -847,6 +890,17 @@ export const HANDLED_FORMS = {
     page: "/de/berufshaftpflicht-freiberufler-portugal/",
     branch: "RC Profissional (DE)",
   },
+  // Especificação v2, Parte 2 continuação (NL) — nl-woonverzekering-wizard,
+  // this page's exclusive form-name (it used to share nl-offerte-aanvraag
+  // with 15 other NL pages). `lang: "nl"` for Dutch labels in the intake
+  // email, same reasoning as the DE forms above.
+  "nl-woonverzekering-wizard": {
+    quote: true,
+    lang: "nl",
+    heading: "New Dutch Home quote request",
+    page: "/nl/woonverzekering-portugal/",
+    branch: "Habitação (NL)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,
@@ -1065,12 +1119,17 @@ const CROSSSELL_FIELDS = new Set(["additional_insurance_needs", "insurance_needs
 // showing nothing.
 const NATIONALITY_FIELDS = new Set(["nacionalidade", "nationality"]);
 
+const LANG_COUNTRY_TABLES = {
+  de: deQuoteFormStrings.countries,
+  nl: nlQuoteFormStrings.countries,
+};
+
 function displayValue(key, value, en, lang) {
   if (NATIONALITY_FIELDS.has(key)) {
     // Especificação v2, "restantes línguas" — `lang` names an actual
-    // language-specific country table (currently only 'de'); `en` stays the
+    // language-specific country table (de, nl so far); `en` stays the
     // PT/EN fallback for every form that predates `lang` existing at all.
-    const table = lang === "de" ? deQuoteFormStrings.countries : en ? enQuoteFormStrings.countries : ptQuoteFormStrings.countries;
+    const table = LANG_COUNTRY_TABLES[lang] || (en ? enQuoteFormStrings.countries : ptQuoteFormStrings.countries);
     return table?.[value] || value;
   }
   return formatValue(value);
@@ -1091,6 +1150,7 @@ function displayValue(key, value, en, lang) {
 // en/pt behaviour unchanged.
 const DYNAMIC_BLOCKS_COPY = {
   de: { heading: "Zu versichernde Personen", person: "Person", name: "Name", dob: "Geburtsdatum" },
+  nl: { heading: "Te verzekeren personen", person: "Persoon", name: "Naam", dob: "Geboortedatum" },
   en: { heading: "People to insure", person: "Person", name: "Name", dob: "Date of birth" },
   pt: { heading: "Pessoas a segurar", person: "Pessoa", name: "Nome", dob: "Data de nascimento" },
 };
@@ -1119,7 +1179,11 @@ export function renderAllFields(data, en = false, lang) {
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map((key) => {
       const label = escapeHtml(
-        (lang === "de" && QUOTE_LABELS_DE[key]) || (en && QUOTE_LABELS_EN[key]) || QUOTE_LABELS[key] || humanise(key)
+        (lang === "de" && QUOTE_LABELS_DE[key]) ||
+          (lang === "nl" && QUOTE_LABELS_NL[key]) ||
+          (en && QUOTE_LABELS_EN[key]) ||
+          QUOTE_LABELS[key] ||
+          humanise(key)
       );
       const value = escapeHtml(displayValue(key, data[key], en, lang));
       if (CROSSSELL_FIELDS.has(key)) {
@@ -1239,6 +1303,13 @@ export function quoteIntro(formConfig, from) {
   if (formConfig.lang === "de") {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " bis ")} Arbeitsstunden` : "24 Arbeitsstunden";
     return `Gesendet von ${escapeHtml(from)}. Eine Antwort innerhalb von ${slaText} wurde zugesagt.`;
+  }
+  // Especificação v2, Parte 2 continuação — same reasoning and priority as
+  // `lang === 'de'` right above: a dedicated Dutch wizard's intake email
+  // reads in Dutch, not the English nl-offerte-aanvraag convention.
+  if (formConfig.lang === "nl") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " tot ")} werkuren` : "24 uur";
+    return `Verzonden vanaf ${escapeHtml(from)}. Een antwoord binnen ${slaText} werd toegezegd.`;
   }
   if (formConfig.en) {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";

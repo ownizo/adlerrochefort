@@ -60,6 +60,9 @@
     pt: { name: 'Nome completo', dob: 'Data de nascimento', nif: 'NIF', nifPlaceholder: 'Número de contribuinte', remove: 'Remover esta pessoa', person: 'Pessoa' },
     en: { name: 'Full name', dob: 'Date of birth', nif: 'Portuguese tax number (NIF)', nifPlaceholder: '9 digits', remove: 'Remove this person', person: 'Person' },
     de: { name: 'Vollständiger Name', dob: 'Geburtsdatum', nif: 'NIF (portugiesische Steuernummer)', nifPlaceholder: '9 Ziffern', remove: 'Diese Person entfernen', person: 'Person' },
+    // Especificação v2, Parte A (NL) — NL Saúde (zorgverzekering) is the
+    // first NL page to use this repeater.
+    nl: { name: 'Volledige naam', dob: 'Geboortedatum', nif: 'NIF (Portugees fiscaal nummer)', nifPlaceholder: '9 cijfers', remove: 'Deze persoon verwijderen', person: 'Persoon' },
   };
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;

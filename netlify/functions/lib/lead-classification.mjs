@@ -329,6 +329,9 @@ const FORM_CLASSIFICATION = {
     product: 'professional-liability',
     classify: classifyRcProfissionalDedicated,
   },
+  // Especificação v2, Parte 2 continuação (NL) — same shape as the DE
+  // entries above, first of four NL wizard forms in this pass.
+  'nl-woonverzekering-wizard': { entityType: 'individual', market: 'PT', language: 'NL', product: 'home' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
