@@ -354,6 +354,10 @@ const FORM_CLASSIFICATION = {
   // this form at all) — same product taxonomy value as 'Vida e Crédito
   // Habitação' in BRANCH_CLASSIFICATION below.
   'de-lebensversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'life' },
+  // Especificação v2, Parte D3 — Private Clients DE, built from the
+  // generic "Private Clients" branch (no `empresa`/company field on this
+  // form — it is a personal-wealth product, always individual).
+  'de-private-clients-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'private-clients' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

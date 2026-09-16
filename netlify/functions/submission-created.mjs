@@ -959,6 +959,18 @@ export const HANDLED_FORMS = {
     page: "/de/lebensversicherung-portugal/",
     branch: "Vida (DE)",
   },
+  // Especificação v2, Parte D3 — Private Clients DE, built from the
+  // generic "Private Clients" branch of the shared de-angebot-anfrage
+  // form. Only two wizard steps (no ramo-specific step 2 — the common
+  // block covers everything the spec asks for), per Hugo's own "reduzir a
+  // dois passos" instruction rather than leaving an empty step.
+  "de-private-clients-wizard": {
+    quote: true,
+    lang: "de",
+    heading: "New German Private Clients quote request",
+    page: "/de/private-clients-portugal/",
+    branch: "Private Clients (DE)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,
