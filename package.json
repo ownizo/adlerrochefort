@@ -10,7 +10,8 @@
     "check:esbuild-bundle": "node scripts/check-esbuild-bundle.mjs",
     "check:freshness": "node scripts/check-generator-freshness.mjs",
     "check:i18n": "node scripts/check-i18n-parity.mjs",
-    "check:clinical-data": "node scripts/check-clinical-data-guard.mjs"
+    "check:clinical-data": "node scripts/check-clinical-data-guard.mjs",
+    "check:text-integrity": "node scripts/check-rendered-text-integrity.mjs"
   },
   "keywords": [],
   "author": "",
