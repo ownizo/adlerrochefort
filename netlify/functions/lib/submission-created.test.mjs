@@ -459,3 +459,37 @@ test("a Dutch Saúde wizard's dynamic-blocks section (dados_dinamicos) renders i
   assert.doesNotMatch(html, /People to insure/);
   assert.doesNotMatch(html, /Zu versichernde Personen/);
 });
+
+// Especificação v2, Parte 2 continuação (NL) — third and final NL wizard in
+// this pass; confirms the 48-72h SLA (not the default 24h) carries through
+// in Dutch too, same as the DE RC Profissional form.
+test("quoteIntro promises 48 tot 72 werkuren in Dutch for a lang: 'nl' form with slaHours set", () => {
+  const formConfig = HANDLED_FORMS["nl-zzp-beroepsaansprakelijkheid-wizard"];
+  assert.equal(formConfig.lang, "nl");
+  assert.equal(formConfig.slaHours, "48 a 72");
+  const text = quoteIntro(formConfig, "https://adlerrochefort.com/nl/zzp-beroepsaansprakelijkheid-portugal/");
+  assert.match(text, /48 tot 72 werkuren/);
+  assert.doesNotMatch(text, /24 uur/);
+  assert.doesNotMatch(text, /48 bis 72 Arbeitsstunden/);
+});
+
+test("test-mode submission on the NL RC Profissional wizard writes Dutch labels into payload_teste.email", async () => {
+  const req = mockRequest({
+    form_name: "nl-zzp-beroepsaansprakelijkheid-wizard",
+    id: "sub-test-nl-2",
+    created_at: "2026-09-16T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      faturacao_anual: "85000",
+      rgpd: "ja",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /Jaaromzet/);
+  assert.match(htmlLine, /48 tot 72 werkuren/);
+  assert.doesNotMatch(htmlLine, /Annual turnover/);
+});
