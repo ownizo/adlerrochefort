@@ -513,6 +513,17 @@ const PAGES = [
       "faturacao_anual", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte C — Hebrew, fourth and last ramo.
+  {
+    label: "IL /il/liability-insurance-portugal/",
+    path: "il/liability-insurance-portugal/index.html",
+    expectedFormName: "il-liability-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked
