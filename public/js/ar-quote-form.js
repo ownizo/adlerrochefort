@@ -222,6 +222,39 @@
       tooShort: '请至少输入 {min} 个字符。',
       requiredGroup: '请至少选择一项。',
     },
+    // Especificação v2, Parte C — Hebrew. The eleven messages tracked by
+    // data/i18n/quote-form/he.json's common.errors.* (required through
+    // tooShort below) are copied verbatim from there — that JSON file is
+    // the source of truth checked by scripts/check-i18n-parity.mjs, this
+    // object is the runtime copy, same relationship every other language
+    // above already has with its own JSON file. The remaining six keys
+    // (sending, failed, licenceBeforeAge16, renovationYear, birthDateAdult,
+    // requiredGroup) have no JSON-tracked equivalent in any language —
+    // sending matches il-content/ui.mjs's own formSending, the rest are
+    // freehand in the same register. Latin/numeric terms embedded in
+    // Hebrew (NIF, an email example, the postal-code format) use the
+    // U+2066/U+2069 isolate pair, not <bdi> — this string reaches the page
+    // through showError()'s textContent, a context <bdi> markup would show
+    // as literal tag text in, same reasoning as he.json's own _comment.
+    he: {
+      required: 'נא למלא שדה זה.',
+      email: 'נא להזין כתובת ⁦דוא״ל⁩ תקינה, למשל ⁦name@email.com⁩.',
+      sending: 'שולחים…',
+      failed: 'לא ניתן היה לשלוח את הבקשה. יש לבדוק את החיבור ולנסות שוב — שום דבר שכתבתם לא אבד.',
+      nif: 'נא להזין ⁦NIF⁩ פורטוגזי תקין, בן 9 ספרות.',
+      postalCode: 'נא להזין מיקוד בפורמט ⁦0000-000⁩.',
+      plate: 'נא להזין מספר רישוי פורטוגזי תקין.',
+      startDate: 'מועד התחילה לא יכול להיות לפני היום.',
+      licenceDate: 'תאריך הרישיון לא יכול להיות לפני תאריך הלידה של המבוטח, וגם לא בעתיד.',
+      licenceBeforeAge16: 'זה לפני יום ההולדת ה־16 של המבוטח — אנחנו נקבל את זה בכל זאת, אבל כדאי לוודא שהתאריך נכון.',
+      renovationYear: 'שנת השיפוץ לא יכולה להיות לפני שנת הבנייה או אחרי השנה הנוכחית.',
+      residenteFiscal: 'נא לציין אם אתם תושבי מס בפורטוגל.',
+      rgpd: 'יש לאשר לפני שנוכל להכין את ההצעה.',
+      birthDate: 'תאריך הלידה לא יכול להיות בעתיד.',
+      birthDateAdult: 'המבוטח חייב להיות בן 18 לפחות.',
+      tooShort: 'נא לכתוב לפחות {min} תווים.',
+      requiredGroup: 'יש לבחור לפחות אפשרות אחת.',
+    },
   };
 
   var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);

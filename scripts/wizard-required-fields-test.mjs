@@ -1000,6 +1000,38 @@ const PAGES = [
       nif: '200000012',
     },
   },
+  // Especificação v2, Parte C — Hebrew, second ramo.
+  {
+    label: 'IL /il/health-insurance-portugal/',
+    path: 'il/health-insurance-portugal/index.html',
+    url: 'https://adlerrochefort.com/il/health-insurance-portugal/',
+    formName: 'il-health-insurance-wizard',
+    expectPersonNameLabel: 'שם מלא',
+    scripts: ['lead-branch-fields.js', 'quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js', 'quote-health-persons.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'דוד כהן',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+972 50 123 4567',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'ישראל',
+      residente_fiscal: 'sim',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+    personValues: {
+      nome: 'שרה לוי',
+      data_nascimento: '2015-06-01',
+      nif: '200000012',
+    },
+  },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together. Car (Auto) is the third of the four ramos.
   {

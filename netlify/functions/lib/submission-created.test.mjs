@@ -652,6 +652,7 @@ test("a PL/SE/DK/ZH Saúde wizard's dynamic-blocks section (dados_dinamicos) ren
     { form: "se-sjukvardsforsakring-wizard", heading: /Personer som ska försäkras/, dob: /Födelsedatum/, name: "Anna Andersson" },
     { form: "dk-sundhedsforsikring-wizard", heading: /Personer der skal forsikres/, dob: /Fødselsdato/, name: "Anna Nielsen" },
     { form: "zh-health-insurance-wizard", heading: /需投保人员/, dob: /出生日期/, name: "李娜" },
+    { form: "il-health-insurance-wizard", heading: /מבוטחים/, dob: /תאריך לידה/, name: "שרה לוי" },
   ];
   for (const c of cases) {
     const formConfig = HANDLED_FORMS[c.form];

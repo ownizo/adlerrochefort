@@ -370,6 +370,8 @@ const FORM_CLASSIFICATION = {
   'se-sjukvardsforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'health' },
   'dk-sundhedsforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'health' },
   'zh-health-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'health' },
+  // Especificação v2, Parte C — Hebrew, second ramo.
+  'il-health-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'HE', product: 'health' },
   'pl-ubezpieczenie-samochodu-wizard': { entityType: 'individual', market: 'PT', language: 'PL', product: 'auto' },
   'se-bilforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'auto' },
   'dk-bilforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'auto' },
