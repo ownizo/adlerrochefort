@@ -15,6 +15,10 @@ import ptQuoteFormStrings from "../../data/i18n/quote-form/pt.json" with { type:
 import enQuoteFormStrings from "../../data/i18n/quote-form/en.json" with { type: "json" };
 import deQuoteFormStrings from "../../data/i18n/quote-form/de.json" with { type: "json" };
 import nlQuoteFormStrings from "../../data/i18n/quote-form/nl.json" with { type: "json" };
+import plQuoteFormStrings from "../../data/i18n/quote-form/pl.json" with { type: "json" };
+import svQuoteFormStrings from "../../data/i18n/quote-form/sv.json" with { type: "json" };
+import daQuoteFormStrings from "../../data/i18n/quote-form/da.json" with { type: "json" };
+import zhQuoteFormStrings from "../../data/i18n/quote-form/zh.json" with { type: "json" };
 
 // -----------------------------------------------------------------------------
 // Netlify Forms trigger: fires on every verified submission of any form on the
@@ -575,6 +579,131 @@ const QUOTE_LABELS_NL = {
   ramo_responsabilidade_civil: "Aansprakelijkheidsverzekering",
 };
 
+// Especificação v2, Parte B — PL/SE/DK/ZH share one generator
+// (scripts/lib/market-cluster.mjs) and are converted together. Same
+// pattern as QUOTE_LABELS_DE/NL above, grown one ramo at a time — Home
+// (Habitação) is the first of the four.
+const QUOTE_LABELS_PL = {
+  ramo: "Ubezpieczenie",
+  nome: "Imię i nazwisko",
+  email: "E-mail",
+  telefone: "Telefon / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "Data urodzenia",
+  morada: "Adres",
+  localidade: "Miejscowość",
+  codigo_postal: "Kod pocztowy",
+  nacionalidade: "Obywatelstwo",
+  residente_fiscal: "Rezydent podatkowy w Portugalii",
+  data_inicio: "Preferowana data rozpoczęcia",
+  rgpd: "Zgoda RODO",
+  source_url: "Strona, z której wysłano",
+
+  regime_ocupacao: "Sposób użytkowania nieruchomości",
+  al_regime: "Rodzaj wynajmu krótkoterminowego",
+  ano_construcao: "Rok budowy",
+  area_bruta: "Powierzchnia brutto (m²)",
+  casas_banho: "Liczba łazienek",
+  obras_ano: "Rok remontu",
+  obras_descricao: "Opis wykonanych prac",
+  capital_edificio: "Suma ubezpieczenia budynku",
+  capital_conteudo: "Suma ubezpieczenia ruchomości",
+};
+
+const QUOTE_LABELS_SV = {
+  ramo: "Försäkring",
+  nome: "Namn",
+  email: "E-post",
+  telefone: "Telefon / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "Födelsedatum",
+  morada: "Adress",
+  localidade: "Ort",
+  codigo_postal: "Postnummer",
+  nacionalidade: "Nationalitet",
+  residente_fiscal: "Skattemässigt bosatt i Portugal",
+  data_inicio: "Önskat startdatum",
+  rgpd: "GDPR-samtycke",
+  source_url: "Sida varifrån det skickades",
+
+  regime_ocupacao: "Bostadens användning",
+  al_regime: "Typ av korttidsuthyrning",
+  ano_construcao: "Byggår",
+  area_bruta: "Bruttoarea (m²)",
+  casas_banho: "Antal badrum",
+  obras_ano: "Renoveringsår",
+  obras_descricao: "Beskrivning av arbetena",
+  capital_edificio: "Försäkringsbelopp byggnad",
+  capital_conteudo: "Försäkringsbelopp lösöre",
+};
+
+const QUOTE_LABELS_DA = {
+  ramo: "Forsikring",
+  nome: "Navn",
+  email: "E-mail",
+  telefone: "Telefon / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "Fødselsdato",
+  morada: "Adresse",
+  localidade: "By",
+  codigo_postal: "Postnummer",
+  nacionalidade: "Nationalitet",
+  residente_fiscal: "Skattemæssigt hjemmehørende i Portugal",
+  data_inicio: "Ønsket startdato",
+  rgpd: "Samtykke (databeskyttelsesforordningen)",
+  source_url: "Side, hvorfra det blev sendt",
+
+  regime_ocupacao: "Boligens anvendelse",
+  al_regime: "Type korttidsudlejning",
+  ano_construcao: "Byggeår",
+  area_bruta: "Bruttoareal (m²)",
+  casas_banho: "Antal badeværelser",
+  obras_ano: "Renoveringsår",
+  obras_descricao: "Beskrivelse af det udførte arbejde",
+  capital_edificio: "Forsikringssum bygning",
+  capital_conteudo: "Forsikringssum indbo",
+};
+
+const QUOTE_LABELS_ZH = {
+  ramo: "险种",
+  nome: "姓名",
+  email: "电子邮箱",
+  telefone: "电话 / WhatsApp",
+  nif: "NIF",
+  data_nascimento: "出生日期",
+  morada: "地址",
+  localidade: "所在城市",
+  codigo_postal: "邮政编码",
+  nacionalidade: "国籍",
+  residente_fiscal: "是否为葡萄牙税务居民",
+  data_inicio: "期望的起保日期",
+  rgpd: "GDPR 同意",
+  source_url: "发送页面",
+
+  regime_ocupacao: "房屋使用方式",
+  al_regime: "短期出租类型",
+  ano_construcao: "建造年份",
+  area_bruta: "建筑总面积（平方米）",
+  casas_banho: "卫生间数量",
+  obras_ano: "翻修年份",
+  obras_descricao: "工程描述",
+  capital_edificio: "建筑保险金额",
+  capital_conteudo: "室内财产保险金额",
+};
+
+// Lookup by `lang`, refactored from a growing if/else-if chain in
+// renderAllFields once PL/SE/DK/ZH brought the count to six — same
+// reasoning as LANG_COUNTRY_TABLES above. `lang` is undefined for every
+// form that predates this system (they fall through to `en`/QUOTE_LABELS).
+const QUOTE_LABELS_BY_LANG = {
+  de: QUOTE_LABELS_DE,
+  nl: QUOTE_LABELS_NL,
+  pl: QUOTE_LABELS_PL,
+  sv: QUOTE_LABELS_SV,
+  da: QUOTE_LABELS_DA,
+  zh: QUOTE_LABELS_ZH,
+};
+
 // Forms handled by this notification flow, with the wording used in the email.
 // Exported so lead-classification.test.mjs can assert every key here also has
 // a CRM classification decision — see "CRM coverage" in that test file.
@@ -971,6 +1100,37 @@ export const HANDLED_FORMS = {
     page: "/de/private-clients-portugal/",
     branch: "Private Clients (DE)",
   },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator
+  // (scripts/lib/market-cluster.mjs) and are converted together. Home
+  // (Habitação) is the first of the four ramos.
+  "pl-ubezpieczenie-domu-wizard": {
+    quote: true,
+    lang: "pl",
+    heading: "New Polish Home quote request",
+    page: "/pl/ubezpieczenie-domu-portugalia/",
+    branch: "Habitação (PL)",
+  },
+  "se-hemforsakring-wizard": {
+    quote: true,
+    lang: "sv",
+    heading: "New Swedish Home quote request",
+    page: "/se/hemforsakring-portugal/",
+    branch: "Habitação (SE)",
+  },
+  "dk-husforsikring-wizard": {
+    quote: true,
+    lang: "da",
+    heading: "New Danish Home quote request",
+    page: "/dk/husforsikring-portugal/",
+    branch: "Habitação (DK)",
+  },
+  "zh-home-insurance-wizard": {
+    quote: true,
+    lang: "zh",
+    heading: "New Chinese Home quote request",
+    page: "/zh/home-insurance-portugal/",
+    branch: "Habitação (ZH)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,
@@ -1192,6 +1352,10 @@ const NATIONALITY_FIELDS = new Set(["nacionalidade", "nationality"]);
 const LANG_COUNTRY_TABLES = {
   de: deQuoteFormStrings.countries,
   nl: nlQuoteFormStrings.countries,
+  pl: plQuoteFormStrings.countries,
+  sv: svQuoteFormStrings.countries,
+  da: daQuoteFormStrings.countries,
+  zh: zhQuoteFormStrings.countries,
 };
 
 function displayValue(key, value, en, lang) {
@@ -1249,8 +1413,7 @@ export function renderAllFields(data, en = false, lang) {
     .filter((key) => data[key] != null && String(formatValue(data[key])).trim() !== "")
     .map((key) => {
       const label = escapeHtml(
-        (lang === "de" && QUOTE_LABELS_DE[key]) ||
-          (lang === "nl" && QUOTE_LABELS_NL[key]) ||
+        QUOTE_LABELS_BY_LANG[lang]?.[key] ||
           (en && QUOTE_LABELS_EN[key]) ||
           QUOTE_LABELS[key] ||
           humanise(key)
@@ -1380,6 +1543,25 @@ export function quoteIntro(formConfig, from) {
   if (formConfig.lang === "nl") {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " tot ")} werkuren` : "24 uur";
     return `Verzonden vanaf ${escapeHtml(from)}. Een antwoord binnen ${slaText} werd toegezegd.`;
+  }
+  // Especificação v2, Parte B — PL/SE/DK/ZH, same priority and reasoning as
+  // the branches above: a dedicated wizard's intake email reads in the
+  // page's own language.
+  if (formConfig.lang === "pl") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " do ")} godzin roboczych` : "24 godzin roboczych";
+    return `Zgłoszenie wysłane z ${escapeHtml(from)}. Odpowiedź w ciągu ${slaText} została obiecana.`;
+  }
+  if (formConfig.lang === "sv") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " till ")} arbetstimmar` : "24 arbetstimmar";
+    return `Skickat från ${escapeHtml(from)}. Ett svar inom ${slaText} har utlovats.`;
+  }
+  if (formConfig.lang === "da") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " til ")} arbejdstimer` : "24 arbejdstimer";
+    return `Sendt fra ${escapeHtml(from)}. Et svar inden for ${slaText} er blevet lovet.`;
+  }
+  if (formConfig.lang === "zh") {
+    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " 至 ")}个工作小时` : "24个工作小时";
+    return `发送自 ${escapeHtml(from)}。承诺将在${slaText}内回复。`;
   }
   if (formConfig.en) {
     const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";

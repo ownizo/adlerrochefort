@@ -33,14 +33,54 @@ export const HOME_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie domu' }],
   pullquote: 'Suma ubezpieczenia to nie cena, jaką Państwo zapłacili. To koszt odbudowy tego, co zostanie zniszczone.',
   schemaType: 'Article',
-  formHeading: 'Zapytaj o ubezpieczenie nieruchomości',
-  formBranch: 'PL · Dom',
-  formSubject: 'Ubezpieczenie domu w Portugalii',
-  formCta: 'Zapytaj o ofertę',
-  formIntro:
-    'Potrzebujemy kilku informacji o nieruchomości: rodzaj, powierzchnia, rok budowy, czy jest zamieszkana na stałe i czy jest kredyt hipoteczny.',
-  formPlaceholder:
-    'Na przykład: mieszkanie 95 m² w Cascais, budynek z 2004 roku, wspólnota, kredyt w Millennium, mieszkamy na stałe.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared pl-zapytanie-ofertowe branch-select form; the formHeading/
+  // formBranch/formSubject/formCta/formIntro/formPlaceholder fields the
+  // old shared form read are gone, not just unused, since scripts/lib/
+  // market-cluster.mjs never calls formHtml() for a page with `wizard` set.
+  wizard: {
+    idPrefix: 'pl-hab',
+    formName: 'pl-ubezpieczenie-domu-wizard',
+    ramo: 'Ubezpieczenie domu',
+    heading: 'Zapytaj o ubezpieczenie nieruchomości',
+    intro: 'Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.',
+    stepLabel2: 'Nieruchomość',
+    submitLabel: 'Zapytaj o ofertę',
+    microNote:
+      'Odpowiedź w ciągu 24 godzin roboczych. Dane są wykorzystywane wyłącznie do przygotowania oferty i przetwarzane zgodnie z RODO — patrz <a href="/en/privacy-policy" hreflang="en">polityka prywatności</a>.',
+    scripts: ['quote-field-toggle.js'],
+    fieldsHtml: `        <div class="contact-form-field">
+          <label for="pl-hab-regime">Sposób użytkowania nieruchomości *</label>
+          <select id="pl-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">Proszę wybrać</option>
+            <option value="permanente">Główne miejsce zamieszkania</option>
+            <option value="holiday_home">Dom wakacyjny / druga nieruchomość</option>
+            <option value="alojamento_local">Alojamento Local (wynajem krótkoterminowy)</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="pl-hab-al-regime">Rodzaj wynajmu krótkoterminowego *</label>
+            <select id="pl-hab-al-regime" name="al_regime" required disabled>
+              <option value="">Proszę wybrać</option>
+              <option value="tempo_inteiro">Całkowity</option>
+              <option value="parcial">Częściowy (współdzielone użytkowanie mieszkania)</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="pl-hab-ano-construcao">Rok budowy *</label><input type="number" id="pl-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="pl-hab-area">Powierzchnia brutto (m²) *</label><input type="number" id="pl-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="pl-hab-wc">Liczba łazienek *</label><input type="number" id="pl-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="pl-hab-obras-check"><input type="checkbox" id="pl-hab-obras-check" data-field-toggle="pl-hab-obras-group"> Czy w ostatnich latach przeprowadzono remont?</label>
+        </div>
+        <div id="pl-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="pl-hab-obras-ano">Rok remontu *</label><input type="number" id="pl-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="pl-hab-obras-desc">Proszę opisać wykonane prace *</label><textarea id="pl-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="pl-hab-capital-edificio">Suma ubezpieczenia budynku (€) *</label><input type="number" id="pl-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="pl-hab-capital-conteudo">Suma ubezpieczenia ruchomości (€) *</label><input type="number" id="pl-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="mury-i-ruchomosci">
   <div class="container narrow article-body">

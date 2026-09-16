@@ -6,7 +6,7 @@
     "brokenLinks": 0,
     "linksViaRedirect": 0,
     "orphans": 1,
-    "singleInbound": 17,
+    "singleInbound": 16,
     "deeperThanThreeClicks": 9
   },
   "broken": [],
@@ -73,12 +73,6 @@
       "url": "/en/blog/category/valuables-collections/page/2/",
       "from": [
         "/en/blog/category/valuables-collections/"
-      ]
-    },
-    {
-      "url": "/en/professional-liability-insurance-portugal/",
-      "from": [
-        "/seguros/responsabilidade-civil-profissional/"
       ]
     },
     {

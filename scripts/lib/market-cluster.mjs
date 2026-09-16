@@ -38,6 +38,27 @@ import {
 } from './lang-selector.mjs';
 import { marketPairs } from './market-hreflang.mjs';
 import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
+import plQuoteFormStrings from '../../data/i18n/quote-form/pl.json' with { type: 'json' };
+import svQuoteFormStrings from '../../data/i18n/quote-form/sv.json' with { type: 'json' };
+import daQuoteFormStrings from '../../data/i18n/quote-form/da.json' with { type: 'json' };
+import zhQuoteFormStrings from '../../data/i18n/quote-form/zh.json' with { type: 'json' };
+
+/**
+ * Especificação v2, Parte B — the quote-form i18n strings (labels, errors,
+ * success text, nationality datalist), keyed by the JSON files' own
+ * language code. A market's own `htmlLang` names which one applies —
+ * derived with `.slice(0, 2)` because /zh/'s htmlLang is `zh-CN` — the same
+ * lookup netlify/functions/submission-created.mjs and public/js/
+ * ar-quote-form.js each do independently from their own `lang` value, so
+ * all three sides agree without a shared constant to keep in sync.
+ */
+const QUOTE_FORM_STRINGS = {
+  pl: plQuoteFormStrings,
+  sv: svQuoteFormStrings,
+  da: daQuoteFormStrings,
+  zh: zhQuoteFormStrings,
+};
+const wizardStrings = (market) => QUOTE_FORM_STRINGS[market.htmlLang.slice(0, 2)];
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
@@ -462,6 +483,123 @@ ${selectOptions(f.prefLangOptions)}
 </section>`;
 }
 
+function nationalityDatalist(countries) {
+  return Object.entries(countries)
+    .map(([code, name]) => `<option value="${esc(name)}" data-code="${code}"></option>`)
+    .join('');
+}
+
+/**
+ * Especificação v2, Parte B — the dedicated wizard form for a page that
+ * opts in via `page.wizard`. Same three-step shape as every other
+ * converted ramo (DE, NL): a shared transversal block (Passo 1), the
+ * ramo's own fields (Passo 2, supplied by the page as raw HTML — same
+ * "page owns its own content" contract `page.sections` already has, not a
+ * new one), and confirmation (Passo 3). `formHtml` above is untouched and
+ * still serves every page without a `wizard` config (hub, moving, buying
+ * a property, the guide) — the shared de-angebot-anfrage/nl-offerte-
+ * aanvraag-style branch-select form those keep for now.
+ *
+ * Field names are the same language-neutral set used by every converted
+ * ramo across DE/NL (nome/nif/data_nascimento/morada/localidade/
+ * codigo_postal/telefone/email/nacionalidade_nome+nacionalidade/
+ * residente_fiscal/data_inicio/rgpd) — this is what lets netlify/functions/
+ * submission-created.mjs's renderAllFields/QUOTE_LABELS_* stay generic
+ * across every language rather than branching per market.
+ */
+function wizardFormHtml(market, page) {
+  const w = page.wizard;
+  const t = wizardStrings(market);
+  const c = t.common;
+  const ui = market.ui;
+  const idp = w.idPrefix;
+  const steps = [c.wizard.passo_1, w.stepLabel2, c.wizard.passo_3];
+  const stepCount = steps.length;
+
+  const progressItems = steps
+    .map(
+      (label, i) =>
+        `<li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">${i + 1}. ${esc(label)}</span></li>`
+    )
+    .join('\n        ');
+
+  return `<section class="section form-section" aria-labelledby="${ui.formId}-title" id="${ui.formId}">
+  <div class="form-shell lp-form-card">
+    <h2 id="${ui.formId}-title">${esc(w.heading)}</h2>
+    <p class="form-intro">${esc(w.intro)}</p>
+
+    <form name="${w.formName}" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/${market.key}/#${ui.formId}">
+      <input type="hidden" name="form-name" value="${w.formName}">
+      <input type="hidden" name="ramo" value="${esc(w.ramo)}">
+      <input type="hidden" name="source_url" id="${idp}-source" value="">
+      <input type="hidden" name="dados_dinamicos" value="">
+      <p class="contact-form-honeypot"><label>${esc(ui.honeypot)} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="${stepCount}" aria-valuenow="1">
+        ${progressItems}
+      </ol>
+
+      <div data-wizard-step>
+        <div class="contact-form-field"><label for="${idp}-nome">${esc(c.fields.nome_completo)} *</label><input type="text" id="${idp}-nome" name="nome" autocomplete="name" required></div>
+        <div class="contact-form-field"><label for="${idp}-nif">${esc(c.fields.nif)} *</label><input type="text" id="${idp}-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required${ltrInput(market)}></div>
+        <div class="contact-form-field"><label for="${idp}-nascimento">${esc(c.fields.data_nascimento)} *</label><input type="date" id="${idp}-nascimento" name="data_nascimento" data-validate="${w.adultBirthDate ? 'birth-date-adult' : 'birth-date'}" required></div>
+        <div class="contact-form-field"><label for="${idp}-morada">${esc(c.fields.morada)} *</label><input type="text" id="${idp}-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="${idp}-localidade">${esc(c.fields.localidade)} *</label><input type="text" id="${idp}-localidade" name="localidade" autocomplete="address-level2" required></div>
+        <div class="contact-form-field"><label for="${idp}-cp">${esc(c.fields.codigo_postal)} *</label><input type="text" id="${idp}-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required${ltrInput(market)}></div>
+        <div class="contact-form-field"><label for="${idp}-telefone">${esc(c.fields.telefone)} *</label><input type="tel" id="${idp}-telefone" name="telefone" autocomplete="tel" required${ltrInput(market)}></div>
+        <div class="contact-form-field"><label for="${idp}-email">${esc(c.fields.email)} *</label><input type="email" id="${idp}-email" name="email" autocomplete="email" required${ltrInput(market)}></div>
+        <div class="contact-form-field">
+          <label for="${idp}-nacionalidade">${esc(c.fields.nacionalidade)} *</label>
+          <input type="text" id="${idp}-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="${idp}-nacionalidade-code" autocomplete="off" required>
+          <input type="hidden" name="nacionalidade" id="${idp}-nacionalidade-code">
+        </div>
+        <div class="contact-form-field">
+          <label for="${idp}-residente-fiscal">${esc(c.fields.residente_fiscal)} *</label>
+          <select id="${idp}-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
+            <option value="">${esc(ui.selectPlaceholder)}</option>
+            <option value="sim">${esc(c.fields.residente_fiscal_sim)}</option>
+            <option value="nao">${esc(c.fields.residente_fiscal_nao)}</option>
+          </select>
+        </div>
+        <p class="wizard-helper" id="${idp}-residente-fiscal-info" hidden>${esc(c.helpers.residente_fiscal_nao_info)}</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} →</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+${w.fieldsHtml}
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← ${esc(c.wizard.anterior)}</button><button type="button" class="wizard-nav-next" data-wizard-next>${esc(c.wizard.seguinte)} →</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="${idp}-inicio">${esc(c.fields.data_inicio)} *</label><input type="date" id="${idp}-inicio" name="data_inicio" data-validate="start-date" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="${idp}-rgpd"><input type="checkbox" id="${idp}-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> ${esc(c.fields.rgpd_consentimento)} *</label>
+        </div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← ${esc(c.wizard.anterior)}</button><button type="submit" class="contact-form-submit">${esc(w.submitLabel || ui.formSubmit)} →</button></div>
+      </div>
+
+      <p class="lp-form-micro">${esc(w.microNote)}</p>
+    </form>
+    <div class="contact-form-success" id="${idp}Success">
+      <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+      <h3>${esc(c.success.titulo)}</h3>
+      <p>${esc(c.success.corpo)}</p>
+    </div>
+    <datalist id="nationality-list">${nationalityDatalist(t.countries)}</datalist>
+  </div>
+</section>`;
+}
+
+
+function wizardScript(page) {
+  const extra = (page.wizard.scripts || []).map((s) => `<script defer src="/js/${s}"></script>`).join('\n');
+  return `<script defer src="/js/lead-branch-fields.js"></script>
+<script defer src="/js/quote-validators.js"></script>
+<script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/quote-nationality.js"></script>
+${extra ? extra + '\n' : ''}<script defer src="/js/quote-wizard.js"></script>`;
+}
+
 /* ─────────────── client script ─────────────── */
 
 function formScript(market) {
@@ -801,7 +939,7 @@ ${jsonLd(market, page)}
 
 <link rel="stylesheet" href="/css/ar-cluster.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
-${LANGSEL_CSS_LINK}
+${page.wizard ? '<link rel="stylesheet" href="/css/ar-property.css">\n<link rel="stylesheet" href="/css/ar-quote-wizard.css">\n' : ''}${LANGSEL_CSS_LINK}
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
 <script>
@@ -856,7 +994,7 @@ ${faqHtml(market, page)}
 
 ${related}
 
-${formHtml(market, page)}
+${page.wizard ? wizardFormHtml(market, page) : formHtml(market, page)}
 </article>
 
 </main>
@@ -867,8 +1005,7 @@ ${footerHtml(market, page)}
   <a href="#${ui.formId}">${ui.mobileCta}</a>
 </div>
 
-${formScript(market)}
-<script defer src="/js/lead-branch-fields.js"></script>
+${page.wizard ? wizardScript(page) : `${formScript(market)}\n<script defer src="/js/lead-branch-fields.js"></script>`}
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${LANGSEL_SCRIPT_TAG}
 ${cookieBanner(market)}

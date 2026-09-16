@@ -63,6 +63,12 @@
     // Especificação v2, Parte A (NL) — NL Saúde (zorgverzekering) is the
     // first NL page to use this repeater.
     nl: { name: 'Volledige naam', dob: 'Geboortedatum', nif: 'NIF (Portugees fiscaal nummer)', nifPlaceholder: '9 cijfers', remove: 'Deze persoon verwijderen', person: 'Persoon' },
+    // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+    // converted together.
+    pl: { name: 'Imię i nazwisko', dob: 'Data urodzenia', nif: 'NIF (portugalski numer podatkowy)', nifPlaceholder: '9 cyfr', remove: 'Usuń tę osobę', person: 'Osoba' },
+    sv: { name: 'Fullständigt namn', dob: 'Födelsedatum', nif: 'NIF (portugisiskt skattenummer)', nifPlaceholder: '9 siffror', remove: 'Ta bort denna person', person: 'Person' },
+    da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF (portugisisk skattenummer)', nifPlaceholder: '9 cifre', remove: 'Fjern denne person', person: 'Person' },
+    zh: { name: '全名', dob: '出生日期', nif: 'NIF（葡萄牙税号）', nifPlaceholder: '9位数字', remove: '移除此人', person: '被保险人' },
   };
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;

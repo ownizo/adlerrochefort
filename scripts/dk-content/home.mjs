@@ -31,14 +31,51 @@ export const HOME_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Husforsikring' }],
   pullquote: 'Forsikringssummen afgør erstatningen. Præmien afgør kun, hvad du betaler for at have den forkert.',
   schemaType: 'Article',
-  formHeading: 'Få et tilbud på husforsikring',
-  formBranch: 'DK · Bolig',
-  formSubject: 'Husforsikring i Portugal',
-  formCta: 'Få et tilbud',
-  formIntro:
-    'Boligtype, areal, byggeår og hvor ofte boligen er beboet — så kan vi regne på det. Kender du ikke genopførelsesprisen, finder vi den sammen.',
-  formPlaceholder:
-    'For eksempel: villa fra 1998 i Lagos, 180 m², bruges fem måneder om året, ingen tidligere skader.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared dk-forespoergsel branch-select form.
+  wizard: {
+    idPrefix: 'dk-hab',
+    formName: 'dk-husforsikring-wizard',
+    ramo: 'Husforsikring',
+    heading: 'Få et tilbud på husforsikring',
+    intro: 'Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.',
+    stepLabel2: 'Boligen',
+    submitLabel: 'Få et tilbud',
+    microNote:
+      'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
+    scripts: ['quote-field-toggle.js'],
+    fieldsHtml: `        <div class="contact-form-field">
+          <label for="dk-hab-regime">Boligens anvendelse *</label>
+          <select id="dk-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">Vælg</option>
+            <option value="permanente">Fast bopæl</option>
+            <option value="holiday_home">Fritidsbolig / anden bolig</option>
+            <option value="alojamento_local">Alojamento Local (korttidsudlejning)</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="dk-hab-al-regime">Type korttidsudlejning *</label>
+            <select id="dk-hab-al-regime" name="al_regime" required disabled>
+              <option value="">Vælg</option>
+              <option value="tempo_inteiro">Fuld tid</option>
+              <option value="parcial">Delvis (delt brug af boligen)</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="dk-hab-ano-construcao">Byggeår *</label><input type="number" id="dk-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="dk-hab-area">Bruttoareal (m²) *</label><input type="number" id="dk-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="dk-hab-wc">Antal badeværelser *</label><input type="number" id="dk-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="dk-hab-obras-check"><input type="checkbox" id="dk-hab-obras-check" data-field-toggle="dk-hab-obras-group"> Har I renoveret inden for de seneste år?</label>
+        </div>
+        <div id="dk-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="dk-hab-obras-ano">Renoveringsår *</label><input type="number" id="dk-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="dk-hab-obras-desc">Beskriv det udførte arbejde *</label><textarea id="dk-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="dk-hab-capital-edificio">Forsikringssum bygning (€) *</label><input type="number" id="dk-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="dk-hab-capital-conteudo">Forsikringssum indbo (€) *</label><input type="number" id="dk-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="policen">
   <div class="container narrow article-body">

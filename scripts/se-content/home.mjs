@@ -33,14 +33,51 @@ export const HOME_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Hemförsäkring' }],
   pullquote: 'Försäkringsbeloppet är inte vad du betalade. Det är vad det kostar att bygga upp det som brann.',
   schemaType: 'Article',
-  formHeading: 'Begär offert på bostadsförsäkring',
-  formBranch: 'SE · Hem',
-  formSubject: 'Hemförsäkring i Portugal',
-  formCta: 'Begär offert',
-  formIntro:
-    'Vi behöver några uppgifter om bostaden: typ, yta, byggår, om den är permanentbostad och om det finns bolån.',
-  formPlaceholder:
-    'Till exempel: lägenhet 95 m² i Cascais, hus från 2004, condomínio, bolån hos Millennium, permanentbostad.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared se-forfragan branch-select form.
+  wizard: {
+    idPrefix: 'se-hab',
+    formName: 'se-hemforsakring-wizard',
+    ramo: 'Hemförsäkring',
+    heading: 'Begär offert på bostadsförsäkring',
+    intro: 'Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.',
+    stepLabel2: 'Bostaden',
+    submitLabel: 'Begär offert',
+    microNote:
+      'Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.',
+    scripts: ['quote-field-toggle.js'],
+    fieldsHtml: `        <div class="contact-form-field">
+          <label for="se-hab-regime">Bostadens användning *</label>
+          <select id="se-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">Välj</option>
+            <option value="permanente">Permanent bostad</option>
+            <option value="holiday_home">Fritidshus / andrahandsbostad</option>
+            <option value="alojamento_local">Alojamento Local (korttidsuthyrning)</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="se-hab-al-regime">Typ av korttidsuthyrning *</label>
+            <select id="se-hab-al-regime" name="al_regime" required disabled>
+              <option value="">Välj</option>
+              <option value="tempo_inteiro">Heltid</option>
+              <option value="parcial">Deltid (delad användning av bostaden)</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="se-hab-ano-construcao">Byggår *</label><input type="number" id="se-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="se-hab-area">Bruttoarea (m²) *</label><input type="number" id="se-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="se-hab-wc">Antal badrum *</label><input type="number" id="se-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="se-hab-obras-check"><input type="checkbox" id="se-hab-obras-check" data-field-toggle="se-hab-obras-group"> Har ni renoverat under de senaste åren?</label>
+        </div>
+        <div id="se-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="se-hab-obras-ano">Renoveringsår *</label><input type="number" id="se-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="se-hab-obras-desc">Beskriv de utförda arbetena *</label><textarea id="se-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="se-hab-capital-edificio">Försäkringsbelopp byggnad (€) *</label><input type="number" id="se-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="se-hab-capital-conteudo">Försäkringsbelopp lösöre (€) *</label><input type="number" id="se-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="hem-eller-villa">
   <div class="container narrow article-body">
