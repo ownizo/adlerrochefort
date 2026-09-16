@@ -392,6 +392,49 @@ const PAGES = [
       "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+  // converted together. Car (Auto) is the third of the four ramos, same
+  // field set as PT/EN/DE Auto.
+  {
+    label: "PL /pl/ubezpieczenie-samochodu-portugalia/",
+    path: "pl/ubezpieczenie-samochodu-portugalia/index.html",
+    expectedFormName: "pl-ubezpieczenie-samochodu-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "SE /se/bilforsakring-portugal/",
+    path: "se/bilforsakring-portugal/index.html",
+    expectedFormName: "se-bilforsakring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "DK /dk/bilforsikring-portugal/",
+    path: "dk/bilforsikring-portugal/index.html",
+    expectedFormName: "dk-bilforsikring-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
+  {
+    label: "ZH /zh/car-insurance-portugal/",
+    path: "zh/car-insurance-portugal/index.html",
+    expectedFormName: "zh-car-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "matricula", "data_carta", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

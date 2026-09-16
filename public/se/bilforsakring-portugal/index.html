@@ -184,6 +184,8 @@
 
 <link rel="stylesheet" href="/css/ar-cluster.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+<link rel="stylesheet" href="/css/ar-property.css">
+<link rel="stylesheet" href="/css/ar-quote-wizard.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
@@ -390,174 +392,73 @@
   </div>
 </section>
 
-<section class="section form-section" aria-labelledby="lead-title" id="offert">
-  <div class="form-shell">
-    <h2 id="lead-title">Begär offert på bilförsäkring</h2>
-    <p class="form-intro">Berätta om fordonet, nuvarande registrering och din tidplan — vi ordnar skyddet så att det inte uppstår något glapp.</p>
-    <p class="form-lang-note">Formuläret är på svenska. Vi svarar och sköter ärendet på engelska, skriftligt.</p>
+<section class="section form-section" aria-labelledby="offert-title" id="offert">
+  <div class="form-shell lp-form-card">
+    <h2 id="offert-title">Begär offert på bilförsäkring</h2>
+    <p class="form-intro">Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.</p>
 
-    <form
-      class="lead-form"
-      id="leadForm"
-      name="se-offertforfragan"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/se/#offert"
-      novalidate>
+    <form name="se-bilforsakring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/se/#offert">
+      <input type="hidden" name="form-name" value="se-bilforsakring-wizard">
+      <input type="hidden" name="ramo" value="Bilförsäkring">
+      <input type="hidden" name="source_url" id="se-auto-source" value="">
+      <input type="hidden" name="dados_dinamicos" value="">
+      <p class="contact-form-honeypot"><label>Fyll inte i detta fält <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-      <input type="hidden" name="form-name" value="se-offertforfragan">
-      <input type="hidden" name="source" value="bilforsakring-portugal">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="subject" value="Ny förfrågan (SE) — Bilförsäkring i Portugal">
-      <input type="hidden" name="language" value="sv">
-      <input type="hidden" name="market" value="sweden">
-      <input type="hidden" name="product_interest" value="SE · Bil">
-      <p class="visually-hidden"><label>Fyll inte i detta fält <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Personuppgifter</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. Fordonet</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Bekräftelse</span></li>
+      </ol>
 
-      <div class="field">
-        <label for="f-name">Namn <span class="req" aria-hidden="true">*</span></label>
-        <input type="text" id="f-name" name="name" autocomplete="name"
-               required aria-required="true" aria-describedby="err-name">
-        <span class="field-error" id="err-name" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-email">E-postadress <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
-               required aria-required="true" aria-describedby="err-email">
-        <span class="field-error" id="err-email" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
-        <p class="field-help" id="help-phone">Ange numret med landsnummer, t.ex. +46 70 123 45 67.</p>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
-        <span class="field-error" id="err-phone" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-localidade">Ort i Portugal</label>
-        <input type="text" id="f-localidade" name="localidade" placeholder="t.ex. Lissabon, Cascais, Lagos, Albufeira">
-      </div>
-
-      <div class="field">
-        <label for="f-country">Land du bor i nu</label>
-        <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="t.ex. Sverige">
-      </div>
-
-      <div class="field">
-        <label for="f-residence">Din status i Portugal</label>
-        <select id="f-residence" name="residence_status">
-          <option value="" selected>Välj</option>
-          <option value="Planning move">Planerar att flytta</option>
-          <option value="Recently arrived">Nyligen flyttat hit</option>
-          <option value="Resident">Bosatt i Portugal</option>
-          <option value="Non-resident owner">Äger bostad men bor inte här permanent</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-type">Vad gäller förfrågan? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
-          <option value="" disabled>Välj</option>
-          <option value="SE · Hem">Hem- eller villaförsäkring</option>
-          <option value="SE · Sjukvård">Sjukvårdsförsäkring</option>
-          <option value="SE · Bil" selected>Bilförsäkring</option>
-          <option value="SE · Ansvar">Ansvarsförsäkring (privat eller yrkesmässig)</option>
-          <option value="SE · Annat">Annat eller vet inte än</option>
-        </select>
-        <span class="field-error" id="err-type" aria-live="polite"></span>
-      </div>
-
-        <div class="form-branch-fields" data-branch="SE · Hem" hidden>
-          <span class="form-branch-legend">Några uppgifter om bostaden</span>
-          <div class="field">
-            <label for="f-home_property_type">Typ av bostad</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="t.ex. lägenhet i condomínio, villa, fritidshus" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Uppskattad återuppbyggnadskostnad (om du vet)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="t.ex. 180 000 EUR — vet du inte, hjälper vi till att räkna" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Ungefärligt värde på lösöret</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="t.ex. 30 000 EUR inklusive möbler och elektronik" disabled>
-          </div>
+      <div data-wizard-step>
+        <div class="contact-form-field"><label for="se-auto-nome">Fullständigt namn *</label><input type="text" id="se-auto-nome" name="nome" autocomplete="name" required></div>
+        <div class="contact-form-field"><label for="se-auto-nif">NIF (portugisiskt skattenummer) *</label><input type="text" id="se-auto-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
+        <div class="contact-form-field"><label for="se-auto-nascimento">Födelsedatum *</label><input type="date" id="se-auto-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="se-auto-morada">Fullständig adress *</label><input type="text" id="se-auto-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="se-auto-localidade">Ort *</label><input type="text" id="se-auto-localidade" name="localidade" autocomplete="address-level2" required></div>
+        <div class="contact-form-field"><label for="se-auto-cp">Postnummer *</label><input type="text" id="se-auto-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
+        <div class="contact-form-field"><label for="se-auto-telefone">Telefonnummer *</label><input type="tel" id="se-auto-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="se-auto-email">E-postadress *</label><input type="email" id="se-auto-email" name="email" autocomplete="email" required></div>
+        <div class="contact-form-field">
+          <label for="se-auto-nacionalidade">Nationalitet *</label>
+          <input type="text" id="se-auto-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="se-auto-nacionalidade-code" autocomplete="off" required>
+          <input type="hidden" name="nacionalidade" id="se-auto-nacionalidade-code">
         </div>
-        <div class="form-branch-fields" data-branch="SE · Sjukvård" hidden>
-          <span class="form-branch-legend">Vilka som ska omfattas</span>
-          <div class="field">
-            <label for="f-health_household">Antal personer och åldrar</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="t.ex. två vuxna (43 och 41) samt ett barn (6)" disabled>
-          </div>
+        <div class="contact-form-field">
+          <label for="se-auto-residente-fiscal">Är du skattemässigt bosatt i Portugal? *</label>
+          <select id="se-auto-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
+            <option value="">undefined</option>
+            <option value="sim">Ja</option>
+            <option value="nao">Nej</option>
+          </select>
         </div>
-        <div class="form-branch-fields" data-branch="SE · Bil" hidden>
-          <span class="form-branch-legend">Några uppgifter om bilen</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Märke, modell och årsmodell</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="t.ex. Volvo V60 2018, diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Nuvarande registrering</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="t.ex. svenska skyltar, ska importeras / redan portugisiska" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Skadefri tid</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="t.ex. 12 år skadefritt, intyg från svenskt bolag" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Ansvar" hidden>
-          <span class="form-branch-legend">Vad skyddet ska gälla</span>
-          <div class="field">
-            <label for="f-liability_activity">Vilken verksamhet eller situation</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="t.ex. IT-konsult, fysioterapeut, uthyrning av bostad, privatliv" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Var finns kunderna eller tredje man</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="t.ex. kunder i Sverige och Portugal, patienter tas emot i Lissabon" disabled>
-          </div>
-        </div>
-
-      <div class="field">
-        <label for="f-start">När ska skyddet börja gälla?</label>
-        <input type="text" id="f-start" name="start_date" placeholder="t.ex. 1 mars, på dagen för escritura, så snart som möjligt">
+        <p class="wizard-helper" id="se-auto-residente-fiscal-info" hidden>Adressen behövs fortfarande. Utan skattemässig hemvist i Portugal kan det i vissa fall inte vara möjligt att utfärda försäkringen — vi granskar ändå din specifika situation.</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>
       </div>
 
-      <div class="field">
-        <label for="f-preflang">Språk för korrespondensen</label>
-        <select id="f-preflang" name="preferred_language">
-          <option value="English">Engelska — vårt arbetsspråk</option>
-          <option value="Portuguese">Portugisiska</option>
-        </select>
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="se-auto-carta">Datum för körkortets utfärdande *</label><input type="date" id="se-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="se-auto-carta-idade-info" hidden>Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>
       </div>
 
-      <div class="field">
-        <label for="f-message">Vad bör vi känna till?</label>
-        <textarea id="f-message" name="message" rows="6"
-                  placeholder="Till exempel: Volvo XC60 2019, svenska skyltar, planerad import i november, sju skadefria år hos svenskt bolag."></textarea>
-      </div>
-
-      <div class="field consent-block">
-        <div class="consent">
-          <input type="checkbox" id="f-consent" name="consent" value="Ja"
-                 required aria-required="true" aria-describedby="err-consent">
-          <label for="f-consent">Jag samtycker till att Adler &amp; Rochefort kontaktar mig om denna förfrågan och behandlar mina uppgifter för det syftet.</label>
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="se-auto-inicio">Önskat startdatum *</label><input type="date" id="se-auto-inicio" name="data_inicio" data-validate="start-date" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="se-auto-rgpd"><input type="checkbox" id="se-auto-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> Jag samtycker till att mina uppgifter används för att förbereda denna offert, i enlighet med GDPR. *</label>
         </div>
-        <span class="field-error" id="err-consent" aria-live="polite"></span>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="submit" class="contact-form-submit">Begär offert →</button></div>
       </div>
 
-      <button type="submit" class="form-submit" id="leadSubmit">Begär offert</button>
-      <p class="form-footnote">Vi svarar inom en arbetsdag. En förfrågan innebär ingen bindning.</p>
+      <p class="lp-form-micro">Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se &lt;a href=&quot;/en/privacy-policy&quot; hreflang=&quot;en&quot;&gt;integritetspolicyn&lt;/a&gt;.</p>
     </form>
-    <div class="form-success" id="leadSuccess">
-      <div class="tick">&#10003;</div>
-      <h3>Tack — din förfrågan har kommit fram.</h3>
-      <p>Vi svarar inom en arbetsdag, skriftligt och på engelska. Är det brådskande, ring +351 928 226 570.</p>
+    <div class="contact-form-success" id="se-autoSuccess">
+      <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+      <h3>Tack!</h3>
+      <p>Din förfrågan har tagits emot. Vi behandlar den och svarar inom 24 arbetstimmar.</p>
     </div>
+    <datalist id="nationality-list"><option value="Afghanistan" data-code="AF"></option><option value="Åland" data-code="AX"></option><option value="Albanien" data-code="AL"></option><option value="Algeriet" data-code="DZ"></option><option value="Amerikanska Jungfruöarna" data-code="VI"></option><option value="Amerikanska Samoa" data-code="AS"></option><option value="Andorra" data-code="AD"></option><option value="Angola" data-code="AO"></option><option value="Anguilla" data-code="AI"></option><option value="Antarktis" data-code="AQ"></option><option value="Antigua och Barbuda" data-code="AG"></option><option value="Argentina" data-code="AR"></option><option value="Armenien" data-code="AM"></option><option value="Aruba" data-code="AW"></option><option value="Australien" data-code="AU"></option><option value="Azerbajdzjan" data-code="AZ"></option><option value="Bahamas" data-code="BS"></option><option value="Bahrain" data-code="BH"></option><option value="Bangladesh" data-code="BD"></option><option value="Barbados" data-code="BB"></option><option value="Belarus" data-code="BY"></option><option value="Belgien" data-code="BE"></option><option value="Belize" data-code="BZ"></option><option value="Benin" data-code="BJ"></option><option value="Bermuda" data-code="BM"></option><option value="Bhutan" data-code="BT"></option><option value="Bolivia" data-code="BO"></option><option value="Bosnien och Hercegovina" data-code="BA"></option><option value="Botswana" data-code="BW"></option><option value="Bouvetön" data-code="BV"></option><option value="Brasilien" data-code="BR"></option><option value="Brittiska Jungfruöarna" data-code="VG"></option><option value="Brittiska territoriet i Indiska oceanen" data-code="IO"></option><option value="Brunei" data-code="BN"></option><option value="Bulgarien" data-code="BG"></option><option value="Burkina Faso" data-code="BF"></option><option value="Burundi" data-code="BI"></option><option value="Caymanöarna" data-code="KY"></option><option value="Centralafrikanska republiken" data-code="CF"></option><option value="Chile" data-code="CL"></option><option value="Colombia" data-code="CO"></option><option value="Cooköarna" data-code="CK"></option><option value="Costa Rica" data-code="CR"></option><option value="Curaçao" data-code="CW"></option><option value="Cypern" data-code="CY"></option><option value="Danmark" data-code="DK"></option><option value="Djibouti" data-code="DJ"></option><option value="Dominica" data-code="DM"></option><option value="Dominikanska republiken" data-code="DO"></option><option value="Ecuador" data-code="EC"></option><option value="Egypten" data-code="EG"></option><option value="Ekvatorialguinea" data-code="GQ"></option><option value="El Salvador" data-code="SV"></option><option value="Elfenbenskusten" data-code="CI"></option><option value="Eritrea" data-code="ER"></option><option value="Estland" data-code="EE"></option><option value="Eswatini" data-code="SZ"></option><option value="Etiopien" data-code="ET"></option><option value="Falklandsöarna" data-code="FK"></option><option value="Färöarna" data-code="FO"></option><option value="Fiji" data-code="FJ"></option><option value="Filippinerna" data-code="PH"></option><option value="Finland" data-code="FI"></option><option value="Förenade Arabemiraten" data-code="AE"></option><option value="Frankrike" data-code="FR"></option><option value="Franska Guyana" data-code="GF"></option><option value="Franska Polynesien" data-code="PF"></option><option value="Franska sydterritorierna" data-code="TF"></option><option value="Gabon" data-code="GA"></option><option value="Gambia" data-code="GM"></option><option value="Georgien" data-code="GE"></option><option value="Ghana" data-code="GH"></option><option value="Gibraltar" data-code="GI"></option><option value="Grekland" data-code="GR"></option><option value="Grenada" data-code="GD"></option><option value="Grönland" data-code="GL"></option><option value="Guadeloupe" data-code="GP"></option><option value="Guam" data-code="GU"></option><option value="Guatemala" data-code="GT"></option><option value="Guernsey" data-code="GG"></option><option value="Guinea" data-code="GN"></option><option value="Guinea-Bissau" data-code="GW"></option><option value="Guyana" data-code="GY"></option><option value="Haiti" data-code="HT"></option><option value="Heardön och McDonaldöarna" data-code="HM"></option><option value="Honduras" data-code="HN"></option><option value="Hongkong SAR" data-code="HK"></option><option value="Indien" data-code="IN"></option><option value="Indonesien" data-code="ID"></option><option value="Irak" data-code="IQ"></option><option value="Iran" data-code="IR"></option><option value="Irland" data-code="IE"></option><option value="Island" data-code="IS"></option><option value="Isle of Man" data-code="IM"></option><option value="Israel" data-code="IL"></option><option value="Italien" data-code="IT"></option><option value="Jamaica" data-code="JM"></option><option value="Japan" data-code="JP"></option><option value="Jemen" data-code="YE"></option><option value="Jersey" data-code="JE"></option><option value="Jordanien" data-code="JO"></option><option value="Julön" data-code="CX"></option><option value="Kambodja" data-code="KH"></option><option value="Kamerun" data-code="CM"></option><option value="Kanada" data-code="CA"></option><option value="Kap Verde" data-code="CV"></option><option value="Karibiska Nederländerna" data-code="BQ"></option><option value="Kazakstan" data-code="KZ"></option><option value="Kenya" data-code="KE"></option><option value="Kina" data-code="CN"></option><option value="Kirgizistan" data-code="KG"></option><option value="Kiribati" data-code="KI"></option><option value="Kokosöarna" data-code="CC"></option><option value="Komorerna" data-code="KM"></option><option value="Kongo-Brazzaville" data-code="CG"></option><option value="Kongo-Kinshasa" data-code="CD"></option><option value="Kroatien" data-code="HR"></option><option value="Kuba" data-code="CU"></option><option value="Kuwait" data-code="KW"></option><option value="Laos" data-code="LA"></option><option value="Lesotho" data-code="LS"></option><option value="Lettland" data-code="LV"></option><option value="Libanon" data-code="LB"></option><option value="Liberia" data-code="LR"></option><option value="Libyen" data-code="LY"></option><option value="Liechtenstein" data-code="LI"></option><option value="Litauen" data-code="LT"></option><option value="Luxemburg" data-code="LU"></option><option value="Macao SAR" data-code="MO"></option><option value="Madagaskar" data-code="MG"></option><option value="Malawi" data-code="MW"></option><option value="Malaysia" data-code="MY"></option><option value="Maldiverna" data-code="MV"></option><option value="Mali" data-code="ML"></option><option value="Malta" data-code="MT"></option><option value="Marocko" data-code="MA"></option><option value="Marshallöarna" data-code="MH"></option><option value="Martinique" data-code="MQ"></option><option value="Mauretanien" data-code="MR"></option><option value="Mauritius" data-code="MU"></option><option value="Mayotte" data-code="YT"></option><option value="Mexiko" data-code="MX"></option><option value="Mikronesien" data-code="FM"></option><option value="Moçambique" data-code="MZ"></option><option value="Moldavien" data-code="MD"></option><option value="Monaco" data-code="MC"></option><option value="Mongoliet" data-code="MN"></option><option value="Montenegro" data-code="ME"></option><option value="Montserrat" data-code="MS"></option><option value="Myanmar (Burma)" data-code="MM"></option><option value="Namibia" data-code="NA"></option><option value="Nauru" data-code="NR"></option><option value="Nederländerna" data-code="NL"></option><option value="Nepal" data-code="NP"></option><option value="Nicaragua" data-code="NI"></option><option value="Niger" data-code="NE"></option><option value="Nigeria" data-code="NG"></option><option value="Niue" data-code="NU"></option><option value="Nordkorea" data-code="KP"></option><option value="Nordmakedonien" data-code="MK"></option><option value="Nordmarianerna" data-code="MP"></option><option value="Norfolkön" data-code="NF"></option><option value="Norge" data-code="NO"></option><option value="Nya Kaledonien" data-code="NC"></option><option value="Nya Zeeland" data-code="NZ"></option><option value="Oman" data-code="OM"></option><option value="Österrike" data-code="AT"></option><option value="Östtimor" data-code="TL"></option><option value="Pakistan" data-code="PK"></option><option value="Palau" data-code="PW"></option><option value="Palestinska territorierna" data-code="PS"></option><option value="Panama" data-code="PA"></option><option value="Papua Nya Guinea" data-code="PG"></option><option value="Paraguay" data-code="PY"></option><option value="Peru" data-code="PE"></option><option value="Pitcairnöarna" data-code="PN"></option><option value="Polen" data-code="PL"></option><option value="Portugal" data-code="PT"></option><option value="Puerto Rico" data-code="PR"></option><option value="Qatar" data-code="QA"></option><option value="Réunion" data-code="RE"></option><option value="Rumänien" data-code="RO"></option><option value="Rwanda" data-code="RW"></option><option value="Ryssland" data-code="RU"></option><option value="S:t Barthélemy" data-code="BL"></option><option value="S:t Helena" data-code="SH"></option><option value="S:t Kitts och Nevis" data-code="KN"></option><option value="S:t Lucia" data-code="LC"></option><option value="S:t Pierre och Miquelon" data-code="PM"></option><option value="S:t Vincent och Grenadinerna" data-code="VC"></option><option value="Saint-Martin" data-code="MF"></option><option value="Salomonöarna" data-code="SB"></option><option value="Samoa" data-code="WS"></option><option value="San Marino" data-code="SM"></option><option value="São Tomé och Príncipe" data-code="ST"></option><option value="Saudiarabien" data-code="SA"></option><option value="Schweiz" data-code="CH"></option><option value="Senegal" data-code="SN"></option><option value="Serbien" data-code="RS"></option><option value="Seychellerna" data-code="SC"></option><option value="Sierra Leone" data-code="SL"></option><option value="Singapore" data-code="SG"></option><option value="Sint Maarten" data-code="SX"></option><option value="Slovakien" data-code="SK"></option><option value="Slovenien" data-code="SI"></option><option value="Somalia" data-code="SO"></option><option value="Spanien" data-code="ES"></option><option value="Sri Lanka" data-code="LK"></option><option value="Storbritannien" data-code="GB"></option><option value="Sudan" data-code="SD"></option><option value="Surinam" data-code="SR"></option><option value="Svalbard och Jan Mayen" data-code="SJ"></option><option value="Sverige" data-code="SE"></option><option value="Sydafrika" data-code="ZA"></option><option value="Sydgeorgien och Sydsandwichöarna" data-code="GS"></option><option value="Sydkorea" data-code="KR"></option><option value="Sydsudan" data-code="SS"></option><option value="Syrien" data-code="SY"></option><option value="Tadzjikistan" data-code="TJ"></option><option value="Taiwan" data-code="TW"></option><option value="Tanzania" data-code="TZ"></option><option value="Tchad" data-code="TD"></option><option value="Thailand" data-code="TH"></option><option value="Tjeckien" data-code="CZ"></option><option value="Togo" data-code="TG"></option><option value="Tokelauöarna" data-code="TK"></option><option value="Tonga" data-code="TO"></option><option value="Trinidad och Tobago" data-code="TT"></option><option value="Tunisien" data-code="TN"></option><option value="Turkiet" data-code="TR"></option><option value="Turkmenistan" data-code="TM"></option><option value="Turks- och Caicosöarna" data-code="TC"></option><option value="Tuvalu" data-code="TV"></option><option value="Tyskland" data-code="DE"></option><option value="USA" data-code="US"></option><option value="USA:s yttre öar" data-code="UM"></option><option value="Uganda" data-code="UG"></option><option value="Ukraina" data-code="UA"></option><option value="Ungern" data-code="HU"></option><option value="Uruguay" data-code="UY"></option><option value="Uzbekistan" data-code="UZ"></option><option value="Vanuatu" data-code="VU"></option><option value="Västsahara" data-code="EH"></option><option value="Vatikanstaten" data-code="VA"></option><option value="Venezuela" data-code="VE"></option><option value="Vietnam" data-code="VN"></option><option value="Wallis- och Futunaöarna" data-code="WF"></option><option value="Zambia" data-code="ZM"></option><option value="Zimbabwe" data-code="ZW"></option></datalist>
   </div>
 </section>
 </article>
@@ -662,148 +563,11 @@
   <a href="#offert">Begär offert</a>
 </div>
 
-<script>
-  /*
-   * Validation and attribution for the Sverige lead form. The form works
-   * without JavaScript — this replaces the browser's generic bubbles with
-   * messages in the visitor's language next to the field that caused them, and
-   * stamps the two attribution fields the rest of the site already uses
-   * (source_url, landing_page; see /js/ar-analytics-tracker.js). No second
-   * analytics stack, no extra conversion: one generate_lead event carrying the
-   * market and language, plus the site's existing lead conversion.
-   */
-  (function () {
-    "use strict";
-    var form = document.getElementById("leadForm");
-    if (!form) return;
-
-    var submitBtn = document.getElementById("leadSubmit");
-    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-    var PHONE_RE = /^[+]?[0-9 ()-]{6,}$/;
-
-    var RULES = [
-      { id: "f-name", error: "err-name", validate: function (value) {
-          if (!value) return "Ange ditt namn.";
-          if (value.length < 2) return "Ange för- och efternamn.";
-          return null; } },
-      { id: "f-email", error: "err-email", validate: function (value) {
-          if (!value) return "Ange din e-postadress.";
-          if (!EMAIL_RE.test(value)) return "E-postadressen ser ofullständig ut.";
-          return null; } },
-      { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Ange ditt telefonnummer.";
-          if (!PHONE_RE.test(value)) return "Ange numret med landsnummer, t.ex. +46 70 123 45 67.";
-          return null; } },
-      { id: "f-type", error: "err-type", validate: function (value) {
-          if (!value) return "Välj vad förfrågan gäller.";
-          return null; } },
-      { id: "f-consent", error: "err-consent", checkbox: true, validate: function (checked) {
-          if (!checked) return "Utan samtycke kan vi inte besvara förfrågan.";
-          return null; } }
-    ];
-
-    function valueOf(rule, field) {
-      return rule.checkbox ? field.checked : String(field.value || "").trim();
-    }
-
-    function setError(rule, message) {
-      var field = document.getElementById(rule.id);
-      var box = document.getElementById(rule.error);
-      if (!field || !box) return;
-      if (message) {
-        box.textContent = message;
-        box.classList.add("show");
-        field.setAttribute("aria-invalid", "true");
-      } else {
-        box.textContent = "";
-        box.classList.remove("show");
-        field.removeAttribute("aria-invalid");
-      }
-    }
-
-    function check(rule) {
-      var field = document.getElementById(rule.id);
-      if (!field) return true;
-      var message = rule.validate(valueOf(rule, field));
-      setError(rule, message);
-      return !message;
-    }
-
-    RULES.forEach(function (rule) {
-      var field = document.getElementById(rule.id);
-      if (!field) return;
-      var revalidate = function () {
-        if (field.getAttribute("aria-invalid") === "true") check(rule);
-      };
-      field.addEventListener("input", revalidate);
-      field.addEventListener("change", revalidate);
-      field.addEventListener("blur", function () {
-        if (valueOf(rule, field)) check(rule);
-      });
-    });
-
-    var typeSelect = document.getElementById("f-type");
-    var productField = form.querySelector('input[name="product_interest"]');
-    if (typeSelect && productField) {
-      typeSelect.addEventListener("change", function () {
-        productField.value = typeSelect.value;
-      });
-    }
-
-    function stampAttribution() {
-      var source = form.querySelector('input[name="source_url"]');
-      if (source && !source.value) source.value = window.location.href;
-      var landing = form.querySelector('input[name="landing_page"]');
-      if (landing && !landing.value) {
-        var stored = null;
-        try { stored = window.sessionStorage.getItem("ar_landing_page"); } catch (err) {}
-        landing.value = stored || window.location.href;
-      }
-    }
-    stampAttribution();
-
-    form.addEventListener("submit", function (event) {
-      var firstInvalid = null;
-      RULES.forEach(function (rule) {
-        if (!check(rule) && !firstInvalid) firstInvalid = document.getElementById(rule.id);
-      });
-      if (firstInvalid) {
-        event.preventDefault();
-        firstInvalid.focus();
-        return;
-      }
-      event.preventDefault();
-      var originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Skickar…";
-      var data = new URLSearchParams(new FormData(form)).toString();
-      fetch("/se/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: data,
-      }).then(function () {
-        form.style.display = "none";
-        var success = document.getElementById("leadSuccess");
-        if (success) success.classList.add("show");
-        if (window.gtag) {
-          window.gtag("event", "generate_lead", {
-            form_name: "se_offertforfragan",
-            market: "sweden",
-            language: "sv",
-            insurance_product: productField ? productField.value : "",
-            landing_page: form.querySelector('input[name="landing_page"]').value
-          });
-          window.gtag("event", "conversion", { send_to: "AW-18361722533/HxH6CKqa1uEcEKXNxrNE", value: 1.0, currency: "EUR" });
-        }
-      }).catch(function () {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-        alert("Formuläret kunde inte skickas. Försök igen eller mejla insurance@adlerrochefort.com.");
-      });
-    });
-  })();
-</script>
 <script defer src="/js/lead-branch-fields.js"></script>
+<script defer src="/js/quote-validators.js"></script>
+<script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/quote-nationality.js"></script>
+<script defer src="/js/quote-wizard.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
 <div class="cookie-banner" id="cookieBanner">

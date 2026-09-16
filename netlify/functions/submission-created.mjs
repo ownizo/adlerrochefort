@@ -608,6 +608,9 @@ const QUOTE_LABELS_PL = {
   obras_descricao: "Opis wykonanych prac",
   capital_edificio: "Suma ubezpieczenia budynku",
   capital_conteudo: "Suma ubezpieczenia ruchomości",
+
+  matricula: "Numer rejestracyjny",
+  data_carta: "Data wydania prawa jazdy",
 };
 
 const QUOTE_LABELS_SV = {
@@ -635,6 +638,9 @@ const QUOTE_LABELS_SV = {
   obras_descricao: "Beskrivning av arbetena",
   capital_edificio: "Försäkringsbelopp byggnad",
   capital_conteudo: "Försäkringsbelopp lösöre",
+
+  matricula: "Registreringsnummer",
+  data_carta: "Datum för körkortets utfärdande",
 };
 
 const QUOTE_LABELS_DA = {
@@ -662,6 +668,9 @@ const QUOTE_LABELS_DA = {
   obras_descricao: "Beskrivelse af det udførte arbejde",
   capital_edificio: "Forsikringssum bygning",
   capital_conteudo: "Forsikringssum indbo",
+
+  matricula: "Nummerplade",
+  data_carta: "Kørekortets udstedelsesdato",
 };
 
 const QUOTE_LABELS_ZH = {
@@ -689,6 +698,9 @@ const QUOTE_LABELS_ZH = {
   obras_descricao: "工程描述",
   capital_edificio: "建筑保险金额",
   capital_conteudo: "室内财产保险金额",
+
+  matricula: "车牌号",
+  data_carta: "驾照签发日期",
 };
 
 // Lookup by `lang`, refactored from a growing if/else-if chain in
@@ -1161,6 +1173,35 @@ export const HANDLED_FORMS = {
     heading: "New Chinese Health quote request",
     page: "/zh/health-insurance-portugal/",
     branch: "Saúde (ZH)",
+  },
+  // Third of the four ramos shared by the PL/SE/DK/ZH generator: Car (Auto).
+  "pl-ubezpieczenie-samochodu-wizard": {
+    quote: true,
+    lang: "pl",
+    heading: "New Polish Car quote request",
+    page: "/pl/ubezpieczenie-samochodu-portugalia/",
+    branch: "Auto (PL)",
+  },
+  "se-bilforsakring-wizard": {
+    quote: true,
+    lang: "sv",
+    heading: "New Swedish Car quote request",
+    page: "/se/bilforsakring-portugal/",
+    branch: "Auto (SE)",
+  },
+  "dk-bilforsikring-wizard": {
+    quote: true,
+    lang: "da",
+    heading: "New Danish Car quote request",
+    page: "/dk/bilforsikring-portugal/",
+    branch: "Auto (DK)",
+  },
+  "zh-car-insurance-wizard": {
+    quote: true,
+    lang: "zh",
+    heading: "New Chinese Car quote request",
+    page: "/zh/car-insurance-portugal/",
+    branch: "Auto (ZH)",
   },
   "car-insurance-quote": {
     quote: true,

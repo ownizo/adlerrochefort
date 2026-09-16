@@ -31,14 +31,22 @@ export const MOTOR_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilförsäkring' }],
   pullquote: 'Skyddet måste löpa vidare medan registreringsskylten byts — inte efteråt.',
   schemaType: 'Article',
-  formHeading: 'Begär offert på bilförsäkring',
-  formBranch: 'SE · Bil',
-  formSubject: 'Bilförsäkring i Portugal',
-  formCta: 'Begär offert',
-  formIntro:
-    'Berätta om fordonet, nuvarande registrering och din tidplan — vi ordnar skyddet så att det inte uppstår något glapp.',
-  formPlaceholder:
-    'Till exempel: Volvo XC60 2019, svenska skyltar, planerad import i november, sju skadefria år hos svenskt bolag.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared se-forfragan branch-select form.
+  wizard: {
+    idPrefix: 'se-auto',
+    formName: 'se-bilforsakring-wizard',
+    ramo: 'Bilförsäkring',
+    heading: 'Begär offert på bilförsäkring',
+    intro: 'Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.',
+    stepLabel2: 'Fordonet',
+    submitLabel: 'Begär offert',
+    microNote:
+      'Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="se-auto-carta">Datum för körkortets utfärdande *</label><input type="date" id="se-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="se-auto-carta-idade-info" hidden>Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="omfattning">
   <div class="container narrow article-body">

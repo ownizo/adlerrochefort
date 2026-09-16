@@ -78,6 +78,13 @@
       "pessoa_nif": "NIF (portugisisk skattenummer)",
       "pessoa_remover": "Fjern denne person",
       "pessoa_adicionar": "+ Tilføj person"
+    },
+    "auto": {
+      "titulo": "Anmod om bilforsikring",
+      "subtitulo": "Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.",
+      "matricula": "Nummerplade",
+      "matricula_placeholder": "AA-00-AA",
+      "data_carta": "Kørekortets udstedelsesdato"
     }
   },
   "countries": {

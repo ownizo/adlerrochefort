@@ -368,6 +368,10 @@ const FORM_CLASSIFICATION = {
   'se-sjukvardsforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'health' },
   'dk-sundhedsforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'health' },
   'zh-health-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'health' },
+  'pl-ubezpieczenie-samochodu-wizard': { entityType: 'individual', market: 'PT', language: 'PL', product: 'auto' },
+  'se-bilforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'auto' },
+  'dk-bilforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'auto' },
+  'zh-car-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'auto' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
