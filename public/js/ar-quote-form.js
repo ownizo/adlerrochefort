@@ -55,6 +55,10 @@
       // public/js/quote-health-persons.js), which uses plain `birth-date`.
       birthDateAdult: 'The policyholder must be at least 18 years old.',
       tooShort: 'Please write at least {min} characters.',
+      // Especificação v2, Parte D2 (NL Bedrijfsverzekering) — the first
+      // required checkbox GROUP (data-required-group): "at least one of
+      // these" rather than a single required control.
+      requiredGroup: 'Please select at least one option.',
     },
     pt: {
       required: 'Preencha este campo.',
@@ -75,6 +79,7 @@
       birthDate: 'A data de nascimento não pode ser no futuro.',
       birthDateAdult: 'O tomador tem de ter pelo menos 18 anos.',
       tooShort: 'Escreva pelo menos {min} caracteres.',
+      requiredGroup: 'Selecione pelo menos uma opção.',
     },
     nl: {
       required: 'Vul dit veld in.',
@@ -101,6 +106,7 @@
       birthDate: 'De geboortedatum mag niet in de toekomst liggen.',
       birthDateAdult: 'De verzekeringnemer moet ten minste 18 jaar oud zijn.',
       tooShort: 'Schrijf ten minste {min} tekens.',
+      requiredGroup: 'Selecteer ten minste één optie.',
     },
     // Especificação v2, "restantes línguas" Parte 2 — DE Auto wizard is the
     // first form to actually need these (every DE page until now used the
@@ -127,6 +133,7 @@
       birthDate: 'Das Geburtsdatum darf nicht in der Zukunft liegen.',
       birthDateAdult: 'Der Versicherungsnehmer muss mindestens 18 Jahre alt sein.',
       tooShort: 'Schreiben Sie mindestens {min} Zeichen.',
+      requiredGroup: 'Wählen Sie mindestens eine Option aus.',
     },
   };
 
@@ -262,16 +269,57 @@
     return true;
   }
 
+  /** Especificação v2, Parte D2 (NL Bedrijfsverzekering) — "ramos
+   *  pretendidos", a group of plain checkboxes (not a single control) where
+   *  at least one, not all, must be checked. The generic per-field
+   *  `required` check above can't express that (it would demand every box
+   *  in the group be ticked), so this is a second, group-level pass:
+   *  every checkbox sharing the same `data-required-group` value forms one
+   *  group, and the group is satisfied if any one of them is checked. The
+   *  error is shown on the first checkbox in the group, same as any other
+   *  field. `disabled` group members (inside a branch/conditional the
+   *  visitor hasn't reached) are excluded, same reasoning as fieldError's
+   *  own disabled check above.
+   */
+  function validateRequiredGroups(scope) {
+    var bad = [];
+    var members = scope.querySelectorAll('[data-required-group]');
+    var groups = {};
+    for (var i = 0; i < members.length; i++) {
+      var el = members[i];
+      if (el.disabled) continue;
+      var name = el.getAttribute('data-required-group');
+      if (!groups[name]) groups[name] = [];
+      groups[name].push(el);
+    }
+    for (var key in groups) {
+      if (!Object.prototype.hasOwnProperty.call(groups, key)) continue;
+      var els = groups[key];
+      var anyChecked = false;
+      for (var j = 0; j < els.length; j++) {
+        if (els[j].checked) { anyChecked = true; break; }
+      }
+      if (anyChecked) {
+        for (var k = 0; k < els.length; k++) clearError(els[k]);
+      } else {
+        showError(els[0], t.requiredGroup || t.required);
+        bad.push(els[0]);
+      }
+    }
+    return bad;
+  }
+
   /** Returns the offending controls, in document order. `scope` defaults to
    *  the whole form — the wizard passes a single step's container so "Next"
    *  only validates the fields the visitor can currently see. */
   function validate(form, scope) {
     var bad = [];
-    var controls = (scope || form).querySelectorAll('input, select, textarea');
+    var root = scope || form;
+    var controls = root.querySelectorAll('input, select, textarea');
     for (var i = 0; i < controls.length; i++) {
       if (!validateOneField(controls[i], form)) bad.push(controls[i]);
     }
-    return bad;
+    return bad.concat(validateRequiredGroups(root));
   }
 
   function focusFirst(el) {
