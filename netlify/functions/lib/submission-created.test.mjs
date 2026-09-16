@@ -670,3 +670,20 @@ test("a PL/SE/DK/ZH Saúde wizard's dynamic-blocks section (dados_dinamicos) ren
     assert.doesNotMatch(html, /People to insure/, `${c.form}: no English leak`);
   }
 });
+
+// Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+// converted together. Car (Auto) is the third of the four ramos.
+test("PL/SE/DK/ZH Auto wizards render matricula/data_carta labels in their own language", () => {
+  const cases = [
+    { form: "pl-ubezpieczenie-samochodu-wizard", label: /Numer rejestracyjny/ },
+    { form: "se-bilforsakring-wizard", label: /Registreringsnummer/ },
+    { form: "dk-bilforsikring-wizard", label: /Nummerplade/ },
+    { form: "zh-car-insurance-wizard", label: /车牌号/ },
+  ];
+  for (const c of cases) {
+    const formConfig = HANDLED_FORMS[c.form];
+    const html = renderAllFields({ nome: "Teste", matricula: "AA-00-AA", rgpd: "sim" }, Boolean(formConfig.en), formConfig.lang);
+    assert.match(html, c.label, `${c.form}: matricula label`);
+    assert.doesNotMatch(html, /Registration plate/, `${c.form}: no English leak`);
+  }
+});

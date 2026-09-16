@@ -38,14 +38,22 @@ export const MOTOR_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: '汽车保险' }],
   pullquote: '强制险保的是别人。保自己的车，是另一件需要单独决定的事。',
   schemaType: 'Article',
-  formHeading: '汽车保险咨询',
-  formBranch: 'ZH · Motor',
-  formSubject: '葡萄牙汽车保险',
-  formCta: '提交咨询',
-  formIntro:
-    '我们需要车辆信息（品牌、型号、年份）、目前的注册地，以及驾驶人的情况与出险记录。',
-  formPlaceholder:
-    '例如：2021 年宝马 X3，已挂葡萄牙牌，主驾驶人 41 岁，在国内有十年驾龄、无事故。',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared zh-inquiry branch-select form.
+  wizard: {
+    idPrefix: 'zh-auto',
+    formName: 'zh-car-insurance-wizard',
+    ramo: 'Motor',
+    heading: '申请汽车保险报价',
+    intro: '请填写基本信息。我们将在24个工作小时内回复。',
+    stepLabel2: '车辆信息',
+    submitLabel: '提交申请',
+    microNote:
+      '我们将在24个工作小时内回复。您的信息仅用于准备本报价，并根据《通用数据保护条例》（GDPR）处理——请参阅<a href="/en/privacy-policy" hreflang="en">隐私政策</a>。',
+    fieldsHtml: `        <div class="contact-form-field"><label for="zh-auto-matricula">车牌号 *</label><input type="text" id="zh-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="zh-auto-carta">驾照签发日期 *</label><input type="date" id="zh-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="zh-auto-carta-idade-info" hidden>该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="qiangzhi-de-bufen">
   <div class="container narrow article-body">

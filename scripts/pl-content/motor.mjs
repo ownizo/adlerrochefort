@@ -33,14 +33,22 @@ export const MOTOR_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie samochodu' }],
   pullquote: 'Ochrona musi trwać nieprzerwanie w trakcie zmiany tablic — nie zacząć się po niej.',
   schemaType: 'Article',
-  formHeading: 'Zapytaj o ubezpieczenie samochodu',
-  formBranch: 'PL · Samochód',
-  formSubject: 'Ubezpieczenie samochodu w Portugalii',
-  formCta: 'Zapytaj o ofertę',
-  formIntro:
-    'Proszę podać pojazd, aktualną rejestrację i planowany termin. Odpowiemy, jak ułożyć ochronę bez luki.',
-  formPlaceholder:
-    'Na przykład: Skoda Octavia 2019, polskie tablice, przerejestrowanie planowane na kwiecień, 9 lat bez szkody.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared pl-zapytanie-ofertowe branch-select form.
+  wizard: {
+    idPrefix: 'pl-auto',
+    formName: 'pl-ubezpieczenie-samochodu-wizard',
+    ramo: 'Ubezpieczenie samochodu',
+    heading: 'Zapytaj o ubezpieczenie samochodu',
+    intro: 'Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.',
+    stepLabel2: 'Pojazd',
+    submitLabel: 'Zapytaj o ofertę',
+    microNote:
+      'Odpowiedź w ciągu 24 godzin roboczych. Dane są wykorzystywane wyłącznie do przygotowania oferty i przetwarzane zgodnie z RODO — patrz <a href="/en/privacy-policy" hreflang="en">polityka prywatności</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="pl-auto-matricula">Numer rejestracyjny *</label><input type="text" id="pl-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="pl-auto-carta">Data wydania prawa jazdy *</label><input type="date" id="pl-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="pl-auto-carta-idade-info" hidden>To przed 16. urodzinami ubezpieczającego — mimo to akceptujemy tę datę, prosimy jednak o sprawdzenie jej poprawności.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="oc-i-ac">
   <div class="container narrow article-body">

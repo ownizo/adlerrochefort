@@ -78,6 +78,13 @@
       "pessoa_nif": "NIF (portugalski numer podatkowy)",
       "pessoa_remover": "Usuń tę osobę",
       "pessoa_adicionar": "+ Dodaj osobę"
+    },
+    "auto": {
+      "titulo": "Zapytaj o ubezpieczenie samochodu",
+      "subtitulo": "Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.",
+      "matricula": "Numer rejestracyjny",
+      "matricula_placeholder": "AA-00-AA",
+      "data_carta": "Data wydania prawa jazdy"
     }
   },
   "countries": {

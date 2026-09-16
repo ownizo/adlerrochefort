@@ -31,14 +31,22 @@ export const MOTOR_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilforsikring' }],
   pullquote: 'Dækningen skal løbe videre, mens nummerpladen skifter — ikke bagefter.',
   schemaType: 'Article',
-  formHeading: 'Få et tilbud på bilforsikring',
-  formBranch: 'DK · Bil',
-  formSubject: 'Bilforsikring i Portugal',
-  formCta: 'Få et tilbud',
-  formIntro:
-    'Fortæl om bilen, den nuværende indregistrering og din tidsplan — så sørger vi for, at der ikke opstår et hul i dækningen.',
-  formPlaceholder:
-    'For eksempel: VW Passat 2019, danske nummerplader, planlagt import i november, syv skadefri år i dansk selskab.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared dk-forespoergsel branch-select form.
+  wizard: {
+    idPrefix: 'dk-auto',
+    formName: 'dk-bilforsikring-wizard',
+    ramo: 'Bilforsikring',
+    heading: 'Få et tilbud på bilforsikring',
+    intro: 'Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.',
+    stepLabel2: 'Bilen',
+    submitLabel: 'Få et tilbud',
+    microNote:
+      'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="dk-auto-matricula">Nummerplade *</label><input type="text" id="dk-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="dk-auto-carta">Kørekortets udstedelsesdato *</label><input type="date" id="dk-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
+        <p class="wizard-helper" id="dk-auto-carta-idade-info" hidden>Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="daekning">
   <div class="container narrow article-body">
