@@ -706,3 +706,27 @@ test("PL/SE/DK/ZH Liability wizards promise 48-72h in their own language, not th
     assert.match(text, c.sla, `${c.form}: SLA text`);
   }
 });
+
+// Especificação v2, Parte C — Hebrew, first ramo (Home). Same shape as the
+// Chinese wizard test above: HANDLED_FORMS carries `lang: "he"`,
+// renderAllFields uses QUOTE_LABELS_HE and LANG_COUNTRY_TABLES.he.
+test("a Hebrew wizard form (formConfig.lang === 'he') renders Hebrew labels", () => {
+  const formConfig = HANDLED_FORMS["il-home-insurance-wizard"];
+  assert.equal(formConfig.lang, "he");
+  const html = renderAllFields(
+    { nome: "דוד כהן", capital_edificio: "250000", rgpd: "sim", nacionalidade: "IL" },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /סכום ביטוח המבנה/);
+  assert.match(html, /ישראל/);
+});
+
+test("quoteIntro renders the 24h SLA in Hebrew for the Home wizard, with the from URL bidi-isolated", () => {
+  const text = quoteIntro(
+    { page: "/il/home-insurance-portugal/", lang: "he" },
+    "https://adlerrochefort.com/il/home-insurance-portugal/"
+  );
+  assert.match(text, /24 שעות עבודה/);
+  assert.match(text, /⁦https:\/\/adlerrochefort\.com\/il\/home-insurance-portugal\/⁩/);
+});

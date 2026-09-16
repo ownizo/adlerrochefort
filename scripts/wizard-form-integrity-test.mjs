@@ -347,6 +347,19 @@ const PAGES = [
       "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte C — Hebrew, first ramo. Same field set as
+  // every other market's Home wizard.
+  {
+    label: "IL /il/home-insurance-portugal/",
+    path: "il/home-insurance-portugal/index.html",
+    expectedFormName: "il-home-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal", "regime_ocupacao",
+      "al_regime", "ano_construcao", "area_bruta", "casas_banho", "obras_ano",
+      "obras_descricao", "capital_edificio", "capital_conteudo", "data_inicio", "rgpd",
+    ],
+  },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together. Health (Saúde) is the second of the four ramos,
   // same field set as PT/EN/DE/NL Saúde (the "pessoa segura" repeater's
