@@ -85,6 +85,12 @@
       "pessoa_nif": "NIF (portugiesische Steuernummer)",
       "pessoa_remover": "Diese Person entfernen",
       "pessoa_adicionar": "+ Person hinzufügen"
+    },
+    "profissional": {
+      "titulo": "Berufshaftpflicht anfragen",
+      "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 48 bis 72 Arbeitsstunden.",
+      "faturacao_anual": "Jahresumsatz",
+      "faturacao_anual_placeholder": "Z. B. 85000"
     }
   },
   "countries": {

@@ -318,6 +318,17 @@ const FORM_CLASSIFICATION = {
   'de-autoversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'auto' },
   'de-hausversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'home' },
   'de-krankenversicherung-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'health' },
+  // Same field set as the PT/EN dedicated RC Profissional wizards (no
+  // `empresa`/`rcp_profissao` field at all) — reuses their classifier for
+  // consistency, which always falls through to 'individual' here too (see
+  // the comment next to 'professional-liability-quote-wizard' above).
+  'de-berufshaftpflicht-freiberufler-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'DE',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

@@ -511,6 +511,11 @@ const QUOTE_LABELS_DE = {
   obras_descricao: "Beschreibung der Renovierung",
   capital_edificio: "Versicherungssumme Gebäude",
   capital_conteudo: "Versicherungssumme Hausrat",
+
+  // Especificação v2, Parte C — Berufshaftpflicht (RC Profissional) DE,
+  // built from the generic "Unternehmen" branch per Hugo's explicit choice
+  // (no dedicated DE page existed for this ramo before).
+  faturacao_anual: "Jahresumsatz",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -825,6 +830,22 @@ export const HANDLED_FORMS = {
     heading: "New German Health quote request",
     page: "/de/krankenversicherung-portugal/",
     branch: "Saúde (DE)",
+  },
+  // Especificação v2, Parte C — the German RC Profissional page had no
+  // dedicated equivalent before this pass (unlike Auto/Habitação/Saúde,
+  // which already existed as full pages with a branch-select form); built
+  // from the generic "Unternehmen" branch of the shared de-angebot-anfrage
+  // form per Hugo's explicit choice via AskUserQuestion, not invented.
+  // Same 48-72h SLA as its PT ("cotacao-rc-profissional") and EN
+  // ("professional-liability-quote-wizard") counterparts — see slaHours.
+  "de-berufshaftpflicht-freiberufler-wizard": {
+    quote: true,
+    en: true,
+    lang: "de",
+    heading: "New German professional liability quote request",
+    slaHours: "48 a 72",
+    page: "/de/berufshaftpflicht-freiberufler-portugal/",
+    branch: "RC Profissional (DE)",
   },
   "car-insurance-quote": {
     quote: true,
