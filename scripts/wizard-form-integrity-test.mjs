@@ -405,6 +405,17 @@ const PAGES = [
       "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte C — Hebrew, second ramo.
+  {
+    label: "IL /il/health-insurance-portugal/",
+    path: "il/health-insurance-portugal/index.html",
+    expectedFormName: "il-health-insurance-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together. Car (Auto) is the third of the four ramos, same
   // field set as PT/EN/DE Auto.

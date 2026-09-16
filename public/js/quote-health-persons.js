@@ -69,9 +69,20 @@
     sv: { name: 'Fullständigt namn', dob: 'Födelsedatum', nif: 'NIF (portugisiskt skattenummer)', nifPlaceholder: '9 siffror', remove: 'Ta bort denna person', person: 'Person' },
     da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF (portugisisk skattenummer)', nifPlaceholder: '9 cifre', remove: 'Fjern denne person', person: 'Person' },
     zh: { name: '全名', dob: '出生日期', nif: 'NIF（葡萄牙税号）', nifPlaceholder: '9位数字', remove: '移除此人', person: '被保险人' },
+    // Especificação v2, Parte C — Hebrew, Saúde ramo.
+    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF (מספר זיהוי פורטוגזי)', nifPlaceholder: '9 ספרות', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
   };
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;
+  // Especificação v2, Parte C — this repeater builds its markup as a raw
+  // innerHTML string, so unlike the wizard's own static fields (which get
+  // ltrInput() per field in scripts/lib/market-cluster.mjs) nothing here
+  // was ever direction-aware. On a right-to-left page both the date-of-
+  // birth and NIF inputs need to stay left-to-right — a typed "15/03/1985"
+  // or "501442600" should not have its digit groups reordered — the same
+  // reasoning as the main wizard's own nif/codigo_postal/telefone/email
+  // fields.
+  var ltrAttr = document.documentElement.getAttribute('dir') === 'rtl' ? ' dir="ltr"' : '';
 
   var MAX_PERSONS = 10;
   var uid = 0;
@@ -91,11 +102,11 @@
       '</div>' +
       '<div class="contact-form-field">' +
       '<label for="pessoa-' + n + '-nascimento">' + t.dob + ' *</label>' +
-      '<input type="date" id="pessoa-' + n + '-nascimento" data-person-field="data_nascimento" data-validate="birth-date" required>' +
+      '<input type="date" id="pessoa-' + n + '-nascimento" data-person-field="data_nascimento" data-validate="birth-date" required' + ltrAttr + '>' +
       '</div>' +
       '<div class="contact-form-field">' +
       '<label for="pessoa-' + n + '-nif">' + t.nif + ' *</label>' +
-      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" inputmode="numeric" placeholder="' + t.nifPlaceholder + '" data-validate="nif" required>' +
+      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" inputmode="numeric" placeholder="' + t.nifPlaceholder + '" data-validate="nif" required' + ltrAttr + '>' +
       '</div>' +
       '<button type="button" class="wizard-nav-back" data-person-remove style="margin-top:4px;">' + t.remove + '</button>';
     return card;

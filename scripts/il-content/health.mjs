@@ -63,14 +63,31 @@ export const HEALTH_PAGE = {
   pullquote:
     'ביטוח בריאות פרטי הוא מוצר בריאות. הוא לא מסמך הגירה, ואין להתייחס אליו כאל אחד.',
   schemaType: 'Article',
-  formHeading: 'הצעה לביטוח בריאות',
-  formBranch: 'IL · Health',
-  formSubject: 'ביטוח בריאות (IL)',
-  formCta: 'בקשת הצעה לבריאות',
-  formIntro:
-    'כתבו מי צריך להיות מבוטח ובאילו גילים, ומאיזה מועד. פרטים רפואיים לא צריך לכתוב בטופס — נסגור אותם בהמשך, בערוץ מתאים.',
-  formPlaceholder:
-    'למשל: שני מבוגרים בגילי 44 ו־41 ושני ילדים (8 ו־4), עוברים לליסבון ביולי, מחפשים כיסוי שכולל אשפוז ורופאי ילדים.',
+  // Especificação v2, Parte C — wizard config. `adultBirthDate: true` is the
+  // ≥18 rule on the tomador's own step-1 date of birth
+  // (data-validate="birth-date-adult"); the pessoa-segura repeater's own
+  // date-of-birth fields (quote-health-persons.js) use plain "birth-date"
+  // and carry no age floor at all — a health policy insures children.
+  // Hebrew text mirrored from data/i18n/quote-form/he.json's ramos.saude
+  // block, which check-i18n-parity.mjs holds as the source of truth.
+  wizard: {
+    idPrefix: 'il-sau',
+    formName: 'il-health-insurance-wizard',
+    ramo: 'Health insurance',
+    heading: 'בקשת הצעה לביטוח בריאות',
+    intro: 'נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.',
+    stepLabel2: 'מבוטחים',
+    submitLabel: 'שליחת הבקשה',
+    adultBirthDate: true,
+    microNote:
+      'נשיב בתוך 24 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.',
+    scripts: ['quote-health-persons.js'],
+    fieldsHtml: `        <p class="wizard-helper" style="margin-bottom:16px;">עבור כל מבוטח נדרש <bdi>NIF</bdi> פורטוגזי, כולל קטינים — בלעדיו לא ניתן להנפיק את ההצעה. אנחנו לא שואלים כאן על מידע רפואי: השאלון הרפואי מתבצע ישירות מול חברת הביטוח, בשלב ההצטרפות.</p>
+        <div data-persons-repeater>
+          <div data-persons-list></div>
+          <button type="button" class="wizard-nav-back" data-persons-add>+ הוספת מבוטח</button>
+        </div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="shalosh-shchavot">
   <div class="container narrow article-body">

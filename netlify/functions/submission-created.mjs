@@ -1240,6 +1240,14 @@ export const HANDLED_FORMS = {
     page: "/zh/health-insurance-portugal/",
     branch: "Saúde (ZH)",
   },
+  // Especificação v2, Parte C — Hebrew, second ramo.
+  "il-health-insurance-wizard": {
+    quote: true,
+    lang: "he",
+    heading: "New Hebrew Health quote request",
+    page: "/il/health-insurance-portugal/",
+    branch: "Saúde (IL)",
+  },
   // Third of the four ramos shared by the PL/SE/DK/ZH generator: Car (Auto).
   "pl-ubezpieczenie-samochodu-wizard": {
     quote: true,
