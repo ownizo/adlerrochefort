@@ -66,6 +66,18 @@
       "obras_descricao": "Proszę opisać wykonane prace",
       "capital_edificio": "Suma ubezpieczenia budynku (€)",
       "capital_conteudo": "Suma ubezpieczenia ruchomości (€)"
+    },
+    "saude": {
+      "titulo": "Zapytaj o ubezpieczenie zdrowotne",
+      "subtitulo": "Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.",
+      "passo_2_titulo": "Osoby do ubezpieczenia",
+      "pessoas_aviso_nif": "Dla każdej ubezpieczanej osoby potrzebny jest portugalski numer podatkowy (NIF), również dla dzieci — bez niego nie można przygotować oferty. Nie pytamy tutaj o żadne informacje medyczne: kwestionariusz zdrowotny wypełnia się bezpośrednio z ubezpieczycielem, w trakcie przystąpienia do polisy.",
+      "pessoa_label": "Osoba",
+      "pessoa_nome": "Imię i nazwisko",
+      "pessoa_nascimento": "Data urodzenia",
+      "pessoa_nif": "NIF (portugalski numer podatkowy)",
+      "pessoa_remover": "Usuń tę osobę",
+      "pessoa_adicionar": "+ Dodaj osobę"
     }
   },
   "countries": {

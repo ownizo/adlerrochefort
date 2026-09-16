@@ -32,14 +32,26 @@ export const HEALTH_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie zdrowotne' }],
   pullquote: 'Polisę zdrowotną kupuje się wtedy, gdy jest się zdrowym. Później kupuje się już tylko to, co ubezpieczyciel zechce zaproponować.',
   schemaType: 'Article',
-  formHeading: 'Zapytaj o ubezpieczenie zdrowotne',
-  formBranch: 'PL · Zdrowie',
-  formSubject: 'Ubezpieczenie zdrowotne w Portugalii',
-  formCta: 'Zapytaj o ofertę',
-  formIntro:
-    'Wystarczy liczba osób i ich wiek. Szczegóły dotyczące zdrowia omawiamy indywidualnie i nigdy przez formularz.',
-  formPlaceholder:
-    'Na przykład: małżeństwo 44 i 42 lata, dwoje dzieci (9 i 12 lat), mieszkamy w Lizbonie od stycznia.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared pl-zapytanie-ofertowe branch-select form.
+  wizard: {
+    idPrefix: 'pl-sau',
+    formName: 'pl-ubezpieczenie-zdrowotne-wizard',
+    ramo: 'Ubezpieczenie zdrowotne',
+    heading: 'Zapytaj o ubezpieczenie zdrowotne',
+    intro: 'Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.',
+    stepLabel2: 'Osoby do ubezpieczenia',
+    submitLabel: 'Zapytaj o ofertę',
+    adultBirthDate: true,
+    microNote:
+      'Odpowiedź w ciągu 24 godzin roboczych. Dane są wykorzystywane wyłącznie do przygotowania oferty i przetwarzane zgodnie z RODO — patrz <a href="/en/privacy-policy" hreflang="en">polityka prywatności</a>.',
+    scripts: ['quote-health-persons.js'],
+    fieldsHtml: `        <p class="wizard-helper" style="margin-bottom:16px;">Dla każdej ubezpieczanej osoby potrzebny jest portugalski numer podatkowy (NIF), również dla dzieci — bez niego nie można przygotować oferty. Nie pytamy tutaj o żadne informacje medyczne: kwestionariusz zdrowotny wypełnia się bezpośrednio z ubezpieczycielem, w trakcie przystąpienia do polisy.</p>
+        <div data-persons-repeater>
+          <div data-persons-list></div>
+          <button type="button" class="wizard-nav-back" data-persons-add>+ Dodaj osobę</button>
+        </div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="sns">
   <div class="container narrow article-body">

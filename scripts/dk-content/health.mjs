@@ -30,14 +30,26 @@ export const HEALTH_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sundhedsforsikring' }],
   pullquote: 'Sundhedsforsikring tegnes, mens man er rask. Senere køber man kun det, selskabet vælger at tilbyde.',
   schemaType: 'Article',
-  formHeading: 'Få et tilbud på sundhedsforsikring',
-  formBranch: 'DK · Sundhed',
-  formSubject: 'Sundhedsforsikring i Portugal',
-  formCta: 'Få et tilbud',
-  formIntro:
-    'Antal personer og aldre er nok til at komme i gang. Helbredsoplysninger tager vi separat, aldrig via formularen.',
-  formPlaceholder:
-    'For eksempel: to voksne på 62 og 60, bosat i Lagos siden januar, dansk folkepension.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared dk-forespoergsel branch-select form.
+  wizard: {
+    idPrefix: 'dk-sau',
+    formName: 'dk-sundhedsforsikring-wizard',
+    ramo: 'Sundhedsforsikring',
+    heading: 'Få et tilbud på sundhedsforsikring',
+    intro: 'Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.',
+    stepLabel2: 'Personer der skal forsikres',
+    submitLabel: 'Få et tilbud',
+    adultBirthDate: true,
+    microNote:
+      'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
+    scripts: ['quote-health-persons.js'],
+    fieldsHtml: `        <p class="wizard-helper" style="margin-bottom:16px;">For hver person, der skal forsikres, kræves et portugisisk skattenummer (NIF), også for børn — uden det kan der ikke udarbejdes et tilbud. Vi spørger ikke om nogen form for medicinske oplysninger her: helbredserklæringen foregår direkte med forsikringsselskabet, ved tilmeldingen.</p>
+        <div data-persons-repeater>
+          <div data-persons-list></div>
+          <button type="button" class="wizard-nav-back" data-persons-add>+ Tilføj person</button>
+        </div>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="sns">
   <div class="container narrow article-body">

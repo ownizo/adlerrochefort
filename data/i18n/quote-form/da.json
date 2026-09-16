@@ -66,6 +66,18 @@
       "obras_descricao": "Beskriv det udførte arbejde",
       "capital_edificio": "Forsikringssum bygning (€)",
       "capital_conteudo": "Forsikringssum indbo (€)"
+    },
+    "saude": {
+      "titulo": "Anmod om sygesikring",
+      "subtitulo": "Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.",
+      "passo_2_titulo": "Personer der skal forsikres",
+      "pessoas_aviso_nif": "For hver person, der skal forsikres, kræves et portugisisk skattenummer (NIF), også for børn — uden det kan der ikke udarbejdes et tilbud. Vi spørger ikke om nogen form for medicinske oplysninger her: helbredserklæringen foregår direkte med forsikringsselskabet, ved tilmeldingen.",
+      "pessoa_label": "Person",
+      "pessoa_nome": "Fulde navn",
+      "pessoa_nascimento": "Fødselsdato",
+      "pessoa_nif": "NIF (portugisisk skattenummer)",
+      "pessoa_remover": "Fjern denne person",
+      "pessoa_adicionar": "+ Tilføj person"
     }
   },
   "countries": {
