@@ -700,6 +700,7 @@ test("PL/SE/DK/ZH Liability wizards promise 48-72h in their own language, not th
     { form: "se-ansvarsforsakring-wizard", sla: /48 till 72 arbetstimmar/ },
     { form: "dk-ansvarsforsikring-wizard", sla: /48 til 72 arbejdstimer/ },
     { form: "zh-liability-insurance-wizard", sla: /48 至 72个工作小时/ },
+    { form: "il-liability-insurance-wizard", sla: /48 עד 72 שעות עבודה/ },
   ];
   for (const c of cases) {
     const formConfig = HANDLED_FORMS[c.form];

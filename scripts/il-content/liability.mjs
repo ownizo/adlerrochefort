@@ -54,14 +54,29 @@ export const LIABILITY_PAGE = {
   pullquote:
     'אין פוליסת אחריות אחת שמתאימה לכל עיסוק. מי שמוכר לכם אחת כזאת, מוכר לכם חריגים שלא קראתם.',
   schemaType: 'Article',
-  formHeading: 'הצעה לביטוח אחריות',
-  formBranch: 'IL · Liability',
-  formSubject: 'ביטוח אחריות (IL)',
-  formCta: 'בקשת הצעה לאחריות',
-  formIntro:
-    'כתבו מה בדיוק העיסוק או המצב, ומי הצדדים שעלולים להיפגע. באחריות אזרחית האפיון המדויק הוא כל ההבדל בין פוליסה שתעבוד לפוליסה שתתגלה כלא רלוונטית.',
-  formPlaceholder:
-    'למשל: יועץ עצמאי בתחום מערכות מידע, לקוחות בפורטוגל ובישראל, עובד מהבית, לקוח אחד ביקש אישור על ביטוח אחריות מקצועית בגבול של מיליון אירו.',
+  // Especificação v2, Parte C — wizard config, fourth and last IL ramo.
+  // slaHours 48-72h (RC Profissional), not the 24h every other ramo
+  // promises — set on the HANDLED_FORMS entry, read by quoteIntro().
+  // faturacao_anual carries no dir="ltr": a single contiguous number
+  // (matching capital_edificio/capital_conteudo in home.mjs, which also
+  // never got it) has no internal separator groups to reorder, and its
+  // placeholder mixes a Hebrew word with a number but stays under the
+  // page's own natural RTL — the reordering bug fixed in quote-health-
+  // persons.js only happens when a mixed string is forced into the
+  // *opposite* base direction from what it's written in.
+  wizard: {
+    idPrefix: 'il-rcp',
+    formName: 'il-liability-insurance-wizard',
+    ramo: 'Liability',
+    heading: 'בקשת הצעה לביטוח אחריות מקצועית',
+    intro: 'נא למלא את הפרטים החשובים. נשיב בתוך 48 עד 72 שעות עבודה.',
+    stepLabel2: 'פעילות עסקית',
+    submitLabel: 'שליחת הבקשה',
+    microNote:
+      'נשיב בתוך 48 עד 72 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="il-rcp-faturacao">מחזור שנתי *</label><input type="number" id="il-rcp-faturacao" name="faturacao_anual" placeholder="לדוגמה: 85000" required></div>
+        <p class="wizard-helper">סוג הפעילות, גובה הכיסוי המבוקש, והאם הפוליסה נדרשת על פי חוזה או התאחדות מקצועית — נבין את כל זה בהמשך, בפנייה חוזרת.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="ma-ze-rc">
   <div class="container narrow article-body">

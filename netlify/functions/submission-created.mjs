@@ -1320,6 +1320,15 @@ export const HANDLED_FORMS = {
     page: "/zh/liability-insurance-portugal/",
     branch: "RC Profissional (ZH)",
   },
+  // Especificação v2, Parte C — Hebrew, fourth and last ramo.
+  "il-liability-insurance-wizard": {
+    quote: true,
+    lang: "he",
+    heading: "New Hebrew Liability quote request",
+    slaHours: "48 a 72",
+    page: "/il/liability-insurance-portugal/",
+    branch: "RC Profissional (IL)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,

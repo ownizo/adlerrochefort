@@ -85,6 +85,12 @@
       "matricula": "מספר רישוי",
       "matricula_placeholder": "AA-00-AA",
       "data_carta": "תאריך הנפקת רישיון הנהיגה"
+    },
+    "profissional": {
+      "titulo": "בקשת הצעה לביטוח אחריות מקצועית",
+      "subtitulo": "נא למלא את הפרטים החשובים. נשיב בתוך 48 עד 72 שעות עבודה.",
+      "faturacao_anual": "מחזור שנתי",
+      "faturacao_anual_placeholder": "לדוגמה: 85000"
     }
   },
   "countries": {

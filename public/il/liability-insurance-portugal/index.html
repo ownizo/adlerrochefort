@@ -200,6 +200,8 @@
 
 <link rel="stylesheet" href="/css/ar-cluster.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+<link rel="stylesheet" href="/css/ar-property.css">
+<link rel="stylesheet" href="/css/ar-quote-wizard.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
@@ -447,174 +449,72 @@
   </div>
 </section>
 
-<section class="section form-section" aria-labelledby="lead-title" id="hatzaa">
-  <div class="form-shell">
-    <h2 id="lead-title">הצעה לביטוח אחריות</h2>
-    <p class="form-intro">כתבו מה בדיוק העיסוק או המצב, ומי הצדדים שעלולים להיפגע. באחריות אזרחית האפיון המדויק הוא כל ההבדל בין פוליסה שתעבוד לפוליסה שתתגלה כלא רלוונטית.</p>
-    <p class="form-lang-note">הטופס מוצג בעברית. שפת העבודה שלנו היא אנגלית: הצעות מחיר, הסבר תנאים וליווי בתביעות נעשים בכתב באנגלית, וגם התשובה תגיע באנגלית.</p>
+<section class="section form-section" aria-labelledby="hatzaa-title" id="hatzaa">
+  <div class="form-shell lp-form-card">
+    <h2 id="hatzaa-title">בקשת הצעה לביטוח אחריות מקצועית</h2>
+    <p class="form-intro">נא למלא את הפרטים החשובים. נשיב בתוך 48 עד 72 שעות עבודה.</p>
 
-    <form
-      class="lead-form"
-      id="leadForm"
-      name="il-bakashat-hatzaa"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/il/#hatzaa"
-      novalidate>
+    <form name="il-liability-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/il/#hatzaa">
+      <input type="hidden" name="form-name" value="il-liability-insurance-wizard">
+      <input type="hidden" name="ramo" value="Liability">
+      <input type="hidden" name="source_url" id="il-rcp-source" value="">
+      <input type="hidden" name="dados_dinamicos" value="">
+      <p class="contact-form-honeypot"><label>נא לא למלא את השדה הזה <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
-      <input type="hidden" name="form-name" value="il-bakashat-hatzaa">
-      <input type="hidden" name="source" value="liability-insurance-portugal">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="subject" value="פנייה חדשה (IL) — ביטוח אחריות (IL)">
-      <input type="hidden" name="language" value="he">
-      <input type="hidden" name="market" value="israel">
-      <input type="hidden" name="product_interest" value="IL · Liability">
-      <p class="visually-hidden"><label>נא לא למלא את השדה הזה <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. פרטים אישיים</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. פעילות עסקית</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. אישור</span></li>
+      </ol>
 
-      <div class="field">
-        <label for="f-name">שם <span class="req" aria-hidden="true">*</span></label>
-        <input type="text" id="f-name" name="name" autocomplete="name"
-               required aria-required="true" aria-describedby="err-name">
-        <span class="field-error" id="err-name" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-email">דוא״ל <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email" dir="ltr"
-               required aria-required="true" aria-describedby="err-email">
-        <span class="field-error" id="err-email" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-phone">טלפון <span class="req" aria-hidden="true">*</span></label>
-        <p class="field-help" id="help-phone">נא לכתוב את המספר עם קידומת בין־לאומית, למשל ⁦+972 50 123 4567⁩ או ⁦+351 912 345 678⁩.</p>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" dir="ltr"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
-        <span class="field-error" id="err-phone" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-localidade">עיר או אזור בפורטוגל</label>
-        <input type="text" id="f-localidade" name="localidade" placeholder="למשל: ליסבון, קשקאיש, פורטו, לאגוש">
-      </div>
-
-      <div class="field">
-        <label for="f-country">ארץ המושב כרגע</label>
-        <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="למשל: ישראל, פורטוגל">
-      </div>
-
-      <div class="field">
-        <label for="f-residence">המצב שלכם בפורטוגל</label>
-        <select id="f-residence" name="residence_status">
-          <option value="" selected>בחרו אפשרות</option>
-          <option value="Planning move">מתכננים מעבר לפורטוגל</option>
-          <option value="Recently arrived">הגענו לפורטוגל לא מכבר</option>
-          <option value="Resident">מתגוררים בפורטוגל</option>
-          <option value="Non-resident owner">בעלי נכס בפורטוגל, מתגוררים במקום אחר</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-type">הביטוח שמעניין אתכם <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
-          <option value="" disabled>בחרו אפשרות</option>
-          <option value="IL · Home">ביטוח דירה או בית (למגורים, לבית שני או להשכרה)</option>
-          <option value="IL · Health">ביטוח בריאות פרטי</option>
-          <option value="IL · Motor">ביטוח רכב</option>
-          <option value="IL · Liability" selected>ביטוח אחריות (Responsabilidade Civil) — פרטי או מקצועי</option>
-          <option value="IL · Other">אחר, או עוד לא ברור</option>
-        </select>
-        <span class="field-error" id="err-type" aria-live="polite"></span>
-      </div>
-
-        <div class="form-branch-fields" data-branch="IL · Home" hidden>
-          <span class="form-branch-legend">על הנכס</span>
-          <div class="field">
-            <label for="f-home_property_type">סוג הנכס</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="למשל: דירה בליסבון בבניין עם condomínio, וילה באלגרבה, בית שמשמש לחופשות" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">אומדן עלות הבנייה מחדש (אם ידוע)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="למשל: כ־200,000 אירו. אם לא ידוע — זה בסדר, נעזור לאמוד" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">שווי משוער של התכולה</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="למשל: כ־50,000 אירו כולל רהיטים ומוצרי חשמל, ובנפרד תכשיטים ושעון" disabled>
-          </div>
+      <div data-wizard-step>
+        <div class="contact-form-field"><label for="il-rcp-nome">שם מלא *</label><input type="text" id="il-rcp-nome" name="nome" autocomplete="name" required></div>
+        <div class="contact-form-field"><label for="il-rcp-nif">⁦NIF⁩ (מספר זיהוי לצורכי מס בפורטוגל) *</label><input type="text" id="il-rcp-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-rcp-nascimento">תאריך לידה *</label><input type="date" id="il-rcp-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="il-rcp-morada">כתובת מלאה *</label><input type="text" id="il-rcp-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="il-rcp-localidade">עיר או יישוב *</label><input type="text" id="il-rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
+        <div class="contact-form-field"><label for="il-rcp-cp">מיקוד *</label><input type="text" id="il-rcp-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-rcp-telefone">מספר טלפון *</label><input type="tel" id="il-rcp-telefone" name="telefone" autocomplete="tel" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-rcp-email">כתובת ⁦דוא״ל⁩ *</label><input type="email" id="il-rcp-email" name="email" autocomplete="email" required dir="ltr"></div>
+        <div class="contact-form-field">
+          <label for="il-rcp-nacionalidade">אזרחות *</label>
+          <input type="text" id="il-rcp-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="il-rcp-nacionalidade-code" autocomplete="off" required>
+          <input type="hidden" name="nacionalidade" id="il-rcp-nacionalidade-code">
         </div>
-        <div class="form-branch-fields" data-branch="IL · Health" hidden>
-          <span class="form-branch-legend">מי צריך להיות מבוטח</span>
-          <div class="field">
-            <label for="f-health_household">מספר הנפשות והגילים</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="למשל: שני מבוגרים (42 ו־39) ושני ילדים (9 ו־5)" disabled>
-          </div>
+        <div class="contact-form-field">
+          <label for="il-rcp-residente-fiscal">האם אתם תושבי מס בפורטוגל? *</label>
+          <select id="il-rcp-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
+            <option value="">בחרו אפשרות</option>
+            <option value="sim">כן</option>
+            <option value="nao">לא</option>
+          </select>
         </div>
-        <div class="form-branch-fields" data-branch="IL · Motor" hidden>
-          <span class="form-branch-legend">על הרכב</span>
-          <div class="field">
-            <label for="f-motor_vehicle">יצרן, דגם ושנה</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="למשל: Volvo XC60 משנת 2021, דיזל" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">מצב הרישום כרגע</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="למשל: רשום כבר בפורטוגל / מתכננים לקנות רכב בפורטוגל / שוקלים לייבא רכב" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">ניסיון נהיגה והיסטוריית תביעות</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="למשל: 12 שנות רישיון, בלי תביעות בחמש השנים האחרונות, המבטח הקודם בישראל" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="IL · Liability" hidden>
-          <span class="form-branch-legend">מה צריך להיות מכוסה</span>
-          <div class="field">
-            <label for="f-liability_activity">העיסוק או המצב המדויק</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="למשל: ייעוץ, פיזיותרפיה, השכרת נכס, בית קפה, אחריות של משק בית" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">איפה נמצאים הלקוחות או הצדדים השלישיים</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="למשל: לקוחות בפורטוגל ובישראל, מקבלים אנשים בקליניקה בליסבון" disabled>
-          </div>
-        </div>
-
-      <div class="field">
-        <label for="f-start">מועד תחילה מבוקש</label>
-        <input type="text" id="f-start" name="start_date" placeholder="למשל: 1 במרץ, יום חתימת ה־escritura, בהקדם האפשרי">
+        <p class="wizard-helper" id="il-rcp-residente-fiscal-info" hidden>עדיין צריך למלא כתובת. ללא תושבות מס בפורטוגל, ייתכן שבמקרים מסוימים לא ניתן יהיה להנפיק את הפוליסה — בכל זאת נבדוק את המצב הספציפי שלכם.</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
       </div>
 
-      <div class="field">
-        <label for="f-preflang">שפת ההתכתבות</label>
-        <select id="f-preflang" name="preferred_language">
-          <option value="English">אנגלית — שפת העבודה שלנו</option>
-          <option value="Portuguese">פורטוגזית</option>
-        </select>
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="il-rcp-faturacao">מחזור שנתי *</label><input type="number" id="il-rcp-faturacao" name="faturacao_anual" placeholder="לדוגמה: 85000" required></div>
+        <p class="wizard-helper">סוג הפעילות, גובה הכיסוי המבוקש, והאם הפוליסה נדרשת על פי חוזה או התאחדות מקצועית — נבין את כל זה בהמשך, בפנייה חוזרת.</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
       </div>
 
-      <div class="field">
-        <label for="f-message">הודעה</label>
-        <textarea id="f-message" name="message" rows="6"
-                  placeholder="למשל: יועץ עצמאי בתחום מערכות מידע, לקוחות בפורטוגל ובישראל, עובד מהבית, לקוח אחד ביקש אישור על ביטוח אחריות מקצועית בגבול של מיליון אירו."></textarea>
-      </div>
-
-      <div class="field consent-block">
-        <div class="consent">
-          <input type="checkbox" id="f-consent" name="consent" value="מאשר"
-                 required aria-required="true" aria-describedby="err-consent">
-          <label for="f-consent">אני מאשר/ת ש־Adler &amp; Rochefort ייצרו איתי קשר בנוגע לפנייה הזו ויעבדו את הפרטים שמסרתי לצורך כך.</label>
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="il-rcp-inicio">מועד תחילה מבוקש *</label><input type="date" id="il-rcp-inicio" name="data_inicio" data-validate="start-date" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="il-rcp-rgpd"><input type="checkbox" id="il-rcp-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> אני מאשר/ת שהפרטים שמסרתי ישמשו להכנת ההצעה הזו, בהתאם לתקנה האירופית להגנת מידע (⁦GDPR⁩). *</label>
         </div>
-        <span class="field-error" id="err-consent" aria-live="polite"></span>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="submit" class="contact-form-submit">שליחת הבקשה ←</button></div>
       </div>
 
-      <button type="submit" class="form-submit" id="leadSubmit">בקשת הצעה לאחריות</button>
-      <p class="form-footnote">בדרך כלל נחזור אליכם בתוך יום עסקים. בקשת הצעה לא מחייבת אתכם לשום דבר.</p>
+      <p class="lp-form-micro">נשיב בתוך 48 עד 72 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.</p>
     </form>
-    <div class="form-success" id="leadSuccess">
-      <div class="tick">&#10003;</div>
-      <h3>הפנייה נשלחה. תודה.</h3>
-      <p>בדרך כלל נשיב בכתב באנגלית בתוך יום עסקים. לעניין דחוף אפשר להתקשר: ⁦+351 928 226 570⁩.</p>
+    <div class="contact-form-success" id="il-rcpSuccess">
+      <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+      <h3>תודה!</h3>
+      <p>הבקשה שלכם התקבלה. אנחנו מטפלים בה ונשיב בתוך 24 שעות עבודה.</p>
     </div>
+    <datalist id="nationality-list"><option value="אוגנדה" data-code="UG"></option><option value="אוזבקיסטן" data-code="UZ"></option><option value="אוסטריה" data-code="AT"></option><option value="אוסטרליה" data-code="AU"></option><option value="אוקראינה" data-code="UA"></option><option value="אורוגוואי" data-code="UY"></option><option value="אזרבייג׳ן" data-code="AZ"></option><option value="אי חג המולד" data-code="CX"></option><option value="איחוד האמירויות הערביות" data-code="AE"></option><option value="איטליה" data-code="IT"></option><option value="איי אולנד" data-code="AX"></option><option value="איי בהאמה" data-code="BS"></option><option value="איי הבתולה הבריטיים" data-code="VG"></option><option value="איי הבתולה של ארצות הברית" data-code="VI"></option><option value="איי הרד ומקדונלד" data-code="HM"></option><option value="איי ווליס ופוטונה" data-code="WF"></option><option value="איי טרקס וקייקוס" data-code="TC"></option><option value="איי מריאנה הצפוניים" data-code="MP"></option><option value="איי מרשל" data-code="MH"></option><option value="איי סיישל" data-code="SC"></option><option value="איי פארו" data-code="FO"></option><option value="איי פוקלנד" data-code="FK"></option><option value="איי פיטקרן" data-code="PN"></option><option value="איי קוק" data-code="CK"></option><option value="איי קוקוס (קילינג)" data-code="CC"></option><option value="איי קיימן" data-code="KY"></option><option value="איי שלמה" data-code="SB"></option><option value="אינדונזיה" data-code="ID"></option><option value="איסלנד" data-code="IS"></option><option value="איראן" data-code="IR"></option><option value="אירלנד" data-code="IE"></option><option value="אל סלבדור" data-code="SV"></option><option value="אלבניה" data-code="AL"></option><option value="אלג׳יריה" data-code="DZ"></option><option value="אנגווילה" data-code="AI"></option><option value="אנגולה" data-code="AO"></option><option value="אנדורה" data-code="AD"></option><option value="אנטארקטיקה" data-code="AQ"></option><option value="אנטיגואה וברבודה" data-code="AG"></option><option value="אסוואטיני" data-code="SZ"></option><option value="אסטוניה" data-code="EE"></option><option value="אפגניסטן" data-code="AF"></option><option value="אקוודור" data-code="EC"></option><option value="ארגנטינה" data-code="AR"></option><option value="ארובה" data-code="AW"></option><option value="אריתריאה" data-code="ER"></option><option value="ארמניה" data-code="AM"></option><option value="ארצות הברית" data-code="US"></option><option value="אתיופיה" data-code="ET"></option><option value="בהוטן" data-code="BT"></option><option value="בוטסואנה" data-code="BW"></option><option value="בולגריה" data-code="BG"></option><option value="בוליביה" data-code="BO"></option><option value="בוסניה והרצגובינה" data-code="BA"></option><option value="בורונדי" data-code="BI"></option><option value="בורקינה פאסו" data-code="BF"></option><option value="בחריין" data-code="BH"></option><option value="בלארוס" data-code="BY"></option><option value="בלגיה" data-code="BE"></option><option value="בליז" data-code="BZ"></option><option value="בנגלדש" data-code="BD"></option><option value="בנין" data-code="BJ"></option><option value="ברבדוס" data-code="BB"></option><option value="ברוניי" data-code="BN"></option><option value="ברזיל" data-code="BR"></option><option value="בריטניה" data-code="GB"></option><option value="ברמודה" data-code="BM"></option><option value="גאורגיה" data-code="GE"></option><option value="גאנה" data-code="GH"></option><option value="גבון" data-code="GA"></option><option value="גואטמלה" data-code="GT"></option><option value="גואם" data-code="GU"></option><option value="גוואדלופ" data-code="GP"></option><option value="גיאנה" data-code="GY"></option><option value="גיאנה הצרפתית" data-code="GF"></option><option value="גיברלטר" data-code="GI"></option><option value="גינאה" data-code="GN"></option><option value="גינאה המשוונית" data-code="GQ"></option><option value="גינאה-ביסאו" data-code="GW"></option><option value="גמביה" data-code="GM"></option><option value="גרינלנד" data-code="GL"></option><option value="גרמניה" data-code="DE"></option><option value="גרנדה" data-code="GD"></option><option value="גרנזי" data-code="GG"></option><option value="ג׳ורג׳יה הדרומית ואיי סנדוויץ׳ הדרומיים" data-code="GS"></option><option value="ג׳יבוטי" data-code="DJ"></option><option value="ג׳מייקה" data-code="JM"></option><option value="ג׳רזי" data-code="JE"></option><option value="דומיניקה" data-code="DM"></option><option value="דנמרק" data-code="DK"></option><option value="דרום אפריקה" data-code="ZA"></option><option value="דרום סודן" data-code="SS"></option><option value="האי בובה" data-code="BV"></option><option value="האי מאן" data-code="IM"></option><option value="האי נורפוק" data-code="NF"></option><option value="האיטי" data-code="HT"></option><option value="האיים המלדיביים" data-code="MV"></option><option value="האיים המרוחקים הקטנים של ארה״ב" data-code="UM"></option><option value="האיים הקריביים ההולנדיים" data-code="BQ"></option><option value="הודו" data-code="IN"></option><option value="הוותיקן" data-code="VA"></option><option value="הולנד" data-code="NL"></option><option value="הונג קונג (אזור מנהלי מיוחד של סין)" data-code="HK"></option><option value="הונגריה" data-code="HU"></option><option value="הונדורס" data-code="HN"></option><option value="הטריטוריה הבריטית באוקיינוס ההודי" data-code="IO"></option><option value="הטריטוריות הדרומיות של צרפת" data-code="TF"></option><option value="הפיליפינים" data-code="PH"></option><option value="הרפובליקה הדומיניקנית" data-code="DO"></option><option value="הרפובליקה המרכז-אפריקאית" data-code="CF"></option><option value="השטחים הפלסטיניים" data-code="PS"></option><option value="וייטנאם" data-code="VN"></option><option value="ונואטו" data-code="VU"></option><option value="ונצואלה" data-code="VE"></option><option value="זימבבואה" data-code="ZW"></option><option value="זמביה" data-code="ZM"></option><option value="חוף השנהב" data-code="CI"></option><option value="טג׳יקיסטן" data-code="TJ"></option><option value="טובאלו" data-code="TV"></option><option value="טוגו" data-code="TG"></option><option value="טונגה" data-code="TO"></option><option value="טוקלאו" data-code="TK"></option><option value="טורקיה" data-code="TR"></option><option value="טורקמניסטן" data-code="TM"></option><option value="טייוואן" data-code="TW"></option><option value="טימור-לסטה" data-code="TL"></option><option value="טנזניה" data-code="TZ"></option><option value="טרינידד וטובגו" data-code="TT"></option><option value="יוון" data-code="GR"></option><option value="יפן" data-code="JP"></option><option value="ירדן" data-code="JO"></option><option value="ישראל" data-code="IL"></option><option value="כווית" data-code="KW"></option><option value="כף ורדה" data-code="CV"></option><option value="לאוס" data-code="LA"></option><option value="לבנון" data-code="LB"></option><option value="לוב" data-code="LY"></option><option value="לוקסמבורג" data-code="LU"></option><option value="לטביה" data-code="LV"></option><option value="ליבריה" data-code="LR"></option><option value="ליטא" data-code="LT"></option><option value="ליכטנשטיין" data-code="LI"></option><option value="לסוטו" data-code="LS"></option><option value="מאוריטניה" data-code="MR"></option><option value="מאוריציוס" data-code="MU"></option><option value="מאיוט" data-code="YT"></option><option value="מאלי" data-code="ML"></option><option value="מדגסקר" data-code="MG"></option><option value="מוזמביק" data-code="MZ"></option><option value="מולדובה" data-code="MD"></option><option value="מונגוליה" data-code="MN"></option><option value="מונטנגרו" data-code="ME"></option><option value="מונסראט" data-code="MS"></option><option value="מונקו" data-code="MC"></option><option value="מיאנמר (בורמה)" data-code="MM"></option><option value="מיקרונזיה" data-code="FM"></option><option value="מלאווי" data-code="MW"></option><option value="מלזיה" data-code="MY"></option><option value="מלטה" data-code="MT"></option><option value="מצרים" data-code="EG"></option><option value="מקאו (אזור מנהלי מיוחד של סין)" data-code="MO"></option><option value="מקדוניה הצפונית" data-code="MK"></option><option value="מקסיקו" data-code="MX"></option><option value="מרוקו" data-code="MA"></option><option value="מרטיניק" data-code="MQ"></option><option value="נאורו" data-code="NR"></option><option value="נורווגיה" data-code="NO"></option><option value="ניגריה" data-code="NG"></option><option value="ניו זילנד" data-code="NZ"></option><option value="ניווה" data-code="NU"></option><option value="ניז׳ר" data-code="NE"></option><option value="ניקרגואה" data-code="NI"></option><option value="נמיביה" data-code="NA"></option><option value="נפאל" data-code="NP"></option><option value="סאו טומה ופרינסיפה" data-code="ST"></option><option value="סבאלברד ויאן מאיין" data-code="SJ"></option><option value="סהרה המערבית" data-code="EH"></option><option value="סודן" data-code="SD"></option><option value="סומליה" data-code="SO"></option><option value="סוריה" data-code="SY"></option><option value="סורינאם" data-code="SR"></option><option value="סיירה לאון" data-code="SL"></option><option value="סין" data-code="CN"></option><option value="סינגפור" data-code="SG"></option><option value="סלובניה" data-code="SI"></option><option value="סלובקיה" data-code="SK"></option><option value="סמואה" data-code="WS"></option><option value="סמואה האמריקנית" data-code="AS"></option><option value="סן מרטן" data-code="MF"></option><option value="סן מרינו" data-code="SM"></option><option value="סנגל" data-code="SN"></option><option value="סנט ברתולומיאו" data-code="BL"></option><option value="סנט הלנה" data-code="SH"></option><option value="סנט וינסנט והגרנדינים" data-code="VC"></option><option value="סנט לוסיה" data-code="LC"></option><option value="סנט מארטן" data-code="SX"></option><option value="סנט פייר ומיקלון" data-code="PM"></option><option value="סנט קיטס ונוויס" data-code="KN"></option><option value="ספרד" data-code="ES"></option><option value="סרביה" data-code="RS"></option><option value="סרי לנקה" data-code="LK"></option><option value="עומאן" data-code="OM"></option><option value="עיראק" data-code="IQ"></option><option value="ערב הסעודית" data-code="SA"></option><option value="פוארטו ריקו" data-code="PR"></option><option value="פולין" data-code="PL"></option><option value="פולינזיה הצרפתית" data-code="PF"></option><option value="פורטוגל" data-code="PT"></option><option value="פיג׳י" data-code="FJ"></option><option value="פינלנד" data-code="FI"></option><option value="פלאו" data-code="PW"></option><option value="פנמה" data-code="PA"></option><option value="פפואה גינאה החדשה" data-code="PG"></option><option value="פקיסטן" data-code="PK"></option><option value="פרגוואי" data-code="PY"></option><option value="פרו" data-code="PE"></option><option value="צרפת" data-code="FR"></option><option value="צ׳אד" data-code="TD"></option><option value="צ׳ילה" data-code="CL"></option><option value="צ׳כיה" data-code="CZ"></option><option value="קובה" data-code="CU"></option><option value="קולומביה" data-code="CO"></option><option value="קומורו" data-code="KM"></option><option value="קונגו - ברזאויל" data-code="CG"></option><option value="קונגו - קינשאסה" data-code="CD"></option><option value="קוסטה ריקה" data-code="CR"></option><option value="קוראסאו" data-code="CW"></option><option value="קוריאה הדרומית" data-code="KR"></option><option value="קוריאה הצפונית" data-code="KP"></option><option value="קזחסטן" data-code="KZ"></option><option value="קטאר" data-code="QA"></option><option value="קירגיזסטן" data-code="KG"></option><option value="קיריבאטי" data-code="KI"></option><option value="קלדוניה החדשה" data-code="NC"></option><option value="קמבודיה" data-code="KH"></option><option value="קמרון" data-code="CM"></option><option value="קנדה" data-code="CA"></option><option value="קניה" data-code="KE"></option><option value="קפריסין" data-code="CY"></option><option value="קרואטיה" data-code="HR"></option><option value="ראוניון" data-code="RE"></option><option value="רואנדה" data-code="RW"></option><option value="רומניה" data-code="RO"></option><option value="רוסיה" data-code="RU"></option><option value="שוודיה" data-code="SE"></option><option value="שווייץ" data-code="CH"></option><option value="תאילנד" data-code="TH"></option><option value="תוניסיה" data-code="TN"></option><option value="תימן" data-code="YE"></option></datalist>
   </div>
 </section>
 </article>
@@ -719,148 +619,11 @@
   <a href="#hatzaa">לקבלת הצעה</a>
 </div>
 
-<script>
-  /*
-   * Validation and attribution for the עברית lead form. The form works
-   * without JavaScript — this replaces the browser's generic bubbles with
-   * messages in the visitor's language next to the field that caused them, and
-   * stamps the two attribution fields the rest of the site already uses
-   * (source_url, landing_page; see /js/ar-analytics-tracker.js). No second
-   * analytics stack, no extra conversion: one generate_lead event carrying the
-   * market and language, plus the site's existing lead conversion.
-   */
-  (function () {
-    "use strict";
-    var form = document.getElementById("leadForm");
-    if (!form) return;
-
-    var submitBtn = document.getElementById("leadSubmit");
-    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
-    var PHONE_RE = /^[+]?[0-9 ()-]{6,}$/;
-
-    var RULES = [
-      { id: "f-name", error: "err-name", validate: function (value) {
-          if (!value) return "נא למלא שם.";
-          if (value.length < 2) return "נא למלא שם מלא.";
-          return null; } },
-      { id: "f-email", error: "err-email", validate: function (value) {
-          if (!value) return "נא למלא כתובת דוא״ל.";
-          if (!EMAIL_RE.test(value)) return "כתובת הדוא״ל נראית חסרה.";
-          return null; } },
-      { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "נא למלא מספר טלפון.";
-          if (!PHONE_RE.test(value)) return "נא לכתוב מספר עם קידומת בין־לאומית, למשל ⁦+351 912 345 678⁩.";
-          return null; } },
-      { id: "f-type", error: "err-type", validate: function (value) {
-          if (!value) return "נא לבחור איזה ביטוח מעניין אתכם.";
-          return null; } },
-      { id: "f-consent", error: "err-consent", checkbox: true, validate: function (checked) {
-          if (!checked) return "בלי האישור הזה לא נוכל להשיב לפנייה.";
-          return null; } }
-    ];
-
-    function valueOf(rule, field) {
-      return rule.checkbox ? field.checked : String(field.value || "").trim();
-    }
-
-    function setError(rule, message) {
-      var field = document.getElementById(rule.id);
-      var box = document.getElementById(rule.error);
-      if (!field || !box) return;
-      if (message) {
-        box.textContent = message;
-        box.classList.add("show");
-        field.setAttribute("aria-invalid", "true");
-      } else {
-        box.textContent = "";
-        box.classList.remove("show");
-        field.removeAttribute("aria-invalid");
-      }
-    }
-
-    function check(rule) {
-      var field = document.getElementById(rule.id);
-      if (!field) return true;
-      var message = rule.validate(valueOf(rule, field));
-      setError(rule, message);
-      return !message;
-    }
-
-    RULES.forEach(function (rule) {
-      var field = document.getElementById(rule.id);
-      if (!field) return;
-      var revalidate = function () {
-        if (field.getAttribute("aria-invalid") === "true") check(rule);
-      };
-      field.addEventListener("input", revalidate);
-      field.addEventListener("change", revalidate);
-      field.addEventListener("blur", function () {
-        if (valueOf(rule, field)) check(rule);
-      });
-    });
-
-    var typeSelect = document.getElementById("f-type");
-    var productField = form.querySelector('input[name="product_interest"]');
-    if (typeSelect && productField) {
-      typeSelect.addEventListener("change", function () {
-        productField.value = typeSelect.value;
-      });
-    }
-
-    function stampAttribution() {
-      var source = form.querySelector('input[name="source_url"]');
-      if (source && !source.value) source.value = window.location.href;
-      var landing = form.querySelector('input[name="landing_page"]');
-      if (landing && !landing.value) {
-        var stored = null;
-        try { stored = window.sessionStorage.getItem("ar_landing_page"); } catch (err) {}
-        landing.value = stored || window.location.href;
-      }
-    }
-    stampAttribution();
-
-    form.addEventListener("submit", function (event) {
-      var firstInvalid = null;
-      RULES.forEach(function (rule) {
-        if (!check(rule) && !firstInvalid) firstInvalid = document.getElementById(rule.id);
-      });
-      if (firstInvalid) {
-        event.preventDefault();
-        firstInvalid.focus();
-        return;
-      }
-      event.preventDefault();
-      var originalLabel = submitBtn.textContent;
-      submitBtn.disabled = true;
-      submitBtn.textContent = "שולחים…";
-      var data = new URLSearchParams(new FormData(form)).toString();
-      fetch("/il/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: data,
-      }).then(function () {
-        form.style.display = "none";
-        var success = document.getElementById("leadSuccess");
-        if (success) success.classList.add("show");
-        if (window.gtag) {
-          window.gtag("event", "generate_lead", {
-            form_name: "il_bakashat_hatzaa",
-            market: "israel",
-            language: "he",
-            insurance_product: productField ? productField.value : "",
-            landing_page: form.querySelector('input[name="landing_page"]').value
-          });
-          window.gtag("event", "conversion", { send_to: "AW-18361722533/HxH6CKqa1uEcEKXNxrNE", value: 1.0, currency: "EUR" });
-        }
-      }).catch(function () {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
-        alert("השליחה לא הושלמה. אפשר לנסות שוב, או לכתוב לכתובת ⁦insurance@adlerrochefort.com⁩.");
-      });
-    });
-  })();
-</script>
 <script defer src="/js/lead-branch-fields.js"></script>
+<script defer src="/js/quote-validators.js"></script>
+<script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/quote-nationality.js"></script>
+<script defer src="/js/quote-wizard.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
 <div class="cookie-banner" id="cookieBanner">

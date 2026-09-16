@@ -410,6 +410,14 @@ const FORM_CLASSIFICATION = {
     product: 'professional-liability',
     classify: classifyRcProfissionalDedicated,
   },
+  // Especificação v2, Parte C — Hebrew, fourth and last ramo.
+  'il-liability-insurance-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'HE',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
