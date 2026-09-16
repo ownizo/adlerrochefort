@@ -1010,7 +1010,7 @@ const flood = {
         {
           kind: 'grid',
           items: [
-            { title: 'Algarve <em>ribeiras</em>', body: 'Dry watercourses that run through towns for most of the year unnoticed, and carry serious volume after heavy rain.' },
+            { title: 'Algarve ribeiras', body: 'Dry watercourses that run through towns for most of the year unnoticed, and carry serious volume after heavy rain.' },
             { title: 'Coastal and clifftop property', body: 'Sea, wind and erosion in combination. See <a href="/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/">coastal properties, subsidence and erosion</a>.' },
             { title: 'Sloping plots', body: 'Villas cut into hillsides where surface water arrives at the back of the house rather than the front.' },
             { title: 'Basements and garages', body: 'Below-ground levels are where flood water ends up, and often where the plant, the boiler and the stored belongings are.' },
@@ -1231,8 +1231,8 @@ const earthquake = {
         {
           kind: 'steps',
           items: [
-            { title: 'Find the <em>condi&ccedil;&otilde;es particulares</em>.', body: 'The particular conditions page of your policy, which lists the covers actually bought and their capital limits.' },
-            { title: 'Look for <em>sismos</em>, <em>fen&oacute;menos s&iacute;smicos</em> or <em>terramoto</em>.', body: 'If the line is absent, or shows no capital against it, you do not have the cover.' },
+            { title: 'Find the condi&ccedil;&otilde;es particulares.', body: 'The particular conditions page of your policy, which lists the covers actually bought and their capital limits.' },
+            { title: 'Look for sismos, fen&oacute;menos s&iacute;smicos or terramoto.', body: 'If the line is absent, or shows no capital against it, you do not have the cover.' },
             { title: 'Check the excess.', body: 'Seismic cover typically carries its own excess, often expressed as a percentage of the sum insured rather than a fixed amount.' },
             { title: 'Check contents as well as buildings.', body: 'The two are separately insured and it is possible to have seismic cover on one and not the other.' },
             { title: 'In an apartment, check both policies.', body: 'Yours and the condominium&rsquo;s. A building can be seismically damaged as a whole while every individual policy responds only to its own fraction.' },
