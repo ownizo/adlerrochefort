@@ -517,6 +517,13 @@ const QUOTE_LABELS_DE = {
   // built from the generic "Unternehmen" branch per Hugo's explicit choice
   // (no dedicated DE page existed for this ramo before).
   faturacao_anual: "Jahresumsatz",
+
+  // Especificação v2, Parte D1 — Lebensversicherung DE. Deliberately no
+  // health/lifestyle fields (no smoking status, no risk sport, no height/
+  // weight, no medical history) — the medical questionnaire belongs to the
+  // insurer's own adhesion step, same reasoning as Saúde's own dynamic
+  // blocks and quote-health-persons.js's own top comment.
+  capital: "Gewünschtes Kapital",
 };
 
 // Especificação v2, Parte 2 continuação (NL) — same pattern as
@@ -940,6 +947,17 @@ export const HANDLED_FORMS = {
     slaHours: "48 a 72",
     page: "/nl/bedrijfsverzekering-portugal/",
     branch: "Empresarial (NL)",
+  },
+  // Especificação v2, Parte D1 — Lebensversicherung DE, built from the
+  // generic "Lebensversicherung" branch of the shared de-angebot-anfrage
+  // form (page already existed; only the form itself was dedicated). No
+  // slaHours: 24h, same default as Auto/Habitação/Saúde.
+  "de-lebensversicherung-wizard": {
+    quote: true,
+    lang: "de",
+    heading: "New German life insurance quote request",
+    page: "/de/lebensversicherung-portugal/",
+    branch: "Vida (DE)",
   },
   "car-insurance-quote": {
     quote: true,

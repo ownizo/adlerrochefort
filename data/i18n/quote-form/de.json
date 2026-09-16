@@ -91,6 +91,16 @@
       "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 48 bis 72 Arbeitsstunden.",
       "faturacao_anual": "Jahresumsatz",
       "faturacao_anual_placeholder": "Z. B. 85000"
+    },
+    "vida": {
+      "titulo": "Beratung zur Lebensversicherung anfragen",
+      "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 24 Arbeitsstunden.",
+      "capital": "Gewünschtes Kapital (€)",
+      "capital_placeholder": "Z. B. 150000"
+    },
+    "private_clients": {
+      "titulo": "Private-Clients-Beratung anfragen",
+      "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 24 Arbeitsstunden."
     }
   },
   "countries": {
