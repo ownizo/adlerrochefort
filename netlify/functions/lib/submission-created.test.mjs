@@ -493,3 +493,31 @@ test("test-mode submission on the NL RC Profissional wizard writes Dutch labels 
   assert.match(htmlLine, /48 tot 72 werkuren/);
   assert.doesNotMatch(htmlLine, /Annual turnover/);
 });
+
+// Especificação v2, Parte D2 — Bedrijfsverzekering NL, built from scratch
+// (no dedicated NL page existed for this ramo before). Confirms the
+// company-facing labels render in Dutch and the ramo_* checkbox fields
+// (present only when checked) each get their own label.
+test("test-mode submission on the NL Bedrijfsverzekering wizard writes Dutch labels for the company fields into payload_teste.email", async () => {
+  const req = mockRequest({
+    form_name: "nl-bedrijfsverzekering-wizard",
+    id: "sub-test-nl-3",
+    created_at: "2026-09-16T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      nome_empresa: "De Vries Consultancy Lda.",
+      nif_empresa: "501442600",
+      ramo_multirriscos: "sim",
+      rgpd: "ja",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /Bedrijfsnaam/);
+  assert.match(htmlLine, /NIF van het bedrijf/);
+  assert.match(htmlLine, /Multirisicoverzekering/);
+  assert.match(htmlLine, /48 tot 72 werkuren/);
+});

@@ -37,6 +37,18 @@ test("explicitly business/condominium forms never classify as individual", () =>
   assert.equal(classifySubmission("condominium-audit", {}).entityType, "condominium");
 });
 
+// Especificação v2, Parte D2 — Bedrijfsverzekering NL always classifies as
+// business (never contextual): it explicitly collects nome_empresa/
+// nif_empresa, so there is no individual/company ambiguity to resolve —
+// unlike the RC Profissional wizards, which reuse the contextual classifier.
+// A business classification means buildCrmLeadPayload skips it entirely
+// (never syncs to individual_clients), same as every other business form.
+test("nl-bedrijfsverzekering-wizard always classifies as business, never contextual", () => {
+  const result = classifySubmission("nl-bedrijfsverzekering-wizard", { nome_empresa: "De Vries Lda.", nif_empresa: "501442600" });
+  assert.equal(result.entityType, "business");
+  assert.equal(result.product, "business-multirisk");
+});
+
 test("unknown form names are ambiguous, never individual by default", () => {
   const result = classifySubmission("some-unlisted-form", {});
   assert.equal(result.entityType, "ambiguous");

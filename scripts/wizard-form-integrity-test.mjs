@@ -258,6 +258,21 @@ const PAGES = [
       "faturacao_anual", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte D2 — Bedrijfsverzekering NL, built from
+  // scratch. nome_empresa/nif_empresa carry a real HTML `required`
+  // attribute (checked here); the three ramo_* checkboxes deliberately do
+  // not (their "at least one" rule is a data-required-group, not a plain
+  // required — see wizard-required-fields-test.mjs for the runtime check).
+  {
+    label: "NL /nl/bedrijfsverzekering-portugal/",
+    path: "nl/bedrijfsverzekering-portugal/index.html",
+    expectedFormName: "nl-bedrijfsverzekering-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "nome_empresa", "nif_empresa", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

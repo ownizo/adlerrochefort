@@ -343,6 +343,12 @@ const FORM_CLASSIFICATION = {
     product: 'professional-liability',
     classify: classifyRcProfissionalDedicated,
   },
+  // Especificação v2, Parte D2 — Bedrijfsverzekering NL. Always `business`,
+  // never contextual: unlike the RC Profissional wizards above, this form
+  // explicitly collects nome_empresa/nif_empresa, so there is no ambiguity
+  // to resolve from free-text keywords. Same product taxonomy value as
+  // 'Multirriscos Empresarial' in BRANCH_CLASSIFICATION below.
+  'nl-bedrijfsverzekering-wizard': { entityType: 'business', market: 'PT', language: 'NL', product: 'business-multirisk' },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────

@@ -607,6 +607,43 @@ const PAGES = [
       rgpd: true,
     },
   },
+  {
+    // Especificação v2, Parte D2 — Bedrijfsverzekering NL, built from
+    // scratch (no dedicated NL page existed for this ramo before). First
+    // page to use a `data-required-group` checkbox group ("at least one of
+    // these three, not all three") — only one of the three ramo_* checkboxes
+    // is listed in `values`, deliberately: withholding it must leave zero
+    // checked and block advancement, which is exactly what the "one
+    // required field withheld at a time" loop below tests. Listing more
+    // than one would leave the group satisfied even with one withheld,
+    // silently defeating that test.
+    label: 'NL /nl/bedrijfsverzekering-portugal/',
+    path: 'nl/bedrijfsverzekering-portugal/index.html',
+    url: 'https://adlerrochefort.com/nl/bedrijfsverzekering-portugal/',
+    formName: 'nl-bedrijfsverzekering-wizard',
+    scripts: ['lead-branch-fields.js', 'quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Jan de Vries',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+31 6 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Nederland',
+      residente_fiscal: 'sim',
+      nome_empresa: 'De Vries Consultancy Lda.',
+      nif_empresa: '501442600',
+      ramo_multirriscos: true,
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+  },
 ];
 
 async function domFor(html, url) {

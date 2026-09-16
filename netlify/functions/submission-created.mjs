@@ -556,9 +556,16 @@ const QUOTE_LABELS_NL = {
   // Bedrijfsverzekering NL (Especificação v2, Parte D2) — no `empresa`/nif
   // pessoal ambiguity here: nome/nif above are the contact person's own,
   // nome_empresa/nif_empresa below are the company's, always both present.
+  // The three ramo_* checkboxes are each their own field (present with
+  // value "sim" only when checked, per the standard HTML checkbox
+  // contract) — data-required-group="ramos_pretendidos" on the markup only
+  // groups them for the "at least one" client-side validation, it is not
+  // itself a submitted field name.
   nome_empresa: "Bedrijfsnaam",
   nif_empresa: "NIF van het bedrijf",
-  ramos_pretendidos: "Gewenste dekkingen",
+  ramo_acidentes_trabalho: "Arbeidsongevallen",
+  ramo_multirriscos: "Multirisicoverzekering",
+  ramo_responsabilidade_civil: "Aansprakelijkheidsverzekering",
 };
 
 // Forms handled by this notification flow, with the wording used in the email.
@@ -920,6 +927,19 @@ export const HANDLED_FORMS = {
     slaHours: "48 a 72",
     page: "/nl/zzp-beroepsaansprakelijkheid-portugal/",
     branch: "RC Profissional (NL)",
+  },
+  // Especificação v2, Parte D2 — Bedrijfsverzekering NL, built from scratch
+  // (no dedicated NL page existed for this simplified 3-branch business
+  // ramo before), per Hugo's explicit definition in the "Parte D" prompt —
+  // not invented. 48-72h SLA: covers responsabilidade civil among its three
+  // options, same reasoning as the RC-only forms above.
+  "nl-bedrijfsverzekering-wizard": {
+    quote: true,
+    lang: "nl",
+    heading: "New Dutch business insurance quote request",
+    slaHours: "48 a 72",
+    page: "/nl/bedrijfsverzekering-portugal/",
+    branch: "Empresarial (NL)",
   },
   "car-insurance-quote": {
     quote: true,
