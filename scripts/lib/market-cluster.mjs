@@ -508,6 +508,15 @@ function nationalityDatalist(countries) {
  * residente_fiscal/data_inicio/rgpd) — this is what lets netlify/functions/
  * submission-created.mjs's renderAllFields/QUOTE_LABELS_* stay generic
  * across every language rather than branching per market.
+ *
+ * `w.microNote` is trusted markup, same contract as `page.sections` and
+ * `w.fieldsHtml` above — every market's copy embeds a real
+ * `<a href="/en/privacy-policy">` link (IL's also wraps GDPR in `<bdi>`).
+ * Bug fixed here (Especificação v2, Parte C): this was passed through
+ * `esc()`, which escaped that link to literal visible text on every
+ * PL/SE/DK/ZH wizard page already shipped — found live on the IL page
+ * while doing this part's RTL verification pass. DE/NL's own hand-built
+ * equivalent never goes through `esc()` and so never had the bug.
  */
 function wizardFormHtml(market, page) {
   const w = page.wizard;
@@ -587,7 +596,7 @@ ${w.fieldsHtml}
         <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>${backArrow} ${esc(c.wizard.anterior)}</button><button type="submit" class="contact-form-submit">${esc(w.submitLabel || ui.formSubmit)} ${fwdArrow}</button></div>
       </div>
 
-      <p class="lp-form-micro">${esc(w.microNote)}</p>
+      <p class="lp-form-micro">${w.microNote}</p>
     </form>
     <div class="contact-form-success" id="${idp}Success">
       <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
