@@ -369,6 +369,36 @@ const PAGES = [
     },
   },
   {
+    // Especificação v2, Parte C — RC Profissional's new dedicated DE page,
+    // built from the generic "Unternehmen" branch (no dedicated DE page
+    // existed for this ramo before). Same field set as the PT/EN wizards
+    // above, shared field names like the other DE wizards.
+    label: 'DE /de/berufshaftpflicht-freiberufler-portugal/',
+    path: 'de/berufshaftpflicht-freiberufler-portugal/index.html',
+    url: 'https://adlerrochefort.com/de/berufshaftpflicht-freiberufler-portugal/',
+    formName: 'de-berufshaftpflicht-freiberufler-wizard',
+    scripts: ['quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
+    firstBatch: [
+      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
+      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
+    ],
+    values: {
+      nome: 'Hans Müller',
+      nif: '501442600',
+      data_nascimento: '1985-03-15',
+      morada: 'Rua Teste 123',
+      localidade: 'Lagos',
+      codigo_postal: '8600-100',
+      telefone: '+49 30 12345678',
+      email: 'teste@example.com',
+      nacionalidade_nome: 'Deutschland',
+      residente_fiscal: 'sim',
+      faturacao_anual: '85000',
+      data_inicio: '2026-10-01',
+      rgpd: true,
+    },
+  },
+  {
     label: 'PT /seguros/saude/',
     path: 'seguros/saude/index.html',
     url: 'https://adlerrochefort.com/seguros/saude/',

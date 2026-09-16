@@ -205,6 +205,19 @@ const PAGES = [
       "nationality_name", "tax_resident_pt", "faturacao_anual", "start_date", "rgpd",
     ],
   },
+  // Especificação v2, Parte C — RC Profissional's new dedicated DE page, built
+  // from the generic "Unternehmen" branch (no dedicated DE page existed for
+  // this ramo before). Same shared field names as PT's dedicated wizard.
+  {
+    label: "DE /de/berufshaftpflicht-freiberufler-portugal/",
+    path: "de/berufshaftpflicht-freiberufler-portugal/index.html",
+    expectedFormName: "de-berufshaftpflicht-freiberufler-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "faturacao_anual", "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

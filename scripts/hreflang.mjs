@@ -110,7 +110,14 @@ const PAGE_CLUSTERS = [
   // '/en/blog/professional-indemnity-insurance/' article pair below (which
   // stays as-is): this pair is /seguros/ page ↔ its EN quote-wizard
   // equivalent, the same "dedicated page" pattern as Auto/Habitação/Saúde.
-  { '/seguros/responsabilidade-civil-profissional/': 'pt-PT', '/en/professional-liability-insurance-portugal/': 'en-GB' },
+  {
+    '/seguros/responsabilidade-civil-profissional/': 'pt-PT',
+    '/en/professional-liability-insurance-portugal/': 'en-GB',
+    // Especificação v2, Parte C — de-berufshaftpflicht-freiberufler-wizard,
+    // built from the generic "Unternehmen" branch (no dedicated DE page
+    // existed for this ramo before), same pattern as Auto/Habitação/Saúde.
+    '/de/berufshaftpflicht-freiberufler-portugal/': 'de',
+  },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
   {
     '/seguros-empresas-lagos/': 'pt-PT',
