@@ -438,3 +438,24 @@ test("test-mode submission on the NL Habitação wizard writes Dutch labels into
   assert.match(htmlLine, /Verzekerd bedrag gebouw/);
   assert.doesNotMatch(htmlLine, /Building insured sum/);
 });
+
+// Especificação v2, Parte 2 continuação (NL) — nl-zorgverzekering-wizard is
+// the first NL form to carry dados_dinamicos (the "pessoa segura"
+// repeater); confirms DYNAMIC_BLOCKS_COPY.nl renders in Dutch.
+test("a Dutch Saúde wizard's dynamic-blocks section (dados_dinamicos) renders in Dutch", () => {
+  const formConfig = HANDLED_FORMS["nl-zorgverzekering-wizard"];
+  assert.equal(formConfig.lang, "nl");
+  const html = renderAllFields(
+    {
+      nome: "Jan de Vries",
+      rgpd: "ja",
+      dados_dinamicos: JSON.stringify([{ nome: "Klara de Vries", data_nascimento: "2015-06-01", nif: "200000012" }]),
+    },
+    Boolean(formConfig.en),
+    formConfig.lang
+  );
+  assert.match(html, /Te verzekeren personen/);
+  assert.match(html, /Geboortedatum/);
+  assert.doesNotMatch(html, /People to insure/);
+  assert.doesNotMatch(html, /Zu versichernde Personen/);
+});

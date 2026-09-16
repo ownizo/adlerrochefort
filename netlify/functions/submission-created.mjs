@@ -901,6 +901,17 @@ export const HANDLED_FORMS = {
     page: "/nl/woonverzekering-portugal/",
     branch: "Habitação (NL)",
   },
+  // The "pessoa segura" repeater (dados_dinamicos) needs no new wiring here
+  // — renderDynamicBlocksSection already has a `lang: "nl"` branch
+  // (DYNAMIC_BLOCKS_COPY.nl), added alongside QUOTE_LABELS_NL in the
+  // Habitação PR in anticipation of this exact form.
+  "nl-zorgverzekering-wizard": {
+    quote: true,
+    lang: "nl",
+    heading: "New Dutch Health quote request",
+    page: "/nl/zorgverzekering-portugal/",
+    branch: "Saúde (NL)",
+  },
   "car-insurance-quote": {
     quote: true,
     en: true,
