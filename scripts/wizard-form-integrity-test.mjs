@@ -286,6 +286,19 @@ const PAGES = [
       "capital", "data_inicio", "rgpd",
     ],
   },
+  // Especificação v2, Parte D3 — Private Clients DE, built from the
+  // generic "Private Clients" branch. Only two wizard steps — no
+  // ramo-specific fields, the shared block covers everything.
+  {
+    label: "DE /de/private-clients-portugal/",
+    path: "de/private-clients-portugal/index.html",
+    expectedFormName: "de-private-clients-wizard",
+    requiredFields: [
+      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
+      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
+      "data_inicio", "rgpd",
+    ],
+  },
 ];
 
 /** Every .html file under public/, as a path relative to public/ — walked

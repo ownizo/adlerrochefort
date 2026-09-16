@@ -546,3 +546,26 @@ test("test-mode submission on the DE Lebensversicherung wizard writes German lab
   assert.doesNotMatch(htmlLine, /Sum insured/i);
   assert.doesNotMatch(htmlLine, /(smoking|raucher|fumador)/i);
 });
+
+// Especificação v2, Parte D3 — Private Clients DE, built from the generic
+// "Private Clients" branch. Only two wizard steps (no ramo-specific
+// fields) — confirms the transversal block alone still renders correctly
+// in German with the right SLA.
+test("test-mode submission on the DE Private Clients wizard writes German labels into payload_teste.email", async () => {
+  const req = mockRequest({
+    form_name: "de-private-clients-wizard",
+    id: "sub-test-de-3",
+    created_at: "2026-09-16T10:00:00Z",
+    data: {
+      nome: TEST_MODE_SENTINEL,
+      email: "agente-teste@example.com",
+      nif: "501442600",
+      rgpd: "sim",
+    },
+  });
+  const { lines } = await captureLogs(() => handler(req));
+  const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
+  assert.ok(htmlLine);
+  assert.match(htmlLine, /24 Arbeitsstunden/);
+  assert.match(htmlLine, /DSGVO-Einwilligung/);
+});
