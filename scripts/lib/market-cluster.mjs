@@ -609,13 +609,34 @@ ${w.fieldsHtml}
 }
 
 
+/**
+ * Parte C bug fix: `extra` (quote-health-persons.js, quote-field-toggle.js)
+ * used to load BEFORE quote-wizard.js here — backwards from the order
+ * every hand-built page (PT's /seguros/saude/, EN, DE, NL) already uses.
+ * `defer` scripts run in document order before DOMContentLoaded, at which
+ * point document.readyState is 'interactive', not 'loading' — so
+ * quote-health-persons.js's own `if (document.readyState === 'loading') …
+ * else init()` took the `else` branch and called init() synchronously,
+ * before quote-wizard.js (running after it) had created
+ * window.QuoteWizard.instances[0]. Its own `if (!wizard) return;` guard
+ * then silently no-opped: no first person block ever got added, and the
+ * "+ add person" button's click listener never got attached either — the
+ * Saúde wizard's step 2 was an empty, non-functional dead end on every
+ * PL/SE/DK/ZH Health page already shipped. Found live, by hand, verifying
+ * IL's own Saúde page — the wizard-required-fields-test.mjs jsdom harness
+ * never caught it because its own `scripts` array happens to list
+ * quote-wizard.js before quote-health-persons.js, the reverse of what was
+ * actually shipped, which accidentally worked and masked the bug.
+ * quote-field-toggle.js has no window.QuoteWizard dependency, so moving
+ * quote-wizard.js first is safe for it too.
+ */
 function wizardScript(page) {
   const extra = (page.wizard.scripts || []).map((s) => `<script defer src="/js/${s}"></script>`).join('\n');
   return `<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/quote-validators.js"></script>
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/quote-nationality.js"></script>
-${extra ? extra + '\n' : ''}<script defer src="/js/quote-wizard.js"></script>`;
+<script defer src="/js/quote-wizard.js"></script>${extra ? '\n' + extra : ''}`;
 }
 
 /* ─────────────── client script ─────────────── */
