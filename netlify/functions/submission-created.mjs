@@ -611,6 +611,8 @@ const QUOTE_LABELS_PL = {
 
   matricula: "Numer rejestracyjny",
   data_carta: "Data wydania prawa jazdy",
+
+  faturacao_anual: "Roczny obrót",
 };
 
 const QUOTE_LABELS_SV = {
@@ -641,6 +643,8 @@ const QUOTE_LABELS_SV = {
 
   matricula: "Registreringsnummer",
   data_carta: "Datum för körkortets utfärdande",
+
+  faturacao_anual: "Årsomsättning",
 };
 
 const QUOTE_LABELS_DA = {
@@ -671,6 +675,8 @@ const QUOTE_LABELS_DA = {
 
   matricula: "Nummerplade",
   data_carta: "Kørekortets udstedelsesdato",
+
+  faturacao_anual: "Årlig omsætning",
 };
 
 const QUOTE_LABELS_ZH = {
@@ -701,6 +707,8 @@ const QUOTE_LABELS_ZH = {
 
   matricula: "车牌号",
   data_carta: "驾照签发日期",
+
+  faturacao_anual: "年营业额",
 };
 
 // Lookup by `lang`, refactored from a growing if/else-if chain in
@@ -1202,6 +1210,41 @@ export const HANDLED_FORMS = {
     heading: "New Chinese Car quote request",
     page: "/zh/car-insurance-portugal/",
     branch: "Auto (ZH)",
+  },
+  // Fourth and last of the four ramos shared by the PL/SE/DK/ZH generator:
+  // Liability (RC Profissional). Same 48-72h SLA as its PT/EN/DE/NL
+  // counterparts — see slaHours.
+  "pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard": {
+    quote: true,
+    lang: "pl",
+    heading: "New Polish Liability quote request",
+    slaHours: "48 a 72",
+    page: "/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/",
+    branch: "RC Profissional (PL)",
+  },
+  "se-ansvarsforsakring-wizard": {
+    quote: true,
+    lang: "sv",
+    heading: "New Swedish Liability quote request",
+    slaHours: "48 a 72",
+    page: "/se/ansvarsforsakring-portugal/",
+    branch: "RC Profissional (SE)",
+  },
+  "dk-ansvarsforsikring-wizard": {
+    quote: true,
+    lang: "da",
+    heading: "New Danish Liability quote request",
+    slaHours: "48 a 72",
+    page: "/dk/ansvarsforsikring-portugal/",
+    branch: "RC Profissional (DK)",
+  },
+  "zh-liability-insurance-wizard": {
+    quote: true,
+    lang: "zh",
+    heading: "New Chinese Liability quote request",
+    slaHours: "48 a 72",
+    page: "/zh/liability-insurance-portugal/",
+    branch: "RC Profissional (ZH)",
   },
   "car-insurance-quote": {
     quote: true,

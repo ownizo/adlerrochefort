@@ -39,14 +39,22 @@ export const LIABILITY_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: '民事责任保险' }],
   pullquote: '不存在一份适用于所有职业的责任险。条款是跟着活动写的。',
   schemaType: 'Article',
-  formHeading: '责任保险咨询',
-  formBranch: 'ZH · Liability',
-  formSubject: '葡萄牙民事责任保险',
-  formCta: '提交咨询',
-  formIntro:
-    '请说明是个人生活的责任保障，还是与某项执业或经营活动相关的职业责任，以及客户或第三方主要在哪些国家。',
-  formPlaceholder:
-    '例如：IT 顾问，客户在葡萄牙和德国；或：出租一套公寓，需要业主责任保障。',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared zh-inquiry branch-select form. Same faturacao_anual field as
+  // PT/EN/DE/NL RC Profissional, and the same 48-72h SLA.
+  wizard: {
+    idPrefix: 'zh-rcp',
+    formName: 'zh-liability-insurance-wizard',
+    ramo: 'Liability',
+    heading: '申请责任保险报价',
+    intro: '请填写基本信息。我们将在48至72个工作小时内回复。',
+    stepLabel2: '经营活动',
+    submitLabel: '提交申请',
+    microNote:
+      '我们将在48至72个工作小时内回复。您的信息仅用于准备本报价，并根据《通用数据保护条例》（GDPR）处理——请参阅<a href="/en/privacy-policy" hreflang="en">隐私政策</a>。',
+    fieldsHtml: `        <div class="contact-form-field"><label for="zh-rcp-faturacao">年营业额 *</label><input type="number" id="zh-rcp-faturacao" name="faturacao_anual" placeholder="例如：85000" required></div>
+        <p class="wizard-helper">经营活动类型、期望的保险金额，以及保单是否为合同或行业协会所要求，我们将在后续联系中进一步了解。</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="shi-shenme">
   <div class="container narrow article-body">

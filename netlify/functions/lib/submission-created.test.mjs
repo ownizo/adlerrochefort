@@ -687,3 +687,22 @@ test("PL/SE/DK/ZH Auto wizards render matricula/data_carta labels in their own l
     assert.doesNotMatch(html, /Registration plate/, `${c.form}: no English leak`);
   }
 });
+
+// Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
+// converted together. Liability (RC Profissional) is the fourth and last
+// of the four ramos, with the same 48-72h SLA as its PT/EN/DE/NL
+// counterparts.
+test("PL/SE/DK/ZH Liability wizards promise 48-72h in their own language, not the default 24h", () => {
+  const cases = [
+    { form: "pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard", sla: /48 do 72 godzin roboczych/ },
+    { form: "se-ansvarsforsakring-wizard", sla: /48 till 72 arbetstimmar/ },
+    { form: "dk-ansvarsforsikring-wizard", sla: /48 til 72 arbejdstimer/ },
+    { form: "zh-liability-insurance-wizard", sla: /48 至 72个工作小时/ },
+  ];
+  for (const c of cases) {
+    const formConfig = HANDLED_FORMS[c.form];
+    assert.equal(formConfig.slaHours, "48 a 72", `${c.form}: slaHours`);
+    const text = quoteIntro(formConfig, "https://adlerrochefort.com/test/");
+    assert.match(text, c.sla, `${c.form}: SLA text`);
+  }
+});

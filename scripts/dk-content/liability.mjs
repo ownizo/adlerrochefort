@@ -30,14 +30,22 @@ export const LIABILITY_PAGE = {
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsforsikring' }],
   pullquote: 'Ansvarsdækningen er den, man aldrig tænker på — indtil den dag den er den eneste, der betyder noget.',
   schemaType: 'Article',
-  formHeading: 'Få et tilbud på ansvarsforsikring',
-  formBranch: 'DK · Ansvar',
-  formSubject: 'Ansvarsforsikring i Portugal',
-  formCta: 'Få et tilbud',
-  formIntro:
-    'Beskriv aktiviteten eller situationen med dine egne ord. Vi vender tilbage med, hvad der faktisk kan tegnes, og hvad der ikke kan.',
-  formPlaceholder:
-    'For eksempel: it-konsulent med danske og tyske kunder, arbejder hjemmefra i Cascais, portugisisk enkeltmandsvirksomhed siden foråret.',
+  // Especificação v2, Parte B — this page's dedicated wizard replaces the
+  // shared dk-forespoergsel branch-select form. Same faturacao_anual field
+  // as PT/EN/DE/NL RC Profissional, and the same 48-72h SLA.
+  wizard: {
+    idPrefix: 'dk-rcp',
+    formName: 'dk-ansvarsforsikring-wizard',
+    ramo: 'Ansvarsforsikring',
+    heading: 'Få et tilbud på ansvarsforsikring',
+    intro: 'Udfyld det væsentligste. Vi svarer inden for 48 til 72 arbejdstimer.',
+    stepLabel2: 'Aktiviteten',
+    submitLabel: 'Få et tilbud',
+    microNote:
+      'Svar inden for 48 til 72 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
+    fieldsHtml: `        <div class="contact-form-field"><label for="dk-rcp-faturacao">Årlig omsætning *</label><input type="number" id="dk-rcp-faturacao" name="faturacao_anual" placeholder="F.eks. 85000" required></div>
+        <p class="wizard-helper">Aktivitetstype, ønsket forsikringssum, og om policyen kræves i henhold til en kontrakt eller en brancheorganisation, gennemgår vi i den kontakt, der følger.</p>`,
+  },
   sections: `
 <section class="section plain" aria-labelledby="tre-slags">
   <div class="container narrow article-body">

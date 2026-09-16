@@ -372,6 +372,38 @@ const FORM_CLASSIFICATION = {
   'se-bilforsakring-wizard': { entityType: 'individual', market: 'PT', language: 'SV', product: 'auto' },
   'dk-bilforsikring-wizard': { entityType: 'individual', market: 'PT', language: 'DA', product: 'auto' },
   'zh-car-insurance-wizard': { entityType: 'individual', market: 'PT', language: 'ZH', product: 'auto' },
+  // Fourth and last of the four ramos shared by the PL/SE/DK/ZH generator:
+  // Liability (RC Profissional). Same field set as the PT/EN/DE/NL
+  // dedicated RC Profissional wizards (no `empresa`/profession field at
+  // all) — reuses their classifier for consistency.
+  'pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'PL',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
+  'se-ansvarsforsakring-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'SV',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
+  'dk-ansvarsforsikring-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'DA',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
+  'zh-liability-insurance-wizard': {
+    entityType: 'contextual',
+    market: 'PT',
+    language: 'ZH',
+    product: 'professional-liability',
+    classify: classifyRcProfissionalDedicated,
+  },
   'expat-insurance-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'insurance-review' },
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
