@@ -14,11 +14,24 @@ test("isTestModeSubmission recognises the sentinel in any of extractContact's na
   }
 });
 
-test("isTestModeSubmission is exact and case-sensitive — nothing a real visitor would plausibly type triggers it", () => {
+// Especificação v2, Parte C — substring, sem distinção de maiúsculas, em
+// qualquer posição do campo, não correspondência exata (ver o comentário em
+// lead-classification.mjs para o incidente que motivou isto: uma submissão
+// de teste real com o sentinela seguido de um nome não foi reconhecida,
+// seguiu o caminho normal, e criou um lead real — email enviado, linhas em
+// website_leads/individual_clients/quote_requests).
+test("isTestModeSubmission recognises the sentinel anywhere in the name field, case-insensitively", () => {
+  assert.equal(isTestModeSubmission({ name: TEST_MODE_SENTINEL.toLowerCase() }), true);
+  assert.equal(isTestModeSubmission({ name: `${TEST_MODE_SENTINEL} דוד כהן` }), true, "sentinel + trailing name (the exact incident)");
+  assert.equal(isTestModeSubmission({ name: `prefix ${TEST_MODE_SENTINEL}` }), true, "sentinel at the end");
+  assert.equal(isTestModeSubmission({ name: `before ${TEST_MODE_SENTINEL} after` }), true, "sentinel in the middle");
+  assert.equal(isTestModeSubmission({ name: `  ${TEST_MODE_SENTINEL}  ` }), true, "surrounding whitespace");
+});
+
+test("isTestModeSubmission still returns false for a name that never contains the sentinel — the normal path is untouched", () => {
   assert.equal(isTestModeSubmission({ name: "Hugo Gonçalves" }), false);
-  assert.equal(isTestModeSubmission({ name: TEST_MODE_SENTINEL.toLowerCase() }), false);
-  assert.equal(isTestModeSubmission({ name: `${TEST_MODE_SENTINEL} extra` }), false);
-  assert.equal(isTestModeSubmission({ name: `prefix ${TEST_MODE_SENTINEL}` }), false);
+  assert.equal(isTestModeSubmission({ name: "TESTE" }), false, "a plausible partial word is not enough");
+  assert.equal(isTestModeSubmission({ name: "" }), false);
   assert.equal(isTestModeSubmission({}), false);
 });
 

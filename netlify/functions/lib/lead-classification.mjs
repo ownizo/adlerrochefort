@@ -503,17 +503,31 @@ export function extractContact(data) {
 // deixa de fazer submissões manuais nesta fase, em nenhuma língua. O modo de
 // teste é a via de validação que o substitui, e este é o valor convencionado
 // que o marca — colocado no campo de nome (extractContact() acima já sabe
-// resolver esse campo em qualquer variante de formulário/língua), exato e
-// sensível a maiúsculas para que nada que um visitante real escreveria por
-// acaso o dispare. submission-created.mjs usa isTestModeSubmission() para
-// decidir, logo à entrada, se uma submissão segue o caminho normal (email +
-// CRM sync reais) ou o caminho de teste (constrói e regista em log os dois
-// payloads, sem os enviar; grava em quote_requests na mesma, marcada
-// `teste = true` — ver netlify/functions/lib/quote-requests-sync.mjs).
+// resolver esse campo em qualquer variante de formulário/língua).
+// submission-created.mjs usa isTestModeSubmission() para decidir, logo à
+// entrada, se uma submissão segue o caminho normal (email + CRM sync reais)
+// ou o caminho de teste (constrói e regista em log os dois payloads, sem os
+// enviar; grava em quote_requests na mesma, marcada `teste = true` — ver
+// netlify/functions/lib/quote-requests-sync.mjs).
 export const TEST_MODE_SENTINEL = "TESTE-AGENTE-NAO-PROCESSAR";
 
+// Substring, sem distinção de maiúsculas/minúsculas, em qualquer posição do
+// campo de nome — não correspondência exata. Encontrado em produção (Parte
+// C, verificação RTL do IL): uma submissão de teste com
+// "TESTE-AGENTE-NAO-PROCESSAR דוד כהן" (sentinela seguida do nome de teste)
+// falhava a correspondência exata, seguia o caminho normal, e criava um
+// lead real — email enviado, linha em website_leads/individual_clients no
+// CRM partilhado, quote_requests gravada com teste=false. Correspondência
+// exata parecia a escolha mais segura ("nada que um visitante real
+// escreveria por acaso o dispare"), mas é frágil: qualquer variação futura
+// no texto à volta do sentinela (um nome anexado, maiúsculas diferentes,
+// espaço a mais) volta a criar o mesmo problema. Substring continua segura
+// nesse sentido — nenhum nome real contém "TESTE-AGENTE-NAO-PROCESSAR" por
+// acaso — e deixa de depender de escrever o campo byte a byte correto.
 export function isTestModeSubmission(data) {
-  return extractContact(data).name === TEST_MODE_SENTINEL;
+  const name = extractContact(data).name;
+  if (!name) return false;
+  return String(name).trim().toUpperCase().includes(TEST_MODE_SENTINEL.toUpperCase());
 }
 
 export const CRM_HANDLED_FORMS = new Set(Object.keys(FORM_CLASSIFICATION));
