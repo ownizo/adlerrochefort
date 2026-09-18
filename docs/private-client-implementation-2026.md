@@ -64,7 +64,7 @@ English hubs have a separate country switch with active country and reciprocal l
 
 All five pages have self-referencing canonicals and valid JSON-LD. English country variants are not represented as hreflang translations, and the German master is not falsely declared an exact translation of either country page. Both new German routes are in `sitemap-pages.xml`. The scoped sitemap mode preserves every non-EN/DE URL entry and the sitemap index.
 
-`terminology-rules.mjs` no longer deliberately restores broker/Makler self-description in EN/DE. Historical exact phrases now resolve to insurance intermediary / insurance agent / Versicherungsvermittler. Supporting enforcement passes prevent these English changes from affecting root/PT public output. Published URL slugs and fragment identifiers are retained, including `/en/why-use-an-insurance-broker/`. Generic discussion of other intermediaries, real-estate agents and third-party/legal definitions remains distinct from the firm's status.
+`terminology-rules.mjs` preserves and restores the established international commercial terminology: broker/insurance broker in EN and Makler/Versicherungsmakler in DE. The Portuguese regulatory category remains agente de seguros não ligado and is retained where regulatory context requires it. Supporting enforcement passes prevent these English changes from affecting root/PT public output. Published URL slugs and fragment identifiers are retained, including `/en/why-use-an-insurance-broker/`. Generic discussion of other intermediaries, real-estate agents and third-party/legal definitions remains distinct from the firm's status.
 
 ## Claims intentionally kept conservative
 
