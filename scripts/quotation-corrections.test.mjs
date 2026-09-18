@@ -75,7 +75,10 @@ test('PT RC and TVDE editorial entry points cannot submit reduced quotation payl
  };
  for(const [url,target] of Object.entries(routes)){
   const html=readFileSync('public'+url+'index.html','utf8');
-  assert.ok(html.includes('Antes de preencher'),url);
+  if(url==='/blog/responsabilidade-civil-num-evento-portugal/')
+    assert.ok(!html.includes('Antes de preencher'),url);
+  else
+    assert.ok(html.includes('Antes de preencher'),url);
   assert.ok(html.includes(target),url);
   assert.ok(!html.includes('name="cotacao-blog"'),url);
   assert.ok(!html.includes('name="rcp_capital"'),url);
@@ -97,10 +100,40 @@ test('PT canonical RC form follows the approved v2 data model and PT qualificati
   'public/seguros/rc-massagistas/index.html',
   'public/seguros/rc-terapeuticas-nao-convencionais/index.html',
   'public/seguros/responsabilidade-civil-profissional/index.html',
-  'public/seguros/responsabilidade-civil-eventos/index.html',
  ];
  for(const path of pages) assert.ok(readFileSync(path,'utf8').includes('Antes de preencher'),path);
  const events=readFileSync('public/seguros/responsabilidade-civil-eventos/index.html','utf8');
+ assert.ok(!events.includes('Antes de preencher'));
  assert.ok(!events.includes('name="ev_capital"'));
  assert.ok(!events.includes('Capital pretendido (se souber)'));
+});
+
+
+test('PT RC specialist forms follow the approved RC model with the Events exception',()=>{
+ const standard=[
+  'public/seguros/rc-massagistas/index.html',
+  'public/seguros/rc-terapeuticas-nao-convencionais/index.html',
+  'public/seguros/rc-yoga-pilates-bem-estar/index.html',
+  'public/seguros/rc-profissoes-especificas/index.html',
+ ];
+ for(const path of standard){
+  const html=readFileSync(path,'utf8'), d=dom(html);
+  const f=d.window.document.querySelector('form[data-wizard]');
+  assert.ok(f,path);
+  for(const n of ['nome','nif','data_nascimento','morada','localidade','codigo_postal','telefone','email','nacionalidade_nome','residente_fiscal','faturacao_anual','data_inicio','rgpd']) assert.ok(f.elements[n],`${path}: ${n}`);
+  assert.ok(html.includes('Antes de preencher'),`${path}: qualification`);
+  d.window.close();
+ }
+
+ const ehtml=readFileSync('public/seguros/responsabilidade-civil-eventos/index.html','utf8'), ed=dom(ehtml);
+ const ef=ed.window.document.querySelector('form[name="cotacao-rc-eventos"]');
+ assert.ok(ef);
+ for(const n of ['nome','nif','data_nascimento','morada','localidade','codigo_postal','telefone','email','nacionalidade_nome','residente_fiscal','ev_tipo','ev_data','ev_participantes','data_inicio','rgpd']) assert.ok(ef.elements[n],`events: ${n}`);
+ assert.equal(ef.elements['faturacao_anual'],undefined);
+ assert.ok(!ehtml.includes('Antes de preencher'));
+ ed.window.close();
+
+ const article=readFileSync('public/blog/responsabilidade-civil-num-evento-portugal/index.html','utf8');
+ assert.ok(!article.includes('Antes de preencher'));
+ assert.ok(article.includes('/seguros/responsabilidade-civil-eventos/'));
 });
