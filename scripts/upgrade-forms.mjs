@@ -155,11 +155,9 @@ const BRANCH_FIELDS = {
     ['empresarial_cae', 'CAE / atividade', 'text', 'Ex.: 56101'],
     ['empresarial_colaboradores', 'N.º de colaboradores da empresa', 'number', 'Ex.: 14'],
   ],
-  'Responsabilidade Civil Profissional': [
-    ['rcp_profissao', 'Profissão ou atividade', 'text', 'Ex.: arquitetura'],
-    ['rcp_capital', 'Capital pretendido', 'text', 'Ex.: 500 000 €'],
-    ['rcp_obrigatorio', 'É exigido por ordem profissional ou contrato?', 'text', 'Sim / Não'],
-  ],
+  // PT RC articles no longer collect a reduced three-question quote.
+  // correctQuotationHtml() routes them to the canonical detailed RC form.
+  'Responsabilidade Civil Profissional': [],
   'Riscos Cibernéticos': [
     ['cyber_empresa', 'Empresa', 'text', 'Designação social'],
     ['cyber_postos', 'N.º de postos de trabalho', 'number', 'Ex.: 25'],

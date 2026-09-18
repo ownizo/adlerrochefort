@@ -507,6 +507,18 @@
     var source = form.querySelector('input[name="source_url"]');
     if (source && !source.value) source.value = window.location.href;
 
+    // Preserve the originating article when an editorial CTA routes to a canonical
+    // quotation form. source_url remains the page where the form is submitted.
+    var sourceParam = null;
+    try { sourceParam = new URL(window.location.href).searchParams.get('source'); } catch (err) {}
+    if (sourceParam && !form.querySelector('input[name="source"]')) {
+      var sourceInput = document.createElement('input');
+      sourceInput.type = 'hidden';
+      sourceInput.name = 'source';
+      sourceInput.value = sourceParam;
+      form.appendChild(sourceInput);
+    }
+
     // Phase 9 (brief §21/§22): landing_page — the first page of this
     // session, read back from the sessionStorage key ar-analytics-tracker.js
     // sets on first touch. Only stamped if the form actually carries the

@@ -243,6 +243,12 @@
 <div class="lp-form-card fade-up">
   <h2>Análise de RC para o seu Evento</h2>
   <p class="lp-form-sub">Preencha o essencial. Cotação em 48 a 72 horas úteis — o cuidado na análise da sua exposição real demora mais do que um formulário genérico.</p>
+  <div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #B8323E;padding:20px 24px;margin:20px 0;text-align:left;">
+      <h3 style="margin:0 0 12px;">Antes de preencher</h3>
+      <p>As nossas propostas partem das coberturas que o risco exige. O prémio é o resultado dessa análise, nunca o ponto de partida.</p>
+      <p>Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pela solidez das condições contratuais e pela forma como respondem a um sinistro. Isso significa, com toda a franqueza, que raramente seremos a proposta mais barata que vai receber.</p>
+      <p>Se o seu critério de decisão for o prémio mais baixo, encontrará melhores valores noutro lado e preferimos dizê-lo já. Se for estar efetivamente protegido no dia em que precisar, é exatamente esse o trabalho que fazemos.</p>
+    </div>
   <form name="cotacao-rc-eventos" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-rc-eventos">
     <input type="hidden" name="ramo" value="RC Organização de Eventos">
@@ -257,7 +263,6 @@
       <div class="field"><label for="ev_data">Data</label><input type="date" id="ev_data" name="ev_data"></div>
       <div class="field"><label for="ev_duracao">Duração</label><input type="text" id="ev_duracao" name="ev_duracao" placeholder="Ex.: 1 dia, 3 dias"></div>
       <div class="field"><label for="ev_participantes">Número estimado de participantes</label><input type="number" id="ev_participantes" name="ev_participantes" placeholder="Ex.: 150"></div>
-      <div class="field"><label for="ev_capital">Capital pretendido (se souber)</label><input type="text" id="ev_capital" name="ev_capital" placeholder="Ex.: 250 000 €"></div>
       <div class="field"><label for="ev_seguro_atual">Já tem seguro para este evento?</label><select id="ev_seguro_atual" name="ev_seguro_atual"><option value="">Selecione…</option><option value="Sim, é renovação">Sim, é renovação</option><option value="Não, é a primeira vez">Não, é a primeira vez</option></select></div>
       <div class="field full"><label for="mensagem">Descrição breve das atividades</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="O que vai acontecer no evento, estruturas ou equipamentos usados, subcontratados envolvidos"></textarea><p class="lp-form-micro" style="margin-top:6px;">Não inclua aqui dados de saúde, seus ou de terceiros — só o que for relevante para a apólice.</p></div>
     </div>

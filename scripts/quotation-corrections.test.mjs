@@ -60,3 +60,47 @@ test('all corrected enquiry quotation links reach complete product forms',async(
   const html=readFileSync('public'+url+'index.html','utf8');const lang=url.split('/')[1];if(product) {assert.ok(html.includes(`href="${routes[lang][product]}"`),url);assert.ok(!/href="#(?:ar-quote-form|quote-form)"/.test(html),url);} else {assert.ok(!html.includes('quotation-enquiry-note'),url);assert.ok(!html.includes('<h2>Get a free, no-obligation quote</h2>'),url);}assert.ok(html.includes('data-quotation-enquiry'),url);assert.ok(html.includes(quoteStrings[lang].common.enquirySubmit),url);assert.equal(correctQuotationHtml(html),html,url);
  }
 });
+
+
+test('PT RC and TVDE editorial entry points cannot submit reduced quotation payloads',()=>{
+ const routes={
+  '/blog/responsabilidade-civil-massagistas/':'/seguros/rc-massagistas/',
+  '/blog/responsabilidade-civil-medicina-tradicional-chinesa/':'/seguros/rc-terapeuticas-nao-convencionais/',
+  '/blog/responsabilidade-civil-num-evento-portugal/':'/seguros/responsabilidade-civil-eventos/',
+  '/blog/responsabilidade-civil-profissional/':'/seguros/responsabilidade-civil-profissional/',
+  '/blog/seguro-responsabilidade-civil-acupuntores/':'/seguros/rc-terapeuticas-nao-convencionais/',
+  '/blog/seguro-responsabilidade-civil-naturopatas/':'/seguros/rc-terapeuticas-nao-convencionais/',
+  '/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/':'/seguros/rc-terapeuticas-nao-convencionais/',
+  '/blog/seguro-tvde-portugal/':'/seguros/tvde/',
+ };
+ for(const [url,target] of Object.entries(routes)){
+  const html=readFileSync('public'+url+'index.html','utf8');
+  assert.ok(html.includes('Antes de preencher'),url);
+  assert.ok(html.includes(target),url);
+  assert.ok(!html.includes('name="cotacao-blog"'),url);
+  assert.ok(!html.includes('name="rcp_capital"'),url);
+  assert.ok(!/<label[^>]*>Capital pretendido/.test(html),url);
+ }
+});
+
+test('PT canonical RC form follows the approved v2 data model and PT qualification blocks remain',()=>{
+ const html=readFileSync('public/seguros/responsabilidade-civil-profissional/index.html','utf8');
+ const d=dom(html),f=d.window.document.querySelector('form[name="cotacao-rc-profissional"]');
+ for(const n of ['nome','nif','data_nascimento','morada','localidade','codigo_postal','telefone','email','nacionalidade_nome','residente_fiscal','faturacao_anual','data_inicio','rgpd']) assert.ok(f.elements[n],n);
+ for(const n of ['rcp_profissao','rcp_capital','rcp_obrigatorio']) assert.equal(f.elements[n],undefined,n);
+ assert.ok(html.includes('Antes de preencher'));
+ d.window.close();
+
+ const pages=[
+  'public/index.html',
+  'public/seguros/tvde/index.html',
+  'public/seguros/rc-massagistas/index.html',
+  'public/seguros/rc-terapeuticas-nao-convencionais/index.html',
+  'public/seguros/responsabilidade-civil-profissional/index.html',
+  'public/seguros/responsabilidade-civil-eventos/index.html',
+ ];
+ for(const path of pages) assert.ok(readFileSync(path,'utf8').includes('Antes de preencher'),path);
+ const events=readFileSync('public/seguros/responsabilidade-civil-eventos/index.html','utf8');
+ assert.ok(!events.includes('name="ev_capital"'));
+ assert.ok(!events.includes('Capital pretendido (se souber)'));
+});
