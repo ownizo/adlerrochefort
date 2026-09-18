@@ -23,8 +23,7 @@
       "residente_fiscal": "Er du skattemæssigt hjemmehørende i Portugal?",
       "residente_fiscal_sim": "Ja",
       "residente_fiscal_nao": "Nej",
-      "rgpd_consentimento": "Jeg accepterer, at mine oplysninger bruges til at forberede dette tilbud, i overensstemmelse med databeskyttelsesforordningen.",
-      "empresa": "Virksomhed"
+      "rgpd_consentimento": "Jeg accepterer, at mine oplysninger bruges til at forberede dette tilbud, i overensstemmelse med databeskyttelsesforordningen."
     },
     "helpers": {
       "residente_fiscal_nao_info": "Adressen er stadig nødvendig. Uden skattemæssigt hjemsted i Portugal er det muligvis ikke i alle tilfælde muligt at udstede policen — vi vurderer alligevel din konkrete situation.",
@@ -46,37 +45,7 @@
     "success": {
       "titulo": "Tak!",
       "corpo": "Din henvendelse er modtaget. Vi behandler den og svarer inden for 24 arbejdstimer."
-    },
-    "runtime": {
-      "required": "Udfyld dette felt.",
-      "email": "Indtast en gyldig e-mailadresse, for eksempel navn@email.com.",
-      "sending": "Sender…",
-      "failed": "Din anmodning kunne ikke sendes. Kontrollér din forbindelse og prøv igen — intet af det, du har skrevet, er gået tabt.",
-      "nif": "Indtast et gyldigt portugisisk skattenummer (NIF), 9 cifre.",
-      "postalCode": "Indtast et postnummer i formatet 0000-000.",
-      "plate": "Indtast en gyldig portugisisk nummerplade.",
-      "startDate": "Startdatoen må ikke være før i dag.",
-      "licenceDate": "Kørekortdatoen må ikke være før forsikringstagerens fødselsdato, og heller ikke i fremtiden.",
-      "licenceBeforeAge16": "Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.",
-      "renovationYear": "Renoveringsåret må ikke være før byggeåret eller efter indeværende år.",
-      "residenteFiscal": "Angiv, om du er skattemæssigt hjemmehørende i Portugal.",
-      "rgpd": "Du skal acceptere, før vi kan forberede tilbuddet.",
-      "birthDate": "Fødselsdatoen må ikke være i fremtiden.",
-      "birthDateAdult": "Forsikringstageren skal være mindst 18 år.",
-      "tooShort": "Skriv mindst {min} tegn.",
-      "requiredGroup": "Vælg mindst én mulighed.",
-      "numberInvalid": "Angiv et tal inden for de angivne grænser."
-    },
-    "select": "Vælg en mulighed",
-    "submit": "Anmod om tilbud",
-    "chooseProduct": "Vælg forsikringstype",
-    "acknowledgement": {
-      "subject": "Forespørgsel modtaget — Adler & Rochefort",
-      "body": "Tak. Vi har modtaget din forespørgsel og gennemgår oplysningerne for at udarbejde tilbud."
-    },
-    "privacy": "Privatlivspolitik",
-    "enquirySubmit": "Send en forespørgsel",
-    "enquiryIntro": "Udfyld den detaljerede produktformular for et tilbud. Brug denne kontaktformular til spørgsmål."
+    }
   },
   "ramos": {
     "habitacao": {
@@ -87,17 +56,16 @@
       "regime_ocupacao_holiday_home": "Fritidsbolig / anden bolig",
       "regime_ocupacao_al": "Alojamento Local (korttidsudlejning)",
       "al_regime": "Type korttidsudlejning",
-      "al_regime_tempo_inteiro": "AL på fuld tid",
-      "al_regime_parcial": "AL på deltid",
+      "al_regime_tempo_inteiro": "Fuld tid",
+      "al_regime_parcial": "Delvis (delt brug af boligen)",
       "ano_construcao": "Byggeår",
       "area_bruta": "Bruttoareal (m²)",
       "casas_banho": "Antal badeværelser",
-      "obras_renovacao_check": "Renoveringer udført",
+      "obras_renovacao_check": "Har I renoveret inden for de seneste år?",
       "obras_ano": "Renoveringsår",
       "obras_descricao": "Beskriv det udførte arbejde",
       "capital_edificio": "Forsikringssum bygning (€)",
-      "capital_conteudo": "Forsikringssum indbo (€)",
-      "morada_imovel": "Ejendommens fulde adresse"
+      "capital_conteudo": "Forsikringssum indbo (€)"
     },
     "saude": {
       "titulo": "Anmod om sygesikring",
@@ -109,8 +77,7 @@
       "pessoa_nascimento": "Fødselsdato",
       "pessoa_nif": "NIF (portugisisk skattenummer)",
       "pessoa_remover": "Fjern denne person",
-      "pessoa_adicionar": "+ Tilføj person",
-      "pessoas_numero": "Antal personer, der skal forsikres"
+      "pessoa_adicionar": "+ Tilføj person"
     },
     "auto": {
       "titulo": "Anmod om bilforsikring",

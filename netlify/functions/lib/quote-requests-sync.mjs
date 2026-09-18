@@ -178,8 +178,8 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
   // DE cluster's existing einwilligung field). A form with no such field yet
   // (most of the site, still Fase 1's "accept what forms already send")
   // simply leaves this undefined — never assumed true.
-  const CONSENT_TRUE_VALUES = new Set(["sim", "yes", "ja", "true", "accepted", "on"]);
-  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "privacy", "consent"]);
+  const CONSENT_TRUE_VALUES = new Set(["sim", "yes", "ja", "true"]);
+  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung"]);
 
   const row = {
     ramo,

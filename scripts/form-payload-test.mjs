@@ -266,7 +266,7 @@ const CASES = [
     path: 'index.html',
     url: 'https://adlerrochefort.com/',
     formName: 'analise-gratuita',
-    branchSelect: 'select',
+    branchSelect: 'select[data-branch-select]',
     branchValue: 'TVDE (Uber, Bolt, Free Now)',
   },
   {
@@ -274,7 +274,7 @@ const CASES = [
     path: 'index.html',
     url: 'https://adlerrochefort.com/',
     formName: 'analise-gratuita',
-    branchSelect: 'select',
+    branchSelect: 'select[data-branch-select]',
     branchValue: 'Condomínio',
     switchFrom: 'TVDE (Uber, Bolt, Free Now)',
   },
@@ -434,8 +434,13 @@ const CASES = [
     formName: 'mortgage-protection-review-spain',
     pageScripts: ['ar-quote-form.js'],
   },
-  // Private Client review forms are covered by scripts/private-client.test.mjs
-  // and private-client/browser-check.mjs; they no longer use the quote wizard.
+  {
+    label: '23. /en/private-clients-spain/ — Spain private client pillar',
+    path: 'en/private-clients-spain/index.html',
+    url: 'https://adlerrochefort.com/en/private-clients-spain/',
+    formName: 'private-client-review-spain',
+    pageScripts: ['ar-quote-form.js'],
+  },
   {
     // International UI/UX rebuild (Phase 5): the /en/ homepage's generic
     // free-analysis form gained an explicit required Country/Market select
@@ -448,7 +453,7 @@ const CASES = [
     path: 'en/index.html',
     url: 'https://adlerrochefort.com/en/',
     formName: 'free-analysis',
-    branchSelect: 'select',
+    branchSelect: 'select[data-branch-select]',
     branchValue: 'Health',
     requireCountry: 'Portugal',
   },
@@ -585,34 +590,36 @@ const CASES = [
     label: '32. /pl/ubezpieczenie-domu-portugalia/ — Polish cluster, home branch',
     path: 'pl/ubezpieczenie-domu-portugalia/index.html',
     url: 'https://adlerrochefort.com/pl/ubezpieczenie-domu-portugalia/',
-    formName: 'pl-ubezpieczenie-domu-wizard',
+    formName: 'pl-zapytanie-ofertowe',
     branchSelect: 'select[data-branch-select]',
-    branchValue: 'permanente',
+    branchValue: 'PL · Dom',
     inlineScripts: true,
-    requireValues: { lang: ['pl'] },
+    requireValues: { market: ['poland'], language: ['pl'], insurance_type: ['PL · Dom'] },
   },
   {
     label: '33. /se/bilforsakring-portugal/ — Swedish cluster, motor branch',
     path: 'se/bilforsakring-portugal/index.html',
     url: 'https://adlerrochefort.com/se/bilforsakring-portugal/',
-    formName: 'se-bilforsakring-wizard',
+    formName: 'se-offertforfragan',
+    branchSelect: 'select[data-branch-select]',
+    branchValue: 'SE · Bil',
     inlineScripts: true,
-    requireValues: { lang: ['sv'] },
+    requireValues: { market: ['sweden'], language: ['sv'], insurance_type: ['SE · Bil'] },
   },
   {
     // Switching branch mid-form: the health answers the visitor typed before
     // changing their mind must not reach the payload alongside the liability
     // ones. Same mechanism as case 13, proven once on the new markup.
-    label: '34. /dk/forsikringsguide-portugal/ — Danish cluster, health → liability switch',
-    path: 'dk/forsikringsguide-portugal/index.html',
-    url: 'https://adlerrochefort.com/dk/forsikringsguide-portugal/',
+    label: '34. /dk/ansvarsforsikring-portugal/ — Danish cluster, health → liability switch',
+    path: 'dk/ansvarsforsikring-portugal/index.html',
+    url: 'https://adlerrochefort.com/dk/ansvarsforsikring-portugal/',
     formName: 'dk-forespoergsel',
     branchSelect: 'select[data-branch-select]',
     switchFrom: 'DK · Sundhed',
     branchValue: 'DK · Ansvar',
     inlineScripts: true,
     requireValues: { market: ['denmark'], language: ['da'], insurance_type: ['DK · Ansvar'] },
-    requireLandingPage: 'https://adlerrochefort.com/dk/forsikringsguide-portugal/',
+    requireLandingPage: 'https://adlerrochefort.com/dk/ansvarsforsikring-portugal/',
   },
   {
     // The Chinese cluster reuses the other markets' branch field ids, so this
@@ -676,12 +683,12 @@ const CASES = [
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
 // payload, and none of them may be missing it silently.
-for (const c of CASES.filter(c => !process.argv.includes('--en-de-only') || /^(en|de)\//.test(c.path))) {
+for (const c of CASES) {
   if (c.formName && c.formName.endsWith('-spain')) c.requireCountry = 'Spain';
 }
 
 let failures = 0;
-for (const c of CASES.filter(c => !process.argv.includes('--en-de-only') || /^(en|de)\//.test(c.path))) {
+for (const c of CASES) {
   let r;
   if (c.switchFrom) {
     // Fill the first branch, then switch: nothing from the abandoned branch may

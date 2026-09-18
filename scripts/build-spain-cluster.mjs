@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { privateClientPage, renderPrivateClient } from './private-client/render.mjs';
 /**
  * Builds the Spain market layer — Phase 1 — under /en/.
  *
@@ -230,9 +229,6 @@ ${section.blocks.map(block).join('\n')}
 function field(f) {
   const req = f.required ? ' required' : '';
   const label = `        <label for="q-${f.name}">${esc(f.label)}${f.required ? ' *' : ''}</label>`;
-  if (f.type === 'checkboxes') {
-    return `<fieldset><legend>${esc(f.label)}</legend>${f.options.map(o => `<label><input type="checkbox" name="${esc(f.name)}" value="${esc(o)}"> ${esc(o)}</label>`).join('')}</fieldset>`;
-  }
   if (f.type === 'select') {
     return `      <div class="contact-form-field">
 ${label}
@@ -690,17 +686,12 @@ const seenH1 = new Map();
 const rendered = [];
 
 for (const page of PAGES) {
-  if (process.argv.includes('--private-clients-only') && !privateClientPage(`/en/${page.slug}/`)) continue;
   for (const [map, value, what] of [
     [seenTitle, page.title, 'title'],
     [seenH1, page.h1, 'H1'],
   ]) {
     if (map.has(value)) throw new Error(`duplicate ${what} on /en/${page.slug}/ and /en/${map.get(value)}/`);
     map.set(value, page.slug);
-  }
-  if (privateClientPage(`/en/${page.slug}/`)) {
-    rendered.push([page, renderPrivateClient(privateClientPage(`/en/${page.slug}/`))]);
-    continue;
   }
   const html = render(page);
   validate(page, html, pending);
@@ -711,10 +702,10 @@ for (const [page, html] of rendered) {
   const dir = join(PUBLIC, 'en', page.slug);
   await mkdir(dir, { recursive: true });
   await writeFile(join(dir, 'index.html'), html);
-  console.log(`wrote /en/${page.slug}/  (${page.title.length} char title)`);
+  console.log(`wrote /en/${page.slug}/  (${page.title.length} char title, ${page.faq.length} FAQs)`);
 }
 console.log(
-  `\n${rendered.length} page(s) written. Next:\n` +
+  `\n${PAGES.length} page(s) written. Next:\n` +
     `  node scripts/generate-sitemap.mjs\n` +
     `(hreflang.mjs and lang-switcher.mjs are deliberately not run for this cluster — see the file header.)`
 );

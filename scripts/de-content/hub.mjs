@@ -128,7 +128,7 @@ export const HUB_PAGE = {
         <span class="fc-tag">Komplexe Risiken</span>
         <h3>Private Clients</h3>
         <p>Für internationale Familien, Eigentümer und Unternehmer mit Luxusimmobilien, Kunst, Sammlungen oder mehreren Wohnsitzen.</p>
-        <a class="fc-link" href="/de/private-clients/">Mehr erfahren</a>
+        <a class="fc-link" href="/de/private-clients-portugal/">Mehr erfahren</a>
       </div>
       <div class="feature-card">
         <span class="fc-tag">Selbstständige &amp; Betriebe</span>
@@ -189,7 +189,7 @@ ${insurerPanel({
       </li>
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Vermittlerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
+        <div><strong>Maklerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
       </li>
     </ul>
   </div>

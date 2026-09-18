@@ -211,21 +211,3 @@
     min-height: 48px;
   }
 }
-
-/* Allow translated labels and native selects to wrap within narrow forms. */
-form[data-wizard] .contact-form-field { min-width: 0; margin-block-end: 14px; }
-form[data-wizard] .contact-form-field > label { line-height: 1.5; white-space: normal; }
-form[data-wizard] input,
-form[data-wizard] select,
-form[data-wizard] textarea { min-width: 0; max-width: 100%; box-sizing: border-box; }
-form[data-wizard] .wizard-progress-item { min-width: 0; overflow-wrap: anywhere; }
-form[data-wizard] .wizard-helper { border-left: 0; border-inline-start: 3px solid var(--primary); }
-
-/* Standalone quote pages reuse the market form without nested landing padding. */
-.quotation-page { box-sizing: border-box; }
-.quotation-page .form-section { padding: 24px 0; }
-.quotation-page .lp-form-card { max-width: 100%; padding: 28px 20px; }
-@media (max-width: 600px) {
-  .quotation-page { padding: 16px 12px !important; }
-  .quotation-page .lp-form-card { padding: 24px 16px; }
-}

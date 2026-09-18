@@ -256,7 +256,6 @@
   </div>
   <form name="cotacao-rc-profissional" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-rc-profissional">
-<input type="hidden" name="lang" value="pt">
     <input type="hidden" name="ramo" value="RC Profissional">
     <input type="hidden" name="source_url" id="cotacao-rc-source" value="">
     <input type="hidden" name="dados_dinamicos" value="">
@@ -271,11 +270,11 @@
     <div data-wizard-step>
       <div class="contact-form-field"><label for="rcp-nome">Nome completo *</label><input type="text" id="rcp-nome" name="nome" autocomplete="name" required></div>
       <div class="contact-form-field"><label for="rcp-nif">NIF *</label><input type="text" id="rcp-nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" data-validate="nif" required></div>
-      <div class="contact-form-field"><label for="rcp-nascimento">Data de nascimento *</label><input type="date" id="rcp-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+      <div class="contact-form-field"><label for="rcp-nascimento">Data de nascimento *</label><input type="date" id="rcp-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
       <div class="contact-form-field"><label for="rcp-morada">Morada completa *</label><input type="text" id="rcp-morada" name="morada" autocomplete="street-address" required></div>
       <div class="contact-form-field"><label for="rcp-localidade">Localidade *</label><input type="text" id="rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
       <div class="contact-form-field"><label for="rcp-cp">Código postal *</label><input type="text" id="rcp-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-      <div class="contact-form-field"><label for="rcp-telefone">Telefone / WhatsApp *</label><input type="tel" id="rcp-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
+      <div class="contact-form-field"><label for="rcp-telefone">Telefone / WhatsApp *</label><input type="tel" id="rcp-telefone" name="telefone" autocomplete="tel" required></div>
       <div class="contact-form-field"><label for="rcp-email">Email *</label><input type="email" id="rcp-email" name="email" autocomplete="email" required></div>
       <div class="contact-form-field">
         <label for="rcp-nacionalidade">Nacionalidade *</label>
@@ -295,8 +294,8 @@
     </div>
 
     <div data-wizard-step hidden>
-      <div class="contact-form-field"><label for="rcp-faturacao">Faturação anual *</label><input type="number" id="rcp-faturacao" name="faturacao_anual" placeholder="Ex.: 85000" required step="0.01"></div>
-      <p class="wizard-helper">Com estes dados conseguimos iniciar a análise e preparar a cotação sem lhe voltar a pedir informação básica.</p>
+      <div class="contact-form-field"><label for="rcp-faturacao">Faturação anual *</label><input type="number" id="rcp-faturacao" name="faturacao_anual" placeholder="Ex.: 85000" required></div>
+      <p class="wizard-helper">Profissão, capital pretendido e se a apólice é exigida por ordem profissional ou contrato ficam para o contacto que se segue — é aí que reunimos o resto do essencial para a análise.</p>
       <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Anterior</button><button type="button" class="wizard-nav-next" data-wizard-next>Seguinte →</button></div>
     </div>
 

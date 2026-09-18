@@ -88,9 +88,6 @@ const files = [
 ].filter((f) => !EXCLUDE.some((re) => re.test(f)));
 
 const rulesFor = (rel) => {
-  // EN/DE corrections must not rewrite root/PT output.
-  if (rel.startsWith('public/') && !/^public\/(en|de|nl|fr)\//.test(rel)) return [];
-
   if (rel.startsWith('public/nl/') || rel.startsWith('scripts/nl-')) return NL_INDEPENDENCE;
   if (rel.startsWith('public/fr/')) return FR_INDEPENDENCE;
   if (rel.startsWith('public/de/')) return DE_INDEPENDENCE;

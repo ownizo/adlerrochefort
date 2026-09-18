@@ -167,15 +167,6 @@
   gtag('config', 'AW-18361722533');
 </script>
 <link rel="stylesheet" href="/css/ar-langsel.css">
-<style id="private-client-navigation">
-.nav-right .pc-nav-link{color:#fff!important;font-size:12px;line-height:1.4;text-underline-offset:4px}
-@media(max-width:700px){
-.site-header .site-nav{height:auto;min-height:100px;flex-wrap:wrap;gap:14px;padding:14px 20px}
-.site-header .nav-right{width:100%;display:grid;grid-template-columns:1fr auto;gap:14px;min-width:0}
-.site-header .pc-nav-link{grid-column:1/-1}
-.site-header .nav-cta{white-space:normal;text-align:center}
-}
-</style>
 </head>
 <body>
 
@@ -188,7 +179,7 @@
     <a href="/de/" class="nav-logo">
       <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
     </a>
-    <div class="nav-right"><a class="pc-nav-link" href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a>
+    <div class="nav-right">
       <div class="lang-switcher">
         <div class="ar-langsel" data-ar-langsel>
           <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Sprache: Deutsch. Andere Sprache wählen."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Deutsch</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -308,7 +299,7 @@
         <span class="fc-tag">Komplexe Risiken</span>
         <h3>Private Clients</h3>
         <p>Für internationale Familien, Eigentümer und Unternehmer mit Luxusimmobilien, Kunst, Sammlungen oder mehreren Wohnsitzen.</p>
-        <a class="fc-link" href="/de/private-clients/">Mehr erfahren</a>
+        <a class="fc-link" href="/de/private-clients-portugal/">Mehr erfahren</a>
       </div>
       <div class="feature-card">
         <span class="fc-tag">Selbstständige &amp; Betriebe</span>
@@ -378,7 +369,7 @@
       </li>
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Vermittlerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
+        <div><strong>Maklerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
       </li>
     </ul>
   </div>
@@ -436,8 +427,7 @@
     <p class="form-intro">Beschreiben Sie kurz Ihre Situation. Wir sagen Ihnen, welches Risiko zuerst geklärt werden sollte und was warten kann.</p>
     <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden, auf Englisch schriftlich.</p>
 
-    <nav class="quotation-routes" aria-label="Versicherungsart auswählen"><p>Versicherungsart auswählen</p><ul><li><a href="/de/krankenversicherung-portugal/#angebot">Krankenversicherung anfragen</a></li><li><a href="/de/hausversicherung-portugal/#angebot">Hausversicherung anfragen</a></li><li><a href="/de/berufshaftpflicht-freiberufler-portugal/#angebot">Berufshaftpflicht anfragen</a></li><li><a href="/de/autoversicherung-portugal/#angebot">Autoversicherung anfragen</a></li></ul></nav>
-<form
+    <form
       class="lead-form"
       id="angebotForm"
       name="de-angebot-anfrage"
@@ -445,22 +435,44 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/de/#angebot"
-     >
-<input type="hidden" name="form-name" value="de-angebot-anfrage">
-<input type="hidden" name="source" value="de-hub">
-<input type="hidden" name="source_url" value="">
-<input type="hidden" name="landing_page" value="">
-<input type="hidden" name="subject" value="Neue Anfrage (DE) — Versicherungen in Portugal">
-<input type="hidden" name="language" value="de">
-<input type="hidden" name="market" value="germany">
-<input type="hidden" name="product_interest" value="">
-<input type="hidden" name="country" value="Portugal">
-<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-<div class="contact-form-field form-field field"><label for="f-name">Vollständiger Name *</label><input type="text" id="f-name" name="name" required></div>
-<div class="contact-form-field form-field field"><label for="f-email">E-Mail-Adresse *</label><input type="email" id="f-email" name="email" required></div>
-<div class="contact-form-field form-field field"><label for="de-angebot-anfrage-telefone">Telefonnummer</label><input type="tel" id="de-angebot-anfrage-telefone" name="telefone" placeholder="+351 …"></div>
-<div class="contact-form-field form-field field"><label for="de-angebot-anfrage-empresa">Unternehmen</label><input type="text" id="de-angebot-anfrage-empresa" name="empresa"></div>
-<div class="contact-form-field form-field field"><label for="f-typ">Versicherungsart auswählen *</label><select id="f-typ" name="versicherungsart" aria-required="true" aria-describedby="err-typ" required>
+      novalidate>
+
+      <input type="hidden" name="form-name" value="de-angebot-anfrage">
+      <input type="hidden" name="source" value="de-hub">
+      <input type="hidden" name="source_url" value="">
+      <input type="hidden" name="landing_page" value="">
+      <input type="hidden" name="subject" value="Neue Anfrage (DE) — Versicherungen in Portugal">
+      <input type="hidden" name="language" value="de">
+      <input type="hidden" name="market" value="germany">
+      <input type="hidden" name="product_interest" value="">
+      <p class="visually-hidden"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="field">
+        <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name"
+               required aria-required="true" aria-describedby="err-name">
+        <span class="field-error" id="err-name" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-email">E-Mail-Adresse <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
+               required aria-required="true" aria-describedby="err-email">
+        <span class="field-error" id="err-email" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-telefon">Telefonnummer <span class="req" aria-hidden="true">*</span></label>
+        <p class="field-help" id="help-telefon">Wir melden uns schriftlich. Die Telefonnummer benötigt der Versicherer bei der Ausstellung der Police.</p>
+        <input type="tel" id="f-telefon" name="telefon" autocomplete="tel" inputmode="tel"
+               pattern="[0-9+ ()-]{6,}"
+               required aria-required="true" aria-describedby="help-telefon err-telefon">
+        <span class="field-error" id="err-telefon" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-typ">Gewünschte Versicherung <span class="req" aria-hidden="true">*</span></label>
+        <select id="f-typ" name="versicherungsart" data-branch-select required aria-required="true" aria-describedby="err-typ">
           <option value="" disabled selected>Bitte wählen</option>
           <option value="Krankenversicherung">Krankenversicherung</option>
           <option value="Hausversicherung">Hausversicherung</option>
@@ -470,10 +482,190 @@
           <option value="Unternehmen">Unternehmen / Selbstständige</option>
           <option value="Therapeuten &amp; Wellness">Therapeuten &amp; Wellness-Instruktoren</option>
           <option value="Sonstiges">Sonstiges / mehrere Bereiche</option>
-        </select></div>
-<button type="submit" class="form-submit" id="angebotSubmit">Angebot anfragen</button>
+        </select>
+        <span class="field-error" id="err-typ" aria-live="polite"></span>
+      </div>
 
-</form>
+        <div class="form-branch-fields" data-branch="Krankenversicherung" hidden>
+          <span class="form-branch-legend">Zu den zu versichernden Personen</span>
+          <div class="field">
+            <label for="f-kv_geburtsdatum">Geburtsdatum der ältesten zu versichernden Person</label>
+            <input type="text" id="f-kv_geburtsdatum" name="kv_geburtsdatum" placeholder="TT.MM.JJJJ" disabled>
+          </div>
+          <div class="field">
+            <label for="f-kv_familie">Familienzusammensetzung</label>
+            <input type="text" id="f-kv_familie" name="kv_familie" placeholder="z. B.: Ehepaar, 2 Kinder" disabled>
+          </div>
+          <div class="field">
+            <label for="f-kv_wohnort">Wohnort in Portugal</label>
+            <input type="text" id="f-kv_wohnort" name="kv_wohnort" placeholder="z. B.: Lagos, Algarve" disabled>
+          </div>
+          <div class="field">
+            <label for="f-kv_termin">Gewünschter Versicherungsbeginn</label>
+            <input type="text" id="f-kv_termin" name="kv_termin" placeholder="z. B.: 1. Januar 2027" disabled>
+          </div>
+          <div class="field">
+            <label for="f-kv_netzwerk">Präferenz: Netzwerk oder Kostenerstattung?</label>
+            <input type="text" id="f-kv_netzwerk" name="kv_netzwerk" placeholder="Netzwerk / Erstattung / unbekannt" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Hausversicherung" hidden>
+          <span class="form-branch-legend">Zur Immobilie</span>
+          <div class="field">
+            <label for="f-hv_lage">Lage der Immobilie</label>
+            <input type="text" id="f-hv_lage" name="hv_lage" placeholder="z. B.: Loulé, Algarve" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_typ">Immobilientyp</label>
+            <input type="text" id="f-hv_typ" name="hv_typ" placeholder="Wohnung / Villa / Quinta" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_nutzung">Haupt- oder Zweitwohnsitz?</label>
+            <input type="text" id="f-hv_nutzung" name="hv_nutzung" placeholder="Hauptwohnsitz / Zweitwohnsitz / zeitweise vermietet" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_baujahr">Baujahr, ungefähr</label>
+            <input type="text" id="f-hv_baujahr" name="hv_baujahr" placeholder="z. B.: 2005" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_flaeche">Wohnfläche in m²</label>
+            <input type="number" id="f-hv_flaeche" name="hv_flaeche" placeholder="z. B.: 160" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_summe_gebaeude">Versicherungssumme Gebäude</label>
+            <input type="text" id="f-hv_summe_gebaeude" name="hv_summe_gebaeude" placeholder="z. B.: 320.000 €" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_summe_hausrat">Versicherungssumme Hausrat</label>
+            <input type="text" id="f-hv_summe_hausrat" name="hv_summe_hausrat" placeholder="z. B.: 60.000 €" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_pool">Swimmingpool vorhanden?</label>
+            <input type="text" id="f-hv_pool" name="hv_pool" placeholder="Ja / Nein" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_erdbeben">Interesse an Erdbebendeckung?</label>
+            <input type="text" id="f-hv_erdbeben" name="hv_erdbeben" placeholder="Ja / Nein / unsicher" disabled>
+          </div>
+          <div class="field">
+            <label for="f-hv_al">Wird die Immobilie als Alojamento Local vermietet?</label>
+            <input type="text" id="f-hv_al" name="hv_al" placeholder="Ja / Nein / geplant" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Autoversicherung" hidden>
+          <span class="form-branch-legend">Zum Fahrzeug</span>
+          <div class="field">
+            <label for="f-av_kennzeichen">Portugiesisches oder ausländisches Kennzeichen?</label>
+            <input type="text" id="f-av_kennzeichen" name="av_kennzeichen" placeholder="Portugiesisch / Deutsch / anderes" disabled>
+          </div>
+          <div class="field">
+            <label for="f-av_fahrzeug">Marke, Modell und Baujahr</label>
+            <input type="text" id="f-av_fahrzeug" name="av_fahrzeug" placeholder="z. B.: VW Golf 2020" disabled>
+          </div>
+          <div class="field">
+            <label for="f-av_fuehrerschein_datum">Datum der ersten Führerscheinausstellung</label>
+            <input type="text" id="f-av_fuehrerschein_datum" name="av_fuehrerschein_datum" placeholder="TT.MM.JJJJ" disabled>
+          </div>
+          <div class="field">
+            <label for="f-av_fuehrerschein_land">Ausstellungsland des Führerscheins</label>
+            <input type="text" id="f-av_fuehrerschein_land" name="av_fuehrerschein_land" placeholder="z. B.: Deutschland" disabled>
+          </div>
+          <div class="field">
+            <label for="f-av_schadenverlauf">Schadenfreie Jahre bzw. Schadenverlauf</label>
+            <input type="text" id="f-av_schadenverlauf" name="av_schadenverlauf" placeholder="z. B.: 8 Jahre schadenfrei" disabled>
+          </div>
+          <div class="field">
+            <label for="f-av_deckung">Gewünschter Deckungsumfang</label>
+            <input type="text" id="f-av_deckung" name="av_deckung" placeholder="Haftpflicht / Teilkasko / Vollkasko" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Lebensversicherung" hidden>
+          <span class="form-branch-legend">Zur gewünschten Absicherung</span>
+          <div class="field">
+            <label for="f-lv_geburtsdatum">Geburtsdatum der zu versichernden Person</label>
+            <input type="text" id="f-lv_geburtsdatum" name="lv_geburtsdatum" placeholder="TT.MM.JJJJ" disabled>
+          </div>
+          <div class="field">
+            <label for="f-lv_zweck">Zweck der Absicherung</label>
+            <input type="text" id="f-lv_zweck" name="lv_zweck" placeholder="Hypothek / Familienabsicherung / beides" disabled>
+          </div>
+          <div class="field">
+            <label for="f-lv_summe">Gewünschte Versicherungssumme</label>
+            <input type="text" id="f-lv_summe" name="lv_summe" placeholder="z. B.: 200.000 €" disabled>
+          </div>
+          <div class="field">
+            <label for="f-lv_raucher">Raucherstatus</label>
+            <input type="text" id="f-lv_raucher" name="lv_raucher" placeholder="Raucher / Nichtraucher" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Private Clients" hidden>
+          <span class="form-branch-legend">Zu den abzusichernden Werten</span>
+          <div class="field">
+            <label for="f-pc_werte">Um welche Vermögenswerte geht es?</label>
+            <input type="text" id="f-pc_werte" name="pc_werte" placeholder="z. B.: Zweitwohnsitz, Kunstsammlung, Oldtimer" disabled>
+          </div>
+          <div class="field">
+            <label for="f-pc_immobilien">Anzahl der Immobilien</label>
+            <input type="number" id="f-pc_immobilien" name="pc_immobilien" placeholder="z. B.: 2" disabled>
+          </div>
+          <div class="field">
+            <label for="f-pc_gesamtwert">Ungefährer Gesamtwert</label>
+            <input type="text" id="f-pc_gesamtwert" name="pc_gesamtwert" placeholder="z. B.: über 1.000.000 €" disabled>
+          </div>
+          <div class="field">
+            <label for="f-pc_anforderungen">Besondere Anforderungen</label>
+            <input type="text" id="f-pc_anforderungen" name="pc_anforderungen" placeholder="z. B.: weltweite Deckung, Einzelanfertigungen" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Unternehmen" hidden>
+          <span class="form-branch-legend">Zum Unternehmen</span>
+          <div class="field">
+            <label for="f-un_taetigkeit">Art der Tätigkeit</label>
+            <input type="text" id="f-un_taetigkeit" name="un_taetigkeit" placeholder="z. B.: Gastronomie, Beratung, Handwerk" disabled>
+          </div>
+          <div class="field">
+            <label for="f-un_mitarbeiter">Anzahl der Mitarbeiter</label>
+            <input type="number" id="f-un_mitarbeiter" name="un_mitarbeiter" placeholder="z. B.: 5" disabled>
+          </div>
+          <div class="field">
+            <label for="f-un_standort">Standort des Betriebs</label>
+            <input type="text" id="f-un_standort" name="un_standort" placeholder="z. B.: Faro" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="Therapeuten &amp; Wellness" hidden>
+          <span class="form-branch-legend">Zu Ihrer Tätigkeit</span>
+          <div class="field">
+            <label for="f-tw_taetigkeit">Tätigkeit</label>
+            <input type="text" id="f-tw_taetigkeit" name="tw_taetigkeit" placeholder="z. B.: Osteopathie, Akupunktur, Yoga, Pilates" disabled>
+          </div>
+          <div class="field">
+            <label for="f-tw_cedula">Besitzen Sie eine ACSS-Zulassung (cédula profissional)?</label>
+            <input type="text" id="f-tw_cedula" name="tw_cedula" placeholder="Ja / Nein / in Beantragung" disabled>
+          </div>
+          <div class="field">
+            <label for="f-tw_ort">Wo üben Sie die Tätigkeit aus?</label>
+            <input type="text" id="f-tw_ort" name="tw_ort" placeholder="z. B.: eigene Praxis, Studio, mobil, auch im Ausland" disabled>
+          </div>
+        </div>
+
+      <div class="field">
+        <label for="f-nachricht">Ihre Nachricht</label>
+        <textarea id="f-nachricht" name="nachricht" rows="6"
+                  placeholder="Zum Beispiel: Sie ziehen um oder leben bereits hier, Immobilie oder Miete, mit oder ohne Fahrzeug, privat oder als Unternehmer."></textarea>
+      </div>
+
+      <div class="field consent-block">
+        <div class="consent">
+          <input type="checkbox" id="f-einwilligung" name="einwilligung" value="ja"
+                 required aria-required="true" aria-describedby="err-einwilligung">
+          <label for="f-einwilligung">Ich bin damit einverstanden, dass Adler &amp; Rochefort meine Angaben zur Bearbeitung meiner Anfrage nutzt, gemäß der DSGVO und der <a class="text-link" href="/en/privacy-policy" hreflang="en">Datenschutzerklärung</a>.</label>
+        </div>
+        <span class="field-error" id="err-einwilligung" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="form-submit" id="angebotSubmit">Angebot anfragen</button>
+      <p class="form-footnote">Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., registrierter Versicherungsmakler bei der ASF unter Nr. 425591790/3.</p>
+    </form>
     <div class="form-success" id="angebotSuccess">
       <div class="tick">&#10003;</div>
       <h3>Vielen Dank!</h3>
@@ -502,7 +694,7 @@
         <li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li>
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
-        <li><a href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a></li>
+        <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
         <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
       </ul>
     </div>
@@ -644,7 +836,7 @@
 
     function check(rule) {
       var field = document.getElementById(rule.id);
-      if (!field || (!field.required && !field.value)) return true;
+      if (!field) return true;
       var message = rule.validate(valueOf(rule, field));
       setError(rule, message);
       return !message;

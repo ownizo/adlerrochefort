@@ -17,8 +17,8 @@ export const PRIVATE_CLIENTS_PAGE = {
   url: '/de/private-clients-portugal/',
   title: 'Private Clients Portugal: Versicherung für komplexe Risiken | Adler & Rochefort',
   description:
-    'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken: Hochwertige Immobilien, Kunst und Sammlungen, Schmuck und Uhren, Oldtimer und mehrere Wohnsitze — individuell zusammengestellt statt aus dem Standardprodukt.',
-  keywords: 'Private Clients Versicherung Portugal, Hochwertige Immobilien Versicherung Portugal, Kunstversicherung Portugal, Oldtimer Versicherung Portugal, Versicherung Zweitwohnsitz Portugal',
+    'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken: Luxusimmobilien, Kunst und Sammlungen, Schmuck und Uhren, Oldtimer und mehrere Wohnsitze — individuell zusammengestellt statt aus dem Standardprodukt.',
+  keywords: 'Private Clients Versicherung Portugal, Luxusimmobilien Versicherung Portugal, Kunstversicherung Portugal, Oldtimer Versicherung Portugal, Versicherung Zweitwohnsitz Portugal',
   eyebrow: 'Private Clients',
   h1: 'Private Clients: Versicherung für komplexere Risiken',
   standfirst:
@@ -49,12 +49,12 @@ export const PRIVATE_CLIENTS_PAGE = {
 
 <section class="section tint" aria-labelledby="bereiche">
   <div class="container">
-    <span class="eyebrow">Was wir prüfen</span>
+    <span class="eyebrow">Was wir abdecken</span>
     <h2 id="bereiche">Bereiche, in denen wir beraten</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <span class="fc-tag">Immobilien</span>
-        <h3>Hochwertige Immobilien &amp; Zweitwohnsitze</h3>
+        <h3>Luxusimmobilien &amp; Zweitwohnsitze</h3>
         <p>Hochwertige Häuser, saisonal genutzte Zweitwohnsitze, mehrere Immobilien in unterschiedlichen Regionen.</p>
       </div>
       <div class="feature-card">
@@ -118,7 +118,7 @@ export const PRIVATE_CLIENTS_PAGE = {
     },
     {
       q: 'Sind Kunst und Sammlungen zum tatsächlichen Wert versichert?',
-      a: '<p>Vereinbarte Werte und Deckung außerhalb des Wohnsitzes können geprüft werden. Einzelbewertung, Annahme und Umfang müssen in der konkreten Police bestätigt sein.</p>',
+      a: '<p>Über die genannten Zeichner ja, mit Einzelbewertung statt einer pauschalen Obergrenze — und mit Deckung auch außerhalb des Wohnsitzes und weltweit, je nach Police.</p>',
     },
     {
       q: 'Was ist Innovarisk?',

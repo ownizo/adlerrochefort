@@ -23,8 +23,7 @@
       "residente_fiscal": "Czy jest Pan/Pani rezydentem podatkowym w Portugalii?",
       "residente_fiscal_sim": "Tak",
       "residente_fiscal_nao": "Nie",
-      "rgpd_consentimento": "Zgadzam się, aby moje dane zostały wykorzystane do przygotowania tej oferty, zgodnie z RODO.",
-      "empresa": "Firma"
+      "rgpd_consentimento": "Zgadzam się, aby moje dane zostały wykorzystane do przygotowania tej oferty, zgodnie z RODO."
     },
     "helpers": {
       "residente_fiscal_nao_info": "Adres jest nadal potrzebny. Bez rezydencji podatkowej w Portugalii wystawienie polisy może nie być możliwe we wszystkich przypadkach — mimo to przeanalizujemy Państwa konkretną sytuację.",
@@ -46,37 +45,7 @@
     "success": {
       "titulo": "Dziękujemy!",
       "corpo": "Państwa zapytanie zostało odebrane. Zajmiemy się nim i odpowiemy w ciągu 24 godzin roboczych."
-    },
-    "runtime": {
-      "required": "To pole jest wymagane.",
-      "email": "Proszę podać prawidłowy adres e-mail, np. imie@email.com.",
-      "sending": "Wysyłanie…",
-      "failed": "Nie udało się wysłać zapytania. Proszę sprawdzić połączenie i spróbować ponownie — nic z tego, co Państwo napisali, nie zostało utracone.",
-      "nif": "Proszę podać prawidłowy portugalski numer podatkowy (NIF), 9 cyfr.",
-      "postalCode": "Proszę podać kod pocztowy w formacie 0000-000.",
-      "plate": "Proszę podać prawidłową portugalską tablicę rejestracyjną.",
-      "startDate": "Data rozpoczęcia nie może być wcześniejsza niż dzisiaj.",
-      "licenceDate": "Data wydania prawa jazdy nie może być wcześniejsza niż data urodzenia ubezpieczającego ani przypadać w przyszłości.",
-      "licenceBeforeAge16": "To przed 16. urodzinami ubezpieczającego — mimo to akceptujemy tę datę, prosimy jednak o sprawdzenie jej poprawności.",
-      "renovationYear": "Rok remontu nie może być wcześniejszy niż rok budowy ani późniejszy niż bieżący rok.",
-      "residenteFiscal": "Proszę wskazać, czy jest Pan/Pani rezydentem podatkowym w Portugalii.",
-      "rgpd": "Musi Pan/Pani wyrazić zgodę, abyśmy mogli przygotować ofertę.",
-      "birthDate": "Data urodzenia nie może być w przyszłości.",
-      "birthDateAdult": "Ubezpieczający musi mieć co najmniej 18 lat.",
-      "tooShort": "Proszę napisać co najmniej {min} znaków.",
-      "requiredGroup": "Proszę wybrać co najmniej jedną opcję.",
-      "numberInvalid": "Wpisz liczbę w podanym zakresie."
-    },
-    "select": "Wybierz opcję",
-    "submit": "Poproś o wycenę",
-    "chooseProduct": "Wybierz rodzaj ubezpieczenia",
-    "acknowledgement": {
-      "subject": "Otrzymaliśmy zapytanie — Adler & Rochefort",
-      "body": "Dziękujemy. Otrzymaliśmy zapytanie i przeanalizujemy dane, aby przygotować oferty ubezpieczenia."
-    },
-    "privacy": "Polityka prywatności",
-    "enquirySubmit": "Wyślij zapytanie",
-    "enquiryIntro": "Aby otrzymać wycenę, wypełnij szczegółowy formularz produktu. Ten formularz kontaktowy służy do zadawania pytań."
+    }
   },
   "ramos": {
     "habitacao": {
@@ -87,17 +56,16 @@
       "regime_ocupacao_holiday_home": "Dom wakacyjny / druga nieruchomość",
       "regime_ocupacao_al": "Alojamento Local (wynajem krótkoterminowy)",
       "al_regime": "Rodzaj wynajmu krótkoterminowego",
-      "al_regime_tempo_inteiro": "AL przez cały rok",
-      "al_regime_parcial": "AL przez część roku",
+      "al_regime_tempo_inteiro": "Całkowity",
+      "al_regime_parcial": "Częściowy (współdzielone użytkowanie mieszkania)",
       "ano_construcao": "Rok budowy",
       "area_bruta": "Powierzchnia brutto (m²)",
       "casas_banho": "Liczba łazienek",
-      "obras_renovacao_check": "Przeprowadzone remonty",
+      "obras_renovacao_check": "Czy w ostatnich latach przeprowadzono remont?",
       "obras_ano": "Rok remontu",
       "obras_descricao": "Proszę opisać wykonane prace",
       "capital_edificio": "Suma ubezpieczenia budynku (€)",
-      "capital_conteudo": "Suma ubezpieczenia ruchomości (€)",
-      "morada_imovel": "Pełny adres nieruchomości"
+      "capital_conteudo": "Suma ubezpieczenia ruchomości (€)"
     },
     "saude": {
       "titulo": "Zapytaj o ubezpieczenie zdrowotne",
@@ -109,8 +77,7 @@
       "pessoa_nascimento": "Data urodzenia",
       "pessoa_nif": "NIF (portugalski numer podatkowy)",
       "pessoa_remover": "Usuń tę osobę",
-      "pessoa_adicionar": "+ Dodaj osobę",
-      "pessoas_numero": "Liczba osób do ubezpieczenia"
+      "pessoa_adicionar": "+ Dodaj osobę"
     },
     "auto": {
       "titulo": "Zapytaj o ubezpieczenie samochodu",

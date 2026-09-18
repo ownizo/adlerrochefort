@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import { PRIVATE_CLIENT_NAV_STYLE } from './private-client/navigation.mjs';
-import { privateClientPage, renderPrivateClient, PRIVATE_CLIENT_PAGES } from './private-client/render.mjs';
 /**
  * Renders the German cluster (/de/…) from the content definitions in
  * scripts/de-cluster.data.mjs.
@@ -24,7 +22,6 @@ import { privateClientPage, renderPrivateClient, PRIVATE_CLIENT_PAGES } from './
  * Run: node scripts/generate-de-cluster.mjs
  * Then: node scripts/generate-sitemap.mjs
  */
-import { correctQuotationHtml, assertPreservesQuotationForms } from './lib/quotation-forms.mjs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -468,7 +465,7 @@ const FOOTER = (page) => `<footer class="on-dark">
         <li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li>
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
-        <li><a href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a></li>
+        <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
         <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
       </ul>
     </div>
@@ -513,7 +510,7 @@ ${footerLangs(page)}
   </div>
   <div class="footer-regulatory">
     <p>Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. ist bei der portugiesischen Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als „agente de seguros“ unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</p>
+    <p>Ownizo, Unipessoal Lda. ist bei der portugiesischen Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als Versicherungsmakler unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</p>
     <p>Diese Seite ist eine allgemeine Information, keine individuelle Beratung. Welche Deckung für Sie geeignet ist, hängt von Ihrer Situation und den Bedingungen der jeweiligen Police ab.</p>
   </div>
 </footer>`;
@@ -679,8 +676,6 @@ const COOKIE_BANNER = `<div class="cookie-banner" id="cookieBanner">
 /* ─────────────── page assembly ─────────────── */
 
 function renderPage(page) {
-  const privatePage = privateClientPage(page.url);
-  if (privatePage) return renderPrivateClient(privatePage);
   const related = page.related?.length
     ? `<section class="section plain" aria-labelledby="weiterlesen-title">
   <div class="container narrow">
@@ -748,7 +743,6 @@ ${jsonLd(page)}
   gtag('config', 'AW-18361722533');
 </script>
 ${LANGSEL_CSS_LINK}
-${PRIVATE_CLIENT_NAV_STYLE}
 </head>
 <body>
 
@@ -761,7 +755,7 @@ ${PRIVATE_CLIENT_NAV_STYLE}
     <a href="/de/" class="nav-logo">
       <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
     </a>
-    <div class="nav-right"><a class="pc-nav-link" href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a>
+    <div class="nav-right">
       ${langSwitcher(page)}
       <a href="#angebot" class="nav-cta">Angebot anfragen</a>
     </div>
@@ -817,12 +811,10 @@ ${LANGSEL_SCRIPT_TAG}
 /* ─────────────── write ─────────────── */
 
 let written = 0;
-for (const page of [...PAGES, ...PRIVATE_CLIENT_PAGES.filter(p => p.lang === 'de' && !PAGES.some(old => old.url === p.url))]) {
-  if (process.argv.includes('--private-clients-only') && !privateClientPage(page.url)) continue;
+for (const page of PAGES) {
   const dir = join(PUBLIC, page.url.replace(/^\/|\/$/g, ''));
   await mkdir(dir, { recursive: true });
-  assertPreservesQuotationForms(join(dir, 'index.html'), renderPage(page));
-  await writeFile(join(dir, 'index.html'), correctQuotationHtml(renderPage(page), { homepage: page.url === '/de/' || page.url === '/nl/' }), 'utf8');
+  await writeFile(join(dir, 'index.html'), renderPage(page), 'utf8');
   written++;
   console.log(`  ✓ ${page.url}`);
 }

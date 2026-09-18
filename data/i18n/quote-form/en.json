@@ -23,8 +23,7 @@
       "residente_fiscal": "Are you a tax resident in Portugal?",
       "residente_fiscal_sim": "Yes",
       "residente_fiscal_nao": "No",
-      "rgpd_consentimento": "I agree that my details may be used to prepare this quote, under GDPR.",
-      "empresa": "Company"
+      "rgpd_consentimento": "I agree that my details may be used to prepare this quote, under GDPR."
     },
     "helpers": {
       "residente_fiscal_nao_info": "We still need your address. Without Portuguese tax residency it may not be possible to issue the policy in every case — we'll review your specific situation regardless.",
@@ -46,37 +45,7 @@
     "success": {
       "titulo": "Request received",
       "corpo": "Thank you. We'll review your request and reply within 24 business hours."
-    },
-    "runtime": {
-      "required": "Please complete this field.",
-      "email": "Enter a valid email address, for example you@email.com.",
-      "sending": "Sending…",
-      "failed": "Your request could not be sent. Please check your connection and try again — nothing you typed has been lost.",
-      "nif": "Enter a valid Portuguese tax number (NIF), 9 digits.",
-      "postalCode": "Enter a postal code in the format 0000-000.",
-      "plate": "Enter a valid Portuguese vehicle plate.",
-      "startDate": "The start date cannot be before today.",
-      "licenceDate": "The licence date can't be before the policyholder's date of birth, or in the future.",
-      "licenceBeforeAge16": "That's before the policyholder's 16th birthday — we'll still take it, but please double-check the date is correct.",
-      "renovationYear": "The renovation year can't be before construction or after the current year.",
-      "residenteFiscal": "Let us know whether you're a tax resident in Portugal.",
-      "rgpd": "You need to agree before we can prepare the quote.",
-      "birthDate": "The date of birth cannot be in the future.",
-      "birthDateAdult": "The policyholder must be at least 18 years old.",
-      "tooShort": "Please write at least {min} characters.",
-      "requiredGroup": "Please select at least one option.",
-      "numberInvalid": "Enter a number within the indicated limits."
-    },
-    "select": "Select an option",
-    "submit": "Request a quotation",
-    "chooseProduct": "Choose the insurance type",
-    "acknowledgement": {
-      "subject": "Request received — Adler & Rochefort",
-      "body": "Thank you. We have received your request and will review the information to prepare quotations."
-    },
-    "privacy": "Privacy policy",
-    "enquirySubmit": "Send an enquiry",
-    "enquiryIntro": "For a quotation, complete the detailed product form. Use this enquiry form for questions."
+    }
   },
   "ramos": {
     "auto": {
@@ -94,17 +63,16 @@
       "regime_ocupacao_holiday_home": "Holiday home",
       "regime_ocupacao_al": "Short-term rental (Alojamento Local)",
       "al_regime": "Short-term rental regime",
-      "al_regime_tempo_inteiro": "Full-time AL",
-      "al_regime_parcial": "Part-time AL",
+      "al_regime_tempo_inteiro": "Whole property",
+      "al_regime_parcial": "Partial (room-sharing)",
       "ano_construcao": "Year of construction",
       "area_bruta": "Gross construction area (m²)",
       "casas_banho": "Number of bathrooms",
-      "obras_renovacao_check": "Renovations carried out",
+      "obras_renovacao_check": "Have you renovated in the last few years?",
       "obras_ano": "Year of the renovation",
       "obras_descricao": "Describe the renovation work",
       "capital_edificio": "Sum insured — building (€)",
-      "capital_conteudo": "Sum insured — contents (€)",
-      "morada_imovel": "Full property address"
+      "capital_conteudo": "Sum insured — contents (€)"
     },
     "saude": {
       "titulo": "Health insurance quote",
@@ -116,8 +84,7 @@
       "pessoa_nascimento": "Date of birth",
       "pessoa_nif": "Portuguese tax number (NIF)",
       "pessoa_remover": "Remove this person",
-      "pessoa_adicionar": "+ Add a person",
-      "pessoas_numero": "Number of people to insure"
+      "pessoa_adicionar": "+ Add a person"
     },
     "profissional": {
       "titulo": "Professional liability insurance quote",

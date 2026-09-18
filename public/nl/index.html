@@ -1065,27 +1065,42 @@
         </ul>
       </div>
       <div class="lead-card">
-        <nav class="quotation-routes" aria-label="Kies het type verzekering"><p>Kies het type verzekering</p><ul><li><a href="/nl/zzp-beroepsaansprakelijkheid-portugal/#offerte">Beroepsaansprakelijkheid aanvragen</a></li><li><a href="/nl/zorgverzekering-portugal/#offerte">Zorgverzekering aanvragen</a></li><li><a href="/nl/woonverzekering-portugal/#offerte">Woonverzekering aanvragen</a></li><li><a href="/nl/autoverzekering-portugal/#quote-form">Autoverzekering offerte</a></li></ul></nav>
-<form id="leadForm" name="lead-nl" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/nl/#offerte">
-<input type="hidden" name="form-name" value="lead-nl">
-<input type="hidden" name="source_url" value="">
-<input type="hidden" name="lang" value="nl">
-<input type="hidden" name="country" value="Portugal">
-<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-<div class="contact-form-field form-field field"><label for="l-name">Volledige naam *</label><input type="text" id="l-name" name="name" required></div>
-<div class="contact-form-field form-field field"><label for="l-email">E-mailadres *</label><input type="email" id="l-email" name="email" required></div>
-<div class="contact-form-field form-field field"><label for="l-phone">Telefoonnummer</label><input type="tel" id="l-phone" name="phone" placeholder="+351 …"></div>
-<div class="contact-form-field form-field field"><label for="lead-nl-empresa">Bedrijf</label><input type="text" id="lead-nl-empresa" name="empresa"></div>
-<div class="contact-form-field form-field field"><label for="l-type">Kies het type verzekering *</label><select id="l-type" name="insurance_type" required>
+        <form id="leadForm" name="lead-nl" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/nl/#offerte">
+          <input type="hidden" name="form-name" value="lead-nl">
+          <input type="hidden" name="source_url" value="">
+          <input type="hidden" name="lang" value="nl">
+          <p style="display:none"><label>Niet invullen: <input name="bot-field"></label></p>
+          <h3>Offerte aanvragen</h3>
+          <p class="sub">Wij antwoorden binnen 24 uur, in het Engels.</p>
+          <div class="field">
+            <label for="l-name">Naam *</label>
+            <input type="text" id="l-name" name="name" placeholder="Uw volledige naam" required>
+          </div>
+          <div class="field">
+            <label for="l-email">E-mail *</label>
+            <input type="email" id="l-email" name="email" placeholder="u@voorbeeld.nl" required>
+          </div>
+          <div class="field">
+            <label for="l-phone">Telefoon / WhatsApp</label>
+            <input type="tel" id="l-phone" name="phone" placeholder="+31 …">
+          </div>
+          <div class="field">
+            <label for="l-type">Gewenste verzekering *</label>
+            <select id="l-type" name="insurance_type" required>
               <option value="" disabled selected>Maak een keuze…</option>
               <option value="Zorgverzekering">Zorgverzekering</option>
               <option value="Woon/opstal">Woon- / opstalverzekering</option>
               <option value="Auto">Autoverzekering</option>
               <option value="Meerdere/advies">Meerdere / algemeen advies</option>
-            </select></div>
-<button type="submit" class="form-submit">Gratis offerte aanvragen</button>
-<p class="form-consent">Door te verzenden gaat u akkoord met contact door Adler &amp; Rochefort. Zie <a href="/en/privacy-policy">privacybeleid</a>.</p>
-</form>
+            </select>
+          </div>
+          <div class="field">
+            <label for="l-msg">Uw bericht</label>
+            <textarea id="l-msg" name="message" placeholder="Kort over uw situatie (woonplaats, aankomst, huidige polissen…)"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Gratis offerte aanvragen</button>
+          <p class="form-consent">Door te verzenden gaat u akkoord met contact door Adler &amp; Rochefort. Zie <a href="/en/privacy-policy">privacybeleid</a>.</p>
+        </form>
         <div class="form-success" id="leadSuccess">
           <div class="tick">&#10003;</div>
           <h3>Hartelijk dank!</h3>
