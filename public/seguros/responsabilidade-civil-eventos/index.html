@@ -243,62 +243,26 @@
 <div class="lp-form-card fade-up">
   <h2>Análise de RC para o seu Evento</h2>
   <p class="lp-form-sub">Preencha o essencial. Cotação em 48 a 72 horas úteis — o cuidado na análise da sua exposição real demora mais do que um formulário genérico.</p>
-<form name="cotacao-rc-eventos" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/obrigado/">
+  <form name="cotacao-rc-eventos" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-rc-eventos">
-<input type="hidden" name="lang" value="pt">
     <input type="hidden" name="ramo" value="RC Organização de Eventos">
     <input type="hidden" name="source_url" id="cotacao-rc-source" value="">
-    <input type="hidden" name="dados_dinamicos" value="">
-    <p class="contact-form-honeypot"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-    <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-      <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Identificação</span></li>
-      <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. Evento</span></li>
-      <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Confirmação</span></li>
-    </ol>
-
-    <div data-wizard-step>
-      <div class="contact-form-field"><label for="rcp-nome">Nome completo *</label><input type="text" id="rcp-nome" name="nome" autocomplete="name" required></div>
-      <div class="contact-form-field"><label for="rcp-nif">NIF *</label><input type="text" id="rcp-nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" data-validate="nif" required></div>
-      <div class="contact-form-field"><label for="rcp-nascimento">Data de nascimento *</label><input type="date" id="rcp-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
-      <div class="contact-form-field"><label for="rcp-morada">Morada completa *</label><input type="text" id="rcp-morada" name="morada" autocomplete="street-address" required></div>
-      <div class="contact-form-field"><label for="rcp-localidade">Localidade *</label><input type="text" id="rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
-      <div class="contact-form-field"><label for="rcp-cp">Código postal *</label><input type="text" id="rcp-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-      <div class="contact-form-field"><label for="rcp-telefone">Telefone / WhatsApp *</label><input type="tel" id="rcp-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
-      <div class="contact-form-field"><label for="rcp-email">Email *</label><input type="email" id="rcp-email" name="email" autocomplete="email" required></div>
-      <div class="contact-form-field">
-        <label for="rcp-nacionalidade">Nacionalidade *</label>
-        <input type="text" id="rcp-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="rcp-nacionalidade-code" autocomplete="off" required>
-        <input type="hidden" name="nacionalidade" id="rcp-nacionalidade-code">
-      </div>
-      <div class="contact-form-field">
-        <label for="rcp-residente-fiscal">É residente fiscal em Portugal? *</label>
-        <select id="rcp-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-          <option value="">Selecionar</option>
-          <option value="sim">Sim</option>
-          <option value="nao">Não</option>
-        </select>
-      </div>
-      <p class="wizard-helper" id="rcp-residente-fiscal-info" hidden>A morada continua a ser necessária. Sem residência fiscal em Portugal pode não ser possível emitir a apólice em todos os casos — analisamos a sua situação concreta na mesma.</p>
-      <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Seguinte →</button></div>
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <div class="lp-form-grid">
+      <div class="field"><label for="nome">Nome / empresa *</label><input type="text" id="nome" name="nome" placeholder="O seu nome ou empresa" required></div>
+      <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="o.seu@email.com" required></div>
+      <div class="field"><label for="telefone">Telefone / WhatsApp *</label><input type="tel" id="telefone" name="telefone" placeholder="+351 …" required></div>
+      <div class="field"><label for="ev_tipo">Tipo de evento *</label><input type="text" id="ev_tipo" name="ev_tipo" placeholder="Ex.: casamento, feira, festival" required></div>
+      <div class="field"><label for="ev_local">Localidade</label><input type="text" id="ev_local" name="ev_local" placeholder="Cidade / concelho"></div>
+      <div class="field"><label for="ev_data">Data</label><input type="date" id="ev_data" name="ev_data"></div>
+      <div class="field"><label for="ev_duracao">Duração</label><input type="text" id="ev_duracao" name="ev_duracao" placeholder="Ex.: 1 dia, 3 dias"></div>
+      <div class="field"><label for="ev_participantes">Número estimado de participantes</label><input type="number" id="ev_participantes" name="ev_participantes" placeholder="Ex.: 150"></div>
+      <div class="field"><label for="ev_capital">Capital pretendido (se souber)</label><input type="text" id="ev_capital" name="ev_capital" placeholder="Ex.: 250 000 €"></div>
+      <div class="field"><label for="ev_seguro_atual">Já tem seguro para este evento?</label><select id="ev_seguro_atual" name="ev_seguro_atual"><option value="">Selecione…</option><option value="Sim, é renovação">Sim, é renovação</option><option value="Não, é a primeira vez">Não, é a primeira vez</option></select></div>
+      <div class="field full"><label for="mensagem">Descrição breve das atividades</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="O que vai acontecer no evento, estruturas ou equipamentos usados, subcontratados envolvidos"></textarea><p class="lp-form-micro" style="margin-top:6px;">Não inclua aqui dados de saúde, seus ou de terceiros — só o que for relevante para a apólice.</p></div>
     </div>
-
-    <div data-wizard-step hidden>
-      <div class="contact-form-field"><label for="rce-tipo">Tipo de evento *</label><input type="text" id="rce-tipo" name="ev_tipo" placeholder="Ex.: casamento, feira, congresso, festival" required></div>
-      <div class="contact-form-field"><label for="rce-data">Data do evento *</label><input type="date" id="rce-data" name="ev_data" required></div>
-      <div class="contact-form-field"><label for="rce-participantes">N.º estimado de participantes *</label><input type="number" id="rce-participantes" name="ev_participantes" min="1" step="1" required></div>
-      <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Anterior</button><button type="button" class="wizard-nav-next" data-wizard-next>Seguinte →</button></div>
-    </div>
-
-    <div data-wizard-step hidden>
-      <div class="contact-form-field"><label for="rcp-inicio">Data de início pretendida *</label><input type="date" id="rcp-inicio" name="data_inicio" data-validate="start-date" required></div>
-      <div class="contact-form-field">
-        <label class="contact-form-checkbox" for="rcp-rgpd"><input type="checkbox" id="rcp-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> Aceito que os meus dados sejam usados para preparar esta análise, ao abrigo do RGPD. *</label>
-      </div>
-      <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Anterior</button><button type="submit" class="contact-form-submit">Pedir análise →</button></div>
-    </div>
-
-    <p class="lp-form-micro">Cotação em 48 a 72 horas úteis. Os seus dados são usados apenas para preparar a análise e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+    <button type="submit" class="lp-form-submit">Pedir proposta →</button>
+    <p class="lp-form-micro">Cotação em 48 a 72 horas úteis. Não é necessário enviar documentos nesta fase. Os seus dados são usados apenas para preparar a análise e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
   </form>
 </div>
     </div>
@@ -780,10 +744,6 @@
     if (f) f.value = window.location.href;
   })();
 </script>
-<script defer src="/js/quote-validators.js"></script>
-<script defer src="/js/ar-quote-form.js"></script>
-<script defer src="/js/quote-nationality.js"></script>
-<script defer src="/js/quote-wizard.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
 </body>
 </html>

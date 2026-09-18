@@ -23,8 +23,7 @@
       "residente_fiscal": "É residente fiscal em Portugal?",
       "residente_fiscal_sim": "Sim",
       "residente_fiscal_nao": "Não",
-      "rgpd_consentimento": "Aceito que os meus dados sejam usados para preparar esta cotação, ao abrigo do RGPD.",
-      "empresa": "Empresa"
+      "rgpd_consentimento": "Aceito que os meus dados sejam usados para preparar esta cotação, ao abrigo do RGPD."
     },
     "helpers": {
       "residente_fiscal_nao_info": "A morada continua a ser necessária. Sem residência fiscal em Portugal pode não ser possível emitir a apólice em todos os casos — analisamos a sua situação concreta na mesma.",
@@ -46,37 +45,7 @@
     "success": {
       "titulo": "Pedido recebido",
       "corpo": "Obrigado. Vamos analisar o seu pedido e responder em 24 horas úteis."
-    },
-    "runtime": {
-      "required": "Preencha este campo.",
-      "email": "Introduza um email válido, por exemplo nome@email.com.",
-      "sending": "A enviar…",
-      "failed": "Não foi possível enviar o seu pedido. Verifique a ligação e tente novamente — não perdeu nada do que escreveu.",
-      "nif": "Introduza um NIF válido, com 9 dígitos.",
-      "postalCode": "Introduza um código postal no formato 0000-000.",
-      "plate": "Introduza uma matrícula portuguesa válida.",
-      "startDate": "A data de início não pode ser anterior a hoje.",
-      "licenceDate": "A data da carta não pode ser anterior à data de nascimento do tomador, nem no futuro.",
-      "licenceBeforeAge16": "É anterior ao 16.º aniversário do tomador — aceitamos na mesma, mas confirme se a data está correta.",
-      "renovationYear": "O ano das obras não pode ser anterior à construção nem posterior ao ano atual.",
-      "residenteFiscal": "Indique se é residente fiscal em Portugal.",
-      "rgpd": "Tem de aceitar para podermos preparar a cotação.",
-      "birthDate": "A data de nascimento não pode ser no futuro.",
-      "birthDateAdult": "O tomador tem de ter pelo menos 18 anos.",
-      "tooShort": "Escreva pelo menos {min} caracteres.",
-      "requiredGroup": "Selecione pelo menos uma opção.",
-      "numberInvalid": "Introduza um número dentro dos limites indicados."
-    },
-    "select": "Selecione uma opção",
-    "submit": "Solicitar cotação",
-    "chooseProduct": "Escolha o tipo de seguro",
-    "acknowledgement": {
-      "subject": "Pedido recebido — Adler & Rochefort",
-      "body": "Obrigado. Recebemos o seu pedido e iremos analisar os dados para preparar as cotações."
-    },
-    "privacy": "Política de privacidade",
-    "enquirySubmit": "Enviar contacto",
-    "enquiryIntro": "Para uma cotação, preencha o formulário detalhado do produto. Este formulário destina-se a esclarecimentos."
+    }
   },
   "ramos": {
     "auto": {
@@ -95,16 +64,15 @@
       "regime_ocupacao_al": "Alojamento local",
       "al_regime": "Regime de Alojamento Local",
       "al_regime_tempo_inteiro": "Tempo inteiro",
-      "al_regime_parcial": "Tempo parcial",
+      "al_regime_parcial": "Parcial (partilha da habitação)",
       "ano_construcao": "Ano de construção",
       "area_bruta": "Área bruta de construção (m²)",
       "casas_banho": "Número de casas de banho",
-      "obras_renovacao_check": "Renovações realizadas",
+      "obras_renovacao_check": "Fez obras de renovação nos últimos anos?",
       "obras_ano": "Ano das obras",
       "obras_descricao": "Descreva as obras realizadas",
       "capital_edificio": "Capital seguro do edifício (€)",
-      "capital_conteudo": "Capital seguro do conteúdo (€)",
-      "morada_imovel": "Morada completa do imóvel"
+      "capital_conteudo": "Capital seguro do conteúdo (€)"
     },
     "saude": {
       "titulo": "Cotação de seguro de saúde",
@@ -116,8 +84,7 @@
       "pessoa_nascimento": "Data de nascimento",
       "pessoa_nif": "NIF",
       "pessoa_remover": "Remover esta pessoa",
-      "pessoa_adicionar": "+ Adicionar pessoa",
-      "pessoas_numero": "Número de pessoas a segurar"
+      "pessoa_adicionar": "+ Adicionar pessoa"
     },
     "profissional": {
       "titulo": "Cotação de RC Profissional",

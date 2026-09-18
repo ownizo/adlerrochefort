@@ -463,8 +463,7 @@
     <p class="form-intro">כתבו מה צריך להיות מכוסה וממתי. נחזור אליכם עם מה שצריך כדי להוציא הצעה, מה אפשר לסדר בפועל, ומה כדאי לבדוק לפני שמחליטים.</p>
     <p class="form-lang-note">הטופס מוצג בעברית. שפת העבודה שלנו היא אנגלית: הצעות מחיר, הסבר תנאים וליווי בתביעות נעשים בכתב באנגלית, וגם התשובה תגיע באנגלית.</p>
 
-    <nav class="quotation-routes" aria-label="בחירת סוג הביטוח"><p>בחירת סוג הביטוח</p><ul><li><a href="/il/liability-insurance-portugal/#hatzaa">בקשת הצעה לביטוח אחריות מקצועית</a></li><li><a href="/il/home-insurance-portugal/#hatzaa">בקשת הצעה לביטוח דירה</a></li><li><a href="/il/health-insurance-portugal/#hatzaa">בקשת הצעה לביטוח בריאות</a></li><li><a href="/il/car-insurance-portugal/#hatzaa">בקשת הצעה לביטוח רכב</a></li></ul></nav>
-<form
+    <form
       class="lead-form"
       id="leadForm"
       name="il-bakashat-hatzaa"
@@ -472,32 +471,155 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/il/#hatzaa"
-     >
-<input type="hidden" name="form-name" value="il-bakashat-hatzaa">
-<input type="hidden" name="source" value="il">
-<input type="hidden" name="source_url" value="">
-<input type="hidden" name="landing_page" value="">
-<input type="hidden" name="subject" value="פנייה חדשה (IL) — פנייה כללית (IL)">
-<input type="hidden" name="language" value="he">
-<input type="hidden" name="market" value="israel">
-<input type="hidden" name="product_interest" value="">
-<input type="hidden" name="country" value="Portugal">
-<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-<div class="contact-form-field form-field field"><label for="f-name">שם מלא *</label><input type="text" id="f-name" name="name" required></div>
-<div class="contact-form-field form-field field"><label for="f-email">כתובת ⁦דוא״ל⁩ *</label><input type="email" id="f-email" name="email" required></div>
-<div class="contact-form-field form-field field"><label for="f-phone">מספר טלפון</label><input type="tel" id="f-phone" name="phone" placeholder="+351 …"></div>
-<div class="contact-form-field form-field field"><label for="il-bakashat-hatzaa-empresa">חברה</label><input type="text" id="il-bakashat-hatzaa-empresa" name="empresa"></div>
-<div class="contact-form-field form-field field"><label for="f-type">בחירת סוג הביטוח *</label><select id="f-type" name="insurance_type" aria-required="true" aria-describedby="err-type" required>
+      novalidate>
+
+      <input type="hidden" name="form-name" value="il-bakashat-hatzaa">
+      <input type="hidden" name="source" value="il">
+      <input type="hidden" name="source_url" value="">
+      <input type="hidden" name="landing_page" value="">
+      <input type="hidden" name="subject" value="פנייה חדשה (IL) — פנייה כללית (IL)">
+      <input type="hidden" name="language" value="he">
+      <input type="hidden" name="market" value="israel">
+      <input type="hidden" name="product_interest" value="">
+      <p class="visually-hidden"><label>נא לא למלא את השדה הזה <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="field">
+        <label for="f-name">שם <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name"
+               required aria-required="true" aria-describedby="err-name">
+        <span class="field-error" id="err-name" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-email">דוא״ל <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email" dir="ltr"
+               required aria-required="true" aria-describedby="err-email">
+        <span class="field-error" id="err-email" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-phone">טלפון <span class="req" aria-hidden="true">*</span></label>
+        <p class="field-help" id="help-phone">נא לכתוב את המספר עם קידומת בין־לאומית, למשל ⁦+972 50 123 4567⁩ או ⁦+351 912 345 678⁩.</p>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" dir="ltr"
+               pattern="[0-9+ ()-]{6,}"
+               required aria-required="true" aria-describedby="help-phone err-phone">
+        <span class="field-error" id="err-phone" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-localidade">עיר או אזור בפורטוגל</label>
+        <input type="text" id="f-localidade" name="localidade" placeholder="למשל: ליסבון, קשקאיש, פורטו, לאגוש">
+      </div>
+
+      <div class="field">
+        <label for="f-country">ארץ המושב כרגע</label>
+        <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="למשל: ישראל, פורטוגל">
+      </div>
+
+      <div class="field">
+        <label for="f-residence">המצב שלכם בפורטוגל</label>
+        <select id="f-residence" name="residence_status">
+          <option value="" selected>בחרו אפשרות</option>
+          <option value="Planning move">מתכננים מעבר לפורטוגל</option>
+          <option value="Recently arrived">הגענו לפורטוגל לא מכבר</option>
+          <option value="Resident">מתגוררים בפורטוגל</option>
+          <option value="Non-resident owner">בעלי נכס בפורטוגל, מתגוררים במקום אחר</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="f-type">הביטוח שמעניין אתכם <span class="req" aria-hidden="true">*</span></label>
+        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
           <option value="" disabled selected>בחרו אפשרות</option>
           <option value="IL · Home">ביטוח דירה או בית (למגורים, לבית שני או להשכרה)</option>
           <option value="IL · Health">ביטוח בריאות פרטי</option>
           <option value="IL · Motor">ביטוח רכב</option>
           <option value="IL · Liability">ביטוח אחריות (Responsabilidade Civil) — פרטי או מקצועי</option>
           <option value="IL · Other">אחר, או עוד לא ברור</option>
-        </select></div>
-<button type="submit" class="form-submit" id="leadSubmit">שליחת הפנייה</button>
+        </select>
+        <span class="field-error" id="err-type" aria-live="polite"></span>
+      </div>
 
-</form>
+        <div class="form-branch-fields" data-branch="IL · Home" hidden>
+          <span class="form-branch-legend">על הנכס</span>
+          <div class="field">
+            <label for="f-home_property_type">סוג הנכס</label>
+            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="למשל: דירה בליסבון בבניין עם condomínio, וילה באלגרבה, בית שמשמש לחופשות" disabled>
+          </div>
+          <div class="field">
+            <label for="f-home_rebuild_value">אומדן עלות הבנייה מחדש (אם ידוע)</label>
+            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="למשל: כ־200,000 אירו. אם לא ידוע — זה בסדר, נעזור לאמוד" disabled>
+          </div>
+          <div class="field">
+            <label for="f-home_contents_value">שווי משוער של התכולה</label>
+            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="למשל: כ־50,000 אירו כולל רהיטים ומוצרי חשמל, ובנפרד תכשיטים ושעון" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="IL · Health" hidden>
+          <span class="form-branch-legend">מי צריך להיות מבוטח</span>
+          <div class="field">
+            <label for="f-health_household">מספר הנפשות והגילים</label>
+            <input type="text" id="f-health_household" name="health_household" placeholder="למשל: שני מבוגרים (42 ו־39) ושני ילדים (9 ו־5)" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="IL · Motor" hidden>
+          <span class="form-branch-legend">על הרכב</span>
+          <div class="field">
+            <label for="f-motor_vehicle">יצרן, דגם ושנה</label>
+            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="למשל: Volvo XC60 משנת 2021, דיזל" disabled>
+          </div>
+          <div class="field">
+            <label for="f-motor_plate">מצב הרישום כרגע</label>
+            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="למשל: רשום כבר בפורטוגל / מתכננים לקנות רכב בפורטוגל / שוקלים לייבא רכב" disabled>
+          </div>
+          <div class="field">
+            <label for="f-motor_claims_history">ניסיון נהיגה והיסטוריית תביעות</label>
+            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="למשל: 12 שנות רישיון, בלי תביעות בחמש השנים האחרונות, המבטח הקודם בישראל" disabled>
+          </div>
+        </div>
+        <div class="form-branch-fields" data-branch="IL · Liability" hidden>
+          <span class="form-branch-legend">מה צריך להיות מכוסה</span>
+          <div class="field">
+            <label for="f-liability_activity">העיסוק או המצב המדויק</label>
+            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="למשל: ייעוץ, פיזיותרפיה, השכרת נכס, בית קפה, אחריות של משק בית" disabled>
+          </div>
+          <div class="field">
+            <label for="f-liability_clients">איפה נמצאים הלקוחות או הצדדים השלישיים</label>
+            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="למשל: לקוחות בפורטוגל ובישראל, מקבלים אנשים בקליניקה בליסבון" disabled>
+          </div>
+        </div>
+
+      <div class="field">
+        <label for="f-start">מועד תחילה מבוקש</label>
+        <input type="text" id="f-start" name="start_date" placeholder="למשל: 1 במרץ, יום חתימת ה־escritura, בהקדם האפשרי">
+      </div>
+
+      <div class="field">
+        <label for="f-preflang">שפת ההתכתבות</label>
+        <select id="f-preflang" name="preferred_language">
+          <option value="English">אנגלית — שפת העבודה שלנו</option>
+          <option value="Portuguese">פורטוגזית</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="f-message">הודעה</label>
+        <textarea id="f-message" name="message" rows="6"
+                  placeholder="למשל: אנחנו עוברים לליסבון במרץ, קנינו דירה בבניין עם condomínio, מתכננים לקנות רכב כאן, ויש לנו שני ילדים."></textarea>
+      </div>
+
+      <div class="field consent-block">
+        <div class="consent">
+          <input type="checkbox" id="f-consent" name="consent" value="מאשר"
+                 required aria-required="true" aria-describedby="err-consent">
+          <label for="f-consent">אני מאשר/ת ש־Adler &amp; Rochefort ייצרו איתי קשר בנוגע לפנייה הזו ויעבדו את הפרטים שמסרתי לצורך כך.</label>
+        </div>
+        <span class="field-error" id="err-consent" aria-live="polite"></span>
+      </div>
+
+      <button type="submit" class="form-submit" id="leadSubmit">שליחת הפנייה</button>
+      <p class="form-footnote">בדרך כלל נחזור אליכם בתוך יום עסקים. בקשת הצעה לא מחייבת אתכם לשום דבר.</p>
+    </form>
     <div class="form-success" id="leadSuccess">
       <div class="tick">&#10003;</div>
       <h3>הפנייה נשלחה. תודה.</h3>
@@ -668,7 +790,7 @@
 
     function check(rule) {
       var field = document.getElementById(rule.id);
-      if (!field || (!field.required && !field.value)) return true;
+      if (!field) return true;
       var message = rule.validate(valueOf(rule, field));
       setError(rule, message);
       return !message;

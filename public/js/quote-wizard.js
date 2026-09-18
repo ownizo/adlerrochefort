@@ -41,7 +41,7 @@
     var controls = form.querySelectorAll('input, select, textarea');
     for (var i = 0; i < controls.length; i++) {
       var el = controls[i];
-      if (!el.name || el.disabled || el.type === 'hidden' || el.name === 'bot-field') continue;
+      if (!el.name || el.type === 'hidden' || el.name === 'bot-field') continue;
       out.push(el);
     }
     return out;
@@ -132,7 +132,7 @@
     // is wrapped, and a failure just means no draft, not a broken form.
     function saveDraft() {
       try {
-        var data = { __step: current, __persons: blocks };
+        var data = { __step: current };
         var fields = serializableFields(form);
         for (var i = 0; i < fields.length; i++) {
           var el = fields[i];
@@ -162,12 +162,11 @@
       } catch (err) {
         return; // corrupted draft — ignore it rather than throw
       }
-      blocks = Array.isArray(data.__persons) ? data.__persons : [];
       var names = Object.keys(data);
       for (var i = 0; i < names.length; i++) {
         var name = names[i];
-        if (name === '__step' || name === '__persons') continue;
-        var el = Array.prototype.find.call(form.elements, function (field) { return field.name === name && (!['checkbox','radio'].includes(field.type) || field.value === data[name]); });
+        if (name === '__step') continue;
+        var el = form.querySelector('[name="' + name + '"]');
         if (!el) continue;
         if (el.type === 'checkbox' || el.type === 'radio') {
           if (el.value !== data[name]) continue;
@@ -300,11 +299,9 @@
       /** Replaces the whole set at once — e.g. after the visitor removes a
        *  repeater row, the caller rebuilds the array and calls this instead
        *  of tracking individual removals here. */
-      getDynamicBlocks: function () { return blocks; },
       setDynamicBlocks: function (newBlocks) {
         blocks = newBlocks || [];
         serializeDynamicBlocks();
-        saveDraft();
       },
       goToStep: showStep,
       currentStep: function () {

@@ -501,7 +501,6 @@
 
     <form name="zh-home-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/zh/#baojia">
       <input type="hidden" name="form-name" value="zh-home-insurance-wizard">
-<input type="hidden" name="lang" value="zh">
       <input type="hidden" name="ramo" value="Home insurance">
       <input type="hidden" name="source_url" id="zh-hab-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -516,11 +515,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="zh-hab-nome">全名 *</label><input type="text" id="zh-hab-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="zh-hab-nif">NIF（葡萄牙税号） *</label><input type="text" id="zh-hab-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="zh-hab-nascimento">出生日期 *</label><input type="date" id="zh-hab-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
-        <div class="contact-form-field"><label for="zh-hab-morada">房产完整地址 *</label><input type="text" id="zh-hab-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="zh-hab-nascimento">出生日期 *</label><input type="date" id="zh-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="zh-hab-morada">详细地址 *</label><input type="text" id="zh-hab-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="zh-hab-localidade">所在城市 *</label><input type="text" id="zh-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="zh-hab-cp">邮政编码 *</label><input type="text" id="zh-hab-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="zh-hab-telefone">电话号码 *</label><input type="tel" id="zh-hab-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
+        <div class="contact-form-field"><label for="zh-hab-telefone">电话号码 *</label><input type="tel" id="zh-hab-telefone" name="telefone" autocomplete="tel" required></div>
         <div class="contact-form-field"><label for="zh-hab-email">电子邮箱 *</label><input type="email" id="zh-hab-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="zh-hab-nacionalidade">国籍 *</label>
@@ -554,16 +553,16 @@
             <label for="zh-hab-al-regime">短期出租类型 *</label>
             <select id="zh-hab-al-regime" name="al_regime" required disabled>
               <option value="">请选择</option>
-              <option value="tempo_inteiro">全年短租（AL）</option>
-              <option value="parcial">部分时间短租（AL）</option>
+              <option value="tempo_inteiro">全部</option>
+              <option value="parcial">部分（与房东共用住所）</option>
             </select>
           </div>
         </div>
         <div class="contact-form-field"><label for="zh-hab-ano-construcao">建造年份 *</label><input type="number" id="zh-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-        <div class="contact-form-field"><label for="zh-hab-area">建筑总面积（平方米） *</label><input type="number" id="zh-hab-area" name="area_bruta" min="1" required step="0.01"></div>
+        <div class="contact-form-field"><label for="zh-hab-area">建筑总面积（平方米） *</label><input type="number" id="zh-hab-area" name="area_bruta" min="1" required></div>
         <div class="contact-form-field"><label for="zh-hab-wc">卫生间数量 *</label><input type="number" id="zh-hab-wc" name="casas_banho" min="0" required></div>
         <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="zh-hab-obras-check"><input type="checkbox" id="zh-hab-obras-check" data-field-toggle="zh-hab-obras-group" name="obras_renovacao" value="sim"> 已进行翻修</label>
+          <label class="contact-form-checkbox" for="zh-hab-obras-check"><input type="checkbox" id="zh-hab-obras-check" data-field-toggle="zh-hab-obras-group"> 近年是否进行过翻修？</label>
         </div>
         <div id="zh-hab-obras-group" hidden>
           <div class="contact-form-field"><label for="zh-hab-obras-ano">翻修年份 *</label><input type="number" id="zh-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>

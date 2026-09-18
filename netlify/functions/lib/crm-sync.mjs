@@ -56,12 +56,6 @@ export function buildCrmLeadPayload(formName, data, { submissionId, sourceUrl } 
   const metadata = {};
   if (classification.branchLabel) metadata.branchLabel = classification.branchLabel;
   if (language) metadata.language = language;
-  if (classification.product === 'private-client') {
-    metadata.countries = data?.country === 'Portugal and Spain' ? ['PT', 'ES'] : [classification.market];
-    // An assistant's name is the enquiry contact, not an assertion of ownership.
-    if (['client','family','assistant','manager','adviser','other'].includes(data?.role)) metadata.contactRole = data.role;
-    if (['yes','not-yet','not-applicable'].includes(data?.authority)) metadata.authority = data.authority;
-  }
 
   const payload = {
     submissionId,

@@ -1,4 +1,3 @@
-import { privateClientPage } from './private-client/content.mjs';
 /**
  * Content for the Spain market layer — Phase 1.
  *
@@ -97,7 +96,7 @@ const HUB = {
   description:
     'Insurance for expats, foreign residents and property owners in Spain, explained in English. Tell us your situation and we will confirm what can be arranged. Free written review.',
   keywords:
-    'insurance for expats in spain, expat insurance spain, insurance for foreigners in spain, insurance intermediary for expats spain, insurance for international residents spain, moving to spain insurance, insurance for foreign property owners spain',
+    'insurance for expats in spain, expat insurance spain, insurance for foreigners in spain, insurance broker for expats spain, insurance for international residents spain, moving to spain insurance, insurance for foreign property owners spain',
   eyebrow: 'Spain · for expats, foreign residents &amp; property owners',
   h1: 'Insurance for Expats in Spain',
   heroSub:
@@ -2477,14 +2476,243 @@ const MORTGAGE = {
 // PRIVATE CLIENTS — /en/private-clients-spain/
 // -----------------------------------------------------------------------------
 
-// Rendered by private-client/render.mjs, including the common review form.
-// This descriptor exists solely for the Spain cluster's route registry.
-const privateClientSpain = privateClientPage('/en/private-clients-spain/');
 const PRIVATE_CLIENTS = {
   slug: 'private-clients-spain',
-  title: privateClientSpain.title,
-  h1: privateClientSpain.title,
-  faq: [],
+  crumb: 'Private clients',
+  parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
+  title: 'Private Client Insurance in Spain | International Clients | Adler & Rochefort',
+  description:
+    'Coordinated insurance review for international households in Spain with more than one property, vehicle or type of cover — one broker, several risks, reviewed together.',
+  keywords:
+    'private client insurance spain, high net worth insurance spain, insurance for wealthy expats spain, high value home insurance spain, international private clients spain',
+  eyebrow: 'Spain · Private clients',
+  h1: 'Private Client Insurance in Spain',
+  heroSub:
+    'For households with more than one property, vehicle or type of cover to manage in Spain — one coordinated review, rather than several unrelated policies arranged at different times with different insurers.',
+  heroCta: 'Request a Private Client Review',
+  heroSecondary: 'Ask About Your Situation',
+  heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
+  topBarCta: 'Request a Private Client Review',
+  stickyCta: 'Request a Private Client Review',
+  whatsapp: 'Hello, I would like a private client insurance review for my household in Spain.',
+  market: 'spain',
+  chatTopics: ['spain_general', 'spain_private_clients'],
+  service: {
+    name: 'Private client insurance review in Spain',
+    type: 'Multi-line insurance intermediation and coordinated review',
+    description:
+      'A coordinated review across property, vehicles, health, life and landlord cover for international households in Spain with more than one policy to manage — arranged where it can be honestly confirmed.',
+  },
+
+  sections: [
+    {
+      id: 'fragmentation',
+      h2: 'Complex households need coordination, not more policies',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'This is not a luxury product line, and we do not market it as one. It is a practical observation: households with a home in one insurer\'s hands, a car with another, health cover arranged somewhere else, and a life policy from years ago — each bought at a different time, by a different route, sometimes in a different language — end up with gaps and overlaps that nobody notices until a claim, because nobody has ever looked at the whole picture at once.',
+        },
+        {
+          kind: 'note',
+          html:
+            'The proposition here is simple: one broker, reviewing several risks together, for an international client. Not a branded "wealth insurance" product — a coordinated process.',
+        },
+      ],
+    },
+
+    {
+      id: 'high-value-property',
+      h2: 'High-value property',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'The mechanics are the same as any home insurance question — see <a href="/en/home-insurance-spain/">home insurance in Spain</a> for the full detail — but higher-value properties raise the same questions with higher stakes: an accurate rebuilding value that has not drifted out of date, higher contents sums that actually reflect what is in the property, the security measures an insurer expects at that value, and how occupancy and second-home use are declared. Getting these details precisely right matters more, not less, as the sums involved grow.',
+        },
+      ],
+    },
+
+    {
+      id: 'multiple-properties',
+      h2: 'Multiple properties',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Owning property in Spain alongside property elsewhere is common among the households we hear from. We can review and help coordinate the Spanish side of that picture; we do not claim to arrange or review cover for property in jurisdictions where we do not operate, and we say so plainly rather than imply otherwise.',
+        },
+      ],
+    },
+
+    {
+      id: 'vehicles',
+      h2: 'Vehicles',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'From a single family car to more than one vehicle across a household — see <a href="/en/car-insurance-spain/">car insurance in Spain</a> for the detail, including foreign licences and foreign-registered vehicles, both of which come up regularly at this end of the client base.',
+        },
+      ],
+    },
+
+    {
+      id: 'health',
+      h2: 'Health',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Family and individual private health cover — see <a href="/en/health-insurance-spain/">health insurance in Spain</a>. For larger or more complex families, the same principle applies as elsewhere on this page: each person is underwritten individually, and reviewing everyone together at once surfaces inconsistencies a policy-by-policy approach misses.',
+        },
+      ],
+    },
+
+    {
+      id: 'life-protection',
+      h2: 'Life and family protection',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'See <a href="/en/life-insurance-spain/">life insurance in Spain</a> for family and mortgage-linked protection. For private clients specifically, this is often the policy most likely to be out of date — arranged years ago, in another country, for a sum insured that no longer reflects the household\'s actual circumstances.',
+        },
+      ],
+    },
+
+    {
+      id: 'landlord',
+      h2: 'Landlord and investment property',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Where a household holds one or more investment or rental properties in Spain, see <a href="/en/landlord-insurance-spain/">landlord insurance in Spain</a>. A coordinated review is most useful here when there is more than one investment property, or where a mix of long-term and short-term letting makes the picture genuinely complex.',
+        },
+      ],
+    },
+
+    {
+      id: 'service',
+      h2: 'International client service',
+      blocks: [
+        {
+          kind: 'p',
+          html:
+            'Everything above is arranged and communicated in English, by a single point of contact, whether you live in Spain full-time or manage the household\'s Spanish affairs remotely. Correspondence, comparison and claims all work the same way whether you are down the road or in a different time zone — that is how we work by default, not an exception arranged on request.',
+        },
+      ],
+    },
+  ],
+
+  form: {
+    heading: 'Request a private client review',
+    sub: 'Tell us what you currently hold, and with whom. We will confirm what can be reviewed together and what can currently be arranged.',
+    name: 'private-client-review-spain',
+    gaField: 'property_ownership',
+    submit: 'Request my review',
+    fields: [
+      [
+        { name: 'name', label: 'Full name', required: true, placeholder: 'Jane Smith', autocomplete: 'name' },
+        { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@example.com', autocomplete: 'email' },
+      ],
+      [
+        { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+44 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
+        { name: 'current_country', label: 'Country of residence', required: true, placeholder: 'e.g. United Kingdom' },
+      ],
+      [
+        { name: 'spain_location', label: 'Where in Spain?', required: true, placeholder: 'e.g. Marbella, Costa del Sol' },
+        {
+          name: 'property_ownership',
+          label: 'Property ownership',
+          type: 'select',
+          required: true,
+          placeholder: 'Select one',
+          options: ['One property in Spain', 'More than one property in Spain', 'Property in Spain and elsewhere', 'Not yet, planning to buy'],
+        },
+      ],
+      [
+        { name: 'property_count', label: 'Number of properties (Spain)', placeholder: 'e.g. 2' },
+        { name: 'vehicles', label: 'Vehicles to consider', placeholder: 'e.g. 2 cars' },
+      ],
+      [
+        {
+          name: 'interests',
+          label: 'Which risks would you like reviewed?',
+          type: 'checkboxes',
+          options: ['Home / property', 'Landlord / rental property', 'Car', 'Health', 'Life'],
+        },
+        {
+          name: 'preferred_contact',
+          label: 'Preferred contact method',
+          type: 'select',
+          placeholder: 'Select one',
+          options: ['Email', 'Phone', 'WhatsApp'],
+        },
+      ],
+      {
+        name: 'message',
+        label: 'Other risks or notes',
+        type: 'textarea',
+        placeholder: 'Anything else relevant to a coordinated review — we do not need valuations or sensitive details at this stage.',
+      },
+    ],
+  },
+
+  faq: [
+    {
+      q: 'What does "private client" mean here — is this a luxury product?',
+      a: 'No. It describes a coordinated review across several types of cover for a household with more than one risk to manage — property, vehicles, health, life — rather than a branded luxury insurance product. The underlying products are the same ones covered elsewhere on this site.',
+    },
+    {
+      q: 'Can you insure property I own outside Spain?',
+      a: 'We can review and help coordinate the Spanish side of your situation. We do not claim to arrange or review cover for property in jurisdictions where we do not operate.',
+    },
+    {
+      q: 'Do you insure art, jewellery or collections?',
+      a: 'Only where it can genuinely be arranged and supported by an actual insurer relationship — we do not promise cover for valuables in general terms. Tell us what you have and we will confirm honestly whether it is something we can currently place.',
+    },
+    {
+      q: 'Is there a minimum value or income to use this service?',
+      a: 'No formal threshold. The review is genuinely most useful for households with more than one property, vehicle or line of cover to coordinate — if that describes your situation, this is the right starting point regardless of specific figures.',
+    },
+    {
+      q: 'Will you need detailed financial information to start?',
+      a: 'No — we start with what you currently hold and with whom, not valuations or sensitive financial detail. That level of detail, if needed, comes later and only where genuinely relevant to a specific policy.',
+    },
+  ],
+
+  related: [
+    {
+      h2: 'Guides worth reading first',
+      blocks: [
+        {
+          kind: 'guides',
+          items: [
+            { href: '/en/blog/high-value-home-insurance-spain/', text: 'Insuring a high-value home in Spain: what international owners should check', note: 'rebuilding value, security, occupancy and valuables' },
+            { href: '/en/blog/insurance-review-expats-spain/', text: 'Why expats in Spain should review their insurance as a whole', note: 'the gaps a policy-by-policy approach tends to miss' },
+            { href: '/en/blog/insurance-buying-property-spain/', text: 'Insurance to consider when buying property in Spain', note: 'the full picture for a new purchase' },
+            { href: '/en/blog/category/spain-private-clients/', text: 'All private client guides for Spain' },
+          ],
+        },
+      ],
+    },
+    {
+      h2: 'Related cover',
+      blocks: [
+        {
+          kind: 'cluster',
+          items: [
+            { href: '/en/home-insurance-spain/', title: 'Home insurance in Spain', blurb: 'The starting point for any property in the review.' },
+            { href: '/en/life-insurance-spain/', title: 'Life insurance in Spain', blurb: 'Often the policy most likely to be out of date.' },
+            { href: '/en/expat-insurance-spain/', title: 'Insurance for expats in Spain', blurb: 'Not sure yet what you need reviewed? Start at the hub.' },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export const PAGES = [HUB, HOME, LANDLORD, HEALTH, CAR, LIFE, MORTGAGE, PRIVATE_CLIENTS];

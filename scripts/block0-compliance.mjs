@@ -176,6 +176,10 @@ const rulesFor = (rel) => {
   }
   return [
     ...METRICS,
+    ...EN_BROKER,
+    ...EN_SELF_DESIGNATION,
+    ...EN_INDEPENDENCE,
+    ...EN_RELATIONSHIP,
     ...PT_SELF_DESIGNATION,
     ...PT_INDEPENDENCE,
     ...PT_RELATIONSHIP,

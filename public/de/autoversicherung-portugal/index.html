@@ -179,15 +179,6 @@
   gtag('config', 'AW-18361722533');
 </script>
 <link rel="stylesheet" href="/css/ar-langsel.css">
-<style id="private-client-navigation">
-.nav-right .pc-nav-link{color:#fff!important;font-size:12px;line-height:1.4;text-underline-offset:4px}
-@media(max-width:700px){
-.site-header .site-nav{height:auto;min-height:100px;flex-wrap:wrap;gap:14px;padding:14px 20px}
-.site-header .nav-right{width:100%;display:grid;grid-template-columns:1fr auto;gap:14px;min-width:0}
-.site-header .pc-nav-link{grid-column:1/-1}
-.site-header .nav-cta{white-space:normal;text-align:center}
-}
-</style>
 </head>
 <body>
 
@@ -200,7 +191,7 @@
     <a href="/de/" class="nav-logo">
       <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
     </a>
-    <div class="nav-right"><a class="pc-nav-link" href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a>
+    <div class="nav-right">
       <div class="lang-switcher">
         <div class="ar-langsel" data-ar-langsel>
           <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Sprache: Deutsch. Andere Sprache wählen."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Deutsch</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -358,7 +349,6 @@
 
     <form name="de-autoversicherung-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/de/#angebot">
       <input type="hidden" name="form-name" value="de-autoversicherung-wizard">
-<input type="hidden" name="lang" value="de">
       <input type="hidden" name="ramo" value="Autoversicherung">
       <input type="hidden" name="source_url" id="de-auto-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -373,11 +363,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="de-auto-nome">Vollständiger Name *</label><input type="text" id="de-auto-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="de-auto-nif">NIF (portugiesische Steuernummer) *</label><input type="text" id="de-auto-nif" name="nif" inputmode="numeric" placeholder="9 Ziffern" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="de-auto-nascimento">Geburtsdatum *</label><input type="date" id="de-auto-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+        <div class="contact-form-field"><label for="de-auto-nascimento">Geburtsdatum *</label><input type="date" id="de-auto-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
         <div class="contact-form-field"><label for="de-auto-morada">Vollständige Anschrift *</label><input type="text" id="de-auto-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="de-auto-localidade">Ort *</label><input type="text" id="de-auto-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="de-auto-cp">Postleitzahl *</label><input type="text" id="de-auto-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="de-auto-telefone">Telefon / WhatsApp *</label><input type="tel" id="de-auto-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
+        <div class="contact-form-field"><label for="de-auto-telefone">Telefon / WhatsApp *</label><input type="tel" id="de-auto-telefone" name="telefone" autocomplete="tel" required></div>
         <div class="contact-form-field"><label for="de-auto-email">E-Mail *</label><input type="email" id="de-auto-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="de-auto-nacionalidade">Staatsangehörigkeit *</label>
@@ -443,7 +433,7 @@
         <li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li>
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
-        <li><a href="/de/private-clients/">Private Clients · Portugal &amp; Spanien</a></li>
+        <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
         <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
       </ul>
     </div>

@@ -17,7 +17,6 @@
  *
  * Idempotent: re-running it finds the new markup already in place and stops.
  */
-import { correctQuotationHtml } from './lib/quotation-forms.mjs';
 import { readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -155,9 +154,11 @@ const BRANCH_FIELDS = {
     ['empresarial_cae', 'CAE / atividade', 'text', 'Ex.: 56101'],
     ['empresarial_colaboradores', 'N.º de colaboradores da empresa', 'number', 'Ex.: 14'],
   ],
-  // PT RC articles no longer collect a reduced three-question quote.
-  // correctQuotationHtml() routes them to the canonical detailed RC form.
-  'Responsabilidade Civil Profissional': [],
+  'Responsabilidade Civil Profissional': [
+    ['rcp_profissao', 'Profissão ou atividade', 'text', 'Ex.: arquitetura'],
+    ['rcp_capital', 'Capital pretendido', 'text', 'Ex.: 500 000 €'],
+    ['rcp_obrigatorio', 'É exigido por ordem profissional ou contrato?', 'text', 'Sim / Não'],
+  ],
   'Riscos Cibernéticos': [
     ['cyber_empresa', 'Empresa', 'text', 'Designação social'],
     ['cyber_postos', 'N.º de postos de trabalho', 'number', 'Ex.: 25'],
@@ -434,7 +435,7 @@ const report = {
   html = syncBranchBlocks(html, ALL_BRANCH_BLOCKS);
 
   if (html !== before) {
-    await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+    await writeFile(path, html);
     report.homepage = true;
   } else {
     report.skipped.push('public/index.html (already in sync)');
@@ -654,7 +655,7 @@ for (const [slug, [title, subtitle]] of Object.entries(MISSING_CTA_FORM)) {
   if (at === -1) throw new Error(`${slug}: article-body not found`);
   html = html.slice(0, at) + ctaTopoBlock(slug, title, subtitle).trimStart() + '\n  ' + html.slice(at);
   if (!html.includes('.cta-topo ')) html = html.replace('</head>', CTA_TOPO_CSS);
-  await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+  await writeFile(path, html);
   report.ctaFormAdded.push(`public/blog/${slug}/index.html`);
 }
 
@@ -680,7 +681,7 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
   });
 
   if (html !== before) {
-    await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+    await writeFile(path, html);
     report.articles.push(`public/${rel}`);
   }
   if (branch) report.preselected++;
@@ -750,7 +751,7 @@ for (const rel of globSync('**/*.html', { cwd: PUBLIC })) {
   html = syncBranchBlocks(html, ALL_BRANCH_BLOCKS_EN);
 
   if (html !== before) {
-    await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+    await writeFile(path, html);
     report.homepageEn = true;
   } else {
     report.skipped.push('public/en/index.html (already in sync)');
@@ -782,7 +783,7 @@ for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
   });
 
   if (html !== before) {
-    await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+    await writeFile(path, html);
     report.articlesEn.push(`public/${rel}`);
   }
   if (branch) report.preselected++;
@@ -815,7 +816,7 @@ for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
     }
 
     if (html !== before) {
-      await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+      await writeFile(path, html);
       report.sourceUrlAdded.push(`public/${rel}`);
     }
   }
@@ -847,7 +848,7 @@ for (const rel of globSync('en/**/*.html', { cwd: PUBLIC })) {
     });
 
     if (html !== before) {
-      await writeFile(path, correctQuotationHtml(html, { homepage: path === join(PUBLIC, 'index.html') || path === join(PUBLIC, 'en', 'index.html') }));
+      await writeFile(path, html);
       report.honeypotAdded.push(`public/${rel}`);
     }
   }

@@ -405,7 +405,6 @@
 
     <form name="pl-ubezpieczenie-zdrowotne-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/pl/#oferta">
       <input type="hidden" name="form-name" value="pl-ubezpieczenie-zdrowotne-wizard">
-<input type="hidden" name="lang" value="pl">
       <input type="hidden" name="ramo" value="Ubezpieczenie zdrowotne">
       <input type="hidden" name="source_url" id="pl-sau-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -424,7 +423,7 @@
         <div class="contact-form-field"><label for="pl-sau-morada">Pełny adres *</label><input type="text" id="pl-sau-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="pl-sau-localidade">Miejscowość *</label><input type="text" id="pl-sau-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="pl-sau-cp">Kod pocztowy *</label><input type="text" id="pl-sau-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="pl-sau-telefone">Numer telefonu *</label><input type="tel" id="pl-sau-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
+        <div class="contact-form-field"><label for="pl-sau-telefone">Numer telefonu *</label><input type="tel" id="pl-sau-telefone" name="telefone" autocomplete="tel" required></div>
         <div class="contact-form-field"><label for="pl-sau-email">Adres e-mail *</label><input type="email" id="pl-sau-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="pl-sau-nacionalidade">Obywatelstwo *</label>
@@ -446,7 +445,6 @@
       <div data-wizard-step hidden>
         <p class="wizard-helper" style="margin-bottom:16px;">Dla każdej ubezpieczanej osoby potrzebny jest portugalski numer podatkowy (NIF), również dla dzieci — bez niego nie można przygotować oferty. Nie pytamy tutaj o żadne informacje medyczne: kwestionariusz zdrowotny wypełnia się bezpośrednio z ubezpieczycielem, w trakcie przystąpienia do polisy.</p>
         <div data-persons-repeater>
-<div class="contact-form-field"><label for="quote-persons-count">Liczba osób do ubezpieczenia *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
           <div data-persons-list></div>
           <button type="button" class="wizard-nav-back" data-persons-add>+ Dodaj osobę</button>
         </div>
