@@ -34,7 +34,7 @@ const STEPS = [
   },
   {
     title: 'Market consultation',
-    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered broker we do not represent one company — we negotiate with whichever of them can actually write the risk.',
+    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered intermediary we do not represent one company — we negotiate with whichever of them can actually write the risk.',
   },
   {
     title: 'Side-by-side comparison',
@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-canadians-portugal',
   metaTitle: 'Insurance for Canadians in Portugal | Buyers &amp; Residents | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for Canadian citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What provincial health coverage does and does not do once you leave, and what to arrange in what order.',
+    'Insurance for Canadian citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered intermediary. What provincial health coverage does and does not do once you leave, and what to arrange in what order.',
   h1: 'Insurance for Canadians in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as a Canadian citizen? Several assumptions that hold in Canada do not carry over here: provincial health coverage is provincial, not federal, and the residency rules and grace periods that govern what happens to it when you leave differ by province — there is no single national answer. Owning property here before you actually move, and insuring it correctly during that gap, is its own separate question. We set out what actually applies to your situation, in English, and arrange it.',
@@ -60,7 +60,7 @@ const HUB = {
   ctaSecondary: 'Message us on WhatsApp',
   whatsapp: wa("Hi, I'm a Canadian citizen looking into insurance for a property or a move to Portugal and would like to talk to someone."),
   trust: [
-    'ASF-registered broker &middot; no. 425591790/3',
+    'ASF-registered intermediary &middot; no. 425591790/3',
     'English throughout, in writing',
     'We tell you honestly what can be arranged',
   ],

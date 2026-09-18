@@ -20,7 +20,7 @@ export const MOTOR_PAGE = {
   h1: 'Autoversicherung in Portugal: Kennzeichen, Deckung und Ihre Fahrhistorie',
   standfirst:
     'Die Frage ist selten, ob Sie Ihr Auto mitbringen können — sondern ob sich das lohnt, und wie Sie die Deckungslücke zwischen deutschem und portugiesischem Kennzeichen vermeiden. Diese Seite ordnet beides ein, ohne Zusagen zu machen, die kein Versicherer garantieren kann.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -59,7 +59,7 @@ export const MOTOR_PAGE = {
 <section class="section plain" aria-labelledby="isv">
   <div class="container narrow article-body">
     <h2 id="isv">ISV und das IMT-Verfahren im Überblick</h2>
-    <p>Wir sind Versicherungsmakler, kein Zollagent — das hier ist die Übersicht, die Sie für Ihre Entscheidung brauchen, keine vollständige Anleitung. Für die Durchführung arbeitet praktisch jeder mit einem <em>despachante</em> (Zollagenten).</p>
+    <p>Wir sind Versicherungsvermittler, kein Zollagent — das hier ist die Übersicht, die Sie für Ihre Entscheidung brauchen, keine vollständige Anleitung. Für die Durchführung arbeitet praktisch jeder mit einem <em>despachante</em> (Zollagenten).</p>
     <h3>ISV — Imposto sobre Veículos</h3>
     <p>Die portugiesische Kfz-Zulassungssteuer, fällig bei der Erstzulassung in Portugal. Die Berechnung basiert auf zwei Komponenten: <strong>Hubraum</strong> und <strong>CO₂-Ausstoß</strong>. Auf das Ergebnis wird ein Abschlag nach Alter des Fahrzeugs angewendet. Das erklärt die beiden Extreme: Ein junger, schwerer Diesel kann eine Steuer im vierstelligen Bereich auslösen, während ein älterer Kleinwagen mit Benzinmotor vergleichsweise günstig wegkommt.</p>
     <p>Ziehen Sie dauerhaft nach Portugal um, kann eine <strong>Befreiung wegen Wohnsitzverlegung</strong> greifen. Dafür gelten strenge Voraussetzungen — unter anderem, wie lange Sie das Fahrzeug vor dem Umzug bereits besaßen und wie lange Sie es danach behalten müssen — und der Antrag ist an Fristen gebunden, die mit Ihrer Registrierung zu laufen beginnen. Wer erst fährt und sich später informiert, ist zu spät dran. Die Voraussetzungen und der Ablauf der Befreiung im Detail: <a href="/de/isv-befreiung-fahrzeugimport-portugal/">ISV-Befreiung beim Fahrzeugimport</a>.</p>

@@ -34,7 +34,7 @@ const STEPS = [
   },
   {
     title: 'Market consultation',
-    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered broker we do not represent one company — we negotiate with whichever of them can actually write the risk.',
+    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered intermediary we do not represent one company — we negotiate with whichever of them can actually write the risk.',
   },
   {
     title: 'Side-by-side comparison',
@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-irish-residents-portugal',
   metaTitle: 'Insurance for Irish Residents in Portugal | VHI, Laya &amp; S1 | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for Irish citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What VHI, Laya and Irish Life cover leaves behind, how the S1 route differs from the UK one, and what to arrange in what order.',
+    'Insurance for Irish citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered intermediary. What VHI, Laya and Irish Life cover leaves behind, how the S1 route differs from the UK one, and what to arrange in what order.',
   h1: 'Insurance for Irish Residents in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as an Irish citizen? Several assumptions that hold in Ireland do not carry over here: VHI, Laya and Irish Life cover does not extend to a Portuguese property, car or liability exposure, community rating and lifetime community rating loading follow you in ways that are easy to overlook when you leave, and the S1 route works differently than it does for a UK national. We set out what actually applies to your situation, in English, and arrange it.',
@@ -60,7 +60,7 @@ const HUB = {
   ctaSecondary: 'Message us on WhatsApp',
   whatsapp: wa("Hi, I'm an Irish citizen looking into insurance for a property or a move to Portugal and would like to talk to someone."),
   trust: [
-    'ASF-registered broker &middot; no. 425591790/3',
+    'ASF-registered intermediary &middot; no. 425591790/3',
     'English throughout, in writing',
     'We tell you honestly what can be arranged',
   ],

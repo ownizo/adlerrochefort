@@ -20,7 +20,7 @@ export const LIFE_PAGE = {
   h1: 'Lebensversicherung in Portugal: Hypothek und Familienabsicherung',
   standfirst:
     'Die Bank schlägt bei jeder Hypothek eine Lebensversicherung vor, oft ohne dass jemand nachfragt, ob es Alternativen gibt. Diese Seite erklärt, was diese Police tatsächlich abdeckt, wo Marktalternativen infrage kommen, und was Familienabsicherung darüber hinaus bedeutet.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Beratung anfragen',
   hreflang: {},
   langLinks: {},

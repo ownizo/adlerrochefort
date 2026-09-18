@@ -29,7 +29,7 @@ export const MOVING_PAGE = {
   h1: 'Versicherungen beim Umzug von Deutschland nach Portugal',
   standfirst:
     'Die meisten deutschsprachigen Seiten zu diesem Thema erklären, was das SNS ist, und hören dort auf. Hier geht es um die Entscheidungen, die tatsächlich vor und nach dem Umzug anstehen: was mit Ihrer deutschen Krankenversicherung passiert, ob eine Anwartschaft sinnvoll ist, wie das S1-Formular für Rentner funktioniert, und in welcher Reihenfolge das alles geregelt werden muss.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Beratung anfragen',
   hreflang: {},
   langLinks: {},

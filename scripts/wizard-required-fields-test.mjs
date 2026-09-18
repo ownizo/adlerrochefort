@@ -673,33 +673,8 @@ const PAGES = [
       rgpd: true,
     },
   },
-  {
-    // Especificação v2, Parte D3 — Private Clients DE, built from the
-    // generic "Private Clients" branch. Only two wizard steps.
-    label: 'DE /de/private-clients-portugal/',
-    path: 'de/private-clients-portugal/index.html',
-    url: 'https://adlerrochefort.com/de/private-clients-portugal/',
-    formName: 'de-private-clients-wizard',
-    scripts: ['lead-branch-fields.js', 'quote-validators.js', 'ar-quote-form.js', 'quote-nationality.js', 'quote-wizard.js'],
-    firstBatch: [
-      'nome', 'nif', 'data_nascimento', 'morada', 'localidade',
-      'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal',
-    ],
-    values: {
-      nome: 'Hans Müller',
-      nif: '501442600',
-      data_nascimento: '1985-03-15',
-      morada: 'Rua Teste 123',
-      localidade: 'Lagos',
-      codigo_postal: '8600-100',
-      telefone: '+49 30 12345678',
-      email: 'teste@example.com',
-      nacionalidade_nome: 'Deutschland',
-      residente_fiscal: 'sim',
-      data_inicio: '2026-10-01',
-      rgpd: true,
-    },
-  },
+  // Private Client review forms are covered by scripts/private-client.test.mjs
+  // and private-client/browser-check.mjs; they no longer use the quote wizard.
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together. Home (Habitação) is the first of the four ramos.
   {

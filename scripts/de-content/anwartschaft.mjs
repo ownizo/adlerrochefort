@@ -27,7 +27,7 @@ export const ANWARTSCHAFT_PAGE = {
   h1: 'Anwartschaftsversicherung beim Umzug nach Portugal',
   standfirst:
     'Wer privat krankenversichert ist und nach Portugal zieht, steht vor einer Entscheidung, die kaum ein portugiesischer Ratgeber erklärt: die private Krankenversicherung einfach kündigen, oder über eine Anwartschaftsversicherung ruhend stellen? Die Antwort ist teuer zu korrigieren, wenn sie falsch getroffen wird — diese Seite ordnet den Mechanismus ein, ohne Ihnen zu sagen, was Ihr eigener Vertrag im Einzelnen erlaubt.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Beratung anfragen',
   hreflang: {},
   langLinks: {},
@@ -52,7 +52,7 @@ export const ANWARTSCHAFT_PAGE = {
     <p>Das ist der Punkt, an dem eine einfache Kündigung gefährlich wird: Ohne Anwartschaft verlieren Sie dieses Rückkehrrecht. Eine neue PKV, egal bei welchem Versicherer, verlangt dann eine neue Gesundheitsprüfung — mit dem vollen Risiko, dass eine in der Zwischenzeit aufgetretene Erkrankung zu einem Risikozuschlag, einem Leistungsausschluss oder im schlechtesten Fall zu einer Ablehnung führt.</p>
     <div class="callout">
       <span class="callout-label">Was diese Seite nicht tut</span>
-      Wir sind portugiesischer Versicherungsmakler, kein deutscher PKV-Berater. Diese Seite erklärt den Mechanismus und die Fragen, die Sie klären sollten — nicht, was Ihr eigener Tarif im Detail zulässt. Die Bedingungen unterscheiden sich zwischen Versicherern und Tarifen; klären Sie die Einzelheiten schriftlich mit Ihrem deutschen PKV-Versicherer, bevor Sie kündigen oder eine Anwartschaft beantragen.
+      Wir sind portugiesischer Versicherungsvermittler, kein deutscher PKV-Berater. Diese Seite erklärt den Mechanismus und die Fragen, die Sie klären sollten — nicht, was Ihr eigener Tarif im Detail zulässt. Die Bedingungen unterscheiden sich zwischen Versicherern und Tarifen; klären Sie die Einzelheiten schriftlich mit Ihrem deutschen PKV-Versicherer, bevor Sie kündigen oder eine Anwartschaft beantragen.
     </div>
   </div>
 </section>

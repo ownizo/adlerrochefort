@@ -29,7 +29,7 @@
  *    on the documentation", and the honest observation that insurers weigh a
  *    foreign record differently.
  *  - No claim of independence beyond what the site already states: an
- *    ASF-registered broker that is not tied to a single insurer. Not "all
+ *    ASF-registered intermediary that is not tied to a single insurer. Not "all
  *    insurers", not "the whole market".
  *  - No immigration, tax or legal advice.
  */
@@ -55,16 +55,16 @@ export const PAGE = {
   crumb: 'Car insurance',
   title: 'Car Insurance in Portugal | Cover for Expats &amp; Foreign Drivers',
   description:
-    'Car insurance in Portugal arranged by an ASF-registered broker. Third-party liability, extended and own-damage cover explained in English, for expats, foreign licences and imported vehicles. Free quote.',
+    'Car insurance in Portugal arranged by an ASF-registered intermediary. Third-party liability, extended and own-damage cover explained in English, for expats, foreign licences and imported vehicles. Free quote.',
   keywords:
-    'car insurance portugal, car insurance in portugal, portuguese car insurance, car insurance for expats portugal, expat car insurance portugal, car insurance for foreigners in portugal, car insurance broker portugal, car insurance quote portugal, insure a car in portugal',
+    'car insurance portugal, car insurance in portugal, portuguese car insurance, car insurance for expats portugal, expat car insurance portugal, car insurance for foreigners in portugal, car insurance intermediary portugal, car insurance quote portugal, insure a car in portugal',
   eyebrow: 'Motor &middot; Portugal',
   h1: 'Car Insurance in Portugal',
   heroSub:
-    'Car insurance for expats, international residents and foreign drivers in Portugal &mdash; explained in plain English and arranged through an ASF-registered insurance broker. Tell us about the car and how you came to own it, and we will come back with a written comparison.',
+    'Car insurance for expats, international residents and foreign drivers in Portugal &mdash; explained in plain English and arranged through an ASF-registered insurance intermediary. Tell us about the car and how you came to own it, and we will come back with a written comparison.',
   heroCta: 'Get a car insurance quote',
   heroTrust:
-    '<strong>ASF-registered insurance broker n.&ordm; 425591790/3</strong> &middot; Not tied to a single insurer &middot; English throughout',
+    '<strong>ASF-registered insurance intermediary n.&ordm; 425591790/3</strong> &middot; Not tied to a single insurer &middot; English throughout',
   topBarCta: 'Get a car insurance quote',
   stickyCta: 'Get a car insurance quote',
   whatsapp: 'Hello, I would like a car insurance quote for a vehicle in Portugal.',
@@ -74,7 +74,7 @@ export const PAGE = {
     name: 'Car insurance in Portugal',
     type: 'Motor insurance broking',
     description:
-      'Broking of Portuguese motor insurance for private drivers in Portugal, including expats and international residents, foreign driving licences, imported vehicles and drivers arriving with a claims history earned abroad. Arranged and serviced in English by an ASF-registered insurance broker.',
+      'Broking of Portuguese motor insurance for private drivers in Portugal, including expats and international residents, foreign driving licences, imported vehicles and drivers arriving with a claims history earned abroad. Arranged and serviced in English by an ASF-registered insurance intermediary.',
   },
 
   sections: [
@@ -347,12 +347,12 @@ export const PAGE = {
 
     {
       id: 'broker',
-      h2: 'Why arrange it through a broker',
+      h2: 'Why arrange it through an intermediary',
       blocks: [
         {
           kind: 'p',
           html:
-            'Adler &amp; Rochefort is an insurance broker registered with the ASF (<em>Autoridade de Supervis&atilde;o de Seguros e Fundos de Pens&otilde;es</em>) under no. 425591790/3. A registered intermediary is required to act in the client&rsquo;s interest, and we are not tied to a single insurer. In practice that means:',
+            'Adler &amp; Rochefort is an insurance intermediary registered with the ASF (<em>Autoridade de Supervis&atilde;o de Seguros e Fundos de Pens&otilde;es</em>) under no. 425591790/3. A registered intermediary is required to act in the client&rsquo;s interest, and we are not tied to a single insurer. In practice that means:',
         },
         {
           kind: 'covers',

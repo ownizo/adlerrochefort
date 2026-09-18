@@ -15,16 +15,16 @@ import { insurerPanel } from '../lib/site-sections.mjs';
 export const HUB_PAGE = {
   slug: 'de-hub',
   url: '/de/',
-  title: 'Versicherungsmakler für deutsche Expats in Portugal | Adler & Rochefort',
+  title: 'Versicherungsvermittler für deutsche Expats in Portugal | Adler & Rochefort',
   description:
     'Nicht einfach versichert, richtig versichert: Versicherungsberatung für deutsche Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Kranken-, Haus-, Auto- und Lebensversicherung — wir beginnen mit dem Risiko, nicht mit dem Preis.',
   keywords:
-    'Versicherung Portugal, Versicherungsmakler Portugal, Versicherung Portugal Deutsche, Krankenversicherung Portugal, Hausversicherung Portugal, Autoversicherung Portugal, Versicherung Algarve',
-  eyebrow: 'Versicherungsmakler · Algarve, Portugal',
+    'Versicherung Portugal, Versicherungsvermittler Portugal, Versicherung Portugal Deutsche, Krankenversicherung Portugal, Hausversicherung Portugal, Autoversicherung Portugal, Versicherung Algarve',
+  eyebrow: 'Versicherungsvermittler · Algarve, Portugal',
   h1: 'Nicht einfach versichert. <em>Richtig versichert.</em>',
   standfirst:
     'Versicherungsberatung für Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Wir vergleichen nicht nur Preise. Wir vergleichen, wie gut Sie wirklich geschützt sind.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Versicherung anfragen',
   heroCtaSecondary: 'Beratung anfragen',
   // Die Startseiten-Gruppe umfasst inzwischen zehn Sprachen (siehe
@@ -128,7 +128,7 @@ export const HUB_PAGE = {
         <span class="fc-tag">Komplexe Risiken</span>
         <h3>Private Clients</h3>
         <p>Für internationale Familien, Eigentümer und Unternehmer mit Luxusimmobilien, Kunst, Sammlungen oder mehreren Wohnsitzen.</p>
-        <a class="fc-link" href="/de/private-clients-portugal/">Mehr erfahren</a>
+        <a class="fc-link" href="/de/private-clients/">Mehr erfahren</a>
       </div>
       <div class="feature-card">
         <span class="fc-tag">Selbstständige &amp; Betriebe</span>
@@ -164,7 +164,7 @@ ${insurerPanel({
   id: 'versicherer',
   heading: 'Wir vergleichen die <em>führenden Versicherer</em>',
   lead:
-    'Als Makler sind wir nicht an einen einzigen Versicherer gebunden. Wir beraten innerhalb unseres Versichererportfolios und wählen die passende Lösung für Ihre Situation.',
+    'Als Versicherungsvermittler sind wir nicht an einen einzigen Versicherer gebunden. Wir beraten innerhalb unseres Versichererportfolios und wählen die passende Lösung für Ihre Situation.',
 })}
 
 <section class="section tint" aria-labelledby="warum">
@@ -173,7 +173,7 @@ ${insurerPanel({
     <ul class="reasons" style="margin-top:0;">
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Registrierter Versicherungsmakler.</strong> <span>Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., bei der ASF unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</span></div>
+        <div><strong>Registrierter Versicherungsvermittler.</strong> <span>Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., bei der ASF unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</span></div>
       </li>
       <li>
         <span class="check">&#10003;</span>
@@ -189,7 +189,7 @@ ${insurerPanel({
       </li>
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Maklerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
+        <div><strong>Vermittlerwechsel ohne neue Police.</strong> <span>Bereits versichert, aber schlecht betreut? Wir übernehmen die Verwaltung Ihrer bestehenden Verträge, ohne Änderung Ihres bestehenden Schutzes.</span></div>
       </li>
     </ul>
   </div>
@@ -198,7 +198,7 @@ ${insurerPanel({
   faq: [
     {
       q: 'Seid ihr ein deutsches Versicherungsunternehmen?',
-      a: '<p>Nein. Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., einem in Portugal bei der ASF registrierten Versicherungsmakler (Nr. 425591790/3). Wir vermitteln Policen portugiesischer und international tätiger Versicherer aus unserem Versichererportfolio — wir sind kein deutscher Versicherer und keine deutsche Niederlassung.</p>',
+      a: '<p>Nein. Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., einem in Portugal bei der ASF registrierten Versicherungsvermittler (Nr. 425591790/3). Wir vermitteln Policen portugiesischer und international tätiger Versicherer aus unserem Versichererportfolio — wir sind kein deutscher Versicherer und keine deutsche Niederlassung.</p>',
     },
     {
       q: 'In welcher Sprache läuft die Beratung ab?',
@@ -206,7 +206,7 @@ ${insurerPanel({
     },
     {
       q: 'Was kostet die Beratung durch euch?',
-      a: '<p>Nichts zusätzlich zur Prämie. Als Versicherungsmakler werden wir vom Versicherer vergütet, nicht von Ihnen. Ein Vergleich und eine Erläuterung der Bedingungen sind kostenlos und unverbindlich.</p>',
+      a: '<p>Nichts zusätzlich zur Prämie. Als Versicherungsvermittler werden wir vom Versicherer vergütet, nicht von Ihnen. Ein Vergleich und eine Erläuterung der Bedingungen sind kostenlos und unverbindlich.</p>',
     },
     {
       q: 'Arbeitet ihr in ganz Portugal oder nur an der Algarve?',

@@ -20,7 +20,7 @@ export const HOME_PAGE = {
   h1: 'Hausversicherung in Portugal: was Sie versichern, und wofür',
   standfirst:
     'Ein Konzept entscheidet über die meisten Streitfälle bei der Schadenregulierung, und es wird selten vorher erklärt: die regra proporcional. Diese Seite erklärt, was in Portugal Pflicht ist, was ein seguro multirriscos üblicherweise abdeckt, wie Sie die richtige Versicherungssumme ermitteln, und wann Erdbebendeckung mehr als eine theoretische Frage ist.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Versicherung vergleichen',
   hreflang: {},
   langLinks: {},

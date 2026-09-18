@@ -32,7 +32,7 @@ const VORERKRANKUNGEN_PAGE = {
   h1: 'Krankenversicherung mit Vorerkrankungen in Portugal',
   standfirst:
     'Eine Vorerkrankung schließt eine private Krankenversicherung in Portugal nicht automatisch aus. Sie verändert, wie die Gesundheitsprüfung verläuft und welches Ergebnis realistisch ist — und manchmal, welcher Weg überhaupt noch offensteht.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Deckung prüfen lassen',
   hreflang: {},
   langLinks: {},
@@ -123,7 +123,7 @@ const S1_PAGE = {
   h1: 'Das S1-Formular für Rentner: Was es gibt, und was nicht',
   standfirst:
     'Wer ausschließlich eine deutsche gesetzliche Rente bezieht und nach Portugal zieht, bleibt gesundheitlich in deutscher Verantwortung. Das S1-Formular öffnet dafür den Zugang zum portugiesischen SNS — ein echter Anspruch, und genau so viel, wie das portugiesische System geben kann. Nicht mehr.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Beratung anfragen',
   hreflang: {},
   langLinks: {},
@@ -238,7 +238,7 @@ const NICHT_LEGALISIERT_PAGE = {
   h1: 'Eine nicht legalisierte Immobilie versichern',
   standfirst:
     'Auf dem Grundstück steht ein Haus, Sie kaufen es beim Notar, und erst Monate später stellt sich heraus, dass das Gebäude formal nicht existiert. Das ist in Portugal keine Seltenheit und auch keine Katastrophe — es bestimmt aber, was Sie versichern können und was im Schadenfall passiert.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Versicherung vergleichen',
   hreflang: {},
   langLinks: {},
@@ -368,7 +368,7 @@ const ISV_PAGE = {
   h1: 'Die ISV-Befreiung beim Fahrzeugimport',
   standfirst:
     'Ziehen Sie dauerhaft nach Portugal um, kann eine Befreiung von der Kfz-Zulassungssteuer (ISV) für Ihr mitgebrachtes Fahrzeug gelten. Die Voraussetzungen sind streng und fristgebunden — wer erst fährt und sich später informiert, ist zu spät dran.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -418,7 +418,7 @@ const ISV_PAGE = {
       <li>Homologation beim IMT und Zuteilung des portugiesischen Kennzeichens.</li>
       <li>Ausstellung des <em>Documento Único Automóvel</em>.</li>
     </ol>
-    <p>Für die Durchführung arbeitet praktisch jeder mit einem <em>despachante</em> (Zollagenten) — wir sind Versicherungsmakler, kein Zollagent, und diese Seite ersetzt keine steuerliche Beratung zum Einzelfall.</p>
+    <p>Für die Durchführung arbeitet praktisch jeder mit einem <em>despachante</em> (Zollagenten) — wir sind Versicherungsvermittler, kein Zollagent, und diese Seite ersetzt keine steuerliche Beratung zum Einzelfall.</p>
   </div>
 </section>
 

@@ -17,13 +17,13 @@ export const PRIVATE_CLIENTS_PAGE = {
   url: '/de/private-clients-portugal/',
   title: 'Private Clients Portugal: Versicherung für komplexe Risiken | Adler & Rochefort',
   description:
-    'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken: Luxusimmobilien, Kunst und Sammlungen, Schmuck und Uhren, Oldtimer und mehrere Wohnsitze — individuell zusammengestellt statt aus dem Standardprodukt.',
-  keywords: 'Private Clients Versicherung Portugal, Luxusimmobilien Versicherung Portugal, Kunstversicherung Portugal, Oldtimer Versicherung Portugal, Versicherung Zweitwohnsitz Portugal',
+    'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken: Hochwertige Immobilien, Kunst und Sammlungen, Schmuck und Uhren, Oldtimer und mehrere Wohnsitze — individuell zusammengestellt statt aus dem Standardprodukt.',
+  keywords: 'Private Clients Versicherung Portugal, Hochwertige Immobilien Versicherung Portugal, Kunstversicherung Portugal, Oldtimer Versicherung Portugal, Versicherung Zweitwohnsitz Portugal',
   eyebrow: 'Private Clients',
   h1: 'Private Clients: Versicherung für komplexere Risiken',
   standfirst:
     'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken. Standardprodukte sind nicht für jedes Risiko gemacht — komplexe Vermögenswerte brauchen eine integrierte Risikoanalyse statt einer Police von der Stange.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Private Client Beratung anfragen',
   hreflang: {},
   langLinks: {},
@@ -49,12 +49,12 @@ export const PRIVATE_CLIENTS_PAGE = {
 
 <section class="section tint" aria-labelledby="bereiche">
   <div class="container">
-    <span class="eyebrow">Was wir abdecken</span>
+    <span class="eyebrow">Was wir prüfen</span>
     <h2 id="bereiche">Bereiche, in denen wir beraten</h2>
     <div class="feature-grid">
       <div class="feature-card">
         <span class="fc-tag">Immobilien</span>
-        <h3>Luxusimmobilien &amp; Zweitwohnsitze</h3>
+        <h3>Hochwertige Immobilien &amp; Zweitwohnsitze</h3>
         <p>Hochwertige Häuser, saisonal genutzte Zweitwohnsitze, mehrere Immobilien in unterschiedlichen Regionen.</p>
       </div>
       <div class="feature-card">
@@ -94,7 +94,7 @@ export const PRIVATE_CLIENTS_PAGE = {
 <section class="section plain" aria-labelledby="uw">
   <div class="container narrow article-body">
     <h2 id="uw">Wer diese Risiken zeichnet</h2>
-    <p>Wir sind Versicherungsmakler und an keinen dieser Zeichner gebunden — wo eine ordentlich aufgebaute Standardpolice denselben Zweck günstiger erfüllt, sagen wir das.</p>
+    <p>Wir sind Versicherungsvermittler und an keinen dieser Zeichner gebunden — wo eine ordentlich aufgebaute Standardpolice denselben Zweck günstiger erfüllt, sagen wir das.</p>
     <h3>Hiscox</h3>
     <p>Hausratdeckung auf All-Risk-Basis, mit Kunst, Schmuck, Uhren und Sammlungen zu vereinbarten Werten, Deckung für Besitz außerhalb des Wohnsitzes und weltweit, sowie Familienhaftpflicht.</p>
     <h3>Liberty Mutual, über Innovarisk</h3>
@@ -118,7 +118,7 @@ export const PRIVATE_CLIENTS_PAGE = {
     },
     {
       q: 'Sind Kunst und Sammlungen zum tatsächlichen Wert versichert?',
-      a: '<p>Über die genannten Zeichner ja, mit Einzelbewertung statt einer pauschalen Obergrenze — und mit Deckung auch außerhalb des Wohnsitzes und weltweit, je nach Police.</p>',
+      a: '<p>Vereinbarte Werte und Deckung außerhalb des Wohnsitzes können geprüft werden. Einzelbewertung, Annahme und Umfang müssen in der konkreten Police bestätigt sein.</p>',
     },
     {
       q: 'Was ist Innovarisk?',

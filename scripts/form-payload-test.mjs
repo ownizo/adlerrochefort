@@ -434,13 +434,8 @@ const CASES = [
     formName: 'mortgage-protection-review-spain',
     pageScripts: ['ar-quote-form.js'],
   },
-  {
-    label: '23. /en/private-clients-spain/ — Spain private client pillar',
-    path: 'en/private-clients-spain/index.html',
-    url: 'https://adlerrochefort.com/en/private-clients-spain/',
-    formName: 'private-client-review-spain',
-    pageScripts: ['ar-quote-form.js'],
-  },
+  // Private Client review forms are covered by scripts/private-client.test.mjs
+  // and private-client/browser-check.mjs; they no longer use the quote wizard.
   {
     // International UI/UX rebuild (Phase 5): the /en/ homepage's generic
     // free-analysis form gained an explicit required Country/Market select
@@ -683,12 +678,12 @@ const CASES = [
 
 // Spain-specific assertion: every Spain case must carry country=Spain in its
 // payload, and none of them may be missing it silently.
-for (const c of CASES) {
+for (const c of CASES.filter(c => !process.argv.includes('--en-de-only') || /^(en|de)\//.test(c.path))) {
   if (c.formName && c.formName.endsWith('-spain')) c.requireCountry = 'Spain';
 }
 
 let failures = 0;
-for (const c of CASES) {
+for (const c of CASES.filter(c => !process.argv.includes('--en-de-only') || /^(en|de)\//.test(c.path))) {
   let r;
   if (c.switchFrom) {
     // Fill the first branch, then switch: nothing from the abandoned branch may

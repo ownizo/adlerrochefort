@@ -42,7 +42,7 @@ export const THERAPEUTEN_WELLNESS_PAGE = {
   h1: 'Berufshaftpflicht für <em>Therapeuten und Wellness-Instruktoren</em>',
   standfirst:
     '„Therapeut" und „Wellness-Instruktor" klingen nach derselben Kategorie. Rechtlich sind es zwei völlig verschiedene Fälle: die eine Tätigkeit unterliegt in Portugal einer gesetzlichen Versicherungspflicht mit Mindestsumme, die andere nicht — und die falsche Police für die falsche Kategorie lässt Sie im Schadenfall ungedeckt da stehen.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},

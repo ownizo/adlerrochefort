@@ -400,6 +400,12 @@ const INTERNAL_FIELDS = new Set([
 // The handful of field names shared by both languages need an English label
 // when the lead came from an English page.
 const QUOTE_LABELS_EN = {
+  role: "Contact role", contact_method: "Preferred contact method",
+  authority: "Authority to discuss requirements", risks: "Household / risk profile",
+  property_count: "Approximate number of properties", locations: "Countries / locations",
+  existing_insurance: "Existing insurance", renewal_approaching: "Approaching renewal",
+  valuations: "Valuations available", requirements: "Requirements", privacy: "Privacy consent",
+  page_url: "Review page",
   source: "Source article",
   source_url: "Page it was sent from",
   lang: "Page language",
@@ -771,6 +777,16 @@ const QUOTE_LABELS_BY_LANG = {
 // Exported so lead-classification.test.mjs can assert every key here also has
 // a CRM classification decision — see "CRM coverage" in that test file.
 export const HANDLED_FORMS = {
+  "private-client-review-portugal": {
+    confidentialReview: true,
+    quote: true, en: true, heading: "New confidential Private Client review — Portugal",
+    page: "/en/private-clients/", branch: "Private Client Review",
+  },
+  "private-client-review-de": {
+    confidentialReview: true,
+    quote: true, en: true, heading: "New confidential Private Client review — German",
+    page: "/de/private-clients/", branch: "Private Client Review (DE)",
+  },
   "relocation-services": {
     heading: "New relocation &amp; company services enquiry",
     intro: "A new submission was received from the Settle in Portugal landing page.",
@@ -1442,6 +1458,7 @@ export const HANDLED_FORMS = {
     branch: "ES · Mortgage Protection",
   },
   "private-client-review-spain": {
+    confidentialReview: true,
     quote: true,
     en: true,
     heading: "New private client review request — Spain",
@@ -1734,6 +1751,7 @@ export function quoteSubject(data, fallbackBranch) {
  * email.
  */
 export function quoteIntro(formConfig, from) {
+  if (formConfig.confidentialReview) return `Confidential household review from ${escapeHtml(from)}. Use the requested contact method. Confirm authority before sharing another person's policy details. No underwriting or quotation deadline was promised.`;
   // Especificação v2, C2: "professional-liability-quote-wizard" is the first
   // EN form to carry a real slaHours (48-72h, same as its PT counterpart
   // "cotacao-rc-profissional") — until now every EN HANDLED_FORMS entry left
