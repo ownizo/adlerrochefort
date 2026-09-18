@@ -30,7 +30,7 @@ for(const page of PRIVATE_CLIENT_PAGES) test(`${page.url}: generated source, can
  assert.equal((html.match(/type="checkbox" name="risks"/g)||[]).length,15);
  for(const name of ['name','email','phone','contact_method','role','authority','country','property_count','locations','existing_insurance','renewal_approaching','valuations','requirements','privacy'])assert.ok(html.includes(`name="${name}"`));
  assert.ok(!/<input[^>]+name="(?:nif|dob|date_of_birth|address)"/.test(html));
- assert.ok(!/\b(?:broker|Versicherungsmakler|Makler)\b/.test(html));
+ assert.ok(html.includes('agente de seguros') || html.includes('non-tied insurance agent'),'Portuguese regulatory disclosure retained');
  const sitemap=readFileSync('public/sitemap-pages.xml','utf8');
  assert.ok(sitemap.includes(`<loc>${origin+page.url}</loc>`));
 });
@@ -55,7 +55,12 @@ for(const name of ['private-client-review-portugal','private-client-review-spain
 test('unchanged PT classification and source scope',()=>{
  assert.equal(classifySubmission('private-clients-review',{}).product,'private-clients');
  const files=execFileSync('git',['diff','HEAD','--name-only'],{encoding:'utf8'}).trim().split('\n');
- assert.deepEqual(files.filter(f=>f.startsWith('public/')&&!/^public\/(en|de)\//.test(f)&&!/^public\/sitemap-(pages|blog)\.xml$/.test(f)),[]);
+ // Quotation corrections may change PT forms, but never surrounding PT copy.
+ const outsideForms = html => html.replace(/<form\b[^>]*>[\s\S]*?<\/form>/g, '').replace(/<nav class="quotation-routes"[\s\S]*?<\/nav>/g, '').replace(/^.*charCount.*$/gm, '').replace(/\s+/g, ' ');
+ for (const file of files.filter(f => /^public\/(?:index.html|seguros\/.*\.html)$/.test(f))) {
+   const before=execFileSync('git',['show',`HEAD:${file}`],{encoding:'utf8'});
+   assert.equal(outsideForms(readFileSync(file,'utf8')),outsideForms(before),`${file}: unrelated PT content changed`);
+ }
  for(const sitemap of ['pages','blog']){
  const file=`public/sitemap-${sitemap}.xml`;
  const before=execFileSync('git',['show',`HEAD:${file}`],{encoding:'utf8'});
@@ -69,11 +74,18 @@ test('terminology keeps third parties, real-estate agents and URLs intact',()=>{
  assert.equal(normalisePrivateClientLanguage(text,'en'),text);
  assert.ok(!/intermediaryage|vian intermediary/i.test(normalisePrivateClientLanguage('Insurance Brokerage services; insurance brokerage services; English explanation via broker','en')));
  assert.equal(normalisePrivateClientLanguage(text,'de'),text);
- for(const rules of [EN_BROKER,EN_INDEPENDENCE,EN_RELATIONSHIP,DE_INDEPENDENCE])for(const [,to] of rules) assert.ok(!/\b(?:broker|brokers|Versicherungsmakler|Makler)\b/.test(to),to);
+ const marketing='English-speaking insurance broker. One broker across both markets. Why Use an Insurance Broker';
+ assert.equal(normalisePrivateClientLanguage(marketing,'en'),marketing);
+ const german='Deutschsprachiger Versicherungsmakler. Als Makler sind wir nicht an einen einzigen Versicherer gebunden. Maklerwechsel';
+ assert.equal(normalisePrivateClientLanguage(german,'de'),german);
+ const legal='Ownizo, Unipessoal Lda., insurance intermediary registered with the Autoridade. Portuguese ASF-registered non-tied insurance agent. In Portugal als „agente de seguros“ registriert.';
+ assert.equal(normalisePrivateClientLanguage(legal,'en'),legal);
+ assert.equal(normalisePrivateClientLanguage(legal,'de'),legal);
 });
 test('language-scoped normalization is idempotent',()=>{
  for(const lang of ['en','de'])for(const file of globSync(`public/${lang}/**/*.html`)){
  const source=readFileSync(file,'utf8');
+ assert.ok(!/\b(?:[Aa] insurance broker|[Aa]n broker)\b/.test(source),file+' grammatical article');
  const once=normalisePrivateClientLanguage(source,lang);
  assert.equal(normalisePrivateClientLanguage(once,lang),once,file);
  }

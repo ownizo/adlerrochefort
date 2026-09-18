@@ -431,7 +431,8 @@
     <p class="form-intro">Proszę napisać, co ma być objęte ochroną i od kiedy. Odpowiemy, jakie informacje będą potrzebne i co realnie da się ułożyć.</p>
     <p class="form-lang-note">Formularz jest po polsku. Odpowiadamy i prowadzimy sprawę po angielsku, pisemnie.</p>
 
-    <form
+    <nav class="quotation-routes" aria-label="Wybierz rodzaj ubezpieczenia"><p>Wybierz rodzaj ubezpieczenia</p><ul><li><a href="/pl/ubezpieczenie-zdrowotne-portugalia/#oferta">Zapytaj o ubezpieczenie zdrowotne</a></li><li><a href="/pl/ubezpieczenie-samochodu-portugalia/#oferta">Zapytaj o ubezpieczenie samochodu</a></li><li><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/#oferta">Zapytaj o ubezpieczenie odpowiedzialności cywilnej</a></li><li><a href="/pl/ubezpieczenie-domu-portugalia/#oferta">Zapytaj o ubezpieczenie nieruchomości</a></li></ul></nav>
+<form
       class="lead-form"
       id="leadForm"
       name="pl-zapytanie-ofertowe"
@@ -439,155 +440,32 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/pl/#oferta"
-      novalidate>
-
-      <input type="hidden" name="form-name" value="pl-zapytanie-ofertowe">
-      <input type="hidden" name="source" value="pl">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="subject" value="Nowe zapytanie (PL) — Zapytanie ogólne (PL)">
-      <input type="hidden" name="language" value="pl">
-      <input type="hidden" name="market" value="poland">
-      <input type="hidden" name="product_interest" value="">
-      <p class="visually-hidden"><label>Proszę nie wypełniać tego pola <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <div class="field">
-        <label for="f-name">Imię i nazwisko <span class="req" aria-hidden="true">*</span></label>
-        <input type="text" id="f-name" name="name" autocomplete="name"
-               required aria-required="true" aria-describedby="err-name">
-        <span class="field-error" id="err-name" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-email">Adres e-mail <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
-               required aria-required="true" aria-describedby="err-email">
-        <span class="field-error" id="err-email" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
-        <p class="field-help" id="help-phone">Proszę podać numer z prefiksem kraju, np. +48 601 234 567.</p>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
-        <span class="field-error" id="err-phone" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-localidade">Miejscowość w Portugalii</label>
-        <input type="text" id="f-localidade" name="localidade" placeholder="np. Lizbona, Porto, Lagos, Cascais">
-      </div>
-
-      <div class="field">
-        <label for="f-country">Kraj obecnego zamieszkania</label>
-        <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="np. Polska">
-      </div>
-
-      <div class="field">
-        <label for="f-residence">Status pobytu w Portugalii</label>
-        <select id="f-residence" name="residence_status">
-          <option value="" selected>Proszę wybrać</option>
-          <option value="Planning move">Planuję przeprowadzkę</option>
-          <option value="Recently arrived">Niedawno przyjechałem / przyjechałam</option>
-          <option value="Resident">Mieszkam w Portugalii na stałe</option>
-          <option value="Non-resident owner">Mam nieruchomość, ale nie mieszkam tu na stałe</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-type">Jakiego ubezpieczenia dotyczy zapytanie? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+     >
+<input type="hidden" name="form-name" value="pl-zapytanie-ofertowe">
+<input type="hidden" name="source" value="pl">
+<input type="hidden" name="source_url" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="subject" value="Nowe zapytanie (PL) — Zapytanie ogólne (PL)">
+<input type="hidden" name="language" value="pl">
+<input type="hidden" name="market" value="poland">
+<input type="hidden" name="product_interest" value="">
+<input type="hidden" name="country" value="Portugal">
+<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="contact-form-field form-field field"><label for="f-name">Imię i nazwisko *</label><input type="text" id="f-name" name="name" required></div>
+<div class="contact-form-field form-field field"><label for="f-email">Adres e-mail *</label><input type="email" id="f-email" name="email" required></div>
+<div class="contact-form-field form-field field"><label for="f-phone">Numer telefonu</label><input type="tel" id="f-phone" name="phone" placeholder="+351 …"></div>
+<div class="contact-form-field form-field field"><label for="pl-zapytanie-ofertowe-empresa">Firma</label><input type="text" id="pl-zapytanie-ofertowe-empresa" name="empresa"></div>
+<div class="contact-form-field form-field field"><label for="f-type">Wybierz rodzaj ubezpieczenia *</label><select id="f-type" name="insurance_type" aria-required="true" aria-describedby="err-type" required>
           <option value="" disabled selected>Proszę wybrać</option>
           <option value="PL · Dom">Ubezpieczenie domu lub mieszkania</option>
           <option value="PL · Zdrowie">Ubezpieczenie zdrowotne</option>
           <option value="PL · Samochód">Ubezpieczenie samochodu</option>
           <option value="PL · OC ogólna">Odpowiedzialność cywilna (prywatna lub zawodowa)</option>
           <option value="PL · Inne">Inne lub jeszcze nie wiem</option>
-        </select>
-        <span class="field-error" id="err-type" aria-live="polite"></span>
-      </div>
+        </select></div>
+<button type="submit" class="form-submit" id="leadSubmit">Wyślij zapytanie</button>
 
-        <div class="form-branch-fields" data-branch="PL · Dom" hidden>
-          <span class="form-branch-legend">Kilka szczegółów o nieruchomości</span>
-          <div class="field">
-            <label for="f-home_property_type">Rodzaj nieruchomości</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="np. mieszkanie we wspólnocie, dom wolnostojący, dom letniskowy" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Szacowana wartość odbudowy (jeśli jest znana)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="np. 180 000 EUR — jeśli nie wiadomo, pomożemy oszacować" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Przybliżona wartość ruchomości domowych</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="np. 30 000 EUR łącznie z wyposażeniem i elektroniką" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · Zdrowie" hidden>
-          <span class="form-branch-legend">Kto ma być objęty ochroną</span>
-          <div class="field">
-            <label for="f-health_household">Liczba osób i ich wiek</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="np. 2 osoby dorosłe (41 i 39 lat) oraz dziecko (7 lat)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · Samochód" hidden>
-          <span class="form-branch-legend">Kilka szczegółów o pojeździe</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Marka, model i rok produkcji</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="np. Skoda Octavia 2019, silnik 1.6 diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Aktualna rejestracja</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="np. polskie tablice, planuję przerejestrowanie / już portugalskie" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Historia szkodowa</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="np. 8 lat bez szkody, zaświadczenie z polskiego ubezpieczyciela" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · OC ogólna" hidden>
-          <span class="form-branch-legend">Czego ma dotyczyć ochrona</span>
-          <div class="field">
-            <label for="f-liability_activity">Jaka działalność lub sytuacja</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="np. konsultant IT, fizjoterapeutka, wynajem mieszkania, życie prywatne" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Gdzie znajdują się klienci lub osoby trzecie</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="np. klienci w Portugalii i w Polsce, pacjenci przyjmowani w gabinecie w Lizbonie" disabled>
-          </div>
-        </div>
-
-      <div class="field">
-        <label for="f-start">Od kiedy ochrona ma obowiązywać?</label>
-        <input type="text" id="f-start" name="start_date" placeholder="np. od 1 marca, w dniu podpisania aktu notarialnego, jak najszybciej">
-      </div>
-
-      <div class="field">
-        <label for="f-preflang">Preferowany język korespondencji</label>
-        <select id="f-preflang" name="preferred_language">
-          <option value="English">Angielski — nasz język pracy</option>
-          <option value="Portuguese">Portugalski</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-message">Co powinniśmy wiedzieć?</label>
-        <textarea id="f-message" name="message" rows="6"
-                  placeholder="Na przykład: przeprowadzam się do Porto w marcu, mam mieszkanie we wspólnocie i samochód na polskich tablicach."></textarea>
-      </div>
-
-      <div class="field consent-block">
-        <div class="consent">
-          <input type="checkbox" id="f-consent" name="consent" value="Tak"
-                 required aria-required="true" aria-describedby="err-consent">
-          <label for="f-consent">Zgadzam się, aby Adler &amp; Rochefort skontaktowało się ze mną w sprawie tego zapytania i przetwarzało podane dane w tym celu.</label>
-        </div>
-        <span class="field-error" id="err-consent" aria-live="polite"></span>
-      </div>
-
-      <button type="submit" class="form-submit" id="leadSubmit">Wyślij zapytanie</button>
-      <p class="form-footnote">Odpowiadamy w ciągu jednego dnia roboczego. Zapytanie nie jest zobowiązaniem do zawarcia umowy.</p>
-    </form>
+</form>
     <div class="form-success" id="leadSuccess">
       <div class="tick">&#10003;</div>
       <h3>Dziękujemy — zapytanie do nas dotarło.</h3>
@@ -758,7 +636,7 @@
 
     function check(rule) {
       var field = document.getElementById(rule.id);
-      if (!field) return true;
+      if (!field || (!field.required && !field.value)) return true;
       var message = rule.validate(valueOf(rule, field));
       setError(rule, message);
       return !message;

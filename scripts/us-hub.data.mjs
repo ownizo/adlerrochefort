@@ -34,7 +34,7 @@ const STEPS = [
   },
   {
     title: 'Market consultation',
-    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered intermediary we do not represent one company — we negotiate with whichever of them can actually write the risk.',
+    text: 'We take the same risk, described the same way, to the insurers we work with. As an ASF-registered broker we do not represent one company — we negotiate with whichever of them can actually write the risk.',
   },
   {
     title: 'Side-by-side comparison',
@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-americans-in-portugal',
   metaTitle: 'Insurance for Americans in Portugal | US Buyers &amp; Residents | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for US citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered intermediary. What is genuinely different from the US system, and what to arrange in what order.',
+    'Insurance for US citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What is genuinely different from the US system, and what to arrange in what order.',
   h1: 'Insurance for Americans in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as a US citizen? Several assumptions that hold in the United States do not carry over here: there is no US-style title insurance market, no umbrella policy that extends to a Portuguese property or car, and the visa and health-insurance timelines do not run on a US clock. We set out what actually applies to your situation, in English, and arrange it.',
@@ -60,7 +60,7 @@ const HUB = {
   ctaSecondary: 'Message us on WhatsApp',
   whatsapp: wa("Hi, I'm a US citizen looking into insurance for a property or a move to Portugal and would like to talk to someone."),
   trust: [
-    'ASF-registered intermediary &middot; no. 425591790/3',
+    'ASF-registered broker &middot; no. 425591790/3',
     'English throughout, in writing',
     'We tell you honestly what can be arranged',
   ],
@@ -137,7 +137,7 @@ const HUB = {
     },
     {
       title: 'Assuming a claim will run the way it does with a US carrier',
-      text: 'Correspondence, assessment and settlement in Portugal follow a different process and, for an international client, run in English by arrangement rather than by default. Knowing that before a claim, not during one, is the point of arranging cover with an intermediary who works in English from the outset.',
+      text: 'Correspondence, assessment and settlement in Portugal follow a different process and, for an international client, run in English by arrangement rather than by default. Knowing that before a claim, not during one, is the point of arranging cover with a broker who works in English from the outset.',
     },
   ],
 

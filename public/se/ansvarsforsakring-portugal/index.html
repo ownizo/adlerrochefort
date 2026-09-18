@@ -398,6 +398,7 @@
 
     <form name="se-ansvarsforsakring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/se/#offert">
       <input type="hidden" name="form-name" value="se-ansvarsforsakring-wizard">
+<input type="hidden" name="lang" value="sv">
       <input type="hidden" name="ramo" value="Ansvarsförsäkring">
       <input type="hidden" name="source_url" id="se-rcp-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -412,11 +413,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="se-rcp-nome">Fullständigt namn *</label><input type="text" id="se-rcp-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="se-rcp-nif">NIF (portugisiskt skattenummer) *</label><input type="text" id="se-rcp-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="se-rcp-nascimento">Födelsedatum *</label><input type="date" id="se-rcp-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="se-rcp-nascimento">Födelsedatum *</label><input type="date" id="se-rcp-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
         <div class="contact-form-field"><label for="se-rcp-morada">Fullständig adress *</label><input type="text" id="se-rcp-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="se-rcp-localidade">Ort *</label><input type="text" id="se-rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="se-rcp-cp">Postnummer *</label><input type="text" id="se-rcp-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="se-rcp-telefone">Telefonnummer *</label><input type="tel" id="se-rcp-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="se-rcp-telefone">Telefonnummer *</label><input type="tel" id="se-rcp-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="se-rcp-email">E-postadress *</label><input type="email" id="se-rcp-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="se-rcp-nacionalidade">Nationalitet *</label>
@@ -436,7 +437,7 @@
       </div>
 
       <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="se-rcp-faturacao">Årsomsättning *</label><input type="number" id="se-rcp-faturacao" name="faturacao_anual" placeholder="T.ex. 85000" required></div>
+        <div class="contact-form-field"><label for="se-rcp-faturacao">Årsomsättning *</label><input type="number" id="se-rcp-faturacao" name="faturacao_anual" placeholder="T.ex. 85000" required step="0.01"></div>
         <p class="wizard-helper">Verksamhetstyp, önskat försäkringsbelopp och om policyn krävs enligt avtal eller av en branschorganisation går vi igenom i kontakten som följer.</p>
         <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>
       </div>

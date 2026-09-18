@@ -428,6 +428,11 @@ const FORM_CLASSIFICATION = {
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
   'nl-offerte-aanvraag': { entityType: 'individual', market: 'PT', product: 'general' },
   'lead-nl': { entityType: 'individual', market: 'PT', product: 'general' },
+  'fr-quote-auto': { entityType: 'individual', market: 'PT', product: 'auto', language: 'FR' },
+  'fr-quote-habitacao': { entityType: 'individual', market: 'PT', product: 'home', language: 'FR' },
+  'fr-quote-saude': { entityType: 'individual', market: 'PT', product: 'health', language: 'FR' },
+  'fr-quote-profissional': { entityType: 'individual', market: 'PT', product: 'professional-liability', language: 'FR' },
+  'nl-quote-auto': { entityType: 'individual', market: 'PT', product: 'auto', language: 'NL' },
   'lead-fr': { entityType: 'individual', market: 'PT', product: 'general' },
   // de-angebot-anfrage (scripts/generate-de-cluster.mjs) submits `language`,
   // not `lang` — see the comment above this block. Fixed here instead, same
@@ -512,7 +517,7 @@ export function classifySubmission(formName, data) {
 export function extractContact(data) {
   const name = firstNonEmpty([data?.nome, data?.name, data?.full_name, data?.naam]);
   const email = firstNonEmpty([data?.email]);
-  const phone = firstNonEmpty([data?.telefone, data?.telemovel, data?.phone, data?.telefoon]);
+  const phone = firstNonEmpty([data?.telefone, data?.telemovel, data?.phone, data?.telefoon, data?.telefon]);
   return { name, email, phone };
 }
 

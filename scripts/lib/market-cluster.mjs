@@ -1,3 +1,4 @@
+import { correctQuotationHtml, quoteStrings } from './quotation-forms.mjs';
 /**
  * The renderer shared by the Polish, Swedish and Danish clusters.
  *
@@ -60,7 +61,7 @@ const QUOTE_FORM_STRINGS = {
   zh: zhQuoteFormStrings,
   he: heQuoteFormStrings,
 };
-const wizardStrings = (market) => QUOTE_FORM_STRINGS[market.htmlLang.slice(0, 2)];
+const wizardStrings = (market) => quoteStrings[market.htmlLang.slice(0, 2)];
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
@@ -518,7 +519,7 @@ function nationalityDatalist(countries) {
  * while doing this part's RTL verification pass. DE/NL's own hand-built
  * equivalent never goes through `esc()` and so never had the bug.
  */
-function wizardFormHtml(market, page) {
+export function wizardFormHtml(market, page) {
   const w = page.wizard;
   const t = wizardStrings(market);
   const c = t.common;
@@ -899,7 +900,7 @@ ${ft.regulatory.map((p) => `    <p>${p}</p>`).join('\n')}
 
 /* ─────────────── page assembly ─────────────── */
 
-export function renderPage(market, page) {
+function renderPageSource(market, page) {
   const ui = market.ui;
 
   const related = page.related?.length
@@ -1064,3 +1065,5 @@ export async function writeMarket(market) {
   }
   return written;
 }
+
+export function renderPage(market, page) { return correctQuotationHtml(renderPageSource(market, page), { homepage: page.url === `/${market.key}/` }); }

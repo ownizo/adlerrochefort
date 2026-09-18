@@ -143,7 +143,7 @@ const nav = `
 const FAQ = [
   {
     q: 'Is this different from a product page’s own form?',
-    a: 'Yes. Each product page (health, home, car and so on) has its own quote form for when you already know what you need. This page is for when you need more than one, or are not yet sure which product page to start from — one form, one insurance intermediary, instead of several separate submissions.',
+    a: 'Yes. Each product page (health, home, car and so on) has its own quote form for when you already know what you need. This page is for when you need more than one, or are not yet sure which product page to start from — one form, one broker, instead of several separate submissions.',
   },
   {
     q: 'Do I need to fill in a separate form for each type of insurance?',
@@ -195,7 +195,7 @@ function render() {
 <meta name="theme-color" content="#17243D">
 <title>Insurance Review for International Clients | Adler &amp; Rochefort</title>
 <meta name="description" content="Need help with more than one type of insurance in Portugal or Spain, or not sure where to start? Tell us once, in English, and we will come back with a clear written answer.">
-<meta name="keywords" content="insurance review, international insurance intermediary, insurance for expats, multiple insurance products">
+<meta name="keywords" content="insurance review, international insurance broker, insurance for expats, multiple insurance products">
 <link rel="canonical" href="${URL}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="Adler &amp; Rochefort">
@@ -204,7 +204,7 @@ function render() {
 <meta property="og:type" content="website">
 <meta property="og:url" content="${URL}">
 <meta property="og:title" content="Insurance Review for International Clients | Adler &amp; Rochefort">
-<meta property="og:description" content="One review, one insurance intermediary, for clients who need more than one type of insurance in Portugal or Spain.">
+<meta property="og:description" content="One review, one broker, for clients who need more than one type of insurance in Portugal or Spain.">
 <meta property="og:image" content="${OG_IMAGE}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -214,7 +214,7 @@ function render() {
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Insurance Review for International Clients | Adler &amp; Rochefort">
-<meta name="twitter:description" content="One review, one insurance intermediary, for clients who need more than one type of insurance in Portugal or Spain.">
+<meta name="twitter:description" content="One review, one broker, for clients who need more than one type of insurance in Portugal or Spain.">
 <meta name="twitter:image" content="${OG_IMAGE}">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -266,13 +266,13 @@ ${nav}
   <div class="lp-hero-inner">
     <div class="lp-eyebrow">For Portugal and Spain</div>
     <h1>Insurance Review for International Clients</h1>
-    <p class="lp-hero-sub">Need help with more than one type of insurance — or not sure which page to start from? Tell us once, in English, and one insurance intermediary will come back with a clear written answer on what applies to you.</p>
+    <p class="lp-hero-sub">Need help with more than one type of insurance — or not sure which page to start from? Tell us once, in English, and one broker will come back with a clear written answer on what applies to you.</p>
     <div class="lp-hero-ctas">
       <a href="#review-form" class="btn-primary">Request a Review</a>
       <a href="https://wa.me/351928226570?text=${encodeURIComponent('Hello, I would like an insurance review — I need help with more than one type of cover.')}" target="_blank" rel="noopener" class="lp-btn-wa">${WHATSAPP_SVG}WhatsApp</a>
     </div>
     <div class="lp-trust">
-      <strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · One submission, one insurance intermediary
+      <strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · One submission, one broker
     </div>
   </div>
 </section>
@@ -285,7 +285,7 @@ ${nav}
     </div>
     <div class="lp-card">
       <h2>Who you are dealing with</h2>
-      <p>Adler &amp; Rochefort is the trading name of Ownizo, Unipessoal Lda., ASF-registered insurance intermediary n.º 425591790/3 — a public registration you can check independently. See <a href="/en/about/">who we are</a>, <a href="/en/how-we-work/">how a review actually works</a>, or <a href="/en/why-use-an-insurance-broker/">why use an intermediary</a> before you send anything.</p>
+      <p>Adler &amp; Rochefort is the trading name of Ownizo, Unipessoal Lda., ASF-registered insurance broker n.º 425591790/3 — a public registration you can check independently. See <a href="/en/about/">who we are</a>, <a href="/en/how-we-work/">how a review actually works</a>, or <a href="/en/why-use-an-insurance-broker/">why use a broker</a> before you send anything.</p>
     </div>
   </div>
 </section>
@@ -356,12 +356,12 @@ ${needsFieldset('Spain')}
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your review, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
     <p class="lp-smallprint">No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.</p>
-    <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>English-speaking team</span><span>One submission, one insurance intermediary</span><span>We reply within a few working days</span></div>
+    <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>English-speaking team</span><span>One submission, one broker</span><span>We reply within a few working days</span></div>
     <div class="lp-next-steps">
       <div class="lp-next-steps-title">What happens next?</div>
       <ol>
         <li>We receive your request</li>
-        <li>An intermediary reviews the information</li>
+        <li>A broker reviews the information</li>
         <li>We may contact you for anything missing</li>
         <li>We explain the available options — you decide whether to proceed</li>
       </ol>
@@ -372,7 +372,7 @@ ${needsFieldset('Spain')}
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
       </div>
       <h3>Thank you</h3>
-      <p>Your request has been received. An Adler &amp; Rochefort insurance agent will review everything you have told us and come back to you with a written answer.</p>
+      <p>Your request has been received. An Adler &amp; Rochefort broker will review everything you have told us and come back to you with a written answer.</p>
     </div>
   </div>
 </section>

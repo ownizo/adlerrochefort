@@ -193,7 +193,7 @@
 
 <a class="skip-link" href="#main">Direkt zum Inhalt</a>
 
-<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsvermittler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
+<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
 
 <header class="site-header">
   <nav class="site-nav on-dark" aria-label="Hauptnavigation">
@@ -238,7 +238,7 @@
     <span class="eyebrow">Hausversicherung</span>
     <h1 id="hero-title">Hausversicherung in Portugal: was Sie versichern, und wofür</h1>
     <p class="hero-subtitle">Ein Konzept entscheidet über die meisten Streitfälle bei der Schadenregulierung, und es wird selten vorher erklärt: die regra proporcional. Diese Seite erklärt, was in Portugal Pflicht ist, was ein seguro multirriscos üblicherweise abdeckt, wie Sie die richtige Versicherungssumme ermitteln, und wann Erdbebendeckung mehr als eine theoretische Frage ist.</p>
-    <p class="hero-meta">Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve</p>
+    <p class="hero-meta">Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve</p>
     <a href="#angebot" class="btn-cta">Versicherung vergleichen <svg viewBox="0 0 24 24"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
   </div>
 </section>
@@ -378,6 +378,7 @@
 
     <form name="de-hausversicherung-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/de/#angebot">
       <input type="hidden" name="form-name" value="de-hausversicherung-wizard">
+<input type="hidden" name="lang" value="de">
       <input type="hidden" name="ramo" value="Hausversicherung">
       <input type="hidden" name="source_url" id="de-hab-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -392,11 +393,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="de-hab-nome">Vollständiger Name *</label><input type="text" id="de-hab-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="de-hab-nif">NIF (portugiesische Steuernummer) *</label><input type="text" id="de-hab-nif" name="nif" inputmode="numeric" placeholder="9 Ziffern" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="de-hab-nascimento">Geburtsdatum *</label><input type="date" id="de-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="de-hab-morada">Vollständige Anschrift *</label><input type="text" id="de-hab-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="de-hab-nascimento">Geburtsdatum *</label><input type="date" id="de-hab-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+        <div class="contact-form-field"><label for="de-hab-morada">Vollständige Anschrift der Immobilie *</label><input type="text" id="de-hab-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="de-hab-localidade">Ort *</label><input type="text" id="de-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="de-hab-cp">Postleitzahl *</label><input type="text" id="de-hab-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="de-hab-telefone">Telefon / WhatsApp *</label><input type="tel" id="de-hab-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="de-hab-telefone">Telefon / WhatsApp *</label><input type="tel" id="de-hab-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="de-hab-email">E-Mail *</label><input type="email" id="de-hab-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="de-hab-nacionalidade">Staatsangehörigkeit *</label>
@@ -430,16 +431,16 @@
             <label for="de-hab-al-regime">Art der Kurzzeitvermietung *</label>
             <select id="de-hab-al-regime" name="al_regime" required disabled>
               <option value="">Auswählen</option>
-              <option value="tempo_inteiro">Vollständig</option>
-              <option value="parcial">Teilweise (gemeinsame Nutzung der Wohnung)</option>
+              <option value="tempo_inteiro">Ganzjährige AL-Nutzung</option>
+              <option value="parcial">Zeitweise AL-Nutzung</option>
             </select>
           </div>
         </div>
         <div class="contact-form-field"><label for="de-hab-ano-construcao">Baujahr *</label><input type="number" id="de-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-        <div class="contact-form-field"><label for="de-hab-area">Bruttobaufläche (m²) *</label><input type="number" id="de-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="de-hab-area">Bruttobaufläche (m²) *</label><input type="number" id="de-hab-area" name="area_bruta" min="1" required step="0.01"></div>
         <div class="contact-form-field"><label for="de-hab-wc">Anzahl der Badezimmer *</label><input type="number" id="de-hab-wc" name="casas_banho" min="0" required></div>
         <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="de-hab-obras-check"><input type="checkbox" id="de-hab-obras-check" data-field-toggle="de-hab-obras-group"> Haben Sie in den letzten Jahren renoviert?</label>
+          <label class="contact-form-checkbox" for="de-hab-obras-check"><input type="checkbox" id="de-hab-obras-check" data-field-toggle="de-hab-obras-group" name="obras_renovacao" value="sim"> Renovierungen durchgeführt</label>
         </div>
         <div id="de-hab-obras-group" hidden>
           <div class="contact-form-field"><label for="de-hab-obras-ano">Jahr der Renovierung *</label><input type="number" id="de-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
@@ -477,10 +478,10 @@
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Versicherungsvermittler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
+      <p class="footer-brand-desc">Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
-        Registrierter Versicherungsvermittler — ASF Nr. 425591790/3
+        Registrierter Versicherungsmakler — ASF Nr. 425591790/3
       </div>
     </div>
     <div>
@@ -563,7 +564,7 @@
   </div>
   <div class="footer-regulatory">
     <p>Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. ist bei der portugiesischen Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als Versicherungsvermittler unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</p>
+    <p>Ownizo, Unipessoal Lda. ist bei der portugiesischen Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als Versicherungsmakler unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</p>
     <p>Diese Seite ist eine allgemeine Information, keine individuelle Beratung. Welche Deckung für Sie geeignet ist, hängt von Ihrer Situation und den Bedingungen der jeweiligen Police ab.</p>
   </div>
 </footer>

@@ -23,7 +23,8 @@
       "residente_fiscal": "Bent u fiscaal ingezetene van Portugal?",
       "residente_fiscal_sim": "Ja",
       "residente_fiscal_nao": "Nee",
-      "rgpd_consentimento": "Ik ga ermee akkoord dat mijn gegevens worden gebruikt om deze offerte voor te bereiden, conform de AVG."
+      "rgpd_consentimento": "Ik ga ermee akkoord dat mijn gegevens worden gebruikt om deze offerte voor te bereiden, conform de AVG.",
+      "empresa": "Bedrijf"
     },
     "helpers": {
       "residente_fiscal_nao_info": "Het adres blijft nodig. Zonder fiscale woonplaats in Portugal is het mogelijk niet in alle gevallen mogelijk om de polis af te geven — wij beoordelen uw concrete situatie hoe dan ook.",
@@ -45,7 +46,37 @@
     "success": {
       "titulo": "Hartelijk dank!",
       "corpo": "Uw aanvraag is ontvangen. Wij behandelen deze en antwoorden binnen 24 uur."
-    }
+    },
+    "runtime": {
+      "required": "Vul dit veld in.",
+      "email": "Voer een geldig e-mailadres in, bijvoorbeeld naam@email.com.",
+      "sending": "Versturen…",
+      "failed": "Uw aanvraag kon niet worden verzonden. Controleer uw verbinding en probeer het opnieuw — er is niets verloren gegaan.",
+      "nif": "Voer een geldig Portugees fiscaal nummer (NIF) in, 9 cijfers.",
+      "postalCode": "Voer een postcode in het formaat 0000-000 in.",
+      "plate": "Voer een geldig Portugees kenteken in.",
+      "startDate": "De ingangsdatum mag niet vóór vandaag liggen.",
+      "licenceDate": "De datum van het rijbewijs mag niet vóór de geboortedatum van de verzekeringnemer liggen, noch in de toekomst.",
+      "licenceBeforeAge16": "Dat is vóór de 16de verjaardag van de verzekeringnemer — wij accepteren het toch, controleer wel of de datum juist is.",
+      "renovationYear": "Het jaar van de verbouwing mag niet vóór het bouwjaar liggen, noch na het huidige jaar.",
+      "residenteFiscal": "Geef aan of u fiscaal ingezetene bent van Portugal.",
+      "rgpd": "U moet akkoord gaan voordat wij de offerte kunnen voorbereiden.",
+      "birthDate": "De geboortedatum mag niet in de toekomst liggen.",
+      "birthDateAdult": "De verzekeringnemer moet ten minste 18 jaar oud zijn.",
+      "tooShort": "Schrijf ten minste {min} tekens.",
+      "requiredGroup": "Selecteer ten minste één optie.",
+      "numberInvalid": "Voer een getal binnen de aangegeven grenzen in."
+    },
+    "select": "Selecteer een optie",
+    "submit": "Offerte aanvragen",
+    "chooseProduct": "Kies het type verzekering",
+    "acknowledgement": {
+      "subject": "Aanvraag ontvangen — Adler & Rochefort",
+      "body": "Bedankt. Wij hebben uw aanvraag ontvangen en beoordelen de gegevens om offertes op te stellen."
+    },
+    "privacy": "Privacybeleid",
+    "enquirySubmit": "Vraag verzenden",
+    "enquiryIntro": "Vul voor een offerte het uitgebreide productformulier in. Gebruik dit contactformulier voor vragen."
   },
   "ramos": {
     "habitacao": {
@@ -56,16 +87,17 @@
       "regime_ocupacao_holiday_home": "Tweede woning / vakantiewoning",
       "regime_ocupacao_al": "Alojamento Local (kortetermijnverhuur)",
       "al_regime": "Soort kortetermijnverhuur",
-      "al_regime_tempo_inteiro": "Volledig",
-      "al_regime_parcial": "Gedeeltelijk (gedeeld gebruik van de woning)",
+      "al_regime_tempo_inteiro": "Voltijds AL",
+      "al_regime_parcial": "Deeltijds AL",
       "ano_construcao": "Bouwjaar",
       "area_bruta": "Bruto woonoppervlak (m²)",
       "casas_banho": "Aantal badkamers",
-      "obras_renovacao_check": "Heeft u de afgelopen jaren verbouwd?",
+      "obras_renovacao_check": "Renovaties uitgevoerd",
       "obras_ano": "Jaar van de verbouwing",
       "obras_descricao": "Beschrijf de uitgevoerde werkzaamheden",
       "capital_edificio": "Verzekerd bedrag gebouw (€)",
-      "capital_conteudo": "Verzekerd bedrag inboedel (€)"
+      "capital_conteudo": "Verzekerd bedrag inboedel (€)",
+      "morada_imovel": "Volledig adres van de woning"
     },
     "saude": {
       "titulo": "Zorgverzekering aanvragen",
@@ -77,7 +109,8 @@
       "pessoa_nascimento": "Geboortedatum",
       "pessoa_nif": "NIF (Portugees fiscaal nummer)",
       "pessoa_remover": "Deze persoon verwijderen",
-      "pessoa_adicionar": "+ Persoon toevoegen"
+      "pessoa_adicionar": "+ Persoon toevoegen",
+      "pessoas_numero": "Aantal te verzekeren personen"
     },
     "profissional": {
       "titulo": "Beroepsaansprakelijkheid aanvragen",
@@ -94,6 +127,13 @@
       "ramos_pretendidos_acidentes_trabalho": "Arbeidsongevallen",
       "ramos_pretendidos_multirriscos": "Multirisicoverzekering",
       "ramos_pretendidos_responsabilidade_civil": "Aansprakelijkheidsverzekering"
+    },
+    "auto": {
+      "titulo": "Autoverzekering offerte",
+      "subtitulo": "Vul de gegevens in om een offerte te ontvangen.",
+      "matricula": "Portugees kenteken",
+      "matricula_placeholder": "AA-00-AA",
+      "data_carta": "Datum afgifte rijbewijs"
     }
   },
   "countries": {

@@ -428,6 +428,7 @@
 
     <form name="se-hemforsakring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/se/#offert">
       <input type="hidden" name="form-name" value="se-hemforsakring-wizard">
+<input type="hidden" name="lang" value="sv">
       <input type="hidden" name="ramo" value="Hemförsäkring">
       <input type="hidden" name="source_url" id="se-hab-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -442,11 +443,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="se-hab-nome">Fullständigt namn *</label><input type="text" id="se-hab-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="se-hab-nif">NIF (portugisiskt skattenummer) *</label><input type="text" id="se-hab-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="se-hab-nascimento">Födelsedatum *</label><input type="date" id="se-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="se-hab-morada">Fullständig adress *</label><input type="text" id="se-hab-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="se-hab-nascimento">Födelsedatum *</label><input type="date" id="se-hab-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+        <div class="contact-form-field"><label for="se-hab-morada">Fastighetens fullständiga adress *</label><input type="text" id="se-hab-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="se-hab-localidade">Ort *</label><input type="text" id="se-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="se-hab-cp">Postnummer *</label><input type="text" id="se-hab-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="se-hab-telefone">Telefonnummer *</label><input type="tel" id="se-hab-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="se-hab-telefone">Telefonnummer *</label><input type="tel" id="se-hab-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="se-hab-email">E-postadress *</label><input type="email" id="se-hab-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="se-hab-nacionalidade">Nationalitet *</label>
@@ -480,16 +481,16 @@
             <label for="se-hab-al-regime">Typ av korttidsuthyrning *</label>
             <select id="se-hab-al-regime" name="al_regime" required disabled>
               <option value="">Välj</option>
-              <option value="tempo_inteiro">Heltid</option>
-              <option value="parcial">Deltid (delad användning av bostaden)</option>
+              <option value="tempo_inteiro">AL på heltid</option>
+              <option value="parcial">AL på deltid</option>
             </select>
           </div>
         </div>
         <div class="contact-form-field"><label for="se-hab-ano-construcao">Byggår *</label><input type="number" id="se-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-        <div class="contact-form-field"><label for="se-hab-area">Bruttoarea (m²) *</label><input type="number" id="se-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="se-hab-area">Bruttoarea (m²) *</label><input type="number" id="se-hab-area" name="area_bruta" min="1" required step="0.01"></div>
         <div class="contact-form-field"><label for="se-hab-wc">Antal badrum *</label><input type="number" id="se-hab-wc" name="casas_banho" min="0" required></div>
         <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="se-hab-obras-check"><input type="checkbox" id="se-hab-obras-check" data-field-toggle="se-hab-obras-group"> Har ni renoverat under de senaste åren?</label>
+          <label class="contact-form-checkbox" for="se-hab-obras-check"><input type="checkbox" id="se-hab-obras-check" data-field-toggle="se-hab-obras-group" name="obras_renovacao" value="sim"> Renoveringar utförda</label>
         </div>
         <div id="se-hab-obras-group" hidden>
           <div class="contact-form-field"><label for="se-hab-obras-ano">Renoveringsår *</label><input type="number" id="se-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>

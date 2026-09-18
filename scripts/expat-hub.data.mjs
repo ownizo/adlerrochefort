@@ -24,11 +24,11 @@
 export const PAGE = {
   slug: 'expat-insurance-portugal',
 
-  title: 'Insurance for Expats in Portugal | English-Speaking Insurance Intermediary',
+  title: 'Insurance for Expats in Portugal | English-Speaking Broker',
   description:
-    'Insurance for expats in Portugal, explained in English. Work out what health, home, landlord, car or life cover you actually need, and get a free written review from an ASF-registered intermediary.',
+    'Insurance for expats in Portugal, explained in English. Work out what health, home, landlord, car or life cover you actually need, and get a free written review from an ASF-registered broker.',
   keywords:
-    'insurance for expats in Portugal, expat insurance Portugal, insurance in Portugal for expats, expat insurance intermediary Portugal, insurance for foreigners in Portugal, insurance for foreign residents Portugal, insurance for international residents Portugal, English-speaking insurance intermediary Portugal',
+    'insurance for expats in Portugal, expat insurance Portugal, insurance in Portugal for expats, expat insurance broker Portugal, insurance for foreigners in Portugal, insurance for foreign residents Portugal, insurance for international residents Portugal, English-speaking insurance broker Portugal',
 
   crumb: 'Insurance for expats',
   eyebrow: 'For expats &amp; international residents in Portugal',
@@ -42,9 +42,9 @@ export const PAGE = {
   whatsapp: 'Hello, I am an expat in Portugal and would like help working out what insurance I need.',
 
   trustbar: [
-    '<strong>An intermediary, not one insurer.</strong> We hold distribution agreements with Allianz, Zurich, M&eacute;dis, Hiscox, MGEN, Asisa and Allianz Partners, and compare them for you.',
+    '<strong>A broker, not one insurer.</strong> We hold distribution agreements with Allianz, Zurich, M&eacute;dis, Hiscox, MGEN, Asisa and Allianz Partners, and compare them for you.',
     '<strong>Everything in English.</strong> The questions, the comparison, the renewal and the claim. Portuguese insurers issue the policy in Portuguese by law; you will know what it says before you sign.',
-    '<strong>More than one insurance line.</strong> Health, home, landlord, motor, life and specialist cover handled by the same people, so nothing falls between two independent intermediaries.',
+    '<strong>More than one insurance line.</strong> Health, home, landlord, motor, life and specialist cover handled by the same people, so nothing falls between two brokers.',
     '<strong>A written comparison in 24 hours.</strong> Free, no obligation, and no call centre.',
   ],
 
@@ -313,7 +313,7 @@ export const PAGE = {
         },
         {
           kind: 'note',
-          html: 'We are an insurance intermediary. We do not give immigration advice, and we do not tell you what a visa route requires &mdash; we arrange the insurance and explain what it does.',
+          html: 'We are an insurance broker. We do not give immigration advice, and we do not tell you what a visa route requires &mdash; we arrange the insurance and explain what it does.',
         },
       ],
     },
@@ -411,12 +411,12 @@ export const PAGE = {
       blocks: [
         {
           kind: 'p',
-          html: 'We are an insurance intermediary registered with the Portuguese supervisory authority (ASF) under no. 425591790/3, based in Lagos in the Algarve and working with international clients across Portugal. English is our working language.',
+          html: 'We are an insurance broker registered with the Portuguese supervisory authority (ASF) under no. 425591790/3, based in Lagos in the Algarve and working with international clients across Portugal. English is our working language.',
         },
         {
           kind: 'covers',
           items: [
-            { title: 'An intermediary, not an insurer', body: ' We hold agency agreements with several insurers and place your risk where it fits, rather than fitting you to one company&rsquo;s product.' },
+            { title: 'A broker, not an insurer', body: ' We hold agency agreements with several insurers and place your risk where it fits, rather than fitting you to one company&rsquo;s product.' },
             { title: 'Everything explained in English', body: ' The questions we ask, the comparison we send, the exclusions we read to you, and the renewal a year later.' },
             { title: 'Advice across more than one line', body: ' Health, home, letting, motor, life and specialist cover in one place, which is what most international households actually need.' },
             { title: 'Experience with international clients', body: ' Non-resident owners, second homes, foreign licences, company-held title and dual-country lives are ordinary work here, not exceptions.' },
@@ -589,10 +589,10 @@ export const PAGE = {
   chatTopics: ['parcerias_expat', 'sns_vs_privado', 'casa_geral', 'auto_expatriados', 'vida_hipoteca'],
 
   service: {
-    name: 'Insurance mediation for expats and international residents in Portugal',
-    type: 'Insurance mediation',
+    name: 'Insurance brokerage for expats and international residents in Portugal',
+    type: 'Insurance brokerage',
     description:
-      'English-speaking, ASF-registered insurance agency for expats, foreign residents and non-resident property owners in Portugal: health, home, landlord, motor, life and specialist cover compared across insurers and explained in English.',
+      'English-speaking, ASF-registered insurance brokerage for expats, foreign residents and non-resident property owners in Portugal: health, home, landlord, motor, life and specialist cover compared across insurers and explained in English.',
     audience: 'Expats, foreign residents and international property owners in Portugal',
   },
 };

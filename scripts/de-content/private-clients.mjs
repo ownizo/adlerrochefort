@@ -23,7 +23,7 @@ export const PRIVATE_CLIENTS_PAGE = {
   h1: 'Private Clients: Versicherung für komplexere Risiken',
   standfirst:
     'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken. Standardprodukte sind nicht für jedes Risiko gemacht — komplexe Vermögenswerte brauchen eine integrierte Risikoanalyse statt einer Police von der Stange.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Private Client Beratung anfragen',
   hreflang: {},
   langLinks: {},
@@ -94,7 +94,7 @@ export const PRIVATE_CLIENTS_PAGE = {
 <section class="section plain" aria-labelledby="uw">
   <div class="container narrow article-body">
     <h2 id="uw">Wer diese Risiken zeichnet</h2>
-    <p>Wir sind Versicherungsvermittler und an keinen dieser Zeichner gebunden — wo eine ordentlich aufgebaute Standardpolice denselben Zweck günstiger erfüllt, sagen wir das.</p>
+    <p>Wir sind Versicherungsmakler und an keinen dieser Zeichner gebunden — wo eine ordentlich aufgebaute Standardpolice denselben Zweck günstiger erfüllt, sagen wir das.</p>
     <h3>Hiscox</h3>
     <p>Hausratdeckung auf All-Risk-Basis, mit Kunst, Schmuck, Uhren und Sammlungen zu vereinbarten Werten, Deckung für Besitz außerhalb des Wohnsitzes und weltweit, sowie Familienhaftpflicht.</p>
     <h3>Liberty Mutual, über Innovarisk</h3>

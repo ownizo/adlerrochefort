@@ -21,7 +21,7 @@ export const HEALTH_PAGE = {
   h1: 'Krankenversicherung in Portugal: was Sie wirklich brauchen',
   standfirst:
     'Portugal hat ein öffentliches Gesundheitssystem, das auf dem Papier vollständig ist und in der Praxis an einem Punkt hakt: der Zeit. Diese Seite erklärt, was das SNS leistet, wo eine private Police den Unterschied macht, und welche Optionen bestehen, wenn Alter oder Vorerkrankungen die reguläre Aufnahme erschweren.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Deckung prüfen lassen',
   hreflang: {},
   langLinks: {},

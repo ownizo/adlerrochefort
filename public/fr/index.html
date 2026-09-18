@@ -995,42 +995,27 @@
         </ul>
       </div>
       <div class="lead-card">
-        <form id="leadForm" name="lead-fr" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/fr/#devis">
-          <input type="hidden" name="form-name" value="lead-fr">
-          <input type="hidden" name="source_url" value="">
-          <input type="hidden" name="lang" value="fr">
-          <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
-          <h3>Demander un devis</h3>
-          <p class="sub">Réponse sous 24 heures.</p>
-          <div class="field">
-            <label for="l-name">Nom *</label>
-            <input type="text" id="l-name" name="name" placeholder="Votre nom complet" required>
-          </div>
-          <div class="field">
-            <label for="l-email">E-mail *</label>
-            <input type="email" id="l-email" name="email" placeholder="vous@exemple.fr" required>
-          </div>
-          <div class="field">
-            <label for="l-phone">Téléphone / WhatsApp</label>
-            <input type="tel" id="l-phone" name="phone" placeholder="+33 …">
-          </div>
-          <div class="field">
-            <label for="l-type">Assurance souhaitée *</label>
-            <select id="l-type" name="insurance_type" required>
+        <nav class="quotation-routes" aria-label="Choisissez le type d’assurance"><p>Choisissez le type d’assurance</p><ul><li><a href="/fr/devis-auto/#quote-form">Devis d’assurance auto</a></li><li><a href="/fr/devis-habitacao/#quote-form">Devis d’assurance habitation</a></li><li><a href="/fr/devis-saude/#quote-form">Devis d’assurance santé</a></li><li><a href="/fr/devis-profissional/#quote-form">Devis de responsabilité civile professionnelle</a></li></ul></nav>
+<form id="leadForm" name="lead-fr" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/fr/#devis">
+<input type="hidden" name="form-name" value="lead-fr">
+<input type="hidden" name="source_url" value="">
+<input type="hidden" name="lang" value="fr">
+<input type="hidden" name="country" value="Portugal">
+<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="contact-form-field form-field field"><label for="l-name">Nom complet *</label><input type="text" id="l-name" name="name" required></div>
+<div class="contact-form-field form-field field"><label for="l-email">E-mail *</label><input type="email" id="l-email" name="email" required></div>
+<div class="contact-form-field form-field field"><label for="l-phone">Téléphone</label><input type="tel" id="l-phone" name="phone" placeholder="+351 …"></div>
+<div class="contact-form-field form-field field"><label for="lead-fr-empresa">Entreprise</label><input type="text" id="lead-fr-empresa" name="empresa"></div>
+<div class="contact-form-field form-field field"><label for="l-type">Choisissez le type d’assurance *</label><select id="l-type" name="insurance_type" required>
               <option value="" disabled selected>Choisissez…</option>
               <option value="Santé">Assurance santé</option>
               <option value="Habitation">Assurance habitation</option>
               <option value="Auto">Assurance auto</option>
               <option value="Plusieurs/conseil">Plusieurs / conseil général</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="l-msg">Votre message</label>
-            <textarea id="l-msg" name="message" placeholder="En bref, votre situation (lieu, arrivée, contrats actuels…)"></textarea>
-          </div>
-          <button type="submit" class="form-submit">Demander un devis gratuit</button>
-          <p class="form-consent">En envoyant ce formulaire, vous acceptez d'être contacté par Adler &amp; Rochefort. Voir la <a href="/en/privacy-policy">politique de confidentialité</a>.</p>
-        </form>
+            </select></div>
+<button type="submit" class="form-submit">Demander un devis gratuit</button>
+<p class="form-consent">En envoyant ce formulaire, vous acceptez d'être contacté par Adler &amp; Rochefort. Voir la <a href="/en/privacy-policy">politique de confidentialité</a>.</p>
+</form>
         <div class="form-success" id="leadSuccess">
           <div class="tick">&#10003;</div>
           <h3>Merci !</h3>

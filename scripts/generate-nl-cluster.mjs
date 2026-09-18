@@ -18,6 +18,7 @@
  * Run: node scripts/generate-nl-cluster.mjs
  * Then: node scripts/generate-sitemap.mjs
  */
+import { correctQuotationHtml, assertPreservesQuotationForms } from './lib/quotation-forms.mjs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -693,7 +694,8 @@ let written = 0;
 for (const page of PAGES) {
   const dir = join(PUBLIC, page.url.replace(/^\/|\/$/g, ''));
   await mkdir(dir, { recursive: true });
-  await writeFile(join(dir, 'index.html'), renderPage(page), 'utf8');
+  assertPreservesQuotationForms(join(dir, 'index.html'), renderPage(page));
+  await writeFile(join(dir, 'index.html'), correctQuotationHtml(renderPage(page), { homepage: page.url === '/de/' || page.url === '/nl/' }), 'utf8');
   written++;
   console.log(`  ✓ ${page.url}`);
 }

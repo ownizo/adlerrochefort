@@ -39,12 +39,12 @@ const ALGARVE_PAGE = {
   title: 'Versicherung Algarve für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung, Krankenversicherung und Autoversicherung für deutsche Eigentümer und Expats an der Algarve — Küstenlage, Ferienimmobilien, Pools und das private Klinik-Netzwerk vor Ort.',
-  keywords: 'Versicherung Algarve, Hausversicherung Algarve, Krankenversicherung Algarve, Ferienhaus Versicherung Algarve, Versicherungsvermittler Algarve Deutsche',
+  keywords: 'Versicherung Algarve, Hausversicherung Algarve, Krankenversicherung Algarve, Ferienhaus Versicherung Algarve, Versicherungsmakler Algarve Deutsche',
   eyebrow: 'Regional · Algarve',
   h1: 'Versicherung an der Algarve',
   standfirst:
     'Wir sitzen in Lagos, mitten in der Algarve — das ist keine Marketingaussage, sondern unsere registrierte Geschäftsadresse. Diese Seite ordnet ein, welche Risiken für deutsche Eigentümer und Expats an der Algarve tatsächlich zählen.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -118,12 +118,12 @@ const LAGOS_PAGE = {
   title: 'Versicherung Lagos für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung, Krankenversicherung und Autoversicherung in Lagos, Algarve — Altstadtwohnungen in propriedade horizontal, Marina und Boote, und der Sitz unseres Maklerbüros vor Ort.',
-  keywords: 'Versicherung Lagos, Hausversicherung Lagos Algarve, Versicherungsvermittler Lagos, Wohnungsversicherung Lagos Altstadt',
+  keywords: 'Versicherung Lagos, Hausversicherung Lagos Algarve, Versicherungsmakler Lagos, Wohnungsversicherung Lagos Altstadt',
   eyebrow: 'Regional · Lagos',
   h1: 'Versicherung in Lagos',
   standfirst:
     'Lagos ist nicht nur eine Stadt, die wir bedienen — es ist unsere registrierte Geschäftsadresse. Diese Seite behandelt die Themen, die in Lagos konkret vorkommen: Altstadtwohnungen, Marina und Boote, und die Übergänge zum westlichen Algarve-Hinterland.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -182,12 +182,12 @@ const LISSABON_PAGE = {
   title: 'Versicherung Lissabon für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung für Eigentumswohnungen in Lissabon: wo die Police der Eigentümergemeinschaft endet und Ihre eigene beginnt, plus Kranken- und Autoversicherung für deutsche Residenten.',
-  keywords: 'Versicherung Lissabon, Hausversicherung Lissabon, Eigentumswohnung Versicherung Lissabon, Versicherungsvermittler Lissabon Deutsche',
+  keywords: 'Versicherung Lissabon, Hausversicherung Lissabon, Eigentumswohnung Versicherung Lissabon, Versicherungsmakler Lissabon Deutsche',
   eyebrow: 'Regional · Lissabon',
   h1: 'Versicherung in Lissabon',
   standfirst:
     'Wir betreuen Kunden in Lissabon. Die Stadt bringt ein Thema besonders oft mit sich: hochwertige Eigentumswohnungen, deren Bausubstanz kollektiv über die Eigentümergemeinschaft versichert ist — und die Frage, wo diese Police endet.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -241,12 +241,12 @@ const CASCAIS_PAGE = {
   title: 'Versicherung Cascais für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung für Villen und Eigentumswohnungen in Cascais, Erdbebendeckung an der Costa do Estoril, sowie Kranken- und Autoversicherung für deutsche Residenten.',
-  keywords: 'Versicherung Cascais, Hausversicherung Cascais, Versicherungsvermittler Cascais Deutsche, Erdbebenversicherung Cascais',
+  keywords: 'Versicherung Cascais, Hausversicherung Cascais, Versicherungsmakler Cascais Deutsche, Erdbebenversicherung Cascais',
   eyebrow: 'Regional · Cascais',
   h1: 'Versicherung in Cascais',
   standfirst:
     'Wir betreuen Kunden in Cascais und an der Costa do Estoril. Zwischen hochwertigen Eigentumswohnungen und freistehenden Villen braucht jede Immobilie eine andere Antwort auf dieselbe Frage: Was deckt die Gebäudepolice, und was nicht?',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -298,12 +298,12 @@ const PORTIMAO_PAGE = {
   title: 'Versicherung Portimão für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung in Portimão: warum das Baujahr über die Erdbebendeckung entscheidet, wo die Police der Eigentümergemeinschaft endet, und was bei Vermietung zu beachten ist.',
-  keywords: 'Versicherung Portimão, Hausversicherung Portimão, Erdbebenversicherung Algarve, Versicherungsvermittler Portimão Deutsche, Eigentumswohnung Versicherung Portimão',
+  keywords: 'Versicherung Portimão, Hausversicherung Portimão, Erdbebenversicherung Algarve, Versicherungsmakler Portimão Deutsche, Eigentumswohnung Versicherung Portimão',
   eyebrow: 'Regional · Portimão',
   h1: 'Versicherung in Portimão',
   standfirst:
     'Wir betreuen Kunden in Portimão. Ein Teil des Wohnungsbestands der Stadt stammt aus den Jahrzehnten des touristischen Ausbaus — und genau das Baujahr ist bei einer portugiesischen Hausversicherung eine der ersten Fragen, die der Versicherer stellt.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -363,12 +363,12 @@ const CARVOEIRO_PAGE = {
   title: 'Versicherung Carvoeiro für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung in Carvoeiro: der Leerstand über den Winter, die Klippenlage am Barlavento-Küstenabschnitt, und was Ferienanlagen mit Eigentümergemeinschaft abdecken.',
-  keywords: 'Versicherung Carvoeiro, Hausversicherung Carvoeiro, Klippenversicherung Algarve, Ferienhaus Versicherung Carvoeiro, Versicherungsvermittler Carvoeiro Deutsche',
+  keywords: 'Versicherung Carvoeiro, Hausversicherung Carvoeiro, Klippenversicherung Algarve, Ferienhaus Versicherung Carvoeiro, Versicherungsmakler Carvoeiro Deutsche',
   eyebrow: 'Regional · Carvoeiro',
   h1: 'Versicherung in Carvoeiro',
   standfirst:
     'Wir betreuen Kunden in Carvoeiro. Der Concelho Lagoa hat einen der höchsten Zweitwohnsitz-Anteile, mit denen wir arbeiten, und die Klippenlage vieler Immobilien braucht eine Deckung, die genau das berücksichtigt.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -435,12 +435,12 @@ const VILAMOURA_PAGE = {
   title: 'Versicherung Vilamoura für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung und Bootsversicherung in Vilamoura: was der Liegeplatzvertrag der Marina verlangt, wo die Police der Ferienanlage endet, und was saisonale Nutzung bedeutet.',
-  keywords: 'Versicherung Vilamoura, Hausversicherung Vilamoura, Bootsversicherung Vilamoura Marina, Versicherungsvermittler Vilamoura Deutsche, Eigentumswohnung Versicherung Vilamoura',
+  keywords: 'Versicherung Vilamoura, Hausversicherung Vilamoura, Bootsversicherung Vilamoura Marina, Versicherungsmakler Vilamoura Deutsche, Eigentumswohnung Versicherung Vilamoura',
   eyebrow: 'Regional · Vilamoura',
   h1: 'Versicherung in Vilamoura',
   standfirst:
     'Wir betreuen Kunden in Vilamoura. Zwischen Marina, Eigentumswohnungen in Ferienanlagen und saisonaler Nutzung braucht kaum eine Immobilie hier dieselbe Antwort wie die nebenan.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -500,12 +500,12 @@ const QUINTA_DO_LAGO_PAGE = {
   title: 'Versicherung Quinta do Lago für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung in Quinta do Lago: was typischerweise nicht in der Versicherungssumme steckt, warum Hausangestellte eine eigene Police brauchen, und wo Private Clients ansetzt.',
-  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Luxusimmobilie Versicherung Algarve, Hausangestellte Versicherung Portugal, Versicherungsvermittler Quinta do Lago Deutsche',
+  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Luxusimmobilie Versicherung Algarve, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
   eyebrow: 'Regional · Quinta do Lago',
   h1: 'Versicherung in Quinta do Lago',
   standfirst:
     'Wir betreuen Kunden in Quinta do Lago. Bei hochwertigen Villen entscheidet selten die Hauptpolice über den Schaden — sondern das, was daneben steht und häufig gar nicht deklariert ist.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -571,12 +571,12 @@ const COMPORTA_PAGE = {
   title: 'Versicherung Comporta für deutsche Expats und Eigentümer | Adler & Rochefort',
   description:
     'Hausversicherung in Comporta: warum Reetdach und Holzbauweise über die Platzierung entscheiden, die Anfahrtszeit der Feuerwehr, und eine der höchsten seismischen Zonen des Festlands.',
-  keywords: 'Versicherung Comporta, Hausversicherung Comporta, Reetdach Versicherung Portugal, Erdbebenversicherung Comporta, Versicherungsvermittler Comporta Deutsche',
+  keywords: 'Versicherung Comporta, Hausversicherung Comporta, Reetdach Versicherung Portugal, Erdbebenversicherung Comporta, Versicherungsmakler Comporta Deutsche',
   eyebrow: 'Regional · Comporta',
   h1: 'Versicherung in Comporta',
   standfirst:
     'Wir betreuen Kunden in Comporta und Melides. Die Architektur, die die Region prägt, liegt außerhalb dessen, wofür eine Standard-Multirriscos-Police geschrieben wurde — ein Haus hier wird platziert, nicht einfach quotiert.',
-  heroMeta: 'Registrierter Versicherungsvermittler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},

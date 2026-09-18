@@ -1,3 +1,4 @@
+import { quotationRoutes } from '../lib/quotation-routes.mjs';
 import { PRIVATE_CLIENT_PAGES, privateClientPage } from './content.mjs';
 export { PRIVATE_CLIENT_PAGES, privateClientPage };
 const esc = s => String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
@@ -10,7 +11,7 @@ export function reviewForm(page) {
  const select=(name,label,options,required=false,selected='')=>`<label>${label}<select name="${name}"${required?' required':''}><option value="">${t('Please select','Bitte wählen')}</option>${options.map(([v,l])=>`<option value="${v}"${v===selected?' selected':''}>${l}</option>`).join('')}</select></label>`;
  const yesno=[['yes',t('Yes','Ja')],['no',t('No','Nein')],['unsure',t('Not sure','Unsicher')]];
  const cta=t('Request a confidential review','Vertrauliche Versicherungsanalyse anfragen');
- return `<section id="review" class="review"><span id="angebot"></span><h2>${cta}</h2><p>${t('Start with context. Please do not send tax numbers, identity documents, medical details or a full property address at this stage.','Beginnen Sie mit einem Überblick. Bitte senden Sie hier keine Steuernummern, Ausweisdokumente, medizinischen Details oder vollständigen Immobilienadressen.')}</p>
+ return `${page.country === 'Spain' ? '' : quotationRoutes(page.lang)}<section id="review" class="review"><span id="angebot"></span><h2>${cta}</h2><p>${t('Start with context. Please do not send tax numbers, identity documents, medical details or a full property address at this stage.','Beginnen Sie mit einem Überblick. Bitte senden Sie hier keine Steuernummern, Ausweisdokumente, medizinischen Details oder vollständigen Immobilienadressen.')}</p>
 <form name="${page.formName}" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-private-client-form>
 <input type="hidden" name="form-name" value="${page.formName}"><input type="hidden" name="language" value="${page.lang.toUpperCase()}"><input type="hidden" name="page_url" value="${page.url}"><input type="hidden" name="product" value="private-client">
 <p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>

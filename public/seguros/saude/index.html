@@ -130,6 +130,7 @@
   <p class="lp-form-sub">Envie os dados de quem quer segurar. Respondemos em 24 horas úteis.</p>
   <form name="cotacao-saude" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-saude">
+<input type="hidden" name="lang" value="pt">
     <input type="hidden" name="ramo" value="Saúde">
     <input type="hidden" name="source_url" id="cotacao-saude-source" value="">
     <input type="hidden" name="dados_dinamicos" value="">
@@ -148,7 +149,7 @@
       <div class="contact-form-field"><label for="sau-morada">Morada completa *</label><input type="text" id="sau-morada" name="morada" autocomplete="street-address" required></div>
       <div class="contact-form-field"><label for="sau-localidade">Localidade *</label><input type="text" id="sau-localidade" name="localidade" autocomplete="address-level2" required></div>
       <div class="contact-form-field"><label for="sau-cp">Código postal *</label><input type="text" id="sau-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-      <div class="contact-form-field"><label for="sau-telefone">Telefone / WhatsApp *</label><input type="tel" id="sau-telefone" name="telefone" autocomplete="tel" required></div>
+      <div class="contact-form-field"><label for="sau-telefone">Telefone / WhatsApp *</label><input type="tel" id="sau-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
       <div class="contact-form-field"><label for="sau-email">Email *</label><input type="email" id="sau-email" name="email" autocomplete="email" required></div>
       <div class="contact-form-field">
         <label for="sau-nacionalidade">Nacionalidade *</label>
@@ -170,6 +171,7 @@
     <div data-wizard-step hidden>
       <p class="wizard-helper" style="margin-bottom:16px;">É necessário o NIF português de cada pessoa a segurar, incluindo menores — sem ele não é possível emitir a proposta. Não pedimos aqui informação clínica: o questionário de saúde é feito diretamente com a seguradora, na fase de adesão.</p>
       <div data-persons-repeater>
+<div class="contact-form-field"><label for="quote-persons-count">Número de pessoas a segurar *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
         <div data-persons-list></div>
         <button type="button" class="wizard-nav-back" data-persons-add>+ Adicionar pessoa</button>
       </div>

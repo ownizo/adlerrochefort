@@ -2,7 +2,7 @@ import { Resend } from "resend";
 import { sendLeadToCrm, buildCrmLeadPayload } from "./lib/crm-sync.mjs";
 import { insertQuoteRequest } from "./lib/quote-requests-sync.mjs";
 import { parseDynamicFields } from "./lib/dynamic-fields.mjs";
-import { isTestModeSubmission } from "./lib/lead-classification.mjs";
+import { classifySubmission, isTestModeSubmission } from "./lib/lead-classification.mjs";
 // Static JSON imports, not a computed require()/fs.readFileSync() of a path
 // under data/ — same reasoning as netlify/functions/lib/plate.mjs: esbuild
 // only inlines a *static* import at bundle time, and a static one crossing
@@ -11,6 +11,7 @@ import { isTestModeSubmission } from "./lib/lead-classification.mjs";
 // nationality ISO code into a readable name for the notification email
 // (B3, Especificação v2) — dados_comuns.nacionalidade in quote_requests
 // keeps the raw code either way, see quote-requests-sync.mjs.
+import frQuoteFormStrings from "../../data/i18n/quote-form/fr.json" with { type: "json" };
 import ptQuoteFormStrings from "../../data/i18n/quote-form/pt.json" with { type: "json" };
 import enQuoteFormStrings from "../../data/i18n/quote-form/en.json" with { type: "json" };
 import deQuoteFormStrings from "../../data/i18n/quote-form/de.json" with { type: "json" };
@@ -777,6 +778,12 @@ const QUOTE_LABELS_BY_LANG = {
 // Exported so lead-classification.test.mjs can assert every key here also has
 // a CRM classification decision — see "CRM coverage" in that test file.
 export const HANDLED_FORMS = {
+  "fr-quote-auto": { quote:true, lang:"fr", heading:"Novo pedido de cotação — auto (fr)", page:"/fr/", branch:"auto" },
+  "fr-quote-habitacao": { quote:true, lang:"fr", heading:"Novo pedido de cotação — habitacao (fr)", page:"/fr/", branch:"habitacao" },
+  "fr-quote-saude": { quote:true, lang:"fr", heading:"Novo pedido de cotação — saude (fr)", page:"/fr/", branch:"saude" },
+  "fr-quote-profissional": { quote:true, lang:"fr", heading:"Novo pedido de cotação — profissional (fr)", page:"/fr/", branch:"profissional" },
+  "nl-quote-auto": { quote:true, lang:"nl", heading:"Novo pedido de cotação — auto (nl)", page:"/nl/", branch:"auto" },
+
   "private-client-review-portugal": {
     confidentialReview: true,
     quote: true, en: true, heading: "New confidential Private Client review — Portugal",
@@ -1819,6 +1826,7 @@ export function quoteIntro(formConfig, from) {
 // nunca ser enviada) — extraída para não duplicar a lógica nos dois sítios.
 // Pura: não faz I/O nenhum.
 export function buildIntakeEmail(formConfig, data, payload) {
+  data = { ...data, lang: data.lang || data.language || formConfig.lang || (formConfig.en ? "en" : "pt") };
   let rows;
   let subject;
   let intro;
@@ -1869,6 +1877,15 @@ export function buildIntakeEmail(formConfig, data, payload) {
   return { subject, html };
 }
 
+const acknowledgementStrings = { pt:ptQuoteFormStrings, en:enQuoteFormStrings, de:deQuoteFormStrings, nl:nlQuoteFormStrings, fr:frQuoteFormStrings, pl:plQuoteFormStrings, sv:svQuoteFormStrings, da:daQuoteFormStrings, zh:zhQuoteFormStrings, he:heQuoteFormStrings };
+export function buildCustomerAcknowledgement(formName, data) {
+  const language = String(classifySubmission(formName,data).language || data.lang || data.language || "pt").toLowerCase().slice(0,2);
+  const copy = (acknowledgementStrings[language] || acknowledgementStrings.pt).common.acknowledgement;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(data.email || ''))) return null;
+  return { from: "leads@adlerrochefort.com", to: data.email, replyTo: "insurance@adlerrochefort.com", subject: copy.subject,
+    html: `<div lang="${escapeHtml(language)}" dir="${language === 'he' ? 'rtl' : 'ltr'}"><p>${escapeHtml(copy.body)}</p><p>Adler &amp; Rochefort</p></div>` };
+}
+
 export default async (req) => {
   let body;
   try {
@@ -1887,6 +1904,7 @@ export default async (req) => {
   }
 
   const data = payload.data || {};
+  if (data["bot-field"]) return new Response("OK", { status: 200 });
 
   // Especificação v2, "restantes línguas" Parte 0 ponto 3 / Parte 4: o Hugo
   // não faz submissões manuais nesta fase, em nenhuma língua — o modo de
@@ -1921,6 +1939,7 @@ export default async (req) => {
   if (isTest) {
     const { subject, html } = buildIntakeEmail(formConfig, data, payload);
     testPayload.email = { subject, html };
+    testPayload.acknowledgement = buildCustomerAcknowledgement(formName, data);
     console.log(`[submission-created] TEST MODE formName=${formName} — email and CRM sync not sent, both payloads logged below instead`);
     console.log(`[submission-created] TEST_EMAIL subject=${JSON.stringify(subject)}`);
     console.log(`[submission-created] TEST_EMAIL_HTML ${html}`);
@@ -1930,16 +1949,28 @@ export default async (req) => {
     const { subject, html } = buildIntakeEmail(formConfig, data, payload);
     try {
       const resend = new Resend(process.env.RESEND_API_KEY);
-      await resend.emails.send({
+      const result = await resend.emails.send({
         from: "leads@adlerrochefort.com",
         to: "insurance@adlerrochefort.com",
         replyTo: data.email || undefined,
         subject,
         html,
       });
+      if (result.error) console.error("Failed to send intake notification email:", result.error.message);
     } catch (err) {
       console.error("Failed to send intake notification email:", err);
       // Do not fail the submission pipeline on email errors.
+    }
+  }
+
+  if (!isTest && process.env.RESEND_API_KEY) {
+    const acknowledgement = buildCustomerAcknowledgement(formName, data);
+    if (acknowledgement) {
+      try {
+        const result = await new Resend(process.env.RESEND_API_KEY).emails.send(acknowledgement,
+          payload.id ? { idempotencyKey: `quote-ack/${payload.id}` } : undefined);
+        if (result.error) console.error("Failed to send customer acknowledgement:", result.error.message);
+      } catch (err) { console.error("Failed to send customer acknowledgement:", err); }
     }
   }
 

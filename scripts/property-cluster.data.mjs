@@ -1257,7 +1257,7 @@ const earthquake = {
         {
           kind: 'note',
           html:
-            'What is <em>not</em> covered varies just as much: pre-existing structural defects, unauthorised construction, and damage to items excluded generally are typical carve-outs. As with every cover on this site, the wording of your own policy is what decides a claim &mdash; not a summary on an intermediary&rsquo;s website, including this one.',
+            'What is <em>not</em> covered varies just as much: pre-existing structural defects, unauthorised construction, and damage to items excluded generally are typical carve-outs. As with every cover on this site, the wording of your own policy is what decides a claim &mdash; not a summary on a broker&rsquo;s website, including this one.',
         },
       ],
     },
@@ -1593,7 +1593,7 @@ const landlord = {
         {
           kind: 'note',
           html:
-            'We are an intermediary, not a product manufacturer. If we cannot place something we say so; we would rather lose a quote than sell you a policy that does not do what you thought it did.',
+            'We are a broker, not a product manufacturer. If we cannot place something we say so; we would rather lose a quote than sell you a policy that does not do what you thought it did.',
         },
       ],
     },

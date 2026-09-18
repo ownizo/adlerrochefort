@@ -1,0 +1,62 @@
+{
+  "zh": {
+    "profissional": "/zh/liability-insurance-portugal/#baojia",
+    "habitacao": "/zh/home-insurance-portugal/#baojia",
+    "saude": "/zh/health-insurance-portugal/#baojia",
+    "auto": "/zh/car-insurance-portugal/#baojia"
+  },
+  "pt": {
+    "saude": "/seguros/saude/#pedido",
+    "profissional": "/seguros/responsabilidade-civil-profissional/#pedido",
+    "habitacao": "/seguros/habitacao/#pedido",
+    "auto": "/seguros/auto/#pedido"
+  },
+  "sv": {
+    "saude": "/se/sjukvardsforsakring-portugal/#offert",
+    "habitacao": "/se/hemforsakring-portugal/#offert",
+    "auto": "/se/bilforsakring-portugal/#offert",
+    "profissional": "/se/ansvarsforsakring-portugal/#offert"
+  },
+  "pl": {
+    "saude": "/pl/ubezpieczenie-zdrowotne-portugalia/#oferta",
+    "auto": "/pl/ubezpieczenie-samochodu-portugalia/#oferta",
+    "profissional": "/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/#oferta",
+    "habitacao": "/pl/ubezpieczenie-domu-portugalia/#oferta"
+  },
+  "nl": {
+    "profissional": "/nl/zzp-beroepsaansprakelijkheid-portugal/#offerte",
+    "saude": "/nl/zorgverzekering-portugal/#offerte",
+    "habitacao": "/nl/woonverzekering-portugal/#offerte",
+    "auto": "/nl/autoverzekering-portugal/#quote-form"
+  },
+  "he": {
+    "profissional": "/il/liability-insurance-portugal/#hatzaa",
+    "habitacao": "/il/home-insurance-portugal/#hatzaa",
+    "saude": "/il/health-insurance-portugal/#hatzaa",
+    "auto": "/il/car-insurance-portugal/#hatzaa"
+  },
+  "en": {
+    "profissional": "/en/professional-liability-insurance-portugal/#quote-form",
+    "habitacao": "/en/home-insurance-quote/#quote-form",
+    "saude": "/en/health-insurance-quote/#quote-form",
+    "auto": "/en/car-insurance-portugal/#quote-form"
+  },
+  "da": {
+    "saude": "/dk/sundhedsforsikring-portugal/#tilbud",
+    "habitacao": "/dk/husforsikring-portugal/#tilbud",
+    "auto": "/dk/bilforsikring-portugal/#tilbud",
+    "profissional": "/dk/ansvarsforsikring-portugal/#tilbud"
+  },
+  "de": {
+    "saude": "/de/krankenversicherung-portugal/#angebot",
+    "habitacao": "/de/hausversicherung-portugal/#angebot",
+    "profissional": "/de/berufshaftpflicht-freiberufler-portugal/#angebot",
+    "auto": "/de/autoversicherung-portugal/#angebot"
+  },
+  "fr": {
+    "auto": "/fr/devis-auto/#quote-form",
+    "habitacao": "/fr/devis-habitacao/#quote-form",
+    "saude": "/fr/devis-saude/#quote-form",
+    "profissional": "/fr/devis-profissional/#quote-form"
+  }
+}

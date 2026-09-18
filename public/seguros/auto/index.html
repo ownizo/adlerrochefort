@@ -152,6 +152,7 @@
   </div>
   <form name="seguro-auto" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/obrigado/">
     <input type="hidden" name="form-name" value="seguro-auto">
+<input type="hidden" name="lang" value="pt">
     <input type="hidden" name="ramo" value="Automóvel">
     <input type="hidden" name="source_url" id="seguro-auto-source" value="">
     <input type="hidden" name="dados_dinamicos" value="">
@@ -166,11 +167,11 @@
     <div data-wizard-step>
       <div class="contact-form-field"><label for="auto-nome">Nome completo *</label><input type="text" id="auto-nome" name="nome" autocomplete="name" required></div>
       <div class="contact-form-field"><label for="auto-nif">NIF *</label><input type="text" id="auto-nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" data-validate="nif" required></div>
-      <div class="contact-form-field"><label for="auto-nascimento">Data de nascimento *</label><input type="date" id="auto-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+      <div class="contact-form-field"><label for="auto-nascimento">Data de nascimento *</label><input type="date" id="auto-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
       <div class="contact-form-field"><label for="auto-morada">Morada completa *</label><input type="text" id="auto-morada" name="morada" autocomplete="street-address" required></div>
       <div class="contact-form-field"><label for="auto-localidade">Localidade *</label><input type="text" id="auto-localidade" name="localidade" autocomplete="address-level2" required></div>
       <div class="contact-form-field"><label for="auto-cp">Código postal *</label><input type="text" id="auto-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-      <div class="contact-form-field"><label for="auto-telefone">Telefone / WhatsApp *</label><input type="tel" id="auto-telefone" name="telefone" autocomplete="tel" required></div>
+      <div class="contact-form-field"><label for="auto-telefone">Telefone / WhatsApp *</label><input type="tel" id="auto-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
       <div class="contact-form-field"><label for="auto-email">Email *</label><input type="email" id="auto-email" name="email" autocomplete="email" required></div>
       <div class="contact-form-field">
         <label for="auto-nacionalidade">Nacionalidade *</label>

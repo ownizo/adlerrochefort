@@ -986,7 +986,7 @@ const LIFE_GUIDE = {
     <p>Moving to Spain is not, by itself, a reason to cancel an existing UK, EU or other international life policy. Before assuming it still works exactly as before, check with the insurer that issued it: its territorial scope, any residency conditions, whether the sum insured still makes sense in its original currency, whether beneficiaries are still correctly named, and whether the policy has its own continuation rules for a move abroad.</p>
 
     <h2 id="beneficiaries">Beneficiaries, briefly</h2>
-    <p>Naming beneficiaries deliberately, rather than leaving a policy to default, generally matters. Where Spanish succession or tax treatment of a payout becomes relevant, that is a question for a Spanish lawyer or tax adviser — not something a general guide, or an insurance intermediary, should attempt to answer.</p>
+    <p>Naming beneficiaries deliberately, rather than leaving a policy to default, generally matters. Where Spanish succession or tax treatment of a payout becomes relevant, that is a question for a Spanish lawyer or tax adviser — not something a general guide, or an insurance broker, should attempt to answer.</p>
 
     <h2 id="mortgage-link">How a mortgage fits in</h2>
     <p>If a Spanish mortgage is part of your situation, the question of what your lender actually requires versus what it merely offers is genuinely worth getting right before you assume either answer — see <a href="/en/blog/mortgage-life-insurance-spain/">do you need life insurance for a mortgage in Spain?</a> for the detail.</p>

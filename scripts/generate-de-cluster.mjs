@@ -24,6 +24,7 @@ import { privateClientPage, renderPrivateClient, PRIVATE_CLIENT_PAGES } from './
  * Run: node scripts/generate-de-cluster.mjs
  * Then: node scripts/generate-sitemap.mjs
  */
+import { correctQuotationHtml, assertPreservesQuotationForms } from './lib/quotation-forms.mjs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -437,7 +438,7 @@ ${branchGroupsHtml()}
       </div>
 
       <button type="submit" class="form-submit" id="angebotSubmit">${page.formCta || 'Angebot anfragen'}</button>
-      <p class="form-footnote">Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., registrierter Versicherungsvermittler bei der ASF unter Nr. 425591790/3.</p>
+      <p class="form-footnote">Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., registrierter Versicherungsmakler bei der ASF unter Nr. 425591790/3.</p>
     </form>
     <div class="form-success" id="angebotSuccess">
       <div class="tick">&#10003;</div>
@@ -454,10 +455,10 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Versicherungsvermittler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
+      <p class="footer-brand-desc">Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
-        Registrierter Versicherungsvermittler — ASF Nr. 425591790/3
+        Registrierter Versicherungsmakler — ASF Nr. 425591790/3
       </div>
     </div>
     <div>
@@ -753,7 +754,7 @@ ${PRIVATE_CLIENT_NAV_STYLE}
 
 <a class="skip-link" href="#main">Direkt zum Inhalt</a>
 
-<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsvermittler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
+<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
 
 <header class="site-header">
   <nav class="site-nav on-dark" aria-label="Hauptnavigation">
@@ -820,7 +821,8 @@ for (const page of [...PAGES, ...PRIVATE_CLIENT_PAGES.filter(p => p.lang === 'de
   if (process.argv.includes('--private-clients-only') && !privateClientPage(page.url)) continue;
   const dir = join(PUBLIC, page.url.replace(/^\/|\/$/g, ''));
   await mkdir(dir, { recursive: true });
-  await writeFile(join(dir, 'index.html'), renderPage(page), 'utf8');
+  assertPreservesQuotationForms(join(dir, 'index.html'), renderPage(page));
+  await writeFile(join(dir, 'index.html'), correctQuotationHtml(renderPage(page), { homepage: page.url === '/de/' || page.url === '/nl/' }), 'utf8');
   written++;
   console.log(`  ✓ ${page.url}`);
 }

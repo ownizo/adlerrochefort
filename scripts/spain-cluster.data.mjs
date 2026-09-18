@@ -253,7 +253,7 @@ const HUB = {
         },
         {
           kind: 'note',
-          html: 'Not sure where you fit? <a href="/en/insurance-review/?market=Spain">Start an insurance review</a> instead and tell us what you need help with — one form, one insurance intermediary.',
+          html: 'Not sure where you fit? <a href="/en/insurance-review/?market=Spain">Start an insurance review</a> instead and tell us what you need help with — one form, one broker.',
         },
       ],
     },

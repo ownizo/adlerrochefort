@@ -360,7 +360,7 @@ ${crossSellField(page)}
       <div class="lp-next-steps-title">What happens next?</div>
       <ol>
         <li>We receive your request</li>
-        <li>An intermediary reviews the information</li>
+        <li>A broker reviews the information</li>
         <li>We may contact you for anything missing</li>
         <li>We explain the available options — you decide whether to proceed</li>
       </ol>

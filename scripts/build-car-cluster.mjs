@@ -42,6 +42,7 @@
  * something that exists on disk. Any of those failing throws, so a broken
  * page never reaches public/.
  */
+import { correctQuotationHtml } from './lib/quotation-forms.mjs';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -93,7 +94,7 @@ const json = (obj) => JSON.stringify(obj, null, 2);
 
 const nav = (page) => `
 <!-- NAV -->
-<div class="asf-top-bar">ASF-registered insurance intermediary n.º 425591790/3 — <a href="#quote-form">${esc(page.topBarCta)}</a></div>
+<div class="asf-top-bar">ASF-registered insurance broker n.º 425591790/3 — <a href="#quote-form">${esc(page.topBarCta)}</a></div>
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-links-left">
     <a href="/en/#services">Services</a>
@@ -146,7 +147,7 @@ const FOOTER = `
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">English-speaking, ASF-registered insurance intermediary in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
+      <p class="footer-brand-desc">English-speaking, ASF-registered insurance broker in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
     </div>
     <div>
       <div class="footer-col-title">Home &amp; Property</div>
@@ -331,7 +332,7 @@ ${fieldRows(page.form.fields)}
       <button type="submit" class="contact-form-submit">${esc(page.form.submit)} &rarr;</button>
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
-    <div class="lp-form-trust"><span>ASF-registered insurance intermediary</span><span>English-speaking team</span><span>Not tied to one insurer</span><span>We handle the claim for you</span><span>We reply within 24h</span></div>
+    <div class="lp-form-trust"><span>ASF-registered insurance broker</span><span>English-speaking team</span><span>Not tied to one insurer</span><span>We handle the claim for you</span><span>We reply within 24h</span></div>
     <div class="contact-form-success" id="quoteSuccess">
       <div class="contact-form-success-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -677,7 +678,7 @@ for (const page of PAGES) {
     if (map.has(value)) throw new Error(`duplicate ${what} on /en/${page.slug}/ and /en/${map.get(value)}/`);
     map.set(value, page.slug);
   }
-  const html = render(page);
+  const html = correctQuotationHtml(render(page));
   validate(page, html, pending);
   rendered.push([page, html]);
 }

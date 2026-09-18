@@ -23,7 +23,8 @@
       "residente_fiscal": "您是否为葡萄牙税务居民？",
       "residente_fiscal_sim": "是",
       "residente_fiscal_nao": "否",
-      "rgpd_consentimento": "本人同意根据《通用数据保护条例》（GDPR），使用本人提供的信息以准备本报价。"
+      "rgpd_consentimento": "本人同意根据《通用数据保护条例》（GDPR），使用本人提供的信息以准备本报价。",
+      "empresa": "公司"
     },
     "helpers": {
       "residente_fiscal_nao_info": "地址信息仍然需要。如果您不是葡萄牙税务居民，某些情况下可能无法签发保单——我们仍会评估您的具体情况。",
@@ -45,7 +46,37 @@
     "success": {
       "titulo": "谢谢！",
       "corpo": "我们已收到您的申请，将在24个工作小时内处理并回复。"
-    }
+    },
+    "runtime": {
+      "required": "请填写此字段。",
+      "email": "请输入有效的电子邮箱地址，例如 name@email.com。",
+      "sending": "正在发送…",
+      "failed": "您的申请无法发送。请检查您的网络连接并重试——您填写的内容不会丢失。",
+      "nif": "请输入有效的葡萄牙税号（NIF），共9位数字。",
+      "postalCode": "请输入格式为 0000-000 的邮政编码。",
+      "plate": "请输入有效的葡萄牙车牌号。",
+      "startDate": "起保日期不能早于今天。",
+      "licenceDate": "驾照签发日期不能早于投保人的出生日期，也不能是将来的日期。",
+      "licenceBeforeAge16": "该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。",
+      "renovationYear": "翻修年份不能早于建造年份，也不能晚于当前年份。",
+      "residenteFiscal": "请说明您是否为葡萄牙税务居民。",
+      "rgpd": "您必须同意后我们才能准备报价。",
+      "birthDate": "出生日期不能是将来的日期。",
+      "birthDateAdult": "投保人必须年满18岁。",
+      "tooShort": "请至少输入 {min} 个字符。",
+      "requiredGroup": "请至少选择一项。",
+      "numberInvalid": "请输入指定范围内的数字。"
+    },
+    "select": "请选择",
+    "submit": "申请报价",
+    "chooseProduct": "选择保险类型",
+    "acknowledgement": {
+      "subject": "已收到申请 — Adler & Rochefort",
+      "body": "谢谢。我们已收到您的申请，将审核所提供的信息以准备保险报价。"
+    },
+    "privacy": "隐私政策",
+    "enquirySubmit": "发送咨询",
+    "enquiryIntro": "如需报价，请填写产品详细表格。此联系表格用于咨询问题。"
   },
   "ramos": {
     "habitacao": {
@@ -56,16 +87,17 @@
       "regime_ocupacao_holiday_home": "度假屋 / 第二居所",
       "regime_ocupacao_al": "Alojamento Local（短期出租）",
       "al_regime": "短期出租类型",
-      "al_regime_tempo_inteiro": "全部",
-      "al_regime_parcial": "部分（与房东共用住所）",
+      "al_regime_tempo_inteiro": "全年短租（AL）",
+      "al_regime_parcial": "部分时间短租（AL）",
       "ano_construcao": "建造年份",
       "area_bruta": "建筑总面积（平方米）",
       "casas_banho": "卫生间数量",
-      "obras_renovacao_check": "近年是否进行过翻修？",
+      "obras_renovacao_check": "已进行翻修",
       "obras_ano": "翻修年份",
       "obras_descricao": "请描述已完成的工程",
       "capital_edificio": "建筑保险金额（欧元）",
-      "capital_conteudo": "室内财产保险金额（欧元）"
+      "capital_conteudo": "室内财产保险金额（欧元）",
+      "morada_imovel": "房产完整地址"
     },
     "saude": {
       "titulo": "申请医疗保险报价",
@@ -77,7 +109,8 @@
       "pessoa_nascimento": "出生日期",
       "pessoa_nif": "NIF（葡萄牙税号）",
       "pessoa_remover": "移除此人",
-      "pessoa_adicionar": "+ 添加人员"
+      "pessoa_adicionar": "+ 添加人员",
+      "pessoas_numero": "投保人数"
     },
     "auto": {
       "titulo": "申请汽车保险报价",
