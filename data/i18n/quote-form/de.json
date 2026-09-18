@@ -23,7 +23,8 @@
       "residente_fiscal": "Sind Sie in Portugal steuerlich ansässig?",
       "residente_fiscal_sim": "Ja",
       "residente_fiscal_nao": "Nein",
-      "rgpd_consentimento": "Ich stimme zu, dass meine Angaben zur Vorbereitung dieses Angebots verwendet werden, gemäß der DSGVO."
+      "rgpd_consentimento": "Ich stimme zu, dass meine Angaben zur Vorbereitung dieses Angebots verwendet werden, gemäß der DSGVO.",
+      "empresa": "Unternehmen"
     },
     "helpers": {
       "residente_fiscal_nao_info": "Die Anschrift wird weiterhin benötigt. Ohne steuerlichen Wohnsitz in Portugal ist die Ausstellung der Police möglicherweise nicht in allen Fällen möglich — wir prüfen Ihre konkrete Situation trotzdem.",
@@ -45,7 +46,37 @@
     "success": {
       "titulo": "Vielen Dank!",
       "corpo": "Ihre Anfrage ist eingegangen. Wir bearbeiten sie und antworten innerhalb von 24 Arbeitsstunden."
-    }
+    },
+    "runtime": {
+      "required": "Bitte füllen Sie dieses Feld aus.",
+      "email": "Geben Sie eine gültige E-Mail-Adresse ein, zum Beispiel name@email.com.",
+      "sending": "Wird gesendet…",
+      "failed": "Ihre Anfrage konnte nicht gesendet werden. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut — nichts von dem, was Sie eingegeben haben, ist verloren gegangen.",
+      "nif": "Geben Sie eine gültige portugiesische Steuernummer (NIF) mit 9 Ziffern ein.",
+      "postalCode": "Geben Sie eine Postleitzahl im Format 0000-000 ein.",
+      "plate": "Geben Sie ein gültiges portugiesisches Kennzeichen ein.",
+      "startDate": "Das Startdatum darf nicht vor heute liegen.",
+      "licenceDate": "Das Datum des Führerscheins darf nicht vor dem Geburtsdatum des Versicherungsnehmers liegen, noch in der Zukunft.",
+      "licenceBeforeAge16": "Das liegt vor dem 16. Geburtstag des Versicherungsnehmers — wir akzeptieren es trotzdem, bitte prüfen Sie aber, ob das Datum korrekt ist.",
+      "renovationYear": "Das Renovierungsjahr darf nicht vor dem Baujahr liegen oder nach dem aktuellen Jahr.",
+      "residenteFiscal": "Geben Sie an, ob Sie in Portugal steuerlich ansässig sind.",
+      "rgpd": "Sie müssen zustimmen, damit wir das Angebot vorbereiten können.",
+      "birthDate": "Das Geburtsdatum darf nicht in der Zukunft liegen.",
+      "birthDateAdult": "Der Versicherungsnehmer muss mindestens 18 Jahre alt sein.",
+      "tooShort": "Schreiben Sie mindestens {min} Zeichen.",
+      "requiredGroup": "Wählen Sie mindestens eine Option aus.",
+      "numberInvalid": "Geben Sie eine Zahl innerhalb der angegebenen Grenzen ein."
+    },
+    "select": "Bitte wählen",
+    "submit": "Angebot anfordern",
+    "chooseProduct": "Versicherungsart auswählen",
+    "acknowledgement": {
+      "subject": "Anfrage erhalten — Adler & Rochefort",
+      "body": "Vielen Dank. Wir haben Ihre Anfrage erhalten und prüfen die Angaben zur Erstellung von Versicherungsangeboten."
+    },
+    "privacy": "Datenschutzerklärung",
+    "enquirySubmit": "Kontaktanfrage senden",
+    "enquiryIntro": "Für ein Angebot füllen Sie bitte das ausführliche Produktformular aus. Dieses Kontaktformular dient Ihren Fragen."
   },
   "ramos": {
     "auto": {
@@ -63,16 +94,17 @@
       "regime_ocupacao_holiday_home": "Ferienwohnsitz",
       "regime_ocupacao_al": "Alojamento Local (Kurzzeitvermietung)",
       "al_regime": "Art der Kurzzeitvermietung",
-      "al_regime_tempo_inteiro": "Vollständig",
-      "al_regime_parcial": "Teilweise (gemeinsame Nutzung der Wohnung)",
+      "al_regime_tempo_inteiro": "Ganzjährige AL-Nutzung",
+      "al_regime_parcial": "Zeitweise AL-Nutzung",
       "ano_construcao": "Baujahr",
       "area_bruta": "Bruttobaufläche (m²)",
       "casas_banho": "Anzahl der Badezimmer",
-      "obras_renovacao_check": "Haben Sie in den letzten Jahren renoviert?",
+      "obras_renovacao_check": "Renovierungen durchgeführt",
       "obras_ano": "Jahr der Renovierung",
       "obras_descricao": "Beschreiben Sie die durchgeführten Arbeiten",
       "capital_edificio": "Versicherungssumme Gebäude (€)",
-      "capital_conteudo": "Versicherungssumme Hausrat (€)"
+      "capital_conteudo": "Versicherungssumme Hausrat (€)",
+      "morada_imovel": "Vollständige Anschrift der Immobilie"
     },
     "saude": {
       "titulo": "Krankenversicherung anfragen",
@@ -84,7 +116,8 @@
       "pessoa_nascimento": "Geburtsdatum",
       "pessoa_nif": "NIF (portugiesische Steuernummer)",
       "pessoa_remover": "Diese Person entfernen",
-      "pessoa_adicionar": "+ Person hinzufügen"
+      "pessoa_adicionar": "+ Person hinzufügen",
+      "pessoas_numero": "Anzahl der zu versichernden Personen"
     },
     "profissional": {
       "titulo": "Berufshaftpflicht anfragen",

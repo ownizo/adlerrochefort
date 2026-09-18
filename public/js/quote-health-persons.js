@@ -57,31 +57,97 @@
   // page silently got before this fix, so no currently-correct page's
   // behaviour changes).
   var COPY = {
-    pt: { name: 'Nome completo', dob: 'Data de nascimento', nif: 'NIF', nifPlaceholder: 'Número de contribuinte', remove: 'Remover esta pessoa', person: 'Pessoa' },
-    en: { name: 'Full name', dob: 'Date of birth', nif: 'Portuguese tax number (NIF)', nifPlaceholder: '9 digits', remove: 'Remove this person', person: 'Person' },
-    de: { name: 'Vollständiger Name', dob: 'Geburtsdatum', nif: 'NIF (portugiesische Steuernummer)', nifPlaceholder: '9 Ziffern', remove: 'Diese Person entfernen', person: 'Person' },
-    // Especificação v2, Parte A (NL) — NL Saúde (zorgverzekering) is the
-    // first NL page to use this repeater.
-    nl: { name: 'Volledige naam', dob: 'Geboortedatum', nif: 'NIF (Portugees fiscaal nummer)', nifPlaceholder: '9 cijfers', remove: 'Deze persoon verwijderen', person: 'Persoon' },
-    // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
-    // converted together.
-    pl: { name: 'Imię i nazwisko', dob: 'Data urodzenia', nif: 'NIF (portugalski numer podatkowy)', nifPlaceholder: '9 cyfr', remove: 'Usuń tę osobę', person: 'Osoba' },
-    sv: { name: 'Fullständigt namn', dob: 'Födelsedatum', nif: 'NIF (portugisiskt skattenummer)', nifPlaceholder: '9 siffror', remove: 'Ta bort denna person', person: 'Person' },
-    da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF (portugisisk skattenummer)', nifPlaceholder: '9 cifre', remove: 'Fjern denne person', person: 'Person' },
-    zh: { name: '全名', dob: '出生日期', nif: 'NIF（葡萄牙税号）', nifPlaceholder: '9位数字', remove: '移除此人', person: '被保险人' },
-    // Especificação v2, Parte C — Hebrew, Saúde ramo.
-    // nifPlaceholder is bare "9", not "9 ספרות" ("9 digits") — matches the
-    // main wizard's own NIF field placeholder (scripts/lib/market-
-    // cluster.mjs's wizardFormHtml uses `placeholder="9"` for every
-    // language). Found live: with this field's dir="ltr" (see ltrAttr
-    // above), a placeholder mixing a digit with a following Hebrew word —
-    // "9 ספרות" — reordered under the forced LTR base direction (rendered
-    // "ספרות 9", the word before the number) exactly the bug iso()'s own
-    // comment describes for phone numbers, just with a word instead of a
-    // second digit group. A bare digit has no Hebrew content to reorder
-    // against, so it renders correctly regardless of dir.
-    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF (מספר זיהוי פורטוגזי)', nifPlaceholder: '9', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
-  };
+  "pt": {
+    "name": "Nome completo",
+    "dob": "Data de nascimento",
+    "nif": "NIF",
+    "nifPlaceholder": "123456789",
+    "remove": "Remover esta pessoa",
+    "person": "Pessoa",
+    "count": "Número de pessoas a segurar"
+  },
+  "en": {
+    "name": "Full name",
+    "dob": "Date of birth",
+    "nif": "Portuguese tax number (NIF)",
+    "nifPlaceholder": "123456789",
+    "remove": "Remove this person",
+    "person": "Person",
+    "count": "Number of people to insure"
+  },
+  "nl": {
+    "name": "Volledige naam",
+    "dob": "Geboortedatum",
+    "nif": "NIF (Portugees fiscaal nummer)",
+    "nifPlaceholder": "123456789",
+    "remove": "Deze persoon verwijderen",
+    "person": "Persoon",
+    "count": "Aantal te verzekeren personen"
+  },
+  "de": {
+    "name": "Vollständiger Name",
+    "dob": "Geburtsdatum",
+    "nif": "NIF (portugiesische Steuernummer)",
+    "nifPlaceholder": "123456789",
+    "remove": "Diese Person entfernen",
+    "person": "Person",
+    "count": "Anzahl der zu versichernden Personen"
+  },
+  "fr": {
+    "name": "Nom complet",
+    "dob": "Date de naissance",
+    "nif": "NIF (numéro fiscal portugais)",
+    "nifPlaceholder": "123456789",
+    "remove": "Retirer cette personne",
+    "person": "Personne",
+    "count": "Nombre de personnes à assurer"
+  },
+  "pl": {
+    "name": "Imię i nazwisko",
+    "dob": "Data urodzenia",
+    "nif": "NIF (portugalski numer podatkowy)",
+    "nifPlaceholder": "123456789",
+    "remove": "Usuń tę osobę",
+    "person": "Osoba",
+    "count": "Liczba osób do ubezpieczenia"
+  },
+  "sv": {
+    "name": "Fullständigt namn",
+    "dob": "Födelsedatum",
+    "nif": "NIF (portugisiskt skattenummer)",
+    "nifPlaceholder": "123456789",
+    "remove": "Ta bort denna person",
+    "person": "Person",
+    "count": "Antal personer att försäkra"
+  },
+  "da": {
+    "name": "Fulde navn",
+    "dob": "Fødselsdato",
+    "nif": "NIF (portugisisk skattenummer)",
+    "nifPlaceholder": "123456789",
+    "remove": "Fjern denne person",
+    "person": "Person",
+    "count": "Antal personer, der skal forsikres"
+  },
+  "zh": {
+    "name": "全名",
+    "dob": "出生日期",
+    "nif": "NIF（葡萄牙税号）",
+    "nifPlaceholder": "123456789",
+    "remove": "移除此人",
+    "person": "被保险人",
+    "count": "投保人数"
+  },
+  "he": {
+    "name": "שם מלא",
+    "dob": "תאריך לידה",
+    "nif": "⁦NIF⁩",
+    "nifPlaceholder": "123456789",
+    "remove": "הסרת מבוטח זה",
+    "person": "מבוטח",
+    "count": "מספר האנשים לביטוח"
+  }
+};
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;
   // Especificação v2, Parte C — this repeater builds its markup as a raw
@@ -153,7 +219,9 @@
     var addBtn = container.querySelector('[data-persons-add]');
     if (!list || !addBtn) return;
 
+    var count = container.querySelector('[data-persons-count]');
     function sync() {
+      if (count) count.value = list.querySelectorAll('[data-person-block]').length;
       wizard.setDynamicBlocks(collectBlocks(list));
     }
 
@@ -177,11 +245,27 @@
     });
     addBtn.addEventListener('click', addPerson);
 
+    if (count) count.addEventListener('change', function () {
+      var n = Number(count.value);
+      if (!Number.isInteger(n) || n < 1 || n > MAX_PERSONS) return;
+      while (list.children.length < n) list.appendChild(buildBlock());
+      while (list.children.length > n) list.lastElementChild.remove();
+      renumber(list); sync();
+    });
+
     // Every wizard page this mechanism serves starts with exactly one
     // person — the common case (insuring yourself, or yourself plus a
     // household you then add to), never zero: pessoas_seguras with nothing
     // in it is not a meaningful submission for this ramo.
-    addPerson();
+    var restored = wizard.getDynamicBlocks();
+    if (restored.length) {
+      restored.slice(0, MAX_PERSONS).forEach(function (person) {
+        var card = buildBlock();
+        ['nome','data_nascimento','nif'].forEach(function (key) { card.querySelector('[data-person-field="'+key+'"]').value = person[key] || ''; });
+        list.appendChild(card);
+      });
+      renumber(list); sync();
+    } else addPerson();
   }
 
   function init() {

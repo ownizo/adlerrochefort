@@ -439,7 +439,8 @@
     <p class="form-intro">Skriv vad som ska skyddas och från när. Vi svarar med vilka uppgifter som behövs och vad som realistiskt går att ordna.</p>
     <p class="form-lang-note">Formuläret är på svenska. Vi svarar och sköter ärendet på engelska, skriftligt.</p>
 
-    <form
+    <nav class="quotation-routes" aria-label="Välj försäkringstyp"><p>Välj försäkringstyp</p><ul><li><a href="/se/sjukvardsforsakring-portugal/#offert">Begär offert på sjukvårdsförsäkring</a></li><li><a href="/se/hemforsakring-portugal/#offert">Begär hemförsäkring</a></li><li><a href="/se/bilforsakring-portugal/#offert">Begär offert på bilförsäkring</a></li><li><a href="/se/ansvarsforsakring-portugal/#offert">Begär offert på ansvarsförsäkring</a></li></ul></nav>
+<form
       class="lead-form"
       id="leadForm"
       name="se-offertforfragan"
@@ -447,155 +448,32 @@
       data-netlify="true"
       netlify-honeypot="bot-field"
       action="/se/#offert"
-      novalidate>
-
-      <input type="hidden" name="form-name" value="se-offertforfragan">
-      <input type="hidden" name="source" value="se">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="subject" value="Ny förfrågan (SE) — Allmän förfrågan (SE)">
-      <input type="hidden" name="language" value="sv">
-      <input type="hidden" name="market" value="sweden">
-      <input type="hidden" name="product_interest" value="">
-      <p class="visually-hidden"><label>Fyll inte i detta fält <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <div class="field">
-        <label for="f-name">Namn <span class="req" aria-hidden="true">*</span></label>
-        <input type="text" id="f-name" name="name" autocomplete="name"
-               required aria-required="true" aria-describedby="err-name">
-        <span class="field-error" id="err-name" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-email">E-postadress <span class="req" aria-hidden="true">*</span></label>
-        <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
-               required aria-required="true" aria-describedby="err-email">
-        <span class="field-error" id="err-email" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
-        <p class="field-help" id="help-phone">Ange numret med landsnummer, t.ex. +46 70 123 45 67.</p>
-        <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
-        <span class="field-error" id="err-phone" aria-live="polite"></span>
-      </div>
-
-      <div class="field">
-        <label for="f-localidade">Ort i Portugal</label>
-        <input type="text" id="f-localidade" name="localidade" placeholder="t.ex. Lissabon, Cascais, Lagos, Albufeira">
-      </div>
-
-      <div class="field">
-        <label for="f-country">Land du bor i nu</label>
-        <input type="text" id="f-country" name="country" autocomplete="country-name" placeholder="t.ex. Sverige">
-      </div>
-
-      <div class="field">
-        <label for="f-residence">Din status i Portugal</label>
-        <select id="f-residence" name="residence_status">
-          <option value="" selected>Välj</option>
-          <option value="Planning move">Planerar att flytta</option>
-          <option value="Recently arrived">Nyligen flyttat hit</option>
-          <option value="Resident">Bosatt i Portugal</option>
-          <option value="Non-resident owner">Äger bostad men bor inte här permanent</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-type">Vad gäller förfrågan? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+     >
+<input type="hidden" name="form-name" value="se-offertforfragan">
+<input type="hidden" name="source" value="se">
+<input type="hidden" name="source_url" value="">
+<input type="hidden" name="landing_page" value="">
+<input type="hidden" name="subject" value="Ny förfrågan (SE) — Allmän förfrågan (SE)">
+<input type="hidden" name="language" value="sv">
+<input type="hidden" name="market" value="sweden">
+<input type="hidden" name="product_interest" value="">
+<input type="hidden" name="country" value="Portugal">
+<p hidden><label>Leave empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="contact-form-field form-field field"><label for="f-name">Fullständigt namn *</label><input type="text" id="f-name" name="name" required></div>
+<div class="contact-form-field form-field field"><label for="f-email">E-postadress *</label><input type="email" id="f-email" name="email" required></div>
+<div class="contact-form-field form-field field"><label for="f-phone">Telefonnummer</label><input type="tel" id="f-phone" name="phone" placeholder="+351 …"></div>
+<div class="contact-form-field form-field field"><label for="se-offertforfragan-empresa">Företag</label><input type="text" id="se-offertforfragan-empresa" name="empresa"></div>
+<div class="contact-form-field form-field field"><label for="f-type">Välj försäkringstyp *</label><select id="f-type" name="insurance_type" aria-required="true" aria-describedby="err-type" required>
           <option value="" disabled selected>Välj</option>
           <option value="SE · Hem">Hem- eller villaförsäkring</option>
           <option value="SE · Sjukvård">Sjukvårdsförsäkring</option>
           <option value="SE · Bil">Bilförsäkring</option>
           <option value="SE · Ansvar">Ansvarsförsäkring (privat eller yrkesmässig)</option>
           <option value="SE · Annat">Annat eller vet inte än</option>
-        </select>
-        <span class="field-error" id="err-type" aria-live="polite"></span>
-      </div>
+        </select></div>
+<button type="submit" class="form-submit" id="leadSubmit">Skicka förfrågan</button>
 
-        <div class="form-branch-fields" data-branch="SE · Hem" hidden>
-          <span class="form-branch-legend">Några uppgifter om bostaden</span>
-          <div class="field">
-            <label for="f-home_property_type">Typ av bostad</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="t.ex. lägenhet i condomínio, villa, fritidshus" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Uppskattad återuppbyggnadskostnad (om du vet)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="t.ex. 180 000 EUR — vet du inte, hjälper vi till att räkna" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Ungefärligt värde på lösöret</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="t.ex. 30 000 EUR inklusive möbler och elektronik" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Sjukvård" hidden>
-          <span class="form-branch-legend">Vilka som ska omfattas</span>
-          <div class="field">
-            <label for="f-health_household">Antal personer och åldrar</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="t.ex. två vuxna (43 och 41) samt ett barn (6)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Bil" hidden>
-          <span class="form-branch-legend">Några uppgifter om bilen</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Märke, modell och årsmodell</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="t.ex. Volvo V60 2018, diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Nuvarande registrering</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="t.ex. svenska skyltar, ska importeras / redan portugisiska" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Skadefri tid</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="t.ex. 12 år skadefritt, intyg från svenskt bolag" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Ansvar" hidden>
-          <span class="form-branch-legend">Vad skyddet ska gälla</span>
-          <div class="field">
-            <label for="f-liability_activity">Vilken verksamhet eller situation</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="t.ex. IT-konsult, fysioterapeut, uthyrning av bostad, privatliv" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Var finns kunderna eller tredje man</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="t.ex. kunder i Sverige och Portugal, patienter tas emot i Lissabon" disabled>
-          </div>
-        </div>
-
-      <div class="field">
-        <label for="f-start">När ska skyddet börja gälla?</label>
-        <input type="text" id="f-start" name="start_date" placeholder="t.ex. 1 mars, på dagen för escritura, så snart som möjligt">
-      </div>
-
-      <div class="field">
-        <label for="f-preflang">Språk för korrespondensen</label>
-        <select id="f-preflang" name="preferred_language">
-          <option value="English">Engelska — vårt arbetsspråk</option>
-          <option value="Portuguese">Portugisiska</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="f-message">Vad bör vi känna till?</label>
-        <textarea id="f-message" name="message" rows="6"
-                  placeholder="Till exempel: vi flyttar till Cascais i mars, har en lägenhet i condomínio och en bil på svenska skyltar."></textarea>
-      </div>
-
-      <div class="field consent-block">
-        <div class="consent">
-          <input type="checkbox" id="f-consent" name="consent" value="Ja"
-                 required aria-required="true" aria-describedby="err-consent">
-          <label for="f-consent">Jag samtycker till att Adler &amp; Rochefort kontaktar mig om denna förfrågan och behandlar mina uppgifter för det syftet.</label>
-        </div>
-        <span class="field-error" id="err-consent" aria-live="polite"></span>
-      </div>
-
-      <button type="submit" class="form-submit" id="leadSubmit">Skicka förfrågan</button>
-      <p class="form-footnote">Vi svarar inom en arbetsdag. En förfrågan innebär ingen bindning.</p>
-    </form>
+</form>
     <div class="form-success" id="leadSuccess">
       <div class="tick">&#10003;</div>
       <h3>Tack — din förfrågan har kommit fram.</h3>
@@ -766,7 +644,7 @@
 
     function check(rule) {
       var field = document.getElementById(rule.id);
-      if (!field) return true;
+      if (!field || (!field.required && !field.value)) return true;
       var message = rule.validate(valueOf(rule, field));
       setError(rule, message);
       return !message;

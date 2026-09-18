@@ -160,7 +160,7 @@ const FOOTER = `
       <ul class="footer-col-links">
         <li><a href="/en/health-insurance-quote/">Health Insurance</a></li>
         <li><a href="/en/car-insurance-portugal/">Car Insurance</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
+        <li><a href="/en/private-clients/">Private Clients</a></li>
         <li><a href="/en/blog/">Insights</a></li>
         <li><a href="/en/about/">About us</a></li>
       </ul>

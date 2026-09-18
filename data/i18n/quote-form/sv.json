@@ -23,7 +23,8 @@
       "residente_fiscal": "Är du skattemässigt bosatt i Portugal?",
       "residente_fiscal_sim": "Ja",
       "residente_fiscal_nao": "Nej",
-      "rgpd_consentimento": "Jag samtycker till att mina uppgifter används för att förbereda denna offert, i enlighet med GDPR."
+      "rgpd_consentimento": "Jag samtycker till att mina uppgifter används för att förbereda denna offert, i enlighet med GDPR.",
+      "empresa": "Företag"
     },
     "helpers": {
       "residente_fiscal_nao_info": "Adressen behövs fortfarande. Utan skattemässig hemvist i Portugal kan det i vissa fall inte vara möjligt att utfärda försäkringen — vi granskar ändå din specifika situation.",
@@ -45,7 +46,37 @@
     "success": {
       "titulo": "Tack!",
       "corpo": "Din förfrågan har tagits emot. Vi behandlar den och svarar inom 24 arbetstimmar."
-    }
+    },
+    "runtime": {
+      "required": "Fyll i detta fält.",
+      "email": "Ange en giltig e-postadress, till exempel namn@email.com.",
+      "sending": "Skickar…",
+      "failed": "Din förfrågan kunde inte skickas. Kontrollera din anslutning och försök igen — inget du har skrivit har gått förlorat.",
+      "nif": "Ange ett giltigt portugisiskt skattenummer (NIF), 9 siffror.",
+      "postalCode": "Ange ett postnummer i formatet 0000-000.",
+      "plate": "Ange ett giltigt portugisiskt registreringsnummer.",
+      "startDate": "Startdatumet får inte vara före dagens datum.",
+      "licenceDate": "Körkortsdatumet får inte vara före försäkringstagarens födelsedatum, och inte heller i framtiden.",
+      "licenceBeforeAge16": "Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.",
+      "renovationYear": "Renoveringsåret får inte vara före byggåret eller efter innevarande år.",
+      "residenteFiscal": "Ange om du är skattemässigt bosatt i Portugal.",
+      "rgpd": "Du måste godkänna innan vi kan förbereda offerten.",
+      "birthDate": "Födelsedatumet får inte vara i framtiden.",
+      "birthDateAdult": "Försäkringstagaren måste vara minst 18 år.",
+      "tooShort": "Skriv minst {min} tecken.",
+      "requiredGroup": "Välj minst ett alternativ.",
+      "numberInvalid": "Ange ett tal inom de angivna gränserna."
+    },
+    "select": "Välj ett alternativ",
+    "submit": "Begär offert",
+    "chooseProduct": "Välj försäkringstyp",
+    "acknowledgement": {
+      "subject": "Förfrågan mottagen — Adler & Rochefort",
+      "body": "Tack. Vi har tagit emot din förfrågan och granskar uppgifterna för att ta fram offerter."
+    },
+    "privacy": "Integritetspolicy",
+    "enquirySubmit": "Skicka en fråga",
+    "enquiryIntro": "Fyll i det detaljerade produktformuläret för en offert. Använd detta kontaktformulär för frågor."
   },
   "ramos": {
     "habitacao": {
@@ -56,16 +87,17 @@
       "regime_ocupacao_holiday_home": "Fritidshus / andrahandsbostad",
       "regime_ocupacao_al": "Alojamento Local (korttidsuthyrning)",
       "al_regime": "Typ av korttidsuthyrning",
-      "al_regime_tempo_inteiro": "Heltid",
-      "al_regime_parcial": "Deltid (delad användning av bostaden)",
+      "al_regime_tempo_inteiro": "AL på heltid",
+      "al_regime_parcial": "AL på deltid",
       "ano_construcao": "Byggår",
       "area_bruta": "Bruttoarea (m²)",
       "casas_banho": "Antal badrum",
-      "obras_renovacao_check": "Har ni renoverat under de senaste åren?",
+      "obras_renovacao_check": "Renoveringar utförda",
       "obras_ano": "Renoveringsår",
       "obras_descricao": "Beskriv de utförda arbetena",
       "capital_edificio": "Försäkringsbelopp byggnad (€)",
-      "capital_conteudo": "Försäkringsbelopp lösöre (€)"
+      "capital_conteudo": "Försäkringsbelopp lösöre (€)",
+      "morada_imovel": "Fastighetens fullständiga adress"
     },
     "saude": {
       "titulo": "Begär offert på sjukvårdsförsäkring",
@@ -77,7 +109,8 @@
       "pessoa_nascimento": "Födelsedatum",
       "pessoa_nif": "NIF (portugisiskt skattenummer)",
       "pessoa_remover": "Ta bort denna person",
-      "pessoa_adicionar": "+ Lägg till person"
+      "pessoa_adicionar": "+ Lägg till person",
+      "pessoas_numero": "Antal personer att försäkra"
     },
     "auto": {
       "titulo": "Begär offert på bilförsäkring",

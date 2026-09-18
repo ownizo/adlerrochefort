@@ -2352,6 +2352,7 @@
     <p class="lp-form-sub">Tell us about the property and we&rsquo;ll come back to you within 24 hours with a written comparison.</p>
     <form class="contact-form" id="quoteForm" method="POST" name="home-insurance-quote-wizard" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard data-ga-field="regime_ocupacao">
       <input type="hidden" name="form-name" value="home-insurance-quote-wizard">
+<input type="hidden" name="lang" value="en">
       <input type="hidden" name="ramo" value="Home">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="source" value="landing:home-insurance-quote">
@@ -2388,7 +2389,7 @@
       <div class="lp-form-row">
       <div class="contact-form-field">
         <label for="q-dob">Date of birth *</label>
-        <input type="date" id="q-dob" name="date_of_birth" data-validate="birth-date" required>
+        <input type="date" id="q-dob" name="date_of_birth" data-validate="birth-date-adult" required>
       </div>
       <div class="contact-form-field">
         <label for="q-postcode">Property postcode *</label>
@@ -2397,7 +2398,7 @@
       </div>
       <div class="lp-form-row">
       <div class="contact-form-field">
-        <label for="q-address">Full address *</label>
+        <label for="q-address">Full property address *</label>
         <input type="text" id="q-address" name="address" autocomplete="street-address" required>
       </div>
       <div class="contact-form-field">
@@ -2440,8 +2441,8 @@
           <label for="q-al-regime">Short-term rental regime *</label>
           <select id="q-al-regime" name="al_regime" required disabled>
             <option value="">Select one</option>
-            <option value="tempo_inteiro">Whole property</option>
-            <option value="parcial">Partial (room-sharing)</option>
+            <option value="tempo_inteiro">Full-time AL</option>
+            <option value="parcial">Part-time AL</option>
           </select>
         </div>
       </div>
@@ -2453,7 +2454,7 @@
       </div>
       <div class="contact-form-field">
         <label for="q-area">Gross construction area (m&sup2;) *</label>
-        <input type="number" id="q-area" name="area_bruta" min="1" required>
+        <input type="number" id="q-area" name="area_bruta" min="1" required step="0.01">
       </div>
       </div>
       <div class="contact-form-field">
@@ -2461,7 +2462,7 @@
         <input type="number" id="q-bathrooms" name="casas_banho" min="0" required>
       </div>
       <div class="contact-form-field">
-        <label class="contact-form-checkbox" for="q-renovation-check"><input type="checkbox" id="q-renovation-check" data-field-toggle="q-renovation-group"> Have you renovated in the last few years?</label>
+        <label class="contact-form-checkbox" for="q-renovation-check"><input type="checkbox" id="q-renovation-check" data-field-toggle="q-renovation-group" name="obras_renovacao" value="sim"> Renovations carried out</label>
       </div>
       <div id="q-renovation-group" hidden>
         <div class="lp-form-row">
@@ -2611,7 +2612,7 @@
         <li><a href="/en/health-insurance-quote/">Health Insurance</a></li>
         <li><a href="/en/car-insurance-portugal/">Car Insurance</a></li>
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
+        <li><a href="/en/private-clients/">Private Clients</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
       </ul>
     </div>

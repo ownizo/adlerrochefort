@@ -449,6 +449,7 @@
 
     <form name="zh-health-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/zh/#baojia">
       <input type="hidden" name="form-name" value="zh-health-insurance-wizard">
+<input type="hidden" name="lang" value="zh">
       <input type="hidden" name="ramo" value="Health insurance">
       <input type="hidden" name="source_url" id="zh-sau-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -467,7 +468,7 @@
         <div class="contact-form-field"><label for="zh-sau-morada">详细地址 *</label><input type="text" id="zh-sau-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="zh-sau-localidade">所在城市 *</label><input type="text" id="zh-sau-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="zh-sau-cp">邮政编码 *</label><input type="text" id="zh-sau-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="zh-sau-telefone">电话号码 *</label><input type="tel" id="zh-sau-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="zh-sau-telefone">电话号码 *</label><input type="tel" id="zh-sau-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="zh-sau-email">电子邮箱 *</label><input type="email" id="zh-sau-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="zh-sau-nacionalidade">国籍 *</label>
@@ -489,6 +490,7 @@
       <div data-wizard-step hidden>
         <p class="wizard-helper" style="margin-bottom:16px;">每位需投保人员都需要提供葡萄牙税号（NIF），儿童也不例外——没有此号码将无法准备报价。我们在此不询问任何医疗信息：健康问卷将在加入保险时直接与保险公司完成。</p>
         <div data-persons-repeater>
+<div class="contact-form-field"><label for="quote-persons-count">投保人数 *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
           <div data-persons-list></div>
           <button type="button" class="wizard-nav-back" data-persons-add>+ 添加人员</button>
         </div>

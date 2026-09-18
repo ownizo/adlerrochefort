@@ -423,6 +423,7 @@
 
     <form name="pl-ubezpieczenie-domu-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/pl/#oferta">
       <input type="hidden" name="form-name" value="pl-ubezpieczenie-domu-wizard">
+<input type="hidden" name="lang" value="pl">
       <input type="hidden" name="ramo" value="Ubezpieczenie domu">
       <input type="hidden" name="source_url" id="pl-hab-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -437,11 +438,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="pl-hab-nome">Imię i nazwisko *</label><input type="text" id="pl-hab-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="pl-hab-nif">NIF (portugalski numer podatkowy) *</label><input type="text" id="pl-hab-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="pl-hab-nascimento">Data urodzenia *</label><input type="date" id="pl-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="pl-hab-morada">Pełny adres *</label><input type="text" id="pl-hab-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="pl-hab-nascimento">Data urodzenia *</label><input type="date" id="pl-hab-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+        <div class="contact-form-field"><label for="pl-hab-morada">Pełny adres nieruchomości *</label><input type="text" id="pl-hab-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="pl-hab-localidade">Miejscowość *</label><input type="text" id="pl-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="pl-hab-cp">Kod pocztowy *</label><input type="text" id="pl-hab-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="pl-hab-telefone">Numer telefonu *</label><input type="tel" id="pl-hab-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="pl-hab-telefone">Numer telefonu *</label><input type="tel" id="pl-hab-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="pl-hab-email">Adres e-mail *</label><input type="email" id="pl-hab-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="pl-hab-nacionalidade">Obywatelstwo *</label>
@@ -475,16 +476,16 @@
             <label for="pl-hab-al-regime">Rodzaj wynajmu krótkoterminowego *</label>
             <select id="pl-hab-al-regime" name="al_regime" required disabled>
               <option value="">Proszę wybrać</option>
-              <option value="tempo_inteiro">Całkowity</option>
-              <option value="parcial">Częściowy (współdzielone użytkowanie mieszkania)</option>
+              <option value="tempo_inteiro">AL przez cały rok</option>
+              <option value="parcial">AL przez część roku</option>
             </select>
           </div>
         </div>
         <div class="contact-form-field"><label for="pl-hab-ano-construcao">Rok budowy *</label><input type="number" id="pl-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-        <div class="contact-form-field"><label for="pl-hab-area">Powierzchnia brutto (m²) *</label><input type="number" id="pl-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="pl-hab-area">Powierzchnia brutto (m²) *</label><input type="number" id="pl-hab-area" name="area_bruta" min="1" required step="0.01"></div>
         <div class="contact-form-field"><label for="pl-hab-wc">Liczba łazienek *</label><input type="number" id="pl-hab-wc" name="casas_banho" min="0" required></div>
         <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="pl-hab-obras-check"><input type="checkbox" id="pl-hab-obras-check" data-field-toggle="pl-hab-obras-group"> Czy w ostatnich latach przeprowadzono remont?</label>
+          <label class="contact-form-checkbox" for="pl-hab-obras-check"><input type="checkbox" id="pl-hab-obras-check" data-field-toggle="pl-hab-obras-group" name="obras_renovacao" value="sim"> Przeprowadzone remonty</label>
         </div>
         <div id="pl-hab-obras-group" hidden>
           <div class="contact-form-field"><label for="pl-hab-obras-ano">Rok remontu *</label><input type="number" id="pl-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>

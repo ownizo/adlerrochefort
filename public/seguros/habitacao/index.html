@@ -153,6 +153,7 @@
   </div>
   <form name="cotacao-habitacao" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-habitacao">
+<input type="hidden" name="lang" value="pt">
     <input type="hidden" name="ramo" value="Habitação">
     <input type="hidden" name="source_url" id="cotacao-habitacao-source" value="">
     <input type="hidden" name="dados_dinamicos" value="">
@@ -167,11 +168,11 @@
     <div data-wizard-step>
       <div class="contact-form-field"><label for="hab-nome">Nome completo *</label><input type="text" id="hab-nome" name="nome" autocomplete="name" required></div>
       <div class="contact-form-field"><label for="hab-nif">NIF *</label><input type="text" id="hab-nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" data-validate="nif" required></div>
-      <div class="contact-form-field"><label for="hab-nascimento">Data de nascimento *</label><input type="date" id="hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-      <div class="contact-form-field"><label for="hab-morada">Morada completa *</label><input type="text" id="hab-morada" name="morada" autocomplete="street-address" required></div>
+      <div class="contact-form-field"><label for="hab-nascimento">Data de nascimento *</label><input type="date" id="hab-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
+      <div class="contact-form-field"><label for="hab-morada">Morada completa do imóvel *</label><input type="text" id="hab-morada" name="morada" autocomplete="street-address" required></div>
       <div class="contact-form-field"><label for="hab-localidade">Localidade *</label><input type="text" id="hab-localidade" name="localidade" autocomplete="address-level2" required></div>
       <div class="contact-form-field"><label for="hab-cp">Código postal *</label><input type="text" id="hab-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-      <div class="contact-form-field"><label for="hab-telefone">Telefone / WhatsApp *</label><input type="tel" id="hab-telefone" name="telefone" autocomplete="tel" required></div>
+      <div class="contact-form-field"><label for="hab-telefone">Telefone / WhatsApp *</label><input type="tel" id="hab-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
       <div class="contact-form-field"><label for="hab-email">Email *</label><input type="email" id="hab-email" name="email" autocomplete="email" required></div>
       <div class="contact-form-field">
         <label for="hab-nacionalidade">Nacionalidade *</label>
@@ -206,15 +207,15 @@
           <select id="hab-al-regime" name="al_regime" required disabled>
             <option value="">Selecionar</option>
             <option value="tempo_inteiro">Tempo inteiro</option>
-            <option value="parcial">Parcial (partilha da habitação)</option>
+            <option value="parcial">Tempo parcial</option>
           </select>
         </div>
       </div>
       <div class="contact-form-field"><label for="hab-ano-construcao">Ano de construção *</label><input type="number" id="hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-      <div class="contact-form-field"><label for="hab-area">Área bruta de construção (m²) *</label><input type="number" id="hab-area" name="area_bruta" min="1" required></div>
+      <div class="contact-form-field"><label for="hab-area">Área bruta de construção (m²) *</label><input type="number" id="hab-area" name="area_bruta" min="1" required step="0.01"></div>
       <div class="contact-form-field"><label for="hab-wc">Número de casas de banho *</label><input type="number" id="hab-wc" name="casas_banho" min="0" required></div>
       <div class="contact-form-field">
-        <label class="contact-form-checkbox" for="hab-obras-check"><input type="checkbox" id="hab-obras-check" data-field-toggle="hab-obras-group"> Fez obras de renovação nos últimos anos?</label>
+        <label class="contact-form-checkbox" for="hab-obras-check"><input type="checkbox" id="hab-obras-check" data-field-toggle="hab-obras-group" name="obras_renovacao" value="sim"> Renovações realizadas</label>
       </div>
       <div id="hab-obras-group" hidden>
         <div class="contact-form-field"><label for="hab-obras-ano">Ano das obras *</label><input type="number" id="hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>

@@ -206,7 +206,12 @@ const BRANCH_FIELD_NAMES = ['tipo_seguro', 'tipo-seguro', 'insurance_type', 'ins
 // é a exceção: o seu campo de atribuição chama-se `language`, não `lang`
 // (brief Parte 11), por isso leva `language: 'DE'` fixo abaixo, tal como
 // quote-blog/free-analysis/expat-health-quote fixam o seu próprio idioma.
+// Private Client reviews accept a country choice independently of language.
+// Both-country reviews keep PT as primary market; CRM metadata records both.
+const privateClientMarket = fallback => data => data?.country === 'Spain' ? 'ES' : data?.country === 'Portugal' || data?.country === 'Portugal and Spain' ? 'PT' : fallback;
 const FORM_CLASSIFICATION = {
+  'private-client-review-portugal': { entityType: 'individual', market: privateClientMarket('PT'), language: 'EN', product: 'private-client' },
+  'private-client-review-de': { entityType: 'individual', market: privateClientMarket('PT'), language: 'DE', product: 'private-client' },
   // ── PT, língua PT ──────────────────────────────────────────────────────
   contacto: { entityType: 'individual', market: 'PT', product: 'contact' },
   'cotacao-tvde': { entityType: 'individual', market: 'PT', product: 'tvde' },
@@ -423,6 +428,11 @@ const FORM_CLASSIFICATION = {
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
   'nl-offerte-aanvraag': { entityType: 'individual', market: 'PT', product: 'general' },
   'lead-nl': { entityType: 'individual', market: 'PT', product: 'general' },
+  'fr-quote-auto': { entityType: 'individual', market: 'PT', product: 'auto', language: 'FR' },
+  'fr-quote-habitacao': { entityType: 'individual', market: 'PT', product: 'home', language: 'FR' },
+  'fr-quote-saude': { entityType: 'individual', market: 'PT', product: 'health', language: 'FR' },
+  'fr-quote-profissional': { entityType: 'individual', market: 'PT', product: 'professional-liability', language: 'FR' },
+  'nl-quote-auto': { entityType: 'individual', market: 'PT', product: 'auto', language: 'NL' },
   'lead-fr': { entityType: 'individual', market: 'PT', product: 'general' },
   // de-angebot-anfrage (scripts/generate-de-cluster.mjs) submits `language`,
   // not `lang` — see the comment above this block. Fixed here instead, same
@@ -459,7 +469,7 @@ const FORM_CLASSIFICATION = {
   'car-insurance-quote-spain': { entityType: 'individual', market: 'ES', language: 'EN', product: 'auto' },
   'life-insurance-review-spain': { entityType: 'individual', market: 'ES', language: 'EN', product: 'life' },
   'mortgage-protection-review-spain': { entityType: 'individual', market: 'ES', language: 'EN', product: 'mortgage-protection' },
-  'private-client-review-spain': { entityType: 'individual', market: 'ES', language: 'EN', product: 'private-clients' },
+  'private-client-review-spain': { entityType: 'individual', market: privateClientMarket('ES'), language: 'EN', product: 'private-client' },
 
   // ── Mercado determinado por submissão: o mesmo formulário serve PT e ES,
   // consoante o campo `country` (Portugal | Spain) escolhido pelo visitante
@@ -507,7 +517,7 @@ export function classifySubmission(formName, data) {
 export function extractContact(data) {
   const name = firstNonEmpty([data?.nome, data?.name, data?.full_name, data?.naam]);
   const email = firstNonEmpty([data?.email]);
-  const phone = firstNonEmpty([data?.telefone, data?.telemovel, data?.phone, data?.telefoon]);
+  const phone = firstNonEmpty([data?.telefone, data?.telemovel, data?.phone, data?.telefoon, data?.telefon]);
   return { name, email, phone };
 }
 

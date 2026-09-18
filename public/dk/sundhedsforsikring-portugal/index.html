@@ -405,6 +405,7 @@
 
     <form name="dk-sundhedsforsikring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/dk/#tilbud">
       <input type="hidden" name="form-name" value="dk-sundhedsforsikring-wizard">
+<input type="hidden" name="lang" value="da">
       <input type="hidden" name="ramo" value="Sundhedsforsikring">
       <input type="hidden" name="source_url" id="dk-sau-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -423,7 +424,7 @@
         <div class="contact-form-field"><label for="dk-sau-morada">Fuld adresse *</label><input type="text" id="dk-sau-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="dk-sau-localidade">By *</label><input type="text" id="dk-sau-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="dk-sau-cp">Postnummer *</label><input type="text" id="dk-sau-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="dk-sau-telefone">Telefonnummer *</label><input type="tel" id="dk-sau-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="dk-sau-telefone">Telefonnummer *</label><input type="tel" id="dk-sau-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="dk-sau-email">E-mailadresse *</label><input type="email" id="dk-sau-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="dk-sau-nacionalidade">Nationalitet *</label>
@@ -445,6 +446,7 @@
       <div data-wizard-step hidden>
         <p class="wizard-helper" style="margin-bottom:16px;">For hver person, der skal forsikres, kræves et portugisisk skattenummer (NIF), også for børn — uden det kan der ikke udarbejdes et tilbud. Vi spørger ikke om nogen form for medicinske oplysninger her: helbredserklæringen foregår direkte med forsikringsselskabet, ved tilmeldingen.</p>
         <div data-persons-repeater>
+<div class="contact-form-field"><label for="quote-persons-count">Antal personer, der skal forsikres *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
           <div data-persons-list></div>
           <button type="button" class="wizard-nav-back" data-persons-add>+ Tilføj person</button>
         </div>

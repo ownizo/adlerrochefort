@@ -42,6 +42,7 @@
  * something that exists on disk. Any of those failing throws, so a broken
  * page never reaches public/.
  */
+import { correctQuotationHtml } from './lib/quotation-forms.mjs';
 import { writeFile, mkdir } from 'node:fs/promises';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -166,7 +167,7 @@ const FOOTER = `
         <li><a href="/en/health-insurance-quote/">Health Insurance</a></li>
         <li><a href="/en/international-health-insurance-portugal/">International Health Insurance</a></li>
         <li><a href="/en/car-insurance-portugal/">Car Insurance</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
+        <li><a href="/en/private-clients/">Private Clients</a></li>
         <li><a href="/en/fiscal-representation-portugal/">Fiscal Representation</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
       </ul>
@@ -677,7 +678,7 @@ for (const page of PAGES) {
     if (map.has(value)) throw new Error(`duplicate ${what} on /en/${page.slug}/ and /en/${map.get(value)}/`);
     map.set(value, page.slug);
   }
-  const html = render(page);
+  const html = correctQuotationHtml(render(page));
   validate(page, html, pending);
   rendered.push([page, html]);
 }

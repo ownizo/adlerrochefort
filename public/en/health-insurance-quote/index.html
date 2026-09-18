@@ -2132,6 +2132,7 @@
     <p class="lp-form-sub">Tell us a little about your situation and we'll come back to you within 24 hours.</p>
     <form class="contact-form" id="quoteForm" method="POST" name="health-insurance-quote-wizard" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard data-ga-field="tax_resident_pt">
       <input type="hidden" name="form-name" value="health-insurance-quote-wizard">
+<input type="hidden" name="lang" value="en">
       <input type="hidden" name="ramo" value="Health">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -2206,6 +2207,7 @@
       <div data-wizard-step hidden>
       <p class="wizard-helper" style="margin-bottom:16px;">A Portuguese tax number (NIF) is required for every person to insure, including children &mdash; without it the insurer cannot issue a proposal. We don't ask for any medical information here: the health questionnaire is done directly with the insurer, at the adhesion stage.</p>
       <div data-persons-repeater>
+<div class="contact-form-field"><label for="quote-persons-count">Number of people to insure *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
         <div data-persons-list></div>
         <button type="button" class="wizard-nav-back" data-persons-add>+ Add a person</button>
       </div>
@@ -2364,7 +2366,7 @@
         <li><a href="/en/health-insurance-quote/">Health Insurance</a></li>
         <li><a href="/en/car-insurance-portugal/">Car Insurance</a></li>
         <li><a href="/en/condominium-insurance-algarve/">Condominium Insurance</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
+        <li><a href="/en/private-clients/">Private Clients</a></li>
         <li><a href="/en/relocation-services/">Relocation Services</a></li>
       </ul>
     </div>

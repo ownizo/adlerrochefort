@@ -396,6 +396,7 @@
 
     <form name="pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/pl/#oferta">
       <input type="hidden" name="form-name" value="pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard">
+<input type="hidden" name="lang" value="pl">
       <input type="hidden" name="ramo" value="Odpowiedzialność cywilna">
       <input type="hidden" name="source_url" id="pl-rcp-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -410,11 +411,11 @@
       <div data-wizard-step>
         <div class="contact-form-field"><label for="pl-rcp-nome">Imię i nazwisko *</label><input type="text" id="pl-rcp-nome" name="nome" autocomplete="name" required></div>
         <div class="contact-form-field"><label for="pl-rcp-nif">NIF (portugalski numer podatkowy) *</label><input type="text" id="pl-rcp-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
-        <div class="contact-form-field"><label for="pl-rcp-nascimento">Data urodzenia *</label><input type="date" id="pl-rcp-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="pl-rcp-nascimento">Data urodzenia *</label><input type="date" id="pl-rcp-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
         <div class="contact-form-field"><label for="pl-rcp-morada">Pełny adres *</label><input type="text" id="pl-rcp-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="pl-rcp-localidade">Miejscowość *</label><input type="text" id="pl-rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="pl-rcp-cp">Kod pocztowy *</label><input type="text" id="pl-rcp-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
-        <div class="contact-form-field"><label for="pl-rcp-telefone">Numer telefonu *</label><input type="tel" id="pl-rcp-telefone" name="telefone" autocomplete="tel" required></div>
+        <div class="contact-form-field"><label for="pl-rcp-telefone">Numer telefonu *</label><input type="tel" id="pl-rcp-telefone" name="telefone" autocomplete="tel" required placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="pl-rcp-email">Adres e-mail *</label><input type="email" id="pl-rcp-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
           <label for="pl-rcp-nacionalidade">Obywatelstwo *</label>
@@ -434,7 +435,7 @@
       </div>
 
       <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="pl-rcp-faturacao">Roczny obrót *</label><input type="number" id="pl-rcp-faturacao" name="faturacao_anual" placeholder="Np. 85000" required></div>
+        <div class="contact-form-field"><label for="pl-rcp-faturacao">Roczny obrót *</label><input type="number" id="pl-rcp-faturacao" name="faturacao_anual" placeholder="Np. 85000" required step="0.01"></div>
         <p class="wizard-helper">Rodzaj działalności, pożądaną sumę ubezpieczenia oraz to, czy polisa jest wymagana umową lub przez izbę zawodową, ustalimy podczas kontaktu, który nastąpi później.</p>
         <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Wstecz</button><button type="button" class="wizard-nav-next" data-wizard-next>Dalej →</button></div>
       </div>

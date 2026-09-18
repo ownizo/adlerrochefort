@@ -8,7 +8,7 @@
  * enforcement scripts carried their own PT/EN/NL tables, no FR or DE table at
  * all, and had come to disagree with each other about which noun was correct.
  *
- * Adler & Rochefort is registered with the ASF as an *agente de seguros*
+ * Adler & Rochefort is registered with the ASF as an *agente de seguros não ligado*
  * (no. 425591790/3) holding agency agreements with several insurers. Peer firms
  * in the same registered category market themselves as "brokers" in English, so
  * the noun is kept in every language: broker (EN), courtier (FR),
@@ -78,159 +78,276 @@ export const PROTECTED = [
 // ---------------------------------------------------------------------------
 // Only phrases in which "intermediary" refers to Adler & Rochefort. Generic
 // references to the profession and quoted definitions are absent on purpose.
+// Marketing self-description only. Formal entity/registration notices retain their legal wording.
 export const EN_BROKER = [
-  // Words an earlier pass corrupted, restored to what they were. "brokerage"
-  // is the original noun, not a new coinage: the old pass rewrote the "broker"
-  // stem inside "brokerage" and left "…intermediaryage" behind.
-  ['insurance intermediaryage', 'insurance brokerage'],
-  ['Insurance Intermediaryage', 'Insurance Brokerage'],
-  ['English explanation vian intermediary', 'English explanation via broker'],
-
-  // Self-designation carrying the "independent" label. Listed here rather than
-  // in Change 2 so the noun is corrected first; the label is then stripped by
-  // the Change 2 rules below, which match on "broker".
-  ['Independent insurance intermediary', 'Independent insurance broker'],
-  ['independent insurance intermediary', 'independent insurance broker'],
-  ['Use an independent intermediary</strong>', 'Use a broker</strong>'],
-  // Two forms of the same sentence: one where the Change 3 clause is still
-  // present (EN_RELATIONSHIP strips it afterwards) and one where it has already
-  // gone. Without the first, the noun stays "intermediary" whenever the
-  // relationship clause sits between it and "can access".
   [
-    'an intermediary registered with the ASF works for you',
-    'a broker registered with the ASF works for you',
-  ],
-  ['an intermediary registered with the ASF can access', 'a broker registered with the ASF can access'],
-  ['an independent local intermediary', 'an independent local broker'],
-  ['An independent intermediary', 'An independent broker'],
-  ['an independent intermediary', 'an independent broker'],
-
-  // Firm self-designation.
-  ['ASF-registered, English-speaking insurance intermediary', 'ASF-registered, English-speaking insurance broker'],
-  ['English-speaking, ASF-registered insurance intermediary', 'English-speaking, ASF-registered insurance broker'],
-  ['ASF-registered Portuguese insurance intermediary', 'ASF-registered Portuguese insurance broker'],
-  ['Insurance intermediary registered with the ASF', 'Insurance broker registered with the ASF'],
-  ['insurance intermediary registered with the ASF', 'insurance broker registered with the ASF'],
-  ['registered insurance intermediary, authorised by the ASF', 'registered insurance broker, authorised by the ASF'],
-  ['ASF-registered insurance intermediary', 'ASF-registered insurance broker'],
-  ['ASF-registered intermediary', 'ASF-registered broker'],
-  ['ASF-authorised insurance intermediary', 'ASF-authorised insurance broker'],
-  ['ASF-authorised intermediary', 'ASF-authorised broker'],
-  ['ASF-registered independent mediator', 'ASF-registered independent broker'],
-  ['ASF-registered mediator', 'ASF-registered broker'],
-  ['insurance intermediary authorised by the ASF analyses', 'insurance broker authorised by the ASF analyses'],
-  ['Registered intermediary', 'Registered broker'],
-  ['Registered insurance intermediary, supervised by the ASF', 'Registered insurance broker, supervised by the ASF'],
-  ['registered insurance intermediary advising international residents', 'registered insurance broker advising international residents'],
-  [
-    'We are an insurance intermediary registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority',
-    'We are an insurance broker registered and authorised by the Portuguese Insurance and Pension Funds Supervisory Authority',
+    "insurance intermediaryage",
+    "insurance brokerage"
   ],
   [
-    'acts as an insurance intermediary registered with the Portuguese Insurance and Pension Funds Supervisory Authority',
-    'acts as an insurance broker registered with the Portuguese Insurance and Pension Funds Supervisory Authority',
+    "Insurance Intermediaryage",
+    "Insurance Brokerage"
   ],
   [
-    'an insurance intermediary registered with the Portuguese authority (ASF)',
-    'an insurance broker registered with the Portuguese authority (ASF)',
-  ],
-  // The homepage trust strip's own subtitle, found next to the "Registered
-  // intermediary" card the pass already caught — the section-subtitle sentence
-  // wasn't an exact match for any existing rule's left-hand side, so it had
-  // never been touched despite sitting one line above a card this table
-  // already corrects. Rewritten to the settled EN status phrase in full,
-  // not just the noun, since "under no. 425591790/3" is part of what needed
-  // to read as "ASF-registered insurance broker n.º 425591790/3".
-  [
-    "Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's ASF under no. 425591790/3",
-    'Ownizo, Unipessoal Lda., ASF-registered insurance broker n.º 425591790/3',
-  ],
-  ['A technology-driven insurance intermediary is not a technology company', 'A technology-driven insurance broker is not a technology company'],
-  ['looking for an insurance intermediary who truly understands', 'looking for a broker who truly understands'],
-
-  // The WhatsApp share link's prefilled message. Encoded, so the replacement
-  // must not introduce a space.
-  ['ASF-registered%20intermediary', 'ASF-registered%20broker'],
-
-  // Named self-description.
-  ['English-speaking Insurance Intermediary', 'English-speaking Insurance Broker'],
-  ['English-speaking insurance intermediary', 'English-speaking insurance broker'],
-  ['English-speaking intermediary', 'English-speaking broker'],
-  ['Expat Insurance Intermediary', 'Expat Insurance Broker'],
-  ['Insurance Intermediaries in the Algarve', 'Insurance Brokers in the Algarve'],
-  ['insurance intermediary in the Algarve', 'insurance broker in the Algarve'],
-  ['insurance intermediary in Lagos', 'insurance broker in Lagos'],
-  ['insurance intermediary in Portugal for expats', 'insurance broker in Portugal for expats'],
-  ['an insurance intermediary like Adler &amp; Rochefort', 'a broker like Adler &amp; Rochefort'],
-  ['insurance intermediary like Adler &amp; Rochefort', 'broker like Adler &amp; Rochefort'],
-  ['an Algarve intermediary', 'an Algarve broker'],
-  ['a Portuguese intermediary', 'a Portuguese broker'],
-  ['Our registration as an insurance intermediary in Portugal', 'Our registration as an insurance broker in Portugal'],
-
-  // First person — unambiguously us.
-  ['independent intermediaries', 'brokers'],
-  ['one of our intermediaries', 'one of our brokers'],
-  ['One of our intermediaries', 'One of our brokers'],
-  ['our experience as specialist intermediaries', 'our experience as specialist brokers'],
-  ['we remain your intermediary', 'we remain your broker'],
-  ['this intermediary does not advise on', 'this broker does not advise on'],
-  ['apart from other intermediaries', 'apart from other brokers'],
-
-  // Service copy about what we do.
-  ['Talk to an insurance intermediary now on WhatsApp.', 'Talk to a broker now on WhatsApp.'],
-  [
-    'Talk it through with an English-speaking insurance intermediary on WhatsApp.',
-    'Talk it through with an English-speaking broker on WhatsApp.',
-  ],
-  ['Having a specialised insurance intermediary managing this process', 'Having a specialised broker managing this process'],
-  ['A specialised intermediary is not a cost', 'A specialised broker is not a cost'],
-  ['An intermediary who works for you.', 'A broker who works for you.'],
-
-  // Headings whose anchor id already says "broker". Rewriting the text back to
-  // "broker" makes heading and fragment agree again; the ids are untouched.
-  ['Why using an intermediary delivers better results', 'Why using a broker delivers better results'],
-  ['How an intermediary helps with a difficult history', 'How a broker helps with a difficult history'],
-  ['The role of a specialised intermediary', 'The role of a specialised broker'],
-  ['The role of the specialist intermediary in real property', 'The role of the specialist broker in real property'],
-  ['the role of an independent intermediary', 'the role of an independent broker'],
-  // Both the table-of-contents link and the heading itself. The id it links to
-  // is "…the-insurance-broker-in-tvde-activity", so the anchor is the evidence
-  // that the earlier pass rewrote the visible text away from "broker" here.
-  // "The role of an insurance intermediary: why it makes a difference" in the
-  // car-insurance article looks similar but has no id, and reads as the
-  // profession generally rather than as us, so it is left alone and reported.
-  [
-    'The role of the insurance intermediary in TVDE activity',
-    'The role of the insurance broker in TVDE activity',
-  ],
-
-  // Meta keywords.
-  ['insurance intermediary portugal, AI insurance intermediary', 'insurance broker portugal, AI insurance broker'],
-  ['tourism insurance intermediary', 'tourism insurance broker'],
-  ['Lagos expat insurance intermediary', 'Lagos expat insurance broker'],
-  ['insurance intermediary technology, adler rochefort', 'insurance broker technology, adler rochefort'],
-  ['english speaking insurance intermediary portugal', 'english speaking insurance broker portugal'],
-  ['English speaking insurance intermediary portugal', 'English speaking insurance broker portugal'],
-  [
-    'insurance intermediary Portugal, expat insurance Portugal',
-    'insurance broker Portugal, expat insurance Portugal',
-  ],
-
-  // The legal-entity notice, which names the authority in full rather than as
-  // "the ASF". Every rule above keys on "the ASF", which is why these two
-  // sentences kept the old noun while the identical sentence elsewhere on the
-  // same pages was corrected. Note that in a formal notice of this kind
-  // "insurance intermediary" is the term the IDD itself uses for the registered
-  // person, so this is the one pair of replacements worth a second look before
-  // deploy — it is flagged in the report.
-  [
-    'Unipessoal Lda., insurance intermediary registered with the Autoridade',
-    'Unipessoal Lda., insurance broker registered with the Autoridade',
+    "English explanation vian intermediary",
+    "English explanation via broker"
   ],
   [
-    'Unipessoal Lda., an insurance intermediary registered with the Autoridade',
-    'Unipessoal Lda., an insurance broker registered with the Autoridade',
+    "Independent insurance intermediary",
+    "Independent insurance broker"
   ],
+  [
+    "independent insurance intermediary",
+    "independent insurance broker"
+  ],
+  [
+    "Use an independent intermediary</strong>",
+    "Use a broker</strong>"
+  ],
+  [
+    "an intermediary registered with the ASF works for you",
+    "a broker registered with the ASF works for you"
+  ],
+  [
+    "an intermediary registered with the ASF can access",
+    "a broker registered with the ASF can access"
+  ],
+  [
+    "an independent local intermediary",
+    "an independent local broker"
+  ],
+  [
+    "An independent intermediary",
+    "An independent broker"
+  ],
+  [
+    "an independent intermediary",
+    "an independent broker"
+  ],
+  [
+    "ASF-registered, English-speaking insurance intermediary",
+    "ASF-registered, English-speaking insurance broker"
+  ],
+  [
+    "English-speaking, ASF-registered insurance intermediary",
+    "English-speaking, ASF-registered insurance broker"
+  ],
+  [
+    "ASF-registered Portuguese insurance intermediary",
+    "ASF-registered Portuguese insurance broker"
+  ],
+  [
+    "Insurance intermediary registered with the ASF",
+    "Insurance broker registered with the ASF"
+  ],
+  [
+    "insurance intermediary registered with the ASF",
+    "insurance broker registered with the ASF"
+  ],
+  [
+    "registered insurance intermediary, authorised by the ASF",
+    "registered insurance broker, authorised by the ASF"
+  ],
+  [
+    "ASF-registered insurance intermediary",
+    "ASF-registered insurance broker"
+  ],
+  [
+    "ASF-registered intermediary",
+    "ASF-registered broker"
+  ],
+  [
+    "ASF-authorised insurance intermediary",
+    "ASF-authorised insurance broker"
+  ],
+  [
+    "ASF-authorised intermediary",
+    "ASF-authorised broker"
+  ],
+  [
+    "ASF-registered independent mediator",
+    "ASF-registered independent broker"
+  ],
+  [
+    "ASF-registered mediator",
+    "ASF-registered broker"
+  ],
+  [
+    "insurance intermediary authorised by the ASF analyses",
+    "insurance broker authorised by the ASF analyses"
+  ],
+  [
+    "Registered intermediary",
+    "Registered broker"
+  ],
+  [
+    "Registered insurance intermediary, supervised by the ASF",
+    "Registered insurance broker, supervised by the ASF"
+  ],
+  [
+    "registered insurance intermediary advising international residents",
+    "registered insurance broker advising international residents"
+  ],
+  [
+    "A technology-driven insurance intermediary is not a technology company",
+    "A technology-driven insurance broker is not a technology company"
+  ],
+  [
+    "looking for an insurance intermediary who truly understands",
+    "looking for a broker who truly understands"
+  ],
+  [
+    "ASF-registered%20intermediary",
+    "ASF-registered%20broker"
+  ],
+  [
+    "English-speaking Insurance Intermediary",
+    "English-speaking Insurance Broker"
+  ],
+  [
+    "English-speaking insurance intermediary",
+    "English-speaking insurance broker"
+  ],
+  [
+    "English-speaking intermediary",
+    "English-speaking broker"
+  ],
+  [
+    "Expat Insurance Intermediary",
+    "Expat Insurance Broker"
+  ],
+  [
+    "Insurance Intermediaries in the Algarve",
+    "Insurance Brokers in the Algarve"
+  ],
+  [
+    "insurance intermediary in the Algarve",
+    "insurance broker in the Algarve"
+  ],
+  [
+    "insurance intermediary in Lagos",
+    "insurance broker in Lagos"
+  ],
+  [
+    "insurance intermediary in Portugal for expats",
+    "insurance broker in Portugal for expats"
+  ],
+  [
+    "an insurance intermediary like Adler &amp; Rochefort",
+    "a broker like Adler &amp; Rochefort"
+  ],
+  [
+    "insurance intermediary like Adler &amp; Rochefort",
+    "broker like Adler &amp; Rochefort"
+  ],
+  [
+    "an Algarve intermediary",
+    "an Algarve broker"
+  ],
+  [
+    "a Portuguese intermediary",
+    "a Portuguese broker"
+  ],
+  [
+    "independent intermediaries",
+    "brokers"
+  ],
+  [
+    "one of our intermediaries",
+    "one of our brokers"
+  ],
+  [
+    "One of our intermediaries",
+    "One of our brokers"
+  ],
+  [
+    "our experience as specialist intermediaries",
+    "our experience as specialist brokers"
+  ],
+  [
+    "we remain your intermediary",
+    "we remain your broker"
+  ],
+  [
+    "this intermediary does not advise on",
+    "this broker does not advise on"
+  ],
+  [
+    "apart from other intermediaries",
+    "apart from other brokers"
+  ],
+  [
+    "Talk to an insurance intermediary now on WhatsApp.",
+    "Talk to a broker now on WhatsApp."
+  ],
+  [
+    "Talk it through with an English-speaking insurance intermediary on WhatsApp.",
+    "Talk it through with an English-speaking broker on WhatsApp."
+  ],
+  [
+    "Having a specialised insurance intermediary managing this process",
+    "Having a specialised broker managing this process"
+  ],
+  [
+    "A specialised intermediary is not a cost",
+    "A specialised broker is not a cost"
+  ],
+  [
+    "An intermediary who works for you.",
+    "A broker who works for you."
+  ],
+  [
+    "Why using an intermediary delivers better results",
+    "Why using a broker delivers better results"
+  ],
+  [
+    "How an intermediary helps with a difficult history",
+    "How a broker helps with a difficult history"
+  ],
+  [
+    "The role of a specialised intermediary",
+    "The role of a specialised broker"
+  ],
+  [
+    "The role of the specialist intermediary in real property",
+    "The role of the specialist broker in real property"
+  ],
+  [
+    "the role of an independent intermediary",
+    "the role of an independent broker"
+  ],
+  [
+    "The role of the insurance intermediary in TVDE activity",
+    "The role of the insurance broker in TVDE activity"
+  ],
+  [
+    "insurance intermediary portugal, AI insurance intermediary",
+    "insurance broker portugal, AI insurance broker"
+  ],
+  [
+    "tourism insurance intermediary",
+    "tourism insurance broker"
+  ],
+  [
+    "Lagos expat insurance intermediary",
+    "Lagos expat insurance broker"
+  ],
+  [
+    "insurance intermediary technology, adler rochefort",
+    "insurance broker technology, adler rochefort"
+  ],
+  [
+    "english speaking insurance intermediary portugal",
+    "english speaking insurance broker portugal"
+  ],
+  [
+    "English speaking insurance intermediary portugal",
+    "English speaking insurance broker portugal"
+  ],
+  [
+    "insurance intermediary Portugal, expat insurance Portugal",
+    "insurance broker Portugal, expat insurance Portugal"
+  ]
 ];
 
 // ---------------------------------------------------------------------------

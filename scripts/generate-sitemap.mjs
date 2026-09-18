@@ -240,6 +240,24 @@ const articleEntries = articleRecords.map(entry);
 // removes from the URLs themselves.
 const newest = (records) => records.reduce((max, r) => (r.lastmod > max ? r.lastmod : max), '') || TODAY;
 
+if (process.argv.includes('--en-de-only')) {
+  for (const [name, entries] of [['sitemap-pages.xml', pageEntries], ['sitemap-blog.xml', articleEntries]]) {
+    const path = join(PUBLIC, name);
+    const old = await readFile(path, 'utf8');
+    const scoped = entries.filter(e => /<loc>https:\/\/adlerrochefort\.com\/(en|de)\//.test(e));
+    const replacements = new Map(scoped.map(e => [e.match(/<loc>(.*?)<\/loc>/)[1], e.trim()]));
+    let next = old.replace(/<url>[\s\S]*?<\/url>/g, entry => {
+      const url = entry.match(/<loc>(.*?)<\/loc>/)[1];
+      if (!/^https:\/\/adlerrochefort\.com\/(en|de)\//.test(url)) return entry;
+      const replacement = replacements.get(url);
+      replacements.delete(url);
+      return replacement || entry;
+    });
+    next = next.replace('</urlset>', [...replacements.values()].map(e => '  '+e+'\n').join('')+'</urlset>');
+    await writeFile(path, next);
+  }
+  console.log('Updated EN/DE sitemap entries only; all other entries and sitemap index preserved.');
+} else {
 await writeFile(join(PUBLIC, 'sitemap-pages.xml'), wrap(pageEntries));
 await writeFile(join(PUBLIC, 'sitemap-blog.xml'), wrap(articleEntries));
 await writeFile(
@@ -257,6 +275,8 @@ await writeFile(
 </sitemapindex>
 `
 );
+
+}
 
 // --- consistency report ------------------------------------------------------
 const inSitemap = new Set([...pageUrls, ...articles.map((a) => a.url)]);

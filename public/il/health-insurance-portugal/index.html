@@ -478,6 +478,7 @@
 
     <form name="il-health-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/il/#hatzaa">
       <input type="hidden" name="form-name" value="il-health-insurance-wizard">
+<input type="hidden" name="lang" value="he">
       <input type="hidden" name="ramo" value="Health insurance">
       <input type="hidden" name="source_url" id="il-sau-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -496,7 +497,7 @@
         <div class="contact-form-field"><label for="il-sau-morada">כתובת מלאה *</label><input type="text" id="il-sau-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="il-sau-localidade">עיר או יישוב *</label><input type="text" id="il-sau-localidade" name="localidade" autocomplete="address-level2" required></div>
         <div class="contact-form-field"><label for="il-sau-cp">מיקוד *</label><input type="text" id="il-sau-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required dir="ltr"></div>
-        <div class="contact-form-field"><label for="il-sau-telefone">מספר טלפון *</label><input type="tel" id="il-sau-telefone" name="telefone" autocomplete="tel" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-sau-telefone">מספר טלפון *</label><input type="tel" id="il-sau-telefone" name="telefone" autocomplete="tel" required dir="ltr" placeholder="+351 …"></div>
         <div class="contact-form-field"><label for="il-sau-email">כתובת ⁦דוא״ל⁩ *</label><input type="email" id="il-sau-email" name="email" autocomplete="email" required dir="ltr"></div>
         <div class="contact-form-field">
           <label for="il-sau-nacionalidade">אזרחות *</label>
@@ -518,6 +519,7 @@
       <div data-wizard-step hidden>
         <p class="wizard-helper" style="margin-bottom:16px;">עבור כל מבוטח נדרש <bdi>NIF</bdi> פורטוגזי, כולל קטינים — בלעדיו לא ניתן להנפיק את ההצעה. אנחנו לא שואלים כאן על מידע רפואי: השאלון הרפואי מתבצע ישירות מול חברת הביטוח, בשלב ההצטרפות.</p>
         <div data-persons-repeater>
+<div class="contact-form-field"><label for="quote-persons-count">מספר האנשים לביטוח *</label><input id="quote-persons-count" type="number" name="numero_pessoas" data-persons-count min="1" max="10" step="1" value="1" required></div>
           <div data-persons-list></div>
           <button type="button" class="wizard-nav-back" data-persons-add>+ הוספת מבוטח</button>
         </div>

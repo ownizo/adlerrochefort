@@ -289,16 +289,8 @@ const PAGES = [
   // Especificação v2, Parte D3 — Private Clients DE, built from the
   // generic "Private Clients" branch. Only two wizard steps — no
   // ramo-specific fields, the shared block covers everything.
-  {
-    label: "DE /de/private-clients-portugal/",
-    path: "de/private-clients-portugal/index.html",
-    expectedFormName: "de-private-clients-wizard",
-    requiredFields: [
-      "nome", "nif", "data_nascimento", "morada", "localidade", "codigo_postal",
-      "telefone", "email", "nacionalidade_nome", "residente_fiscal",
-      "data_inicio", "rgpd",
-    ],
-  },
+  // Private Client review forms are covered by scripts/private-client.test.mjs
+  // and private-client/browser-check.mjs; they no longer use the quote wizard.
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator
   // (scripts/lib/market-cluster.mjs) and are converted together. Home
   // (Habitação) is the first of the four ramos, same field set as
