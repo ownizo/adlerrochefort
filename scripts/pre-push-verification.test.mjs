@@ -38,10 +38,15 @@ test('Portuguese homepage keeps only five visible fields and its original contex
  for(const tree of ['en','de','nl','fr','pl','se','dk','zh','il'])assert.ok(!readFileSync(`public/${tree}/index.html`,'utf8').includes('Antes de preencher'),tree);
 });
 test('Private Client editorial content, country navigation and representative journeys are preserved',()=>{
- const withoutProductRoutes=s=>s.replace(/<nav class="quotation-routes"[\s\S]*?<\/nav>/g,'');
+ // Permit only the three approved designation/description changes; preserve all other bytes.
+ const withoutTerminologyCorrection=s=>s
+  .replaceAll('Insurance broker · registered in Portugal with the ASF as a non-tied insurance agent · No. 425591790/3','ASF-registered non-tied insurance agent · No. 425591790/3')
+  .replaceAll('Versicherungsmakler · in Portugal bei der ASF als „agente de seguros não ligado“ registriert · Nr. 425591790/3','Versicherungsvermittler · in Portugal als „agente de seguros“ registriert · ASF Nr. 425591790/3')
+  .replaceAll('Adler & Rochefort is an insurance broker. Ownizo, Unipessoal Lda. is registered in Portugal with the ASF as a non-tied insurance agent, no. 425591790/3.','Portuguese ASF-registered non-tied insurance agent, no. 425591790/3')
+ ;
  for(const page of PRIVATE_CLIENT_PAGES){
   const file=pageFile(page.url),before=execFileSync('git',['show',`HEAD:${file}`],{encoding:'utf8'});
-  assert.equal(withoutProductRoutes(readFileSync(file,'utf8')).replaceAll('Versicherungsmakler','Versicherungsvermittler'),before.replaceAll('Versicherungsmakler','Versicherungsvermittler'),page.url);
+  assert.equal(withoutTerminologyCorrection(readFileSync(file,'utf8')),withoutTerminologyCorrection(before),page.url);
  }
 });
 test('every sitemap entry exists, is indexable and has its own canonical',()=>{

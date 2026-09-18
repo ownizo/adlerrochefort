@@ -31,6 +31,13 @@ for(const page of PRIVATE_CLIENT_PAGES) test(`${page.url}: generated source, can
  for(const name of ['name','email','phone','contact_method','role','authority','country','property_count','locations','existing_insurance','renewal_approaching','valuations','requirements','privacy'])assert.ok(html.includes(`name="${name}"`));
  assert.ok(!/<input[^>]+name="(?:nif|dob|date_of_birth|address)"/.test(html));
  assert.ok(html.includes('agente de seguros') || html.includes('non-tied insurance agent'),'Portuguese regulatory disclosure retained');
+ const designation=page.lang==='de'?'Versicherungsmakler · in Portugal bei der ASF als „agente de seguros não ligado“ registriert · Nr. 425591790/3':'Insurance broker · registered in Portugal with the ASF as a non-tied insurance agent · No. 425591790/3';
+ assert.equal(html.match(/<div class="topline">([^<]+)<\/div>/)?.[1],designation,'visible commercial designation and regulatory category');
+ assert.ok(html.match(/<footer>[\s\S]*?<\/footer>/)?.[0].includes(designation),'footer retains combined designation');
+ assert.equal(normalisePrivateClientLanguage(designation,page.lang),designation,'normalizer must preserve combined designation');
+ const service=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).find(s=>s['@type']==='Service');
+ assert.equal(service.provider['@type'],'InsuranceAgency');
+ assert.equal(service.provider.description,'Adler & Rochefort is an insurance broker. Ownizo, Unipessoal Lda. is registered in Portugal with the ASF as a non-tied insurance agent, no. 425591790/3.');
  const sitemap=readFileSync('public/sitemap-pages.xml','utf8');
  assert.ok(sitemap.includes(`<loc>${origin+page.url}</loc>`));
 });
