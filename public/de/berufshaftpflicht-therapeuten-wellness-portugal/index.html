@@ -387,6 +387,15 @@
       </div>
 
       <div class="field">
+        <label for="f-nif">Portugiesische Steuernummer (NIF) <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f-nif" name="nif" inputmode="numeric" required aria-required="true">
+      </div>
+      <div class="field">
+        <label for="f-morada">Vollständige Anschrift <span class="req" aria-hidden="true">*</span></label>
+        <input type="text" id="f-morada" name="morada" autocomplete="street-address" required aria-required="true">
+      </div>
+
+      <div class="field">
         <label for="f-email">E-Mail-Adresse <span class="req" aria-hidden="true">*</span></label>
         <input type="email" id="f-email" name="email" autocomplete="email" inputmode="email"
                required aria-required="true" aria-describedby="err-email">
@@ -730,6 +739,12 @@
       { id: "f-name", error: "err-name", validate: function (v) {
           if (!v) return "Bitte geben Sie Ihren Namen ein.";
           if (v.length < 2) return "Bitte geben Sie Ihren vollständigen Namen ein.";
+          return null; } },
+      { id: "f-nif", validate: function (v) {
+          if (!v) return "Bitte geben Sie Ihre portugiesische Steuernummer (NIF) ein.";
+          return null; } },
+      { id: "f-morada", validate: function (v) {
+          if (!v) return "Bitte geben Sie Ihre vollständige Anschrift ein.";
           return null; } },
       { id: "f-email", error: "err-email", validate: function (v) {
           if (!v) return "Bitte geben Sie Ihre E-Mail-Adresse ein.";
