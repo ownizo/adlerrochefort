@@ -838,6 +838,9 @@ export const HANDLED_FORMS = {
   "cotacao-empresarial": {
     quote: true,
     heading: "Novo pedido de análise — Multirriscos Empresarial",
+    // Phase 12 (PT repositioning) rebuild: empresarial's real turnaround is
+    // 48-72 working hours, same as RC Profissional — see slaHours above.
+    slaHours: "48 a 72",
     page: "/seguros/empresarial/",
     branch: "Empresarial",
   },

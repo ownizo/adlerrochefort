@@ -59,11 +59,13 @@ function firstNonEmpty(values) {
 }
 
 // classifySubmission()'s `product` vocabulary (lead-classification.mjs) is
-// broader than the spec's four ramos — this maps the ones that clearly
-// belong to one of the four; everything else is recorded under its own
-// product name rather than forced into a wrong bucket. A later phase, once
-// the wizard exists per ramo, sets `ramo` explicitly from a hidden field
-// instead of relying on this inference at all.
+// broader than the ramos mapped here — this covers the ones whose product
+// name doesn't already read as the ramo the spec/pillar rebuild uses
+// (business-multirisk added in the empresarial pillar rebuild, Phase 12);
+// everything else is recorded under its own product name rather than
+// forced into a wrong bucket. A later phase, once the wizard exists per
+// ramo, sets `ramo` explicitly from a hidden field instead of relying on
+// this inference at all.
 const RAMO_BY_PRODUCT = {
   auto: "auto",
   tvde: "auto",
@@ -73,6 +75,7 @@ const RAMO_BY_PRODUCT = {
   health: "saude",
   "professional-liability": "profissional",
   "event-liability": "profissional",
+  "business-multirisk": "empresarial",
 };
 
 // Field names already in use, across the PT/EN/NL/DE/FR/market-cluster forms

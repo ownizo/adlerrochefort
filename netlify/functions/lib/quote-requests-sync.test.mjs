@@ -123,6 +123,19 @@ test("empty/undefined field values are dropped from dados_risco rather than stor
   assert.deepEqual(row.dados_risco, {});
 });
 
+test("ramo maps business-multirisk to empresarial (Phase 12 empresarial pillar rebuild)", () => {
+  const row = buildQuoteRequestRow("cotacao-empresarial", {
+    nome: "Empresa Lda",
+    email: "geral@empresa.pt",
+    empresa: "Empresa Lda",
+    nif: "501442600",
+    ramos_pretendidos: ["Multirriscos", "Responsabilidade civil"],
+    rgpd: "sim",
+  });
+  assert.equal(row.ramo, "empresarial");
+  assert.equal(row.consentimento.aceite, true);
+});
+
 test("ramo falls back to the classifier's raw product name for forms outside the four core ramos", () => {
   const row = buildQuoteRequestRow("cotacao-frota", {
     nome: "Empresa Lda",
