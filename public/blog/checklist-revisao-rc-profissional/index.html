@@ -479,7 +479,8 @@
   .cta-topo-form .cta-field select:focus {
     border-color: #B8323E;
   }
-  .cta-topo-form .cta-btn {
+  .cta-topo-form .cta-btn, .cta-topo > .cta-btn {
+    display: inline-block;
     background: #17243D;
     color: #fff;
     border: none;
@@ -489,11 +490,12 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .cta-topo-form .cta-btn:hover { background: #2a3f66; }
+  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #2a3f66; }
   .cta-topo-micro {
     font-size: 10px;
     color: #516F94;
@@ -659,233 +661,10 @@
   <img src="/images/blog/checklist-revisao-rc-profissional.svg" alt="Checklist para rever uma apólice de RC Profissional" class="article-featured-image" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem; object-fit: cover;" width="1200" height="630" fetchpriority="high" decoding="async">
 
   <div class="cta-topo">
-    <div class="cta-topo-title">Receba 3 cotações em 24 horas</div>
+    <div class="cta-topo-title">Peça uma análise de responsabilidade civil</div>
     <div class="cta-topo-subtitle">Análise gratuita por mediador de seguros registado na ASF. Sem compromisso.</div>
-    <form class="cta-topo-form" name="cotacao-blog" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="cotacao-blog">
-      <input type="hidden" name="source" value="checklist-revisao-rc-profissional">
-      <input type="hidden" name="source_url" value="">
-      <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <div class="cta-field"><label>Nome *</label><input type="text" name="nome" required placeholder="O seu nome"></div>
-      <div class="cta-field"><label>Email *</label><input type="email" name="email" required placeholder="o.seu@email.com"></div>
-      <div class="cta-field"><label>Tipo de seguro *</label><select name="tipo-seguro" data-branch-select required><option value="">Selecionar</option><option value="Saúde">Saúde</option><option value="Automóvel">Automóvel</option><option value="TVDE (Uber, Bolt, Free Now)">TVDE (Uber, Bolt, Free Now)</option><option value="Frota de empresa">Frota de empresa</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio">Condomínio</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Riscos Cibernéticos">Riscos Cibernéticos</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Acidentes de Trabalho">Acidentes de Trabalho</option><option value="Outro" selected>Outro</option></select></div>
-        <div class="form-branch-fields" data-branch="Saúde" hidden>
-          <div class="cta-field">
-            <label for="saude_idade">Idade da pessoa mais velha a segurar</label>
-            <input type="number" id="saude_idade" name="saude_idade" placeholder="Ex.: 42" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="saude_pessoas">Quantas pessoas a segurar</label>
-            <input type="number" id="saude_pessoas" name="saude_pessoas" placeholder="Ex.: 3" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Automóvel" hidden>
-          <div class="cta-field">
-            <label for="auto_veiculo">Marca, modelo e ano</label>
-            <input type="text" id="auto_veiculo" name="auto_veiculo" placeholder="Ex.: Renault Clio 2019" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="auto_matricula">Matrícula</label>
-            <input type="text" id="auto_matricula" name="auto_matricula" placeholder="AA-00-AA" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="auto_anos_carta">Anos de carta</label>
-            <input type="number" id="auto_anos_carta" name="auto_anos_carta" placeholder="Ex.: 15" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="TVDE (Uber, Bolt, Free Now)" hidden>
-          <div class="cta-field">
-            <label for="tvde_perfil">É motorista ou operador?</label>
-            <input type="text" id="tvde_perfil" name="tvde_perfil" placeholder="Motorista / Operador" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="tvde_viaturas">N.º de viaturas</label>
-            <input type="number" id="tvde_viaturas" name="tvde_viaturas" placeholder="Ex.: 1" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="tvde_zona">Zona de operação</label>
-            <input type="text" id="tvde_zona" name="tvde_zona" placeholder="Lisboa, Porto, Algarve…" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Frota de empresa" hidden>
-          <div class="cta-field">
-            <label for="frota_empresa">Empresa</label>
-            <input type="text" id="frota_empresa" name="frota_empresa" placeholder="Designação social" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="frota_viaturas">N.º de viaturas da frota</label>
-            <input type="number" id="frota_viaturas" name="frota_viaturas" placeholder="Ex.: 8" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="frota_sinistros">Sinistros nos últimos 3 anos</label>
-            <input type="text" id="frota_sinistros" name="frota_sinistros" placeholder="Ex.: 2" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Habitação" hidden>
-          <div class="cta-field">
-            <label for="habitacao_tipo">Tipo de imóvel</label>
-            <input type="text" id="habitacao_tipo" name="habitacao_tipo" placeholder="Apartamento / Moradia" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="habitacao_cp">Código postal</label>
-            <input type="text" id="habitacao_cp" name="habitacao_cp" placeholder="0000-000" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="habitacao_valor">Valor de reconstrução estimado</label>
-            <input type="text" id="habitacao_valor" name="habitacao_valor" placeholder="Ex.: 160 000 €" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Alojamento Local" hidden>
-          <div class="cta-field">
-            <label for="al_tipo">Tipo de unidade</label>
-            <input type="text" id="al_tipo" name="al_tipo" placeholder="Apartamento / Moradia / Hostel" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="al_registo">N.º de registo AL</label>
-            <input type="text" id="al_registo" name="al_registo" placeholder="Se já emitido" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="al_capacidade">Capacidade (hóspedes)</label>
-            <input type="number" id="al_capacidade" name="al_capacidade" placeholder="Ex.: 6" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Condomínio" hidden>
-          <div class="cta-field">
-            <label for="condominio_nome">Nome do condomínio</label>
-            <input type="text" id="condominio_nome" name="condominio_nome" placeholder="Ex.: Condomínio Edifício Atlântico" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_nif">NIF do condomínio</label>
-            <input type="text" id="condominio_nif" name="condominio_nif" placeholder="000 000 000" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_morada">Morada e código postal</label>
-            <input type="text" id="condominio_morada" name="condominio_morada" placeholder="Rua, n.º, 0000-000 Localidade" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_fracoes">Número de frações</label>
-            <input type="number" id="condominio_fracoes" name="condominio_fracoes" placeholder="Ex.: 24" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_pisos">Número de pisos</label>
-            <input type="number" id="condominio_pisos" name="condominio_pisos" placeholder="Ex.: 5" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_ano_construcao">Ano de construção</label>
-            <input type="number" id="condominio_ano_construcao" name="condominio_ano_construcao" placeholder="Ex.: 1998" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_elevador">Existe elevador</label>
-            <select id="condominio_elevador" name="condominio_elevador" disabled><option value="">Selecionar</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_espacos_exteriores">Existe piscina ou espaços comuns exteriores</label>
-            <select id="condominio_espacos_exteriores" name="condominio_espacos_exteriores" disabled><option value="">Selecionar</option><option value="Sim">Sim</option><option value="Não">Não</option></select>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_capital">Capital seguro atual do edifício</label>
-            <input type="text" id="condominio_capital" name="condominio_capital" placeholder="Ex.: 2 400 000 €" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_seguradora">Seguradora atual</label>
-            <input type="text" id="condominio_seguradora" name="condominio_seguradora" placeholder="Se já existe apólice" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_vencimento">Data de vencimento</label>
-            <input type="date" id="condominio_vencimento" name="condominio_vencimento" placeholder="" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="condominio_contacto">Quem contacta</label>
-            <select id="condominio_contacto" name="condominio_contacto" disabled><option value="">Selecionar</option><option value="Administrador profissional">Administrador profissional</option><option value="Administrador condómino">Administrador condómino</option><option value="Condómino">Condómino</option></select>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Hotelaria e Restauração" hidden>
-          <div class="cta-field">
-            <label for="horeca_tipo">Tipo de estabelecimento</label>
-            <input type="text" id="horeca_tipo" name="horeca_tipo" placeholder="Hotel, restaurante, bar…" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="horeca_colaboradores">N.º de colaboradores</label>
-            <input type="number" id="horeca_colaboradores" name="horeca_colaboradores" placeholder="Ex.: 12" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="horeca_volume">Volume de negócios anual</label>
-            <input type="text" id="horeca_volume" name="horeca_volume" placeholder="Ex.: 700 000 €" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Multirriscos Empresarial" hidden>
-          <div class="cta-field">
-            <label for="empresarial_empresa">Empresa</label>
-            <input type="text" id="empresarial_empresa" name="empresarial_empresa" placeholder="Designação social" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="empresarial_cae">CAE / atividade</label>
-            <input type="text" id="empresarial_cae" name="empresarial_cae" placeholder="Ex.: 56101" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="empresarial_colaboradores">N.º de colaboradores da empresa</label>
-            <input type="number" id="empresarial_colaboradores" name="empresarial_colaboradores" placeholder="Ex.: 14" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Responsabilidade Civil Profissional" hidden>
-          <div class="cta-field">
-            <label for="rcp_profissao">Profissão ou atividade</label>
-            <input type="text" id="rcp_profissao" name="rcp_profissao" placeholder="Ex.: arquitetura" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="rcp_capital">Capital pretendido</label>
-            <input type="text" id="rcp_capital" name="rcp_capital" placeholder="Ex.: 500 000 €" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="rcp_obrigatorio">É exigido por ordem profissional ou contrato?</label>
-            <input type="text" id="rcp_obrigatorio" name="rcp_obrigatorio" placeholder="Sim / Não" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Riscos Cibernéticos" hidden>
-          <div class="cta-field">
-            <label for="cyber_empresa">Empresa</label>
-            <input type="text" id="cyber_empresa" name="cyber_empresa" placeholder="Designação social" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="cyber_postos">N.º de postos de trabalho</label>
-            <input type="number" id="cyber_postos" name="cyber_postos" placeholder="Ex.: 25" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="cyber_dados">Trata dados pessoais de clientes?</label>
-            <input type="text" id="cyber_dados" name="cyber_dados" placeholder="Sim / Não" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Vida e Crédito Habitação" hidden>
-          <div class="cta-field">
-            <label for="vida_capital">Capital em dívida</label>
-            <input type="text" id="vida_capital" name="vida_capital" placeholder="Ex.: 180 000 €" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="vida_banco">Banco</label>
-            <input type="text" id="vida_banco" name="vida_banco" placeholder="Instituição de crédito" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="vida_nascimento">Data de nascimento</label>
-            <input type="date" id="vida_nascimento" name="vida_nascimento" placeholder="" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="Acidentes de Trabalho" hidden>
-          <div class="cta-field">
-            <label for="at_empresa">Empresa</label>
-            <input type="text" id="at_empresa" name="at_empresa" placeholder="Designação social" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="at_trabalhadores">N.º de trabalhadores</label>
-            <input type="number" id="at_trabalhadores" name="at_trabalhadores" placeholder="Ex.: 9" disabled>
-          </div>
-          <div class="cta-field">
-            <label for="at_massa_salarial">Massa salarial anual</label>
-            <input type="text" id="at_massa_salarial" name="at_massa_salarial" placeholder="Ex.: 210 000 €" disabled>
-          </div>
-        </div>
-      <button type="submit" class="cta-btn">Pedir cotação</button>
-    </form>
-    <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
+    <div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #B8323E;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3><p>As soluções que colocamos não partem do prémio mais baixo. Partem do critério de subscrição de um painel restrito de seguradoras internacionais, escolhidas pela forma como respondem a uma reclamação — não pelo preço a que vendem a apólice.</p><p>Essa escolha tem um preço: raramente seremos a proposta mais barata que vai receber. O capital a contratar é decidido caso a caso na proposta, depois de analisada a sua atividade — não é uma escolha que se faça num formulário.</p><p>Se procura apenas o documento mais barato para cumprir uma exigência contratual, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que uma reclamação chegar, é esse o trabalho que fazemos.</p></div><a class="cta-btn" href="/seguros/responsabilidade-civil-profissional/?source=blog%3Achecklist-revisao-rc-profissional#pedido">Preencher formulário de cotação →</a>
+    <div class="cta-topo-micro">Resposta em 48 a 72 horas úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
 
   <div class="article-body">
@@ -914,7 +693,7 @@
 
     <!-- cluster-links -->
     <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/responsabilidade-civil-profissional/" style="color:#17243D;font-weight:600;">O que acontece quando o seu consultor comete um erro de €500.000?</a> &middot; <a href="/blog/rc-profissional-capital-quanto-contratar/" style="color:#17243D;font-weight:600;">RC Profissional: que capital deve contratar?</a></p>
-    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Quer que revejamos a sua apólice com base nesta checklist? A página de <a href="/seguros/responsabilidade-civil-profissional/" style="color:#17243D;font-weight:600;">RC Profissional</a> reúne o formulário de análise — resposta em 24 horas úteis, por mediador registado na ASF.</p>
+    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Quer que revejamos a sua apólice com base nesta checklist? A página de <a href="/seguros/responsabilidade-civil-profissional/" style="color:#17243D;font-weight:600;">RC Profissional</a> reúne o formulário de análise — resposta em 48 a 72 horas úteis, por mediador registado na ASF.</p>
     <!-- /cluster-links -->
   </div>
 
