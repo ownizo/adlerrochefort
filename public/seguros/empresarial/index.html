@@ -118,13 +118,19 @@
       <div class="lp-trust">
         <div>ASF n.º 425591790/3</div>
         <div>Revisão de capitais incluída</div>
-        <div>Resposta em 24h úteis</div>
+        <div>Cotação em 48 a 72h úteis</div>
       </div>
     </div>
     <div id="pedido">
 <div class="lp-form-card fade-up">
   <h2>Análise de seguros da empresa</h2>
-  <p class="lp-form-sub">Preencha o essencial. Respondemos em 24 horas úteis.</p>
+  <p class="lp-form-sub">Preencha o essencial. Cotação em 48 a 72 horas úteis — a revisão de capitais e exclusões de uma apólice empresarial não se faz num formulário genérico.</p>
+  <div class="hero-form-note">
+    <h3>Antes de preencher</h3>
+    <p>Trabalhamos com um painel restrito de seguradoras com apetite real para risco empresarial, escolhidas pela forma como definem capitais e exclusões — não pelo prémio mais baixo.</p>
+    <p>O capital seguro do edifício, do equipamento e das existências é revisto caso a caso, depois de analisada a sua atividade — não é uma escolha que se faça num formulário.</p>
+    <p>Se procura apenas o documento mais barato para cumprir uma exigência contratual, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que houver um sinistro, é esse o trabalho que fazemos.</p>
+  </div>
   <form name="cotacao-empresarial" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/obrigado/">
     <input type="hidden" name="form-name" value="cotacao-empresarial">
     <input type="hidden" name="ramo" value="Multirriscos Empresarial">
@@ -135,7 +141,7 @@
       <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="o.seu@email.com" required></div>
       <div class="field"><label for="telefone">Telefone / WhatsApp *</label><input type="tel" id="telefone" name="telefone" placeholder="+351 …" required></div>
       <div class="field"><label for="empresa">Empresa *</label><input type="text" id="empresa" name="empresa" placeholder="Designação social" required></div>
-      <div class="field"><label for="nif">NIF</label><input type="text" id="nif" name="nif" placeholder="Contribuinte"></div>
+      <div class="field"><label for="nif">NIF da empresa *</label><input type="text" id="nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" required></div>
       <div class="field"><label for="cae">CAE / atividade</label><input type="text" id="cae" name="cae" placeholder="Ex.: 56101 — restauração"></div>
       <div class="field"><label for="n_colaboradores">N.º de colaboradores</label><input type="number" id="n_colaboradores" name="n_colaboradores" placeholder="Ex.: 14"></div>
       <div class="field"><label for="volume_negocios">Volume de negócios anual</label><input type="text" id="volume_negocios" name="volume_negocios" placeholder="Ex.: 1 200 000 €"></div>
@@ -144,12 +150,13 @@
       <div class="field"><label for="valor_edificio">Valor do edifício / benfeitorias</label><input type="text" id="valor_edificio" name="valor_edificio" placeholder="Ex.: 400 000 €"></div>
       <div class="field"><label for="valor_equipamentos">Valor de equipamentos</label><input type="text" id="valor_equipamentos" name="valor_equipamentos" placeholder="Ex.: 90 000 €"></div>
       <div class="field"><label for="valor_existencias">Valor de existências</label><input type="text" id="valor_existencias" name="valor_existencias" placeholder="Ex.: 60 000 €"></div>
-      <div class="field full"><label for="seguros_atuais">Seguros já em vigor</label><div class="lp-check-grid"><label for="seguros_atuais-0"><input type="checkbox" id="seguros_atuais-0" name="seguros_atuais" value="Multirriscos"> Multirriscos</label><label for="seguros_atuais-1"><input type="checkbox" id="seguros_atuais-1" name="seguros_atuais" value="Responsabilidade civil"> Responsabilidade civil</label><label for="seguros_atuais-2"><input type="checkbox" id="seguros_atuais-2" name="seguros_atuais" value="Acidentes de trabalho"> Acidentes de trabalho</label><label for="seguros_atuais-3"><input type="checkbox" id="seguros_atuais-3" name="seguros_atuais" value="Frota"> Frota</label><label for="seguros_atuais-4"><input type="checkbox" id="seguros_atuais-4" name="seguros_atuais" value="Riscos cibernéticos"> Riscos cibernéticos</label><label for="seguros_atuais-5"><input type="checkbox" id="seguros_atuais-5" name="seguros_atuais" value="D&amp;O"> D&amp;O</label></div></div>
+      <div class="field full"><label id="ramos-pretendidos-label">Ramos pretendidos *</label><div class="lp-check-grid"><label for="ramos_pretendidos-0"><input type="checkbox" id="ramos_pretendidos-0" name="ramos_pretendidos" value="Acidentes de trabalho" aria-describedby="ramos-pretendidos-label" data-required-group="ramos_pretendidos"> Acidentes de trabalho</label><label for="ramos_pretendidos-1"><input type="checkbox" id="ramos_pretendidos-1" name="ramos_pretendidos" value="Multirriscos"> Multirriscos</label><label for="ramos_pretendidos-2"><input type="checkbox" id="ramos_pretendidos-2" name="ramos_pretendidos" value="Responsabilidade civil"> Responsabilidade civil</label></div></div>
       <div class="field"><label for="vencimento">Data de vencimento</label><input type="date" id="vencimento" name="vencimento" placeholder=""></div>
       <div class="field full"><label for="mensagem">Notas</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="Algo que devamos saber?"></textarea><p class="lp-form-micro" style="margin-top:6px;">Não inclua aqui dados de saúde, seus ou de terceiros — só o que for relevante para a apólice.</p></div>
+      <div class="field full"><label><input type="checkbox" name="rgpd" value="sim" required> Aceito que os meus dados sejam usados para preparar esta cotação, ao abrigo do RGPD. *</label></div>
     </div>
     <button type="submit" class="lp-form-submit">Pedir análise →</button>
-    <p class="lp-form-micro">Resposta em 24 horas úteis. Os seus dados são usados apenas para preparar a cotação e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+    <p class="lp-form-micro">Cotação em 48 a 72 horas úteis. Os seus dados são usados apenas para preparar a cotação e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
   </form>
 </div>
     </div>
@@ -220,7 +227,7 @@
     <details><summary>Estamos em instalações arrendadas. O que temos de segurar?</summary><p>O edifício é responsabilidade do senhorio, mas as benfeitorias, o recheio, o equipamento, as existências e a responsabilidade civil de exploração são da empresa. É uma repartição frequentemente mal resolvida no contrato de arrendamento.</p></details>
     <details><summary>Precisamos de seguro de riscos cibernéticos?</summary><p>Se a empresa trata dados pessoais, factura por sistemas informáticos ou depende deles para operar, a exposição existe. O RGPD obriga à notificação de violações de dados em 72 horas, e o custo de resposta a um incidente raramente é o resgate.</p></details>
     <details><summary>Com que frequência devemos rever as apólices?</summary><p>Anualmente, e sempre que haja investimento relevante, mudança de instalações, alteração de atividade ou variação significativa do número de colaboradores.</p></details>
-    <details><summary>Quanto tempo demora a análise?</summary><p>Devolvemos um primeiro parecer em 24 horas úteis. A análise completa de uma carteira com várias apólices costuma demorar alguns dias, consoante a documentação disponível.</p></details>
+    <details><summary>Quanto tempo demora a análise?</summary><p>Devolvemos um primeiro parecer em 48 a 72 horas úteis. A análise completa de uma carteira com várias apólices costuma demorar alguns dias, consoante a documentação disponível.</p></details>
   </div>
 </section>
 
@@ -282,7 +289,7 @@
 <section class="cta-strip" aria-label="Contacto">
   <div class="cta-strip-text">
     <h2 class="cta-strip-title">Pedir análise<br><em>de seguros da empresa</em></h2>
-    <p class="cta-strip-sub">Enviamos um parecer sobre os capitais, as sobreposições e as lacunas antes de qualquer proposta comercial. Resposta em 24 horas úteis.</p>
+    <p class="cta-strip-sub">Enviamos um parecer sobre os capitais, as sobreposições e as lacunas antes de qualquer proposta comercial. Cotação em 48 a 72 horas úteis.</p>
     <div style="margin-top:36px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
       <a href="#pedido" class="btn-primary">Preencher o formulário</a>
       <a href="https://wa.me/351928226570?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20de%20seguros%20para%20a%20minha%20empresa." class="btn-ghost" rel="noopener" target="_blank">Falar por WhatsApp</a>
@@ -647,7 +654,7 @@
       "name": "Quanto tempo demora a análise?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Devolvemos um primeiro parecer em 24 horas úteis. A análise completa de uma carteira com várias apólices costuma demorar alguns dias, consoante a documentação disponível."
+        "text": "Devolvemos um primeiro parecer em 48 a 72 horas úteis. A análise completa de uma carteira com várias apólices costuma demorar alguns dias, consoante a documentação disponível."
       }
     }
   ]
@@ -658,6 +665,51 @@
     var f = document.getElementById('cotacao-empresarial-source');
     if (f) f.value = window.location.href;
   })();
+</script>
+<script defer src="/js/quote-validators.js"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.querySelector('form[name="cotacao-empresarial"]');
+    if (!form) return;
+
+    // Required-checkbox-group validation for "Ramos pretendidos".
+    var anchor = form.querySelector('[data-required-group]');
+    if (anchor) {
+      var group = anchor.getAttribute('data-required-group');
+      var boxes = form.querySelectorAll('[name="' + group + '"]');
+      function groupSatisfied() {
+        return Array.prototype.some.call(boxes, function (b) { return b.checked; });
+      }
+      Array.prototype.forEach.call(boxes, function (b) {
+        b.addEventListener('change', function () { anchor.setCustomValidity(''); });
+      });
+      form.addEventListener('submit', function (e) {
+        if (!groupSatisfied()) {
+          anchor.setCustomValidity('Escolha pelo menos uma opção.');
+          anchor.reportValidity();
+          e.preventDefault();
+        }
+      });
+    }
+
+    // NIF check-digit validation (same rule as the wizard pillars' data-validate="nif").
+    var nif = form.querySelector('#nif');
+    if (nif && window.QuoteValidators) {
+      function checkNif() {
+        if (nif.value && !window.QuoteValidators.isValidNif(nif.value)) {
+          nif.setCustomValidity('NIF inválido — confirme o número de contribuinte.');
+        } else {
+          nif.setCustomValidity('');
+        }
+      }
+      nif.addEventListener('blur', checkNif);
+      nif.addEventListener('input', function () { nif.setCustomValidity(''); });
+      form.addEventListener('submit', function (e) {
+        checkNif();
+        if (!nif.validity.valid) { nif.reportValidity(); e.preventDefault(); }
+      });
+    }
+  });
 </script>
 <script defer src="/js/ar-langsel.js"></script>
 </body>
