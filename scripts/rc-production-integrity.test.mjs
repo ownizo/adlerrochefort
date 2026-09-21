@@ -45,6 +45,30 @@ test('Netlify honeypot is hidden by the wizard stylesheet', () => {
   assert.match(css, /\.contact-form-honeypot\s*\{[^}]*display\s*:\s*none\s*!important\s*;/s);
 });
 
+// With the blog CTAs linking straight to these pillars, this box is what
+// the visitor actually reads before filling in the wizard — it carries the
+// same no-capital rule as the blog articles' box.
+const RC_PILLAR_PATHS_WITH_BOX = [
+  'public/seguros/rc-massagistas/index.html',
+  'public/seguros/rc-profissoes-especificas/index.html',
+  'public/seguros/rc-terapeuticas-nao-convencionais/index.html',
+  'public/seguros/rc-yoga-pilates-bem-estar/index.html',
+  'public/seguros/responsabilidade-civil-profissional/index.html',
+];
+
+test('RC pillar "Antes de preencher" boxes never name a capital figure', () => {
+  const failures = [];
+  for (const path of RC_PILLAR_PATHS_WITH_BOX) {
+    const html = readFileSync(path, 'utf8');
+    const box = html.match(/<h3>Antes de preencher<\/h3>\s*(?:<p>.*?<\/p>\s*)+<\/div>/s)?.[0];
+    if (!box) { failures.push(`${path}: missing "Antes de preencher" box`); continue; }
+    if (/\b\d[\d.]*\s*€/.test(box)) failures.push(`${path}: box names a capital figure`);
+  }
+  const events = readFileSync('public/seguros/responsabilidade-civil-eventos/index.html', 'utf8');
+  if (events.includes('Antes de preencher')) failures.push('responsabilidade-civil-eventos: should not carry the RC qualification box');
+  assert.deepEqual(failures, []);
+});
+
 test('PT RC articles have no 3-quotation promise, and carry the positioning box except events', () => {
   const failures = [];
   for (const path of walk('public/blog')) {
