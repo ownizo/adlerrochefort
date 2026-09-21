@@ -15,6 +15,13 @@ const RC_ARTICLE_PATHS = [
   'public/blog/seguro-responsabilidade-civil-acupuntores/index.html',
   'public/blog/seguro-responsabilidade-civil-naturopatas/index.html',
   'public/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/index.html',
+  // General "RC Profissional" editorial content, not tied to a niche pillar
+  // — same ramo, same target pillar, added when converting the rest of PT.
+  'public/blog/checklist-revisao-rc-profissional/index.html',
+  'public/blog/claims-made-rc-profissional/index.html',
+  'public/blog/rc-profissional-atividade-declarada/index.html',
+  'public/blog/rc-profissional-capital-quanto-contratar/index.html',
+  'public/blog/rc-profissional-exclusoes/index.html',
 ];
 const TVDE_ARTICLE_PATH = 'public/blog/seguro-tvde-portugal/index.html';
 
