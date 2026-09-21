@@ -75,11 +75,15 @@ test('PT RC and TVDE editorial entry points cannot submit reduced quotation payl
  };
  for(const [url,target] of Object.entries(routes)){
   const html=readFileSync('public'+url+'index.html','utf8');
+  const isTvde=url==='/blog/seguro-tvde-portugal/';
   if(url==='/blog/responsabilidade-civil-num-evento-portugal/')
     assert.ok(!html.includes('Antes de preencher'),url);
   else
     assert.ok(html.includes('Antes de preencher'),url);
   assert.ok(html.includes(target),url);
+  // Only the true RC routes get the "Peça uma análise" RC framing — TVDE
+  // is its own ramo (auto) and keeps its original CTA title.
+  assert.equal(html.includes('Receba 3 cotações'),isTvde,url);
   assert.ok(!html.includes('name="cotacao-blog"'),url);
   assert.ok(!html.includes('name="rcp_capital"'),url);
   assert.ok(!/<label[^>]*>Capital pretendido/.test(html),url);

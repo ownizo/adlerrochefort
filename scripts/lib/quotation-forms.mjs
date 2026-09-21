@@ -7,14 +7,23 @@ const langs=['pt','en','nl','de','fr','pl','sv','da','zh','he'];
 export const quoteStrings=Object.fromEntries(langs.map(lang=>[lang,JSON.parse(readFileSync(new URL(`../../data/i18n/quote-form/${lang}.json`,import.meta.url)))]));
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 
+// Especificação v2, Parte 2 — o bloco "Antes de preencher" das RC nunca
+// promete um capital: só o painel restrito de seguradoras, o critério de
+// subscrição acima do prémio, e que raramente seremos a proposta mais
+// barata. A escolha do capital fica para a proposta, caso a caso.
+const RC_POSITIONING_NOTE = [
+  'As soluções que colocamos não partem do prémio mais baixo. Partem do critério de subscrição de um painel restrito de seguradoras internacionais, escolhidas pela forma como respondem a uma reclamação — não pelo preço a que vendem a apólice.',
+  'Essa escolha tem um preço: raramente seremos a proposta mais barata que vai receber. O capital a contratar é decidido caso a caso na proposta, depois de analisada a sua atividade — não é uma escolha que se faça num formulário.',
+  'Se procura apenas o documento mais barato para cumprir uma exigência contratual, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que uma reclamação chegar, é esse o trabalho que fazemos.',
+];
 const PT_DIRECT_QUOTE_ROUTES = {
-  '/blog/responsabilidade-civil-massagistas/': { target:'/seguros/rc-massagistas/#pedido', note:['Uma reclamação por lesão não se resolve com um documento barato. As soluções que colocamos partem de um capital de 250.000 €, porque é esse o valor que responde de forma realista quando se somam a indemnização, a peritagem e os custos de defesa de um processo que pode durar anos.','Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber — é a consequência direta desse critério.','Se procura apenas o documento mais barato para apresentar a um espaço ou clínica, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que um cliente apresentar uma reclamação, é esse o trabalho que fazemos.'] },
-  '/blog/responsabilidade-civil-medicina-tradicional-chinesa/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', note:['O capital mínimo fixado por lei para esta atividade é de 150.000 €. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa.','Trabalhamos com um painel restrito de seguradoras internacionais especializadas neste risco, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber.','Se procura o documento mais barato que satisfaça a ACSS, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que um paciente apresentar uma reclamação, é esse o trabalho que fazemos.'] },
-  '/blog/responsabilidade-civil-num-evento-portugal/': { target:'/seguros/responsabilidade-civil-eventos/#pedido', note:[] },
-  '/blog/responsabilidade-civil-profissional/': { target:'/seguros/responsabilidade-civil-profissional/#pedido', note:['As soluções que colocamos partem de um capital de 250.000 €. Não é uma imposição comercial: é o reflexo do que custa uma reclamação depois de somados a indemnização, a peritagem e os custos de defesa ao longo de um processo que pode arrastar-se por anos.','Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber, e é uma consequência direta desse critério.','Se procura apenas o documento mais barato que cumpra uma exigência contratual ou de ordem profissional, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que uma reclamação chegar, é esse o trabalho que fazemos.'] },
-  '/blog/seguro-responsabilidade-civil-acupuntores/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', note:['O capital mínimo fixado por lei para esta atividade é de 150.000 €. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa.','Trabalhamos com um painel restrito de seguradoras internacionais especializadas neste risco, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber.','Se procura o documento mais barato que satisfaça a ACSS, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que um paciente apresentar uma reclamação, é esse o trabalho que fazemos.'] },
-  '/blog/seguro-responsabilidade-civil-naturopatas/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', note:['O capital mínimo fixado por lei para esta atividade é de 150.000 €. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa.','Trabalhamos com um painel restrito de seguradoras internacionais especializadas neste risco, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber.','Se procura o documento mais barato que satisfaça a ACSS, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que um paciente apresentar uma reclamação, é esse o trabalho que fazemos.'] },
-  '/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', note:['O capital mínimo fixado por lei para esta atividade é de 150.000 €. As soluções que colocamos partem de 250.000 €, porque o mínimo legal cobre mal uma reclamação por dano corporal depois de somados a indemnização e os custos de defesa.','Trabalhamos com um painel restrito de seguradoras internacionais especializadas neste risco, escolhidas pelas condições contratuais que praticam e pela forma como respondem a uma reclamação. Raramente seremos a proposta mais barata que vai receber.','Se procura o documento mais barato que satisfaça a ACSS, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que um paciente apresentar uma reclamação, é esse o trabalho que fazemos.'] },
+  '/blog/responsabilidade-civil-massagistas/': { target:'/seguros/rc-massagistas/#pedido', rc:true, note:RC_POSITIONING_NOTE },
+  '/blog/responsabilidade-civil-medicina-tradicional-chinesa/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', rc:true, note:RC_POSITIONING_NOTE },
+  '/blog/responsabilidade-civil-num-evento-portugal/': { target:'/seguros/responsabilidade-civil-eventos/#pedido', rc:true, note:[] },
+  '/blog/responsabilidade-civil-profissional/': { target:'/seguros/responsabilidade-civil-profissional/#pedido', rc:true, note:RC_POSITIONING_NOTE },
+  '/blog/seguro-responsabilidade-civil-acupuntores/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', rc:true, note:RC_POSITIONING_NOTE },
+  '/blog/seguro-responsabilidade-civil-naturopatas/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', rc:true, note:RC_POSITIONING_NOTE },
+  '/blog/seguro-responsabilidade-civil-terapeuticas-nao-convencionais/': { target:'/seguros/rc-terapeuticas-nao-convencionais/#pedido', rc:true, note:RC_POSITIONING_NOTE },
   '/blog/seguro-tvde-portugal/': { target:'/seguros/tvde/#pedido', note:['As nossas propostas partem das coberturas que a atividade exige. O prémio é o resultado dessa análise, nunca o ponto de partida.','Em TVDE, a viatura é o rendimento. Uma apólice mais barata é quase sempre mais barata porque retirou alguma coisa — a franquia de danos próprios, os dias de veículo de substituição, o quilómetro a partir do qual a assistência arranca, a proteção do próprio condutor. Nada disso aparece no valor anual em destaque, e tudo isso aparece no dia em que o carro para.','Por isso trabalhamos com um painel restrito de seguradoras internacionais e raramente seremos a proposta mais barata. Se o seu critério for o prémio mais baixo, dizemo-lo com franqueza — encontrará melhores valores noutro lado.'] },
 };
 const ptBeforeFill=(paragraphs,target)=>`${paragraphs.length?`<div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #B8323E;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3>${paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</div>`:''}<a class="cta-btn" href="${esc(target)}">Preencher formulário de cotação →</a>`;
@@ -36,11 +45,29 @@ export function correctQuotationHtml(html,{homepage=false}={}) {
  const configuredDirect=lang==='pt' ? PT_DIRECT_QUOTE_ROUTES[canonical] : null;
  const selectedRc=lang==='pt' && /<option value="Responsabilidade Civil Profissional" selected>/.test(html);
  const selectedTvde=lang==='pt' && /<option value="TVDE \(Uber, Bolt, Free Now\)" selected>/.test(html);
- const direct=configuredDirect || (selectedRc ? {target:'/seguros/responsabilidade-civil-profissional/#pedido',note:PT_DIRECT_QUOTE_ROUTES['/blog/responsabilidade-civil-profissional/'].note} : selectedTvde ? {target:'/seguros/tvde/#pedido',note:PT_DIRECT_QUOTE_ROUTES['/blog/seguro-tvde-portugal/'].note} : null);
+ const direct=configuredDirect || (selectedRc ? {target:'/seguros/responsabilidade-civil-profissional/#pedido',rc:true,note:PT_DIRECT_QUOTE_ROUTES['/blog/responsabilidade-civil-profissional/'].note} : selectedTvde ? {target:'/seguros/tvde/#pedido',note:PT_DIRECT_QUOTE_ROUTES['/blog/seguro-tvde-portugal/'].note} : null);
  if(direct && canonical?.startsWith('/blog/') && !html.includes('data-wizard')){
   const target=ptDirectTarget(direct.target,canonical);
+  if(lang==='pt' && direct.rc){
+   // Especificação v2, Parte 2: RC's real turnaround is 48-72 working
+   // hours, never the 24h every other ramo promises — both the button's
+   // micro-copy and any inline "resposta em 24 horas úteis" callout in
+   // the article body must read the RC figure, not the generic one.
+   html=html.replace(/<div class="cta-topo-title">Receba 3 cotações em 24 horas<\/div>/g,'<div class="cta-topo-title">Peça uma análise de responsabilidade civil</div>');
+   html=html.replace(/Resposta em 24h úteis\./g,'Resposta em 48 a 72 horas úteis.');
+   html=html.replace(/resposta em 24 horas úteis/g,'resposta em 48 a 72 horas úteis');
+  }
   html=html.replace(/href="#(?:quote-form|ar-quote-form|cotacao|pedido)"/g,`href="${target}"`);
-  html=html.replace(/<form\b[^>]*\bname="cotacao-blog"[^>]*>[\s\S]*?<\/form>/g,ptBeforeFill(direct.note,target));
+  // First-ever conversion still has the raw embedded form. A page already
+  // converted by an earlier pass (or hand-edited since) has no form left —
+  // resync its existing note+button (or bare button, if a previous pass
+  // stripped the note) instead of doing nothing, so this stays idempotent.
+  const rawForm=/<form\b[^>]*\bname="cotacao-blog"[^>]*>[\s\S]*?<\/form>/;
+  const noteAndButton=/<div class="hero-form-note quotation-before-fill"[\s\S]*?<\/div>\s*<a class="cta-btn"[^>]*>Preencher formulário de cotação →<\/a>/;
+  const bareButton=/<a class="cta-btn"[^>]*>Preencher formulário de cotação →<\/a>/;
+  if(rawForm.test(html)) html=html.replace(rawForm,ptBeforeFill(direct.note,target));
+  else if(noteAndButton.test(html)) html=html.replace(noteAndButton,ptBeforeFill(direct.note,target));
+  else if(bareButton.test(html)) html=html.replace(bareButton,ptBeforeFill(direct.note,target));
   return html;
  }
 

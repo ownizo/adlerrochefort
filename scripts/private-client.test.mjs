@@ -63,7 +63,9 @@ test('unchanged PT classification and source scope',()=>{
  assert.equal(classifySubmission('private-clients-review',{}).product,'private-clients');
  const files=execFileSync('git',['diff','HEAD','--name-only'],{encoding:'utf8'}).trim().split('\n');
  // Quotation corrections may change PT forms, but never surrounding PT copy.
- const outsideForms = html => html.replace(/<form\b[^>]*>[\s\S]*?<\/form>/g, '').replace(/<nav class="quotation-routes"[\s\S]*?<\/nav>/g, '').replace(/^.*charCount.*$/gm, '').replace(/\s+/g, ' ');
+ // The RC/wizard-css hotfix also adds the missing wizard stylesheet link to
+ // <head> on pages that needed it — a chrome fix, not editorial copy.
+ const outsideForms = html => html.replace(/<form\b[^>]*>[\s\S]*?<\/form>/g, '').replace(/<nav class="quotation-routes"[\s\S]*?<\/nav>/g, '').replace(/^.*charCount.*$/gm, '').replace(/<link rel="stylesheet" href="\/css\/ar-quote-wizard\.css">\n?/g, '').replace(/\s+/g, ' ');
  for (const file of files.filter(f => /^public\/(?:index.html|seguros\/.*\.html)$/.test(f))) {
    const before=execFileSync('git',['show',`HEAD:${file}`],{encoding:'utf8'});
    assert.equal(outsideForms(readFileSync(file,'utf8')),outsideForms(before),`${file}: unrelated PT content changed`);
