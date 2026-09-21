@@ -6,6 +6,10 @@ import { readFileSync } from 'node:fs';
 const PRIVATE_CLIENTS_ARTICLE_PATHS = [
   'public/blog/investimento-americano-luxo-portugal/index.html',
   'public/blog/seguros-private-clients-portugal/index.html',
+  // Missed in the original PR #232 batch — "Private Clients" is this
+  // article's own blog category, and it's explicitly listed under
+  // "Análises relacionadas" on the /private-clients/ pillar itself.
+  'public/blog/subseguro-portugal/index.html',
 ];
 
 test('PT private-clients blog CTAs link straight to the pillar form, with no embedded form and the correct 24h SLA', () => {
