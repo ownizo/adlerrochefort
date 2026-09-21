@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+const { JSDOM } = createRequire(import.meta.url)('jsdom');
 
 // The fixed set of PT blog articles whose own CTA routes straight to an RC
 // (or TVDE) pillar's wizard — not merely a page that mentions or cross-links
@@ -83,5 +85,43 @@ test('RC pillar "Antes de preencher" boxes never name a capital figure', () => {
   }
   const events = readFileSync('public/seguros/responsabilidade-civil-eventos/index.html', 'utf8');
   if (events.includes('Antes de preencher')) failures.push('responsabilidade-civil-eventos: should not carry a positioning box');
+  assert.deepEqual(failures, []);
+});
+
+// 2026-09-21: completed the wizard on every RC pillar the blog CTAs point
+// to — full identification block (with the 18-years-old rule on the
+// policyholder), no capital field anywhere.
+const ALL_RC_PILLAR_PATHS = [
+  'public/seguros/rc-massagistas/index.html',
+  'public/seguros/rc-profissoes-especificas/index.html',
+  'public/seguros/rc-terapeuticas-nao-convencionais/index.html',
+  'public/seguros/rc-yoga-pilates-bem-estar/index.html',
+  'public/seguros/responsabilidade-civil-profissional/index.html',
+  'public/seguros/responsabilidade-civil-eventos/index.html',
+];
+const REQUIRED_COMMON_FIELDS = ['nome', 'nif', 'data_nascimento', 'morada', 'localidade', 'codigo_postal', 'telefone', 'email', 'nacionalidade_nome', 'residente_fiscal', 'faturacao_anual', 'data_inicio', 'rgpd'];
+
+test('every RC pillar wizard collects the complete common field set, with no capital field', () => {
+  const failures = [];
+  for (const path of ALL_RC_PILLAR_PATHS) {
+    const html = readFileSync(path, 'utf8');
+    const dom = new JSDOM(html);
+    const form = dom.window.document.querySelector('form[data-wizard]');
+    if (!form) { failures.push(`${path}: no data-wizard form`); continue; }
+    for (const name of REQUIRED_COMMON_FIELDS) {
+      const el = form.elements[name];
+      if (!el) failures.push(`${path}: missing field "${name}"`);
+      else if (!el.required && name !== 'nacionalidade_nome') failures.push(`${path}: "${name}" is not required`);
+    }
+    const dob = form.elements['data_nascimento'];
+    if (dob && dob.dataset.validate !== 'birth-date-adult') failures.push(`${path}: data_nascimento must use data-validate="birth-date-adult" (18-year rule), found "${dob.dataset.validate}"`);
+    if (/\bcapital\b/i.test(html.replace(/<style[\s\S]*?<\/style>/g, ''))) {
+      // Case-insensitive is intentional but scoped to form controls only —
+      // editorial body copy on the page is allowed to discuss capital.
+      const capitalField = [...form.querySelectorAll('input, select, textarea')].find(el => /capital/i.test(el.name || '') || /capital/i.test(el.id || ''));
+      if (capitalField) failures.push(`${path}: form still has a capital field (${capitalField.name || capitalField.id})`);
+    }
+    dom.window.close();
+  }
   assert.deepEqual(failures, []);
 });
