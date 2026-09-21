@@ -19,7 +19,7 @@ test('empresarial pillar form collects nome, empresa, NIF (required) and a requi
   assert.ok(!form.includes('Seguros já em vigor'), 'the old "seguros já em vigor" group should be removed');
   assert.ok(!/name="seguros_atuais"/.test(form), 'the old seguros_atuais field name should be gone');
   assert.ok(form.includes('Ramos pretendidos'));
-  for (const ramo of ['Acidentes de trabalho', 'Multirriscos', 'Responsabilidade civil']) {
+  for (const ramo of ['Acidentes de trabalho', 'Multirriscos', 'Responsabilidade civil', 'Riscos cibernéticos', 'D&amp;O', 'Seguro de obra']) {
     assert.ok(
       new RegExp(`name="ramos_pretendidos" value="${ramo}"`).test(form),
       `missing ramos_pretendidos option: ${ramo}`
