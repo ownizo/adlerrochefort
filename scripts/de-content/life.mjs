@@ -16,7 +16,7 @@ export const LIFE_PAGE = {
   // back in verbatim. See publishedFormSection() there for why.
   dedicatedForm: 'de-lebensversicherung-wizard',
   url: '/de/lebensversicherung-portugal/',
-  title: 'Lebensversicherung in Portugal für deutsche Expats | Adler & Rochefort',
+  title: 'Lebensversicherung in Portugal | Adler & Rochefort',
   description:
     'Risikolebensversicherung, an eine Hypothek gekoppelte Deckung und Familienabsicherung in Portugal: was die Bankpolice abdeckt, wo Marktalternativen infrage kommen, und worauf Sie bei Begünstigten achten.',
   keywords: 'Lebensversicherung Portugal, Risikolebensversicherung Portugal, Hypothek Lebensversicherung Portugal, Familienabsicherung Portugal Deutsche',

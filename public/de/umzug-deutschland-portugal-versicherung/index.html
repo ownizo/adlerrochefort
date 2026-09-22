@@ -58,6 +58,14 @@
         {
           "@type": "Country",
           "name": "Portugal"
+        },
+        {
+          "@type": "Country",
+          "name": "Spain"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Mallorca, Spain"
         }
       ],
       "address": {
@@ -168,7 +176,7 @@
       "author": {
         "@type": "Person",
         "name": "Hugo Gonçalves",
-        "jobTitle": "Agente de seguros (ASF 425591790/3)",
+        "jobTitle": "Gründer und Risk Management Specialist",
         "worksFor": {
           "@id": "https://adlerrochefort.com/#organization"
         }
@@ -247,8 +255,8 @@
 <div class="lang-policy-band">
   <aside class="lang-policy" aria-labelledby="sprachpolitik">
     <h2 id="sprachpolitik">Unsere Arbeitssprache ist Englisch</h2>
-      <p>Diese Seite ist auf Deutsch, weil das Thema deutsche Expats in Portugal betrifft. Die eigentliche Dienstleistung läuft jedoch auf Englisch: Angebote, Erläuterungen zu den Bedingungen, Korrespondenz und Schadenabwicklung erfolgen auf Englisch, schriftlich. Wir weisen vorab darauf hin, weil eine Schadenmeldung der falsche Moment wäre, das erst zu erfahren.</p>
-      <p>Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt. Wir sorgen dafür, dass Sie genau verstehen, was darin steht — auf Englisch, schriftlich, bevor Sie unterschreiben.</p>
+      <p>Diese Seite ist auf Deutsch. Intern ist unsere Arbeitssprache Englisch. Angebote, Erläuterungen zu den Bedingungen, Korrespondenz und Schadenabwicklung stellen wir Ihnen mit KI-Unterstützung auf Deutsch bereit — so klar, dass Sie den Unterschied kaum merken.</p>
+      <p>Policen portugiesischer und spanischer Versicherer werden gesetzlich auf Portugiesisch bzw. Spanisch ausgestellt. Wir sorgen dafür, dass Sie genau verstehen, was darin steht — auf Deutsch, schriftlich, bevor Sie unterschreiben.</p>
   </aside>
 </div>
 
@@ -371,6 +379,8 @@
   </div>
 </section>
 
+
+
 <section class="section plain" aria-labelledby="weiterlesen-title">
   <div class="container narrow">
     <h2 id="weiterlesen-title">Weiterlesen</h2>
@@ -388,7 +398,7 @@
   <div class="form-shell">
     <h2 id="angebot-title">Beratung zu Ihrem Umzug anfragen</h2>
     <p class="form-intro">Beschreiben Sie kurz Ihre Situation — geplantes Abmeldedatum, ob Sie Rentner sind, ob ein Fahrzeug mitkommt. Wir sagen Ihnen, was zuerst geregelt werden muss.</p>
-    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden, auf Englisch schriftlich.</p>
+    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden auf Deutsch.</p>
 
     <form
       class="lead-form"
@@ -407,6 +417,7 @@
       <input type="hidden" name="subject" value="Neue Anfrage (DE) — Umzug von Deutschland nach Portugal">
       <input type="hidden" name="language" value="de">
       <input type="hidden" name="market" value="germany">
+      <input type="hidden" name="country" value="Portugal">
       <input type="hidden" name="product_interest" value="">
       <p class="visually-hidden"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
@@ -447,6 +458,7 @@
           <option value="Autoversicherung">Autoversicherung</option>
           <option value="Lebensversicherung">Lebensversicherung</option>
           <option value="Private Clients">Private Clients (komplexe Risiken)</option>
+          <option value="Berufshaftpflicht">Berufshaftpflicht (RC)</option>
           <option value="Unternehmen">Unternehmen / Selbstständige</option>
           <option value="Therapeuten &amp; Wellness">Therapeuten &amp; Wellness-Instruktoren</option>
           <option value="Sonstiges">Sonstiges / mehrere Bereiche</option>
@@ -465,8 +477,8 @@
             <input type="text" id="f-kv_familie" name="kv_familie" placeholder="z. B.: Ehepaar, 2 Kinder" disabled>
           </div>
           <div class="field">
-            <label for="f-kv_wohnort">Wohnort in Portugal</label>
-            <input type="text" id="f-kv_wohnort" name="kv_wohnort" placeholder="z. B.: Lagos, Algarve" disabled>
+            <label for="f-kv_wohnort">Wohnort</label>
+            <input type="text" id="f-kv_wohnort" name="kv_wohnort" placeholder="z. B.: Lagos, Algarve / Palma, Mallorca" disabled>
           </div>
           <div class="field">
             <label for="f-kv_termin">Gewünschter Versicherungsbeginn</label>
@@ -585,6 +597,25 @@
             <input type="text" id="f-pc_anforderungen" name="pc_anforderungen" placeholder="z. B.: weltweite Deckung, Einzelanfertigungen" disabled>
           </div>
         </div>
+        <div class="form-branch-fields" data-branch="Berufshaftpflicht" hidden>
+          <span class="form-branch-legend">Zur beruflichen Haftung</span>
+          <div class="field">
+            <label for="f-rc_taetigkeit">Art der Tätigkeit</label>
+            <input type="text" id="f-rc_taetigkeit" name="rc_taetigkeit" placeholder="z. B.: Beratung, Therapie, Architektur" disabled>
+          </div>
+          <div class="field">
+            <label for="f-rc_ort">Wo üben Sie die Tätigkeit aus?</label>
+            <input type="text" id="f-rc_ort" name="rc_ort" placeholder="z. B.: Lagos, Algarve, auch im Ausland" disabled>
+          </div>
+          <div class="field">
+            <label for="f-rc_summe">Gewünschte Deckungssumme</label>
+            <input type="text" id="f-rc_summe" name="rc_summe" placeholder="z. B.: 150.000 € / 300.000 €" disabled>
+          </div>
+          <div class="field">
+            <label for="f-rc_cedula">Berufszulassung vorhanden?</label>
+            <input type="text" id="f-rc_cedula" name="rc_cedula" placeholder="Ja / Nein / in Beantragung / nicht erforderlich" disabled>
+          </div>
+        </div>
         <div class="form-branch-fields" data-branch="Unternehmen" hidden>
           <span class="form-branch-legend">Zum Unternehmen</span>
           <div class="field">
@@ -637,7 +668,7 @@
     <div class="form-success" id="angebotSuccess">
       <div class="tick">&#10003;</div>
       <h3>Vielen Dank!</h3>
-      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Englisch bei Ihnen.</p>
+      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Deutsch bei Ihnen.</p>
     </div>
   </div>
 </section>
@@ -664,6 +695,21 @@
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
         <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Algarve</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-lagos/">Lagos</a></li>
+        <li><a href="/de/versicherung-luz/">Praia da Luz</a></li>
+        <li><a href="/de/versicherung-burgau/">Burgau</a></li>
+        <li><a href="/de/versicherung-vila-do-bispo/">Vila do Bispo</a></li>
+        <li><a href="/de/versicherung-sagres/">Sagres</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top:22px">Spanien</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-spanien/">Spanien insgesamt</a></li>
+        <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
       </ul>
     </div>
     <div>

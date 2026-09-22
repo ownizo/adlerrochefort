@@ -15,7 +15,7 @@ export const MOTOR_PAGE = {
   // back in verbatim. See publishedFormSection() there for why.
   dedicatedForm: 'de-autoversicherung-wizard',
   url: '/de/autoversicherung-portugal/',
-  title: 'Autoversicherung in Portugal für deutsche Expats | Adler & Rochefort',
+  title: 'Autoversicherung in Portugal | Adler & Rochefort',
   description:
     'Kfz-Haftpflicht und Vollkasko in Portugal, deutsches oder portugiesisches Kennzeichen, ISV und das IMT-Verfahren, und wie Ihre deutsche Schadenfreiheitsklasse behandelt wird.',
   keywords:

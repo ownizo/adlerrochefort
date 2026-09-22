@@ -13,7 +13,7 @@
  * the already-shared public/css/ar-chrome.css; body content comes from
  * public/css/ar-de.css, this cluster's own stylesheet.
  *
- * The one structural difference from the Dutch cluster: /de/ IS the hub (Part 4
+ * September 2026: /de/ is the EN-parity homepage (hand-authored). The editorial hub now lives at /de/versicherung-portugal/. Historical note: the one structural difference from the Dutch cluster used to be that /de/ IS the hub (Part 4
  * of the brief lists it as one of the eleven pages, not a separate landing next
  * to the homepage the way /nl/verzekeringen-portugal/ sits apart from
  * /nl/index.html). So this script's PAGES array includes a page whose url is
@@ -44,6 +44,10 @@ const esc = (s) =>
 
 /* ─────────────── shared chrome ─────────────── */
 
+function isSpainPage(page) {
+  return page.formCountry === 'Spain' || page.formMarket === 'spain';
+}
+
 const ORG_LD = {
   '@type': 'InsuranceAgency',
   '@id': `${ORIGIN}/#organization`,
@@ -59,6 +63,8 @@ const ORG_LD = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Algarve, Portugal' },
     { '@type': 'Country', name: 'Portugal' },
+    { '@type': 'Country', name: 'Spain' },
+    { '@type': 'AdministrativeArea', name: 'Mallorca, Spain' },
   ],
   address: {
     '@type': 'PostalAddress',
@@ -203,17 +209,40 @@ function jsonLd(page) {
     image: `${ORIGIN}/images/og-image-adlerrochefort.png`,
     publisher: { '@id': `${ORIGIN}/#organization` },
   };
+  if (page.areaServed) webpage.areaServed = page.areaServed;
+  else if (isSpainPage(page)) webpage.areaServed = { '@type': 'Country', name: 'Spain' };
   if (page.schemaType === 'Article') {
     webpage.author = {
       '@type': 'Person',
       name: 'Hugo Gonçalves',
-      jobTitle: 'Agente de seguros (ASF 425591790/3)',
+      jobTitle: 'Gründer und Risk Management Specialist',
       worksFor: { '@id': `${ORIGIN}/#organization` },
     };
   }
 
   const graph = [ORG_LD, breadcrumb, faq, webpage].filter(Boolean);
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 2);
+}
+
+function teamHtml(page) {
+  if (!page.showTeam) return '';
+  return `<section class="section tint de-team" id="team" aria-labelledby="team-title">
+  <div class="container narrow">
+    <span class="eyebrow">Ihr Ansprechpartner</span>
+    <h2 id="team-title">Hugo Gonçalves</h2>
+    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Risk Management Specialist · ASF 425591790/3 · Lagos</p>
+    <div class="de-team-grid">
+      <picture>
+        <source type="image/webp" srcset="/images/hugo-goncalves-640.webp">
+        <img src="/images/hugo-goncalves-640.jpg" alt="Hugo Gonçalves, Gründer von Adler &amp; Rochefort" width="640" height="853" loading="lazy" decoding="async">
+      </picture>
+      <div class="article-body">
+        <p>Hugo Gonçalves ist der Gründer von Adler &amp; Rochefort. Er verbindet internationale Erfahrung mit einer klaren Spezialisierung auf Versicherungsberatung für internationale Mandanten in Portugal und, im Dienstleistungsverkehr, in Spanien. Jeder Fall wird im Detail gelesen, bevor eine Police empfohlen wird — unter Aufsicht der ASF.</p>
+        <p>Abschluss in Business Management der University of Hertfordshire, laufende Weiterbildung am Chartered Insurance Institute (CII). Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. <a class="text-link" href="/de/#team">Mehr zum Team</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>`;
 }
 
 function langPolicyHtml() {
@@ -256,7 +285,7 @@ const BRANCHES = [
     fields: [
       { id: 'kv_geburtsdatum', label: 'Geburtsdatum der ältesten zu versichernden Person', type: 'text', placeholder: 'TT.MM.JJJJ' },
       { id: 'kv_familie', label: 'Familienzusammensetzung', type: 'text', placeholder: 'z. B.: Ehepaar, 2 Kinder' },
-      { id: 'kv_wohnort', label: 'Wohnort in Portugal', type: 'text', placeholder: 'z. B.: Lagos, Algarve' },
+      { id: 'kv_wohnort', label: 'Wohnort', type: 'text', placeholder: 'z. B.: Lagos, Algarve / Palma, Mallorca' },
       { id: 'kv_termin', label: 'Gewünschter Versicherungsbeginn', type: 'text', placeholder: 'z. B.: 1. Januar 2027' },
       { id: 'kv_netzwerk', label: 'Präferenz: Netzwerk oder Kostenerstattung?', type: 'text', placeholder: 'Netzwerk / Erstattung / unbekannt' },
     ],
@@ -314,6 +343,17 @@ const BRANCHES = [
     ],
   },
   {
+    value: 'Berufshaftpflicht',
+    label: 'Berufshaftpflicht (RC)',
+    legend: 'Zur beruflichen Haftung',
+    fields: [
+      { id: 'rc_taetigkeit', label: 'Art der Tätigkeit', type: 'text', placeholder: 'z. B.: Beratung, Therapie, Architektur' },
+      { id: 'rc_ort', label: 'Wo üben Sie die Tätigkeit aus?', type: 'text', placeholder: 'z. B.: Lagos, Algarve, auch im Ausland' },
+      { id: 'rc_summe', label: 'Gewünschte Deckungssumme', type: 'text', placeholder: 'z. B.: 150.000 € / 300.000 €' },
+      { id: 'rc_cedula', label: 'Berufszulassung vorhanden?', type: 'text', placeholder: 'Ja / Nein / in Beantragung / nicht erforderlich' },
+    ],
+  },
+  {
     value: 'Unternehmen',
     label: 'Unternehmen / Selbstständige',
     legend: 'Zum Unternehmen',
@@ -335,8 +375,8 @@ const BRANCHES = [
   },
 ];
 
-function branchGroupsHtml() {
-  return BRANCHES.map((b) => {
+function branchGroupsHtml(page) {
+  return branchesFor(page).map((b) => {
     const fields = b.fields
       .map(
         (f) => `          <div class="field">
@@ -398,9 +438,55 @@ async function dedicatedFormSkipReason(page) {
   return `hand-authored ${page.dedicatedForm}`;
 }
 
+function branchesFor(page) {
+  if (!isSpainPage(page)) return BRANCHES;
+  return BRANCHES.map((b) => {
+    if (b.value === "Krankenversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "kv_geburtsdatum", label: "Geburtsdatum der ältesten zu versichernden Person", type: "text", placeholder: "TT.MM.JJJJ" },
+          { id: "kv_familie", label: "Familienzusammensetzung", type: "text", placeholder: "z. B.: Ehepaar, 2 Kinder" },
+          { id: "kv_wohnort", label: "Wohnort in Spanien", type: "text", placeholder: "z. B.: Palma, Sóller, Andratx" },
+          { id: "kv_termin", label: "Gewünschter Versicherungsbeginn", type: "text", placeholder: "z. B.: 1. Januar 2027" },
+        ],
+      };
+    }
+    if (b.value === "Hausversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "hv_lage", label: "Lage der Immobilie", type: "text", placeholder: "z. B.: Palma, Andratx, Sóller, Alcúdia" },
+          { id: "hv_typ", label: "Immobilientyp", type: "text", placeholder: "Wohnung / Villa / Finca" },
+          { id: "hv_nutzung", label: "Haupt- oder Zweitwohnsitz?", type: "text", placeholder: "Hauptwohnsitz / Zweitwohnsitz / vermietet" },
+          { id: "hv_comunidad", label: "Comunidad de propietarios?", type: "text", placeholder: "Ja / Nein / unsicher" },
+          { id: "hv_leerstand", label: "Wochen Leerstand im Jahr", type: "text", placeholder: "z. B.: 30" },
+          { id: "hv_summe_gebaeude", label: "Wiederaufbauwert Gebäude", type: "text", placeholder: "z. B.: 450.000 €" },
+          { id: "hv_pool", label: "Swimmingpool vorhanden?", type: "text", placeholder: "Ja / Nein" },
+          { id: "hv_vermietung", label: "Wird vermietet?", type: "text", placeholder: "Nein / Langzeit / Ferienvermietung" },
+        ],
+      };
+    }
+    if (b.value === "Autoversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "av_kennzeichen", label: "Spanisches oder ausländisches Kennzeichen?", type: "text", placeholder: "Spanisch / Deutsch / anderes" },
+          { id: "av_fahrzeug", label: "Marke, Modell und Baujahr", type: "text", placeholder: "z. B.: VW Golf 2020" },
+          { id: "av_fuehrerschein_datum", label: "Datum der ersten Führerscheinausstellung", type: "text", placeholder: "TT.MM.JJJJ" },
+          { id: "av_fuehrerschein_land", label: "Ausstellungsland des Führerscheins", type: "text", placeholder: "z. B.: Deutschland" },
+          { id: "av_schadenverlauf", label: "Schadenfreie Jahre bzw. Schadenverlauf", type: "text", placeholder: "z. B.: 8 Jahre schadenfrei" },
+          { id: "av_deckung", label: "Gewünschter Deckungsumfang", type: "text", placeholder: "Haftpflicht / Teilkasko / Vollkasko" },
+        ],
+      };
+    }
+    return b;
+  });
+}
+
 function formHtml(page) {
   const selected = page.formBranch;
-  const options = BRANCHES.map(
+  const options = branchesFor(page).map(
     (b) => `          <option value="${esc(b.value)}"${b.value === selected ? ' selected' : ''}>${esc(b.label)}</option>`
   ).join('\n');
 
@@ -408,7 +494,7 @@ function formHtml(page) {
   <div class="form-shell">
     <h2 id="angebot-title">${page.formHeading || 'Angebot anfragen'}</h2>
     <p class="form-intro">${page.formIntro}</p>
-    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden, auf Englisch schriftlich.</p>
+    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden auf Deutsch.</p>
 
     <form
       class="lead-form"
@@ -426,7 +512,8 @@ function formHtml(page) {
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="subject" value="Neue Anfrage (DE) — ${esc(page.formSubject)}">
       <input type="hidden" name="language" value="de">
-      <input type="hidden" name="market" value="germany">
+      <input type="hidden" name="market" value="${esc(page.formMarket || 'germany')}">
+      <input type="hidden" name="country" value="${esc(page.formCountry || 'Portugal')}">
       <input type="hidden" name="product_interest" value="${esc(selected || '')}">
       <p class="visually-hidden"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
@@ -468,7 +555,7 @@ ${options}
         <span class="field-error" id="err-typ" aria-live="polite"></span>
       </div>
 
-${branchGroupsHtml()}
+${branchGroupsHtml(page)}
 
       <div class="field">
         <label for="f-nachricht">Ihre Nachricht</label>
@@ -491,7 +578,7 @@ ${branchGroupsHtml()}
     <div class="form-success" id="angebotSuccess">
       <div class="tick">&#10003;</div>
       <h3>Vielen Dank!</h3>
-      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Englisch bei Ihnen.</p>
+      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Deutsch bei Ihnen.</p>
     </div>
   </div>
 </section>`;
@@ -503,7 +590,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
+      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Sitz in Lagos." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Registrierter Versicherungsmakler — ASF Nr. 425591790/3
@@ -512,12 +599,32 @@ const FOOTER = (page) => `<footer class="on-dark">
     <div>
       <div class="footer-col-title">Deckung</div>
       <ul class="footer-col-links">
-        <li><a href="/de/krankenversicherung-portugal/">Krankenversicherung</a></li>
+${isSpainPage(page) ? `        <li><a href="/de/krankenversicherung-spanien/">Krankenversicherung</a></li>
+        <li><a href="/de/hausversicherung-spanien/">Hausversicherung</a></li>
+        <li><a href="/de/autoversicherung-spanien/">Autoversicherung</a></li>
+        <li><a href="/de/lebensversicherung-spanien/">Lebensversicherung</a></li>
+        <li><a href="/de/vermieterversicherung-spanien/">Vermieterversicherung</a></li>
+        <li><a href="/de/private-clients-spanien/">Private Clients</a></li>` : `        <li><a href="/de/krankenversicherung-portugal/">Krankenversicherung</a></li>
         <li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li>
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
-        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
+        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>`}
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Algarve</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-lagos/">Lagos</a></li>
+        <li><a href="/de/versicherung-luz/">Praia da Luz</a></li>
+        <li><a href="/de/versicherung-burgau/">Burgau</a></li>
+        <li><a href="/de/versicherung-vila-do-bispo/">Vila do Bispo</a></li>
+        <li><a href="/de/versicherung-sagres/">Sagres</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top:22px">Spanien</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-spanien/">Spanien insgesamt</a></li>
+        <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
       </ul>
     </div>
     <div>
@@ -758,7 +865,9 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}"${
 <meta name="keywords" content="${esc(page.keywords)}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="Hugo Gonçalves">
-<link rel="canonical" href="${ORIGIN}${page.url}">
+${page.geo ? `<meta name="geo.region" content="${esc(page.geo.region)}">
+<meta name="geo.placename" content="${esc(page.geo.placename)}">
+` : ''}<link rel="canonical" href="${ORIGIN}${page.url}">
 ${hreflangTags(page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -799,7 +908,7 @@ ${LANGSEL_CSS_LINK}
 
 <a class="skip-link" href="#main">Direkt zum Inhalt</a>
 
-<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
+<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · ${isSpainPage(page) ? "Dienstleistungsverkehr Spanien" : "Lagos, Algarve"}</div>
 
 <header class="site-header">
   <nav class="site-nav on-dark" aria-label="Hauptnavigation">
@@ -836,6 +945,8 @@ ${quote}
 
 ${faqHtml(page)}
 
+${teamHtml(page)}
+
 ${related}
 
 ${formSection}
@@ -863,10 +974,16 @@ ${LANGSEL_SCRIPT_TAG}
 
 let written = 0;
 const skipped = [];
+const only = process.argv.filter((a) => a.startsWith('--only=')).map((a) => a.slice(7));
 for (const page of PAGES) {
+  if (only.length && !only.includes(page.slug)) continue;
   // Checked before anything is written: a page that declares dedicatedForm
   // is never overwritten, and an inconsistent declaration throws rather
   // than letting the run continue past the page the guard protects.
+  if (page.url === '/de/') {
+    skipped.push(`${page.url} — hand-authored EN-parity homepage, not regenerated`);
+    continue;
+  }
   if (page.dedicatedForm) {
     skipped.push(`${page.url} — ${await dedicatedFormSkipReason(page)}`);
     continue;

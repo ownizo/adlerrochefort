@@ -36,7 +36,7 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
 const ALGARVE_PAGE = {
   slug: 'versicherung-algarve',
   url: '/de/versicherung-algarve/',
-  title: 'Versicherung Algarve für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung an der Algarve | Adler & Rochefort',
   description:
     'Hausversicherung, Krankenversicherung und Autoversicherung für deutsche Eigentümer und Expats an der Algarve — Küstenlage, Ferienimmobilien, Pools und das private Klinik-Netzwerk vor Ort.',
   keywords: 'Versicherung Algarve, Hausversicherung Algarve, Krankenversicherung Algarve, Ferienhaus Versicherung Algarve, Versicherungsmakler Algarve Deutsche',
@@ -109,13 +109,18 @@ const ALGARVE_PAGE = {
     { url: '/de/versicherung-carvoeiro/', label: 'Versicherung in Carvoeiro' },
     { url: '/de/versicherung-vilamoura/', label: 'Versicherung in Vilamoura' },
     { url: '/de/versicherung-quinta-do-lago/', label: 'Versicherung in Quinta do Lago' },
+    { url: '/de/versicherung-lagos/', label: 'Versicherung in Lagos' },
+    { url: '/de/versicherung-luz/', label: 'Versicherung in Praia da Luz' },
+    { url: '/de/versicherung-burgau/', label: 'Versicherung in Burgau' },
+    { url: '/de/versicherung-vila-do-bispo/', label: 'Versicherung in Vila do Bispo' },
+    { url: '/de/versicherung-sagres/', label: 'Versicherung in Sagres' },
   ],
 };
 
 const LAGOS_PAGE = {
   slug: 'versicherung-lagos',
   url: '/de/versicherung-lagos/',
-  title: 'Versicherung Lagos für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Lagos | Adler & Rochefort',
   description:
     'Hausversicherung, Krankenversicherung und Autoversicherung in Lagos, Algarve — Altstadtwohnungen in propriedade horizontal, Marina und Boote, und der Sitz unseres Maklerbüros vor Ort.',
   keywords: 'Versicherung Lagos, Hausversicherung Lagos Algarve, Versicherungsmakler Lagos, Wohnungsversicherung Lagos Altstadt',
@@ -131,6 +136,7 @@ const LAGOS_PAGE = {
   published: '2026-09-12T09:00:00+00:00',
   modified: '2026-09-12T09:00:00+00:00',
   schemaType: 'WebPage',
+  showTeam: true,
   formHeading: 'Angebot für Lagos anfragen',
   formBranch: '',
   formSubject: 'Versicherung Lagos',
@@ -170,16 +176,19 @@ const LAGOS_PAGE = {
     },
   ],
   related: [
+    { url: '/de/versicherung-luz/', label: 'Versicherung in Praia da Luz' },
+    { url: '/de/versicherung-burgau/', label: 'Versicherung in Burgau' },
+    { url: '/de/versicherung-sagres/', label: 'Versicherung in Sagres' },
+    { url: '/de/versicherung-vila-do-bispo/', label: 'Versicherung in Vila do Bispo' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/versicherung-algarve/', label: 'Versicherung an der Algarve' },
-    { url: '/en/blog/insuring-a-high-value-apartment-lisbon-cascais/', label: 'Insuring a High-Value Apartment (Lisbon &amp; Cascais, Englisch)', hreflang: 'en' },
   ],
 };
 
 const LISSABON_PAGE = {
   slug: 'versicherung-lissabon',
   url: '/de/versicherung-lissabon/',
-  title: 'Versicherung Lissabon für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Lissabon | Adler & Rochefort',
   description:
     'Hausversicherung für Eigentumswohnungen in Lissabon: wo die Police der Eigentümergemeinschaft endet und Ihre eigene beginnt, plus Kranken- und Autoversicherung für deutsche Residenten.',
   keywords: 'Versicherung Lissabon, Hausversicherung Lissabon, Eigentumswohnung Versicherung Lissabon, Versicherungsmakler Lissabon Deutsche',
@@ -238,7 +247,7 @@ const LISSABON_PAGE = {
 const CASCAIS_PAGE = {
   slug: 'versicherung-cascais',
   url: '/de/versicherung-cascais/',
-  title: 'Versicherung Cascais für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Cascais | Adler & Rochefort',
   description:
     'Hausversicherung für Villen und Eigentumswohnungen in Cascais, Erdbebendeckung an der Costa do Estoril, sowie Kranken- und Autoversicherung für deutsche Residenten.',
   keywords: 'Versicherung Cascais, Hausversicherung Cascais, Versicherungsmakler Cascais Deutsche, Erdbebenversicherung Cascais',
@@ -295,7 +304,7 @@ const CASCAIS_PAGE = {
 const PORTIMAO_PAGE = {
   slug: 'versicherung-portimao',
   url: '/de/versicherung-portimao/',
-  title: 'Versicherung Portimão für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Portimão | Adler & Rochefort',
   description:
     'Hausversicherung in Portimão: warum das Baujahr über die Erdbebendeckung entscheidet, wo die Police der Eigentümergemeinschaft endet, und was bei Vermietung zu beachten ist.',
   keywords: 'Versicherung Portimão, Hausversicherung Portimão, Erdbebenversicherung Algarve, Versicherungsmakler Portimão Deutsche, Eigentumswohnung Versicherung Portimão',
@@ -360,7 +369,7 @@ const PORTIMAO_PAGE = {
 const CARVOEIRO_PAGE = {
   slug: 'versicherung-carvoeiro',
   url: '/de/versicherung-carvoeiro/',
-  title: 'Versicherung Carvoeiro für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Carvoeiro | Adler & Rochefort',
   description:
     'Hausversicherung in Carvoeiro: der Leerstand über den Winter, die Klippenlage am Barlavento-Küstenabschnitt, und was Ferienanlagen mit Eigentümergemeinschaft abdecken.',
   keywords: 'Versicherung Carvoeiro, Hausversicherung Carvoeiro, Klippenversicherung Algarve, Ferienhaus Versicherung Carvoeiro, Versicherungsmakler Carvoeiro Deutsche',
@@ -432,7 +441,7 @@ const CARVOEIRO_PAGE = {
 const VILAMOURA_PAGE = {
   slug: 'versicherung-vilamoura',
   url: '/de/versicherung-vilamoura/',
-  title: 'Versicherung Vilamoura für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Vilamoura | Adler & Rochefort',
   description:
     'Hausversicherung und Bootsversicherung in Vilamoura: was der Liegeplatzvertrag der Marina verlangt, wo die Police der Ferienanlage endet, und was saisonale Nutzung bedeutet.',
   keywords: 'Versicherung Vilamoura, Hausversicherung Vilamoura, Bootsversicherung Vilamoura Marina, Versicherungsmakler Vilamoura Deutsche, Eigentumswohnung Versicherung Vilamoura',
@@ -497,10 +506,10 @@ const VILAMOURA_PAGE = {
 const QUINTA_DO_LAGO_PAGE = {
   slug: 'versicherung-quinta-do-lago',
   url: '/de/versicherung-quinta-do-lago/',
-  title: 'Versicherung Quinta do Lago für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Quinta do Lago | Adler & Rochefort',
   description:
     'Hausversicherung in Quinta do Lago: was typischerweise nicht in der Versicherungssumme steckt, warum Hausangestellte eine eigene Police brauchen, und wo Private Clients ansetzt.',
-  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Luxusimmobilie Versicherung Algarve, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
+  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
   eyebrow: 'Regional · Quinta do Lago',
   h1: 'Versicherung in Quinta do Lago',
   standfirst:
@@ -568,7 +577,7 @@ const QUINTA_DO_LAGO_PAGE = {
 const COMPORTA_PAGE = {
   slug: 'versicherung-comporta',
   url: '/de/versicherung-comporta/',
-  title: 'Versicherung Comporta für deutsche Expats und Eigentümer | Adler & Rochefort',
+  title: 'Versicherung in Comporta | Adler & Rochefort',
   description:
     'Hausversicherung in Comporta: warum Reetdach und Holzbauweise über die Platzierung entscheiden, die Anfahrtszeit der Feuerwehr, und eine der höchsten seismischen Zonen des Festlands.',
   keywords: 'Versicherung Comporta, Hausversicherung Comporta, Reetdach Versicherung Portugal, Erdbebenversicherung Comporta, Versicherungsmakler Comporta Deutsche',

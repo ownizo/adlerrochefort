@@ -92,7 +92,7 @@ export const SPAIN_CROSS_SELL_PROMPT = {
 const HUB = {
   slug: 'expat-insurance-spain',
   crumb: 'Insurance for expats',
-  title: 'Insurance for Expats in Spain | English-Speaking Service',
+  title: 'Insurance in Spain for International Clients | Adler & Rochefort',
   description:
     'Insurance for expats, foreign residents and property owners in Spain, explained in English. Tell us your situation and we will confirm what can be arranged. Free written review.',
   keywords:
@@ -589,13 +589,13 @@ const HOME = {
   slug: 'home-insurance-spain',
   crumb: 'Home insurance',
   parent: { href: '/en/expat-insurance-spain/', label: 'Insurance for expats in Spain' },
-  title: 'Home Insurance in Spain for International Owners',
+  title: 'Home Insurance in Spain | Adler & Rochefort',
   description:
     'Home insurance in Spain for expats, second-home owners and non-resident property owners. Explained in English — tell us about the property and we will confirm what can be arranged.',
   keywords:
     'home insurance spain expats, property insurance spain foreigners, home insurance spain non residents, house insurance spain expats, property insurance spain international owners, second home insurance spain',
   eyebrow: 'Spain · Home insurance',
-  h1: 'Home Insurance in Spain for International Owners',
+  h1: 'Home Insurance in Spain | Adler & Rochefort',
   heroSub:
     'Whether the property is where you live full-time, a holiday home you use for part of the year, or an investment held from abroad, cover has to match how you actually use it. Tell us about the property and we will confirm what can currently be arranged.',
   heroCta: 'Get a home insurance quote',

@@ -16,7 +16,7 @@ export const HEALTH_PAGE = {
   // back in verbatim. See publishedFormSection() there for why.
   dedicatedForm: 'de-krankenversicherung-wizard',
   url: '/de/krankenversicherung-portugal/',
-  title: 'Krankenversicherung in Portugal für deutsche Expats | Adler & Rochefort',
+  title: 'Krankenversicherung in Portugal | Adler & Rochefort',
   description:
     'SNS und wo es in der Praxis an Grenzen stößt, das private Netzwerk an der Algarve, Wartezeiten und Gesundheitsprüfung, Vorerkrankungen und die mutualistische Alternative bei höherem Alter.',
   keywords:
