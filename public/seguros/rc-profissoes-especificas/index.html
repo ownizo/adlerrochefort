@@ -572,43 +572,6 @@
 <script>
   function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
 
-  (function () {
-    var triggers = Array.prototype.slice.call(document.querySelectorAll('.nav-trigger'));
-    function closeAll(except) {
-      triggers.forEach(function (t) {
-        if (t === except) return;
-        t.setAttribute('aria-expanded', 'false');
-        var panel = document.getElementById(t.getAttribute('aria-controls'));
-        if (panel) panel.hidden = true;
-      });
-    }
-    triggers.forEach(function (trigger) {
-      var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-      if (!panel) return;
-      trigger.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        closeAll(trigger);
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-    document.addEventListener('click', function () { closeAll(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
-  })();
-
-  (function () {
-    var accTriggers = Array.prototype.slice.call(document.querySelectorAll('.mobile-accordion-trigger'));
-    accTriggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function () {
-        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-        if (!panel) return;
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-  })();
 
   (function () {
     if (!localStorage.getItem('cookie_consent')) {

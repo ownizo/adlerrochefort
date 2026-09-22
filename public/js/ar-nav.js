@@ -1,12 +1,16 @@
 /*
  * Shared mega-nav behaviour. One file, every language.
  *
- * Homepages used to inline this. Inner pages that now carry the same nav
- * would otherwise open a burger that did nothing and dropdowns that never
- * toggle. Idempotent: a page that already defined toggleMenu keeps working.
+ * Click-to-toggle on desktop (.nav-trigger) and accordion on mobile.
+ * Bound once, in the capture phase, so a page that still carries an older
+ * inline copy of this wiring cannot double-toggle (open-then-close on the
+ * same click — which looks like the menu does nothing).
  */
 (function () {
   "use strict";
+
+  if (window.__arNavBound) return;
+  window.__arNavBound = true;
 
   if (typeof window.toggleMenu !== "function") {
     window.toggleMenu = function toggleMenu() {
@@ -18,66 +22,60 @@
     };
   }
 
-  function setupMega() {
-    var triggers = Array.prototype.slice.call(document.querySelectorAll(".nav-trigger"));
-    if (!triggers.length) return;
-
-    function closeAll(except) {
-      triggers.forEach(function (t) {
-        if (t === except) return;
-        t.setAttribute("aria-expanded", "false");
-        var panel = document.getElementById(t.getAttribute("aria-controls"));
-        if (panel) panel.hidden = true;
-      });
-    }
-
-    triggers.forEach(function (trigger) {
-      if (trigger.getAttribute("data-ar-nav")) return;
-      trigger.setAttribute("data-ar-nav", "1");
-      var panel = document.getElementById(trigger.getAttribute("aria-controls"));
-      if (!panel) return;
-      trigger.addEventListener("click", function (e) {
-        e.stopPropagation();
-        var isOpen = trigger.getAttribute("aria-expanded") === "true";
-        closeAll(trigger);
-        trigger.setAttribute("aria-expanded", String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-
-    document.addEventListener("click", function () {
-      closeAll();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeAll();
-    });
+  function panelFor(trigger) {
+    var id = trigger.getAttribute("aria-controls");
+    return id ? document.getElementById(id) : null;
   }
 
-  function setupAccordion() {
-    var accTriggers = Array.prototype.slice.call(
-      document.querySelectorAll(".mobile-accordion-trigger")
-    );
-    accTriggers.forEach(function (trigger) {
-      if (trigger.getAttribute("data-ar-nav")) return;
-      trigger.setAttribute("data-ar-nav", "1");
-      trigger.addEventListener("click", function () {
-        var panel = document.getElementById(trigger.getAttribute("aria-controls"));
+  function closeMega(except) {
+    var triggers = document.querySelectorAll(".nav-trigger");
+    for (var i = 0; i < triggers.length; i++) {
+      var t = triggers[i];
+      if (t === except) continue;
+      t.setAttribute("aria-expanded", "false");
+      var panel = panelFor(t);
+      if (panel) panel.hidden = true;
+    }
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target && e.target.closest ? e.target : null;
+      if (!target || !target.closest) return;
+
+      var trigger = target.closest(".nav-trigger");
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        var panel = panelFor(trigger);
         if (!panel) return;
         var isOpen = trigger.getAttribute("aria-expanded") === "true";
+        closeMega(trigger);
         trigger.setAttribute("aria-expanded", String(!isOpen));
         panel.hidden = isOpen;
-      });
-    });
-  }
+        return;
+      }
 
-  function init() {
-    setupMega();
-    setupAccordion();
-  }
+      if (target.closest(".nav-panel")) return;
+      closeMega();
+    },
+    true
+  );
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMega();
+  });
+
+  document.addEventListener("click", function (e) {
+    var target = e.target && e.target.closest ? e.target : null;
+    if (!target || !target.closest) return;
+    var trigger = target.closest(".mobile-accordion-trigger");
+    if (!trigger) return;
+    var panel = panelFor(trigger);
+    if (!panel) return;
+    var isOpen = trigger.getAttribute("aria-expanded") === "true";
+    trigger.setAttribute("aria-expanded", String(!isOpen));
+    panel.hidden = isOpen;
+  });
 })();
