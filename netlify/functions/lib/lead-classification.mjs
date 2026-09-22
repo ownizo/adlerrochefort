@@ -219,6 +219,15 @@ const FORM_CLASSIFICATION = {
   'auditoria-condominio': { entityType: 'condominium', market: 'PT', product: 'condominium' },
   'alterar-mediador': { entityType: 'individual', market: 'PT', product: 'mediator-change' },
   'private-clients-review': { entityType: 'individual', market: 'PT', product: 'private-clients' },
+  // Phase 12: the 2 "no quote CTA" blog pages — business-development
+  // contacts, not insurance leads, so CRM sync is skipped for them (only
+  // 'individual' leads sync — see the comment on HANDLED_FORMS). Still
+  // classified explicitly rather than left to the 'ambiguous' fallback, per
+  // the CRM coverage test below.
+  'adler-pro-interesse': { entityType: 'business', market: 'PT', product: 'adler-pro-interest' },
+  'parcerias-imobiliarias': { entityType: 'business', market: 'PT', product: 'real-estate-partnership' },
+  'adler-pro-interest': { entityType: 'business', market: 'PT', language: 'EN', product: 'adler-pro-interest' },
+  'real-estate-partnership': { entityType: 'business', market: 'PT', language: 'EN', product: 'real-estate-partnership' },
   // RC Profissional e o cluster de nicho (TNC, Massagistas, Profissões
   // Específicas, Eventos) — formulários dedicados novos (ver secção 6/7 do
   // pedido). Mesmo `product` que o ramo partilhado equivalente

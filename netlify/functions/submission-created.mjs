@@ -82,6 +82,15 @@ const FIELD_LABELS = {
   source_url: "Page URL",
   message: "Message",
   gdpr_consent: "GDPR consent",
+  // adler-pro-interesse/adler-pro-interest, parcerias-imobiliarias/real-estate-partnership
+  // (Phase 12, no-CTA blog pages — see HANDLED_FORMS below).
+  nome: "Full name",
+  empresa: "Company",
+  mensagem: "Message",
+  agencia: "Agency",
+  telefone: "Phone",
+  company: "Company",
+  agency: "Agency",
   // Dutch landing page (/nl/verzekeringen-portugal/). The visitor writes in
   // Dutch; the labels stay English because the team works in English.
   naam: "Name",
@@ -780,6 +789,30 @@ export const HANDLED_FORMS = {
     heading: "New fiscal representation enquiry",
     intro: "A new submission was received from the fiscal representation service page.",
     subjectPrefix: "New fiscal representation enquiry",
+  },
+  // Phase 12 (PT repositioning): the 2 "no quote CTA" blog pages — these are
+  // not insurance leads, so they skip the quote:true path (no ramo, no SLA
+  // promise) and go through the same simple flow as relocation-services/
+  // fiscal-representation above.
+  "adler-pro-interesse": {
+    heading: "Novo contacto — Interesse na Adler Pro",
+    intro: "Um visitante do blog demonstrou interesse na plataforma Adler Pro.",
+    subjectPrefix: "Novo contacto Adler Pro",
+  },
+  "parcerias-imobiliarias": {
+    heading: "Novo contacto — Parceria imobiliária",
+    intro: "Uma agência imobiliária demonstrou interesse numa parceria.",
+    subjectPrefix: "Nova parceria imobiliária",
+  },
+  "adler-pro-interest": {
+    heading: "New contact — Adler Pro interest",
+    intro: "A blog visitor expressed interest in the Adler Pro platform.",
+    subjectPrefix: "New Adler Pro contact",
+  },
+  "real-estate-partnership": {
+    heading: "New contact — Real estate partnership",
+    intro: "A real estate agency expressed interest in a partnership.",
+    subjectPrefix: "New real estate partnership",
   },
   "nl-offerte-aanvraag": {
     heading: "New Dutch quote request",
