@@ -70,6 +70,11 @@ export const ZH_MARKET = {
   gtagName: 'zh_baojia_shenqing',
   subjectPrefix: '新咨询 (ZH) — ',
   consentValue: '同意',
+
+  // Especificação v2, Parte 4 — short shared lead form, same shape and same
+  // reasoning as PL's (see scripts/pl-cluster.data.mjs). All four pages
+  // sharing this form-name, no per-page exception.
+  shortForm: true,
   otherValue: 'ZH · Other',
 
   langPolicy: LANG_POLICY_ZH,
