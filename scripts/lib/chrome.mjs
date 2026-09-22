@@ -327,50 +327,6 @@ export const GA = `<script async src="https://www.googletagmanager.com/gtag/js?i
 export const PAGE_SCRIPTS = `<script>
   function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
 
-  // Desktop mega menu — click-to-toggle, keyboard + click-outside + Escape.
-  // Same generic, selector-based wiring as public/index.html; needed here
-  // because CHROME.pt.nav/mobileNav now carry the mega-menu/accordion markup
-  // scraped from the homepage, but that markup's own interactivity lives in
-  // the homepage's <script>, which generated pages never inherit.
-  (function () {
-    var triggers = Array.prototype.slice.call(document.querySelectorAll('.nav-trigger'));
-    function closeAll(except) {
-      triggers.forEach(function (t) {
-        if (t === except) return;
-        t.setAttribute('aria-expanded', 'false');
-        var panel = document.getElementById(t.getAttribute('aria-controls'));
-        if (panel) panel.hidden = true;
-      });
-    }
-    triggers.forEach(function (trigger) {
-      var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-      if (!panel) return;
-      trigger.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        closeAll(trigger);
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-    document.addEventListener('click', function () { closeAll(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
-  })();
-
-  // Mobile accordion — click-to-toggle, ARIA state.
-  (function () {
-    var accTriggers = Array.prototype.slice.call(document.querySelectorAll('.mobile-accordion-trigger'));
-    accTriggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function () {
-        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-        if (!panel) return;
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-  })();
-
   (function () {
     if (!localStorage.getItem('cookie_consent')) {
       document.getElementById('cookieBanner').classList.add('show');
@@ -387,6 +343,7 @@ export const PAGE_SCRIPTS = `<script>
     document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
   })();
 </script>
+<script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>`;
 
 export const esc = (s) =>
