@@ -182,7 +182,12 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
   // (most of the site, still Fase 1's "accept what forms already send")
   // simply leaves this undefined — never assumed true.
   // "consent" (+ its per-language affirmative) covers the five market
-  // clusters' shared lead form — PL/SE/DK/ZH/IL, 20 pages. Every one of
+  // clusters' shared lead form — PL/SE/DK/ZH/IL, 20 pages — and
+  // "toestemming" the Dutch one ("nl-offerte-aanvraag", 12 pages, plus the
+  // hand-authored /nl/ hub), which had exactly the same defect: a required
+  // checkbox the visitor must tick, whose value never reached this list.
+  // Its value is already "ja", so unlike the five above it needed the
+  // field name alone. Every one of
   // them renders a *required* consent checkbox named "consent", and none of
   // them was ever read here: the alias list stopped at "einwilligung", so
   // every lead from those pages was stored with `aceite: undefined` — the
@@ -202,7 +207,7 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
     "同意", // ZH
     "מאשר", // IL
   ]);
-  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "consent"]);
+  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "consent", "toestemming"]);
 
   const row = {
     ramo,
