@@ -335,6 +335,20 @@
 
   .privacy-note { font-size: 12.5px; color: var(--muted); margin-top: 18px; text-align: center; }
   .privacy-note a { color: var(--primary); }
+  /* The field-label rule above is uppercase and tracked. A consent sentence
+     is not a field label — reset it, or the RGPD text ships in all caps. */
+  .field-block > label.consent-opt {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13.5px; font-weight: 500; letter-spacing: 0;
+    text-transform: none; line-height: 1.55; color: var(--ink2);
+    cursor: pointer; margin-bottom: 0;
+  }
+  .field-block > label.consent-opt input[type="checkbox"] {
+    width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px;
+    accent-color: var(--primary);
+  }
+  .field-block > label.consent-opt span { flex: 1; min-width: 0; }
+  .field-block > label.consent-opt a { color: var(--primary); }
 
   /* FAQ */
   .faq-wrap { background: var(--white); }
@@ -678,12 +692,17 @@
           <input type="tel" id="telefone" name="telefone" placeholder="ex: 912 345 678" inputmode="tel" autocomplete="tel">
         </div>
 
+        <div class="field-block">
+          <label class="consent-opt" for="rgpd"><input type="checkbox" id="rgpd" name="rgpd" value="sim" required><span>Autorizo que a Adler &amp; Rochefort trate os meus dados e documentos exclusivamente para processar esta alteração de mediador, nos termos do RGPD e da <a href="/politica-de-privacidade">Política de Privacidade</a>. *</span></label>
+          <div class="error-msg" id="err-rgpd">É necessário o seu consentimento para tratarmos o pedido</div>
+        </div>
+
         <button type="submit" class="submit-btn" id="submitBtn">
           <span class="spinner"></span>
           <span class="btn-text">Enviar pedido de alteração</span>
         </button>
 
-        <p class="privacy-note">Ao enviar, os seus dados e documentos são tratados pela Adler &amp; Rochefort exclusivamente para processar a alteração de mediador, nos termos da nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+        <p class="privacy-note">Os seus dados e documentos são tratados pela Adler &amp; Rochefort exclusivamente para processar a alteração de mediador, nos termos da nossa <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
       </form>
 
       <!-- Success -->
@@ -1043,6 +1062,13 @@
       var email = $('email').value.trim();
       var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       setError('email', !emailOk); if (!emailOk) ok = false;
+
+      // Consent is required to *send* us the data, not to generate the PDF
+      // the visitor keeps for themselves — hence inside the !forPdf branch,
+      // next to the email address, which is the other field only the
+      // submission needs.
+      var rgpd = $('rgpd');
+      setError('rgpd', !rgpd.checked); if (!rgpd.checked) ok = false;
 
       // Para pessoas coletivas, a certidão permanente é obrigatória.
       var certInput = form.querySelector('input[name="certidaoPermanente"]');
