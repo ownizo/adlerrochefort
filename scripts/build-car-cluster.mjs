@@ -47,6 +47,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, PILLAR, PT_EQUIVALENT } from './car-cluster.data.mjs';
+import { NAV_SCRIPT } from './lib/mega-nav.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -561,11 +562,7 @@ ${page.related.map(card).join('\n\n')}
 </main>
 ${FOOTER}
 
-<script>
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
-</script>
+${NAV_SCRIPT}
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>

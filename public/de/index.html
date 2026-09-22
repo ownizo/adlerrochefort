@@ -3828,53 +3828,6 @@
 
 
 <script>
-  // Mobile nav
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
-
-  // Desktop mega menu — click-to-toggle, keyboard + click-outside + Escape, no hover dependency
-  (function () {
-    var triggers = Array.prototype.slice.call(document.querySelectorAll('.nav-trigger'));
-    function closeAll(except) {
-      triggers.forEach(function (t) {
-        if (t === except) return;
-        t.setAttribute('aria-expanded', 'false');
-        var panel = document.getElementById(t.getAttribute('aria-controls'));
-        if (panel) panel.hidden = true;
-      });
-    }
-    triggers.forEach(function (trigger) {
-      var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-      if (!panel) return;
-      trigger.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        closeAll(trigger);
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-    document.addEventListener('click', function () { closeAll(); });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeAll();
-    });
-  })();
-
-  // Mobile accordion — click-to-toggle, ARIA state, no hover dependency
-  (function () {
-    var accTriggers = Array.prototype.slice.call(document.querySelectorAll('.mobile-accordion-trigger'));
-    accTriggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function () {
-        var panel = document.getElementById(trigger.getAttribute('aria-controls'));
-        if (!panel) return;
-        var isOpen = trigger.getAttribute('aria-expanded') === 'true';
-        trigger.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
-      });
-    });
-  })();
-
   // Contact form modal
   function openContactForm() {
     document.getElementById('contactModal').classList.add('open');
@@ -3999,4 +3952,5 @@
 <script defer src="/js/insurance-chat-widget.js" data-lang="en" data-topics="modelos_rede_reembolso,allianz,april,medis,comparacao_precos,auto_geral,casa_geral,alojamento_local"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 </body></html>
