@@ -11,6 +11,7 @@
  * side effect of wanting three constants. This file has none: importing it
  * only defines the constants below.
  */
+import { livroLink } from './livro.mjs';
 
 // Not the Portugal footer. Shows both markets' product links plus contact —
 // genuinely neutral, which is why the review page reuses it unmodified.
@@ -56,6 +57,7 @@ export const FOOTER = `
     <div class="footer-legal">
       <a href="/en/privacy-policy/">Privacy Policy</a>
       <a href="/en/terms-and-conditions/">Terms &amp; Conditions</a>
+      ${livroLink('Complaints Book')}
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">ASF Reporting Channel</a>
     </div>
   </div>

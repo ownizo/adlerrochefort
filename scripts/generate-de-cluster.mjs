@@ -36,6 +36,7 @@ import {
   LANG_BY_KEY,
 } from './lib/lang-selector.mjs';
 import { extractSiteNav, extractMobileNav, swapLangSwitcher, NAV_SCRIPT } from './lib/mega-nav.mjs';
+import { livroLink, LIVRO_CSS, LIVRO_SCRIPT } from './lib/livro.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -671,7 +672,7 @@ ${footerLangs(page)}
     <div class="footer-legal">
       <a href="/en/privacy-policy" hreflang="en">Datenschutz</a>
       <a href="/en/terms-and-conditions" hreflang="en">AGB</a>
-      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Beschwerdebuch</a>
+      ${livroLink('Beschwerdebuch')}
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">ASF-Hinweisgeberkanal</a>
     </div>
   </div>
@@ -903,6 +904,7 @@ ${jsonLd(page)}
 
 <link rel="stylesheet" href="/css/ar-de.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+${LIVRO_CSS}
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
 <script>
@@ -968,6 +970,7 @@ ${FORM_SCRIPT}
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${COOKIE_BANNER}
 ${NAV_SCRIPT}
+${LIVRO_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
 </body>
 </html>

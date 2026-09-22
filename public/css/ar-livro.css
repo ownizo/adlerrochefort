@@ -1,0 +1,97 @@
+/* Livro de Reclamações — official Ownizo plaque with QR.
+   Desktop (fine pointer): hover or keyboard focus on the footer label.
+   Mobile (coarse pointer): first tap opens the card; the plaque itself is
+   the link to livroreclamacoes.pt. Backdrop or Escape closes it. */
+
+.footer-livro {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-livro-card {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  z-index: 80;
+  width: min(560px, 92vw);
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+}
+
+.footer-livro-card a {
+  display: block;
+  line-height: 0;
+}
+
+.footer-legal .footer-livro-card a {
+  color: inherit;
+  font-size: inherit;
+}
+
+.footer-livro-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer-livro-card::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 28px;
+  border: 7px solid transparent;
+  border-top-color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-livro:hover .footer-livro-card,
+  .footer-livro:focus-within .footer-livro-card {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+.footer-livro.is-open .footer-livro-card {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+}
+
+.footer-livro.is-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 79;
+  background: rgba(15, 22, 36, 0.45);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-livro.is-open::before {
+    content: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-livro.is-open .footer-livro-card {
+    position: fixed;
+    left: 50%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    width: min(360px, calc(100vw - 32px));
+    transform: translate(-50%, -50%);
+  }
+  .footer-livro.is-open .footer-livro-card::after {
+    content: none;
+  }
+}
