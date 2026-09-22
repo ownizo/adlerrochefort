@@ -14,6 +14,10 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  */
 export const PRIVATE_CLIENTS_PAGE = {
   slug: 'private-clients-portugal',
+  // Hand-authored wizard, not regenerated from this file's formBranch/BRANCHES:
+  // generate-de-cluster.mjs splices the published <section id="angebot">
+  // back in verbatim. See publishedFormSection() there for why.
+  dedicatedForm: 'de-private-clients-wizard',
   url: '/de/private-clients-portugal/',
   title: 'Private Clients Portugal: Versicherung für komplexe Risiken | Adler & Rochefort',
   description:

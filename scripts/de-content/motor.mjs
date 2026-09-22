@@ -10,6 +10,10 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  */
 export const MOTOR_PAGE = {
   slug: 'autoversicherung-portugal',
+  // Hand-authored wizard, not regenerated from this file's formBranch/BRANCHES:
+  // generate-de-cluster.mjs splices the published <section id="angebot">
+  // back in verbatim. See publishedFormSection() there for why.
+  dedicatedForm: 'de-autoversicherung-wizard',
   url: '/de/autoversicherung-portugal/',
   title: 'Autoversicherung in Portugal für deutsche Expats | Adler & Rochefort',
   description:

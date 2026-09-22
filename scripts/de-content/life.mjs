@@ -11,6 +11,10 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  */
 export const LIFE_PAGE = {
   slug: 'lebensversicherung-portugal',
+  // Hand-authored wizard, not regenerated from this file's formBranch/BRANCHES:
+  // generate-de-cluster.mjs splices the published <section id="angebot">
+  // back in verbatim. See publishedFormSection() there for why.
+  dedicatedForm: 'de-lebensversicherung-wizard',
   url: '/de/lebensversicherung-portugal/',
   title: 'Lebensversicherung in Portugal für deutsche Expats | Adler & Rochefort',
   description:
