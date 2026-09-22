@@ -105,6 +105,7 @@ const FIELD_LABELS = {
   // classification in lead-classification.mjs instead, so these two are only
   // ever shown in the notification email, not read by crm-sync.mjs.
   telefon: "Phone",
+  firma: "Company",
   versicherungsart: "Type of insurance",
   nachricht: "Notes",
   einwilligung: "GDPR consent",
