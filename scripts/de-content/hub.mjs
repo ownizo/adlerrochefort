@@ -15,7 +15,7 @@ import { insurerPanel } from '../lib/site-sections.mjs';
 export const HUB_PAGE = {
   slug: 'de-hub',
   url: '/de/versicherung-portugal/',
-  title: 'Versicherungen in Portugal für deutsche Expats | Adler & Rochefort',
+  title: 'Versicherung in Portugal | Adler & Rochefort',
   description:
     'Nicht einfach versichert, richtig versichert: Versicherungsberatung für deutsche Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Kranken-, Haus-, Auto- und Lebensversicherung — wir beginnen mit dem Risiko, nicht mit dem Preis.',
   keywords:

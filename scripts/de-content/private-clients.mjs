@@ -19,10 +19,10 @@ export const PRIVATE_CLIENTS_PAGE = {
   // back in verbatim. See publishedFormSection() there for why.
   dedicatedForm: 'de-private-clients-wizard',
   url: '/de/private-clients-portugal/',
-  title: 'Private Clients Portugal: Versicherung für komplexe Risiken | Adler & Rochefort',
+  title: 'Private Clients in Portugal | Adler & Rochefort',
   description:
-    'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken: Luxusimmobilien, Kunst und Sammlungen, Schmuck und Uhren, Oldtimer und mehrere Wohnsitze — individuell zusammengestellt statt aus dem Standardprodukt.',
-  keywords: 'Private Clients Versicherung Portugal, Luxusimmobilien Versicherung Portugal, Kunstversicherung Portugal, Oldtimer Versicherung Portugal, Versicherung Zweitwohnsitz Portugal',
+    'Immobilien, Kunst, Schmuck, Sammlungen, Oldtimer und Boote gemeinsam geprüft — nicht als einzelne Retail-Policen. Taxierte Werte, wo das Risiko es braucht.',
+  keywords: 'Private Clients Versicherung Portugal, Kunstversicherung Portugal, Schmuckversicherung Portugal, Oldtimer Versicherung Portugal, Bootsversicherung Portugal',
   eyebrow: 'Private Clients',
   h1: 'Private Clients: Versicherung für komplexere Risiken',
   standfirst:

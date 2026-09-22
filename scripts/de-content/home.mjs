@@ -15,7 +15,7 @@ export const HOME_PAGE = {
   // back in verbatim. See publishedFormSection() there for why.
   dedicatedForm: 'de-hausversicherung-wizard',
   url: '/de/hausversicherung-portugal/',
-  title: 'Hausversicherung in Portugal für deutsche Eigentümer | Adler & Rochefort',
+  title: 'Hausversicherung in Portugal | Adler & Rochefort',
   description:
     'Gebäude- und Hausratversicherung, die regra proporcional im Vergleich zum deutschen Unterversicherungsverzicht, Erdbebendeckung, Pool und Alojamento Local — was eine portugiesische Hausversicherung wirklich abdeckt.',
   keywords:
