@@ -179,7 +179,7 @@ ${pcItems}
 ${insightsLink}${whyBlock}    <a href="${cta.href}" class="nav-cta">${cta.label}</a>
     ${switcher.trim()}
   </div>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="${burgerLabel}">
+  <button class="nav-burger" aria-label="${burgerLabel}" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>`;

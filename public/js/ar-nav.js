@@ -1,10 +1,13 @@
 /*
  * Shared mega-nav behaviour. One file, every language.
  *
- * Click-to-toggle on desktop (.nav-trigger) and accordion on mobile.
- * Bound once, in the capture phase, so a page that still carries an older
- * inline copy of this wiring cannot double-toggle (open-then-close on the
- * same click — which looks like the menu does nothing).
+ * One capture-phase click listener owns the burger, the desktop mega-menu
+ * and the mobile accordion. Capture + stopPropagation on the burger and on
+ * .nav-trigger so a leftover inline onclick / IIFE cannot double-toggle
+ * (open-then-close on the same click — which looks like the menu does nothing).
+ *
+ * Named handlers so DevTools EventListener breakpoints land here, not on
+ * an anonymous function (e).
  */
 (function () {
   "use strict";
@@ -12,15 +15,16 @@
   if (window.__arNavBound) return;
   window.__arNavBound = true;
 
-  if (typeof window.toggleMenu !== "function") {
-    window.toggleMenu = function toggleMenu() {
-      var drawer = document.getElementById("mobileNav");
-      var burger = document.querySelector(".nav-burger");
-      if (!drawer) return;
-      var open = drawer.classList.toggle("open");
-      if (burger) burger.setAttribute("aria-expanded", String(open));
-    };
+  function toggleMenu() {
+    var drawer = document.getElementById("mobileNav");
+    var burger = document.querySelector(".nav-burger");
+    if (!drawer) return;
+    var open = drawer.classList.toggle("open");
+    if (burger) burger.setAttribute("aria-expanded", String(open));
   }
+  // Always own the global: leftover one-liners used to win because we only
+  // defined this when it was missing, and those copies never set aria-expanded.
+  window.toggleMenu = toggleMenu;
 
   function panelFor(trigger) {
     var id = trigger.getAttribute("aria-controls");
@@ -38,44 +42,54 @@
     }
   }
 
-  document.addEventListener(
-    "click",
-    function (e) {
-      var target = e.target && e.target.closest ? e.target : null;
-      if (!target || !target.closest) return;
-
-      var trigger = target.closest(".nav-trigger");
-      if (trigger) {
-        e.preventDefault();
-        e.stopPropagation();
-        var panel = panelFor(trigger);
-        if (!panel) return;
-        var isOpen = trigger.getAttribute("aria-expanded") === "true";
-        closeMega(trigger);
-        trigger.setAttribute("aria-expanded", String(!isOpen));
-        panel.hidden = isOpen;
-        return;
-      }
-
-      if (target.closest(".nav-panel")) return;
-      closeMega();
-    },
-    true
-  );
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeMega();
-  });
-
-  document.addEventListener("click", function (e) {
-    var target = e.target && e.target.closest ? e.target : null;
-    if (!target || !target.closest) return;
-    var trigger = target.closest(".mobile-accordion-trigger");
-    if (!trigger) return;
+  function togglePanel(trigger) {
     var panel = panelFor(trigger);
     if (!panel) return;
     var isOpen = trigger.getAttribute("aria-expanded") === "true";
     trigger.setAttribute("aria-expanded", String(!isOpen));
     panel.hidden = isOpen;
-  });
+  }
+
+  function onNavClick(e) {
+    var target = e.target && e.target.closest ? e.target : null;
+    if (!target || !target.closest) return;
+
+    if (target.closest(".nav-burger")) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+      return;
+    }
+
+    var mega = target.closest(".nav-trigger");
+    if (mega) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = mega.getAttribute("aria-expanded") === "true";
+      closeMega(mega);
+      mega.setAttribute("aria-expanded", String(!isOpen));
+      var panel = panelFor(mega);
+      if (panel) panel.hidden = isOpen;
+      return;
+    }
+
+    var accordion = target.closest(".mobile-accordion-trigger");
+    if (accordion) {
+      togglePanel(accordion);
+      return;
+    }
+
+    if (target.closest(".nav-panel") || target.closest("#mobileNav")) return;
+    closeMega();
+  }
+
+  function onNavKeydown(e) {
+    if (e.key !== "Escape") return;
+    closeMega();
+    var drawer = document.getElementById("mobileNav");
+    if (drawer && drawer.classList.contains("open")) toggleMenu();
+  }
+
+  document.addEventListener("click", onNavClick, true);
+  document.addEventListener("keydown", onNavKeydown);
 })();
