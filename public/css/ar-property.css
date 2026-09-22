@@ -2068,3 +2068,17 @@
     .lp-compare { grid-template-columns: 1fr; }
     .lp-cluster { grid-template-columns: 1fr; }
   }
+
+
+/* Cluster headers (DE/NL): logo + .nav-right, no mega-menu .nav-links.
+   This file was written for PT/EN property landings (centered logo) and is
+   meant to load BEFORE ar-chrome.css. Dedicated DE/NL wizards load it AFTER,
+   so the absolute-centered logo sat the quote CTA on top of the mark. */
+.site-nav:has(> .nav-right) {
+  justify-content: space-between;
+}
+.site-nav:has(> .nav-right) .nav-logo {
+  position: static;
+  left: auto;
+  transform: none;
+}
