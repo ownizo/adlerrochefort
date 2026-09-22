@@ -44,6 +44,10 @@ const esc = (s) =>
 
 /* ─────────────── shared chrome ─────────────── */
 
+function isSpainPage(page) {
+  return page.formCountry === 'Spain' || page.formMarket === 'spain';
+}
+
 const ORG_LD = {
   '@type': 'InsuranceAgency',
   '@id': `${ORIGIN}/#organization`,
@@ -59,6 +63,8 @@ const ORG_LD = {
   areaServed: [
     { '@type': 'AdministrativeArea', name: 'Algarve, Portugal' },
     { '@type': 'Country', name: 'Portugal' },
+    { '@type': 'Country', name: 'Spain' },
+    { '@type': 'AdministrativeArea', name: 'Mallorca, Spain' },
   ],
   address: {
     '@type': 'PostalAddress',
@@ -203,6 +209,8 @@ function jsonLd(page) {
     image: `${ORIGIN}/images/og-image-adlerrochefort.png`,
     publisher: { '@id': `${ORIGIN}/#organization` },
   };
+  if (page.areaServed) webpage.areaServed = page.areaServed;
+  else if (isSpainPage(page)) webpage.areaServed = { '@type': 'Country', name: 'Spain' };
   if (page.schemaType === 'Article') {
     webpage.author = {
       '@type': 'Person',
@@ -367,8 +375,8 @@ const BRANCHES = [
   },
 ];
 
-function branchGroupsHtml() {
-  return BRANCHES.map((b) => {
+function branchGroupsHtml(page) {
+  return branchesFor(page).map((b) => {
     const fields = b.fields
       .map(
         (f) => `          <div class="field">
@@ -430,9 +438,55 @@ async function dedicatedFormSkipReason(page) {
   return `hand-authored ${page.dedicatedForm}`;
 }
 
+function branchesFor(page) {
+  if (!isSpainPage(page)) return BRANCHES;
+  return BRANCHES.map((b) => {
+    if (b.value === "Krankenversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "kv_geburtsdatum", label: "Geburtsdatum der ältesten zu versichernden Person", type: "text", placeholder: "TT.MM.JJJJ" },
+          { id: "kv_familie", label: "Familienzusammensetzung", type: "text", placeholder: "z. B.: Ehepaar, 2 Kinder" },
+          { id: "kv_wohnort", label: "Wohnort in Spanien", type: "text", placeholder: "z. B.: Palma, Sóller, Andratx" },
+          { id: "kv_termin", label: "Gewünschter Versicherungsbeginn", type: "text", placeholder: "z. B.: 1. Januar 2027" },
+        ],
+      };
+    }
+    if (b.value === "Hausversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "hv_lage", label: "Lage der Immobilie", type: "text", placeholder: "z. B.: Palma, Andratx, Sóller, Alcúdia" },
+          { id: "hv_typ", label: "Immobilientyp", type: "text", placeholder: "Wohnung / Villa / Finca" },
+          { id: "hv_nutzung", label: "Haupt- oder Zweitwohnsitz?", type: "text", placeholder: "Hauptwohnsitz / Zweitwohnsitz / vermietet" },
+          { id: "hv_comunidad", label: "Comunidad de propietarios?", type: "text", placeholder: "Ja / Nein / unsicher" },
+          { id: "hv_leerstand", label: "Wochen Leerstand im Jahr", type: "text", placeholder: "z. B.: 30" },
+          { id: "hv_summe_gebaeude", label: "Wiederaufbauwert Gebäude", type: "text", placeholder: "z. B.: 450.000 €" },
+          { id: "hv_pool", label: "Swimmingpool vorhanden?", type: "text", placeholder: "Ja / Nein" },
+          { id: "hv_vermietung", label: "Wird vermietet?", type: "text", placeholder: "Nein / Langzeit / Ferienvermietung" },
+        ],
+      };
+    }
+    if (b.value === "Autoversicherung") {
+      return {
+        ...b,
+        fields: [
+          { id: "av_kennzeichen", label: "Spanisches oder ausländisches Kennzeichen?", type: "text", placeholder: "Spanisch / Deutsch / anderes" },
+          { id: "av_fahrzeug", label: "Marke, Modell und Baujahr", type: "text", placeholder: "z. B.: VW Golf 2020" },
+          { id: "av_fuehrerschein_datum", label: "Datum der ersten Führerscheinausstellung", type: "text", placeholder: "TT.MM.JJJJ" },
+          { id: "av_fuehrerschein_land", label: "Ausstellungsland des Führerscheins", type: "text", placeholder: "z. B.: Deutschland" },
+          { id: "av_schadenverlauf", label: "Schadenfreie Jahre bzw. Schadenverlauf", type: "text", placeholder: "z. B.: 8 Jahre schadenfrei" },
+          { id: "av_deckung", label: "Gewünschter Deckungsumfang", type: "text", placeholder: "Haftpflicht / Teilkasko / Vollkasko" },
+        ],
+      };
+    }
+    return b;
+  });
+}
+
 function formHtml(page) {
   const selected = page.formBranch;
-  const options = BRANCHES.map(
+  const options = branchesFor(page).map(
     (b) => `          <option value="${esc(b.value)}"${b.value === selected ? ' selected' : ''}>${esc(b.label)}</option>`
   ).join('\n');
 
@@ -501,7 +555,7 @@ ${options}
         <span class="field-error" id="err-typ" aria-live="polite"></span>
       </div>
 
-${branchGroupsHtml()}
+${branchGroupsHtml(page)}
 
       <div class="field">
         <label for="f-nachricht">Ihre Nachricht</label>
@@ -536,7 +590,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.</p>
+      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Sitz in Lagos." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Registrierter Versicherungsmakler — ASF Nr. 425591790/3
@@ -545,22 +599,31 @@ const FOOTER = (page) => `<footer class="on-dark">
     <div>
       <div class="footer-col-title">Deckung</div>
       <ul class="footer-col-links">
-        <li><a href="/de/krankenversicherung-portugal/">Krankenversicherung</a></li>
+${isSpainPage(page) ? `        <li><a href="/de/krankenversicherung-spanien/">Krankenversicherung</a></li>
+        <li><a href="/de/hausversicherung-spanien/">Hausversicherung</a></li>
+        <li><a href="/de/autoversicherung-spanien/">Autoversicherung</a></li>
+        <li><a href="/de/lebensversicherung-spanien/">Lebensversicherung</a></li>
+        <li><a href="/de/vermieterversicherung-spanien/">Vermieterversicherung</a></li>
+        <li><a href="/de/private-clients-spanien/">Private Clients</a></li>` : `        <li><a href="/de/krankenversicherung-portugal/">Krankenversicherung</a></li>
         <li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li>
         <li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li>
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
-        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
+        <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>`}
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Orte</div>
+      <div class="footer-col-title">Algarve</div>
       <ul class="footer-col-links">
         <li><a href="/de/versicherung-lagos/">Lagos</a></li>
         <li><a href="/de/versicherung-luz/">Praia da Luz</a></li>
         <li><a href="/de/versicherung-burgau/">Burgau</a></li>
         <li><a href="/de/versicherung-vila-do-bispo/">Vila do Bispo</a></li>
         <li><a href="/de/versicherung-sagres/">Sagres</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top:22px">Spanien</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-spanien/">Spanien insgesamt</a></li>
         <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
       </ul>
     </div>
@@ -845,7 +908,7 @@ ${LANGSEL_CSS_LINK}
 
 <a class="skip-link" href="#main">Direkt zum Inhalt</a>
 
-<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lagos, Algarve</div>
+<div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · ${isSpainPage(page) ? "Dienstleistungsverkehr Spanien" : "Lagos, Algarve"}</div>
 
 <header class="site-header">
   <nav class="site-nav on-dark" aria-label="Hauptnavigation">

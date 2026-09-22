@@ -323,20 +323,20 @@ export const SAGRES_PAGE = {
 export const MALLORCA_PAGE = {
   slug: 'versicherung-mallorca',
   url: '/de/versicherung-mallorca/',
-  title: 'Versicherung auf Mallorca | Adler & Rochefort',
+  title: 'Versicherung auf Mallorca, Spanien | Adler & Rochefort',
   description:
     'Haus-, Kranken- und Autoversicherung auf Mallorca für internationale Mandanten. Zweitwohnsitz, saisonaler Leerstand, Boot — vom Sitz in Portugal im Dienstleistungsverkehr, schriftlich auf Deutsch.',
   keywords:
     'Versicherung Mallorca, Hausversicherung Mallorca, Zweitwohnsitz Mallorca Versicherung, Versicherungsmakler Mallorca Deutsche',
   eyebrow: 'Spanien · Mallorca',
-  h1: 'Versicherung auf Mallorca',
+  h1: 'Versicherung auf Mallorca, Spanien',
   standfirst:
     'Internationale Haushalte auf der Insel sind häufig Zweitwohnsitz-Eigentümer. Immobilie, saisonales Leerstandsmuster und — wo vorhanden — ein örtlich liegendes Boot gehören in dieselbe Prüfung, nicht in drei getrennte Gespräche.',
   heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: { en: '/en/home-insurance-spain/' },
   langLinks: { en: '/en/home-insurance-spain/' },
-  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Mallorca' }],
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Spanien', url: '/de/versicherung-spanien/' }, { name: 'Mallorca' }],
   published: PUBLISHED,
   modified: PUBLISHED,
   schemaType: 'Article',
