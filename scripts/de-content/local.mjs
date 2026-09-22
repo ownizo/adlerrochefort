@@ -109,6 +109,11 @@ const ALGARVE_PAGE = {
     { url: '/de/versicherung-carvoeiro/', label: 'Versicherung in Carvoeiro' },
     { url: '/de/versicherung-vilamoura/', label: 'Versicherung in Vilamoura' },
     { url: '/de/versicherung-quinta-do-lago/', label: 'Versicherung in Quinta do Lago' },
+    { url: '/de/versicherung-lagos/', label: 'Versicherung in Lagos' },
+    { url: '/de/versicherung-luz/', label: 'Versicherung in Praia da Luz' },
+    { url: '/de/versicherung-burgau/', label: 'Versicherung in Burgau' },
+    { url: '/de/versicherung-vila-do-bispo/', label: 'Versicherung in Vila do Bispo' },
+    { url: '/de/versicherung-sagres/', label: 'Versicherung in Sagres' },
   ],
 };
 
@@ -131,6 +136,7 @@ const LAGOS_PAGE = {
   published: '2026-09-12T09:00:00+00:00',
   modified: '2026-09-12T09:00:00+00:00',
   schemaType: 'WebPage',
+  showTeam: true,
   formHeading: 'Angebot für Lagos anfragen',
   formBranch: '',
   formSubject: 'Versicherung Lagos',
@@ -170,9 +176,12 @@ const LAGOS_PAGE = {
     },
   ],
   related: [
+    { url: '/de/versicherung-luz/', label: 'Versicherung in Praia da Luz' },
+    { url: '/de/versicherung-burgau/', label: 'Versicherung in Burgau' },
+    { url: '/de/versicherung-sagres/', label: 'Versicherung in Sagres' },
+    { url: '/de/versicherung-vila-do-bispo/', label: 'Versicherung in Vila do Bispo' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/versicherung-algarve/', label: 'Versicherung an der Algarve' },
-    { url: '/en/blog/insuring-a-high-value-apartment-lisbon-cascais/', label: 'Insuring a High-Value Apartment (Lisbon &amp; Cascais, Englisch)', hreflang: 'en' },
   ],
 };
 
@@ -500,7 +509,7 @@ const QUINTA_DO_LAGO_PAGE = {
   title: 'Versicherung in Quinta do Lago | Adler & Rochefort',
   description:
     'Hausversicherung in Quinta do Lago: was typischerweise nicht in der Versicherungssumme steckt, warum Hausangestellte eine eigene Police brauchen, und wo Private Clients ansetzt.',
-  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Luxusimmobilie Versicherung Algarve, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
+  keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
   eyebrow: 'Regional · Quinta do Lago',
   h1: 'Versicherung in Quinta do Lago',
   standfirst:

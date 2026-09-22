@@ -27,6 +27,7 @@ import { LIFE_PAGE } from './de-content/life.mjs';
 import { PRIVATE_CLIENTS_PAGE } from './de-content/private-clients.mjs';
 import { LOCAL_PAGES } from './de-content/local.mjs';
 import { ANWARTSCHAFT_PAGE } from './de-content/anwartschaft.mjs';
+import { DESTINATION_PAGES } from './de-content/destinations.mjs';
 import { PHASE2_PAGES } from './de-content/phase2.mjs';
 import { THERAPEUTEN_WELLNESS_PAGE } from './de-content/therapeuten-wellness.mjs';
 
@@ -43,5 +44,6 @@ export const PAGES = [
   PRIVATE_CLIENTS_PAGE,
   THERAPEUTEN_WELLNESS_PAGE,
   ...LOCAL_PAGES,
+  ...DESTINATION_PAGES,
   ...PHASE2_PAGES,
 ];

@@ -431,3 +431,21 @@ body {
 @media (max-width: 480px) {
   .hero-inner { padding: 60px 20px 48px; }
 }
+
+
+/* Team / founder on destination pages */
+.de-team-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.de-team-grid picture, .de-team-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+@media (max-width: 640px) {
+  .de-team-grid { grid-template-columns: 1fr; max-width: 280px; }
+}

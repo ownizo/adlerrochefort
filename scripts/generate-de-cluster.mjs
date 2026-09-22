@@ -207,13 +207,34 @@ function jsonLd(page) {
     webpage.author = {
       '@type': 'Person',
       name: 'Hugo Gonçalves',
-      jobTitle: 'Agente de seguros (ASF 425591790/3)',
+      jobTitle: 'Gründer und Risk Management Specialist',
       worksFor: { '@id': `${ORIGIN}/#organization` },
     };
   }
 
   const graph = [ORG_LD, breadcrumb, faq, webpage].filter(Boolean);
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 2);
+}
+
+function teamHtml(page) {
+  if (!page.showTeam) return '';
+  return `<section class="section tint de-team" id="team" aria-labelledby="team-title">
+  <div class="container narrow">
+    <span class="eyebrow">Ihr Ansprechpartner</span>
+    <h2 id="team-title">Hugo Gonçalves</h2>
+    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Risk Management Specialist · ASF 425591790/3 · Lagos</p>
+    <div class="de-team-grid">
+      <picture>
+        <source type="image/webp" srcset="/images/hugo-goncalves-640.webp">
+        <img src="/images/hugo-goncalves-640.jpg" alt="Hugo Gonçalves, Gründer von Adler &amp; Rochefort" width="640" height="853" loading="lazy" decoding="async">
+      </picture>
+      <div class="article-body">
+        <p>Hugo Gonçalves ist der Gründer von Adler &amp; Rochefort. Er verbindet internationale Erfahrung mit einer klaren Spezialisierung auf Versicherungsberatung für internationale Mandanten in Portugal und, im Dienstleistungsverkehr, in Spanien. Jeder Fall wird im Detail gelesen, bevor eine Police empfohlen wird — unter Aufsicht der ASF.</p>
+        <p>Abschluss in Business Management der University of Hertfordshire, laufende Weiterbildung am Chartered Insurance Institute (CII). Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. <a class="text-link" href="/de/#team">Mehr zum Team</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>`;
 }
 
 function langPolicyHtml() {
@@ -256,7 +277,7 @@ const BRANCHES = [
     fields: [
       { id: 'kv_geburtsdatum', label: 'Geburtsdatum der ältesten zu versichernden Person', type: 'text', placeholder: 'TT.MM.JJJJ' },
       { id: 'kv_familie', label: 'Familienzusammensetzung', type: 'text', placeholder: 'z. B.: Ehepaar, 2 Kinder' },
-      { id: 'kv_wohnort', label: 'Wohnort in Portugal', type: 'text', placeholder: 'z. B.: Lagos, Algarve' },
+      { id: 'kv_wohnort', label: 'Wohnort', type: 'text', placeholder: 'z. B.: Lagos, Algarve / Palma, Mallorca' },
       { id: 'kv_termin', label: 'Gewünschter Versicherungsbeginn', type: 'text', placeholder: 'z. B.: 1. Januar 2027' },
       { id: 'kv_netzwerk', label: 'Präferenz: Netzwerk oder Kostenerstattung?', type: 'text', placeholder: 'Netzwerk / Erstattung / unbekannt' },
     ],
@@ -311,6 +332,17 @@ const BRANCHES = [
       { id: 'pc_immobilien', label: 'Anzahl der Immobilien', type: 'number', placeholder: 'z. B.: 2' },
       { id: 'pc_gesamtwert', label: 'Ungefährer Gesamtwert', type: 'text', placeholder: 'z. B.: über 1.000.000 €' },
       { id: 'pc_anforderungen', label: 'Besondere Anforderungen', type: 'text', placeholder: 'z. B.: weltweite Deckung, Einzelanfertigungen' },
+    ],
+  },
+  {
+    value: 'Berufshaftpflicht',
+    label: 'Berufshaftpflicht (RC)',
+    legend: 'Zur beruflichen Haftung',
+    fields: [
+      { id: 'rc_taetigkeit', label: 'Art der Tätigkeit', type: 'text', placeholder: 'z. B.: Beratung, Therapie, Architektur' },
+      { id: 'rc_ort', label: 'Wo üben Sie die Tätigkeit aus?', type: 'text', placeholder: 'z. B.: Lagos, Algarve, auch im Ausland' },
+      { id: 'rc_summe', label: 'Gewünschte Deckungssumme', type: 'text', placeholder: 'z. B.: 150.000 € / 300.000 €' },
+      { id: 'rc_cedula', label: 'Berufszulassung vorhanden?', type: 'text', placeholder: 'Ja / Nein / in Beantragung / nicht erforderlich' },
     ],
   },
   {
@@ -426,7 +458,8 @@ function formHtml(page) {
       <input type="hidden" name="landing_page" value="">
       <input type="hidden" name="subject" value="Neue Anfrage (DE) — ${esc(page.formSubject)}">
       <input type="hidden" name="language" value="de">
-      <input type="hidden" name="market" value="germany">
+      <input type="hidden" name="market" value="${esc(page.formMarket || 'germany')}">
+      <input type="hidden" name="country" value="${esc(page.formCountry || 'Portugal')}">
       <input type="hidden" name="product_interest" value="${esc(selected || '')}">
       <p class="visually-hidden"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
@@ -491,7 +524,7 @@ ${branchGroupsHtml()}
     <div class="form-success" id="angebotSuccess">
       <div class="tick">&#10003;</div>
       <h3>Vielen Dank!</h3>
-      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Englisch bei Ihnen.</p>
+      <p>Ihre Anfrage ist eingegangen. Wir melden uns innerhalb von 24 Stunden schriftlich auf Deutsch bei Ihnen.</p>
     </div>
   </div>
 </section>`;
@@ -518,6 +551,17 @@ const FOOTER = (page) => `<footer class="on-dark">
         <li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li>
         <li><a href="/de/private-clients-portugal/">Private Clients</a></li>
         <li><a href="/de/berufshaftpflicht-therapeuten-wellness-portugal/">Therapeuten &amp; Wellness</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orte</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-lagos/">Lagos</a></li>
+        <li><a href="/de/versicherung-luz/">Praia da Luz</a></li>
+        <li><a href="/de/versicherung-burgau/">Burgau</a></li>
+        <li><a href="/de/versicherung-vila-do-bispo/">Vila do Bispo</a></li>
+        <li><a href="/de/versicherung-sagres/">Sagres</a></li>
+        <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
       </ul>
     </div>
     <div>
@@ -758,7 +802,9 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}"${
 <meta name="keywords" content="${esc(page.keywords)}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="Hugo Gonçalves">
-<link rel="canonical" href="${ORIGIN}${page.url}">
+${page.geo ? `<meta name="geo.region" content="${esc(page.geo.region)}">
+<meta name="geo.placename" content="${esc(page.geo.placename)}">
+` : ''}<link rel="canonical" href="${ORIGIN}${page.url}">
 ${hreflangTags(page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -836,6 +882,8 @@ ${quote}
 
 ${faqHtml(page)}
 
+${teamHtml(page)}
+
 ${related}
 
 ${formSection}
@@ -863,7 +911,9 @@ ${LANGSEL_SCRIPT_TAG}
 
 let written = 0;
 const skipped = [];
+const only = process.argv.filter((a) => a.startsWith('--only=')).map((a) => a.slice(7));
 for (const page of PAGES) {
+  if (only.length && !only.includes(page.slug)) continue;
   // Checked before anything is written: a page that declares dedicatedForm
   // is never overwritten, and an inconsistent declaration throws rather
   // than letting the run continue past the page the guard protects.
