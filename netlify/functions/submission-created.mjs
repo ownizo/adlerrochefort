@@ -539,6 +539,18 @@ const QUOTE_LABELS_DE = {
   // insurer's own adhesion step, same reasoning as Saúde's own dynamic
   // blocks and quote-health-persons.js's own top comment.
   capital: "Gewünschtes Kapital",
+
+  // DE Therapeuten & Wellness. tw_cedula is a professional-registration
+  // question (does the ACSS licence exist), not a clinical one — it asks
+  // about the practitioner's own credential, never about a client's health.
+  tw_atividade: "Haupttätigkeit",
+  tw_outra: "Andere Tätigkeit",
+  tw_cedula: "ACSS-Zulassung (cédula profissional)",
+  tw_local: "Ort der Tätigkeit",
+  tw_situacao: "Situation",
+
+  // /de/private-clients/'s single-page form ("de-private-clients").
+  mensagem: "Nachricht",
 };
 
 // Especificação v2, Parte 2 continuação (NL) — same pattern as
@@ -1208,6 +1220,37 @@ export const HANDLED_FORMS = {
     lang: "de",
     heading: "New German Private Clients quote request",
     page: "/de/private-clients-portugal/",
+    branch: "Private Clients (DE)",
+  },
+  // DE Therapeuten & Wellness — carved out of the shared
+  // "de-angebot-anfrage" form precisely so it can carry slaHours here. The
+  // page promised 24h while its three PT counterparts (cotacao-rc-tnc,
+  // cotacao-rc-massagistas, cotacao-rc-yoga) all promise 48-72h for the
+  // same ramo; slaHours is per form-name, not per branch, so the shared
+  // form could never express that difference and the page had to get its
+  // own form-name to be corrected at all.
+  "de-berufshaftpflicht-therapeuten-wizard": {
+    quote: true,
+    en: true,
+    lang: "de",
+    heading: "New German therapists & wellness liability quote request",
+    slaHours: "48 a 72",
+    page: "/de/berufshaftpflicht-therapeuten-wellness-portugal/",
+    branch: "RC Terapeutas e Bem-Estar (DE)",
+  },
+  // DE Private Clients, the /de/private-clients/ landing (distinct from
+  // /de/private-clients-portugal/, which carries the three-step
+  // "de-private-clients-wizard"). Single-page contact form per Hugo's
+  // explicit choice — same five identifying fields, no wizard. Until this
+  // existed the page had five CTAs pointing at a #kontakt block that
+  // offered only mailto and WhatsApp, so nothing a visitor typed was ever
+  // captured as a lead. No slaHours: 24h, the default, as specified.
+  "de-private-clients": {
+    quote: true,
+    en: true,
+    lang: "de",
+    heading: "New German Private Clients enquiry",
+    page: "/de/private-clients/",
     branch: "Private Clients (DE)",
   },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator

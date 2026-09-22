@@ -370,6 +370,19 @@ const FORM_CLASSIFICATION = {
   // generic "Private Clients" branch (no `empresa`/company field on this
   // form — it is a personal-wealth product, always individual).
   'de-private-clients-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'private-clients' },
+  // DE Therapeuten & Wellness — its own wizard, carved out of the shared
+  // de-angebot-anfrage form so this ramo can carry the 48-72h SLA its PT
+  // counterparts already promise (cotacao-rc-tnc / cotacao-rc-massagistas /
+  // cotacao-rc-yoga). `individual`, not `contextual`, for exactly the
+  // reason those three are: no company/business field anywhere on the
+  // form, just a closed select of individual therapeutic and wellness
+  // activities, so there is nothing that could point to business.
+  'de-berufshaftpflicht-therapeuten-wizard': { entityType: 'individual', market: 'PT', language: 'DE', product: 'professional-liability' },
+  // The /de/private-clients/ landing's own single-page form, alongside
+  // 'de-private-clients-wizard' (the /de/private-clients-portugal/ page).
+  // Same product taxonomy value as that one and as PT's
+  // 'private-clients-review' — two entry points, one product.
+  'de-private-clients': { entityType: 'individual', market: 'PT', language: 'DE', product: 'private-clients' },
   // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
   // converted together.
   'pl-ubezpieczenie-domu-wizard': { entityType: 'individual', market: 'PT', language: 'PL', product: 'home' },

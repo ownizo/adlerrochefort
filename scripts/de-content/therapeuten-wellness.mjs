@@ -32,6 +32,11 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  */
 export const THERAPEUTEN_WELLNESS_PAGE = {
   slug: 'berufshaftpflicht-therapeuten-wellness-portugal',
+  // Hand-authored wizard, not regenerated from this file's formBranch/BRANCHES:
+  // generate-de-cluster.mjs skips this page. See dedicatedFormSkipReason()
+  // there, and the slaHours comment in submission-created.mjs for why this
+  // ramo needed its own form-name (48-72h, not the shared form's 24h).
+  dedicatedForm: 'de-berufshaftpflicht-therapeuten-wizard',
   url: '/de/berufshaftpflicht-therapeuten-wellness-portugal/',
   title: 'Berufshaftpflicht für Therapeuten und Wellness-Instruktoren in Portugal | Adler & Rochefort',
   description:
