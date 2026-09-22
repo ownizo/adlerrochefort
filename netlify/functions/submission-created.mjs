@@ -469,6 +469,27 @@ const QUOTE_LABELS_EN = {
   data_carta: "Driving licence issue date",
   rgpd: "GDPR consent",
 
+  // Portuguese-named fields on English-language forms, and the two
+  // non-English consent fields. Without an entry here each fell through to
+  // humanise(), which puts the raw field name in the email — so an English
+  // notification said "Ramos pretendidos", "Seguro atual", "Nome",
+  // "Toestemming" or "Consentement". Found by rendering every quote form's
+  // real field set through renderAllFields() and flagging any label that
+  // came back equal to its own humanised key.
+  //
+  // The field names themselves are deliberately left alone: renaming a live
+  // Netlify Forms field loses the continuity of everything already
+  // submitted under the old name. The label is the part the team reads.
+  nome: "Name",
+  // /en/business-insurance-portugal/ — the EN empresarial pillar.
+  ramos_pretendidos: "Lines of cover requested",
+  // /en/insurance/tvde/ ("quote-tvde-en").
+  seguro_atual: "Current insurer",
+  // The /nl/ and /fr/ hub forms are `en: true` (the team reads the inbox in
+  // English) but name their consent box in their own language.
+  toestemming: "GDPR consent",
+  consentement: "GDPR consent",
+
   // Especificação v2 — Passo 2 (Habitação, Fase 2). Language-neutral field
   // names shared by the PT and EN Habitação wizard pages (see the matching
   // comment next to QUOTE_LABELS above, where the PT wording for these same
