@@ -411,6 +411,7 @@ def transform_homepage() -> None:
         html = html.replace(old, new)
     html = html.replace('aria-label="Homepage"', 'aria-label="Startseite"')
     html = html.replace('onclick="toggleMenu()" aria-label="Menu"', 'onclick="toggleMenu()" aria-label="Menü"')
+    html = html.replace('<button class="nav-burger" aria-label="Menu">', '<button class="nav-burger" aria-label="Menü">')
     (PUBLIC / "de" / "index.html").write_text(html, encoding="utf-8")
     print(f"  wrote public/de/index.html ({len(html)} bytes)")
 

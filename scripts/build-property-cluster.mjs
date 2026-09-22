@@ -105,11 +105,11 @@ const nav = (page) => `
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="/en/#services" onclick="toggleMenu()">Services</a>
-  <a href="/en/home-insurance-quote/" onclick="toggleMenu()">Home insurance</a>
-  <a href="/en/#adler-one" onclick="toggleMenu()">Individuals</a>
-  <a href="/en/#blog" onclick="toggleMenu()">Insights</a>
-  <a href="#quote-form" onclick="toggleMenu()">Free Quote</a>
+  <a href="/en/#services">Services</a>
+  <a href="/en/home-insurance-quote/">Home insurance</a>
+  <a href="/en/#adler-one">Individuals</a>
+  <a href="/en/#blog">Insights</a>
+  <a href="#quote-form">Free Quote</a>
   <div class="mobile-lang-switcher">
     <a href="/seguros/habitacao/" lang="pt-PT">PT</a>
     <a href="/en/${page.slug}/" class="active">EN</a>
