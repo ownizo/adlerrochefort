@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-const { default: langRouter } = await import("./lang-router.ts");
+const { default: langRouter } = await import("../netlify/edge-functions/lang-router.ts");
 
 function request(url, headers = {}) {
   return new Request(url, { headers });
