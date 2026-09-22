@@ -500,7 +500,8 @@
   .cta-topo-form .cta-field select:focus {
     border-color: #B8323E;
   }
-  .cta-topo-form .cta-btn {
+  .cta-topo-form .cta-btn, .cta-topo > .cta-btn {
+    display: inline-block;
     background: #17243D;
     color: #fff;
     border: none;
@@ -510,11 +511,12 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .cta-topo-form .cta-btn:hover { background: #2a3f66; }
+  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #2a3f66; }
   .cta-topo-micro {
     font-size: 10px;
     color: #516F94;
@@ -682,11 +684,9 @@
   <img src="/images/blog/health-insurance-expats.svg" alt="Health insurance for expats in Portugal - Allianz, Medis and AdvanceCare" class="article-featured-image" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 2rem; object-fit: cover;" width="1200" height="675" fetchpriority="high" decoding="async">
 
   <div class="cta-topo">
-    <div class="cta-topo-title">Get 3 quotes within 24 hours</div>
+    <div class="cta-topo-title">Get a quote for health insurance</div>
     <div class="cta-topo-subtitle">Free analysis by an ASF-registered insurance broker. No commitment.</div>
-    <div class="cta-topo-form" style="justify-content:center;">
-      <a href="#ar-quote-form" class="cta-btn" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">Get a free comparison</a>
-    </div>
+    <a class="cta-btn" href="/en/health-insurance-quote/?source=blog%3Ahealth-insurance-expats-portugal#quote-form">Get my quote &rarr;</a>
     <div class="cta-topo-micro">Reply within 24 business hours. Your data is handled under GDPR.</div>
   </div>
 
