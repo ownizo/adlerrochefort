@@ -783,6 +783,7 @@
   gtag('config', 'AW-18361722533');
 </script>
 <link rel="stylesheet" href="/css/ar-langsel.css">
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
@@ -790,13 +791,91 @@
 <div class="asf-top-bar">Courtier en assurances francophone en Algarve — enregistré auprès de l'ASF nº 425591790/3. <a href="#devis">Devis gratuit et sans engagement</a></div>
 
 <!-- NAV -->
-<nav class="site-nav">
+<nav class="site-nav" role="navigation" aria-label="Navigation principale">
+  <div class="nav-links-left">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPT" aria-expanded="false" aria-controls="navPanelPT">
+        Assurances au Portugal
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelPT" role="menu" aria-label="Menu Portugal" hidden>
+        <div class="nav-panel-cols">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">Aperçu</div>
+            <a href="/fr/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Assurances pour expatriés au Portugal</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Assurances personnelles</div>
+            <a href="/en/health-insurance-quote/" role="menuitem">Assurance santé</a>
+            <a href="/en/home-insurance-quote/" role="menuitem">Assurance habitation</a>
+            <a href="/en/car-insurance-portugal/" role="menuitem">Assurance auto</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Installation</div>
+            <a href="/en/expat-visa-insurance-portugal/" role="menuitem">Visa & relocation</a>
+            <a href="/en/expat-insurance-portugal/" role="menuitem">Insurance for expats</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerES" aria-expanded="false" aria-controls="navPanelES">
+        Assurances en Espagne
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelES" role="menu" aria-label="Menu Espagne" hidden>
+        <div class="nav-panel-cols nav-panel-cols--4">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">Aperçu</div>
+            <a href="/en/expat-insurance-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Assurances pour expatriés en Espagne</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Personnel</div>
+            <a href="/en/health-insurance-spain/" role="menuitem">Assurance santé</a>
+            <a href="/en/home-insurance-spain/" role="menuitem">Assurance habitation</a>
+            <a href="/en/car-insurance-spain/" role="menuitem">Assurance auto</a>
+            <a href="/en/life-insurance-spain/" role="menuitem">Assurance vie</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Immobilier</div>
+            <a href="/en/landlord-insurance-spain/" role="menuitem">Assurance propriétaire-bailleur</a>
+            <a href="/en/mortgage-protection-spain/" role="menuitem">Protection emprunteur</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Private Clients</div>
+            <a href="/en/private-clients-spain/" role="menuitem">Assurance Private Client</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPC" aria-expanded="false" aria-controls="navPanelPC">
+        Private Clients
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelPC" role="menu" aria-label="Menu Private Clients" hidden>
+        <a href="/en/private-clients/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Private Clients — Portugal</a>
+        <a href="/en/private-clients-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Private Clients — Espagne</a>
+      </div>
+    </div>
+  </div>
   <a href="/fr/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort — courtier en assurances francophone au Portugal" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler & Rochefort — courtier en assurances francophone au Portugal" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
-  <div class="nav-right">
-    <a href="tel:+351928226570" class="nav-phone">+351 928 226 570</a>
-    <a href="#devis" class="nav-cta">Demander un devis</a>
+  <div class="nav-links-right">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerWhy" aria-expanded="false" aria-controls="navPanelWhy">
+        Pourquoi nous
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelWhy" role="menu" aria-label="Menu Pourquoi nous" hidden>
+        <a href="/en/about/" role="menuitem">À propos</a>
+        <a href="/en/how-we-work/" role="menuitem">Notre façon de travailler</a>
+        <a href="/en/why-use-an-insurance-broker/" role="menuitem">Pourquoi un courtier</a>
+        <a href="/en/claims-support/" role="menuitem">Sinistres</a>
+      </div>
+    </div>
+    <a href="/fr/#devis" class="nav-cta">Demander un devis</a>
     <div class="lang-switcher">
       <div class="ar-langsel" data-ar-langsel>
         <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Langue : Français. Choisir une autre langue."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Français</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -815,7 +894,67 @@
       </div>
     </div>
   </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPT">
+      🇵🇹 Assurances au Portugal
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPT" hidden>
+      <a href="/fr/" onclick="toggleMenu()">🇵🇹 Assurances pour expatriés au Portugal</a>
+      <a href="/en/health-insurance-quote/" onclick="toggleMenu()">Assurance santé</a>
+      <a href="/en/home-insurance-quote/" onclick="toggleMenu()">Assurance habitation</a>
+      <a href="/en/car-insurance-portugal/" onclick="toggleMenu()">Assurance auto</a>
+      <a href="/en/expat-visa-insurance-portugal/" onclick="toggleMenu()">Visa & relocation</a>
+      <a href="/en/expat-insurance-portugal/" onclick="toggleMenu()">Insurance for expats</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccES">
+      🇪🇸 Assurances en Espagne
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccES" hidden>
+      <a href="/en/expat-insurance-spain/" onclick="toggleMenu()">🇪🇸 Assurances pour expatriés en Espagne</a>
+      <a href="/en/health-insurance-spain/" onclick="toggleMenu()">Assurance santé</a>
+      <a href="/en/home-insurance-spain/" onclick="toggleMenu()">Assurance habitation</a>
+      <a href="/en/car-insurance-spain/" onclick="toggleMenu()">Assurance auto</a>
+      <a href="/en/life-insurance-spain/" onclick="toggleMenu()">Assurance vie</a>
+      <a href="/en/landlord-insurance-spain/" onclick="toggleMenu()">Assurance propriétaire-bailleur</a>
+      <a href="/en/mortgage-protection-spain/" onclick="toggleMenu()">Protection emprunteur</a>
+      <a href="/en/private-clients-spain/" onclick="toggleMenu()">Assurance Private Client</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPC">
+      Private Clients
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPC" hidden>
+      <a href="/en/private-clients/" onclick="toggleMenu()">🇵🇹 Private Clients — Portugal</a>
+      <a href="/en/private-clients-spain/" onclick="toggleMenu()">🇪🇸 Private Clients — Espagne</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccWhy">
+      Pourquoi nous
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccWhy" hidden>
+      <a href="/en/about/" onclick="toggleMenu()">À propos</a>
+      <a href="/en/how-we-work/" onclick="toggleMenu()">Notre façon de travailler</a>
+      <a href="/en/why-use-an-insurance-broker/" onclick="toggleMenu()">Pourquoi un courtier</a>
+      <a href="/en/claims-support/" onclick="toggleMenu()">Sinistres</a>
+    </div>
+  </div>
+  <a href="/fr/#devis" onclick="toggleMenu()">Demander un devis</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1216,5 +1355,6 @@
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 </body>
 </html>

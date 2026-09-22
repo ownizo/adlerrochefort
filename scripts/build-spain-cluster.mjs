@@ -28,14 +28,12 @@
  *   node scripts/generate-sitemap.mjs
  *
  * Deliberately NOT run: scripts/hreflang.mjs and scripts/lang-switcher.mjs.
- * Spain pages carry no hreflang alternates at all — they are country
- * variants of an English-language intent, not language translations of a
- * Portuguese page, and the site's own hreflang.mjs already enforces that a
- * page declares hreflang only when a real translated counterpart exists on
- * disk. None does for Spain yet. Running lang-switcher.mjs would try to
- * rebuild the PT|EN|NL|FR|DE selector this cluster deliberately does not use
- * (see `marketSwitch` below) and could touch unrelated Portugal files for no
- * reason connected to this task.
+ * Spain pages share the English homepage mega-nav (Portugal / Spain /
+ * Private Clients) so a visitor always knows which market they are in and
+ * can leave Spain without guessing a URL. lang-switcher.mjs then rewrites
+ * the stamped selector to this page's counterparts. They still carry no
+ * hreflang set of their own — they are country variants of an English-language
+ * intent, not translations of a Portuguese page.
  *
  * Before anything is written, every page is rendered and validated: unique H1
  * and title within this cluster, valid JSON-LD, every visible FAQ present in
@@ -48,6 +46,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, SPAIN_PRODUCTS, SPAIN_CROSS_SELL, SPAIN_CROSS_SELL_PROMPT, HUB_SLUG } from './spain-cluster.data.mjs';
+import { extractSiteNav, extractMobileNav, NAV_SCRIPT } from './lib/mega-nav.mjs';
 import { FOOTER, WHATSAPP_SVG, PROVIDER } from './lib/spain-chrome.mjs';
 
 // Phase 5 (conversion): resolves a page's own product key from its slug, so
@@ -121,53 +120,21 @@ function ancestorsOf(page) {
 
 const HUB_URL = `/en/${bySlug.has('expat-insurance-spain') ? 'expat-insurance-spain' : ''}/`;
 
+const enHomeHtml = readFileSync(join(PUBLIC, 'en/index.html'), 'utf8');
+const EN_NAV = extractSiteNav(enHomeHtml);
+const EN_MOBILE = extractMobileNav(enHomeHtml);
+const EN_TOP = (enHomeHtml.match(/<div class="asf-top-bar"[^>]*>[\s\S]*?<\/div>/) || [''])[0];
+if (!EN_NAV || !EN_NAV.includes('nav-links-left')) {
+  throw new Error('public/en/index.html has no mega-nav — Spain pages cannot be generated without it');
+}
+
+
 const nav = (page) => `
 <!-- NAV -->
-<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal's ASF, no. 425591790/3, and serves Spain on a cross-border basis — <a href="#quote-form">${esc(page.topBarCta)}</a></div>
-<nav class="site-nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-links-left">
-    <a href="${HUB_URL}">Insurance for expats in Spain</a>
-    <a href="/en/health-insurance-spain/">Health insurance</a>
-    <a href="/en/home-insurance-spain/">Home insurance</a>
-    <a href="/en/landlord-insurance-spain/">Landlord insurance</a>
-    <a href="/en/car-insurance-spain/">Car insurance</a>
-    <a href="/en/life-insurance-spain/">Life insurance</a>
-    <a href="/en/private-clients-spain/">Private clients</a>
-  </div>
-  <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
-    <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
-  </a>
-  <div class="nav-links-right">
-    <a href="#faq">FAQ</a>
-    <a href="#quote-form" class="nav-cta">${esc(page.topBarCta)}</a>
-    <div class="lang-switcher market-switch">
-      <span class="market-current" aria-current="true">🇪🇸 Spain</span>
-      <span class="lang-switcher-sep">|</span>
-      <a href="${PT_HUB}">Looking for Portugal?</a>
-    </div>
-  </div>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+${EN_TOP}
+${EN_NAV}
 
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="${HUB_URL}" onclick="toggleMenu()">Insurance for expats in Spain</a>
-  <a href="/en/health-insurance-spain/" onclick="toggleMenu()">Health insurance</a>
-  <a href="/en/home-insurance-spain/" onclick="toggleMenu()">Home insurance</a>
-  <a href="/en/landlord-insurance-spain/" onclick="toggleMenu()">Landlord insurance</a>
-  <a href="/en/car-insurance-spain/" onclick="toggleMenu()">Car insurance</a>
-  <a href="/en/life-insurance-spain/" onclick="toggleMenu()">Life insurance</a>
-  <a href="/en/private-clients-spain/" onclick="toggleMenu()">Private clients</a>
-  <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="#quote-form" onclick="toggleMenu()">${esc(page.topBarCta)}</a>
-  <div class="mobile-lang-switcher market-switch">
-    <span class="market-current" aria-current="true">🇪🇸 Spain</span>
-    <a href="${PT_HUB}">Looking for Portugal instead?</a>
-  </div>
-</div>`;
+${EN_MOBILE || ''}`;
 
 // --- body blocks -------------------------------------------------------------
 
@@ -573,11 +540,7 @@ ${page.related.map(card).join('\n\n')}
 </main>
 ${FOOTER}
 
-<script>
-  function toggleMenu() {
-    document.getElementById('mobileNav').classList.toggle('open');
-  }
-</script>
+${NAV_SCRIPT}
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-conversion-events.js"></script>

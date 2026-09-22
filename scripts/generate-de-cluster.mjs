@@ -6,9 +6,10 @@
  * Mirrors scripts/generate-nl-cluster.mjs deliberately — same mechanism, same
  * guarantees, same reasons for generating rather than hand-writing eleven (here:
  * eleven, one of which is the homepage itself) pages. The brief for this branch
- * is explicit that there is no CHROME.de in scripts/lib/partials.mjs and that a
- * third chrome pattern must not be invented, so this generator is self-contained
- * exactly like the Dutch one: it does not import partials.mjs or chrome.mjs.
+ * takes its header from the hand-authored /de/ homepage mega-nav (Portugal /
+ * Spain / Private Clients), so a generated product page cannot drift into the
+ * compact logo+CTA bar. It still does not import partials.mjs — the homepage
+ * file is the source of truth, same as stamp-mega-nav.mjs.
  * Chrome-adjacent classes (nav, footer, cookie banner, lang switcher) come from
  * the already-shared public/css/ar-chrome.css; body content comes from
  * public/css/ar-de.css, this cluster's own stylesheet.
@@ -34,10 +35,18 @@ import {
   LANGSEL_SCRIPT_TAG,
   LANG_BY_KEY,
 } from './lib/lang-selector.mjs';
+import { extractSiteNav, extractMobileNav, swapLangSwitcher, NAV_SCRIPT } from './lib/mega-nav.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
 const ORIGIN = 'https://adlerrochefort.com';
+
+const deHomeHtml = await readFile(join(PUBLIC, 'de/index.html'), 'utf8');
+const absDe = (h) => h && h.replace(/href="#([a-z0-9-]+)"/gi, 'href="/de/#$1"');
+const DE_NAV = absDe(extractSiteNav(deHomeHtml));
+const DE_MOBILE = absDe(extractMobileNav(deHomeHtml));
+if (!DE_NAV || !DE_NAV.includes('nav-links-left')) throw new Error('public/de/index.html has no mega-nav — refusing to generate a compact header');
+
 
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -911,16 +920,10 @@ ${LANGSEL_CSS_LINK}
 <div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · ${isSpainPage(page) ? "Dienstleistungsverkehr Spanien" : "Lagos, Algarve"}</div>
 
 <header class="site-header">
-  <nav class="site-nav on-dark" aria-label="Hauptnavigation">
-    <a href="/de/" class="nav-logo">
-      <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
-    </a>
-    <div class="nav-right">
-      ${langSwitcher(page)}
-      <a href="#angebot" class="nav-cta">Angebot anfragen</a>
-    </div>
-  </nav>
+${swapLangSwitcher(DE_NAV, langSwitcher(page))}
 </header>
+
+${DE_MOBILE || ''}
 
 ${breadcrumbHtml(page)}
 
@@ -964,6 +967,7 @@ ${FORM_SCRIPT}
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${COOKIE_BANNER}
+${NAV_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
 </body>
 </html>
