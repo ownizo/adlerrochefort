@@ -105,6 +105,8 @@ export const ZH_UI = {
     email: '电子邮箱',
     phone: '电话号码',
     phoneHelp: '请填写含国际区号的号码，例如 +351 912 345 678 或 +86 138 0000 0000。',
+    company: '公司（选填）',
+    companyPh: '例如：公司名称，若此次咨询与业务相关',
     localidade: '在葡萄牙的城市或地区',
     localidadePh: '例如：里斯本、卡斯凯什、波尔图、拉各斯',
     country: '目前居住的国家',
