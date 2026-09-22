@@ -119,6 +119,14 @@ const PAGE_CLUSTERS = [
     '/de/berufshaftpflicht-freiberufler-portugal/': 'de',
   },
   { '/seguros/condominios/': 'pt-PT', '/en/condominium-insurance-algarve/': 'en-GB' },
+  // Empresarial — the commercial pillar, same page in two languages. Like
+  // the Yoga/Pilates entry above, this is a real pair that both sides
+  // already declared in their markup while being registered nowhere, so
+  // the wouldDrop safety check reported it as a warning on every run
+  // rather than this script silently deleting it. Registering it here is
+  // what turns that warning off; it is also in scripts/lib/lang-pairs.mjs,
+  // so the selector and the tags now agree.
+  { '/seguros/empresarial/': 'pt-PT', '/en/business-insurance-portugal/': 'en-GB' },
   {
     '/seguros-empresas-lagos/': 'pt-PT',
     '/en/expat-insurance-lagos-portugal/': 'en-GB',
