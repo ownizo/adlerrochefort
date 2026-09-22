@@ -409,3 +409,24 @@ html[lang="he"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
   font-size: 11.5px;
   letter-spacing: 0;
 }
+
+
+/* DE/NL cluster header: these pages also load ar-property.css AFTER ar-chrome.css.
+   That file centers the logo for PT/EN landings and put the quote CTA on the mark.
+   This sheet is last in the cascade on those pages. */
+.site-nav:has(.nav-right) {
+  justify-content: space-between !important;
+}
+.site-nav:has(.nav-right) .nav-logo {
+  position: static !important;
+  left: auto !important;
+  transform: none !important;
+}
+.site-nav:has(.nav-right) .nav-right {
+  margin-left: auto;
+}
+.site-nav:has(.nav-right) .nav-logo-img {
+  height: 46px;
+  width: auto;
+  max-width: 200px;
+}
