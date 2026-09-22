@@ -3,9 +3,12 @@ import assert from 'node:assert/strict';
 import { readFileSync, globSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { HANDLED_FORMS, renderAllFields } from './submission-created.mjs';
+import { HANDLED_FORMS, renderAllFields } from '../submission-created.mjs';
 
-const PUBLIC = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'public');
+// Lives under lib/ on purpose. Netlify publishes every top-level file in
+// netlify/functions/ as a function, and a name with a dot
+// ("email-labels.test") is rejected at deploy: "Incorrect function names".
+const PUBLIC = join(dirname(fileURLToPath(import.meta.url)), '..', '..', '..', 'public');
 
 // Fields that never reach the notification body, or whose label is not this
 // check's business (nacionalidade_nome is the combobox's search text, which
