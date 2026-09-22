@@ -17,6 +17,18 @@ import type { Context, Config } from "@netlify/edge-functions";
  * User preference (Bloco C): an explicit `nf_lang` cookie set by the PT|EN
  * switcher always wins over the browser-language heuristic.
  */
+// Builds the redirect target, carrying the visitor's query string over
+// (e.g. ?source=blog:<slug> from a blog CTA) — new URL(path, url) on its own
+// drops it, since it replaces the whole pathname+search+hash with `path`.
+// The fragment needs no handling here: it never reaches the server at all,
+// so the edge function never sees it — the browser keeps it by itself on a
+// redirect whose Location has no fragment of its own.
+function withQuery(path: string, url: URL): URL {
+  const target = new URL(path, url);
+  target.search = url.search;
+  return target;
+}
+
 export default async (request: Request, _context: Context) => {
   const url = new URL(request.url);
 
@@ -29,7 +41,7 @@ export default async (request: Request, _context: Context) => {
   const pref = cookie.match(/(?:^|;\s*)nf_lang=(pt|en)/i);
   if (pref) {
     if (pref[1].toLowerCase() === "en") {
-      return Response.redirect(new URL("/en/", url), 302);
+      return Response.redirect(withQuery("/en/", url), 302);
     }
     return; // nf_lang=pt -> stay on the PT homepage.
   }
@@ -68,7 +80,7 @@ export default async (request: Request, _context: Context) => {
   };
 
   if (lang && lang !== "pt") {
-    return Response.redirect(new URL(landing[lang] || "/en/", url), 302);
+    return Response.redirect(withQuery(landing[lang] || "/en/", url), 302);
   }
 
   // Portuguese browser (or unknown) -> continue to the PT homepage (x-default).
