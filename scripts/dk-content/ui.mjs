@@ -91,6 +91,8 @@ export const DK_UI = {
     email: 'E-mailadresse',
     phone: 'Telefon',
     phoneHelp: 'Angiv nummeret med landekode, f.eks. +45 20 12 34 56.',
+    company: 'Virksomhed (valgfrit)',
+    companyPh: 'f.eks. virksomhedens navn, hvis henvendelsen vedrører driften',
     localidade: 'By i Portugal',
     localidadePh: 'f.eks. Lissabon, Cascais, Lagos, Albufeira',
     country: 'Land du bor i nu',
