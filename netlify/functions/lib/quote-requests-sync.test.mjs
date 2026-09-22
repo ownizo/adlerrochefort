@@ -389,3 +389,27 @@ test("an unticked consent box is never recorded as consent given", () => {
   });
   assert.equal(row.consentimento.aceite, undefined);
 });
+
+// The Dutch cluster had the same defect as the five market clusters above:
+// "nl-offerte-aanvraag" (12 pages) and the hand-authored /nl/ hub both render
+// a required consent checkbox named "toestemming", which this module never
+// read. Its value was already a recognised one, so only the name was missing
+// — which is exactly why it went unnoticed for so long.
+test("the Dutch forms record consent as given, from their own \"toestemming\" field", () => {
+  const row = buildQuoteRequestRow("nl-offerte-aanvraag", {
+    naam: "Jan de Vries",
+    email: "jan@example.nl",
+    toestemming: "ja",
+  });
+  assert.equal(row.consentimento.aceite, true);
+});
+
+test("the /nl/ hub form (lead-nl) records consent the same way", () => {
+  const row = buildQuoteRequestRow("lead-nl", {
+    name: "Jan de Vries",
+    email: "jan@example.nl",
+    company: "Test BV",
+    toestemming: "ja",
+  });
+  assert.equal(row.consentimento.aceite, true);
+});

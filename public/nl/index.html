@@ -1085,6 +1085,10 @@
             <input type="tel" id="l-phone" name="phone" placeholder="+31 …">
           </div>
           <div class="field">
+            <label for="l-company">Bedrijf (optioneel)</label>
+            <input type="text" id="l-company" name="company" autocomplete="organization" placeholder="Bijv. bedrijfsnaam, als de aanvraag zakelijk is">
+          </div>
+          <div class="field">
             <label for="l-type">Gewenste verzekering *</label>
             <select id="l-type" name="insurance_type" required>
               <option value="" disabled selected>Maak een keuze…</option>
@@ -1099,7 +1103,7 @@
             <textarea id="l-msg" name="message" placeholder="Kort over uw situatie (woonplaats, aankomst, huidige polissen…)"></textarea>
           </div>
           <button type="submit" class="form-submit">Gratis offerte aanvragen</button>
-          <p class="form-consent">Door te verzenden gaat u akkoord met contact door Adler &amp; Rochefort. Zie <a href="/en/privacy-policy">privacybeleid</a>.</p>
+          <p class="form-consent"><label for="l-toestemming"><input type="checkbox" id="l-toestemming" name="toestemming" value="ja" required aria-required="true"> Ik ga ermee akkoord dat Adler &amp; Rochefort mijn gegevens gebruikt om mijn aanvraag te behandelen, conform de AVG en het <a href="/en/privacy-policy">privacybeleid</a>. *</label></p>
         </form>
         <div class="form-success" id="leadSuccess">
           <div class="tick">&#10003;</div>
@@ -1247,7 +1251,13 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: data
-      }).then(function () {
+      }).then(function (response) {
+        // fetch() only rejects on a network error: without this check a 404
+        // or a 500 from the form endpoint still ran the success branch, and
+        // the visitor was thanked for a submission that was never stored.
+        // Same defect, same fix as public/js/ar-quote-form.js — see its
+        // header comment.
+        if (!response.ok) throw new Error('HTTP ' + response.status);
         form.style.display = 'none';
         document.getElementById('leadSuccess').classList.add('show');
       }).catch(function () {
