@@ -242,10 +242,24 @@ const BESTAANDE_AANDOENING = {
   modified: '2026-09-13T09:00:00+00:00',
   formBranch: 'Zorgverzekering',
   formSubject: 'zorgverzekering met bestaande aandoening',
+  // Both strings below were corrected on the published page in the
+  // Especificação v2 A1 sweep — the fifth clinical-data instance listed in
+  // the header of scripts/check-clinical-data-guard.mjs, and the one that
+  // was "not driven by any generator at all" as far as that sweep could
+  // tell — but the correction never reached this file, so the old wording
+  // sat here ready to be re-published. Found exactly that way: running the
+  // generator to add the optional `bedrijf` field put both back and the
+  // guard failed. The page's whole subject is pre-existing conditions, so
+  // it has to name the concept; what it must not do is invite the visitor
+  // to type the condition and its treatment into a public form. The live
+  // wording, restored here, asks for age and prior refusal instead and
+  // says the condition itself is discussed separately — which is also the
+  // "nooit via het formulier" phrasing the guard recognises as the
+  // reassurance pattern rather than a solicitation.
   formIntro:
-    'Vertel ons om welke aandoening het gaat en hoe die momenteel wordt behandeld — wij zeggen u eerlijk welke route realistisch is.',
+    'Vertel ons uw leeftijd en of u al een afwijzing van een verzekeraar heeft ontvangen — de aandoening zelf bespreken wij apart, nooit via het formulier.',
   formPlaceholder:
-    'Bijvoorbeeld: type aandoening, huidige behandeling, leeftijd, en of u al een afwijzing van een verzekeraar heeft ontvangen.',
+    'Bijvoorbeeld: uw leeftijd, of u al een afwijzing van een verzekeraar heeft ontvangen, en of een overstap van uw huidige verzekering een optie is.',
   sections: `
 <section class="section plain" aria-labelledby="acceptatie">
   <div class="container narrow article-body">

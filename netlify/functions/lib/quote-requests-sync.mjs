@@ -206,8 +206,9 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
     "tak", // PL
     "同意", // ZH
     "מאשר", // IL
+    "oui", // FR
   ]);
-  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "consent", "toestemming"]);
+  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "consent", "toestemming", "consentement"]);
 
   const row = {
     ramo,

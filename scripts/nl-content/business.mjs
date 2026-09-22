@@ -9,6 +9,11 @@ export const BUSINESS_PAGES = [
   {
     slug: 'alojamento-local-verzekering-portugal',
     url: '/nl/alojamento-local-verzekering-portugal/',
+    // Deliberately no form of its own: the page's own copy says Alojamento
+    // Local "is geen apart verzekeringsproduct" and sends the visitor to the
+    // Woon form with AL selected. generate-nl-cluster.mjs skips the page
+    // rather than emitting a second, contradictory form.
+    ctaRoutesTo: '/nl/woonverzekering-portugal/#offerte',
     title: 'Alojamento Local verzekeren: B&B, casa de campo en glamping | Adler & Rochefort',
     description:
       'AL kent een eigen verplichte aansprakelijkheidsverzekering. Een gewone woonpolis dekt commercieel gebruik niet. Wat u nodig heeft voor een B&B, casa de campo of glamping in Portugal.',
@@ -153,6 +158,10 @@ export const BUSINESS_PAGES = [
   {
     slug: 'zzp-beroepsaansprakelijkheid-portugal',
     url: '/nl/zzp-beroepsaansprakelijkheid-portugal/',
+    // Hand-authored wizard, not regenerated from this file:
+    // generate-nl-cluster.mjs skips this page. See
+    // dedicatedFormSkipReason() there for why.
+    dedicatedForm: 'nl-zzp-beroepsaansprakelijkheid-wizard',
     title: 'Beroepsaansprakelijkheid voor zzp’ers in Portugal | Adler & Rochefort',
     description:
       'Uw activiteit overzetten naar Portugal als consultant, IT’er, ontwerper of therapeut: wat beroepsaansprakelijkheid dekt, wanneer een beroepsorde of een opdrachtgever het eist, en wat er nog meer bij hoort.',

@@ -413,3 +413,13 @@ test("the /nl/ hub form (lead-nl) records consent the same way", () => {
   });
   assert.equal(row.consentimento.aceite, true);
 });
+
+test("the French hub form records consent from its own \"consentement\" field", () => {
+  const row = buildQuoteRequestRow("lead-fr", {
+    name: "Jean Dupont",
+    email: "jean@example.fr",
+    company: "Test SARL",
+    consentement: "oui",
+  });
+  assert.equal(row.consentimento.aceite, true);
+});

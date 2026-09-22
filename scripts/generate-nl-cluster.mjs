@@ -18,7 +18,7 @@
  * Run: node scripts/generate-nl-cluster.mjs
  * Then: node scripts/generate-sitemap.mjs
  */
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_NL } from './nl-cluster.data.mjs';
@@ -222,7 +222,18 @@ const BRANCHES = [
       { id: 'zorg_leeftijd', label: 'Leeftijd van de oudste te verzekeren persoon', type: 'number', placeholder: 'Bijv.: 62' },
       { id: 'zorg_personen', label: 'Aantal te verzekeren personen', type: 'number', placeholder: 'Bijv.: 2' },
       { id: 'zorg_s1', label: 'Heeft u een S1 van het CAK?', type: 'text', placeholder: 'Ja / Nee / Aangevraagd' },
-      { id: 'zorg_aandoeningen', label: 'Bestaande aandoeningen om te melden', type: 'text', placeholder: 'Ja / Nee' },
+      // 'zorg_aandoeningen' removed. It was stripped from the published
+      // HTML in the Especificação v2 A1 sweep — the fourth of the five
+      // clinical-data instances listed in the header of
+      // scripts/check-clinical-data-guard.mjs — but never from this
+      // generator, so it sat here waiting to be re-emitted onto all 12
+      // shared-form pages by the next person who ran the script. Found
+      // exactly that way: running it to add the optional `bedrijf` field
+      // put the field back and the guard failed with 25 hits. A public
+      // form must never ask about a medical condition, in any ramo or
+      // language; the health questionnaire belongs to the insurer's own
+      // adhesion step. Same removal as 'health_history' in the PL/SE/DK/
+      // ZH/IL cluster content.
     ],
   },
   {
@@ -344,6 +355,11 @@ function formHtml(page) {
                pattern="[0-9+ ()-]{6,}"
                required aria-required="true" aria-describedby="help-telefoon err-telefoon">
         <span class="field-error" id="err-telefoon" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="f-bedrijf">Bedrijf</label>
+        <input type="text" id="f-bedrijf" name="bedrijf" autocomplete="organization" placeholder="Bedrijfsnaam (optioneel)">
       </div>
 
       <div class="field">
@@ -689,12 +705,79 @@ ${LANGSEL_SCRIPT_TAG}
 
 /* ─────────────── write ─────────────── */
 
+// A page that has since been given its own hand-authored wizard (its own
+// exclusive form-name, its own fields, the 18-year rule on the tomador) is
+// NOT regenerated: page.dedicatedForm names the form it is supposed to
+// carry, and the page is skipped.
+//
+// Without this, running this generator reverted three pages — Woon, Zorg
+// and ZZP Beroepsaansprakelijkheid — to the shared "nl-offerte-aanvraag"
+// form, taking their exclusive form-names and every field the wizard adds
+// with them. Verified by running it. Identical to the hazard found and
+// fixed in scripts/generate-de-cluster.mjs; see dedicatedFormSkipReason()
+// there for the longer note, including why these pages are skipped rather
+// than form-spliced (they also carry stylesheets and scripts this
+// generator does not emit).
+//
+// The consequence is deliberate: editing these pages' content in
+// scripts/nl-content/*.mjs has no effect until someone reconciles them.
+// The skip message says so on every run, so that is visible, not silent.
+async function dedicatedFormSkipReason(page) {
+  const file = join(PUBLIC, page.url.replace(/^\/|\/$/g, ''), 'index.html');
+  const html = await readFile(file, 'utf8').catch(() => null);
+  // `ctaRoutesTo` is the other way a page's form stops being this
+  // generator's to write: the page deliberately has none and sends its CTA
+  // to another page's form. Alojamento Local is the case — its own copy
+  // says "Alojamento Local is geen apart verzekeringsproduct" and routes to
+  // the Woon form with AL selected, so emitting a separate AL form here
+  // would contradict the page and split the ramo across two forms.
+  if (page.ctaRoutesTo) {
+    if (html === null) throw new Error(`${page.url} declares ctaRoutesTo but has no published index.html.`);
+    if (/<form\b/.test(html)) {
+      throw new Error(
+        `${page.url} declares ctaRoutesTo "${page.ctaRoutesTo}" but its published HTML does contain a <form>. ` +
+          `One of the two is wrong — fix that before running this generator.`
+      );
+    }
+    if (!html.includes(page.ctaRoutesTo)) {
+      throw new Error(
+        `${page.url} declares ctaRoutesTo "${page.ctaRoutesTo}" but does not link there.`
+      );
+    }
+    return `no form of its own, CTA routes to ${page.ctaRoutesTo}`;
+  }
+  if (html === null) {
+    throw new Error(
+      `${page.url} declares dedicatedForm "${page.dedicatedForm}" but has no published index.html. ` +
+        `Author the wizard first, or drop dedicatedForm to let this generator emit the shared form.`
+    );
+  }
+  const nameMatch = html.match(/<form\b[^>]*\bname="([^"]+)"/);
+  const actual = nameMatch ? nameMatch[1] : null;
+  if (actual !== page.dedicatedForm) {
+    throw new Error(
+      `${page.url}'s published form is named "${actual ?? '(none)'}", but its data declares dedicatedForm ` +
+        `"${page.dedicatedForm}". One of the two is wrong — fix that before running this generator.`
+    );
+  }
+  return `hand-authored ${page.dedicatedForm}`;
+}
+
 let written = 0;
+const skipped = [];
 for (const page of PAGES) {
+  if (page.dedicatedForm || page.ctaRoutesTo) {
+    skipped.push(`${page.url} — ${await dedicatedFormSkipReason(page)}`);
+    continue;
+  }
   const dir = join(PUBLIC, page.url.replace(/^\/|\/$/g, ''));
   await mkdir(dir, { recursive: true });
   await writeFile(join(dir, 'index.html'), renderPage(page), 'utf8');
   written++;
   console.log(`  ✓ ${page.url}`);
+}
+if (skipped.length) {
+  console.log(`\nSkipped ${skipped.length} page(s) with a hand-authored form — not regenerated, content edits to their scripts/nl-content/*.mjs entries will NOT appear until they are reconciled by hand:`);
+  for (const line of skipped) console.log(`  – ${line}`);
 }
 console.log(`\n${written} Dutch pages written.`);
