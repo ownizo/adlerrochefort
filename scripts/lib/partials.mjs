@@ -310,14 +310,15 @@ ${rightLinks.map((l) => '    ' + navLink(l)).join('\n')}
 }
 
 /**
- * The drawer the burger opens. Hidden by default by `.mobile-nav`; every entry
- * closes it again so a same-page anchor does not leave the drawer covering the
- * section it just jumped to.
+ * The drawer the burger opens. Hidden by default by `.mobile-nav`. Same-page
+ * anchors are closed by /js/ar-nav.js (delegated click on `#mobileNav a`), so
+ * a jump to #quote-form does not leave the drawer covering the section it
+ * just jumped to.
  */
 export function mobileDrawer({ links = [], switcher = '' }) {
   return `<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-${links.map((l) => `  <a href="${l.href}" onclick="toggleMenu()">${l.label}</a>`).join('\n')}
+${links.map((l) => `  <a href="${l.href}">${l.label}</a>`).join('\n')}
   ${switcher}
 </div>`;
 }

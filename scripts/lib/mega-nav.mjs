@@ -49,7 +49,7 @@ const item = ({ href, label, flag, onclick }) => {
 
 const mobileItem = ({ href, label, flag }) => {
   const text = flag ? `${flag} ${label}` : label;
-  return `<a href="${href}" onclick="toggleMenu()">${text}</a>`;
+  return `<a href="${href}">${text}</a>`;
 };
 
 /**
@@ -204,7 +204,7 @@ ${insightsLink}${whyBlock}    <a href="${cta.href}" class="nav-cta">${cta.label}
 `
     : '';
   const mobInsights = insights
-    ? `  <a href="${insights.href}" onclick="toggleMenu()">${insights.label}</a>\n`
+    ? `  <a href="${insights.href}">${insights.label}</a>\n`
     : '';
   const mobSwitch = mobileSwitcher
     ? `  <div class="mobile-lang-switcher">
@@ -242,7 +242,7 @@ ${mobileSwitcher}
       ${mobPc}
     </div>
   </div>
-${mobInsights}${mobWhy}  <a href="${cta.href}" onclick="toggleMenu()">${cta.label}</a>
+${mobInsights}${mobWhy}  <a href="${cta.href}">${cta.label}</a>
 ${mobSwitch}</div>`;
 
   return { nav, mobile };

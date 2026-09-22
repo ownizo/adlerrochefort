@@ -1,13 +1,18 @@
 /*
  * Shared mega-nav behaviour. One file, every language.
  *
- * One capture-phase click listener owns the burger, the desktop mega-menu
- * and the mobile accordion. Capture + stopPropagation on the burger and on
- * .nav-trigger so a leftover inline onclick / IIFE cannot double-toggle
- * (open-then-close on the same click — which looks like the menu does nothing).
+ * Event delegation: one capture-phase listener on document, matching with
+ * closest(). No per-node addEventListener, no onclick on the burger or on
+ * drawer links. Capture + stopPropagation on the burger and on .nav-trigger
+ * so a leftover inline onclick / IIFE cannot double-toggle (open-then-close
+ * on the same click — which looks like the menu does nothing).
  *
- * Named handlers so DevTools EventListener breakpoints land here, not on
- * an anonymous function (e).
+ * Drawer links are different: they must navigate, and gtag's document-bubble
+ * click tracker must still see them, so those clicks are not stopped. They
+ * call closeMenu() (idempotent), not toggleMenu() — a leftover onclick that
+ * toggled would reopen the drawer over a same-page hash target.
+ *
+ * Named handlers so DevTools EventListener breakpoints land here.
  */
 (function () {
   "use strict";
@@ -15,15 +20,23 @@
   if (window.__arNavBound) return;
   window.__arNavBound = true;
 
-  function toggleMenu() {
+  function setDrawer(open) {
     var drawer = document.getElementById("mobileNav");
     var burger = document.querySelector(".nav-burger");
     if (!drawer) return;
-    var open = drawer.classList.toggle("open");
-    if (burger) burger.setAttribute("aria-expanded", String(open));
+    drawer.classList.toggle("open", !!open);
+    if (burger) burger.setAttribute("aria-expanded", String(!!open));
   }
-  // Always own the global: leftover one-liners used to win because we only
-  // defined this when it was missing, and those copies never set aria-expanded.
+
+  function toggleMenu() {
+    var drawer = document.getElementById("mobileNav");
+    setDrawer(!(drawer && drawer.classList.contains("open")));
+  }
+
+  function closeMenu() {
+    setDrawer(false);
+  }
+
   window.toggleMenu = toggleMenu;
 
   function panelFor(trigger) {
@@ -79,6 +92,15 @@
       return;
     }
 
+    // Delegated: any link in the drawer closes it. Same-page hashes (#quote-form,
+    // #offerte) would otherwise leave the overlay covering the section they
+    // jumped to. Do not preventDefault / stopPropagation — the click must
+    // navigate, and analytics bubble listeners must still see it.
+    if (target.closest("#mobileNav a")) {
+      closeMenu();
+      return;
+    }
+
     if (target.closest(".nav-panel") || target.closest("#mobileNav")) return;
     closeMega();
   }
@@ -86,8 +108,7 @@
   function onNavKeydown(e) {
     if (e.key !== "Escape") return;
     closeMega();
-    var drawer = document.getElementById("mobileNav");
-    if (drawer && drawer.classList.contains("open")) toggleMenu();
+    closeMenu();
   }
 
   document.addEventListener("click", onNavClick, true);

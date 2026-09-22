@@ -42,7 +42,7 @@ const RESERVED = 'en/blog/insurance-portugal-spain-international-residents/index
 
 const MORTGAGE_LINK_DESKTOP = '<a href="/en/mortgage-protection-spain/">Mortgage Protection</a>';
 const MORTGAGE_LINK_MOBILE =
-  '<a href="/en/mortgage-protection-spain/" onclick="toggleMenu()">Mortgage Protection</a>';
+  '<a href="/en/mortgage-protection-spain/">Mortgage Protection</a>';
 
 function findRegion(html, startMarker, endMarker) {
   const s = html.indexOf(startMarker);
@@ -88,7 +88,7 @@ for (const file of navTargets) {
   const mobileNav = findRegion(html, '<div class="mobile-nav" id="mobileNav">', '</div>');
   if (mobileNav && !html.slice(mobileNav.start, mobileNav.end).includes('mortgage-protection-spain')) {
     const scoped = html.slice(mobileNav.start, mobileNav.end);
-    const lifeLink = scoped.match(/<a href="\/en\/life-insurance-spain\/" onclick="toggleMenu\(\)">[^<]*<\/a>/);
+    const lifeLink = scoped.match(/<a href="\/en\/life-insurance-spain\/"(?: onclick="toggleMenu\(\)")?>[^<]*<\/a>/);
     if (lifeLink) {
       const insertAt = mobileNav.start + lifeLink.index + lifeLink[0].length;
       html = html.slice(0, insertAt) + `\n  ${MORTGAGE_LINK_MOBILE}` + html.slice(insertAt);

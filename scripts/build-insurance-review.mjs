@@ -135,10 +135,10 @@ const nav = `
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="/en/expat-insurance-portugal/" onclick="toggleMenu()">🇵🇹 Insurance in Portugal</a>
-  <a href="/en/expat-insurance-spain/" onclick="toggleMenu()">🇪🇸 Insurance in Spain</a>
-  <a href="#faq" onclick="toggleMenu()">FAQ</a>
-  <a href="#review-form" onclick="toggleMenu()">Start Your Review</a>
+  <a href="/en/expat-insurance-portugal/">🇵🇹 Insurance in Portugal</a>
+  <a href="/en/expat-insurance-spain/">🇪🇸 Insurance in Spain</a>
+  <a href="#faq">FAQ</a>
+  <a href="#review-form">Start Your Review</a>
 </div>`;
 
 const FAQ = [
