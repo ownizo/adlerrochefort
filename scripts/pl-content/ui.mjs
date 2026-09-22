@@ -97,6 +97,8 @@ export const PL_UI = {
     email: 'Adres e-mail',
     phone: 'Telefon',
     phoneHelp: 'Proszę podać numer z prefiksem kraju, np. +48 601 234 567.',
+    company: 'Firma (opcjonalnie)',
+    companyPh: 'np. nazwa firmy, jeśli zapytanie dotyczy działalności',
     localidade: 'Miejscowość w Portugalii',
     localidadePh: 'np. Lizbona, Porto, Lagos, Cascais',
     country: 'Kraj obecnego zamieszkania',

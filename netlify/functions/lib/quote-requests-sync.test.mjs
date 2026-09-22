@@ -354,3 +354,38 @@ test("insertQuoteRequest posts payload_teste in the row body for a test-mode cal
   assert.deepEqual(bodies[0].payload_teste, testPayload);
   assert.equal("payload_teste" in bodies[1], false);
 });
+
+// The five market clusters (PL/SE/DK/ZH/IL) share one lead form across four
+// pages each — 20 pages, all rendering a *required* consent checkbox named
+// "consent" that this module never read. Every lead from them was stored with
+// `aceite: undefined`: the visitor could not submit without ticking the box,
+// and the record then failed to show that they had. The per-language
+// affirmative matters just as much as the field name — recognising "consent"
+// while only knowing "ja" would have turned PL/ZH/IL from undefined into a
+// positive tick recorded as `false`.
+for (const [market, formName, value] of [
+  ["PL", "pl-zapytanie-ofertowe", "Tak"],
+  ["SE", "se-offertforfragan", "Ja"],
+  ["DK", "dk-forespoergsel", "Ja"],
+  ["ZH", "zh-baojia-shenqing", "同意"],
+  ["IL", "il-bakashat-hatzaa", "מאשר"],
+]) {
+  test(`${market}'s shared lead form records consent as given, from its own "consent" field and affirmative`, () => {
+    const row = buildQuoteRequestRow(formName, {
+      name: "Test Person",
+      email: "test@example.com",
+      phone: "+351 912 345 678",
+      insurance_type: "Home",
+      consent: value,
+    });
+    assert.equal(row.consentimento.aceite, true, `${value} must be recognised as consent given`);
+  });
+}
+
+test("an unticked consent box is never recorded as consent given", () => {
+  const row = buildQuoteRequestRow("pl-zapytanie-ofertowe", {
+    name: "Test Person",
+    email: "test@example.com",
+  });
+  assert.equal(row.consentimento.aceite, undefined);
+});

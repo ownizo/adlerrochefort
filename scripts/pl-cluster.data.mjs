@@ -56,6 +56,17 @@ export const PL_MARKET = {
   gtagName: 'pl_zapytanie_ofertowe',
   subjectPrefix: 'Nowe zapytanie (PL) — ',
   consentValue: 'Tak',
+
+  // Especificação v2, Parte 4 — this cluster's shared lead form uses the
+  // short shape (name, email, phone, optional company, insurance type,
+  // the chosen ramo's own optional fields, message, consent), the same one
+  // "analise-gratuita" (PT), "free-analysis" (EN) and "de-angebot-anfrage"
+  // (DE) already use. Localidade, country of residence, residence status,
+  // start date and preferred language leave the form: they are asked in
+  // the follow-up, where they can be asked precisely, rather than standing
+  // between a first-time visitor and sending anything at all. Applies to
+  // all four pages sharing this form-name, with no per-page exception.
+  shortForm: true,
   otherValue: 'PL · Inne',
 
   langPolicy: LANG_POLICY_PL,
