@@ -23,10 +23,20 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, LANG_POLICY_NL } from './nl-cluster.data.mjs';
 import { footerSelectorHtml, langSelectorHtml, selectorTargets, LANGSEL_CSS_LINK, LANGSEL_SCRIPT_TAG } from './lib/lang-selector.mjs';
+import { extractSiteNav, extractMobileNav, swapLangSwitcher, NAV_SCRIPT } from './lib/mega-nav.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
 const ORIGIN = 'https://adlerrochefort.com';
+
+const nlHomeHtml = await readFile(join(PUBLIC, 'nl/index.html'), 'utf8');
+const absNl = (h) => h && h.replace(/href="#([a-z0-9-]+)"/gi, 'href="/nl/#$1"');
+const NL_NAV = absNl(extractSiteNav(nlHomeHtml));
+const NL_MOBILE = absNl(extractMobileNav(nlHomeHtml));
+if (!NL_NAV || !NL_NAV.includes('nav-links-left')) {
+  throw new Error('public/nl/index.html has no mega-nav — add it before generating the cluster');
+}
+
 
 /** Escapes text destined for an HTML attribute or a JSON-LD string. */
 const esc = (s) =>
@@ -646,16 +656,10 @@ ${LANGSEL_CSS_LINK}
 <div class="asf-top-bar on-dark">Adler &amp; Rochefort — geregistreerd verzekeringsagent bij de ASF onder nr. 425591790/3 · Lagos, Algarve</div>
 
 <header class="site-header">
-  <nav class="site-nav on-dark" aria-label="Hoofdnavigatie">
-    <a href="/nl/verzekeringen-portugal/" class="nav-logo">
-      <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
-    </a>
-    <div class="nav-right">
-      ${langSwitcher(page)}
-      <a href="#offerte" class="nav-cta">Vraag een offerte aan</a>
-    </div>
-  </nav>
+${swapLangSwitcher(NL_NAV, langSwitcher(page))}
 </header>
+
+${NL_MOBILE || ''}
 
 ${breadcrumbHtml(page)}
 
@@ -697,6 +701,7 @@ ${FORM_SCRIPT}
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${COOKIE_BANNER}
+${NAV_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
 </body>
 </html>

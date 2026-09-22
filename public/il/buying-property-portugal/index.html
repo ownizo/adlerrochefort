@@ -217,12 +217,94 @@
 <div class="asf-top-bar on-dark">סוכנות ביטוח רשומה בפורטוגל — רישום ⁦ASF 425591790/3⁩ · לאגוש, אלגרבה, פורטוגל</div>
 
 <header class="site-header">
-  <nav class="site-nav on-dark" aria-label="ניווט ראשי">
-    <a href="/il/" class="nav-logo">
-      <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
-    </a>
-    <div class="nav-right">
-      <div class="lang-switcher">
+<nav class="site-nav" role="navigation" aria-label="ניווט ראשי">
+  <div class="nav-links-left">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPT" aria-expanded="false" aria-controls="navPanelPT">
+        ביטוח בפורטוגל
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelPT" role="menu" aria-label="תפריט פורטוגל" hidden>
+        <div class="nav-panel-cols">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">סקירה</div>
+            <a href="/il/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> ביטוח בפורטוגל</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">ביטוח אישי</div>
+            <a href="/il/home-insurance-portugal/" role="menuitem">ביטוח דירה ומבנה</a>
+            <a href="/il/health-insurance-portugal/" role="menuitem">ביטוח בריאות פרטי</a>
+            <a href="/il/car-insurance-portugal/" role="menuitem">ביטוח רכב</a>
+            <a href="/il/liability-insurance-portugal/" role="menuitem">ביטוח אחריות אזרחית</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">מעבר ונכס</div>
+            <a href="/il/moving-to-portugal/" role="menuitem">מעבר לפורטוגל</a>
+            <a href="/il/buying-property-portugal/" role="menuitem">קניית דירה בפורטוגל</a>
+            <a href="/il/insurance-guide-portugal/" role="menuitem">מדריך הביטוח בפורטוגל</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerES" aria-expanded="false" aria-controls="navPanelES">
+        ביטוח בספרד
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelES" role="menu" aria-label="תפריט ספרד" hidden>
+        <div class="nav-panel-cols nav-panel-cols--4">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">סקירה</div>
+            <a href="/en/expat-insurance-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> ביטוח לתושבים זרים בספרד</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">אישי</div>
+            <a href="/en/health-insurance-spain/" role="menuitem">ביטוח בריאות</a>
+            <a href="/en/home-insurance-spain/" role="menuitem">ביטוח דירה</a>
+            <a href="/en/car-insurance-spain/" role="menuitem">ביטוח רכב</a>
+            <a href="/en/life-insurance-spain/" role="menuitem">ביטוח חיים</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">נכס</div>
+            <a href="/en/landlord-insurance-spain/" role="menuitem">ביטוח למשכיר</a>
+            <a href="/en/mortgage-protection-spain/" role="menuitem">הגנת משכנתא</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Private Clients</div>
+            <a href="/en/private-clients-spain/" role="menuitem">ביטוח Private Client</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPC" aria-expanded="false" aria-controls="navPanelPC">
+        Private Clients
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelPC" role="menu" aria-label="תפריט Private Clients" hidden>
+        <a href="/en/private-clients/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Private Clients — פורטוגל</a>
+        <a href="/en/private-clients-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Private Clients — ספרד</a>
+      </div>
+    </div>
+  </div>
+  <a href="/il/" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler & Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
+  </a>
+  <div class="nav-links-right">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerWhy" aria-expanded="false" aria-controls="navPanelWhy">
+        למה אנחנו
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelWhy" role="menu" aria-label="תפריט למה אנחנו" hidden>
+        <a href="/en/about/" role="menuitem">עלינו</a>
+        <a href="/en/how-we-work/" role="menuitem">איך אנחנו עובדים</a>
+        <a href="/en/why-use-an-insurance-broker/" role="menuitem">למה סוכן</a>
+        <a href="/en/claims-support/" role="menuitem">תביעות</a>
+      </div>
+    </div>
+    <a href="#hatzaa" class="nav-cta">לקבלת הצעה</a>
+    <div class="lang-switcher">
       <div class="ar-langsel" data-ar-langsel>
         <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="שפה: עברית. בחירת שפה אחרת."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">עברית</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
         <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
@@ -238,11 +320,89 @@
           <li><a href="/il/buying-property-portugal/" lang="he" dir="rtl" hreflang="he-IL" aria-current="true"><span>עברית</span></a></li>
         </ul>
       </div>
-      </div>
-      <a href="#hatzaa" class="nav-cta">לקבלת הצעה</a>
     </div>
-  </nav>
+  </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="תפריט">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 </header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPT">
+      🇵🇹 ביטוח בפורטוגל
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPT" hidden>
+      <a href="/il/" onclick="toggleMenu()">🇵🇹 ביטוח בפורטוגל</a>
+      <a href="/il/home-insurance-portugal/" onclick="toggleMenu()">ביטוח דירה ומבנה</a>
+      <a href="/il/health-insurance-portugal/" onclick="toggleMenu()">ביטוח בריאות פרטי</a>
+      <a href="/il/car-insurance-portugal/" onclick="toggleMenu()">ביטוח רכב</a>
+      <a href="/il/liability-insurance-portugal/" onclick="toggleMenu()">ביטוח אחריות אזרחית</a>
+      <a href="/il/moving-to-portugal/" onclick="toggleMenu()">מעבר לפורטוגל</a>
+      <a href="/il/buying-property-portugal/" onclick="toggleMenu()">קניית דירה בפורטוגל</a>
+      <a href="/il/insurance-guide-portugal/" onclick="toggleMenu()">מדריך הביטוח בפורטוגל</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccES">
+      🇪🇸 ביטוח בספרד
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccES" hidden>
+      <a href="/en/expat-insurance-spain/" onclick="toggleMenu()">🇪🇸 ביטוח לתושבים זרים בספרד</a>
+      <a href="/en/health-insurance-spain/" onclick="toggleMenu()">ביטוח בריאות</a>
+      <a href="/en/home-insurance-spain/" onclick="toggleMenu()">ביטוח דירה</a>
+      <a href="/en/car-insurance-spain/" onclick="toggleMenu()">ביטוח רכב</a>
+      <a href="/en/life-insurance-spain/" onclick="toggleMenu()">ביטוח חיים</a>
+      <a href="/en/landlord-insurance-spain/" onclick="toggleMenu()">ביטוח למשכיר</a>
+      <a href="/en/mortgage-protection-spain/" onclick="toggleMenu()">הגנת משכנתא</a>
+      <a href="/en/private-clients-spain/" onclick="toggleMenu()">ביטוח Private Client</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPC">
+      Private Clients
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPC" hidden>
+      <a href="/en/private-clients/" onclick="toggleMenu()">🇵🇹 Private Clients — פורטוגל</a>
+      <a href="/en/private-clients-spain/" onclick="toggleMenu()">🇪🇸 Private Clients — ספרד</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccWhy">
+      למה אנחנו
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccWhy" hidden>
+      <a href="/en/about/" onclick="toggleMenu()">עלינו</a>
+      <a href="/en/how-we-work/" onclick="toggleMenu()">איך אנחנו עובדים</a>
+      <a href="/en/why-use-an-insurance-broker/" onclick="toggleMenu()">למה סוכן</a>
+      <a href="/en/claims-support/" onclick="toggleMenu()">תביעות</a>
+    </div>
+  </div>
+  <a href="#hatzaa" onclick="toggleMenu()">לקבלת הצעה</a>
+  <div class="mobile-lang-switcher">
+    <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
+      <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="שפה: עברית. בחירת שפה אחרת."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">עברית</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+      <ul class="ar-langsel-menu" id="arLangselMobileMenu" aria-labelledby="arLangselMobileBtn" hidden>
+        <li><a href="/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">דף הבית</span></a></li>
+        <li><a href="/en/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">דף הבית</span></a></li>
+        <li><a href="/nl/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">דף הבית</span></a></li>
+        <li><a href="/fr/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">דף הבית</span></a></li>
+        <li><a href="/de/" lang="de" dir="ltr" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">דף הבית</span></a></li>
+        <li><a href="/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span></a></li>
+        <li><a href="/se/kopa-hus-i-portugal-forsakring/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span></a></li>
+        <li><a href="/dk/kobe-bolig-i-portugal-forsikring/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span></a></li>
+        <li><a href="/zh/buying-property-portugal/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span></a></li>
+        <li><a href="/il/buying-property-portugal/" lang="he" dir="rtl" hreflang="he-IL" aria-current="true"><span>עברית</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <nav class="breadcrumb" aria-label="מסלול הניווט">
     <ol>
@@ -802,6 +962,7 @@
 </script>
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
 <div class="cookie-banner" id="cookieBanner">
   <div class="cookie-banner-content">

@@ -430,3 +430,12 @@ html[lang="he"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
   width: auto;
   max-width: 200px;
 }
+
+.site-nav:has(.nav-links-left) {
+  justify-content: space-between !important;
+}
+.site-nav:has(.nav-links-left) .nav-logo {
+  position: static !important;
+  left: auto !important;
+  transform: none !important;
+}

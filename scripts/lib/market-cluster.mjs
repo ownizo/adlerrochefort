@@ -38,6 +38,7 @@ import {
 } from './lang-selector.mjs';
 import { marketPairs } from './market-hreflang.mjs';
 import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
+import { clusterMegaNav, NAV_SCRIPT } from './mega-nav.mjs';
 import plQuoteFormStrings from '../../data/i18n/quote-form/pl.json' with { type: 'json' };
 import svQuoteFormStrings from '../../data/i18n/quote-form/sv.json' with { type: 'json' };
 import daQuoteFormStrings from '../../data/i18n/quote-form/da.json' with { type: 'json' };
@@ -920,6 +921,13 @@ ${ft.regulatory.map((p) => `    <p>${p}</p>`).join('\n')}
 
 export function renderPage(market, page) {
   const ui = market.ui;
+  const mega = clusterMegaNav(market, {
+    switcher: `<div class="lang-switcher">
+${langSelector(market, page)}
+      </div>`,
+    mobileSwitcher: langSelector(market, page, { mobile: true, id: 'arLangselMobile', indent: '    ' }),
+    ctaHref: `#${ui.formId}`,
+  });
 
   const related = page.related?.length
     ? `<section class="section plain" aria-labelledby="related-title">
@@ -1014,18 +1022,10 @@ ${page.wizard ? '<link rel="stylesheet" href="/css/ar-property.css">\n<link rel=
 <div class="asf-top-bar on-dark">${ui.asfBar}</div>
 
 <header class="site-header">
-  <nav class="site-nav on-dark" aria-label="${esc(ui.navAria)}">
-    <a href="/${market.key}/" class="nav-logo">
-      <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
-    </a>
-    <div class="nav-right">
-      <div class="lang-switcher">
-${langSelector(market, page)}
-      </div>
-      <a href="#${ui.formId}" class="nav-cta">${ui.navCta}</a>
-    </div>
-  </nav>
+${mega.nav}
 </header>
+
+${mega.mobile}
 
 ${breadcrumbHtml(market, page)}
 
@@ -1065,6 +1065,7 @@ ${footerHtml(market, page)}
 
 ${page.wizard ? wizardScript(page) : `${formScript(market)}\n<script defer src="/js/lead-branch-fields.js"></script>`}
 <script defer src="/js/ar-analytics-tracker.js"></script>
+${NAV_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
 ${cookieBanner(market)}
 </body>

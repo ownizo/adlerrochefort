@@ -195,32 +195,194 @@
 <div class="asf-top-bar on-dark">Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien</div>
 
 <header class="site-header">
-  <nav class="site-nav on-dark" aria-label="Hauptnavigation">
-    <a href="/de/" class="nav-logo">
-      <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" width="1000" height="354" loading="eager">
-    </a>
-    <div class="nav-right">
-      <div class="lang-switcher">
-        <div class="ar-langsel" data-ar-langsel>
-          <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Sprache: Deutsch. Andere Sprache wählen."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Deutsch</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
-          <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
-            <li><a href="/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/en/home-insurance-spain/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span></a></li>
-            <li><a href="/nl/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/fr/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/de/versicherung-mallorca/" lang="de" dir="ltr" hreflang="de" aria-current="true"><span>Deutsch</span></a></li>
-            <li><a href="/pl/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/se/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/dk/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/zh/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">Startseite</span></a></li>
-            <li><a href="/il/" lang="he" dir="rtl" hreflang="he-IL"><span>עברית</span><span class="ar-langsel-note">Startseite</span></a></li>
-          </ul>
+  <nav class="site-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-links-left">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPT" aria-expanded="false" aria-controls="navPanelPT">
+        Umzug nach Portugal
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelPT" role="menu" aria-label="Versicherungsmenü Portugal" hidden>
+        <div class="nav-panel-cols">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">Überblick</div>
+            <a href="/de/versicherung-portugal/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Versicherungen für Expats in Portugal</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Privatversicherung</div>
+            <a href="/de/krankenversicherung-portugal/" role="menuitem">Krankenversicherung</a>
+            <a href="/de/hausversicherung-portugal/" role="menuitem">Hausversicherung</a>
+            <a href="/de/autoversicherung-portugal/" role="menuitem">Autoversicherung</a>
+            <a href="/de/hausversicherung-portugal/" role="menuitem">Vermieterversicherung</a>
+            <a href="/de/lebensversicherung-portugal/" role="menuitem">Life &amp; Hypothekenschutz</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Umzug &amp; Immobilie</div>
+            <a href="/de/umzug-deutschland-portugal-versicherung/" role="menuitem">Relocation &amp; Visa Insurance</a>
+            <a href="/de/hausversicherung-portugal/" role="menuitem">Wohnungseigentümergemeinschaft</a>
+          </div>
         </div>
       </div>
-      <a href="#angebot" class="nav-cta">Angebot anfragen</a>
     </div>
-  </nav>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerES" aria-expanded="false" aria-controls="navPanelES">
+        Versicherung in Spanien
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelES" role="menu" aria-label="Versicherungsmenü Spanien" hidden>
+        <div class="nav-panel-cols nav-panel-cols--4">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">Überblick</div>
+            <a href="/de/versicherung-spanien/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Versicherungen für Expats in Spanien</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Privat</div>
+            <a href="/de/krankenversicherung-spanien/" role="menuitem">Krankenversicherung</a>
+            <a href="/de/hausversicherung-spanien/" role="menuitem">Hausversicherung</a>
+            <a href="/de/autoversicherung-spanien/" role="menuitem">Autoversicherung</a>
+            <a href="/de/lebensversicherung-spanien/" role="menuitem">Lebensversicherung</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Immobilie</div>
+            <a href="/de/vermieterversicherung-spanien/" role="menuitem">Vermieterversicherung</a>
+            <a href="/de/hypothekenschutz-spanien/" role="menuitem">Hypothekenschutz</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Private Clients</div>
+            <a href="/de/private-clients-spanien/" role="menuitem">Private-Client-Versicherung</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPC" aria-expanded="false" aria-controls="navPanelPC">
+        Private Clients
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelPC" role="menu" aria-label="Menü Private Clients" hidden>
+        <a href="/de/private-clients-portugal/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Private Clients — Portugal</a>
+        <a href="/de/private-clients-spanien/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Private Clients — Spanien</a>
+      </div>
+    </div>
+  </div>
+  <a href="/de/" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
+  </a>
+  <div class="nav-links-right">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerWhy" aria-expanded="false" aria-controls="navPanelWhy">
+        Warum wir
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelWhy" role="menu" aria-label="Menü Warum wir" hidden>
+        <a href="/de/#why-us" role="menuitem">Unser Ansatz</a>
+        <a href="/de/#team" role="menuitem">Über uns</a>
+        <a href="/de/#why-us" role="menuitem">So arbeiten wir</a>
+        <a href="/de/#why-us" role="menuitem">Warum ein Makler</a>
+        <a href="/de/#why-us" role="menuitem">Schadenbegleitung</a>
+      </div>
+    </div>
+    <a href="/de/#contact" class="nav-cta">Analyse anfragen</a>
+    <div class="lang-switcher">
+      <div class="ar-langsel" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Sprache: Deutsch. Andere Sprache wählen."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Deutsch</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
+          <li><a href="/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/en/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/nl/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/fr/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/de/versicherung-mallorca/" lang="de" dir="ltr" hreflang="de" aria-current="true"><span>Deutsch</span></a></li>
+          <li><a href="/pl/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/se/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/dk/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/zh/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">Startseite</span></a></li>
+          <li><a href="/il/" lang="he" dir="rtl" hreflang="he-IL"><span>עברית</span><span class="ar-langsel-note">Startseite</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 </header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPT">
+      🇵🇹 Umzug nach Portugal
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPT" hidden>
+      <a href="/de/versicherung-portugal/" onclick="toggleMenu()">Versicherungen für Expats in Portugal</a>
+      <a href="/de/krankenversicherung-portugal/" onclick="toggleMenu()">Krankenversicherung</a>
+      <a href="/de/hausversicherung-portugal/" onclick="toggleMenu()">Hausversicherung</a>
+      <a href="/de/autoversicherung-portugal/" onclick="toggleMenu()">Autoversicherung</a>
+      <a href="/de/hausversicherung-portugal/" onclick="toggleMenu()">Vermieterversicherung</a>
+      <a href="/de/lebensversicherung-portugal/" onclick="toggleMenu()">Life &amp; Hypothekenschutz</a>
+      <a href="/de/umzug-deutschland-portugal-versicherung/" onclick="toggleMenu()">Relocation &amp; Visa Insurance</a>
+      <a href="/de/hausversicherung-portugal/" onclick="toggleMenu()">Wohnungseigentümergemeinschaft</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccES">
+      🇪🇸 Versicherung in Spanien
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccES" hidden>
+      <a href="/de/versicherung-spanien/" onclick="toggleMenu()">Versicherungen für Expats in Spanien</a>
+      <a href="/de/krankenversicherung-spanien/" onclick="toggleMenu()">Krankenversicherung</a>
+      <a href="/de/hausversicherung-spanien/" onclick="toggleMenu()">Hausversicherung</a>
+      <a href="/de/autoversicherung-spanien/" onclick="toggleMenu()">Autoversicherung</a>
+      <a href="/de/vermieterversicherung-spanien/" onclick="toggleMenu()">Vermieterversicherung</a>
+      <a href="/de/lebensversicherung-spanien/" onclick="toggleMenu()">Lebensversicherung</a>
+      <a href="/de/hypothekenschutz-spanien/" onclick="toggleMenu()">Hypothekenschutz</a>
+      <a href="/de/private-clients-spanien/" onclick="toggleMenu()">Private-Client-Versicherung</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPC">
+      Private Clients
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPC" hidden>
+      <a href="/de/private-clients-portugal/" onclick="toggleMenu()">🇵🇹 Private Clients — Portugal</a>
+      <a href="/de/private-clients-spanien/" onclick="toggleMenu()">🇪🇸 Private Clients — Spanien</a>
+    </div>
+  </div>
+    <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccWhy">
+      Warum wir
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccWhy" hidden>
+      <a href="/de/#why-us" onclick="toggleMenu()">Unser Ansatz</a>
+      <a href="/de/#team" onclick="toggleMenu()">Über uns</a>
+      <a href="/de/#why-us" onclick="toggleMenu()">So arbeiten wir</a>
+      <a href="/de/#why-us" onclick="toggleMenu()">Warum ein Makler</a>
+      <a href="/de/#why-us" onclick="toggleMenu()">Schadenbegleitung</a>
+    </div>
+  </div>
+  <a href="/de/#contact" onclick="toggleMenu()">Analyse anfragen</a>
+  <div class="mobile-lang-switcher">
+    <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
+      <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="Sprache: Deutsch. Andere Sprache wählen."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Deutsch</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+      <ul class="ar-langsel-menu" id="arLangselMobileMenu" aria-labelledby="arLangselMobileBtn" hidden>
+        <li><a href="/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/en/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/nl/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/fr/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/de/versicherung-mallorca/" lang="de" dir="ltr" hreflang="de" aria-current="true"><span>Deutsch</span></a></li>
+        <li><a href="/pl/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/se/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/dk/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/zh/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">Startseite</span></a></li>
+        <li><a href="/il/" lang="he" dir="rtl" hreflang="he-IL"><span>עברית</span><span class="ar-langsel-note">Startseite</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
     <ol>
@@ -876,5 +1038,6 @@
   }
 </script>
 <script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 </body>
 </html>

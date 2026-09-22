@@ -2082,3 +2082,12 @@
   left: auto;
   transform: none;
 }
+
+.site-nav:has(.nav-links-left) {
+  justify-content: space-between;
+}
+.site-nav:has(.nav-links-left) .nav-logo {
+  position: static;
+  left: auto;
+  transform: none;
+}

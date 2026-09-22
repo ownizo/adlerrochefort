@@ -91,6 +91,7 @@
 </style>
 <link rel="stylesheet" href="/css/ar-quote-wizard.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
+<link rel="stylesheet" href="/css/ar-chrome.css">
 </head>
 <body>
 
@@ -142,7 +143,7 @@
   </a>
   <div class="nav-links-right">
     <a href="/alterarmediador" class="nav-cta nav-cta-mediador">Alterar de Mediador</a>
-    <a href="#pedido" class="nav-cta">Pedir análise</a>
+    <a href="/#contacto" class="nav-cta">Pedir análise</a>
     <div class="lang-switcher">
       <div class="ar-langsel" data-ar-langsel>
         <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Idioma: Português. Escolher outro idioma."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Português</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -165,6 +166,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-accordion-item">
     <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-private">Private Clients<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -206,7 +208,7 @@
   <a href="/blog/">Insights</a>
   <a href="/#porque" onclick="toggleMenu()">Porquê nós</a>
   <a href="/alterarmediador">Alterar de Mediador</a>
-  <a href="#pedido" onclick="toggleMenu()">Contacto</a>
+  <a href="/#contacto" onclick="toggleMenu()">Contacto</a>
   <div class="mobile-lang-switcher">
     <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
       <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="Idioma: Português. Escolher outro idioma."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Português</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -904,5 +906,6 @@
 <script defer src="/js/quote-nationality.js"></script>
 <script defer src="/js/quote-wizard.js"></script>
 <script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 </body>
 </html>

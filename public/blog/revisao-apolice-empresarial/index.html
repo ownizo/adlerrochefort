@@ -600,12 +600,54 @@
 <body>
 
 <div class="asf-top-bar">Mediador de seguros registado na ASF n.º 425591790/3 — <a href="/#contacto">Análise gratuita da sua apólice atual</a></div>
-<nav class="site-nav" role="navigation" aria-label="Navegação do artigo">
+<nav class="site-nav" role="navigation" aria-label="Navegação principal">
+  <div class="nav-links-left">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-private">Private Clients<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-private" hidden>
+        <a href="/private-clients/">Visão geral</a>
+        <a href="/private-clients/#patrimonio">Residências de elevado valor</a>
+        <a href="/private-clients/#arte-coleccoes">Arte, coleções e joalharia</a>
+        <a href="/private-clients/#automoveis">Automóveis clássicos e de valor</a>
+        <a href="/private-clients/#embarcacoes">Embarcações</a>
+        <a href="/#adler-one">Os Meus Seguros — Particulares</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-professional">Riscos Profissionais<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-professional" hidden>
+        <a href="/seguros/responsabilidade-civil-profissional/">RC Profissional</a>
+        <a href="/seguros/rc-terapeuticas-nao-convencionais/">Terapêuticas Não Convencionais</a>
+        <a href="/seguros/rc-yoga-pilates-bem-estar/">Yoga, Pilates e Bem-Estar</a>
+        <a href="/seguros/rc-massagistas/">Massagistas</a>
+        <a href="/seguros/rc-profissoes-especificas/">Profissões Específicas</a>
+        <a href="/seguros/responsabilidade-civil-eventos/">Organização de Eventos</a>
+        <a href="/blog/responsabilidade-administradores-seguro-do/">Responsabilidade de Administradores (D&amp;O)</a>
+        <a href="/blog/seguro-ciberseguranca-empresas-portugal/">Riscos Cibernéticos</a>
+        <a href="/blog/categoria/riscos-profissionais/" style="border-top:1px solid var(--border);margin-top:6px;padding-top:15px;font-weight:600;color:var(--primary);">Ver Riscos Profissionais &rarr;</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" aria-expanded="false" aria-controls="nav-panel-business">Empresas<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-panel nav-panel--sm" id="nav-panel-business" hidden>
+        <a href="/seguros/empresarial/">Multirriscos Empresarial</a>
+        <a href="/seguros/frota/">Frotas &amp; Transportes</a>
+        <a href="/seguros/alojamento-local/">Alojamento Local</a>
+        <a href="/seguros/tvde/">TVDE</a>
+        <a href="/seguros/condominios/">Condomínios</a>
+        <a href="/#adler-pro">Os Meus Seguros — Empresas</a>
+      </div>
+    </div>
+    <a href="/seguros/">Seguros</a>
+    <a href="/blog/">Insights</a>
+    <a href="/#porque">Porquê nós</a>
+  </div>
   <a href="/" class="nav-logo">
     <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
   </a>
-  <div class="nav-right">
-    <a href="/#blog" class="nav-back">&larr; Voltar aos Insights</a>
+  <div class="nav-links-right">
+    <a href="/alterarmediador" class="nav-cta nav-cta-mediador">Alterar de Mediador</a>
+    <a href="/#contacto" class="nav-cta">Pedir análise</a>
     <div class="lang-switcher">
       <div class="ar-langsel" data-ar-langsel>
         <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="Idioma: Português. Escolher outro idioma."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Português</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
@@ -624,7 +666,72 @@
       </div>
     </div>
   </div>
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-private">Private Clients<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-private" hidden>
+      <a href="/private-clients/" onclick="toggleMenu()">Visão geral</a>
+      <a href="/private-clients/#patrimonio" onclick="toggleMenu()">Residências de elevado valor</a>
+      <a href="/private-clients/#arte-coleccoes" onclick="toggleMenu()">Arte, coleções e joalharia</a>
+      <a href="/private-clients/#automoveis" onclick="toggleMenu()">Automóveis clássicos e de valor</a>
+      <a href="/private-clients/#embarcacoes" onclick="toggleMenu()">Embarcações</a>
+      <a href="/#adler-one" onclick="toggleMenu()">Os Meus Seguros — Particulares</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-professional">Riscos Profissionais<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-professional" hidden>
+      <a href="/seguros/responsabilidade-civil-profissional/" onclick="toggleMenu()">RC Profissional</a>
+      <a href="/seguros/rc-terapeuticas-nao-convencionais/" onclick="toggleMenu()">Terapêuticas Não Convencionais</a>
+      <a href="/seguros/rc-yoga-pilates-bem-estar/" onclick="toggleMenu()">Yoga, Pilates e Bem-Estar</a>
+      <a href="/seguros/rc-massagistas/" onclick="toggleMenu()">Massagistas</a>
+      <a href="/seguros/rc-profissoes-especificas/" onclick="toggleMenu()">Profissões Específicas</a>
+      <a href="/seguros/responsabilidade-civil-eventos/" onclick="toggleMenu()">Organização de Eventos</a>
+      <a href="/blog/responsabilidade-administradores-seguro-do/" onclick="toggleMenu()">Responsabilidade de Administradores (D&amp;O)</a>
+      <a href="/blog/seguro-ciberseguranca-empresas-portugal/" onclick="toggleMenu()">Riscos Cibernéticos</a>
+      <a href="/blog/categoria/riscos-profissionais/" onclick="toggleMenu()">Ver Riscos Profissionais &rarr;</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="macc-business">Empresas<svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-accordion-panel" id="macc-business" hidden>
+      <a href="/seguros/empresarial/" onclick="toggleMenu()">Multirriscos Empresarial</a>
+      <a href="/seguros/frota/" onclick="toggleMenu()">Frotas &amp; Transportes</a>
+      <a href="/seguros/alojamento-local/" onclick="toggleMenu()">Alojamento Local</a>
+      <a href="/seguros/tvde/" onclick="toggleMenu()">TVDE</a>
+      <a href="/seguros/condominios/" onclick="toggleMenu()">Condomínios</a>
+      <a href="/#adler-pro" onclick="toggleMenu()">Os Meus Seguros — Empresas</a>
+    </div>
+  </div>
+  <a href="/seguros/" onclick="toggleMenu()">Seguros</a>
+  <a href="/blog/">Insights</a>
+  <a href="/#porque" onclick="toggleMenu()">Porquê nós</a>
+  <a href="/alterarmediador">Alterar de Mediador</a>
+  <a href="/#contacto" onclick="toggleMenu()">Contacto</a>
+  <div class="mobile-lang-switcher">
+    <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
+      <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="Idioma: Português. Escolher outro idioma."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">Português</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+      <ul class="ar-langsel-menu" id="arLangselMobileMenu" aria-labelledby="arLangselMobileBtn" hidden>
+        <li><a href="/blog/revisao-apolice-empresarial/" lang="pt-PT" dir="ltr" hreflang="pt-PT" aria-current="true"><span>Português</span></a></li>
+        <li><a href="/en/blog/business-insurance-policy-review/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span></a></li>
+        <li><a href="/nl/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/fr/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/de/" lang="de" dir="ltr" hreflang="de"><span>Deutsch</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/pl/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/se/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/dk/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/zh/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span><span class="ar-langsel-note">página inicial</span></a></li>
+        <li><a href="/il/" lang="he" dir="rtl" hreflang="he-IL"><span>עברית</span><span class="ar-langsel-note">página inicial</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <div class="breadcrumb">
   <a href="/">Início</a><span>&rsaquo;</span>
@@ -976,5 +1083,6 @@
   }
 </script>
 <script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/ar-nav.js"></script>
 </body>
 </html>
