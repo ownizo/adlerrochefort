@@ -87,6 +87,11 @@ export const IL_MARKET = {
   gtagName: 'il_bakashat_hatzaa',
   subjectPrefix: 'פנייה חדשה (IL) — ',
   consentValue: 'מאשר',
+
+  // Especificação v2, Parte 4 — short shared lead form, same shape and same
+  // reasoning as PL's (see scripts/pl-cluster.data.mjs). All four pages
+  // sharing this form-name, no per-page exception.
+  shortForm: true,
   otherValue: 'IL · Other',
 
   langPolicy: LANG_POLICY_IL,
