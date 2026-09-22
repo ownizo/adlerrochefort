@@ -14,8 +14,8 @@
 export const LANG_POLICY_DE = {
   heading: 'Unsere Arbeitssprache ist Englisch',
   body: [
-    'Diese Seite ist auf Deutsch, weil das Thema deutsche Expats in Portugal betrifft. Die eigentliche Dienstleistung läuft jedoch auf Englisch: Angebote, Erläuterungen zu den Bedingungen, Korrespondenz und Schadenabwicklung erfolgen auf Englisch, schriftlich. Wir weisen vorab darauf hin, weil eine Schadenmeldung der falsche Moment wäre, das erst zu erfahren.',
-    'Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt. Wir sorgen dafür, dass Sie genau verstehen, was darin steht — auf Englisch, schriftlich, bevor Sie unterschreiben.',
+    'Diese Seite ist auf Deutsch. Intern ist unsere Arbeitssprache Englisch. Angebote, Erläuterungen zu den Bedingungen, Korrespondenz und Schadenabwicklung stellen wir Ihnen mit KI-Unterstützung auf Deutsch bereit — so klar, dass Sie den Unterschied kaum merken.',
+    'Policen portugiesischer und spanischer Versicherer werden gesetzlich auf Portugiesisch bzw. Spanisch ausgestellt. Wir sorgen dafür, dass Sie genau verstehen, was darin steht — auf Deutsch, schriftlich, bevor Sie unterschreiben.',
   ],
 };
 

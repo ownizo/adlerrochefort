@@ -13,7 +13,7 @@
  * the already-shared public/css/ar-chrome.css; body content comes from
  * public/css/ar-de.css, this cluster's own stylesheet.
  *
- * The one structural difference from the Dutch cluster: /de/ IS the hub (Part 4
+ * September 2026: /de/ is the EN-parity homepage (hand-authored). The editorial hub now lives at /de/versicherung-portugal/. Historical note: the one structural difference from the Dutch cluster used to be that /de/ IS the hub (Part 4
  * of the brief lists it as one of the eleven pages, not a separate landing next
  * to the homepage the way /nl/verzekeringen-portugal/ sits apart from
  * /nl/index.html). So this script's PAGES array includes a page whose url is
@@ -408,7 +408,7 @@ function formHtml(page) {
   <div class="form-shell">
     <h2 id="angebot-title">${page.formHeading || 'Angebot anfragen'}</h2>
     <p class="form-intro">${page.formIntro}</p>
-    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden, auf Englisch schriftlich.</p>
+    <p class="form-lang-note">Wir antworten innerhalb von 24 Stunden auf Deutsch.</p>
 
     <form
       class="lead-form"
@@ -867,6 +867,10 @@ for (const page of PAGES) {
   // Checked before anything is written: a page that declares dedicatedForm
   // is never overwritten, and an inconsistent declaration throws rather
   // than letting the run continue past the page the guard protects.
+  if (page.url === '/de/') {
+    skipped.push(`${page.url} — hand-authored EN-parity homepage, not regenerated`);
+    continue;
+  }
   if (page.dedicatedForm) {
     skipped.push(`${page.url} — ${await dedicatedFormSkipReason(page)}`);
     continue;

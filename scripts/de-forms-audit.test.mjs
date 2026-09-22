@@ -9,7 +9,7 @@ import { readFileSync } from 'node:fs';
 // in netlify/functions/submission-created.mjs. Deliberately shared across
 // these pages, unlike the dedicated per-ramo wizards below — not a bug.
 const SHARED_FORM_PATHS = [
-  'public/de/index.html',
+  'public/de/versicherung-portugal/index.html',
   'public/de/anwartschaftsversicherung-portugal/index.html',
   'public/de/isv-befreiung-fahrzeugimport-portugal/index.html',
   'public/de/nicht-legalisierte-immobilie-versichern-portugal/index.html',

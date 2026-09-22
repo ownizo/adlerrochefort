@@ -14,8 +14,8 @@ import { insurerPanel } from '../lib/site-sections.mjs';
 
 export const HUB_PAGE = {
   slug: 'de-hub',
-  url: '/de/',
-  title: 'Versicherungsmakler für deutsche Expats in Portugal | Adler & Rochefort',
+  url: '/de/versicherung-portugal/',
+  title: 'Versicherungen in Portugal für deutsche Expats | Adler & Rochefort',
   description:
     'Nicht einfach versichert, richtig versichert: Versicherungsberatung für deutsche Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Kranken-, Haus-, Auto- und Lebensversicherung — wir beginnen mit dem Risiko, nicht mit dem Preis.',
   keywords:
@@ -32,19 +32,16 @@ export const HUB_PAGE = {
   // sind URL-Segmente, keine Sprachcodes — ausgeliefert wird sv bzw. da; /il/
   // ebenso, dort ist die Sprache he und das hreflang he-IL.
   hreflang: {
-    pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/',
-    pl: '/pl/', se: '/se/', dk: '/dk/', zh: '/zh/', il: '/il/',
-    xDefault: '/',
+    en: '/en/expat-insurance-portugal/',
   },
   langLinks: {
-    pt: '/', en: '/en/', fr: '/fr/', nl: '/nl/',
-    pl: '/pl/', se: '/se/', dk: '/dk/', zh: '/zh/', il: '/il/',
+    en: '/en/expat-insurance-portugal/',
   },
-  breadcrumb: [],
+  breadcrumb: [{ name: 'Startseite', url: '/de/' }, { name: 'Versicherungen in Portugal' }],
   published: '2026-09-12T09:00:00+00:00',
   modified: '2026-09-12T09:00:00+00:00',
   pullquote: 'Eine Versicherung zeigt ihren Wert erst im Schadenfall.',
-  isHub: true,
+  isHub: false,
   schemaType: 'WebPage',
   formHeading: 'Ihr kostenloses Angebot',
   formBranch: '',
@@ -202,7 +199,7 @@ ${insurerPanel({
     },
     {
       q: 'In welcher Sprache läuft die Beratung ab?',
-      a: '<p>Diese Seiten sind auf Deutsch, weil die Themen deutsche Expats in Portugal betreffen. Die eigentliche Dienstleistung — Angebote, Erläuterungen, Korrespondenz und Schadenabwicklung — läuft auf Englisch, schriftlich. Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt; wir sorgen dafür, dass Sie auf Englisch genau verstehen, was darin steht, bevor Sie unterschreiben.</p>',
+      a: '<p>Diese Seiten sind auf Deutsch, weil die Themen deutsche Expats in Portugal betreffen. Intern ist unsere Arbeitssprache Englisch. Angebote, Erläuterungen, Korrespondenz und Schadenabwicklung stellen wir Ihnen mit KI-Unterstützung auf Deutsch bereit — so klar, dass Sie den Unterschied kaum merken. Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt; wir sorgen dafür, dass Sie auf Deutsch genau verstehen, was darin steht, bevor Sie unterschreiben.</p>',
     },
     {
       q: 'Was kostet die Beratung durch euch?',
