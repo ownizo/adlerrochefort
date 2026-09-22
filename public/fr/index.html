@@ -1181,7 +1181,13 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: data
-      }).then(function () {
+      }).then(function (response) {
+        // fetch() only rejects on a network error: without this check a 404
+        // or a 500 from the form endpoint still ran the success branch, and
+        // the visitor was thanked for a submission that was never stored.
+        // Same defect, same fix as public/js/ar-quote-form.js and the /nl/
+        // hub — see that file's header comment.
+        if (!response.ok) throw new Error('HTTP ' + response.status);
         form.style.display = 'none';
         document.getElementById('leadSuccess').classList.add('show');
       }).catch(function () {

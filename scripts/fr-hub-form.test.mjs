@@ -27,3 +27,11 @@ test('the optional company field is present and stays optional', () => {
   assert.ok(field, 'no company field');
   assert.doesNotMatch(field[0], /\brequired\b/);
 });
+
+// fetch() only rejects on a network error, so without this check a 404 or a
+// 500 from the form endpoint ran the success branch: the visitor was thanked
+// for a submission that was never stored. Last page on the site to carry the
+// old copy of this handler — the /nl/ hub was the other.
+test('a submission is only called successful once the response is checked', () => {
+  assert.match(html, /if \(!response\.ok\) throw new Error/);
+});
