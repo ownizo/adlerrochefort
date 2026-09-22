@@ -65,6 +65,27 @@ export const PAGE_CLUSTERS = [
   { pt: '/seguros/saude/', en: '/en/health-insurance-quote/', nl: '/nl/zorgverzekering-portugal/', de: '/de/krankenversicherung-portugal/' },
   { pt: '/seguros/responsabilidade-civil-profissional/', en: '/en/professional-liability-insurance-portugal/', de: '/de/berufshaftpflicht-freiberufler-portugal/' },
   { pt: '/seguros/alojamento-local/', nl: '/nl/alojamento-local-verzekering-portugal/' },
+  // Empresarial. Both sides already declared each other in their hreflang
+  // markup but the pair was in neither record, so every run of
+  // scripts/lang-switcher.mjs demoted the PT link on the EN page to the
+  // homepage and the EN link on the PT page to /en/ — and
+  // scripts/hreflang.mjs's own wouldDrop check had been reporting the same
+  // gap as a warning on every run. Added to both records together.
+  { pt: '/seguros/empresarial/', en: '/en/business-insurance-portugal/' },
+  // Private Clients: a selector counterpart, deliberately NOT an hreflang
+  // pair, and so deliberately not added to scripts/hreflang.mjs.
+  //
+  // /de/private-clients/ hand-authored a link to /en/private-clients/ and
+  // labels it "Portugal-Seite" — the German page covers Portugal *and*
+  // Spain, the English one covers Portugal. Useful to offer, not the same
+  // page in another language, which is all hreflang may claim. The
+  // Portuguese /private-clients/ pairs with neither: its own selector
+  // points at /en/ and /de/, and the Private Client audit records that the
+  // three landings define the service differently. Registering the link
+  // here is what stops this pass replacing a real destination with a
+  // fallback; same precedent as the RC Terapêuticas entry above, which is
+  // likewise a selector counterpart with no hreflang claim.
+  { de: '/de/private-clients/', en: '/en/private-clients/' },
   { pt: '/politica-de-privacidade/', en: '/en/privacy-policy/' },
   { pt: '/termos-e-condicoes/', en: '/en/terms-and-conditions/' },
 ];

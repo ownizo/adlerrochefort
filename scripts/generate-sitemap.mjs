@@ -12,7 +12,8 @@
  *   - hreflang alternates are emitted only for confirmed bidirectional pairs
  *   - x-default appears on the homepage pair and the services hub only, and
  *     points at the Portuguese URL
- *   - lastmod is the date of the last commit that touched the page's own file,
+ *   - lastmod is the date of the last commit that touched the page's own file
+ *     in a way that was not purely whitespace,
  *     so a page claims to have changed when it did and not otherwise
  */
 import { readFile, writeFile } from 'node:fs/promises';
@@ -65,18 +66,35 @@ try {
   // not a repository, or git is not on PATH
 }
 
-// A page edited but not yet committed changed today, whatever git last recorded
-// for it. Without this, regenerating before committing would date a rewritten
-// page to the commit that preceded the rewrite.
+// A page edited but not yet committed changed today, whatever git last
+// recorded for it. Without this, regenerating before committing would date a
+// rewritten page to the commit that preceded the rewrite.
+//
+// "Edited" deliberately excludes a page whose working-tree diff is only
+// whitespace. The canonical chrome passes — scripts/hreflang.mjs,
+// scripts/lang-switcher.mjs, scripts/unify-chrome.mjs — reindent the lines
+// they own, and running one of them before this script used to hand every
+// page it touched today's date. Reindentation is not a change a search
+// engine should be told about, and `lastmod` is a claim about when the page
+// last actually changed, not about when a generator last ran over it. So
+// the substantive set comes from `git diff --ignore-all-space` rather than
+// from `git status`, which cannot tell the two apart.
+//
+// Untracked pages are still stamped today, and correctly: a file git has
+// never seen has no committed date to fall back to.
 const uncommitted = new Set();
 if (gitDates.size) {
   try {
-    for (const line of git(['status', '--porcelain', '--', 'public']).split('\n')) {
-      const file = line.slice(3).trim().replace(/^"|"$/g, '');
+    for (const line of git(['diff', 'HEAD', '--name-only', '--ignore-all-space', '--', 'public']).split('\n')) {
+      const file = line.trim();
+      if (file) uncommitted.add(file);
+    }
+    for (const line of git(['ls-files', '--others', '--exclude-standard', '--', 'public']).split('\n')) {
+      const file = line.trim();
       if (file) uncommitted.add(file);
     }
   } catch {
-    // a status failure leaves every page on its committed date
+    // a diff failure leaves every page on its committed date
   }
 }
 

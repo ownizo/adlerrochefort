@@ -2,15 +2,15 @@
   "generated": "run scripts/hreflang.mjs to refresh",
   "totals": {
     "htmlFiles": 441,
-    "filesChanged": 1,
-    "pagesWithHreflang": 133,
+    "filesChanged": 0,
+    "pagesWithHreflang": 135,
     "articlePairs": 28,
     "monolingualPt": 24,
     "monolingualEn": 152,
     "unilateralDeclarations": 0,
     "brokenHreflangTargets": 0,
     "xDefaultPages": 11,
-    "pagesLeftUntouchedToAvoidDroppingAPair": 2
+    "pagesLeftUntouchedToAvoidDroppingAPair": 0
   },
   "note": "monolingualPt / monolingualEn are informative. PT and EN are separate audiences; an article existing in one language only is the intended state and is not a task.",
   "articlePairs": [
@@ -311,18 +311,5 @@
   },
   "unilateralDeclarations": [],
   "brokenHreflangTargets": [],
-  "wouldDrop": [
-    {
-      "page": "/en/business-insurance-portugal/",
-      "drops": [
-        "/seguros/empresarial/"
-      ]
-    },
-    {
-      "page": "/seguros/empresarial/",
-      "drops": [
-        "/en/business-insurance-portugal/"
-      ]
-    }
-  ]
+  "wouldDrop": []
 }
