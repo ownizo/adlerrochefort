@@ -360,6 +360,23 @@ function selectOptions(options, selected) {
  * that field. The visible option labels are in the visitor's language; the
  * value is the inbox's. The Spain cluster already uses this convention.
  */
+/**
+ * The optional company field, present only on the short form.
+ *
+ * Deliberately optional and deliberately last of the identifying fields,
+ * matching the "analise-gratuita" (PT), "free-analysis" (EN) and
+ * "de-angebot-anfrage" (DE) short forms this shape is taken from — a
+ * private individual must never be made to answer it, and a business lead
+ * is worth far more when it says so up front.
+ */
+function companyFieldHtml(f) {
+  return `
+      <div class="field">
+        <label for="f-company">${f.company}</label>
+        <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="${esc(f.companyPh)}">
+      </div>`;
+}
+
 function formHtml(market, page) {
   const ui = market.ui;
   const f = ui.f;
@@ -414,6 +431,7 @@ function formHtml(market, page) {
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
+${market.shortForm ? companyFieldHtml(f) : `
       <div class="field">
         <label for="f-localidade">${f.localidade}</label>
         <input type="text" id="f-localidade" name="localidade" placeholder="${esc(f.localidadePh)}">
@@ -430,7 +448,7 @@ function formHtml(market, page) {
           <option value="" selected>${esc(f.selectPlaceholder)}</option>
 ${selectOptions(f.residenceOptions)}
         </select>
-      </div>
+      </div>`}
 
       <div class="field">
         <label for="f-type">${f.type} <span class="req" aria-hidden="true">*</span></label>
@@ -446,6 +464,7 @@ ${selectOptions(
 
 ${branchGroupsHtml(market)}
 
+${market.shortForm ? '' : `
       <div class="field">
         <label for="f-start">${f.startDate}</label>
         <input type="text" id="f-start" name="start_date" placeholder="${esc(f.startDatePh)}">
@@ -456,7 +475,7 @@ ${branchGroupsHtml(market)}
         <select id="f-preflang" name="preferred_language">
 ${selectOptions(f.prefLangOptions)}
         </select>
-      </div>
+      </div>`}
 
       <div class="field">
         <label for="f-message">${f.message}</label>

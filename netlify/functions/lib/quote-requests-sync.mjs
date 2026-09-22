@@ -181,8 +181,28 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
   // DE cluster's existing einwilligung field). A form with no such field yet
   // (most of the site, still Fase 1's "accept what forms already send")
   // simply leaves this undefined — never assumed true.
-  const CONSENT_TRUE_VALUES = new Set(["sim", "yes", "ja", "true"]);
-  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung"]);
+  // "consent" (+ its per-language affirmative) covers the five market
+  // clusters' shared lead form — PL/SE/DK/ZH/IL, 20 pages. Every one of
+  // them renders a *required* consent checkbox named "consent", and none of
+  // them was ever read here: the alias list stopped at "einwilligung", so
+  // every lead from those pages was stored with `aceite: undefined` — the
+  // visitor had to tick the box to submit, and the record then failed to
+  // show they had. Adding the name alone would not have been enough either:
+  // only "ja" (SE/DK) was a recognised value, so PL/ZH/IL would have
+  // flipped from undefined to an affirmative read as `false`. Both halves
+  // belong together — see each cluster's `consentValue` in
+  // scripts/{pl,se,dk,zh,il}-cluster.data.mjs, which is where these strings
+  // come from and the only place they may be changed.
+  const CONSENT_TRUE_VALUES = new Set([
+    "sim", // PT wizards
+    "yes", // EN
+    "ja", // DE (einwilligung), SE, DK
+    "true",
+    "tak", // PL
+    "同意", // ZH
+    "מאשר", // IL
+  ]);
+  const consentValue = pickFirst(data, ["rgpd", "consentimento_rgpd", "einwilligung", "consent"]);
 
   const row = {
     ramo,
