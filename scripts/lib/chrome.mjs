@@ -11,6 +11,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CHROME } from './partials.mjs';
+import { LIVRO_CSS } from './livro.mjs';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const PUBLIC = join(ROOT, 'public');
@@ -342,6 +343,7 @@ export const PAGE_SCRIPTS = `<script>
   })();
 </script>
 <script defer src="/js/ar-nav.js"></script>
+<script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>`;
 
 export const esc = (s) =>
@@ -431,6 +433,7 @@ ${head}
 <link rel="manifest" href="/site.webmanifest">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/ar-site.css">
+${LIVRO_CSS}
 ${GA}
 </head>
 <body>

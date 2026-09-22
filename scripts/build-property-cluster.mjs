@@ -27,6 +27,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PAGES, PILLAR } from './property-cluster.data.mjs';
 import { NAV_SCRIPT } from './lib/mega-nav.mjs';
+import { livroLink, LIVRO_CSS, LIVRO_SCRIPT } from './lib/livro.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -174,7 +175,7 @@ const FOOTER = `
     <div class="footer-legal">
       <a href="/en/privacy-policy/">Privacy Policy</a>
       <a href="/en/terms-and-conditions/">Terms &amp; Conditions</a>
-      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">Complaints Book</a>
+      ${livroLink('Complaints Book')}
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">ASF Reporting Channel</a>
     </div>
   </div>
@@ -463,6 +464,7 @@ ${breadcrumbLd(page)}
      are the site chrome and must win, exactly as they do on the pillar. -->
 <link rel="stylesheet" href="/css/ar-property.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+${LIVRO_CSS}
 <link rel="stylesheet" href="/css/ar-landing.css">
 </head>
 <body>
@@ -540,6 +542,7 @@ ${page.related.map(card).join('\n\n')}
 ${FOOTER}
 
 ${NAV_SCRIPT}
+${LIVRO_SCRIPT}
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>

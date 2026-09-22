@@ -48,6 +48,7 @@ import { fileURLToPath } from 'node:url';
 import { PAGES, SPAIN_PRODUCTS, SPAIN_CROSS_SELL, SPAIN_CROSS_SELL_PROMPT, HUB_SLUG } from './spain-cluster.data.mjs';
 import { extractSiteNav, extractMobileNav, NAV_SCRIPT } from './lib/mega-nav.mjs';
 import { FOOTER, WHATSAPP_SVG, PROVIDER } from './lib/spain-chrome.mjs';
+import { LIVRO_CSS, LIVRO_SCRIPT } from './lib/livro.mjs';
 
 // Phase 5 (conversion): resolves a page's own product key from its slug, so
 // the cross-sell layer never has to be told twice which product a page is —
@@ -462,6 +463,7 @@ ${breadcrumbLd(page)}
 
 <link rel="stylesheet" href="/css/ar-property.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+${LIVRO_CSS}
 <link rel="stylesheet" href="/css/ar-landing.css">
 <style>
   /* Market-context indicator, replacing the PT|EN|NL|FR|DE language switcher
@@ -541,6 +543,7 @@ ${page.related.map(card).join('\n\n')}
 ${FOOTER}
 
 ${NAV_SCRIPT}
+${LIVRO_SCRIPT}
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/ar-quote-cta.js"></script>
 <script defer src="/js/ar-conversion-events.js"></script>

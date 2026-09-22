@@ -39,6 +39,7 @@ import {
 import { marketPairs } from './market-hreflang.mjs';
 import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
 import { clusterMegaNav, NAV_SCRIPT } from './mega-nav.mjs';
+import { livroLink, LIVRO_CSS, LIVRO_SCRIPT } from './livro.mjs';
 import plQuoteFormStrings from '../../data/i18n/quote-form/pl.json' with { type: 'json' };
 import svQuoteFormStrings from '../../data/i18n/quote-form/sv.json' with { type: 'json' };
 import daQuoteFormStrings from '../../data/i18n/quote-form/da.json' with { type: 'json' };
@@ -907,7 +908,7 @@ ${footerLangs(market, page)}
     <div class="footer-legal">
       <a href="/en/privacy-policy" hreflang="en">${ft.privacy}</a>
       <a href="/en/terms-and-conditions" hreflang="en">${ft.terms}</a>
-      <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">${ft.complaints}</a>
+      ${livroLink(ft.complaints)}
       <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">${ft.asfChannel}</a>
     </div>
   </div>
@@ -1005,6 +1006,7 @@ ${jsonLd(market, page)}
 
 <link rel="stylesheet" href="/css/ar-cluster.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+${LIVRO_CSS}
 ${page.wizard ? '<link rel="stylesheet" href="/css/ar-property.css">\n<link rel="stylesheet" href="/css/ar-quote-wizard.css">\n' : ''}${LANGSEL_CSS_LINK}
 <!-- Google tag (gtag.js) - Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
@@ -1066,6 +1068,7 @@ ${footerHtml(market, page)}
 ${page.wizard ? wizardScript(page) : `${formScript(market)}\n<script defer src="/js/lead-branch-fields.js"></script>`}
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${NAV_SCRIPT}
+${LIVRO_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
 ${cookieBanner(market)}
 </body>

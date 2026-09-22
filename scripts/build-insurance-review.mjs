@@ -35,6 +35,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { FOOTER, WHATSAPP_SVG, PROVIDER } from './lib/spain-chrome.mjs';
 import { NAV_SCRIPT } from './lib/mega-nav.mjs';
+import { LIVRO_CSS, LIVRO_SCRIPT } from './lib/livro.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -246,6 +247,7 @@ ${breadcrumbLd}
 
 <link rel="stylesheet" href="/css/ar-property.css">
 <link rel="stylesheet" href="/css/ar-chrome.css">
+${LIVRO_CSS}
 <link rel="stylesheet" href="/css/ar-landing.css">
 <style>
   /* Country-choice cards: the one piece of UI unique to this page. Reuses the
@@ -400,6 +402,7 @@ ${FAQ.map(
 ${FOOTER}
 
 ${NAV_SCRIPT}
+${LIVRO_SCRIPT}
 <script defer src="/js/ar-quote-form.js"></script>
 <script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-conversion-events.js"></script>
