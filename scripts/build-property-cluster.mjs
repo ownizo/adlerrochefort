@@ -98,7 +98,7 @@ const nav = (page) => `
       <a href="/de/" class="lang-unavailable" lang="de">DE</a>
     </div>
   </div>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+  <button class="nav-burger" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>

@@ -303,7 +303,7 @@ ${left.map((l) => '    ' + navLink(l)).join('\n')}
 ${rightLinks.map((l) => '    ' + navLink(l)).join('\n')}
     ${switcher}
   </div>
-  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+  <button class="nav-burger" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>`;
