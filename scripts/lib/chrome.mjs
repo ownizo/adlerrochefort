@@ -325,8 +325,6 @@ export const GA = `<script async src="https://www.googletagmanager.com/gtag/js?i
 </script>`;
 
 export const PAGE_SCRIPTS = `<script>
-  function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
-
   (function () {
     if (!localStorage.getItem('cookie_consent')) {
       document.getElementById('cookieBanner').classList.add('show');
