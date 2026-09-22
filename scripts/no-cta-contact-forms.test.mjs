@@ -38,8 +38,14 @@ test('no-CTA blog pages have their own dedicated contact form, not the generic q
     for (const field of fields) {
       if (!new RegExp(`name="${field}"`).test(html)) failures.push(`${path}: missing field ${field}`);
     }
-    if (!/name="(rgpd|gdpr_consent)" value="(sim|yes)"[^>]*required/.test(html)) {
-      failures.push(`${path}: missing a required GDPR consent checkbox`);
+    // Field NAME stays "rgpd" on every form, PT and EN alike — only the
+    // label text is translated. quote-requests-sync.mjs's consentValue
+    // lookup only recognises rgpd/consentimento_rgpd/einwilligung, so a
+    // differently-named field (e.g. "gdpr_consent") silently leaves
+    // consentimento.aceite unset — caught in production on this exact bug
+    // for real-estate-partnership, fixed in the same PR as this assertion.
+    if (!/name="rgpd" value="(sim|yes)"[^>]*required/.test(html)) {
+      failures.push(`${path}: missing a required GDPR consent checkbox with name="rgpd" (not gdpr_consent — that field name is never read by quote-requests-sync.mjs's consentValue lookup)`);
     }
     if (!new RegExp(`getElementById\\('${formName}-source'\\)`).test(html)) {
       failures.push(`${path}: missing the source_url auto-population script`);
