@@ -91,6 +91,8 @@ export const SE_UI = {
     email: 'E-postadress',
     phone: 'Telefon',
     phoneHelp: 'Ange numret med landsnummer, t.ex. +46 70 123 45 67.',
+    company: 'Företag (frivilligt)',
+    companyPh: 't.ex. företagets namn, om förfrågan gäller verksamheten',
     localidade: 'Ort i Portugal',
     localidadePh: 't.ex. Lissabon, Cascais, Lagos, Albufeira',
     country: 'Land du bor i nu',

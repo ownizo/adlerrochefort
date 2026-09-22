@@ -53,6 +53,11 @@ export const SE_MARKET = {
   gtagName: 'se_offertforfragan',
   subjectPrefix: 'Ny förfrågan (SE) — ',
   consentValue: 'Ja',
+
+  // Especificação v2, Parte 4 — short shared lead form, same shape and same
+  // reasoning as PL's (see scripts/pl-cluster.data.mjs). All four pages
+  // sharing this form-name, no per-page exception.
+  shortForm: true,
   otherValue: 'SE · Annat',
 
   langPolicy: LANG_POLICY_SE,
