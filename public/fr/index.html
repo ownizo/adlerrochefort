@@ -1015,6 +1015,10 @@
             <input type="tel" id="l-phone" name="phone" placeholder="+33 …">
           </div>
           <div class="field">
+            <label for="l-company">Société (facultatif)</label>
+            <input type="text" id="l-company" name="company" autocomplete="organization" placeholder="Nom de la société, si la demande est professionnelle">
+          </div>
+          <div class="field">
             <label for="l-type">Assurance souhaitée *</label>
             <select id="l-type" name="insurance_type" required>
               <option value="" disabled selected>Choisissez…</option>
@@ -1029,7 +1033,7 @@
             <textarea id="l-msg" name="message" placeholder="En bref, votre situation (lieu, arrivée, contrats actuels…)"></textarea>
           </div>
           <button type="submit" class="form-submit">Demander un devis gratuit</button>
-          <p class="form-consent">En envoyant ce formulaire, vous acceptez d'être contacté par Adler &amp; Rochefort. Voir la <a href="/en/privacy-policy">politique de confidentialité</a>.</p>
+          <p class="form-consent"><label for="l-consentement"><input type="checkbox" id="l-consentement" name="consentement" value="oui" required aria-required="true"> J'accepte qu'Adler &amp; Rochefort utilise mes données pour traiter ma demande, conformément au RGPD et à la <a href="/en/privacy-policy">politique de confidentialité</a>. *</label></p>
         </form>
         <div class="form-success" id="leadSuccess">
           <div class="tick">&#10003;</div>

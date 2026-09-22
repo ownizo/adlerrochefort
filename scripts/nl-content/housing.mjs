@@ -10,6 +10,10 @@ export const HOUSING_PAGES = [
   {
     slug: 'woonverzekering-portugal',
     url: '/nl/woonverzekering-portugal/',
+    // Hand-authored wizard, not regenerated from this file:
+    // generate-nl-cluster.mjs skips this page. See
+    // dedicatedFormSkipReason() there for why.
+    dedicatedForm: 'nl-woonverzekering-wizard',
     title: 'Woonverzekering in Portugal: multirriscos, herbouwwaarde en onderverzekering | Adler & Rochefort',
     description:
       'Verplichte brandverzekering bij appartementen, multirriscos als standaardproduct, waarom u op herbouwwaarde verzekert en niet op aankoopprijs, de evenredigheidsregel en aardbevingsdekking.',

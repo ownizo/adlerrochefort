@@ -145,6 +145,10 @@ export const HEALTH_PAGES = [
   {
     slug: 'zorgverzekering-portugal',
     url: '/nl/zorgverzekering-portugal/',
+    // Hand-authored wizard, not regenerated from this file:
+    // generate-nl-cluster.mjs skips this page. See
+    // dedicatedFormSkipReason() there for why.
+    dedicatedForm: 'nl-zorgverzekering-wizard',
     title: 'Zorgverzekering in Portugal voor Nederlanders | Adler & Rochefort',
     description:
       'Hoe het SNS werkt en waar het in de praktijk tekortschiet, welke particuliere verzekeraars relevant zijn, wachttijden en medische acceptatie, en de mutualistische route bij hogere leeftijd.',
