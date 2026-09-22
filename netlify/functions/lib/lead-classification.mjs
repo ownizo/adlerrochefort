@@ -215,6 +215,9 @@ const FORM_CLASSIFICATION = {
   'cotacao-habitacao': { entityType: 'individual', market: 'PT', product: 'home' },
   'cotacao-saude': { entityType: 'individual', market: 'PT', product: 'health' },
   'cotacao-empresarial': { entityType: 'business', market: 'PT', product: 'business-multirisk' },
+  // EN counterpart (Phase 12 empresarial pillar rebuild) — same product, so
+  // it resolves to the same ramo via RAMO_BY_PRODUCT.
+  'business-insurance-quote': { entityType: 'business', market: 'PT', language: 'EN', product: 'business-multirisk' },
   'seguro-auto': { entityType: 'individual', market: 'PT', product: 'auto' },
   'auditoria-condominio': { entityType: 'condominium', market: 'PT', product: 'condominium' },
   'alterar-mediador': { entityType: 'individual', market: 'PT', product: 'mediator-change' },

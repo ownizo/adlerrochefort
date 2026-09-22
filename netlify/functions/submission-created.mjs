@@ -1007,6 +1007,16 @@ export const HANDLED_FORMS = {
     page: "/en/professional-liability-insurance-portugal/",
     branch: "RC Profissional",
   },
+  // EN counterpart of "cotacao-empresarial" (Phase 12 empresarial pillar
+  // rebuild) — same shape, same 48-72h SLA, single-page form (not a wizard).
+  "business-insurance-quote": {
+    quote: true,
+    en: true,
+    heading: "New business insurance review request",
+    slaHours: "48 a 72",
+    page: "/en/business-insurance-portugal/",
+    branch: "Empresarial",
+  },
   // "home-insurance-quote" (no suffix) is also the shared HOME_FORM name
   // scripts/property-cluster.data.mjs's generated secondary pages use
   // (unoccupied/second-home/apartment/earthquake/flood-insurance-portugal

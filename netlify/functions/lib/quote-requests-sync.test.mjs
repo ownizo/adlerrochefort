@@ -136,6 +136,20 @@ test("ramo maps business-multirisk to empresarial (Phase 12 empresarial pillar r
   assert.equal(row.consentimento.aceite, true);
 });
 
+test("EN business-insurance-quote resolves to the same ramo=empresarial as its PT counterpart", () => {
+  const row = buildQuoteRequestRow("business-insurance-quote", {
+    name: "Test Company Ltd",
+    email: "info@testcompany.com",
+    company: "Test Company Ltd",
+    nif: "501442600",
+    ramos_pretendidos: ["Multi-risk insurance", "Public liability"],
+    rgpd: "yes",
+  });
+  assert.equal(row.ramo, "empresarial");
+  assert.equal(row.lingua, "en");
+  assert.equal(row.consentimento.aceite, true);
+});
+
 test("ramo falls back to the classifier's raw product name for forms outside the four core ramos", () => {
   const row = buildQuoteRequestRow("cotacao-frota", {
     nome: "Empresa Lda",

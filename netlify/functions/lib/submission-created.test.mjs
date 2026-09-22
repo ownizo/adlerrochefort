@@ -193,6 +193,13 @@ test("HANDLED_FORMS['cotacao-empresarial'] promises 48-72h, matching the pillar 
   assert.doesNotMatch(text, /\b24 horas\b/);
 });
 
+test("HANDLED_FORMS['business-insurance-quote'] (EN) promises 48-72 business hours, matching its PT counterpart", () => {
+  assert.equal(HANDLED_FORMS["business-insurance-quote"].slaHours, "48 a 72");
+  const text = quoteIntro(HANDLED_FORMS["business-insurance-quote"], "https://adlerrochefort.com/en/business-insurance-portugal/");
+  assert.match(text, /48 to 72 business hours/);
+  assert.doesNotMatch(text, /\b24 hours\b/);
+});
+
 test("quoteIntro defaults to 'one working day' for an EN form with no slaHours", () => {
   const text = quoteIntro({ page: "/en/car-insurance-portugal/", en: true }, "https://adlerrochefort.com/en/car-insurance-portugal/");
   assert.match(text, /A reply within one working day was promised/);
