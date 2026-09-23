@@ -469,6 +469,7 @@ footer { background: var(--footer-bg); padding: 76px 48px 44px; }
 @media (max-width: 720px) {
   .nav-cta { display: none; }
   .mobile-cta { display: block; }
+  .mobile-cta[hidden] { display: none; }
   body { padding-bottom: 82px; }
   .footer-top { grid-template-columns: 1fr; gap: 40px; }
 }

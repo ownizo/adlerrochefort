@@ -425,7 +425,6 @@
   </aside>
 </div>
 
-
 <section class="section plain" aria-labelledby="baaya-hi-tizmun">
   <div class="container narrow article-body">
     <h2 id="baaya-hi-tizmun">הבעיה היא כמעט תמיד תזמון, לא בחירה</h2>
@@ -593,7 +592,6 @@
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
-
       <div class="field">
         <label for="f-company">חברה (לא חובה)</label>
         <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="למשל: שם החברה, אם הפנייה קשורה לעסק">
@@ -601,7 +599,7 @@
 
       <div class="field">
         <label for="f-type">הביטוח שמעניין אתכם <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type" required aria-required="true" aria-describedby="err-type">
           <option value="" disabled selected>בחרו אפשרות</option>
           <option value="IL · Home">ביטוח דירה או בית (למגורים, לבית שני או להשכרה)</option>
           <option value="IL · Health">ביטוח בריאות פרטי</option>
@@ -611,57 +609,6 @@
         </select>
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
-
-        <div class="form-branch-fields" data-branch="IL · Home" hidden>
-          <span class="form-branch-legend">על הנכס</span>
-          <div class="field">
-            <label for="f-home_property_type">סוג הנכס</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="למשל: דירה בליסבון בבניין עם condomínio, וילה באלגרבה, בית שמשמש לחופשות" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">אומדן עלות הבנייה מחדש (אם ידוע)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="למשל: כ־200,000 אירו. אם לא ידוע — זה בסדר, נעזור לאמוד" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">שווי משוער של התכולה</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="למשל: כ־50,000 אירו כולל רהיטים ומוצרי חשמל, ובנפרד תכשיטים ושעון" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="IL · Health" hidden>
-          <span class="form-branch-legend">מי צריך להיות מבוטח</span>
-          <div class="field">
-            <label for="f-health_household">מספר הנפשות והגילים</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="למשל: שני מבוגרים (42 ו־39) ושני ילדים (9 ו־5)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="IL · Motor" hidden>
-          <span class="form-branch-legend">על הרכב</span>
-          <div class="field">
-            <label for="f-motor_vehicle">יצרן, דגם ושנה</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="למשל: Volvo XC60 משנת 2021, דיזל" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">מצב הרישום כרגע</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="למשל: רשום כבר בפורטוגל / מתכננים לקנות רכב בפורטוגל / שוקלים לייבא רכב" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">ניסיון נהיגה והיסטוריית תביעות</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="למשל: 12 שנות רישיון, בלי תביעות בחמש השנים האחרונות, המבטח הקודם בישראל" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="IL · Liability" hidden>
-          <span class="form-branch-legend">מה צריך להיות מכוסה</span>
-          <div class="field">
-            <label for="f-liability_activity">העיסוק או המצב המדויק</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="למשל: ייעוץ, פיזיותרפיה, השכרת נכס, בית קפה, אחריות של משק בית" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">איפה נמצאים הלקוחות או הצדדים השלישיים</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="למשל: לקוחות בפורטוגל ובישראל, מקבלים אנשים בקליניקה בליסבון" disabled>
-          </div>
-        </div>
-
-
 
       <div class="field">
         <label for="f-message">הודעה</label>
@@ -938,7 +885,6 @@
     });
   })();
 </script>
-<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>

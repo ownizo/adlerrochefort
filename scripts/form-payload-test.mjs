@@ -622,18 +622,15 @@ const CASES = [
     requireLandingPage: 'https://adlerrochefort.com/dk/ansvarsforsikring-portugal/',
   },
   {
-    // The Chinese cluster reuses the other markets' branch field ids, so this
-    // case doubles as proof that the shared mechanism survives a form whose
-    // labels are CJK: the branch fields are found by id, not by label text.
-    label: '35. /zh/buying-property-portugal/ — Chinese cluster, home → liability switch',
+    // The shared short form no longer carries a branch questionnaire — the
+    // pillar wizards ask those questions. This case only checks that the
+    // Chinese page still submits its market and language.
+    label: '35. /zh/buying-property-portugal/ — Chinese short form, attribution only',
     path: 'zh/buying-property-portugal/index.html',
     url: 'https://adlerrochefort.com/zh/buying-property-portugal/',
     formName: 'zh-baojia-shenqing',
-    branchSelect: 'select[data-branch-select]',
-    switchFrom: 'ZH · Home',
-    branchValue: 'ZH · Liability',
     inlineScripts: true,
-    requireValues: { market: ['china'], language: ['zh'], insurance_type: ['ZH · Liability'] },
+    requireValues: { market: ['china'], language: ['zh'] },
     requireLandingPage: 'https://adlerrochefort.com/zh/buying-property-portugal/',
   },
   {

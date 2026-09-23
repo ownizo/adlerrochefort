@@ -23,6 +23,10 @@
   pointer-events: none;
   transform: translateY(6px);
   transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+  /* Hidden by default in the layout, not only visually. An absolute 560px
+     plaque anchored to a footer link sticks out of the viewport — in RTL
+     that becomes page-level horizontal scroll and clips the form. */
+  display: none;
 }
 
 .footer-livro-card a {
@@ -53,6 +57,7 @@
 @media (hover: hover) and (pointer: fine) {
   .footer-livro:hover .footer-livro-card,
   .footer-livro:focus-within .footer-livro-card {
+    display: block;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -61,6 +66,7 @@
 }
 
 .footer-livro.is-open .footer-livro-card {
+  display: block;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

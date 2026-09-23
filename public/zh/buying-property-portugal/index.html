@@ -425,7 +425,6 @@
   </aside>
 </div>
 
-
 <section class="section plain" aria-labelledby="liucheng-li-de-baoxian">
   <div class="container narrow article-body">
     <h2 id="liucheng-li-de-baoxian">保险在买房流程里的位置</h2>
@@ -639,7 +638,6 @@
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
-
       <div class="field">
         <label for="f-company">公司（选填）</label>
         <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="例如：公司名称，若此次咨询与业务相关">
@@ -647,7 +645,7 @@
 
       <div class="field">
         <label for="f-type">需要的保险 <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type" required aria-required="true" aria-describedby="err-type">
           <option value="" disabled>请选择</option>
           <option value="ZH · Home" selected>房屋保险（自住、第二居所或出租）</option>
           <option value="ZH · Health">私人医疗保险</option>
@@ -657,57 +655,6 @@
         </select>
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
-
-        <div class="form-branch-fields" data-branch="ZH · Home" hidden>
-          <span class="form-branch-legend">关于这处房产</span>
-          <div class="field">
-            <label for="f-home_property_type">房产类型</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="例如：里斯本公寓（含 condomínio）、阿尔加维独立别墅、度假用房" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">估算重建费用（如果知道）</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="例如：约 20 万欧元；不清楚也没关系，我们可以协助估算" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">室内财物的大致价值</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="例如：约 5 万欧元，含家具、电器；另有手表与首饰" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="ZH · Health" hidden>
-          <span class="form-branch-legend">需要投保的人</span>
-          <div class="field">
-            <label for="f-health_household">人数与年龄</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="例如：两位成人（42 岁、39 岁）与两个孩子（9 岁、5 岁）" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="ZH · Motor" hidden>
-          <span class="form-branch-legend">关于这辆车</span>
-          <div class="field">
-            <label for="f-motor_vehicle">品牌、车型与年份</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="例如：2021 年 Volvo XC60，柴油" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">目前的登记情况</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="例如：已是葡萄牙牌照 / 打算在葡萄牙购车 / 计划从他国进口" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">驾驶与出险记录</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="例如：驾龄 12 年，近五年无事故；原保险公司在中国" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="ZH · Liability" hidden>
-          <span class="form-branch-legend">需要保障的范围</span>
-          <div class="field">
-            <label for="f-liability_activity">具体活动或情形</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="例如：咨询顾问、理疗师、房产出租、餐饮经营、家庭日常责任" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">客户或第三方所在地</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="例如：客户在葡萄牙与中国；在里斯本的工作室接待客人" disabled>
-          </div>
-        </div>
-
-
 
       <div class="field">
         <label for="f-message">留言</label>
@@ -984,7 +931,6 @@
     });
   })();
 </script>
-<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>

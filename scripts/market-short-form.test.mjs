@@ -70,6 +70,17 @@ for (const market of MARKETS) {
       assert.ok(market.ui.f.companyPh, `${market.key}: f.companyPh placeholder missing`);
     });
 
+    test(`${market.key}: the short form keeps an optional message and drops the branch questionnaire`, () => {
+      for (const page of pages) {
+        const html = readFileSync(`public${page.url}index.html`, 'utf8');
+        const block = formBlock(page.url);
+        assert.match(block, /name="message"/, `${page.url}: the optional message stays`);
+        assert.doesNotMatch(block, /form-branch-fields/, `${page.url}: branch questionnaire must be gone`);
+        assert.doesNotMatch(block, /data-branch-select/, `${page.url}: branch select hook must be gone`);
+        assert.doesNotMatch(html, /lead-branch-fields\.js/, `${page.url}: branch script is only for pages that still have groups`);
+      }
+    });
+
     test(`${market.key}: the consent checkbox value is one the backend recognises as consent given`, async () => {
       const { buildQuoteRequestRow } = await import('../netlify/functions/lib/quote-requests-sync.mjs');
       const row = buildQuoteRequestRow(market.formName, {

@@ -400,7 +400,6 @@
   </aside>
 </div>
 
-
 <section class="section plain" aria-labelledby="opdelingen">
   <div class="container narrow article-body">
     <h2 id="opdelingen">Den danske opdeling findes ikke her</h2>
@@ -658,7 +657,6 @@
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
-
       <div class="field">
         <label for="f-company">Virksomhed (valgfrit)</label>
         <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="f.eks. virksomhedens navn, hvis henvendelsen vedrører driften">
@@ -666,7 +664,7 @@
 
       <div class="field">
         <label for="f-type">Hvad handler forespørgslen om? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type" required aria-required="true" aria-describedby="err-type">
           <option value="" disabled selected>Vælg</option>
           <option value="DK · Bolig">Hus- eller indboforsikring</option>
           <option value="DK · Sundhed">Sundhedsforsikring</option>
@@ -676,57 +674,6 @@
         </select>
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
-
-        <div class="form-branch-fields" data-branch="DK · Bolig" hidden>
-          <span class="form-branch-legend">Lidt om boligen</span>
-          <div class="field">
-            <label for="f-home_property_type">Boligtype</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="f.eks. lejlighed i condomínio, villa, sommerhus" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Anslået genopførelsespris (hvis du ved det)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="f.eks. 180.000 EUR — ved du det ikke, regner vi det ud sammen" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Omtrentlig værdi af indboet</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="f.eks. 30.000 EUR inkl. møbler og elektronik" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="DK · Sundhed" hidden>
-          <span class="form-branch-legend">Hvem skal være dækket</span>
-          <div class="field">
-            <label for="f-health_household">Antal personer og aldre</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="f.eks. to voksne (43 og 41) og et barn (6)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="DK · Bil" hidden>
-          <span class="form-branch-legend">Lidt om bilen</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Mærke, model og årgang</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="f.eks. Skoda Octavia 2018, diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Nuværende indregistrering</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="f.eks. danske nummerplader, skal importeres / allerede portugisiske" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Skadefri periode</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="f.eks. 12 år uden skader, skadesattest fra dansk selskab" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="DK · Ansvar" hidden>
-          <span class="form-branch-legend">Hvad dækningen skal omfatte</span>
-          <div class="field">
-            <label for="f-liability_activity">Hvilken aktivitet eller situation</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="f.eks. it-konsulent, fysioterapeut, udlejning af bolig, privatliv" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Hvor er kunderne eller tredjemand</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="f.eks. kunder i Danmark og Portugal, klienter modtages i Lissabon" disabled>
-          </div>
-        </div>
-
-
 
       <div class="field">
         <label for="f-message">Hvad bør vi vide?</label>
@@ -1003,7 +950,6 @@
     });
   })();
 </script>
-<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
