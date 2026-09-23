@@ -8,9 +8,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: pt-home-parecer-escrito
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Apply copy and push
         run: |
           python3 scripts/apply_pt_home_copy.py
@@ -21,5 +18,5 @@ jobs:
             echo 'no html changes'
           else
             git commit -m "PT home: parecer por escrito, duas portas, sem reunião obrigatória"
-            git push origin pt-home-parecer-escrito
+            git push
           fi
