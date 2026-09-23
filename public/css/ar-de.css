@@ -426,6 +426,7 @@ body {
   .process-steps li::before { top: 18px; inset-inline-start: 18px; width: 36px; height: 36px; font-size: 15px; }
   .form-shell { padding: 26px 22px; }
   .mobile-cta { display: block; }
+  .mobile-cta[hidden] { display: none; }
   body { padding-bottom: 70px; }
 }
 @media (max-width: 480px) {

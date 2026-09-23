@@ -454,7 +454,7 @@ ${selectOptions(f.residenceOptions)}
 
       <div class="field">
         <label for="f-type">${f.type} <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type"${market.shortForm ? '' : ' data-branch-select'} required aria-required="true" aria-describedby="err-type">
           <option value="" disabled${selected ? '' : ' selected'}>${esc(f.selectPlaceholder)}</option>
 ${selectOptions(
   market.branches.map((b) => ({ v: b.value, l: b.label })).concat([{ v: market.otherValue, l: f.typeOther }]),
@@ -464,7 +464,7 @@ ${selectOptions(
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
 
-${branchGroupsHtml(market)}
+${market.shortForm ? '' : `${branchGroupsHtml(market)}\n`}
 
 ${market.shortForm ? '' : `
       <div class="field">
@@ -1065,7 +1065,7 @@ ${footerHtml(market, page)}
   <a href="#${ui.formId}">${ui.mobileCta}</a>
 </div>
 
-${page.wizard ? wizardScript(page) : `${formScript(market)}\n<script defer src="/js/lead-branch-fields.js"></script>`}
+${page.wizard ? wizardScript(page) : `${formScript(market)}${market.shortForm ? '' : '\n<script defer src="/js/lead-branch-fields.js"></script>'}`}
 <script defer src="/js/ar-analytics-tracker.js"></script>
 ${NAV_SCRIPT}
 ${LIVRO_SCRIPT}

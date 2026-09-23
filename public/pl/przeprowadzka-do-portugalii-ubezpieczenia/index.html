@@ -409,7 +409,6 @@
   </aside>
 </div>
 
-
 <section class="section plain" aria-labelledby="trzy-luki">
   <div class="container narrow article-body">
     <h2 id="trzy-luki">Trzy luki, które widzimy najczęściej</h2>
@@ -581,7 +580,6 @@
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
-
       <div class="field">
         <label for="f-company">Firma (opcjonalnie)</label>
         <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="np. nazwa firmy, jeśli zapytanie dotyczy działalności">
@@ -589,7 +587,7 @@
 
       <div class="field">
         <label for="f-type">Jakiego ubezpieczenia dotyczy zapytanie? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type" required aria-required="true" aria-describedby="err-type">
           <option value="" disabled selected>Proszę wybrać</option>
           <option value="PL · Dom">Ubezpieczenie domu lub mieszkania</option>
           <option value="PL · Zdrowie">Ubezpieczenie zdrowotne</option>
@@ -599,57 +597,6 @@
         </select>
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
-
-        <div class="form-branch-fields" data-branch="PL · Dom" hidden>
-          <span class="form-branch-legend">Kilka szczegółów o nieruchomości</span>
-          <div class="field">
-            <label for="f-home_property_type">Rodzaj nieruchomości</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="np. mieszkanie we wspólnocie, dom wolnostojący, dom letniskowy" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Szacowana wartość odbudowy (jeśli jest znana)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="np. 180 000 EUR — jeśli nie wiadomo, pomożemy oszacować" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Przybliżona wartość ruchomości domowych</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="np. 30 000 EUR łącznie z wyposażeniem i elektroniką" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · Zdrowie" hidden>
-          <span class="form-branch-legend">Kto ma być objęty ochroną</span>
-          <div class="field">
-            <label for="f-health_household">Liczba osób i ich wiek</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="np. 2 osoby dorosłe (41 i 39 lat) oraz dziecko (7 lat)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · Samochód" hidden>
-          <span class="form-branch-legend">Kilka szczegółów o pojeździe</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Marka, model i rok produkcji</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="np. Skoda Octavia 2019, silnik 1.6 diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Aktualna rejestracja</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="np. polskie tablice, planuję przerejestrowanie / już portugalskie" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Historia szkodowa</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="np. 8 lat bez szkody, zaświadczenie z polskiego ubezpieczyciela" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="PL · OC ogólna" hidden>
-          <span class="form-branch-legend">Czego ma dotyczyć ochrona</span>
-          <div class="field">
-            <label for="f-liability_activity">Jaka działalność lub sytuacja</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="np. konsultant IT, fizjoterapeutka, wynajem mieszkania, życie prywatne" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Gdzie znajdują się klienci lub osoby trzecie</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="np. klienci w Portugalii i w Polsce, pacjenci przyjmowani w gabinecie w Lizbonie" disabled>
-          </div>
-        </div>
-
-
 
       <div class="field">
         <label for="f-message">Co powinniśmy wiedzieć?</label>
@@ -926,7 +873,6 @@
     });
   })();
 </script>
-<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>

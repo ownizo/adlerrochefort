@@ -113,4 +113,37 @@
 
   document.addEventListener("click", onNavClick, true);
   document.addEventListener("keydown", onNavKeydown);
+
+  // The cluster mobile bar (.mobile-cta) is a different element from the
+  // landing-page bar (.lp-sticky-cta, handled in ar-quote-cta.js). It used
+  // to stay on top of the form it links to. Hide it while that target is
+  // on screen, and while the cookie notice owns the bottom edge.
+  var quoteBar = document.querySelector(".mobile-cta");
+  if (quoteBar) {
+    var quoteLink = quoteBar.querySelector('a[href^="#"]');
+    var quoteId = quoteLink && quoteLink.getAttribute("href").slice(1);
+    var quoteTarget = quoteId && document.getElementById(quoteId);
+    var cookieBanner = document.getElementById("cookieBanner");
+    var quoteOnScreen = false;
+
+    function syncQuoteBar() {
+      var bannerUp = !!(cookieBanner && cookieBanner.classList.contains("show"));
+      if (bannerUp || quoteOnScreen) quoteBar.setAttribute("hidden", "");
+      else quoteBar.removeAttribute("hidden");
+    }
+
+    if (quoteTarget && "IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) {
+        quoteOnScreen = entries.some(function (entry) { return entry.isIntersecting; });
+        syncQuoteBar();
+      }, { rootMargin: "0px 0px -25% 0px" }).observe(quoteTarget);
+    }
+    if (cookieBanner) {
+      new MutationObserver(syncQuoteBar).observe(cookieBanner, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+    }
+    syncQuoteBar();
+  }
 })();

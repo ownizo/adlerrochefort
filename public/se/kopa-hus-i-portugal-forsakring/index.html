@@ -417,7 +417,6 @@
   </aside>
 </div>
 
-
 <section class="section plain" aria-labelledby="tidslinje">
   <div class="container narrow article-body">
     <h2 id="tidslinje">Vad som gäller när</h2>
@@ -618,7 +617,6 @@
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
-
       <div class="field">
         <label for="f-company">Företag (frivilligt)</label>
         <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="t.ex. företagets namn, om förfrågan gäller verksamheten">
@@ -626,7 +624,7 @@
 
       <div class="field">
         <label for="f-type">Vad gäller förfrågan? <span class="req" aria-hidden="true">*</span></label>
-        <select id="f-type" name="insurance_type" data-branch-select required aria-required="true" aria-describedby="err-type">
+        <select id="f-type" name="insurance_type" required aria-required="true" aria-describedby="err-type">
           <option value="" disabled>Välj</option>
           <option value="SE · Hem" selected>Hem- eller villaförsäkring</option>
           <option value="SE · Sjukvård">Sjukvårdsförsäkring</option>
@@ -636,57 +634,6 @@
         </select>
         <span class="field-error" id="err-type" aria-live="polite"></span>
       </div>
-
-        <div class="form-branch-fields" data-branch="SE · Hem" hidden>
-          <span class="form-branch-legend">Några uppgifter om bostaden</span>
-          <div class="field">
-            <label for="f-home_property_type">Typ av bostad</label>
-            <input type="text" id="f-home_property_type" name="home_property_type" placeholder="t.ex. lägenhet i condomínio, villa, fritidshus" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_rebuild_value">Uppskattad återuppbyggnadskostnad (om du vet)</label>
-            <input type="text" id="f-home_rebuild_value" name="home_rebuild_value" placeholder="t.ex. 180 000 EUR — vet du inte, hjälper vi till att räkna" disabled>
-          </div>
-          <div class="field">
-            <label for="f-home_contents_value">Ungefärligt värde på lösöret</label>
-            <input type="text" id="f-home_contents_value" name="home_contents_value" placeholder="t.ex. 30 000 EUR inklusive möbler och elektronik" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Sjukvård" hidden>
-          <span class="form-branch-legend">Vilka som ska omfattas</span>
-          <div class="field">
-            <label for="f-health_household">Antal personer och åldrar</label>
-            <input type="text" id="f-health_household" name="health_household" placeholder="t.ex. två vuxna (43 och 41) samt ett barn (6)" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Bil" hidden>
-          <span class="form-branch-legend">Några uppgifter om bilen</span>
-          <div class="field">
-            <label for="f-motor_vehicle">Märke, modell och årsmodell</label>
-            <input type="text" id="f-motor_vehicle" name="motor_vehicle" placeholder="t.ex. Volvo V60 2018, diesel" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_plate">Nuvarande registrering</label>
-            <input type="text" id="f-motor_plate" name="motor_plate" placeholder="t.ex. svenska skyltar, ska importeras / redan portugisiska" disabled>
-          </div>
-          <div class="field">
-            <label for="f-motor_claims_history">Skadefri tid</label>
-            <input type="text" id="f-motor_claims_history" name="motor_claims_history" placeholder="t.ex. 12 år skadefritt, intyg från svenskt bolag" disabled>
-          </div>
-        </div>
-        <div class="form-branch-fields" data-branch="SE · Ansvar" hidden>
-          <span class="form-branch-legend">Vad skyddet ska gälla</span>
-          <div class="field">
-            <label for="f-liability_activity">Vilken verksamhet eller situation</label>
-            <input type="text" id="f-liability_activity" name="liability_activity" placeholder="t.ex. IT-konsult, fysioterapeut, uthyrning av bostad, privatliv" disabled>
-          </div>
-          <div class="field">
-            <label for="f-liability_clients">Var finns kunderna eller tredje man</label>
-            <input type="text" id="f-liability_clients" name="liability_clients" placeholder="t.ex. kunder i Sverige och Portugal, patienter tas emot i Lissabon" disabled>
-          </div>
-        </div>
-
-
 
       <div class="field">
         <label for="f-message">Vad bör vi känna till?</label>
@@ -963,7 +910,6 @@
     });
   })();
 </script>
-<script defer src="/js/lead-branch-fields.js"></script>
 <script defer src="/js/ar-analytics-tracker.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
