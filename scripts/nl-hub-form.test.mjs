@@ -30,6 +30,14 @@ test('the optional company field is present and stays optional', () => {
   assert.doesNotMatch(field[0], /\brequired\b/);
 });
 
+test('source_url is stamped from the page URL so ?source=blog:<slug> survives the POST', () => {
+  assert.match(html, /input\[name="source_url"\]/);
+  assert.match(html, /source\.value = window\.location\.href/);
+  const stampAt = html.indexOf('source.value = window.location.href');
+  const formDataAt = html.indexOf('new FormData(form)');
+  assert.ok(stampAt !== -1 && formDataAt !== -1 && stampAt < formDataAt, 'source_url must be set before FormData is read');
+});
+
 // fetch() only rejects on a network error, so without this check a 404 or a
 // 500 from the form endpoint ran the success branch: the visitor was thanked
 // for a submission that was never stored. Same defect and same fix as

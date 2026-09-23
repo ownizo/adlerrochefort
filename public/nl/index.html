@@ -1397,6 +1397,10 @@
     if (!form) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      // Same attribution as ar-quote-form.js: the full URL, so a visit from
+      // an article (?source=blog:<slug>#offerte) is what quote_requests stores.
+      var source = form.querySelector('input[name="source_url"]');
+      if (source && !source.value) source.value = window.location.href;
       var data = new URLSearchParams(new FormData(form)).toString();
       fetch('/nl/', {
         method: 'POST',

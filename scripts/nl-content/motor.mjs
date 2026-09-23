@@ -9,6 +9,8 @@ export const MOTOR_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 'auto-importeren-portugal-verzekering',
+    // No Dutch auto pillar exists. Unresolved destination → short form.
+    ctaRoutesTo: '/nl/?source=blog%3Aauto-importeren-portugal-verzekering#offerte',
     url: '/nl/auto-importeren-portugal-verzekering/',
     title: 'Auto importeren naar Portugal: verzekering, ISV en kenteken | Adler & Rochefort',
     description:
@@ -133,6 +135,8 @@ export const MOTOR_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 'schadevrije-jaren-meenemen-portugal',
+    // No Dutch auto pillar exists. Unresolved destination → short form.
+    ctaRoutesTo: '/nl/?source=blog%3Aschadevrije-jaren-meenemen-portugal#offerte',
     url: '/nl/schadevrije-jaren-meenemen-portugal/',
     title: 'Schadevrije jaren meenemen naar Portugal: de royementsverklaring | Adler & Rochefort',
     description:
