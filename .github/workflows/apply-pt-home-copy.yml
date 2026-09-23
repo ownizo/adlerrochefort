@@ -1,0 +1,25 @@
+name: apply-pt-home-copy
+on:
+  workflow_dispatch:
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pt-home-parecer-escrito
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Apply copy and push
+        run: |
+          python3 scripts/apply_pt_home_copy.py
+          git config user.name ownizo
+          git config user.email sales@ownizo.com
+          git add public/index.html public/private-clients/index.html
+          if git diff --cached --quiet; then
+            echo 'no html changes'
+          else
+            git commit -m "PT home: parecer por escrito, duas portas, sem reunião obrigatória"
+            git push origin pt-home-parecer-escrito
+          fi
