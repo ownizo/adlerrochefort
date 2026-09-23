@@ -10,6 +10,9 @@ export const HEALTH_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 'uitschrijven-nederland-zorgverzekering-portugal',
+    // Article, not the pillar. CTA links to the zorg wizard; the shared
+    // nl-offerte-aanvraag form is not collected here.
+    ctaRoutesTo: '/nl/zorgverzekering-portugal/?source=blog%3Auitschrijven-nederland-zorgverzekering-portugal#offerte',
     url: '/nl/uitschrijven-nederland-zorgverzekering-portugal/',
     title: 'Uitschrijven uit Nederland: wat gebeurt er met uw zorgverzekering? | Adler & Rochefort',
     description:
@@ -307,6 +310,8 @@ export const HEALTH_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 's1-formulier-cak-portugal',
+    // S1 articles route to saúde (zorg wizard), not the generic form.
+    ctaRoutesTo: '/nl/zorgverzekering-portugal/?source=blog%3As1-formulier-cak-portugal#offerte',
     url: '/nl/s1-formulier-cak-portugal/',
     title: 'Het S1-formulier en het CAK in Portugal: wat het wel en niet dekt | Adler & Rochefort',
     description:

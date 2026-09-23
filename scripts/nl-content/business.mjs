@@ -13,7 +13,7 @@ export const BUSINESS_PAGES = [
     // Local "is geen apart verzekeringsproduct" and sends the visitor to the
     // Woon form with AL selected. generate-nl-cluster.mjs skips the page
     // rather than emitting a second, contradictory form.
-    ctaRoutesTo: '/nl/woonverzekering-portugal/#offerte',
+    ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Aalojamento-local-verzekering-portugal#offerte',
     title: 'Alojamento Local verzekeren: B&B, casa de campo en glamping | Adler & Rochefort',
     description:
       'AL kent een eigen verplichte aansprakelijkheidsverzekering. Een gewone woonpolis dekt commercieel gebruik niet. Wat u nodig heeft voor een B&B, casa de campo of glamping in Portugal.',

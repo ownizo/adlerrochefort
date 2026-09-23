@@ -141,6 +141,7 @@ export const HOUSING_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 'bosbrandrisico-woonverzekering-portugal',
+    ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Abosbrandrisico-woonverzekering-portugal#offerte',
     url: '/nl/bosbrandrisico-woonverzekering-portugal/',
     title: 'Bosbrandrisico en uw woonverzekering in Portugal | Adler & Rochefort',
     description:
@@ -265,6 +266,7 @@ export const HOUSING_PAGES = [
    * ───────────────────────────────────────────────────────────────────────── */
   {
     slug: 'niet-gelegaliseerde-woning-verzekeren-portugal',
+    ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Aniet-gelegaliseerde-woning-verzekeren-portugal#offerte',
     url: '/nl/niet-gelegaliseerde-woning-verzekeren-portugal/',
     title: 'Een niet-gelegaliseerde woning verzekeren in Portugal | Adler & Rochefort',
     description:

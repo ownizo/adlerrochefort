@@ -8,8 +8,11 @@
  *
  *   - the language-policy block, placed directly after the introduction and
  *     before the first section heading;
- *   - the `nl-offerte-aanvraag` form, with a branch selector and per-branch
- *     qualification fields, posting to /nl/bedankt/;
+ *   - article pages declare `ctaRoutesTo` and are not regenerated: they link
+ *     to the zorg or woon wizard, or to the short form on /nl/ when there is
+ *     no pillar (auto) or the page crosses ramos. Alojamento Local is the
+ *     same mechanism. The shared `nl-offerte-aanvraag` form is no longer
+ *     published on any of them;
  *   - BreadcrumbList, FAQPage (five questions) and BlogPosting/Article JSON-LD;
  *   - a language switcher that marks PT and EN as unavailable rather than
  *     linking to an approximate page, and hreflang alternates emitted only

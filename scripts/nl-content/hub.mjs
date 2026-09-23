@@ -6,6 +6,8 @@
 
 export const HUB_PAGE = {
   slug: 'verzekeringen-portugal',
+  // Hub crosses zorg, wonen and auto. Short form on /nl/, not the long shared form.
+  ctaRoutesTo: '/nl/?source=blog%3Averzekeringen-portugal#offerte',
   url: '/nl/verzekeringen-portugal/',
   title: 'Verzekeringen in Portugal: de juiste volgorde | Adler & Rochefort',
   description:

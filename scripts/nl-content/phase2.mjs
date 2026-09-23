@@ -28,6 +28,7 @@ const CAT_ZORG = { name: 'Zorg', url: '/nl/verzekeringen-portugal/#zorg' };
 // ---------------------------------------------------------------------------
 const EVENREDIGHEID_TOTAAL_VERLIES = {
   slug: 'evenredigheidsregel-totaal-verlies-portugal',
+  ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Aevenredigheidsregel-totaal-verlies-portugal#offerte',
   url: '/nl/evenredigheidsregel-totaal-verlies-portugal/',
   title: 'De evenredigheidsregel bij totaal verlies in Portugal | Adler & Rochefort',
   description:
@@ -136,6 +137,7 @@ const EVENREDIGHEID_TOTAAL_VERLIES = {
 // ---------------------------------------------------------------------------
 const AARDBEVING = {
   slug: 'aardbevingsdekking-portugal',
+  ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Aaardbevingsdekking-portugal#offerte',
   url: '/nl/aardbevingsdekking-portugal/',
   title: 'Aardbevingsdekking in Portugal: wat het dekt en waarom het in de Algarve telt | Adler & Rochefort',
   description:
@@ -225,6 +227,7 @@ const AARDBEVING = {
 // ---------------------------------------------------------------------------
 const BESTAANDE_AANDOENING = {
   slug: 'zorgverzekering-bestaande-aandoening-portugal',
+  ctaRoutesTo: '/nl/zorgverzekering-portugal/?source=blog%3Azorgverzekering-bestaande-aandoening-portugal#offerte',
   url: '/nl/zorgverzekering-bestaande-aandoening-portugal/',
   title: 'Zorgverzekering met een bestaande aandoening in Portugal | Adler & Rochefort',
   description:
@@ -327,6 +330,9 @@ const BESTAANDE_AANDOENING = {
 // ---------------------------------------------------------------------------
 const SCHADE_BETWISTEN = {
   slug: 'schade-melden-en-betwisten-portugal',
+  // Claims process crosses ramos (perito, CIMPAS, ASF). No single pillar —
+  // short form on the Dutch homepage, not an inferred woon wizard.
+  ctaRoutesTo: '/nl/?source=blog%3Aschade-melden-en-betwisten-portugal#offerte',
   url: '/nl/schade-melden-en-betwisten-portugal/',
   title: 'Schade melden en betwisten in Portugal: perito de parte, CIMPAS, Livro de Reclamações en ASF | Adler & Rochefort',
   description:
@@ -427,6 +433,7 @@ const SCHADE_BETWISTEN = {
 // ---------------------------------------------------------------------------
 const VVE = {
   slug: 'vve-verzekering-portugal',
+  ctaRoutesTo: '/nl/woonverzekering-portugal/?source=blog%3Avve-verzekering-portugal#offerte',
   url: '/nl/vve-verzekering-portugal/',
   title: 'VvE-verzekering in Portugal: waar de gebouwenpolis eindigt en u begint | Adler & Rochefort',
   description:
