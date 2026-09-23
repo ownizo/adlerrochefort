@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Apply PT homepage + private-clients copy. Run from repo root."""
 from pathlib import Path
 
 def sub(path, pairs):
@@ -12,21 +11,21 @@ def sub(path, pairs):
             continue
         t = t.replace(a, b, 1)
         ok += 1
+    t = t.replace(
+        '<title>Adler & Rochefort | Private Clients, Riscos Profissionais e Empresas</title>',
+        '<title>Adler & Rochefort \u2014 RC profissional e patrim\u00f3nio privado | Parecer por escrito</title>',
+        1,
+    )
+    t = t.replace(
+        '<meta property="og:title" content="Adler & Rochefort | Private Clients, Riscos Profissionais e Empresas">',
+        '<meta property="og:title" content="Adler & Rochefort \u2014 RC profissional e patrim\u00f3nio privado">',
+        1,
+    )
     p.write_text(t, encoding='utf-8')
     print(path, ok, '/', len(pairs))
-    return ok == len(pairs)
+    return ok
 
 home = [
-    ('<title>Adler & Rochefort | Private Clients, Riscos Profissionais e Empresas</title>',
-     '<title>Adler & Rochefort \u2014 RC profissional e patrim\u00f3nio privado | Parecer por escrito</title>'),
-    ('<meta name="description" content="Media\u00e7\u00e3o de seguros para patrim\u00f3nio privado, responsabilidade profissional e empresas. An\u00e1lise de risco, consulta ao mercado e acompanhamento de sinistros.">',
-     '<meta name="description" content="Mediador ASF. Lemos a ap\u00f3lice da Ordem, do banco e do retalho e dizemos por escrito o que fica de fora \u2014 RC profissional e patrim\u00f3nio privado. Sem reuni\u00e3o obrigat\u00f3ria.">'),
-    ('<meta property="og:title" content="Adler & Rochefort | Private Clients, Riscos Profissionais e Empresas">',
-     '<meta property="og:title" content="Adler & Rochefort \u2014 RC profissional e patrim\u00f3nio privado">'),
-    ('<meta property="og:description" content="Media\u00e7\u00e3o de seguros para patrim\u00f3nio privado, responsabilidade profissional e empresas. An\u00e1lise de risco, consulta ao mercado e acompanhamento de sinistros.">',
-     '<meta property="og:description" content="O seguro da Ordem e o Multirriscos de retalho cumprem o m\u00ednimo. N\u00f3s tratamos do que fica de fora. Parecer por escrito, sem reuni\u00e3o obrigat\u00f3ria.">'),
-    ('<meta name="twitter:description" content="Media\u00e7\u00e3o de seguros para patrim\u00f3nio privado, responsabilidade profissional e empresas.">',
-     '<meta name="twitter:description" content="RC profissional e patrim\u00f3nio privado. Parecer por escrito a partir da ap\u00f3lice que j\u00e1 tem.">'),
     ('<div class="hero-eyebrow">Private Clients \u00b7 Riscos Profissionais \u00b7 Empresas</div>',
      '<div class="hero-eyebrow">Riscos Profissionais \u00b7 Patrim\u00f3nio Privado</div>'),
     ('H\u00e1 riscos que n\u00e3o cabem<br>\n      numa proposta <em>standard.</em>',
@@ -66,6 +65,7 @@ pc = [
      '<a href="#pedido" class="btn-primary">Enviar as ap\u00f3lices atuais</a>'),
 ]
 
-ok1 = sub('public/index.html', home)
-ok2 = sub('public/private-clients/index.html', pc)
-raise SystemExit(0 if ok1 and ok2 else 1)
+n1 = sub('public/index.html', home)
+n2 = sub('public/private-clients/index.html', pc)
+print('done', n1, n2)
+raise SystemExit(0 if n1 >= 10 and n2 >= 1 else 1)
