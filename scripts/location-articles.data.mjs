@@ -464,4 +464,100 @@ export const ARTICLES = [
     ],
     chatTopics: 'casa_geral,sintra',
   },
+
+  // ---------------------------------------------------------------------------
+  // F — Madeira. No indicative premiums: nothing already published on the
+  // site prices this island, and this file does not invent a range.
+  // ---------------------------------------------------------------------------
+  {
+    slug: 'home-insurance-madeira',
+    tag: 'Madeira',
+    heroLabel: 'Madeira',
+    gradient: 'linear-gradient(135deg,#1A3A32 0%,#7BA39A 100%)',
+    readingTime: 9,
+    published: '2026-09-24',
+    dateLabel: 'Published 24 September 2026',
+    catalogueDate: 'September 2026',
+    title: 'Home insurance in Madeira: ribeiras, the 2010 aluvi&atilde;o, and what a mainland wording does not assume',
+    metaTitle: 'Home Insurance in Madeira: Ribeiras, Flood and Landslip | Adler & Rochefort',
+    description:
+      'Madeira is not the Algarve with another name. Flash flood and debris flow along the ribeiras, storm versus landslip, and an earthquake peril that is lower than the mainland and not absent.',
+    excerpt:
+      'The south coast sits on steep volcanic catchments. Storm, flood and landslip are different lines in a Portuguese wording, and the 2010 aluvião is why the distinction matters.',
+    keywords:
+      'home insurance Madeira, seguro habitação Madeira, Funchal home insurance, Ribeira Brava flood insurance, Porto Santo house insurance, aluvião Madeira insurance',
+    cta: CTA(
+      'A house or apartment in Funchal, Ribeira Brava or Porto Santo?',
+      'Tell us which island, how the property sits relative to a ribeira, and whether it is let. We will say in writing what a Portuguese policy will and will not do.'
+    ),
+    intro: `<p>Madeira is a Portuguese risk, written on a Portuguese <em>multirriscos</em>, and it is not a Lagos villa with the island&rsquo;s name swapped in. The south coast is built at the bottom of steep volcanic catchments. When rain is intense the <em>ribeiras</em> do not rise like a mainland river. They carry water, rock and soil into the towns that sit at their mouths.</p>
+<p>Our office is in Lagos, on the mainland. We do not have an address in Funchal, and we do not describe a book of Madeira business we do not have. What we can do is place a Portuguese policy, in writing, once the property and the way it is used are described accurately. This page is the underwriting difference. It is not a price list &mdash; we are not publishing an indicative premium for an island we have not priced in public.</p>`,
+    body: [
+      [
+        'The 2010 <em>aluvi&atilde;o</em> is the reference event',
+        `<p>On 20 February 2010 an <em>aluvi&atilde;o</em> &mdash; flash flood and debris flow, not a slow river flood &mdash; killed dozens of people. Funchal and Ribeira Brava were the worst hit. C&acirc;mara de Lobos and Santa Cruz were also affected. It was the worst event of that kind on the island since 1803.</p>
+<p>The insurance point is the word. A wording that covers rainwater entering a building is not automatically a wording that covers a debris flow down a <em>ribeira</em>, the soil that comes with it, or the retaining wall that fails because of it. Those are separate questions, and they are the ones to put to the insurer before a premium is compared. Our note on <a href="/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/">coastal and clifftop property</a> sets out how Portuguese wordings already separate storm, rainwater flood, landslip and erosion. Madeira is where that separation stops being theoretical.</p>`,
+      ],
+      [
+        'Storm, flood, landslip and the sea',
+        `<p>Storm damage to a roof is the ordinary covered peril. Progressive wear from wind and salt air is maintenance, and it is not covered &mdash; the same distinction we make on the <a href="/en/blog/home-insurance-sagres-vila-do-bispo/">wind coast west of Lagos</a>, without pretending the two coasts are the same exposure.</p>
+<p>Sea overtopping is a third thing. Wordings that pay for rainwater often exclude, or separately limit, water that comes from the sea. A ground-floor property on the Funchal front, or anything low on Porto Santo, needs that line read rather than assumed. Landslip and subsidence, where an insurer offers them at all, are elective and carry their own excess. Gradual erosion is not insured, in Madeira or anywhere else.</p>`,
+      ],
+      [
+        'Name the island, and name the <em>ribeira</em>',
+        `<p>Funchal, C&acirc;mara de Lobos, Ribeira Brava, Santa Cruz and Machico are not interchangeable postcodes. What an underwriter needs is where the building sits relative to a watercourse and to a slope, not the word &ldquo;Madeira&rdquo; on the proposal.</p>
+<p><strong>Porto Santo is not the same island.</strong> It is lower, sandier and without the same steep catchments. A policy written as if the two were one risk is the wrong policy. Say which island, and say how the property is reached if the access itself crosses a <em>ribeira</em> or a steep lane.</p>`,
+      ],
+      [
+        'Second homes, short lets, and the Funchal condominium',
+        `<p>A large share of international ownership here is seasonal. Most Portuguese wordings restrict theft and water damage once a property has been empty beyond a stated number of consecutive days. A policy declared as a permanent home, for a flat that is empty from October to May, is the gap that shows up in the claim. The clause is covered in <a href="/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/">second homes that sit empty for months</a>.</p>
+<p>If the property is let, including as <em>alojamento local</em>, the use has to be the use on the policy. A residential wording does not become a holiday-let wording because the guests are occasional. See <a href="/en/blog/holiday-home-insurance-portugal/">holiday-home insurance in Portugal</a>.</p>
+<p>In Funchal, most apartments sit in <em>propriedade horizontal</em>. The condominium policy insures the shared structure. It does not insure interior finishes, contents, or liability to the flat below. That boundary is the same one set out in <a href="/en/blog/condominium-insurance-doesnt-cover-contents/">what condominium insurance does not cover</a>. The sum insured, on a house or a fraction, is the cost of reinstatement &mdash; not the purchase price &mdash; and the proportional rule reduces every settlement if that figure is short.</p>`,
+      ],
+      [
+        'Earthquake is elective, and lower hazard is not none',
+        `<p>IPMA&rsquo;s own description of the archipelago is that seismic hazard is lower than on the mainland and in the Azores. Lower is not the same as absent. On 7 March 2020 a magnitude 5.2 earthquake, about 35 km south of Funchal, was felt across Madeira and on Porto Santo. IPMA recorded a maximum intensity of V in Funchal, C&acirc;mara de Lobos and Calheta, and IV on Porto Santo.</p>
+<p>Earthquake cover on a Portuguese multi-risk policy is an optional extension, with its own excess. It is often the line a mortgage arrangement drops. Whether to buy it is a decision about that excess and about the building, not a slogan about an &ldquo;aseismic&rdquo; island. How the extension works is in <a href="/en/blog/earthquake-cover-algarve-buildings/">earthquake cover for Portuguese buildings</a>.</p>`,
+      ],
+    ],
+    tableHeading: 'What to confirm on a Madeira policy',
+    tableNote: `<p>A comparison of perils, not a price list. We are not publishing indicative premiums for Madeira. Nothing already on this site prices the island, and a range invented for this page would be a guess. The <a href="/en/blog/home-insurance-cost-algarve-price-drivers/">cost guide</a> explains what moves a Portuguese premium in general: sum insured, excess, construction and how the property is used.</p>`,
+    table: [
+      ['Question', 'What usually decides it'],
+      ['Storm versus wear from wind and salt', 'Storm is a covered peril. Progressive corrosion and wear are maintenance, and they are not.'],
+      ['Rainwater flood versus an <em>aluvi&atilde;o</em>', 'Debris flow, soil and a failed retaining wall may sit outside a rainwater-flood line. Read the peril, do not infer it.'],
+      ['Water from the sea', 'Often excluded or separately limited, including where rainwater flood is covered.'],
+      ['Landslip', 'Elective where an insurer offers it, with its own excess. Gradual erosion is not insured.'],
+      ['Empty for the winter, or let to guests', 'Both have to be declared. A residential permanent-home wording does not cover either by default.'],
+    ],
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker. The registered office is in Lagos. The property can be in Funchal. Send the address, which island, whether a <em>ribeira</em> or a slope is part of the picture, the rebuild figure and whether anyone lets it. You will have a written answer within 24 hours, including where a wording will not do what the place name suggests.</p>`,
+    faq: [
+      [
+        'Do you have an office in Funchal?',
+        'No. The registered address is Varandas de São João 4, 8600-324 Lagos. Madeira policies are Portuguese policies, arranged in writing from that registration. We do not claim a local office or a local book of business we do not have.',
+      ],
+      [
+        'Does a normal flood clause cover a repeat of February 2010?',
+        'Not by assumption. The 2010 event was an aluvião: flash flood and debris flow, worst in Funchal and Ribeira Brava, and the worst of its kind on the island since 1803. Rainwater flood, debris, landslip and water from the sea are different lines. Confirm each one in the wording.',
+      ],
+      [
+        'Is Porto Santo the same risk as Funchal?',
+        'No. Porto Santo is a lower, sandier island without the same steep ribeira catchments. The proposal has to name the island. A policy written as if the two were one exposure is the wrong policy.',
+      ],
+      [
+        'Is earthquake included?',
+        'Not unless the particular conditions show it, with a sum against it. IPMA treats seismic hazard in the archipelago as lower than on the mainland and in the Azores, which is not the same as none: a magnitude 5.2 south of Funchal was felt across both islands on 7 March 2020. The extension is optional and has its own excess.',
+      ],
+      [
+        'The flat is empty most of the year, or let. Does that matter?',
+        'Yes. Unoccupancy clauses restrict theft and escape-of-water once a stated number of consecutive empty days is passed, and a short let — including alojamento local — is a different use from a home. Declare both at the start.',
+      ],
+    ],
+    related: [
+      ['/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/', 'Coastal Perils', 'Coastal and clifftop property: storm, flood, landslip and erosion are not the same cover'],
+      ['/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/', 'Second Homes', 'Second homes that sit empty for months: the unoccupancy clause that voids your cover'],
+      ['/en/blog/earthquake-cover-algarve-buildings/', 'Earthquake', 'Earthquake cover for Portuguese buildings: the elective nobody reads'],
+    ],
+    chatTopics: 'casa_geral,madeira',
+  },
 ];

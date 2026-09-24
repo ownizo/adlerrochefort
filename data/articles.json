@@ -5620,6 +5620,27 @@
         "readingTime": 7,
         "featured": false,
         "translationOf": null
+      },
+      {
+        "slug": "home-insurance-madeira",
+        "lang": "en",
+        "status": "published",
+        "url": "/en/blog/home-insurance-madeira/",
+        "category": "home-property",
+        "tag": "Madeira",
+        "title": "Home insurance in Madeira: ribeiras, the 2010 aluvião, and what a mainland wording does not assume",
+        "metaTitle": "Home Insurance in Madeira: Ribeiras, Flood and Landslip | Adler & Rochefort",
+        "description": "Madeira is not the Algarve with another name. Flash flood and debris flow along the ribeiras, storm versus landslip, and an earthquake peril that is lower than the mainland and not absent.",
+        "excerpt": "The south coast sits on steep volcanic catchments. Storm, flood and landslip are different lines in a Portuguese wording, and the 2010 aluvião is why the distinction matters.",
+        "image": null,
+        "imageGradient": "linear-gradient(135deg, #1A3A32 0%, #7BA39A 100%)",
+        "imageAlt": "Home insurance in Madeira: ribeiras, the 2010 aluvião, and what a mainland wording does not assume",
+        "published": "2026-09-24",
+        "modified": "2026-09-24",
+        "dateLabel": "September 2026",
+        "readingTime": 9,
+        "featured": false,
+        "translationOf": null
       }
     ],
     "nl": [
