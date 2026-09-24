@@ -5,9 +5,11 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  * Algarve, Lagos, Lissabon and Cascais. content/de-phase3 adds five more —
  * Portimão, Carvoeiro, Vilamoura, Quinta do Lago, Comporta — chosen from a
  * nine-town list because these five have both a real German buyer presence
- * and a distinct risk story; Albufeira, Tavira, Porto and Madeira were
+ * and a distinct risk story; Albufeira, Tavira and Porto were
  * dropped rather than padded with a page that would have been a location
- * matrix by another name.
+ * matrix by another name. Madeira is not in this list: it has its own
+ * page in destinations.mjs, translated from /en/blog/home-insurance-madeira/,
+ * because the ribeira / aluvião exposure is not an Algarve town renamed.
  *
  * Every fact on every page here is translated from an already-published EN
  * article, not invented for this page: the Portimão worked example (bank-
@@ -28,8 +30,8 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  * zone comparison are from public/en/blog/home-insurance-comporta-melides/.
  * None invents a fact not already established elsewhere on the site
  * (CUF/HPA network, the 1755-earthquake seismic zoning, Monchique's 2018
- * wildfire, and now these five). "Wir betreuen Kunden in…" for all nine
- * except Algarve/Lagos, where the registered address is real and the
+ * wildfire, and now these five). "Wir betreuen Kunden in…" is not used
+ * except for Algarve/Lagos, where the registered address is real and the
  * stronger claim is true.
  */
 

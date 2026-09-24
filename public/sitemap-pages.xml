@@ -292,6 +292,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/de/versicherung-costa-blanca/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/de/versicherung-costa-del-sol/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/de/versicherung-lagos/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -306,6 +318,12 @@
   <url>
     <loc>https://adlerrochefort.com/de/versicherung-luz/</loc>
     <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/de/versicherung-madeira/</loc>
+    <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

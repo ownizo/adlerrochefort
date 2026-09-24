@@ -88,6 +88,11 @@ const OTHER = {
     ['/en/blog/home-insurance-comporta-melides/', 'Comporta &amp; Melides'],
     ['/en/blog/home-insurance-troia-setubal/', 'Tr&oacute;ia'],
   ],
+  'home-insurance-madeira': [
+    ['/en/blog/home-insurance-lagos/', 'Lagos'],
+    ['/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/', 'Coastal perils'],
+    ['/en/blog/earthquake-cover-algarve-buildings/', 'Earthquake'],
+  ],
 };
 
 const WA_SVG =
@@ -124,6 +129,7 @@ ${entries}
 }
 
 function buildHead(a) {
+  const published = a.published || PUBLISHED;
   let head = TEMPLATE.slice(0, region(TEMPLATE, '<div class="article-hero">', '</html>').start);
 
   head = swap(head, T_TITLE_TAG, a.metaTitle);
@@ -131,9 +137,9 @@ function buildHead(a) {
   head = swap(head, T_OG_TITLE, a.title);
   head = swap(head, T_HEADLINE, a.title);
   head = swap(head, T_DESC, a.description);
-  head = swap(head, '"datePublished":"2026-08-06","dateModified":"2026-08-06"', `"datePublished":"${PUBLISHED}","dateModified":"${PUBLISHED}"`);
-  head = swap(head, '<meta property="article:published_time" content="2026-08-06">', `<meta property="article:published_time" content="${PUBLISHED}">`);
-  head = swap(head, '<meta property="article:modified_time" content="2026-08-06">', `<meta property="article:modified_time" content="${PUBLISHED}">`);
+  head = swap(head, '"datePublished":"2026-08-06","dateModified":"2026-08-06"', `"datePublished":"${published}","dateModified":"${published}"`);
+  head = swap(head, '<meta property="article:published_time" content="2026-08-06">', `<meta property="article:published_time" content="${published}">`);
+  head = swap(head, '<meta property="article:modified_time" content="2026-08-06">', `<meta property="article:modified_time" content="${published}">`);
 
   // JSON-LD is not HTML-parsed, so entity references have to be resolved there.
   head = swap(head, `"headline":"${a.title}"`, `"headline":${JSON.stringify(decode(a.title))}`);
@@ -149,6 +155,8 @@ function buildHead(a) {
 }
 
 function buildBody(a) {
+  const published = a.published || PUBLISHED;
+  const dateLabel = a.dateLabel || DATE_LABEL;
   const sections = a.body.map(([h2, html]) => `<h2>${h2}</h2>\n${html}`);
 
   const ctaInline = `<div class="ar-cv ar-cta-inline">
@@ -171,13 +179,17 @@ function buildBody(a) {
     .join('')}</tr></thead><tbody>${rows
     .map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`)
     .join('')}</tbody></table></div>`;
+  const tableHeading = a.tableHeading || `Indicative premiums &mdash; ${a.heroLabel}`;
+  const tableNote =
+    a.tableNote ??
+    `<p>Market estimates, not offers &mdash; the figures move with the sum insured, the excess and how the property is used. The <a href="/en/blog/home-insurance-cost-algarve-price-drivers/">cost guide</a> explains what shifts them.</p>`;
 
   const other = OTHER[a.slug]
     .map(([href, label]) => `<a href="${href}">${label}</a>`)
     .join(' &middot; ');
 
   return `<div class="article-hero"><div class="article-hero-img" style="background:${a.gradient}"><span>${a.heroLabel}</span></div></div>
-<article class="article-container"><div class="article-tag">${a.tag}</div><h1 class="article-title">${a.title}</h1>  <div class="article-date"><time datetime="${PUBLISHED}">${DATE_LABEL}</time> &middot; ${a.readingTime} min read</div>
+<article class="article-container"><div class="article-tag">${a.tag}</div><h1 class="article-title">${a.title}</h1>  <div class="article-date"><time datetime="${published}">${dateLabel}</time> &middot; ${a.readingTime} min read</div>
   <div class="article-author">
     <picture>
       <source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp">
@@ -191,9 +203,9 @@ function buildBody(a) {
 <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across Zurich, Allianz, Hiscox and Liberty Mutual, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>
 ${a.intro}
 ${sections.join('\n')}
-<h2>Indicative premiums &mdash; ${a.heroLabel}</h2>
+<h2>${tableHeading}</h2>
 ${table}
-<p>Market estimates, not offers &mdash; the figures move with the sum insured, the excess and how the property is used. The <a href="/en/blog/home-insurance-cost-algarve-price-drivers/">cost guide</a> explains what shifts them.</p>
+${tableNote}
 <h2>Talk to us</h2>
 ${a.closing}
 <p>If you would rather start from the property than from the article, our <a href="/en/home-insurance-quote/">home insurance comparison for owners in Portugal</a> takes the address, the rebuild figure and how the property is used, and comes back with the market priced side by side.</p>
@@ -266,7 +278,14 @@ function build(a) {
 
 // ---------------------------------------------------------------------------
 
-for (const a of ARTICLES) {
+const only = process.argv.filter((arg) => arg.startsWith('--only=')).map((arg) => arg.slice('--only='.length));
+const selected = only.length ? ARTICLES.filter((a) => only.includes(a.slug)) : ARTICLES;
+if (only.length && selected.length !== only.length) {
+  const have = new Set(ARTICLES.map((a) => a.slug));
+  throw new Error(`unknown --only slug: ${only.filter((s) => !have.has(s)).join(', ')}`);
+}
+
+for (const a of selected) {
   const dir = join(ROOT, 'public/en/blog', a.slug);
   mkdirSync(dir, { recursive: true });
   const html = build(a);
@@ -282,11 +301,12 @@ const dataPath = join(ROOT, 'data/articles.json');
 const data = JSON.parse(readFileSync(dataPath, 'utf8'));
 const gradientOf = (a) => a.gradient.replace('linear-gradient(135deg,', 'linear-gradient(135deg, ').replace(/,(?=#)/g, ', ');
 
-for (const a of ARTICLES) {
+for (const a of selected) {
   if (data.articles.en.some((r) => r.slug === a.slug)) {
     console.log(`articles.json: ${a.slug} already present, skipped`);
     continue;
   }
+  const published = a.published || PUBLISHED;
   data.articles.en.push({
     slug: a.slug,
     lang: 'en',
@@ -301,9 +321,9 @@ for (const a of ARTICLES) {
     image: null,
     imageGradient: gradientOf(a),
     imageAlt: decode(a.title),
-    published: PUBLISHED,
-    modified: PUBLISHED,
-    dateLabel: 'August 2026',
+    published,
+    modified: published,
+    dateLabel: a.catalogueDate || 'August 2026',
     readingTime: a.readingTime,
     featured: false,
     translationOf: null,

@@ -1,17 +1,29 @@
 import { BREADCRUMB_ROOT } from './shared.mjs';
 
 /**
- * West-Algarve and Mallorca destination pages for /de.
+ * West-Algarve, Madeira and Spain destination pages for /de.
  *
- * Facts only from already-published EN material:
+ * Facts only from already-published EN material, plus — for Madeira — the
+ * EN article this round adds at /en/blog/home-insurance-madeira/ (the German
+ * page is a translation of that article, not a second set of facts):
  *   - Lagos office / concelho: scripts/de-content/local.mjs (LAGOS_PAGE)
  *   - Sagres, Vila do Bispo, Salema, Burgau: scripts/location-articles.data.mjs
  *     (home-insurance-sagres-vila-do-bispo) — wind vs storm, salt corrosion,
  *     isolation, off-grid declaration, rebuild cost west of Lagos
  *   - Praia da Luz: same concelho as Lagos; pool / beach-access liability
  *     from public/en/blog/swimming-pools-jetties-private-access-liability-nobody-insures/
- *   - Mallorca: public/en/private-clients-spain/ (second homes, seasonal
- *     occupancy, local boat) and the Spain FoS position already on /de/
+ *   - Madeira: public/en/blog/home-insurance-madeira/ — aluvião vs rainwater
+ *     flood, Porto Santo as a different island, optional earthquake. No
+ *     invented premiums. No claim of a Funchal office.
+ *   - Mallorca and Costa del Sol: public/en/private-clients-spain/ (second
+ *     homes, seasonal occupancy, local boat on Mallorca; villas, rebuild,
+ *     contents and vehicles left between visits on the Costa del Sol) and
+ *     the Spain FoS position already on /de/
+ *   - Costa Blanca: the Spain home-insurance facts already on
+ *     /de/hausversicherung-spanien/ (comunidad, second home, non-resident,
+ *     rebuild), at the coast our own Spain forms already name as
+ *     "Alicante, Costa Blanca". No DANA narrative and no Consorcio detail
+ *     that the published Spain pages do not carry.
  *
  * No invented premiums. showTeam + the shared branching form (health, home,
  * motor, professional liability) are rendered by generate-de-cluster.mjs.
@@ -398,8 +410,263 @@ export const MALLORCA_PAGE = {
   related: [
     { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
     { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
-    { url: '/de/private-clients-spanien/', label: 'Private Clients in Spanien' },
-    { url: '/de/krankenversicherung-spanien/', label: 'Krankenversicherung in Spanien' },
+    { url: '/de/versicherung-costa-del-sol/', label: 'Versicherung an der Costa del Sol' },
+    { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+  ],
+};
+
+const MADEIRA_PUBLISHED = '2026-09-24T12:00:00+00:00';
+
+export const MADEIRA_PAGE = {
+  slug: 'versicherung-madeira',
+  url: '/de/versicherung-madeira/',
+  title: 'Hausversicherung auf Madeira | Adler & Rochefort',
+  description:
+    'Hausversicherung auf Madeira: Ribeiras, Aluvião, Sturm gegen Erdrutsch, Porto Santo als andere Insel. Vom Sitz in Lagos — kein Büro in Funchal, keine erfundenen Prämien.',
+  keywords:
+    'Hausversicherung Madeira, Versicherung Funchal, Versicherung Ribeira Brava, Porto Santo Versicherung, Aluvião Versicherung',
+  eyebrow: 'Regional · Madeira',
+  h1: 'Hausversicherung auf Madeira',
+  standfirst:
+    'Madeira ist kein Algarve-Ort mit anderem Namen. An der Südküste stehen die Orte am Ausgang steiler vulkanischer Einzugsgebiete. Die Frage an die Police ist, ob Sturm, Überschwemmung und Erdrutsch dasselbe Ereignis sind.',
+  heroMeta: META,
+  heroCta: 'Angebot anfragen',
+  hreflang: { en: '/en/blog/home-insurance-madeira/' },
+  langLinks: { en: '/en/blog/home-insurance-madeira/' },
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Madeira' }],
+  published: MADEIRA_PUBLISHED,
+  modified: MADEIRA_PUBLISHED,
+  schemaType: 'Article',
+  showTeam: true,
+  formHeading: 'Angebot für Madeira anfragen',
+  formBranch: 'Hausversicherung',
+  formSubject: 'Hausversicherung Madeira',
+  formCta: 'Angebot anfragen',
+  formIntro:
+    'Welche Insel, wie die Immobilie zu einer Ribeira oder einem Hang liegt, und ob sie vermietet wird. Wir antworten schriftlich auf Deutsch — auch wenn eine Deckung so nicht besteht.',
+  formPlaceholder:
+    'Zum Beispiel: Funchal oder Porto Santo, Wohnung oder Haus, Nähe zu einer Ribeira, Wochen Leerstand, Vermietung.',
+  geo: { region: 'PT-30', placename: 'Madeira, Portugal' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Madeira, Portugal' },
+  sections: `
+<section class="section plain" aria-labelledby="aluviao">
+  <div class="container narrow article-body">
+    <h2 id="aluviao">Der 20. Februar 2010 ist das Referenzereignis</h2>
+    <p>Am 20. Februar 2010 traf ein <em>Aluvião</em> die Insel — Sturzflut und Geröllstrom, keine langsame Flussflut. Dutzende Menschen starben. Funchal und Ribeira Brava waren am schwersten getroffen, Câmara de Lobos und Santa Cruz ebenfalls. Es war das schwerste Ereignis dieser Art auf der Insel seit 1803. Eine Klausel, die Regenwasser im Gebäude deckt, deckt nicht automatisch Geröll, mitgerissenes Erdreich oder eine Stützmauer, die deshalb versagt. Diese Zeilen liest man im Wortlaut, bevor man Prämien vergleicht. Der englische Artikel, aus dem diese Seite übersetzt ist: <a href="/en/blog/home-insurance-madeira/" hreflang="en">Home insurance in Madeira</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="gefahren">
+  <div class="container narrow article-body">
+    <h2 id="gefahren">Sturm, Überschwemmung, Erdrutsch, Meer</h2>
+    <p>Sturmschaden am Dach ist das gewöhnlich gedeckte Ereignis. Fortschreitender Verschleiß durch Wind und Salzluft ist Unterhalt und nicht gedeckt — dieselbe Unterscheidung wie an der Westküste, ohne zu behaupten, die Exposition sei dieselbe. Wasser vom Meer ist ein Drittes: Formulierungen, die Regenwasser zahlen, schließen Seewasser oft aus oder begrenzen es gesondert. Erdrutsch ist, wo ein Versicherer ihn überhaupt anbietet, Wahldeckung mit eigener Selbstbeteiligung. Allmähliche Erosion ist nicht versichert. Die portugiesische Hausversicherung im Überblick: <a href="/de/hausversicherung-portugal/">Hausversicherung in Portugal</a>.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="insel">
+  <div class="container narrow article-body">
+    <h2 id="insel">Die Insel benennen — und die Ribeira</h2>
+    <p>Funchal, Câmara de Lobos, Ribeira Brava, Santa Cruz und Machico sind keine austauschbaren Postleitzahlen. Was zählt, ist die Lage zur Wasserrinne und zum Hang. <strong>Porto Santo ist nicht dieselbe Insel.</strong> Sie ist flacher, sandiger, ohne dieselben steilen Einzugsgebiete. Eine Police, die beide als ein Risiko behandelt, ist die falsche Police. Unser Sitz bleibt Lagos, Varandas de São João 4. Wir haben kein Büro in Funchal und behaupten keinen Bestand auf der Insel, den wir nicht haben. Die Police selbst ist eine portugiesische Police, schriftlich von dieser Registrierung aus.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="nutzung">
+  <div class="container narrow article-body">
+    <h2 id="nutzung">Leerstand, Vermietung, Gemeinschaft — und Erdbeben</h2>
+    <p>Ein großer Teil des internationalen Eigentums wird nur einen Teil des Jahres genutzt. Steht die Wohnung als ständig bewohnt in der Police und von Oktober bis Mai leer, ist das die Lücke im Schadenfall. Vermietung, auch als <em>alojamento local</em>, ist eine andere Nutzung als Wohnen und muss so gemeldet werden. In Funchal sitzt die Wohnung meist in der <em>propriedade horizontal</em>: die Gemeinschaft deckt das gemeinsame Gebäude, nicht Innenausbau, Hausrat oder die Haftung gegenüber der Wohnung darunter. Die Versicherungssumme ist der Wiederaufbauwert, nicht der Kaufpreis.</p>
+    <p>Das IPMA beschreibt die seismische Gefährdung des Archipels als geringer als auf dem Festland und auf den Azoren. Geringer heißt nicht keine. Am 7. März 2020 war ein Beben der Magnitude 5,2, etwa 35 km südlich von Funchal, auf Madeira und Porto Santo zu spüren — Intensität V in Funchal, Câmara de Lobos und Calheta, IV auf Porto Santo. Erdbebendeckung ist eine Wahlklausel mit eigener Selbstbeteiligung, nicht Bestandteil jeder <em>multirriscos</em>.</p>
+  </div>
+</section>`,
+  faqTitle: 'Hausversicherung Madeira — häufige Fragen',
+  faq: [
+    {
+      q: 'Habt ihr ein Büro in Funchal?',
+      a: '<p>Nein. Die registrierte Adresse ist in Lagos, Varandas de São João 4, 8600-324. Madeira wird als portugiesisches Risiko von dieser Registrierung aus schriftlich bearbeitet. Wir behaupten kein Büro und keinen örtlichen Bestand, den wir nicht haben.</p>',
+    },
+    {
+      q: 'Deckt eine normale Überschwemmungsklausel einen Aluvião wie 2010?',
+      a: '<p>Nicht von selbst. Das Ereignis vom 20. Februar 2010 war Sturzflut und Geröllstrom, am schwersten in Funchal und Ribeira Brava. Regenwasser, Geröll, Erdrutsch und Wasser vom Meer sind verschiedene Zeilen. Jede einzeln im Wortlaut prüfen.</p>',
+    },
+    {
+      q: 'Ist Porto Santo dasselbe Risiko wie Funchal?',
+      a: '<p>Nein. Porto Santo ist flacher und sandiger, ohne dieselben steilen Ribeira-Einzugsgebiete. Die Anfrage muss die Insel nennen.</p>',
+    },
+    {
+      q: 'Ist Erdbeben automatisch enthalten?',
+      a: '<p>Nur wenn die besonderen Bedingungen es mit einer Summe ausweisen. Die Gefährdung ist nach IPMA geringer als auf dem Festland und den Azoren — und am 7. März 2020 trotzdem spürbar gewesen. Die Klausel ist optional und hat eine eigene Selbstbeteiligung.</p>',
+    },
+  ],
+  related: [
+    { url: '/en/blog/home-insurance-madeira/', label: 'Home insurance in Madeira', hreflang: 'en' },
+    { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
+    { url: '/de/versicherung-portugal/', label: 'Versicherung in Portugal' },
+    { url: '/de/versicherung-lagos/', label: 'Sitz in Lagos' },
+  ],
+};
+
+export const COSTA_DEL_SOL_PAGE = {
+  slug: 'versicherung-costa-del-sol',
+  url: '/de/versicherung-costa-del-sol/',
+  title: 'Versicherung an der Costa del Sol, Spanien | Adler & Rochefort',
+  description:
+    'Haus-, Kranken- und Autoversicherung an der Costa del Sol für internationale Mandanten. Villa, Zweitwohnsitz, Fahrzeug zwischen den Besuchen — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
+  keywords:
+    'Versicherung Costa del Sol, Hausversicherung Marbella, Zweitwohnsitz Costa del Sol, Versicherungsmakler Costa del Sol Deutsche',
+  eyebrow: 'Spanien · Costa del Sol',
+  h1: 'Versicherung an der Costa del Sol, Spanien',
+  standfirst:
+    'Villen und Zweitwohnsitze an dieser Küste werfen dieselben Fragen auf wie anderswo in Spanien: Wiederaufbauwert, Hausrat, der zum Inhalt passt, und Fahrzeuge, die zwischen den Besuchen in Spanien bleiben. Die Dichte internationaler Eigentümer macht daraus ein wiederkehrendes Muster, keine Sonderpolizei.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien',
+  heroCta: 'Angebot anfragen',
+  hreflang: { en: '/en/home-insurance-spain/' },
+  langLinks: { en: '/en/home-insurance-spain/' },
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Spanien', url: '/de/versicherung-spanien/' }, { name: 'Costa del Sol' }],
+  published: MADEIRA_PUBLISHED,
+  modified: MADEIRA_PUBLISHED,
+  schemaType: 'Article',
+  showTeam: true,
+  formHeading: 'Angebot für die Costa del Sol anfragen',
+  formBranch: 'Hausversicherung',
+  formSubject: 'Versicherung Costa del Sol',
+  formCountry: 'Spain',
+  formMarket: 'spain',
+  formCta: 'Angebot anfragen',
+  formIntro:
+    'Schildern Sie Ort, Immobilie und Nutzung — und was zwischen den Besuchen in Spanien bleibt. Wir sagen schriftlich, was sich derzeit vermitteln lässt.',
+  formPlaceholder: 'Zum Beispiel: Marbella oder Estepona, Villa oder Wohnung, Wochen Leerstand, Fahrzeug vor Ort, Resident oder nicht.',
+  geo: { region: 'ES-MA', placename: 'Costa del Sol, Andalucía' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Costa del Sol, Spain' },
+  sections: `
+<section class="section plain" aria-labelledby="fos">
+  <div class="container narrow article-body">
+    <h2 id="fos">Von Portugal aus, im Dienstleistungsverkehr</h2>
+    <p>Adler & Rochefort ist bei der portugiesischen Aufsicht ASF unter Nr. 425591790/3 registriert und in Spanien von dieser Registrierung aus tätig — nach dem EU-Rahmen, der einem in einem Mitgliedstaat zugelassenen Vermittler Leistungen in einem anderen erlaubt. Wir haben keine gesonderte spanische Zulassung und kein Büro an der Costa del Sol. Wir behaupten nicht, den andalusischen Markt zu vergleichen — nur das, was wir nach einer kurzen Lagebeschreibung schriftlich bestätigen können. Den Cluster für Spanien insgesamt: <a href="/de/versicherung-spanien/">Versicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="villa">
+  <div class="container narrow article-body">
+    <h2 id="villa">Villa, Zweitwohnsitz, Inhalt</h2>
+    <p>Das steht bereits auf der Seite <a href="/de/private-clients-spanien/">Private Clients in Spanien</a>, im Abschnitt zur Costa del Sol, und wird hier nicht umgeschrieben: genauer Wiederaufbauwert, Hausrat, der abbildet, was tatsächlich in der Immobilie ist, und die Frage, wie Leerstand und Zweitwohnsitz gemeldet sind. Eine als ganzjährig bewohnt gemeldete Police für ein Haus, das den größeren Teil des Jahres leer steht, ist die Lücke, die im Schadenfall auffällt. Wie Wiederaufbauwert und Sicherheitsanforderungen bewertet werden: <a href="/de/hausversicherung-spanien/">Hausversicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="fahrzeug">
+  <div class="container narrow article-body">
+    <h2 id="fahrzeug">Fahrzeug zwischen den Besuchen — und Vermietung</h2>
+    <p>Fahrzeuge, die zwischen den Aufenthalten an der Küste bleiben, gehören in dieselbe Prüfung wie das Haus, nicht in eine spätere. Private Krankenversicherung für Aufenthalte ebenfalls. Wird vermietet, ist das eine andere Police als die des selbst genutzten Zweitwohnsitzes. Siehe <a href="/de/autoversicherung-spanien/">Autoversicherung in Spanien</a>, <a href="/de/krankenversicherung-spanien/">Krankenversicherung in Spanien</a> und <a href="/de/vermieterversicherung-spanien/">Vermieterversicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="ehrlichkeit">
+  <div class="container narrow article-body">
+    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
+    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+  </div>
+</section>`,
+  faqTitle: 'Versicherung Costa del Sol — häufige Fragen',
+  faq: [
+    {
+      q: 'Habt ihr ein Büro in Marbella?',
+      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+    },
+    {
+      q: 'Versichert ihr jede Villa an der Küste?',
+      a: '<p>Nein. Die spanischen Versichererbeziehungen sind noch im Aufbau. Schildern Sie die Lage — wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.</p>',
+    },
+    {
+      q: 'Muss ich in Spanien gemeldet sein?',
+      a: '<p>Nein. Nicht-residentes Eigentum ist üblich und in der Regel versicherbar. Was zählt, sind genaue Angaben zur Immobilie und zur Nutzung, einschließlich eines Fahrzeugs, das zwischen den Besuchen bleibt.</p>',
+    },
+  ],
+  related: [
+    { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
+    { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
+    { url: '/de/versicherung-mallorca/', label: 'Versicherung auf Mallorca' },
+    { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+  ],
+};
+
+export const COSTA_BLANCA_PAGE = {
+  slug: 'versicherung-costa-blanca',
+  url: '/de/versicherung-costa-blanca/',
+  title: 'Versicherung an der Costa Blanca, Spanien | Adler & Rochefort',
+  description:
+    'Hausversicherung an der Costa Blanca für nicht-residente Eigentümer. Comunidad, Zweitwohnsitz und Leerstand — Alicante ist das Beispiel unserer eigenen Formulare. Schriftlich auf Deutsch.',
+  keywords:
+    'Versicherung Costa Blanca, Hausversicherung Alicante, Zweitwohnsitz Costa Blanca, Comunidad Versicherung Alicante, Versicherungsmakler Costa Blanca',
+  eyebrow: 'Spanien · Costa Blanca',
+  h1: 'Versicherung an der Costa Blanca, Spanien',
+  standfirst:
+    'Alicante und die Costa Blanca sind das Beispiel, das unsere Formulare zur Hausversicherung in Spanien bereits nennen. Hier sitzt internationales Eigentum oft in einer Eigentümergemeinschaft. Die Gebäudepolice der Comunidad und die eigene Police sind zwei Verträge.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien',
+  heroCta: 'Angebot anfragen',
+  hreflang: { en: '/en/home-insurance-spain/' },
+  langLinks: { en: '/en/home-insurance-spain/' },
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Spanien', url: '/de/versicherung-spanien/' }, { name: 'Costa Blanca' }],
+  published: MADEIRA_PUBLISHED,
+  modified: MADEIRA_PUBLISHED,
+  schemaType: 'Article',
+  showTeam: true,
+  formHeading: 'Angebot für die Costa Blanca anfragen',
+  formBranch: 'Hausversicherung',
+  formSubject: 'Versicherung Costa Blanca',
+  formCountry: 'Spain',
+  formMarket: 'spain',
+  formCta: 'Angebot anfragen',
+  formIntro:
+    'Ort, Wohnung oder Haus, und ob die Comunidad das Gebäude bereits versichert. Wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.',
+  formPlaceholder: 'Zum Beispiel: Alicante, Torrevieja oder Dénia, Wohnung in der Comunidad, Wochen Leerstand, Resident oder nicht.',
+  geo: { region: 'ES-A', placename: 'Costa Blanca, Alicante' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Costa Blanca, Spain' },
+  sections: `
+<section class="section plain" aria-labelledby="fos">
+  <div class="container narrow article-body">
+    <h2 id="fos">Von Portugal aus, im Dienstleistungsverkehr</h2>
+    <p>Adler & Rochefort ist bei der portugiesischen Aufsicht ASF unter Nr. 425591790/3 registriert und in Spanien von dieser Registrierung aus tätig — nach dem EU-Rahmen, der einem in einem Mitgliedstaat zugelassenen Vermittler Leistungen in einem anderen erlaubt. Wir haben keine gesonderte spanische Zulassung und kein Büro an der Costa Blanca. Wir behaupten nicht, den valencianischen Markt zu vergleichen — nur das, was wir nach einer kurzen Lagebeschreibung schriftlich bestätigen können. Den Cluster für Spanien insgesamt: <a href="/de/versicherung-spanien/">Versicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="comunidad">
+  <div class="container narrow article-body">
+    <h2 id="comunidad">Comunidad und eigene Police</h2>
+    <p>An dieser Küste — Alicante ist das Beispiel in unseren Formularen zur <a href="/de/hausversicherung-spanien/">Hausversicherung in Spanien</a> — ist die erste Frage oft nicht die Villa, sondern die Gemeinschaft. Häufig ist die äußere Bausubstanz bereits über die Police der <em>comunidad de propietarios</em> versichert. Die eigene Deckung betrifft dann Hausrat und Innenausbau. Das gilt nicht in jeder Gemeinschaft gleich, also nachlesen statt annehmen. Was die Gemeinschaft nicht trägt, bleibt beim Eigentümer, einschließlich der Haftung gegenüber dem Nachbarn.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="zweit">
+  <div class="container narrow article-body">
+    <h2 id="zweit">Zweitwohnsitz und nicht-residente Eigentümer</h2>
+    <p>Internationale Eigentümer nutzen die Wohnung häufig nur einen Teil des Jahres und wohnen selbst nicht in Spanien. Leerstand, Sicherheit und der Wiederaufbauwert — nicht der Kaufpreis — entscheiden, was ein Versicherer zeichnet. Eine genaue Angabe zum Leerstandsmuster zählt mehr als der Ortsname. Fahrzeug und Krankenversicherung für die Aufenthalte sind eigene Sparten und derselbe Haushalt: <a href="/de/autoversicherung-spanien/">Autoversicherung in Spanien</a> und <a href="/de/krankenversicherung-spanien/">Krankenversicherung in Spanien</a>. Wird vermietet, gehört das auf die <a href="/de/vermieterversicherung-spanien/">Vermieterversicherung</a>, nicht stillschweigend in die Wohnpolice.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="ehrlichkeit">
+  <div class="container narrow article-body">
+    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
+    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+  </div>
+</section>`,
+  faqTitle: 'Versicherung Costa Blanca — häufige Fragen',
+  faq: [
+    {
+      q: 'Habt ihr ein Büro in Alicante?',
+      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+    },
+    {
+      q: 'Reicht die Versicherung der Comunidad?',
+      a: '<p>Für die gemeinsame Bausubstanz oft ja, für Hausrat, Innenausbau und die Haftung gegenüber dem Nachbarn nein. Das steht in den Bedingungen der Gemeinschaft und ist von Haus zu Haus verschieden. Nachlesen, nicht annehmen.</p>',
+    },
+    {
+      q: 'Muss ich Resident an der Costa Blanca sein?',
+      a: '<p>Nein. Nicht-residentes Eigentum ist der Normalfall, den unsere Spanien-Seiten bereits beschreiben. Entscheidend sind Immobilie, Nutzung und Leerstand — nicht der Wohnsitz.</p>',
+    },
+  ],
+  related: [
+    { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
+    { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
+    { url: '/de/versicherung-costa-del-sol/', label: 'Versicherung an der Costa del Sol' },
+    { url: '/de/versicherung-mallorca/', label: 'Versicherung auf Mallorca' },
   ],
 };
 
@@ -408,5 +675,8 @@ export const DESTINATION_PAGES = [
   BURGAU_PAGE,
   VILA_DO_BISPO_PAGE,
   SAGRES_PAGE,
+  MADEIRA_PAGE,
   MALLORCA_PAGE,
+  COSTA_DEL_SOL_PAGE,
+  COSTA_BLANCA_PAGE,
 ];

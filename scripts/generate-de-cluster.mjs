@@ -75,6 +75,9 @@ const ORG_LD = {
     { '@type': 'Country', name: 'Portugal' },
     { '@type': 'Country', name: 'Spain' },
     { '@type': 'AdministrativeArea', name: 'Mallorca, Spain' },
+    { '@type': 'AdministrativeArea', name: 'Costa del Sol, Spain' },
+    { '@type': 'AdministrativeArea', name: 'Costa Blanca, Spain' },
+    { '@type': 'AdministrativeArea', name: 'Madeira, Portugal' },
   ],
   address: {
     '@type': 'PostalAddress',
@@ -631,10 +634,16 @@ ${isSpainPage(page) ? `        <li><a href="/de/krankenversicherung-spanien/">Kr
         <li><a href="/de/versicherung-vila-do-bispo/">Vila do Bispo</a></li>
         <li><a href="/de/versicherung-sagres/">Sagres</a></li>
       </ul>
+      <div class="footer-col-title" style="margin-top:22px">Madeira</div>
+      <ul class="footer-col-links">
+        <li><a href="/de/versicherung-madeira/">Madeira</a></li>
+      </ul>
       <div class="footer-col-title" style="margin-top:22px">Spanien</div>
       <ul class="footer-col-links">
         <li><a href="/de/versicherung-spanien/">Spanien insgesamt</a></li>
         <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
+        <li><a href="/de/versicherung-costa-del-sol/">Costa del Sol</a></li>
+        <li><a href="/de/versicherung-costa-blanca/">Costa Blanca</a></li>
       </ul>
     </div>
     <div>
