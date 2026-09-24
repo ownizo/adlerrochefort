@@ -24,6 +24,10 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  *     rebuild), at the coast our own Spain forms already name as
  *     "Alicante, Costa Blanca". No DANA narrative and no Consorcio detail
  *     that the published Spain pages do not carry.
+ *   - Canaries and Catalonia: the same altitude. Name the island or the
+ *     coast, second home versus let, comunidad where the building is one.
+ *     No Consorcio mechanism and no storm the published Spain pages do not
+ *     already describe.
  *
  * No invented premiums. showTeam + the shared branching form (health, home,
  * motor, professional liability) are rendered by generate-de-cluster.mjs.
@@ -412,6 +416,8 @@ export const MALLORCA_PAGE = {
     { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
     { url: '/de/versicherung-costa-del-sol/', label: 'Versicherung an der Costa del Sol' },
     { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+    { url: '/de/versicherung-kanaren/', label: 'Versicherung auf den Kanaren' },
+    { url: '/de/versicherung-katalonien/', label: 'Versicherung in Katalonien' },
   ],
 };
 
@@ -584,6 +590,8 @@ export const COSTA_DEL_SOL_PAGE = {
     { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
     { url: '/de/versicherung-mallorca/', label: 'Versicherung auf Mallorca' },
     { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+    { url: '/de/versicherung-kanaren/', label: 'Versicherung auf den Kanaren' },
+    { url: '/de/versicherung-katalonien/', label: 'Versicherung in Katalonien' },
   ],
 };
 
@@ -666,6 +674,175 @@ export const COSTA_BLANCA_PAGE = {
     { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
     { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
     { url: '/de/versicherung-costa-del-sol/', label: 'Versicherung an der Costa del Sol' },
+    { url: '/de/versicherung-kanaren/', label: 'Versicherung auf den Kanaren' },
+    { url: '/de/versicherung-katalonien/', label: 'Versicherung in Katalonien' },
+  ],
+};
+
+export const KANAREN_PAGE = {
+  slug: 'versicherung-kanaren',
+  url: '/de/versicherung-kanaren/',
+  title: 'Versicherung auf den Kanarischen Inseln | Adler & Rochefort',
+  description:
+    'Hausversicherung auf den Kanaren für internationale Mandanten. Die Insel nennen, Zweitwohnsitz und Leerstand — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
+  keywords:
+    'Versicherung Kanaren, Hausversicherung Teneriffa, Versicherung Gran Canaria, Zweitwohnsitz Lanzarote, Versicherung La Palma',
+  eyebrow: 'Spanien · Kanarische Inseln',
+  h1: 'Versicherung auf den Kanarischen Inseln, Spanien',
+  standfirst:
+    'Teneriffa, Gran Canaria, Lanzarote, Fuerteventura und La Palma sind nicht ein Ort mit fünf Namen. Die Anfrage nennt die Insel. Leerstand und Vermietung entscheiden danach, nicht der Archipel als Etikett.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien',
+  heroCta: 'Angebot anfragen',
+  hreflang: { en: '/en/home-insurance-spain/' },
+  langLinks: { en: '/en/home-insurance-spain/' },
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Spanien', url: '/de/versicherung-spanien/' }, { name: 'Kanaren' }],
+  published: MADEIRA_PUBLISHED,
+  modified: MADEIRA_PUBLISHED,
+  schemaType: 'Article',
+  showTeam: true,
+  formHeading: 'Angebot für die Kanaren anfragen',
+  formBranch: 'Hausversicherung',
+  formSubject: 'Versicherung Kanaren',
+  formCountry: 'Spain',
+  formMarket: 'spain',
+  formCta: 'Angebot anfragen',
+  formIntro:
+    'Insel, Ort, Wohnung oder Haus, und wie viele Monate es leer steht. Wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.',
+  formPlaceholder: 'Zum Beispiel: Adeje auf Teneriffa, Puerto del Carmen, Corralejo oder Los Llanos, Wochen Leerstand, Vermietung.',
+  geo: { region: 'ES-CN', placename: 'Islas Canarias' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Canary Islands, Spain' },
+  sections: `
+<section class="section plain" aria-labelledby="fos">
+  <div class="container narrow article-body">
+    <h2 id="fos">Von Portugal aus, im Dienstleistungsverkehr</h2>
+    <p>Adler & Rochefort ist bei der portugiesischen Aufsicht ASF unter Nr. 425591790/3 registriert und in Spanien von dieser Registrierung aus tätig — nach dem EU-Rahmen, der einem in einem Mitgliedstaat zugelassenen Vermittler Leistungen in einem anderen erlaubt. Wir haben keine gesonderte spanische Zulassung und kein Büro auf den Kanaren. Wir behaupten nicht, den Markt des Archipels zu vergleichen — nur das, was wir nach einer kurzen Lagebeschreibung schriftlich bestätigen können. Den Cluster für Spanien insgesamt: <a href="/de/versicherung-spanien/">Versicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="insel">
+  <div class="container narrow article-body">
+    <h2 id="insel">Die Insel nennen</h2>
+    <p>Eine Wohnung in Costa Adeje, ein Haus in Puerto del Carmen und eine Finca auf La Palma sind nicht dasselbe Risiko, nur weil alle drei „Kanaren“ heißen. La Palma ist nicht Teneriffa: der Ausbruch von 2021 hat Wohngebiete in Los Llanos de Aridane, El Paso und Tazacorte zerstört. Das ist ein Grund, die Insel in der Anfrage zu nennen, keine Aussage darüber, was eine konkrete Police zahlt. Wie Wiederaufbauwert und Leerstand bewertet werden: <a href="/de/hausversicherung-spanien/">Hausversicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="nutzung">
+  <div class="container narrow article-body">
+    <h2 id="nutzung">Zweitwohnsitz, Leerstand, Vermietung</h2>
+    <p>Der größte Teil des internationalen Eigentums auf den Inseln ist nicht ganzjährig bewohnt. Eine als ständig bewohnt gemeldete Police für ein Haus, das den größeren Teil des Jahres leer steht, ist die Lücke, die im Schadenfall auffällt. Kurzzeitvermietung ist eine andere Nutzung als der selbst genutzte Zweitwohnsitz und muss so gemeldet werden — und die Satzung der Gemeinschaft erlaubt sie oft nicht, auch wenn das Inserat schon online steht. Fahrzeug und Krankenversicherung für die Aufenthalte: <a href="/de/autoversicherung-spanien/">Autoversicherung in Spanien</a> und <a href="/de/krankenversicherung-spanien/">Krankenversicherung in Spanien</a>. Wird vermietet, gehört das auf die <a href="/de/vermieterversicherung-spanien/">Vermieterversicherung</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="ehrlichkeit">
+  <div class="container narrow article-body">
+    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
+    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+  </div>
+</section>`,
+  faqTitle: 'Versicherung Kanaren — häufige Fragen',
+  faq: [
+    {
+      q: 'Habt ihr ein Büro auf Teneriffa?',
+      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus. Das gilt für jede Insel.</p>',
+    },
+    {
+      q: 'Ist La Palma dasselbe Risiko wie Teneriffa?',
+      a: '<p>Nein. Die Anfrage nennt die Insel und den Ort. Der Ausbruch von 2021 betraf Wohngebiete auf La Palma, nicht die Südküste von Teneriffa. Was eine Police dazu zahlt, steht in ihrem Wortlaut — wir erfinden keine Deckung.</p>',
+    },
+    {
+      q: 'Muss ich auf den Inseln wohnen?',
+      a: '<p>Nein. Nicht-residentes Eigentum ist üblich. Was zählt, sind Immobilie, Nutzung und Leerstand.</p>',
+    },
+  ],
+  related: [
+    { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
+    { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
+    { url: '/de/versicherung-costa-del-sol/', label: 'Versicherung an der Costa del Sol' },
+    { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+    { url: '/de/versicherung-katalonien/', label: 'Versicherung in Katalonien' },
+  ],
+};
+
+export const KATALONIEN_PAGE = {
+  slug: 'versicherung-katalonien',
+  url: '/de/versicherung-katalonien/',
+  title: 'Versicherung in Katalonien, Spanien | Adler & Rochefort',
+  description:
+    'Hausversicherung in Katalonien: Wohnung in Barcelona, Haus an der Costa Brava, Apartment an der Costa Daurada. Zweitwohnsitz und Comunidad — schriftlich auf Deutsch.',
+  keywords:
+    'Versicherung Katalonien, Hausversicherung Barcelona, Versicherung Costa Brava, Zweitwohnsitz Costa Daurada, Versicherungsmakler Katalonien Deutsche',
+  eyebrow: 'Spanien · Katalonien',
+  h1: 'Versicherung in Katalonien, Spanien',
+  standfirst:
+    'Katalonien ist nicht nur eine Ferienküste. Eine Wohnung in Barcelona, ein Haus an der Costa Brava und ein Apartment an der Costa Daurada werfen nicht dieselbe Frage an die Police auf.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Dienstleistungsverkehr Spanien',
+  heroCta: 'Angebot anfragen',
+  hreflang: { en: '/en/home-insurance-spain/' },
+  langLinks: { en: '/en/home-insurance-spain/' },
+  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Spanien', url: '/de/versicherung-spanien/' }, { name: 'Katalonien' }],
+  published: MADEIRA_PUBLISHED,
+  modified: MADEIRA_PUBLISHED,
+  schemaType: 'Article',
+  showTeam: true,
+  formHeading: 'Angebot für Katalonien anfragen',
+  formBranch: 'Hausversicherung',
+  formSubject: 'Versicherung Katalonien',
+  formCountry: 'Spain',
+  formMarket: 'spain',
+  formCta: 'Angebot anfragen',
+  formIntro:
+    'Barcelona, Costa Brava oder Costa Daurada, Wohnung oder Haus, und ob die Gemeinschaft das Gebäude bereits versichert. Wir antworten schriftlich.',
+  formPlaceholder: 'Zum Beispiel: Eixample, Begur oder Cambrils, Wohnung in der Comunidad, Wochen Leerstand, Vermietung.',
+  geo: { region: 'ES-CT', placename: 'Catalunya' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Catalonia, Spain' },
+  sections: `
+<section class="section plain" aria-labelledby="fos">
+  <div class="container narrow article-body">
+    <h2 id="fos">Von Portugal aus, im Dienstleistungsverkehr</h2>
+    <p>Adler & Rochefort ist bei der portugiesischen Aufsicht ASF unter Nr. 425591790/3 registriert und in Spanien von dieser Registrierung aus tätig — nach dem EU-Rahmen, der einem in einem Mitgliedstaat zugelassenen Vermittler Leistungen in einem anderen erlaubt. Wir haben keine gesonderte spanische Zulassung und kein Büro in Barcelona. Wir behaupten nicht, den katalanischen Markt zu vergleichen — nur das, was wir nach einer kurzen Lagebeschreibung schriftlich bestätigen können. Den Cluster für Spanien insgesamt: <a href="/de/versicherung-spanien/">Versicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="drei">
+  <div class="container narrow article-body">
+    <h2 id="drei">Barcelona, Costa Brava, Costa Daurada</h2>
+    <p>In Barcelona sitzt die Wohnung meist in einer Eigentümergemeinschaft. Häufig ist die äußere Bausubstanz bereits über die Gemeinschaft versichert; Hausrat und Innenausbau sind die eigene Police. Das gilt nicht in jedem Haus gleich, also nachlesen statt annehmen — dieselbe Frage wie an der <a href="/de/versicherung-costa-blanca/">Costa Blanca</a>. An der Costa Brava ist es oft ein Haus, das den Winter leer steht. An der Costa Daurada, von Sitges bis Cambrils, wieder häufiger die Wohnung. Drei Lagen, nicht eine Police mit drei Ortsnamen. Wiederaufbauwert statt Kaufpreis: <a href="/de/hausversicherung-spanien/">Hausversicherung in Spanien</a>.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="nutzung">
+  <div class="container narrow article-body">
+    <h2 id="nutzung">Leerstand und Vermietung</h2>
+    <p>Ein Zweitwohnsitz, der von Oktober bis Ostern zu ist, wird als Zweitwohnsitz gemeldet, nicht als Hauptwohnsitz. Touristische Vermietung ist eine andere Nutzung und hängt daran, ob die Gemeinschaft und die Gemeinde sie erlauben. Die Police folgt dieser Angabe, sie ersetzt sie nicht. Wird vermietet: <a href="/de/vermieterversicherung-spanien/">Vermieterversicherung in Spanien</a>. Fahrzeug und Krankenversicherung für die Aufenthalte bleiben eigene Sparten desselben Haushalts: <a href="/de/autoversicherung-spanien/">Auto</a> und <a href="/de/krankenversicherung-spanien/">Kranken</a>.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="ehrlichkeit">
+  <div class="container narrow article-body">
+    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
+    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+  </div>
+</section>`,
+  faqTitle: 'Versicherung Katalonien — häufige Fragen',
+  faq: [
+    {
+      q: 'Habt ihr ein Büro in Barcelona?',
+      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Katalonien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+    },
+    {
+      q: 'Reicht die Versicherung der Gemeinschaft in Barcelona?',
+      a: '<p>Für die gemeinsame Bausubstanz oft ja, für Hausrat, Innenausbau und die eigene Haftung nein. Das steht in den Bedingungen der Gemeinschaft und ist von Haus zu Haus verschieden.</p>',
+    },
+    {
+      q: 'Muss ich in Katalonien wohnen?',
+      a: '<p>Nein. Nicht-residentes Eigentum ist versicherbar. Entscheidend sind Ort, Immobilie, Nutzung und Leerstand.</p>',
+    },
+  ],
+  related: [
+    { url: '/de/versicherung-spanien/', label: 'Versicherung in Spanien' },
+    { url: '/de/hausversicherung-spanien/', label: 'Hausversicherung in Spanien' },
+    { url: '/de/versicherung-costa-blanca/', label: 'Versicherung an der Costa Blanca' },
+    { url: '/de/versicherung-kanaren/', label: 'Versicherung auf den Kanaren' },
     { url: '/de/versicherung-mallorca/', label: 'Versicherung auf Mallorca' },
   ],
 };
@@ -679,4 +856,6 @@ export const DESTINATION_PAGES = [
   MALLORCA_PAGE,
   COSTA_DEL_SOL_PAGE,
   COSTA_BLANCA_PAGE,
+  KANAREN_PAGE,
+  KATALONIEN_PAGE,
 ];

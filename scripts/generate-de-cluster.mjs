@@ -77,6 +77,8 @@ const ORG_LD = {
     { '@type': 'AdministrativeArea', name: 'Mallorca, Spain' },
     { '@type': 'AdministrativeArea', name: 'Costa del Sol, Spain' },
     { '@type': 'AdministrativeArea', name: 'Costa Blanca, Spain' },
+    { '@type': 'AdministrativeArea', name: 'Canary Islands, Spain' },
+    { '@type': 'AdministrativeArea', name: 'Catalonia, Spain' },
     { '@type': 'AdministrativeArea', name: 'Madeira, Portugal' },
   ],
   address: {
@@ -644,6 +646,8 @@ ${isSpainPage(page) ? `        <li><a href="/de/krankenversicherung-spanien/">Kr
         <li><a href="/de/versicherung-mallorca/">Mallorca</a></li>
         <li><a href="/de/versicherung-costa-del-sol/">Costa del Sol</a></li>
         <li><a href="/de/versicherung-costa-blanca/">Costa Blanca</a></li>
+        <li><a href="/de/versicherung-kanaren/">Kanaren</a></li>
+        <li><a href="/de/versicherung-katalonien/">Katalonien</a></li>
       </ul>
     </div>
     <div>
