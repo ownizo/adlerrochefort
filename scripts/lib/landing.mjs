@@ -107,14 +107,14 @@ const LANG_POLICY_CSS = `<style>
   .ar-langpolicy-band { background: #F5F1E8; padding: 44px 24px; }
   .ar-langpolicy {
     max-width: 820px; margin: 0 auto; background: #FFFFFF;
-    border: 1px solid #DAD5C8; border-left: 4px solid #B8323E;
+    border: 1px solid #DAD5C8; border-left: 4px solid #5A6610;
     padding: 34px 36px; font-family: 'Montserrat', system-ui, sans-serif;
   }
   .ar-langpolicy h2 {
     font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; font-weight: 700;
-    color: #111927; margin: 0 0 16px; letter-spacing: 0;
+    color: #1A200C; margin: 0 0 16px; letter-spacing: 0;
   }
-  .ar-langpolicy p { font-size: 17px; line-height: 1.75; color: #526984; margin: 0 0 14px; }
+  .ar-langpolicy p { font-size: 17px; line-height: 1.75; color: #565F48; margin: 0 0 14px; }
   .ar-langpolicy p:last-child { margin-bottom: 0; }
   @media (max-width: 640px) { .ar-langpolicy { padding: 26px 22px; } .ar-langpolicy-band { padding: 32px 18px; } }
 </style>`;

@@ -58,7 +58,7 @@
 }
 
 .ar-langsel .ar-langsel-btn:focus-visible {
-  outline: 2px solid #E8919B;
+  outline: 2px solid #F3FF74;
   outline-offset: 2px;
 }
 
@@ -142,7 +142,7 @@
   letter-spacing: 0;
   text-transform: none;
   text-decoration: none;
-  color: #111927;
+  color: #1A200C;
   background: transparent;
   opacity: 1;
   transition: background 0.15s, color 0.15s;
@@ -151,17 +151,17 @@
 .ar-langsel .ar-langsel-menu a:hover,
 .ar-langsel .ar-langsel-menu a:focus-visible {
   background: #F5F1E8;
-  color: #17243D;
+  color: #283113;
   text-decoration: none;
 }
 
 .ar-langsel .ar-langsel-menu a:focus-visible {
-  outline: 2px solid #B8323E;
+  outline: 2px solid #F3FF74;
   outline-offset: -2px;
 }
 
 .ar-langsel .ar-langsel-menu a[aria-current="true"] {
-  color: #17243D;
+  color: #283113;
   font-weight: 700;
   background: #E8E5DF;
 }
@@ -174,13 +174,13 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #516F94;
+  color: #5E6650;
   white-space: nowrap;
 }
 
 .ar-langsel .ar-langsel-menu a:hover .ar-langsel-note,
 .ar-langsel .ar-langsel-menu a:focus-visible .ar-langsel-note {
-  color: #526984;
+  color: #565F48;
 }
 
 /* ── mobile drawer variant ──────────────────────────────────────────────── */

@@ -75,21 +75,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #17243D;
-    --primary-hover: #223553;
-    --primary-dim: rgba(23,36,61,0.10);
-    --accent: #B8323E;
+    --primary: #283113;
+    --primary-hover: #3A4720;
+    --primary-dim: rgba(40,49,19,0.10);
+    --accent: #F3FF74;
     --cream: #F5F1E8;
     --cream2: #E8E5DF;
-    --ink: #111927;
-    --ink2: #526984;
-    --muted: #516F94;
-    --muted2: #516F94;
+    --ink: #1A200C;
+    --ink2: #565F48;
+    --muted: #5E6650;
+    --muted2: #5E6650;
     --white: #FFFFFF;
     --border: #DAD5C8;
-    --hero-bg: #17243D;
-    --nav-bg: #17243D;
-    --footer-bg: #111927;
+    --hero-bg: #283113;
+    --nav-bg: #283113;
+    --footer-bg: #1A200C;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 96px; }
@@ -106,7 +106,7 @@
     padding: 0 48px;
     height: 68px;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid rgba(23,36,61,0.25);
+    border-bottom: 1px solid rgba(40,49,19,0.25);
   }
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
@@ -262,8 +262,7 @@
   }
   .footer-badge-dot {
     width: 6px; height: 6px; border-radius: 50%;
-    background: #B8323E;
-  }
+    background: #F3FF74; color: #283113;}
   .footer-col-title {
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
@@ -282,7 +281,7 @@
     display: flex; align-items: center; justify-content: center;
     transition: 0.2s;
   }
-  .footer-social a:hover { border-color: var(--accent); background: rgba(184,50,62,0.1); }
+  .footer-social a:hover { border-color: var(--accent); background: rgba(243,255,116,0.1); }
   .footer-social a svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.5); }
   .footer-social a:hover svg { fill: var(--accent); }
   .footer-bottom {
@@ -330,7 +329,7 @@
 
   /* ASF TOP BAR */
   .asf-top-bar {
-    background: #17243D;
+    background: #283113;
     color: rgba(255,255,255,0.85);
     text-align: center;
     font-size: 12px;
@@ -340,17 +339,17 @@
     line-height: 1.4;
   }
   .asf-top-bar a {
-    color: #B8323E;
+    color: #F3FF74;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
   }
-  .asf-top-bar a:hover { color: #E8919B; }
+  .asf-top-bar a:hover { color: #F3FF74; }
 
   /* CTA TOPO */
   .cta-topo {
     background: #F5F1E8;
-    border-left: 4px solid #B8323E;
+    border-left: 4px solid #5A6610;
     padding: 28px 32px;
     margin-bottom: 36px;
   }
@@ -358,12 +357,12 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #17243D;
+    color: #283113;
     margin-bottom: 6px;
   }
   .cta-topo-subtitle {
     font-size: 13px;
-    color: #526984;
+    color: #565F48;
     margin-bottom: 18px;
   }
   .cta-topo-form {
@@ -382,7 +381,7 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #516F94;
+    color: #5E6650;
     margin-bottom: 4px;
   }
   .cta-topo-form .cta-field input,
@@ -393,17 +392,17 @@
     background: #fff;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
-    color: #111927;
+    color: #1A200C;
     outline: none;
     transition: border-color 0.2s;
   }
   .cta-topo-form .cta-field input:focus,
   .cta-topo-form .cta-field select:focus {
-    border-color: #B8323E;
+    border-color: #5A6610;
   }
   .cta-topo-form .cta-btn, .cta-topo > .cta-btn {
     display: inline-block;
-    background: #17243D;
+    background: #283113;
     color: #fff;
     border: none;
     padding: 10px 24px;
@@ -417,16 +416,16 @@
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #2a3f66; }
+  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #4A5A28; }
   .cta-topo-micro {
     font-size: 10px;
-    color: #516F94;
+    color: #5E6650;
     margin-top: 10px;
   }
 
   /* CTA MEIO */
   .cta-meio {
-    background: #17243D;
+    background: #283113;
     padding: 28px 32px;
     display: flex;
     align-items: center;
@@ -452,8 +451,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #B8323E;
-    color: #FFFFFF;
+    background: #F3FF74;
+    color: #283113;
     padding: 12px 24px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
@@ -462,7 +461,7 @@
     white-space: nowrap;
     transition: background 0.2s;
   }
-  .cta-meio-btn:hover { background: #872733; }
+  .cta-meio-btn:hover { background: #E4F25C; color: #283113;}
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
 </style>
@@ -481,15 +480,15 @@
     margin: 4px 0 26px; padding: 16px 18px;
     background: var(--white, #FFFFFF);
     border: 1px solid var(--border, #DAD5C8);
-    border-left: 3px solid var(--primary, #17243D);
+    border-left: 3px solid var(--primary, #283113);
     border-radius: 10px;
   }
   .article-author-photo { border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #111927); line-height: 1.35; }
+  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #1A200C); line-height: 1.35; }
   .article-author-name a { color: inherit; text-decoration: none; }
-  .article-author-name a:hover { color: var(--primary, #17243D); }
-  .article-author-role { font-size: 13px; color: var(--ink2, #526984); line-height: 1.5; margin-top: 2px; }
-  .article-author-creds { font-size: 12px; color: var(--muted, #516F94); line-height: 1.5; margin-top: 4px; }
+  .article-author-name a:hover { color: var(--primary, #283113); }
+  .article-author-role { font-size: 13px; color: var(--ink2, #565F48); line-height: 1.5; margin-top: 2px; }
+  .article-author-creds { font-size: 12px; color: var(--muted, #5E6650); line-height: 1.5; margin-top: 4px; }
   .article-toc {
     margin: 8px 0 32px; padding: 20px 24px;
     background: var(--cream2, #E8E5DF);
@@ -497,17 +496,17 @@
   }
   .article-toc-title {
     font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink, #111927); margin-bottom: 12px;
+    color: var(--ink, #1A200C); margin-bottom: 12px;
   }
   .article-toc ol { margin: 0; padding-left: 20px; }
-  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #526984); }
-  .article-toc a { color: var(--ink2, #526984); text-decoration: none; }
-  .article-toc a:hover { color: var(--primary, #17243D); text-decoration: underline; }
+  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #565F48); }
+  .article-toc a { color: var(--ink2, #565F48); text-decoration: none; }
+  .article-toc a:hover { color: var(--primary, #283113); text-decoration: underline; }
   .related-card.related-card-landing {
     background: var(--cream2, #E8E5DF);
-    border-color: var(--accent, #B8323E);
+    border-color: var(--accent, #F3FF74);
   }
-  .related-card-landing .related-card-tag { color: var(--accent, #B8323E); }
+  .related-card-landing .related-card-tag { color: var(--accent, #5A6610); }
   @media (max-width: 768px) {
     .article-author { flex-direction: column; align-items: flex-start; }
   }
@@ -525,9 +524,9 @@
     margin-top: 12px;
     font-size: 11px;
     line-height: 1.55;
-    color: var(--muted, #516F94);
+    color: var(--muted, #5E6650);
   }
-  .form-gdpr a { color: var(--primary, #17243D); }
+  .form-gdpr a { color: var(--primary, #283113); }
 </style>
 <link rel="stylesheet" href="/css/ar-langsel.css">
 </head>
@@ -693,7 +692,7 @@
   <div class="cta-topo">
     <div class="cta-topo-title">Peça uma análise de seguros da empresa</div>
     <div class="cta-topo-subtitle">Análise gratuita por mediador de seguros registado na ASF. Sem compromisso.</div>
-    <div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #B8323E;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3><p>Trabalhamos com um painel restrito de seguradoras com apetite real para risco empresarial, escolhidas pela forma como definem capitais e exclusões — não pelo prémio mais baixo.</p><p>O capital seguro do edifício, do equipamento e das existências é revisto caso a caso, depois de analisada a sua atividade — não é uma escolha que se faça num formulário.</p><p>Se procura apenas o documento mais barato para cumprir uma exigência contratual, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que houver um sinistro, é esse o trabalho que fazemos.</p></div><a class="cta-btn" href="/seguros/empresarial/?source=blog%3Aseguros-turismo-rural-hoteis-boutique#pedido">Pedir análise →</a>
+    <div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #5A6610;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3><p>Trabalhamos com um painel restrito de seguradoras com apetite real para risco empresarial, escolhidas pela forma como definem capitais e exclusões — não pelo prémio mais baixo.</p><p>O capital seguro do edifício, do equipamento e das existências é revisto caso a caso, depois de analisada a sua atividade — não é uma escolha que se faça num formulário.</p><p>Se procura apenas o documento mais barato para cumprir uma exigência contratual, encontrá-lo-á noutro lado. Se procura estar coberto no dia em que houver um sinistro, é esse o trabalho que fazemos.</p></div><a class="cta-btn" href="/seguros/empresarial/?source=blog%3Aseguros-turismo-rural-hoteis-boutique#pedido">Pedir análise →</a>
     <div class="cta-topo-micro">Resposta em 48 a 72 horas úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
 
@@ -745,15 +744,15 @@
   
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#526984;"><strong>Continuar neste tema:</strong> <a href="/blog/seguro-rc-multirriscos-alojamento-local/" style="color:#17243D;font-weight:600;">Seguro de RC e Multirriscos para AL: são a mesma coisa? (Não — e esta confusão pode custar-lhe caro)</a> &middot; <a href="/blog/seguro-multiriscos-hotel-portugal/" style="color:#17243D;font-weight:600;">Seguro multirriscos para hotel em Portugal: o que deve cobrir e o que as apólices standard não incluem</a> &middot; <a href="/blog/seguro-alojamento-local-decreto-lei-76-2024/" style="color:#17243D;font-weight:600;">Seguro obrigatório para Alojamento Local em 2025: o que mudou com o Decreto-Lei n.º 76/2024</a></p>
-    <p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/empresarial/" style="color:#17243D;font-weight:600;">multirriscos empresarial para hotelaria</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
+    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#565F48;"><strong>Continuar neste tema:</strong> <a href="/blog/seguro-rc-multirriscos-alojamento-local/" style="color:#283113;font-weight:600;">Seguro de RC e Multirriscos para AL: são a mesma coisa? (Não — e esta confusão pode custar-lhe caro)</a> &middot; <a href="/blog/seguro-multiriscos-hotel-portugal/" style="color:#283113;font-weight:600;">Seguro multirriscos para hotel em Portugal: o que deve cobrir e o que as apólices standard não incluem</a> &middot; <a href="/blog/seguro-alojamento-local-decreto-lei-76-2024/" style="color:#283113;font-weight:600;">Seguro obrigatório para Alojamento Local em 2025: o que mudou com o Decreto-Lei n.º 76/2024</a></p>
+    <p style="background:#E8E5DF;border-left:4px solid #283113;padding:14px 18px;margin:32px 0 0;font-size:14px;line-height:1.6;color:#565F48;border-radius:0 6px 6px 0;">Precisa de uma proposta? A página de <a href="/seguros/empresarial/" style="color:#283113;font-weight:600;">multirriscos empresarial para hotelaria</a> reúne o que a lei exige, as coberturas que costumam faltar nas apólices e o formulário de cotação — resposta em 24 horas úteis, por mediador registado na ASF.</p>
     <!-- /cluster-links -->
   </div>
 
-  <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #B8323E;border-radius:12px;padding:32px 36px;text-align:center;">
-    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#111927;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
-    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#526984;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
-    <a href="/#contacto" style="display:inline-block;background:#B8323E;color:#FFFFFF;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
+  <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #5A6610;border-radius:12px;padding:32px 36px;text-align:center;">
+    <h3 style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#1A200C;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#565F48;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
+    <a href="/#contacto" style="display:inline-block;background:#F3FF74;color:#283113;padding:14px 30px;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
   </div>
 </article>
 

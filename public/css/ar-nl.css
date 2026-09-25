@@ -18,16 +18,16 @@
   --border: #DAD5C8;
   --border-soft: #E8E5DF;
   /* Text tones — all >= 4.5:1 on cream, beige and white. */
-  --ink: #111927;
-  --ink2: #526984;
-  --muted: #516F94;
-  --primary: #17243D;
-  --gold: #B8323E;
-  --rule: #B8323E; --accent-on-dark: #E8919B;
+  --ink: #1A200C;
+  --ink2: #565F48;
+  --muted: #5E6650;
+  --primary: #283113;
+  --gold: #F3FF74;
+  --rule: #F3FF74; --accent-on-dark: #F3FF74;
   /* Site chrome (shared with the rest of adlerrochefort.com). */
-  --nav-bg: #17243D;
-  --footer-bg: #111927;
-  --navy: #17243D;
+  --nav-bg: #283113;
+  --footer-bg: #1A200C;
+  --navy: #283113;
   --error: #A32B1F;
 }
 
@@ -83,7 +83,7 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
   background: var(--nav-bg);
   padding: 0 48px; min-height: 76px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  border-bottom: 1px solid rgba(23,36,61,0.3);
+  border-bottom: 1px solid rgba(40,49,19,0.3);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; padding: 8px 0; }
 .nav-logo-img { height: 46px; width: auto; }
@@ -170,7 +170,7 @@ p { font-size: 19px; line-height: 1.8; }
   text-decoration: none; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
-.btn-cta:hover { background: #111927; transform: translateY(-2px); }
+.btn-cta:hover { background: #1A200C; transform: translateY(-2px); }
 .btn-cta svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
 /* ─────────── LANGUAGE POLICY BLOCK ─────────── */
@@ -396,7 +396,7 @@ p { font-size: 19px; line-height: 1.8; }
   letter-spacing: 0.02em; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s;
 }
-.form-submit:hover { background: #111927; }
+.form-submit:hover { background: #1A200C; }
 .form-submit[disabled] { background: var(--muted); border-color: var(--muted); cursor: progress; }
 .form-footnote { margin-top: 22px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 

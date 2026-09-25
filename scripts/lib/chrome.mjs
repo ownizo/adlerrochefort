@@ -424,7 +424,7 @@ export function page({ lang = 'pt-PT', head, body, bodyEnd = '' }) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#17243D">
+<meta name="theme-color" content="#283113">
 ${head}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">

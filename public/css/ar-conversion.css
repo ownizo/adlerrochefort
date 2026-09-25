@@ -4,12 +4,12 @@
    Palette mirrors the site theme (sage / gold / cream / ink).
    ════════════════════════════════════════════════════════════════ */
 :root {
-  --ar-primary: #17243D;
-  --ar-primary-hover: #223553;
-  --ar-accent: #B8323E; --ar-accent-on-dark: #E8919B;
-  --ar-accent-hover: #872733;
-  --ar-ink: #111927;
-  --ar-ink2: #526984;
+  --ar-primary: #283113;
+  --ar-primary-hover: #3A4720;
+  --ar-accent: #F3FF74; --ar-accent-on-dark: #F3FF74;
+  --ar-accent-hover: #E4F25C;
+  --ar-ink: #1A200C;
+  --ar-ink2: #565F48;
   --ar-cream: #F5F1E8;
   --ar-cream2: #E8E5DF;
   --ar-border: #DAD5C8;
@@ -73,8 +73,8 @@
   transition: background 0.2s, transform 0.2s;
   line-height: 1;
 }
-.ar-btn-primary { background: var(--ar-accent); color: #fff; }
-.ar-btn-primary:hover { background: var(--ar-accent-hover); transform: translateY(-1px); }
+.ar-btn-primary { background: var(--ar-accent); color: #283113; }
+.ar-btn-primary:hover { background: var(--ar-accent-hover); transform: translateY(-1px); color: #283113;}
 .ar-btn-wa { background: var(--ar-wa); color: #fff; }
 .ar-btn-wa:hover { background: var(--ar-wa-hover); transform: translateY(-1px); }
 .ar-btn-wa svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }

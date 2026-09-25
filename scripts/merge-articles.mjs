@@ -108,7 +108,7 @@ if (await gone('seguro-habitacao-proteger-casa')) {
     // main guide, so it points forward to the commercial page instead.
     html = html.replace(
       /<p style="background:#E8E5DF;[^"]*">Este artigo faz parte[\s\S]*?<\/p>\n/,
-      `<p style="background:#E8E5DF;border-left:4px solid #17243D;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#526984;border-radius:0 6px 6px 0;">Este é o nosso guia principal sobre seguro de habitação em Portugal. Para pedir cotação com coberturas e capitais já enquadrados, veja a página de <a href="/seguros/habitacao/" style="color:#17243D;font-weight:600;">seguro de habitação</a>.</p>\n`
+      `<p style="background:#E8E5DF;border-left:4px solid #283113;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#565F48;border-radius:0 6px 6px 0;">Este é o nosso guia principal sobre seguro de habitação em Portugal. Para pedir cotação com coberturas e capitais já enquadrados, veja a página de <a href="/seguros/habitacao/" style="color:#283113;font-weight:600;">seguro de habitação</a>.</p>\n`
     );
 
     const PLAN = [

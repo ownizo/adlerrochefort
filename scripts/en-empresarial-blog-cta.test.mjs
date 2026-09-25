@@ -41,7 +41,7 @@ test('the CSS fix for a bare <a class="cta-btn"> (not just inside .cta-topo-form
     if (!html.includes('.cta-topo-form .cta-btn, .cta-topo > .cta-btn {')) {
       failures.push(`${path}: missing the broadened .cta-btn selector`);
     }
-    if (!html.includes('.cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #2a3f66; }')) {
+    if (!html.includes('.cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #4A5A28; }')) {
       failures.push(`${path}: missing the broadened .cta-btn:hover selector`);
     }
   }
