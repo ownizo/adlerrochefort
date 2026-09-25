@@ -321,8 +321,8 @@ export const EN_INDEPENDENCE = [
   // tag-bearing left-hand sides keep these away from the prose rules below.
   ['<div>Independent insurance broker</div>', '<div>Not tied to a single insurer</div>'],
   [
-    '<strong>Independent and English-speaking</strong>, based in Lagos, Algarve.',
-    '<strong>English-speaking and not tied to a single insurer</strong>, based in Lagos, Algarve.',
+    '<strong>Not tied to a single insurer</strong>, with offices in Lisbon and Lagos and clients across Portugal and Spain.',
+    '<strong>Not tied to a single insurer</strong>, with offices in Lisbon and Lagos and clients across Portugal and Spain.',
   ],
 
   // Generic "independent broker" forms, longest first. These only reach text
@@ -448,8 +448,8 @@ export const DE_INDEPENDENCE = [
   // the old wording, or a future person running this pass expecting it to
   // cover /de/, lands on the corrected form rather than reintroducing the gap.
   [
-    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal. Klare Beratung, in unserem Versichererportfolio.',
-    'Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.',
+    'Versicherungsmakler für Privatmandanten in Portugal und Spanien, mit Büros in Lissabon und Lagos.',
+    'Versicherungsmakler für Privatmandanten in Portugal und Spanien — bei der ASF registriert unter Nr. 425591790/3, Büros in Lissabon und Lagos.',
   ],
 ];
 

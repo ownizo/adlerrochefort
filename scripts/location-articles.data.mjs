@@ -256,7 +256,7 @@ export const ARTICLES = [
       ['Quinta do Lago or Vale do Lobo villa, high specification', 'from &euro;2,000, individually underwritten'],
       ['Workers&rsquo; compensation, one part-time housekeeper', '&euro;90&ndash;&euro;180'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance broker working across the Algarve. For a property in the Golden Triangle the useful starting point is the plot rather than the house: what stands on it, what is let, and who works there. Send that through the form below or on WhatsApp and you will have a written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered private-client broker working across Portugal and Spain. For a property in the Golden Triangle the useful starting point is the plot rather than the house: what stands on it, what is let, and who works there. Send that through the form below or on WhatsApp and you will have a written comparison within 24 hours.</p>`,
     faq: [
       [
         'Is the swimming pool covered by a standard Portuguese home policy?',
@@ -307,9 +307,9 @@ export const ARTICLES = [
       'home insurance Sagres, Vila do Bispo house insurance, Salema property insurance, Burgau home insurance, salt corrosion insurance Portugal, off-grid house insurance Algarve',
     cta: CTA(
       'A property in the south-west corner?',
-      'We are in Lagos, half an hour away, and we write a lot of this coast. Send us the details.'
+      'We write a lot of this coast from our Lagos office. Send us the details.'
     ),
-    intro: `<p>The south-west corner of the Algarve &mdash; Sagres, Vila do Bispo, Raposeira, Salema and Burgau &mdash; is the most wind-exposed prime residential location on the Portuguese mainland. It is also the natural extension of our own patch: our office is in Lagos, half an hour up the road, and this is a coast we write regularly.</p>
+    intro: `<p>The south-west corner of the Algarve &mdash; Sagres, Vila do Bispo, Raposeira, Salema and Burgau &mdash; is the most wind-exposed prime residential location on the Portuguese mainland. It is also a coast we write regularly from our Lagos office.</p>
 <p>The insurance problem here is not exotic. It is that the dominant cause of damage is <em>continuous</em>, and continuous is precisely what a property policy is written not to cover.</p>`,
     body: [
       [
@@ -347,7 +347,7 @@ export const ARTICLES = [
       ['Rural property with off-grid generation, declared', '&euro;450&ndash;&euro;950'],
       ['Property let as Alojamento Local', '&euro;380&ndash;&euro;700'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance broker based in Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered private-client broker with offices in Lisbon and Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
     faq: [
       [
         'Is wind damage covered in Sagres?',
@@ -454,7 +454,7 @@ export const ARTICLES = [
       ],
       [
         'Do you cover Sintra and Cascais from the Algarve?',
-        'Yes. Placement, documentation and claims are handled in writing and by phone wherever the property is, and we deal with the insurer and the loss adjuster in Portuguese on your behalf. Our office is in Lagos; the property does not have to be.',
+        'Yes. Placement, documentation and claims are handled in writing and by phone wherever the property is, and we deal with the insurer and the loss adjuster in Portuguese on your behalf. We work from Lisbon and Lagos; the property can be anywhere in Portugal.',
       ],
     ],
     related: [
@@ -491,7 +491,7 @@ export const ARTICLES = [
       'Tell us which island, how the property sits relative to a ribeira, and whether it is let. We will say in writing what a Portuguese policy will and will not do.'
     ),
     intro: `<p>Madeira is a Portuguese risk, written on a Portuguese <em>multirriscos</em>, and it is not a Lagos villa with the island&rsquo;s name swapped in. The south coast is built at the bottom of steep volcanic catchments. When rain is intense the <em>ribeiras</em> do not rise like a mainland river. They carry water, rock and soil into the towns that sit at their mouths.</p>
-<p>Our office is in Lagos, on the mainland. We do not have an address in Funchal, and we do not describe a book of Madeira business we do not have. What we can do is place a Portuguese policy, in writing, once the property and the way it is used are described accurately. This page is the underwriting difference. It is not a price list &mdash; we are not publishing an indicative premium for an island we have not priced in public.</p>`,
+<p>Our offices are in Lisbon and Lagos, on the mainland. We do not have an address in Funchal, and we do not describe a book of Madeira business we do not have. What we can do is place a Portuguese policy, in writing, once the property and the way it is used are described accurately. This page is the underwriting difference. It is not a price list &mdash; we are not publishing an indicative premium for an island we have not priced in public.</p>`,
     body: [
       [
         'The 2010 <em>aluvi&atilde;o</em> is the reference event',
@@ -530,7 +530,7 @@ export const ARTICLES = [
       ['Landslip', 'Elective where an insurer offers it, with its own excess. Gradual erosion is not insured.'],
       ['Empty for the winter, or let to guests', 'Both have to be declared. A residential permanent-home wording does not cover either by default.'],
     ],
-    closing: `<p>We are an ASF-registered, English-speaking insurance broker. The registered office is in Lagos. The property can be in Funchal. Send the address, which island, whether a <em>ribeira</em> or a slope is part of the picture, the rebuild figure and whether anyone lets it. You will have a written answer within 24 hours, including where a wording will not do what the place name suggests.</p>`,
+    closing: `<p>We are an ASF-registered, English-speaking insurance broker. Our offices are in Lisbon and Lagos. The property can be in Funchal. Send the address, which island, whether a <em>ribeira</em> or a slope is part of the picture, the rebuild figure and whether anyone lets it. You will have a written answer within 24 hours, including where a wording will not do what the place name suggests.</p>`,
     faq: [
       [
         'Do you have an office in Funchal?',

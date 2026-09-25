@@ -24,7 +24,7 @@ export const MOTOR_PAGE = {
   h1: 'Autoversicherung in Portugal: Kennzeichen, Deckung und Ihre Fahrhistorie',
   standfirst:
     'Die Frage ist selten, ob Sie Ihr Auto mitbringen können — sondern ob sich das lohnt, und wie Sie die Deckungslücke zwischen deutschem und portugiesischem Kennzeichen vermeiden. Diese Seite ordnet beides ein, ohne Zusagen zu machen, die kein Versicherer garantieren kann.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},

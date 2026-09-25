@@ -45,8 +45,8 @@ const ALGARVE_PAGE = {
   eyebrow: 'Regional · Algarve',
   h1: 'Versicherung an der Algarve',
   standfirst:
-    'Wir sitzen in Lagos, mitten in der Algarve — das ist keine Marketingaussage, sondern unsere registrierte Geschäftsadresse. Diese Seite ordnet ein, welche Risiken für deutsche Eigentümer und Expats an der Algarve tatsächlich zählen.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+    'Mit einem Büro in Lagos kennen wir die Algarve aus der Praxis, nicht aus dem Prospekt. Diese Seite ordnet ein, welche Risiken für deutsche Eigentümer und Expats an der Algarve tatsächlich zählen.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -91,11 +91,11 @@ const ALGARVE_PAGE = {
   faqTitle: 'Versicherung Algarve — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro an der Algarve?',
-      a: '<p>Ja — unsere registrierte Geschäftsadresse ist in Lagos, an der westlichen Algarve.</p>',
+      q: 'Haben Sie ein Büro an der Algarve?',
+      a: '<p>Ja — eines unserer beiden Büros ist in Lagos, an der westlichen Algarve; das andere in Lissabon.</p>',
     },
     {
-      q: 'Versichert ihr auch das Hinterland, nicht nur die Küste?',
+      q: 'Versichern Sie auch das Hinterland, nicht nur die Küste?',
       a: '<p>Ja, ganz Portugal. An der Algarve kennen wir die westliche Region am besten — von Küstenorten bis zum bewaldeten Hinterland um Monchique, wo das Waldbrandrisiko eine andere Gewichtung braucht als an der Küste.</p>',
     },
     {
@@ -124,13 +124,13 @@ const LAGOS_PAGE = {
   url: '/de/versicherung-lagos/',
   title: 'Versicherung in Lagos | Adler & Rochefort',
   description:
-    'Hausversicherung, Krankenversicherung und Autoversicherung in Lagos, Algarve — Altstadtwohnungen in propriedade horizontal, Marina und Boote, und der Sitz unseres Maklerbüros vor Ort.',
+    'Hausversicherung, Krankenversicherung und Autoversicherung in Lagos, Algarve — Altstadtwohnungen in propriedade horizontal, Marina und Boote, und eines unserer beiden Büros vor Ort.',
   keywords: 'Versicherung Lagos, Hausversicherung Lagos Algarve, Versicherungsmakler Lagos, Wohnungsversicherung Lagos Altstadt',
   eyebrow: 'Regional · Lagos',
   h1: 'Versicherung in Lagos',
   standfirst:
-    'Lagos ist nicht nur eine Stadt, die wir bedienen — es ist unsere registrierte Geschäftsadresse. Diese Seite behandelt die Themen, die in Lagos konkret vorkommen: Altstadtwohnungen, Marina und Boote, und die Übergänge zum westlichen Algarve-Hinterland.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+    'Lagos ist nicht nur eine Stadt, die wir bedienen — es ist einer unserer beiden Bürostandorte. Diese Seite behandelt die Themen, die in Lagos konkret vorkommen: Altstadtwohnungen, Marina und Boote, und die Übergänge zum westlichen Algarve-Hinterland.',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -143,7 +143,7 @@ const LAGOS_PAGE = {
   formBranch: '',
   formSubject: 'Versicherung Lagos',
   formCta: 'Angebot anfragen',
-  formIntro: 'Sagen Sie uns, worum es geht — wir sitzen in Lagos und kennen die Stadt und ihre Versicherer direkt vor Ort.',
+  formIntro: 'Sagen Sie uns, worum es geht — wir haben ein Büro in Lagos und kennen die Stadt aus der Praxis.',
   formPlaceholder: 'Zum Beispiel: Altstadt oder Neubaugebiet, Wohnung oder Haus, Boot vorhanden, Haupt- oder Zweitwohnsitz.',
   sections: `
 <section class="section plain" aria-labelledby="altstadt">
@@ -169,8 +169,8 @@ const LAGOS_PAGE = {
   faqTitle: 'Versicherung Lagos — häufige Fragen',
   faq: [
     {
-      q: 'Ist euer Büro wirklich in Lagos?',
-      a: '<p>Ja, das ist unsere registrierte Geschäftsadresse (Varandas de São João 4, 8600-324 Lagos).</p>',
+      q: 'Ist Ihr Büro wirklich in Lagos?',
+      a: '<p>Ja. Lagos ist einer unserer beiden Bürostandorte; der andere ist Lissabon.</p>',
     },
     {
       q: 'Deckt die Police der Eigentümergemeinschaft meine Altstadtwohnung vollständig ab?',
@@ -198,7 +198,7 @@ const LISSABON_PAGE = {
   h1: 'Versicherung in Lissabon',
   standfirst:
     'Wir betreuen Kunden in Lissabon. Die Stadt bringt ein Thema besonders oft mit sich: hochwertige Eigentumswohnungen, deren Bausubstanz kollektiv über die Eigentümergemeinschaft versichert ist — und die Frage, wo diese Police endet.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -234,8 +234,8 @@ const LISSABON_PAGE = {
       a: '<p>Nein. Sie deckt die Bausubstanz und die Gemeinschaftsflächen, oft zu einer veralteten Summe. Innenausbau, Hausrat und Ihre eigene Haftpflicht als Bewohner brauchen eine eigene Police.</p>',
     },
     {
-      q: 'Habt ihr ein Büro in Lissabon?',
-      a: '<p>Unsere registrierte Geschäftsadresse ist in Lagos, Algarve. Wir betreuen Kunden in ganz Portugal, einschließlich Lissabon.</p>',
+      q: 'Haben Sie ein Büro in Lissabon?',
+      a: '<p>Ja. Unser Büro in Lissabon ist an der Av. do Atlântico 16 (Parque das Nações); das zweite ist in Lagos. Wir betreuen Mandanten in ganz Portugal und in Spanien.</p>',
     },
   ],
   related: [
@@ -257,7 +257,7 @@ const CASCAIS_PAGE = {
   h1: 'Versicherung in Cascais',
   standfirst:
     'Wir betreuen Kunden in Cascais und an der Costa do Estoril. Zwischen hochwertigen Eigentumswohnungen und freistehenden Villen braucht jede Immobilie eine andere Antwort auf dieselbe Frage: Was deckt die Gebäudepolice, und was nicht?',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -314,7 +314,7 @@ const PORTIMAO_PAGE = {
   h1: 'Versicherung in Portimão',
   standfirst:
     'Wir betreuen Kunden in Portimão. Ein Teil des Wohnungsbestands der Stadt stammt aus den Jahrzehnten des touristischen Ausbaus — und genau das Baujahr ist bei einer portugiesischen Hausversicherung eine der ersten Fragen, die der Versicherer stellt.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -379,7 +379,7 @@ const CARVOEIRO_PAGE = {
   h1: 'Versicherung in Carvoeiro',
   standfirst:
     'Wir betreuen Kunden in Carvoeiro. Der Concelho Lagoa hat einen der höchsten Zweitwohnsitz-Anteile, mit denen wir arbeiten, und die Klippenlage vieler Immobilien braucht eine Deckung, die genau das berücksichtigt.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -451,7 +451,7 @@ const VILAMOURA_PAGE = {
   h1: 'Versicherung in Vilamoura',
   standfirst:
     'Wir betreuen Kunden in Vilamoura. Zwischen Marina, Eigentumswohnungen in Ferienanlagen und saisonaler Nutzung braucht kaum eine Immobilie hier dieselbe Antwort wie die nebenan.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -516,7 +516,7 @@ const QUINTA_DO_LAGO_PAGE = {
   h1: 'Versicherung in Quinta do Lago',
   standfirst:
     'Wir betreuen Kunden in Quinta do Lago. Bei hochwertigen Villen entscheidet selten die Hauptpolice über den Schaden — sondern das, was daneben steht und häufig gar nicht deklariert ist.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},
@@ -587,7 +587,7 @@ const COMPORTA_PAGE = {
   h1: 'Versicherung in Comporta',
   standfirst:
     'Wir betreuen Kunden in Comporta und Melides. Die Architektur, die die Region prägt, liegt außerhalb dessen, wofür eine Standard-Multirriscos-Police geschrieben wurde — ein Haus hier wird platziert, nicht einfach quotiert.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Angebot anfragen',
   hreflang: {},
   langLinks: {},

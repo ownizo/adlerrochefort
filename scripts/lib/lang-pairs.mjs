@@ -57,7 +57,8 @@ export const PAGE_CLUSTERS = [
   // counterpart of their own, since neither had one before.
   { pt: '/seguros/rc-terapeuticas-nao-convencionais/', en: '/en/blog/liability-insurance-complementary-therapies/' },
   { pt: '/seguros/rc-yoga-pilates-bem-estar/', en: '/en/blog/yoga-instructor-liability-insurance-portugal/' },
-  { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
+  // /seguros-empresas-lagos/ retired (301 to /seguros/empresarial/, Sept 2026): EN+NL pair only.
+  { en: '/en/expat-insurance-lagos-portugal/', nl: '/nl/verzekeringen-portugal/' },
   // `de` added, same reasoning as /seguros/auto/ above.
   { pt: '/seguros/habitacao/', en: '/en/home-insurance-quote/', nl: '/nl/woonverzekering-portugal/', de: '/de/hausversicherung-portugal/' },
   // Missing entirely before this pass, same reasoning as /seguros/auto/

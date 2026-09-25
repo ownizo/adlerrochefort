@@ -153,7 +153,7 @@ const FAQ = [
   },
   {
     q: 'Do you treat Portugal and Spain the same way?',
-    a: 'We are honest about the difference. Portugal is our home market, with several years of insurer relationships in place. Spain is newer for us — we tell you plainly what can currently be arranged rather than assume parity between the two.',
+    a: 'We are honest about the difference. Portugal and Spain are served to the same standard, by the same adviser; where the rules or the insurers differ between the two markets, we explain the difference in writing.',
   },
 ];
 

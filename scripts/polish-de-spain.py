@@ -409,7 +409,7 @@ def body_pairs():
     ("Correspondence, claims and the policy explanation all happen in English, whichever country the property sits in.",
      "Korrespondenz, Schäden und die Erläuterung der Police laufen auf Deutsch — unabhängig davon, in welchem Land die Immobilie steht."),
     ("Same principle — the working language is English, and we ask about your own residency and tax position only where it genuinely affects the cover.",
-     "Dasselbe Prinzip — intern arbeiten wir auf Englisch, die Korrespondenz mit Ihnen auf Deutsch. Residenz und Steuerlage fragen wir nur, wo sie die Deckung wirklich berühren."),
+     "Dasselbe Prinzip — die Korrespondenz mit Ihnen läuft schriftlich auf Deutsch. Residenz und Steuerlage fragen wir nur, wo sie die Deckung wirklich berühren."),
     ("Time zones and distance make a written comparison more useful than a phone call; that is how we normally work in any case.",
      "Zeitzonen und Distanz machen einen schriftlichen Vergleich nützlicher als einen Anruf; so arbeiten wir ohnehin meist."),
     ("Both change the risk an insurer is actually being asked to price. Tell us the pattern of use and we will ask the right questions rather than the generic ones.",

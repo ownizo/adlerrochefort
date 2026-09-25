@@ -375,7 +375,7 @@ const PROP_NON_RESIDENT = {
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
-      <p>Tell us about the property and how it is used — including how often you are actually there — and we will confirm what can currently be arranged. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>
+      <p>Tell us about the property and how it is used — including how often you are actually there — and we will reply in writing with what we recommend. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>
     </div>
 
     <h2 id="faq">Frequently asked questions</h2>
@@ -448,7 +448,7 @@ const PROP_SECOND_HOME = {
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
-      <p>Tell us the actual occupancy pattern — how much of the year the property is used, and by whom — and we will confirm what can currently be arranged. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>
+      <p>Tell us the actual occupancy pattern — how much of the year the property is used, and by whom — and we will reply in writing with what we recommend. See <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>
     </div>
 
     <h2 id="faq">Frequently asked questions</h2>
@@ -521,7 +521,7 @@ const PROP_RENTING_OUT = {
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
-      <p>Tell us how the property is let — long-term, short-term, or a mix — and who manages it, and we will confirm what can currently be arranged. See <a href="/en/landlord-insurance-spain/">landlord insurance in Spain</a>.</p>
+      <p>Tell us how the property is let — long-term, short-term, or a mix — and who manages it, and we will reply in writing with what we recommend. See <a href="/en/landlord-insurance-spain/">landlord insurance in Spain</a>.</p>
     </div>
 
     <h2 id="faq">Frequently asked questions</h2>
@@ -612,7 +612,7 @@ const CAR_GUIDE = {
     <p>A Portuguese, British, or other foreign claims-free record does not transfer automatically. Some Spanish insurers will take a documented foreign record into account when quoting; not all do, and it is an underwriting decision rather than a guarantee. The mechanics of gathering that evidence properly are in <a href="/en/blog/no-claims-history-car-insurance-spain/">using foreign no-claims history for car insurance in Spain</a>.</p>
 
     <h2 id="quote">How to get a quote</h2>
-    <p>Start with the driver and the vehicle — you do not need every document to begin. Tell us your licence country, roughly how long you have held it, the vehicle's registration status, and where the car will be kept, and we will tell you what else is needed and what can currently be arranged.</p>
+    <p>Start with the driver and the vehicle — you do not need every document to begin. Tell us your licence country, roughly how long you have held it, the vehicle's registration status, and where the car will be kept, and we will tell you what else is needed and what we recommend.</p>
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
@@ -759,7 +759,7 @@ const CAR_FOREIGN_REG = {
 
     <div class="callout">
       <div class="callout-title">Where this leads</div>
-      <p>Tell us about the vehicle in the form on <a href="/en/car-insurance-spain/">car insurance in Spain</a> and we will confirm what can currently be arranged.</p>
+      <p>Tell us about the vehicle in the form on <a href="/en/car-insurance-spain/">car insurance in Spain</a> and we will reply in writing with what we recommend.</p>
     </div>
 
     <h2 id="faq">Frequently asked questions</h2>

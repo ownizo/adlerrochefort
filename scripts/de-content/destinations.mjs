@@ -33,7 +33,7 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  * motor, professional liability) are rendered by generate-de-cluster.mjs.
  */
 
-const META = 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve';
+const META = 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien';
 const PUBLISHED = '2026-09-22T12:00:00+00:00';
 
 export const LUZ_PAGE = {
@@ -41,7 +41,7 @@ export const LUZ_PAGE = {
   url: '/de/versicherung-luz/',
   title: 'Versicherung in Praia da Luz | Adler & Rochefort',
   description:
-    'Haus-, Kranken- und Autoversicherung in Praia da Luz. Villen und Zweitwohnsitze an der Bucht, Leerstand, Pool und der Sitz in Lagos — zehn Minuten entfernt.',
+    'Haus-, Kranken- und Autoversicherung in Praia da Luz. Villen und Zweitwohnsitze an der Bucht, Leerstand und Pool — aus unserem Büro in Lagos betreut.',
   keywords:
     'Versicherung Praia da Luz, Hausversicherung Luz Algarve, Versicherungsmakler Luz, Ferienhaus Versicherung Luz',
   eyebrow: 'Regional · Praia da Luz',
@@ -62,7 +62,7 @@ export const LUZ_PAGE = {
   formSubject: 'Versicherung Praia da Luz',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns, worum es geht — Villa, Zweitwohnsitz, Pool, Fahrzeug oder Krankenversicherung. Wir sitzen in Lagos, wenige Minuten entfernt.',
+    'Sagen Sie uns, worum es geht — Villa, Zweitwohnsitz, Pool, Fahrzeug oder Krankenversicherung. Unser Büro in Lagos liegt wenige Minuten entfernt.',
   formPlaceholder: 'Zum Beispiel: Villa oder Wohnung, Haupt- oder Zweitwohnsitz, Pool vorhanden, Leerstand über den Winter.',
   geo: { region: 'PT-08', placename: 'Praia da Luz, Lagos, Algarve' },
   sections: `
@@ -96,8 +96,8 @@ export const LUZ_PAGE = {
   faqTitle: 'Versicherung Praia da Luz — häufige Fragen',
   faq: [
     {
-      q: 'Sitzt ihr wirklich in der Nähe von Luz?',
-      a: '<p>Ja. Unsere registrierte Geschäftsadresse ist in Lagos, Varandas de São João 4, 8600-324 — wenige Minuten die Küste entlang.</p>',
+      q: 'Ist Ihr Büro wirklich in der Nähe von Luz?',
+      a: '<p>Ja. Eines unserer beiden Büros ist in Lagos, wenige Minuten die Küste entlang; das andere in Lissabon.</p>',
     },
     {
       q: 'Ist ein Ferienhaus in Luz anders zu versichern als ein Hauptwohnsitz?',
@@ -121,7 +121,7 @@ export const BURGAU_PAGE = {
   url: '/de/versicherung-burgau/',
   title: 'Versicherung in Burgau | Adler & Rochefort',
   description:
-    'Hausversicherung in Burgau an der Windküste. Atlantikwind, Salzluft und Leerstand — vom Sitz in Lagos, eine halbe Stunde entfernt.',
+    'Hausversicherung in Burgau an der Windküste. Atlantikwind, Salzluft und Leerstand — aus unserem Büro in Lagos betreut.',
   keywords:
     'Versicherung Burgau, Hausversicherung Burgau Algarve, Ferienhaus Versicherung Burgau, Versicherungsmakler westliche Algarve',
   eyebrow: 'Regional · Burgau',
@@ -142,7 +142,7 @@ export const BURGAU_PAGE = {
   formSubject: 'Versicherung Burgau',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns, worum es geht — Wohnung, Villa, Zweitwohnsitz oder Vermietung. Wir schreiben diese Küste regelmäßig, vom Sitz in Lagos.',
+    'Sagen Sie uns, worum es geht — Wohnung, Villa, Zweitwohnsitz oder Vermietung. Wir schreiben diese Küste regelmäßig, aus unserem Büro in Lagos.',
   formPlaceholder: 'Zum Beispiel: Wohnung oder Villa, Haupt- oder Zweitwohnsitz, Abstand zur Küste, Pool vorhanden.',
   geo: { region: 'PT-08', placename: 'Burgau, Vila do Bispo, Algarve' },
   sections: `
@@ -177,8 +177,8 @@ export const BURGAU_PAGE = {
       a: '<p>Nein. Korrosion, Rost und allmähliche Abnutzung sind marktüblich ausgeschlossen. Plötzlicher unfallartiger Schaden ist gedeckt; versagt ein Teil nach Jahren der Korrosion, wertet der Versicherer meist die Korrosion als Ursache.</p>',
     },
     {
-      q: 'Wie weit seid ihr von Burgau?',
-      a: '<p>Unser Sitz ist in Lagos, rund eine halbe Stunde entfernt. Die südwestlichen Concelhos schreiben wir regelmäßig.</p>',
+      q: 'Wie weit ist Ihr Büro von Burgau entfernt?',
+      a: '<p>Unser Büro in Lagos liegt rund eine halbe Stunde entfernt. Die südwestlichen Concelhos schreiben wir regelmäßig.</p>',
     },
   ],
   related: [
@@ -195,7 +195,7 @@ export const VILA_DO_BISPO_PAGE = {
   url: '/de/versicherung-vila-do-bispo/',
   title: 'Versicherung in Vila do Bispo | Adler & Rochefort',
   description:
-    'Hausversicherung in Vila do Bispo: Abgeschiedenheit, Assistance, Off-Grid-Anlagen und Wiederaufbau westlich von Lagos. Schriftlich, vom Sitz in Lagos.',
+    'Hausversicherung in Vila do Bispo: Abgeschiedenheit, Assistance, Off-Grid-Anlagen und Wiederaufbau westlich von Lagos. Schriftlich, aus Lissabon und Lagos.',
   keywords:
     'Versicherung Vila do Bispo, Hausversicherung Vila do Bispo, Off-Grid Versicherung Algarve, Ferienhaus Versicherung westliche Algarve',
   eyebrow: 'Regional · Vila do Bispo',
@@ -216,7 +216,7 @@ export const VILA_DO_BISPO_PAGE = {
   formSubject: 'Versicherung Vila do Bispo',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns Lage, Bauweise und ob die Immobilie am Netz hängt. Wir sitzen in Lagos und kennen die westlichen Concelhos aus der Praxis, nicht nur von der Karte.',
+    'Sagen Sie uns Lage, Bauweise und ob die Immobilie am Netz hängt. Unser Büro in Lagos kennt die westlichen Concelhos aus der Praxis, nicht nur von der Karte.',
   formPlaceholder: 'Zum Beispiel: Villa oder Quinta, Photovoltaik oder Batterie vorhanden, Bohrung, Leerstand, Schlüsselhalter vor Ort.',
   geo: { region: 'PT-08', placename: 'Vila do Bispo, Algarve' },
   sections: `
@@ -268,7 +268,7 @@ export const SAGRES_PAGE = {
   url: '/de/versicherung-sagres/',
   title: 'Versicherung in Sagres | Adler & Rochefort',
   description:
-    'Hausversicherung in Sagres: Atlantikwind gegen Sturmklausel, Salzluft, Isolation. Schriftlich erklärt, vom Sitz in Lagos — eine halbe Stunde entfernt.',
+    'Hausversicherung in Sagres: Atlantikwind gegen Sturmklausel, Salzluft, Isolation. Schriftlich erklärt, aus unserem Büro in Lagos.',
   keywords:
     'Versicherung Sagres, Hausversicherung Sagres Algarve, Ferienhaus Versicherung Sagres, Versicherungsmakler Sagres',
   eyebrow: 'Regional · Sagres',
@@ -289,14 +289,14 @@ export const SAGRES_PAGE = {
   formSubject: 'Versicherung Sagres',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns Lage, Bauweise und Nutzung. Wir sitzen in Lagos und schreiben diese Küste regelmäßig — Dach, Salz und Leerstand inklusive.',
+    'Sagen Sie uns Lage, Bauweise und Nutzung. Diese Küste schreiben wir regelmäßig aus unserem Büro in Lagos — Dach, Salz und Leerstand inklusive.',
   formPlaceholder: 'Zum Beispiel: Villa oder Wohnung, Abstand zur Klippe, Photovoltaik, Haupt- oder Zweitwohnsitz.',
   geo: { region: 'PT-08', placename: 'Sagres, Vila do Bispo, Algarve' },
   sections: `
 <section class="section plain" aria-labelledby="kueste">
   <div class="container narrow article-body">
     <h2 id="kueste">Die Windküste, von Lagos aus</h2>
-    <p>Die Südwestecke — Sagres, Vila do Bispo, Raposeira, Salema und Burgau — ist die windoffenste gefragte Wohnlage auf dem Festland. Sie ist auch die natürliche Verlängerung unseres eigenen Gebiets: der Sitz in Lagos liegt eine halbe Stunde die Straße hinauf, und diese Küste schreiben wir regelmäßig. Die Police hier kauft man für Feuer, Sturm, Wasser, Diebstahl und Haftpflicht — nicht in der Erwartung, dass der jährliche Salz- und Windverschleiß versichert sei. Den englischen Leitfaden zu genau dieser Küste: <a href="/en/blog/home-insurance-sagres-vila-do-bispo/" hreflang="en">Home insurance in Sagres, Vila do Bispo, Salema and Burgau</a>.</p>
+    <p>Die Südwestecke — Sagres, Vila do Bispo, Raposeira, Salema und Burgau — ist die windoffenste gefragte Wohnlage auf dem Festland. Diese Küste schreiben wir regelmäßig aus unserem Büro in Lagos. Die Police hier kauft man für Feuer, Sturm, Wasser, Diebstahl und Haftpflicht — nicht in der Erwartung, dass der jährliche Salz- und Windverschleiß versichert sei. Den englischen Leitfaden zu genau dieser Küste: <a href="/en/blog/home-insurance-sagres-vila-do-bispo/" hreflang="en">Home insurance in Sagres, Vila do Bispo, Salema and Burgau</a>.</p>
   </div>
 </section>
 
@@ -320,8 +320,8 @@ export const SAGRES_PAGE = {
       a: '<p>Sturmschaden ja. Fortschreitender Schaden durch den gewöhnlichen Wind des Jahres gilt als Unterhalt und ist nicht gedeckt. Das ist die zentrale Unterscheidung an dieser Küste.</p>',
     },
     {
-      q: 'Sitzt ihr in Sagres?',
-      a: '<p>Nein. Unsere registrierte Adresse ist in Lagos, eine halbe Stunde entfernt. Die südwestlichen Concelhos schreiben wir regelmäßig — nah genug, ein Dach zu sehen, statt nur darüber zu lesen.</p>',
+      q: 'Haben Sie ein Büro in Sagres?',
+      a: '<p>Nein. Unser Büro in Lagos liegt eine halbe Stunde entfernt, das zweite ist in Lissabon. Die südwestlichen Concelhos schreiben wir regelmäßig — nah genug, ein Dach zu sehen, statt nur darüber zu lesen.</p>',
     },
     {
       q: 'Was muss ich außer dem Haus angeben?',
@@ -364,7 +364,7 @@ export const MALLORCA_PAGE = {
   formMarket: 'spain',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Schildern Sie Immobilie, Nutzung und was sonst noch auf der Insel liegt — Fahrzeug, Boot, Kranken. Wir sagen schriftlich, was sich derzeit vermitteln lässt.',
+    'Schildern Sie Immobilie, Nutzung und was sonst noch auf der Insel liegt — Fahrzeug, Boot, Kranken. Wir antworten schriftlich mit unserer Empfehlung.',
   formPlaceholder: 'Zum Beispiel: Ort auf Mallorca, Villa oder Wohnung, Wochen Leerstand, Boot in der Marina, Resident oder nicht.',
   geo: { region: 'ES-PM', placename: 'Mallorca, Islas Baleares' },
   areaServed: { '@type': 'AdministrativeArea', name: 'Mallorca, Spain' },
@@ -392,19 +392,19 @@ export const MALLORCA_PAGE = {
 
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
-    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
-    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+    <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Mallorca — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro auf Mallorca?',
-      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      q: 'Haben Sie ein Büro auf Mallorca?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
-      q: 'Versichert ihr jedes Haus auf der Insel?',
-      a: '<p>Nein. Wir sagen ehrlich, dass die spanischen Versichererbeziehungen noch im Aufbau sind. Schildern Sie die Lage — wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.</p>',
+      q: 'Versichern Sie jedes Haus auf der Insel?',
+      a: '<p>Nicht jedes, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
     },
     {
       q: 'Muss ich Resident auf Mallorca sein?',
@@ -428,7 +428,7 @@ export const MADEIRA_PAGE = {
   url: '/de/versicherung-madeira/',
   title: 'Hausversicherung auf Madeira | Adler & Rochefort',
   description:
-    'Hausversicherung auf Madeira: Ribeiras, Aluvião, Sturm gegen Erdrutsch, Porto Santo als andere Insel. Vom Sitz in Lagos — kein Büro in Funchal, keine erfundenen Prämien.',
+    'Hausversicherung auf Madeira: Ribeiras, Aluvião, Sturm gegen Erdrutsch, Porto Santo als andere Insel. Aus Lissabon und Lagos betreut, schriftlich, ohne erfundene Prämien.',
   keywords:
     'Hausversicherung Madeira, Versicherung Funchal, Versicherung Ribeira Brava, Porto Santo Versicherung, Aluvião Versicherung',
   eyebrow: 'Regional · Madeira',
@@ -486,8 +486,8 @@ export const MADEIRA_PAGE = {
   faqTitle: 'Hausversicherung Madeira — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro in Funchal?',
-      a: '<p>Nein. Die registrierte Adresse ist in Lagos, Varandas de São João 4, 8600-324. Madeira wird als portugiesisches Risiko von dieser Registrierung aus schriftlich bearbeitet. Wir behaupten kein Büro und keinen örtlichen Bestand, den wir nicht haben.</p>',
+      q: 'Haben Sie ein Büro in Funchal?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Madeira ist ein portugiesisches Risiko und wird von dort aus schriftlich betreut — mit Besichtigung vor Ort, wenn der Versicherer sie verlangt.</p>',
     },
     {
       q: 'Deckt eine normale Überschwemmungsklausel einen Aluvião wie 2010?',
@@ -506,7 +506,7 @@ export const MADEIRA_PAGE = {
     { url: '/en/blog/home-insurance-madeira/', label: 'Home insurance in Madeira', hreflang: 'en' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/versicherung-portugal/', label: 'Versicherung in Portugal' },
-    { url: '/de/versicherung-lagos/', label: 'Sitz in Lagos' },
+    { url: '/de/versicherung-lagos/', label: 'Büros in Lissabon und Lagos' },
   ],
 };
 
@@ -538,7 +538,7 @@ export const COSTA_DEL_SOL_PAGE = {
   formMarket: 'spain',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Schildern Sie Ort, Immobilie und Nutzung — und was zwischen den Besuchen in Spanien bleibt. Wir sagen schriftlich, was sich derzeit vermitteln lässt.',
+    'Schildern Sie Ort, Immobilie und Nutzung — und was zwischen den Besuchen in Spanien bleibt. Wir antworten schriftlich mit unserer Empfehlung.',
   formPlaceholder: 'Zum Beispiel: Marbella oder Estepona, Villa oder Wohnung, Wochen Leerstand, Fahrzeug vor Ort, Resident oder nicht.',
   geo: { region: 'ES-MA', placename: 'Costa del Sol, Andalucía' },
   areaServed: { '@type': 'AdministrativeArea', name: 'Costa del Sol, Spain' },
@@ -566,19 +566,19 @@ export const COSTA_DEL_SOL_PAGE = {
 
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
-    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
-    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+    <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Costa del Sol — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro in Marbella?',
-      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      q: 'Haben Sie ein Büro in Marbella?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
-      q: 'Versichert ihr jede Villa an der Küste?',
-      a: '<p>Nein. Die spanischen Versichererbeziehungen sind noch im Aufbau. Schildern Sie die Lage — wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.</p>',
+      q: 'Versichern Sie jede Villa an der Küste?',
+      a: '<p>Nicht jede, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
     },
     {
       q: 'Muss ich in Spanien gemeldet sein?',
@@ -623,7 +623,7 @@ export const COSTA_BLANCA_PAGE = {
   formMarket: 'spain',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Ort, Wohnung oder Haus, und ob die Comunidad das Gebäude bereits versichert. Wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.',
+    'Ort, Wohnung oder Haus, und ob die Comunidad das Gebäude bereits versichert. Wir antworten schriftlich — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist.',
   formPlaceholder: 'Zum Beispiel: Alicante, Torrevieja oder Dénia, Wohnung in der Comunidad, Wochen Leerstand, Resident oder nicht.',
   geo: { region: 'ES-A', placename: 'Costa Blanca, Alicante' },
   areaServed: { '@type': 'AdministrativeArea', name: 'Costa Blanca, Spain' },
@@ -651,15 +651,15 @@ export const COSTA_BLANCA_PAGE = {
 
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
-    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
-    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+    <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Costa Blanca — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro in Alicante?',
-      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      q: 'Haben Sie ein Büro in Alicante?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Reicht die Versicherung der Comunidad?',
@@ -707,7 +707,7 @@ export const KANAREN_PAGE = {
   formMarket: 'spain',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Insel, Ort, Wohnung oder Haus, und wie viele Monate es leer steht. Wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.',
+    'Insel, Ort, Wohnung oder Haus, und wie viele Monate es leer steht. Wir antworten schriftlich — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist.',
   formPlaceholder: 'Zum Beispiel: Adeje auf Teneriffa, Puerto del Carmen, Corralejo oder Los Llanos, Wochen Leerstand, Vermietung.',
   geo: { region: 'ES-CN', placename: 'Islas Canarias' },
   areaServed: { '@type': 'AdministrativeArea', name: 'Canary Islands, Spain' },
@@ -735,15 +735,15 @@ export const KANAREN_PAGE = {
 
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
-    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
-    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+    <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Kanaren — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro auf Teneriffa?',
-      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus. Das gilt für jede Insel.</p>',
+      q: 'Haben Sie ein Büro auf Teneriffa?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus. Das gilt für jede Insel.</p>',
     },
     {
       q: 'Ist La Palma dasselbe Risiko wie Teneriffa?',
@@ -819,15 +819,15 @@ export const KATALONIEN_PAGE = {
 
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
-    <h2 id="ehrlichkeit">Was wir aufbauen — und was wir nicht versprechen</h2>
-    <p>Wir bauen unsere Versichererbeziehungen in Spanien auf. Statt zu raten, was sich platzieren lässt, stellen wir kurze Fragen zur Immobilie oder zur Lage und antworten schriftlich — einschließlich, wenn ein Fall derzeit außerhalb dessen liegt, was wir vermitteln können. Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. Spanische Policen werden gesetzlich auf Spanisch ausgestellt; wir sorgen dafür, dass Sie verstehen, was darin steht, bevor Sie unterschreiben.</p>
+    <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Katalonien — häufige Fragen',
   faq: [
     {
-      q: 'Habt ihr ein Büro in Barcelona?',
-      a: '<p>Nein. Unser Sitz ist in Lagos, Portugal. Katalonien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      q: 'Haben Sie ein Büro in Barcelona?',
+      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Katalonien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Reicht die Versicherung der Gemeinschaft in Barcelona?',

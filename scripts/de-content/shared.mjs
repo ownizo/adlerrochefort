@@ -14,7 +14,7 @@
 export const LANG_POLICY_DE = {
   heading: 'Unsere Arbeitssprache ist Englisch',
   body: [
-    'Diese Seite ist auf Deutsch. Intern ist unsere Arbeitssprache Englisch. Angebote, Erläuterungen zu den Bedingungen, Korrespondenz und Schadenabwicklung stellen wir Ihnen mit KI-Unterstützung auf Deutsch bereit — so klar, dass Sie den Unterschied kaum merken.',
+    'Diese Seite ist auf Deutsch. Angebote, Erläuterungen der Bedingungen, Korrespondenz und Schadenbegleitung erhalten Sie schriftlich auf Deutsch.',
     'Policen portugiesischer und spanischer Versicherer werden gesetzlich auf Portugiesisch bzw. Spanisch ausgestellt. Wir sorgen dafür, dass Sie genau verstehen, was darin steht — auf Deutsch, schriftlich, bevor Sie unterschreiben.',
   ],
 };

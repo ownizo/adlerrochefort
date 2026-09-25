@@ -27,7 +27,7 @@ export const ANWARTSCHAFT_PAGE = {
   h1: 'Anwartschaftsversicherung beim Umzug nach Portugal',
   standfirst:
     'Wer privat krankenversichert ist und nach Portugal zieht, steht vor einer Entscheidung, die kaum ein portugiesischer Ratgeber erklärt: die private Krankenversicherung einfach kündigen, oder über eine Anwartschaftsversicherung ruhend stellen? Die Antwort ist teuer zu korrigieren, wenn sie falsch getroffen wird — diese Seite ordnet den Mechanismus ein, ohne Ihnen zu sagen, was Ihr eigener Vertrag im Einzelnen erlaubt.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Beratung anfragen',
   hreflang: {},
   langLinks: {},

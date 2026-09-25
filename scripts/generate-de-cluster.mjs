@@ -245,15 +245,15 @@ function teamHtml(page) {
   <div class="container narrow">
     <span class="eyebrow">Ihr Ansprechpartner</span>
     <h2 id="team-title">Hugo Gonçalves</h2>
-    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Risk Management Specialist · ASF 425591790/3 · Lagos</p>
+    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Spezialist für Risikomanagement · ASF 425591790/3 · Lissabon · Lagos</p>
     <div class="de-team-grid">
       <picture>
         <source type="image/webp" srcset="/images/hugo-goncalves-640.webp">
         <img src="/images/hugo-goncalves-640.jpg" alt="Hugo Gonçalves, Gründer von Adler &amp; Rochefort" width="640" height="853" loading="lazy" decoding="async">
       </picture>
       <div class="article-body">
-        <p>Hugo Gonçalves ist der Gründer von Adler &amp; Rochefort. Er verbindet internationale Erfahrung mit einer klaren Spezialisierung auf Versicherungsberatung für internationale Mandanten in Portugal und, im Dienstleistungsverkehr, in Spanien. Jeder Fall wird im Detail gelesen, bevor eine Police empfohlen wird — unter Aufsicht der ASF.</p>
-        <p>Abschluss in Business Management der University of Hertfordshire, laufende Weiterbildung am Chartered Insurance Institute (CII). Korrespondenz mit Ihnen auf Deutsch; intern arbeiten wir auf Englisch. <a class="text-link" href="/de/#team">Mehr zum Team</a>.</p>
+        <p>Hugo Gonçalves ist der Gründer von Adler &amp; Rochefort. Er verbindet internationale Erfahrung mit einer klaren Spezialisierung auf Private-Client-Versicherung in Portugal und Spanien. Jeder Fall wird im Detail gelesen, bevor eine Police empfohlen wird — unter Aufsicht der ASF.</p>
+        <p>Abschluss in Business Management der University of Hertfordshire, laufende Weiterbildung am Chartered Insurance Institute (CII). Korrespondenz mit Ihnen schriftlich auf Deutsch. <a class="text-link" href="/de/#team">Mehr zum Team</a>.</p>
       </div>
     </div>
   </div>
@@ -605,7 +605,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Sitz in Lagos." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
+      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Büros in Lissabon und Lagos." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Registrierter Versicherungsmakler — ASF Nr. 425591790/3
@@ -659,7 +659,8 @@ ${footerLangs(page)}
       <ul class="footer-col-links">
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
-        <li><span>Varandas de São João 4<br>8600-324 Lagos, Algarve, Portugal</span></li>
+        <li><span>Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal</span></li>
+        <li><span>Varandas de São João 4<br>8600-324 Lagos, Portugal</span></li>
         <li><a href="#angebot">Angebot anfragen</a></li>
         <li>
           <div class="footer-social">
@@ -872,7 +873,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}"${
     ? `<section class="pullquote-band" aria-label="Zitat">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>Adler &amp; Rochefort · Lagos, Algarve</cite>
+    <cite>Adler &amp; Rochefort · Lisboa · Lagos</cite>
   </blockquote>
 </section>`
     : '';

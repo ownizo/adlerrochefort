@@ -36,12 +36,12 @@ add(
     "en/index.html",
     "Insurance in Portugal and Spain | Adler & Rochefort",
     "Independent insurance advice for international households in Portugal and Spain. Health, home, car, life and private-client cover, in English, in writing.",
-    "insurance Portugal, insurance Spain, insurance broker Algarve, private client insurance Portugal, international households Portugal Spain, home insurance Portugal, health insurance Portugal",
+    "insurance Portugal, insurance Spain, private client insurance broker Portugal Spain, private client insurance Portugal, international households Portugal Spain, home insurance Portugal, health insurance Portugal",
 )
 add(
     "en/about/index.html",
     "About Adler & Rochefort | Insurance in Portugal",
-    "ASF-registered insurance intermediary in Lagos. Independent written advice for international households with interests in Portugal and Spain.",
+    "ASF-registered insurance broker in Portugal and Spain. Independent written advice for international households with interests in Portugal and Spain.",
 )
 add(
     "en/apartment-insurance-portugal/index.html",
@@ -87,7 +87,7 @@ add(
     "en/expat-insurance-portugal/index.html",
     "Insurance in Portugal for International Clients | Adler & Rochefort",
     "Work out what health, home, landlord, car or life cover actually applies in Portugal. Independent written advice from an ASF-registered intermediary.",
-    "insurance for expats Portugal, insurance Portugal international residents, insurance broker Algarve, home insurance Portugal, health insurance Portugal",
+    "insurance for expats Portugal, insurance Portugal international residents, private client insurance broker Portugal Spain, home insurance Portugal, health insurance Portugal",
 )
 add(
     "en/expat-insurance-spain/index.html",
@@ -348,7 +348,7 @@ add(
 add(
     "de/versicherung-algarve/index.html",
     "Versicherung an der Algarve | Adler & Rochefort",
-    "Haus, Kranken und Auto für internationale Eigentümer an der Algarve. Küste, Leerstand, Pools und das private Kliniknetz — von unserem Sitz in Lagos.",
+    "Haus, Kranken und Auto für internationale Eigentümer an der Algarve. Küste, Leerstand, Pools und das private Kliniknetz — von unserem Büros in Lissabon und Lagos.",
 )
 add(
     "de/versicherung-carvoeiro/index.html",
