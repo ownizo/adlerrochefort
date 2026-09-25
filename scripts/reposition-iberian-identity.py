@@ -11,8 +11,6 @@ What this script does, and only this:
     formal "Sie" register expected by private clients;
   * replaces the "our Spanish insurer relationships are still being built"
     disclaimers with the current position;
-  * removes the insurer that is not to be named on the site from partner
-    lists.
 
 Local guides whose *subject* is Lagos or the Algarve keep their subject —
 only the sentences describing the firm change.
@@ -187,16 +185,8 @@ R = [
      "Agente de seguros para clientes privados, patrimónios de elevado valor e riscos profissionais, em Portugal e Espanha. Escritórios em Lisboa e Lagos."),
 ]
 
-# Partner lists: remove the insurer that must not be named anywhere on the site.
-PARTNER_RE = [
-    (re.compile(r'\s*<div class="partner-logo">\s*<(span|a)[^>]*>\s*Chubb\s*</(span|a)>\s*</div>'), ''),
-    (re.compile(r'\s*<(div|span|li)( class="[^"]*")?>\s*Chubb\s*</\1>'), ''),
-    (re.compile(r'Hiscox, Allianz, Zurich &amp; Chubb'), 'Hiscox, Allianz &amp; Zurich'),
-    (re.compile(r'Hiscox, Allianz, Zurich & Chubb'), 'Hiscox, Allianz & Zurich'),
-    (re.compile(r' · Chubb\b'), ''),
-    (re.compile(r", 'Chubb'"), ''),
-    (re.compile(r', "Chubb"'), ''),
-]
+# Partner lists are governed by data/partners.json and are not touched here.
+PARTNER_RE = []
 
 
 def in_scope(rel):
