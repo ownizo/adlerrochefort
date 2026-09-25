@@ -30,7 +30,7 @@ const T_TITLE_TAG =
 const T_HEADLINE = 'Home insurance in Lagos: what local property actually needs';
 const T_OG_TITLE = 'Home insurance in Lagos, Algarve: what local property actually needs';
 const T_DESC =
-  'Lagos runs from the historic walled centre to the clifftop villas of Porto de M&oacute;s and the flatlands of Meia Praia. Each needs a different policy. An English-speaking broker based in Lagos explains.';
+  'Lagos runs from the historic walled centre to the clifftop villas of Porto de M&oacute;s and the flatlands of Meia Praia. Each needs a different policy. An ASF-registered private-client broker explains.';
 const T_KEYWORDS =
   'home insurance Lagos Portugal, seguro habitação Lagos, Meia Praia insurance, Porto de Mós villa insurance, Lagos expat insurance broker';
 const T_TOPICS = 'casa_geral,lagos';

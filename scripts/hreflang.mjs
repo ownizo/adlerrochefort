@@ -128,7 +128,6 @@ const PAGE_CLUSTERS = [
   // so the selector and the tags now agree.
   { '/seguros/empresarial/': 'pt-PT', '/en/business-insurance-portugal/': 'en-GB' },
   {
-    '/seguros-empresas-lagos/': 'pt-PT',
     '/en/expat-insurance-lagos-portugal/': 'en-GB',
     '/nl/verzekeringen-portugal/': 'nl',
   },

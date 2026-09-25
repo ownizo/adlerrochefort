@@ -285,8 +285,8 @@ def translations() -> list[tuple[str, str]]:
         ("We are not tied to a single insurer. We put your needs first and find the right cover at the right price.",
          "Wir sind nicht an einen Versicherer gebunden. Ihre Bedürfnisse stehen zuerst — die passende Deckung zum passenden Preis."),
         ("Based in Portugal, serving both markets", "Sitz in Portugal, beide Märkte"),
-        ("Established in Lagos, Algarve, with several years arranging insurance for international clients — now extending that service to Spain on a cross-border basis.",
-         "Ansässig in Lagos, Algarve, seit mehreren Jahren für internationale Mandanten tätig — denselben Service erweitern wir grenzüberschreitend auf Spanien."),
+        ("Offices in Lisbon and Lagos, clients across Portugal and Spain, and one ASF registration that covers both markets.",
+         "Büros in Lissabon und Lagos, Mandanten in Portugal und Spanien — eine ASF-Registrierung für beide Märkte."),
         ("We handle your claim in English", "Schadenbegleitung auf Deutsch"),
         ("When something goes wrong, we manage the process end to end and make sure you receive what you are entitled to.",
          "Wenn etwas schiefgeht, begleiten wir den Prozess von Anfang bis Ende und achten darauf, dass Sie erhalten, was Ihnen zusteht."),
@@ -321,8 +321,8 @@ def translations() -> list[tuple[str, str]]:
         (">Email *</label>", ">E-Mail *</label>"),
         (">Phone</label>", ">Telefon</label>"),
         (">Company</label>", ">Unternehmen</label>"),
-        ("Insurer relationships and product availability vary by market — the insurers above operate in Portugal. Our Spanish insurer relationships are still being built; tell us what you need and we will confirm honestly what can currently be arranged in Spain.",
-         "Versichererbeziehungen und Produktverfügbarkeit unterscheiden sich je nach Markt — die oben genannten Versicherer sind in Portugal tätig. Unsere spanischen Beziehungen bauen wir noch auf; sagen Sie uns, was Sie brauchen, und wir sagen ehrlich, was sich derzeit in Spanien vermitteln lässt."),
+        ("Insurer relationships and product availability vary by market. In Spain we place with insurers licensed there and with specialist high-net-worth capacity; the insurer proposed is always named in writing with the proposal.",
+         "Versichererbeziehungen und Produktverfügbarkeit unterscheiden sich je nach Markt. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken; der vorgeschlagene Versicherer steht immer schriftlich im Angebot."),
     ]
     pairs.sort(key=lambda x: len(x[0]), reverse=True)
     return pairs

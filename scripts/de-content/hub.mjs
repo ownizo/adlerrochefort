@@ -24,7 +24,7 @@ export const HUB_PAGE = {
   h1: 'Nicht einfach versichert. <em>Richtig versichert.</em>',
   standfirst:
     'Versicherungsberatung für Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Wir vergleichen nicht nur Preise. Wir vergleichen, wie gut Sie wirklich geschützt sind.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Versicherung anfragen',
   heroCtaSecondary: 'Beratung anfragen',
   // Die Startseiten-Gruppe umfasst inzwischen zehn Sprachen (siehe
@@ -174,7 +174,7 @@ ${insurerPanel({
       </li>
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Vor Ort in Portugal.</strong> <span>An der Algarve ansässig, mit über 20 Jahren Erfahrung im Versicherungs- und Tourismussektor.</span></div>
+        <div><strong>Vor Ort in Portugal.</strong> <span>Büros in Lissabon und Lagos, Mandanten in Portugal und Spanien.</span></div>
       </li>
       <li>
         <span class="check">&#10003;</span>
@@ -194,20 +194,20 @@ ${insurerPanel({
   faqTitle: 'Versicherungen in Portugal — häufige Fragen',
   faq: [
     {
-      q: 'Seid ihr ein deutsches Versicherungsunternehmen?',
+      q: 'Sind Sie ein deutsches Versicherungsunternehmen?',
       a: '<p>Nein. Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., einem in Portugal bei der ASF registrierten Versicherungsmakler (Nr. 425591790/3). Wir vermitteln Policen portugiesischer und international tätiger Versicherer aus unserem Versichererportfolio — wir sind kein deutscher Versicherer und keine deutsche Niederlassung.</p>',
     },
     {
       q: 'In welcher Sprache läuft die Beratung ab?',
-      a: '<p>Diese Seiten sind auf Deutsch, weil die Themen deutsche Expats in Portugal betreffen. Intern ist unsere Arbeitssprache Englisch. Angebote, Erläuterungen, Korrespondenz und Schadenabwicklung stellen wir Ihnen mit KI-Unterstützung auf Deutsch bereit — so klar, dass Sie den Unterschied kaum merken. Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt; wir sorgen dafür, dass Sie auf Deutsch genau verstehen, was darin steht, bevor Sie unterschreiben.</p>',
+      a: '<p>Diese Seiten sind auf Deutsch, weil die Themen deutsche Expats in Portugal betreffen. Angebote, Erläuterungen, Korrespondenz und Schadenbegleitung erhalten Sie schriftlich auf Deutsch. Policen portugiesischer Versicherer werden gesetzlich auf Portugiesisch ausgestellt; wir sorgen dafür, dass Sie auf Deutsch genau verstehen, was darin steht, bevor Sie unterschreiben.</p>',
     },
     {
-      q: 'Was kostet die Beratung durch euch?',
+      q: 'Was kostet Ihre Beratung?',
       a: '<p>Nichts zusätzlich zur Prämie. Als Versicherungsmakler werden wir vom Versicherer vergütet, nicht von Ihnen. Ein Vergleich und eine Erläuterung der Bedingungen sind kostenlos und unverbindlich.</p>',
     },
     {
-      q: 'Arbeitet ihr in ganz Portugal oder nur an der Algarve?',
-      a: '<p>Wir sitzen in Lagos und kennen die westliche Algarve am besten. Versichern können wir in ganz Portugal; bei Themen wie Krankenversicherung und Hausversicherung ist lokale Marktkenntnis besonders wertvoll.</p>',
+      q: 'Arbeiten Sie in ganz Portugal oder nur an der Algarve?',
+      a: '<p>In ganz Portugal und in Spanien. Wir haben Büros in Lissabon und Lagos; Spanien betreuen wir im europäischen Dienstleistungsverkehr von unserer ASF-Registrierung aus.</p>',
     },
     {
       q: 'Wo sollte ich als Erstes ansetzen?',

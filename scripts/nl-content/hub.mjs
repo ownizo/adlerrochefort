@@ -20,7 +20,7 @@ export const HUB_PAGE = {
     'Verhuizen naar Portugal betekent dat elke verzekering die u had opnieuw moet worden ingericht — en dat een paar ervan op een ander moment ingaan dan u denkt. Hieronder staat per onderwerp wat er verandert, met op elke pagina het detail dat er werkelijk toe doet.',
   heroMeta:
     'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
-  hreflang: { pt: '/seguros-empresas-lagos/', en: '/en/expat-insurance-lagos-portugal/' },
+  hreflang: { en: '/en/expat-insurance-lagos-portugal/' },
   breadcrumb: [
     { name: 'Home', url: '/nl/' },
     { name: 'Verzekeringen Portugal' },

@@ -1,5 +1,5 @@
 {
   "_comment": "Single source of truth for the insurers displayed as Adler & Rochefort partners across the site (partner logo strips, homepage hero-trust lines, brand-chip rows, and any quote-form or meta-description copy that enumerates them). Do not add or remove a name here without the same approval this list itself required. This file does NOT govern editorial articles about a named insurer (e.g. /en/blog/medis-health-insurance-portugal/) — those stay untouched even for a name that is no longer a partner.",
   "updated": "2026-09-11",
-  "partners": ["Hiscox", "Allianz", "Zurich", "MGEN", "Asisa", "April", "Chubb"]
+  "partners": ["Hiscox", "Allianz", "Zurich", "MGEN", "Asisa", "April", "Chubb", "Hispania", "Innovarisk"]
 }

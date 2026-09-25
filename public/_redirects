@@ -135,3 +135,15 @@
 
 /guides/insurance-portugal-spain-international-residents    /en/blog/insurance-portugal-spain-international-residents/   301!
 /guides/insurance-portugal-spain-international-residents/*  /en/blog/insurance-portugal-spain-international-residents/   301!
+
+# ---------------------------------------------------------------------------
+# National / Iberian repositioning, September 2026.
+#
+# The Lagos-only business landing duplicated /seguros/empresarial/ and
+# anchored the firm to one town. Its audience is served by the national
+# business page; the Lagos expat guide (/en/expat-insurance-lagos-portugal/)
+# stays, as a local guide.
+# ---------------------------------------------------------------------------
+
+/seguros-empresas-lagos        /seguros/empresarial/   301!
+/seguros-empresas-lagos/*      /seguros/empresarial/   301!

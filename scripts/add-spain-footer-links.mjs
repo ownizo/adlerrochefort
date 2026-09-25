@@ -96,7 +96,7 @@ const NEW_REGULATORY_SENTENCE = (() => {
 })();
 
 const OLD_BRAND_DESC =
-  '<p class="footer-brand-desc">English-speaking, ASF-registered insurance broker in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>';
+  '<p class="footer-brand-desc">ASF-registered private-client insurance broker in Portugal and Spain. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>';
 const OLD_REGULATORY_SENTENCE =
   '<p>Ownizo, Unipessoal Lda. is registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3.</p>';
 

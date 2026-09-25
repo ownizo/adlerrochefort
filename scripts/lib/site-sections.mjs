@@ -37,7 +37,7 @@ const esc = (s) =>
  * Polish, Swedish, Danish and Chinese. Only the heading and the lead above the
  * row are localised.
  */
-export const INSURERS = ['Hiscox', 'Allianz', 'Zurich', 'MGEN', 'Asisa', 'APRIL', 'Chubb'];
+export const INSURERS = ['Hiscox', 'Allianz', 'Zurich', 'MGEN', 'Asisa', 'APRIL', 'Chubb', 'Hispania', 'Innovarisk'];
 
 /**
  * Render the insurer panel.

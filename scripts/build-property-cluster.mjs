@@ -125,7 +125,7 @@ const FOOTER = `
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">English-speaking, ASF-registered insurance broker in the Algarve. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
+      <p class="footer-brand-desc">ASF-registered private-client insurance broker in Portugal and Spain. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
     </div>
     <div>
       <div class="footer-col-title">Home &amp; Property</div>
@@ -156,6 +156,7 @@ const FOOTER = `
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
         <li><a href="https://wa.me/351928226570" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
+        <li>Av. do Atl&acirc;ntico 16, Esc. 5.07, 1990-019 Lisboa</li>
         <li>Varandas de S&atilde;o Jo&atilde;o 4, 8600-324 Lagos</li>
       </ul>
     </div>

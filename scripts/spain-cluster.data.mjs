@@ -597,7 +597,7 @@ const HOME = {
   eyebrow: 'Spain · Home insurance',
   h1: 'Home Insurance in Spain | Adler & Rochefort',
   heroSub:
-    'Whether the property is where you live full-time, a holiday home you use for part of the year, or an investment held from abroad, cover has to match how you actually use it. Tell us about the property and we will confirm what can currently be arranged.',
+    'Whether the property is where you live full-time, a holiday home you use for part of the year, or an investment held from abroad, cover has to match how you actually use it. Tell us about the property and we will reply in writing with what we recommend.',
   heroCta: 'Get a home insurance quote',
   heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
   topBarCta: 'Get a home insurance quote',
@@ -609,7 +609,7 @@ const HOME = {
     name: 'Home insurance guidance in Spain',
     type: 'Property insurance intermediation',
     description:
-      'Helping international owners of permanent residences, holiday homes and second homes in Spain work out what buildings and contents cover applies, and arranging it where it can be honestly confirmed.',
+      'Helping international owners of permanent residences, holiday homes and second homes in Spain work out what buildings and contents cover applies, and arranging it in writing.',
   },
 
   sections: [
@@ -803,7 +803,7 @@ const HOME = {
     },
     {
       q: 'Can you name which Spanish insurers you work with?',
-      a: 'Not yet, honestly — our Spanish insurer relationships are still being built. We ask about your property and situation and come back with a clear written answer on what can currently be arranged, rather than promise a panel we do not yet have.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. We ask about the property and the household first, and name the insurer in writing with the proposal.',
     },
     {
       q: 'Is this the same policy as for a property in Portugal?',
@@ -877,7 +877,7 @@ const LANDLORD = {
     name: 'Landlord insurance guidance in Spain',
     type: 'Rental property insurance intermediation',
     description:
-      'Helping international landlords letting property in Spain — long-term or short-term — work out what cover applies, and arranging it where it can be honestly confirmed.',
+      'Helping international landlords letting property in Spain — long-term or short-term — work out what cover applies, and arranging it in writing.',
   },
 
   sections: [
@@ -1060,7 +1060,7 @@ const LANDLORD = {
     },
     {
       q: 'Can you name which Spanish insurers offer landlord cover?',
-      a: 'Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what we can currently arrange than promise a panel that does not exist yet.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the property and the household, and is named in writing with the proposal.',
     },
   ],
 
@@ -1111,7 +1111,7 @@ const HEALTH = {
   eyebrow: 'Spain · Health insurance',
   h1: 'Health Insurance in Spain for Expats',
   heroSub:
-    'Moving to Spain, or already there and thinking about private cover? We help you work out what actually applies to your situation — individual or family, resident or arriving soon — and tell you honestly what can currently be arranged.',
+    'Moving to Spain, or already there and thinking about private cover? We help you work out what actually applies to your situation — individual or family, resident or arriving soon — and reply in writing with what we recommend.',
   heroCta: 'Get a Health Insurance Quote',
   heroSecondary: 'Ask About Your Situation',
   heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
@@ -1124,7 +1124,7 @@ const HEALTH = {
     name: 'Health insurance guidance in Spain',
     type: 'Private health insurance intermediation',
     description:
-      'Helping expats, international residents and families in Spain work out what private health cover applies to their situation, and arranging it where it can be honestly confirmed.',
+      'Helping expats, international residents and families in Spain work out what private health cover applies to their situation, and arranging it in writing.',
   },
 
   sections: [
@@ -1428,7 +1428,7 @@ const HEALTH = {
     },
     {
       q: 'Can you name which Spanish health insurers you work with?',
-      a: 'Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than name a panel we do not actually have.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
     },
     {
       q: 'What is the difference between domestic and international health cover?',
@@ -1513,7 +1513,7 @@ const CAR = {
   eyebrow: 'Spain · Car insurance',
   h1: 'Car Insurance in Spain for Expats',
   heroSub:
-    'Already driving in Spain, bringing a car with you, or buying one after you arrive? We help international clients understand what motor cover actually applies to their situation, and arrange it where it can be honestly confirmed.',
+    'Already driving in Spain, bringing a car with you, or buying one after you arrive? We help international clients understand what motor cover actually applies to their situation, and arrange it in writing.',
   heroCta: 'Get a Car Insurance Quote',
   heroSecondary: 'Ask About Your Vehicle',
   heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
@@ -1526,7 +1526,7 @@ const CAR = {
     name: 'Car insurance guidance in Spain',
     type: 'Motor insurance intermediation',
     description:
-      'Helping expats, international residents and foreign drivers in Spain work out what motor cover applies to their situation — foreign licences, foreign-registered vehicles included — and arranging it where it can be honestly confirmed.',
+      'Helping expats, international residents and foreign drivers in Spain work out what motor cover applies to their situation — foreign licences, foreign-registered vehicles included — and arranging it in writing.',
   },
 
   sections: [
@@ -1686,7 +1686,7 @@ const CAR = {
         {
           kind: 'note',
           html:
-            'Tell us about the vehicle and we will confirm what can currently be arranged — see <a href="/en/blog/foreign-registered-car-insurance-spain/">insuring a foreign-registered car in Spain</a> for the detail behind each of these factors.',
+            'Tell us about the vehicle and we will reply in writing with what we recommend — see <a href="/en/blog/foreign-registered-car-insurance-spain/">insuring a foreign-registered car in Spain</a> for the detail behind each of these factors.',
         },
       ],
     },
@@ -1842,11 +1842,11 @@ const CAR = {
     },
     {
       q: 'Can you insure a foreign-registered car kept in Spain?',
-      a: 'It depends on the vehicle, how long it has been or will be in Spain, and the insurer — this is genuinely more complex than insuring a Spanish-registered vehicle and we cannot promise availability in general terms. Tell us about the vehicle and we will confirm honestly what can currently be arranged.',
+      a: 'It depends on the vehicle, how long it has been or will be in Spain, and the insurer — this is genuinely more complex than insuring a Spanish-registered vehicle and we do not promise availability in general terms. Tell us about the vehicle and we will reply in writing.',
     },
     {
       q: 'Do you name which Spanish motor insurers you work with?',
-      a: 'Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than promise a panel that does not exist yet.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
     },
     {
       q: 'What documents do I need to import and register a car in Spain?',
@@ -1916,7 +1916,7 @@ const LIFE = {
   eyebrow: 'Spain · Life insurance',
   h1: 'Life Insurance in Spain for International Residents',
   heroSub:
-    'Whether it is protecting a family, a mortgage, or reviewing cover you already hold from another country, we help you work out what actually applies to your situation — and confirm honestly what can currently be arranged.',
+    'Whether it is protecting a family, a mortgage, or reviewing cover you already hold from another country, we help you work out what actually applies to your situation — in writing.',
   heroCta: 'Get a Life Insurance Review',
   heroSecondary: 'Discuss Your Situation',
   heroTrust: '<strong>English throughout</strong> · Registered with Portugal’s ASF (no. 425591790/3) · A written answer on what can be arranged',
@@ -1929,7 +1929,7 @@ const LIFE = {
     name: 'Life insurance guidance in Spain',
     type: 'Life insurance intermediation',
     description:
-      'Helping international residents in Spain work out what life and family-protection cover applies to their situation, including reviewing existing foreign cover, and arranging it where it can be honestly confirmed.',
+      'Helping international residents in Spain work out what life and family-protection cover applies to their situation, including reviewing existing foreign cover, and arranging it in writing.',
   },
 
   sections: [
@@ -2609,7 +2609,7 @@ const PRIVATE_CLIENTS = {
 
   form: {
     heading: 'Request a private client review',
-    sub: 'Tell us what you currently hold, and with whom. We will confirm what can be reviewed together and what can currently be arranged.',
+    sub: 'Tell us what you currently hold, and with whom. We reply in writing with what should be reviewed together and what we recommend.',
     name: 'private-client-review-spain',
     gaField: 'property_ownership',
     submit: 'Request my review',

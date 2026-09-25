@@ -427,7 +427,8 @@ const FOOTER = (page) => `<footer class="on-dark">
       <ul class="footer-col-links">
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
-        <li><span>Varandas de São João 4<br>8600-324 Lagos, Algarve, Portugal</span></li>
+        <li><span>Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal</span></li>
+        <li><span>Varandas de São João 4<br>8600-324 Lagos, Portugal</span></li>
         <li><a href="#offerte">Vraag een offerte aan</a></li>
         <li>
           <div class="footer-social">
@@ -600,7 +601,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
     ? `<section class="pullquote-band" aria-label="Citaat">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>Adler &amp; Rochefort · Lagos, Algarve</cite>
+    <cite>Adler &amp; Rochefort · Lisboa · Lagos</cite>
   </blockquote>
 </section>`
     : '';

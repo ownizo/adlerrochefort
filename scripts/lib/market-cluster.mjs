@@ -963,7 +963,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
     ? `<section class="pullquote-band" aria-label="${esc(ui.pullquoteAria)}">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>${iso(market, 'Adler &amp; Rochefort · Lagos, Algarve')}</cite>
+    <cite>${iso(market, 'Adler &amp; Rochefort · Lisboa · Lagos')}</cite>
   </blockquote>
 </section>`
     : '';

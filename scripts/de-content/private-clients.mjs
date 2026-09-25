@@ -27,7 +27,7 @@ export const PRIVATE_CLIENTS_PAGE = {
   h1: 'Private Clients: Versicherung für komplexere Risiken',
   standfirst:
     'Für internationale Familien, Eigentümer und Unternehmer mit komplexeren Risiken. Standardprodukte sind nicht für jedes Risiko gemacht — komplexe Vermögenswerte brauchen eine integrierte Risikoanalyse statt einer Police von der Stange.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lagos, Algarve',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
   heroCta: 'Private Client Beratung anfragen',
   hreflang: {},
   langLinks: {},
