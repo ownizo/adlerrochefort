@@ -212,7 +212,7 @@ function jsonLd(market, page) {
     datePublished: page.published,
     dateModified: page.modified || page.published,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${ORIGIN}${page.url}` },
-    image: `${ORIGIN}/images/og-image-adlerrochefort.png`,
+    image: `${ORIGIN}/images/og-adlerrochefort-en.png`,
     publisher: { '@id': `${ORIGIN}/#organization` },
   };
   if (page.schemaType === 'Article') {
@@ -987,7 +987,7 @@ ${hreflangTags(market, page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <meta property="og:url" content="${ORIGIN}${page.url}">
 <meta property="og:title" content="${esc(page.ogTitle || page.title)}">
 <meta property="og:description" content="${esc(page.ogDescription || page.description)}">
-<meta property="og:image" content="${ORIGIN}/images/og-image-adlerrochefort.png">
+<meta property="og:image" content="${ORIGIN}/images/og-adlerrochefort-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="${market.ogLocale}">
@@ -995,10 +995,10 @@ ${hreflangTags(market, page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(page.ogTitle || page.title)}">
 <meta name="twitter:description" content="${esc(page.ogDescription || page.description)}">
-<meta name="twitter:image" content="${ORIGIN}/images/og-image-adlerrochefort.png">
+<meta name="twitter:image" content="${ORIGIN}/images/og-adlerrochefort-en.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 ${jsonLd(market, page)}

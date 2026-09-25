@@ -363,7 +363,7 @@ export const ORGANIZATION = {
   alternateName: 'Ownizo, Unipessoal Lda.',
   url: `${ORIGIN}/`,
   logo: `${ORIGIN}/images/logo-adler-rochefort.png`,
-  image: `${ORIGIN}/images/og-image-adlerrochefort.png`,
+  image: `${ORIGIN}/images/og-adlerrochefort-pt.png`,
   telephone: '+351928226570',
   email: 'insurance@adlerrochefort.com',
   address: [
@@ -431,7 +431,7 @@ ${head}
 <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/ar-site.css">
 ${LIVRO_CSS}
 ${GA}

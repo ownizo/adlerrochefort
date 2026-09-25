@@ -159,7 +159,7 @@ export const HUB_PAGE = {
 
 ${insurerPanel({
   id: 'versicherer',
-  heading: 'Wir vergleichen die <em>führenden Versicherer</em>',
+  heading: 'Versicherer &amp; Co-Brokerage-Partner, <em>mit denen wir arbeiten</em>',
   lead:
     'Als Makler sind wir nicht an einen einzigen Versicherer gebunden. Wir beraten innerhalb unseres Versichererportfolios und wählen die passende Lösung für Ihre Situation.',
 })}

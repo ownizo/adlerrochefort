@@ -162,7 +162,7 @@ export const HUB_PAGE = {
     alt: 'Doradca ubezpieczeniowy dla obcokrajowców w Portugalii',
   },
   insurers: {
-    heading: 'Porównujemy <em>wiodących ubezpieczycieli</em>',
+    heading: 'Ubezpieczyciele i partnerzy co-brokerage, <em>z którymi współpracujemy</em>',
     lead:
       'Jako broker nie jesteśmy związani z jedną firmą. Doradzamy w ramach naszego portfela ubezpieczycieli i szukamy rozwiązania dopasowanego do Pana lub Pani sytuacji — nie tylko najtańszej składki.',
   },

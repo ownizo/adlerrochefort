@@ -30,11 +30,11 @@ ${PARTNERS.map((p) => `    <div class="partner-logo"><span class="partner-logo-t
 // logo strip below it lists the ones this claim is about.
 export const PARTNERS_PT = partnersSection(
   'Seguradoras parceiras',
-  'Comparamos as <em>seguradoras com que trabalhamos</em>'
+  'Seguradoras e parceiros de co-mediação <em>com quem trabalhamos</em>'
 );
 export const PARTNERS_EN = partnersSection(
   'Partner insurers',
-  'We compare the <em>insurers we work with</em>'
+  'Insurers &amp; co-brokerage partners <em>we work with</em>'
 );
 
 /** Renders one form field from a compact spec. */
@@ -108,7 +108,7 @@ const LANG_POLICY_CSS = `<style>
   .ar-langpolicy {
     max-width: 820px; margin: 0 auto; background: #FFFFFF;
     border: 1px solid #DAD5C8; border-left: 4px solid #5A6610;
-    padding: 34px 36px; font-family: 'Montserrat', system-ui, sans-serif;
+    padding: 34px 36px; font-family: 'Stolzl', 'Albert Sans', system-ui, sans-serif;
   }
   .ar-langpolicy h2 {
     font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; font-weight: 700;

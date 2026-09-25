@@ -43,7 +43,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     max-width: 100%;
   }
 .nav-logo-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 18px;
     font-weight: 600;
     color: var(--white);
@@ -174,7 +174,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 .mobile-accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
 .mobile-accordion-trigger {
     width: 100%; text-align: left; background: none; border: none; cursor: pointer;
-    font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 600;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif; font-size: 20px; font-weight: 600;
     color: rgba(255,255,255,0.8); padding: 14px 0;
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
   }
@@ -202,7 +202,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     margin-bottom: 52px;
   }
 .footer-brand-name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 20px; font-weight: 600;
     color: var(--white); letter-spacing: 0.04em;
     margin-bottom: 16px;
@@ -334,7 +334,7 @@ footer { padding: 56px 28px 36px; }
 .mobile-nav a {
     text-decoration: none;
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-weight: 600;
     color: rgba(255,255,255,0.8);
     padding: 14px 0;
@@ -350,7 +350,7 @@ footer { padding: 56px 28px 36px; }
 .mobile-lang-switcher a {
     text-decoration: none;
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-weight: 600;
     color: rgba(255,255,255,0.8);
     padding: 6px 14px;
@@ -489,7 +489,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     max-width: 100%;
   }
 .nav-logo-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 18px;
     font-weight: 600;
     color: var(--white);
@@ -595,7 +595,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     margin-bottom: 52px;
   }
 .footer-brand-name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 20px; font-weight: 600;
     color: var(--white); letter-spacing: 0.04em;
     margin-bottom: 16px;
@@ -726,7 +726,7 @@ footer { padding: 56px 28px 36px; }
 .mobile-nav a {
     text-decoration: none;
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-weight: 600;
     color: rgba(255,255,255,0.8);
     padding: 14px 0;
@@ -832,7 +832,7 @@ footer { padding: 48px 20px 28px; }
   .mobile-accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
 .mobile-accordion-trigger {
     width: 100%; text-align: left; background: none; border: none; cursor: pointer;
-    font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 600;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif; font-size: 22px; font-weight: 600;
     color: rgba(255,255,255,0.85); padding: 16px 0;
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
   }

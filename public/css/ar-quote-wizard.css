@@ -81,7 +81,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: var(--ink);
@@ -150,7 +150,7 @@
   background: none;
   border: 1px solid var(--border);
   padding: 14px 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -169,7 +169,7 @@
   background: var(--primary);
   border: none;
   padding: 14px 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;

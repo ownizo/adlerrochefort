@@ -41,7 +41,7 @@
  * leave the header with nothing in it at all. Hidden while the image is fine. */
 .nav-logo-mark {
   display: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -149,7 +149,7 @@
   .contact-form-field select {
     background: var(--white);
     border: 1px solid var(--border);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     color: var(--ink);
     -webkit-appearance: none;
     appearance: none;
@@ -289,7 +289,7 @@
   }
 
   .lp-table td:first-child {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 20px;
     font-weight: 700;
     color: var(--ink);
@@ -351,7 +351,7 @@
   display: flex;
   align-items: center;
   gap: 9px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 14px;
   color: var(--ink);
   cursor: pointer;
@@ -520,7 +520,7 @@
     padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
     background: var(--primary);
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Stolzl', 'Albert Sans', sans-serif;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.04em;

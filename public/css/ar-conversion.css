@@ -17,7 +17,7 @@
   --ar-wa-hover: #1ebe57;
 }
 
-.ar-cv { font-family: 'Montserrat', sans-serif; }
+.ar-cv { font-family: 'Stolzl', 'Albert Sans', sans-serif; }
 .ar-cv * { box-sizing: border-box; }
 
 /* ───────── Inline CTA band (intro / mid) ───────── */
@@ -63,7 +63,7 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -89,7 +89,7 @@
   padding: 36px;
 }
 .ar-cta-form-wrap h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--ar-ink);
@@ -124,7 +124,7 @@
 .ar-cta-form select,
 .ar-cta-form textarea {
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 15px;
   color: var(--ar-ink);
   background: var(--ar-cream);
@@ -165,7 +165,7 @@
 }
 .ar-cta-form-success-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 2.5; }
 .ar-cta-form-success h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 20px; color: var(--ar-ink); margin: 0 0 8px;
 }
 .ar-cta-form-success p { font-size: 15px; color: var(--ar-ink2); margin: 0; }
@@ -206,7 +206,7 @@
   margin: 52px 0 0;
 }
 .ar-faq h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--ar-ink);

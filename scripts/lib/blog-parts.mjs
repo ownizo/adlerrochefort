@@ -5,6 +5,13 @@
  */
 import { esc, ORIGIN } from './chrome.mjs';
 
+/** Language-specific social card when a page has no image of its own. */
+function defaultOgImage(canonical = '') {
+  if (canonical.startsWith('/de/')) return '/images/og-adlerrochefort-de.png';
+  if (/^\/(en|fr|nl|dk|se|pl|il|zh)\//.test(canonical)) return '/images/og-adlerrochefort-en.png';
+  return '/images/og-adlerrochefort-pt.png';
+}
+
 export function card(a, i = 0) {
   const img = a.image
     ? `<img src="${esc(a.image)}" alt="${esc(a.imageAlt || a.title)}" width="640" height="360" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;">`
@@ -231,12 +238,12 @@ export const metaHead = ({ title, description, canonical, ogImage, robots, hrefl
     `<meta property="og:title" content="${esc(title)}">`,
     `<meta property="og:description" content="${esc(description)}">`,
     `<meta property="og:url" content="${ORIGIN}${canonical}">`,
-    `<meta property="og:image" content="${ORIGIN}${ogImage || '/images/og-image-adlerrochefort.png'}">`,
+    `<meta property="og:image" content="${ORIGIN}${ogImage || defaultOgImage(canonical)}">`,
     `<meta property="og:site_name" content="Adler &amp; Rochefort">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${esc(title)}">`,
     `<meta name="twitter:description" content="${esc(description)}">`,
-    `<meta name="twitter:image" content="${ORIGIN}${ogImage || '/images/og-image-adlerrochefort.png'}">`,
+    `<meta name="twitter:image" content="${ORIGIN}${ogImage || defaultOgImage(canonical)}">`,
   ]
     .filter(Boolean)
     .join('\n');

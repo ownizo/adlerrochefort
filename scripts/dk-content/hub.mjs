@@ -183,7 +183,7 @@ export const HUB_PAGE = {
     alt: 'Forsikringsrådgiver for udlandsdanskere og andre udlændinge i Portugal',
   },
   insurers: {
-    heading: 'Vi sammenligner <em>førende forsikringsselskaber</em>',
+    heading: 'Forsikringsselskaber og co-brokerage-partnere, <em>vi samarbejder med</em>',
     lead:
       'Som mægler er vi ikke bundet til ét selskab. Vi rådgiver inden for vores portefølje af forsikringsselskaber og finder den løsning, der passer til din situation — ikke blot den laveste præmie.',
   },

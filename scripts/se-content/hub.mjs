@@ -167,7 +167,7 @@ export const HUB_PAGE = {
     alt: 'Försäkringsrådgivare för utlandsboende i Portugal',
   },
   insurers: {
-    heading: 'Vi jämför <em>ledande försäkringsbolag</em>',
+    heading: 'Försäkringsbolag och co-brokingpartner <em>vi samarbetar med</em>',
     lead:
       'Som förmedlare är vi inte bundna till ett enda bolag. Vi ger råd inom vår portfölj av försäkringsbolag och letar efter den lösning som passar din situation — inte bara den lägsta premien.',
   },

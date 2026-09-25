@@ -25,7 +25,7 @@
 
 .ar-langsel {
   position: relative;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Stolzl', 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1;
 }
 
@@ -343,7 +343,7 @@
    installs is a serif that sits visibly lower than its neighbours.
 
    No webfont: these are the CJK UI faces already installed on each platform.
-   Montserrat stays first so a mixed row keeps its Latin in the brand face.
+   The brand face stays first so a mixed row keeps its Latin in the brand face.
 
    The 13px the Latin rows use reads small in Chinese — the glyphs are denser
    — so the row and, on a Chinese page, the button label go up two points.
@@ -352,7 +352,7 @@
 .ar-langsel .ar-langsel-menu a[lang="zh-CN"],
 html[lang="zh-CN"] .ar-langsel .ar-langsel-label,
 html[lang="zh-CN"] .ar-langsel .ar-langsel-note {
-  font-family: 'Montserrat', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+  font-family: 'Stolzl', 'Albert Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans SC', 'WenQuanYi Micro Hei',
     system-ui, sans-serif;
 }
@@ -374,7 +374,7 @@ html[lang="zh-CN"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
 
    Same shape as the Chinese block above and the same reasoning: the Hebrew
    row needs a face that carries Hebrew, and on a Hebrew page the button label
-   and the row notes need it too. Montserrat stays first so the nine Latin
+   and the row notes need it too. The brand face stays first so the nine Latin
    rows in the menu are unaffected on every page, including this one.
 
    Direction is not set here. Each row carries its own `dir` from
@@ -390,7 +390,7 @@ html[lang="zh-CN"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
 .ar-langsel .ar-langsel-menu a[lang="he"],
 html[lang="he"] .ar-langsel .ar-langsel-label,
 html[lang="he"] .ar-langsel .ar-langsel-note {
-  font-family: 'Montserrat', system-ui, 'Segoe UI', 'Arial Hebrew',
+  font-family: 'Stolzl', 'Albert Sans', system-ui, 'Segoe UI', 'Arial Hebrew',
     'Noto Sans Hebrew', 'Noto Sans Hebrew UI', 'Alef', Arial, sans-serif;
 }
 

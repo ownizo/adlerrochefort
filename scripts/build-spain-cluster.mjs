@@ -64,7 +64,7 @@ const crossSellFor = (page) => {
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
 const ORIGIN = 'https://adlerrochefort.com';
-const OG_IMAGE = `${ORIGIN}/images/og-image-adlerrochefort.png`;
+const OG_IMAGE = `${ORIGIN}/images/og-adlerrochefort-en.png`;
 const PT_HUB = '/en/expat-insurance-portugal/';
 
 const esc = (s) =>
@@ -439,7 +439,7 @@ function render(page) {
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 ${serviceLd(page)}
