@@ -1478,7 +1478,9 @@
   /* ═══════════════ RESPONSIVE ═══════════════ */
   @media (max-width: 1024px) {
     .site-nav { padding: 0 28px; justify-content: space-between; }
-    .nav-links { display: none; }
+    .nav-links,
+    .nav-links-left,
+    .nav-links-right { display: none; }
     .nav-logo { position: static; left: auto; transform: none; }
     .nav-burger { display: flex; }
 

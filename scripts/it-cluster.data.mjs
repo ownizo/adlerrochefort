@@ -34,6 +34,13 @@ import { LIABILITY_PAGE } from './it-content/liability.mjs';
 import { MOVING_PAGE } from './it-content/moving.mjs';
 import { PROPERTY_PAGE } from './it-content/property.mjs';
 import { GUIDE_PAGE } from './it-content/guide.mjs';
+import { KR_PAGE } from './it-content/niche-kr.mjs';
+import { ESTATE_PAGE } from './it-content/niche-estate.mjs';
+import { BUILD_PAGE } from './it-content/niche-build.mjs';
+import { VILLALET_PAGE } from './it-content/niche-villalet.mjs';
+import { EQUINE_PAGE } from './it-content/niche-equine.mjs';
+import { AVIATION_PAGE } from './it-content/niche-aviation.mjs';
+import { CYBER_PAGE } from './it-content/niche-cyber.mjs';
 
 export { LANG_POLICY_IT, BREADCRUMB_ROOT } from './it-content/shared.mjs';
 
@@ -46,6 +53,16 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  // Specialist (HNW niche) pages — Portugal and Spain, placed through
+  // specialist markets and co-brokerage partners. Cluster keys niche-* are
+  // shared with the EN/DE/ES/PL counterparts for hreflang pairing.
+  KR_PAGE,
+  ESTATE_PAGE,
+  BUILD_PAGE,
+  VILLALET_PAGE,
+  EQUINE_PAGE,
+  AVIATION_PAGE,
+  CYBER_PAGE,
 ];
 
 export const IT_MARKET = {

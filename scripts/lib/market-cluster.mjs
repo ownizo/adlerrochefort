@@ -37,7 +37,7 @@ import {
   selectorTargets,
   LANG_BY_KEY,
 } from './lang-selector.mjs';
-import { marketPairs } from './market-hreflang.mjs';
+import { marketPairs, CLUSTER_X_DEFAULT } from './market-hreflang.mjs';
 import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
 import { clusterMegaNav, NAV_SCRIPT } from './mega-nav.mjs';
 import { livroLink, LIVRO_CSS, LIVRO_SCRIPT } from './livro.mjs';
@@ -190,6 +190,7 @@ function hreflangTags(market, page) {
   }
   out.push(`  <link rel="alternate" hreflang="${market.hreflang}" href="${ORIGIN}${page.url}">`);
   if (page.isHub) out.push(`  <link rel="alternate" hreflang="x-default" href="${ORIGIN}/">`);
+  else if (CLUSTER_X_DEFAULT[page.cluster]) out.push(`  <link rel="alternate" hreflang="x-default" href="${ORIGIN}${CLUSTER_X_DEFAULT[page.cluster]}">`);
   return out.join('\n') + '\n';
 }
 

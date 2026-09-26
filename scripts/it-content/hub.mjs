@@ -33,7 +33,7 @@ export const HUB_PAGE = {
   standfirst:
     'Residenze, arte e collezioni, responsabilità civile e tutela della famiglia, in Portogallo e in Spagna. Sottoscrizione individuale, consulenza per iscritto e un unico interlocutore — dal primo contatto al sinistro.',
   published: '2026-09-26T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-26T18:00:00+00:00',
   breadcrumb: [{ name: 'Home', url: '/it/' }],
   pullquote:
     'Una polizza non si giudica il giorno in cui si firma, ma il giorno in cui deve pagare.',
@@ -138,7 +138,44 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="guide">
+<section class="section plain" aria-labelledby="specialistiche">
+  <div class="container narrow article-body">
+    <h2 id="specialistiche">Coperture specialistiche</h2>
+    <p>Alcuni rischi di una famiglia con un patrimonio importante non rientrano in nessuna polizza standard. Li collochiamo attraverso mercati specializzati e partner di co-brokerage, in Portogallo e in Spagna, con lo stesso metodo: valutazione scritta, un unico consulente, assistenza nel sinistro.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-rapimento-estorsione/">Rapimento, riscatto ed estorsione (K&amp;R)</a></h3>
+        <p>Consulenti di crisi 24 ore su 24, rimborso di riscatti ed estorsioni, famiglia, personale e ospiti — con la riservatezza che questa copertura richiede.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-tenuta-vigneto/">Tenute, quintas e vigneti</a></h3>
+        <p>Casa padronale, cantina, stock di vino, incendio boschivo, enoturismo ed eventi in un unico programma coerente.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-costruzione-villa/">Costruzione e ristrutturazione di una villa</a></h3>
+        <p>Polizza CAR, responsabilità del committente, la casa esistente durante i lavori, la decennale spagnola e il passaggio alla polizza casa.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-affitto-villa-lusso/">Affitto di ville di lusso</a></h3>
+        <p>Danni degli ospiti, perdita di affitti, RC per piscina, barche ed eventi, personale — e le regole dell’Alojamento Local e delle licenze regionali spagnole.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-cavalli/">Cavalli e scuderie</a></h3>
+        <p>Mortalità e furto a valore concordato, spese veterinarie, scuderie e la responsabilità oggettiva del proprietario.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-aviazione-privata/">Aviazione privata e droni</a></h3>
+        <p>Corpi a valore concordato, RC verso terzi e passeggeri, equipaggio e droni sulla tenuta — esclusivamente tramite mercati aeronautici.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-cyber-frode-famiglia/">Cyber, frodi e furto d’identità</a></h3>
+        <p>Frodi sui bonifici durante l’acquisto di casa, estorsione informatica, furto d’identità e molestie online, con assistenza 24 ore su 24.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="guide">
   <div class="container narrow article-body">
     <h2 id="guide">Tre guide sulla situazione, non sul prodotto</h2>
     <ul class="hub-list">
@@ -158,7 +195,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="seconda-casa">
+<section class="section plain" aria-labelledby="seconda-casa">
   <div class="container narrow article-body">
     <h2 id="seconda-casa">Residenza a Lisbona, seconda casa al mare</h2>
     <p>Molte famiglie italiane che seguiamo hanno una combinazione precisa: la residenza principale a Lisbona, Cascais o Porto e una seconda casa in Algarve, alle Baleari, sulla Costa del Sol o in Italia. La seconda casa, usata alcuni mesi all’anno, non è un dettaglio per la compagnia: è un rischio diverso, e le condizioni lo trattano separatamente.</p>
@@ -173,7 +210,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="metodo">
+<section class="section tint" aria-labelledby="metodo">
   <div class="container narrow article-body">
     <h2 id="metodo">Come lavoriamo</h2>
     <ol class="process-steps">
@@ -187,7 +224,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="errori">
+<section class="section plain" aria-labelledby="errori">
   <div class="container narrow article-body">
     <h2 id="errori">Cinque errori che vediamo spesso</h2>
     <ul>

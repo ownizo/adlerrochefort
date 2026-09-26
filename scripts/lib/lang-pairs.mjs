@@ -29,6 +29,15 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Specialist (niche) pages, September 2026 — EN/DE hand-authored, ES/IT/PL
+  // generated (their groups also come from scripts/lib/market-hreflang.mjs).
+  { en: '/en/kidnap-ransom-extortion-insurance/', de: '/de/entfuehrung-loesegeld-versicherung/', es: '/es/seguro-secuestro-extorsion/', it: '/it/assicurazione-rapimento-estorsione/', pl: '/pl/ubezpieczenie-porwanie-okup/' },
+  { en: '/en/rural-estate-vineyard-insurance/', de: '/de/weingut-landgut-versicherung/', es: '/es/seguro-finca-vinedo/', it: '/it/assicurazione-tenuta-vigneto/', pl: '/pl/ubezpieczenie-winnica-posiadlosc/' },
+  { en: '/en/luxury-home-construction-insurance/', de: '/de/bauversicherung-luxusimmobilie/', es: '/es/seguro-obra-vivienda-lujo/', it: '/it/assicurazione-costruzione-villa/', pl: '/pl/ubezpieczenie-budowa-willi/' },
+  { en: '/en/luxury-villa-rental-insurance/', de: '/de/luxusvilla-vermietung-versicherung/', es: '/es/seguro-alquiler-villa-lujo/', it: '/it/assicurazione-affitto-villa-lusso/', pl: '/pl/ubezpieczenie-wynajem-willi/' },
+  { en: '/en/equine-horse-insurance/', de: '/de/pferdeversicherung/', es: '/es/seguro-caballos/', it: '/it/assicurazione-cavalli/', pl: '/pl/ubezpieczenie-koni/' },
+  { en: '/en/private-aviation-insurance/', de: '/de/privatflugzeug-versicherung/', es: '/es/seguro-aviacion-privada/', it: '/it/assicurazione-aviazione-privata/', pl: '/pl/ubezpieczenie-lotnictwo-prywatne/' },
+  { en: '/en/family-cyber-fraud-insurance/', de: '/de/cyber-betrug-versicherung-familie/', es: '/es/seguro-ciber-fraude-familiar/', it: '/it/assicurazione-cyber-frode-famiglia/', pl: '/pl/ubezpieczenie-cyber-oszustwa-rodzina/' },
   // The homepage cluster is the one place where all eight languages genuinely
   // have the same page. The three market homepages are not listed here: they
   // come from scripts/lib/market-hreflang.mjs, which derives them from the page

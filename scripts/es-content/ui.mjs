@@ -58,6 +58,17 @@ export const ES_BRANCHES = [
       { id: 'liability_clients', label: 'Dónde están los clientes o terceros', placeholder: 'p. ej., clientes en España y Portugal, visitas en Madrid' },
     ],
   },
+  // Specialist lines, placed through specialist markets and co-brokerage
+  // partners. The cluster uses the short form (no branch field groups), so
+  // these carry no extra fields: the page preselects the value and the
+  // free-text message carries the detail.
+  { value: 'Español · Secuestro y extorsión', label: 'Secuestro, rescate y extorsión (K&R)', legend: 'Secuestro y extorsión', fields: [] },
+  { value: 'Español · Finca y viñedo', label: 'Finca rústica, bodega o viñedo', legend: 'Finca y viñedo', fields: [] },
+  { value: 'Español · Obra de vivienda', label: 'Construcción o reforma de una vivienda de alto valor', legend: 'Obra de vivienda', fields: [] },
+  { value: 'Español · Alquiler de villa', label: 'Alquiler vacacional de una villa de lujo', legend: 'Alquiler de villa', fields: [] },
+  { value: 'Español · Caballos', label: 'Caballos, cuadras e instalaciones ecuestres', legend: 'Caballos', fields: [] },
+  { value: 'Español · Aviación privada', label: 'Aviación privada: aviones, helicópteros y drones', legend: 'Aviación privada', fields: [] },
+  { value: 'Español · Ciberriesgo y fraude', label: 'Ciberriesgo, fraude e identidad de la familia', legend: 'Ciberriesgo y fraude', fields: [] },
 ];
 
 export const ES_UI = {

@@ -142,7 +142,44 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="guias">
+<section class="section plain" aria-labelledby="especializadas">
+  <div class="container narrow article-body">
+    <h2 id="especializadas">Coberturas especializadas</h2>
+    <p>Algunos riesgos no se colocan en el mercado minorista. Los presentamos, a través de mercados especializados y de nuestros socios de mediación, con el mismo método: análisis por escrito y un único interlocutor. Cada guía trata las diferencias entre España y Portugal.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/es/seguro-secuestro-extorsion/">Secuestro, rescate y extorsión</a></h3>
+        <p>Consultoría de crisis 24/7, reembolso de rescates y extorsiones y total confidencialidad, para la familia y el personal, en todo el mundo.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-finca-vinedo/">Fincas, bodegas y viñedos</a></h3>
+        <p>Casa, explotación, vino en bodega, incendio forestal y enoturismo, de la Rioja al Douro, en un programa coherente.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-obra-vivienda-lujo/">Construir o reformar una vivienda de alto valor</a></h3>
+        <p>Todo riesgo construcción, responsabilidad del promotor, seguro decenal en España y la entrega sin un día al descubierto.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-alquiler-villa-lujo/">Alquiler vacacional de una villa de lujo</a></h3>
+        <p>Daños por huéspedes, pérdida de rentas, responsabilidad civil y el seguro que exigen la licencia turística y el Alojamento Local.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-caballos/">Caballos, cuadras e instalaciones ecuestres</a></h3>
+        <p>Mortalidad a valor convenido, veterinario, pérdida de uso y la responsabilidad objetiva del poseedor del caballo.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-aviacion-privada/">Aviación privada: aviones, helicópteros y drones</a></h3>
+        <p>Casco a valor convenido, responsabilidad frente a terceros y pasajeros y drones en la finca, a través de un socio especializado en aviación.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-ciber-fraude-familiar/">Ciberriesgo, fraude e identidad de la familia</a></h3>
+        <p>Transferencias desviadas en una compraventa, ciberextorsión, suplantación de identidad y ciberacoso, con respuesta 24 horas.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="guias">
   <div class="container narrow article-body">
     <h2 id="guias">Tres guías para la situación, no para el producto</h2>
     <ul class="hub-list">
@@ -162,7 +199,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="dos-casas">
+<section class="section plain" aria-labelledby="dos-casas">
   <div class="container narrow article-body">
     <h2 id="dos-casas">Una familia, dos países, un solo programa</h2>
     <p>Muchas de las familias con las que trabajamos tienen casa en los dos lados de la frontera: la residencia principal en Madrid o en Ciudad de México y una segunda vivienda en Lisboa, Cascais o la Comporta; o al revés, la vida en Lisboa y la casa de verano en la Costa del Sol. Lo habitual es que cada vivienda tenga su propia póliza, contratada en momentos distintos, con criterios distintos y con límites que nadie ha comparado.</p>
@@ -177,7 +214,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="como">
+<section class="section tint" aria-labelledby="como">
   <div class="container narrow article-body">
     <h2 id="como">Cómo trabajamos</h2>
     <ol class="process-steps">
@@ -191,7 +228,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="errores">
+<section class="section plain" aria-labelledby="errores">
   <div class="container narrow article-body">
     <h2 id="errores">Cinco errores que vemos una y otra vez</h2>
     <ul>

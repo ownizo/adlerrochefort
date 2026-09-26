@@ -18,7 +18,7 @@
  *   * no page carries a `wizard`. The per-page quote wizards validate a
  *     Portuguese NIF, a 0000-000 postcode and a Portuguese plate as required
  *     fields, which would lock out exactly the readers this cluster is for —
- *     families living in Spain. All eight pages share one short form,
+ *     families living in Spain. All pages share one short form,
  *     'es-solicitud', with the product preselected per page.
  */
 import { ES_UI, ES_BRANCHES } from './es-content/ui.mjs';
@@ -31,6 +31,13 @@ import { LIABILITY_PAGE } from './es-content/liability.mjs';
 import { MOVING_PAGE } from './es-content/moving.mjs';
 import { PROPERTY_PAGE } from './es-content/property.mjs';
 import { GUIDE_PAGE } from './es-content/guide.mjs';
+import { NICHE_KR_PAGE } from './es-content/niche-kr.mjs';
+import { NICHE_ESTATE_PAGE } from './es-content/niche-estate.mjs';
+import { NICHE_BUILD_PAGE } from './es-content/niche-build.mjs';
+import { NICHE_VILLALET_PAGE } from './es-content/niche-villalet.mjs';
+import { NICHE_EQUINE_PAGE } from './es-content/niche-equine.mjs';
+import { NICHE_AVIATION_PAGE } from './es-content/niche-aviation.mjs';
+import { NICHE_CYBER_PAGE } from './es-content/niche-cyber.mjs';
 
 export { LANG_POLICY_ES, BREADCRUMB_ROOT } from './es-content/shared.mjs';
 
@@ -43,6 +50,16 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  // Specialist lines (Portugal and Spain), placed through specialist markets
+  // and co-brokerage partners. Cluster keys niche-* pair them with the
+  // /it/ and /pl/ counterparts in scripts/lib/market-hreflang.mjs.
+  NICHE_KR_PAGE,
+  NICHE_ESTATE_PAGE,
+  NICHE_BUILD_PAGE,
+  NICHE_VILLALET_PAGE,
+  NICHE_EQUINE_PAGE,
+  NICHE_AVIATION_PAGE,
+  NICHE_CYBER_PAGE,
 ];
 
 export const ES_MARKET = {

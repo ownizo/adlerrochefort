@@ -22,6 +22,16 @@ import { LIABILITY_PAGE } from './pl-content/liability.mjs';
 import { MOVING_PAGE } from './pl-content/moving.mjs';
 import { PROPERTY_PAGE } from './pl-content/property.mjs';
 import { GUIDE_PAGE } from './pl-content/guide.mjs';
+// Specialist (niche) pages, September 2026. Each covers Portugal and Spain;
+// the `cluster` keys (niche-*) are shared with /en/, /de/, /es/ and /it/ so
+// the hreflang pairing falls out of the page objects.
+import { NICHE_KR_PAGE } from './pl-content/niche-kr.mjs';
+import { NICHE_ESTATE_PAGE } from './pl-content/niche-estate.mjs';
+import { NICHE_BUILD_PAGE } from './pl-content/niche-build.mjs';
+import { NICHE_VILLALET_PAGE } from './pl-content/niche-villalet.mjs';
+import { NICHE_EQUINE_PAGE } from './pl-content/niche-equine.mjs';
+import { NICHE_AVIATION_PAGE } from './pl-content/niche-aviation.mjs';
+import { NICHE_CYBER_PAGE } from './pl-content/niche-cyber.mjs';
 
 export { LANG_POLICY_PL, BREADCRUMB_ROOT } from './pl-content/shared.mjs';
 
@@ -34,6 +44,13 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  NICHE_KR_PAGE,
+  NICHE_ESTATE_PAGE,
+  NICHE_BUILD_PAGE,
+  NICHE_VILLALET_PAGE,
+  NICHE_EQUINE_PAGE,
+  NICHE_AVIATION_PAGE,
+  NICHE_CYBER_PAGE,
 ];
 
 export const PL_MARKET = {

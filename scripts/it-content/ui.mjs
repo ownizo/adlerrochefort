@@ -55,6 +55,16 @@ export const IT_BRANCHES = [
       { id: 'liability_clients', label: 'Dove si trovano clienti o terzi', placeholder: 'es. clienti in Italia e in Portogallo, ricevo clienti a Lisbona' },
     ],
   },
+  // Specialist (niche) branches, pre-selected by the seven niche pages. The
+  // short form renders no branch questionnaire, so `fields` stays empty; the
+  // value only reaches the inbox subject via insurance_type.
+  { value: 'IT · Rapimento ed estorsione (K&R)', label: 'Protezione K&R — rapimento ed estorsione', legend: 'Protezione K&R', fields: [] },
+  { value: 'IT · Tenute e vigneti', label: 'Tenute, quintas e vigneti', legend: 'La tenuta', fields: [] },
+  { value: 'IT · Costruzione e ristrutturazione', label: 'Costruzione o ristrutturazione di una villa', legend: 'Il cantiere', fields: [] },
+  { value: 'IT · Affitto di ville di lusso', label: 'Affitto di ville di lusso', legend: 'La villa in affitto', fields: [] },
+  { value: 'IT · Cavalli', label: 'Cavalli e scuderie', legend: 'I cavalli', fields: [] },
+  { value: 'IT · Aviazione privata', label: 'Aviazione privata e droni', legend: 'L’aeromobile', fields: [] },
+  { value: 'IT · Cyber e frodi (famiglia)', label: 'Cyber, frodi e furto d’identità', legend: 'La protezione digitale', fields: [] },
 ];
 
 export const IT_UI = {

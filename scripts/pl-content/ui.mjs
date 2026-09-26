@@ -59,6 +59,17 @@ export const PL_BRANCHES = [
       { id: 'liability_clients', label: 'Gdzie znajdują się klienci lub osoby trzecie', placeholder: 'np. klienci w Portugalii i w Polsce, pacjenci przyjmowani w gabinecie w Lizbonie' },
     ],
   },
+  // Specialist (niche) cover, September 2026 — one option per niche page,
+  // preselected there via `formBranch`. No per-branch questionnaire: the
+  // shared form is the short shape (PL_MARKET.shortForm), which never
+  // renders branch groups, and these risks are qualified in conversation.
+  { value: 'PL · Porwanie i okup', label: 'Porwanie, okup i wymuszenie (K&R)', legend: '', fields: [] },
+  { value: 'PL · Winnica i posiadłość', label: 'Posiadłość wiejska lub winnica', legend: '', fields: [] },
+  { value: 'PL · Budowa willi', label: 'Budowa lub remont domu o wysokiej wartości', legend: '', fields: [] },
+  { value: 'PL · Wynajem willi', label: 'Wynajem luksusowej willi', legend: '', fields: [] },
+  { value: 'PL · Konie', label: 'Konie i obiekty jeździeckie', legend: '', fields: [] },
+  { value: 'PL · Lotnictwo', label: 'Samoloty, śmigłowce i drony', legend: '', fields: [] },
+  { value: 'PL · Cyber i oszustwa', label: 'Cyberochrona i oszustwa — rodzina', legend: '', fields: [] },
 ];
 
 export const PL_UI = {

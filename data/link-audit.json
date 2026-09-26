@@ -1,19 +1,354 @@
 {
   "generated": "run scripts/link-audit.mjs to refresh",
   "totals": {
-    "htmlFiles": 439,
-    "indexedUrls": 430,
-    "brokenLinks": 0,
+    "htmlFiles": 510,
+    "indexedUrls": 473,
+    "brokenLinks": 84,
     "linksViaRedirect": 0,
-    "orphans": 1,
-    "singleInbound": 16,
-    "deeperThanThreeClicks": 9
+    "orphans": 0,
+    "singleInbound": 14,
+    "deeperThanThreeClicks": 3
   },
-  "broken": [],
-  "viaRedirect": [],
-  "orphans": [
-    "/de/versicherung-cascais/"
+  "broken": [
+    {
+      "from": "public/de/bauversicherung-luxusimmobilie/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/de/bauversicherung-luxusimmobilie/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/de/bauversicherung-luxusimmobilie/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/de/bauversicherung-luxusimmobilie/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/de/cyber-betrug-versicherung-familie/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/de/cyber-betrug-versicherung-familie/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/de/cyber-betrug-versicherung-familie/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/de/cyber-betrug-versicherung-familie/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/de/entfuehrung-loesegeld-versicherung/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/de/entfuehrung-loesegeld-versicherung/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/de/entfuehrung-loesegeld-versicherung/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/de/entfuehrung-loesegeld-versicherung/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/de/luxusvilla-vermietung-versicherung/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/de/luxusvilla-vermietung-versicherung/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/de/luxusvilla-vermietung-versicherung/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/de/luxusvilla-vermietung-versicherung/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/de/pferdeversicherung/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/de/pferdeversicherung/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/de/pferdeversicherung/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/de/pferdeversicherung/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/de/privatflugzeug-versicherung/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/de/privatflugzeug-versicherung/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/de/privatflugzeug-versicherung/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/de/privatflugzeug-versicherung/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/de/weingut-landgut-versicherung/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/de/weingut-landgut-versicherung/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/de/weingut-landgut-versicherung/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/de/weingut-landgut-versicherung/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/en/equine-horse-insurance/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/en/equine-horse-insurance/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/en/equine-horse-insurance/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/en/equine-horse-insurance/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/en/family-cyber-fraud-insurance/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/en/family-cyber-fraud-insurance/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/en/family-cyber-fraud-insurance/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/en/family-cyber-fraud-insurance/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/en/kidnap-ransom-extortion-insurance/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/en/kidnap-ransom-extortion-insurance/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/en/kidnap-ransom-extortion-insurance/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/en/kidnap-ransom-extortion-insurance/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/en/luxury-home-construction-insurance/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/en/luxury-home-construction-insurance/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/en/luxury-home-construction-insurance/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/en/luxury-home-construction-insurance/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/en/luxury-villa-rental-insurance/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/en/luxury-villa-rental-insurance/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/en/luxury-villa-rental-insurance/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/en/luxury-villa-rental-insurance/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/en/private-aviation-insurance/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/en/private-aviation-insurance/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/en/private-aviation-insurance/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/en/private-aviation-insurance/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/en/rural-estate-vineyard-insurance/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/en/rural-estate-vineyard-insurance/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/en/rural-estate-vineyard-insurance/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/en/rural-estate-vineyard-insurance/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-budowa-willi/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-budowa-willi/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-budowa-willi/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-budowa-willi/index.html",
+      "href": "/it/assicurazione-costruzione-villa/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-cyber-oszustwa-rodzina/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-cyber-oszustwa-rodzina/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-cyber-oszustwa-rodzina/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-cyber-oszustwa-rodzina/index.html",
+      "href": "/it/assicurazione-cyber-frode-famiglia/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-koni/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-koni/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-koni/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-koni/index.html",
+      "href": "/it/assicurazione-cavalli/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-lotnictwo-prywatne/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-lotnictwo-prywatne/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-lotnictwo-prywatne/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-lotnictwo-prywatne/index.html",
+      "href": "/it/assicurazione-aviazione-privata/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-porwanie-okup/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-porwanie-okup/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-porwanie-okup/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-porwanie-okup/index.html",
+      "href": "/it/assicurazione-rapimento-estorsione/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-winnica-posiadlosc/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-winnica-posiadlosc/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-winnica-posiadlosc/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-winnica-posiadlosc/index.html",
+      "href": "/it/assicurazione-tenuta-vigneto/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-wynajem-willi/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-wynajem-willi/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-wynajem-willi/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    },
+    {
+      "from": "public/pl/ubezpieczenie-wynajem-willi/index.html",
+      "href": "/it/assicurazione-affitto-villa-lusso/"
+    }
   ],
+  "viaRedirect": [],
+  "orphans": [],
   "singleInbound": [
     {
       "url": "/blog/checklist-revisao-rc-profissional/",
@@ -46,15 +381,9 @@
       ]
     },
     {
-      "url": "/de/versicherung-comporta/",
+      "url": "/de/versicherung-cascais/",
       "from": [
-        "/de/versicherung-lissabon/"
-      ]
-    },
-    {
-      "url": "/de/versicherung-lagos/",
-      "from": [
-        "/de/versicherung-portimao/"
+        "/de/private-clients/"
       ]
     },
     {
@@ -94,12 +423,6 @@
       ]
     },
     {
-      "url": "/nl/vve-verzekering-portugal/",
-      "from": [
-        "/nl/woonverzekering-portugal/"
-      ]
-    },
-    {
       "url": "/nl/zorgverzekering-bestaande-aandoening-portugal/",
       "from": [
         "/nl/zorgverzekering-portugal/"
@@ -114,41 +437,17 @@
   ],
   "deeperThanThreeClicks": [
     {
-      "url": "/de/versicherung-algarve/",
-      "clicks": null
-    },
-    {
       "url": "/de/versicherung-carvoeiro/",
-      "clicks": null
-    },
-    {
-      "url": "/de/versicherung-cascais/",
-      "clicks": null
-    },
-    {
-      "url": "/de/versicherung-comporta/",
-      "clicks": null
-    },
-    {
-      "url": "/de/versicherung-lagos/",
-      "clicks": null
-    },
-    {
-      "url": "/de/versicherung-lissabon/",
-      "clicks": null
+      "clicks": 4
     },
     {
       "url": "/de/versicherung-portimao/",
-      "clicks": null
-    },
-    {
-      "url": "/de/versicherung-quinta-do-lago/",
-      "clicks": null
+      "clicks": 4
     },
     {
       "url": "/de/versicherung-vilamoura/",
-      "clicks": null
+      "clicks": 4
     }
   ],
-  "maxClickDepth": 3
+  "maxClickDepth": 4
 }

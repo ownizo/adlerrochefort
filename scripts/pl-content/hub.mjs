@@ -111,6 +111,38 @@ export const HUB_PAGE = {
         <p>Obowiązkowe OC po portugalsku, odpowiednik AC, samochody o wysokiej wartości, przerejestrowanie i ISV oraz historia szkodowa z Polski.</p>
       </li>
     </ul>
+    <h3 id="ochrona-specjalistyczna">Ochrona specjalistyczna</h3>
+    <p>Ryzyka, których nie obejmie żadna polisa domowa — w Portugalii i w Hiszpanii, lokowane na rynkach specjalistycznych i przez partnerów co-brokerage.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-porwanie-okup/">Porwanie, okup i wymuszenie</a></h3>
+        <p>Konsultanci kryzysowi 24/7, zwrot okupu, porwanie ekspresowe i cyberwymuszenie — z pełną poufnością.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-winnica-posiadlosc/">Posiadłości wiejskie i winnice</a></h3>
+        <p>Quinta, herdade, finca: dom, winiarnia, zapasy wina, pożar i OC enoturystyki w jednym programie.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-budowa-willi/">Budowa i remont willi</a></h3>
+        <p>Ubezpieczenie robót, OC inwestora, istniejący budynek, seguro decenal i odbiór bez luki w ochronie.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-wynajem-willi/">Wynajem luksusowej willi</a></h3>
+        <p>Alojamento Local i licencje regionalne, szkody wyrządzone przez gości, utrata dochodu, personel.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-koni/">Konie i stajnie</a></h3>
+        <p>Śmierć i kradzież, leczenie, utrata użyteczności, stajnie oraz OC posiadacza konia.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-lotnictwo-prywatne/">Lotnictwo prywatne</a></h3>
+        <p>Samoloty, śmigłowce i drony: casco, OC wobec osób trzecich i pasażerów, załoga, hangar.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-cyber-oszustwa-rodzina/">Cyberochrona i oszustwa</a></h3>
+        <p>Przekierowane przelewy przy zakupie domu, kradzież tożsamości, cyberwymuszenie, pomoc 24/7.</p>
+      </li>
+    </ul>
   </div>
 </section>
 

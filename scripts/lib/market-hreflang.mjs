@@ -39,6 +39,27 @@ export const EXISTING_HOME_CLUSTER = {
 
 const HREFLANG_TO_KEY = Object.fromEntries(LANGS.map((l) => [l.hreflang, l.key]));
 
+/**
+ * Specialist (niche) pages, September 2026. The generated markets carry them
+ * with `niche-*` cluster keys; the English and German versions are
+ * hand-authored, so they are declared here to join the same groups. x-default
+ * for every niche group is the English page.
+ */
+export const NICHE_EXTERNAL = {
+  'niche-kr': { '/en/kidnap-ransom-extortion-insurance/': 'en-GB', '/de/entfuehrung-loesegeld-versicherung/': 'de' },
+  'niche-estate': { '/en/rural-estate-vineyard-insurance/': 'en-GB', '/de/weingut-landgut-versicherung/': 'de' },
+  'niche-build': { '/en/luxury-home-construction-insurance/': 'en-GB', '/de/bauversicherung-luxusimmobilie/': 'de' },
+  'niche-villalet': { '/en/luxury-villa-rental-insurance/': 'en-GB', '/de/luxusvilla-vermietung-versicherung/': 'de' },
+  'niche-equine': { '/en/equine-horse-insurance/': 'en-GB', '/de/pferdeversicherung/': 'de' },
+  'niche-aviation': { '/en/private-aviation-insurance/': 'en-GB', '/de/privatflugzeug-versicherung/': 'de' },
+  'niche-cyber': { '/en/family-cyber-fraud-insurance/': 'en-GB', '/de/cyber-betrug-versicherung-familie/': 'de' },
+};
+
+/** cluster key -> x-default path, for groups whose default is not the PT homepage. */
+export const CLUSTER_X_DEFAULT = Object.fromEntries(
+  Object.entries(NICHE_EXTERNAL).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
+);
+
 /** clusterKey -> { path: hreflangValue }, derived from the page objects. */
 export function clusterGroups() {
   const groups = new Map();
@@ -50,6 +71,9 @@ export function clusterGroups() {
       group[page.url] = hreflang;
       groups.set(page.cluster, group);
     }
+  }
+  for (const [key, extra] of Object.entries(NICHE_EXTERNAL)) {
+    if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');
   if (hub) groups.set('hub', { ...EXISTING_HOME_CLUSTER, ...hub });
