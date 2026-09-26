@@ -121,8 +121,8 @@ const ltrInput = (market) => (market.dir === 'rtl' ? ' dir="ltr"' : '');
  * and in particular no `knowsLanguage` entry for Polish, Swedish, Danish,
  * Chinese or Hebrew, because the working language is English and claiming
  * otherwise in structured data would be the same false claim as claiming it in
- * prose. There is no Israeli branch node either: the agency has one address,
- * in Lagos, and the /il/ cluster being in Hebrew does not give it a second.
+ * prose. There is no Israeli branch node either: the agency's offices are in
+ * Lisbon and Lagos, and the /il/ cluster being in Hebrew does not give it a second.
  */
 const ORG_LD = {
   '@type': 'InsuranceAgency',
@@ -137,17 +137,25 @@ const ORG_LD = {
   foundingDate: '2014',
   knowsLanguage: ['en', 'pt'],
   areaServed: [
-    { '@type': 'AdministrativeArea', name: 'Algarve, Portugal' },
     { '@type': 'Country', name: 'Portugal' },
+    { '@type': 'Country', name: 'Spain' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Varandas de São João 4',
-    addressLocality: 'Lagos',
-    addressRegion: 'Algarve',
-    postalCode: '8600-324',
-    addressCountry: 'PT',
-  },
+  address: [
+    {
+      '@type': 'PostalAddress',
+      streetAddress: 'Av. do Atlântico 16, Esc. 5.07',
+      addressLocality: 'Lisboa',
+      postalCode: '1990-019',
+      addressCountry: 'PT',
+    },
+    {
+      '@type': 'PostalAddress',
+      streetAddress: 'Varandas de São João 4',
+      addressLocality: 'Lagos',
+      postalCode: '8600-324',
+      addressCountry: 'PT',
+    },
+  ],
   sameAs: [
     'https://www.facebook.com/adlerrochefort',
     'https://www.instagram.com/adlerrochefort/',
@@ -205,7 +213,7 @@ function jsonLd(market, page) {
 
   const webpage = {
     '@type': page.schemaType || 'WebPage',
-    headline: page.h1,
+    headline: page.h1.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
     name: page.title,
     description: page.description,
     inLanguage: market.inLanguage,
@@ -892,7 +900,8 @@ ${footerLangs(market, page)}
       <ul class="footer-col-links">
         <li><a href="mailto:insurance@adlerrochefort.com">${iso(market, 'insurance@adlerrochefort.com')}</a></li>
         <li><a href="tel:+351928226570">${iso(market, '+351 928 226 570')}</a></li>
-        <li><span>${iso(market, 'Varandas de São João 4<br>8600-324 Lagos, Algarve, Portugal')}</span></li>
+        <li><span>${iso(market, 'Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal')}</span></li>
+        <li><span>${iso(market, 'Varandas de São João 4<br>8600-324 Lagos, Portugal')}</span></li>
         <li><a href="#${market.ui.formId}">${ft.contactCta}</a></li>
         <li>
           ${SOCIAL_SVGS}

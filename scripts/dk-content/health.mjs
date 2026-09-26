@@ -16,17 +16,17 @@ export const HEALTH_PAGE = {
   slug: 'sundhedsforsikring-portugal',
   url: '/dk/sundhedsforsikring-portugal/',
   cluster: 'health',
-  title: 'Sundhedsforsikring i Portugal for danskere | Adler & Rochefort',
+  title: 'International sundhedsforsikring i Portugal | Adler & Rochefort',
   description:
-    'SNS og privat sundhedsforsikring i Portugal: registrering, behandlernetværk, kvalifikationsperioder, helbredsvurdering og eksisterende lidelser — og hvad der sker med den danske sygesikring ved udrejse.',
+    'International privat sundhedsforsikring for familier i Portugal og Spanien: frit valg af læge, behandling i udlandet, SNS og den danske sygesikring.',
   keywords:
-    'sundhedsforsikring Portugal, privat behandling Portugal, SNS Portugal, sygesikring udland, blåt EU-sygesikringskort Portugal, S1 Portugal, udrejse Danmark sygesikring',
-  eyebrow: 'Sundhedsforsikring',
-  h1: 'Sundhedsforsikring i Portugal: SNS, privat behandling og den danske sygesikring',
+    'sundhedsforsikring Portugal, international sundhedsforsikring, privat sundhedsforsikring familie Portugal, privat behandling Portugal, SNS Portugal, sygesikring udland, blåt EU-sygesikringskort Portugal, S1 Portugal, udrejse Danmark sygesikring',
+  eyebrow: 'International sundhedsforsikring',
+  h1: 'Sundhedsforsikring i Portugal: international privat dækning for familien',
   standfirst:
-    'En privat sundhedsforsikring i Portugal erstatter ikke det offentlige — den købes for at give en anden vej ind. Her er, hvordan de to systemer fungerer side om side, og hvad selskabet spørger om, før det tegner.',
+    'For en familie, der lever mellem Portugal, Spanien og Danmark, handler sundhedsforsikring om frit valg af læge og hospital — også uden for Portugal. Her er, hvordan en international police fungerer, hvordan den spiller sammen med SNS, og hvad selskabet spørger om, før det tegner.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sundhedsforsikring' }],
   pullquote: 'Sundhedsforsikring tegnes, mens man er rask. Senere køber man kun det, selskabet vælger at tilbyde.',
   schemaType: 'Article',
@@ -36,10 +36,10 @@ export const HEALTH_PAGE = {
     idPrefix: 'dk-sau',
     formName: 'dk-sundhedsforsikring-wizard',
     ramo: 'Sundhedsforsikring',
-    heading: 'Få et tilbud på sundhedsforsikring',
+    heading: 'Forespørgsel om sundhedsforsikring',
     intro: 'Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.',
     stepLabel2: 'Personer der skal forsikres',
-    submitLabel: 'Få et tilbud',
+    submitLabel: 'Send forespørgsel',
     adultBirthDate: true,
     microNote:
       'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
@@ -51,7 +51,22 @@ export const HEALTH_PAGE = {
         </div>`,
   },
   sections: `
-<section class="section plain" aria-labelledby="sns">
+<section class="section plain" aria-labelledby="international">
+  <div class="container narrow article-body">
+    <h2 id="international">International sundhedsforsikring til familier</h2>
+    <p>En portugisisk sundhedsforsikring er som regel bygget til ét land og ét behandlernetværk. For en familie med bolig i flere lande, børn i skole eller på studie i udlandet og jævnlige ophold i Danmark rækker det sjældent. Her er en <strong>international privat sundhedsforsikring</strong> det naturlige udgangspunkt:</p>
+    <ul>
+      <li><strong>Frit valg af læge og hospital</strong> — i Portugal, i Spanien og i udlandet, ikke kun inden for et lokalt netværk.</li>
+      <li><strong>Høje årlige maksimumsbeløb</strong> for indlæggelse, operation og alvorlig sygdom, så dækningen ikke slipper op midt i et behandlingsforløb.</li>
+      <li><strong>Geografisk område efter behov</strong> — Europa eller hele verden, med eller uden USA.</li>
+      <li><strong>Evakuering og hjemtransport</strong>, når den nødvendige behandling ikke findes der, hvor man er.</li>
+      <li><strong>Én police for hele familien</strong>, der følger med ved flytning mellem lande.</li>
+    </ul>
+    <p>Hvilken løsning der passer — international eller portugisisk, bred eller mere målrettet — afhænger af, hvor familien bor og rejser, alder og helbredsvurdering. Vi sammenligner betingelserne og giver anbefalingen skriftligt. SNS og den danske sygesikring gennemgås nedenfor, fordi de afgør, hvad den private police skal supplere.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="sns">
   <div class="container narrow article-body">
     <h2 id="sns">SNS — det portugisiske offentlige sundhedsvæsen</h2>
     <p><em>Serviço Nacional de Saúde</em> er Portugals offentlige sundhedsvæsen, tilgængeligt for den, der er lovligt bosat i landet. Adgangen får man ved at lade sig registrere på sundhedscentret (<em>centro de saúde</em>) for sin adresse — normalt med NIF, legitimation, adressedokumentation og opholdspapirer. Efter registreringen får du et <em>número de utente</em>, et patientnummer, og bliver efter kapacitet tilknyttet en <em>médico de família</em>.</p>
@@ -60,7 +75,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="udrejse">
+<section class="section plain" aria-labelledby="udrejse">
   <div class="container narrow article-body">
     <h2 id="udrejse">Udrejse, det blå kort og S1</h2>
     <p>Dette er den del, der oftest springes over, fordi den ser ud som en formalitet. Den afgør, om du har adgang til behandling i de første måneder.</p>
@@ -69,14 +84,14 @@ export const HEALTH_PAGE = {
     <h3>Det blå EU-sygesikringskort</h3>
     <p>Det blå kort er beregnet til <strong>midlertidigt ophold</strong> — ferie, forretningsrejse, kortere besøg. Det er ikke et grundlag for behandling for den, der har flyttet sin bopæl til et andet land. Efter flytningen til Portugal, når du ikke længere er omfattet af den danske sygesikring, udfylder kortet ikke sin funktion, selv om det ligger i tasken med gyldighed tilbage.</p>
     <h3>Blanket S1</h3>
-    <p>For visse grupper — især pensionister med dansk pension og udsendte medarbejdere — findes en EU-mekanisme, hvor retten til behandling følger med: attesten S1, udstedt af institutionen i det land, der fortsat er kompetent. Registreret i Portugal giver den adgang til SNS på samme vilkår som for bosatte. Det er koordinering af social sikring, ikke en privat forsikring — vi udsteder ikke sådanne attester og rådgiver ikke i sager hos danske myndigheder. Vi nævner det, fordi mange af vores danske kunder ikke kender muligheden, og fordi det ændrer hele regnestykket.</p>
+    <p>For visse grupper — især pensionister med dansk pension og udsendte medarbejdere — findes en EU-mekanisme, hvor retten til behandling følger med: attesten S1, udstedt af institutionen i det land, der fortsat er kompetent. Registreret i Portugal giver den adgang til SNS på samme vilkår som for bosatte. Det er koordinering af social sikring, ikke en privat forsikring — vi udsteder ikke sådanne attester og rådgiver ikke i sager hos danske myndigheder. Vi nævner det, fordi mange danske pensionister ikke kender muligheden, og fordi det ændrer hele regnestykket.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="privat">
+<section class="section tint" aria-labelledby="privat">
   <div class="container narrow article-body">
-    <h2 id="privat">Hvad en privat police giver</h2>
-    <p>Portugisisk privat sundhedsforsikring bygger oftest på et <strong>behandlernetværk</strong> (<em>rede convencionada</em>): inden for netværket betaler du en lav fast egenbetaling pr. konsultation eller undersøgelse, uden for netværket gælder refusion efter takst, normalt med større egen andel. Netværket er derfor det første, vi spørger om — ikke prisen. En police med en udmærket takstliste og intet hospital inden for hundrede kilometer er ikke en god police.</p>
+    <h2 id="privat">Hvad en privat police består af</h2>
+    <p>Portugisisk privat sundhedsforsikring bygger oftest på et <strong>behandlernetværk</strong> (<em>rede convencionada</em>): inden for netværket betaler du en lav fast egenbetaling pr. konsultation eller undersøgelse, uden for netværket gælder refusion efter takst, normalt med større egen andel. Netværket er derfor et af de første spørgsmål, vi stiller. En police med en udmærket takstliste og intet hospital inden for hundrede kilometer er ikke en god police.</p>
     <p>Dækningen omfatter typisk konsultationer og udredning, hospitalsindlæggelse og operation, og afhængigt af variant også tandbehandling, graviditet og fødsel, fysioterapi, alternativ behandling, behandling i udlandet og second opinion. Hvert modul har sit eget årsmaksimum og sin egen egenbetaling.</p>
     <ul>
       <li><strong>Årsmaksimum (<em>capital</em>)</strong> — adskilt for ambulant og for hospital, ofte med vidt forskellige beløb.</li>
@@ -88,7 +103,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="karens">
+<section class="section plain" aria-labelledby="karens">
   <div class="container narrow article-body">
     <h2 id="karens">Kvalifikationsperioder, helbredsvurdering og eksisterende lidelser</h2>
     <h3>Kvalifikationsperioder</h3>
@@ -104,7 +119,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="familie">
+<section class="section tint" aria-labelledby="familie">
   <div class="container narrow article-body">
     <h2 id="familie">Familiedækning</h2>
     <p>En familiepolice dækker normalt ægtefælle eller samlever samt børn op til en bestemt alder, ofte med rabat efter antal personer. Det, der får størst praktisk betydning:</p>
@@ -117,7 +132,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="opholdstillladelse">
+<section class="section plain" aria-labelledby="opholdstillladelse">
   <div class="container narrow article-body">
     <h2 id="opholdstillladelse">Forsikring og opholdssager</h2>
     <p>Et meget almindeligt spørgsmål, hvor svaret skal være forsigtigt. <strong>Vi kan ikke bekræfte, at en police opfylder kravene i en konkret opholds- eller visumsag.</strong> Kravene fastsættes af myndighederne, varierer efter ansøgningstype og ansøgerens situation og kan ændres. Vurderingen foretages af myndigheden, og fortolkningen af reglerne af en juridisk rådgiver.</p>
@@ -125,7 +140,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="checkliste">
+<section class="section tint" aria-labelledby="checkliste">
   <div class="container narrow article-body">
     <h2 id="checkliste">Checkliste</h2>
     <ol class="process-steps">
@@ -141,6 +156,10 @@ export const HEALTH_PAGE = {
 </section>`,
   faqTitle: 'Sundhedsforsikring i Portugal — spørgsmål',
   faq: [
+    {
+      q: 'Hvad er forskellen på en international og en portugisisk sundhedsforsikring?',
+      a: '<p>En portugisisk police er typisk bygget op om et lokalt behandlernetværk og dækker primært i Portugal. En international police giver frit valg af læge og hospital i flere lande, højere årlige maksimumsbeløb og ofte evakuering og hjemtransport. For familier, der lever mellem flere lande, er det som regel den mest hensigtsmæssige løsning; hvad der kan tegnes, afhænger af alder og helbredsvurdering.</p>',
+    },
     {
       q: 'Har jeg ret til offentlig behandling som bosat i Portugal?',
       a: '<p>Den, der er lovligt bosat, kan lade sig registrere i SNS på sundhedscentret for sin adresse og få et <em>número de utente</em>. Hvilke dokumenter der kræves, varierer en smule mellem sundhedscentre; normalt NIF, legitimation, adressedokumentation og opholdspapirer. Betingelserne for adgang fastsættes af myndighederne, ikke af forsikringsselskabet.</p>',
@@ -159,7 +178,7 @@ export const HEALTH_PAGE = {
     },
     {
       q: 'Har jeg brug for en privat police, når jeg er registreret i SNS?',
-      a: '<p>Det er ikke et enten-eller. SNS giver adgang til behandling, herunder akut. En privat police giver kortere ventetid til konsultation og udredning og mulighed for at vælge klinik. De fleste af vores kunder bruger begge dele. Er budgettet stramt, er en ambulant variant med et godt netværk en bedre start end den bredeste dækning for enhver pris.</p>',
+      a: '<p>Det er ikke et enten-eller. SNS giver adgang til behandling, herunder akut. En privat police giver kortere ventetid til konsultation og udredning og mulighed for at vælge klinik. De fleste af vores kunder bruger begge dele. For familier, der også lever og rejser uden for Portugal, er en international police med frit valg af læge og hospital ofte den mest hensigtsmæssige løsning.</p>',
     },
     {
       q: 'Dækker policen, når jeg er i Danmark?',

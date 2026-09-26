@@ -17,9 +17,9 @@ export const GUIDE_PAGE = {
   slug: 'ubezpieczenia-portugalia-przewodnik',
   url: '/pl/ubezpieczenia-portugalia-przewodnik/',
   cluster: 'guide',
-  title: 'Ubezpieczenia w Portugalii: przewodnik dla Polaków | Adler & Rochefort',
+  title: 'Przewodnik po ubezpieczeniach w Portugalii | Adler & Rochefort',
   description:
-    'Jak działa portugalski rynek ubezpieczeń: agent, broker i bank, budowa polisy, franszyzy, zgłaszanie szkody, wznowienia i wypowiedzenie umowy. Przewodnik dla Polaków mieszkających w Portugalii.',
+    'Jak działa portugalski rynek ubezpieczeń: agent, broker i bank, budowa polisy, franszyzy, zgłaszanie szkody, wznowienia i wypowiedzenie. Przewodnik dla Polaków.',
   keywords:
     'ubezpieczenia Portugalia przewodnik, jak działają ubezpieczenia w Portugalii, agent ubezpieczeniowy Portugalia, zgłoszenie szkody Portugalia, wypowiedzenie polisy Portugalia, ASF Portugalia',
   eyebrow: 'Przewodnik',
@@ -27,7 +27,7 @@ export const GUIDE_PAGE = {
   standfirst:
     'Ta strona zbiera to, czego nie znajdzie się w żadnej ulotce: jak zbudowany jest portugalski rynek, jak czytać polisę, jak zgłosić szkodę, kiedy i jak można wypowiedzieć umowę oraz o co zapytać każdego agenta, zanim się coś podpisze.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Przewodnik po ubezpieczeniach' }],
   pullquote: 'Polisa to nie produkt, który się kupuje. To dokument, który ktoś kiedyś przeczyta bardzo uważnie — najlepiej, żeby to byli Państwo, a nie dopiero likwidator.',
   schemaType: 'Article',
@@ -36,9 +36,9 @@ export const GUIDE_PAGE = {
   formSubject: 'Przewodnik po ubezpieczeniach (PL)',
   formCta: 'Wyślij zapytanie',
   formIntro:
-    'Proszę opisać sytuację własnymi słowami. Odpowiemy, co w tej sytuacji ma sens, a co można spokojnie pominąć.',
+    'Proszę opisać sytuację własnymi słowami albo przesłać obecne polisy. Odpowiemy pisemnie, co w tej sytuacji ma sens, a co można spokojnie pominąć.',
   formPlaceholder:
-    'Na przykład: mieszkamy w Portugalii od roku, mamy polisę z banku i nie wiemy, czy zakres jest odpowiedni.',
+    'Na przykład: mieszkamy w Portugalii od roku, mamy polisę domu z banku i kilka dzieł sztuki — nie wiemy, czy zakres jest odpowiedni.',
   sections: `
 <section class="section plain" aria-labelledby="kto-jest-kim">
   <div class="container narrow article-body">
@@ -46,7 +46,7 @@ export const GUIDE_PAGE = {
     <p>Portugalski rynek ubezpieczeń jest nadzorowany przez <strong>ASF</strong> (<em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em>) — odpowiednik polskiego nadzoru w zakresie ubezpieczeń. Każdy pośrednik musi być wpisany do rejestru ASF, a numer wpisu jest publiczny i można go sprawdzić. Warto to zrobić przy pierwszym kontakcie z kimkolwiek: to jedna minuta.</p>
     <ul>
       <li><strong>Ubezpieczyciel (<em>seguradora</em>)</strong> — podmiot, który ponosi ryzyko i wypłaca odszkodowanie. Sprzedaje również bezpośrednio, przez własne kanały.</li>
-      <li><strong>Agent ubezpieczeniowy (<em>agente de seguros</em>)</strong> — pośrednik działający w oparciu o umowy z ubezpieczycielami i doradzający w ramach swojego portfela. Adler &amp; Rochefort jest zarejestrowanym agentem ubezpieczeniowym, ASF nr 425591790/3.</li>
+      <li><strong>Agent ubezpieczeniowy (<em>agente de seguros</em>)</strong> — pośrednik działający w oparciu o umowy z ubezpieczycielami i doradzający w ramach swojego portfela. Adler &amp; Rochefort jest zarejestrowanym agentem ubezpieczeniowym, ASF nr 425591790/3, bez umowy na wyłączność z żadnym ubezpieczycielem — z biurami w Lizbonie i Lagos oraz klientami w całej Portugalii i w Hiszpanii.</li>
       <li><strong>Broker (<em>corretor</em>)</strong> — pośrednik o szerszym mandacie, zwykle obsługujący większe ryzyka korporacyjne.</li>
       <li><strong>Bank</strong> — sprzedaje ubezpieczenia przy okazji kredytu, w kanale bancassurance. Wygodne, ale zakres bywa dopasowany do zabezpieczenia kredytu, nie do Państwa sytuacji.</li>
       <li><strong>Porównywarki</strong> — pokazują ceny. Nie odpowiadają na pytanie, czy porównywane polisy mają porównywalny zakres, a to zwykle jest pytanie ważniejsze.</li>
@@ -131,20 +131,20 @@ export const GUIDE_PAGE = {
     <h2 id="produkty">Szczegóły produktów</h2>
     <ul class="hub-list">
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-domu-portugalia/">Ubezpieczenie domu i mieszkania</a></h3>
-        <p>Wartość odbudowy, wspólnota a <em>condomínio</em>, zalania, ryzyko sejsmiczne, nieruchomości używane sezonowo.</p>
+        <h3><a href="/pl/ubezpieczenie-domu-portugalia/">Ubezpieczenie domu o wysokiej wartości</a></h3>
+        <p>Oględziny i koszt odbudowy, sztuka i kolekcje według wartości uzgodnionej, <em>condomínio</em>, zalania, ryzyko sejsmiczne, nieruchomości używane sezonowo.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-zdrowotne-portugalia/">Ubezpieczenie zdrowotne</a></h3>
-        <p>SNS, sieci placówek, karencje, ocena ryzyka, sprawy NFZ i dokument S1.</p>
+        <h3><a href="/pl/ubezpieczenie-zdrowotne-portugalia/">Ubezpieczenie zdrowotne dla rodzin</a></h3>
+        <p>SNS, polisa portugalska i międzynarodowa, karencje, ocena ryzyka, sprawy NFZ i dokument S1.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/pl/ubezpieczenie-samochodu-portugalia/">Ubezpieczenie samochodu</a></h3>
         <p>Obowiązkowe OC, <em>danos próprios</em>, ISV i przerejestrowanie, historia szkodowa.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">Odpowiedzialność cywilna</a></h3>
-        <p>Prywatna i zawodowa, z przykładami dla konsultantów, terapeutów i małych firm.</p>
+        <h3><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">Odpowiedzialność cywilna rodziny</a></h3>
+        <p>Sumy rzędu milionów euro, zasięg światowy, koszty obrony ponad sumę; OC zawodowa jako odrębna polisa.</p>
       </li>
     </ul>
   </div>

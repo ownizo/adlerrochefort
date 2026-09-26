@@ -27,19 +27,19 @@ export const HOME_PAGE = {
   slug: 'home-insurance-portugal',
   url: '/zh/home-insurance-portugal/',
   cluster: 'home',
-  title: '葡萄牙房屋保险：房产与室内财物的投保方式 | Adler & Rochefort',
+  title: '高价值房屋保险：葡萄牙与西班牙 | Adler & Rochefort',
   description:
-    '葡萄牙房屋保险（multirriscos habitação）实际保什么：建筑与室内财物的划分、重建费用怎么定、比例赔付、水渍与地震、第二居所与空置条件、出租用途与房贷要求。',
+    '高价值住宅保险：现场查勘与重建费用、取消比例赔付、艺术品与收藏按约定价值承保、百万级家庭责任。逐一核保，书面建议，服务葡萄牙与西班牙。',
   keywords:
-    '葡萄牙房屋保险, 葡萄牙房产保险, multirriscos habitação, 葡萄牙公寓保险, 葡萄牙别墅保险, 葡萄牙第二居所保险, 葡萄牙房屋重建费用, 葡萄牙地震保险',
-  eyebrow: '房屋与财产',
-  h1: '葡萄牙房屋保险：从建筑到室内财物',
+    '高价值房屋保险, 豪宅保险 葡萄牙, 艺术品保险, 葡萄牙房屋保险, 葡萄牙房产保险, multirriscos habitação, 葡萄牙公寓保险, 葡萄牙别墅保险, 葡萄牙第二居所保险, 葡萄牙房屋重建费用, 葡萄牙地震保险',
+  eyebrow: '高价值住宅',
+  h1: '高价值房屋保险：从建筑到艺术收藏',
   standfirst:
-    '葡萄牙的房屋保险叫 <em>multirriscos habitação</em>，由两个保额组成：建筑与室内财物。保额对应的是重建费用，不是您的成交价——这一条决定了理赔时能拿回多少。',
+    '价值较高的住宅需要的不是标准的 <em>multirriscos habitação</em>，而是逐一核保的私人客户保单：现场查勘确认重建费用、取消比例赔付、贵重物品按约定价值列明，以及与家业相称的责任保额。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '房屋保险' }],
-  pullquote: '保额不是您付了多少钱买这套房，而是把烧掉的部分重新盖起来要花多少钱。',
+  pullquote: '保额不是您付了多少钱买这处房产，而是把它按原有标准重新建起来要花多少钱。',
   schemaType: 'Article',
   // Especificação v2, Parte B — this page's dedicated wizard replaces the
   // shared zh-inquiry branch-select form.
@@ -93,7 +93,7 @@ export const HOME_PAGE = {
     <p>在国内城市，很少有业主为自己住的那套房子单独买财产保险。这不是疏忽，而是环境决定的：房屋是钢筋混凝土结构、小区有物业、真正的重大损失概率低，而且大多数人对“房子”的价值感知集中在土地与位置上，不在建筑本体上。</p>
     <p>葡萄牙的情况不同，原因有三个很具体：</p>
     <ul>
-      <li><strong>房屋结构与年代更分散。</strong>阿尔加维和里斯本大量住宅是二十世纪七八十年代甚至更早的砖混或石造建筑，管线老化、屋面渗漏、外墙裂缝是常见问题，而不是意外。</li>
+      <li><strong>房屋结构与年代更分散。</strong>里斯本、阿尔加维和其他地区大量住宅是二十世纪七八十年代甚至更早的砖混或石造建筑，管线老化、屋面渗漏、外墙裂缝是常见问题，而不是意外。</li>
       <li><strong>水渍损失非常普遍。</strong>葡萄牙房屋保险最高频的理赔类型不是火灾也不是盗窃，而是 <em>danos por água</em>——水管爆裂、卫浴渗漏、屋顶进水，以及由此造成的对楼下邻居的损害。</li>
       <li><strong>有房贷就必须有保险。</strong>银行放款时会把房屋保险作为条件，受益人指向银行。没有保单，贷款流程走不下去。</li>
     </ul>
@@ -101,7 +101,83 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="liang-ge-baoe">
+<section class="section tint" aria-labelledby="fangwu-benti">
+  <div class="container">
+    <h2 id="fangwu-benti">房屋本身</h2>
+    <p>价值较高的住宅，问题的重点不同于普通公寓。以下是我们所安排的私人客户保单在房屋部分的参考条件，每一份方案我们都会以书面形式逐项对照：</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>现场查勘与重建费用</h3><p>对于价值较高的住宅，保险公司会免费安排现场查勘，确认重建费用，建议室内财物与贵重物品的保额，并提出防损建议。</p></div>
+      <div class="feature-card"><h3>不适用比例赔付</h3><p>接受建议保额后，保险公司放弃比例赔付原则：即使建造成本此后上涨，局部损失也全额赔付。</p></div>
+      <div class="feature-card"><h3>保证重建</h3><p>发生全损时，即使重建费用超过建筑保额，房屋也会被重建——前提是已接受查勘建议的保额。</p></div>
+      <div class="feature-card"><h3>同等标准的临时住所</h3><p>房屋无法居住期间，提供同等标准的替代住所，宠物与马匹亦包括在内——而不是零售市场常见的几个月上限。</p></div>
+      <div class="feature-card"><h3>花园、围墙与附属建筑</h3><p>树木、灌木与草坪、围墙与挡土墙、泳池、附属建筑与客房，各有独立保额，而不是象征性的一个小数目。</p></div>
+      <div class="feature-card"><h3>水、燃气与查漏</h3><p>查找并修复水、燃气或供暖系统的泄漏，不设单独分项限额，流失的水或燃料也在赔付之列。</p></div>
+      <div class="feature-card"><h3>赔付方式由您选择</h3><p>现金赔付，或由您选定的供应商、工匠与修复师修复，两种方式均无扣减。</p></div>
+      <div class="feature-card"><h3>重大损失免除自负额</h3><p>损失超过一定金额时，自负额完全免除——恰恰在它原本最沉重的时候。</p></div>
+      <div class="feature-card"><h3>今天的房屋</h3><p>太阳能板、储能电池与备用发电机，重建时的环保升级，以及钥匙遗失或被盗时的换锁费用。</p></div>
+      <div class="feature-card"><h3>因伤残而改造</h3><p>家庭成员因意外或疾病造成永久伤残时，对住宅进行适应性改造的费用。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="shinei-caiwu">
+  <div class="container">
+    <h2 id="shinei-caiwu">室内财物</h2>
+    <p>家具、陈设与个人物品，按一切险承保，而不是逐项列举的有限风险：</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>全球一切险</h3><p>个人物品在家中、旅途中和第二居所均按一切险承保，随身携带的物品不设单独分项限额。</p></div>
+      <div class="feature-card"><h3>可超出保额的室内财物赔付</h3><p>接受建议保额后，如实际价值高于室内财物保额，赔付可在预先约定的幅度内超出保额。</p></div>
+      <div class="feature-card"><h3>关键处不设分项限额</h3><p>意外损坏与遗失、储藏室与酒窖内的盗窃、户外家具，均不设掏空保障的分项限额。</p></div>
+      <div class="feature-card"><h3>访客物品与新购物品</h3><p>访客的物品同样受到保障；新购置的物品在申报期内自动承保。</p></div>
+      <div class="feature-card"><h3>家中活动</h3><p>在家中举办庆典时的活动取消费用，以及帐篷、舞台等临时搭建物。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="guizhong-wupin">
+  <div class="container">
+    <h2 id="guizhong-wupin">艺术品、收藏与贵重物品</h2>
+    <p>首饰、名表、艺术品与收藏按评估后的约定价值单独列明——赔的是写明的价值，而不是事后各说各话：</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>约定价值</h3><p>艺术品、首饰、手表与收藏按投保时依评估确定的价值列明——全损时即按此金额赔付，不在折旧上争执。</p></div>
+      <div class="feature-card"><h3>无自负额</h3><p>按约定价值或申报价值投保的贵重物品不适用自负额。</p></div>
+      <div class="feature-card"><h3>修复后的贬值</h3><p>物品经修复后市场价值下降的，差额予以赔付——修复费用也不设上限。</p></div>
+      <div class="feature-card"><h3>防止估值不足</h3><p>经专业评估的物品在出险当日价值高于保额的，保单可在约定幅度内超出约定价值赔付。</p></div>
+      <div class="feature-card"><h3>新购藏品与酒窖</h3><p>新购藏品在一定期限内自动承保；葡萄酒与烈酒收藏另有专门的储存条件。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="jiating-zeren">
+  <div class="container">
+    <h2 id="jiating-zeren">家庭个人责任</h2>
+    <p>房屋保单附带的零售级责任额度，对资产较多的家庭通常不够。私人客户方案的责任部分：</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>与家业相称的保额</h3><p>家庭个人责任保额可达数百万欧元，全球范围有效。</p></div>
+      <div class="feature-card"><h3>抗辩费用另计</h3><p>法律抗辩费用在保额之外另行支付，而不是从保额中扣减。</p></div>
+      <div class="feature-card"><h3>谁在保障之内</h3><p>整个家庭，包括在外地求学的子女，以及偶尔替您照看宠物的人；与住所相关的访客与家政人员。</p></div>
+      <div class="feature-card"><h3>每一处住所</h3><p>无论作为业主、租户还是居住者——在葡萄牙、在西班牙，或家庭在任何地方拥有的住所。</p></div>
+    </div>
+    <p><a href="/zh/liability-insurance-portugal/">详细了解家庭个人责任保险</a></p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="jiating-baozhang">
+  <div class="container">
+    <h2 id="jiating-baozhang">家庭保障</h2>
+    <p>部分私人客户保单还为家庭本身提供保障，针对的是资产较多的家庭更可能面对的风险：</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>绑架与勒索</h3><p>家庭成员遭绑架与勒索时的相关费用，包括专业顾问费用与悬赏线索的奖金。</p></div>
+      <div class="feature-card"><h3>劫车与入室抢劫</h3><p>遭遇劫车、加重入室盗窃、人身袭击、路怒或空怒事件后的支援与补偿。</p></div>
+      <div class="feature-card"><h3>威胁与跟踪</h3><p>家庭成员受到威胁或跟踪时的安全顾问、临时迁居与法律支援。</p></div>
+      <div class="feature-card"><h3>网络欺凌与名誉</h3><p>反复遭受网络欺凌后的心理咨询师、网络安全顾问、律师费用，必要时包括转学费用。</p></div>
+      <div class="feature-card"><h3>心理支援</h3><p>上述任何事件发生后，为家庭提供专业心理支援。</p></div>
+    </div>
+    <p class="legal-note">以上是我们所安排的高价值资产保单的参考条件。保障范围、限额、自负额与除外责任因保险公司与风险而异，仅以最终出具的保单条款为准。</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="liang-ge-baoe">
   <div class="container narrow article-body">
     <h2 id="liang-ge-baoe">两个保额：建筑与室内财物</h2>
     <p>一份 <em>multirriscos habitação</em> 的骨架是两个数字：</p>
@@ -115,23 +191,23 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="zhongjian-feiyong">
+<section class="section tint" aria-labelledby="zhongjian-feiyong">
   <div class="container narrow article-body">
-    <h2 id="zhongjian-feiyong">重建费用：整份保单里最容易被填错的数字</h2>
+    <h2 id="zhongjian-feiyong">重建费用：整份保单里最关键的数字</h2>
     <p>中国买家最常犯的一个错误，是把成交价填成保额。逻辑上很自然——保额不就应该等于房子的价值吗？但在葡萄牙的房屋保险里，这两个数字衡量的是不同的东西。</p>
-    <p><em>Valor de reconstrução</em>（重建费用）指的是：如果这栋建筑被毁，按现在的人工与材料价格，把它重新建起来要花多少钱。它<strong>不包含土地价值，也不包含位置溢价</strong>。而在葡萄牙，尤其是里斯本、卡斯凯什和阿尔加维沿海，房价里位置的占比很高。结果就是一套 60 万欧元成交的公寓，重建费用可能在 15 万到 20 万欧元之间。</p>
-    <p>按 60 万投保会怎样？并不会赔得更多——房屋保险是补偿性的，赔的是实际损失，不会因为保额高就多赔。您只是多付了三倍的保费。</p>
+    <p><em>Valor de reconstrução</em>（重建费用）指的是：如果这栋建筑被毁，按现在的人工与材料价格，把它重新建起来要花多少钱。它<strong>不包含土地价值，也不包含位置溢价</strong>。而在葡萄牙，尤其是里斯本、卡斯凯什和阿尔加维沿海，房价里位置的占比很高，所以重建费用往往只是成交价的一部分。反过来，对于用料考究、工艺复杂的住宅，重建费用也可能高于一般估算。</p>
+    <p>按成交价投保会怎样？并不会赔得更多——房屋保险是补偿性的，赔的是实际损失，不会因为保额高就多赔。</p>
     <p>反过来低估更危险，因为葡萄牙保单普遍适用<strong>比例赔付原则</strong>（<em>regra proporcional</em>）：</p>
     <div class="callout">
       <span class="callout-label">比例赔付是怎么算的</span>
-      假设应有的重建费用是 20 万欧元，而保单上写的是 12 万（相当于应有金额的 60%）。厨房发生火灾，修复费用 3 万欧元。保险公司可以按 60% 赔付，即 1.8 万欧元，再扣除自负额。损失只是局部的，赔款却按整体不足的比例打了折。
+      假设保单上的建筑保额只相当于应有重建费用的 60%。厨房发生火灾，保险公司可以只按修复费用的 60% 赔付，再扣除自负额。损失只是局部的，赔款却按整体不足的比例打了折。这正是私人客户保单通过现场查勘、接受建议保额来取消比例赔付的原因。
     </div>
     <p>这就是为什么这个数字值得认真对待。实务中通常按建筑面积乘以每平方米的重建单价来估算，单价取决于地区、建筑类型与装修标准；有些保险公司提供自动重估条款（<em>atualização automática de capitais</em>），按通胀逐年调整，在建材涨价的年份很有用。</p>
     <p class="legal-note">具体的每平方米单价与是否适用比例赔付，取决于保险公司与所选方案。以上说明的是葡萄牙市场的通常做法。</p>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="condominio">
+<section class="section plain" aria-labelledby="condominio">
   <div class="container narrow article-body">
     <h2 id="condominio">Condomínio 的保险覆盖到哪里</h2>
     <p><em>Condomínio</em> 常被理解成“物业”，但它们不是一回事。物业是管理机构，而 <em>condomínio</em> 在葡萄牙法律上是全体业主组成的共有体：共同决策、共同分摊、共同持有建筑的公共部分（<em>partes comuns</em>）。</p>
@@ -146,10 +222,10 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="bao-shenme">
+<section class="section tint" aria-labelledby="bao-shenme">
   <div class="container narrow article-body">
-    <h2 id="bao-shenme">通常包含什么，通常不包含什么</h2>
-    <p>不同保险公司的方案差异很大——这一点在葡萄牙尤其明显，两份保费相近的保单可能在保障范围上相差很远。以下是市场上比较典型的情形，不是对任何一份具体合同的确认。</p>
+    <h2 id="bao-shenme">标准零售保单通常包含什么、不包含什么</h2>
+    <p>作为对照，以下是葡萄牙零售市场上标准房屋保单比较典型的情形——也正是私人客户保单着力改进的地方。不同保险公司的方案差异很大，以下不是对任何一份具体合同的确认。</p>
     <div class="compare-wrap">
       <table class="compare-table">
         <caption class="visually-hidden">葡萄牙房屋保险常见保障与常见除外</caption>
@@ -160,7 +236,7 @@ export const HOME_PAGE = {
           <tr><td>火灾、爆炸、闪电</td><td>基础保障，几乎所有方案都包含。</td></tr>
           <tr><td>水渍（<em>danos por água</em>）</td><td>通常包含，但自负额较高，且“查漏与破拆修复”的费用是否包含，各家不同。</td></tr>
           <tr><td>风暴与暴雨</td><td>通常包含，但常设风速门槛，或要求建筑无原有缺陷。</td></tr>
-          <tr><td>盗窃与入室抢劫</td><td>通常包含。可能要求门锁与安防达到一定标准；现金与首饰另设分项限额。</td></tr>
+          <tr><td>盗窃与入室抢劫</td><td>通常包含。可能要求门锁与安防达到一定标准；现金与首饰另设分项限额，高价值物品需按约定价值单独列明。</td></tr>
           <tr><td>电涌与电器损坏</td><td>常见但不一定默认包含，需要确认是否已勾选。</td></tr>
           <tr><td>玻璃破碎</td><td>通常包含，保额有限。</td></tr>
           <tr><td>地震（<em>fenómenos sísmicos</em>）</td><td><strong>在葡萄牙通常是可选项，不是默认包含。</strong>需要单独确认并单独定价。</td></tr>
@@ -171,11 +247,11 @@ export const HOME_PAGE = {
         </tbody>
       </table>
     </div>
-    <p><strong>关于地震，值得单独说一句。</strong>里斯本、塞图巴尔和阿尔加维在地震风险区划上并非低风险地区，1755 年的里斯本大地震和 1969 年的圣维森特角地震都是真实记录。地震保障在葡萄牙市场上通常作为附加项提供，价格取决于地区、建筑年代与结构类型。不要假设它已经包含在内，也不要假设它不重要。</p>
+    <p><strong>关于地震，值得单独说一句。</strong>里斯本、塞图巴尔和阿尔加维在地震风险区划上并非低风险地区，1755 年的里斯本大地震和 1969 年的圣维森特角地震都是真实记录。地震保障在葡萄牙市场上通常作为附加项提供，条件取决于地区、建筑年代与结构类型。不要假设它已经包含在内，也不要假设它不重要。</p>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="di-er-ju-suo">
+<section class="section plain" aria-labelledby="di-er-ju-suo">
   <div class="container narrow article-body">
     <h2 id="di-er-ju-suo">第二居所、空置房产与出租用途</h2>
     <p>很多中国客户在葡萄牙的房产不是全年自住：可能一年住两三个月，可能给家人偶尔使用，可能通过平台短租，也可能长租给本地住户。这三种用途在保单上是三件不同的事。</p>
@@ -185,7 +261,7 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="fangdai">
+<section class="section tint" aria-labelledby="fangdai">
   <div class="container narrow article-body">
     <h2 id="fangdai">房贷相关的要求</h2>
     <p>如果房产有葡萄牙的房贷，银行通常会要求两件事：房屋多险保单（<em>multirriscos</em>），以及寿险（<em>seguro de vida</em>）。银行会作为保单的受益人（<em>beneficiário</em>），并要求在放款前提供保险证明。</p>
@@ -195,41 +271,28 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="guizhong-wupin">
-  <div class="container narrow article-body">
-    <h2 id="guizhong-wupin">贵重物品与较高价值的房产</h2>
-    <p>并不是每位客户都有需要特别安排的财物。但如果确实有——首饰、名表、艺术品、收藏、高端音响或摄影器材、较高价值的住宅、或者多处房产——那么普通方案的几项限制需要提前知道：</p>
-    <ul>
-      <li><strong>分项限额（<em>sublimites</em>）。</strong>珠宝、贵金属、现金、艺术品通常有单独上限，常以室内财物保额的百分比表示（例如 20%），有时还有单件上限。</li>
-      <li><strong>安防条件。</strong>超过一定金额，保险公司可能要求保险箱、警报系统或特定门锁标准，并写入特别条款。不满足条件时，这部分保障可能不成立。</li>
-      <li><strong>逐项申报与价值证明。</strong>单件价值较高的物品通常需要列明，并提供评估报告或购买凭证。申报清楚的好处在理赔时才体现：赔的是写明的价值，不是事后各说各话。</li>
-      <li><strong>多处房产。</strong>几处房产分别投保，还是在一份方案里统一安排，取决于用途与保险公司的承保条件。用途不同（自住、第二居所、出租）通常需要分别约定。</li>
-    </ul>
-    <p>需要说明的是，这些安排的目的不是“买更贵的保险”，而是让保单上的数字与实际情况一致。一份没有如实申报的高保额保单，在理赔时并不比低保额保单更可靠。</p>
-  </div>
-</section>
 
 <section class="section plain" aria-labelledby="jiancha-qingdan">
   <div class="container narrow article-body">
-    <h2 id="jiancha-qingdan">接受保险方案之前，中国买家应该核对的几项</h2>
-    <p>拿到一份报价或保单草案时，可以按这个顺序逐项对照。这不需要懂葡萄牙语，只需要知道该找哪几个数字。</p>
+    <h2 id="jiancha-qingdan">接受保险方案之前应该核对的几项</h2>
+    <p>拿到一份方案或保单草案时，或者想检视现有的保单，可以按这个顺序逐项对照。这不需要懂葡萄牙语，只需要知道该找哪几个数字。</p>
     <ol class="process-steps">
       <li><div><strong>建筑保额（<em>capital edifício</em>）。</strong><span>它是否接近真实的重建费用，而不是成交价、不是银行估值、不是房产税籍价值（<em>valor patrimonial tributário</em>）？</span></div></li>
       <li><div><strong>室内财物保额（<em>capital recheio</em>）。</strong><span>如果全部重新购置一遍，这个数字够吗？</span></div></li>
       <li><div><strong>地震保障。</strong><span>是否包含？如果包含，保额与自负额是多少？如果不包含，明确知道这是一个选择，而不是一次遗漏。</span></div></li>
       <li><div><strong>除外责任（<em>exclusões</em>）。</strong><span>至少读清楚水渍、逐渐渗漏、维护不足、施工这几项的写法。</span></div></li>
       <li><div><strong>自负额（<em>franquia</em>）。</strong><span>是固定金额还是百分比？两者并列时按哪一项适用？水渍的自负额常常单独更高。</span></div></li>
-      <li><div><strong>贵重物品限额。</strong><span>珠宝、现金、艺术品的分项上限是多少，是否附带安防条件？</span></div></li>
+      <li><div><strong>贵重物品。</strong><span>首饰、手表、艺术品是按约定价值逐项列明，还是受室内财物保额的百分比分项限额约束？是否附带安防条件？</span></div></li>
       <li><div><strong>空置条款。</strong><span>连续无人居住多少天之后保障受限？这个天数与您的实际使用方式是否吻合？</span></div></li>
       <li><div><strong>出租用途。</strong><span>如果房产会出租（长租或短租），保单上是否写明？没写明就等于没有。</span></div></li>
-      <li><div><strong>民事责任。</strong><span>额度多少？范围是否只限同楼邻居，还是覆盖更广的第三方？</span></div></li>
+      <li><div><strong>民事责任。</strong><span>额度是否与家业相称？范围是否全球有效？抗辩费用是否在保额之外？</span></div></li>
       <li><div><strong>投保人与被保险人信息。</strong><span>姓名拼写、NIF、房产地址是否与产权文件一致？共同持有时是否两人都在保单上？</span></div></li>
       <li><div><strong>房贷受益人条款。</strong><span>如果有贷款，银行是否已按要求列为受益人？</span></div></li>
       <li><div><strong>生效日期。</strong><span>保障从哪一天开始？签署产权转让书（<em>escritura</em>）当天必须已经生效。</span></div></li>
     </ol>
     <div class="callout">
       <span class="callout-label">最值得问的一个问题</span>
-      不是“这份保单多少钱”，而是“这份保单不保什么”。能立刻具体回答后一个问题的人，通常真的读过条款。
+      不是“这份保单多少钱”，而是“这份保单不保什么”。欢迎把您现有的保单发给我们，我们会以书面形式指出其中的缺口。能立刻具体回答后一个问题的人，通常真的读过条款。
     </div>
   </div>
 </section>
@@ -237,9 +300,9 @@ export const HOME_PAGE = {
 <section class="section tint" aria-labelledby="women-de-zuoyong">
   <div class="container narrow article-body">
     <h2 id="women-de-zuoyong">我们在这件事里做什么</h2>
-    <p>Adler &amp; Rochefort 是在葡萄牙注册的保险代理机构（ASF 注册号 425591790/3）。在房屋保险上，我们的工作是三段：</p>
+    <p>Adler &amp; Rochefort 是面向高净值家庭的私人客户保险代理机构（ASF 注册号 425591790/3），在里斯本和拉各斯设有办公室，服务葡萄牙与西班牙的客户。在房屋保险上，从首次联系到理赔由同一位顾问负责，工作分三段：</p>
     <ul>
-      <li><strong>投保前。</strong>估算重建费用、确认室内财物保额、逐项确认地震与贵重物品等可选保障、把实际使用方式（自住、第二居所、出租）写进保单，并在签字前用英语书面说明保额、自负额、主要除外责任与报案时限。</li>
+      <li><strong>投保前。</strong>安排现场查勘或估算重建费用、确认室内财物保额、将贵重物品按约定价值列明、确认地震等可选保障、把实际使用方式（自住、第二居所、出租）写进保单，并在签字前用英语书面说明保额、自负额、主要除外责任与报案时限。</li>
       <li><strong>保单期间。</strong>装修、加装泳池或太阳能、使用方式变化、房产出租、续保重估——这些都需要更新保单，否则理赔时的依据仍然是旧信息。</li>
       <li><strong>理赔时。</strong>协助报案、准备材料、与保险公司和查勘人员沟通、盯住时限。葡萄牙的报案时限通常很短，从事故发生日起算，错过之后的补救空间有限。</li>
     </ul>

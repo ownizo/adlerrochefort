@@ -19,17 +19,17 @@ export const MOTOR_PAGE = {
   slug: 'ubezpieczenie-samochodu-portugalia',
   url: '/pl/ubezpieczenie-samochodu-portugalia/',
   cluster: 'motor',
-  title: 'Ubezpieczenie samochodu w Portugalii dla Polaków | Adler & Rochefort',
+  title: 'Ubezpieczenie samochodu w Portugalii | Adler & Rochefort',
   description:
-    'Obowiązkowe OC po portugalsku, odpowiednik AC, przerejestrowanie samochodu i ISV, polskie prawo jazdy oraz historia szkodowa i zniżki przy przeprowadzce do Portugalii.',
+    'OC i odpowiednik AC w Portugalii, samochody o wysokiej wartości, przerejestrowanie i ISV, polskie prawo jazdy i historia szkodowa przy przeprowadzce z Polski.',
   keywords:
     'ubezpieczenie samochodu Portugalia, OC Portugalia, AC Portugalia, przerejestrowanie samochodu Portugalia ISV, polskie prawo jazdy Portugalia, historia szkodowa Portugalia, zniżki OC za granicą',
   eyebrow: 'Ubezpieczenie komunikacyjne',
   h1: 'Ubezpieczenie samochodu w Portugalii: tablice, zakres i Państwa historia szkodowa',
   standfirst:
-    'Pytanie rzadko brzmi „czy mogę przywieźć samochód”. Brzmi „czy to się opłaca” i „jak nie zostać bez ochrony między polskimi i portugalskimi tablicami”. Ta strona porządkuje jedno i drugie — bez obietnic, których żaden ubezpieczyciel nie może dać.',
+    'Pytanie rzadko brzmi „czy mogę przywieźć samochód”. Brzmi „czy to ma sens” i „jak nie zostać bez ochrony między polskimi i portugalskimi tablicami”. Ta strona porządkuje jedno i drugie — łącznie z samochodami o wysokiej wartości — bez obietnic, których żaden ubezpieczyciel nie może dać.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie samochodu' }],
   pullquote: 'Ochrona musi trwać nieprzerwanie w trakcie zmiany tablic — nie zacząć się po niej.',
   schemaType: 'Article',
@@ -65,7 +65,7 @@ export const MOTOR_PAGE = {
           <tr><td>OC</td><td><em>responsabilidade civil automóvel</em></td><td>Obowiązkowe, minimalne sumy ustawowe.</td></tr>
           <tr><td>AC (autocasco)</td><td><em>danos próprios</em></td><td>Moduł opcjonalny, z własną franszyzą; często wymagany przy leasingu i kredycie.</td></tr>
           <tr><td>Kradzież</td><td><em>furto ou roubo</em></td><td>Bywa osobnym modułem, nie zawsze częścią <em>danos próprios</em>.</td></tr>
-          <tr><td>Szyby</td><td><em>quebra isolada de vidros</em></td><td>Zwykle bez franszyzy lub z niską; tanie, a używane najczęściej.</td></tr>
+          <tr><td>Szyby</td><td><em>quebra isolada de vidros</em></td><td>Zwykle bez franszyzy lub z niską; niedrogi moduł, a używany najczęściej.</td></tr>
           <tr><td>Assistance</td><td><em>assistência em viagem</em></td><td>Uwaga na limit kilometrów od miejsca zamieszkania i zakres holowania.</td></tr>
           <tr><td>NNW / kierowca</td><td><em>ocupantes</em> / <em>proteção do condutor</em></td><td>Kierowca sprawca nie jest chroniony z OC — to osobny moduł.</td></tr>
           <tr><td>Ochrona prawna</td><td><em>proteção jurídica</em></td><td>Przydatna w sporze o winę; w Polsce rzadziej kupowana.</td></tr>
@@ -76,7 +76,21 @@ export const MOTOR_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="tablice-i-luka">
+<section class="section tint" aria-labelledby="wysoka-wartosc">
+  <div class="container narrow article-body">
+    <h2 id="wysoka-wartosc">Samochody o wysokiej wartości i kolekcjonerskie</h2>
+    <p>Przy samochodach o wysokiej wartości, klasycznych i kolekcjonerskich standardowa polisa komunikacyjna z odszkodowaniem według wartości rynkowej z dnia szkody często nie odpowiada rzeczywistości. Warunki, o które warto zapytać:</p>
+    <ul>
+      <li><strong>Wartość uzgodniona</strong> — ustalona na początku umowy na podstawie wyceny, zamiast sporu o wartość rynkową po szkodzie całkowitej.</li>
+      <li><strong>Naprawa w wybranym warsztacie</strong>, w tym w autoryzowanym serwisie lub u specjalisty od danej marki, z oryginalnymi częściami.</li>
+      <li><strong>Kilka samochodów, jedna polisa</strong> — pojazdy rodziny i kolekcja w jednym przeglądzie, z jasno określonym kręgiem kierowców.</li>
+      <li><strong>Ograniczony przebieg i przechowywanie</strong> — przy samochodach kolekcjonerskich zakres i składka zależą od rocznego przebiegu i warunków garażowania.</li>
+    </ul>
+    <p>Dostępność tych warunków zależy od ubezpieczyciela, wieku i wartości pojazdu; potwierdzamy je na piśmie przed zawarciem umowy.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="tablice-i-luka">
   <div class="container narrow article-body">
     <h2 id="tablice-i-luka">Polskie tablice, portugalskie tablice i luka pomiędzy</h2>
     <p>Dopóki samochód pozostaje zarejestrowany w Polsce, polska polisa jest skonstruowana wokół rejestracji i miejsca zamieszkania w Polsce. Po wymeldowaniu i przeniesieniu rezydencji ta podstawa przestaje odpowiadać rzeczywistości, nawet jeśli umowa formalnie trwa. Z drugiej strony portugalski ubezpieczyciel zwykle może wystawić regularną polisę dopiero na <strong>portugalskie tablice</strong> (<em>matrícula</em>).</p>
@@ -87,7 +101,7 @@ export const MOTOR_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="przerejestrowanie">
+<section class="section tint" aria-labelledby="przerejestrowanie">
   <div class="container narrow article-body">
     <h2 id="przerejestrowanie">Przerejestrowanie i ISV — przegląd</h2>
     <p>Jesteśmy agencją ubezpieczeniową, nie agencją celną. Poniżej przegląd wystarczający do podjęcia decyzji, a nie instrukcja: samą procedurę praktycznie wszyscy prowadzą z <em>despachante</em> (agentem celnym).</p>
@@ -105,7 +119,7 @@ export const MOTOR_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="historia-szkodowa">
+<section class="section plain" aria-labelledby="historia-szkodowa">
   <div class="container narrow article-body">
     <h2 id="historia-szkodowa">Historia szkodowa i zniżki wypracowane w Polsce</h2>
     <p>Wieloletnia bezszkodowa historia z polskiego ubezpieczyciela ma dla portugalskiego ubezpieczyciela realną wartość ekonomiczną — ale <strong>jej uznanie nie jest gwarantowane i zależy od konkretnego ubezpieczyciela</strong>. Nie możemy złożyć uniwersalnej obietnicy, że każdy przeniesie zniżki w całości; niektórzy uwzględniają je w pełni, inni częściowo, a jeszcze inni wyłącznie przy zaświadczeniu w określonej formie.</p>
@@ -114,7 +128,7 @@ export const MOTOR_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="prawo-jazdy">
+<section class="section tint" aria-labelledby="prawo-jazdy">
   <div class="container narrow article-body">
     <h2 id="prawo-jazdy">Polskie prawo jazdy w Portugalii</h2>
     <p>Polskie prawo jazdy jest dokumentem unijnym i zachowuje ważność w Portugalii — do samego kierowania pojazdem wymiana nie jest konieczna. Jako rezydent rejestruje się jednak unijne prawo jazdy w <strong>IMT</strong>. To nie wymiana dokumentu: zachowuje się swoje prawo jazdy, a rejestracja ma termin liczony od momentu zarejestrowania pobytu.</p>
@@ -122,7 +136,7 @@ export const MOTOR_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="szkoda">
+<section class="section plain" aria-labelledby="szkoda">
   <div class="container narrow article-body">
     <h2 id="szkoda">Co robić po stłuczce</h2>
     <ol class="process-steps">

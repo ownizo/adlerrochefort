@@ -30,9 +30,9 @@ export const ZH_BRANCHES = [
     label: '房屋保险（自住、第二居所或出租）',
     legend: '关于这处房产',
     fields: [
-      { id: 'home_property_type', label: '房产类型', placeholder: '例如：里斯本公寓（含 condomínio）、阿尔加维独立别墅、度假用房' },
-      { id: 'home_rebuild_value', label: '估算重建费用（如果知道）', placeholder: '例如：约 20 万欧元；不清楚也没关系，我们可以协助估算' },
-      { id: 'home_contents_value', label: '室内财物的大致价值', placeholder: '例如：约 5 万欧元，含家具、电器；另有手表与首饰' },
+      { id: 'home_property_type', label: '房产类型', placeholder: '例如：里斯本公寓（含 condomínio）、卡斯凯什或阿尔加维的独立别墅、西班牙的第二居所' },
+      { id: 'home_rebuild_value', label: '估算重建费用（如果知道）', placeholder: '例如：已有的重建估算；不清楚也没关系，较高价值的房产可由保险公司安排现场查勘' },
+      { id: 'home_contents_value', label: '室内财物的大致价值', placeholder: '例如：家具与室内陈设；另有艺术品、手表与首饰需单独列明' },
     ],
   },
   {
@@ -64,7 +64,7 @@ export const ZH_BRANCHES = [
     label: '民事责任保险（个人或职业）',
     legend: '需要保障的范围',
     fields: [
-      { id: 'liability_activity', label: '具体活动或情形', placeholder: '例如：咨询顾问、理疗师、房产出租、餐饮经营、家庭日常责任' },
+      { id: 'liability_activity', label: '具体活动或情形', placeholder: '例如：家庭个人责任（含家政人员、泳池、船艇）、房产出租、咨询顾问' },
       { id: 'liability_clients', label: '客户或第三方所在地', placeholder: '例如：客户在葡萄牙与中国；在里斯本的工作室接待客人' },
     ],
   },
@@ -72,9 +72,9 @@ export const ZH_BRANCHES = [
 
 export const ZH_UI = {
   skipLink: '跳到主要内容',
-  asfBar: '葡萄牙注册保险代理人 — ASF 注册号 425591790/3 · 拉各斯，阿尔加维，葡萄牙',
+  asfBar: '高净值家庭私人客户保险 · 里斯本与拉各斯 · 服务葡萄牙与西班牙 · ASF 注册号 425591790/3',
   navAria: '主导航',
-  navCta: '索取报价',
+  navCta: '书面评估',
 
   mega: {
     portugal: '葡萄牙保险',
@@ -107,10 +107,10 @@ export const ZH_UI = {
     whyClaims: '理赔支持',
     burger: '菜单',
   },
-  mobileCta: '索取报价',
+  mobileCta: '申请书面评估',
   breadcrumbAria: '面包屑导航',
-  heroMeta: '葡萄牙注册保险代理人 · ASF 注册号 425591790/3 · 拉各斯，阿尔加维',
-  heroCta: '索取报价',
+  heroMeta: '葡萄牙注册保险代理人 · ASF 注册号 425591790/3 · 里斯本与拉各斯',
+  heroCta: '申请书面评估',
   relatedTitle: '相关页面',
   pullquoteAria: '引述',
   langPolicyId: 'gongzuo-yuyan',
@@ -120,12 +120,12 @@ export const ZH_UI = {
   faqTitle: '常见问题',
 
   formId: 'baojia',
-  formTitle: '索取报价',
+  formTitle: '申请书面评估',
   formLangNote:
     '本表单界面为中文。我们的工作语言是英语：报价、条款说明与理赔沟通均以英语书面进行，回复也将是英语。',
   formSubmit: '提交',
   formSending: '正在提交…',
-  formFootnote: '我们通常在一个工作日内回复。索取报价不构成任何投保义务。',
+  formFootnote: '我们通常在一个工作日内回复。提交咨询不构成任何投保义务，您的资料仅用于本次评估。',
   honeypot: '请勿填写此栏',
   successHeading: '已收到，谢谢。',
   successBody:
@@ -184,7 +184,7 @@ export const ZH_UI = {
   },
 
   footer: {
-    desc: '葡萄牙注册保险代理人，服务在葡萄牙的国际居民与企业。在我们合作的保险公司范围内提供清晰的建议。',
+    desc: '面向高净值家庭的私人客户保险代理机构，办公室设在里斯本与拉各斯，服务葡萄牙与西班牙的客户。逐一核保、书面建议，从首次联系到理赔由同一位顾问负责。',
     badge: '葡萄牙注册保险代理人 — ASF 注册号 425591790/3',
     coverTitle: '保险类别',
     coverLinks: [
@@ -196,7 +196,7 @@ export const ZH_UI = {
     ],
     langsTitle: '语言',
     contactTitle: '联系我们',
-    contactCta: '索取报价',
+    contactCta: '申请书面评估',
     copy: '版权所有',
     vault: '前往 MyCoverVault',
     privacy: '隐私政策',

@@ -57,15 +57,26 @@ const ORG_LD = {
   email: 'insurance@adlerrochefort.com',
   url: ORIGIN,
   logo: `${ORIGIN}/images/logo-adler-rochefort.png`,
-  areaServed: { '@type': 'Country', name: 'Portugal', identifier: 'PT' },
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Varandas de São João 4',
-    addressLocality: 'Lagos',
-    addressRegion: 'Algarve',
-    postalCode: '8600-324',
-    addressCountry: 'PT',
-  },
+  areaServed: [
+    { '@type': 'Country', name: 'Portugal', identifier: 'PT' },
+    { '@type': 'Country', name: 'Spain', identifier: 'ES' },
+  ],
+  address: [
+    {
+      '@type': 'PostalAddress',
+      streetAddress: 'Av. do Atlântico 16, Esc. 5.07',
+      addressLocality: 'Lisboa',
+      postalCode: '1990-019',
+      addressCountry: 'PT',
+    },
+    {
+      '@type': 'PostalAddress',
+      streetAddress: 'Varandas de São João 4',
+      addressLocality: 'Lagos',
+      postalCode: '8600-324',
+      addressCountry: 'PT',
+    },
+  ],
   identifier: { '@type': 'PropertyValue', name: 'ASF registration', value: '425591790/3' },
 };
 
@@ -416,7 +427,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Verzekeringsagent in Lagos, Algarve. Wij vergelijken Portugese verzekeraars en leggen alles schriftelijk vast.</p>
+      <p class="footer-brand-desc">Verzekeringen voor private clients in Portugal en Spanje, met kantoren in Lissabon en Lagos. Advies altijd schriftelijk.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Geregistreerd verzekeringsagent — ASF nr. 425591790/3
@@ -659,7 +670,7 @@ ${LANGSEL_CSS_LINK}
 
 <a class="skip-link" href="#main">Direct naar de inhoud</a>
 
-<div class="asf-top-bar on-dark">Adler &amp; Rochefort — geregistreerd verzekeringsagent bij de ASF onder nr. 425591790/3 · Lagos, Algarve</div>
+<div class="asf-top-bar on-dark">Adler &amp; Rochefort — geregistreerd verzekeringsagent bij de ASF onder nr. 425591790/3 · Portugal &amp; Spanje</div>
 
 <header class="site-header">
 ${swapLangSwitcher(NL_NAV, langSwitcher(page))}

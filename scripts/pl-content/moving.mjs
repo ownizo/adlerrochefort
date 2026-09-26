@@ -16,9 +16,9 @@ export const MOVING_PAGE = {
   slug: 'przeprowadzka-do-portugalii-ubezpieczenia',
   url: '/pl/przeprowadzka-do-portugalii-ubezpieczenia/',
   cluster: 'moving',
-  title: 'Przeprowadzka do Portugalii: ubezpieczenia krok po kroku | Adler & Rochefort',
+  title: 'Przeprowadzka do Portugalii i ubezpieczenia | Adler & Rochefort',
   description:
-    'Co ustawić przed wyjazdem z Polski, co po uzyskaniu NIF, a co dopiero po rejestracji pobytu. Zdrowie, mieszkanie, samochód i odpowiedzialność cywilna w odpowiedniej kolejności.',
+    'Co ustawić przed wyjazdem z Polski, co po uzyskaniu NIF, a co po rejestracji pobytu: zdrowie, dom, kolekcje, samochód i OC we właściwej kolejności.',
   keywords:
     'przeprowadzka do Portugalii, ubezpieczenia przy przeprowadzce do Portugalii, NIF Portugalia, rejestracja pobytu Portugalia, wyprowadzka z Polski ubezpieczenie, przeprowadzka Portugalia formalności',
   eyebrow: 'Przeprowadzka',
@@ -26,7 +26,7 @@ export const MOVING_PAGE = {
   standfirst:
     'Przy przeprowadzce nie chodzi o to, żeby kupić wszystko naraz. Chodzi o kolejność — bo luki w ochronie powstają dokładnie na stykach: między polskim a portugalskim systemem zdrowotnym, między polskimi a portugalskimi tablicami i między zakupem nieruchomości a jej ubezpieczeniem.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Przeprowadzka do Portugalii' }],
   pullquote: 'Luki nie powstają wtedy, gdy się o czymś zapomni. Powstają wtedy, gdy dwie rzeczy zrobi się w złej kolejności.',
   schemaType: 'Article',
@@ -35,9 +35,9 @@ export const MOVING_PAGE = {
   formSubject: 'Przeprowadzka do Portugalii (PL)',
   formCta: 'Wyślij zapytanie',
   formIntro:
-    'Proszę napisać, kiedy planowana jest przeprowadzka i co zabieracie Państwo ze sobą. Odpowiemy, co i kiedy trzeba ustawić.',
+    'Proszę napisać, kiedy planowana jest przeprowadzka i co zabierają Państwo ze sobą, albo przesłać obecne polisy. Odpowiemy pisemnie, co i kiedy trzeba ustawić.',
   formPlaceholder:
-    'Na przykład: przeprowadzka we wrześniu, dwie osoby dorosłe i dziecko, samochód na polskich tablicach, wynajmujemy mieszkanie w Porto.',
+    'Na przykład: przeprowadzka we wrześniu, dwie osoby dorosłe i dwoje dzieci, kolekcja obrazów w transporcie, dwa samochody na polskich tablicach, dom w Cascais.',
   sections: `
 <section class="section plain" aria-labelledby="trzy-luki">
   <div class="container narrow article-body">
@@ -61,7 +61,7 @@ export const MOVING_PAGE = {
       <li><div><strong>Dokumentacja medyczna.</strong><span> Historia leczenia, aktualne rozpoznania, lista przyjmowanych leków. Przydaje się przy ankiecie medycznej i u portugalskiego lekarza.</span></div></li>
       <li><div><strong>Sprawdzenie, czy dotyczy Państwa dokument S1.</strong><span> Przy polskiej emeryturze lub oddelegowaniu zmienia on całą kalkulację dotyczącą zdrowia.</span></div></li>
       <li><div><strong>Decyzja o samochodzie.</strong><span> Rachunek ISV plus koszt procedury kontra wartość pojazdu. Bywa, że sprzedaż w Polsce i zakup na miejscu wychodzi taniej — i wtedy nie trzeba się zajmować niczym z sekcji o przerejestrowaniu.</span></div></li>
-      <li><div><strong>Ubezpieczenie przewozu rzeczy.</strong><span> Firma przeprowadzkowa ma własną odpowiedzialność, zwykle ograniczoną wagowo i dużo niższą niż wartość przewożonych rzeczy. Warto sprawdzić jej limit i rozważyć osobne ubezpieczenie transportu, zwłaszcza przy przedmiotach o dużej wartości.</span></div></li>
+      <li><div><strong>Ubezpieczenie przewozu rzeczy.</strong><span> Firma przeprowadzkowa ma własną odpowiedzialność, zwykle ograniczoną wagowo i dużo niższą niż wartość przewożonych rzeczy. Warto sprawdzić jej limit i rozważyć osobne ubezpieczenie transportu. Dzieła sztuki, antyki i kolekcje wymagają zwykle ubezpieczenia „od ściany do ściany” (<em>nail-to-nail</em>) — od zdjęcia ze ściany w Polsce do powieszenia w nowym domu — na podstawie aktualnych wycen.</span></div></li>
     </ol>
   </div>
 </section>
@@ -129,7 +129,7 @@ export const MOVING_PAGE = {
     },
     {
       q: 'Co z ubezpieczeniem rzeczy w transporcie?',
-      a: '<p>Firma przeprowadzkowa odpowiada zwykle w ograniczonym zakresie, często wyliczanym od wagi, co przy elektronice i meblach bywa znacznie poniżej wartości. Warto poprosić o limit odpowiedzialności na piśmie i rozważyć osobne ubezpieczenie transportu, zwłaszcza jeśli w transporcie znajdują się przedmioty o dużej wartości.</p>',
+      a: '<p>Firma przeprowadzkowa odpowiada zwykle w ograniczonym zakresie, często wyliczanym od wagi, co przy elektronice i meblach bywa znacznie poniżej wartości. Warto poprosić o limit odpowiedzialności na piśmie i rozważyć osobne ubezpieczenie transportu. Dzieła sztuki i kolekcje ubezpiecza się zwykle „od ściany do ściany”, według aktualnych wycen, a po przyjeździe włącza do polisy domu.</p>',
     },
     {
       q: 'Kiedy wypowiedzieć polskie polisy?',

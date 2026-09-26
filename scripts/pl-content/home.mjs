@@ -19,17 +19,17 @@ export const HOME_PAGE = {
   slug: 'ubezpieczenie-domu-portugalia',
   url: '/pl/ubezpieczenie-domu-portugalia/',
   cluster: 'home',
-  title: 'Ubezpieczenie domu i mieszkania w Portugalii | Adler & Rochefort',
+  title: 'Ubezpieczenie domu i rezydencji w Portugalii | Adler & Rochefort',
   description:
-    'Mury i ruchomości domowe, condomínio a wspólnota mieszkaniowa, zalania, ryzyko sejsmiczne i wartość odbudowy. Jak ubezpieczyć nieruchomość w Portugalii, gdy przyjeżdża się z Polski.',
+    'Domy o wysokiej wartości w Portugalii: oględziny, bez zasady proporcji, gwarantowana odbudowa, sztuka i kolekcje według wartości uzgodnionej. Na piśmie.',
   keywords:
-    'ubezpieczenie domu Portugalia, ubezpieczenie mieszkania Portugalia, multirriscos habitação, ubezpieczenie nieruchomości Portugalia Polacy, ubezpieczenie domu letniskowego Portugalia, wartość odbudowy Portugalia',
-  eyebrow: 'Ubezpieczenie nieruchomości',
-  h1: 'Ubezpieczenie domu i mieszkania w Portugalii: co naprawdę jest objęte ochroną',
+    'ubezpieczenie domu Portugalia, ubezpieczenie domu o wysokiej wartości Portugalia, ubezpieczenie rezydencji Portugalia, ubezpieczenie dzieł sztuki Portugalia, multirriscos habitação, wartość odbudowy Portugalia, ubezpieczenie domu wakacyjnego Portugalia',
+  eyebrow: 'Domy o wysokiej wartości',
+  h1: 'Ubezpieczenie domu o wysokiej wartości w Portugalii: warunki, które decydują przy szkodzie',
   standfirst:
-    'Portugalskie <em>multirriscos habitação</em> wygląda jak polska polisa mieszkaniowa i w dużej części nią jest. Różnice są jednak dokładnie w tych miejscach, w których rozstrzyga się szkoda: w sumie ubezpieczenia, w zalaniach i w tym, co należy do wspólnoty, a co do Państwa.',
+    'Przy nieruchomości o wysokiej wartości pytania są inne niż przy typowym mieszkaniu: oględziny i koszt odbudowy, rezygnacja z zasady proporcji, sztuka i kolekcje według wartości uzgodnionej, odpowiedzialność cywilna liczona w milionach. Poniżej opisujemy warunki, które sprawdzamy na piśmie w każdej propozycji — oraz portugalskie realia, które obowiązują niezależnie od wartości domu.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie domu' }],
   pullquote: 'Suma ubezpieczenia to nie cena, jaką Państwo zapłacili. To koszt odbudowy tego, co zostanie zniszczone.',
   schemaType: 'Article',
@@ -82,6 +82,64 @@ export const HOME_PAGE = {
         <div class="contact-form-field"><label for="pl-hab-capital-conteudo">Suma ubezpieczenia ruchomości (€) *</label><input type="number" id="pl-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
   },
   sections: `
+<section class="section plain" aria-labelledby="warunki-dom">
+  <div class="container narrow article-body">
+    <h2 id="warunki-dom">Dom: warunki, które lokujemy</h2>
+    <p>Powyżej pewnego kosztu odbudowy pytania się zmieniają. Poniżej opisujemy warunki referencyjne polis dla majątków o wysokiej wartości, które lokujemy u ubezpieczycieli — i z którymi porównujemy na piśmie każdą propozycję.</p>
+    <ul class="hub-list">
+      <li class="hub-item"><h3>Oględziny i koszt odbudowy</h3><p>Przy nieruchomościach o wyższej wartości ubezpieczyciel przeprowadza bezpłatne oględziny na miejscu, aby potwierdzić koszt odbudowy, doradzić w sprawie sum ubezpieczenia ruchomości i przedmiotów wartościowych oraz zarekomendować środki zapobiegawcze.</p></li>
+      <li class="hub-item"><h3>Bez zasady proporcji</h3><p>Po przyjęciu rekomendowanych sum ubezpieczyciel rezygnuje ze stosowania zasady proporcji: szkoda częściowa jest wypłacana w całości, nawet jeśli koszty budowy w międzyczasie wzrosły.</p></li>
+      <li class="hub-item"><h3>Gwarantowana odbudowa</h3><p>Po szkodzie całkowitej dom zostaje odbudowany, nawet jeśli koszt przekroczy sumę ubezpieczenia budynku — pod warunkiem przyjęcia sum zarekomendowanych po oględzinach.</p></li>
+      <li class="hub-item"><h3>Zakwaterowanie o porównywalnym standardzie</h3><p>Zakwaterowanie zastępcze o porównywalnym standardzie, również dla zwierząt domowych i koni, przez cały czas, gdy dom nie nadaje się do zamieszkania — bez limitu kilku miesięcy typowego dla rynku masowego.</p></li>
+      <li class="hub-item"><h3>Ogród, mury i budynki gospodarcze</h3><p>Drzewa, krzewy i trawniki, ogrodzenia i mury oporowe, baseny, budynki gospodarcze i domy gościnne z własnymi sumami ubezpieczenia — a nie z symbolicznym limitem.</p></li>
+      <li class="hub-item"><h3>Woda, gaz i lokalizacja awarii</h3><p>Zlokalizowanie i naprawa wycieków wody, gazu lub oleju opałowego bez odrębnego podlimitu, wraz z utraconą wodą lub paliwem.</p></li>
+      <li class="hub-item"><h3>Odszkodowanie według Państwa wyboru</h3><p>Wypłata pieniężna albo naprawa przez wybranych przez Państwa wykonawców, rzemieślników i konserwatorów — bez potrąceń przy żadnym z wariantów.</p></li>
+      <li class="hub-item"><h3>Bez franszyzy przy dużych szkodach</h3><p>Powyżej określonej wysokości szkody franszyza przestaje obowiązywać — dokładnie tam, gdzie ważyłaby najwięcej.</p></li>
+      <li class="hub-item"><h3>Nowoczesny dom</h3><p>Panele fotowoltaiczne, magazyny energii i agregaty prądotwórcze, ekologiczna modernizacja przy odbudowie oraz wymiana zamków po utracie lub kradzieży kluczy.</p></li>
+      <li class="hub-item"><h3>Przystosowanie domu po inwalidztwie</h3><p>Prace dostosowujące dom, gdy członek rodziny dozna trwałego inwalidztwa w wyniku wypadku lub choroby.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="warunki-ruchomosci">
+  <div class="container narrow article-body">
+    <h2 id="warunki-ruchomosci">Ruchomości, kolekcje, odpowiedzialność cywilna i rodzina</h2>
+    <h3>Ruchomości domowe</h3>
+    <ul>
+      <li><strong>Ochrona od wszystkich ryzyk, na całym świecie.</strong> Rzeczy osobiste chronione od wszystkich ryzyk — w domu, w podróży i w drugiej nieruchomości — bez odrębnego podlimitu dla tego, co mają Państwo przy sobie.</li>
+      <li><strong>Ruchomości ponad sumę ubezpieczenia.</strong> Po przyjęciu rekomendowanych sum odszkodowanie może przekroczyć sumę ubezpieczenia ruchomości o uzgodniony z góry margines, jeśli ich rzeczywista wartość okaże się wyższa.</li>
+      <li><strong>Bez podlimitów tam, gdzie to ważne.</strong> Przypadkowe uszkodzenie i utrata, kradzież z piwnic i budynków gospodarczych oraz meble ogrodowe — bez podlimitów, które w standardowych polisach odbierają ochronie realną treść.</li>
+      <li><strong>Rzeczy gości i nowe zakupy.</strong> Rzeczy Państwa gości są chronione, a nowo nabyte przedmioty objęte automatycznie przez okres przewidziany na ich zgłoszenie.</li>
+      <li><strong>Wydarzenia w domu.</strong> Odwołanie wydarzenia oraz konstrukcje tymczasowe — namioty, sceny — przy uroczystościach organizowanych w domu.</li>
+    </ul>
+    <h3 id="kolekcje">Sztuka, biżuteria i kolekcje</h3>
+    <ul>
+      <li><strong>Wartość uzgodniona.</strong> Dzieła sztuki, biżuteria, zegarki i kolekcje wpisane do polisy według wartości ustalonej na początku umowy na podstawie wyceny — tę kwotę wypłaca się przy szkodzie całkowitej, bez sporu o amortyzację.</li>
+      <li><strong>Bez franszyzy.</strong> Przedmioty wartościowe ubezpieczone według wartości uzgodnionej lub zadeklarowanej nie są obciążone franszyzą.</li>
+      <li><strong>Utrata wartości po renowacji.</strong> Jeśli przedmiot zostanie odrestaurowany, ale straci wartość rynkową, różnica jest wypłacana — a koszt naprawy nie ma górnego limitu.</li>
+      <li><strong>Ochrona przed niedoszacowaniem.</strong> Jeśli przedmiot z aktualną profesjonalną wyceną okaże się w dniu szkody wart więcej niż jego suma ubezpieczenia, polisa wypłaca ponad wartość uzgodnioną, w określonym marginesie.</li>
+      <li><strong>Nowe nabytki i kolekcje win.</strong> Nowe przedmioty objęte automatycznie przez określony czas, a kolekcje win i alkoholi — z własnymi warunkami przechowywania.</li>
+    </ul>
+    <h3>Odpowiedzialność cywilna</h3>
+    <ul>
+      <li><strong>Sumy dopasowane do majątku.</strong> Odpowiedzialność cywilna rodziny z sumami gwarancyjnymi rzędu kilku milionów euro, o zasięgu światowym.</li>
+      <li><strong>Koszty obrony ponad sumę.</strong> Koszty obrony prawnej są pokrywane ponad sumę gwarancyjną, a nie z niej potrącane.</li>
+      <li><strong>Kto jest chroniony.</strong> Domownicy, w tym dzieci studiujące poza domem, oraz osoby okazjonalnie opiekujące się Państwa zwierzętami; goście i personel domowy w związku z rezydencją.</li>
+      <li><strong>Wszystkie rezydencje.</strong> Jako właściciel, najemca lub użytkownik — w Portugalii, w Hiszpanii albo wszędzie tam, gdzie rodzina ma dom.</li>
+    </ul>
+    <p>Więcej na <a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">stronie o odpowiedzialności cywilnej rodziny</a>.</p>
+    <h3>Ochrona rodziny</h3>
+    <ul>
+      <li><strong>Porwanie i wymuszenie.</strong> Koszty związane z porwaniem i okupem członka rodziny, w tym wyspecjalizowani konsultanci i nagrody za informacje.</li>
+      <li><strong>Carjacking i napad na dom.</strong> Wsparcie i odszkodowanie po carjackingu, napadzie na dom, pobiciu, agresji na drodze lub na pokładzie samolotu.</li>
+      <li><strong>Groźby i nękanie.</strong> Konsultanci ds. bezpieczeństwa, tymczasowa relokacja i pomoc prawna, gdy członkowi rodziny się grozi lub gdy jest on uporczywie nękany.</li>
+      <li><strong>Cyberprzemoc i reputacja.</strong> Psycholog, konsultant ds. cyberbezpieczeństwa, prawnik oraz — w razie potrzeby — koszty zmiany szkoły po powtarzających się aktach cyberprzemocy.</li>
+      <li><strong>Wsparcie psychologiczne.</strong> Profesjonalna pomoc dla rodziny po każdym z tych zdarzeń.</li>
+    </ul>
+    <p class="legal-note">To są warunki referencyjne polis dla majątków o wysokiej wartości, które lokujemy u ubezpieczycieli. Zakres, limity, franszyzy i wyłączenia różnią się w zależności od ubezpieczyciela i ryzyka i są potwierdzane wyłącznie w dokumentacji wystawionej polisy.</p>
+  </div>
+</section>
+
 <section class="section plain" aria-labelledby="mury-i-ruchomosci">
   <div class="container narrow article-body">
     <h2 id="mury-i-ruchomosci">Mury i ruchomości domowe — gdzie przebiega granica</h2>
@@ -98,7 +156,7 @@ export const HOME_PAGE = {
   <div class="container narrow article-body">
     <h2 id="wartosc-odbudowy">Wartość odbudowy, czyli najczęstszy kosztowny błąd</h2>
     <p>Suma ubezpieczenia budynku powinna odpowiadać <strong>kosztowi odbudowy</strong>, a nie cenie transakcyjnej. W Portugalii różnica jest szczególnie duża w dwóch kierunkach. W Lizbonie czy Cascais cena zakupu zawiera wartość działki i lokalizacji, których pożar nie niszczy — więc suma równa cenie zakupu jest zawyżona i rok po roku opłacana zbyt wysoką składką. Na terenach o niskich cenach nieruchomości oraz w starym budownictwie bywa odwrotnie: odbudowa wychodzi drożej niż wartość rynkowa, zwłaszcza przy budynkach objętych wymogami konserwatorskimi lub o nietypowej konstrukcji.</p>
-    <p>Znaczenie tej liczby wykracza poza szkody całkowite. Przy <em>regra proporcional</em> (zasadzie proporcji) niedoubezpieczenie obniża odszkodowanie także przy szkodzie częściowej — jeśli suma jest o 30% za niska, świadczenie za zniszczoną łazienkę może zostać obniżone o te same 30%. Mechanizm jest ten sam, który w Polsce nazywa się niedoubezpieczeniem; tu bywa stosowany bardziej konsekwentnie.</p>
+    <p>Znaczenie tej liczby wykracza poza szkody całkowite. Przy <em>regra proporcional</em> (zasadzie proporcji) niedoubezpieczenie obniża odszkodowanie także przy szkodzie częściowej — jeśli suma jest o 30% za niska, świadczenie za zniszczoną łazienkę może zostać obniżone o te same 30%. Mechanizm jest ten sam, który w Polsce nazywa się niedoubezpieczeniem; tu bywa stosowany bardziej konsekwentnie. Dlatego przy domach o wysokiej wartości tak duże znaczenie mają oględziny: po przyjęciu zarekomendowanych sum ubezpieczyciel może zrezygnować z tej zasady.</p>
     <h3>Co bierzemy pod uwagę przy ustalaniu sumy</h3>
     <ul>
       <li>Powierzchnię użytkową z <em>caderneta predial</em> oraz liczbę kondygnacji.</li>
@@ -189,6 +247,10 @@ export const HOME_PAGE = {
 </section>`,
   faqTitle: 'Ubezpieczenie nieruchomości w Portugalii — pytania',
   faq: [
+    {
+      q: 'Od jakiej wartości domu mają zastosowanie warunki dla majątków o wysokiej wartości?',
+      a: '<p>Nie ma jednego progu dla całego rynku — każdy ubezpieczyciel ustala go sam, zwykle na podstawie kosztu odbudowy oraz wartości ruchomości, dzieł sztuki i kolekcji. Na podstawie kilku danych o nieruchomości mówimy, czy dany dom kwalifikuje się do takich warunków, i przedstawiamy rekomendację na piśmie.</p>',
+    },
     {
       q: 'Czy ubezpieczenie domu w Portugalii jest obowiązkowe?',
       a: '<p>Dla mieszkania w budynku wielolokalowym ubezpieczenie od ryzyka pożaru jest wymagane w odniesieniu do części wspólnych i lokali — obowiązek wynika z przepisów o współwłasności. Przy kredycie hipotecznym ubezpieczenie nieruchomości wymaga dodatkowo bank, w zakresie wynikającym z umowy kredytowej. Dla domu wolnostojącego bez kredytu nie ma powszechnego obowiązku, choć praktycznie każdy właściciel taką polisę posiada.</p>',

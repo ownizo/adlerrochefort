@@ -18,9 +18,9 @@ export const DK_BRANCHES = [
     label: 'Hus- eller indboforsikring',
     legend: 'Lidt om boligen',
     fields: [
-      { id: 'home_property_type', label: 'Boligtype', placeholder: 'f.eks. lejlighed i condomínio, villa, sommerhus' },
-      { id: 'home_rebuild_value', label: 'Anslået genopførelsespris (hvis du ved det)', placeholder: 'f.eks. 180.000 EUR — ved du det ikke, regner vi det ud sammen' },
-      { id: 'home_contents_value', label: 'Omtrentlig værdi af indboet', placeholder: 'f.eks. 30.000 EUR inkl. møbler og elektronik' },
+      { id: 'home_property_type', label: 'Boligtype', placeholder: 'f.eks. villa med pool, byhus i Lissabon, lejlighed i condomínio' },
+      { id: 'home_rebuild_value', label: 'Anslået genopførelsespris (hvis du ved det)', placeholder: 'ved du det ikke, fastlægger vi det sammen — ofte ved en besigtigelse' },
+      { id: 'home_contents_value', label: 'Omtrentlig værdi af indboet', placeholder: 'f.eks. møbler, kunst, smykker og ure — gerne opdelt' },
     ],
   },
   {
@@ -49,10 +49,10 @@ export const DK_BRANCHES = [
   },
   {
     value: 'DK · Ansvar',
-    label: 'Ansvarsforsikring (privat eller erhverv)',
+    label: 'Ansvarsforsikring (familie eller erhverv)',
     legend: 'Hvad dækningen skal omfatte',
     fields: [
-      { id: 'liability_activity', label: 'Hvilken aktivitet eller situation', placeholder: 'f.eks. it-konsulent, fysioterapeut, udlejning af bolig, privatliv' },
+      { id: 'liability_activity', label: 'Hvilken aktivitet eller situation', placeholder: 'f.eks. familiens privatansvar, husstandsansatte, båd, udlejning, erhverv' },
       { id: 'liability_clients', label: 'Hvor er kunderne eller tredjemand', placeholder: 'f.eks. kunder i Danmark og Portugal, klienter modtages i Lissabon' },
     ],
   },
@@ -60,9 +60,9 @@ export const DK_BRANCHES = [
 
 export const DK_UI = {
   skipLink: 'Gå til indholdet',
-  asfBar: 'Registreret forsikringsformidler — ASF nr. 425591790/3 · Lagos, Algarve, Portugal',
+  asfBar: 'Registreret forsikringsformidler — ASF nr. 425591790/3 · Portugal og Spanien · Lissabon og Lagos',
   navAria: 'Hovednavigation',
-  navCta: 'Få et tilbud',
+  navCta: 'Skriftlig vurdering',
 
   mega: {
     portugal: 'Forsikring i Portugal',
@@ -91,14 +91,14 @@ export const DK_UI = {
     pcSpain: 'Private Clients — Spanien',
     whyAbout: 'Om os',
     whyHow: 'Sådan arbejder vi',
-    whyBroker: 'Hvorfor en mægler',
+    whyBroker: 'Hvorfor en formidler',
     whyClaims: 'Skadebehandling',
     burger: 'Menu',
   },
-  mobileCta: 'Få et tilbud',
+  mobileCta: 'Skriftlig vurdering',
   breadcrumbAria: 'Brødkrummer',
-  heroMeta: 'Registreret forsikringsformidler · ASF nr. 425591790/3 · Lagos, Algarve',
-  heroCta: 'Få et tilbud',
+  heroMeta: 'Registreret forsikringsformidler · ASF nr. 425591790/3 · Lissabon og Lagos',
+  heroCta: 'Bed om en skriftlig vurdering',
   relatedTitle: 'Relaterede sider',
   pullquoteAria: 'Citat',
   langPolicyId: 'arbejdssprog',
@@ -108,7 +108,7 @@ export const DK_UI = {
   faqTitle: 'Ofte stillede spørgsmål',
 
   formId: 'tilbud',
-  formTitle: 'Få et tilbud',
+  formTitle: 'Bed om en skriftlig vurdering',
   formLangNote: 'Formularen er på dansk. Vi svarer og behandler sagen på engelsk, skriftligt.',
   formSubmit: 'Send forespørgsel',
   formSending: 'Sender…',
@@ -125,8 +125,8 @@ export const DK_UI = {
     phoneHelp: 'Angiv nummeret med landekode, f.eks. +45 20 12 34 56.',
     company: 'Virksomhed (valgfrit)',
     companyPh: 'f.eks. virksomhedens navn, hvis henvendelsen vedrører driften',
-    localidade: 'By i Portugal',
-    localidadePh: 'f.eks. Lissabon, Cascais, Lagos, Albufeira',
+    localidade: 'By i Portugal eller Spanien',
+    localidadePh: 'f.eks. Lissabon, Cascais, Comporta, Lagos, Marbella',
     country: 'Land du bor i nu',
     countryPh: 'f.eks. Danmark',
     residence: 'Din status i Portugal',
@@ -170,7 +170,7 @@ export const DK_UI = {
   },
 
   footer: {
-    desc: 'Forsikringsformidler for udlandsdanskere, andre udlandsboende og virksomheder i Algarve, Portugal. Klar rådgivning inden for vores portefølje af forsikringsselskaber.',
+    desc: 'Forsikringsformidler for private kunder med betydelige formuer i Portugal og Spanien, med kontorer i Lissabon og Lagos. Individuel tegning, skriftlig rådgivning og én rådgiver fra første kontakt til skade.',
     badge: 'Registreret forsikringsformidler — ASF nr. 425591790/3',
     coverTitle: 'Forsikringer',
     coverLinks: [
@@ -182,7 +182,7 @@ export const DK_UI = {
     ],
     langsTitle: 'Sprog',
     contactTitle: 'Kontakt',
-    contactCta: 'Få et tilbud',
+    contactCta: 'Skriftlig vurdering',
     copy: 'Alle rettigheder forbeholdes',
     vault: 'Til MyCoverVault',
     privacy: 'Privatlivspolitik',
@@ -191,7 +191,7 @@ export const DK_UI = {
     asfChannel: 'ASF’s whistleblowerkanal',
     regulatory: [
       'Adler &amp; Rochefort er et varemærke tilhørende Ownizo, Unipessoal Lda.',
-      'Ownizo, Unipessoal Lda. er registreret hos den portugisiske tilsynsmyndighed for forsikring og pensionsfonde (ASF) som forsikringsagent med nummer 425591790/3. Vi rådgiver inden for vores portefølje af forsikringsselskaber.',
+      'Ownizo, Unipessoal Lda. er registreret hos den portugisiske tilsynsmyndighed for forsikring og pensionsfonde (ASF) som forsikringsagent med nummer 425591790/3 og formidler i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Vi rådgiver inden for vores portefølje af forsikringsselskaber.',
       'Denne side indeholder generel information og udgør ikke individuel forsikringsrådgivning eller juridisk rådgivning. Hvilken dækning der passer, afhænger af din situation og af betingelserne i den valgte police.',
     ],
   },

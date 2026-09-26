@@ -17,9 +17,9 @@ export const MOTOR_PAGE = {
   slug: 'bilforsakring-portugal',
   url: '/se/bilforsakring-portugal/',
   cluster: 'motor',
-  title: 'Bilförsäkring i Portugal för svenskar | Adler & Rochefort',
+  title: 'Bilförsäkring i Portugal, även samlarbilar | Adler & Rochefort',
   description:
-    'Trafikförsäkring och helförsäkring i Portugal, svensk eller portugisisk registrering, ISV och importen via IMT, svenskt körkort och hur skadefrihetsrabatten behandlas.',
+    'Bilförsäkring i Portugal: omfattning, svensk eller portugisisk registrering, ISV och import, värdefulla bilar och samlarbilar till avtalat värde, skadefria år.',
   keywords:
     'bilförsäkring Portugal, trafikförsäkring Portugal, ta med bilen till Portugal, importera bil Portugal ISV, svenskt körkort Portugal, skadefrihetsrabatt Portugal',
   eyebrow: 'Bilförsäkring',
@@ -27,7 +27,7 @@ export const MOTOR_PAGE = {
   standfirst:
     'Frågan är sällan om du får ta med bilen, utan om det är värt det — och hur du undviker glappet mellan svensk och portugisisk registrering. Här är båda delarna, utan löften som inget bolag kan ge.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilförsäkring' }],
   pullquote: 'Skyddet måste löpa vidare medan registreringsskylten byts — inte efteråt.',
   schemaType: 'Article',
@@ -64,8 +64,10 @@ export const MOTOR_PAGE = {
         </tbody>
       </table>
     </div>
-    <p>Konsekvensen: en portugisisk offert som ser billigare ut än den svenska helförsäkringen kan vara det helt riktigt — eller bara sakna tre av de saker som fanns i den svenska. Vi går igenom tilläggen ett i taget i stället för att jämföra två slutsummor.</p>
+    <p>Konsekvensen: två offerter med olika slutsummor kan vara likvärdiga — eller så saknar den ena tre av de saker som fanns i den svenska helförsäkringen. Vi går igenom tilläggen ett i taget i stället för att jämföra två slutsummor.</p>
     <p>Ett par detaljer som brukar överraska: självrisken på <em>danos próprios</em> är ofta procentuell och därför högre på en dyr bil än en svensk fast självrisk, och glasruteskydd är mycket vanligt som separat tillägg med egen, låg självrisk.</p>
+    <h3>Värdefulla bilar och samlarbilar</h3>
+    <p>För dyra bilar och samlingar räcker en vanlig bilförsäkring sällan. Ersättningen bygger där på marknadsvärdet på skadedagen, med procentuell självrisk och verkstäder som bolaget väljer. För samlarbilar och fordon med högt värde finns villkor med <strong>avtalat värde</strong> mot värdering, fritt val av specialistverkstad och skydd även när bilen står i garage eller transporteras till ett evenemang. Flera bilar i samma hushåll kan samlas i en försäkring. Vi går igenom samlingen skriftligt och anger vad som kräver individuell prövning.</p>
   </div>
 </section>
 

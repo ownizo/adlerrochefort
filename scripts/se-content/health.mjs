@@ -16,17 +16,17 @@ export const HEALTH_PAGE = {
   slug: 'sjukvardsforsakring-portugal',
   url: '/se/sjukvardsforsakring-portugal/',
   cluster: 'health',
-  title: 'Sjukvårdsförsäkring i Portugal för svenskar | Adler & Rochefort',
+  title: 'Internationell sjukvårdsförsäkring i Portugal | Adler & Rochefort',
   description:
-    'SNS och privat sjukvårdsförsäkring i Portugal: registrering, vårdnätverk, kvalificeringstider, hälsoprövning och befintliga besvär — och vad som händer med Försäkringskassan vid utflyttning.',
+    'Privat sjukvårdsförsäkring för familjer i Portugal och Spanien: internationellt skydd, SNS parallellt, kvalificeringstider, hälsoprövning och utflyttning.',
   keywords:
-    'sjukvårdsförsäkring Portugal, privat vård Portugal, SNS Portugal, utflyttning Sverige sjukvård, EU-kort Portugal, Försäkringskassan utflyttning, S1 Portugal',
+    'sjukvårdsförsäkring Portugal, internationell sjukvårdsförsäkring, privat vård Portugal, SNS Portugal, utflyttning Sverige sjukvård, EU-kort Portugal, Försäkringskassan utflyttning, S1 Portugal',
   eyebrow: 'Sjukvårdsförsäkring',
-  h1: 'Sjukvårdsförsäkring i Portugal: SNS, privat vård och vad som händer med svensk sjukförsäkring',
+  h1: 'Sjukvårdsförsäkring för familjen i Portugal: internationellt skydd, SNS och privat vård',
   standfirst:
-    'En privat sjukvårdsförsäkring i Portugal ersätter inte den offentliga vården — den köps för att ge en andra väg in. Här är hur de två systemen fungerar parallellt, och vad bolaget frågar innan det tecknar.',
+    'För en familj som lever i flera länder är frågan inte bara vilken vård som finns i Portugal, utan vilket skydd som följer med till Spanien, Sverige och vidare. Här är hur den offentliga vården, lokala privata försäkringar och internationella försäkringar förhåller sig till varandra — och vad bolaget frågar innan det tecknar.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sjukvårdsförsäkring' }],
   pullquote: 'Sjukvårdsförsäkring tecknas när man är frisk. Senare köper man bara det bolaget väljer att erbjuda.',
   schemaType: 'Article',
@@ -88,7 +88,22 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="karens">
+<section class="section tint" aria-labelledby="internationell">
+  <div class="container narrow article-body">
+    <h2 id="internationell">Lokal eller internationell försäkring</h2>
+    <p>Den portugisiska nätverksförsäkringen är byggd för den som bor och får vård i Portugal. För familjer som delar året mellan flera länder, reser mycket eller vill kunna välja sjukhus fritt är en <strong>internationell privat sjukvårdsförsäkring</strong> ofta den mer naturliga lösningen. Skillnaderna som brukar avgöra:</p>
+    <ul>
+      <li><strong>Geografiskt område</strong> — Europa eller hela världen, med eller utan USA. Skyddet gäller i Portugal, i Spanien och i Sverige på samma villkor, inte bara vid akuta fall.</li>
+      <li><strong>Fritt val av vårdgivare</strong> — privata sjukhus och specialister efter eget val, ofta med direktbetalning i stället för ersättning i efterhand.</li>
+      <li><strong>Höga årstak</strong> — belopp som är dimensionerade för allvarlig sjukdom och kostsam behandling, inte bara för öppenvård.</li>
+      <li><strong>Transport och evakuering</strong> — medicinsk transport till lämpligt sjukhus och hemtransport när det behövs.</li>
+      <li><strong>Kontinuitet</strong> — försäkringen följer med om familjen flyttar vidare, utan ny hälsoprövning för varje land.</li>
+    </ul>
+    <p>Vilken lösning som passar beror på var familjen faktiskt lever, hur ofta ni reser och vilka vårdgivare ni vill ha tillgång till. Vi jämför omfattningen skriftligt och säger det rakt ut när en lokal försäkring räcker.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="karens">
   <div class="container narrow article-body">
     <h2 id="karens">Kvalificeringstider, hälsoprövning och befintliga besvär</h2>
     <h3>Kvalificeringstider</h3>
@@ -104,7 +119,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="familj">
+<section class="section tint" aria-labelledby="familj">
   <div class="container narrow article-body">
     <h2 id="familj">Familjeförsäkring</h2>
     <p>En familjeförsäkring omfattar normalt makar eller partner samt barn upp till en viss ålder, ofta med rabatt för antalet personer. Det som får störst praktisk betydelse:</p>
@@ -117,7 +132,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="uppehallstillstand">
+<section class="section plain" aria-labelledby="uppehallstillstand">
   <div class="container narrow article-body">
     <h2 id="uppehallstillstand">Försäkring och uppehållsärenden</h2>
     <p>En mycket vanlig fråga, där svaret måste vara försiktigt. <strong>Vi kan inte bekräfta att en försäkring uppfyller kraven i ett enskilt uppehålls- eller visumärende.</strong> Kraven sätts av myndigheterna, varierar med ansökningstyp och sökandens situation, och kan ändras. Bedömningen görs av myndigheten, och tolkningen av regelverket av ett juridiskt ombud.</p>
@@ -125,7 +140,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="checklista">
+<section class="section tint" aria-labelledby="checklista">
   <div class="container narrow article-body">
     <h2 id="checklista">Checklista</h2>
     <ol class="process-steps">
@@ -159,7 +174,11 @@ export const HEALTH_PAGE = {
     },
     {
       q: 'Behöver jag en privat försäkring om jag är registrerad i SNS?',
-      a: '<p>Det är inget antingen-eller. SNS ger tillgång till vård, inklusive akut. En privat försäkring ger kortare väntetid till konsultation och diagnostik och möjlighet att välja mottagning. De flesta av våra kunder använder båda parallellt. Är budgeten begränsad är en öppenvårdsvariant med bra nätverk en bättre start än den bredaste omfattningen till varje pris.</p>',
+      a: '<p>Det är inget antingen-eller. SNS ger tillgång till vård, inklusive akut. En privat försäkring ger kortare väntetid till konsultation och diagnostik och möjlighet att välja mottagning. De flesta av våra kunder använder båda parallellt, och för familjer som lever i flera länder är det ofta en internationell försäkring som ger den största skillnaden.</p>',
+    },
+    {
+      q: 'När är en internationell försäkring bättre än en portugisisk?',
+      a: '<p>När familjen bor i flera länder, reser ofta, vill ha vård i Sverige eller Spanien på samma villkor som i Portugal eller vill välja sjukhus fritt. En portugisisk nätverksförsäkring är byggd för vård i Portugal; en internationell försäkring har ett bredare geografiskt område, högre årstak och följer med om ni flyttar vidare. Vi jämför de två skriftligt utifrån hur ni faktiskt lever.</p>',
     },
     {
       q: 'Gäller försäkringen när jag reser till Sverige?',

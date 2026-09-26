@@ -24,7 +24,7 @@ export const BUSINESS_PAGES = [
     standfirst:
       'Zodra u gasten tegen betaling ontvangt, is uw woning geen woning meer maar een bedrijf. Uw woonpolis weet dat nog niet, en de wet stelt een eigen eis waar de meeste beginnende exploitanten pas bij de registratie van horen.',
     heroMeta:
-      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
     hreflang: { pt: '/seguros/alojamento-local/' },
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Alojamento Local' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -172,7 +172,7 @@ export const BUSINESS_PAGES = [
     standfirst:
       'U zet uw activiteit over naar Portugal — advies, IT, ontwerp, coaching, een therapeutische praktijk. De inschrijving bij de Finanças is een formaliteit. De vraag die daarna komt is wie er opdraait voor de schade als uw werk een fout bevat.',
     heroMeta:
-      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Beroepsaansprakelijkheid zzp' }],
     published: '2026-08-13T09:00:00+00:00',

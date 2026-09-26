@@ -16,9 +16,9 @@ export const PROPERTY_PAGE = {
   slug: 'kobe-bolig-i-portugal-forsikring',
   url: '/dk/kobe-bolig-i-portugal-forsikring/',
   cluster: 'property',
-  title: 'Købe bolig i Portugal: forsikring trin for trin | Adler & Rochefort',
+  title: 'Boligkøb i Portugal: forsikring trin for trin | Adler & Rochefort',
   description:
-    'Forsikring ved ejendomskøb i Portugal: hvad banken kræver, hvad der gælder fra dagen for escritura, de tre tal der ikke er det samme, og hvorfor der ikke findes en ejerskifteforsikring.',
+    'Forsikring ved boligkøb i Portugal: hvad banken kræver, hvad der gælder fra escritura, de tre tal der ikke er det samme, og hvorfor ejerskifteforsikring mangler.',
   keywords:
     'købe bolig i Portugal forsikring, ejendomskøb Portugal, boliglån Portugal forsikring, condomínio Portugal, escritura Portugal, feriebolig Portugal forsikring',
   eyebrow: 'Guide',
@@ -26,18 +26,18 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Ved et portugisisk boligkøb kommer forsikringsspørgsmålet som regel til sidst, når alt andet er afgjort — og på det tidspunkt står banken allerede med et forslag. Her er, hvad der gælder hvornår, og hvilke beslutninger der er dine.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Købe bolig i Portugal' }],
   pullquote: 'Banken har en legitim interesse i, at boligen er forsikret. Hvilket selskab der skriver policen, er et andet spørgsmål.',
   schemaType: 'Article',
   formHeading: 'Forsikring til dit boligkøb',
   formBranch: 'DK · Bolig',
   formSubject: 'Ejendomskøb i Portugal — forsikring',
-  formCta: 'Få et tilbud',
+  formCta: 'Bed om en skriftlig vurdering',
   formIntro:
-    'Fortæl, hvor i handlen du er, og hvad det er for en ejendom. Vi vender tilbage med, hvad der skal være klar til dagen for escritura.',
+    'Fortæl, hvor i handlen du er, og hvad det er for en ejendom. Vi vender skriftligt tilbage med, hvad der skal være klar til dagen for escritura.',
   formPlaceholder:
-    'For eksempel: lejlighed i Cascais, kontrakt underskrevet, escritura i november, boliglån i portugisisk bank.',
+    'For eksempel: villa med pool i Comporta, kontrakt underskrevet, escritura i november, kunst og møbler flyttes fra Danmark.',
   sections: `
 <section class="section plain" aria-labelledby="tidslinje">
   <div class="container narrow article-body">

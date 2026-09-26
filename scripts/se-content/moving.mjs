@@ -15,9 +15,9 @@ export const MOVING_PAGE = {
   slug: 'flytta-till-portugal-forsakring',
   url: '/se/flytta-till-portugal-forsakring/',
   cluster: 'moving',
-  title: 'Flytta till Portugal: försäkringar i rätt ordning | Adler & Rochefort',
+  title: 'Flytta till Portugal: försäkringarna i ordning | Adler & Rochefort',
   description:
-    'Vad som händer med svenska försäkringar vid utflyttning, de tre glappen som uppstår under flytten, och i vilken ordning sjukvård, hem och bil bör ordnas i Portugal.',
+    'Vad som händer med svenska försäkringar vid utflyttning, de tre glappen under flytten och i vilken ordning sjukvård, hem, värdeföremål och bil ordnas.',
   keywords:
     'flytta till Portugal försäkring, utflyttning Sverige försäkringar, försäkring vid flytt utomlands, svenska försäkringar utomlands, NIF Portugal, uppehållsregistrering Portugal',
   eyebrow: 'Guide',
@@ -25,16 +25,16 @@ export const MOVING_PAGE = {
   standfirst:
     'Det mesta som går fel vid en flytt går fel på grund av tidsordningen, inte av val av bolag. Här är de tre glappen som uppstår under en flytt till Portugal och hur du stänger dem.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Flytta till Portugal' }],
   pullquote: 'Ingen säger upp sina försäkringar. Man flyttar bara, och en dag stämmer inte längre det de bygger på.',
   schemaType: 'Article',
   formHeading: 'Planera försäkringarna för flytten',
   formBranch: '',
   formSubject: 'Flytt till Portugal — försäkringar',
-  formCta: 'Boka ett samtal',
+  formCta: 'Begär en skriftlig plan',
   formIntro:
-    'Berätta var i flytten du står och vilket datum du siktar på. Vi svarar med vad som behöver ordnas, i vilken ordning.',
+    'Berätta var i flytten du står och vilket datum du siktar på, och skicka gärna de försäkringar du har i dag. Vi svarar skriftligt med vad som behöver ordnas, i vilken ordning.',
   formPlaceholder:
     'Till exempel: flyttar i februari till Lissabon, två vuxna, hyr första året, tar med bilen. Vad ordnar vi först?',
   sections: `

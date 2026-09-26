@@ -136,9 +136,9 @@ export const IL_BRANCHES = [
 export const IL_UI = {
   skipLink: 'דילוג לתוכן הראשי',
   asfBar:
-    'סוכנות ביטוח רשומה בפורטוגל — רישום ⁦ASF 425591790/3⁩ · לאגוש, אלגרבה, פורטוגל',
+    'ביטוח ללקוחות פרטיים בפורטוגל ובספרד — רישום ⁦ASF 425591790/3⁩ · ליסבון · לאגוש',
   navAria: 'ניווט ראשי',
-  navCta: 'לקבלת הצעה',
+  navCta: 'בקשת חוות דעת',
 
   mega: {
     portugal: 'ביטוח בפורטוגל',
@@ -171,10 +171,10 @@ export const IL_UI = {
     whyClaims: 'תביעות',
     burger: 'תפריט',
   },
-  mobileCta: 'לקבלת הצעה',
+  mobileCta: 'בקשת חוות דעת',
   breadcrumbAria: 'מסלול הניווט',
-  heroMeta: 'סוכנות ביטוח רשומה בפורטוגל · רישום ⁦ASF 425591790/3⁩ · לאגוש, אלגרבה',
-  heroCta: 'לקבלת הצעה',
+  heroMeta: 'סוכנות ביטוח רשומה · ⁦ASF 425591790/3⁩ · משרדים בליסבון ובלאגוש · פורטוגל וספרד',
+  heroCta: 'לבקשת חוות דעת בכתב',
   relatedTitle: 'עמודים קשורים',
   pullquoteAria: 'ציטוט',
   langPolicyId: 'sfat-avoda',
@@ -254,19 +254,19 @@ export const IL_UI = {
 
   footer: {
     desc:
-      'סוכנות ביטוח רשומה בפורטוגל, עבור תושבים ובעלי עסקים בין־לאומיים בפורטוגל. ייעוץ ברור בתוך מגוון המבטחים שאנחנו עובדים איתם.',
+      'תיווך ביטוח ללקוחות פרטיים ולמשפחות בעלות הון משמעותי בפורטוגל ובספרד, עם משרדים בליסבון ובלאגוש. חיתום פרטני, חוות דעת בכתב ויועץ אחד — מהפנייה הראשונה ועד התביעה.',
     badge: 'סוכנות ביטוח רשומה בפורטוגל — רישום ⁦ASF 425591790/3⁩',
     coverTitle: 'סוגי ביטוח',
     coverLinks: [
-      { url: '/il/home-insurance-portugal/', label: 'ביטוח דירה ומבנה' },
-      { url: '/il/health-insurance-portugal/', label: 'ביטוח בריאות פרטי' },
+      { url: '/il/home-insurance-portugal/', label: 'ביטוח בתים בעלי ערך גבוה' },
+      { url: '/il/health-insurance-portugal/', label: 'ביטוח בריאות בין־לאומי' },
       { url: '/il/car-insurance-portugal/', label: 'ביטוח רכב' },
-      { url: '/il/liability-insurance-portugal/', label: 'ביטוח אחריות' },
+      { url: '/il/liability-insurance-portugal/', label: 'אחריות אזרחית משפחתית' },
       { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל' },
     ],
     langsTitle: 'שפות',
     contactTitle: 'יצירת קשר',
-    contactCta: 'לקבלת הצעה',
+    contactCta: 'בקשת חוות דעת',
     copy: 'כל הזכויות שמורות',
     vault: 'מעבר ל־MyCoverVault',
     privacy: 'מדיניות פרטיות',
@@ -275,7 +275,7 @@ export const IL_UI = {
     asfChannel: 'ערוץ הדיווח של ASF',
     regulatory: [
       'Adler &amp; Rochefort הוא השם המסחרי של ⁦Ownizo, Unipessoal Lda.⁩',
-      '⁦Ownizo, Unipessoal Lda.⁩ רשומה כסוכנות ביטוח אצל רשות הפיקוח על הביטוח וקרנות הפנסיה בפורטוגל (ASF), מספר רישום 425591790/3. אנחנו מייעצים בתוך מגוון המבטחים שאנחנו עובדים איתם.',
+      '⁦Ownizo, Unipessoal Lda.⁩ רשומה כסוכנות ביטוח אצל רשות הפיקוח על הביטוח וקרנות הפנסיה בפורטוגל (ASF), מספר רישום 425591790/3, ופועלת בספרד במסגרת חופש מתן השירותים באיחוד האירופי. אנחנו מייעצים בתוך מגוון המבטחים שאנחנו עובדים איתם.',
       'התוכן בעמוד הזה הוא הסבר כללי, ואינו ייעוץ ביטוחי או משפטי המותאם למצב אישי. הכיסוי בפועל תלוי בנסיבות שלכם ובתנאי הפוליסה שנבחרה.',
     ],
   },

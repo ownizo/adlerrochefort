@@ -12,6 +12,10 @@
  * practical consequences here. Second homes get real weight because that is a
  * large share of Swedish ownership in Portugal, without turning the page into
  * an Algarve page.
+ *
+ * Positioning: high-value homes. The "ramverket" section carries the same
+ * insurer-neutral, price-free coverage framework as the PT/EN/DE home pages
+ * (house, contents, valuables, liability, family + disclaimer).
  */
 import { BREADCRUMB_ROOT } from './shared.mjs';
 
@@ -19,17 +23,17 @@ export const HOME_PAGE = {
   slug: 'hemforsakring-portugal',
   url: '/se/hemforsakring-portugal/',
   cluster: 'home',
-  title: 'Hemförsäkring i Portugal för svenskar | Adler & Rochefort',
+  title: 'Försäkring för värdefulla hem i Portugal | Adler & Rochefort',
   description:
-    'Vad multirriscos habitação faktiskt täcker: byggnad och lösöre, condomínio, vattenskador, jordskalvsrisk och återuppbyggnadsvärde — och vad den svenska hemförsäkringens paket inte innehåller här.',
+    'Hemförsäkring för bostäder med högt värde i Portugal och Spanien: besiktning, ingen proportionell nedsättning, konst och samlingar, ansvar i miljonbelopp.',
   keywords:
-    'hemförsäkring Portugal, villaförsäkring Portugal, multirriscos habitação, fritidshusförsäkring Portugal, bostadsförsäkring Portugal svenskar, återuppbyggnadsvärde Portugal',
-  eyebrow: 'Bostadsförsäkring',
-  h1: 'Hemförsäkring i Portugal: vad som faktiskt omfattas',
+    'hemförsäkring Portugal, villaförsäkring Portugal, försäkring värdefull bostad, multirriscos habitação, konstförsäkring Portugal, fritidshusförsäkring Portugal, återuppbyggnadsvärde Portugal',
+  eyebrow: 'Värdefulla hem',
+  h1: 'Hemförsäkring i Portugal för bostäder med högt värde',
   standfirst:
-    'Portugisisk <em>multirriscos habitação</em> skyddar bostaden väl. Den innehåller däremot inte de fyra extra delar som följer med en svensk hemförsäkring — och skillnaderna sitter precis där en skada avgörs.',
+    'En vanlig <em>multirriscos habitação</em> är byggd för en genomsnittlig bostad. Ett hem med högt värde — med konst, samlingar och flera byggnader på tomten — behöver villkor som är skrivna för det, och ett försäkringsbelopp som stämmer den dag något händer.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Hemförsäkring' }],
   pullquote: 'Försäkringsbeloppet är inte vad du betalade. Det är vad det kostar att bygga upp det som brann.',
   schemaType: 'Article',
@@ -79,7 +83,59 @@ export const HOME_PAGE = {
         <div class="contact-form-field"><label for="se-hab-capital-conteudo">Försäkringsbelopp lösöre (€) *</label><input type="number" id="se-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
   },
   sections: `
-<section class="section plain" aria-labelledby="hem-eller-villa">
+<section class="section plain" aria-labelledby="ramverket">
+  <div class="container narrow article-body">
+    <h2 id="ramverket">Så är en försäkring för ett värdefullt hem uppbyggd</h2>
+    <p>Private client-villkoren skiljer sig från en vanlig bostadsförsäkring på de punkter där en skada på ett dyrt hem faktiskt avgörs: hur försäkringsbeloppet fastställs, vad som händer om det visar sig vara för lågt och hur värdeföremål värderas. Nedan är referensvillkoren i de försäkringar vi förmedlar, uppdelade på fem områden.</p>
+    <h3>Huset</h3>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Besiktning och återuppbyggnadskostnad</h3><p>För bostäder med högre värde gör försäkringsbolaget en besiktning på plats, utan kostnad för dig, för att fastställa återuppbyggnadskostnaden, föreslå försäkringsbelopp för lösöre och värdeföremål och rekommendera skadeförebyggande åtgärder.</p></div>
+      <div class="feature-card"><h3>Ingen proportionell nedsättning</h3><p>När de rekommenderade beloppen accepteras avstår bolaget från underförsäkringsregeln: en delskada ersätts fullt ut, även om byggkostnaderna har stigit sedan dess.</p></div>
+      <div class="feature-card"><h3>Garanterad återuppbyggnad</h3><p>Vid totalskada byggs huset upp igen även om kostnaden överstiger byggnadens försäkringsbelopp — förutsatt att de belopp som rekommenderades vid besiktningen har accepterats.</p></div>
+      <div class="feature-card"><h3>Likvärdigt ersättningsboende</h3><p>Ersättningsboende av jämförbar standard, även för husdjur och hästar, så länge huset inte går att bo i — inte de få månader som är vanliga på massmarknaden.</p></div>
+      <div class="feature-card"><h3>Trädgård, murar och andra byggnader</h3><p>Träd, buskar och gräsmattor, tomt- och stödmurar, pooler, annex och gästhus med egna försäkringsbelopp — inte begränsade till ett symboliskt belopp.</p></div>
+      <div class="feature-card"><h3>Vatten, gas och läcksökning</h3><p>Lokalisering och reparation av läckage från vatten-, gas- eller oljeledningar utan särskild beloppsgräns, samt det vatten eller den olja som gått förlorad.</p></div>
+      <div class="feature-card"><h3>Ersättning på ditt sätt</h3><p>Kontant ersättning eller reparation genom de leverantörer, hantverkare och konservatorer du själv väljer, utan avdrag för något av alternativen.</p></div>
+      <div class="feature-card"><h3>Ingen självrisk vid stora skador</h3><p>Över ett visst skadebelopp tas självrisken bort helt — just där den annars skulle väga tyngst.</p></div>
+      <div class="feature-card"><h3>Dagens hus</h3><p>Solpaneler, batterier och reservgeneratorer, miljöförbättring vid återuppbyggnad och byte av lås om nycklarna tappas bort eller stjäls.</p></div>
+      <div class="feature-card"><h3>Anpassning vid invaliditet</h3><p>Ombyggnad av bostaden när en familjemedlem får en bestående invaliditet genom olycksfall eller sjukdom.</p></div>
+    </div>
+    <h3>Lösöret</h3>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Allrisk i hela världen</h3><p>Personliga tillhörigheter är försäkrade mot alla risker — hemma, på resa och i fritidsbostaden — utan särskild beloppsgräns för det du bär med dig.</p></div>
+      <div class="feature-card"><h3>Lösöre över försäkringsbeloppet</h3><p>När de rekommenderade beloppen accepteras kan ersättningen överstiga lösörebeloppet med en på förhand avtalad marginal, om det verkliga värdet visar sig vara högre.</p></div>
+      <div class="feature-card"><h3>Inga delbelopp där det räknas</h3><p>Plötslig skada och förlust, stöld ur förråd och vinkällare samt utemöbler — utan de delbelopp som urholkar ett standardskydd.</p></div>
+      <div class="feature-card"><h3>Gästers tillhörigheter och nyförvärv</h3><p>Dina gästers tillhörigheter är skyddade, och det du nyligen har köpt omfattas automatiskt under en anmälningsperiod.</p></div>
+      <div class="feature-card"><h3>Evenemang i hemmet</h3><p>Inställda evenemang och tillfälliga konstruktioner — tält, scener — vid fester som hålls hemma.</p></div>
+    </div>
+    <h3>Värdeföremål och samlingar</h3>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Avtalat värde</h3><p>Konst, smycken, klockor och samlingar förtecknas till ett värde som fastställs vid avtalets början mot värdering — det är det belopp som betalas vid totalförlust, utan diskussion om värdeminskning.</p></div>
+      <div class="feature-card"><h3>Ingen självrisk</h3><p>Värdeföremål som försäkras till avtalat eller angivet värde har ingen självrisk.</p></div>
+      <div class="feature-card"><h3>Värdeminskning efter konservering</h3><p>När ett föremål konserveras men ändå förlorar i marknadsvärde ersätts mellanskillnaden — och reparationerna har inget kostnadstak.</p></div>
+      <div class="feature-card"><h3>Skydd mot undervärdering</h3><p>Om ett föremål med aktuell professionell värdering visar sig vara värt mer än försäkringsbeloppet på skadedagen, betalar försäkringen utöver det avtalade värdet inom en fastställd marginal.</p></div>
+      <div class="feature-card"><h3>Nyförvärv och vinkällare</h3><p>Nya föremål omfattas automatiskt under en period, och samlingar av vin och sprit har egna villkor för förvaring.</p></div>
+    </div>
+    <h3>Ansvar</h3>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Belopp som motsvarar tillgångarna</h3><p>Privat ansvar för hela familjen med försäkringsbelopp på flera miljoner euro, med giltighet i hela världen.</p></div>
+      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Kostnaderna för rättsligt försvar betalas utöver försäkringsbeloppet och dras inte av från det.</p></div>
+      <div class="feature-card"><h3>Vilka som omfattas</h3><p>Hushållet, även barn som studerar på annan ort, och den som tillfälligt tar hand om dina djur; gäster och hushållsanställda i anslutning till bostaden.</p></div>
+      <div class="feature-card"><h3>Alla bostäder</h3><p>Som ägare, hyresgäst eller brukare — i Portugal, i Spanien eller var familjen än har ett hem.</p></div>
+    </div>
+    <h3>Familjen</h3>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Kidnappning och utpressning</h3><p>Kostnader vid kidnappning av och krav på lösensumma för en familjemedlem, inklusive specialiserade konsulter och belöningar för information.</p></div>
+      <div class="feature-card"><h3>Bilkapning och rån i hemmet</h3><p>Stöd och ersättning efter bilkapning, grovt inbrott, överfall, vägilska eller hot och våld ombord på flyg.</p></div>
+      <div class="feature-card"><h3>Hot och förföljelse</h3><p>Säkerhetskonsult, tillfällig flytt och juridiskt stöd när en familjemedlem hotas eller förföljs.</p></div>
+      <div class="feature-card"><h3>Nätmobbning och rykte</h3><p>Psykolog, IT-säkerhetskonsult, advokat och vid behov kostnaden för skolbyte efter upprepad nätmobbning.</p></div>
+      <div class="feature-card"><h3>Krisstöd</h3><p>Professionellt stöd för familjen efter någon av dessa händelser.</p></div>
+    </div>
+    <p class="legal-note">Detta är referensvillkoren i de private client-försäkringar för bostäder med högt värde som vi förmedlar. Omfattning, belopp, självrisker och undantag varierar mellan försäkringsbolag och risker, och bekräftas först i de allmänna, särskilda och individuella villkoren i den försäkring som utfärdas.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="hem-eller-villa">
   <div class="container narrow article-body">
     <h2 id="hem-eller-villa">Hem eller villa — en svensk uppdelning som inte finns här</h2>
     <p>I Sverige avgör boendeformen produkten: <strong>hemförsäkring</strong> för lösöret i en lägenhet, <strong>villaförsäkring</strong> när du också äger byggnaden, <strong>bostadsrättstillägg</strong> för det du själv ansvarar för i en bostadsrätt.</p>
@@ -92,26 +148,26 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="det-som-saknas">
+<section class="section plain" aria-labelledby="det-som-saknas">
   <div class="container narrow article-body">
-    <h2 id="det-som-saknas">De fyra delarna som inte följer med</h2>
-    <p>Detta är sidans viktigaste avsnitt för en svensk läsare. Din svenska hemförsäkring innehöll fem saker. Här följer bara två med automatiskt.</p>
+    <h2 id="det-som-saknas">De fyra delarna som inte följer med i en vanlig försäkring</h2>
+    <p>Din svenska hemförsäkring innehöll fem saker. I en vanlig portugisisk bostadsförsäkring följer bara två med automatiskt. Private client-villkoren ovan täcker en stor del av glappet — ansvaret och stödet efter överfall — men resten måste fortfarande väljas medvetet.</p>
     <h3>Ansvarsskydd</h3>
-    <p>Portugisiska bostadsförsäkringar innehåller ofta <em>responsabilidade civil</em>, men i många varianter är skyddet <strong>begränsat till skador på grannar i samma byggnad</strong> — typiskt vattenskador — med ett lågt belopp. Ett bredare privat ansvarsskydd, som gäller skador du orsakar tredje man utanför bostaden, är då ett tillägg eller en egen försäkring. Det beror på bolag och variant, och vi kontrollerar det i villkoren. Se <a href="/se/ansvarsforsakring-portugal/">sidan om ansvarsförsäkring</a>.</p>
+    <p>Portugisiska bostadsförsäkringar innehåller ofta <em>responsabilidade civil</em>, men i många varianter är skyddet <strong>begränsat till skador på grannar i samma byggnad</strong> — typiskt vattenskador — med ett lågt belopp. Ett bredare privat ansvarsskydd, som gäller skador du orsakar tredje man utanför bostaden, är då ett tillägg eller en egen försäkring. I private client-villkoren ingår familjeansvar i miljonbelopp med giltighet i hela världen; i andra varianter kontrollerar vi det i villkoren. Se <a href="/se/ansvarsforsakring-portugal/">sidan om ansvarsförsäkring</a>.</p>
     <h3>Rättsskydd</h3>
-    <p><em>Proteção jurídica</em> finns som tillval hos de flesta bolag, men ingår sällan som standard. Det är billigt och används oftare än man tror — vid tvist med en entreprenör, med <em>condomínio</em> eller om vållandefrågan vid en skada.</p>
+    <p><em>Proteção jurídica</em> finns som tillval hos de flesta bolag, men ingår sällan som standard. Det används oftare än man tror — vid tvist med en entreprenör, med <em>condomínio</em> eller om vållandefrågan vid en skada.</p>
     <h3>Reseskydd</h3>
     <p>Finns inte i bostadsförsäkringen. Reseförsäkring är en egen produkt i Portugal. Har du kvar ett svenskt kort med reseskydd, kontrollera villkoren: många kortförsäkringar förutsätter att du är folkbokförd i Sverige.</p>
     <h3>Överfallsskydd</h3>
-    <p>Ingen självklar motsvarighet. Personskada vid överfall hanteras i så fall genom olycksfallsförsäkring (<em>seguro de acidentes pessoais</em>), som tecknas separat.</p>
+    <p>Ingen självklar motsvarighet i en vanlig försäkring. Personskada vid överfall hanteras i så fall genom olycksfallsförsäkring (<em>seguro de acidentes pessoais</em>), som tecknas separat. I private client-villkoren finns i stället ett familjeskydd med stöd och ersättning efter överfall, rån i hemmet och hot.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="aterbyggnadsvarde">
+<section class="section tint" aria-labelledby="aterbyggnadsvarde">
   <div class="container narrow article-body">
     <h2 id="aterbyggnadsvarde">Återuppbyggnadskostnaden — det dyraste misstaget</h2>
-    <p>Försäkringsbeloppet för byggnaden ska motsvara <strong>kostnaden att bygga upp den igen</strong>, inte köpeskillingen. I Portugal är skillnaden stor i båda riktningarna. I Lissabon och Cascais innehåller priset tomt och läge, som en brand inte förstör — då är beloppet för högt och premien betalas i onödan år efter år. I äldre bebyggelse och på orter med låga bostadspriser är det ofta omvänt: att bygga upp huset kostar mer än det är värt på marknaden, särskilt vid bevarandekrav eller ovanlig konstruktion.</p>
-    <p>Siffran spelar roll långt utanför totalskador. Enligt <em>regra proporcional</em> sätts ersättningen ned i samma proportion som underförsäkringen — är beloppet 30 % för lågt kan ersättningen för det utbrunna badrummet minskas med 30 %. Mekanismen finns i svenska villkor också, men tillämpas mer konsekvent här.</p>
+    <p>Försäkringsbeloppet för byggnaden ska motsvara <strong>kostnaden att bygga upp den igen</strong>, inte köpeskillingen. I Portugal är skillnaden stor i båda riktningarna. I Lissabon och Cascais innehåller köpeskillingen tomt och läge, som en brand inte förstör — då blir beloppet för högt. I äldre bebyggelse och på orter med låga bostadspriser är det ofta omvänt: att bygga upp huset kostar mer än det är värt på marknaden, särskilt vid bevarandekrav eller ovanlig konstruktion.</p>
+    <p>Siffran spelar roll långt utanför totalskador. Enligt <em>regra proporcional</em> sätts ersättningen ned i samma proportion som underförsäkringen — är beloppet 30 % för lågt kan ersättningen för det utbrunna badrummet minskas med 30 %. Mekanismen finns i svenska villkor också, men tillämpas mer konsekvent här. Det är just därför besiktningen i private client-villkoren väger så tungt: accepteras de rekommenderade beloppen avstår bolaget från nedsättningen.</p>
     <h3>Vad vi utgår från</h3>
     <ul>
       <li>Ytan enligt <em>caderneta predial</em> och antalet våningar.</li>
@@ -123,7 +179,7 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="condominio">
+<section class="section plain" aria-labelledby="condominio">
   <div class="container narrow article-body">
     <h2 id="condominio">Condomínio är inte en bostadsrättsförening</h2>
     <p>En lägenhet i Portugal är en <em>fração autónoma</em> — du äger den, till skillnad från en bostadsrätt där du äger en andel i en förening med nyttjanderätt till lägenheten. Skillnaden är juridisk, men den har en praktisk följd som svenska köpare ofta missar: <strong>det finns ingen förening som äger huset och försäkrar det som sin egendom.</strong> Det finns ett <em>condomínio</em>, en samfällighet av ägare, med en försäkring som normalt slutar där lägenheten börjar.</p>
@@ -147,7 +203,7 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="vatten-och-jordskalv">
+<section class="section tint" aria-labelledby="vatten-och-jordskalv">
   <div class="container narrow article-body">
     <h2 id="vatten-och-jordskalv">Vattenskador och jordskalvsrisk</h2>
     <h3>Vattenskador (<em>danos por água</em>)</h3>
@@ -159,7 +215,7 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="fritidshus">
+<section class="section plain" aria-labelledby="fritidshus">
   <div class="container narrow article-body">
     <h2 id="fritidshus">Fritidshus och bostad som står tom</h2>
     <p>En stor del av svenskt bostadsägande i Portugal är andrahandsbostäder som används några månader om året. Det är en annan risk än en permanentbostad, och den måste anmälas som sådan.</p>
@@ -173,7 +229,7 @@ export const HOME_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="checklista">
+<section class="section tint" aria-labelledby="checklista">
   <div class="container narrow article-body">
     <h2 id="checklista">Checklista innan du skriver under</h2>
     <ol class="process-steps">
@@ -193,7 +249,7 @@ export const HOME_PAGE = {
   faq: [
     {
       q: 'Ingår ansvarsskydd som i en svensk hemförsäkring?',
-      a: '<p>Inte på samma sätt. Portugisiska bostadsförsäkringar innehåller ofta ansvar, men många varianter begränsar det till skador på grannar i samma byggnad och med lågt belopp. Ett bredare privat ansvarsskydd är då ett tillägg eller en egen försäkring. Vi kontrollerar villkoren och anger beloppet i kronor och euro.</p>',
+      a: '<p>Inte på samma sätt. Portugisiska bostadsförsäkringar innehåller ofta ansvar, men många varianter begränsar det till skador på grannar i samma byggnad och med lågt belopp. Ett bredare privat ansvarsskydd är då ett tillägg eller en egen försäkring. I private client-villkoren för värdefulla hem ingår däremot familjeansvar med belopp på flera miljoner euro, i hela världen. Vi kontrollerar villkoren och anger beloppet skriftligt.</p>',
     },
     {
       q: 'Är hemförsäkring obligatorisk i Portugal?',
@@ -209,7 +265,11 @@ export const HOME_PAGE = {
     },
     {
       q: 'Hur räknar jag lösörets värde?',
-      a: '<p>Rum för rum: möbler, vitvaror, elektronik, kläder, sportutrustning och cyklar, verktyg. Summan brukar bli högre än man tror. Föremål med högt styckvärde — smycken, instrument, kameror, konst — har ofta ett tak per objekt och behöver anmälas separat.</p>',
+      a: '<p>Rum för rum: möbler, vitvaror, elektronik, kläder, sportutrustning och cyklar, verktyg. Summan brukar bli högre än man tror. Föremål med högt styckvärde — konst, smycken, klockor, instrument, samlingar — har i en vanlig försäkring ofta ett tak per objekt. I private client-villkoren förtecknas de i stället till ett avtalat värde, mot värdering och utan självrisk.</p>',
+    },
+    {
+      q: 'Vad innebär besiktningen, och vad kostar den?',
+      a: '<p>För bostäder med högre värde skickar försäkringsbolaget en besiktningsman till huset, utan kostnad för dig. Besiktningen fastställer återuppbyggnadskostnaden, föreslår belopp för lösöre och värdeföremål och ger råd om skadeförebyggande åtgärder. Accepterar du de rekommenderade beloppen avstår bolaget från proportionell nedsättning vid en delskada.</p>',
     },
     {
       q: 'Jag bor i huset tre månader om året. Vad ska jag anmäla?',

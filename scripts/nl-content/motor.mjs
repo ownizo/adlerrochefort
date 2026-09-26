@@ -22,7 +22,7 @@ export const MOTOR_PAGES = [
     standfirst:
       'De import zelf is een administratief traject met een begin en een eind. Het risico zit in het midden: de weken waarin uw auto nog Nederlands staat geregistreerd maar hier al rondrijdt, en uw Nederlandse polis daar strikt genomen niet meer voor bedoeld is.',
     heroMeta:
-      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Auto importeren' }],
     published: '2026-08-13T09:00:00+00:00',
@@ -148,7 +148,7 @@ export const MOTOR_PAGES = [
     standfirst:
       'Vijftien jaar zonder schade is in Nederland veel geld waard. In Portugal is het dat ook — maar alleen als u het kunt bewijzen, bij een verzekeraar die het accepteert. Beide voorwaarden zijn minder vanzelfsprekend dan ze klinken.',
     heroMeta:
-      'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+      'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
     hreflang: {},
     breadcrumb: [...BREADCRUMB_ROOT, CAT, { name: 'Schadevrije jaren meenemen' }],
     published: '2026-08-13T09:00:00+00:00',

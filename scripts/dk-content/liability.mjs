@@ -16,19 +16,19 @@ export const LIABILITY_PAGE = {
   slug: 'ansvarsforsikring-portugal',
   url: '/dk/ansvarsforsikring-portugal/',
   cluster: 'liability',
-  title: 'Ansvarsforsikring i Portugal for danskere | Adler & Rochefort',
+  title: 'Ansvarsforsikring for familien i Portugal | Adler & Rochefort',
   description:
-    'Responsabilidade civil i Portugal: privatansvaret, der lå i din danske indboforsikring, og erhvervsansvar for konsulenter, behandlere og mindre virksomheder.',
+    'Familiens ansvarsforsikring i Portugal og Spanien: summer i millionklassen, verden over, med forsvarsomkostninger ud over summen. Erhvervsansvar tegnes særskilt.',
   keywords:
-    'ansvarsforsikring Portugal, responsabilidade civil Portugal, privatansvar Portugal, erhvervsansvarsforsikring Portugal, konsulent forsikring Portugal, professionelt ansvar Portugal',
-  eyebrow: 'Ansvarsforsikring',
-  h1: 'Ansvarsforsikring i Portugal: den dækning du har haft uden at købe den',
+    'ansvarsforsikring Portugal, familieansvar Portugal, responsabilidade civil familiar, privatansvar Portugal, ansvarsforsikring Spanien, erhvervsansvarsforsikring Portugal, konsulent forsikring Portugal, professionelt ansvar Portugal',
+  eyebrow: 'Familiens ansvar',
+  h1: 'Ansvarsforsikring i Portugal: familiens ansvar i millionklassen',
   standfirst:
-    'I Danmark ligger ansvarsforsikringen inde i indboforsikringen. I Portugal er <em>responsabilidade civil</em> ofte et tilvalg med sin egen sum — og for erhverv en helt selvstændig police. Her er forskellen, og hvad du har brug for.',
+    'En tingskade har et loft — værdien af det, du ejer. Et erstatningskrav har ikke. I Danmark lå ansvarsforsikringen inde i indboet; i Portugal skal den vælges, og summen skal passe til husstanden. Erhvervsansvar er en helt selvstændig police.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsforsikring' }],
-  pullquote: 'Ansvarsdækningen er den, man aldrig tænker på — indtil den dag den er den eneste, der betyder noget.',
+  pullquote: 'Alle andre dele af policen er begrænset af værdien af noget, du ejer. Ansvaret er kun begrænset af den sum, du har valgt.',
   schemaType: 'Article',
   // Especificação v2, Parte B — this page's dedicated wizard replaces the
   // shared dk-forespoergsel branch-select form. Same faturacao_anual field
@@ -37,26 +37,27 @@ export const LIABILITY_PAGE = {
     idPrefix: 'dk-rcp',
     formName: 'dk-ansvarsforsikring-wizard',
     ramo: 'Ansvarsforsikring',
-    heading: 'Få et tilbud på ansvarsforsikring',
+    heading: 'Forespørgsel om ansvarsforsikring',
     intro: 'Udfyld det væsentligste. Vi svarer inden for 48 til 72 arbejdstimer.',
     stepLabel2: 'Aktiviteten',
-    submitLabel: 'Få et tilbud',
+    submitLabel: 'Send forespørgsel',
     microNote:
       'Svar inden for 48 til 72 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
     fieldsHtml: `        <div class="contact-form-field"><label for="dk-rcp-faturacao">Årlig omsætning *</label><input type="number" id="dk-rcp-faturacao" name="faturacao_anual" placeholder="F.eks. 85000" required></div>
-        <p class="wizard-helper">Aktivitetstype, ønsket forsikringssum, og om policyen kræves i henhold til en kontrakt eller en brancheorganisation, gennemgår vi i den kontakt, der følger.</p>`,
+        <p class="wizard-helper">Aktivitetstype, ønsket forsikringssum, og om policen kræves i henhold til en kontrakt eller en brancheorganisation, gennemgår vi i den kontakt, der følger. Gælder forespørgslen kun familiens privatansvar, kan du angive 0 og beskrive husstanden i korrespondancen.</p>`,
   },
   sections: `
-<section class="section plain" aria-labelledby="tre-slags">
+<section class="section plain" aria-labelledby="familie">
   <div class="container narrow article-body">
-    <h2 id="tre-slags">Tre slags ansvar, tre forskellige policer</h2>
-    <p><em>Responsabilidade civil</em> betyder erstatningsansvar — pligten til at betale for skade, du har forvoldt over for andre. På det portugisiske marked møder du begrebet i tre sammenhænge, som købes hver for sig:</p>
+    <h2 id="familie">Familiens ansvar: det, policen skal kunne</h2>
+    <p><em>Responsabilidade civil familiar</em> dækker, når et medlem af husstanden bliver erstatningsansvarligt for personskade eller tingskade hos andre. Policen betaler erstatningen — og udgiften til at forsvare sig mod kravet, som i en omstridt sag ofte er det største beløb i de første år.</p>
+    <p>For en husstand med betydelige formuer er det de samme fire punkter, der afgør, om dækningen holder:</p>
     <ul>
-      <li><strong>Privatansvar</strong> (<em>RC familiar</em> eller <em>vida privada</em>) — skade, du, din familie eller dit husdyr forvolder over for tredjemand i det daglige. I portugisiske boligpolicer optræder det som tilvalg eller med en grundsum, der dækker ansvar knyttet til boligen.</li>
-      <li><strong>Erhvervs- og professionsansvar</strong> (<em>RC profissional</em> eller <em>RC de exploração</em>) — skade, der opstår i dit arbejde: en forkert rådgivning, en overskredet frist, et uheld i dine lokaler, skade på kundens ejendom.</li>
-      <li><strong>Ansvar knyttet til køretøj og ejendom</strong> — bilforsikringens ansvarsdel er lovpligtig og selvstændig; ejerens ansvar for bygningen ligger i boligpolicen, og i etagebyggeri delvis hos <em>condomínio</em>.</li>
+      <li><strong>Summer i millionklassen.</strong> Standardpolicer i Portugal har ofte en ansvarssum i de lave hundredtusinder af euro. Over for et krav efter en alvorlig personskade — tabt arbejdsevne, pleje og ombygning gennem et helt liv — er det ikke meget. De private client-policer, vi placerer, har summer på flere millioner euro.</li>
+      <li><strong>Verden over.</strong> Dækningen følger familien — på rejse, i en anden bolig, i skole eller på studie i udlandet — ikke kun inden for matriklen.</li>
+      <li><strong>Forsvarsomkostninger ud over summen.</strong> Advokat, sagkyndige og retsomkostninger betales ud over forsikringssummen og trækkes ikke fra den.</li>
+      <li><strong>Alle boliger og hele husstanden.</strong> Som ejer, lejer eller bruger, i Portugal, i Spanien eller hvor familien ellers har bolig — og for ægtefælle eller samlever, børn, herunder børn der studerer ude, og personer, der lejlighedsvis passer jeres dyr.</li>
     </ul>
-    <p>Ingen af dem erstatter en anden. Vi ser ofte den situation, at nogen har både bil- og boligforsikring og alligevel står helt uden dækning for det, de arbejder med.</p>
   </div>
 </section>
 
@@ -64,30 +65,38 @@ export const LIABILITY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="privat">Det danske hul: ansvaret, der ikke følger med</h2>
     <p>Har du haft indboforsikring i Danmark, har du haft ansvarsforsikring — og sandsynligvis aldrig tænkt over den. Det er den danske indboforsikrings konstruktion: ansvar og retshjælp ligger inde i pakken.</p>
-    <p>Den portugisiske <em>multirriscos habitação</em> er bygget op om tingskaden: bygning og indbo. Ansvarsdelen findes, men som tilvalg eller med en sum, der er knyttet til boligen frem for til dig som person. Resultatet er et hul, ingen gør opmærksom på, fordi ingen af parterne i handlen ser hele din situation — banken ser lånet, mægleren ser købet, selskabet ser huset.</p>
-    <h3>Situationer, hvor det bliver konkret</h3>
-    <ul>
-      <li>Din hund bider en forbipasserende på en gåtur uden for grunden.</li>
-      <li>Dit barn ødelægger en dyr ting hjemme hos nogen andre eller ridser en bil på en legeplads.</li>
-      <li>Du vælter en gående på cykel eller løbetur på strandpromenaden.</li>
-      <li>En urtepotte på din altan blæser ned på en bil på gaden.</li>
-      <li>Grillen på terrassen forårsager en brand, der spreder sig til naboens terrasse.</li>
-    </ul>
-    <p>I hvert tilfælde står spørgsmålet om erstatning til tredjemand — reparation, behandlingsudgifter, tabt indtægt — og om udgiften til at forsvare sig mod et krav. Om dækningen findes, med hvilken sum og med hvilke undtagelser, afgøres af den enkelte police, og det er det spørgsmål, vi besvarer skriftligt, før du tegner.</p>
+    <p>Den portugisiske <em>multirriscos habitação</em> er bygget op om tingskaden: bygning og indbo. Ansvarsdelen findes, men som tilvalg eller med en sum, der er knyttet til boligen frem for til dig som person. Resultatet er et hul, ingen gør opmærksom på, fordi ingen af parterne i handlen ser hele din situation — banken ser lånet, ejendomsmægleren ser købet, selskabet ser huset.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="erhverv">
+<section class="section plain" aria-labelledby="hvor">
   <div class="container narrow article-body">
-    <h2 id="erhverv">Erhvervsansvar: hvem har brug for det</h2>
-    <p>Mange af vores danske kunder arbejder fra Portugal på en måde, der ikke var planen, da de flyttede hertil. Et udvalg af situationer, vi håndterer løbende — som illustration, ikke som en forsikring om, at enhver sådan aktivitet kan tegnes:</p>
+    <h2 id="hvor">Hvor store husstande får krav</h2>
+    <p>Situationerne er almindelige, og det er netop pointen. Næsten ingen af dem kræver, at noget usædvanligt sker:</p>
     <ul>
-      <li><strong>Konsulenter og freelancere inden for it, teknik og marketing</strong> — fakturerer danske eller andre udenlandske kunder fra Portugal. Risikoen er økonomisk: en anbefaling, der slår fejl, et driftsstop, en forsinket leverance. Kundens kontrakt kræver ofte et bestemt forsikringsniveau, og den klausul er værd at læse, før kontrakten skrives under.</li>
-      <li><strong>Fysioterapeuter, kiropraktorer og massører</strong> — fysisk behandling af klienter, ofte i egne lokaler eller ved hjemmebesøg. Her mødes to risici: behandlingsskaden og skaden i lokalet.</li>
-      <li><strong>Yoga-, pilates- og wellnessaktivitet</strong> — grupper, lejede lokaler, ofte i retreatform. Udlejeren beder rutinemæssigt om forsikringsdokumentation, og deltagernes egne ulykker er et andet spørgsmål end dit ansvar.</li>
-      <li><strong>Mindre virksomheder med lokaler</strong> — café, butik, salon, lille kontor. Erhvervsansvaret (<em>RC de exploração</em>) dækker den klassiske situation, at en besøgende kommer til skade hos dig, og kombineres normalt med tingforsikring på lokaler og inventar.</li>
-      <li><strong>Udlejning til turister (<em>alojamento local</em>)</strong> — en almindelig plan blandt danske boligkøbere. En sædvanlig boligpolice er normalt ikke skrevet til erhvervsmæssig udlejning; aktiviteten skal oplyses til selskabet, og undtagelser for udlejningsperioder er en tilbagevendende årsag til afvisning i skadesager.</li>
-      <li><strong>Revision, jura, arkitektur og andre lovregulerede fag</strong> — for visse fag følger krav om professionsansvarsforsikring af reglerne eller af fagets organisation. Hvilke krav der gælder din situation, afgøres af regelværket og din faglige organisation, ikke af os.</li>
+      <li><strong>Pool og vandanlæg.</strong> En ulykke i poolen vurderes ud fra, hvad en fornuftig ejer ville have gjort: hegn, overdækning, opsyn og skiltning.</li>
+      <li><strong>Gæster.</strong> En gæst, der falder på en terrasse eller en trappe, eller et barn, der kommer til skade under et besøg.</li>
+      <li><strong>Husstandsansatte.</strong> Rengøring, gartner, chauffør eller barnepige kan forvolde skade hos tredjemand i arbejdet, og det kan ansvarsdelen dække afhængigt af betingelserne. Deres egne arbejdsskader er noget andet: i Portugal skal husstandsansatte være omfattet af den lovpligtige arbejdsskadeforsikring (<em>acidentes de trabalho</em>), en særskilt police.</li>
+      <li><strong>Både, jetski og fritid.</strong> Mindre fartøjer kan være omfattet af familiens ansvar; større både kræver normalt egen ansvarsforsikring. Golf, cykling, ridning, sejlads og ski giver også krav, og nogle aktiviteter skal oplyses.</li>
+      <li><strong>Vand i etagebyggeri.</strong> Den hyppigste ansvarsskade, og i en renoveret bygning er beløbene betydelige.</li>
+      <li><strong>Træer, mure og skel.</strong> Væltede træer og sammenstyrtede støttemure er ejerens ansvar — og i indlandet også brand fra en grund, der ikke er ryddet.</li>
+      <li><strong>Hunde og heste.</strong> Dyreholderens ansvar er strengt, og visse hunderacer er undtaget i nogle betingelser.</li>
+      <li><strong>Byggearbejder.</strong> Ejeren kan blive ansvarlig for skade hos naboen fra arbejder på egen grund. Entreprenørens egen forsikring skal kontrolleres, ikke antages.</li>
+    </ul>
+    <p>Om dækningen findes, med hvilken sum og med hvilke undtagelser, afgøres af den enkelte police — og det er det spørgsmål, vi besvarer skriftligt, før du tegner. Send os gerne jeres nuværende police, så får I sum, undtagelser og vores anbefaling på skrift.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="erhverv">
+  <div class="container narrow article-body">
+    <h2 id="erhverv">Erhvervsansvar er en særskilt police</h2>
+    <p>Familiens ansvarsforsikring dækker privatlivet, ikke arbejdet. Skade, der opstår i en erhvervsaktivitet — en forkert rådgivning, en overskredet frist, et uheld i dine lokaler — hører under erhvervs- eller professionsansvar (<em>RC profissional</em> eller <em>RC de exploração</em>), som tegnes for sig. Situationer, vi jævnligt håndterer — som illustration, ikke som en forsikring om, at enhver aktivitet kan tegnes:</p>
+    <ul>
+      <li><strong>Konsulenter, bestyrelsesmedlemmer og rådgivere</strong>, der arbejder for danske eller andre udenlandske kunder fra Portugal. Kundens kontrakt kræver ofte et bestemt forsikringsniveau.</li>
+      <li><strong>Behandlere og undervisere</strong> — fysioterapi, yoga, wellness og retreats — hvor behandlingsskaden og skaden i lokalet er to forskellige risici.</li>
+      <li><strong>Mindre virksomheder med lokaler</strong>, hvor erhvervsansvaret dækker den besøgende, der kommer til skade, og normalt kombineres med tingforsikring.</li>
+      <li><strong>Udlejning (<em>alojamento local</em>)</strong>. En sædvanlig boligpolice er ikke skrevet til erhvervsmæssig udlejning; aktiviteten skal oplyses, og undtagelser for udlejningsperioder er en tilbagevendende årsag til afvisning.</li>
+      <li><strong>Lovregulerede fag</strong>, hvor krav om professionsansvar kan følge af reglerne eller af fagets organisation.</li>
     </ul>
     <div class="callout">
       <span class="callout-label">Vigtig afgrænsning</span>
@@ -96,7 +105,7 @@ export const LIABILITY_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="undtagelser">
+<section class="section plain" aria-labelledby="undtagelser">
   <div class="container narrow article-body">
     <h2 id="undtagelser">Hvad der normalt ikke er dækket</h2>
     <p>Undtagelserne varierer mellem selskaber og betingelser, men mønstrene gentager sig. En ansvarsforsikring er normalt ikke beregnet til:</p>
@@ -112,9 +121,9 @@ export const LIABILITY_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="spoergsmaal">
+<section class="section tint" aria-labelledby="erhverv-spoergsmaal">
   <div class="container narrow article-body">
-    <h2 id="spoergsmaal">Hvad selskabet vil spørge om</h2>
+    <h2 id="erhverv-spoergsmaal">Erhvervsansvar: hvad selskabet vil spørge om</h2>
     <p>Så du kan forberede svarene i stedet for at gætte:</p>
     <ol class="process-steps">
       <li><div><strong>Beskrivelse af aktiviteten</strong><span> — hvad du faktisk gør, med dine egne ord. Grundlaget for hele vurderingen.</span></div></li>
@@ -135,8 +144,16 @@ export const LIABILITY_PAGE = {
       a: '<p>Ikke på samme selvfølgelige måde. Den portugisiske <em>multirriscos habitação</em> er bygget op om bygning og indbo; ansvarsdelen findes som tilvalg eller med en sum knyttet til boligen. Vi kontrollerer, hvad der står i netop din police, og hvilken sum der gælder, før du går ud fra, at dækningen er der.</p>',
     },
     {
-      q: 'Hvilken ansvarssum bør jeg vælge?',
-      a: '<p>Det afhænger af aktiviteten og af kundekontrakterne. For privatansvar er det afgørende, hvad der realistisk kan opstå — behandlingsudgifter og tabt indtægt hos tredjemand kan blive betydelige. For erhvervsansvar sætter kundens kontrakt ofte en mindstesum. Vi gennemgår niveauerne og prisforskellen mellem dem.</p>',
+      q: 'Hvilken ansvarssum bør familien have?',
+      a: '<p>En sum, der svarer til det værste realistiske krav, ikke til boligens værdi. Et krav efter en alvorlig personskade — tabt arbejdsevne, pleje og ombygning gennem et helt liv — kan løbe op i millioner. De private client-policer, vi placerer, har summer på flere millioner euro, verden over, og forsvarsomkostningerne betales ud over summen. For erhvervsansvar sætter kundens kontrakt ofte en mindstesum.</p>',
+    },
+    {
+      q: 'Er vores husstandsansatte dækket?',
+      a: '<p>Det er to forskellige spørgsmål. Forvolder en ansat skade hos tredjemand i arbejdet, kan familiens ansvarsdækning træde til afhængigt af betingelserne. Den ansattes egne arbejdsskader dækkes af den lovpligtige arbejdsskadeforsikring (<em>acidentes de trabalho</em>), som er en særskilt police, arbejdsgiveren skal have.</p>',
+    },
+    {
+      q: 'Dækker familiens ansvar vores båd?',
+      a: '<p>Mindre fartøjer kan være omfattet, afhængigt af betingelserne; større både og fartøjer med motor over en vis størrelse kræver normalt deres egen ansvarsforsikring. Oplys, hvad I har, så vi kan kontrollere, hvor grænsen går i netop jeres police.</p>',
     },
     {
       q: 'Jeg er it-konsulent og fakturerer fra Portugal. Hvilken forsikring er det?',

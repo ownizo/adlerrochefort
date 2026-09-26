@@ -18,17 +18,17 @@ export const HEALTH_PAGE = {
   slug: 'ubezpieczenie-zdrowotne-portugalia',
   url: '/pl/ubezpieczenie-zdrowotne-portugalia/',
   cluster: 'health',
-  title: 'Ubezpieczenie zdrowotne w Portugalii dla Polaków | Adler & Rochefort',
+  title: 'Ubezpieczenie zdrowotne rodziny w Portugalii | Adler & Rochefort',
   description:
-    'SNS a prywatne ubezpieczenie zdrowotne w Portugalii: rejestracja, sieci placówek, okresy karencji, ocena ryzyka i choroby istniejące przed umową. Co zmienia się po wypisaniu się z NFZ.',
+    'Międzynarodowe prywatne ubezpieczenie zdrowotne dla rodzin w Portugalii: wybór szpitali w Europie i na świecie, SNS, karencje, ocena ryzyka i sprawa NFZ.',
   keywords:
-    'ubezpieczenie zdrowotne Portugalia, prywatna opieka zdrowotna Portugalia, SNS Portugalia, NFZ a Portugalia, ubezpieczenie zdrowotne dla Polaków Portugalia, karencja ubezpieczenie zdrowotne Portugalia',
-  eyebrow: 'Ubezpieczenie zdrowotne',
-  h1: 'Ubezpieczenie zdrowotne w Portugalii: publiczny SNS, prywatna polisa i co dzieje się z NFZ',
+    'międzynarodowe ubezpieczenie zdrowotne Portugalia, ubezpieczenie zdrowotne dla rodziny Portugalia, prywatna opieka zdrowotna Portugalia, SNS Portugalia, NFZ a Portugalia, karencja ubezpieczenie zdrowotne Portugalia',
+  eyebrow: 'Międzynarodowe ubezpieczenie zdrowotne',
+  h1: 'Ubezpieczenie zdrowotne dla rodzin w Portugalii: SNS, polisa portugalska czy międzynarodowa',
   standfirst:
-    'Prywatne ubezpieczenie zdrowotne w Portugalii nie zastępuje systemu publicznego — kupuje się je po to, by mieć drugą drogę dostępu. Ta strona wyjaśnia, jak te dwa światy działają obok siebie i o co ubezpieczyciel zapyta, zanim wystawi polisę.',
+    'Prywatne ubezpieczenie zdrowotne nie zastępuje portugalskiego systemu publicznego — daje drugą, szybszą drogę dostępu, a w wariancie międzynarodowym także wybór lekarzy i szpitali w Portugalii, w Polsce i dalej. Ta strona wyjaśnia, jak te rozwiązania działają obok siebie i o co ubezpieczyciel zapyta, zanim wystawi polisę.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie zdrowotne' }],
   pullquote: 'Polisę zdrowotną kupuje się wtedy, gdy jest się zdrowym. Później kupuje się już tylko to, co ubezpieczyciel zechce zaproponować.',
   schemaType: 'Article',
@@ -90,7 +90,22 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="karencja-i-ocena">
+<section class="section tint" aria-labelledby="miedzynarodowe">
+  <div class="container narrow article-body">
+    <h2 id="miedzynarodowe">Międzynarodowe ubezpieczenie zdrowotne</h2>
+    <p>Dla rodzin, które żyją między kilkoma krajami — dom w Portugalii, interesy w Polsce, dzieci na studiach za granicą, częste podróże — polisa portugalska z siecią placówek bywa za wąska. Rozwiązaniem jest międzynarodowe prywatne ubezpieczenie zdrowotne (<em>seguro de saúde internacional</em>), budowane wokół osoby, a nie wokół jednego kraju.</p>
+    <ul>
+      <li><strong>Zasięg terytorialny do wyboru</strong> — zwykle Europa, cały świat bez Stanów Zjednoczonych albo cały świat. Leczenie w Polsce jest wtedy częścią zakresu, a nie wyjątkiem.</li>
+      <li><strong>Swobodny wybór lekarza i szpitala</strong>, często z rozliczeniem bezgotówkowym bezpośrednio z placówką.</li>
+      <li><strong>Wysokie limity roczne</strong>, w wielu planach liczone w milionach euro, z hospitalizacją, onkologią i leczeniem specjalistycznym.</li>
+      <li><strong>Transport medyczny i ewakuacja</strong> — do najbliższego odpowiedniego ośrodka, a w części planów także powrót do kraju.</li>
+      <li><strong>Ciągłość przy przeprowadzkach</strong> — polisa zwykle nie wygasa przy zmianie kraju zamieszkania, pod warunkiem zgłoszenia zmiany.</li>
+    </ul>
+    <p>Moduły ambulatoryjne, stomatologia, opieka położnicza i badania profilaktyczne są zwykle dobierane osobno. Ocena ryzyka przebiega albo na podstawie pełnej ankiety medycznej, albo — u części ubezpieczycieli — w trybie moratorium; które rozwiązanie jest korzystniejsze, zależy od historii zdrowotnej i omawiamy to przed złożeniem wniosku. Zakres, limity i wyłączenia zależą od ubezpieczyciela i planu i potwierdzamy je pisemnie.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="karencja-i-ocena">
   <div class="container narrow article-body">
     <h2 id="karencja-i-ocena">Karencje, ocena ryzyka i choroby istniejące przed umową</h2>
     <h3>Okresy karencji</h3>
@@ -106,7 +121,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="rodzina">
+<section class="section tint" aria-labelledby="rodzina">
   <div class="container narrow article-body">
     <h2 id="rodzina">Polisa rodzinna</h2>
     <p>Ubezpieczenie rodzinne obejmuje zwykle małżonków lub partnerów oraz dzieci do określonego wieku, często z rabatem za liczbę osób. Kilka rzeczy, które w praktyce mają największe znaczenie:</p>
@@ -119,7 +134,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="wizy-i-pobyt">
+<section class="section plain" aria-labelledby="wizy-i-pobyt">
   <div class="container narrow article-body">
     <h2 id="wizy-i-pobyt">Ubezpieczenie a wnioski o pobyt</h2>
     <p>Bardzo częste pytanie, na które odpowiedź musi być ostrożna. <strong>Nie możemy potwierdzić, że dana polisa spełnia wymogi konkretnego postępowania pobytowego lub wizowego.</strong> Wymogi ustala administracja, zależą od rodzaju wniosku i sytuacji wnioskodawcy oraz mogą się zmieniać. Ocena należy do właściwego urzędu, a interpretacja przepisów — do prawnika.</p>
@@ -127,7 +142,7 @@ export const HEALTH_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="lista-kontrolna-zdrowie">
+<section class="section tint" aria-labelledby="lista-kontrolna-zdrowie">
   <div class="container narrow article-body">
     <h2 id="lista-kontrolna-zdrowie">Lista kontrolna</h2>
     <ol class="process-steps">
@@ -161,11 +176,15 @@ export const HEALTH_PAGE = {
     },
     {
       q: 'Czy potrzebuję prywatnej polisy, jeśli jestem zarejestrowany w SNS?',
-      a: '<p>To nie jest wybór „albo–albo”. SNS zapewnia dostęp do opieki, w tym nagłej; prywatna polisa daje krótszy czas oczekiwania na konsultacje i diagnostykę oraz możliwość wyboru placówki. Większość naszych klientów korzysta z obu równolegle. Jeśli budżet jest ograniczony, warto zacząć od wariantu ambulatoryjnego z dobrą siecią, a nie od najszerszego zakresu za wszelką cenę.</p>',
+      a: '<p>To nie jest wybór „albo–albo”. SNS zapewnia dostęp do opieki, w tym nagłej; prywatna polisa daje krótszy czas oczekiwania na konsultacje i diagnostykę oraz możliwość wyboru placówki. Większość naszych klientów korzysta z obu równolegle. O tym, czy wystarczy polisa portugalska, czy potrzebny jest plan międzynarodowy, decyduje to, jak żyje rodzina: gdzie chce się leczyć, jak często podróżuje i czy dzieci uczą się za granicą.</p>',
+    },
+    {
+      q: 'Czym różni się polisa międzynarodowa od portugalskiej?',
+      a: '<p>Polisa portugalska działa zwykle w oparciu o sieć placówek w Portugalii, z ograniczoną ochroną za granicą. Plan międzynarodowy obejmuje wybrany obszar — Europę, świat bez Stanów Zjednoczonych albo cały świat — ze swobodnym wyborem lekarza i szpitala, wyższymi limitami i transportem medycznym. Szczegółowy zakres zależy od ubezpieczyciela i planu.</p>',
     },
     {
       q: 'Czy polisa zadziała, gdy jadę do Polski?',
-      a: '<p>Zależy od zakresu terytorialnego. Część portugalskich polis zdrowotnych obejmuje leczenie za granicą w trybie zwrotu kosztów, część ogranicza się do przypadków nagłych, a część działa tylko w Portugalii. To jedno z pytań, które zadajemy na samym początku, bo dla osób regularnie jeżdżących do Polski bywa decydujące.</p>',
+      a: '<p>Zależy od zakresu terytorialnego. Część portugalskich polis zdrowotnych obejmuje leczenie za granicą w trybie zwrotu kosztów, część ogranicza się do przypadków nagłych, a część działa tylko w Portugalii. Plany międzynarodowe obejmują Polskę w ramach wybranego zasięgu. To jedno z pytań, które zadajemy na samym początku, bo dla osób regularnie jeżdżących do Polski bywa decydujące.</p>',
     },
   ],
   related: [

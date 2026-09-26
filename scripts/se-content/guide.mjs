@@ -17,9 +17,9 @@ export const GUIDE_PAGE = {
   slug: 'forsakringsguide-portugal',
   url: '/se/forsakringsguide-portugal/',
   cluster: 'guide',
-  title: 'Försäkringsguide för Portugal: så fungerar marknaden | Adler & Rochefort',
+  title: 'Försäkringsguide för Portugal | Adler & Rochefort',
   description:
-    'Hur den portugisiska försäkringsmarknaden fungerar för svenskar: aktörerna, försäkringsbrevets delar, begreppen, skadeanmälan, förnyelse och uppsägning — och sju frågor att ställa varje förmedlare.',
+    'Så fungerar försäkringsmarknaden i Portugal: aktörerna, försäkringsbrevet, begreppen, skadeanmälan och förnyelse — och sju frågor till varje förmedlare.',
   keywords:
     'försäkring Portugal, försäkringsguide Portugal, portugisiska försäkringsbolag, ASF Portugal, försäkringsförmedlare Portugal, apólice Portugal, skadeanmälan Portugal',
   eyebrow: 'Guide',
@@ -27,9 +27,9 @@ export const GUIDE_PAGE = {
   standfirst:
     'Den här sidan förklarar inte enskilda produkter utan systemet de ligger i: vem aktörerna är, vad som står i ett portugisiskt försäkringsbrev, vilka begrepp som avgör ersättningen och hur en skada faktiskt hanteras.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Försäkringsguide' }],
-  pullquote: 'Den billigaste försäkringen blir dyr den dagen skadan visar sig vara undantagen.',
+  pullquote: 'En försäkring prövas inte när den tecknas, utan den dag skadan inträffar — och då är det villkoren som gäller, inte broschyren.',
   schemaType: 'Article',
   formHeading: 'Ställ en fråga om försäkring i Portugal',
   formBranch: '',

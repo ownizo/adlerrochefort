@@ -10,6 +10,11 @@
  * standard part of the Swedish home policy, so the reader has had it for
  * decades without ever buying it, and will assume the Portuguese multirriscos
  * behaves the same way. Examples are illustrative, not coverage promises.
+ *
+ * Positioning: family/personal liability first — limits in the millions,
+ * worldwide, defence costs on top — with professional liability kept as the
+ * separate product it is (the wizard below is the RC profissional form and
+ * stays unchanged).
  */
 import { BREADCRUMB_ROOT } from './shared.mjs';
 
@@ -17,19 +22,19 @@ export const LIABILITY_PAGE = {
   slug: 'ansvarsforsakring-portugal',
   url: '/se/ansvarsforsakring-portugal/',
   cluster: 'liability',
-  title: 'Ansvarsförsäkring i Portugal för svenskar | Adler & Rochefort',
+  title: 'Ansvarsförsäkring för familjen i Portugal | Adler & Rochefort',
   description:
-    'Responsabilidade civil i Portugal: privat ansvarsskydd som inte följer med hemförsäkringen som i Sverige, och yrkesansvar för konsulter, terapeuter och egna företagare.',
+    'Privat ansvar för familjen med belopp i miljoner euro, giltigt i hela världen och med försvarskostnader utöver beloppet — i Portugal och Spanien.',
   keywords:
-    'ansvarsförsäkring Portugal, responsabilidade civil Portugal, privat ansvarsskydd Portugal, yrkesansvarsförsäkring Portugal, konsultförsäkring Portugal, företagsförsäkring Portugal',
-  eyebrow: 'Ansvarsförsäkring',
-  h1: 'Ansvarsförsäkring i Portugal: det skydd du haft utan att köpa det',
+    'ansvarsförsäkring Portugal, privat ansvarsförsäkring familj, responsabilidade civil familiar, ansvarsskydd miljonbelopp, ansvarsförsäkring Spanien, yrkesansvarsförsäkring Portugal',
+  eyebrow: 'Familjeansvar',
+  h1: 'Ansvarsförsäkring för familjen: miljonbelopp, i hela världen',
   standfirst:
-    'I Sverige ligger ansvarsskyddet inne i hemförsäkringen. I Portugal är <em>responsabilidade civil</em> ofta ett tillval med eget belopp — och för yrkesverksamhet en helt egen försäkring. Här är vad som skiljer och vad du behöver.',
+    'I Sverige låg ansvarsskyddet inne i hemförsäkringen. I en vanlig portugisisk bostadsförsäkring är <em>responsabilidade civil</em> ofta begränsad till skador på grannar och till ett lågt belopp. För ett hushåll med betydande tillgångar är ansvaret den del av försäkringen där beloppet betyder mest.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsförsäkring' }],
-  pullquote: 'Ansvarsskyddet är det du aldrig tänker på — till den dag det är det enda som betyder något.',
+  pullquote: 'Allt annat i försäkringen begränsas av värdet på något du äger. Ansvaret begränsas bara av det belopp du valt.',
   schemaType: 'Article',
   // Especificação v2, Parte B — this page's dedicated wizard replaces the
   // shared se-forfragan branch-select form. Same faturacao_anual field as
@@ -48,16 +53,17 @@ export const LIABILITY_PAGE = {
         <p class="wizard-helper">Verksamhetstyp, önskat försäkringsbelopp och om policyn krävs enligt avtal eller av en branschorganisation går vi igenom i kontakten som följer.</p>`,
   },
   sections: `
-<section class="section plain" aria-labelledby="tre-slag">
+<section class="section plain" aria-labelledby="beloppet">
   <div class="container narrow article-body">
-    <h2 id="tre-slag">Tre slags ansvar, tre skilda försäkringar</h2>
-    <p><em>Responsabilidade civil</em> betyder skadeståndsansvar — skyldigheten att ersätta skada du orsakat någon annan. På den portugisiska marknaden möter du begreppet i tre sammanhang som köps var för sig:</p>
-    <ul>
-      <li><strong>Privat ansvar</strong> (<em>RC familiar</em> eller <em>vida privada</em>) — skada du, din familj eller ditt husdjur orsakar tredje man i vardagen. I portugisiska hemförsäkringar förekommer det som tillval eller med ett grundbelopp som täcker ansvar kopplat till bostaden.</li>
-      <li><strong>Yrkes- och verksamhetsansvar</strong> (<em>RC profissional</em> eller <em>RC de exploração</em>) — skada som uppstår i ditt arbete: felaktigt råd, missad tidsfrist, olycka i din lokal, skada på kundens egendom.</li>
-      <li><strong>Ansvar knutet till fordon och fastighet</strong> — trafikförsäkringens ansvarsdel är lagstadgad och separat; ägaransvar för byggnad ligger i hemförsäkringen, och för flerbostadshus delvis hos <em>condomínio</em>.</li>
-    </ul>
-    <p>Ingen av dem ersätter en annan. Vi ser ofta läget att någon har både bil- och hemförsäkring och ändå står helt utan skydd för sin yrkesverksamhet.</p>
+    <h2 id="beloppet">Varför beloppet är det viktigaste valet</h2>
+    <p>Sakförsäkringen har ett naturligt tak: byggnaden, lösöret, förteckningen över värdeföremål. Ansvaret har inget. Ett skadeståndsanspråk för en allvarlig personskada hos tredje man — inkomstförlust under många år, vård, anpassning av bostad — bestäms av vad domstolen dömer ut och av den skadades förluster, och ingen av dem har något att göra med vad ditt hus är värt.</p>
+    <p>Vanliga portugisiska bostadsförsäkringar har ofta ett ansvarsbelopp som räcker för en vattenskada hos grannen men inte för en allvarlig personskada. För ett hushåll med betydande tillgångar är det också frågan om vad en motpart kan rikta anspråk mot. Därför bygger vi familjeansvaret på fyra principer:</p>
+    <div class="feature-grid">
+      <div class="feature-card"><h3>Belopp som motsvarar tillgångarna</h3><p>Privat ansvar för hela familjen med försäkringsbelopp på flera miljoner euro, med giltighet i hela världen.</p></div>
+      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Kostnaderna för rättsligt försvar betalas utöver försäkringsbeloppet och dras inte av från det — i en tvistig sak ofta den största posten de första åren.</p></div>
+      <div class="feature-card"><h3>Vilka som omfattas</h3><p>Hushållet, även barn som studerar på annan ort, och den som tillfälligt tar hand om dina djur; gäster och hushållsanställda i anslutning till bostaden.</p></div>
+      <div class="feature-card"><h3>Alla bostäder</h3><p>Som ägare, hyresgäst eller brukare — i Portugal, i Spanien eller var familjen än har ett hem.</p></div>
+    </div>
   </div>
 </section>
 
@@ -65,95 +71,101 @@ export const LIABILITY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="privat">Det svenska glappet: ansvarsskyddet som inte följer med</h2>
     <p>Har du haft hemförsäkring i Sverige har du haft ansvarsskydd — och sannolikt aldrig behövt fundera på det. Det är den svenska hemförsäkringens konstruktion: ansvar, rättsskydd, reseskydd och överfallsskydd ligger inne i paketet.</p>
-    <p>Den portugisiska <em>multirriscos habitação</em> är byggd kring sakskadan: byggnad och lösöre. Ansvarsdelen finns, men som tillval eller med ett belopp som är kopplat till bostaden snarare än till dig som person. Resultatet är ett glapp som ingen påpekar, eftersom ingen part i affären ser hela din situation — banken ser lånet, mäklaren ser köpet, bolaget ser huset.</p>
-    <h3>Situationer där det blir konkret</h3>
-    <ul>
-      <li>Din hund biter en förbipasserande på en promenad utanför tomten.</li>
-      <li>Ditt barn skadar en dyr sak hemma hos någon annan, eller repar en bil på en lekplats.</li>
-      <li>Du cyklar eller springer omkull en gående på strandpromenaden.</li>
-      <li>En krukväxt på din balkong blåser ner på en bil på gatan.</li>
-      <li>Grillen på uteplatsen orsakar en brand som sprider sig till grannens uteplats.</li>
-    </ul>
-    <p>I varje fall står frågan om ersättning till tredje man — reparation, vårdkostnad, inkomstförlust — och om kostnaden för att försvara sig mot ett anspråk. Om skyddet finns, till vilket belopp och med vilka undantag avgörs av den enskilda försäkringen, och det är den frågan vi besvarar skriftligt innan du tecknar.</p>
+    <p>Den portugisiska <em>multirriscos habitação</em> är byggd kring sakskadan: byggnad och lösöre. Ansvarsdelen finns, men som tillval eller med ett belopp som är kopplat till bostaden snarare än till dig och din familj. Resultatet är ett glapp som ingen påpekar, eftersom ingen part i affären ser hela din situation — banken ser lånet, fastighetsmäklaren ser köpet, bolaget ser huset.</p>
+    <h3>Vem räknas som försäkrad?</h3>
+    <p>Definitionen av försäkrad person avgör om skyddet alls gäller, och villkoren skiljer sig mer här än någon annanstans. Räkna med försäkringstagaren, make eller maka och hemmavarande barn. Kontrollera sedan fyra fall särskilt: vuxna barn som studerar på annan ort, sambo, andra släktingar som bor permanent i hushållet och gäster som använder bostaden med ditt tillstånd.</p>
+    <p>Hushållsanställdas egna skador i arbetet omfattas inte av ansvarsförsäkringen. Den som anställer personal i ett hushåll i Portugal ska ha en lagstadgad arbetsskadeförsäkring (<em>seguro de acidentes de trabalho</em>), som är en egen försäkring med egna skyldigheter. Familjeansvaret kan däremot gälla när en anställd i tjänsten orsakar skada hos tredje man — det beror på villkoren.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="yrke">
+<section class="section plain" aria-labelledby="dar-anspraken-uppstar">
   <div class="container narrow article-body">
-    <h2 id="yrke">Yrkesansvar: vem behöver det</h2>
-    <p>Många av våra svenska kunder arbetar från Portugal på ett sätt som inte fanns när de flyttade hit. Ett urval av situationer vi hanterar löpande, som illustration och inte som en utfästelse om att varje sådan verksamhet går att försäkra:</p>
+    <h2 id="dar-anspraken-uppstar">Där anspråken uppstår</h2>
+    <p>Riskerna är vardagliga, och det är just poängen. Nästan inget av detta kräver att något ovanligt händer:</p>
     <ul>
-      <li><strong>Konsulter och frilansare inom IT, teknik och marknadsföring</strong> — fakturerar svenska eller andra utländska kunder från Portugal. Risken är ekonomisk: en rekommendation som slår fel, ett driftstopp, en försenad leverans. Beställarens avtal kräver ofta en minsta försäkringsnivå, och det är värt att läsa den klausulen innan avtalet skrivs på.</li>
-      <li><strong>Fysioterapeuter, naprapater och massörer</strong> — fysisk behandling av kunder, ofta i egen lokal eller hembesök. Här samverkar två risker: behandlingsskada och skada i lokalen.</li>
-      <li><strong>Yoga-, pilates- och wellnessverksamhet</strong> — grupper, hyrd lokal, ofta retreatformat. Uthyraren begär regelmässigt försäkringsbevis, och gästernas eventuella olycksfall är en annan fråga än ditt eget ansvar.</li>
-      <li><strong>Små verksamheter med lokal</strong> — kafé, butik, salong, litet kontor. Verksamhetsansvaret (<em>RC de exploração</em>) täcker den klassiska situationen att en besökare skadas hos dig, och kombineras normalt med sakförsäkring för lokal och inventarier.</li>
-      <li><strong>Uthyrning till turister (<em>alojamento local</em>)</strong> — en vanlig plan bland svenska bostadsköpare. En vanlig hemförsäkring är normalt inte skriven för kommersiell uthyrning; verksamheten ska anmälas till bolaget, och undantag för uthyrningsperioder är ett återkommande skäl till avslag vid skada.</li>
-      <li><strong>Bokföring, juridik, arkitektur och andra reglerade yrken</strong> — för vissa yrken följer krav på yrkesansvarsförsäkring av regelverket eller yrkesordningen. Vilka krav som gäller din situation avgörs av regelverket och din yrkesorganisation, inte av oss.</li>
+      <li><strong>Pool och vatten.</strong> En privat pool bedöms mot vad en rimlig ägare borde ha gjort: staket, överdrag, tillsyn, skyltning. En gäst eller ett grannbarn som skadas är det klassiska anspråket.</li>
+      <li><strong>Vattenskador i flerbostadshus.</strong> Det vanligaste ansvarsanspråket av alla, och i en renoverad byggnad med påkostade ytskikt blir beloppen betydande.</li>
+      <li><strong>Träd, murar och tomtgränser.</strong> Ett träd som faller eller en stödmur som rasar är ägarens ansvar — liksom en brand som sprider sig från en tomt som inte röjts enligt reglerna.</li>
+      <li><strong>Hundar och andra djur.</strong> Djurhållaransvaret är strikt till sin karaktär, och vissa hundraser har särskilda krav på registrering, munkorg och försäkring. Villkoren kan undanta vissa raser.</li>
+      <li><strong>Byggarbeten.</strong> Att anlita en entreprenör flyttar inte över allt ansvar: en ägare kan bli ansvarig för skador hos grannen till följd av arbeten på den egna fastigheten. Entreprenörens egen försäkring ska kontrolleras, inte antas.</li>
+      <li><strong>Båt, sport och fritid.</strong> Golf, cykling, segling, skidåkning och vattensporter ger upphov till anspråk från tredje man. Mindre båtar kan ibland ingå i familjeansvaret; större båtar och vattenskotrar kräver normalt en egen försäkring och ska alltid anmälas.</li>
+      <li><strong>Barnen.</strong> Ett barn som skadar något dyrt hemma hos någon annan, eller en annan elev i skolan — de situationer den svenska hemförsäkringen alltid tog hand om utan att någon märkte det.</li>
     </ul>
     <div class="callout">
-      <span class="callout-label">Viktig avgränsning</span>
-      Vi bedömer inte vilken registrering, vilket bolagsform eller vilket tillstånd din verksamhet behöver i Portugal, och vi kan inte bekräfta att en försäkring uppfyller ett lagkrav eller ett kundavtals krav. Det är frågor för revisor, jurist eller din yrkesorganisation. Vi ordnar försäkringen, förklarar omfattningen skriftligt på engelska och lämnar det försäkringsbevis en beställare eller uthyrare kan behöva.
+      <span class="callout-label">Osäker på vilket belopp du har i dag?</span>
+      Skicka oss försäkringsbrevet. Vi svarar skriftligt med ansvarsbeloppet, undantagen och vad det skulle innebära att höja det.
     </div>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="undantag">
+<section class="section tint" aria-labelledby="separat">
+  <div class="container narrow article-body">
+    <h2 id="separat">Det som förblir separat</h2>
+    <p><em>Responsabilidade civil</em> betyder skadeståndsansvar, och på den portugisiska marknaden möter du begreppet i flera sammanhang som köps var för sig. Familjeansvaret ersätter inte de andra:</p>
+    <ul>
+      <li><strong>Yrkes- och verksamhetsansvar</strong> (<em>RC profissional</em> eller <em>RC de exploração</em>) — skada som uppstår i ditt arbete: felaktigt råd, missad tidsfrist, olycka i din lokal, skada på kundens egendom. Privat ansvar undantar alltid yrkesverksamhet.</li>
+      <li><strong>Fordon</strong> — trafikförsäkringens ansvarsdel är lagstadgad och ligger i bilförsäkringen.</li>
+      <li><strong>Uthyrning till turister</strong> (<em>alojamento local</em>) — är näringsverksamhet. Den ska anmälas till bolaget och kräver normalt ett eget ansvarsskydd mot gäster.</li>
+      <li><strong>Uppdrag i styrelser och bolag</strong> — hanteras genom bolagets egna försäkringar, inte genom familjens.</li>
+    </ul>
+    <h3>Yrkesansvar: vem behöver det</h3>
+    <p>Många av våra svenska kunder arbetar från Portugal — som konsulter, rådgivare eller med en egen verksamhet. Några situationer vi hanterar, som illustration och inte som en utfästelse om att varje verksamhet går att försäkra:</p>
+    <ul>
+      <li><strong>Konsulter och rådgivare</strong> som fakturerar svenska eller andra utländska kunder från Portugal. Risken är ekonomisk, och beställarens avtal kräver ofta en minsta försäkringsnivå — läs den klausulen innan avtalet skrivs på.</li>
+      <li><strong>Terapeuter och wellnessverksamhet</strong> — behandlingsskada och skada i lokalen är två olika risker som ska täckas båda.</li>
+      <li><strong>Reglerade yrken</strong> — för vissa följer krav på yrkesansvarsförsäkring av regelverket eller yrkesorganisationen. Vilka krav som gäller avgörs av dem, inte av oss.</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-label">Viktig avgränsning</span>
+      Vi bedömer inte vilken registrering, bolagsform eller vilket tillstånd din verksamhet behöver i Portugal, och vi kan inte bekräfta att en försäkring uppfyller ett lagkrav eller ett kundavtals krav. Det är frågor för revisor, jurist eller din yrkesorganisation. Vi ordnar försäkringen, förklarar omfattningen skriftligt på engelska och lämnar det försäkringsbevis en beställare kan behöva.
+    </div>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="undantag">
   <div class="container narrow article-body">
     <h2 id="undantag">Vad som normalt inte täcks</h2>
     <p>Undantagen varierar mellan bolag och villkor, men mönstren återkommer. En ansvarsförsäkring är normalt inte avsedd för:</p>
     <ul>
       <li>Uppsåtliga handlingar och skada orsakad avsiktligt.</li>
-      <li>Avtalsviten, återbetalning av arvode och rent kontraktuella åtaganden utöver skadeståndsansvaret.</li>
       <li>Skada på din egen egendom — det ligger i sakförsäkringen, inte i ansvarsdelen.</li>
-      <li>Verksamhet som inte anmälts till bolaget, eller som ligger utanför den beskrivna verksamheten i försäkringsbrevet.</li>
-      <li>Anspråk som härrör från händelser före försäkringens start, eller efter dess slut — hur detta avgränsas beror på om försäkringen följer skadeanmälnings- eller skadehändelseprincipen, vilket är en av de detaljer vi går igenom.</li>
+      <li>Skador mellan medlemmar i samma hushåll.</li>
+      <li>Yrkesverksamhet och uthyrning som inte anmälts och försäkrats för sig.</li>
+      <li>Avtalsviten och rent kontraktuella åtaganden utöver skadeståndsansvaret.</li>
       <li>Böter, sanktionsavgifter och straffrättsliga påföljder.</li>
     </ul>
     <p>Att läsa undantagen före tecknandet är hela poängen med att gå via en förmedlare. Det är också den enda tidpunkt då de går att påverka.</p>
-  </div>
-</section>
-
-<section class="section plain" aria-labelledby="fragor">
-  <div class="container narrow article-body">
-    <h2 id="fragor">Vad bolaget kommer att fråga</h2>
-    <p>Så att du kan förbereda svaren i stället för att gissa:</p>
-    <ol class="process-steps">
-      <li><div><strong>Verksamhetsbeskrivning</strong><span> — vad du faktiskt gör, med egna ord. Underlaget för hela bedömningen.</span></div></li>
-      <li><div><strong>Omsättning</strong><span> och fördelningen mellan kundtyper och länder.</span></div></li>
-      <li><div><strong>Var arbetet utförs</strong><span> — hemma, i egen lokal, hos kund, på distans.</span></div></li>
-      <li><div><strong>Kundernas geografi</strong><span> — särskilt om någon kund finns i USA eller Kanada, vilket ofta påverkar både premie och möjlighet.</span></div></li>
-      <li><div><strong>Anställda eller underleverantörer</strong><span>, och hur de är kopplade till verksamheten.</span></div></li>
-      <li><div><strong>Yrkeskvalifikationer och registrering</strong><span> där verksamheten är reglerad.</span></div></li>
-      <li><div><strong>Skadehistorik</strong><span> — tidigare anspråk eller kända omständigheter som kan leda till anspråk.</span></div></li>
-      <li><div><strong>Önskat ansvarsbelopp</strong><span>, ofta styrt av vad kundavtalen kräver.</span></div></li>
-    </ol>
   </div>
 </section>`,
   faqTitle: 'Ansvarsförsäkring i Portugal — frågor',
   faq: [
     {
       q: 'Ingår ansvarsskyddet i hemförsäkringen som i Sverige?',
-      a: '<p>Inte på samma självklara sätt. Den portugisiska <em>multirriscos habitação</em> är byggd kring byggnad och lösöre; ansvarsdelen finns som tillval eller med ett belopp knutet till bostaden. Vi kontrollerar vad som står i just din försäkring och vilket belopp som gäller innan du utgår från att skyddet finns.</p>',
+      a: '<p>Inte på samma självklara sätt. En vanlig portugisisk <em>multirriscos habitação</em> är byggd kring byggnad och lösöre; ansvarsdelen finns som tillval eller med ett belopp knutet till bostaden. I private client-villkoren för värdefulla hem ingår familjeansvar med belopp på flera miljoner euro. Vi kontrollerar vad som står i just din försäkring innan du utgår från att skyddet finns.</p>',
     },
     {
-      q: 'Vilket ansvarsbelopp bör jag välja?',
-      a: '<p>Det beror på verksamheten och kundavtalen. För privat ansvar styr vad som rimligen kan uppstå — vårdkostnad och inkomstförlust hos tredje man kan bli betydande. För yrkesansvar sätter beställarens avtal ofta ett minsta belopp. Vi går igenom nivåerna och prisskillnaden mellan dem.</p>',
+      q: 'Vilket ansvarsbelopp bör familjen ha?',
+      a: '<p>Ett belopp som står i proportion till vad ett allvarligt personskadeanspråk kan kosta och till vad familjen har att förlora — för hushåll med betydande tillgångar normalt flera miljoner euro. Ett lågt belopp är den del av försäkringen där konsekvensen av ett felaktigt val saknar övre gräns. Vi går igenom nivåerna skriftligt.</p>',
     },
     {
-      q: 'Jag är IT-konsult och fakturerar från Portugal. Vilken försäkring är det?',
-      a: '<p>Yrkesansvar (<em>RC profissional</em>), som täcker ekonomisk skada hos kunden till följd av ditt arbete. Anlitar du underleverantörer eller har anställda tillkommer normalt verksamhetsansvar. Vad som går att teckna beror på verksamhetsbeskrivning, omsättning och kundernas geografi.</p>',
+      q: 'Ingår försvarskostnaderna i försäkringsbeloppet?',
+      a: '<p>I de private client-villkor vi förmedlar betalas kostnaderna för rättsligt försvar utöver försäkringsbeloppet, inte inom det. I andra villkor räknas de ofta in i beloppet, så att en utdragen tvist äter upp det som skulle ha gått till ersättning. Det är en av de första punkterna vi kontrollerar.</p>',
+    },
+    {
+      q: 'Omfattas gäster och hushållsanställda?',
+      a: '<p>Gäster och hushållsanställda omfattas i anslutning till bostaden, enligt villkoren. De anställdas egna skador i arbetet är däremot en fråga för den lagstadgade arbetsskadeförsäkringen (<em>seguro de acidentes de trabalho</em>), som tecknas separat.</p>',
+    },
+    {
+      q: 'Gäller skyddet i Spanien och på resor?',
+      a: '<p>Ja, familjeansvaret i private client-villkoren gäller i hela världen, och som ägare, hyresgäst eller brukare av bostäder i Portugal, i Spanien eller var familjen än har ett hem. Den geografiska omfattningen framgår alltid av försäkringsbrevet, och vi bekräftar den skriftligt.</p>',
+    },
+    {
+      q: 'Jag är konsult och fakturerar från Portugal. Täcks det?',
+      a: '<p>Nej, inte av familjeansvaret — privat ansvar undantar yrkesverksamhet. Det krävs en yrkesansvarsförsäkring (<em>RC profissional</em>), som täcker ekonomisk skada hos kunden till följd av ditt arbete. Vad som går att teckna beror på verksamhetsbeskrivning, omsättning och kundernas geografi.</p>',
     },
     {
       q: 'Jag hyr ut mitt hus till turister. Räcker hemförsäkringen?',
       a: '<p>Normalt inte utan vidare. En vanlig hemförsäkring är inte skriven för kommersiell uthyrning, och uthyrningen bör anmälas till bolaget. Vilken lösning som är möjlig beror på bolag, fastighet och uthyrningens omfattning — men gissa inte: en oanmäld uthyrning är ett återkommande skäl till att en skada inte ersätts.</p>',
-    },
-    {
-      q: 'Måste jag ha yrkesansvarsförsäkring i Portugal?',
-      a: '<p>För vissa reglerade yrken följer krav av regelverket eller yrkesorganisationen; för andra kommer kravet från kundavtalen. Vi ger inga juridiska råd om vad som gäller din verksamhet — kontrollera det med revisor, jurist eller din yrkesorganisation, och berätta för oss vilket belopp och vilken omfattning som krävs.</p>',
-    },
-    {
-      q: 'Täcker försäkringen kunder i andra länder?',
-      a: '<p>Den geografiska omfattningen anges i försäkringen. Europeisk verksamhet är oftast oproblematisk; kunder i USA och Kanada behandlas normalt särskilt och kan påverka både premie och möjlighet att teckna. Ange kundernas länder från början så att omfattningen stämmer med verkligheten.</p>',
     },
   ],
   related: [

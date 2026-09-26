@@ -19,15 +19,15 @@ export const MOTOR_PAGE = {
   cluster: 'motor',
   title: 'Bilforsikring i Portugal for danskere | Adler & Rochefort',
   description:
-    'Ansvarsforsikring og kasko i Portugal, danske eller portugisiske nummerplader, ISV og importen via IMT, dansk kørekort og hvordan din skadesattest og dit bonustrin behandles.',
+    'Bilforsikring i Portugal for danskere: ansvar og kasko, værdifulde biler, danske eller portugisiske nummerplader, ISV og import via IMT og din skadesattest.',
   keywords:
     'bilforsikring Portugal, ansvarsforsikring bil Portugal, tage bilen til Portugal, importere bil Portugal ISV, dansk kørekort Portugal, skadesattest Portugal, bonustrin udland',
   eyebrow: 'Bilforsikring',
   h1: 'Bilforsikring i Portugal: nummerplader, dækning og din skadeshistorik',
   standfirst:
-    'Spørgsmålet er sjældent, om du må tage bilen med, men om det kan betale sig — og hvordan du undgår hullet mellem dansk og portugisisk indregistrering. Her er begge dele, uden løfter intet selskab kan give.',
+    'Spørgsmålet er sjældent, om du må tage bilen med, men om det giver mening — og hvordan du undgår hullet mellem dansk og portugisisk indregistrering. Her er begge dele, uden løfter intet selskab kan give.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilforsikring' }],
   pullquote: 'Dækningen skal løbe videre, mens nummerpladen skifter — ikke bagefter.',
   schemaType: 'Article',
@@ -37,10 +37,10 @@ export const MOTOR_PAGE = {
     idPrefix: 'dk-auto',
     formName: 'dk-bilforsikring-wizard',
     ramo: 'Bilforsikring',
-    heading: 'Få et tilbud på bilforsikring',
+    heading: 'Forespørgsel om bilforsikring',
     intro: 'Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.',
     stepLabel2: 'Bilen',
-    submitLabel: 'Få et tilbud',
+    submitLabel: 'Send forespørgsel',
     microNote:
       'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
     fieldsHtml: `        <div class="contact-form-field"><label for="dk-auto-matricula">Nummerplade *</label><input type="text" id="dk-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
@@ -68,8 +68,9 @@ export const MOTOR_PAGE = {
         </tbody>
       </table>
     </div>
-    <p>Konsekvensen: et portugisisk tilbud, der ser billigere ud end den danske kaskoforsikring, kan være det med rette — eller blot mangle tre af de ting, der var med hjemme. Vi gennemgår tilvalgene ét for ét frem for at sammenligne to slutbeløb.</p>
+    <p>Konsekvensen: et portugisisk tilbud, der ligner den danske kaskoforsikring, kan dække det samme — eller mangle tre af de ting, der var med hjemme. Vi gennemgår tilvalgene ét for ét og giver sammenligningen skriftligt i stedet for at stille to slutbeløb op mod hinanden.</p>
     <p>To detaljer, der plejer at overraske: selvrisikoen på <em>danos próprios</em> er ofte procentvis og derfor større på en dyr bil end en fast dansk selvrisiko, og glasdækning er meget almindelig som særskilt tilvalg med sin egen, lave selvrisiko.</p>
+    <p>Ved nyere og mere værdifulde biler er det især tre ting, der skal afklares skriftligt: hvilken værdi der lægges til grund ved totalskade, om reparation sker på autoriseret værksted med originale dele, og hvordan en procentvis selvrisiko slår igennem på netop den bil.</p>
   </div>
 </section>
 

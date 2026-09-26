@@ -18,17 +18,17 @@ export const LIABILITY_PAGE = {
   slug: 'ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia',
   url: '/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/',
   cluster: 'liability',
-  title: 'Ubezpieczenie odpowiedzialności cywilnej w Portugalii | Adler & Rochefort',
+  title: 'Odpowiedzialność cywilna rodziny w Portugalii | Adler & Rochefort',
   description:
-    'Responsabilidade civil w Portugalii: OC w życiu prywatnym i OC zawodowa dla konsultantów, freelancerów, fizjoterapeutów, branży wellness i małych firm. Co obejmuje, a co nie.',
+    'OC rodziny z sumami rzędu milionów euro, na całym świecie, z kosztami obrony ponad sumę: personel domowy, goście, basen, łódź. OC zawodowa — osobno.',
   keywords:
-    'odpowiedzialność cywilna Portugalia, responsabilidade civil, OC zawodowa Portugalia, ubezpieczenie freelancera Portugalia, OC w życiu prywatnym Portugalia, ubezpieczenie działalności Portugalia',
-  eyebrow: 'Odpowiedzialność cywilna',
-  h1: 'Odpowiedzialność cywilna w Portugalii: prywatna i zawodowa',
+    'odpowiedzialność cywilna rodziny Portugalia, OC w życiu prywatnym Portugalia, responsabilidade civil familiar, OC prywatne wysoka suma gwarancyjna, OC zawodowa Portugalia, odpowiedzialność cywilna Hiszpania',
+  eyebrow: 'Odpowiedzialność cywilna rodziny',
+  h1: 'Odpowiedzialność cywilna rodziny w Portugalii: sumy w milionach, zasięg światowy',
   standfirst:
-    'W polskich polisach mieszkaniowych OC w życiu prywatnym dokłada się niemal automatycznie. W Portugalii <em>responsabilidade civil</em> to osobna kategoria, którą trzeba świadomie kupić — i dwie bardzo różne rzeczy, zależnie od tego, czy chodzi o życie prywatne, czy o pracę.',
+    'W polskich polisach mieszkaniowych OC w życiu prywatnym dokłada się niemal automatycznie, zwykle z niewielką sumą. W Portugalii <em>responsabilidade civil</em> trzeba kupić świadomie — a przy znacznym majątku suma liczona w dziesiątkach czy setkach tysięcy euro często nie wystarcza. OC zawodowa to osobna polisa i osobne pytania, opisane niżej.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Odpowiedzialność cywilna' }],
   pullquote: 'Odpowiedzialność cywilna to jedno z niewielu ryzyk bez górnej granicy. Dlatego kupuje się ją zanim się jej potrzebuje.',
   schemaType: 'Article',
@@ -58,11 +58,38 @@ export const LIABILITY_PAGE = {
       <li><strong><em>Responsabilidade civil familiar</em></strong> — odpowiedzialność cywilna w życiu prywatnym: Państwo, domownicy, dzieci, często zwierzęta domowe.</li>
       <li><strong><em>Responsabilidade civil profissional</em></strong> — odpowiedzialność cywilna zawodowa, związana z wykonywaną pracą lub prowadzoną działalnością.</li>
     </ul>
-    <p>Ta strona dotyczy dwóch ostatnich. Zakres każdej z nich zależy od ubezpieczyciela i wybranego wariantu — poniżej opisujemy, jak zwykle wygląda portugalska praktyka.</p>
+    <p>Ta strona dotyczy przede wszystkim odpowiedzialności cywilnej rodziny, a w dalszej części — zawodowej, która pozostaje odrębnym produktem. Zakres każdej z nich zależy od ubezpieczyciela i wybranego wariantu — poniżej opisujemy, jak zwykle wygląda praktyka rynkowa.</p>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="oc-prywatne">
+<section class="section tint" aria-labelledby="oc-rodziny">
+  <div class="container narrow article-body">
+    <h2 id="oc-rodziny">OC rodziny przy znacznym majątku</h2>
+    <p>Odpowiedzialność cywilna to jedno z niewielu ryzyk, których wysokości nie wyznacza wartość tego, co się posiada, lecz rozmiar szkody wyrządzonej komuś innemu. Poważny wypadek z udziałem gościa, pracownika czy przypadkowego przechodnia może oznaczać roszczenie o koszty leczenia, utracone dochody i zadośćuczynienie liczone przez lata. A im większy majątek, tym bardziej oczywistym celem roszczenia staje się rodzina, która go posiada.</p>
+    <p>Polisy dla majątków o wysokiej wartości, które lokujemy, mają zwykle następujące warunki referencyjne:</p>
+    <ul class="hub-list">
+      <li class="hub-item"><h3>Sumy dopasowane do majątku</h3><p>Odpowiedzialność cywilna rodziny z sumami gwarancyjnymi rzędu kilku milionów euro, o zasięgu światowym.</p></li>
+      <li class="hub-item"><h3>Koszty obrony ponad sumę</h3><p>Koszty obrony prawnej są pokrywane ponad sumę gwarancyjną, a nie z niej potrącane.</p></li>
+      <li class="hub-item"><h3>Kto jest chroniony</h3><p>Domownicy, w tym dzieci studiujące poza domem, oraz osoby okazjonalnie opiekujące się Państwa zwierzętami; goście i personel domowy w związku z rezydencją.</p></li>
+      <li class="hub-item"><h3>Wszystkie rezydencje</h3><p>Jako właściciel, najemca lub użytkownik — w Portugalii, w Hiszpanii albo wszędzie tam, gdzie rodzina ma dom.</p></li>
+    </ul>
+    <h3>Sytuacje typowe dla domów o wysokiej wartości</h3>
+    <ul>
+      <li><strong>Personel domowy.</strong> Ogrodnik, pomoc domowa, opiekunka do dzieci, kierowca — szkoda wyrządzona przez nich osobom trzecim oraz szkoda, której sami doznają. Ta druga część ma w Portugalii odrębny reżim: pracodawca pomocy domowej ma ustawowy obowiązek zawarcia ubezpieczenia wypadkowego pracowników (<em>seguro de acidentes de trabalho</em>), którego OC nie zastępuje.</li>
+      <li><strong>Goście i przyjęcia.</strong> Upadek na tarasie, wypadek przy basenie, szkoda podczas uroczystości organizowanej w domu.</li>
+      <li><strong>Basen, korty, konie.</strong> Elementy, które podnoszą ryzyko szkody na osobie; warto sprawdzić, czy polisa nie wyłącza ich wprost i czy konie wymagają zgłoszenia.</li>
+      <li><strong>Łodzie i skutery wodne.</strong> Małe jednostki bywają objęte polisą rodzinną do określonej długości lub mocy silnika. Większe wymagają odrębnej polisy jachtowej, a dla łodzi rekreacyjnych w Portugalii obowiązuje ustawowe ubezpieczenie OC.</li>
+      <li><strong>Wynajem domu.</strong> Gdy rezydencja jest okresowo wynajmowana, odpowiedzialność wobec najemców i gości musi być zgłoszona — zwykła polisa rodzinna nie obejmuje działalności zarobkowej.</li>
+      <li><strong>Dzieci za granicą.</strong> Studia, wymiana, praktyki — zasięg światowy i objęcie dzieci mieszkających poza domem sprawdzamy w definicji ubezpieczonego, a nie w ulotce.</li>
+    </ul>
+    <div class="callout">
+      <span class="callout-label">Jaka suma jest właściwa</span>
+      Punktem wyjścia jest to, co rodzina posiada i jak żyje: liczba domów i krajów, personel, basen, łódź, podróże, dzieci za granicą. Sumę rekomendujemy na piśmie, z uzasadnieniem — a jeśli podstawowa polisa nie oferuje wystarczającej sumy, wskazujemy, jak ją uzupełnić.
+    </div>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="oc-prywatne">
   <div class="container narrow article-body">
     <h2 id="oc-prywatne">OC w życiu prywatnym: luka, o której nikt nie wie</h2>
     <p>Polska polisa mieszkaniowa niemal zawsze zawiera OC w życiu prywatnym, często z sumą kilkuset tysięcy złotych, w cenie wtopionej w składkę. Przyzwyczajenie jest zatem takie, że ta ochrona po prostu jest.</p>
@@ -82,10 +109,10 @@ export const LIABILITY_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="oc-zawodowa">
+<section class="section tint" aria-labelledby="oc-zawodowa">
   <div class="container narrow article-body">
-    <h2 id="oc-zawodowa">OC zawodowa: dla kogo i po co</h2>
-    <p>OC zawodowa chroni przed roszczeniami wynikającymi z wykonywanej pracy: błędu w usłudze, niedopatrzenia, szkody wyrządzonej klientowi lub jego mieniu, a w przypadku zawodów kontaktowych — szkody na osobie. Coraz więcej naszych polskich klientów potrzebuje jej z dwóch powodów jednocześnie: bo ryzyko jest realne i bo kontrahent wpisał ją do umowy.</p>
+    <h2 id="oc-zawodowa">Co pozostaje odrębne: OC zawodowa</h2>
+    <p>Polisa rodzinna nie obejmuje odpowiedzialności związanej z pracą zawodową ani z prowadzeniem firmy — to zawsze osobna umowa. OC zawodowa chroni przed roszczeniami wynikającymi z wykonywanej pracy: błędu w usłudze, niedopatrzenia, szkody wyrządzonej klientowi lub jego mieniu, a w przypadku zawodów kontaktowych — szkody na osobie. Coraz więcej naszych polskich klientów potrzebuje jej z dwóch powodów jednocześnie: bo ryzyko jest realne i bo kontrahent wpisał ją do umowy.</p>
     <h3>Konsultanci i specjaliści IT pracujący zdalnie</h3>
     <p>Najczęstsza grupa. Polski lub międzynarodowy klient, praca z Portugalii, umowa B2B. Kontrakty korporacyjne regularnie wymagają <em>professional indemnity</em> z konkretną sumą, a czasem także <em>public liability</em>. Kluczowe pytania, które zadajemy: gdzie znajdują się klienci, jakiemu prawu podlega umowa, czy praca dotyczy systemów przetwarzających dane osobowe i czy wymagane jest rozszerzenie o szkody cybernetyczne. Zakres terytorialny i jurysdykcja to w tym przypadku pierwsza rzecz do sprawdzenia — nie suma.</p>
     <h3>Fizjoterapeuci, terapeuci, branża wellness</h3>
@@ -97,7 +124,7 @@ export const LIABILITY_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="czego-nie-obejmuje">
+<section class="section plain" aria-labelledby="czego-nie-obejmuje">
   <div class="container narrow article-body">
     <h2 id="czego-nie-obejmuje">Czego OC zwykle nie obejmuje</h2>
     <p>Ta lista jest ważniejsza od listy tego, co jest objęte, bo właśnie tutaj rodzą się rozczarowania. Typowe wyłączenia w portugalskich polisach OC:</p>
@@ -113,9 +140,9 @@ export const LIABILITY_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="o-co-zapyta">
+<section class="section tint" aria-labelledby="o-co-zapyta">
   <div class="container narrow article-body">
-    <h2 id="o-co-zapyta">O co zapyta ubezpieczyciel</h2>
+    <h2 id="o-co-zapyta">O co zapyta ubezpieczyciel przy OC zawodowej</h2>
     <ol class="process-steps">
       <li><div><strong>Dokładny opis działalności</strong><span> — nie nazwa zawodu, ale wykonywane czynności.</span></div></li>
       <li><div><strong>Roczne przychody</strong><span> lub ich prognoza; to zwykle podstawa taryfy.</span></div></li>
@@ -130,6 +157,14 @@ export const LIABILITY_PAGE = {
 </section>`,
   faqTitle: 'Odpowiedzialność cywilna w Portugalii — pytania',
   faq: [
+    {
+      q: 'Dlaczego suma gwarancyjna w milionach euro, a nie w setkach tysięcy?',
+      a: '<p>Bo w odpowiedzialności cywilnej wysokość szkody wyznacza poszkodowany, a nie wartość Państwa majątku. Poważna szkoda na osobie — koszty leczenia, utracone dochody, zadośćuczynienie, koszty sądowe — potrafi przekroczyć typowe limity polis mieszkaniowych. Polisy dla majątków o wysokiej wartości oferują sumy rzędu kilku milionów euro, o zasięgu światowym, z kosztami obrony pokrywanymi ponad sumę gwarancyjną.</p>',
+    },
+    {
+      q: 'Czy OC rodziny obejmuje personel domowy?',
+      a: '<p>Szkody wyrządzone przez personel domowy osobom trzecim w związku z rezydencją są w polisach dla majątków o wysokiej wartości zwykle objęte. Wypadki, którym ulega sam pracownik, to osobny temat: w Portugalii pracodawca pomocy domowej ma ustawowy obowiązek zawarcia ubezpieczenia wypadkowego pracowników (<em>seguro de acidentes de trabalho</em>). Zajmujemy się obiema polisami razem.</p>',
+    },
     {
       q: 'Czy moja polisa mieszkaniowa obejmuje OC w życiu prywatnym?',
       a: '<p>Może, ale nie w takim zakresie, jaki przywozi się z polskiego rynku. Wiele portugalskich polis mieszkaniowych ogranicza odpowiedzialność cywilną do szkód wyrządzonych sąsiadom w tym samym budynku i z niskim limitem. Szerszy zakres bywa osobnym rozszerzeniem. Sprawdzamy to w warunkach i podajemy limit kwotowo.</p>',

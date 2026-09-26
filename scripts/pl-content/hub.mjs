@@ -19,33 +19,35 @@ export const HUB_PAGE = {
   url: '/pl/',
   cluster: 'hub',
   isHub: true,
-  title: 'Ubezpieczenia w Portugalii dla Polaków | Adler & Rochefort',
+  title: 'Ubezpieczenia majątku · Portugalia i Hiszpania | Adler & Rochefort',
   description:
-    'Jak działają ubezpieczenia w Portugalii, gdy przyjeżdża się z Polski: dom, zdrowie, samochód i odpowiedzialność cywilna. Zarejestrowany agent ubezpieczeniowy w Algarve, ASF nr 425591790/3.',
+    'Domy o wysokiej wartości, sztuka i kolekcje, OC rodziny i międzynarodowe ubezpieczenie zdrowotne w Portugalii i Hiszpanii. Indywidualnie, na piśmie.',
+  ogTitle: 'Ubezpieczenia majątków o wysokiej wartości w Portugalii i Hiszpanii',
   keywords:
-    'ubezpieczenie Portugalia, ubezpieczenia dla Polaków w Portugalii, polisa mieszkaniowa Portugalia, ubezpieczenie zdrowotne Portugalia, ubezpieczenie samochodu Portugalia, agent ubezpieczeniowy Portugalia',
-  eyebrow: 'Ubezpieczenia w Portugalii',
-  h1: 'Ubezpieczenia w Portugalii dla Polaków mieszkających tutaj na stałe i na pół roku',
+    'ubezpieczenie Portugalia, ubezpieczenie majątku Portugalia, ubezpieczenie domu o wysokiej wartości Portugalia, ubezpieczenie dzieł sztuki Portugalia, odpowiedzialność cywilna rodziny Portugalia, ubezpieczenia Hiszpania, ubezpieczenia dla Polaków w Portugalii',
+  eyebrow: 'Klienci prywatni · Portugalia i Hiszpania',
+  h1: 'Ubezpieczenia majątków<br><em>o wysokiej wartości.</em>',
   standfirst:
-    'Portugalski rynek ubezpieczeń nie jest polskim rynkiem przetłumaczonym na portugalski. Inaczej dzieli się ryzyka, inaczej rozumie odpowiedzialność cywilną i inaczej liczy sumy ubezpieczenia. Te strony wyjaśniają, co naprawdę się zmienia — i jak dobrać ochronę, która zadziała w dniu szkody.',
+    'Rezydencje, sztuka i kolekcje, odpowiedzialność cywilna i ochrona rodziny — w Portugalii i Hiszpanii. Indywidualna ocena ryzyka, rekomendacja na piśmie i jeden doradca — od pierwszego kontaktu do likwidacji szkody.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [{ name: 'Strona główna', url: '/pl/' }],
   pullquote:
-    'Najtańsza polisa staje się bardzo droga w dniu, w którym okazuje się, że akurat ta szkoda jest wyłączona.',
+    'Powyżej pewnej wartości pytanie nie brzmi już, czy jest się ubezpieczonym. Brzmi: czy polisa została napisana dla tego, co Państwo posiadają.',
   schemaType: 'WebPage',
   formHeading: 'Porozmawiajmy o Państwa sytuacji',
   formBranch: '',
   formSubject: 'Zapytanie ogólne (PL)',
   formCta: 'Wyślij zapytanie',
   formIntro:
-    'Proszę napisać, co ma być objęte ochroną i od kiedy. Odpowiemy, jakie informacje będą potrzebne i co realnie da się ułożyć.',
+    'Proszę napisać, co ma być objęte ochroną, albo przesłać nam obecną polisę. Odpowiemy pisemnie: co warto zmienić, jakie informacje będą potrzebne i jak mógłby wyglądać zakres.',
   formPlaceholder:
-    'Na przykład: przeprowadzam się do Porto w marcu, mam mieszkanie we wspólnocie i samochód na polskich tablicach.',
+    'Na przykład: dom w Cascais i apartament w Marbelli, kolekcja obrazów i dwa samochody — chcielibyśmy przejrzeć obecne polisy.',
   sections: `
 <section class="section plain" aria-labelledby="co-sie-zmienia">
   <div class="container narrow article-body">
     <h2 id="co-sie-zmienia">Co się zmienia, kiedy przyjeżdża się z polskiego rynku</h2>
+    <p>Portugalski rynek ubezpieczeń nie jest polskim rynkiem przetłumaczonym na portugalski. Inaczej dzieli się ryzyka, inaczej rozumie odpowiedzialność cywilną i inaczej liczy sumy ubezpieczenia — a przy majątku o wysokiej wartości każda z tych różnic waży więcej.</p>
     <p>Osoba, która ubezpieczała się w Polsce, przywozi do Portugalii zestaw bardzo rozsądnych nawyków — i kilka założeń, które tu po prostu nie obowiązują. To nie kwestia lepszego czy gorszego rynku. Ryzyka są inaczej pogrupowane, a granice między polisami przebiegają w innych miejscach.</p>
     <p>Trzy różnice powodują najwięcej nieporozumień:</p>
     <ul>
@@ -85,23 +87,28 @@ export const HUB_PAGE = {
 
 <section class="section plain" aria-labelledby="ubezpieczenia">
   <div class="container narrow">
-    <h2 id="ubezpieczenia">Cztery ubezpieczenia, o które pytają najczęściej</h2>
+    <h2 id="ubezpieczenia">Co chronimy</h2>
+    <p>Każde ryzyko oceniane indywidualnie, a cały majątek gospodarstwa domowego — domy, kolekcje, samochody, odpowiedzialność cywilna i zdrowie — przeglądany razem, żeby luka w jednej polisie nie ukryła się za datą innej.</p>
     <ul class="hub-list">
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-domu-portugalia/">Ubezpieczenie domu i mieszkania</a></h3>
-        <p>Mury i ruchomości domowe, wspólnota mieszkaniowa a <em>condomínio</em>, zalania, ryzyko sejsmiczne i dlaczego polisa z banku nie zawsze jest tą właściwą.</p>
+        <h3><a href="/pl/ubezpieczenie-domu-portugalia/">Domy i rezydencje o wysokiej wartości</a></h3>
+        <p>Oględziny i koszt odbudowy, rezygnacja z zasady proporcji, gwarantowana odbudowa, zakwaterowanie o porównywalnym standardzie — oraz portugalskie realia: <em>condomínio</em>, zalania i ryzyko sejsmiczne.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-zdrowotne-portugalia/">Ubezpieczenie zdrowotne</a></h3>
-        <p>SNS i prywatna opieka obok siebie, sieci placówek, okresy karencji, ocena ryzyka i choroby istniejące przed zawarciem umowy.</p>
+        <h3><a href="/pl/ubezpieczenie-domu-portugalia/#kolekcje">Sztuka, biżuteria i kolekcje</a></h3>
+        <p>Wartość uzgodniona na podstawie wyceny, bez franszyzy, z ochroną przed niedoszacowaniem i utratą wartości po renowacji.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-samochodu-portugalia/">Ubezpieczenie samochodu</a></h3>
-        <p>Obowiązkowe OC po portugalsku, odpowiednik AC, przerejestrowanie i ISV, polskie prawo jazdy oraz historia szkodowa.</p>
+        <h3><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">Odpowiedzialność cywilna rodziny</a></h3>
+        <p>Sumy gwarancyjne rzędu kilku milionów euro, zasięg światowy, koszty obrony ponad sumę — personel domowy, goście, basen, łódź. OC zawodowa — osobno.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia/">Odpowiedzialność cywilna</a></h3>
-        <p>OC w życiu prywatnym i OC zawodowa — dla konsultantów, freelancerów, fizjoterapeutów, branży wellness i małych firm.</p>
+        <h3><a href="/pl/ubezpieczenie-zdrowotne-portugalia/">Międzynarodowe ubezpieczenie zdrowotne</a></h3>
+        <p>Dla całej rodziny: wybór szpitali w Portugalii, w Polsce i na świecie, obok publicznego SNS, z karencjami i oceną ryzyka wyjaśnionymi na piśmie.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-samochodu-portugalia/">Samochody</a></h3>
+        <p>Obowiązkowe OC po portugalsku, odpowiednik AC, samochody o wysokiej wartości, przerejestrowanie i ISV oraz historia szkodowa z Polski.</p>
       </li>
     </ul>
   </div>
@@ -130,12 +137,13 @@ export const HUB_PAGE = {
 <section class="section plain" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Jesteśmy agencją ubezpieczeniową zarejestrowaną w Portugalii i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy. Nie jesteśmy porównywarką cen i nie budujemy oferty wokół najniższej składki. Nasza praca polega na czymś innym: na dopasowaniu zakresu do sytuacji, wyjaśnieniu portugalskich warunków po angielsku i pisemnie, oraz na tym, żeby przy szkodzie mieć po swojej stronie kogoś, kto zna akta sprawy.</p>
+    <p>Adler &amp; Rochefort to marka handlowa spółki Ownizo, Unipessoal Lda. — pośrednika ubezpieczeniowego dla klientów prywatnych o znacznym majątku. Mamy biura w Lizbonie i Lagos, a klientów w całej Portugalii i w Hiszpanii, gdzie działamy w ramach unijnej swobody świadczenia usług, pod jednym wpisem ASF nr 425591790/3. Nie mamy umowy na wyłączność z żadnym ubezpieczycielem i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy.</p>
+    <p>Nie jesteśmy porównywarką cen. Składka jest wynikiem analizy, a nie jej punktem wyjścia. Nasza praca polega na dopasowaniu zakresu do majątku, wyjaśnieniu warunków po angielsku i pisemnie oraz na tym, żeby przy szkodzie mieć po swojej stronie tę samą osobę, która polisę ułożyła. Dyskrecja jest częścią tej pracy: informacje o tym, co Państwo posiadają, trafiają wyłącznie do ubezpieczycieli, do których zwrócimy się za Państwa zgodą.</p>
     <ol class="process-steps">
-      <li><div><strong>Rozmowa o sytuacji.</strong><span> Co ma być chronione, jaka jest wartość, kto mieszka w nieruchomości, czy jest kredyt, czy prowadzona jest działalność.</span></div></li>
-      <li><div><strong>Zakres przed ceną.</strong><span> Najpierw ustalamy, co polisa musi obejmować, a co może zostać pominięte świadomie. Dopiero potem porównujemy warianty.</span></div></li>
+      <li><div><strong>Przegląd sytuacji.</strong><span> Co ma być chronione i gdzie, jaka jest wartość domów, kolekcji i samochodów, kto należy do gospodarstwa domowego, jakie polisy już istnieją.</span></div></li>
+      <li><div><strong>Zakres przed ceną.</strong><span> Najpierw ustalamy, co polisa musi obejmować, a co może zostać pominięte świadomie. Tam, gdzie ryzyko tego wymaga, dokumentację — oględziny, wyceny, zabezpieczenia — ocenia underwriter ubezpieczyciela.</span></div></li>
       <li><div><strong>Warunki po angielsku.</strong><span> Zanim cokolwiek zostanie podpisane, dostaje Pan lub Pani wyjaśnienie sumy ubezpieczenia, franszyz, wyłączeń i terminów — pisemnie.</span></div></li>
-      <li><div><strong>Obsługa szkody.</strong><span> Zgłoszenie, kontakt z ubezpieczycielem, pilnowanie terminów. To ta część, dla której w ogóle warto mieć agenta.</span></div></li>
+      <li><div><strong>Jeden doradca, aż do szkody.</strong><span> Ta sama osoba od pierwszego przeglądu przez wznowienia po zgłoszenie szkody, kontakt z ubezpieczycielem i likwidatorem oraz pilnowanie terminów — pisemnie, aż do wypłaty.</span></div></li>
     </ol>
     <p class="legal-note">Zakres ochrony zależy od ubezpieczyciela i wybranego wariantu polisy. Na tej stronie opisujemy, jak zwykle działa portugalski rynek — nie jest to potwierdzenie warunków konkretnej umowy.</p>
   </div>
@@ -156,15 +164,15 @@ export const HUB_PAGE = {
   // The portrait band and the insurer row below it are rendered by
   // scripts/lib/site-sections.mjs; only the Polish copy lives here.
   audience: {
-    heading: 'Dla kogo <em>tu jesteśmy</em>',
+    heading: 'Dla kogo <em>pracujemy</em>',
     body:
-      'Prowadzimy ubezpieczenia Polakom mieszkającym w Portugalii: rodzinom, osobom kupującym mieszkanie lub dom, pracownikom, samozatrudnionym i przedsiębiorcom. Niezależnie od tego, czy przyjechał Pan lub Pani w tym roku, czy mieszka tu od lat, portugalską stronę ubezpieczeń prowadzimy my — doradztwo, porównanie odpowiednich wariantów, zawarcie polisy, bieżąca obsługa i pomoc przy szkodzie u tej samej osoby.',
-    alt: 'Doradca ubezpieczeniowy dla obcokrajowców w Portugalii',
+      'Doradzamy polskim rodzinom i przedsiębiorcom, którzy mają w Portugalii lub w Hiszpanii dom, drugą nieruchomość albo znaczną część majątku: rezydencje, dzieła sztuki i kolekcje, samochody, a do tego odpowiedzialność cywilną i zdrowie całej rodziny. Jeden doradca prowadzi całość — od przeglądu obecnych polis przez propozycję i zawarcie umowy po obsługę szkody — pisemnie, po angielsku i z pełną dyskrecją.',
+    alt: 'Doradca ubezpieczeniowy dla klientów prywatnych w Portugalii i Hiszpanii',
   },
   insurers: {
     heading: 'Ubezpieczyciele i partnerzy co-brokerage, <em>z którymi współpracujemy</em>',
     lead:
-      'Jako broker nie jesteśmy związani z jedną firmą. Doradzamy w ramach naszego portfela ubezpieczycieli i szukamy rozwiązania dopasowanego do Pana lub Pani sytuacji — nie tylko najtańszej składki.',
+      'Nie mamy umowy na wyłączność z żadnym ubezpieczycielem. Propozycje dobieramy w ramach naszego portfela ze względu na treść warunków, jakość obsługi i sposób likwidacji szkód — a nie ze względu na najniższą składkę.',
   },
   faqTitle: 'Ubezpieczenia w Portugalii — pytania Polaków',
   faq: [
@@ -182,11 +190,15 @@ export const HUB_PAGE = {
     },
     {
       q: 'Czy jesteście porównywarką ubezpieczeń?',
-      a: '<p>Nie. Jesteśmy zarejestrowanym agentem ubezpieczeniowym i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy. Cena ma znaczenie i porównujemy warianty, ale punktem wyjścia jest zakres — bo obniżenie składki przez wycięcie ochrony, której ktoś naprawdę potrzebuje, nie jest oszczędnością.</p>',
+      a: '<p>Nie. Jesteśmy zarejestrowanym agentem ubezpieczeniowym i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy. Porównujemy warianty, ale punktem wyjścia jest zakres, a rekomendację przekazujemy na piśmie — bo obniżenie składki przez wycięcie ochrony, której ktoś naprawdę potrzebuje, nie jest żadną korzyścią.</p>',
+    },
+    {
+      q: 'Czy obsługują Państwo także nieruchomości w Hiszpanii?',
+      a: '<p>Tak. W Hiszpanii działamy w ramach unijnej swobody świadczenia usług, pod tym samym wpisem ASF nr 425591790/3, z ubezpieczycielami uprawnionymi do działania na tamtejszym rynku. Rodziny, które mają domy po obu stronach granicy, prowadzi jeden doradca, według jednego standardu.</p>',
     },
     {
       q: 'Jakie dokumenty będą potrzebne?',
-      a: '<p>Zwykle: numer NIF, dokument tożsamości, adres w Portugalii, a dla nieruchomości — <em>caderneta predial</em> lub akt notarialny wraz z powierzchnią i rokiem budowy. Przy ubezpieczeniu samochodu dochodzi dowód rejestracyjny i zaświadczenie o historii szkodowej, a przy zdrowotnym — dane osób objętych ochroną. Pełną listę dla konkretnej sprawy podajemy w pierwszej odpowiedzi.</p>',
+      a: '<p>Zwykle: numer NIF, dokument tożsamości, adres w Portugalii, a dla nieruchomości — <em>caderneta predial</em> lub akt notarialny wraz z powierzchnią i rokiem budowy, a przy dziełach sztuki, biżuterii i kolekcjach — aktualne wyceny. Przy ubezpieczeniu samochodu dochodzi dowód rejestracyjny i zaświadczenie o historii szkodowej, a przy zdrowotnym — dane osób objętych ochroną. Pełną listę dla konkretnej sprawy podajemy w pierwszej odpowiedzi.</p>',
     },
   ],
   related: [

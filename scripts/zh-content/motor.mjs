@@ -26,7 +26,7 @@ export const MOTOR_PAGE = {
   cluster: 'motor',
   title: '葡萄牙汽车保险：强制责任险与全险 | Adler & Rochefort',
   description:
-    '葡萄牙汽车保险如何运作：强制第三者责任险、全险的实际范围、在葡萄牙买车与车辆进口、驾照问题、出险记录能否采用、理赔流程与所需文件。',
+    '葡萄牙汽车保险如何运作：强制第三者责任险、全险的实际范围、较高价值车辆、车辆进口、驾照问题与出险记录。书面建议，同一位顾问负责到理赔。',
   keywords:
     '葡萄牙汽车保险, 葡萄牙车险, 葡萄牙强制责任险, 葡萄牙全险, 葡萄牙买车保险, 葡萄牙车辆进口保险, 葡萄牙驾照',
   eyebrow: '汽车保险',
@@ -34,7 +34,7 @@ export const MOTOR_PAGE = {
   standfirst:
     '在葡萄牙，只有第三者责任险（<em>responsabilidade civil automóvel</em>）是法律强制的。其余的——车损、盗窃、玻璃、道路救援——都是自选项，而“全险”这个词在不同保险公司手里含义并不相同。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '汽车保险' }],
   pullquote: '强制险保的是别人。保自己的车，是另一件需要单独决定的事。',
   schemaType: 'Article',
@@ -59,7 +59,7 @@ export const MOTOR_PAGE = {
   <div class="container narrow article-body">
     <h2 id="qiangzhi-de-bufen">强制的只有一项</h2>
     <p>葡萄牙法律要求所有在道路上行驶的机动车投保<strong>第三者民事责任险</strong>（<em>seguro de responsabilidade civil automóvel</em>）。它赔的是您给别人造成的损害：对方的人身伤害、对方的车辆与财产损失。它<strong>不赔您自己的车</strong>。</p>
-    <p>强制险有法定的最低保额，并且额度很高——人身伤害部分的法定最低限额是数百万欧元级别。这是欧盟层面统一要求的结果，所以在这一项上，各家保险公司之间的差别不在保额，而在服务与价格。</p>
+    <p>强制险有法定的最低保额，并且额度很高——人身伤害部分的法定最低限额是数百万欧元级别。这是欧盟层面统一要求的结果，所以在这一项上，各家保险公司之间的差别不在保额，而在服务与理赔处理。</p>
     <p>没有有效的强制险上路，在葡萄牙是严重违法行为：罚款、车辆可能被扣，事故中造成的损害要自己全额承担。车辆即使长期停放不开，只要仍在登记状态，一般也需要保持保险有效，或者办理正式的停驶/注销手续。</p>
   </div>
 </section>
@@ -69,11 +69,11 @@ export const MOTOR_PAGE = {
     <h2 id="quanxian-shi-shenme">“全险”不是一个标准产品</h2>
     <p>中文里说的“全险”，在葡萄牙对应的是在强制险之上加买一组可选保障。不同保险公司的打包方式不同，所以两份都叫 <em>seguro de danos próprios</em> 的报价，实际内容可能差别很大。需要逐项确认的是这些：</p>
     <ul>
-      <li><strong>车损（<em>danos próprios</em> / <em>choque, colisão e capotamento</em>）。</strong>碰撞、翻车造成自己车辆的损失。这是全险的核心，也是保费的主要来源。注意自负额（<em>franquia</em>）：常见的是车辆价值的某个百分比且设最低金额，小事故可能达不到理赔门槛。</li>
+      <li><strong>车损（<em>danos próprios</em> / <em>choque, colisão e capotamento</em>）。</strong>碰撞、翻车造成自己车辆的损失。这是全险的核心。对于较高价值的车辆，还要确认全损时按什么价值赔付（新车价、约定价值或市场价值）。注意自负额（<em>franquia</em>）：常见的是车辆价值的某个百分比且设最低金额，小事故可能达不到理赔门槛。</li>
       <li><strong>盗窃（<em>furto ou roubo</em>）。</strong>整车被盗与车内固定设备被盗。有些方案要求防盗装置。</li>
       <li><strong>火灾与爆炸（<em>incêndio</em>）。</strong>通常与盗窃一起提供。</li>
-      <li><strong>玻璃（<em>quebra isolada de vidros</em>）。</strong>前后风挡与车窗单独破损。这一项使用频率高、价格低，通常值得买——葡萄牙的碎石路面与高速路况让挡风玻璃损伤很常见。</li>
-      <li><strong>自然事件。</strong>风暴、洪水、冰雹、落物。阿尔加维与里斯本地区的冬季暴雨会造成实际损失。</li>
+      <li><strong>玻璃（<em>quebra isolada de vidros</em>）。</strong>前后风挡与车窗单独破损。这一项使用频率高，通常值得包含——葡萄牙的碎石路面与高速路况让挡风玻璃损伤很常见。</li>
+      <li><strong>自然事件。</strong>风暴、洪水、冰雹、落物。葡萄牙沿海地区的冬季暴雨会造成实际损失。</li>
       <li><strong>道路救援（<em>assistência em viagem</em>）。</strong>拖车、故障处理、代步车、在国外的援助。范围差别非常大：有些只在葡萄牙境内、有些覆盖欧洲、有些含代步车有些不含。</li>
       <li><strong>驾驶人意外（<em>ocupantes</em>）。</strong>对驾驶人与乘客的人身伤害给付，因为强制险不保有过错方自己。</li>
       <li><strong>法律保障（<em>proteção jurídica</em>）。</strong>事故后的法律费用与代理。</li>
@@ -161,7 +161,7 @@ export const MOTOR_PAGE = {
     <h2 id="women-de-zuoyong">我们在这件事里做什么</h2>
     <ul>
       <li><strong>投保前。</strong>按车辆与使用情况确认需要哪些可选保障、说明自负额的实际影响、确认救援的覆盖范围，并在签字前用英语书面说明保额、自负额与主要除外责任。</li>
-      <li><strong>保单期间。</strong>换车、增加驾驶人、车辆用途变化（例如用于营运或网约车，这通常需要不同的保单）、续保时按无事故年限重新议价。</li>
+      <li><strong>保单期间。</strong>换车、增加驾驶人、车辆用途变化（例如用于营运或网约车，这通常需要不同的保单）、续保时按无事故年限重新检视条件。</li>
       <li><strong>理赔时。</strong>报案、材料准备、与查勘人员和保险公司沟通、盯住时限。</li>
     </ul>
     <p class="legal-note">具体保障、自负额与除外责任取决于保险公司与所选方案，并以保单文件为准。驾照、车辆登记与进口相关规定由主管机关制定，本页不构成这方面的意见。服务语言为英语，书面进行。</p>

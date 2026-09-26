@@ -16,9 +16,9 @@ export const GUIDE_PAGE = {
   slug: 'forsikringsguide-portugal',
   url: '/dk/forsikringsguide-portugal/',
   cluster: 'guide',
-  title: 'Forsikringsguide til Portugal: sådan fungerer markedet | Adler & Rochefort',
+  title: 'Forsikringsguide til Portugal: markedet | Adler & Rochefort',
   description:
-    'Hvordan det portugisiske forsikringsmarked fungerer for danskere: aktørerne, policens dele, begreberne, skadesagens forløb, fornyelse og opsigelse — og syv spørgsmål til enhver formidler.',
+    'Sådan fungerer det portugisiske forsikringsmarked: aktørerne, policens dele, begreberne, skadesagens forløb, fornyelse — og syv spørgsmål til enhver formidler.',
   keywords:
     'forsikring Portugal, forsikringsguide Portugal, portugisiske forsikringsselskaber, ASF Portugal, forsikringsformidler Portugal, apólice Portugal, skadesanmeldelse Portugal',
   eyebrow: 'Guide',
@@ -26,9 +26,9 @@ export const GUIDE_PAGE = {
   standfirst:
     'Denne side forklarer ikke de enkelte produkter, men systemet de ligger i: hvem aktørerne er, hvad der står i en portugisisk police, hvilke begreber der afgør erstatningen, og hvordan en skadesag faktisk forløber.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Forsikringsguide' }],
-  pullquote: 'Den billigste police bliver dyr den dag, det viser sig, at netop den skade var undtaget.',
+  pullquote: 'En police bedømmes ikke den dag, den tegnes, men den dag, den skal betale.',
   schemaType: 'Article',
   formHeading: 'Stil et spørgsmål om forsikring i Portugal',
   formBranch: '',
@@ -133,11 +133,11 @@ export const GUIDE_PAGE = {
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/dk/husforsikring-portugal/">Husforsikring i Portugal</a></h3>
-        <p>Bygning og indbo, genopførelsespris, vandskade, jordskælvsdækning, feriebolig — og de to dækninger, der ikke følger med.</p>
+        <p>Boliger af høj værdi: besigtigelse, genopførelse, indbo og kunst til aftalt værdi — og det portugisiske grundlag med vandskade, jordskælv og feriebolig.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/dk/sundhedsforsikring-portugal/">Sundhedsforsikring i Portugal</a></h3>
-        <p>SNS, private netværk, kvalifikationsperioder, helbredsvurdering og hvad der sker med den danske sygesikring.</p>
+        <p>International privat dækning for familien, SNS, kvalifikationsperioder, helbredsvurdering og hvad der sker med den danske sygesikring.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/dk/bilforsikring-portugal/">Bilforsikring i Portugal</a></h3>
@@ -145,7 +145,7 @@ export const GUIDE_PAGE = {
       </li>
       <li class="hub-item">
         <h3><a href="/dk/ansvarsforsikring-portugal/">Ansvarsforsikring i Portugal</a></h3>
-        <p>Privatansvar og erhvervsansvar for konsulenter, behandlere og mindre virksomheder.</p>
+        <p>Familiens ansvar i millionklassen, verden over, og erhvervsansvar som særskilt police.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/dk/flytte-til-portugal-forsikring/">Flytte til Portugal</a></h3>

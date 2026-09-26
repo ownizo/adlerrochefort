@@ -11,15 +11,15 @@ export const HUB_PAGE = {
   url: '/nl/verzekeringen-portugal/',
   title: 'Verzekeringen in Portugal: de juiste volgorde | Adler & Rochefort',
   description:
-    'Bijna niets gaat mis door een verkeerde polis, maar door verkeerde timing: de BRP-uitschrijving, de royementsverklaring, het S1-formulier. Zorg, auto en woning in de juiste volgorde. Verzekeringsagent in Lagos, Algarve.',
+    'Naar Portugal verhuizen: zorg, woning en auto in de juiste volgorde — BRP-uitschrijving, royementsverklaring, S1. Schriftelijk advies vanuit Lissabon en Lagos.',
   keywords:
-    'verzekeringen Portugal Nederlanders, zorgverzekering Portugal, woonverzekering Portugal, autoverzekering Portugal, verzekeringsagent Algarve, emigreren Portugal verzekeringen',
+    'verzekeringen Portugal Nederlanders, zorgverzekering Portugal, woonverzekering Portugal, autoverzekering Portugal, private client verzekering Portugal, emigreren Portugal verzekeringen',
   eyebrow: 'Verzekeringen in Portugal',
   h1: 'Verzekeringen in Portugal voor Nederlanders',
   standfirst:
     'Verhuizen naar Portugal betekent dat elke verzekering die u had opnieuw moet worden ingericht — en dat een paar ervan op een ander moment ingaan dan u denkt. Hieronder staat per onderwerp wat er verandert, met op elke pagina het detail dat er werkelijk toe doet.',
   heroMeta:
-    'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: augustus 2026',
+    'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
   hreflang: { en: '/en/expat-insurance-lagos-portugal/' },
   breadcrumb: [
     { name: 'Home', url: '/nl/' },
@@ -51,7 +51,7 @@ export const HUB_PAGE = {
     <p>Uw Nederlandse zorgverzekering eindigt bij uitschrijving uit de BRP — niet bij aankomst, en niet aan het einde van de maand. Daaronder ligt het echte punt: Portugese verzekeraars hanteren wachttijden, en een onderbroken dekking kan betekenen dat u die volledig opnieuw doorloopt. Voor gepensioneerden met AOW loopt er daarnaast een aparte route via het CAK, die meer geeft dan mensen denken en minder dan zij hopen.</p>
     <ul class="hub-list">
       <li class="hub-item"><a href="/nl/uitschrijven-nederland-zorgverzekering-portugal/">Uitschrijven uit Nederland: wat gebeurt er met uw zorgverzekering?</a><span>Wat er precies stopt en op welke datum, de juiste volgorde van registraties, en waarom u de Nederlandse dekking niet moet laten aflopen voordat de Portugese loopt.</span></li>
-      <li class="hub-item"><a href="/nl/zorgverzekering-portugal/">Zorgverzekering in Portugal</a><span>Het SNS en waar het in de praktijk vastloopt, het particuliere netwerk in de Algarve, wachttijden en medische acceptatie, en de mutualistische route bij hogere leeftijd.</span></li>
+      <li class="hub-item"><a href="/nl/zorgverzekering-portugal/">Zorgverzekering in Portugal</a><span>Internationale dekking voor het hele gezin, het SNS en waar het in de praktijk vastloopt, het particuliere netwerk, wachttijden en medische acceptatie, en de mutualistische route bij hogere leeftijd.</span></li>
       <li class="hub-item"><a href="/nl/s1-formulier-cak-portugal/">Het S1-formulier en het CAK</a><span>Verdragsbijdrage en S1 voor wie een Nederlands pensioen ontvangt: wat de aanspraak wél geeft, wat niet, en waarom het een particuliere polis aanvult in plaats van vervangt.</span></li>
     </ul>
   </div>
@@ -73,7 +73,7 @@ export const HUB_PAGE = {
     <h2 id="wonen">Wonen</h2>
     <p>De Portugese woonverzekering lijkt op de Nederlandse tot het moment van schade. Dan blijken twee dingen anders: het verzekerde bedrag moet gelijk zijn aan de herbouwwaarde en niet aan de aankoopprijs, en bij een tekort wordt élke schade naar evenredigheid gekort. Daarnaast spelen twee vraagstukken die in Nederland niet bestaan — de wettelijke brandgang rond woningen in bosrijk gebied, en de bebouwing die er staat maar administratief niet bestaat.</p>
     <ul class="hub-list">
-      <li class="hub-item"><a href="/nl/woonverzekering-portugal/">Woonverzekering in Portugal</a><span>Verplichte brandverzekering bij appartementen, multirriscos als standaardproduct, herbouwwaarde tegenover aankoopprijs, de evenredigheidsregel en aardbevingsdekking.</span></li>
+      <li class="hub-item"><a href="/nl/woonverzekering-portugal/">Woonverzekering in Portugal</a><span>Voor villa’s en hoogwaardige woningen: taxatie ter plaatse, geen evenredigheidsregel bij de aanbevolen bedragen, herbouwwaarde tegenover aankoopprijs, kostbaarheden tegen overeengekomen waarde en aardbevingsdekking.</span></li>
       <li class="hub-item"><a href="/nl/bosbrandrisico-woonverzekering-portugal/">Bosbrandrisico en uw woonverzekering</a><span>De verplichte brandgang is bij een schade een dekkingsvraag. Plus eucalyptus op eigen grond, niet-aangegeven bijgebouwen, en de werkelijke duur van herbouw in het binnenland.</span></li>
       <li class="hub-item"><a href="/nl/niet-gelegaliseerde-woning-verzekeren-portugal/">Een niet-gelegaliseerde woning verzekeren</a><span>Rústico kopen met bestaande bebouwing: wat verzekerbaar is, wat er bij een schade gebeurt, welke documenten u vóór de escritura opvraagt, en wat de bank eist.</span></li>
     </ul>
@@ -95,7 +95,7 @@ export const HUB_PAGE = {
 <section class="section tint" aria-labelledby="wie-wij-zijn">
   <div class="container narrow article-body">
     <h2 id="wie-wij-zijn">Wie wij zijn</h2>
-    <p>Adler &amp; Rochefort is een verzekeringsagent in Lagos, in de westelijke Algarve, ingeschreven bij de ASF onder nummer 425591790/3. Wij zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
+    <p>Adler &amp; Rochefort is een verzekeringsagent voor particuliere cliënten met een aanzienlijk vermogen, met kantoren in Lissabon en Lagos en cliënten in heel Portugal en Spanje. Wij zijn ingeschreven bij de ASF onder nummer 425591790/3, zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Hoogwaardige woningen, kunst en collecties, gezinsaansprakelijkheid en internationale zorg worden individueel geaccepteerd; het advies krijgt u schriftelijk, en één adviseur blijft uw aanspreekpunt tot en met de schade. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
     <p>Wat wij niet doen: fiscaal advies, juridisch advies en de legalisatietrajecten zelf. Daarvoor werkt u met een <em>contabilista</em>, een advocaat of een architect. Wat wij wél doen begint zodra die structuur er is.</p>
   </div>
 </section>`,
@@ -118,14 +118,14 @@ export const HUB_PAGE = {
       a: '<p>Niets bovenop de premie. Als verzekeringsagent worden wij door de verzekeraar beloond, niet door u. Een vergelijking en een toelichting op de voorwaarden zijn kosteloos en verplichten u tot niets.</p>',
     },
     {
-      q: 'Werken jullie in heel Portugal of alleen in de Algarve?',
-      a: '<p>Wij zitten in Lagos en kennen de westelijke Algarve het beste — welke klinieken gecontracteerd zijn, hoe de câmaras werken, welke gebieden bij brandrisico lastig te verzekeren zijn. Verzekeren doen wij in heel Portugal; bij zorg en woning is lokale kennis alleen wezenlijk meer waard.</p>',
+      q: 'Werken jullie in heel Portugal, en ook in Spanje?',
+      a: '<p>Ja. Wij hebben kantoren in Lissabon en Lagos en werken voor cliënten op het hele Portugese vasteland, op Madeira en in Spanje — in Spanje op grond van het Europese vrij verrichten van diensten, onder dezelfde ASF-registratie. Lokale kennis blijft bij zorg en woning veel waard: welke ziekenhuizen gecontracteerd zijn, hoe de câmaras werken, welke gebieden bij brandrisico lastig te verzekeren zijn.</p>',
     },
   ],
   related: [
     { url: '/nl/uitschrijven-nederland-zorgverzekering-portugal/', label: 'Uitschrijven uit Nederland en uw zorgverzekering' },
     { url: '/nl/woonverzekering-portugal/', label: 'Woonverzekering in Portugal' },
-    { url: '/en/expat-insurance-lagos-portugal/', label: 'Expat insurance in Lagos (Engels)' },
+    { url: '/en/private-clients/', label: 'Private client insurance in Portugal (Engels)' },
   ],
   article: {
     tag: 'Overzicht',

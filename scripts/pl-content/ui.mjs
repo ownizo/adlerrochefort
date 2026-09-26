@@ -64,7 +64,7 @@ export const PL_BRANCHES = [
 export const PL_UI = {
   // chrome
   skipLink: 'Przejdź do treści',
-  asfBar: 'Zarejestrowany agent ubezpieczeniowy — ASF nr 425591790/3 · Lagos, Algarve, Portugalia',
+  asfBar: 'Zarejestrowany agent ubezpieczeniowy — ASF nr 425591790/3 · Portugalia i Hiszpania · Lizbona · Lagos',
   navAria: 'Nawigacja główna',
   navCta: 'Zapytaj o ofertę',
 
@@ -101,8 +101,8 @@ export const PL_UI = {
   },
   mobileCta: 'Zapytaj o ofertę',
   breadcrumbAria: 'Ścieżka nawigacji',
-  heroMeta: 'Zarejestrowany agent ubezpieczeniowy · ASF nr 425591790/3 · Lagos, Algarve',
-  heroCta: 'Zapytaj o ofertę',
+  heroMeta: 'Zarejestrowany agent ubezpieczeniowy · ASF nr 425591790/3 · Lizbona i Lagos · Portugalia i Hiszpania',
+  heroCta: 'Poproś o pisemną ocenę',
   relatedTitle: 'Powiązane strony',
   pullquoteAria: 'Wyróżniony cytat',
   langPolicyId: 'jezyk-pracy',
@@ -176,7 +176,7 @@ export const PL_UI = {
   },
 
   footer: {
-    desc: 'Agencja ubezpieczeniowa dla osób z zagranicy i firm w Algarve, Portugalia. Jasne doradztwo w ramach naszego portfela ubezpieczycieli.',
+    desc: 'Pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku w Portugalii i Hiszpanii. Biura w Lizbonie i Lagos, indywidualna ocena ryzyka i rekomendacja na piśmie.',
     badge: 'Zarejestrowany agent ubezpieczeniowy — ASF nr 425591790/3',
     coverTitle: 'Ubezpieczenia',
     coverLinks: [
@@ -197,7 +197,7 @@ export const PL_UI = {
     asfChannel: 'Kanał zgłoszeń ASF',
     regulatory: [
       'Adler &amp; Rochefort to marka handlowa spółki Ownizo, Unipessoal Lda.',
-      'Ownizo, Unipessoal Lda. jest zarejestrowana w portugalskim organie nadzoru ubezpieczeń i funduszy emerytalnych (ASF) jako agent ubezpieczeniowy pod numerem 425591790/3. Doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy.',
+      'Ownizo, Unipessoal Lda. jest zarejestrowana w portugalskim organie nadzoru ubezpieczeń i funduszy emerytalnych (ASF) jako agent ubezpieczeniowy pod numerem 425591790/3 i działa w Hiszpanii w ramach unijnej swobody świadczenia usług. Doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy.',
       'Ta strona zawiera informacje ogólne i nie stanowi indywidualnej porady ubezpieczeniowej ani prawnej. Zakres odpowiedniej ochrony zależy od sytuacji oraz od warunków konkretnej polisy.',
     ],
   },

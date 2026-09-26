@@ -17,31 +17,50 @@ export const HUB_PAGE = {
   url: '/dk/',
   cluster: 'hub',
   isHub: true,
-  title: 'Forsikring i Portugal for danskere | Adler & Rochefort',
+  title: 'Forsikring for store privatformuer i Portugal | Adler & Rochefort',
   description:
-    'Sådan fungerer forsikring i Portugal, når man kommer fra Danmark: bolig, sundhed, bil og ansvar. Registreret forsikringsformidler i Algarve, ASF nr. 425591790/3.',
+    'Forsikring for danske husstande med betydelig formue i Portugal og Spanien: bolig, kunst, ansvar i millionklassen og sundhed. Kontorer i Lissabon og Lagos.',
+  ogTitle: 'Forsikring for store privatformuer — Portugal og Spanien',
+  ogDescription:
+    'Boliger, kunst og samlinger, ansvar og familiebeskyttelse i Portugal og Spanien. Individuelt tegnet, skriftligt rådgivet og én rådgiver fra første kontakt til skade.',
   keywords:
-    'forsikring Portugal, husforsikring Portugal, sundhedsforsikring Portugal, bilforsikring Portugal, danskere i Portugal forsikring, forsikringsformidler Portugal',
-  eyebrow: 'Forsikring i Portugal',
-  h1: 'Forsikring i Portugal for danskere — fastboende, halvårsophold eller feriebolig',
+    'forsikring Portugal, private client forsikring Portugal, forsikring af kunst Portugal, husforsikring Portugal, forsikring Spanien, sundhedsforsikring Portugal, bilforsikring Portugal, danskere i Portugal forsikring, forsikringsformidler Portugal',
+  eyebrow: 'Private clients · Portugal og Spanien',
+  h1: 'Forsikring for<br><em>store privatformuer.</em>',
   standfirst:
-    'I Danmark deler man forsikringerne op i indbo og hus, og ansvar følger med indboet. Portugal deler op et helt andet sted. Det er den vigtigste ting at forstå, før du tegner noget her.',
+    'Boliger, kunst og samlinger, ansvar og familiebeskyttelse i Portugal og Spanien. Individuelt tegnet, skriftligt rådgivet og én rådgiver — fra første kontakt til skade.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [{ name: 'Forside', url: '/dk/' }],
   pullquote:
-    'Den billigste police bliver dyr den dag, det viser sig, at netop den skade var undtaget.',
+    'En police bedømmes ikke den dag, den tegnes, men den dag, den skal betale.',
   schemaType: 'WebPage',
-  formHeading: 'Fortæl om din situation',
+  formHeading: 'Bed om en skriftlig vurdering',
   formBranch: '',
   formSubject: 'Generel forespørgsel (DK)',
   formCta: 'Send forespørgsel',
   formIntro:
-    'Skriv, hvad der skal dækkes, og fra hvornår. Vi svarer med, hvilke oplysninger der skal til, og hvad der realistisk kan ordnes.',
+    'Fortæl, hvad der skal dækkes, eller send os jeres nuværende policer. Vi svarer skriftligt med, hvad de dækker, hvor hullerne er, og hvad vi vil anbefale.',
   formPlaceholder:
-    'For eksempel: vi flytter til Lissabon i marts, har en lejlighed i condomínio og en bil på danske nummerplader.',
+    'For eksempel: villa i Cascais og lejlighed i Marbella, en mindre kunstsamling, to børn der studerer i udlandet — vi vil gerne have policerne gennemgået.',
   sections: `
-<section class="section plain" aria-labelledby="opdelingen">
+<section class="section plain" aria-labelledby="hvem">
+  <div class="container narrow article-body">
+    <h2 id="hvem">En forsikringsformidler for private kunder i Portugal og Spanien</h2>
+    <p>Adler &amp; Rochefort er en portugisisk forsikringsformidler, registreret hos tilsynsmyndigheden ASF under nr. 425591790/3, med kontorer i <strong>Lissabon og Lagos</strong>. Vi arbejder for husstande med betydelige formuer i hele Portugal og — i henhold til EU’s frie udveksling af tjenesteydelser — i Spanien.</p>
+    <p>Arbejdet samler sig om de risici, hvor en standardpolice ikke rækker:</p>
+    <ul>
+      <li><strong>Boliger af høj værdi</strong> — villaer, byhuse og ejendomme med pool, anneks og gæstehus, forsikret til den reelle genopførelsespris.</li>
+      <li><strong>Kunst, smykker, ure og samlinger</strong> — til aftalt værdi og uden selvrisiko.</li>
+      <li><strong>Familiens ansvar</strong> — med summer i millionklassen, verden over, og forsvarsomkostninger ud over summen.</li>
+      <li><strong>International sundhedsforsikring</strong> til familier, der lever og rejser mellem flere lande.</li>
+      <li><strong>Biler</strong>, herunder nyere og mere værdifulde køretøjer.</li>
+    </ul>
+    <p>Hver risiko tegnes individuelt, rådgivningen gives skriftligt, og du har den samme rådgiver fra første kontakt til en eventuel skade.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="opdelingen">
   <div class="container narrow article-body">
     <h2 id="opdelingen">Den danske opdeling findes ikke her</h2>
     <p>I Danmark er forsikringslandskabet delt på en måde, de fleste har haft hele livet uden at tænke over det: <strong>indboforsikringen</strong> dækker tingene i boligen — og har <em>ansvarsforsikring</em> og <em>retshjælp</em> indbygget — mens <strong>husforsikringen</strong> dækker selve bygningen, hvis man ejer et hus. Bor man i lejlighed, har man kun indbo; ejerforeningen tager bygningen.</p>
@@ -66,7 +85,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="ordbog">
+<section class="section plain" aria-labelledby="ordbog">
   <div class="container narrow article-body">
     <h2 id="ordbog">Seks ord, der afgør din police</h2>
     <p>Policer udstedes på portugisisk. Disse seks ord er dem, der bestemmer, hvad du får udbetalt — resten kan man spørge om.</p>
@@ -89,31 +108,35 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="forsikringer">
+<section class="section tint" aria-labelledby="forsikringer">
   <div class="container narrow article-body">
-    <h2 id="forsikringer">De fire forsikringer, vi arbejder med</h2>
+    <h2 id="forsikringer">Det, vi forsikrer</h2>
     <ul class="hub-list">
       <li class="hub-item">
-        <h3><a href="/dk/husforsikring-portugal/">Hus- og indboforsikring</a></h3>
-        <p>Bygning og indbo i samme police, genopførelsespris, vandskade, jordskælvsdækning, <em>condomínio</em> versus ejerforening og feriebolig, der står tom.</p>
+        <h3><a href="/dk/husforsikring-portugal/">Boliger af høj værdi</a></h3>
+        <p>Besigtigelse og genopførelsespris, ingen underforsikringsregel, garanteret genopførelse, indbo verden over og værdigenstande til aftalt værdi — samt det portugisiske grundlag: <em>condomínio</em>, vandskade, jordskælv og feriebolig.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/dk/sundhedsforsikring-portugal/">Sundhedsforsikring</a></h3>
-        <p>SNS og det offentlige, private behandlernetværk, kvalifikationsperioder, helbredsvurdering — og hvad der sker med det gule sundhedskort og sygesikringsgruppen.</p>
+        <h3><a href="/en/private-clients/" hreflang="en">Kunst, samlinger og hele husstanden (engelsk)</a></h3>
+        <p>Private client-programmet samlet: kunst og samlinger, smykker og ure, vinkælder, familiebeskyttelse og flere boliger i én sammenhængende dækning.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/sundhedsforsikring-portugal/">International sundhedsforsikring</a></h3>
+        <p>Privat sundhedsdækning til familier: frit valg af læge og hospital, behandling i og uden for Portugal, SNS ved siden af — og hvad der sker med det gule sundhedskort.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/dk/bilforsikring-portugal/">Bilforsikring</a></h3>
-        <p>Ansvar og kasko, danske eller portugisiske nummerplader, ISV og importen via IMT, og hvordan din skadesattest behandles.</p>
+        <p>Ansvar og kasko, danske eller portugisiske nummerplader, ISV og importen via IMT, og hvordan din skadesattest behandles — også for nyere og mere værdifulde biler.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/dk/ansvarsforsikring-portugal/">Ansvarsforsikring</a></h3>
-        <p>Det privatansvar, der lå i din indboforsikring, og erhvervsansvar for konsulenter, behandlere og mindre virksomheder.</p>
+        <h3><a href="/dk/ansvarsforsikring-portugal/">Familiens ansvarsforsikring</a></h3>
+        <p>Privatansvar med summer i millionklassen, verden over og med forsvarsomkostninger ud over summen — og erhvervsansvar som en særskilt police.</p>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="guider">
+<section class="section plain" aria-labelledby="guider">
   <div class="container narrow article-body">
     <h2 id="guider">Tre guider til situationen frem for produktet</h2>
     <ul class="hub-list">
@@ -133,10 +156,10 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="feriebolig">
+<section class="section tint" aria-labelledby="feriebolig">
   <div class="container narrow article-body">
     <h2 id="feriebolig">Feriebolig eller halvårsophold</h2>
-    <p>Mange af vores danske kunder bor her ikke fast. Boligen bruges nogle måneder om året, ofte i vinterhalvåret, og står tom resten af tiden. Det er ikke en detalje for forsikringsselskabet — det er en anden risiko, og portugisiske betingelser behandler den særskilt.</p>
+    <p>Mange danske husstande bor her ikke fast. Boligen bruges nogle måneder om året, ofte i vinterhalvåret, og står tom resten af tiden. Det er ikke en detalje for forsikringsselskabet — det er en anden risiko, og portugisiske betingelser behandler den særskilt.</p>
     <p>Hvad det betyder i praksis:</p>
     <ul>
       <li><strong>Perioder uden beboelse</strong> er defineret i betingelserne, typisk som et antal sammenhængende dage. Overskrides grænsen, kan visse dækninger være begrænset eller bortfalde.</li>
@@ -148,21 +171,21 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="saadan">
+<section class="section plain" aria-labelledby="saadan">
   <div class="container narrow article-body">
     <h2 id="saadan">Sådan arbejder vi</h2>
     <ol class="process-steps">
       <li><div><strong>Vi starter med situationen, ikke med produktet.</strong><span> Hvor bor du, hvor længe, hvad ejer du, hvem skal dækkes, og hvad arbejder du med. Produktet følger af svarene.</span></div></li>
-      <li><div><strong>Vi sætter summerne, før vi taler om præmie.</strong><span> Genopførelsespris på bygningen, gensalgsværdi på indboet. En forkert sum gør en billig police ubrugelig.</span></div></li>
-      <li><div><strong>Vi læser undtagelserne højt.</strong><span> Skriftligt, på engelsk, før du skriver under — de tre vigtigste undtagelser i netop den police.</span></div></li>
-      <li><div><strong>Vi indhenter tilbud inden for vores portefølje af selskaber</strong><span> og forklarer, hvad forskellen i dækning består i, ikke kun forskellen i pris.</span></div></li>
+      <li><div><strong>Vi sætter summerne, før vi taler om præmie.</strong><span> Genopførelsespris på bygningen, gensalgsværdi på indboet, vurderinger på kunst og smykker. En forkert sum gør enhver police utilstrækkelig.</span></div></li>
+      <li><div><strong>Vi læser undtagelserne højt.</strong><span> Skriftligt, på engelsk, før du skriver under — de vigtigste undtagelser i netop den police.</span></div></li>
+      <li><div><strong>Vi indhenter tilbud inden for vores portefølje af selskaber</strong><span> og forklarer skriftligt, hvor dækningerne adskiller sig fra hinanden.</span></div></li>
       <li><div><strong>Vi anmelder skaden for dig.</strong><span> På portugisisk, over for taksator, og vi følger sagen til den er afsluttet.</span></div></li>
       <li><div><strong>Vi gennemgår policerne én gang om året.</strong><span> Boligen, adressen og arbejdet ser sjældent ud, som planen gjorde.</span></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="fejl">
+<section class="section tint" aria-labelledby="fejl">
   <div class="container narrow article-body">
     <h2 id="fejl">Fem fejl vi ser gentagne gange</h2>
     <ul>
@@ -179,19 +202,27 @@ export const HUB_PAGE = {
   audience: {
     heading: 'Hvem vi <em>er her for</em>',
     body:
-      'Vi står for forsikringerne for danskere i Portugal: pensionister, boligkøbere, ejere af feriebolig, familier og erhvervsaktive. Uanset om du flyttede hertil i år eller har boet her i årtier, er det os, der tager den portugisiske forsikringsside — rådgivning, sammenligning af de dækninger, der passer, tegning, løbende service og hjælp ved skade, hos den samme person hele vejen.',
-    alt: 'Forsikringsrådgiver for udlandsdanskere og andre udlændinge i Portugal',
+      'Vi arbejder for private husstande med betydelige formuer i Portugal og Spanien — familier med flere boliger, samlere, iværksættere og pensionister, der har flyttet hele eller dele af livet sydpå. Fra kontorerne i Lissabon og Lagos tager vi hele forsikringssiden: rådgivning, individuel tegning, løbende service og hjælp ved skade, hos den samme rådgiver hele vejen.',
+    alt: 'Forsikringsrådgiver for private kunder med betydelige formuer i Portugal og Spanien',
   },
   insurers: {
     heading: 'Forsikringsselskaber og co-brokerage-partnere, <em>vi samarbejder med</em>',
     lead:
-      'Som mægler er vi ikke bundet til ét selskab. Vi rådgiver inden for vores portefølje af forsikringsselskaber og finder den løsning, der passer til din situation — ikke blot den laveste præmie.',
+      'Vi er ikke bundet til ét selskab. Vi rådgiver inden for vores portefølje af forsikringsselskaber og anbefaler skriftligt den dækning, der passer til husstanden og formuen.',
   },
   faqTitle: 'Forsikring i Portugal — ofte stillede spørgsmål',
   faq: [
     {
       q: 'Taler I dansk?',
-      a: '<p>Nej. Vi arbejder på engelsk, skriftligt, og læser og forhandler betingelserne på portugisisk over for selskaberne. Denne side er på dansk, fordi emnet er dansk — men vi har ikke dansktalende medarbejdere og intet kontor i Danmark. Vi er forsikringsformidler i Lagos i Algarve.</p>',
+      a: '<p>Nej. Vi arbejder på engelsk, skriftligt, og læser og forhandler betingelserne på portugisisk over for selskaberne. Denne side er på dansk, fordi emnet er dansk — men vi har ikke dansktalende medarbejdere og intet kontor i Danmark. Vi er en portugisisk forsikringsformidler med kontorer i Lissabon og Lagos og kunder i hele Portugal og Spanien.</p>',
+    },
+    {
+      q: 'Hvem arbejder I for?',
+      a: '<p>For private husstande med betydelige formuer i Portugal og Spanien: boliger af høj værdi, kunst og samlinger, familiens ansvar i millionklassen, international sundhedsforsikring og biler. Hver risiko tegnes individuelt, rådgivningen gives skriftligt, og du har én rådgiver fra første kontakt til skade.</p>',
+    },
+    {
+      q: 'Arbejder I også i Spanien?',
+      a: '<p>Ja. Vi er registreret i Portugal hos ASF under nr. 425591790/3 og formidler i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Mange af vores kunder har bolig i begge lande, og det er en fordel at have begge dele hos samme rådgiver.</p>',
     },
     {
       q: 'Kan jeg beholde min danske forsikring på boligen i Portugal?',

@@ -24,7 +24,7 @@ export const PROPERTY_PAGE = {
   cluster: 'property',
   title: '在葡萄牙买房：保险该在哪个阶段安排 | Adler & Rochefort',
   description:
-    '买房各阶段的保险安排：签约前要了解什么、房贷会要求什么、保障为什么必须在 escritura 当天生效、买房后还要补什么，以及中国买家最常犯的六个错误。',
+    '在葡萄牙购置房产的保险安排：签约前要了解什么、房贷的要求、保障为何须在 escritura 当天生效、高价值房产的现场查勘，以及最常见的六个错误。',
   keywords:
     '葡萄牙买房保险, 葡萄牙房产投保, 葡萄牙房贷保险, escritura 保险, 葡萄牙买房流程 保险, 葡萄牙房产重建价值',
   eyebrow: '买房',
@@ -32,7 +32,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     '买房过程中与保险有关的决定其实只有几个，但每一个都有时间点。最关键的一条：保障必须在签署产权转让书（<em>escritura</em>）当天已经生效，而不是办完手续之后再补。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '在葡萄牙买房' }],
   pullquote: '交割当天房子已经是您的了。保单晚一天生效，那一天的风险就是自己的。',
   schemaType: 'Article',
@@ -145,9 +145,9 @@ export const PROPERTY_PAGE = {
   <div class="container narrow article-body">
     <h2 id="women-de-zuoyong">我们在这件事里做什么</h2>
     <ul>
-      <li><strong>交割前。</strong>按房产文件估算重建费用、对照银行在贷款合同里的保险要求、比较银行方案与其他方案的范围、确认地震与贵重物品等可选保障、把生效日定在交割当天或之前。</li>
+      <li><strong>交割前。</strong>按房产文件估算重建费用（较高价值的房产可安排保险公司现场查勘）、对照银行在贷款合同里的保险要求、比较银行方案与其他方案的范围、确认地震与贵重物品等可选保障、把生效日定在交割当天或之前。</li>
       <li><strong>交割当天。</strong>确认保单已生效、受益人条款符合银行要求、投保人与房产信息与产权文件一致。</li>
-      <li><strong>入住之后。</strong>补齐室内财物与责任额度、申报贵重物品、按实际使用方式调整条款、装修后重估保额。</li>
+      <li><strong>入住之后。</strong>补齐室内财物与与家业相称的责任额度、将艺术品与贵重物品按约定价值列明、按实际使用方式调整条款、装修后重估保额。</li>
       <li><strong>理赔时。</strong>协助报案、准备材料、与保险公司和查勘人员沟通、盯住时限。</li>
     </ul>
     <p class="legal-note">服务语言为英语，书面进行。保单依葡萄牙法律以葡萄牙语出具。</p>

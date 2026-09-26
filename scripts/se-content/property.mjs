@@ -21,7 +21,7 @@ export const PROPERTY_PAGE = {
   cluster: 'property',
   title: 'Köpa hus i Portugal: försäkring steg för steg | Adler & Rochefort',
   description:
-    'Försäkring vid fastighetsköp i Portugal: vad banken kräver, vad som gäller från kontraktsdagen, de tre värdena som inte är samma sak, och vad som skiljer condomínio från en bostadsrättsförening.',
+    'Försäkring vid köp av en värdefull bostad i Portugal: vad banken kräver, vad som gäller från kontraktsdagen, återuppbyggnadskostnaden och condomínio.',
   keywords:
     'köpa hus i Portugal försäkring, fastighetsköp Portugal, bolån Portugal försäkring, condomínio Portugal, fritidshus Portugal försäkring, escritura Portugal',
   eyebrow: 'Guide',
@@ -29,16 +29,16 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Vid ett portugisiskt fastighetsköp kommer försäkringsfrågan i regel sist, när allt annat är avgjort — och då står banken redan med ett förslag. Här är vad som gäller när, och vilka beslut som är dina.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Köpa hus i Portugal' }],
   pullquote: 'Banken har ett berättigat intresse i att huset är försäkrat. Vilket bolag som skriver försäkringen är en annan fråga.',
   schemaType: 'Article',
   formHeading: 'Försäkring till ditt husköp',
   formBranch: 'SE · Hem',
   formSubject: 'Fastighetsköp i Portugal — försäkring',
-  formCta: 'Begär offert',
+  formCta: 'Begär en skriftlig genomgång',
   formIntro:
-    'Berätta var i köpet du står och vad det är för objekt. Vi återkommer med vad som ska vara klart till kontraktsdagen.',
+    'Berätta var i köpet du står och vad det är för objekt. Vi återkommer skriftligt med vad som ska vara klart till kontraktsdagen.',
   formPlaceholder:
     'Till exempel: lägenhet i Cascais, kontrakt skrivet, escritura i november, bolån hos portugisisk bank.',
   sections: `

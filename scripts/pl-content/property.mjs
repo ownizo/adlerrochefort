@@ -16,9 +16,9 @@ export const PROPERTY_PAGE = {
   slug: 'zakup-nieruchomosci-w-portugalii-ubezpieczenie',
   url: '/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/',
   cluster: 'property',
-  title: 'Zakup nieruchomości w Portugalii: ubezpieczenie krok po kroku | Adler & Rochefort',
+  title: 'Ubezpieczenie przy zakupie domu w Portugalii | Adler & Rochefort',
   description:
-    'Czego wymaga bank przy kredycie hipotecznym, kiedy ryzyko przechodzi na nabywcę, jak ustalić wartość odbudowy i dlaczego polisa musi zaczynać się w dniu escritura.',
+    'Kiedy ryzyko przechodzi na nabywcę, czego może wymagać bank, jak ustalić koszt odbudowy i dlaczego polisa musi obowiązywać od dnia escritura.',
   keywords:
     'zakup nieruchomości Portugalia, kredyt hipoteczny Portugalia ubezpieczenie, escritura Portugalia, CPCV Portugalia, ubezpieczenie przy zakupie domu Portugalia, caderneta predial',
   eyebrow: 'Zakup nieruchomości',
@@ -26,7 +26,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Kupno nieruchomości w Portugalii ma dwa punkty, w których ubezpieczenie przestaje być formalnością: podpisanie umowy przedwstępnej i podpisanie aktu. Między nimi mija zwykle kilka tygodni, a po drugim z nich ryzyko jest już Państwa.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Zakup nieruchomości' }],
   pullquote: 'Polisa ma zaczynać się w dniu podpisania aktu. Nie tygodnie później, kiedy wszyscy odetchną.',
   schemaType: 'Article',
@@ -37,7 +37,7 @@ export const PROPERTY_PAGE = {
   formIntro:
     'Jeśli znana jest już data <em>escritura</em>, proszę ją podać. Ustawiamy początek ochrony dokładnie na ten dzień.',
   formPlaceholder:
-    'Na przykład: dom w Lagos, 140 m², escritura 14 maja, kredyt w Novo Banco, bank wymaga ubezpieczenia z ryzykiem sejsmicznym.',
+    'Na przykład: dom w Cascais, 380 m² z basenem, escritura 14 maja, kredyt w Novo Banco, bank wymaga ubezpieczenia z ryzykiem sejsmicznym.',
   sections: `
 <section class="section plain" aria-labelledby="etapy">
   <div class="container narrow article-body">
@@ -90,7 +90,7 @@ export const PROPERTY_PAGE = {
       <li><strong>Wartość podatkowa (<em>valor patrimonial tributário</em>)</strong> z <em>caderneta predial</em> — służy do wyliczania podatków, zwykle jest niższa od ceny i nie jest właściwą podstawą sumy ubezpieczenia.</li>
       <li><strong>Koszt odbudowy</strong> — jedyna liczba, na której warto oprzeć sumę ubezpieczenia budynku. To koszt postawienia tego samego budynku od nowa, przy dzisiejszych stawkach i dzisiejszych przepisach budowlanych.</li>
     </ul>
-    <p>Konsekwencja zbyt niskiej sumy to <em>regra proporcional</em>: odszkodowanie obniżone w proporcji do niedoubezpieczenia, również przy szkodzie częściowej. Konsekwencja zbyt wysokiej to składka płacona przez lata za ochronę, której nie da się wykorzystać, bo odszkodowanie nie przekroczy realnych kosztów odbudowy. Ustalenie tej liczby to jedna rozmowa i kilka danych z <em>caderneta predial</em>.</p>
+    <p>Konsekwencja zbyt niskiej sumy to <em>regra proporcional</em>: odszkodowanie obniżone w proporcji do niedoubezpieczenia, również przy szkodzie częściowej. Konsekwencja zbyt wysokiej to składka płacona przez lata za ochronę, której nie da się wykorzystać, bo odszkodowanie nie przekroczy realnych kosztów odbudowy. Ustalenie tej liczby to jedna rozmowa i kilka danych z <em>caderneta predial</em>. Przy domach o wysokiej wartości ubezpieczyciel przeprowadza zwykle bezpłatne oględziny na miejscu, potwierdza koszt odbudowy, a po przyjęciu zarekomendowanych sum może zrezygnować z zasady proporcji — zob. <a href="/pl/ubezpieczenie-domu-portugalia/">stronę o ubezpieczeniu domu</a>.</p>
   </div>
 </section>
 

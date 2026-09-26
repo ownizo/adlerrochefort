@@ -16,9 +16,9 @@ export const MOVING_PAGE = {
   slug: 'flytte-til-portugal-forsikring',
   url: '/dk/flytte-til-portugal-forsikring/',
   cluster: 'moving',
-  title: 'Flytte til Portugal: forsikringerne i rigtig rækkefølge | Adler & Rochefort',
+  title: 'Flytte til Portugal: forsikringer i rækkefølge | Adler & Rochefort',
   description:
-    'Hvad der sker med danske forsikringer ved udrejse, de tre huller der opstår under flytningen, og i hvilken rækkefølge sundhed, bolig og bil bør ordnes i Portugal.',
+    'Hvad der sker med danske forsikringer ved udrejse, de tre huller under flytningen, og i hvilken rækkefølge sundhed, bolig og bil bør ordnes i Portugal.',
   keywords:
     'flytte til Portugal forsikring, udrejse Danmark forsikringer, forsikring ved flytning til udlandet, danske forsikringer i udlandet, NIF Portugal, opholdsregistrering Portugal',
   eyebrow: 'Guide',
@@ -26,7 +26,7 @@ export const MOVING_PAGE = {
   standfirst:
     'Det meste, der går galt ved en flytning, går galt på grund af rækkefølgen, ikke valget af selskab. Her er de tre huller, der opstår ved en flytning til Portugal, og hvordan du lukker dem.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-26T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Flytte til Portugal' }],
   pullquote: 'Ingen opsiger sine forsikringer. Man flytter blot — og en dag passer grundlaget ikke længere.',
   schemaType: 'Article',
@@ -35,7 +35,7 @@ export const MOVING_PAGE = {
   formSubject: 'Flytning til Portugal — forsikringer',
   formCta: 'Book en samtale',
   formIntro:
-    'Fortæl, hvor i flytningen du er, og hvilken dato du sigter efter. Vi svarer med, hvad der skal ordnes, i hvilken rækkefølge.',
+    'Fortæl, hvor i flytningen I er, og hvilken dato I sigter efter — send gerne jeres nuværende policer med. Vi svarer skriftligt med, hvad der skal ordnes, og i hvilken rækkefølge.',
   formPlaceholder:
     'For eksempel: flytter i februar til Lissabon, to voksne, lejer det første år, tager bilen med. Hvad ordner vi først?',
   sections: `

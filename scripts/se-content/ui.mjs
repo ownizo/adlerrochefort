@@ -9,7 +9,7 @@
  * The insurance_type values stay English and market-tagged ("SE · Hem")
  * because netlify/functions/submission-created.mjs builds the notification
  * subject from this field — the label is for Stockholm, the value is for the
- * inbox in Lagos.
+ * firm's inbox.
  */
 
 export const SE_BRANCHES = [
@@ -18,9 +18,9 @@ export const SE_BRANCHES = [
     label: 'Hem- eller villaförsäkring',
     legend: 'Några uppgifter om bostaden',
     fields: [
-      { id: 'home_property_type', label: 'Typ av bostad', placeholder: 't.ex. lägenhet i condomínio, villa, fritidshus' },
-      { id: 'home_rebuild_value', label: 'Uppskattad återuppbyggnadskostnad (om du vet)', placeholder: 't.ex. 180 000 EUR — vet du inte, hjälper vi till att räkna' },
-      { id: 'home_contents_value', label: 'Ungefärligt värde på lösöret', placeholder: 't.ex. 30 000 EUR inklusive möbler och elektronik' },
+      { id: 'home_property_type', label: 'Typ av bostad', placeholder: 't.ex. villa, quinta, stadsvåning i condomínio, fritidshus' },
+      { id: 'home_rebuild_value', label: 'Uppskattad återuppbyggnadskostnad (om du vet)', placeholder: 't.ex. 1 500 000 EUR — vet du inte, fastställs den vid besiktning' },
+      { id: 'home_contents_value', label: 'Ungefärligt värde på lösöret', placeholder: 't.ex. 250 000 EUR; konst, smycken och samlingar gärna separat' },
     ],
   },
   {
@@ -60,9 +60,9 @@ export const SE_BRANCHES = [
 
 export const SE_UI = {
   skipLink: 'Gå till innehållet',
-  asfBar: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3 · Lagos, Algarve, Portugal',
+  asfBar: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3 · Lissabon och Lagos · Portugal och Spanien',
   navAria: 'Huvudnavigering',
-  navCta: 'Begär offert',
+  navCta: 'Begär genomgång',
 
   mega: {
     portugal: 'Försäkring i Portugal',
@@ -95,10 +95,10 @@ export const SE_UI = {
     whyClaims: 'Skadehjälp',
     burger: 'Meny',
   },
-  mobileCta: 'Begär offert',
+  mobileCta: 'Begär genomgång',
   breadcrumbAria: 'Brödsmulor',
-  heroMeta: 'Registrerad försäkringsförmedlare · ASF nr 425591790/3 · Lagos, Algarve',
-  heroCta: 'Begär offert',
+  heroMeta: 'Registrerad försäkringsförmedlare · ASF nr 425591790/3 · Portugal och Spanien',
+  heroCta: 'Begär en skriftlig genomgång',
   relatedTitle: 'Relaterade sidor',
   pullquoteAria: 'Citat',
   langPolicyId: 'arbetssprak',
@@ -108,7 +108,7 @@ export const SE_UI = {
   faqTitle: 'Vanliga frågor',
 
   formId: 'offert',
-  formTitle: 'Begär offert',
+  formTitle: 'Begär en skriftlig genomgång',
   formLangNote: 'Formuläret är på svenska. Vi svarar och sköter ärendet på engelska, skriftligt.',
   formSubmit: 'Skicka förfrågan',
   formSending: 'Skickar…',
@@ -170,7 +170,7 @@ export const SE_UI = {
   },
 
   footer: {
-    desc: 'Försäkringsförmedlare för utlandsboende och företag i Algarve, Portugal. Tydlig rådgivning inom vår portfölj av försäkringsbolag.',
+    desc: 'Försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar i Portugal och Spanien. Kontor i Lissabon och Lagos. Individuell riskbedömning och skriftlig rådgivning.',
     badge: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3',
     coverTitle: 'Försäkringar',
     coverLinks: [
@@ -182,7 +182,7 @@ export const SE_UI = {
     ],
     langsTitle: 'Språk',
     contactTitle: 'Kontakt',
-    contactCta: 'Begär offert',
+    contactCta: 'Begär genomgång',
     copy: 'Alla rättigheter förbehållna',
     vault: 'Till MyCoverVault',
     privacy: 'Integritetspolicy',

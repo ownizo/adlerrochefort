@@ -214,7 +214,7 @@ function jsonLd(page) {
 
   const webpage = {
     '@type': page.schemaType || 'WebPage',
-    headline: page.h1,
+    headline: page.h1.replace(/<[^>]+>/g, '').trim(),
     name: page.title,
     description: page.description,
     inLanguage: 'de-DE',

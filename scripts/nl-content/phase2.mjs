@@ -39,7 +39,7 @@ const EVENREDIGHEID_TOTAAL_VERLIES = {
   h1: 'De evenredigheidsregel bij totaal verlies',
   standfirst:
     'Onze pagina over <a href="/nl/woonverzekering-portugal/">de woonverzekering</a> legt de evenredigheidsregel in algemene termen uit. Deze pagina gaat specifiek over een totaal verlies: wat een uitkering dan werkelijk omvat, in welke volgorde de expert dat doorrekent, en waarom onderverzekering bij een totaalschade harder aankomt dan bij een kleine schade.',
-  heroMeta: 'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: september 2026',
+  heroMeta: 'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: september 2026',
   hreflang: {},
   breadcrumb: [...BREADCRUMB_ROOT, CAT_WONEN, { name: 'Evenredigheidsregel bij totaal verlies' }],
   published: '2026-09-13T09:00:00+00:00',
@@ -148,7 +148,7 @@ const AARDBEVING = {
   h1: 'Aardbevingsdekking in Portugal',
   standfirst:
     'Onze pagina over de woonverzekering noemt aardbevingsdekking kort. Deze pagina gaat dieper: wat de dekking precies omvat, hoe de premie wordt opgebouwd, en waarom dit voor het zuidwesten van Portugal geen theoretische vraag is.',
-  heroMeta: 'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: september 2026',
+  heroMeta: 'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: september 2026',
   hreflang: {},
   breadcrumb: [...BREADCRUMB_ROOT, CAT_WONEN, { name: 'Aardbevingsdekking' }],
   published: '2026-09-13T09:00:00+00:00',
@@ -238,7 +238,7 @@ const BESTAANDE_AANDOENING = {
   h1: 'Zorgverzekering met een bestaande aandoening',
   standfirst:
     'Een bestaande aandoening betekent niet automatisch geen particuliere zorgverzekering in Portugal. Het verandert hoe de medische acceptatie verloopt en wat een realistische uitkomst is — en soms welke route nog openstaat.',
-  heroMeta: 'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: september 2026',
+  heroMeta: 'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: september 2026',
   hreflang: {},
   breadcrumb: [...BREADCRUMB_ROOT, CAT_ZORG, { name: 'Bestaande aandoening' }],
   published: '2026-09-13T09:00:00+00:00',
@@ -343,7 +343,7 @@ const SCHADE_BETWISTEN = {
   h1: 'Schade melden en betwisten in Portugal',
   standfirst:
     'De beoordeling van een verzekeraar is niet het laatste woord. Portugees verzekeringsrecht voorziet expliciet in een manier om die te betwisten — en er zijn twee onafhankelijke routes daarnaast.',
-  heroMeta: 'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: september 2026',
+  heroMeta: 'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: september 2026',
   hreflang: {},
   breadcrumb: [...BREADCRUMB_ROOT, CAT_WONEN, { name: 'Schade melden en betwisten' }],
   published: '2026-09-13T09:00:00+00:00',
@@ -444,7 +444,7 @@ const VVE = {
   h1: 'VvE-verzekering: waar de gebouwenpolis eindigt en u begint',
   standfirst:
     'Voor hoogwaardige appartementen in propriedade horizontal komt dezelfde vraag steeds terug: wat dekt de polis van de VvE eigenlijk, en waar begint uw eigen verantwoordelijkheid?',
-  heroMeta: 'Verzekeringsagent in Lagos, Algarve · ASF nr. 425591790/3 · Laatst bijgewerkt: september 2026',
+  heroMeta: 'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: september 2026',
   hreflang: {},
   breadcrumb: [...BREADCRUMB_ROOT, CAT_WONEN, { name: 'VvE-verzekering' }],
   published: '2026-09-13T09:00:00+00:00',
