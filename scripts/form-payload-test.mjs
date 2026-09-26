@@ -634,6 +634,18 @@ const CASES = [
     requireLandingPage: 'https://adlerrochefort.com/zh/buying-property-portugal/',
   },
   {
+    // Spanish cluster (September 2026). No wizards on /es/ — every page uses
+    // the shared short form with the product preselected — so this checks the
+    // attribution and that the preselected product survives into the payload.
+    label: '35a. /es/seguro-hogar-alto-valor/ — Spanish short form, preselected product',
+    path: 'es/seguro-hogar-alto-valor/index.html',
+    url: 'https://adlerrochefort.com/es/seguro-hogar-alto-valor/',
+    formName: 'es-solicitud',
+    inlineScripts: true,
+    requireValues: { market: ['spain-es'], language: ['es'], insurance_type: ['Español · Hogar'] },
+    requireLandingPage: 'https://adlerrochefort.com/es/seguro-hogar-alto-valor/',
+  },
+  {
     // Fase 2 (Habitação). Same wizard shape as case 15's Auto page, plus a
     // conditional branch group inside step 2 (regime de ocupação → AL-only
     // fields, via lead-branch-fields.js) and a checkbox-toggled group (obras

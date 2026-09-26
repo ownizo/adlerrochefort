@@ -21,6 +21,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, globSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT, PUBLIC, ORIGIN } from './lib/chrome.mjs';
+import { MARKETS } from './lib/market-registry.mjs';
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const data = JSON.parse(await readFile(join(ROOT, 'data', 'articles.json'), 'utf8'));
@@ -199,7 +200,8 @@ const priorityFor = (u) => {
   // /zh/ and /il/ joined /de/ here as their clusters were built. /nl/ and /fr/
   // are left at the default on purpose: /nl/ is a single landing whose cluster
   // hangs off sibling URLs rather than off it, and /fr/ is one page.
-  if (['/', '/en/', '/de/', '/pl/', '/se/', '/dk/', '/zh/', '/il/'].includes(u)) return '1.0';
+  // Markets registered later (/es/, /it/) are read from the registry.
+  if (['/', '/en/', '/de/', ...MARKETS.map((m) => `/${m.key}/`)].includes(u)) return '1.0';
   if (u === '/seguros/' || u === '/blog/' || u === '/en/blog/') return '0.9';
   if (/^\/seguros\/[^/]+\/$/.test(u) || /^\/en\/insurance\/[^/]+\/$/.test(u)) return '0.9';
   // Pagination is checked before the category hubs: a paginated category URL

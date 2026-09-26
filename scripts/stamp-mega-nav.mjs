@@ -19,6 +19,7 @@ import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { extractSiteNav, extractMobileNav } from './lib/mega-nav.mjs';
+import { MARKETS } from './lib/market-registry.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -80,7 +81,7 @@ function langOf(rel) {
   // other PT commercial roots
   if (!rel.includes('/')) return 'pt';
   const top = rel.split('/')[0];
-  if (['css', 'js', 'images', 'en', 'de', 'nl', 'fr', 'se', 'dk', 'pl', 'zh', 'il'].includes(top)) {
+  if (['css', 'js', 'images', 'en', 'de', 'nl', 'fr', ...MARKETS.map((m) => m.key)].includes(top)) {
     return HOMES[top] ? top : null;
   }
   return 'pt';

@@ -16,8 +16,13 @@ import { SE_MARKET } from '../se-cluster.data.mjs';
 import { DK_MARKET } from '../dk-cluster.data.mjs';
 import { ZH_MARKET } from '../zh-cluster.data.mjs';
 import { IL_MARKET } from '../il-cluster.data.mjs';
+import { ES_MARKET } from '../es-cluster.data.mjs';
+import { IT_MARKET } from '../it-cluster.data.mjs';
 
-export const MARKETS = [PL_MARKET, SE_MARKET, DK_MARKET, ZH_MARKET, IL_MARKET];
+// Spanish (/es/) joined in September 2026. Order here is registration order:
+// it decides the order of hreflang alternates in the generated pages, so a new
+// market is appended, never inserted.
+export const MARKETS = [PL_MARKET, SE_MARKET, DK_MARKET, ZH_MARKET, IL_MARKET, ES_MARKET, IT_MARKET];
 export const MARKET_BY_KEY = Object.fromEntries(MARKETS.map((m) => [m.key, m]));
 export const MARKET_KEYS = MARKETS.map((m) => m.key);
 

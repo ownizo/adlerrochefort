@@ -495,6 +495,14 @@ const FORM_CLASSIFICATION = {
     language: 'EN',
     product: 'insurance-review',
   },
+  // Spanish (/es/) — registered by scripts/add-market-to-corpus.mjs.
+  // `market` stays 'PT' like every other language cluster: the business is
+  // Portuguese; the lead's own market travels in the submitted `market` field.
+  'es-solicitud': { entityType: 'individual', market: 'PT', product: 'general', language: 'ES' },
+  // Italian (/it/) — registered by scripts/add-market-to-corpus.mjs.
+  // `market` stays 'PT' like every other language cluster: the business is
+  // Portuguese; the lead's own market travels in the submitted `market` field.
+  'it-richiesta': { entityType: 'individual', market: 'PT', product: 'general', language: 'IT' },
 };
 
 /**

@@ -171,6 +171,13 @@ export const LANG_FALLBACK = {
   dk: '/dk/',
   zh: '/zh/',
   il: '/il/',
+  // Markets added later (Spanish, Italian) — every registered language falls
+  // back to its own home page, exactly as scripts/lang-switcher.mjs does.
+  ...Object.fromEntries(
+    Object.values(LANG_BY_KEY)
+      .filter((l) => !['pt', 'en', 'nl', 'fr', 'de', 'pl', 'se', 'dk', 'zh', 'il'].includes(l.key))
+      .map((l) => [l.key, l.home])
+  ),
 };
 
 const isBlogPath = (url) => url.startsWith('/blog/') || url.startsWith('/en/blog/');

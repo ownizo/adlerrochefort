@@ -8,7 +8,7 @@ import { esc, ORIGIN } from './chrome.mjs';
 /** Language-specific social card when a page has no image of its own. */
 function defaultOgImage(canonical = '') {
   if (canonical.startsWith('/de/')) return '/images/og-adlerrochefort-de.png';
-  if (/^\/(en|fr|nl|dk|se|pl|il|zh)\//.test(canonical)) return '/images/og-adlerrochefort-en.png';
+  if (/^\/(en|fr|nl|dk|se|pl|il|zh|es|it)\//.test(canonical)) return '/images/og-adlerrochefort-en.png';
   return '/images/og-adlerrochefort-pt.png';
 }
 

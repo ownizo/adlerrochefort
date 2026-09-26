@@ -55,19 +55,45 @@
  *     because the globe alone is not a label.
  */
 
-/** The ten languages, in the order the control presents them. */
-export const LANGS = [
+import { MARKET_BY_KEY } from './market-registry.mjs';
+
+/**
+ * Every language the control knows how to present, in presentation order.
+ *
+ * September 2026 — Spanish (/es/) and Italian (/it/) sit after German, with
+ * the other large European languages, rather than at the end of the list.
+ *
+ * A row for a generated market (anything not hand-built: see STATIC_KEYS) is
+ * only offered once that market is registered in scripts/lib/market-registry.mjs,
+ * so the selector can never link to a cluster that has not been generated. That
+ * is what lets a language be prepared here ahead of its content: /it/ has a row
+ * below, and it appears on the site the moment IT_MARKET is registered — no
+ * second edit to this file. scripts/add-market-to-corpus.mjs then inserts the
+ * new row into the pages that already exist, at the position this order gives.
+ */
+const CATALOG = [
   { key: 'pt', label: 'Português', html: 'pt-PT', hreflang: 'pt-PT', home: '/' },
   { key: 'en', label: 'English', html: 'en', hreflang: 'en-GB', home: '/en/' },
   { key: 'nl', label: 'Nederlands', html: 'nl', hreflang: 'nl', home: '/nl/' },
   { key: 'fr', label: 'Français', html: 'fr', hreflang: 'fr', home: '/fr/' },
   { key: 'de', label: 'Deutsch', html: 'de', hreflang: 'de', home: '/de/' },
+  { key: 'es', label: 'Español', html: 'es', hreflang: 'es-ES', home: '/es/' },
+  { key: 'it', label: 'Italiano', html: 'it', hreflang: 'it-IT', home: '/it/' },
   { key: 'pl', label: 'Polski', html: 'pl', hreflang: 'pl-PL', home: '/pl/' },
   { key: 'se', label: 'Svenska', html: 'sv', hreflang: 'sv-SE', home: '/se/' },
   { key: 'dk', label: 'Dansk', html: 'da', hreflang: 'da-DK', home: '/dk/' },
   { key: 'zh', label: '简体中文', html: 'zh-CN', hreflang: 'zh-CN', home: '/zh/' },
   { key: 'il', label: 'עברית', html: 'he', hreflang: 'he-IL', home: '/il/', dir: 'rtl' },
 ];
+
+/** The hand-built language sections, always offered. */
+const STATIC_KEYS = new Set(['pt', 'en', 'nl', 'fr', 'de']);
+
+/** Every catalogued language, registered or not — for tooling only. */
+export const LANG_CATALOG = CATALOG;
+
+/** The languages the control presents, in order. */
+export const LANGS = CATALOG.filter((l) => STATIC_KEYS.has(l.key) || MARKET_BY_KEY[l.key]);
 
 export const LANG_KEYS = LANGS.map((l) => l.key);
 export const LANG_BY_KEY = Object.fromEntries(LANGS.map((l) => [l.key, l]));
@@ -96,6 +122,8 @@ export const SELECTOR_UI = {
   // English row: `aria` uses the verbal noun (בחירת) the way Hebrew interface
   // copy does rather than an imperative addressed to one gender.
   il: { aria: (n) => `שפה: ${n}. בחירת שפה אחרת.`, home: 'דף הבית', blog: 'בלוג' },
+  es: { aria: (n) => `Idioma: ${n}. Elegir otro idioma.`, home: 'página de inicio', blog: 'blog' },
+  it: { aria: (n) => `Lingua: ${n}. Scegli un’altra lingua.`, home: 'pagina iniziale', blog: 'blog' },
 };
 
 /** Assets the control needs. Both callers inject exactly these two lines. */

@@ -26,6 +26,7 @@
  * Entry point: scripts/generate-market-clusters.mjs.
  */
 import { mkdir, writeFile } from 'node:fs/promises';
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -62,7 +63,15 @@ const QUOTE_FORM_STRINGS = {
   zh: zhQuoteFormStrings,
   he: heQuoteFormStrings,
 };
-const wizardStrings = (market) => QUOTE_FORM_STRINGS[market.htmlLang.slice(0, 2)];
+// A market registered later (Spanish, Italian) that opts a page into a wizard
+// is read from data/i18n/quote-form/<lang>.json if that file exists, and falls
+// back to English otherwise — a missing table must never break generation.
+const wizardStrings = (market) => {
+  const lang = market.htmlLang.slice(0, 2);
+  if (QUOTE_FORM_STRINGS[lang]) return QUOTE_FORM_STRINGS[lang];
+  const file = join(ROOT, 'data', 'i18n', 'quote-form', `${lang}.json`);
+  return JSON.parse(readFileSync(existsSync(file) ? file : join(ROOT, 'data', 'i18n', 'quote-form', 'en.json'), 'utf8'));
+};
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
@@ -220,7 +229,7 @@ function jsonLd(market, page) {
     datePublished: page.published,
     dateModified: page.modified || page.published,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${ORIGIN}${page.url}` },
-    image: `${ORIGIN}/images/og-adlerrochefort-en.png`,
+    image: `${ORIGIN}${market.ogImage || "/images/og-adlerrochefort-en.png"}`,
     publisher: { '@id': `${ORIGIN}/#organization` },
   };
   if (page.schemaType === 'Article') {
@@ -232,7 +241,11 @@ function jsonLd(market, page) {
     };
   }
 
-  const graph = [ORG_LD, breadcrumb, faq, webpage].filter(Boolean);
+  // A market whose service genuinely runs in its own language (Spanish) says
+  // so via `knowsLanguage` on its descriptor; every other market keeps the
+  // organisation node exactly as the rest of the site publishes it.
+  const org = market.knowsLanguage ? { ...ORG_LD, knowsLanguage: market.knowsLanguage } : ORG_LD;
+  const graph = [org, breadcrumb, faq, webpage].filter(Boolean);
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }, null, 2);
 }
 
@@ -996,7 +1009,7 @@ ${hreflangTags(market, page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <meta property="og:url" content="${ORIGIN}${page.url}">
 <meta property="og:title" content="${esc(page.ogTitle || page.title)}">
 <meta property="og:description" content="${esc(page.ogDescription || page.description)}">
-<meta property="og:image" content="${ORIGIN}/images/og-adlerrochefort-en.png">
+<meta property="og:image" content="${ORIGIN}${market.ogImage || "/images/og-adlerrochefort-en.png"}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="${market.ogLocale}">
@@ -1004,7 +1017,7 @@ ${hreflangTags(market, page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(page.ogTitle || page.title)}">
 <meta name="twitter:description" content="${esc(page.ogDescription || page.description)}">
-<meta name="twitter:image" content="${ORIGIN}/images/og-adlerrochefort-en.png">
+<meta name="twitter:image" content="${ORIGIN}${market.ogImage || "/images/og-adlerrochefort-en.png"}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">

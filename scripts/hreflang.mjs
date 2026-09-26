@@ -30,6 +30,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { globSync, existsSync } from 'node:fs';
 import { MARKET_PRODUCT_CLUSTERS } from './lib/market-hreflang.mjs';
+import { MARKETS } from './lib/market-registry.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC = join(ROOT, 'public');
@@ -76,6 +77,11 @@ const SITE = 'https://adlerrochefort.com';
  * Danish reader's question would be the unilateral declaration this whole
  * script exists to remove.
  */
+const LISTED_HUBS = new Set(['/pl/', '/se/', '/dk/', '/zh/', '/il/']);
+const LATER_MARKET_HUBS = Object.fromEntries(
+  MARKETS.filter((m) => !LISTED_HUBS.has(`/${m.key}/`)).map((m) => [`/${m.key}/`, m.hreflang])
+);
+
 const PAGE_CLUSTERS = [
   {
     '/': 'pt-PT',
@@ -88,6 +94,10 @@ const PAGE_CLUSTERS = [
     '/dk/': 'da-DK',
     '/zh/': 'zh-CN',
     '/il/': 'he-IL',
+    // Markets registered after this list was written (Spanish /es/, then
+    // Italian /it/) join from the registry, in registration order, so a new
+    // market's homepage is declared here the moment it is generated.
+    ...LATER_MARKET_HUBS,
     xDefault: '/',
   },
   { '/blog/': 'pt-PT', '/en/blog/': 'en-GB' },
@@ -170,6 +180,7 @@ const X_DEFAULT = new Map([
   ['/dk/', '/'],
   ['/zh/', '/'],
   ['/il/', '/'],
+  ...Object.keys(LATER_MARKET_HUBS).map((hub) => [hub, '/']),
   ['/seguros/', '/seguros/'],
 ]);
 

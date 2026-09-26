@@ -45,6 +45,7 @@ import {
 } from './lib/partials.mjs';
 import { buildPairMap } from './lib/lang-pairs.mjs';
 import { marketPairs } from './lib/market-hreflang.mjs';
+import { MARKETS } from './lib/market-registry.mjs';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const write = DRY_RUN ? async () => {} : writeFile;
@@ -209,7 +210,9 @@ const THANK_YOU_PAGES = [/\/obrigado\//, /\/en\/thank-you\//, /\/nl\/bedankt\//]
 // Their single source of truth is scripts/lib/market-cluster.mjs; the
 // language selector inside that chrome is kept current by
 // scripts/lang-switcher.mjs, which does run over them.
-const MARKET_CLUSTERS = [/\/pl\//, /\/se\//, /\/dk\//, /\/zh\//, /\/il\//];
+// Derived from the registry since Spanish (/es/) joined, so the exclusion
+// grows with the clusters instead of being remembered by hand.
+const MARKET_CLUSTERS = MARKETS.map((m) => new RegExp(`/${m.key}/`));
 
 const SKIP = [
   /email-signature\.html$/,

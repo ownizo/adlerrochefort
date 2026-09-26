@@ -66,6 +66,7 @@ import {
   LANGSEL_SCRIPT_TAG,
   LANGSEL_STYLESHEET,
   LANGSEL_SCRIPT,
+  LANGS,
   footerSelectorHtml,
   langSelectorHtml,
   selectorTargets,
@@ -91,14 +92,9 @@ const cluster = await buildPairMap();
 const FALLBACK = {
   pt: (isBlog) => (isBlog ? '/blog/' : '/'),
   en: (isBlog) => (isBlog ? '/en/blog/' : '/en/'),
-  de: () => '/de/',
-  fr: () => '/fr/',
-  nl: () => '/nl/',
-  pl: () => '/pl/',
-  se: () => '/se/',
-  dk: () => '/dk/',
-  zh: () => '/zh/',
-  il: () => '/il/',
+  // Every other language — hand-built or generated, including markets added
+  // after this file was written (Spanish, Italian) — falls back to its home.
+  ...Object.fromEntries(LANGS.filter((l) => l.key !== 'pt' && l.key !== 'en').map((l) => [l.key, () => l.home])),
 };
 
 /**
@@ -114,9 +110,10 @@ const FALLBACK = {
  * Hebrew — and the same consequence applies: omit it and every Hebrew page
  * would render the selector as though it were Portuguese.
  */
+const SEGMENTS = LANGS.map((l) => l.key).filter((k) => k !== 'pt');
 const langOf = (path) => {
-  const m = path.match(/^\/(en|de|fr|nl|pl|se|dk|zh|il)\//);
-  return m ? m[1] : 'pt';
+  const seg = path.split('/')[1];
+  return SEGMENTS.includes(seg) ? seg : 'pt';
 };
 
 // --- switcher location --------------------------------------------------------

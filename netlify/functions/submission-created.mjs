@@ -1700,6 +1700,24 @@ export const HANDLED_FORMS = {
     page: "/il/",
     branch: "IL · Other",
   },
+  // Spanish (/es/) — registered by scripts/add-market-to-corpus.mjs
+  // from scripts/es-cluster.data.mjs, same shape as the dk entries.
+  "es-solicitud": {
+    quote: true,
+    en: true,
+    heading: "New Spanish quote request",
+    page: "/es/",
+    branch: "Español · Otro",
+  },
+  // Italian (/it/) — registered by scripts/add-market-to-corpus.mjs
+  // from scripts/it-cluster.data.mjs, same shape as the dk entries.
+  "it-richiesta": {
+    quote: true,
+    en: true,
+    heading: "New Italian quote request",
+    page: "/it/",
+    branch: "IT · Altro",
+  },
 };
 
 const humanise = (key) =>
