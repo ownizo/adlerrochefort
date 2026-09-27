@@ -104,6 +104,10 @@ const ALGARVE_PAGE = {
     },
   ],
   related: [
+    { url: '/de/blog/surfen-portugal-zweitwohnsitz/', label: 'Surfen in Portugal und der Zweitwohnsitz' },
+    { url: '/de/blog/surfen-lagos-zweitwohnsitz/', label: 'Surfen in Lagos' },
+    { url: '/de/blog/surfen-sagres-zweitwohnsitz/', label: 'Surfen in Sagres' },
+    { url: '/de/blog/surfen-aljezur-zweitwohnsitz/', label: 'Surfen in Aljezur und das Leben im Monte' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/krankenversicherung-portugal/', label: 'Krankenversicherung in Portugal' },
     { url: '/de/umzug-deutschland-portugal-versicherung/', label: 'Versicherungen beim Umzug von Deutschland nach Portugal' },
@@ -178,6 +182,10 @@ const LAGOS_PAGE = {
     },
   ],
   related: [
+    { url: '/de/blog/surfen-lagos-zweitwohnsitz/', label: 'Surfen in Lagos — und ein Zuhause für das ganze Jahr' },
+    { url: '/de/blog/surfen-portugal-zweitwohnsitz/', label: 'Surfen in Portugal und der Zweitwohnsitz' },
+    { url: '/de/blog/surfen-sagres-zweitwohnsitz/', label: 'Surfen in Sagres — und ein Haus am Ende Europas' },
+    { url: '/de/blog/surfen-portugal-zweitwohnsitz/', label: 'Surfen in Portugal und der Zweitwohnsitz' },
     { url: '/de/versicherung-luz/', label: 'Versicherung in Praia da Luz' },
     { url: '/de/versicherung-burgau/', label: 'Versicherung in Burgau' },
     { url: '/de/versicherung-sagres/', label: 'Versicherung in Sagres' },

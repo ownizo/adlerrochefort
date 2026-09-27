@@ -347,7 +347,7 @@ export const ARTICLES = [
       ['Rural property with off-grid generation, declared', '&euro;450&ndash;&euro;950'],
       ['Property let as Alojamento Local', '&euro;380&ndash;&euro;700'],
     ],
-    closing: `<p>We are an ASF-registered private-client broker with offices in Lisbon and Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
+    closing: `<p>We are an ASF-registered private-client broker with offices in Lisbon and Lagos, and the south-west concelhos are close enough that we see these properties rather than read about them &mdash; which matters when the question is whether a roof was in serviceable condition. Our guide to <a href="/en/blog/home-insurance-lagos/">home insurance in Lagos</a> covers the neighbouring concelho. For the surf itself &mdash; Tonel, Beliche, Mareta and the two-coast logic &mdash; see <a href="/en/blog/surfing-sagres-second-home/">surfing Sagres and owning a home there</a>. Send the property details through the form below or on WhatsApp for a written comparison within 24 hours.</p>`,
     faq: [
       [
         'Is wind damage covered in Sagres?',
