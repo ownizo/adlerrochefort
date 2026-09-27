@@ -67,6 +67,27 @@ export const PAGES = [
 
 export const IT_MARKET = {
   key: 'it',
+  // Mega-menu "Assicurazioni in Spagna": /it/ pages cover both countries, so
+  // the Spain menu points at their Spain content instead of the English pages.
+  spainNav: {
+    overviewTitle: 'Panoramica',
+    overview: [{ href: '/it/#spagna', label: 'Assicurazioni in Spagna', flag: '🇪🇸' }],
+    personalTitle: 'Privati',
+    personal: [
+      { href: '/it/assicurazione-casa-alto-valore/#alto-valore', label: 'Casa di alto valore in Spagna' },
+      { href: '/it/comprare-casa-portogallo-spagna-assicurazione/', label: 'Comprare casa in Spagna' },
+      { href: '/it/responsabilita-civile-famiglia/', label: 'Responsabilità civile della famiglia' },
+    ],
+    propertyTitle: 'Immobili',
+    property: [
+      { href: '/it/assicurazione-affitto-villa-lusso/', label: 'Affitto di ville di lusso' },
+      { href: '/it/assicurazione-costruzione-villa/', label: 'Costruzione e ristrutturazione' },
+      { href: '/it/assicurazione-tenuta-vigneto/', label: 'Tenute e vigneti' },
+    ],
+    privateTitle: 'Private Clients',
+    privateClients: [{ href: '/it/#specialistiche', label: 'Coperture specialistiche' }],
+  },
+  pcSpainHref: '/it/assicurazione-casa-alto-valore/#alto-valore',
   name: 'Italia',
 
   htmlLang: 'it',

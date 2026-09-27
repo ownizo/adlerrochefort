@@ -282,7 +282,10 @@ function langSelector(market, page, { mobile = false, variant = '', id = '', ind
 
 function breadcrumbHtml(market, page) {
   const trail = page.breadcrumb;
-  if (!trail || !trail.length) return '';
+  // No visible trail on the hub (it would be a lone "Home" strip under the
+  // header, which the EN/DE homepages don't have); the BreadcrumbList JSON-LD
+  // is still emitted.
+  if (!trail || trail.length < 2 || page.isHub) return '';
   const items = trail
     .map((c, i) =>
       i === trail.length - 1

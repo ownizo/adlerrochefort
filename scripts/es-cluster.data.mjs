@@ -64,6 +64,28 @@ export const PAGES = [
 
 export const ES_MARKET = {
   key: 'es',
+  // Mega-menu "Seguros en España": /es/ pages cover both countries, so the
+  // Spain menu points at their Spain sections instead of the English pages.
+  spainNav: {
+    overviewTitle: 'Visión general',
+    overview: [{ href: '/es/#espana', label: 'Seguros en España', flag: '🇪🇸' }],
+    personalTitle: 'Particulares',
+    personal: [
+      { href: '/es/seguro-hogar-alto-valor/#frontera', label: 'Vivienda de alto valor en España' },
+      { href: '/es/seguro-salud-internacional/#tarjeta', label: 'Salud en España' },
+      { href: '/es/seguro-responsabilidad-civil-familiar/', label: 'Responsabilidad civil familiar' },
+      { href: '/es/guia-seguros-portugal-espana/', label: 'Guía de seguros en España y Portugal' },
+    ],
+    propertyTitle: 'Inmuebles',
+    property: [
+      { href: '/es/seguro-alquiler-villa-lujo/', label: 'Alquiler vacacional de una villa' },
+      { href: '/es/seguro-obra-vivienda-lujo/', label: 'Construir o reformar una vivienda' },
+      { href: '/es/seguro-finca-vinedo/', label: 'Fincas, bodegas y viñedos' },
+    ],
+    privateTitle: 'Private Clients',
+    privateClients: [{ href: '/es/#especializadas', label: 'Coberturas especializadas' }],
+  },
+  pcSpainHref: '/es/seguro-hogar-alto-valor/#frontera',
   name: 'España',
 
   htmlLang: 'es',

@@ -265,13 +265,9 @@ function spainSpec(m, own = null) {
       personalTitle: m.personalShort,
       personal: ['es-home', 'es-health', 'es-motor', 'es-liability'].map((c) => own(c)).filter(Boolean),
       propertyTitle: m.property,
-      property: [
-        own('es-property'),
-        { href: SPAIN_HREFS.landlord, label: m.spainLandlord },
-        { href: SPAIN_HREFS.mortgage, label: m.spainMortgage },
-      ].filter(Boolean),
+      property: [own('es-property'), own('niche-villalet'), own('niche-build')].filter(Boolean),
       privateTitle: m.privateClients,
-      privateClients: [{ href: SPAIN_HREFS.privateClients, label: m.spainPC }],
+      privateClients: [{ href: own('es-home').href, label: m.spainPC }],
     };
   }
   return {
@@ -324,6 +320,18 @@ function whySpec(m) {
  * Mega-nav for a market-cluster page (PL/SE/DK/ZH/IL). Portugal items come
  * from that market's own pages; Spain and Private Clients point at English.
  */
+/** "Why us" menu on the generated markets: the market's own hub sections and
+ *  guide instead of the English about/how-we-work/claims pages. */
+const MARKET_WHY = {
+  es: { about: 'quienes', how: 'como', claims: '#siniestro' },
+  it: { about: 'chi', how: 'metodo', claims: '#sinistro' },
+  pl: { about: 'audience-title', how: 'jak-pracujemy', claims: '' },
+  se: { about: 'audience-title', how: 'sa-arbetar-vi', claims: '' },
+  dk: { about: 'hvem', how: 'saadan', claims: '' },
+  zh: { about: 'audience-title', how: 'women-zenme-zuo', claims: '' },
+  il: { about: 'audience-title', how: 'eich-anachnu-ovdim', claims: '' },
+};
+
 export function clusterMegaNav(market, { switcher, mobileSwitcher, ctaHref }) {
   const ui = market.ui;
   const m = ui.mega;
@@ -348,9 +356,29 @@ export function clusterMegaNav(market, { switcher, mobileSwitcher, ctaHref }) {
       movingTitle: m.moving,
       moving: ['moving', 'property', 'guide'].map((c) => link(c)).filter(Boolean),
     },
-    spain: spainSpec(m, (c, flag) => link(c, flag)),
-    privateClients: pcSpec(m),
-    whyUs: whySpec(m),
+    spain: market.spainNav ? { trigger: m.spain, menuAria: m.spainMenu, ...market.spainNav } : spainSpec(m, (c, flag) => link(c, flag)),
+    privateClients: {
+      trigger: m.privateClients,
+      menuAria: m.privateClientsMenu,
+      items: [
+        (byCluster.home && { href: byCluster.home.url, label: m.pcPortugal, flag: '🇵🇹' }) || { href: PC_HREFS.portugal, label: m.pcPortugal, flag: '🇵🇹' },
+        (byCluster['es-home'] && { href: byCluster['es-home'].url, label: m.pcSpain, flag: '🇪🇸' })
+          || (market.pcSpainHref && { href: market.pcSpainHref, label: m.pcSpain, flag: '🇪🇸' })
+          || { href: PC_HREFS.spain, label: m.pcSpain, flag: '🇪🇸' },
+      ],
+    },
+    whyUs: MARKET_WHY[market.key]
+      ? {
+          trigger: m.whyUs,
+          menuAria: m.whyUsMenu,
+          items: [
+            { href: `/${market.key}/#${MARKET_WHY[market.key].about}`, label: m.whyAbout },
+            { href: `/${market.key}/#${MARKET_WHY[market.key].how}`, label: m.whyHow },
+            { href: `/${market.key}/#insurers-title`, label: m.whyBroker },
+            ...(byCluster.guide ? [{ href: byCluster.guide.url + MARKET_WHY[market.key].claims, label: m.whyClaims }] : []),
+          ],
+        }
+      : whySpec(m),
     insights: null,
     cta: { href: ctaHref, label: ui.navCta },
     switcher,
