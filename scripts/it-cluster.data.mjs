@@ -41,6 +41,8 @@ import { VILLALET_PAGE } from './it-content/niche-villalet.mjs';
 import { EQUINE_PAGE } from './it-content/niche-equine.mjs';
 import { AVIATION_PAGE } from './it-content/niche-aviation.mjs';
 import { CYBER_PAGE } from './it-content/niche-cyber.mjs';
+import { GOLF_PAGE } from './it-content/golf.mjs';
+import { NAUTICAL_PAGE } from './it-content/nautical.mjs';
 
 export { LANG_POLICY_IT, BREADCRUMB_ROOT } from './it-content/shared.mjs';
 
@@ -63,6 +65,10 @@ export const PAGES = [
   EQUINE_PAGE,
   AVIATION_PAGE,
   CYBER_PAGE,
+  // Pillar articles (September 2026): golf and the sea in Portugal and Spain.
+  // Cluster keys 'golf' / 'nautical' pair them with every other language.
+  GOLF_PAGE,
+  NAUTICAL_PAGE,
 ];
 
 export const IT_MARKET = {

@@ -161,7 +161,25 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="ochrona-specjalistyczna">
+<section class="section plain" aria-labelledby="golf-i-morze">
+  <div class="container narrow">
+    <span class="eyebrow">Portugalia i Hiszpania</span>
+    <h2 id="golf-i-morze">Golf i morze</h2>
+    <p>Dwie pasje, które przyciągają na Półwysep Iberyjski wiele polskich rodzin — i domy, które wokół nich powstają.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/pl/golf-rezydencje-portugalia-hiszpania/">Golf w Portugalii i Hiszpanii</a></h3>
+        <p>Od Quinta do Lago i Monte Rei po Valderramę, La Zagaletę i Majorkę — pola, osiedla golfowe i ochrona domu przy fairwayu.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/mariny-jachty-portugalia-hiszpania/">Mariny i jachty w Portugalii i Hiszpanii</a></h3>
+        <p>Vilamoura, Cascais, Palma, Ibiza i Puerto Banús — mariny, domy nad wodą oraz ochrona jachtu i załogi.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="ochrona-specjalistyczna">
   <div class="container narrow">
     <span class="eyebrow">Portugalia i Hiszpania</span>
     <h2 id="ochrona-specjalistyczna">Ochrona specjalistyczna</h2>
@@ -199,7 +217,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="jak-pracujemy">
+<section class="section plain" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
     <p>Adler &amp; Rochefort to marka handlowa spółki Ownizo, Unipessoal Lda. — pośrednika ubezpieczeniowego dla klientów prywatnych o znacznym majątku. Mamy biura w Lizbonie i Lagos, a klientów w całej Portugalii i w Hiszpanii, gdzie działamy w ramach unijnej swobody świadczenia usług, pod jednym wpisem ASF nr 425591790/3. Nie mamy umowy na wyłączność z żadnym ubezpieczycielem i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy.</p>
@@ -214,7 +232,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="bledy">
+<section class="section tint" aria-labelledby="bledy">
   <div class="container narrow article-body">
     <h2 id="bledy">Pięć błędów, które widzimy najczęściej</h2>
     <ul>

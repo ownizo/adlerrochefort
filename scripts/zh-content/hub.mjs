@@ -162,7 +162,24 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="siren-kehu">
+<section class="section plain" aria-labelledby="gaoerfu-hanghai">
+  <div class="container narrow">
+    <h2 id="gaoerfu-hanghai">高尔夫与航海</h2>
+    <p>伊比利亚半岛一些最出色的社区，正是围绕这两种生活建起来的：先谈目的地与住宅，最后再谈保障。</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/zh/golf-homes-portugal-spain/">葡萄牙与西班牙高尔夫：名场、社区与住宅</a></h3>
+        <p>阿尔加维“金三角”、孔波塔与卡斯凯什，Valderrama、La Zagaleta、马略卡与马德里；球场封闭社区里的别墅，以及房屋、收藏与家人的保障。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/marinas-yachts-portugal-spain/">葡萄牙与西班牙的码头与游艇</a></h3>
+        <p>维拉摩拉、卡斯凯什与亚速尔群岛，帕尔马、伊维萨与巴努斯港；临水住宅与泊位，以及游艇、船员与房屋的保障。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="siren-kehu">
   <div class="container narrow article-body">
     <h2 id="siren-kehu">我们专注的领域：高净值家庭的私人客户保险</h2>
     <p>Adler &amp; Rochefort 为在葡萄牙和西班牙拥有较高价值资产的家庭安排保险。这类家庭的需要与大众市场不同：保额更高、资产更分散，而普通零售保单中的分项限额与标准条款，往往恰好在最关键的地方不够用。</p>
@@ -177,7 +194,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="women-zenme-zuo">
+<section class="section plain" aria-labelledby="women-zenme-zuo">
   <div class="container narrow article-body">
     <h2 id="women-zenme-zuo">我们是谁，怎么工作</h2>
     <p>Adler &amp; Rochefort 是 Ownizo, Unipessoal Lda. 的商业名称，在葡萄牙保险与退休基金监理局（ASF）注册为保险代理人，注册号 425591790/3。我们在里斯本和拉各斯设有办公室，客户遍及葡萄牙全境；在西班牙，我们依据欧盟服务自由原则提供服务。我们在合作的保险公司范围内提供建议，不是比价网站——先确定保障范围，再在范围一致的前提下比较方案。</p>

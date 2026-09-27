@@ -181,7 +181,24 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="mishpachot-vaasakim">
+<section class="section plain" aria-labelledby="golf-veyam">
+  <div class="container narrow">
+    <h2 id="golf-veyam">גולף וים</h2>
+    <p>שני העולמות שסביבם נבנו כמה מהקהילות היפות בחצי האי האיברי — היעדים עצמם, הבתים שבהם, ובסוף גם ההגנה עליהם.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/il/golf-homes-portugal-spain/">גולף ובתי יוקרה בפורטוגל ובספרד</a></h3>
+        <p>המשולש הזהוב באלגרבה, קומפורטה וקשקאיש, ולדרמה, לה זגאלטה, מיורקה ומדריד — הקהילות הסגורות סביב המסלולים, והבית, האוסף והמשפחה.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/marinas-yachts-portugal-spain/">מרינות ויאכטות בפורטוגל ובספרד</a></h3>
+        <p>וילמורה, קשקאיש והאיים האזוריים, פלמה, איביזה ופוארטו באנוס, בתים על המים ומקומות עגינה — והיאכטה, הצוות והבית.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="mishpachot-vaasakim">
   <div class="container narrow article-body">
     <h2 id="mishpachot-vaasakim">בתים, אוספים, משפחות — ומה שנשאר נפרד</h2>
     <p><strong>בתים, אמנות ואוספים.</strong> בבית בעל ערך גבוה, פוליסת דירה סטנדרטית היא לרוב הכלי הלא נכון: היא מגבילה פריטי ערך בסעיף נפרד (למשל, סך התכשיטים לא יעלה על אחוז מסוים מסכום התכולה), קוצבת את הדיור החלופי לחודשים ספורים, ומכסה גינה, חומות ובריכה בסכום סמלי. הפוליסות שאנחנו מסדרים ללקוחות פרטיים בנויות אחרת: סקר באתר שקובע את עלות הבנייה מחדש, ויתור על כלל ביטוח החסר כשמתקבלים הסכומים המומלצים, ואמנות, תכשיטים, שעונים ואוספים בערך מוסכם מראש. <a href="/il/home-insurance-portugal/">מסגרת הכיסוי המלאה נמצאת בעמוד ביטוח הבית</a>.</p>
@@ -191,7 +208,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="eich-anachnu-ovdim">
+<section class="section plain" aria-labelledby="eich-anachnu-ovdim">
   <div class="container narrow article-body">
     <h2 id="eich-anachnu-ovdim">מי אנחנו ואיך אנחנו עובדים</h2>
     <p><bdi>Adler &amp; Rochefort</bdi> היא סוכנות לתיווך ביטוח ללקוחות פרטיים ולמשפחות בעלות הון משמעותי, בפורטוגל ובספרד. אנחנו רשומים אצל הרשות הפורטוגזית (רישום <bdi>ASF</bdi> <bdi>425591790/3</bdi>), המשרדים שלנו בליסבון ובלאגוש, ובספרד אנחנו פועלים במסגרת חופש מתן השירותים באיחוד האירופי. אין לנו משרד בישראל. אנחנו מייעצים בתוך מגוון המבטחים שאנחנו עובדים איתם, ואיננו אתר השוואת מחירים: קודם מגדירים מה הכיסוי צריך לכלול, ורק אחר כך משווים בין נוסחים שמכסים את אותו דבר.</p>

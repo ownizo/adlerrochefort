@@ -28,6 +28,10 @@ import { ES_HEALTH_PAGE } from './se-content/es-health.mjs';
 import { ES_MOTOR_PAGE } from './se-content/es-motor.mjs';
 import { ES_LIABILITY_PAGE } from './se-content/es-liability.mjs';
 import { ES_PROPERTY_PAGE } from './se-content/es-property.mjs';
+// Golf and nautical pillar articles, September 2026 (cluster keys golf /
+// nautical), each covering Portugal and Spain.
+import { GOLF_PAGE } from './se-content/golf.mjs';
+import { NAUTICAL_PAGE } from './se-content/nautical.mjs';
 
 export { LANG_POLICY_SE, BREADCRUMB_ROOT } from './se-content/shared.mjs';
 
@@ -46,6 +50,8 @@ export const PAGES = [
   ES_MOTOR_PAGE,
   ES_LIABILITY_PAGE,
   ES_PROPERTY_PAGE,
+  GOLF_PAGE,
+  NAUTICAL_PAGE,
 ];
 
 export const SE_MARKET = {

@@ -200,6 +200,14 @@ export const HUB_PAGE = {
         <h3><a href="/es/seguro-ciber-fraude-familiar/">Ciberriesgo, fraude e identidad de la familia</a></h3>
         <p>Transferencias desviadas en una compraventa, ciberextorsión, suplantación de identidad y ciberacoso, con respuesta 24 horas.</p>
       </li>
+      <li class="hub-item">
+        <h3><a href="/es/golf-viviendas-lujo-portugal-espana/">Golf y viviendas de lujo en Portugal y España</a></h3>
+        <p>Del Triángulo de Oro del Algarve a Valderrama y La Zagaleta: los grandes campos, sus comunidades y cómo proteger la casa.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/puertos-deportivos-yates-portugal-espana/">Puertos deportivos y yates en Portugal y España</a></h3>
+        <p>De Palma y Puerto Banús a Vilamoura, Cascais y Horta: los puertos, las casas frente al mar y cómo proteger el yate.</p>
+      </li>
     </ul>
   </div>
 </section>
@@ -290,5 +298,7 @@ export const HUB_PAGE = {
   related: [
     { url: '/es/comprar-casa-en-portugal-seguro/', label: 'Comprar casa en Portugal: el seguro paso a paso' },
     { url: '/es/guia-seguros-portugal-espana/', label: 'Guía de seguros en Portugal y España' },
+    { url: '/es/golf-viviendas-lujo-portugal-espana/', label: 'Golf y viviendas de lujo en Portugal y España' },
+    { url: '/es/puertos-deportivos-yates-portugal-espana/', label: 'Puertos deportivos y yates en Portugal y España' },
   ],
 };

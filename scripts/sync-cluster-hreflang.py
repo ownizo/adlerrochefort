@@ -12,10 +12,10 @@ import json, os, re, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORIGIN = 'https://adlerrochefort.com'
 js = ("import('./scripts/lib/market-hreflang.mjs').then(m=>{const o={};"
-      "for (const [k,v] of m.clusterGroups()) if(k.startsWith('es-')||k.startsWith('niche-')) o[k]=v;"
+      "for (const [k,v] of m.clusterGroups()) if(k.startsWith('es-')||k.startsWith('niche-')||k==='golf'||k==='nautical') o[k]=v;"
       "process.stdout.write(JSON.stringify({groups:o,xd:m.CLUSTER_X_DEFAULT}))})")
 data = json.loads(subprocess.check_output(['node', '-e', js], cwd=ROOT))
-HAND = ('/en/', '/de/', '/nl/')
+HAND = ('/en/', '/de/', '/nl/', '/fr/', '/blog/')
 changed = 0
 for key, group in data['groups'].items():
     xd = data['xd'].get(key)

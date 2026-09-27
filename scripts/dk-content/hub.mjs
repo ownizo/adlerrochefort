@@ -186,7 +186,25 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="feriebolig">
+<section class="section tint" aria-labelledby="golf-og-hav">
+  <div class="container narrow">
+    <span class="eyebrow">Portugal og Spanien</span>
+    <h2 id="golf-og-hav">Golf og hav</h2>
+    <p>To passioner, der trækker mange danske familier til Den Iberiske Halvø — og boligerne, der er vokset frem omkring dem.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/dk/golf-boliger-portugal-spanien/">Golf i Portugal og Spanien</a></h3>
+        <p>Fra Quinta do Lago og Monte Rei til Valderrama, La Zagaleta og Mallorca — banerne, golfområderne og beskyttelsen af huset ved fairway.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/lystbaadehavne-yachter-portugal-spanien/">Lystbådehavne og yachter i Portugal og Spanien</a></h3>
+        <p>Vilamoura, Cascais, Palma, Ibiza og Puerto Banús — marinaerne, husene ved vandet og beskyttelsen af båd og besætning.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="feriebolig">
   <div class="container narrow article-body">
     <h2 id="feriebolig">Feriebolig eller halvårsophold</h2>
     <p>Mange danske husstande bor her ikke fast. Boligen bruges nogle måneder om året, ofte i vinterhalvåret, og står tom resten af tiden. Det er ikke en detalje for forsikringsselskabet — det er en anden risiko, og portugisiske betingelser behandler den særskilt.</p>
@@ -201,7 +219,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="saadan">
+<section class="section tint" aria-labelledby="saadan">
   <div class="container narrow article-body">
     <h2 id="saadan">Sådan arbejder vi</h2>
     <ol class="process-steps">
@@ -215,7 +233,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="fejl">
+<section class="section plain" aria-labelledby="fejl">
   <div class="container narrow article-body">
     <h2 id="fejl">Fem fejl vi ser gentagne gange</h2>
     <ul>

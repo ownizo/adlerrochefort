@@ -29,6 +29,9 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Golf and nautical pillars, September 2026.
+  { pt: '/blog/golfe-casas-alto-valor-portugal-espanha/', en: '/en/blog/golf-homes-portugal-spain/', de: '/de/blog/golf-immobilien-portugal-spanien/', fr: '/fr/golf-residences-portugal-espagne/', nl: '/nl/golf-woningen-portugal-spanje/', es: '/es/golf-viviendas-lujo-portugal-espana/', it: '/it/golf-ville-lusso-portogallo-spagna/', pl: '/pl/golf-rezydencje-portugalia-hiszpania/', dk: '/dk/golf-boliger-portugal-spanien/', se: '/se/golf-bostader-portugal-spanien/', il: '/il/golf-homes-portugal-spain/', zh: '/zh/golf-homes-portugal-spain/' },
+  { pt: '/blog/marinas-iates-portugal-espanha/', en: '/en/blog/marinas-yachts-portugal-spain/', de: '/de/blog/marinas-yachten-portugal-spanien/', fr: '/fr/ports-plaisance-yachts-portugal-espagne/', nl: '/nl/jachthavens-jachten-portugal-spanje/', es: '/es/puertos-deportivos-yates-portugal-espana/', it: '/it/marine-yacht-portogallo-spagna/', pl: '/pl/mariny-jachty-portugalia-hiszpania/', dk: '/dk/lystbaadehavne-yachter-portugal-spanien/', se: '/se/marinor-yachter-portugal-spanien/', il: '/il/marinas-yachts-portugal-spain/', zh: '/zh/marinas-yachts-portugal-spain/' },
   // Spain cluster, September 2026 (es-* groups in scripts/lib/market-hreflang.mjs).
   { en: '/en/expat-insurance-spain/', de: '/de/versicherung-spanien/', nl: '/nl/verzekeringen-spanje/', pl: '/pl/ubezpieczenia-hiszpania-przewodnik/', se: '/se/forsakring-spanien/', dk: '/dk/forsikring-spanien/', zh: '/zh/insurance-guide-spain/', il: '/il/insurance-guide-spain/' },
   { en: '/en/home-insurance-spain/', de: '/de/hausversicherung-spanien/', nl: '/nl/woonverzekering-spanje/', pl: '/pl/ubezpieczenie-domu-hiszpania/', se: '/se/hemforsakring-spanien/', dk: '/dk/husforsikring-spanien/', zh: '/zh/home-insurance-spain/', il: '/il/home-insurance-spain/' },

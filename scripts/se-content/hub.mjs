@@ -207,7 +207,25 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="fritidshus">
+<section class="section tint" aria-labelledby="golf-och-hav">
+  <div class="container narrow">
+    <span class="eyebrow">Portugal och Spanien</span>
+    <h2 id="golf-och-hav">Golf och hav</h2>
+    <p>Två passioner som lockar många svenska familjer till Iberiska halvön — och bostäderna som vuxit fram runt dem.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/se/golf-bostader-portugal-spanien/">Golf i Portugal och Spanien</a></h3>
+        <p>Från Quinta do Lago och Monte Rei till Valderrama, La Zagaleta och Mallorca — banorna, golfområdena och skyddet för huset vid fairway.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/marinor-yachter-portugal-spanien/">Marinor och yachter i Portugal och Spanien</a></h3>
+        <p>Vilamoura, Cascais, Palma, Ibiza och Puerto Banús — marinorna, husen vid vattnet och skyddet för båt och besättning.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="fritidshus">
   <div class="container narrow article-body">
     <h2 id="fritidshus">Flera bostäder och huset som står tomt</h2>
     <p>Många av våra svenska kunder har mer än en bostad — ett hus i Portugal, en lägenhet i Spanien, kvar ett hem i Sverige — och bor i var och en delar av året. För ett försäkringsbolag är det en helt annan risk än en permanentbostad, och den måste anmälas som sådan.</p>
@@ -216,7 +234,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="sa-arbetar-vi">
+<section class="section tint" aria-labelledby="sa-arbetar-vi">
   <div class="container narrow article-body">
     <h2 id="sa-arbetar-vi">Vilka vi är och hur vi arbetar</h2>
     <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med kontor i Lissabon och Lagos och kunder i hela Portugal och i Spanien. Vi är registrerade hos den portugisiska tillsynsmyndigheten ASF (nr 425591790/3) och arbetar i Spanien med stöd av EU:s frihet att tillhandahålla tjänster.</p>

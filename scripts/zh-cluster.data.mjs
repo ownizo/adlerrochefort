@@ -47,6 +47,11 @@ import { MOTOR_ES_PAGE } from './zh-content/motor-spain.mjs';
 import { LIABILITY_ES_PAGE } from './zh-content/liability-spain.mjs';
 import { PROPERTY_ES_PAGE } from './zh-content/property-spain.mjs';
 
+// Golf and nautical pillar articles (September 2026), cluster keys
+// 'golf' / 'nautical', paired by key with the other markets.
+import { GOLF_PAGE } from './zh-content/golf.mjs';
+import { NAUTICAL_PAGE } from './zh-content/nautical.mjs';
+
 export { LANG_POLICY_ZH, BREADCRUMB_ROOT } from './zh-content/shared.mjs';
 
 export const PAGES = [
@@ -64,6 +69,8 @@ export const PAGES = [
   MOTOR_ES_PAGE,
   LIABILITY_ES_PAGE,
   PROPERTY_ES_PAGE,
+  GOLF_PAGE,
+  NAUTICAL_PAGE,
 ];
 
 export const ZH_MARKET = {

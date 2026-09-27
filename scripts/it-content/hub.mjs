@@ -200,6 +200,14 @@ export const HUB_PAGE = {
         <h3><a href="/it/assicurazione-cyber-frode-famiglia/">Cyber, frodi e furto d’identità</a></h3>
         <p>Frodi sui bonifici durante l’acquisto di casa, estorsione informatica, furto d’identità e molestie online, con assistenza 24 ore su 24.</p>
       </li>
+      <li class="hub-item">
+        <h3><a href="/it/golf-ville-lusso-portogallo-spagna/">Golf e ville di lusso in Portogallo e in Spagna</a></h3>
+        <p>Dal Triangolo d’Oro dell’Algarve a Valderrama e La Zagaleta: i grandi percorsi, le comunità che li circondano e come proteggere la villa.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/it/marine-yacht-portogallo-spagna/">Marine e yacht in Portogallo e in Spagna</a></h3>
+        <p>Da Palma e Puerto Banús a Vilamoura, Cascais e Horta: le marine, le case sul mare e come proteggere lo yacht.</p>
+      </li>
     </ul>
   </div>
 </section>
@@ -292,5 +300,7 @@ export const HUB_PAGE = {
   related: [
     { url: '/it/trasferirsi-in-portogallo-assicurazioni/', label: 'Trasferirsi in Portogallo: le assicurazioni nell’ordine giusto' },
     { url: '/it/guida-assicurazioni-portogallo/', label: 'Guida alle assicurazioni in Portogallo' },
+    { url: '/it/golf-ville-lusso-portogallo-spagna/', label: 'Golf e ville di lusso in Portogallo e in Spagna' },
+    { url: '/it/marine-yacht-portogallo-spagna/', label: 'Marine e yacht in Portogallo e in Spagna' },
   ],
 };

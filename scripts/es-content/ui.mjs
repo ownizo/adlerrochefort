@@ -69,6 +69,9 @@ export const ES_BRANCHES = [
   { value: 'Español · Caballos', label: 'Caballos, cuadras e instalaciones ecuestres', legend: 'Caballos', fields: [] },
   { value: 'Español · Aviación privada', label: 'Aviación privada: aviones, helicópteros y drones', legend: 'Aviación privada', fields: [] },
   { value: 'Español · Ciberriesgo y fraude', label: 'Ciberriesgo, fraude e identidad de la familia', legend: 'Ciberriesgo y fraude', fields: [] },
+  // Pillar articles: golf communities and the sea (yacht + waterfront home).
+  { value: 'Español · Vivienda de golf', label: 'Vivienda en una comunidad de golf', legend: 'Vivienda de golf', fields: [] },
+  { value: 'Español · Yate y vivienda frente al mar', label: 'Yate, embarcación y vivienda frente al mar', legend: 'Yate y vivienda frente al mar', fields: [] },
 ];
 
 export const ES_UI = {

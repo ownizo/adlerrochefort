@@ -65,9 +65,27 @@ export const SPAIN_EXTERNAL = {
   'es-property': { '/en/blog/insurance-buying-property-spain/': 'en-GB', '/de/immobilienkauf-spanien-versicherung/': 'de', '/nl/huis-kopen-spanje-verzekering/': 'nl' },
 };
 
+/** Golf and nautical pillars (September 2026): hand-authored PT/EN/DE/FR/NL members. */
+export const GOLF_NAUTICAL_EXTERNAL = {
+  golf: {
+    '/blog/golfe-casas-alto-valor-portugal-espanha/': 'pt-PT',
+    '/en/blog/golf-homes-portugal-spain/': 'en-GB',
+    '/de/blog/golf-immobilien-portugal-spanien/': 'de',
+    '/fr/golf-residences-portugal-espagne/': 'fr',
+    '/nl/golf-woningen-portugal-spanje/': 'nl',
+  },
+  nautical: {
+    '/blog/marinas-iates-portugal-espanha/': 'pt-PT',
+    '/en/blog/marinas-yachts-portugal-spain/': 'en-GB',
+    '/de/blog/marinas-yachten-portugal-spanien/': 'de',
+    '/fr/ports-plaisance-yachts-portugal-espagne/': 'fr',
+    '/nl/jachthavens-jachten-portugal-spanje/': 'nl',
+  },
+};
+
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL }).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL }).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
 );
 
 /** clusterKey -> { path: hreflangValue }, derived from the page objects. */
@@ -82,7 +100,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL })) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');
