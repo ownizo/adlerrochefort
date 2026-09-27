@@ -11,7 +11,7 @@
  * narrower than a Danish grundejerforening's), and seismic risk is a cover
  * decision Denmark never has to make.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const HOME_PAGE = {
   slug: 'husforsikring-portugal',
@@ -27,7 +27,7 @@ export const HOME_PAGE = {
   standfirst:
     'En villa eller et byhus af høj værdi skal forsikres på betingelser, der er skrevet til netop den slags bolig: besigtigelse, genopførelse uden loft, indbo og kunst til aftalt værdi og ansvar i millionklassen. Her er, hvad vi lægger vægt på — og det portugisiske grundlag, det hviler på.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Husforsikring' }],
   pullquote: 'Forsikringssummen afgør erstatningen. Derfor fastlægges den først — og skriftligt.',
   schemaType: 'Article',
@@ -76,7 +76,7 @@ export const HOME_PAGE = {
         <div class="contact-form-field"><label for="dk-hab-capital-edificio">Forsikringssum bygning (€) *</label><input type="number" id="dk-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
         <div class="contact-form-field"><label for="dk-hab-capital-conteudo">Forsikringssum indbo (€) *</label><input type="number" id="dk-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="policen">
   <div class="container narrow article-body">
     <h2 id="policen">Én police, to dele</h2>
@@ -338,7 +338,7 @@ export const HOME_PAGE = {
       <li><div><strong>Selvrisikoen</strong><span> er kendt pr. dækning — og du ved, om den er et beløb eller en procent.</span></div></li>
     </ol>
   </div>
-</section>`,
+</section>`, toSpain.home),
   faqTitle: 'Husforsikring i Portugal — spørgsmål',
   faq: [
     {
@@ -371,6 +371,7 @@ export const HOME_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/husforsikring-spanien/', label: 'Husforsikring i Spanien' },
     { url: '/dk/kobe-bolig-i-portugal-forsikring/', label: 'Købe bolig i Portugal: forsikring trin for trin' },
     { url: '/dk/ansvarsforsikring-portugal/', label: 'Ansvarsforsikring i Portugal' },
   ],

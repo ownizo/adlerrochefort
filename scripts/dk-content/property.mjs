@@ -10,7 +10,7 @@
  * insurance requirement is met by a policy the buyer chooses — not
  * necessarily the bank's own.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const PROPERTY_PAGE = {
   slug: 'kobe-bolig-i-portugal-forsikring',
@@ -26,7 +26,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Ved et portugisisk boligkøb kommer forsikringsspørgsmålet som regel til sidst, når alt andet er afgjort — og på det tidspunkt står banken allerede med et forslag. Her er, hvad der gælder hvornår, og hvilke beslutninger der er dine.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Købe bolig i Portugal' }],
   pullquote: 'Banken har en legitim interesse i, at boligen er forsikret. Hvilket selskab der skriver policen, er et andet spørgsmål.',
   schemaType: 'Article',
@@ -38,7 +38,7 @@ export const PROPERTY_PAGE = {
     'Fortæl, hvor i handlen du er, og hvad det er for en ejendom. Vi vender skriftligt tilbage med, hvad der skal være klar til dagen for escritura.',
   formPlaceholder:
     'For eksempel: villa med pool i Comporta, kontrakt underskrevet, escritura i november, kunst og møbler flyttes fra Danmark.',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="tidslinje">
   <div class="container narrow article-body">
     <h2 id="tidslinje">Hvad der gælder hvornår</h2>
@@ -137,7 +137,7 @@ export const PROPERTY_PAGE = {
       <li><div><strong>Se summen efter én gang om året</strong><span> — byggeomkostningerne flytter sig, og indeksklausulen i policen følger ikke altid virkeligheden.</span></div></li>
     </ol>
   </div>
-</section>`,
+</section>`, toSpain.property),
   faqTitle: 'Købe bolig i Portugal — spørgsmål om forsikring',
   faq: [
     {
@@ -166,6 +166,7 @@ export const PROPERTY_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/kobe-bolig-i-spanien-forsikring/', label: 'Købe bolig i Spanien: forsikring trin for trin' },
     { url: '/dk/husforsikring-portugal/', label: 'Husforsikring i Portugal' },
     { url: '/dk/forsikringsguide-portugal/', label: 'Forsikringsguide til Portugal' },
   ],

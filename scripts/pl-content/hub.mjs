@@ -30,7 +30,7 @@ export const HUB_PAGE = {
   standfirst:
     'Rezydencje, sztuka i kolekcje, odpowiedzialność cywilna i ochrona rodziny — w Portugalii i Hiszpanii. Indywidualna ocena ryzyka, rekomendacja na piśmie i jeden doradca — od pierwszego kontaktu do likwidacji szkody.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [{ name: 'Strona główna', url: '/pl/' }],
   pullquote:
     'Powyżej pewnej wartości pytanie nie brzmi już, czy jest się ubezpieczonym. Brzmi: czy polisa została napisana dla tego, co Państwo posiadają.',
@@ -85,9 +85,10 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="ubezpieczenia">
+<section class="section plain" aria-labelledby="portugalia">
   <div class="container narrow">
-    <h2 id="ubezpieczenia">Co chronimy</h2>
+    <span class="eyebrow">Ubezpieczenia w Portugalii</span>
+    <h2 id="portugalia">Portugalia</h2>
     <p>Każde ryzyko oceniane indywidualnie, a cały majątek gospodarstwa domowego — domy, kolekcje, samochody, odpowiedzialność cywilna i zdrowie — przeglądany razem, żeby luka w jednej polisie nie ukryła się za datą innej.</p>
     <ul class="hub-list">
       <li class="hub-item">
@@ -110,8 +111,60 @@ export const HUB_PAGE = {
         <h3><a href="/pl/ubezpieczenie-samochodu-portugalia/">Samochody</a></h3>
         <p>Obowiązkowe OC po portugalsku, odpowiednik AC, samochody o wysokiej wartości, przerejestrowanie i ISV oraz historia szkodowa z Polski.</p>
       </li>
+      <li class="hub-item">
+        <h3><a href="/pl/przeprowadzka-do-portugalii-ubezpieczenia/">Przeprowadzka do Portugalii</a></h3>
+        <p>Kolejność działań: co ustawić przed wyjazdem, co dopiero po uzyskaniu NIF, i gdzie najczęściej powstaje luka w ochronie.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/">Zakup nieruchomości w Portugalii</a></h3>
+        <p>Czego wymaga bank przy kredycie hipotecznym, jak ustalić wartość odbudowy i dlaczego data rozpoczęcia ochrony to dzień <em>escritura</em>.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenia-portugalia-przewodnik/">Przewodnik po ubezpieczeniach w Portugalii</a></h3>
+        <p>Całość w jednym miejscu: pojęcia, dokumenty, terminy, zgłaszanie szkody i pytania, które warto zadać każdemu agentowi.</p>
+      </li>
     </ul>
-    <h3 id="ochrona-specjalistyczna">Ochrona specjalistyczna</h3>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="hiszpania">
+  <div class="container narrow">
+    <span class="eyebrow">Ubezpieczenia w Hiszpanii</span>
+    <h2 id="hiszpania">Hiszpania</h2>
+    <p>Costa Blanca i Alicante, Costa del Sol, Wyspy Kanaryjskie, Barcelona i Walencja. Ten sam standard i ten sam doradca, ale hiszpańskie realia: Consorcio de Compensación de Seguros, <em>comunidad de propietarios</em>, rejestracja obywatela UE i polisy wystawiane po hiszpańsku.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenia-hiszpania-przewodnik/">Przewodnik po ubezpieczeniach w Hiszpanii</a></h3>
+        <p>Czym hiszpański rynek różni się od polskiego i portugalskiego, ryzyka regionalne i to, jak pracujemy w Hiszpanii.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-domu-hiszpania/">Dom i rezydencja w Hiszpanii</a></h3>
+        <p>Koszt odbudowy, Consorcio, polisa wspólnoty, dom używany część roku, sztuka i kolekcje, wynajem i licencje regionalne.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-zdrowotne-hiszpania/">Ubezpieczenie zdrowotne w Hiszpanii</a></h3>
+        <p>Publiczna opieka, S1 i EKUZ, rejestracja pobytu, plany krajowe i międzynarodowe dla rodziny.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-samochodu-hiszpania/">Samochód w Hiszpanii</a></h3>
+        <p>Obowiązkowe OC, <em>todo riesgo</em>, przerejestrowanie auta z Polski, prawo jazdy i historia szkodowa.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/">Odpowiedzialność cywilna rodziny w Hiszpanii</a></h3>
+        <p>Limity z polisy domowej a program na miliony euro — basen, personel domowy, psy, łodzie, wynajem.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/pl/zakup-nieruchomosci-w-hiszpanii-ubezpieczenie/">Zakup nieruchomości w Hiszpanii</a></h3>
+        <p>Umowa <em>arras</em>, notariusz i rejestr, czego może wymagać bank i ochrona od dnia podpisania aktu.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="ochrona-specjalistyczna">
+  <div class="container narrow">
+    <span class="eyebrow">Portugalia i Hiszpania</span>
+    <h2 id="ochrona-specjalistyczna">Ochrona specjalistyczna</h2>
     <p>Ryzyka, których nie obejmie żadna polisa domowa — w Portugalii i w Hiszpanii, lokowane na rynkach specjalistycznych i przez partnerów co-brokerage.</p>
     <ul class="hub-list">
       <li class="hub-item">
@@ -146,27 +199,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="przewodniki">
-  <div class="container narrow">
-    <h2 id="przewodniki">Przewodniki na trzy najczęstsze momenty</h2>
-    <ul class="hub-list">
-      <li class="hub-item">
-        <h3><a href="/pl/przeprowadzka-do-portugalii-ubezpieczenia/">Przeprowadzka do Portugalii</a></h3>
-        <p>Kolejność działań: co ustawić przed wyjazdem, co dopiero po uzyskaniu NIF, i gdzie najczęściej powstaje luka w ochronie.</p>
-      </li>
-      <li class="hub-item">
-        <h3><a href="/pl/zakup-nieruchomosci-w-portugalii-ubezpieczenie/">Zakup nieruchomości</a></h3>
-        <p>Czego wymaga bank przy kredycie hipotecznym, jak ustalić wartość odbudowy i dlaczego data rozpoczęcia ochrony to dzień <em>escritura</em>.</p>
-      </li>
-      <li class="hub-item">
-        <h3><a href="/pl/ubezpieczenia-portugalia-przewodnik/">Przewodnik po ubezpieczeniach w Portugalii</a></h3>
-        <p>Całość w jednym miejscu: pojęcia, dokumenty, terminy, zgłaszanie szkody i pytania, które warto zadać każdemu agentowi.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section plain" aria-labelledby="jak-pracujemy">
+<section class="section tint" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
     <p>Adler &amp; Rochefort to marka handlowa spółki Ownizo, Unipessoal Lda. — pośrednika ubezpieczeniowego dla klientów prywatnych o znacznym majątku. Mamy biura w Lizbonie i Lagos, a klientów w całej Portugalii i w Hiszpanii, gdzie działamy w ramach unijnej swobody świadczenia usług, pod jednym wpisem ASF nr 425591790/3. Nie mamy umowy na wyłączność z żadnym ubezpieczycielem i doradzamy w ramach portfela ubezpieczycieli, z którymi współpracujemy.</p>
@@ -181,7 +214,7 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="bledy">
+<section class="section plain" aria-labelledby="bledy">
   <div class="container narrow article-body">
     <h2 id="bledy">Pięć błędów, które widzimy najczęściej</h2>
     <ul>
@@ -226,7 +259,7 @@ export const HUB_PAGE = {
     },
     {
       q: 'Czy obsługują Państwo także nieruchomości w Hiszpanii?',
-      a: '<p>Tak. W Hiszpanii działamy w ramach unijnej swobody świadczenia usług, pod tym samym wpisem ASF nr 425591790/3, z ubezpieczycielami uprawnionymi do działania na tamtejszym rynku. Rodziny, które mają domy po obu stronach granicy, prowadzi jeden doradca, według jednego standardu.</p>',
+      a: '<p>Tak. W Hiszpanii działamy w ramach unijnej swobody świadczenia usług, pod tym samym wpisem ASF nr 425591790/3, z ubezpieczycielami uprawnionymi do działania na tamtejszym rynku. Rodziny, które mają domy po obu stronach granicy, prowadzi jeden doradca, według jednego standardu. Szczegóły w <a href="/pl/ubezpieczenia-hiszpania-przewodnik/">przewodniku po ubezpieczeniach w Hiszpanii</a>.</p>',
     },
     {
       q: 'Jakie dokumenty będą potrzebne?',
@@ -235,6 +268,7 @@ export const HUB_PAGE = {
   ],
   related: [
     { url: '/pl/ubezpieczenia-portugalia-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Portugalii' },
+    { url: '/pl/ubezpieczenia-hiszpania-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Hiszpanii' },
     { url: '/pl/przeprowadzka-do-portugalii-ubezpieczenia/', label: 'Przeprowadzka do Portugalii: ubezpieczenia krok po kroku' },
   ],
 };

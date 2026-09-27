@@ -10,7 +10,7 @@
  * and the page says plainly that we do not advise on Portuguese company
  * registration or on whether a policy satisfies a legal requirement.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const LIABILITY_PAGE = {
   slug: 'ansvarsforsikring-portugal',
@@ -26,7 +26,7 @@ export const LIABILITY_PAGE = {
   standfirst:
     'En tingskade har et loft — værdien af det, du ejer. Et erstatningskrav har ikke. I Danmark lå ansvarsforsikringen inde i indboet; i Portugal skal den vælges, og summen skal passe til husstanden. Erhvervsansvar er en helt selvstændig police.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsforsikring' }],
   pullquote: 'Alle andre dele af policen er begrænset af værdien af noget, du ejer. Ansvaret er kun begrænset af den sum, du har valgt.',
   schemaType: 'Article',
@@ -46,7 +46,7 @@ export const LIABILITY_PAGE = {
     fieldsHtml: `        <div class="contact-form-field"><label for="dk-rcp-faturacao">Årlig omsætning *</label><input type="number" id="dk-rcp-faturacao" name="faturacao_anual" placeholder="F.eks. 85000" required></div>
         <p class="wizard-helper">Aktivitetstype, ønsket forsikringssum, og om policen kræves i henhold til en kontrakt eller en brancheorganisation, gennemgår vi i den kontakt, der følger. Gælder forespørgslen kun familiens privatansvar, kan du angive 0 og beskrive husstanden i korrespondancen.</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="familie">
   <div class="container narrow article-body">
     <h2 id="familie">Familiens ansvar: det, policen skal kunne</h2>
@@ -136,7 +136,7 @@ export const LIABILITY_PAGE = {
       <li><div><strong>Ønsket ansvarssum</strong><span>, ofte styret af, hvad kundekontrakterne kræver.</span></div></li>
     </ol>
   </div>
-</section>`,
+</section>`, toSpain.liability),
   faqTitle: 'Ansvarsforsikring i Portugal — spørgsmål',
   faq: [
     {
@@ -173,6 +173,7 @@ export const LIABILITY_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/ansvarsforsikring-spanien/', label: 'Ansvarsforsikring i Spanien' },
     { url: '/dk/forsikringsguide-portugal/', label: 'Forsikringsguide til Portugal' },
     { url: '/dk/husforsikring-portugal/', label: 'Husforsikring i Portugal' },
   ],

@@ -38,6 +38,14 @@ import { LIABILITY_PAGE } from './zh-content/liability.mjs';
 import { MOVING_PAGE } from './zh-content/moving.mjs';
 import { PROPERTY_PAGE } from './zh-content/property.mjs';
 import { GUIDE_PAGE } from './zh-content/guide.mjs';
+// Spain cluster (September 2026) — cluster keys es-*, paired by key with the
+// other generated markets and (via the main integration) EN/DE/NL.
+import { GUIDE_ES_PAGE } from './zh-content/guide-spain.mjs';
+import { HOME_ES_PAGE } from './zh-content/home-spain.mjs';
+import { HEALTH_ES_PAGE } from './zh-content/health-spain.mjs';
+import { MOTOR_ES_PAGE } from './zh-content/motor-spain.mjs';
+import { LIABILITY_ES_PAGE } from './zh-content/liability-spain.mjs';
+import { PROPERTY_ES_PAGE } from './zh-content/property-spain.mjs';
 
 export { LANG_POLICY_ZH, BREADCRUMB_ROOT } from './zh-content/shared.mjs';
 
@@ -50,6 +58,12 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  GUIDE_ES_PAGE,
+  HOME_ES_PAGE,
+  HEALTH_ES_PAGE,
+  MOTOR_ES_PAGE,
+  LIABILITY_ES_PAGE,
+  PROPERTY_ES_PAGE,
 ];
 
 export const ZH_MARKET = {

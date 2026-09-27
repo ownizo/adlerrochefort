@@ -10,7 +10,7 @@
  * named only to help the reader place ASF and livro de reclamações — not as
  * claims about how Danish bodies operate.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const GUIDE_PAGE = {
   slug: 'forsikringsguide-portugal',
@@ -26,7 +26,7 @@ export const GUIDE_PAGE = {
   standfirst:
     'Denne side forklarer ikke de enkelte produkter, men systemet de ligger i: hvem aktørerne er, hvad der står i en portugisisk police, hvilke begreber der afgør erstatningen, og hvordan en skadesag faktisk forløber.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Forsikringsguide' }],
   pullquote: 'En police bedømmes ikke den dag, den tegnes, men den dag, den skal betale.',
   schemaType: 'Article',
@@ -38,7 +38,7 @@ export const GUIDE_PAGE = {
     'Ved du ikke, hvilket produkt spørgsmålet handler om, er det ingen ulempe. Beskriv situationen, og vi finder ud af, hvad der er relevant.',
   formPlaceholder:
     'For eksempel: vi har haft en police gennem en portugisisk bank i fire år og ved ikke, hvad den faktisk dækker.',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="aktoerer">
   <div class="container narrow article-body">
     <h2 id="aktoerer">Aktørerne, og hvem der gør hvad</h2>
@@ -157,7 +157,7 @@ export const GUIDE_PAGE = {
       </li>
     </ul>
   </div>
-</section>`,
+</section>`, toSpain.guide),
   faqTitle: 'Forsikring i Portugal — generelle spørgsmål',
   faq: [
     {
@@ -186,6 +186,7 @@ export const GUIDE_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/forsikring-spanien/', label: 'Forsikring i Spanien: overblik' },
     { url: '/dk/husforsikring-portugal/', label: 'Husforsikring i Portugal' },
     { url: '/dk/flytte-til-portugal-forsikring/', label: 'Flytte til Portugal: forsikringerne i rigtig rækkefølge' },
   ],

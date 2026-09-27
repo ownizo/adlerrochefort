@@ -51,6 +51,12 @@ import { LIABILITY_PAGE } from './il-content/liability.mjs';
 import { MOVING_PAGE } from './il-content/moving.mjs';
 import { PROPERTY_PAGE } from './il-content/property.mjs';
 import { GUIDE_PAGE } from './il-content/guide.mjs';
+import { ES_GUIDE_PAGE } from './il-content/es-guide.mjs';
+import { ES_HOME_PAGE } from './il-content/es-home.mjs';
+import { ES_HEALTH_PAGE } from './il-content/es-health.mjs';
+import { ES_MOTOR_PAGE } from './il-content/es-motor.mjs';
+import { ES_LIABILITY_PAGE } from './il-content/es-liability.mjs';
+import { ES_PROPERTY_PAGE } from './il-content/es-property.mjs';
 
 export { LANG_POLICY_IL, BREADCRUMB_ROOT } from './il-content/shared.mjs';
 
@@ -63,6 +69,14 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  // Spain cluster (September 2026). Slugs and `es-*` cluster keys are the
+  // fixed set shared with the other markets, so hreflang pairs by key.
+  ES_GUIDE_PAGE,
+  ES_HOME_PAGE,
+  ES_HEALTH_PAGE,
+  ES_MOTOR_PAGE,
+  ES_LIABILITY_PAGE,
+  ES_PROPERTY_PAGE,
 ];
 
 export const IL_MARKET = {

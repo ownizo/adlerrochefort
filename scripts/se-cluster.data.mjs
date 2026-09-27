@@ -21,6 +21,13 @@ import { LIABILITY_PAGE } from './se-content/liability.mjs';
 import { MOVING_PAGE } from './se-content/moving.mjs';
 import { PROPERTY_PAGE } from './se-content/property.mjs';
 import { GUIDE_PAGE } from './se-content/guide.mjs';
+// Spain cluster (cluster keys es-*), paired by key with the other markets.
+import { ES_GUIDE_PAGE } from './se-content/es-guide.mjs';
+import { ES_HOME_PAGE } from './se-content/es-home.mjs';
+import { ES_HEALTH_PAGE } from './se-content/es-health.mjs';
+import { ES_MOTOR_PAGE } from './se-content/es-motor.mjs';
+import { ES_LIABILITY_PAGE } from './se-content/es-liability.mjs';
+import { ES_PROPERTY_PAGE } from './se-content/es-property.mjs';
 
 export { LANG_POLICY_SE, BREADCRUMB_ROOT } from './se-content/shared.mjs';
 
@@ -33,6 +40,12 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  ES_GUIDE_PAGE,
+  ES_HOME_PAGE,
+  ES_HEALTH_PAGE,
+  ES_MOTOR_PAGE,
+  ES_LIABILITY_PAGE,
+  ES_PROPERTY_PAGE,
 ];
 
 export const SE_MARKET = {

@@ -11,7 +11,7 @@
  * worth more at home than here — so selling before the move is often the
  * better arithmetic. Acceptance statements are hedged.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const MOTOR_PAGE = {
   slug: 'bilforsikring-portugal',
@@ -27,7 +27,7 @@ export const MOTOR_PAGE = {
   standfirst:
     'Spørgsmålet er sjældent, om du må tage bilen med, men om det giver mening — og hvordan du undgår hullet mellem dansk og portugisisk indregistrering. Her er begge dele, uden løfter intet selskab kan give.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilforsikring' }],
   pullquote: 'Dækningen skal løbe videre, mens nummerpladen skifter — ikke bagefter.',
   schemaType: 'Article',
@@ -47,7 +47,7 @@ export const MOTOR_PAGE = {
         <div class="contact-form-field"><label for="dk-auto-carta">Kørekortets udstedelsesdato *</label><input type="date" id="dk-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="dk-auto-carta-idade-info" hidden>Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="daekning">
   <div class="container narrow article-body">
     <h2 id="daekning">Ansvar, delkasko, kasko — og hvordan Portugal deler op</h2>
@@ -135,7 +135,7 @@ export const MOTOR_PAGE = {
     </ol>
     <p>Har du ikke blanketten i bilen: dokumentér alligevel alt med billeder og noter, og kontakt os samme dag.</p>
   </div>
-</section>`,
+</section>`, toSpain.motor),
   faqTitle: 'Bilforsikring i Portugal — spørgsmål',
   faq: [
     {
@@ -164,6 +164,7 @@ export const MOTOR_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/bilforsikring-spanien/', label: 'Bilforsikring i Spanien' },
     { url: '/dk/flytte-til-portugal-forsikring/', label: 'Flytte til Portugal: forsikringerne i rigtig rækkefølge' },
     { url: '/dk/husforsikring-portugal/', label: 'Husforsikring i Portugal' },
   ],

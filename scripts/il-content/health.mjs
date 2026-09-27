@@ -42,7 +42,7 @@
  * Israeli entitlement rules here would be exactly the kind of confident error
  * the brief rules out.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const HEALTH_PAGE = {
   slug: 'health-insurance-portugal',
@@ -58,7 +58,7 @@ export const HEALTH_PAGE = {
   standfirst:
     'המערכת בפורטוגל בנויה אחרת ממה שמכירים מישראל: אין בחירה בין קופות, אין שכבת שב״ן, וביטוח פרטי הוא שוק מסחרי נפרד עם חיתום ותקופות המתנה משלו. משפחה שחיה בין כמה מדינות צריכה לרוב תוכנית בין־לאומית ולא רק מקומית. הנה מה כל אחת עושה, מה לא, ומה קובע אם תתקבלו.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'ביטוח בריאות פרטי', url: '/il/health-insurance-portugal/' }],
   pullquote:
     'ביטוח בריאות פרטי הוא מוצר בריאות. הוא לא מסמך הגירה, ואין להתייחס אליו כאל אחד.',
@@ -88,7 +88,7 @@ export const HEALTH_PAGE = {
           <button type="button" class="wizard-nav-back" data-persons-add>+ הוספת מבוטח</button>
         </div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="shalosh-shchavot">
   <div class="container narrow article-body">
     <h2 id="shalosh-shchavot">שלוש שכבות — אבל לא אותן שלוש שכבות</h2>
@@ -213,7 +213,10 @@ export const HEALTH_PAGE = {
     <p>תוכנית בין־לאומית מכסה את המבוטחים באזור שנבחר — אירופה, העולם כולו, או העולם למעט ארצות הברית — עם בחירה חופשית של רופאים ובתי חולים, לרוב בהסדר תשלום ישיר מול בתי החולים הגדולים. היא ממשיכה בדרך כלל ללוות את המשפחה גם כשהיא עוברת מדינה, בלי חיתום מחדש, והיא נמכרת ומנוהלת בדרך כלל באנגלית. מנגד, החיתום בכניסה מלא, והפרמיה משקפת את האזור ואת היקף הכיסוי.</p>
     <p>הדרך שאנחנו עובדים: קודם לקבוע מה חייב להיות מכוסה ואיפה — בדרך כלל אשפוז וניתוחים הם הליבה, כי שם נמצא האירוע שאי אפשר לספוג — ורק אחר כך להשוות בין תוכניות שמכסות את אותו דבר, מקומיות ובין־לאומיות. לפעמים התשובה היא שילוב: תוכנית בין־לאומית לאירועים הגדולים, ותשלום ישיר על ביקורים מזדמנים. את ההמלצה ואת הנימוקים שלה תקבלו בכתב.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'גרים או מתכננים לגור בספרד?',
+    body: 'שם המערכת הציבורית אזורית, ולאשרת שהייה נדרש לעיתים ביטוח פרטי בתנאים מסוימים — <a href="/il/health-insurance-spain/">ביטוח בריאות בספרד</a>.',
+  }),
   faqTitle: 'ביטוח בריאות פרטי בפורטוגל: שאלות נפוצות',
   faq: [
     {
@@ -254,6 +257,7 @@ export const HEALTH_PAGE = {
     },
   ],
   related: [
+    { url: '/il/health-insurance-spain/', label: 'ביטוח בריאות בספרד' },
     { url: '/il/moving-to-portugal/', label: 'מעבר מישראל לפורטוגל: סדר הפעולות בביטוח' },
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל ושאלות נפוצות' },
     { url: '/il/', label: 'ביטוח בפורטוגל: המדריך לישראלים' },

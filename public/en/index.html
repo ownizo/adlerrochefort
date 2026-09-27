@@ -2666,6 +2666,13 @@
   .country-card .btn-primary { align-self: flex-start; margin-top: 4px; }
   .country-card-secondary { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ink2); text-decoration: none; margin-top: -4px; }
   .country-card-secondary:hover { color: var(--primary); }
+  .country-card-cluster { border-top: 1px solid var(--border); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .country-card-cluster-title { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink2); margin-top: 6px; }
+  .country-card-links { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; }
+  .country-card-links li { margin: 0; }
+  .country-card-links a { display: inline-block; padding: 3px 0; font-size: 14px; line-height: 1.45; font-weight: 600; color: var(--primary); text-decoration: none; }
+  .country-card-links a:hover { text-decoration: underline; }
+  @media (max-width: 420px) { .country-card-links { grid-template-columns: 1fr; } }
   @media (max-width: 760px) { .country-router-grid { grid-template-columns: 1fr; } .country-router { padding: 0 20px 48px; } }
 
   /* ═══════════════ PROTECT GRID — cross-market product categories ═══════════════ */
@@ -3168,6 +3175,27 @@
         <div class="country-card-products">
           <span>High-value homes</span><span>Art &amp; collections</span><span>Family liability</span><span>International health</span><span>Collector cars</span>
         </div>
+        <nav class="country-card-cluster" aria-label="Portugal">
+          <div class="country-card-cluster-title">Cover in Portugal</div>
+          <ul class="country-card-links">
+            <li><a href="/en/home-insurance-quote/">High-value homes</a></li>
+            <li><a href="/en/blog/family-liability-cover-portugal/">Family liability</a></li>
+            <li><a href="/en/international-health-insurance-portugal/">International health</a></li>
+            <li><a href="/en/health-insurance-quote/">Private health &amp; visas</a></li>
+            <li><a href="/en/car-insurance-portugal/">Car insurance</a></li>
+            <li><a href="/en/landlord-insurance-portugal/">Landlord &amp; letting</a></li>
+            <li><a href="/en/blog/insurance-buying-property-portugal/">Buying property</a></li>
+            <li><a href="/en/expat-insurance-portugal/">Insurance in Portugal: overview</a></li>
+          </ul>
+          <div class="country-card-cluster-title">Regional guides</div>
+          <ul class="country-card-links">
+            <li><a href="/en/blog/insuring-a-high-value-apartment-lisbon-cascais/">Lisbon &amp; Cascais</a></li>
+            <li><a href="/en/blog/home-insurance-sintra-cascais-villas/">Sintra</a></li>
+            <li><a href="/en/blog/home-insurance-comporta-melides/">Comporta &amp; Melides</a></li>
+            <li><a href="/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/">Algarve</a></li>
+            <li><a href="/en/blog/home-insurance-madeira/">Madeira</a></li>
+          </ul>
+        </nav>
         <a href="/en/private-clients/" class="btn-primary">Private clients in Portugal →</a>
         <a href="/en/expat-insurance-portugal/" class="country-card-secondary">Relocating to Portugal? Start here →</a>
       </div>
@@ -3178,6 +3206,24 @@
         <div class="country-card-products">
           <span>High-value homes</span><span>Art &amp; collections</span><span>Family liability</span><span>International health</span><span>Collector cars</span>
         </div>
+        <nav class="country-card-cluster" aria-label="Spain">
+          <div class="country-card-cluster-title">Cover in Spain</div>
+          <ul class="country-card-links">
+            <li><a href="/en/home-insurance-spain/">High-value homes</a></li>
+            <li><a href="/en/family-liability-insurance-spain/">Family liability</a></li>
+            <li><a href="/en/health-insurance-spain/">Health insurance</a></li>
+            <li><a href="/en/car-insurance-spain/">Car insurance</a></li>
+            <li><a href="/en/landlord-insurance-spain/">Landlord &amp; letting</a></li>
+            <li><a href="/en/blog/insurance-buying-property-spain/">Buying property</a></li>
+            <li><a href="/en/life-insurance-spain/">Life &amp; mortgage protection</a></li>
+            <li><a href="/en/expat-insurance-spain/">Insurance in Spain: overview</a></li>
+          </ul>
+          <div class="country-card-cluster-title">Regional content</div>
+          <ul class="country-card-links">
+            <li><a href="/en/private-clients-spain/#where">Madrid, Balearics, Costa del Sol and more</a></li>
+            <li><a href="/en/blog/high-value-home-insurance-spain/">High-value homes, region by region</a></li>
+          </ul>
+        </nav>
         <a href="/en/private-clients-spain/" class="btn-primary">Private clients in Spain →</a>
         <a href="/en/expat-insurance-spain/" class="country-card-secondary">Relocating to Spain? Start here →</a>
       </div>

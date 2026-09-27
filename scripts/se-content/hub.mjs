@@ -32,7 +32,7 @@ export const HUB_PAGE = {
   standfirst:
     'Bostäder, konst och samlingar, ansvar och familjens skydd — i Portugal och Spanien. Individuell riskbedömning, skriftlig rådgivning och en och samma rådgivare, från första kontakt till skadereglering.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-12T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [{ name: 'Startsida', url: '/se/' }],
   pullquote:
     'Ett värdefullt hem behöver villkor som är skrivna för det — inte en standardprodukt med ett högre belopp.',
@@ -112,7 +112,7 @@ export const HUB_PAGE = {
 
 <section class="section plain" aria-labelledby="ordlista">
   <div class="container narrow article-body">
-    <h2 id="ordlista">Sex ord som sparar mest tid</h2>
+    <h2 id="ordlista">Sex portugisiska ord som sparar mest tid</h2>
     <p>Försäkringsbrevet kommer på portugisiska — så säger lagen. Dessa sex ord återkommer i varje dokument:</p>
     <div class="compare-wrap">
       <table class="compare-table">
@@ -137,9 +137,10 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="forsakringar">
+<section class="section tint" aria-labelledby="portugal">
   <div class="container narrow">
-    <h2 id="forsakringar">Fyra försäkringar i detalj</h2>
+    <h2 id="portugal">Portugal</h2>
+    <p>Försäkringarna för ett hushåll i Portugal — från Lissabon och Cascais till Comporta och Algarve — och guider för flytten och bostadsköpet.</p>
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/se/hemforsakring-portugal/">Hemförsäkring för värdefulla bostäder</a></h3>
@@ -157,25 +158,50 @@ export const HUB_PAGE = {
         <h3><a href="/se/ansvarsforsakring-portugal/">Ansvarsförsäkring för familjen</a></h3>
         <p>Privat ansvar i miljonbelopp, gäster, hushållsanställda, pool och båt — och varför yrkesansvar är en egen försäkring.</p>
       </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section plain" aria-labelledby="guider">
-  <div class="container narrow">
-    <h2 id="guider">Guider för tre vanliga situationer</h2>
-    <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/se/flytta-till-portugal-forsakring/">Flytta till Portugal</a></h3>
         <p>Ordningen: vad som ska ordnas före utflyttningen, vad som kräver NIF och var glappen uppstår.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/se/kopa-hus-i-portugal-forsakring/">Köpa hus eller lägenhet</a></h3>
+        <h3><a href="/se/kopa-hus-i-portugal-forsakring/">Köpa hus eller lägenhet i Portugal</a></h3>
         <p>Vad banken kan kräva vid bolån, hur återuppbyggnadskostnaden räknas och varför försäkringen börjar på dagen för <em>escritura</em>.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/se/forsakringsguide-portugal/">Försäkringsguide för Portugal</a></h3>
         <p>Marknadens uppbyggnad, försäkringsbrevets delar, skadeanmälan, förnyelse och uppsägning — och frågorna att ställa varje förmedlare.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="spanien">
+  <div class="container narrow">
+    <h2 id="spanien">Spanien</h2>
+    <p>Samma genomgång för bostaden i Spanien — Costa del Sol, Costa Blanca, Mallorca och Kanarieöarna — där Consorcio, <em>comunidad</em> och regionala regler gör marknaden annorlunda.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/se/forsakring-spanien/">Försäkring i Spanien — översikt</a></h3>
+        <p>Hur den spanska marknaden är uppbyggd, vad som skiljer den från den svenska och portugisiska, och hur vi arbetar i Spanien.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/hemforsakring-spanien/">Hemförsäkring i Spanien</a></h3>
+        <p>Consorcio vid översvämning och jordskalv, <em>comunidad</em>-försäkringen, tomma perioder, turistuthyrning och private client-villkor.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/sjukvardsforsakring-spanien/">Sjukvårdsförsäkring i Spanien</a></h3>
+        <p>Offentlig vård, S1 för pensionärer, EU-kortet, kravet på sjukvårdsskydd vid registrering och internationella planer.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/bilforsakring-spanien/">Bilförsäkring i Spanien</a></h3>
+        <p>Obligatorisk försäkring, svensk bil till spanska skyltar, körkortet, skadefri tid och samlarbilar.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/ansvarsforsakring-spanien/">Ansvarsförsäkring för familjen i Spanien</a></h3>
+        <p>Beloppen i hemförsäkringen, familjeansvar i miljonbelopp, pool, anställda, hund, båt och uthyrning.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/se/kopa-hus-i-spanien-forsakring/">Köpa hus i Spanien</a></h3>
+        <p><em>Arras</em>, notarie och registrering, bankens försäkringskrav och rätt försäkringsbelopp från dagen för <em>escritura</em>.</p>
       </li>
     </ul>
   </div>
@@ -247,5 +273,6 @@ export const HUB_PAGE = {
   related: [
     { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide för Portugal' },
     { url: '/se/flytta-till-portugal-forsakring/', label: 'Flytta till Portugal: försäkringar i rätt ordning' },
+    { url: '/se/forsakring-spanien/', label: 'Försäkring i Spanien' },
   ],
 };

@@ -29,7 +29,7 @@
  * insurer's decision per case. The page says what document to ask for and
  * sets the expectation honestly rather than promising a discount.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const MOTOR_PAGE = {
   slug: 'car-insurance-portugal',
@@ -45,7 +45,7 @@ export const MOTOR_PAGE = {
   standfirst:
     'המילה "חובה" מתארת כאן משהו אחר ממה שהיא מתארת בישראל, וזה ההבדל שכדאי להבין ראשון. הנה מה כוללת שכבת החובה, מה מוסיף מקיף, ומה נכנס לתמונה כשקונים רכב כאן או מייבאים אחד.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'ביטוח רכב', url: '/il/car-insurance-portugal/' }],
   pullquote:
     'שכבת החובה בפורטוגל מכסה את מי שנפגע מכם. את הרכב שלכם היא לא מכסה בכלל.',
@@ -69,7 +69,7 @@ export const MOTOR_PAGE = {
         <div class="contact-form-field"><label for="il-auto-carta">תאריך הנפקת רישיון הנהיגה *</label><input type="date" id="il-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="il-auto-carta-idade-info" hidden>זה לפני יום ההולדת ה־16 של המבוטח — אנחנו נקבל את זה בכל זאת, אבל כדאי לוודא שהתאריך נכון.</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="hova-shona">
   <div class="container narrow article-body">
     <h2 id="hova-shona">"חובה" כאן זה לא "חובה" שם</h2>
@@ -160,7 +160,10 @@ export const MOTOR_PAGE = {
     <p>שני דברים שכדאי לדעת לפני שצריך אותם. הראשון: בפורטוגל יש טופס הצהרה משותפת לתאונה — <em dir="ltr">Declaração Amigável de Acidente Automóvel</em> — שממלאים שני הנהגים במקום וחותמים עליו. הוא שקול פחות או יותר למה שאתם מכירים כטופס הודעה על תאונה, אבל הוא דו־צדדי, והוא המסמך שמזרז יותר מכל דבר אחר את הטיפול בתביעה. כדאי להחזיק עותק בתא הכפפות. אם אתם לא קוראים פורטוגזית — הטופס בנוי כטבלה עם שדות סטנדרטיים, ואנחנו יכולים לעבור עליו איתכם מראש כדי שתדעו מה ממלאים.</p>
     <p>השני: <strong>אין לחתום על סעיף שמייחס לכם אחריות אם אינכם מסכימים לו.</strong> הטופס כולל שרטוט וסימון נסיבות, והוא נקרא בהמשך כעדות. אם יש מחלוקת — מתעדים, מצלמים, ומציינים בטופס שאין הסכמה, במקום לחתום כדי לסיים את האירוע מהר. ובכל מקרה, למועד הדיווח למבטח יש תקופה קצובה שכתובה בפוליסה, והיא בדרך כלל קצרה.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'יש לכם גם רכב בספרד?',
+    body: 'שם לישראל אין הסכם החלפת רישיונות, והרישום שונה — <a href="/il/car-insurance-spain/">ביטוח רכב בספרד</a>.',
+  }),
   faqTitle: 'ביטוח רכב בפורטוגל: שאלות נפוצות',
   faq: [
     {
@@ -197,6 +200,7 @@ export const MOTOR_PAGE = {
     },
   ],
   related: [
+    { url: '/il/car-insurance-spain/', label: 'ביטוח רכב בספרד' },
     { url: '/il/moving-to-portugal/', label: 'מעבר מישראל לפורטוגל: סדר הפעולות בביטוח' },
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל ושאלות נפוצות' },
     { url: '/il/liability-insurance-portugal/', label: 'ביטוח אחריות אזרחית בפורטוגל' },

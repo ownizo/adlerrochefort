@@ -39,7 +39,7 @@ export const HUB_PAGE = {
   standfirst:
     '住宅、艺术品与收藏、民事责任与家庭保障，覆盖葡萄牙与西班牙。逐一核保，书面建议，从首次联系到理赔，始终由同一位顾问负责。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [{ name: '首页', url: '/zh/' }],
   pullquote:
     '一份保单真正的价值，要到理赔那一天才看得出来——看的是条款写了什么，以及那时有没有人站在您这一边。',
@@ -92,34 +92,27 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="si-lei-baoxian">
+<section class="section plain" aria-labelledby="putaoya">
   <div class="container narrow">
-    <h2 id="si-lei-baoxian">四类核心保障</h2>
+    <h2 id="putaoya">葡萄牙</h2>
+    <p>在葡萄牙生活、置业或准备迁居：四类核心保障与三份按情形写的指南。</p>
     <ul class="hub-list">
       <li class="hub-item">
-        <h3><a href="/zh/home-insurance-portugal/">高价值房屋与财产保险</a></h3>
+        <h3><a href="/zh/home-insurance-portugal/">葡萄牙高价值房屋保险</a></h3>
         <p>现场查勘与重建费用、取消比例赔付、贵重物品与收藏的约定价值、<em>condomínio</em> 公共保险覆盖到哪里、水渍与地震风险、第二居所与空置条件。</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/zh/health-insurance-portugal/">国际私人医疗保险</a></h3>
+        <h3><a href="/zh/health-insurance-portugal/">葡萄牙国际私人医疗保险</a></h3>
         <p>为全家安排的国际医疗、SNS 公立体系与私人保险如何并行、医疗网络与报销型的差别、等待期、健康核保、既往症与家庭保单。</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/zh/car-insurance-portugal/">汽车保险</a></h3>
+        <h3><a href="/zh/car-insurance-portugal/">葡萄牙汽车保险</a></h3>
         <p>强制第三者责任与全险的实际差别、较高价值车辆、车辆进口与驾照问题，以及海外的出险记录能不能被采用。</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/zh/liability-insurance-portugal/">民事责任保险</a></h3>
+        <h3><a href="/zh/liability-insurance-portugal/">葡萄牙民事责任保险</a></h3>
         <p>家庭个人责任（<em>Responsabilidade Civil</em>）：数百万欧元保额、全球范围、抗辩费用另计，涵盖家政人员、访客、泳池与船艇；职业责任另行安排。</p>
       </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section tint" aria-labelledby="san-fen-zhinan">
-  <div class="container narrow">
-    <h2 id="san-fen-zhinan">三份按情形写的指南</h2>
-    <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/zh/moving-to-portugal/">迁居葡萄牙：保险安排的顺序</a></h3>
         <p>出发前该办什么、到了之后该办什么、哪些环节需要 NIF、空档最容易出现在什么时候。</p>
@@ -131,6 +124,39 @@ export const HUB_PAGE = {
       <li class="hub-item">
         <h3><a href="/zh/insurance-guide-portugal/">葡萄牙保险指南与常见问题</a></h3>
         <p>市场结构、保单由哪些文件组成、理赔流程、续保与退保，以及应该向任何中介提出的那几个问题。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="xibanya">
+  <div class="container narrow">
+    <h2 id="xibanya">西班牙</h2>
+    <p>在马德里、巴塞罗那、瓦伦西亚或太阳海岸拥有住宅：西班牙的规则与葡萄牙不同，从 Consorcio 巨灾保障到社区保险，各页单独说明。</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/zh/home-insurance-spain/">西班牙高价值房屋保险</a></h3>
+        <p>社区保险、自己的保单与 Consorcio 三层如何分工；洪水与地震、重建保额、艺术品按约定价值承保、空置期与出租用途。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/health-insurance-spain/">西班牙私人医疗保险</a></h3>
+        <p>公立体系与居留、非营利居留签证通常要求的无共付无等待期保单、本地方案与家庭国际医疗的差别。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/car-insurance-spain/">西班牙汽车保险</a></h3>
+        <p>强制险与全险、西班牙牌照与车辆登记、驾照与 DGT、海外出险记录，以及较高价值与收藏车辆。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/liability-insurance-spain/">西班牙家庭责任保险</a></h3>
+        <p>房屋保单附带的家庭责任够不够；泳池、家政人员、犬只、船艇与出租房产，以及百万级、全球有效的家庭责任。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/buying-property-spain/">在西班牙买房：各阶段的保险安排</a></h3>
+        <p>定金合同、公证与产权登记、银行房贷与保险捆绑、保额按重建费用、保单从公证签署当天生效。</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/zh/insurance-guide-spain/">西班牙保险指南</a></h3>
+        <p>四个华人家庭集中地区的不同问题、西班牙与葡萄牙的主要差别、西语保单常用词，以及我们在西班牙如何工作。</p>
       </li>
     </ul>
   </div>
@@ -197,7 +223,7 @@ export const HUB_PAGE = {
     },
     {
       q: '你们也为西班牙的资产安排保险吗？',
-      a: '<p>是的。我们在里斯本和拉各斯设有办公室，客户遍及葡萄牙全境；在西班牙，我们依据欧盟服务自由原则提供服务。许多客户在两国都有房产，住宅、贵重物品与家庭责任可以统一规划，由同一位顾问跟进。</p>',
+      a: '<p>是的。我们在里斯本和拉各斯设有办公室，客户遍及葡萄牙全境；在西班牙，我们依据欧盟服务自由原则提供服务。许多客户在两国都有房产，住宅、贵重物品与家庭责任可以统一规划，由同一位顾问跟进。西班牙的规则与葡萄牙有几处重要差别，请参阅<a href="/zh/insurance-guide-spain/">西班牙保险指南</a>。</p>',
     },
     {
       q: '你们是比价平台吗？',
@@ -211,5 +237,6 @@ export const HUB_PAGE = {
   related: [
     { url: '/zh/insurance-guide-portugal/', label: '葡萄牙保险指南与常见问题' },
     { url: '/zh/moving-to-portugal/', label: '迁居葡萄牙：保险安排的顺序' },
+    { url: '/zh/insurance-guide-spain/', label: '西班牙保险指南' },
   ],
 };

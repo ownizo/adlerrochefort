@@ -16,7 +16,7 @@
  * bounded: that page explains what the product covers, this one explains when
  * each decision has to be made and by whom.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const PROPERTY_PAGE = {
   slug: 'buying-property-portugal',
@@ -32,7 +32,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     '买房过程中与保险有关的决定其实只有几个，但每一个都有时间点。最关键的一条：保障必须在签署产权转让书（<em>escritura</em>）当天已经生效，而不是办完手续之后再补。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '在葡萄牙买房' }],
   pullquote: '交割当天房子已经是您的了。保单晚一天生效，那一天的风险就是自己的。',
   schemaType: 'Article',
@@ -44,7 +44,7 @@ export const PROPERTY_PAGE = {
     '请说明房产所在地区、类型与面积、预计交割日期，以及是否有葡萄牙的房贷。',
   formPlaceholder:
     '例如：卡斯凯什一套 140 平方米的联排别墅，1998 年建成，预计十月底交割，有 Novo Banco 的房贷。',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="liucheng-li-de-baoxian">
   <div class="container narrow article-body">
     <h2 id="liucheng-li-de-baoxian">保险在买房流程里的位置</h2>
@@ -152,7 +152,11 @@ export const PROPERTY_PAGE = {
     </ul>
     <p class="legal-note">服务语言为英语，书面进行。保单依葡萄牙法律以葡萄牙语出具。</p>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '也在西班牙看房？',
+    href: '/zh/buying-property-spain/',
+    text: '在西班牙买房：各阶段的保险安排',
+  })),
   faqTitle: '在葡萄牙买房：保险相关的常见问题',
   faq: [
     {

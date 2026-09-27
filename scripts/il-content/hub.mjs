@@ -57,7 +57,7 @@ export const HUB_PAGE = {
   standfirst:
     'בתי מגורים, אמנות ואוספים, אחריות אזרחית והגנה על המשפחה — בפורטוגל ובספרד. חיתום פרטני, חוות דעת בכתב ויועץ אחד — מהפנייה הראשונה ועד התביעה.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [{ name: 'ביטוח בפורטוגל', url: '/il/' }],
   pullquote:
     'בנכסים בעלי ערך גבוה השאלה איננה כמה עולה הפוליסה, אלא מה בדיוק היא תשלם ביום שבו תצטרכו אותה.',
@@ -111,9 +111,10 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="arba-sugim">
+<section class="section plain" aria-labelledby="portugal">
   <div class="container narrow">
-    <h2 id="arba-sugim">ארבעת סוגי הביטוח שעליהם שואלים הכי הרבה</h2>
+    <h2 id="portugal">פורטוגל</h2>
+    <p>ארבעת סוגי הביטוח שעליהם שואלים הכי הרבה, ושלושה מדריכים לפי מצב — לבית, למשפחה ולרכב בפורטוגל.</p>
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/il/home-insurance-portugal/">ביטוח לבתים בעלי ערך גבוה</a></h3>
@@ -131,14 +132,6 @@ export const HUB_PAGE = {
         <h3><a href="/il/liability-insurance-portugal/">אחריות אזרחית משפחתית</a></h3>
         <p>אחריות של משק הבית בגבולות של מיליוני אירו, בתחולה עולמית, עם הוצאות הגנה מעבר לגבול: אורחים, צוות בית, בריכות וסירות. ובנפרד — אחריות מקצועית (<em dir="ltr">Responsabilidade Civil Profissional</em>), שהיא חוזה אחר.</p>
       </li>
-    </ul>
-  </div>
-</section>
-
-<section class="section tint" aria-labelledby="shlosha-madrichim">
-  <div class="container narrow">
-    <h2 id="shlosha-madrichim">שלושה מדריכים לפי מצב</h2>
-    <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/il/moving-to-portugal/">מעבר מישראל לפורטוגל: סדר הפעולות בביטוח</a></h3>
         <p>מה לסדר לפני העזיבה, מה מסתדר רק אחרי ההגעה, איפה נדרש <em dir="ltr">NIF</em>, ובאילו נקודות נוצרים רווחי כיסוי שאיש לא מתכוון להם.</p>
@@ -150,6 +143,39 @@ export const HUB_PAGE = {
       <li class="hub-item">
         <h3><a href="/il/insurance-guide-portugal/">מדריך הביטוח בפורטוגל ושאלות נפוצות</a></h3>
         <p>מבנה השוק, ממה מורכבת פוליסה, איך מתנהלת תביעה, חידוש וביטול, ואילו שאלות כדאי לשאול כל סוכן — כולל אותנו.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="sfarad">
+  <div class="container narrow">
+    <h2 id="sfarad">ספרד</h2>
+    <p>למשפחות במדריד ובברצלונה, ולבעלי בתים בקוסטה דל סול ובאזור ולנסיה. השוק הספרדי בנוי אחרת בכמה נקודות — ובראשן רעידת אדמה והצפה חריגה, שמכוסות דרך ה־<em dir="ltr">Consorcio de Compensación de Seguros</em> ולא כתוספת אופציונלית כמו בפורטוגל.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/il/insurance-guide-spain/">ביטוח בספרד: המדריך לישראלים</a></h3>
+        <p>ארבעת ההבדלים המבניים מול ישראל ומול פורטוגל, איך אנחנו עובדים בספרד במסגרת חופש מתן השירותים באיחוד האירופי, ושמונה מילים בספרדית שיחזרו בכל פוליסה.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/home-insurance-spain/">ביטוח לבתים בעלי ערך גבוה בספרד</a></h3>
+        <p>מה ה־<em dir="ltr">Consorcio</em> מכסה ומה לא, ה־<em dir="ltr">comunidad de propietarios</em>, סכום לפי עלות בנייה מחדש, בית ריק והשכרה, חשיפות אזוריות — ומסגרת הכיסוי ללקוחות פרטיים.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/health-insurance-spain/">ביטוח בריאות בספרד</a></h3>
+        <p>המערכת הציבורית האזורית, ביטוח פרטי לאשרת <em dir="ltr">no lucrativa</em>, מה משנה דרכון אירופי, ותוכניות בין־לאומיות למשפחות.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/car-insurance-spain/">ביטוח רכב בספרד</a></h3>
+        <p>ה־<em dir="ltr">seguro obligatorio</em>, רכב בלוחית זרה אחרי קבלת תושבות, הרישיון הישראלי, היסטוריית תביעות מחו״ל ורכבי אספנות.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/liability-insurance-spain/">אחריות אזרחית משפחתית בספרד</a></h3>
+        <p>מה כלול בפוליסת הבית ומה חסר, גבולות של מיליונים בתחולה עולמית, בריכה, עובדות משק בית, כלבים, סירות והשכרה.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/il/buying-property-spain/">קניית נכס בספרד: הביטוח לפי שלבי העסקה</a></h3>
+        <p>חוזה ה־<em dir="ltr">arras</em>, הנוטריון והרישום, מה הבנק רשאי לדרוש ומה לא, וכיסוי מיום ה־<em dir="ltr">escritura</em>.</p>
       </li>
     </ul>
   </div>
@@ -204,7 +230,7 @@ export const HUB_PAGE = {
     },
     {
       q: 'אתם מבטחים גם נכסים בספרד?',
-      a: '<p>כן. בספרד אנחנו פועלים במסגרת חופש מתן השירותים באיחוד האירופי, ומשפחות רבות מחזיקות בית בפורטוגל ובית נוסף בספרד. בפוליסות ללקוחות פרטיים אפשר לעיתים לרכז את שני הבתים, את האוספים ואת האחריות האזרחית של המשפחה תחת מבנה אחד, עם יועץ אחד. האם זה אפשרי בפועל ובאילו תנאים — תלוי במבטח ובסיכון, ונאמר לכם את זה בכתב.</p>',
+      a: '<p>כן. בספרד אנחנו פועלים במסגרת חופש מתן השירותים באיחוד האירופי, ומשפחות רבות מחזיקות בית בפורטוגל ובית נוסף בספרד. בפוליסות ללקוחות פרטיים אפשר לעיתים לרכז את שני הבתים, את האוספים ואת האחריות האזרחית של המשפחה תחת מבנה אחד, עם יועץ אחד. האם זה אפשרי בפועל ובאילו תנאים — תלוי במבטח ובסיכון, ונאמר לכם את זה בכתב. <a href="/il/insurance-guide-spain/">המדריך לביטוח בספרד</a> מסביר מה שונה שם.</p>',
     },
     {
       q: 'ביטוח דירה הוא חובה בפורטוגל?',
@@ -234,5 +260,6 @@ export const HUB_PAGE = {
   related: [
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל ושאלות נפוצות' },
     { url: '/il/moving-to-portugal/', label: 'מעבר מישראל לפורטוגל: סדר הפעולות בביטוח' },
+    { url: '/il/insurance-guide-spain/', label: 'ביטוח בספרד: המדריך לישראלים' },
   ],
 };

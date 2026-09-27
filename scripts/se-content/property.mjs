@@ -29,7 +29,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Vid ett portugisiskt fastighetsköp kommer försäkringsfrågan i regel sist, när allt annat är avgjort — och då står banken redan med ett förslag. Här är vad som gäller när, och vilka beslut som är dina.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Köpa hus i Portugal' }],
   pullquote: 'Banken har ett berättigat intresse i att huset är försäkrat. Vilket bolag som skriver försäkringen är en annan fråga.',
   schemaType: 'Article',
@@ -140,6 +140,10 @@ export const PROPERTY_PAGE = {
       <li><div><strong>Anmäl uthyrning</strong><span> om det är planen. En oanmäld korttidsuthyrning är ett återkommande skäl till att en skada inte ersätts. Se <a href="/se/ansvarsforsakring-portugal/">ansvarsförsäkring i Portugal</a>.</span></div></li>
       <li><div><strong>Se över beloppet årligen</strong><span> — byggkostnaderna rör sig, och indexklausulen i försäkringen följer inte alltid med verkligheten.</span></div></li>
     </ol>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Funderar du också på Spanien? → <a href="/se/kopa-hus-i-spanien-forsakring/">Köpa hus i Spanien: försäkringen steg för steg</a>.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Köpa hus i Portugal — frågor om försäkring',
@@ -172,5 +176,6 @@ export const PROPERTY_PAGE = {
   related: [
     { url: '/se/hemforsakring-portugal/', label: 'Hemförsäkring i Portugal' },
     { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide för Portugal' },
+    { url: '/se/kopa-hus-i-spanien-forsakring/', label: 'Köpa hus i Spanien: försäkringen steg för steg' },
   ],
 };

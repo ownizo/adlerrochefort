@@ -21,13 +21,13 @@
  * section; it is the ninth block, written as a checklist a buyer can hold
  * against a PDF.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const HOME_PAGE = {
   slug: 'home-insurance-portugal',
   url: '/zh/home-insurance-portugal/',
   cluster: 'home',
-  title: '高价值房屋保险：葡萄牙与西班牙 | Adler & Rochefort',
+  title: '葡萄牙高价值房屋保险：从建筑到艺术收藏 | Adler & Rochefort',
   description:
     '高价值住宅保险：现场查勘与重建费用、取消比例赔付、艺术品与收藏按约定价值承保、百万级家庭责任。逐一核保，书面建议，服务葡萄牙与西班牙。',
   keywords:
@@ -37,7 +37,7 @@ export const HOME_PAGE = {
   standfirst:
     '价值较高的住宅需要的不是标准的 <em>multirriscos habitação</em>，而是逐一核保的私人客户保单：现场查勘确认重建费用、取消比例赔付、贵重物品按约定价值列明，以及与家业相称的责任保额。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '房屋保险' }],
   pullquote: '保额不是您付了多少钱买这处房产，而是把它按原有标准重新建起来要花多少钱。',
   schemaType: 'Article',
@@ -86,7 +86,7 @@ export const HOME_PAGE = {
         <div class="contact-form-field"><label for="zh-hab-capital-edificio">建筑保险金额（欧元） *</label><input type="number" id="zh-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
         <div class="contact-form-field"><label for="zh-hab-capital-conteudo">室内财产保险金额（欧元） *</label><input type="number" id="zh-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="weishenme-yao-bao">
   <div class="container narrow article-body">
     <h2 id="weishenme-yao-bao">为什么在葡萄牙，房子本身要投保</h2>
@@ -308,7 +308,11 @@ export const HOME_PAGE = {
     </ul>
     <p class="legal-note">服务语言为英语，书面进行。保单依葡萄牙法律以葡萄牙语出具。</p>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '在西班牙也有房产？',
+    href: '/zh/home-insurance-spain/',
+    text: '西班牙高价值房屋保险',
+  })),
   faqTitle: '葡萄牙房屋保险：常见问题',
   faq: [
     {

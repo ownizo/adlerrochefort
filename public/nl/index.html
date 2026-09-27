@@ -198,7 +198,12 @@
     display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 34px 40px; margin-top: 44px; text-align: left;
   }
-  .guide-col h3 {
+  .guide-cluster + .guide-cluster { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--border); }
+  .guide-cluster-title {
+    font-size: 26px; font-weight: 700; color: var(--ink); margin-top: 44px; text-align: left;
+  }
+  .guide-cluster-title + .guide-grid { margin-top: 28px; }
+  .guide-col h4 {
     font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--muted); font-weight: 700;
     padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 16px;
@@ -1052,7 +1057,7 @@
       <div class="feature-card">
         <span class="fc-tag">Wonen</span>
         <h3>Hoogwaardige woningen</h3>
-        <p>Herbouwwaarde ter plaatse vastgesteld, geen evenredigheidsregel bij de aanbevolen bedragen, herbouw gegarandeerd na totaal verlies en vervangende woonruimte van vergelijkbaar niveau. <a href="/nl/woonverzekering-portugal/">Woonverzekering →</a></p>
+        <p>Herbouwwaarde ter plaatse vastgesteld, geen evenredigheidsregel bij de aanbevolen bedragen, herbouw gegarandeerd na totaal verlies en vervangende woonruimte van vergelijkbaar niveau. <a href="/nl/woonverzekering-portugal/">Portugal →</a> · <a href="/nl/woonverzekering-spanje/">Spanje →</a></p>
       </div>
       <div class="feature-card">
         <span class="fc-tag">Kunst &amp; collecties</span>
@@ -1067,7 +1072,7 @@
       <div class="feature-card">
         <span class="fc-tag">Zorg &amp; auto</span>
         <h3>Internationale zorg en auto’s</h3>
-        <p>Internationale zorgverzekering per gezinslid individueel geaccepteerd, ook voor wie tussen landen leeft. En auto’s — ook klassiekers en geïmporteerde voertuigen — tegen een passende waarde. <a href="/nl/zorgverzekering-portugal/">Zorgverzekering →</a></p>
+        <p>Internationale zorgverzekering per gezinslid individueel geaccepteerd, ook voor wie tussen landen leeft. En auto’s — ook klassiekers en geïmporteerde voertuigen — tegen een passende waarde. <a href="/nl/zorgverzekering-portugal/">Portugal →</a> · <a href="/nl/zorgverzekering-spanje/">Spanje →</a></p>
       </div>
     </div>
   </div>
@@ -1154,10 +1159,12 @@
 <section class="section guides">
   <div class="container">
     <h2>Per onderwerp <em>uitgelegd</em></h2>
-    <p class="lead">Wat er verandert als u naar Portugal verhuist, geschreven voor Nederlanders — met de details die in de algemene uitleg ontbreken.</p>
+    <p class="lead">Geschreven voor Nederlanders, in twee delen: Portugal en Spanje — met de details die in de algemene uitleg ontbreken.</p>
+    <div class="guide-cluster" aria-labelledby="cluster-portugal">
+    <h3 class="guide-cluster-title" id="cluster-portugal"><span aria-hidden="true">🇵🇹</span> Portugal</h3>
     <div class="guide-grid">
         <div class="guide-col">
-          <h3>Zorg</h3>
+          <h4>Zorg</h4>
           <ul>
             <li><a href="/nl/uitschrijven-nederland-zorgverzekering-portugal/">Uitschrijven uit Nederland en uw zorgverzekering</a></li>
             <li><a href="/nl/zorgverzekering-portugal/">Zorgverzekering in Portugal: wat u nodig heeft</a></li>
@@ -1165,14 +1172,14 @@
           </ul>
         </div>
         <div class="guide-col">
-          <h3>Auto</h3>
+          <h4>Auto</h4>
           <ul>
             <li><a href="/nl/auto-importeren-portugal-verzekering/">Auto importeren naar Portugal</a></li>
             <li><a href="/nl/schadevrije-jaren-meenemen-portugal/">Schadevrije jaren meenemen</a></li>
           </ul>
         </div>
         <div class="guide-col">
-          <h3>Wonen</h3>
+          <h4>Wonen</h4>
           <ul>
             <li><a href="/nl/woonverzekering-portugal/">Woonverzekering: herbouwwaarde en onderverzekering</a></li>
             <li><a href="/nl/bosbrandrisico-woonverzekering-portugal/">Bosbrandrisico en uw woonverzekering</a></li>
@@ -1180,14 +1187,46 @@
           </ul>
         </div>
         <div class="guide-col">
-          <h3>Ondernemen</h3>
+          <h4>Ondernemen</h4>
           <ul>
             <li><a href="/nl/alojamento-local-verzekering-portugal/">Alojamento Local verzekeren</a></li>
             <li><a href="/nl/zzp-beroepsaansprakelijkheid-portugal/">Beroepsaansprakelijkheid voor zzp’ers</a></li>
           </ul>
         </div>
     </div>
-    <p class="guides-all"><a href="/nl/verzekeringen-portugal/">Naar het volledige overzicht →</a></p>
+    <p class="guides-all"><a href="/nl/verzekeringen-portugal/">Naar het volledige overzicht Portugal →</a></p>
+    </div>
+    <div class="guide-cluster" aria-labelledby="cluster-spanje">
+    <h3 class="guide-cluster-title" id="cluster-spanje"><span aria-hidden="true">🇪🇸</span> Spanje</h3>
+    <div class="guide-grid">
+        <div class="guide-col">
+          <h4>Wonen</h4>
+          <ul>
+            <li><a href="/nl/woonverzekering-spanje/">Woonverzekering in Spanje: Consorcio, comunidad en leegstand</a></li>
+            <li><a href="/nl/huis-kopen-spanje-verzekering/">Een huis kopen in Spanje: de verzekeringen</a></li>
+          </ul>
+        </div>
+        <div class="guide-col">
+          <h4>Zorg</h4>
+          <ul>
+            <li><a href="/nl/zorgverzekering-spanje/">Zorgverzekering in Spanje: S1, inschrijving en internationale zorg</a></li>
+          </ul>
+        </div>
+        <div class="guide-col">
+          <h4>Auto</h4>
+          <ul>
+            <li><a href="/nl/autoverzekering-spanje/">Autoverzekering in Spanje: kenteken, rijbewijs en schadevrije jaren</a></li>
+          </ul>
+        </div>
+        <div class="guide-col">
+          <h4>Aansprakelijkheid</h4>
+          <ul>
+            <li><a href="/nl/aansprakelijkheidsverzekering-spanje/">Gezinsaansprakelijkheid in Spanje</a></li>
+          </ul>
+        </div>
+    </div>
+    <p class="guides-all"><a href="/nl/verzekeringen-spanje/">Naar het volledige overzicht Spanje →</a></p>
+    </div>
   </div>
 </section>
 
@@ -1450,6 +1489,20 @@
         alert('Er ging iets mis bij het verzenden. Bel ons: +351 928 226 570');
       });
     });
+  })();
+</script>
+<script>
+  // Preselect the product when an article links here with ?type=<option value>
+  // (the Spain pages do: /nl/?source=blog:<slug>&type=Woon%2Fopstal#offerte).
+  // Only an existing option can be chosen; anything else leaves the select alone.
+  (function () {
+    var select = document.getElementById('l-type');
+    if (!select || !window.URLSearchParams) return;
+    var wanted = new URLSearchParams(window.location.search).get('type');
+    if (!wanted) return;
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].value === wanted && !select.options[i].disabled) { select.value = wanted; break; }
+    }
   })();
 </script>
 <script>

@@ -11,7 +11,7 @@
  * renewal and cancellation rules, and the questions worth asking any
  * intermediary. It links to the product pages for the product detail.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const GUIDE_PAGE = {
   slug: 'ubezpieczenia-portugalia-przewodnik',
@@ -27,7 +27,7 @@ export const GUIDE_PAGE = {
   standfirst:
     'Ta strona zbiera to, czego nie znajdzie się w żadnej ulotce: jak zbudowany jest portugalski rynek, jak czytać polisę, jak zgłosić szkodę, kiedy i jak można wypowiedzieć umowę oraz o co zapytać każdego agenta, zanim się coś podpisze.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Przewodnik po ubezpieczeniach' }],
   pullquote: 'Polisa to nie produkt, który się kupuje. To dokument, który ktoś kiedyś przeczyta bardzo uważnie — najlepiej, żeby to byli Państwo, a nie dopiero likwidator.',
   schemaType: 'Article',
@@ -181,3 +181,13 @@ export const GUIDE_PAGE = {
     { url: '/pl/przeprowadzka-do-portugalii-ubezpieczenia/', label: 'Przeprowadzka do Portugalii: ubezpieczenia krok po kroku' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(GUIDE_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Mają Państwo dom lub majątek także w Hiszpanii?',
+  body: 'Consorcio de Compensación de Seguros, rejestracja obywatela UE, polisy po hiszpańsku i regiony, w których mieszkają Polacy — w osobnym przewodniku.',
+  url: '/pl/ubezpieczenia-hiszpania-przewodnik/',
+  cta: 'Przewodnik po ubezpieczeniach w Hiszpanii',
+});

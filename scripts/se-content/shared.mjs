@@ -12,8 +12,8 @@
 export const LANG_POLICY_SE = {
   heading: 'Vi arbetar på engelska',
   body: [
-    'Den här sidan är på svenska eftersom ämnet gäller svenskar i Portugal. Själva arbetet sker däremot på engelska: offerter, förklaringar av villkor, korrespondens och skadeärenden — skriftligt, på engelska. Vi säger det direkt, eftersom en skadeanmälan är fel tillfälle att upptäcka det.',
-    'Portugisiska försäkringsbolag utfärdar enligt lag sina försäkringsbrev på portugisiska. Vi ser till att du förstår exakt vad som står i dem — skriftligt, på engelska, innan du skriver under.',
+    'Den här sidan är på svenska eftersom ämnet gäller svenskar i Portugal och Spanien. Själva arbetet sker däremot på engelska: offerter, förklaringar av villkor, korrespondens och skadeärenden — skriftligt, på engelska. Vi säger det direkt, eftersom en skadeanmälan är fel tillfälle att upptäcka det.',
+    'Portugisiska försäkringsbolag utfärdar sina försäkringsbrev på portugisiska och spanska bolag på spanska — det är lagens huvudregel i båda länderna. Vi ser till att du förstår exakt vad som står i dem — skriftligt, på engelska, innan du skriver under.',
   ],
 };
 

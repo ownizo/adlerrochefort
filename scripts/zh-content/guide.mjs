@@ -17,7 +17,7 @@
  * material (§15) sits here too, as one section — deliberately not as its own
  * page, because /zh/ is an individual and family cluster.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const GUIDE_PAGE = {
   slug: 'insurance-guide-portugal',
@@ -33,7 +33,7 @@ export const GUIDE_PAGE = {
   standfirst:
     '这一页回答的是还没有细分到某个产品之前的问题：我到底需要哪几份保险、哪些是法律强制的、外国人能不能买、理赔实际是怎么走的，以及除了保费还该比较什么。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '葡萄牙保险指南' }],
   pullquote: '保险不是比较保费的数字，而是决定哪些风险自己承担、哪些交给保险公司。',
   schemaType: 'Article',
@@ -45,7 +45,7 @@ export const GUIDE_PAGE = {
     '不确定需要哪几份保险也没关系。把情况说清楚，我们会回复应该先处理什么、需要哪些资料。',
   formPlaceholder:
     '例如：在里斯本租房住，刚开始做自由职业的设计工作，想了解医疗和责任方面该怎么安排。',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="wo-xuyao-naxie">
   <div class="container narrow article-body">
     <h2 id="wo-xuyao-naxie">在葡萄牙生活，我需要哪几份保险？</h2>
@@ -213,7 +213,11 @@ export const GUIDE_PAGE = {
       </li>
     </ul>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '在西班牙也有资产？',
+    href: '/zh/insurance-guide-spain/',
+    text: '西班牙保险指南',
+  })),
   faqTitle: '葡萄牙保险：完整常见问题',
   faq: [
     {

@@ -26,7 +26,7 @@ export const HEALTH_PAGE = {
   standfirst:
     'För en familj som lever i flera länder är frågan inte bara vilken vård som finns i Portugal, utan vilket skydd som följer med till Spanien, Sverige och vidare. Här är hur den offentliga vården, lokala privata försäkringar och internationella försäkringar förhåller sig till varandra — och vad bolaget frågar innan det tecknar.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sjukvårdsförsäkring' }],
   pullquote: 'Sjukvårdsförsäkring tecknas när man är frisk. Senare köper man bara det bolaget väljer att erbjuda.',
   schemaType: 'Article',
@@ -152,6 +152,10 @@ export const HEALTH_PAGE = {
       <li><div><strong>Årstak och egenavgifter</strong><span> förstådda separat för öppenvård och sjukhusvård.</span></div></li>
       <li><div><strong>Resor till Sverige</strong><span>: du vet om och hur försäkringen gäller utanför Portugal.</span></div></li>
     </ol>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Bor familjen delvis i Spanien? → <a href="/se/sjukvardsforsakring-spanien/">Sjukvårdsförsäkring i Spanien</a>: offentlig vård, S1 och kraven vid registrering som bosatt.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Sjukvårdsförsäkring i Portugal — frågor',
@@ -188,5 +192,6 @@ export const HEALTH_PAGE = {
   related: [
     { url: '/se/flytta-till-portugal-forsakring/', label: 'Flytta till Portugal: försäkringar i rätt ordning' },
     { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide för Portugal' },
+    { url: '/se/sjukvardsforsakring-spanien/', label: 'Sjukvårdsförsäkring i Spanien' },
   ],
 };

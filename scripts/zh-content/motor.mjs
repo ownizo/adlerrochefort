@@ -18,7 +18,7 @@
  *     consequence of driving on a licence that is not valid here — which is
  *     the part that actually belongs on an insurance site.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const MOTOR_PAGE = {
   slug: 'car-insurance-portugal',
@@ -34,7 +34,7 @@ export const MOTOR_PAGE = {
   standfirst:
     '在葡萄牙，只有第三者责任险（<em>responsabilidade civil automóvel</em>）是法律强制的。其余的——车损、盗窃、玻璃、道路救援——都是自选项，而“全险”这个词在不同保险公司手里含义并不相同。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '汽车保险' }],
   pullquote: '强制险保的是别人。保自己的车，是另一件需要单独决定的事。',
   schemaType: 'Article',
@@ -54,7 +54,7 @@ export const MOTOR_PAGE = {
         <div class="contact-form-field"><label for="zh-auto-carta">驾照签发日期 *</label><input type="date" id="zh-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="zh-auto-carta-idade-info" hidden>该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="qiangzhi-de-bufen">
   <div class="container narrow article-body">
     <h2 id="qiangzhi-de-bufen">强制的只有一项</h2>
@@ -166,7 +166,11 @@ export const MOTOR_PAGE = {
     </ul>
     <p class="legal-note">具体保障、自负额与除外责任取决于保险公司与所选方案，并以保单文件为准。驾照、车辆登记与进口相关规定由主管机关制定，本页不构成这方面的意见。服务语言为英语，书面进行。</p>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '车在西班牙？',
+    href: '/zh/car-insurance-spain/',
+    text: '西班牙汽车保险',
+  })),
   faqTitle: '葡萄牙汽车保险：常见问题',
   faq: [
     {

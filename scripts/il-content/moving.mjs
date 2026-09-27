@@ -42,7 +42,7 @@ export const MOVING_PAGE = {
   standfirst:
     'רוב בעיות הביטוח במעבר הן לא בעיות של בחירת פוליסה — הן בעיות של תזמון. הנה מה שאפשר לסדר מראש, מה מחכה ל־NIF, ואיפה בדיוק נוצרים הימים שבהם אף אחד לא מכוסה.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'מעבר לפורטוגל', url: '/il/moving-to-portugal/' }],
   pullquote:
     'רווח כיסוי הוא כמעט תמיד תוצאה של הנחה שמישהו אחר מכסה את הימים האלה.',
@@ -153,5 +153,6 @@ export const MOVING_PAGE = {
     { url: '/il/health-insurance-portugal/', label: 'ביטוח בריאות פרטי בפורטוגל' },
     { url: '/il/buying-property-portugal/', label: 'קניית דירה בפורטוגל: ביטוח לפי שלבי העסקה' },
     { url: '/il/car-insurance-portugal/', label: 'ביטוח רכב בפורטוגל' },
+    { url: '/il/insurance-guide-spain/', label: 'עוברים לספרד? ביטוח בספרד: המדריך לישראלים' },
   ],
 };

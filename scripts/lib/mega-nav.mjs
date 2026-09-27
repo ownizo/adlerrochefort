@@ -253,7 +253,27 @@ function crumbName(page) {
   return trail.length ? trail[trail.length - 1].name : page.eyebrow;
 }
 
-function spainSpec(m) {
+function spainSpec(m, own = null) {
+  // Markets with their own Spain cluster (es-* pages) link to it; the rest of
+  // the menu (landlord, mortgage, private clients) stays on the English pages.
+  if (own && own('es-guide')) {
+    return {
+      trigger: m.spain,
+      menuAria: m.spainMenu,
+      overviewTitle: m.overview,
+      overview: [own('es-guide', '🇪🇸')],
+      personalTitle: m.personalShort,
+      personal: ['es-home', 'es-health', 'es-motor', 'es-liability'].map((c) => own(c)).filter(Boolean),
+      propertyTitle: m.property,
+      property: [
+        own('es-property'),
+        { href: SPAIN_HREFS.landlord, label: m.spainLandlord },
+        { href: SPAIN_HREFS.mortgage, label: m.spainMortgage },
+      ].filter(Boolean),
+      privateTitle: m.privateClients,
+      privateClients: [{ href: SPAIN_HREFS.privateClients, label: m.spainPC }],
+    };
+  }
   return {
     trigger: m.spain,
     menuAria: m.spainMenu,
@@ -328,7 +348,7 @@ export function clusterMegaNav(market, { switcher, mobileSwitcher, ctaHref }) {
       movingTitle: m.moving,
       moving: ['moving', 'property', 'guide'].map((c) => link(c)).filter(Boolean),
     },
-    spain: spainSpec(m),
+    spain: spainSpec(m, (c, flag) => link(c, flag)),
     privateClients: pcSpec(m),
     whyUs: whySpec(m),
     insights: null,

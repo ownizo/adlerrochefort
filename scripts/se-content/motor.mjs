@@ -27,7 +27,7 @@ export const MOTOR_PAGE = {
   standfirst:
     'Frågan är sällan om du får ta med bilen, utan om det är värt det — och hur du undviker glappet mellan svensk och portugisisk registrering. Här är båda delarna, utan löften som inget bolag kan ge.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Bilförsäkring' }],
   pullquote: 'Skyddet måste löpa vidare medan registreringsskylten byts — inte efteråt.',
   schemaType: 'Article',
@@ -130,6 +130,10 @@ export const MOTOR_PAGE = {
       <li><div><strong>Verkstad:</strong><span> kontrollera om försäkringen kräver verkstad inom bolagets nätverk innan reparationen beställs.</span></div></li>
     </ol>
     <p>Har du inte blanketten i bilen: dokumentera ändå allt med bilder och anteckningar och kontakta oss samma dag.</p>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Har du också bil i Spanien? → <a href="/se/bilforsakring-spanien/">Bilförsäkring i Spanien</a>.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Bilförsäkring i Portugal — frågor',
@@ -162,5 +166,6 @@ export const MOTOR_PAGE = {
   related: [
     { url: '/se/flytta-till-portugal-forsakring/', label: 'Flytta till Portugal: försäkringar i rätt ordning' },
     { url: '/se/hemforsakring-portugal/', label: 'Hemförsäkring i Portugal' },
+    { url: '/se/bilforsakring-spanien/', label: 'Bilförsäkring i Spanien' },
   ],
 };

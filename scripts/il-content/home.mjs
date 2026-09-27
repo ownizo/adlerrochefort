@@ -30,7 +30,7 @@
  * most wants a flat answer about, and a flat answer here would be wrong on
  * some proportion of proposals.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const HOME_PAGE = {
   slug: 'home-insurance-portugal',
@@ -46,7 +46,7 @@ export const HOME_PAGE = {
   standfirst:
     'בית, תכולה, אמנות ואוספים, ואחריות המשפחה — בחיתום פרטני ובנוסחים שנכתבו לבתים בעלי ערך גבוה, בפורטוגל ובספרד. הנה מה הפוליסות האלה כוללות, ומה חשוב לדעת על השוק הפורטוגזי לפני שמאשרים הצעה.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'ביטוח בתים בעלי ערך גבוה', url: '/il/home-insurance-portugal/' }],
   pullquote:
     'סכום הביטוח של המבנה אינו מה ששילמתם על הנכס. הוא מה שיעלה לבנות אותו מחדש.',
@@ -102,7 +102,7 @@ export const HOME_PAGE = {
         <div class="contact-form-field"><label for="il-hab-capital-edificio">סכום ביטוח המבנה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
         <div class="contact-form-field"><label for="il-hab-capital-conteudo">סכום ביטוח התכולה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section tint" aria-labelledby="misgeret-habayit">
   <div class="container">
     <h2 id="misgeret-habayit">הבית עצמו</h2>
@@ -283,7 +283,10 @@ export const HOME_PAGE = {
     <p>מי שקונה בפורטוגל עם מימון יגלה שהבנק הוא לרוב מי שקובע את לוח הזמנים. בפועל הבנקים דורשים בדרך כלל שתי פוליסות כתנאי להלוואה: ביטוח מבנה על הנכס, וביטוח חיים שמכסה את יתרת ההלוואה (<em dir="ltr">seguro de vida</em>). הדרישה המדויקת, הסכומים והמועדים משתנים בין בנקים ובין תיקים.</p>
     <p>שתי נקודות שכדאי לדעת מראש. הבנק ירצה להירשם כמוטב בפוליסת המבנה, וזו בקשה שגרתית שמסודרת בנוסח הפוליסה. ובנוסף — הבנק יציע לכם בדרך כלל את הפוליסה שלו, אבל אינכם מחויבים לרכוש דווקא אותה: אפשר להביא פוליסה ממבטח אחר, כל עוד היא עומדת בדרישות שהבנק הציב. לפעמים תנאי המשכנתה עצמם משתנים בהתאם, ולכן שווה להשוות את שני המסלולים במלואם. <a href="/il/buying-property-portugal/">העמוד על קניית נכס</a> עובר על זה לפי שלבי העסקה.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'יש לכם גם בית בספרד?',
+    body: 'בספרד רעידת אדמה והצפה חריגה מכוסות דרך ה־<em dir="ltr">Consorcio</em>, והבניין מבוטח דרך ה־<em dir="ltr">comunidad</em> — <a href="/il/home-insurance-spain/">ביטוח לבתים בעלי ערך גבוה בספרד</a>.',
+  }),
   faqTitle: 'ביטוח דירה בפורטוגל: שאלות נפוצות',
   faq: [
     {
@@ -324,6 +327,7 @@ export const HOME_PAGE = {
     },
   ],
   related: [
+    { url: '/il/home-insurance-spain/', label: 'ביטוח לבתים בעלי ערך גבוה בספרד' },
     { url: '/il/buying-property-portugal/', label: 'קניית דירה בפורטוגל: ביטוח לפי שלבי העסקה' },
     { url: '/il/liability-insurance-portugal/', label: 'ביטוח אחריות אזרחית בפורטוגל' },
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל ושאלות נפוצות' },

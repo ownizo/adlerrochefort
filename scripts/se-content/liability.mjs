@@ -32,7 +32,7 @@ export const LIABILITY_PAGE = {
   standfirst:
     'I Sverige låg ansvarsskyddet inne i hemförsäkringen. I en vanlig portugisisk bostadsförsäkring är <em>responsabilidade civil</em> ofta begränsad till skador på grannar och till ett lågt belopp. För ett hushåll med betydande tillgångar är ansvaret den del av försäkringen där beloppet betyder mest.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ansvarsförsäkring' }],
   pullquote: 'Allt annat i försäkringen begränsas av värdet på något du äger. Ansvaret begränsas bara av det belopp du valt.',
   schemaType: 'Article',
@@ -135,6 +135,10 @@ export const LIABILITY_PAGE = {
       <li>Böter, sanktionsavgifter och straffrättsliga påföljder.</li>
     </ul>
     <p>Att läsa undantagen före tecknandet är hela poängen med att gå via en förmedlare. Det är också den enda tidpunkt då de går att påverka.</p>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Äger du också en bostad i Spanien? → <a href="/se/ansvarsforsakring-spanien/">Ansvarsförsäkring för familjen i Spanien</a>.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Ansvarsförsäkring i Portugal — frågor',
@@ -171,5 +175,6 @@ export const LIABILITY_PAGE = {
   related: [
     { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide för Portugal' },
     { url: '/se/hemforsakring-portugal/', label: 'Hemförsäkring i Portugal' },
+    { url: '/se/ansvarsforsakring-spanien/', label: 'Ansvarsförsäkring i Spanien' },
   ],
 };

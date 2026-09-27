@@ -32,6 +32,16 @@ import { NICHE_VILLALET_PAGE } from './pl-content/niche-villalet.mjs';
 import { NICHE_EQUINE_PAGE } from './pl-content/niche-equine.mjs';
 import { NICHE_AVIATION_PAGE } from './pl-content/niche-aviation.mjs';
 import { NICHE_CYBER_PAGE } from './pl-content/niche-cyber.mjs';
+// Spain cluster, September 2026. Written for Poles in Spain (Costa Blanca,
+// Costa del Sol, the Canaries, Barcelona/Valencia) — not translations of the
+// Portugal pages. The es-* cluster keys are shared with /nl/, /dk/, /se/,
+// /il/, /zh/, /en/ and /de/, so hreflang pairs them from the page objects.
+import { ES_GUIDE_PAGE } from './pl-content/es-guide.mjs';
+import { ES_HOME_PAGE } from './pl-content/es-home.mjs';
+import { ES_HEALTH_PAGE } from './pl-content/es-health.mjs';
+import { ES_MOTOR_PAGE } from './pl-content/es-motor.mjs';
+import { ES_LIABILITY_PAGE } from './pl-content/es-liability.mjs';
+import { ES_PROPERTY_PAGE } from './pl-content/es-property.mjs';
 
 export { LANG_POLICY_PL, BREADCRUMB_ROOT } from './pl-content/shared.mjs';
 
@@ -51,6 +61,12 @@ export const PAGES = [
   NICHE_EQUINE_PAGE,
   NICHE_AVIATION_PAGE,
   NICHE_CYBER_PAGE,
+  ES_GUIDE_PAGE,
+  ES_HOME_PAGE,
+  ES_HEALTH_PAGE,
+  ES_MOTOR_PAGE,
+  ES_LIABILITY_PAGE,
+  ES_PROPERTY_PAGE,
 ];
 
 export const PL_MARKET = {

@@ -10,7 +10,7 @@
  * lender may and may not require, and what the escritura date does to the
  * start date. The two link to each other rather than repeating.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const PROPERTY_PAGE = {
   slug: 'zakup-nieruchomosci-w-portugalii-ubezpieczenie',
@@ -26,7 +26,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     'Kupno nieruchomości w Portugalii ma dwa punkty, w których ubezpieczenie przestaje być formalnością: podpisanie umowy przedwstępnej i podpisanie aktu. Między nimi mija zwykle kilka tygodni, a po drugim z nich ryzyko jest już Państwa.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Zakup nieruchomości' }],
   pullquote: 'Polisa ma zaczynać się w dniu podpisania aktu. Nie tygodnie później, kiedy wszyscy odetchną.',
   schemaType: 'Article',
@@ -153,3 +153,13 @@ export const PROPERTY_PAGE = {
     { url: '/pl/przeprowadzka-do-portugalii-ubezpieczenia/', label: 'Przeprowadzka do Portugalii: ubezpieczenia krok po kroku' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(PROPERTY_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Kupują Państwo także w Hiszpanii?',
+  body: 'W Hiszpanii transakcja przebiega przez umowę <em>arras</em>, notariusza i <em>Registro de la Propiedad</em>, a bank nie może narzucić swojej polisy domowej. Opisujemy to na osobnej stronie.',
+  url: '/pl/zakup-nieruchomosci-w-hiszpanii-ubezpieczenie/',
+  cta: 'Zakup nieruchomości w Hiszpanii: ubezpieczenie',
+});

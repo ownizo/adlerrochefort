@@ -25,7 +25,7 @@ export const MOVING_PAGE = {
   standfirst:
     'Det mesta som går fel vid en flytt går fel på grund av tidsordningen, inte av val av bolag. Här är de tre glappen som uppstår under en flytt till Portugal och hur du stänger dem.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Flytta till Portugal' }],
   pullquote: 'Ingen säger upp sina försäkringar. Man flyttar bara, och en dag stämmer inte längre det de bygger på.',
   schemaType: 'Article',
@@ -134,5 +134,6 @@ export const MOVING_PAGE = {
     { url: '/se/sjukvardsforsakring-portugal/', label: 'Sjukvårdsförsäkring i Portugal' },
     { url: '/se/bilforsakring-portugal/', label: 'Bilförsäkring i Portugal' },
     { url: '/se/hemforsakring-portugal/', label: 'Hemförsäkring i Portugal' },
+    { url: '/se/forsakring-spanien/', label: 'Försäkring i Spanien' },
   ],
 };

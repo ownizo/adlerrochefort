@@ -10,7 +10,7 @@
  * of operations and the three moments where cover lapses without anyone
  * noticing.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const MOVING_PAGE = {
   slug: 'przeprowadzka-do-portugalii-ubezpieczenia',
@@ -26,7 +26,7 @@ export const MOVING_PAGE = {
   standfirst:
     'Przy przeprowadzce nie chodzi o to, żeby kupić wszystko naraz. Chodzi o kolejność — bo luki w ochronie powstają dokładnie na stykach: między polskim a portugalskim systemem zdrowotnym, między polskimi a portugalskimi tablicami i między zakupem nieruchomości a jej ubezpieczeniem.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Przeprowadzka do Portugalii' }],
   pullquote: 'Luki nie powstają wtedy, gdy się o czymś zapomni. Powstają wtedy, gdy dwie rzeczy zrobi się w złej kolejności.',
   schemaType: 'Article',
@@ -142,3 +142,13 @@ export const MOVING_PAGE = {
     { url: '/pl/ubezpieczenie-domu-portugalia/', label: 'Ubezpieczenie domu i mieszkania w Portugalii' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(MOVING_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Przeprowadzają się Państwo do Hiszpanii?',
+  body: 'Rejestracja obywatela UE, ubezpieczenie zdrowotne, przerejestrowanie samochodu i dom — hiszpańska kolejność działań jest inna niż portugalska. Zaczynamy od przewodnika.',
+  url: '/pl/ubezpieczenia-hiszpania-przewodnik/',
+  cta: 'Przewodnik po ubezpieczeniach w Hiszpanii',
+});

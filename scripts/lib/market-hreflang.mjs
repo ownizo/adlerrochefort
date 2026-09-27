@@ -55,9 +55,19 @@ export const NICHE_EXTERNAL = {
   'niche-cyber': { '/en/family-cyber-fraud-insurance/': 'en-GB', '/de/cyber-betrug-versicherung-familie/': 'de' },
 };
 
+/** Spain cluster (September 2026): hand-authored EN/DE/NL members of the es-* groups. */
+export const SPAIN_EXTERNAL = {
+  'es-guide': { '/en/expat-insurance-spain/': 'en-GB', '/de/versicherung-spanien/': 'de', '/nl/verzekeringen-spanje/': 'nl' },
+  'es-home': { '/en/home-insurance-spain/': 'en-GB', '/de/hausversicherung-spanien/': 'de', '/nl/woonverzekering-spanje/': 'nl' },
+  'es-health': { '/en/health-insurance-spain/': 'en-GB', '/de/krankenversicherung-spanien/': 'de', '/nl/zorgverzekering-spanje/': 'nl' },
+  'es-motor': { '/en/car-insurance-spain/': 'en-GB', '/de/autoversicherung-spanien/': 'de', '/nl/autoverzekering-spanje/': 'nl' },
+  'es-liability': { '/en/family-liability-insurance-spain/': 'en-GB', '/de/privathaftpflicht-spanien/': 'de', '/nl/aansprakelijkheidsverzekering-spanje/': 'nl' },
+  'es-property': { '/en/blog/insurance-buying-property-spain/': 'en-GB', '/de/immobilienkauf-spanien-versicherung/': 'de', '/nl/huis-kopen-spanje-verzekering/': 'nl' },
+};
+
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries(NICHE_EXTERNAL).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL }).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
 );
 
 /** clusterKey -> { path: hreflangValue }, derived from the page objects. */
@@ -72,7 +82,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries(NICHE_EXTERNAL)) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');

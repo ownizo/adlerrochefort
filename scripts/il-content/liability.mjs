@@ -33,7 +33,7 @@
  * would be a per-profession regulatory claim the repository cannot stand
  * behind and which changes.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const LIABILITY_PAGE = {
   slug: 'liability-insurance-portugal',
@@ -49,7 +49,7 @@ export const LIABILITY_PAGE = {
   standfirst:
     'ביטוח רכוש מוגבל לשווי של מה שבבעלותכם; ביטוח אחריות מוגבל רק בגבול שבחרתם. כך נראית אחריות אזרחית של משק בית בעל הון משמעותי — גבולות של מיליוני אירו, תחולה עולמית, הוצאות הגנה מעבר לגבול — ומה נשאר נפרד, כמו אחריות מקצועית.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'אחריות אזרחית משפחתית', url: '/il/liability-insurance-portugal/' }],
   pullquote:
     'כל פרק אחר בפוליסה מוגבל לשווי של משהו שבבעלותכם. פרק האחריות מוגבל רק בגבול שבחרתם.',
@@ -77,7 +77,7 @@ export const LIABILITY_PAGE = {
     fieldsHtml: `        <div class="contact-form-field"><label for="il-rcp-faturacao">מחזור שנתי *</label><input type="number" id="il-rcp-faturacao" name="faturacao_anual" placeholder="לדוגמה: 85000" required></div>
         <p class="wizard-helper">סוג הפעילות, גובה הכיסוי המבוקש, והאם הפוליסה נדרשת על פי חוזה או התאחדות מקצועית — נבין את כל זה בהמשך, בפנייה חוזרת.</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section tint" aria-labelledby="achrayut-mishpachtit">
   <div class="container">
     <h2 id="achrayut-mishpachtit">אחריות של משק בית: הסיכון שאין לו תקרה טבעית</h2>
@@ -237,7 +237,10 @@ export const LIABILITY_PAGE = {
     <p>השיקול הוא סדר הגודל של הנזק שמשק הבית יכול לגרום, ומה עומד על הפרק אם הגבול ייגמר — לא מה שנשמע סביר בטופס. משפחה עם בית ובריכה, עם צוות, עם ילדים מתבגרים ועם בתים בכמה מדינות חשופה לתביעות בסדר גודל אחר ממשק בית קטן, וגם היכולת של צד שלישי לפנות לנכסים שלה גדולה יותר.</p>
     <p>שלוש שאלות שכדאי לקבל עליהן תשובה בכתב: מה הגבול לאירוע, והאם יש גבול מצטבר לשנה; האם הוצאות ההגנה בתוך הגבול או מעליו; ומה תחום התחולה הגאוגרפי — פורטוגל, האיחוד האירופי או העולם כולו, ועם אילו סייגים. מכיוון שתביעות גדולות נדירות, הגדלת הגבול היא בדרך כלל אחד השינויים הסבירים ביותר בכל פוליסה. אם יש לכם פוליסה קיימת, שלחו לנו אותה ונחזור אליכם בכתב עם הגבול, החריגים ומה היה משתנה בנוסח ללקוחות פרטיים.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'יש לכם גם בית בספרד?',
+    body: 'שם האחריות האזרחית כלולה לרוב בפוליסת הבית, בגבול שכדאי לבדוק — <a href="/il/liability-insurance-spain/">אחריות אזרחית משפחתית בספרד</a>.',
+  }),
   faqTitle: 'ביטוח אחריות בפורטוגל: שאלות נפוצות',
   faq: [
     {
@@ -282,6 +285,7 @@ export const LIABILITY_PAGE = {
     },
   ],
   related: [
+    { url: '/il/liability-insurance-spain/', label: 'אחריות אזרחית משפחתית בספרד' },
     { url: '/il/home-insurance-portugal/', label: 'ביטוח לבתים בעלי ערך גבוה בפורטוגל' },
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל ושאלות נפוצות' },
     { url: '/il/', label: 'ביטוח בפורטוגל: המדריך לישראלים' },

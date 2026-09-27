@@ -13,7 +13,7 @@
  * reading properly, because they are the two that produce the most surprised
  * claimants in Portugal.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const HOME_PAGE = {
   slug: 'ubezpieczenie-domu-portugalia',
@@ -29,7 +29,7 @@ export const HOME_PAGE = {
   standfirst:
     'Przy nieruchomości o wysokiej wartości pytania są inne niż przy typowym mieszkaniu: oględziny i koszt odbudowy, rezygnacja z zasady proporcji, sztuka i kolekcje według wartości uzgodnionej, odpowiedzialność cywilna liczona w milionach. Poniżej opisujemy warunki, które sprawdzamy na piśmie w każdej propozycji — oraz portugalskie realia, które obowiązują niezależnie od wartości domu.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie domu' }],
   pullquote: 'Suma ubezpieczenia to nie cena, jaką Państwo zapłacili. To koszt odbudowy tego, co zostanie zniszczone.',
   schemaType: 'Article',
@@ -282,3 +282,13 @@ export const HOME_PAGE = {
     { url: '/pl/ubezpieczenia-portugalia-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Portugalii' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(HOME_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Mają Państwo także dom w Hiszpanii?',
+  body: 'W Hiszpanii ryzyka katastroficzne — powódź, trzęsienie ziemi, erupcję wulkanu — pokrywa Consorcio de Compensación de Seguros, a dom używany część roku wymaga innych warunków. Costa Blanca, Costa del Sol, Kanary, Barcelona i Walencja.',
+  url: '/pl/ubezpieczenie-domu-hiszpania/',
+  cta: 'Ubezpieczenie domu w Hiszpanii',
+});

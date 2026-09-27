@@ -447,7 +447,8 @@ const FORM_CLASSIFICATION = {
 
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
   'nl-offerte-aanvraag': { entityType: 'individual', market: 'PT', product: 'general' },
-  'lead-nl': { entityType: 'individual', market: 'PT', product: 'general' },
+  // Spain pages under /nl/ (…-spanje/) send their leads through the hub form.
+  'lead-nl': { entityType: 'individual', market: (d) => (/spanje/.test(String((d && (d.source_url || d.source)) || '')) ? 'ES' : 'PT'), product: 'general' },
   'lead-fr': { entityType: 'individual', market: 'PT', product: 'general' },
   // de-angebot-anfrage (scripts/generate-de-cluster.mjs) submits `language`,
   // not `lang` — see the comment above this block. Fixed here instead, same

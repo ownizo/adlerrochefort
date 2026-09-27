@@ -19,13 +19,13 @@
  * stated once as its own paragraph and once in the FAQ, in both cases as a
  * refusal to confirm rather than a hedge.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const HEALTH_PAGE = {
   slug: 'health-insurance-portugal',
   url: '/zh/health-insurance-portugal/',
   cluster: 'health',
-  title: '家庭国际私人医疗保险：葡萄牙与西班牙 | Adler & Rochefort',
+  title: '葡萄牙家庭国际私人医疗保险 | Adler & Rochefort',
   description:
     '为全家安排的国际私人医疗保险：与 SNS 公立体系的关系、医疗网络与报销型、国际保单、等待期与健康核保、家庭保单。书面建议，服务葡萄牙与西班牙。',
   keywords:
@@ -35,7 +35,7 @@ export const HEALTH_PAGE = {
   standfirst:
     '葡萄牙有覆盖全民的公立医疗体系（SNS）。私人医疗保险叠加在它之上，买的是就诊速度与选择权；对于在多个国家生活、工作或求学的家庭，国际医疗保单则让全家在不同国家都能获得同样的保障。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '私人医疗保险' }],
   pullquote: '在葡萄牙，私人医疗保险买到的主要不是钱，而是时间和选择权。',
   schemaType: 'Article',
@@ -59,7 +59,7 @@ export const HEALTH_PAGE = {
           <button type="button" class="wizard-nav-back" data-persons-add>+ 添加人员</button>
         </div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="liang-ceng-jiegou">
   <div class="container narrow article-body">
     <h2 id="liang-ceng-jiegou">先理解葡萄牙的两层结构</h2>
@@ -169,7 +169,11 @@ export const HEALTH_PAGE = {
     </ul>
     <p class="legal-note">具体保障、等待期、核保结论与除外条款取决于保险公司与所选方案，并以保单文件为准。本页说明的是葡萄牙市场通常的运作方式，不构成个人化的保险建议或医疗建议。服务语言为英语，书面进行。</p>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '也在西班牙生活？',
+    href: '/zh/health-insurance-spain/',
+    text: '西班牙私人医疗保险',
+  })),
   faqTitle: '葡萄牙私人医疗保险：常见问题',
   faq: [
     {

@@ -10,7 +10,7 @@
  * wrongly rely on, and S1 matters for pensioners. Underwriting and
  * pre-existing conditions are hedged throughout.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling, toSpain } from './shared.mjs';
 
 export const HEALTH_PAGE = {
   slug: 'sundhedsforsikring-portugal',
@@ -26,7 +26,7 @@ export const HEALTH_PAGE = {
   standfirst:
     'For en familie, der lever mellem Portugal, Spanien og Danmark, handler sundhedsforsikring om frit valg af læge og hospital — også uden for Portugal. Her er, hvordan en international police fungerer, hvordan den spiller sammen med SNS, og hvad selskabet spørger om, før det tegner.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Sundhedsforsikring' }],
   pullquote: 'Sundhedsforsikring tegnes, mens man er rask. Senere køber man kun det, selskabet vælger at tilbyde.',
   schemaType: 'Article',
@@ -50,7 +50,7 @@ export const HEALTH_PAGE = {
           <button type="button" class="wizard-nav-back" data-persons-add>+ Tilføj person</button>
         </div>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="international">
   <div class="container narrow article-body">
     <h2 id="international">International sundhedsforsikring til familier</h2>
@@ -153,7 +153,7 @@ export const HEALTH_PAGE = {
       <li><div><strong>Ophold i Danmark</strong><span>: du ved, om og hvordan policen dækker uden for Portugal.</span></div></li>
     </ol>
   </div>
-</section>`,
+</section>`, toSpain.health),
   faqTitle: 'Sundhedsforsikring i Portugal — spørgsmål',
   faq: [
     {
@@ -186,6 +186,7 @@ export const HEALTH_PAGE = {
     },
   ],
   related: [
+    { url: '/dk/sundhedsforsikring-spanien/', label: 'Sundhedsforsikring i Spanien' },
     { url: '/dk/flytte-til-portugal-forsikring/', label: 'Flytte til Portugal: forsikringerne i rigtig rækkefølge' },
     { url: '/dk/forsikringsguide-portugal/', label: 'Forsikringsguide til Portugal' },
   ],

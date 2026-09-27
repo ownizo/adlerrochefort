@@ -13,7 +13,7 @@
  * pages rather than freshly asserted, and the claims-history section is hedged
  * because no insurer guarantees recognition.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const MOTOR_PAGE = {
   slug: 'ubezpieczenie-samochodu-portugalia',
@@ -29,7 +29,7 @@ export const MOTOR_PAGE = {
   standfirst:
     'Pytanie rzadko brzmi „czy mogę przywieźć samochód”. Brzmi „czy to ma sens” i „jak nie zostać bez ochrony między polskimi i portugalskimi tablicami”. Ta strona porządkuje jedno i drugie — łącznie z samochodami o wysokiej wartości — bez obietnic, których żaden ubezpieczyciel nie może dać.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie samochodu' }],
   pullquote: 'Ochrona musi trwać nieprzerwanie w trakcie zmiany tablic — nie zacząć się po niej.',
   schemaType: 'Article',
@@ -181,3 +181,13 @@ export const MOTOR_PAGE = {
     { url: '/pl/ubezpieczenia-portugalia-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Portugalii' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(MOTOR_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Mają Państwo samochód także w Hiszpanii?',
+  body: 'Hiszpańskie <em>seguro obligatorio</em>, <em>todo riesgo</em>, przerejestrowanie auta z polskimi tablicami i uznawanie polskiej historii szkodowej — na osobnej stronie.',
+  url: '/pl/ubezpieczenie-samochodu-hiszpania/',
+  cta: 'Ubezpieczenie samochodu w Hiszpanii',
+});

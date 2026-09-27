@@ -30,7 +30,7 @@ export const HUB_PAGE = {
   standfirst:
     'Boliger, kunst og samlinger, ansvar og familiebeskyttelse i Portugal og Spanien. Individuelt tegnet, skriftligt rådgivet og én rådgiver — fra første kontakt til skade.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [{ name: 'Forside', url: '/dk/' }],
   pullquote:
     'En police bedømmes ikke den dag, den tegnes, men den dag, den skal betale.',
@@ -108,9 +108,11 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="forsikringer">
+<section class="section tint" aria-labelledby="portugal">
   <div class="container narrow article-body">
-    <h2 id="forsikringer">Det, vi forsikrer</h2>
+    <h2 id="portugal">Portugal</h2>
+    <p>Forsikringerne og guiderne for boliger og husstande i Portugal — fra Lissabon og Cascais til Comporta og Algarve.</p>
+    <h3>Det, vi forsikrer</h3>
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/dk/husforsikring-portugal/">Boliger af høj værdi</a></h3>
@@ -133,12 +135,7 @@ export const HUB_PAGE = {
         <p>Privatansvar med summer i millionklassen, verden over og med forsvarsomkostninger ud over summen — og erhvervsansvar som en særskilt police.</p>
       </li>
     </ul>
-  </div>
-</section>
-
-<section class="section plain" aria-labelledby="guider">
-  <div class="container narrow article-body">
-    <h2 id="guider">Tre guider til situationen frem for produktet</h2>
+    <h3>Guider til situationen</h3>
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/dk/flytte-til-portugal-forsikring/">Flytte til Portugal</a></h3>
@@ -151,6 +148,39 @@ export const HUB_PAGE = {
       <li class="hub-item">
         <h3><a href="/dk/forsikringsguide-portugal/">Forsikringsguide til Portugal</a></h3>
         <p>Hvordan markedet fungerer: aktørerne, policens dele, skadesagens forløb, fornyelse og opsigelse.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="spanien">
+  <div class="container narrow article-body">
+    <h2 id="spanien">Spanien</h2>
+    <p>De samme dækninger på spanske betingelser — for danske husstande på Costa del Sol, Costa Blanca, Mallorca og De Kanariske Øer.</p>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/dk/forsikring-spanien/">Forsikring i Spanien: overblik</a></h3>
+        <p>Hvordan vi arbejder i Spanien, Consorcio de Compensación de Seguros, de spanske begreber og reglerne for fornyelse og skadesanmeldelse.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/husforsikring-spanien/">Husforsikring i Spanien</a></h3>
+        <p>Boliger af høj værdi, naturkatastrofer via Consorcio, <em>comunidad de propietarios</em>, tomme perioder og udlejning.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/sundhedsforsikring-spanien/">Sundhedsforsikring i Spanien</a></h3>
+        <p>Det offentlige system, S1 for pensionister, registrering som EU-borger og international privat dækning for familien.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/bilforsikring-spanien/">Bilforsikring i Spanien</a></h3>
+        <p>Lovpligtig ansvar og kasko, spanske nummerplader, import af den danske bil og din skadesattest.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/ansvarsforsikring-spanien/">Familiens ansvarsforsikring i Spanien</a></h3>
+        <p>Ansvaret i boligpolicen og dets grænser, summer i millionklassen, hunde, både, husstandsansatte og udlejning.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/dk/kobe-bolig-i-spanien-forsikring/">Købe bolig i Spanien</a></h3>
+        <p>Arras, notar og Registro de la Propiedad, bankens forsikringsforslag og dækning fra dagen for <em>escritura</em>.</p>
       </li>
     </ul>
   </div>
@@ -222,7 +252,7 @@ export const HUB_PAGE = {
     },
     {
       q: 'Arbejder I også i Spanien?',
-      a: '<p>Ja. Vi er registreret i Portugal hos ASF under nr. 425591790/3 og formidler i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Mange af vores kunder har bolig i begge lande, og det er en fordel at have begge dele hos samme rådgiver.</p>',
+      a: '<p>Ja. Vi er registreret i Portugal hos ASF under nr. 425591790/3 og formidler i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Mange af vores kunder har bolig i begge lande, og det er en fordel at have begge dele hos samme rådgiver. Se <a href="/dk/forsikring-spanien/">forsikring i Spanien</a>.</p>',
     },
     {
       q: 'Kan jeg beholde min danske forsikring på boligen i Portugal?',
@@ -244,5 +274,6 @@ export const HUB_PAGE = {
   related: [
     { url: '/dk/flytte-til-portugal-forsikring/', label: 'Flytte til Portugal: forsikringerne i rigtig rækkefølge' },
     { url: '/dk/forsikringsguide-portugal/', label: 'Forsikringsguide til Portugal' },
+    { url: '/dk/forsikring-spanien/', label: 'Forsikring i Spanien: overblik' },
   ],
 };

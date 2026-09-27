@@ -22,9 +22,36 @@ export const LANG_POLICY_ZH = {
   heading: '关于语言：网站是中文，服务语言是英语',
   body: [
     '这些页面用中文写成，因为提问的人用中文思考这件事。但具体工作不是用中文进行的：报价、条款解释、往来沟通和理赔协助都以英语书面进行。我们把这一点写在每一页上，而不是让您在理赔当中才发现——那是最不合适的时机。',
-    '葡萄牙保险公司依法以葡萄牙语出具保单。这不会因为客户是外国人而改变。我们要做的是：在您签字之前，用英语书面说清保单里写了什么——保额、自负额、除外责任和时限，以及哪些是您以为包含、实际并不包含的部分。如果由亲友或顾问代您核对英文文件会更放心，这样安排完全没有问题。',
+    '葡萄牙的保险公司以葡萄牙语出具保单，西班牙的保险公司以西班牙语出具保单。这不会因为客户是外国人而改变。我们要做的是：在您签字之前，用英语书面说清保单里写了什么——保额、自负额、除外责任和时限，以及哪些是您以为包含、实际并不包含的部分。如果由亲友或顾问代您核对英文文件会更放心，这样安排完全没有问题。',
   ],
 };
 
 /** /zh/ is itself the hub, so product pages sit one level below it. */
 export const BREADCRUMB_ROOT = [{ name: '首页', url: '/zh/' }];
+
+/**
+ * Portugal ↔ Spain sibling links (September 2026, Portugal/Spain clusters).
+ *
+ * Each Portugal product page points at its Spain counterpart and vice versa,
+ * so a reader who owns in both countries finds the other page from the top of
+ * the one they landed on. The note is placed inside the first section's
+ * container rather than as a band of its own, so the page keeps its
+ * cream/white rhythm (and nextBand() in the renderer is unaffected).
+ */
+export function siblingNote({ label, href, text }) {
+  return `
+    <div class="callout sibling-link">
+      <span class="callout-label">${label}</span>
+      <a class="text-link" href="${href}">${text} →</a>
+    </div>`;
+}
+
+/** Insert a sibling note at the top of the first section's container. */
+export function withSibling(sections, note) {
+  const re = /(<div class="container[^"]*">)/;
+  if (!re.test(sections)) throw new Error('withSibling: no container in sections');
+  return sections.replace(re, `$1${note}`);
+}
+
+/** The Spain cluster's breadcrumb parent — the Spain guide is its landing page. */
+export const BREADCRUMB_ES = [...BREADCRUMB_ROOT, { name: '西班牙保险指南', url: '/zh/insurance-guide-spain/' }];

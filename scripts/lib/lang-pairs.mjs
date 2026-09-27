@@ -29,6 +29,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Spain cluster, September 2026 (es-* groups in scripts/lib/market-hreflang.mjs).
+  { en: '/en/expat-insurance-spain/', de: '/de/versicherung-spanien/', nl: '/nl/verzekeringen-spanje/', pl: '/pl/ubezpieczenia-hiszpania-przewodnik/', se: '/se/forsakring-spanien/', dk: '/dk/forsikring-spanien/', zh: '/zh/insurance-guide-spain/', il: '/il/insurance-guide-spain/' },
+  { en: '/en/home-insurance-spain/', de: '/de/hausversicherung-spanien/', nl: '/nl/woonverzekering-spanje/', pl: '/pl/ubezpieczenie-domu-hiszpania/', se: '/se/hemforsakring-spanien/', dk: '/dk/husforsikring-spanien/', zh: '/zh/home-insurance-spain/', il: '/il/home-insurance-spain/' },
+  { en: '/en/health-insurance-spain/', de: '/de/krankenversicherung-spanien/', nl: '/nl/zorgverzekering-spanje/', pl: '/pl/ubezpieczenie-zdrowotne-hiszpania/', se: '/se/sjukvardsforsakring-spanien/', dk: '/dk/sundhedsforsikring-spanien/', zh: '/zh/health-insurance-spain/', il: '/il/health-insurance-spain/' },
+  { en: '/en/car-insurance-spain/', de: '/de/autoversicherung-spanien/', nl: '/nl/autoverzekering-spanje/', pl: '/pl/ubezpieczenie-samochodu-hiszpania/', se: '/se/bilforsakring-spanien/', dk: '/dk/bilforsikring-spanien/', zh: '/zh/car-insurance-spain/', il: '/il/car-insurance-spain/' },
+  { en: '/en/family-liability-insurance-spain/', de: '/de/privathaftpflicht-spanien/', nl: '/nl/aansprakelijkheidsverzekering-spanje/', pl: '/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/', se: '/se/ansvarsforsakring-spanien/', dk: '/dk/ansvarsforsikring-spanien/', zh: '/zh/liability-insurance-spain/', il: '/il/liability-insurance-spain/' },
+  { en: '/en/blog/insurance-buying-property-spain/', de: '/de/immobilienkauf-spanien-versicherung/', nl: '/nl/huis-kopen-spanje-verzekering/', pl: '/pl/zakup-nieruchomosci-w-hiszpanii-ubezpieczenie/', se: '/se/kopa-hus-i-spanien-forsakring/', dk: '/dk/kobe-bolig-i-spanien-forsikring/', zh: '/zh/buying-property-spain/', il: '/il/buying-property-spain/' },
   // Specialist (niche) pages, September 2026 — EN/DE hand-authored, ES/IT/PL
   // generated (their groups also come from scripts/lib/market-hreflang.mjs).
   { en: '/en/kidnap-ransom-extortion-insurance/', de: '/de/entfuehrung-loesegeld-versicherung/', es: '/es/seguro-secuestro-extorsion/', it: '/it/assicurazione-rapimento-estorsione/', pl: '/pl/ubezpieczenie-porwanie-okup/' },

@@ -19,13 +19,13 @@
  * that the wording follows the activity and that some activities are not
  * accepted at all by some insurers.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, siblingNote, withSibling } from './shared.mjs';
 
 export const LIABILITY_PAGE = {
   slug: 'liability-insurance-portugal',
   url: '/zh/liability-insurance-portugal/',
   cluster: 'liability',
-  title: '家庭个人责任保险：葡萄牙与西班牙 | Adler & Rochefort',
+  title: '葡萄牙家庭个人责任保险：百万级保额 | Adler & Rochefort',
   description:
     '高净值家庭的个人责任保险：数百万欧元保额、全球范围、抗辩费用另计，涵盖家政人员、访客、泳池与船艇。职业责任另行按活动安排。葡萄牙与西班牙。',
   keywords:
@@ -35,7 +35,7 @@ export const LIABILITY_PAGE = {
   standfirst:
     '民事责任保险（<em>Responsabilidade Civil</em>）处理的是您和家人依法应当对他人承担的赔偿责任。资产越多，被索赔的金额往往越高——因此家庭责任的保额应与家业相称：数百万欧元、全球有效，抗辩费用在保额之外另行支付。',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: '民事责任保险' }],
   pullquote: '家业越大，别人向您索赔的金额也越大。责任保额应当与之相称，而不是停留在房屋保单附带的那一点额度。',
   schemaType: 'Article',
@@ -55,7 +55,7 @@ export const LIABILITY_PAGE = {
     fieldsHtml: `        <div class="contact-form-field"><label for="zh-rcp-faturacao">年营业额 *</label><input type="number" id="zh-rcp-faturacao" name="faturacao_anual" placeholder="例如：85000" required></div>
         <p class="wizard-helper">经营活动类型、期望的保险金额，以及保单是否为合同或行业协会所要求，我们将在后续联系中进一步了解。</p>`,
   },
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="shi-shenme">
   <div class="container narrow article-body">
     <h2 id="shi-shenme">先说清楚它是什么</h2>
@@ -165,7 +165,11 @@ export const LIABILITY_PAGE = {
     </ul>
     <p class="legal-note">是否属于依法强制投保的职业、以及具体保障范围，取决于适用法规、保险公司与所选方案，并以保单文件为准。本页为一般性说明，不构成法律意见。服务语言为英语，书面进行。</p>
   </div>
-</section>`,
+</section>`, siblingNote({
+    label: '在西班牙也有住所？',
+    href: '/zh/liability-insurance-spain/',
+    text: '西班牙家庭责任保险',
+  })),
   faqTitle: '葡萄牙民事责任保险：常见问题',
   faq: [
     {

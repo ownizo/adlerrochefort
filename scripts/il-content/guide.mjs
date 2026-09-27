@@ -22,7 +22,7 @@
  * read the product page first: nothing here confirms that a health policy
  * satisfies AIMA, and nothing here rules on Israeli licence validity.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const GUIDE_PAGE = {
   slug: 'insurance-guide-portugal',
@@ -38,7 +38,7 @@ export const GUIDE_PAGE = {
   standfirst:
     'השאלות שאנחנו מקבלים הכי הרבה מלקוחות ישראלים, עם תשובות ישרות — כולל במקומות שבהם התשובה הישרה היא ״זה תלוי״ או ״זו לא שאלה של ביטוח״.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'מדריך הביטוח בפורטוגל', url: '/il/insurance-guide-portugal/' }],
   pullquote:
     'התשובה ״זה תלוי בפוליסה״ נשמעת כמו התחמקות. בפורטוגל היא בדרך כלל התשובה המדויקת היחידה.',
@@ -51,7 +51,7 @@ export const GUIDE_PAGE = {
     'כתבו את המצב שלכם בכמה שורות. נחזור בכתב באנגלית עם תשובה ספציפית, גם אם התשובה היא שאתם לא צריכים את מה שחשבתם שאתם צריכים.',
   formPlaceholder:
     'למשל: יש לי דירה בליסבון שמושכרת, אני גר בישראל, ואני לא בטוח אם הפוליסה שקיבלתי מהבנק מכסה את התכולה של הדיירים או שלי.',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="ma-chayavim">
   <div class="container narrow article-body">
     <h2 id="ma-chayavim">מה חייבים לבטח בפורטוגל?</h2>
@@ -140,7 +140,10 @@ export const GUIDE_PAGE = {
     </div>
     <p>אם ההצעה שבידיכם לא נותנת תשובה ברורה לשבע השאלות האלה, זו לא בהכרח הצעה גרועה — אבל זו הצעה שאי אפשר להשוות. <a href="/il/">בדף הראשי של המדריך</a> יש את ארבעת המוצרים העיקריים, ואפשר גם לשלוח לנו הצעה קיימת ולבקש שנעבור עליה מול מה שיש בשוק.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'ומה לגבי ספרד?',
+    body: 'השוק הספרדי בנוי אחרת בכמה נקודות חשובות, מה־<em dir="ltr">Consorcio</em> ועד ביטוח בריאות לאשרה — <a href="/il/insurance-guide-spain/">ביטוח בספרד: המדריך לישראלים</a>.',
+  }),
   faqTitle: 'ביטוח בפורטוגל: השאלות שאנחנו מקבלים',
   faq: [
     {
@@ -193,6 +196,7 @@ export const GUIDE_PAGE = {
     },
   ],
   related: [
+    { url: '/il/insurance-guide-spain/', label: 'ביטוח בספרד: המדריך לישראלים' },
     { url: '/il/', label: 'ביטוח בפורטוגל: מדריך לישראלים' },
     { url: '/il/health-insurance-portugal/', label: 'ביטוח בריאות פרטי בפורטוגל' },
     { url: '/il/home-insurance-portugal/', label: 'ביטוח דירה ומבנה בפורטוגל' },

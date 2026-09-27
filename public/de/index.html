@@ -2666,6 +2666,14 @@
   .country-card .btn-primary { align-self: flex-start; margin-top: 4px; }
   .country-card-secondary { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ink2); text-decoration: none; margin-top: -4px; }
   .country-card-secondary:hover { color: var(--primary); }
+  .country-card-cluster { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 4px; }
+  .country-card-cluster-title { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); margin: 0 0 8px; }
+  .country-card-cluster ul { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+  .country-card-cluster ul:last-child { margin-bottom: 0; }
+  .country-card-cluster-regions { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .country-card-cluster a { font-size: 14px; line-height: 1.4; color: var(--ink2); text-decoration: none; overflow-wrap: anywhere; }
+  .country-card-cluster a:hover { color: var(--primary); text-decoration: underline; }
+  @media (max-width: 420px) { .country-card-cluster-regions { grid-template-columns: 1fr 1fr !important; } }
   @media (max-width: 760px) { .country-router-grid { grid-template-columns: 1fr; } .country-router { padding: 0 20px 48px; } }
 
   /* ═══════════════ PROTECT GRID — cross-market product categories ═══════════════ */
@@ -3169,6 +3177,12 @@
         </div>
         <a href="/de/private-clients-portugal/" class="btn-primary">Private Clients in Portugal →</a>
         <a href="/de/umzug-deutschland-portugal-versicherung/" class="country-card-secondary">Umzug nach Portugal? Hier beginnen →</a>
+        <nav class="country-card-cluster" aria-label="Alle Seiten Portugal">
+          <div class="country-card-cluster-title">Versicherungen in Portugal</div>
+          <ul><li><a href="/de/versicherung-portugal/">Überblick Portugal</a></li><li><a href="/de/hausversicherung-portugal/">Hausversicherung</a></li><li><a href="/de/krankenversicherung-portugal/">Krankenversicherung</a></li><li><a href="/de/autoversicherung-portugal/">Autoversicherung</a></li><li><a href="/de/lebensversicherung-portugal/">Lebensversicherung</a></li><li><a href="/de/private-clients-portugal/">Private Clients &amp; Privathaftpflicht</a></li><li><a href="/de/umzug-deutschland-portugal-versicherung/">Umzug aus Deutschland</a></li><li><a href="/de/s1-formular-rentner-portugal/">S1 für Rentner</a></li><li><a href="/de/anwartschaftsversicherung-portugal/">PKV-Anwartschaft</a></li><li><a href="/de/vorerkrankungen-krankenversicherung-portugal/">Vorerkrankungen</a></li><li><a href="/de/isv-befreiung-fahrzeugimport-portugal/">Fahrzeugimport (ISV)</a></li><li><a href="/de/nicht-legalisierte-immobilie-versichern-portugal/">Nicht legalisierte Immobilie</a></li><li><a href="/de/berufshaftpflicht-freiberufler-portugal/">Berufshaftpflicht</a></li></ul>
+          <div class="country-card-cluster-title">Regionen</div>
+          <ul class="country-card-cluster-regions"><li><a href="/de/versicherung-lissabon/">Lissabon</a></li><li><a href="/de/versicherung-cascais/">Cascais</a></li><li><a href="/de/versicherung-comporta/">Comporta</a></li><li><a href="/de/versicherung-algarve/">Algarve</a></li><li><a href="/de/versicherung-quinta-do-lago/">Quinta do Lago</a></li><li><a href="/de/versicherung-vilamoura/">Vilamoura</a></li><li><a href="/de/versicherung-lagos/">Lagos</a></li><li><a href="/de/versicherung-madeira/">Madeira</a></li></ul>
+        </nav>
       </div>
       <div class="country-card fade-up">
         <div class="country-card-flag">🇪🇸</div>
@@ -3178,7 +3192,13 @@
           <span>Hochwertige Immobilien</span><span>Kunst &amp; Sammlungen</span><span>Privathaftpflicht</span><span>Internationale Krankenversicherung</span><span>Sammlerfahrzeuge</span>
         </div>
         <a href="/de/private-clients-spanien/" class="btn-primary">Private Clients in Spanien →</a>
-        <a href="/de/versicherung-spanien/" class="country-card-secondary">Umzug nach Spanien? Hier beginnen →</a>
+        <a href="/de/umzug-deutschland-spanien-versicherung/" class="country-card-secondary">Umzug nach Spanien? Hier beginnen →</a>
+        <nav class="country-card-cluster" aria-label="Alle Seiten Spanien">
+          <div class="country-card-cluster-title">Versicherungen in Spanien</div>
+          <ul><li><a href="/de/versicherung-spanien/">Überblick Spanien</a></li><li><a href="/de/hausversicherung-spanien/">Hausversicherung</a></li><li><a href="/de/krankenversicherung-spanien/">Krankenversicherung</a></li><li><a href="/de/autoversicherung-spanien/">Autoversicherung</a></li><li><a href="/de/lebensversicherung-spanien/">Lebensversicherung</a></li><li><a href="/de/privathaftpflicht-spanien/">Privathaftpflicht</a></li><li><a href="/de/private-clients-spanien/">Private Clients</a></li><li><a href="/de/immobilienkauf-spanien-versicherung/">Immobilienkauf</a></li><li><a href="/de/vermieterversicherung-spanien/">Vermieterversicherung</a></li><li><a href="/de/hypothekenschutz-spanien/">Hypothekenschutz</a></li><li><a href="/de/umzug-deutschland-spanien-versicherung/">Umzug aus Deutschland</a></li><li><a href="/de/s1-formular-rentner-spanien/">S1 für Rentner</a></li><li><a href="/de/anwartschaftsversicherung-spanien/">PKV-Anwartschaft</a></li><li><a href="/de/vorerkrankungen-krankenversicherung-spanien/">Vorerkrankungen</a></li></ul>
+          <div class="country-card-cluster-title">Regionen</div>
+          <ul class="country-card-cluster-regions"><li><a href="/de/versicherung-mallorca/">Mallorca</a></li><li><a href="/de/versicherung-costa-del-sol/">Costa del Sol</a></li><li><a href="/de/versicherung-costa-blanca/">Costa Blanca</a></li><li><a href="/de/versicherung-kanaren/">Kanaren</a></li><li><a href="/de/versicherung-katalonien/">Katalonien</a></li></ul>
+        </nav>
       </div>
     </div>
   </div>

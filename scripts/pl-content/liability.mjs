@@ -12,7 +12,7 @@
  * liability almost as a reflex, and Portuguese ones frequently do not — which
  * is the gap most Polish clients do not know they have.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const LIABILITY_PAGE = {
   slug: 'ubezpieczenie-odpowiedzialnosci-cywilnej-portugalia',
@@ -28,7 +28,7 @@ export const LIABILITY_PAGE = {
   standfirst:
     'W polskich polisach mieszkaniowych OC w życiu prywatnym dokłada się niemal automatycznie, zwykle z niewielką sumą. W Portugalii <em>responsabilidade civil</em> trzeba kupić świadomie — a przy znacznym majątku suma liczona w dziesiątkach czy setkach tysięcy euro często nie wystarcza. OC zawodowa to osobna polisa i osobne pytania, opisane niżej.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Odpowiedzialność cywilna' }],
   pullquote: 'Odpowiedzialność cywilna to jedno z niewielu ryzyk bez górnej granicy. Dlatego kupuje się ją zanim się jej potrzebuje.',
   schemaType: 'Article',
@@ -195,3 +195,13 @@ export const LIABILITY_PAGE = {
     { url: '/pl/ubezpieczenia-portugalia-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Portugalii' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(LIABILITY_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Mają Państwo dom także w Hiszpanii?',
+  body: 'W Hiszpanii <em>responsabilidad civil familiar</em> często jest częścią polisy domowej — ale z limitem, który przy willi z basenem, personelem i psami trzeba sprawdzić. Opisujemy to na osobnej stronie.',
+  url: '/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/',
+  cta: 'Odpowiedzialność cywilna rodziny w Hiszpanii',
+});

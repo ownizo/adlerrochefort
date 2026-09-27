@@ -33,7 +33,7 @@ export const HOME_PAGE = {
   standfirst:
     'En vanlig <em>multirriscos habitação</em> är byggd för en genomsnittlig bostad. Ett hem med högt värde — med konst, samlingar och flera byggnader på tomten — behöver villkor som är skrivna för det, och ett försäkringsbelopp som stämmer den dag något händer.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Hemförsäkring' }],
   pullquote: 'Försäkringsbeloppet är inte vad du betalade. Det är vad det kostar att bygga upp det som brann.',
   schemaType: 'Article',
@@ -243,6 +243,10 @@ export const HOME_PAGE = {
       <li><div><strong>Gränsfallen</strong><span> — pool, solceller, pergola, mur — står i försäkringsbrevet med värde.</span></div></li>
       <li><div><strong>Självriskerna</strong><span> är kända i kronor och ören per moment.</span></div></li>
     </ol>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Äger du också en bostad i Spanien? → <a href="/se/hemforsakring-spanien/">Hemförsäkring i Spanien</a> — där ersätts översvämning och jordskalv av Consorcio de Compensación de Seguros.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Hemförsäkring i Portugal — frågor',
@@ -280,5 +284,6 @@ export const HOME_PAGE = {
     { url: '/se/kopa-hus-i-portugal-forsakring/', label: 'Köpa hus i Portugal: försäkringen steg för steg' },
     { url: '/se/ansvarsforsakring-portugal/', label: 'Ansvarsförsäkring i Portugal' },
     { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide för Portugal' },
+    { url: '/se/hemforsakring-spanien/', label: 'Hemförsäkring i Spanien' },
   ],
 };

@@ -31,7 +31,7 @@
  * the lender's requirements — stated with the qualifier, because the terms are
  * the bank's and the repository cannot promise a given bank's behaviour.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const PROPERTY_PAGE = {
   slug: 'buying-property-portugal',
@@ -39,7 +39,7 @@ export const PROPERTY_PAGE = {
   cluster: 'property',
   title: 'קניית דירה בפורטוגל: ביטוח לפי שלבי העסקה | Adler & Rochefort',
   description:
-    'מה צריך להיות מבוטח לפני החתימה, ביום ה־escritura ואחרי הקנייה — כולל הטעויות הנפוצות: מחיר הקנייה כסכום ביטוח, הנחה שרעידת אדמה כלולה, ביטוח חסר בתכולה והשכרה לא מוצהרת.',
+    'מה לבטח לפני החתימה, ביום ה־escritura ואחרי הקנייה — והטעויות הנפוצות: מחיר הקנייה כסכום ביטוח, הנחה שרעידת אדמה כלולה, ביטוח חסר והשכרה לא מוצהרת.',
   keywords:
     'קניית דירה בפורטוגל, קניית נכס בפורטוגל, ביטוח מבנה פורטוגל, escritura, משכנתא בפורטוגל, ביטוח נכס לפני חתימה',
   eyebrow: 'קניית נכס',
@@ -47,7 +47,7 @@ export const PROPERTY_PAGE = {
   standfirst:
     'ביטוח בעסקת נדל״ן בפורטוגל הוא לא החלטה אחת. יש מה לבדוק לפני החתימה, יש מה שחייב להיות בתוקף ביום המסירה, ויש דברים שרק אחרי הקנייה עלולים לבטל את הכיסוי בלי שאף אחד ישים לב.',
   published: '2026-09-13T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'קניית דירה בפורטוגל', url: '/il/buying-property-portugal/' }],
   pullquote:
     'בפורטוגל קרקע היא לעיתים רוב המחיר. ביטוח לפי מחיר הקנייה משלם פרמיה על משהו שאי אפשר לתבוע.',
@@ -60,7 +60,7 @@ export const PROPERTY_PAGE = {
     'כתבו איזה נכס, באיזה שלב אתם, ואם יש משכנתא. נחזור בכתב עם מה שנדרש ביום ה־escritura, מה מומלץ מעבר לזה, ומה חשוב שיופיע בפוליסה.',
   formPlaceholder:
     'למשל: דירת שלושה חדרים בקאשקאיש, escritura בנובמבר, משכנתא של 60% מהמחיר, בכוונה להשכיר בקיץ.',
-  sections: `
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="lo-hachlata-achat">
   <div class="container narrow article-body">
     <h2 id="lo-hachlata-achat">למה זה לא החלטה אחת</h2>
@@ -140,7 +140,10 @@ export const PROPERTY_PAGE = {
     </div>
     <p class="legal-note">מה שכתוב כאן הוא הסבר כללי על ההיגיון של פוליסות בפורטוגל, ולא ייעוץ לגבי נכס מסוים. הכיסוי בפועל, הזמינות, ההשתתפויות העצמיות והחריגים נקבעים בפוליסה שתונפק ובכפוף לחיתום של המבטח.</p>
   </div>
-</section>`,
+</section>`, {
+    label: 'קונים גם בספרד?',
+    body: 'שם העסקה עוברת דרך חוזה <em dir="ltr">arras</em>, נוטריון ורישום, והבנק אינו רשאי לחייב אתכם בביטוח שלו — <a href="/il/buying-property-spain/">קניית נכס בספרד</a>.',
+  }),
   faqTitle: 'קניית נכס בפורטוגל: שאלות נפוצות',
   faq: [
     {
@@ -177,6 +180,7 @@ export const PROPERTY_PAGE = {
     },
   ],
   related: [
+    { url: '/il/buying-property-spain/', label: 'קניית נכס בספרד: הביטוח לפי שלבי העסקה' },
     { url: '/il/home-insurance-portugal/', label: 'ביטוח דירה ומבנה בפורטוגל' },
     { url: '/il/moving-to-portugal/', label: 'מעבר לפורטוגל: מה לסדר בביטוח' },
     { url: '/il/insurance-guide-portugal/', label: 'מדריך הביטוח בפורטוגל' },

@@ -26,9 +26,32 @@ export const LANG_POLICY_IL = {
   heading: 'על השפה: האתר בעברית, שפת העבודה אנגלית',
   body: [
     'העמודים האלה כתובים בעברית, כי מי ששואל את השאלות האלה חושב עליהן בעברית. אבל העבודה עצמה לא מתנהלת בעברית: הצעות מחיר, הסבר של תנאי הפוליסה, ההתכתבות והליווי בתביעה נעשים בכתב באנגלית, וגם התשובה שתקבלו תהיה באנגלית. אנחנו כותבים את זה בכל עמוד ולא מחכים שתגלו את זה באמצע תביעה — שם זה מתגלה בתזמון הגרוע ביותר.',
-    'מבטחים בפורטוגל מנפיקים פוליסות בפורטוגזית, כי החוק מחייב אותם. זה לא משתנה כשהלקוח הוא זר. מה שאנחנו כן עושים: לפני החתימה, להעביר לכם בכתב באנגלית את מה שכתוב בפוליסה — סכומי הביטוח, ההשתתפות העצמית, החריגים ולוחות הזמנים לדיווח על נזק, וגם מה שאתם מניחים שמכוסה ובפועל אינו מכוסה. אם נוח לכם שבן משפחה, חבר או יועץ שקורא אנגלית יעבור על המסמכים איתכם, זו בקשה סבירה לגמרי ואנחנו נערכים לפיה.',
+    'מבטחים בפורטוגל מנפיקים פוליסות בפורטוגזית, ומבטחים בספרד — בספרדית; זה לא משתנה כשהלקוח הוא זר. מה שאנחנו כן עושים: לפני החתימה, להעביר לכם בכתב באנגלית את מה שכתוב בפוליסה — סכומי הביטוח, ההשתתפות העצמית, החריגים ולוחות הזמנים לדיווח על נזק, וגם מה שאתם מניחים שמכוסה ובפועל אינו מכוסה. אם נוח לכם שבן משפחה, חבר או יועץ שקורא אנגלית יעבור על המסמכים איתכם, זו בקשה סבירה לגמרי ואנחנו נערכים לפיה.',
   ],
 };
 
 /** /il/ is itself the hub, so product pages sit one level below it. */
 export const BREADCRUMB_ROOT = [{ name: 'ביטוח בפורטוגל', url: '/il/' }];
+
+/**
+ * The Spain cluster (es-* keys, September 2026) sits under the same hub, with
+ * the Spain guide as an intermediate crumb so the trail says which country the
+ * page is about. The guide itself uses only the first element.
+ */
+export const BREADCRUMB_ROOT_ES = [
+  { name: 'ביטוח בפורטוגל ובספרד', url: '/il/' },
+  { name: 'ביטוח בספרד', url: '/il/insurance-guide-spain/' },
+];
+
+/**
+ * Portugal ↔ Spain sibling link. Inserted as a callout at the end of a page's
+ * FIRST section, so it is seen early and the page's plain/tint band rhythm is
+ * untouched (no extra section, nothing for nextBand() to miscount).
+ */
+export function withSibling(sections, { label, body }) {
+  const anchor = '\n  </div>\n</section>';
+  const i = sections.indexOf(anchor);
+  if (i < 0) throw new Error('withSibling: no section close found');
+  const note = `\n    <div class="callout">\n      <span class="callout-label">${label}</span>\n      ${body}\n    </div>`;
+  return sections.slice(0, i) + note + sections.slice(i);
+}

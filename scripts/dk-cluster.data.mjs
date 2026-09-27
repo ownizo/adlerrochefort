@@ -21,6 +21,13 @@ import { LIABILITY_PAGE } from './dk-content/liability.mjs';
 import { MOVING_PAGE } from './dk-content/moving.mjs';
 import { PROPERTY_PAGE } from './dk-content/property.mjs';
 import { GUIDE_PAGE } from './dk-content/guide.mjs';
+// Spain cluster (September 2026) — cluster keys es-*, paired across markets.
+import { ES_GUIDE_PAGE } from './dk-content/es-guide.mjs';
+import { ES_HOME_PAGE } from './dk-content/es-home.mjs';
+import { ES_HEALTH_PAGE } from './dk-content/es-health.mjs';
+import { ES_MOTOR_PAGE } from './dk-content/es-motor.mjs';
+import { ES_LIABILITY_PAGE } from './dk-content/es-liability.mjs';
+import { ES_PROPERTY_PAGE } from './dk-content/es-property.mjs';
 
 export { LANG_POLICY_DK, BREADCRUMB_ROOT } from './dk-content/shared.mjs';
 
@@ -33,6 +40,12 @@ export const PAGES = [
   MOVING_PAGE,
   PROPERTY_PAGE,
   GUIDE_PAGE,
+  ES_GUIDE_PAGE,
+  ES_HOME_PAGE,
+  ES_HEALTH_PAGE,
+  ES_MOTOR_PAGE,
+  ES_LIABILITY_PAGE,
+  ES_PROPERTY_PAGE,
 ];
 
 export const DK_MARKET = {

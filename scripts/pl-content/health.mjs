@@ -12,7 +12,7 @@
  * brief is emphatic that cover for prior conditions must never be stated as a
  * general fact.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_ROOT, withSibling } from './shared.mjs';
 
 export const HEALTH_PAGE = {
   slug: 'ubezpieczenie-zdrowotne-portugalia',
@@ -28,7 +28,7 @@ export const HEALTH_PAGE = {
   standfirst:
     'Prywatne ubezpieczenie zdrowotne nie zastępuje portugalskiego systemu publicznego — daje drugą, szybszą drogę dostępu, a w wariancie międzynarodowym także wybór lekarzy i szpitali w Portugalii, w Polsce i dalej. Ta strona wyjaśnia, jak te rozwiązania działają obok siebie i o co ubezpieczyciel zapyta, zanim wystawi polisę.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie zdrowotne' }],
   pullquote: 'Polisę zdrowotną kupuje się wtedy, gdy jest się zdrowym. Później kupuje się już tylko to, co ubezpieczyciel zechce zaproponować.',
   schemaType: 'Article',
@@ -192,3 +192,13 @@ export const HEALTH_PAGE = {
     { url: '/pl/ubezpieczenia-portugalia-przewodnik/', label: 'Przewodnik po ubezpieczeniach w Portugalii' },
   ],
 };
+
+// Portugal → Spain sibling (September 2026 two-cluster structure).
+withSibling(HEALTH_PAGE, {
+  id: 'rodzenstwo-hiszpania',
+  label: 'Hiszpania',
+  heading: 'Mieszkają Państwo także w Hiszpanii?',
+  body: 'W Hiszpanii dostęp do publicznej opieki zależy od pracy, formularza S1 lub rejestracji pobytu, a prywatna polisa bywa jej podstawą. Opisujemy to na osobnej stronie.',
+  url: '/pl/ubezpieczenie-zdrowotne-hiszpania/',
+  cta: 'Ubezpieczenie zdrowotne w Hiszpanii',
+});

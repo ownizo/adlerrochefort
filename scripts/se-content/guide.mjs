@@ -27,7 +27,7 @@ export const GUIDE_PAGE = {
   standfirst:
     'Den här sidan förklarar inte enskilda produkter utan systemet de ligger i: vem aktörerna är, vad som står i ett portugisiskt försäkringsbrev, vilka begrepp som avgör ersättningen och hur en skada faktiskt hanteras.',
   published: '2026-09-12T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Försäkringsguide' }],
   pullquote: 'En försäkring prövas inte när den tecknas, utan den dag skadan inträffar — och då är det villkoren som gäller, inte broschyren.',
   schemaType: 'Article',
@@ -157,6 +157,10 @@ export const GUIDE_PAGE = {
         <p>Vad banken kräver, de tre värdena, och vad som skiljer condomínio från en bostadsrättsförening.</p>
       </li>
     </ul>
+    <div class="callout">
+      <span class="callout-label">Spanien</span>
+      Har du också en bostad i Spanien? → <a href="/se/forsakring-spanien/">Försäkring i Spanien</a> — den spanska marknaden, Consorcio och hur vi arbetar där.
+    </div>
   </div>
 </section>`,
   faqTitle: 'Försäkring i Portugal — allmänna frågor',
@@ -189,5 +193,6 @@ export const GUIDE_PAGE = {
   related: [
     { url: '/se/hemforsakring-portugal/', label: 'Hemförsäkring i Portugal' },
     { url: '/se/flytta-till-portugal-forsakring/', label: 'Flytta till Portugal: försäkringar i rätt ordning' },
+    { url: '/se/forsakring-spanien/', label: 'Försäkring i Spanien' },
   ],
 };

@@ -179,6 +179,7 @@ export const SE_UI = {
       { url: '/se/bilforsakring-portugal/', label: 'Bilförsäkring' },
       { url: '/se/ansvarsforsakring-portugal/', label: 'Ansvarsförsäkring' },
       { url: '/se/forsakringsguide-portugal/', label: 'Försäkringsguide' },
+      { url: '/se/forsakring-spanien/', label: 'Försäkring i Spanien' },
     ],
     langsTitle: 'Språk',
     contactTitle: 'Kontakt',
