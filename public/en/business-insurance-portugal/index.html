@@ -2319,7 +2319,7 @@
       <div class="lp-form-row">
       <div class="contact-form-field">
         <label for="q-nif">Company tax number (NIF) *</label>
-        <input type="text" id="q-nif" name="nif" placeholder="9 digits" inputmode="numeric" required>
+        <input type="text" id="q-nif" name="nif" placeholder="NIF" required>
       </div>
       </div>
 
@@ -2602,23 +2602,8 @@
       });
     }
 
-    // NIF check-digit validation (same rule as the other EN quote wizards' data-validate="nif").
-    var nif = form.querySelector('#q-nif');
-    if (nif && window.QuoteValidators) {
-      function checkNif() {
-        if (nif.value && !window.QuoteValidators.isValidNif(nif.value)) {
-          nif.setCustomValidity('Invalid NIF — please check the tax number.');
-        } else {
-          nif.setCustomValidity('');
-        }
-      }
-      nif.addEventListener('blur', checkNif);
-      nif.addEventListener('input', function () { nif.setCustomValidity(''); });
-      form.addEventListener('submit', function (e) {
-        checkNif();
-        if (!nif.validity.valid) { nif.reportValidity(); e.preventDefault(); }
-      });
-    }
+    // NIF/NIE is free text (Portuguese, Spanish or foreign tax numbers are
+    // accepted) — only the native `required` check applies.
   });
 </script>
 <script defer src="/js/quote-validators.js"></script>

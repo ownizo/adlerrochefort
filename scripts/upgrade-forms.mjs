@@ -90,7 +90,7 @@ const BRANCH_FIELDS = {
   ],
   'Automóvel': [
     ['auto_veiculo', 'Marca, modelo e ano', 'text', 'Ex.: Renault Clio 2019'],
-    ['auto_matricula', 'Matrícula', 'text', 'AA-00-AA'],
+    ['auto_matricula', 'Matrícula', 'text', ''],
     ['auto_anos_carta', 'Anos de carta', 'number', 'Ex.: 15'],
   ],
   'TVDE (Uber, Bolt, Free Now)': [
@@ -105,7 +105,7 @@ const BRANCH_FIELDS = {
   ],
   'Habitação': [
     ['habitacao_tipo', 'Tipo de imóvel', 'text', 'Apartamento / Moradia'],
-    ['habitacao_cp', 'Código postal', 'text', '0000-000'],
+    ['habitacao_cp', 'Código postal', 'text', ''],
     ['habitacao_valor', 'Valor de reconstrução estimado', 'text', 'Ex.: 160 000 €'],
   ],
   'Alojamento Local': [
@@ -120,7 +120,7 @@ const BRANCH_FIELDS = {
   // here avoids the round trip that every condominium enquiry otherwise costs.
   'Condomínio': [
     ['condominio_nome', 'Nome do condomínio', 'text', 'Ex.: Condomínio Edifício Atlântico'],
-    ['condominio_nif', 'NIF do condomínio', 'text', '000 000 000'],
+    ['condominio_nif', 'NIF do condomínio', 'text', 'NIF'],
     ['condominio_morada', 'Morada e código postal', 'text', 'Rua, n.º, 0000-000 Localidade'],
     ['condominio_fracoes', 'Número de frações', 'number', 'Ex.: 24'],
     ['condominio_pisos', 'Número de pisos', 'number', 'Ex.: 5'],
@@ -187,7 +187,7 @@ const branchField = ([name, label, type, placeholder, options]) => {
       ? `<select id="${name}" name="${name}" disabled><option value="">${placeholder}</option>` +
         options.map((o) => `<option value="${o}">${o}</option>`).join('') +
         `</select>`
-      : `<input type="${type}" id="${name}" name="${name}" placeholder="${placeholder}" disabled>`;
+      : `<input type="${type}" id="${name}" name="${name}"${placeholder ? ` placeholder="${placeholder}"` : ''} disabled>`;
   return `          <div class="form-field">
             <label for="${name}">${label}</label>
             ${control}
@@ -213,7 +213,7 @@ const BRANCH_FIELDS_EN = {
   ],
   'Car': [
     ['car_vehicle', 'Make, model and year', 'text', 'e.g. Renault Clio 2019'],
-    ['car_plate', 'Registration plate', 'text', 'AA-00-AA'],
+    ['car_plate', 'Registration plate', 'text', ''],
     ['car_licence_years', 'Years holding a licence', 'number', 'e.g. 15'],
   ],
   'TVDE (Uber, Bolt, Free Now)': [
@@ -228,7 +228,7 @@ const BRANCH_FIELDS_EN = {
   ],
   'Home': [
     ['home_type', 'Property type', 'text', 'Apartment / House'],
-    ['home_postcode', 'Postcode', 'text', '0000-000'],
+    ['home_postcode', 'Postcode', 'text', ''],
     ['home_rebuild_value', 'Estimated rebuild value', 'text', 'e.g. €160,000'],
   ],
   'Holiday let (Alojamento Local)': [
@@ -241,7 +241,7 @@ const BRANCH_FIELDS_EN = {
   // Portuguese administrator can answer from memory is asked later.
   'Condominium': [
     ['condo_units', 'Number of units in the building', 'number', 'e.g. 24'],
-    ['condo_postcode', 'Building postcode', 'text', '0000-000'],
+    ['condo_postcode', 'Building postcode', 'text', ''],
     ['condo_role', 'Are you the administrator or an owner?', 'text', 'Administrator / Owner'],
   ],
   'Hospitality &amp; restaurants': [

@@ -403,7 +403,7 @@ export const PAGE = {
       ],
       [
         { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+351 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
-        { name: 'postcode', label: 'Postcode where the car is kept', required: true, placeholder: '8600-324', autocomplete: 'postal-code' },
+        { name: 'postcode', label: 'Postcode where the car is kept', required: true, autocomplete: 'postal-code' },
       ],
       [
         { name: 'vehicle', label: 'Make, model and year', required: true, placeholder: 'e.g. Volkswagen Golf 2019' },

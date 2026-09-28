@@ -57,30 +57,24 @@
   // page silently got before this fix, so no currently-correct page's
   // behaviour changes).
   var COPY = {
-    pt: { name: 'Nome completo', dob: 'Data de nascimento', nif: 'NIF', nifPlaceholder: 'Número de contribuinte', remove: 'Remover esta pessoa', person: 'Pessoa' },
-    en: { name: 'Full name', dob: 'Date of birth', nif: 'Portuguese tax number (NIF)', nifPlaceholder: '9 digits', remove: 'Remove this person', person: 'Person' },
-    de: { name: 'Vollständiger Name', dob: 'Geburtsdatum', nif: 'NIF (portugiesische Steuernummer)', nifPlaceholder: '9 Ziffern', remove: 'Diese Person entfernen', person: 'Person' },
+    pt: { name: 'Nome completo', dob: 'Data de nascimento', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Remover esta pessoa', person: 'Pessoa' },
+    en: { name: 'Full name', dob: 'Date of birth', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Remove this person', person: 'Person' },
+    de: { name: 'Vollständiger Name', dob: 'Geburtsdatum', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Diese Person entfernen', person: 'Person' },
     // Especificação v2, Parte A (NL) — NL Saúde (zorgverzekering) is the
     // first NL page to use this repeater.
-    nl: { name: 'Volledige naam', dob: 'Geboortedatum', nif: 'NIF (Portugees fiscaal nummer)', nifPlaceholder: '9 cijfers', remove: 'Deze persoon verwijderen', person: 'Persoon' },
+    nl: { name: 'Volledige naam', dob: 'Geboortedatum', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Deze persoon verwijderen', person: 'Persoon' },
     // Especificação v2, Parte B — PL/SE/DK/ZH share one generator and are
     // converted together.
-    pl: { name: 'Imię i nazwisko', dob: 'Data urodzenia', nif: 'NIF (portugalski numer podatkowy)', nifPlaceholder: '9 cyfr', remove: 'Usuń tę osobę', person: 'Osoba' },
-    sv: { name: 'Fullständigt namn', dob: 'Födelsedatum', nif: 'NIF (portugisiskt skattenummer)', nifPlaceholder: '9 siffror', remove: 'Ta bort denna person', person: 'Person' },
-    da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF (portugisisk skattenummer)', nifPlaceholder: '9 cifre', remove: 'Fjern denne person', person: 'Person' },
-    zh: { name: '全名', dob: '出生日期', nif: 'NIF（葡萄牙税号）', nifPlaceholder: '9位数字', remove: '移除此人', person: '被保险人' },
+    pl: { name: 'Imię i nazwisko', dob: 'Data urodzenia', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Usuń tę osobę', person: 'Osoba' },
+    sv: { name: 'Fullständigt namn', dob: 'Födelsedatum', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Ta bort denna person', person: 'Person' },
+    da: { name: 'Fulde navn', dob: 'Fødselsdato', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'Fjern denne person', person: 'Person' },
+    zh: { name: '全名', dob: '出生日期', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: '移除此人', person: '被保险人' },
     // Especificação v2, Parte C — Hebrew, Saúde ramo.
-    // nifPlaceholder is bare "9", not "9 ספרות" ("9 digits") — matches the
-    // main wizard's own NIF field placeholder (scripts/lib/market-
-    // cluster.mjs's wizardFormHtml uses `placeholder="9"` for every
-    // language). Found live: with this field's dir="ltr" (see ltrAttr
-    // above), a placeholder mixing a digit with a following Hebrew word —
-    // "9 ספרות" — reordered under the forced LTR base direction (rendered
-    // "ספרות 9", the word before the number) exactly the bug iso()'s own
-    // comment describes for phone numbers, just with a word instead of a
-    // second digit group. A bare digit has no Hebrew content to reorder
-    // against, so it renders correctly regardless of dir.
-    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF (מספר זיהוי פורטוגזי)', nifPlaceholder: '9', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
+    // The NIF/NIE label and placeholder are Latin-only on purpose: this
+    // field is dir="ltr" on a right-to-left page (see ltrAttr below), and a
+    // placeholder mixing Latin/digits with a Hebrew word reorders under the
+    // forced LTR base direction.
+    he: { name: 'שם מלא', dob: 'תאריך לידה', nif: 'NIF/NIE', nifPlaceholder: 'NIF / NIE', remove: 'הסרת מבוטח זה', person: 'מבוטח' },
   };
   var lang = (document.documentElement.getAttribute('lang') || 'pt').slice(0, 2);
   var t = COPY[lang] || COPY.pt;
@@ -89,7 +83,7 @@
   // ltrInput() per field in scripts/lib/market-cluster.mjs) nothing here
   // was ever direction-aware. On a right-to-left page both the date-of-
   // birth and NIF inputs need to stay left-to-right — a typed "15/03/1985"
-  // or "501442600" should not have its digit groups reordered — the same
+  // or "X1234567L" should not have its digit groups reordered — the same
   // reasoning as the main wizard's own nif/codigo_postal/telefone/email
   // fields.
   var ltrAttr = document.documentElement.getAttribute('dir') === 'rtl' ? ' dir="ltr"' : '';
@@ -116,7 +110,7 @@
       '</div>' +
       '<div class="contact-form-field">' +
       '<label for="pessoa-' + n + '-nif">' + t.nif + ' *</label>' +
-      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" inputmode="numeric" placeholder="' + t.nifPlaceholder + '" data-validate="nif" required' + ltrAttr + '>' +
+      '<input type="text" id="pessoa-' + n + '-nif" data-person-field="nif" placeholder="' + t.nifPlaceholder + '" required' + ltrAttr + '>' +
       '</div>' +
       '<button type="button" class="wizard-nav-back" data-person-remove style="margin-top:4px;">' + t.remove + '</button>';
     return card;

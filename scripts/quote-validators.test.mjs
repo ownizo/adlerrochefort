@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Unit tests for public/js/quote-validators.js.
+ * Unit tests for public/js/quote-validators.js, plus the free-text rule for
+ * NIF/NIE, postcode and plate in public/js/ar-quote-form.js.
  *
  * The file under test is a plain browser script (no ES module syntax, house
  * style — see public/js/ar-quote-form.js), and it has no DOM dependency at
@@ -34,64 +35,89 @@ function load() {
 
 const V = load();
 
-// ── NIF ─────────────────────────────────────────────────────────────────
-test('isValidNif: accepts a well-formed NIF with a correct check digit', () => {
-  // 501442600 is a commonly-cited valid test NIF (company category, but this
-  // validator deliberately does not restrict by first-digit category).
-  assert.equal(V.isValidNif('501442600'), true);
+// ── NIF/NIE, postcode, plate: free text ────────────────────────────────
+// Owner decision: the tax number (NIF/NIE), postcode and number plate are
+// free text on every form, in every language, so clients can enter
+// Portuguese, Spanish or foreign values. The Portuguese-only rules (NIF
+// check digit, 0000-000, the four Portuguese plate shapes) were removed
+// from this file and from public/js/ar-quote-form.js; these tests keep them
+// from coming back. Required-ness is untouched: an empty required field is
+// still refused (last test in this block).
+test('QuoteValidators no longer exposes the Portuguese NIF / postcode / plate format rules', () => {
+  for (const name of ['isValidNif', 'formatPostalCode', 'isValidPostalCode', 'normalizePlate', 'isValidPlate']) {
+    assert.equal(V[name], undefined, `${name} should be gone — these fields are free text`);
+  }
 });
 
-test('isValidNif: rejects a NIF with a wrong check digit', () => {
-  assert.equal(V.isValidNif('501442601'), false);
-});
+// A minimal DOM stand-in, just enough for ar-quote-form.js to load and for
+// ArQuoteForm.validateField() to run against one field: the file reads
+// <html lang>, looks for forms to wire (none here), and on an error builds
+// a <p> inside the field's wrapper.
+function fakeDocument(lang) {
+  const makeEl = () => ({
+    attrs: {}, children: [], className: '', textContent: '',
+    classList: { add() {}, remove() {} },
+    setAttribute(k, v) { this.attrs[k] = String(v); },
+    getAttribute(k) { return k in this.attrs ? this.attrs[k] : null; },
+    removeAttribute(k) { delete this.attrs[k]; },
+    hasAttribute(k) { return k in this.attrs; },
+    appendChild(c) { this.children.push(c); c.parentNode = this; },
+    removeChild(c) { this.children = this.children.filter((x) => x !== c); },
+    querySelector(sel) { return sel === '.contact-form-error' ? this.children.find((c) => c.className === 'contact-form-error') || null : null; },
+  });
+  return {
+    documentElement: { getAttribute: (k) => (k === 'lang' ? lang : null) },
+    body: { dataset: {}, classList: { add() {} } },
+    createElement: makeEl,
+    querySelectorAll: () => [],
+    makeEl,
+  };
+}
 
-test('isValidNif: rejects wrong length and non-numeric input', () => {
-  assert.equal(V.isValidNif('12345678'), false);
-  assert.equal(V.isValidNif('1234567890'), false);
-  assert.equal(V.isValidNif('12345678A'), false);
-  assert.equal(V.isValidNif(''), false);
-  assert.equal(V.isValidNif(null), false);
-});
+function loadQuoteForm(lang) {
+  const document = fakeDocument(lang);
+  const sandbox = { window: {}, document, console };
+  vm.createContext(sandbox);
+  vm.runInContext(source, sandbox);
+  vm.runInContext(readFileSync(join(ROOT, 'public', 'js', 'ar-quote-form.js'), 'utf8'), sandbox);
+  const field = (attrs, value) => {
+    const wrap = document.makeEl();
+    const el = document.makeEl();
+    Object.assign(el, { type: 'text', name: attrs.name, value, disabled: false, form: null, id: '' });
+    for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+    el.closest = () => wrap;
+    el.parentNode = wrap;
+    return el;
+  };
+  return { api: sandbox.window.ArQuoteForm, field };
+}
 
-// ── Postal code ─────────────────────────────────────────────────────────
-test('formatPostalCode: inserts the hyphen after 4 digits as the visitor types', () => {
-  assert.equal(V.formatPostalCode('8'), '8');
-  assert.equal(V.formatPostalCode('8600'), '8600');
-  assert.equal(V.formatPostalCode('8600324'), '8600-324');
-  assert.equal(V.formatPostalCode('8600-324'), '8600-324');
-});
+const FREE_TEXT_CASES = [
+  // [field attributes, Spanish/foreign value]. data-validate is included
+  // deliberately: a stale cached page may still carry it, and must not block.
+  [{ name: 'nif', 'data-validate': 'nif', required: '' }, 'X1234567L'],
+  [{ name: 'nif', required: '' }, 'B12345678'],
+  [{ name: 'codigo_postal', 'data-validate': 'postal-code', required: '' }, '29602'],
+  [{ name: 'postcode', required: '' }, 'SW1A 1AA'],
+  [{ name: 'matricula', 'data-validate': 'plate', required: '' }, '1234 BCD'],
+];
 
-test('formatPostalCode: strips non-digits and caps at 7 digits', () => {
-  assert.equal(V.formatPostalCode('86-oo-324x'), '8632-4'); // letters/hyphens dropped, only the 7 digits kept
-  assert.equal(V.formatPostalCode('86003249999'), '8600-324'); // extra digits beyond 7 ignored
-});
+for (const lang of ['pt', 'en', 'de', 'nl', 'pl', 'sv', 'da', 'zh', 'he']) {
+  test(`ar-quote-form (${lang}): Spanish/foreign NIF/NIE, postcode and plate pass client-side validation`, () => {
+    const { api, field } = loadQuoteForm(lang);
+    assert.ok(api && typeof api.validateField === 'function', 'ArQuoteForm.validateField not published');
+    for (const [attrs, value] of FREE_TEXT_CASES) {
+      assert.equal(api.validateField(field(attrs, value), null), true, `${attrs.name}="${value}" was refused`);
+    }
+  });
+}
 
-test('isValidPostalCode: only accepts the finished 0000-000 shape', () => {
-  assert.equal(V.isValidPostalCode('8600-324'), true);
-  assert.equal(V.isValidPostalCode('8600324'), false);
-  assert.equal(V.isValidPostalCode('8600-32'), false);
-  assert.equal(V.isValidPostalCode(''), false);
-});
-
-// ── Plate ───────────────────────────────────────────────────────────────
-test('normalizePlate: accepts all four current formats, with or without hyphens', () => {
-  assert.equal(V.normalizePlate('AA0000'), 'AA-00-00');
-  assert.equal(V.normalizePlate('aa-00-00'), 'AA-00-00');
-  assert.equal(V.normalizePlate('00AA00'), '00-AA-00');
-  assert.equal(V.normalizePlate('00-00-AA'), '00-00-AA');
-  assert.equal(V.normalizePlate('AA00AA'), 'AA-00-AA');
-});
-
-test('normalizePlate: rejects the wrong length or an invalid segment-type sequence', () => {
-  assert.equal(V.normalizePlate('AAA000'), null); // LLLNNN is not one of the four shapes
-  assert.equal(V.normalizePlate('AA000'), null); // 5 chars
-  assert.equal(V.normalizePlate('AA00000'), null); // 7 chars
-  assert.equal(V.normalizePlate(''), null);
-});
-
-test('isValidPlate mirrors normalizePlate', () => {
-  assert.equal(V.isValidPlate('AA-00-00'), true);
-  assert.equal(V.isValidPlate('AAA-000'), false);
+test('ar-quote-form: an empty REQUIRED NIF/postcode/plate is still refused (required-ness unchanged)', () => {
+  const { api, field } = loadQuoteForm('pt');
+  for (const name of ['nif', 'codigo_postal', 'postcode', 'matricula']) {
+    assert.equal(api.validateField(field({ name, required: '' }, '   '), null), false, `empty required ${name} was accepted`);
+  }
+  assert.equal(api.validateField(field({ name: 'nif' }, ''), null), true, 'an empty OPTIONAL nif must still pass');
 });
 
 // ── Dates ───────────────────────────────────────────────────────────────
@@ -172,4 +198,28 @@ test('isRenovationYearValid: between construction year and the current year, inc
   assert.equal(V.isRenovationYearValid(2000, 2005), false); // before construction
   assert.equal(V.isRenovationYearValid(currentYear + 1, 2005), false); // in the future
   assert.equal(V.isRenovationYearValid(currentYear, 2005), true);
+});
+
+// ── Markup: no page brings the old format rules back ────────────────────
+test('no form field for NIF/NIE, postcode or plate carries a format rule (data-validate, pattern, numeric inputmode)', async () => {
+  const { readdirSync } = await import('node:fs');
+  const FIELD = /^(nif|nif_empresa|condominio_nif|postcode|codigo_postal|home_postcode|condo_postcode|habitacao_cp|matricula|car_plate|auto_matricula)$/;
+  const offenders = [];
+  const walk = (dir) => {
+    for (const ent of readdirSync(dir, { withFileTypes: true })) {
+      const p = join(dir, ent.name);
+      if (ent.isDirectory()) walk(p);
+      else if (ent.name.endsWith('.html')) {
+        const html = readFileSync(p, 'utf8');
+        if (/data-validate="(nif|postal-code|plate)"/.test(html)) offenders.push(`${p}: data-validate nif/postal-code/plate`);
+        for (const m of html.matchAll(/<input\b[^>]*>/g)) {
+          const name = (m[0].match(/\bname="([^"]*)"/) || [])[1];
+          if (!name || !FIELD.test(name)) continue;
+          if (/\s(pattern|maxlength)=/.test(m[0]) || /inputmode="numeric"/.test(m[0])) offenders.push(`${p}: ${m[0]}`);
+        }
+      }
+    }
+  };
+  walk(join(ROOT, 'public'));
+  assert.deepEqual(offenders, []);
 });

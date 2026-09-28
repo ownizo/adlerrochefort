@@ -1,34 +1,21 @@
 // -----------------------------------------------------------------------------
 // plate.mjs — Portuguese vehicle plate normalisation, server side.
 //
-// A deliberate, small duplication of public/js/quote-validators.js's
-// normalizePlate() (byte-for-byte the same logic), not a require() of that
-// file. The first version of this fix (Especificação v2 hotfix) reached
-// across with `createRequire(import.meta.url)("../../../public/js/
-// quote-validators.js")` — that resolves fine with plain `node`, including
-// under `node --test`, but esbuild's bundler (Netlify's
-// node_bundler = "esbuild", netlify.toml) does not treat a dynamically
-// constructed require (the result of calling createRequire(), rather than
-// the literal identifier `require`) as a static import to inline. The
-// deployed bundle kept the runtime require() call as-is, expecting
-// public/js/quote-validators.js to exist relative to the BUNDLED function
-// at /var/task/netlify/functions/submission-created.mjs — it doesn't, since
-// only the function's own files are deployed, not arbitrary paths under
-// public/. Every submission-created invocation threw MODULE_NOT_FOUND
-// before running any of its own code: no email, no CRM sync, no
-// quote_requests insert, for every form on the site, confirmed live in
-// production via `netlify logs --source functions`.
+// The plate field is free text on every form (owner decision: clients may
+// enter a Portuguese, Spanish or foreign plate, and the browser no longer
+// checks its format). This is therefore not a validator: it only tidies a
+// value that happens to be a Portuguese plate into its hyphenated form for
+// the CRM, and callers keep anything else exactly as typed (see
+// quote-requests-sync.mjs, `normalizePlate(v) || v`).
 //
-// A file that lives inside netlify/functions/lib/ from the start, with no
-// path reaching outside it, cannot have this problem — esbuild bundles
-// same-tree ES module imports correctly, which is exactly why every other
-// file in this directory (classifySubmission, applyDynamicFields, etc.) is
-// already written this way.
-//
-// If the two copies of this function are ever found to disagree, that is a
-// bug in whichever one was last edited without updating the other —
-// scripts/quote-validators.test.mjs and this file's own test both assert
-// the same fixed set of shapes/examples for exactly that reason.
+// It lives inside netlify/functions/lib/ on purpose. An earlier version
+// reached across to public/js/quote-validators.js with
+// `createRequire(import.meta.url)(...)`, which esbuild (Netlify's
+// node_bundler, netlify.toml) does not inline — the deployed bundle kept a
+// runtime require() of a file that isn't shipped and every
+// submission-created invocation threw MODULE_NOT_FOUND. The browser copy
+// of this function has since been removed along with the client-side plate
+// rule; this file is now the only one.
 // -----------------------------------------------------------------------------
 
 const PLATE_SHAPES = ["LLNNNN", "NNLLNN", "NNNNLL", "LLNNLL"];

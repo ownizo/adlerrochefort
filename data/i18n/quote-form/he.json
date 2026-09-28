@@ -14,7 +14,7 @@
       "email": "כתובת ⁦דוא״ל⁩",
       "telefone": "מספר טלפון",
       "data_inicio": "מועד תחילה מבוקש",
-      "nif": "⁦NIF⁩ (מספר זיהוי לצורכי מס בפורטוגל)",
+      "nif": "⁦NIF/NIE⁩",
       "data_nascimento": "תאריך לידה",
       "morada": "כתובת מלאה",
       "localidade": "עיר או יישוב",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "נא למלא שדה זה.",
       "email_invalido": "נא להזין כתובת ⁦דוא״ל⁩ תקינה, למשל ⁦name@email.com⁩.",
-      "nif_invalido": "נא להזין ⁦NIF⁩ פורטוגזי תקין, בן 9 ספרות.",
-      "codigo_postal_invalido": "נא להזין מיקוד בפורמט ⁦0000-000⁩.",
-      "matricula_invalida": "נא להזין מספר רישוי פורטוגזי תקין.",
       "data_inicio_invalida": "מועד התחילה לא יכול להיות לפני היום.",
       "data_nascimento_invalida": "תאריך הלידה לא יכול להיות בעתיד.",
       "carta_invalida": "תאריך הרישיון לא יכול להיות לפני תאריך הלידה של המבוטח, וגם לא בעתיד.",
@@ -75,7 +72,7 @@
       "pessoa_label": "מבוטח",
       "pessoa_nome": "שם מלא",
       "pessoa_nascimento": "תאריך לידה",
-      "pessoa_nif": "⁦NIF⁩",
+      "pessoa_nif": "⁦NIF/NIE⁩",
       "pessoa_remover": "הסרת מבוטח זה",
       "pessoa_adicionar": "+ הוספת מבוטח"
     },
@@ -83,7 +80,6 @@
       "titulo": "בקשת הצעה לביטוח רכב",
       "subtitulo": "נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.",
       "matricula": "מספר רישוי",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "תאריך הנפקת רישיון הנהיגה"
     },
     "profissional": {

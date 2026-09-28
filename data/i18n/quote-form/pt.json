@@ -14,7 +14,7 @@
       "email": "Email",
       "telefone": "Telefone",
       "data_inicio": "Data de início pretendida",
-      "nif": "NIF",
+      "nif": "NIF/NIE",
       "data_nascimento": "Data de nascimento",
       "morada": "Morada completa",
       "localidade": "Localidade",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "Este campo é obrigatório.",
       "email_invalido": "Introduza um email válido, por exemplo nome@email.com.",
-      "nif_invalido": "Introduza um NIF válido, com 9 dígitos.",
-      "codigo_postal_invalido": "Introduza um código postal no formato 0000-000.",
-      "matricula_invalida": "Introduza uma matrícula portuguesa válida.",
       "data_inicio_invalida": "A data de início não pode ser anterior a hoje.",
       "data_nascimento_invalida": "A data de nascimento não pode ser no futuro.",
       "carta_invalida": "A data da carta não pode ser anterior à data de nascimento do tomador, nem no futuro.",
@@ -52,7 +49,6 @@
       "titulo": "Cotação de seguro automóvel",
       "subtitulo": "Preencha o essencial. Respondemos em 24 horas úteis.",
       "matricula": "Matrícula",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Data de emissão da carta de condução"
     },
     "habitacao": {
@@ -82,7 +78,7 @@
       "pessoa_label": "Pessoa",
       "pessoa_nome": "Nome completo",
       "pessoa_nascimento": "Data de nascimento",
-      "pessoa_nif": "NIF",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Remover esta pessoa",
       "pessoa_adicionar": "+ Adicionar pessoa"
     },

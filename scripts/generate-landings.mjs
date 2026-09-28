@@ -240,7 +240,7 @@ TVDE.form = quoteForm({
   micro: GDPR,
   fields: [
     ...COMMON,
-    { name: 'nif', label: 'NIF', placeholder: 'Contribuinte' },
+    { name: 'nif', label: 'NIF/NIE', placeholder: 'NIF / NIE' },
     {
       name: 'perfil',
       label: 'É motorista ou operador?',
@@ -252,7 +252,7 @@ TVDE.form = quoteForm({
     { name: 'licenca_imt', label: 'N.º de licença IMT', placeholder: 'Se aplicável' },
     { name: 'n_viaturas', label: 'N.º de viaturas', type: 'number', placeholder: '1' },
     { name: 'veiculo', label: 'Marca, modelo e ano', placeholder: 'Ex.: Toyota Corolla 2021' },
-    { name: 'matricula', label: 'Matrícula', placeholder: 'AA-00-AA' },
+    { name: 'matricula', label: 'Matrícula' },
     { name: 'km_ano', label: 'Km por ano (estimativa)', placeholder: 'Ex.: 45 000' },
     {
       name: 'zona',
@@ -422,7 +422,7 @@ FROTA.form = quoteForm({
   fields: [
     ...COMMON,
     { name: 'empresa', label: 'Empresa', required: true, placeholder: 'Designação social' },
-    { name: 'nif', label: 'NIF', placeholder: 'Contribuinte' },
+    { name: 'nif', label: 'NIF/NIE', placeholder: 'NIF / NIE' },
     { name: 'cae', label: 'CAE / setor', placeholder: 'Ex.: 49392 — transporte de passageiros' },
     { name: 'n_viaturas', label: 'N.º de viaturas', type: 'number', required: true, placeholder: 'Ex.: 8' },
     {
@@ -789,7 +789,7 @@ HABITACAO.form = quoteForm({
       options: ['Apartamento', 'Moradia', 'Moradia em banda', 'Outro'],
     },
     { name: 'morada', label: 'Morada', placeholder: 'Rua e localidade' },
-    { name: 'codigo_postal', label: 'Código postal', placeholder: '0000-000' },
+    { name: 'codigo_postal', label: 'Código postal' },
     { name: 'ano_construcao', label: 'Ano de construção', type: 'number', placeholder: 'Ex.: 1998' },
     { name: 'area', label: 'Área (m²)', type: 'number', placeholder: 'Ex.: 120' },
     {
@@ -966,7 +966,7 @@ EMPRESARIAL.form = quoteForm({
   fields: [
     ...COMMON,
     { name: 'empresa', label: 'Empresa', required: true, placeholder: 'Designação social' },
-    { name: 'nif', label: 'NIF', placeholder: 'Contribuinte' },
+    { name: 'nif', label: 'NIF', placeholder: 'NIF' },
     { name: 'cae', label: 'CAE / atividade', placeholder: 'Ex.: 56101 — restauração' },
     { name: 'n_colaboradores', label: 'N.º de colaboradores', type: 'number', placeholder: 'Ex.: 14' },
     { name: 'volume_negocios', label: 'Volume de negócios anual', placeholder: 'Ex.: 1 200 000 €' },
@@ -1186,7 +1186,7 @@ TVDE_EN.form = quoteForm({
     { name: 'nome', label: 'Name', required: true, placeholder: 'Your name' },
     { name: 'email', label: 'Email', type: 'email', required: true, placeholder: 'you@email.com' },
     { name: 'telefone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+351 …' },
-    { name: 'nif', label: 'NIF', placeholder: 'Portuguese tax number' },
+    { name: 'nif', label: 'NIF/NIE', placeholder: 'NIF / NIE' },
     {
       name: 'perfil',
       label: 'Are you a driver or an operator?',
@@ -1198,7 +1198,7 @@ TVDE_EN.form = quoteForm({
     { name: 'licenca_imt', label: 'IMT licence number', placeholder: 'If applicable' },
     { name: 'n_viaturas', label: 'Number of vehicles', type: 'number', placeholder: '1' },
     { name: 'veiculo', label: 'Make, model and year', placeholder: 'e.g. Toyota Corolla 2021' },
-    { name: 'matricula', label: 'Registration plate', placeholder: 'AA-00-AA' },
+    { name: 'matricula', label: 'Registration plate' },
     { name: 'km_ano', label: 'Estimated km per year', placeholder: 'e.g. 45,000' },
     {
       name: 'zona',
@@ -1450,9 +1450,9 @@ AUTO.form = quoteForm({
   micro: GDPR,
   fields: [
     ...COMMON,
-    { name: 'nif', label: 'NIF', placeholder: 'Número de contribuinte' },
+    { name: 'nif', label: 'NIF/NIE', placeholder: 'NIF / NIE' },
     { name: 'veiculo', label: 'Marca, modelo e ano', placeholder: 'Ex.: Renault Clio 2019' },
-    { name: 'matricula', label: 'Matrícula', placeholder: 'AA-00-AA (ou nº do quadro)' },
+    { name: 'matricula', label: 'Matrícula', placeholder: 'Matrícula ou n.º do quadro' },
     {
       name: 'situacao_matricula',
       label: 'Situação do veículo',
@@ -1465,7 +1465,7 @@ AUTO.form = quoteForm({
         'Ainda vou comprar o veículo',
       ],
     },
-    { name: 'codigo_postal', label: 'Código postal onde o veículo fica', placeholder: '0000-000' },
+    { name: 'codigo_postal', label: 'Código postal onde o veículo fica' },
     { name: 'data_carta', label: 'Data de emissão da carta de condução', type: 'date' },
     { name: 'pais_carta', label: 'País emissor da carta', placeholder: 'Ex.: Portugal, Reino Unido' },
     {

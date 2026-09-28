@@ -45,7 +45,7 @@ export const MOTOR_PAGE = {
     submitLabel: 'Zapytaj o ofertę',
     microNote:
       'Odpowiedź w ciągu 24 godzin roboczych. Dane są wykorzystywane wyłącznie do przygotowania oferty i przetwarzane zgodnie z RODO — patrz <a href="/en/privacy-policy" hreflang="en">polityka prywatności</a>.',
-    fieldsHtml: `        <div class="contact-form-field"><label for="pl-auto-matricula">Numer rejestracyjny *</label><input type="text" id="pl-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+    fieldsHtml: `        <div class="contact-form-field"><label for="pl-auto-matricula">Numer rejestracyjny *</label><input type="text" id="pl-auto-matricula" name="matricula" required></div>
         <div class="contact-form-field"><label for="pl-auto-carta">Data wydania prawa jazdy *</label><input type="date" id="pl-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="pl-auto-carta-idade-info" hidden>To przed 16. urodzinami ubezpieczającego — mimo to akceptujemy tę datę, prosimy jednak o sprawdzenie jej poprawności.</p>`,
   },

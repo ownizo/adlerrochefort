@@ -52,10 +52,8 @@ export default async (req) => {
     return new Response(JSON.stringify({ error: "Todos os campos são obrigatórios" }), { status: 400, headers });
   }
 
-  // Validate NIF (9 digits)
-  if (!/^\d{9}$/.test(nif.trim())) {
-    return new Response(JSON.stringify({ error: "NIF inválido" }), { status: 400, headers });
-  }
+  // NIF/NIE is free text (Portuguese, Spanish or foreign tax numbers are all
+  // accepted) — only its presence is checked, above.
 
   // Validate email
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {

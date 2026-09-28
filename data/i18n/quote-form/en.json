@@ -14,7 +14,7 @@
       "email": "Email",
       "telefone": "Phone",
       "data_inicio": "Requested start date",
-      "nif": "Portuguese tax number (NIF)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Date of birth",
       "morada": "Full address",
       "localidade": "Town / city",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "This field is required.",
       "email_invalido": "Enter a valid email address, for example name@email.com.",
-      "nif_invalido": "Enter a valid Portuguese tax number (NIF), 9 digits.",
-      "codigo_postal_invalido": "Enter a postal code in the format 0000-000.",
-      "matricula_invalida": "Enter a valid Portuguese vehicle plate.",
       "data_inicio_invalida": "The start date cannot be before today.",
       "data_nascimento_invalida": "The date of birth cannot be in the future.",
       "carta_invalida": "The licence date can't be before the policyholder's date of birth, or in the future.",
@@ -52,7 +49,6 @@
       "titulo": "Car insurance quote",
       "subtitulo": "Fill in the essentials. We reply within 24 business hours.",
       "matricula": "Number plate",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Driving licence issue date"
     },
     "habitacao": {
@@ -82,7 +78,7 @@
       "pessoa_label": "Person",
       "pessoa_nome": "Full name",
       "pessoa_nascimento": "Date of birth",
-      "pessoa_nif": "Portuguese tax number (NIF)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Remove this person",
       "pessoa_adicionar": "+ Add a person"
     },

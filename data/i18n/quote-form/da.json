@@ -14,7 +14,7 @@
       "email": "E-mailadresse",
       "telefone": "Telefonnummer",
       "data_inicio": "Ønsket startdato",
-      "nif": "NIF (portugisisk skattenummer)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Fødselsdato",
       "morada": "Fuld adresse",
       "localidade": "By",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "Udfyld dette felt.",
       "email_invalido": "Indtast en gyldig e-mailadresse, for eksempel navn@email.com.",
-      "nif_invalido": "Indtast et gyldigt portugisisk skattenummer (NIF), 9 cifre.",
-      "codigo_postal_invalido": "Indtast et postnummer i formatet 0000-000.",
-      "matricula_invalida": "Indtast en gyldig portugisisk nummerplade.",
       "data_inicio_invalida": "Startdatoen må ikke være før i dag.",
       "data_nascimento_invalida": "Fødselsdatoen må ikke være i fremtiden.",
       "carta_invalida": "Kørekortdatoen må ikke være før forsikringstagerens fødselsdato, og heller ikke i fremtiden.",
@@ -75,7 +72,7 @@
       "pessoa_label": "Person",
       "pessoa_nome": "Fulde navn",
       "pessoa_nascimento": "Fødselsdato",
-      "pessoa_nif": "NIF (portugisisk skattenummer)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Fjern denne person",
       "pessoa_adicionar": "+ Tilføj person"
     },
@@ -83,7 +80,6 @@
       "titulo": "Anmod om bilforsikring",
       "subtitulo": "Udfyld det væsentligste. Vi svarer inden for 24 arbejdstimer.",
       "matricula": "Nummerplade",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Kørekortets udstedelsesdato"
     },
     "profissional": {

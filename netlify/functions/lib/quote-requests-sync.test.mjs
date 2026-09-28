@@ -58,9 +58,8 @@ test("richer PII (NIF, morada, matrícula) lands here — the opposite of crm-sy
 });
 
 // Especificação v2 hotfix: a real submission recorded the plate as
-// "55VB18" instead of "55-VB-18" — data-validate is opt-in per field, so a
-// value can reach the server without ever passing through
-// quote-validators.js's normalizePlate() in the browser first.
+// "55VB18" instead of "55-VB-18". The plate is free text in the browser (no
+// format rule), so the server is the only place a Portuguese plate is tidied.
 test("matricula is normalised to hyphenated form at save time, regardless of how it arrived", () => {
   const row = buildQuoteRequestRow("seguro-auto", {
     nome: "Ana Costa",
@@ -85,6 +84,19 @@ test("matricula that matches none of the four known shapes is kept as typed, not
     matricula: "not a real plate",
   });
   assert.equal(row.dados_risco.matricula, "not a real plate");
+});
+
+test("free-text plate, NIF/NIE and postcode (Spanish or foreign values) are stored exactly as typed", () => {
+  const row = buildQuoteRequestRow("seguro-auto", {
+    nome: "Ana Costa",
+    email: "ana@example.com",
+    nif: "X1234567L",
+    codigo_postal: "29602",
+    matricula: "1234 BCD",
+  });
+  assert.equal(row.dados_risco.matricula, "1234 BCD");
+  assert.equal(row.dados_comuns.nif, "X1234567L");
+  assert.equal(row.dados_comuns.codigo_postal, "29602");
 });
 
 test("localidade (Especificação v2, Passo 1) is lifted to dados_comuns like morada/codigo_postal, not left in dados_risco", () => {

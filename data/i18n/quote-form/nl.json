@@ -14,7 +14,7 @@
       "email": "E-mailadres",
       "telefone": "Telefoonnummer",
       "data_inicio": "Gewenste ingangsdatum",
-      "nif": "NIF (Portugees fiscaal nummer)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Geboortedatum",
       "morada": "Volledig adres",
       "localidade": "Woonplaats",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "Vul dit veld in.",
       "email_invalido": "Voer een geldig e-mailadres in, bijvoorbeeld naam@email.com.",
-      "nif_invalido": "Voer een geldig Portugees fiscaal nummer (NIF) in, 9 cijfers.",
-      "codigo_postal_invalido": "Voer een postcode in het formaat 0000-000 in.",
-      "matricula_invalida": "Voer een geldig Portugees kenteken in.",
       "data_inicio_invalida": "De ingangsdatum mag niet vóór vandaag liggen.",
       "data_nascimento_invalida": "De geboortedatum mag niet in de toekomst liggen.",
       "carta_invalida": "De datum van het rijbewijs mag niet vóór de geboortedatum van de verzekeringnemer liggen, noch in de toekomst.",
@@ -75,7 +72,7 @@
       "pessoa_label": "Persoon",
       "pessoa_nome": "Volledige naam",
       "pessoa_nascimento": "Geboortedatum",
-      "pessoa_nif": "NIF (Portugees fiscaal nummer)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Deze persoon verwijderen",
       "pessoa_adicionar": "+ Persoon toevoegen"
     },

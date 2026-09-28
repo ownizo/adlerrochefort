@@ -43,7 +43,7 @@ export const MOTOR_PAGE = {
     submitLabel: 'Send forespørgsel',
     microNote:
       'Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.',
-    fieldsHtml: `        <div class="contact-form-field"><label for="dk-auto-matricula">Nummerplade *</label><input type="text" id="dk-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+    fieldsHtml: `        <div class="contact-form-field"><label for="dk-auto-matricula">Nummerplade *</label><input type="text" id="dk-auto-matricula" name="matricula" required></div>
         <div class="contact-form-field"><label for="dk-auto-carta">Kørekortets udstedelsesdato *</label><input type="date" id="dk-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="dk-auto-carta-idade-info" hidden>Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.</p>`,
   },

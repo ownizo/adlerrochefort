@@ -2,17 +2,13 @@ import { classifySubmission, extractContact } from "./lead-classification.mjs";
 import { applyDynamicFields } from "./dynamic-fields.mjs";
 import { normalizePlate } from "./plate.mjs";
 
-// normalizePlate() needs to run here too, not just in the browser, because
-// a value that reaches this function did not necessarily pass through the
-// client-side validator first (data-validate is opt-in per field, and
-// best-effort submissions from any form sharing dados_risco's generic bag
-// are accepted as-is — see the file-level comment below). ./plate.mjs is a
-// small, deliberate duplication of public/js/quote-validators.js's own
-// normalizePlate() — see that file's own comment for why this isn't a
-// cross-directory require() of the browser file instead (it was, briefly;
-// it broke every submission on the site in production — esbuild does not
-// bundle a dynamically-constructed require the way it bundles a static
-// import, so the deployed function bundle didn't ship the file it needed).
+// normalizePlate() tidies a Portuguese plate into its hyphenated form for
+// the CRM. The plate field is free text on every form (Portuguese, Spanish
+// or foreign plates are all accepted, nothing checks the format in the
+// browser), so anything that isn't a Portuguese plate is kept exactly as
+// typed — see the call site below. ./plate.mjs lives inside this directory
+// on purpose (see that file's comment: a cross-directory require() of the
+// browser file once broke every submission on the site in production).
 
 // -----------------------------------------------------------------------------
 // quote-requests-sync.mjs — grava cada submissão relevante na tabela
@@ -162,15 +158,12 @@ export function buildQuoteRequestRow(formName, data, { language, submissionId, i
     dados_risco[k] = v;
   }
 
-  // Normalise the plate to AA-00-AA/00-AA-00/etc. (Especificação v2 §8) at
-  // the point of saving, not just on the client: a value can reach here
-  // without ever passing through public/js/quote-validators.js in the
-  // browser — data-validate is opt-in per field, and dados_risco is a
-  // best-effort generic bag for whatever a form sends (see the file-level
-  // comment above). Confirmed in production: a plate arrived as "55VB18"
-  // instead of "55-VB-18". normalizePlate() returns null for a value that
-  // doesn't match one of the four known shapes at all — kept as originally
-  // typed then, for a human to look at, rather than silently dropped.
+  // Tidy a Portuguese plate to AA-00-AA/00-AA-00/etc. at the point of
+  // saving (a real submission once arrived as "55VB18" instead of
+  // "55-VB-18"). The field is free text — Spanish and foreign plates are
+  // accepted — so normalizePlate() returns null for anything that isn't one
+  // of the four Portuguese shapes and the value is kept exactly as typed,
+  // never dropped or rejected.
   if (typeof dados_risco.matricula === "string") {
     dados_risco.matricula = normalizePlate(dados_risco.matricula) || dados_risco.matricula;
   }

@@ -30,7 +30,7 @@ const CONTACT_ROWS = [
   ],
   [
     { name: 'phone', label: 'Phone / WhatsApp', type: 'tel', required: true, placeholder: '+351 000 000 000', autocomplete: 'tel', inputmode: 'tel' },
-    { name: 'postcode', label: 'Property postcode', required: true, placeholder: '8600-324', autocomplete: 'postal-code' },
+    { name: 'postcode', label: 'Property postcode', required: true, autocomplete: 'postal-code' },
   ],
 ];
 

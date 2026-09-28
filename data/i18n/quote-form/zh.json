@@ -14,7 +14,7 @@
       "email": "电子邮箱",
       "telefone": "电话号码",
       "data_inicio": "期望的起保日期",
-      "nif": "NIF（葡萄牙税号）",
+      "nif": "NIF/NIE",
       "data_nascimento": "出生日期",
       "morada": "详细地址",
       "localidade": "所在城市",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "请填写此字段。",
       "email_invalido": "请输入有效的电子邮箱地址，例如 name@email.com。",
-      "nif_invalido": "请输入有效的葡萄牙税号（NIF），共9位数字。",
-      "codigo_postal_invalido": "请输入格式为 0000-000 的邮政编码。",
-      "matricula_invalida": "请输入有效的葡萄牙车牌号。",
       "data_inicio_invalida": "起保日期不能早于今天。",
       "data_nascimento_invalida": "出生日期不能是将来的日期。",
       "carta_invalida": "驾照签发日期不能早于投保人的出生日期，也不能是将来的日期。",
@@ -75,7 +72,7 @@
       "pessoa_label": "被保险人",
       "pessoa_nome": "全名",
       "pessoa_nascimento": "出生日期",
-      "pessoa_nif": "NIF（葡萄牙税号）",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "移除此人",
       "pessoa_adicionar": "+ 添加人员"
     },
@@ -83,7 +80,6 @@
       "titulo": "申请汽车保险报价",
       "subtitulo": "请填写基本信息。我们将在24个工作小时内回复。",
       "matricula": "车牌号",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "驾照签发日期"
     },
     "profissional": {

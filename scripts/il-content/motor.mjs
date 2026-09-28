@@ -50,10 +50,9 @@ export const MOTOR_PAGE = {
   pullquote:
     'שכבת החובה בפורטוגל מכסה את מי שנפגע מכם. את הרכב שלכם היא לא מכסה בכלל.',
   schemaType: 'Article',
-  // Especificação v2, Parte C — wizard config. matricula's placeholder
-  // ("AA-00-AA") and value are pure Latin/digits, no embedded Hebrew word,
-  // so dir="ltr" carries none of the bidi-reordering risk fixed in
-  // quote-health-persons.js's own NIF placeholder (see PR that fixed it).
+  // Especificação v2, Parte C — wizard config. matricula is free text with
+  // no placeholder (Portuguese, Spanish or foreign plates are accepted); a
+  // plate is Latin/digits, so dir="ltr" keeps it from being reordered.
   // Hebrew text mirrored from data/i18n/quote-form/he.json's ramos.auto.
   wizard: {
     idPrefix: 'il-auto',
@@ -65,7 +64,7 @@ export const MOTOR_PAGE = {
     submitLabel: 'שליחת הבקשה',
     microNote:
       'נשיב בתוך 24 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.',
-    fieldsHtml: `        <div class="contact-form-field"><label for="il-auto-matricula">מספר רישוי *</label><input type="text" id="il-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required dir="ltr"></div>
+    fieldsHtml: `        <div class="contact-form-field"><label for="il-auto-matricula">מספר רישוי *</label><input type="text" id="il-auto-matricula" name="matricula" required dir="ltr"></div>
         <div class="contact-form-field"><label for="il-auto-carta">תאריך הנפקת רישיון הנהיגה *</label><input type="date" id="il-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="il-auto-carta-idade-info" hidden>זה לפני יום ההולדת ה־16 של המבוטח — אנחנו נקבל את זה בכל זאת, אבל כדאי לוודא שהתאריך נכון.</p>`,
   },

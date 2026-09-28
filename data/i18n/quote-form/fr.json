@@ -10,9 +10,6 @@
     "errors": {
       "campo_obrigatorio": "Ce champ est obligatoire.",
       "email_invalido": "Saisissez une adresse e-mail valide, par exemple nom@email.com.",
-      "nif_invalido": "Saisissez un numéro fiscal portugais (NIF) valide, 9 chiffres.",
-      "codigo_postal_invalido": "Saisissez un code postal au format 0000-000.",
-      "matricula_invalida": "Saisissez une plaque d'immatriculation portugaise valide.",
       "data_inicio_invalida": "La date de début ne peut pas être antérieure à aujourd'hui."
     },
     "success": {

@@ -216,7 +216,7 @@
       <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="o.seu@email.com" required></div>
       <div class="field"><label for="telefone">Telefone / WhatsApp *</label><input type="tel" id="telefone" name="telefone" placeholder="+351 …" required></div>
       <div class="field"><label for="empresa">Empresa *</label><input type="text" id="empresa" name="empresa" placeholder="Designação social" required></div>
-      <div class="field"><label for="nif">NIF da empresa *</label><input type="text" id="nif" name="nif" inputmode="numeric" placeholder="Número de contribuinte" required></div>
+      <div class="field"><label for="nif">NIF da empresa *</label><input type="text" id="nif" name="nif" placeholder="NIF" required></div>
       <div class="field"><label for="cae">CAE / atividade</label><input type="text" id="cae" name="cae" placeholder="Ex.: 56101 — restauração"></div>
       <div class="field"><label for="n_colaboradores">N.º de colaboradores</label><input type="number" id="n_colaboradores" name="n_colaboradores" placeholder="Ex.: 14"></div>
       <div class="field"><label for="volume_negocios">Volume de negócios anual</label><input type="text" id="volume_negocios" name="volume_negocios" placeholder="Ex.: 1 200 000 €"></div>
@@ -785,23 +785,8 @@
       });
     }
 
-    // NIF check-digit validation (same rule as the wizard pillars' data-validate="nif").
-    var nif = form.querySelector('#nif');
-    if (nif && window.QuoteValidators) {
-      function checkNif() {
-        if (nif.value && !window.QuoteValidators.isValidNif(nif.value)) {
-          nif.setCustomValidity('NIF inválido — confirme o número de contribuinte.');
-        } else {
-          nif.setCustomValidity('');
-        }
-      }
-      nif.addEventListener('blur', checkNif);
-      nif.addEventListener('input', function () { nif.setCustomValidity(''); });
-      form.addEventListener('submit', function (e) {
-        checkNif();
-        if (!nif.validity.valid) { nif.reportValidity(); e.preventDefault(); }
-      });
-    }
+    // NIF/NIE is free text (Portuguese, Spanish or foreign tax numbers are
+    // accepted) — only the native `required` check applies.
   });
 </script>
 <script defer src="/js/ar-langsel.js"></script>

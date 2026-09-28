@@ -43,7 +43,7 @@ export const MOTOR_PAGE = {
     submitLabel: 'Begär offert',
     microNote:
       'Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.',
-    fieldsHtml: `        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+    fieldsHtml: `        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" required></div>
         <div class="contact-form-field"><label for="se-auto-carta">Datum för körkortets utfärdande *</label><input type="date" id="se-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="se-auto-carta-idade-info" hidden>Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.</p>`,
   },

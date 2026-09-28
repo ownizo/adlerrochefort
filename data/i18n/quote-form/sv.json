@@ -14,7 +14,7 @@
       "email": "E-postadress",
       "telefone": "Telefonnummer",
       "data_inicio": "Önskat startdatum",
-      "nif": "NIF (portugisiskt skattenummer)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Födelsedatum",
       "morada": "Fullständig adress",
       "localidade": "Ort",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "Fyll i detta fält.",
       "email_invalido": "Ange en giltig e-postadress, till exempel namn@email.com.",
-      "nif_invalido": "Ange ett giltigt portugisiskt skattenummer (NIF), 9 siffror.",
-      "codigo_postal_invalido": "Ange ett postnummer i formatet 0000-000.",
-      "matricula_invalida": "Ange ett giltigt portugisiskt registreringsnummer.",
       "data_inicio_invalida": "Startdatumet får inte vara före dagens datum.",
       "data_nascimento_invalida": "Födelsedatumet får inte vara i framtiden.",
       "carta_invalida": "Körkortsdatumet får inte vara före försäkringstagarens födelsedatum, och inte heller i framtiden.",
@@ -75,7 +72,7 @@
       "pessoa_label": "Person",
       "pessoa_nome": "Fullständigt namn",
       "pessoa_nascimento": "Födelsedatum",
-      "pessoa_nif": "NIF (portugisiskt skattenummer)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Ta bort denna person",
       "pessoa_adicionar": "+ Lägg till person"
     },
@@ -83,7 +80,6 @@
       "titulo": "Begär offert på bilförsäkring",
       "subtitulo": "Fyll i det viktigaste. Vi svarar inom 24 arbetstimmar.",
       "matricula": "Registreringsnummer",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Datum för körkortets utfärdande"
     },
     "profissional": {

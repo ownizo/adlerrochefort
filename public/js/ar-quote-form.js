@@ -36,9 +36,6 @@
       // JSON file is the source of truth checked by
       // scripts/check-i18n-parity.mjs; this object is the runtime copy, same
       // relationship the four messages above already have with the spec.
-      nif: 'Enter a valid Portuguese tax number (NIF), 9 digits.',
-      postalCode: 'Enter a postal code in the format 0000-000.',
-      plate: 'Enter a valid Portuguese vehicle plate.',
       startDate: 'The start date cannot be before today.',
       licenceDate: "The licence date can't be before the policyholder's date of birth, or in the future.",
       licenceBeforeAge16: "That's before the policyholder's 16th birthday — we'll still take it, but please double-check the date is correct.",
@@ -67,9 +64,6 @@
       failed:
         'Não foi possível enviar o seu pedido. Verifique a ligação e tente novamente — ' +
         'não perdeu nada do que escreveu.',
-      nif: 'Introduza um NIF válido, com 9 dígitos.',
-      postalCode: 'Introduza um código postal no formato 0000-000.',
-      plate: 'Introduza uma matrícula portuguesa válida.',
       startDate: 'A data de início não pode ser anterior a hoje.',
       licenceDate: 'A data da carta não pode ser anterior à data de nascimento do tomador, nem no futuro.',
       licenceBeforeAge16: 'É anterior ao 16.º aniversário do tomador — aceitamos na mesma, mas confirme se a data está correta.',
@@ -94,9 +88,6 @@
       // data-validate). Mirrors data/i18n/quote-form/nl.json's
       // common.errors.* wording exactly, same relationship the pt/en/de
       // objects above already have with their own JSON files.
-      nif: 'Voer een geldig Portugees fiscaal nummer (NIF) in, 9 cijfers.',
-      postalCode: 'Voer een postcode in het formaat 0000-000 in.',
-      plate: 'Voer een geldig Portugees kenteken in.',
       startDate: 'De ingangsdatum mag niet vóór vandaag liggen.',
       licenceDate: 'De datum van het rijbewijs mag niet vóór de geboortedatum van de verzekeringnemer liggen, noch in de toekomst.',
       licenceBeforeAge16: 'Dat is vóór de 16de verjaardag van de verzekeringnemer — wij accepteren het toch, controleer wel of de datum juist is.',
@@ -121,9 +112,6 @@
       failed:
         'Ihre Anfrage konnte nicht gesendet werden. Bitte überprüfen Sie Ihre Verbindung und ' +
         'versuchen Sie es erneut — nichts von dem, was Sie eingegeben haben, ist verloren gegangen.',
-      nif: 'Geben Sie eine gültige portugiesische Steuernummer (NIF) mit 9 Ziffern ein.',
-      postalCode: 'Geben Sie eine Postleitzahl im Format 0000-000 ein.',
-      plate: 'Geben Sie ein gültiges portugiesisches Kennzeichen ein.',
       startDate: 'Das Startdatum darf nicht vor heute liegen.',
       licenceDate: 'Das Datum des Führerscheins darf nicht vor dem Geburtsdatum des Versicherungsnehmers liegen, noch in der Zukunft.',
       licenceBeforeAge16: 'Das liegt vor dem 16. Geburtstag des Versicherungsnehmers — wir akzeptieren es trotzdem, bitte prüfen Sie aber, ob das Datum korrekt ist.',
@@ -147,9 +135,6 @@
       failed:
         'Nie udało się wysłać zapytania. Proszę sprawdzić połączenie i spróbować ponownie — ' +
         'nic z tego, co Państwo napisali, nie zostało utracone.',
-      nif: 'Proszę podać prawidłowy portugalski numer podatkowy (NIF), 9 cyfr.',
-      postalCode: 'Proszę podać kod pocztowy w formacie 0000-000.',
-      plate: 'Proszę podać prawidłową portugalską tablicę rejestracyjną.',
       startDate: 'Data rozpoczęcia nie może być wcześniejsza niż dzisiaj.',
       licenceDate: 'Data wydania prawa jazdy nie może być wcześniejsza niż data urodzenia ubezpieczającego ani przypadać w przyszłości.',
       licenceBeforeAge16: 'To przed 16. urodzinami ubezpieczającego — mimo to akceptujemy tę datę, prosimy jednak o sprawdzenie jej poprawności.',
@@ -168,9 +153,6 @@
       failed:
         'Din förfrågan kunde inte skickas. Kontrollera din anslutning och försök igen — ' +
         'inget du har skrivit har gått förlorat.',
-      nif: 'Ange ett giltigt portugisiskt skattenummer (NIF), 9 siffror.',
-      postalCode: 'Ange ett postnummer i formatet 0000-000.',
-      plate: 'Ange ett giltigt portugisiskt registreringsnummer.',
       startDate: 'Startdatumet får inte vara före dagens datum.',
       licenceDate: 'Körkortsdatumet får inte vara före försäkringstagarens födelsedatum, och inte heller i framtiden.',
       licenceBeforeAge16: 'Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.',
@@ -189,9 +171,6 @@
       failed:
         'Din anmodning kunne ikke sendes. Kontrollér din forbindelse og prøv igen — ' +
         'intet af det, du har skrevet, er gået tabt.',
-      nif: 'Indtast et gyldigt portugisisk skattenummer (NIF), 9 cifre.',
-      postalCode: 'Indtast et postnummer i formatet 0000-000.',
-      plate: 'Indtast en gyldig portugisisk nummerplade.',
       startDate: 'Startdatoen må ikke være før i dag.',
       licenceDate: 'Kørekortdatoen må ikke være før forsikringstagerens fødselsdato, og heller ikke i fremtiden.',
       licenceBeforeAge16: 'Det er før forsikringstagerens 16-års fødselsdag — vi accepterer det alligevel, men kontrollér venligst, at datoen er korrekt.',
@@ -208,9 +187,6 @@
       email: '请输入有效的电子邮箱地址，例如 name@email.com。',
       sending: '正在发送…',
       failed: '您的申请无法发送。请检查您的网络连接并重试——您填写的内容不会丢失。',
-      nif: '请输入有效的葡萄牙税号（NIF），共9位数字。',
-      postalCode: '请输入格式为 0000-000 的邮政编码。',
-      plate: '请输入有效的葡萄牙车牌号。',
       startDate: '起保日期不能早于今天。',
       licenceDate: '驾照签发日期不能早于投保人的出生日期，也不能是将来的日期。',
       licenceBeforeAge16: '该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。',
@@ -222,7 +198,7 @@
       tooShort: '请至少输入 {min} 个字符。',
       requiredGroup: '请至少选择一项。',
     },
-    // Especificação v2, Parte C — Hebrew. The eleven messages tracked by
+    // Especificação v2, Parte C — Hebrew. The eight messages tracked by
     // data/i18n/quote-form/he.json's common.errors.* (required through
     // tooShort below) are copied verbatim from there — that JSON file is
     // the source of truth checked by scripts/check-i18n-parity.mjs, this
@@ -232,7 +208,7 @@
     // requiredGroup) have no JSON-tracked equivalent in any language —
     // sending matches il-content/ui.mjs's own formSending, the rest are
     // freehand in the same register. Latin/numeric terms embedded in
-    // Hebrew (NIF, an email example, the postal-code format) use the
+    // Hebrew (an email example) use the
     // U+2066/U+2069 isolate pair, not <bdi> — this string reaches the page
     // through showError()'s textContent, a context <bdi> markup would show
     // as literal tag text in, same reasoning as he.json's own _comment.
@@ -241,9 +217,6 @@
       email: 'נא להזין כתובת ⁦דוא״ל⁩ תקינה, למשל ⁦name@email.com⁩.',
       sending: 'שולחים…',
       failed: 'לא ניתן היה לשלוח את הבקשה. יש לבדוק את החיבור ולנסות שוב — שום דבר שכתבתם לא אבד.',
-      nif: 'נא להזין ⁦NIF⁩ פורטוגזי תקין, בן 9 ספרות.',
-      postalCode: 'נא להזין מיקוד בפורמט ⁦0000-000⁩.',
-      plate: 'נא להזין מספר רישוי פורטוגזי תקין.',
       startDate: 'מועד התחילה לא יכול להיות לפני היום.',
       licenceDate: 'תאריך הרישיון לא יכול להיות לפני תאריך הלידה של המבוטח, וגם לא בעתיד.',
       licenceBeforeAge16: 'זה לפני יום ההולדת ה־16 של המבוטח — אנחנו נקבל את זה בכל זאת, אבל כדאי לוודא שהתאריך נכון.',
@@ -350,9 +323,11 @@
       var ref = el.getAttribute('data-validate-ref');
       var refEl = ref && form ? form.querySelector('[name="' + ref + '"]') : null;
       var refValue = refEl ? (refEl.value || '').trim() : '';
-      if (kind === 'nif' && !QV.isValidNif(value)) return t.nif;
-      if (kind === 'postal-code' && !QV.isValidPostalCode(value)) return t.postalCode;
-      if (kind === 'plate' && !QV.isValidPlate(value)) return t.plate;
+      // No `nif` / `postal-code` / `plate` kinds any more: the tax number
+      // (NIF/NIE), postcode and number plate are free text on every form so
+      // clients can enter Portuguese, Spanish or foreign values. A stale
+      // cached page still carrying one of those attributes falls through
+      // here as "no format rule", never as an error.
       if (kind === 'start-date' && !QV.isStartDateValid(value)) return t.startDate;
       // Not the ≥18-years-old rule — this is only the plain "not in the
       // future" check, matching data/i18n/quote-form/{lang}.json's

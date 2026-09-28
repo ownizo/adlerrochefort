@@ -50,7 +50,7 @@ export const MOTOR_PAGE = {
     submitLabel: '提交申请',
     microNote:
       '我们将在24个工作小时内回复。您的信息仅用于准备本报价，并根据《通用数据保护条例》（GDPR）处理——请参阅<a href="/en/privacy-policy" hreflang="en">隐私政策</a>。',
-    fieldsHtml: `        <div class="contact-form-field"><label for="zh-auto-matricula">车牌号 *</label><input type="text" id="zh-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+    fieldsHtml: `        <div class="contact-form-field"><label for="zh-auto-matricula">车牌号 *</label><input type="text" id="zh-auto-matricula" name="matricula" required></div>
         <div class="contact-form-field"><label for="zh-auto-carta">驾照签发日期 *</label><input type="date" id="zh-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="zh-auto-carta-idade-info" hidden>该日期早于投保人的16岁生日——我们仍会接受，但请核实日期是否正确。</p>`,
   },

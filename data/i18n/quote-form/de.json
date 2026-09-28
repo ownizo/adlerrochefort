@@ -14,7 +14,7 @@
       "email": "E-Mail-Adresse",
       "telefone": "Telefonnummer",
       "data_inicio": "Gewünschtes Startdatum",
-      "nif": "NIF (portugiesische Steuernummer)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Geburtsdatum",
       "morada": "Vollständige Anschrift",
       "localidade": "Ort",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "Dieses Feld ist erforderlich.",
       "email_invalido": "Geben Sie eine gültige E-Mail-Adresse ein, zum Beispiel name@email.com.",
-      "nif_invalido": "Geben Sie eine gültige portugiesische Steuernummer (NIF) mit 9 Ziffern ein.",
-      "codigo_postal_invalido": "Geben Sie eine Postleitzahl im Format 0000-000 ein.",
-      "matricula_invalida": "Geben Sie ein gültiges portugiesisches Kennzeichen ein.",
       "data_inicio_invalida": "Das Startdatum darf nicht vor heute liegen.",
       "data_nascimento_invalida": "Das Geburtsdatum darf nicht in der Zukunft liegen.",
       "carta_invalida": "Das Datum des Führerscheins darf nicht vor dem Geburtsdatum des Versicherungsnehmers liegen, noch in der Zukunft.",
@@ -52,7 +49,6 @@
       "titulo": "Autoversicherung anfragen",
       "subtitulo": "Füllen Sie das Wesentliche aus. Wir antworten innerhalb von 24 Arbeitsstunden.",
       "matricula": "Kennzeichen",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Datum der Führerscheinausstellung"
     },
     "habitacao": {
@@ -82,7 +78,7 @@
       "pessoa_label": "Person",
       "pessoa_nome": "Vollständiger Name",
       "pessoa_nascimento": "Geburtsdatum",
-      "pessoa_nif": "NIF (portugiesische Steuernummer)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Diese Person entfernen",
       "pessoa_adicionar": "+ Person hinzufügen"
     },

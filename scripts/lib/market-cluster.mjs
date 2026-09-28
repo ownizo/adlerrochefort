@@ -606,11 +606,11 @@ function wizardFormHtml(market, page) {
 
       <div data-wizard-step>
         <div class="contact-form-field"><label for="${idp}-nome">${esc(c.fields.nome_completo)} *</label><input type="text" id="${idp}-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="${idp}-nif">${esc(c.fields.nif)} *</label><input type="text" id="${idp}-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required${ltrInput(market)}></div>
+        <div class="contact-form-field"><label for="${idp}-nif">${esc(c.fields.nif)} *</label><input type="text" id="${idp}-nif" name="nif" placeholder="NIF / NIE" required${ltrInput(market)}></div>
         <div class="contact-form-field"><label for="${idp}-nascimento">${esc(c.fields.data_nascimento)} *</label><input type="date" id="${idp}-nascimento" name="data_nascimento" data-validate="${w.adultBirthDate ? 'birth-date-adult' : 'birth-date'}" required></div>
         <div class="contact-form-field"><label for="${idp}-morada">${esc(c.fields.morada)} *</label><input type="text" id="${idp}-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="${idp}-localidade">${esc(c.fields.localidade)} *</label><input type="text" id="${idp}-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="${idp}-cp">${esc(c.fields.codigo_postal)} *</label><input type="text" id="${idp}-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required${ltrInput(market)}></div>
+        <div class="contact-form-field"><label for="${idp}-cp">${esc(c.fields.codigo_postal)} *</label><input type="text" id="${idp}-cp" name="codigo_postal" autocomplete="postal-code" required${ltrInput(market)}></div>
         <div class="contact-form-field"><label for="${idp}-telefone">${esc(c.fields.telefone)} *</label><input type="tel" id="${idp}-telefone" name="telefone" autocomplete="tel" required${ltrInput(market)}></div>
         <div class="contact-form-field"><label for="${idp}-email">${esc(c.fields.email)} *</label><input type="email" id="${idp}-email" name="email" autocomplete="email" required${ltrInput(market)}></div>
         <div class="contact-form-field">

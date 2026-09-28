@@ -14,7 +14,7 @@
       "email": "Adres e-mail",
       "telefone": "Numer telefonu",
       "data_inicio": "Preferowana data rozpoczęcia",
-      "nif": "NIF (portugalski numer podatkowy)",
+      "nif": "NIF/NIE",
       "data_nascimento": "Data urodzenia",
       "morada": "Pełny adres",
       "localidade": "Miejscowość",
@@ -32,9 +32,6 @@
     "errors": {
       "campo_obrigatorio": "To pole jest wymagane.",
       "email_invalido": "Proszę podać prawidłowy adres e-mail, np. imie@email.com.",
-      "nif_invalido": "Proszę podać prawidłowy portugalski numer podatkowy (NIF), 9 cyfr.",
-      "codigo_postal_invalido": "Proszę podać kod pocztowy w formacie 0000-000.",
-      "matricula_invalida": "Proszę podać prawidłową portugalską tablicę rejestracyjną.",
       "data_inicio_invalida": "Data rozpoczęcia nie może być wcześniejsza niż dzisiaj.",
       "data_nascimento_invalida": "Data urodzenia nie może być w przyszłości.",
       "carta_invalida": "Data wydania prawa jazdy nie może być wcześniejsza niż data urodzenia ubezpieczającego ani przypadać w przyszłości.",
@@ -75,7 +72,7 @@
       "pessoa_label": "Osoba",
       "pessoa_nome": "Imię i nazwisko",
       "pessoa_nascimento": "Data urodzenia",
-      "pessoa_nif": "NIF (portugalski numer podatkowy)",
+      "pessoa_nif": "NIF/NIE",
       "pessoa_remover": "Usuń tę osobę",
       "pessoa_adicionar": "+ Dodaj osobę"
     },
@@ -83,7 +80,6 @@
       "titulo": "Zapytaj o ubezpieczenie samochodu",
       "subtitulo": "Proszę podać najważniejsze informacje. Odpowiadamy w ciągu 24 godzin roboczych.",
       "matricula": "Numer rejestracyjny",
-      "matricula_placeholder": "AA-00-AA",
       "data_carta": "Data wydania prawa jazdy"
     },
     "profissional": {

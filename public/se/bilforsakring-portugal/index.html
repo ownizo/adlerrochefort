@@ -592,11 +592,11 @@
 
       <div data-wizard-step>
         <div class="contact-form-field"><label for="se-auto-nome">Fullständigt namn *</label><input type="text" id="se-auto-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="se-auto-nif">NIF (portugisiskt skattenummer) *</label><input type="text" id="se-auto-nif" name="nif" inputmode="numeric" placeholder="9" data-validate="nif" required></div>
+        <div class="contact-form-field"><label for="se-auto-nif">NIF/NIE *</label><input type="text" id="se-auto-nif" name="nif" placeholder="NIF / NIE" required></div>
         <div class="contact-form-field"><label for="se-auto-nascimento">Födelsedatum *</label><input type="date" id="se-auto-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
         <div class="contact-form-field"><label for="se-auto-morada">Fullständig adress *</label><input type="text" id="se-auto-morada" name="morada" autocomplete="street-address" required></div>
         <div class="contact-form-field"><label for="se-auto-localidade">Ort *</label><input type="text" id="se-auto-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="se-auto-cp">Postnummer *</label><input type="text" id="se-auto-cp" name="codigo_postal" placeholder="0000-000" autocomplete="postal-code" data-validate="postal-code" required></div>
+        <div class="contact-form-field"><label for="se-auto-cp">Postnummer *</label><input type="text" id="se-auto-cp" name="codigo_postal" autocomplete="postal-code" required></div>
         <div class="contact-form-field"><label for="se-auto-telefone">Telefonnummer *</label><input type="tel" id="se-auto-telefone" name="telefone" autocomplete="tel" required></div>
         <div class="contact-form-field"><label for="se-auto-email">E-postadress *</label><input type="email" id="se-auto-email" name="email" autocomplete="email" required></div>
         <div class="contact-form-field">
@@ -617,7 +617,7 @@
       </div>
 
       <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" placeholder="AA-00-AA" data-validate="plate" required></div>
+        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" required></div>
         <div class="contact-form-field"><label for="se-auto-carta">Datum för körkortets utfärdande *</label><input type="date" id="se-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
         <p class="wizard-helper" id="se-auto-carta-idade-info" hidden>Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.</p>
         <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>

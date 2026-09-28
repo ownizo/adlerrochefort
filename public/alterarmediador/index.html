@@ -580,9 +580,9 @@
 
         <!-- NIF -->
         <div class="field-block">
-          <label for="nif">Número de Identificação Fiscal (NIF / NIPC)</label>
-          <input type="text" id="nif" name="nif" placeholder="ex: 123456789" maxlength="9" inputmode="numeric" required>
-          <div class="error-msg" id="err-nif">Indique um NIF/NIPC válido (9 dígitos)</div>
+          <label for="nif">NIF/NIE</label>
+          <input type="text" id="nif" name="nif" placeholder="NIF / NIE" required>
+          <div class="error-msg" id="err-nif">Indique o NIF/NIE</div>
         </div>
 
         <!-- Morada -->
@@ -1064,7 +1064,7 @@
     var apolices = collectApolices();
 
     setError('nome', nome.length < 3); if (nome.length < 3) ok = false;
-    setError('nif', !/^\d{9}$/.test(nif)); if (!/^\d{9}$/.test(nif)) ok = false;
+    setError('nif', !nif); if (!nif) ok = false;
     setError('morada', morada.length < 5); if (morada.length < 5) ok = false;
     setError('seguradora', seguradora.length < 2); if (seguradora.length < 2) ok = false;
     var apoErr = $('err-apolices');
