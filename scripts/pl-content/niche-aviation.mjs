@@ -51,7 +51,7 @@ export const NICHE_AVIATION_PAGE = {
 <section class="section tint" aria-labelledby="przepisy">
   <div class="container narrow article-body">
     <h2 id="przepisy">Przepisy wspólne i różnice między krajami</h2>
-    <p>Minimalne ubezpieczenie przewoźników i operatorów statków powietrznych w Unii Europejskiej wyznacza <strong>rozporządzenie (WE) nr 785/2004</strong> — sumy OC wobec osób trzecich i pasażerów zależą od maksymalnej masy startowej. To minimum, a nie rekomendacja: przy lotach nad obszarami gęsto zabudowanymi czy z pasażerami o wysokich dochodach sumy powyżej minimum są standardem.</p>
+    <p>Minimalne ubezpieczenie przewoźników i operatorów statków powietrznych w Unii Europejskiej wyznacza <strong>rozporządzenie (WE) nr 785/2004</strong> — minimalne sumy OC wobec osób trzecich zależą od maksymalnej masy startowej, a wobec pasażerów liczone są na każdego pasażera. To minimum, a nie rekomendacja: przy lotach nad obszarami gęsto zabudowanymi czy z pasażerami o wysokich dochodach sumy powyżej minimum są standardem.</p>
     <div class="compare-wrap">
       <table class="compare-table">
         <caption class="visually-hidden">Lotnictwo prywatne w Portugalii i w Hiszpanii — przepisy i praktyka</caption>
@@ -60,7 +60,7 @@ export const NICHE_AVIATION_PAGE = {
         </thead>
         <tbody>
           <tr><td>Organ nadzoru</td><td>ANAC (Autoridade Nacional da Aviação Civil).</td><td>AESA (Agencia Estatal de Seguridad Aérea).</td></tr>
-          <tr><td>Drony</td><td>Unijne przepisy o dronach; rejestracja operatora w ANAC; krajowy obowiązek ubezpieczenia OC dla dronów powyżej określonej masy.</td><td>Unijne przepisy o dronach; rejestracja operatora w AESA; krajowe przepisy przewidują obowiązkowe OC dla większości operacji.</td></tr>
+          <tr><td>Drony</td><td>Unijne przepisy o dronach; rejestracja operatora w ANAC; krajowy obowiązek ubezpieczenia OC dla dronów powyżej określonej masy.</td><td>Unijne przepisy o dronach; rejestracja operatora w AESA; krajowe przepisy przewidują obowiązkowe OC dla wielu operacji i dla dronów od 20 kg.</td></tr>
           <tr><td>Typowe bazy</td><td>Cascais (Tires), Portimão, Madera.</td><td>Madryt, Málaga, Ibiza, Palma, Barcelona.</td></tr>
         </tbody>
       </table>
@@ -135,7 +135,7 @@ export const NICHE_AVIATION_PAGE = {
   faq: [
     {
       q: 'Jakie ubezpieczenie jest obowiązkowe dla prywatnego samolotu w UE?',
-      a: '<p>Rozporządzenie (WE) nr 785/2004 wyznacza minimalne sumy OC wobec osób trzecich i pasażerów, zależne od maksymalnej masy startowej. To minimum; przy prywatnych lotach z pasażerami rekomendujemy zwykle wyższy łączny limit.</p>',
+      a: '<p>Rozporządzenie (WE) nr 785/2004 wyznacza minimalne sumy OC wobec osób trzecich, zależne od maksymalnej masy startowej, oraz minimalne sumy na każdego pasażera. To minimum; przy prywatnych lotach z pasażerami rekomendujemy zwykle wyższy łączny limit.</p>',
     },
     {
       q: 'Samolot jest zarządzany przez firmę zarządzającą. Czy jej polisa mnie chroni?',

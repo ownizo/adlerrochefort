@@ -65,7 +65,7 @@ export const VILLALET_PAGE = {
           <tr><th scope="col">Aspetto</th><th scope="col">In Portogallo</th><th scope="col">In Spagna</th></tr>
         </thead>
         <tbody>
-          <tr><td>Registrazione</td><td>Registro nazionale dell’<em>Alojamento Local</em> (AL), tramite il comune</td><td>Licenze turistiche regionali — per esempio alle Baleari, la <em>VFT</em> in Andalusia, la <em>HUT</em> in Catalogna — e una nuova registrazione nazionale per gli affitti di breve durata</td></tr>
+          <tr><td>Registrazione</td><td>Registro nazionale dell’<em>Alojamento Local</em> (AL), tramite il comune</td><td>Licenze turistiche regionali — per esempio alle Baleari, la <em>VFT</em> in Andalusia, la <em>HUT</em> in Catalogna ; la registrazione nazionale per gli affitti brevi introdotta nel 2025 è stata in gran parte annullata dal Tribunal Supremo nel 2026</td></tr>
           <tr><td>Assicurazione obbligatoria</td><td>Il regime AL richiede un’assicurazione che copra la responsabilità civile del gestore verso gli ospiti e i terzi</td><td>Diverse regioni richiedono una responsabilità civile per le abitazioni turistiche; requisiti e massimali variano</td></tr>
           <tr><td>Chi gestisce</td><td>Il titolare della registrazione AL risponde verso gli ospiti, anche se si avvale di una società di gestione</td><td>Il titolare della licenza, spesso tramite un’agenzia; la ripartizione delle responsabilità va letta nel contratto</td></tr>
         </tbody>
@@ -163,7 +163,7 @@ export const VILLALET_PAGE = {
     },
     {
       q: 'E in Spagna?',
-      a: '<p>Le licenze turistiche sono regionali — Baleari, Andalusia, Catalogna e altre hanno regole proprie — e diverse regioni richiedono una responsabilità civile per le abitazioni turistiche. A questo si aggiunge una registrazione nazionale per gli affitti di breve durata. Verifichi i requisiti della Sua regione; noi adeguiamo la copertura.</p>',
+      a: '<p>Le licenze turistiche sono regionali — Baleari, Andalusia, Catalogna e altre hanno regole proprie — e diverse regioni richiedono una responsabilità civile per le abitazioni turistiche. La registrazione nazionale per gli affitti brevi introdotta nel 2025 è stata in gran parte annullata dal Tribunal Supremo nel 2026, per cui il riferimento resta la licenza regionale. Verifichi i requisiti della Sua regione; noi adeguiamo la copertura.</p>',
     },
     {
       q: 'Il furto commesso da un ospite è coperto?',

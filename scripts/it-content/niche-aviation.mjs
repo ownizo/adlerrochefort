@@ -57,7 +57,7 @@ export const AVIATION_PAGE = {
 <section class="section tint" aria-labelledby="rischi">
   <div class="container narrow article-body">
     <h2 id="rischi">I rischi, e che cosa cambia tra Portogallo e Spagna</h2>
-    <p>Il quadro di base è europeo. Il Regolamento (CE) n. 785/2004 fissa i requisiti minimi di assicurazione per la responsabilità verso passeggeri, bagagli, merci e terzi degli operatori di aeromobili, in funzione del peso massimo al decollo; per i droni, il Regolamento (UE) 2019/947 disciplina le operazioni e la registrazione degli operatori. Le differenze nazionali riguardano soprattutto l’autorità di riferimento e l’ambiente operativo.</p>
+    <p>Il quadro di base è europeo. Il Regolamento (CE) n. 785/2004 fissa i requisiti minimi di assicurazione per la responsabilità verso passeggeri, bagagli, merci e terzi degli operatori di aeromobili: per i terzi in funzione del peso massimo al decollo, per i passeggeri con un minimo per passeggero; per i droni, il Regolamento (UE) 2019/947 disciplina le operazioni e la registrazione degli operatori. Le differenze nazionali riguardano soprattutto l’autorità di riferimento e l’ambiente operativo.</p>
     <div class="compare-wrap">
       <table class="compare-table">
         <caption class="visually-hidden">Aviazione privata: differenze pratiche tra Portogallo e Spagna</caption>
@@ -156,7 +156,7 @@ export const AVIATION_PAGE = {
   faq: [
     {
       q: 'Quali massimali di responsabilità civile sono obbligatori?',
-      a: '<p>Il Regolamento (CE) n. 785/2004 fissa i minimi per la responsabilità verso passeggeri e terzi in funzione del peso massimo al decollo dell’aeromobile. Sono minimi di legge: per un aeromobile privato di valore consigliamo di norma massimali combinati ben più elevati.</p>',
+      a: '<p>Il Regolamento (CE) n. 785/2004 fissa i minimi per la responsabilità verso terzi in funzione del peso massimo al decollo dell’aeromobile e un minimo per ciascun passeggero. Sono minimi di legge: per un aeromobile privato di valore consigliamo di norma massimali combinati ben più elevati.</p>',
     },
     {
       q: 'L’aereo è di una società e lo gestisce una società di management. Chi lo assicura?',

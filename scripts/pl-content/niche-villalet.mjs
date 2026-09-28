@@ -58,7 +58,7 @@ export const NICHE_VILLALET_PAGE = {
           <tr><th scope="col">Zagadnienie</th><th scope="col">Portugalia</th><th scope="col">Hiszpania</th></tr>
         </thead>
         <tbody>
-          <tr><td>Rejestracja</td><td>Krajowy reżim <em>Alojamento Local</em> (AL) — rejestracja w gminie przed rozpoczęciem wynajmu.</td><td>Licencje regionalne: np. licencja turystyczna na Balearach, <em>VFT</em> w Andaluzji, <em>HUT</em> w Katalonii; od 2025 r. dodatkowo krajowy rejestr najmu krótkoterminowego.</td></tr>
+          <tr><td>Rejestracja</td><td>Krajowy reżim <em>Alojamento Local</em> (AL) — rejestracja w gminie przed rozpoczęciem wynajmu.</td><td>Licencje regionalne: np. licencja turystyczna na Balearach, <em>VFT</em> w Andaluzji, <em>HUT</em> w Katalonii; krajowy rejestr najmu krótkoterminowego z 2025 r. został w 2026 r. w dużej części unieważniony przez Sąd Najwyższy (Tribunal Supremo).</td></tr>
           <tr><td>Obowiązkowe ubezpieczenie</td><td>Reżim AL wymaga ubezpieczenia obejmującego odpowiedzialność operatora za szkody wyrządzone gościom i osobom trzecim.</td><td>Zależy od regionu; kilka wspólnot autonomicznych wymaga OC dla wynajmu turystycznego, czasem z określoną minimalną sumą.</td></tr>
           <tr><td>Ograniczenia</td><td>Część gmin ogranicza nowe rejestracje AL w wybranych strefach.</td><td>Wiele regionów i gmin ogranicza lub zamyka możliwość uzyskania nowych licencji.</td></tr>
         </tbody>
@@ -143,7 +143,7 @@ export const NICHE_VILLALET_PAGE = {
     },
     {
       q: 'Jak wygląda to w Hiszpanii?',
-      a: '<p>Licencje na wynajem turystyczny są regionalne, na przykład na Balearach, w Andaluzji czy w Katalonii, a kilka regionów wymaga ubezpieczenia OC. Od 2025 roku obowiązuje także krajowy rejestr najmu krótkoterminowego. Wymogi zależą od regionu i gminy, dlatego sprawdzamy je dla konkretnej lokalizacji.</p>',
+      a: '<p>Licencje na wynajem turystyczny są regionalne, na przykład na Balearach, w Andaluzji czy w Katalonii, a kilka regionów wymaga ubezpieczenia OC. Krajowy rejestr najmu krótkoterminowego wprowadzony w 2025 roku został w 2026 roku w dużej części unieważniony przez hiszpański Sąd Najwyższy, więc punktem odniesienia pozostaje licencja regionalna. Wymogi zależą od regionu i gminy, dlatego sprawdzamy je dla konkretnej lokalizacji.</p>',
     },
     {
       q: 'Czy polisa pokryje utracone rezerwacje?',

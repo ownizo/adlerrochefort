@@ -7,8 +7,8 @@
  * Ibiza, Mallorca, Marbella or the Costa Brava.
  *
  * Spanish-specific angle: the Spanish owner is used to regional licensing
- * (Balearics, Andalusia VFT, Catalonia HUT) and has heard of the new national
- * register for short-term rentals; Portugal has one national Alojamento Local
+ * (Balearics, Andalusia VFT, Catalonia HUT) and has heard of the national
+ * short-term rental register (2025, largely annulled by the Tribunal Supremo in 2026); Portugal has one national Alojamento Local
  * regime with its own compulsory insurance. Both explained generally, pointing
  * to the applicable regime rather than paraphrasing it in detail.
  */
@@ -70,7 +70,7 @@ ${section(
 ${compareTable('Regulación del alquiler turístico y seguro en España y en Portugal', [
   ['Régimen', 'Autonómico: cada comunidad tiene su propia norma y su registro (p. ej., Baleares, viviendas con fines turísticos en Andalucía, HUT en Cataluña)', 'Nacional: el régimen de <em>Alojamento Local</em>, con registro municipal'],
   ['Seguro exigido', 'Varias comunidades exigen un seguro de responsabilidad civil para la vivienda turística; los requisitos varían', 'El registro de Alojamento Local exige un seguro que cubra la responsabilidad del titular por daños a huéspedes y terceros'],
-  ['Registro estatal', 'Registro único estatal para los arrendamientos de corta duración, además de la licencia autonómica', 'Registro nacional de Alojamento Local'],
+  ['Registro estatal', 'El registro único estatal de arrendamientos de corta duración, creado en 2025, fue anulado en gran parte por el Tribunal Supremo en 2026; la referencia sigue siendo la licencia y el registro autonómicos', 'Registro nacional de Alojamento Local'],
   ['Comunidad o condominio', 'Los estatutos y los acuerdos de la comunidad pueden limitar el uso turístico', 'El condominio puede oponerse en determinados casos previstos en el régimen'],
 ])}
     <p>Las normas cambian con frecuencia y dependen de la comunidad autónoma o del municipio. No gestionamos licencias ni valoramos si una vivienda puede alquilarse: eso corresponde a su abogado o a su gestora. Lo que sí hacemos es comprobar que la póliza cumple el seguro exigido por la licencia y entregarle la documentación que le pidan.</p>`
@@ -129,7 +129,7 @@ ${disclaimer('tint', 'No valoramos requisitos de licencia turística; el cumplim
     },
     {
       q: '¿Y en España?',
-      a: '<p>Depende de la comunidad autónoma. Baleares, Andalucía y Cataluña, entre otras, tienen su propio régimen de vivienda turística, y varias exigen un seguro de responsabilidad civil. A ello se suma el registro único estatal para los arrendamientos de corta duración. Los requisitos de licencia los confirma su abogado o su gestora.</p>',
+      a: '<p>Depende de la comunidad autónoma. Baleares, Andalucía y Cataluña, entre otras, tienen su propio régimen de vivienda turística, y varias exigen un seguro de responsabilidad civil. El registro único estatal creado en 2025 fue anulado en gran parte por el Tribunal Supremo en 2026, así que la referencia vuelve a ser la licencia y el registro autonómicos. Los requisitos de licencia los confirma su abogado o su gestora.</p>',
     },
     {
       q: '¿Está cubierta la pérdida de rentas si la villa queda inhabitable?',

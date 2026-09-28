@@ -80,7 +80,7 @@ export const KR_PAGE = {
         </tbody>
       </table>
     </div>
-    <p>Chi viene dall’Italia sa che lì la disciplina sui sequestri di persona a scopo di estorsione, introdotta nei primi anni Novanta, limita fortemente questo tipo di copertura. Per una famiglia residente in Portogallo o in Spagna il quadro è diverso, ma non va dato per scontato: prima di proporre una struttura verifichiamo con il mercato e, se necessario, con un legale, che cosa sia assicurabile nella Sua situazione specifica.</p>
+    <p>Chi viene dall’Italia sa che lì la disciplina sui sequestri di persona a scopo di estorsione dei primi anni Novanta (d.l. 8/1991, convertito dalla legge 82/1991) dichiara nulli i contratti che assicurano questo rischio e punisce il cittadino italiano che, anche all’estero, assicuri il pagamento di un riscatto per un sequestro avvenuto in Italia. Per una famiglia residente in Portogallo o in Spagna il quadro è diverso, ma non va dato per scontato — in particolare per i soggiorni in Italia: prima di proporre una struttura verifichiamo con il mercato e, se necessario, con un legale, che cosa sia assicurabile nella Sua situazione specifica.</p>
   </div>
 </section>
 

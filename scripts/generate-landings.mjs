@@ -460,7 +460,7 @@ const AL = {
   url: '/seguros/alojamento-local/',
   slug: 'alojamento-local',
   category: 'hotelaria-turismo',
-  metaTitle: 'Seguro de Alojamento Local | Obrigatório desde o DL 76/2024 | Adler & Rochefort',
+  metaTitle: 'Seguro de Alojamento Local obrigatório e o DL 76/2024 | Adler & Rochefort',
   metaDescription:
     'Seguro de alojamento local obrigatório: responsabilidade civil, multirriscos e perda de exploração. O que o Decreto-Lei n.º 76/2024 exige e porque o seguro do condomínio não chega.',
   h1: 'Seguro de <em>Alojamento Local</em>',

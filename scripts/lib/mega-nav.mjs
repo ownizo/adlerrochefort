@@ -447,8 +447,35 @@ export function nlMegaNav({ switcher, mobileSwitcher, ctaHref = '/nl/#offerte' }
         { href: '/nl/zzp-beroepsaansprakelijkheid-portugal/', label: 'ZZP-aansprakelijkheid' },
       ],
     },
-    spain: spainSpec(m),
-    privateClients: pcSpec(m),
+    // /nl/ has its own Spain cluster (September 2026): the Spain menu stays on /nl/.
+    spain: {
+      trigger: m.spain,
+      menuAria: m.spainMenu,
+      overviewTitle: m.overview,
+      overview: [{ href: '/nl/verzekeringen-spanje/', label: 'Verzekeringen in Spanje', flag: '🇪🇸' }],
+      personalTitle: m.personalShort,
+      personal: [
+        { href: '/nl/zorgverzekering-spanje/', label: m.spainHealth },
+        { href: '/nl/woonverzekering-spanje/', label: m.spainHome },
+        { href: '/nl/autoverzekering-spanje/', label: m.spainCar },
+        { href: '/nl/aansprakelijkheidsverzekering-spanje/', label: 'Aansprakelijkheid' },
+      ],
+      propertyTitle: m.property,
+      property: [
+        { href: '/nl/huis-kopen-spanje-verzekering/', label: 'Huis kopen in Spanje' },
+        { href: '/nl/golf-woningen-portugal-spanje/', label: 'Golfwoningen' },
+      ],
+      privateTitle: m.privateClients,
+      privateClients: [{ href: '/nl/woonverzekering-spanje/', label: m.spainPC }],
+    },
+    privateClients: {
+      trigger: m.privateClients,
+      menuAria: m.privateClientsMenu,
+      items: [
+        { href: '/nl/woonverzekering-portugal/', label: m.pcPortugal, flag: '🇵🇹' },
+        { href: '/nl/woonverzekering-spanje/', label: m.pcSpain, flag: '🇪🇸' },
+      ],
+    },
     whyUs: whySpec(m),
     insights: null,
     cta: { href: ctaHref, label: m.cta },

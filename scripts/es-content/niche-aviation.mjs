@@ -81,7 +81,7 @@ ${section(
     `    <h2 id="espana-portugal">España, Portugal y el marco europeo</h2>
     <p>El seguro obligatorio de las aeronaves se rige, en lo esencial, por normas europeas comunes a los dos países; las autoridades nacionales supervisan la matrícula, la operación y los drones:</p>
 ${compareTable('Marco del seguro de aviación privada en España y en Portugal', [
-  ['Seguro mínimo de operadores', 'Reglamento (CE) n.º 785/2004: mínimos de responsabilidad frente a terceros y pasajeros según el peso de la aeronave', 'El mismo Reglamento europeo, de aplicación directa'],
+  ['Seguro mínimo de operadores', 'Reglamento (CE) n.º 785/2004: mínimos de responsabilidad frente a terceros según el peso máximo al despegue y mínimos por pasajero', 'El mismo Reglamento europeo, de aplicación directa'],
   ['Autoridad de aviación civil', 'Agencia Estatal de Seguridad Aérea (AESA)', 'Autoridade Nacional da Aviação Civil (ANAC)'],
   ['Drones', 'Marco europeo de drones y normativa nacional complementaria; registro de operadores ante AESA', 'Marco europeo de drones y normativa nacional complementaria; registro de operadores ante ANAC'],
   ['Operaciones habituales', 'Madrid, costa mediterránea, Baleares', 'Lisboa-Cascais, Algarve, Madeira'],
@@ -124,7 +124,7 @@ ${disclaimer('tint', 'Los riesgos de aviación se colocan exclusivamente a trav�
     },
     {
       q: '¿Qué seguro es obligatorio para una aeronave privada?',
-      a: '<p>El Reglamento (CE) n.º 785/2004 fija, para toda la Unión Europea, unos mínimos de seguro de responsabilidad frente a terceros y frente a pasajeros según el peso de la aeronave. El casco no es obligatorio por ley, aunque lo exigirá cualquier entidad que financie la aeronave.</p>',
+      a: '<p>El Reglamento (CE) n.º 785/2004 fija, para toda la Unión Europea, unos mínimos de seguro de responsabilidad frente a terceros, escalonados según el peso máximo al despegue, y unos mínimos por pasajero. El casco no es obligatorio por ley, aunque lo exigirá cualquier entidad que financie la aeronave.</p>',
     },
     {
       q: 'Mi aeronave la gestiona una empresa. ¿Quién debe contratar el seguro?',
