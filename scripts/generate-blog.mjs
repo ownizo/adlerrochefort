@@ -290,9 +290,11 @@ async function buildListing({
 // piece exists, in the brief's own priority order (Subseguro > Claims-made >
 // Private Clients pillar > RC Professional), falling back to the newest
 // article if none of those slugs exist yet at generation time.
+// September 2026: the firm leads with private clients (HNW), so the PT blog
+// opens on the Private Clients pillar rather than professional liability.
 const FEATURED_CANDIDATES = [
-  'claims-made-rc-profissional',
   'seguros-private-clients-portugal',
+  'claims-made-rc-profissional',
   'subseguro-portugal',
   'responsabilidade-civil-profissional',
 ];
