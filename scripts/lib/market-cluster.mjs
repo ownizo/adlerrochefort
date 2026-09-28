@@ -38,6 +38,7 @@ import {
   LANG_BY_KEY,
 } from './lang-selector.mjs';
 import { marketPairs, CLUSTER_X_DEFAULT } from './market-hreflang.mjs';
+import { trustpilotBlock } from './trustpilot-reviews.mjs';
 import { audienceBand, insurerPanel, nextBand } from './site-sections.mjs';
 import { clusterMegaNav, NAV_SCRIPT } from './mega-nav.mjs';
 import { livroLink, LIVRO_CSS, LIVRO_SCRIPT } from './livro.mjs';
@@ -983,7 +984,9 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
 
   // Joined here rather than interpolated one per line so that a page without
   // these sections keeps exactly the blank-line rhythm it had before.
-  const extraSections = [audienceHtml, insurersHtml].filter(Boolean).map((h) => `\n${h}\n`).join('');
+  // Trustpilot reviews on the hub only (see scripts/lib/trustpilot-reviews.mjs).
+  const reviewsHtml = page.isHub ? trustpilotBlock(market.key) : '';
+  const extraSections = [audienceHtml, reviewsHtml, insurersHtml].filter(Boolean).map((h) => `\n${h}\n`).join('');
 
   const quote = page.pullquote
     ? `<section class="pullquote-band" aria-label="${esc(ui.pullquoteAria)}">

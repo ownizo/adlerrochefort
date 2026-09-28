@@ -20,7 +20,7 @@ export function card(a, i = 0) {
   // them; without it they would fall back to a flat tile and look unfinished.
   const bgStyle = !a.image && a.imageGradient ? ` style="background: ${esc(a.imageGradient)};"` : '';
   const readLabel = a.lang === 'en' ? 'Read article' : 'Ler artigo';
-  return `    <a href="${a.url}" class="blog-card fade-up" style="transition-delay: ${(i % 6) * 0.05}s; text-decoration: none; color: inherit;">
+  return `    <a href="${a.url}" class="blog-card fade-up" style="transition-delay: ${+((i % 6) * 0.05).toFixed(2)}s; text-decoration: none; color: inherit;">
       <div class="blog-card-img">
         <div class="blog-card-img-bg"${bgStyle}>${img}</div>
         <div class="blog-card-tag">${esc(a.tag || '')}</div>

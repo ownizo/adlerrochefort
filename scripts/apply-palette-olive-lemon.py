@@ -18,8 +18,9 @@ not a blind find-and-replace:
   4. Everything else is mapped hex-for-hex (navy family -> olive family,
      blue-grey text -> olive-grey text, red -> lemon).
 
-Applies to public/ (HTML inline styles and css/*.css) and to the generators
-in scripts/ so a re-run does not bring the old palette back. Idempotent.
+Applies to public/ (HTML inline styles and css/*.css), to the generators
+in scripts/ and to the generator data in data/ (e.g. the card gradients in
+data/articles.json) so a re-run does not bring the old palette back. Idempotent.
 """
 import os
 import re
@@ -101,6 +102,12 @@ def transform_inline_style(s):
     return re.sub(r'(style=")([^"]*)(")', st, s)
 
 
+def transform_gradients(s):
+    # Data files carry bare CSS values (e.g. "imageGradient": "linear-gradient(...)"),
+    # not style="" attributes: apply rule 3 to every gradient directly.
+    return re.sub(r'(linear-gradient\([^)]*?)' + ACCENT_RE, lambda k: k.group(1) + LIME_INK, s, flags=re.I)
+
+
 def hexmap(s):
     for a, b in HEX_MAP:
         s = re.sub(a, b, s, flags=re.I)
@@ -116,7 +123,7 @@ def process_html(s):
 def main():
     dry = '--dry-run' in sys.argv
     n = 0
-    for base in ('public', 'scripts'):
+    for base in ('public', 'scripts', 'data'):
         for dp, dn, fn in os.walk(os.path.join(ROOT, base)):
             dn[:] = [d for d in dn if d != 'node_modules']
             for f in fn:
@@ -134,6 +141,8 @@ def main():
                     s = process_html(s)
                 elif f.endswith('.css'):
                     s = hexmap(transform_css(s))
+                elif base == 'data' and f.endswith('.json'):
+                    s = hexmap(transform_gradients(s))
                 elif base == 'scripts' and f.endswith('.mjs'):
                     s = hexmap(transform_css(transform_inline_style(s)))
                 else:
