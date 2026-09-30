@@ -74,30 +74,30 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #283113;
-    --primary-hover: #3A4720;
-    --primary-dim: rgba(40,49,19,0.10);
-    --accent: #F3FF74;
-    --cream: #F5F1E8;
-    --cream2: #E8E5DF;
-    --ink: #1A200C;
-    --ink2: #565F48;
-    --muted: #5E6650;
-    --muted2: #5E6650;
+    --primary: #292929;
+    --primary-hover: #1C1C1C;
+    --primary-dim: rgba(41,41,41,0.10);
+    --accent: #FF6300;
+    --cream: #F7F6F5;
+    --cream2: #EBE9E8;
+    --ink: #292929;
+    --ink2: #333332;
+    --muted: #6B6763;
+    --muted2: #6B6763;
     --white: #FFFFFF;
-    --border: #DAD5C8;
-    --hero-bg: #283113;
-    --nav-bg: #283113;
-    --footer-bg: #1A200C;
+    --border: #D1CFCE;
+    --hero-bg: #292929;
+    --nav-bg: #292929;
+    --footer-bg: #292929;
   }
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 96px; }
   body {
     background: var(--cream);
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: var(--ink);
   }
 
@@ -108,7 +108,7 @@
     padding: 0 48px;
     height: 68px;
     display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid rgba(40,49,19,0.25);
+    border-bottom: 1px solid rgba(41,41,41,0.25);
   }
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
@@ -116,7 +116,7 @@
   }
   .nav-logo-img { height: 44px; width: auto; }
   .nav-logo-text {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px; font-weight: 600;
     color: var(--white); letter-spacing: 0.04em;
   }
@@ -142,7 +142,7 @@
   .lang-switcher a:hover { color: var(--accent); }
   .lang-switcher a.active {
     color: var(--white);
-    background: rgba(40,49,19,0.3);
+    background: rgba(41,41,41,0.3);
   }
   .lang-switcher-sep {
     color: rgba(255,255,255,0.2);
@@ -179,7 +179,7 @@
     padding: 5px 12px; margin-bottom: 20px;
   }
   .article-title {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 42px; font-weight: 700;
     color: var(--ink); line-height: 1.15;
     margin-bottom: 16px;
@@ -193,7 +193,7 @@
     color: var(--ink2); margin-bottom: 24px;
   }
   .article-body h3 {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px; font-weight: 700;
     margin-bottom: 16px; margin-top: 36px;
   }
@@ -216,7 +216,7 @@
     background: var(--hero-bg); text-align: center;
   }
   .article-cta p {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px; font-weight: 600;
     color: var(--white); margin-bottom: 20px;
   }
@@ -235,7 +235,7 @@
     padding: 0 80px 80px;
   }
   .related-title {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 28px; font-weight: 700;
     margin-bottom: 24px;
   }
@@ -254,7 +254,7 @@
     text-transform: uppercase; color: var(--primary); margin-bottom: 12px;
   }
   .related-card-title {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px; font-weight: 700; line-height: 1.3;
   }
 
@@ -271,7 +271,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .footer-brand-name {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 22px; font-weight: 600;
     color: var(--white); margin-bottom: 12px;
   }
@@ -286,7 +286,7 @@
   }
   .footer-badge-dot {
     width: 6px; height: 6px; border-radius: 50%;
-    background: #F3FF74; color: #283113;}
+    background: #FF6300; color: #292929;}
   .footer-col-title {
     font-size: 11px; font-weight: 700;
     letter-spacing: 0.14em; text-transform: uppercase;
@@ -305,7 +305,7 @@
     display: flex; align-items: center; justify-content: center;
     transition: 0.2s;
   }
-  .footer-social a:hover { border-color: var(--accent); background: rgba(243,255,116,0.1); }
+  .footer-social a:hover { border-color: var(--accent); background: rgba(255,99,0,0.1); }
   .footer-social a svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.5); }
   .footer-social a:hover svg { fill: var(--accent); }
   .footer-bottom {
@@ -353,7 +353,7 @@
 
   /* ASF TOP BAR */
   .asf-top-bar {
-    background: #283113;
+    background: #292929;
     color: rgba(255,255,255,0.85);
     text-align: center;
     font-size: 12px;
@@ -363,30 +363,30 @@
     line-height: 1.4;
   }
   .asf-top-bar a {
-    color: #F3FF74;
+    color: #FF6300;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
   }
-  .asf-top-bar a:hover { color: #F3FF74; }
+  .asf-top-bar a:hover { color: #FF6300; }
 
   /* CTA TOPO */
   .cta-topo {
-    background: #F5F1E8;
-    border-left: 4px solid #5A6610;
+    background: #F7F6F5;
+    border-left: 4px solid #FF6300;
     padding: 28px 32px;
     margin-bottom: 36px;
   }
   .cta-topo-title {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    color: #283113;
+    color: #292929;
     margin-bottom: 6px;
   }
   .cta-topo-subtitle {
     font-size: 13px;
-    color: #565F48;
+    color: #333332;
     margin-bottom: 18px;
   }
   .cta-topo-form {
@@ -405,32 +405,32 @@
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #5E6650;
+    color: #6B6763;
     margin-bottom: 4px;
   }
   .cta-topo-form .cta-field input,
   .cta-topo-form .cta-field select {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #DAD5C8;
+    border: 1px solid #D1CFCE;
     background: #fff;
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    color: #1A200C;
+    color: #292929;
     outline: none;
     transition: border-color 0.2s;
   }
   .cta-topo-form .cta-field input:focus,
   .cta-topo-form .cta-field select:focus {
-    border-color: #5A6610;
+    border-color: #FF6300;
   }
   .cta-topo-form .cta-btn, .cta-topo > .cta-btn {
     display: inline-block;
-    background: #283113;
+    background: #292929;
     color: #fff;
     border: none;
     padding: 10px 24px;
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -440,16 +440,16 @@
     transition: background 0.2s;
     white-space: nowrap;
   }
-  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #4A5A28; }
+  .cta-topo-form .cta-btn:hover, .cta-topo > .cta-btn:hover { background: #1C1C1C; }
   .cta-topo-micro {
     font-size: 10px;
-    color: #5E6650;
+    color: #6B6763;
     margin-top: 10px;
   }
 
   /* CTA MEIO */
   .cta-meio {
-    background: #283113;
+    background: #292929;
     padding: 28px 32px;
     display: flex;
     align-items: center;
@@ -461,7 +461,7 @@
     flex: 1;
   }
   .cta-meio-title {
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #fff;
@@ -475,17 +475,17 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #F3FF74;
-    color: #283113;
+    background: #FF6300;
+    color: #292929;
     padding: 12px 24px;
-    font-family: 'Stolzl', 'Albert Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
     transition: background 0.2s;
   }
-  .cta-meio-btn:hover { background: #E4F25C; color: #283113;}
+  .cta-meio-btn:hover { background: #E05600; color: #292929;}
   .cta-meio-btn svg { width: 18px; height: 18px; fill: currentColor; }
 
 </style>
@@ -503,34 +503,34 @@
     display: flex; align-items: center; gap: 14px;
     margin: 4px 0 26px; padding: 16px 18px;
     background: var(--white, #FFFFFF);
-    border: 1px solid var(--border, #DAD5C8);
-    border-left: 3px solid var(--primary, #283113);
+    border: 1px solid var(--border, #D1CFCE);
+    border-left: 3px solid var(--primary, #292929);
     border-radius: 10px;
   }
   .article-author-photo { border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #1A200C); line-height: 1.35; }
+  .article-author-name { font-size: 15px; font-weight: 700; color: var(--ink, #292929); line-height: 1.35; }
   .article-author-name a { color: inherit; text-decoration: none; }
-  .article-author-name a:hover { color: var(--primary, #283113); }
-  .article-author-role { font-size: 13px; color: var(--ink2, #565F48); line-height: 1.5; margin-top: 2px; }
-  .article-author-creds { font-size: 12px; color: var(--muted, #5E6650); line-height: 1.5; margin-top: 4px; }
+  .article-author-name a:hover { color: var(--primary, #292929); }
+  .article-author-role { font-size: 13px; color: var(--ink2, #333332); line-height: 1.5; margin-top: 2px; }
+  .article-author-creds { font-size: 12px; color: var(--muted, #6B6763); line-height: 1.5; margin-top: 4px; }
   .article-toc {
     margin: 8px 0 32px; padding: 20px 24px;
-    background: var(--cream2, #E8E5DF);
+    background: var(--cream2, #EBE9E8);
     border-radius: 10px;
   }
   .article-toc-title {
     font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--ink, #1A200C); margin-bottom: 12px;
+    color: var(--ink, #292929); margin-bottom: 12px;
   }
   .article-toc ol { margin: 0; padding-left: 20px; }
-  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #565F48); }
-  .article-toc a { color: var(--ink2, #565F48); text-decoration: none; }
-  .article-toc a:hover { color: var(--primary, #283113); text-decoration: underline; }
+  .article-toc li { font-size: 14px; line-height: 1.7; color: var(--ink2, #333332); }
+  .article-toc a { color: var(--ink2, #333332); text-decoration: none; }
+  .article-toc a:hover { color: var(--primary, #292929); text-decoration: underline; }
   .related-card.related-card-landing {
-    background: var(--cream2, #E8E5DF);
-    border-color: var(--accent, #F3FF74);
+    background: var(--cream2, #EBE9E8);
+    border-color: var(--accent, #FF6300);
   }
-  .related-card-landing .related-card-tag { color: var(--accent, #5A6610); }
+  .related-card-landing .related-card-tag { color: var(--accent, #FF6300); }
   @media (max-width: 768px) {
     .article-author { flex-direction: column; align-items: flex-start; }
   }
@@ -540,7 +540,7 @@
 <style>
   .form-branch-fields[hidden] { display: none; }
   .form-branch-fields {
-    border-top: 1px solid var(--border, #DAD5C8);
+    border-top: 1px solid var(--border, #D1CFCE);
     margin-top: 4px;
     padding-top: 14px;
   }
@@ -548,9 +548,9 @@
     margin-top: 12px;
     font-size: 11px;
     line-height: 1.55;
-    color: var(--muted, #5E6650);
+    color: var(--muted, #6B6763);
   }
-  .form-gdpr a { color: var(--primary, #283113); }
+  .form-gdpr a { color: var(--primary, #292929); }
 </style>
 <link rel="stylesheet" href="/css/ar-langsel.css">
 </head>
@@ -720,7 +720,7 @@
   <div class="cta-topo">
     <div class="cta-topo-title">Peça uma análise gratuita</div>
     <div class="cta-topo-subtitle">Análise gratuita por mediador de seguros registado na ASF. Sem compromisso.</div>
-    <div class="hero-form-note quotation-before-fill" style="background:#F5F1E8;border-left:3px solid #5A6610;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3><p>As nossas propostas partem das coberturas que o risco exige. O prémio é o resultado dessa análise, nunca o ponto de partida.</p><p>Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pela solidez das condições contratuais e pela forma como respondem a um sinistro. Isso significa, com toda a franqueza, que raramente seremos a proposta mais barata que vai receber.</p><p>Se o seu critério de decisão for o prémio mais baixo, encontrará melhores valores noutro lado e preferimos dizê-lo já. Se for estar efetivamente protegido no dia em que precisar, é exatamente esse o trabalho que fazemos.</p></div><a class="cta-btn" href="/?source=blog%3A20-anos-turismo-seguros-hotelaria#inicio">Solicitar Análise Gratuita →</a>
+    <div class="hero-form-note quotation-before-fill" style="background:#F7F6F5;border-left:3px solid #FF6300;padding:20px 24px;margin:20px 0;text-align:left;"><h3 style="margin:0 0 12px;">Antes de preencher</h3><p>As nossas propostas partem das coberturas que o risco exige. O prémio é o resultado dessa análise, nunca o ponto de partida.</p><p>Trabalhamos com um painel restrito de seguradoras internacionais, escolhidas pela solidez das condições contratuais e pela forma como respondem a um sinistro. Isso significa, com toda a franqueza, que raramente seremos a proposta mais barata que vai receber.</p><p>Se o seu critério de decisão for o prémio mais baixo, encontrará melhores valores noutro lado e preferimos dizê-lo já. Se for estar efetivamente protegido no dia em que precisar, é exatamente esse o trabalho que fazemos.</p></div><a class="cta-btn" href="/?source=blog%3A20-anos-turismo-seguros-hotelaria#inicio">Solicitar Análise Gratuita →</a>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
 
@@ -831,14 +831,14 @@
   
 
     <!-- cluster-links -->
-    <p style="border-top:1px solid #DAD5C8;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#565F48;"><strong>Continuar neste tema:</strong> <a href="/blog/adler-pro-plataforma-saas/" style="color:#283113;font-weight:600;">Os Meus Seguros: a plataforma SaaS que está a transformar a gestão de seguros empresariais</a> &middot; <a href="/blog/parcerias-imobiliarias-comissoes/" style="color:#283113;font-weight:600;">Parcerias com imobiliárias: como a referenciação de clientes gera receita e valor para todos</a> &middot; <a href="/blog/investimento-americano-luxo-portugal/" style="color:#283113;font-weight:600;">Investimento americano no segmento de luxo em Portugal: como a Adler &amp; Rochefort protege quem aposta no premium</a></p>
+    <p style="border-top:1px solid #D1CFCE;padding-top:18px;margin:36px 0 0;font-size:14px;line-height:1.7;color:#333332;"><strong>Continuar neste tema:</strong> <a href="/blog/adler-pro-plataforma-saas/" style="color:#292929;font-weight:600;">Os Meus Seguros: a plataforma SaaS que está a transformar a gestão de seguros empresariais</a> &middot; <a href="/blog/parcerias-imobiliarias-comissoes/" style="color:#292929;font-weight:600;">Parcerias com imobiliárias: como a referenciação de clientes gera receita e valor para todos</a> &middot; <a href="/blog/investimento-americano-luxo-portugal/" style="color:#292929;font-weight:600;">Investimento americano no segmento de luxo em Portugal: como a Adler &amp; Rochefort protege quem aposta no premium</a></p>
     <!-- /cluster-links -->
   </div>
 
-  <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #5A6610;border-radius:12px;padding:32px 36px;text-align:center;">
-    <h3 style="font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:22px;font-weight:700;color:#1A200C;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
-    <p style="font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:16px;color:#565F48;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
-    <a href="/#contacto" style="display:inline-block;background:#F3FF74;color:#283113;padding:14px 30px;font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
+  <div class="blog-cta" style="margin:48px 0 0;background:#F7F6F5;border:1px solid #EBE9E8;border-left:4px solid #FF6300;border-radius:12px;padding:32px 36px;text-align:center;">
+    <h3 style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#292929;margin:0 0 12px;line-height:1.3;">A sua empresa está verdadeiramente protegida?</h3>
+    <p style="font-family:'Inter',sans-serif;font-size:16px;color:#333332;margin:0 0 24px;line-height:1.6;">Fazemos uma análise gratuita das suas apólices, identificamos lacunas de cobertura e apresentamos um plano concreto em 48 horas — sem compromisso.</p>
+    <a href="/#contacto" style="display:inline-block;background:#FF6300;color:#292929;padding:14px 30px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise gratuita →</a>
   </div>
 </article>
 

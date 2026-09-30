@@ -11,23 +11,23 @@
 
 :root {
   /* Light, neutral palette — cream / white / beige with discreet accents. */
-  --cream: #F5F1E8;
+  --cream: #F7F6F5;
   --white: #FFFFFF;
-  --beige: #F5F1E8;
-  --sand: #E8E5DF;
-  --border: #DAD5C8;
-  --border-soft: #E8E5DF;
+  --beige: #F7F6F5;
+  --sand: #EBE9E8;
+  --border: #D1CFCE;
+  --border-soft: #EBE9E8;
   /* Text tones — all >= 4.5:1 on cream, beige and white. */
-  --ink: #1A200C;
-  --ink2: #565F48;
-  --muted: #5E6650;
-  --primary: #283113;
-  --gold: #F3FF74;
-  --rule: #F3FF74; --accent-on-dark: #F3FF74;
+  --ink: #292929;
+  --ink2: #333332;
+  --muted: #6B6763;
+  --primary: #292929;
+  --gold: #FF6300;
+  --rule: #FF6300; --accent-on-dark: #FF6300;
   /* Site chrome (shared with the rest of adlerrochefort.com). */
-  --nav-bg: #283113;
-  --footer-bg: #1A200C;
-  --navy: #283113;
+  --nav-bg: #292929;
+  --footer-bg: #292929;
+  --navy: #292929;
   --error: #A32B1F;
 }
 
@@ -36,7 +36,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adju
 
 body {
   background: var(--cream);
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--ink2);
   font-size: 19px;
   line-height: 1.75;
@@ -83,7 +83,7 @@ select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
   background: var(--nav-bg);
   padding: 0 48px; min-height: 76px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  border-bottom: 1px solid rgba(40,49,19,0.3);
+  border-bottom: 1px solid rgba(41,41,41,0.3);
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; padding: 8px 0; }
 .nav-logo-img { height: 46px; width: auto; }
@@ -165,12 +165,12 @@ p { font-size: 19px; line-height: 1.8; }
   display: inline-flex; align-items: center; gap: 12px;
   padding: 20px 40px;
   background: var(--ink); color: var(--white);
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px; font-weight: 700; letter-spacing: 0.02em;
   text-decoration: none; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
-.btn-cta:hover { background: #1A200C; transform: translateY(-2px); }
+.btn-cta:hover { background: #292929; transform: translateY(-2px); }
 .btn-cta svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
 
 /* ─────────── LANGUAGE POLICY BLOCK ─────────── */
@@ -326,7 +326,7 @@ p { font-size: 19px; line-height: 1.8; }
   color: var(--ink); text-align: center; max-width: 900px; margin: 0 auto;
 }
 .pullquote cite {
-  display: block; font-family: 'Stolzl', 'Albert Sans', sans-serif; font-style: normal;
+  display: block; font-family: 'Inter', sans-serif; font-style: normal;
   font-size: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--muted); margin-top: 30px;
 }
@@ -363,9 +363,9 @@ p { font-size: 19px; line-height: 1.8; }
 .field-help { font-size: 16px; line-height: 1.6; color: var(--muted); margin: -2px 0 10px; }
 .field input, .field select, .field textarea {
   width: 100%; padding: 15px 16px;
-  font-family: 'Stolzl', 'Albert Sans', sans-serif; font-size: 18px; line-height: 1.5;
+  font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.5;
   color: var(--ink); background: var(--white);
-  border: 1px solid #DAD5C8; border-radius: 0;
+  border: 1px solid #D1CFCE; border-radius: 0;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .field input::placeholder, .field textarea::placeholder { color: #6E6A5C; }
@@ -392,11 +392,11 @@ p { font-size: 19px; line-height: 1.8; }
 .form-submit {
   width: 100%; margin-top: 36px; padding: 21px 32px;
   background: var(--ink); color: var(--white);
-  font-family: 'Stolzl', 'Albert Sans', sans-serif; font-size: 18px; font-weight: 700;
+  font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700;
   letter-spacing: 0.02em; border: 1px solid var(--ink); cursor: pointer;
   transition: background 0.2s;
 }
-.form-submit:hover { background: #1A200C; }
+.form-submit:hover { background: #292929; }
 .form-submit[disabled] { background: var(--muted); border-color: var(--muted); cursor: progress; }
 .form-footnote { margin-top: 22px; font-size: 16px; line-height: 1.6; color: var(--muted); }
 

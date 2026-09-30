@@ -259,7 +259,7 @@ ${inlineCta(a)}
 ${spain}
 <h2>Talk to us</h2>
 ${a.closing}
-<p style="font-size:13px;color:#5E6650;margin-top:34px;">More from the surf coast: ${otherLine(a)}</p>
+<p style="font-size:13px;color:#6B6763;margin-top:34px;">More from the surf coast: ${otherLine(a)}</p>
 <p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General information from an insurance intermediary, not personalised advice; what a policy covers depends on its wording.</em></p>
 </div>
 `;

@@ -107,8 +107,8 @@ if (await gone('seguro-habitacao-proteger-casa')) {
     // The callout pointed at the article being absorbed. This page is now the
     // main guide, so it points forward to the commercial page instead.
     html = html.replace(
-      /<p style="background:#E8E5DF;[^"]*">Este artigo faz parte[\s\S]*?<\/p>\n/,
-      `<p style="background:#E8E5DF;border-left:4px solid #283113;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#565F48;border-radius:0 6px 6px 0;">Este é o nosso guia principal sobre seguro de habitação em Portugal. Para pedir cotação com coberturas e capitais já enquadrados, veja a página de <a href="/seguros/habitacao/" style="color:#283113;font-weight:600;">seguro de habitação</a>.</p>\n`
+      /<p style="background:#EBE9E8;[^"]*">Este artigo faz parte[\s\S]*?<\/p>\n/,
+      `<p style="background:#EBE9E8;border-left:4px solid #292929;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#333332;border-radius:0 6px 6px 0;">Este é o nosso guia principal sobre seguro de habitação em Portugal. Para pedir cotação com coberturas e capitais já enquadrados, veja a página de <a href="/seguros/habitacao/" style="color:#292929;font-weight:600;">seguro de habitação</a>.</p>\n`
     );
 
     const PLAN = [

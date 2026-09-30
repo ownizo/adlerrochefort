@@ -528,7 +528,7 @@ export const ARTICLES = [
     de: 'surfen-lagos-zweitwohnsitz',
     tag: 'Lagos',
     heroLabel: 'Lagos &middot; two coasts within reach',
-    gradient: 'linear-gradient(135deg,#283113 0%,#B9A77A 100%)',
+    gradient: 'linear-gradient(135deg,#292929 0%,#B9A77A 100%)',
     title: 'Surfing from Lagos — two coasts within reach, and a home in a year-round town',
     metaTitle: 'Surfing Lagos and Owning a Home There | Adler &amp; Rochefort',
     description:

@@ -25,7 +25,7 @@
 
 .ar-langsel {
   position: relative;
-  font-family: 'Stolzl', 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .ar-langsel .ar-langsel-btn:focus-visible {
-  outline: 2px solid #F3FF74;
+  outline: 2px solid #FF6300;
   outline-offset: 2px;
 }
 
@@ -112,7 +112,7 @@
   padding: 6px;
   list-style: none;
   background: #FFFFFF;
-  border: 1px solid #DAD5C8;
+  border: 1px solid #D1CFCE;
   border-radius: 4px;
   box-shadow: 0 14px 34px rgba(17, 25, 39, 0.22);
 }
@@ -142,7 +142,7 @@
   letter-spacing: 0;
   text-transform: none;
   text-decoration: none;
-  color: #1A200C;
+  color: #292929;
   background: transparent;
   opacity: 1;
   transition: background 0.15s, color 0.15s;
@@ -150,20 +150,20 @@
 
 .ar-langsel .ar-langsel-menu a:hover,
 .ar-langsel .ar-langsel-menu a:focus-visible {
-  background: #F5F1E8;
-  color: #283113;
+  background: #F7F6F5;
+  color: #292929;
   text-decoration: none;
 }
 
 .ar-langsel .ar-langsel-menu a:focus-visible {
-  outline: 2px solid #F3FF74;
+  outline: 2px solid #FF6300;
   outline-offset: -2px;
 }
 
 .ar-langsel .ar-langsel-menu a[aria-current="true"] {
-  color: #283113;
+  color: #292929;
   font-weight: 700;
-  background: #E8E5DF;
+  background: #EBE9E8;
 }
 
 /* The honest part of the control: a language that has no counterpart for this
@@ -174,13 +174,13 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #5E6650;
+  color: #6B6763;
   white-space: nowrap;
 }
 
 .ar-langsel .ar-langsel-menu a:hover .ar-langsel-note,
 .ar-langsel .ar-langsel-menu a:focus-visible .ar-langsel-note {
-  color: #565F48;
+  color: #333332;
 }
 
 /* ── mobile drawer variant ──────────────────────────────────────────────── */
@@ -352,7 +352,7 @@
 .ar-langsel .ar-langsel-menu a[lang="zh-CN"],
 html[lang="zh-CN"] .ar-langsel .ar-langsel-label,
 html[lang="zh-CN"] .ar-langsel .ar-langsel-note {
-  font-family: 'Stolzl', 'Albert Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+  font-family: 'Inter', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     'Noto Sans CJK SC', 'Noto Sans SC', 'Source Han Sans SC', 'WenQuanYi Micro Hei',
     system-ui, sans-serif;
 }
@@ -390,7 +390,7 @@ html[lang="zh-CN"] .ar-langsel .ar-langsel-menu .ar-langsel-note {
 .ar-langsel .ar-langsel-menu a[lang="he"],
 html[lang="he"] .ar-langsel .ar-langsel-label,
 html[lang="he"] .ar-langsel .ar-langsel-note {
-  font-family: 'Stolzl', 'Albert Sans', system-ui, 'Segoe UI', 'Arial Hebrew',
+  font-family: 'Inter', system-ui, 'Segoe UI', 'Arial Hebrew',
     'Noto Sans Hebrew', 'Noto Sans Hebrew UI', 'Alef', Arial, sans-serif;
 }
 

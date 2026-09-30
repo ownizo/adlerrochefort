@@ -61,21 +61,21 @@ export function trustpilotBlock(lang = 'en') {
   return `<!-- trustpilot:start -->
 <section class="tp-reviews" aria-labelledby="tp-title-${lang}">
   <style>
-    .tp-reviews{background:#F5F1E8;padding:72px 24px}
+    .tp-reviews{background:#F7F6F5;padding:72px 24px}
     .tp-reviews .tp-inner{max-width:1120px;margin:0 auto}
-    .tp-reviews h2{font-size:30px;line-height:1.2;color:#283113;margin:0 0 10px;text-align:center}
-    .tp-reviews .tp-score{text-align:center;color:#565F48;font-size:15px;margin:0 0 36px}
-    .tp-reviews .tp-score strong{color:#283113}
+    .tp-reviews h2{font-size:30px;line-height:1.2;color:#292929;margin:0 0 10px;text-align:center}
+    .tp-reviews .tp-score{text-align:center;color:#333332;font-size:15px;margin:0 0 36px}
+    .tp-reviews .tp-score strong{color:#292929}
     .tp-reviews .tp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-    .tp-reviews .tp-card{background:#fff;border:1px solid #E8E5DF;border-radius:10px;padding:24px;margin:0;display:flex;flex-direction:column;text-align:left}
+    .tp-reviews .tp-card{background:#fff;border:1px solid #EBE9E8;border-radius:10px;padding:24px;margin:0;display:flex;flex-direction:column;text-align:left}
     .tp-reviews .tp-stars{display:flex;gap:3px;margin-bottom:14px}
     .tp-reviews .tp-star{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;background:#00B67A;color:#fff;font-size:15px;line-height:1}
     .tp-reviews blockquote{margin:0;flex:1}
-    .tp-reviews blockquote p{margin:0 0 10px;color:#283113;font-size:15px;line-height:1.65}
+    .tp-reviews blockquote p{margin:0 0 10px;color:#292929;font-size:15px;line-height:1.65}
     .tp-reviews .tp-title{font-weight:700}
-    .tp-reviews figcaption{margin-top:14px;color:#565F48;font-size:13px}
-    .tp-reviews .tp-foot{text-align:center;margin-top:28px;font-size:14px;color:#565F48}
-    .tp-reviews .tp-foot a{color:#283113;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    .tp-reviews figcaption{margin-top:14px;color:#333332;font-size:13px}
+    .tp-reviews .tp-foot{text-align:center;margin-top:28px;font-size:14px;color:#333332}
+    .tp-reviews .tp-foot a{color:#292929;font-weight:700;text-decoration:underline;text-underline-offset:3px}
   </style>
   <div class="tp-inner">
     <h2 id="tp-title-${lang}">${t.h}</h2>

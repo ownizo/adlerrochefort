@@ -194,7 +194,7 @@ function render() {
   return `<!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#283113">
+<meta name="theme-color" content="#292929">
 <title>Insurance Review for International Clients | Adler &amp; Rochefort</title>
 <meta name="description" content="Need help with more than one type of insurance in Portugal or Spain, or not sure where to start? Tell us once, in English, and we will come back with a clear written answer.">
 <meta name="keywords" content="insurance review, international insurance broker, insurance for expats, multiple insurance products">
@@ -223,7 +223,7 @@ function render() {
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 ${serviceLd}

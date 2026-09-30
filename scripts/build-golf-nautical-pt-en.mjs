@@ -327,7 +327,7 @@ const PT_MONTHS = 'janeiro fevereiro março abril maio junho julho agosto setemb
 
 // Styles the private-clients template lacks: H2 in the body, ordered lists, the FAQ block.
 const PT_EXTRA_CSS = `<style>
-  .article-body h2 { font-family: 'Stolzl', 'Albert Sans', sans-serif; font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
+  .article-body h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; font-weight: 400; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
   .article-body h3 { font-size: 20px; margin: 30px 0 14px; }
   .article-body a { color: var(--primary); font-weight: 600; }
   .article-faq { max-width: 780px; margin: 0 auto; padding: 0 80px 60px; }
@@ -463,10 +463,10 @@ ${a.closing}
 <p><em>A Adler &amp; Rochefort é uma marca comercial da Ownizo, Unipessoal Lda., registada na ASF com o n.º 425591790/3. Informação geral prestada por um mediador de seguros, que não substitui aconselhamento personalizado; o âmbito de cada apólice depende das respetivas condições.</em></p>
   </div>
 
-  <div class="blog-cta" style="margin:48px 0 0;background:#F5F1E8;border:1px solid #E8E5DF;border-left:4px solid #5A6610;border-radius:12px;padding:32px 36px;text-align:center;">
-    <h3 style="font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:22px;font-weight:700;color:#1A200C;margin:0 0 12px;line-height:1.3;">${a.ctaFinal.title}</h3>
-    <p style="font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:16px;color:#565F48;margin:0 0 24px;line-height:1.6;">${a.ctaFinal.text}</p>
-    <a href="${src}" style="display:inline-block;background:#F3FF74;color:#283113;padding:14px 30px;font-family:'Stolzl', 'Albert Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise →</a>
+  <div class="blog-cta" style="margin:48px 0 0;background:#F7F6F5;border:1px solid #EBE9E8;border-left:4px solid #FF6300;border-radius:12px;padding:32px 36px;text-align:center;">
+    <h3 style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#292929;margin:0 0 12px;line-height:1.3;">${a.ctaFinal.title}</h3>
+    <p style="font-family:'Inter',sans-serif;font-size:16px;color:#333332;margin:0 0 24px;line-height:1.6;">${a.ctaFinal.text}</p>
+    <a href="${src}" style="display:inline-block;background:#FF6300;color:#292929;padding:14px 30px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;">Pedir análise →</a>
   </div>
 </article>
 
@@ -534,7 +534,7 @@ if (!process.argv.includes('--no-data')) {
       description: plain(a.description),
       excerpt: plain(a.excerpt),
       image: null,
-      imageGradient: lang === 'en' ? a.gradient.replace('linear-gradient(135deg,', 'linear-gradient(135deg, ').replace(/,(?=#)/g, ', ') : 'linear-gradient(135deg, #283113 0%, #4B5A22 55%, #8C9A4E 100%)',
+      imageGradient: lang === 'en' ? a.gradient.replace('linear-gradient(135deg,', 'linear-gradient(135deg, ').replace(/,(?=#)/g, ', ') : 'linear-gradient(135deg, #292929 0%, #4B5A22 55%, #8C9A4E 100%)',
       imageAlt: plain(a.title),
       published: PUBLISHED,
       modified: PUBLISHED,

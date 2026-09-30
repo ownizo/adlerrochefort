@@ -4,20 +4,20 @@
    Palette mirrors the site theme (sage / gold / cream / ink).
    ════════════════════════════════════════════════════════════════ */
 :root {
-  --ar-primary: #283113;
-  --ar-primary-hover: #3A4720;
-  --ar-accent: #F3FF74; --ar-accent-on-dark: #F3FF74;
-  --ar-accent-hover: #E4F25C;
-  --ar-ink: #1A200C;
-  --ar-ink2: #565F48;
-  --ar-cream: #F5F1E8;
-  --ar-cream2: #E8E5DF;
-  --ar-border: #DAD5C8;
+  --ar-primary: #292929;
+  --ar-primary-hover: #1C1C1C;
+  --ar-accent: #FF6300; --ar-accent-on-dark: #FF6300;
+  --ar-accent-hover: #E05600;
+  --ar-ink: #292929;
+  --ar-ink2: #333332;
+  --ar-cream: #F7F6F5;
+  --ar-cream2: #EBE9E8;
+  --ar-border: #D1CFCE;
   --ar-wa: #25D366;
   --ar-wa-hover: #1ebe57;
 }
 
-.ar-cv { font-family: 'Stolzl', 'Albert Sans', sans-serif; }
+.ar-cv { font-family: 'Inter', sans-serif; }
 .ar-cv * { box-sizing: border-box; }
 
 /* ───────── Inline CTA band (intro / mid) ───────── */
@@ -63,7 +63,7 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -73,8 +73,8 @@
   transition: background 0.2s, transform 0.2s;
   line-height: 1;
 }
-.ar-btn-primary { background: var(--ar-accent); color: #283113; }
-.ar-btn-primary:hover { background: var(--ar-accent-hover); transform: translateY(-1px); color: #283113;}
+.ar-btn-primary { background: var(--ar-accent); color: #292929; }
+.ar-btn-primary:hover { background: var(--ar-accent-hover); transform: translateY(-1px); color: #292929;}
 .ar-btn-wa { background: var(--ar-wa); color: #fff; }
 .ar-btn-wa:hover { background: var(--ar-wa-hover); transform: translateY(-1px); }
 .ar-btn-wa svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
@@ -89,7 +89,7 @@
   padding: 36px;
 }
 .ar-cta-form-wrap h2 {
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--ar-ink);
@@ -124,7 +124,7 @@
 .ar-cta-form select,
 .ar-cta-form textarea {
   width: 100%;
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   color: var(--ar-ink);
   background: var(--ar-cream);
@@ -165,7 +165,7 @@
 }
 .ar-cta-form-success-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 2.5; }
 .ar-cta-form-success h3 {
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px; color: var(--ar-ink); margin: 0 0 8px;
 }
 .ar-cta-form-success p { font-size: 15px; color: var(--ar-ink2); margin: 0; }
@@ -206,7 +206,7 @@
   margin: 52px 0 0;
 }
 .ar-faq h2 {
-  font-family: 'Stolzl', 'Albert Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--ar-ink);

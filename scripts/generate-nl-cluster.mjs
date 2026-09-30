@@ -622,7 +622,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1A200C">
+<meta name="theme-color" content="#292929">
 <title>${esc(page.title)}</title>
 <meta name="description" content="${esc(page.description)}">
 <meta name="keywords" content="${esc(page.keywords)}">
@@ -647,7 +647,7 @@ ${hreflangTags(page)}<link rel="icon" href="/favicon.ico" sizes="any">
 <meta name="twitter:image" content="${ORIGIN}/images/og-adlerrochefort-en.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 ${jsonLd(page)}

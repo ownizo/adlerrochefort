@@ -5,7 +5,7 @@
   needs no markup change.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80" role="img" aria-label="British-Portuguese Chamber of Commerce">
-  <rect x="0.5" y="0.5" width="239" height="79" fill="#FFFFFF" stroke="#DAD5C8"/>
-  <text x="120" y="42" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1A200C">BPCC</text>
-  <text x="120" y="61" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="8" letter-spacing="0.8" fill="#5E6650">BRITISH-PORTUGUESE CHAMBER</text>
+  <rect x="0.5" y="0.5" width="239" height="79" fill="#FFFFFF" stroke="#D1CFCE"/>
+  <text x="120" y="42" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#292929">BPCC</text>
+  <text x="120" y="61" text-anchor="middle" font-family="Montserrat, Helvetica, Arial, sans-serif" font-size="8" letter-spacing="0.8" fill="#6B6763">BRITISH-PORTUGUESE CHAMBER</text>
 </svg>
