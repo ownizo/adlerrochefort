@@ -143,7 +143,7 @@ const ORG_LD = {
   telephone: '+351928226570',
   email: 'insurance@adlerrochefort.com',
   url: ORIGIN,
-  logo: `${ORIGIN}/images/logo-adler-rochefort.png`,
+  logo: `${ORIGIN}/images/logo-adler-rochefort.svg`,
   foundingDate: '2014',
   knowsLanguage: ['en', 'pt'],
   areaServed: [

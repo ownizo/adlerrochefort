@@ -303,7 +303,7 @@ export function siteNav({ lang = 'en', home, left = [], right = [], cta, switche
 ${left.map((l) => '    ' + navLink(l)).join('\n')}
   </div>
   <a href="${home}" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1648" height="403" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
     <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
   </a>
   <div class="nav-links-right">
@@ -363,7 +363,7 @@ export function articleNav(lang, { switcher = '', backHref, backLabel } = {}) {
     lang === 'pt' ? 'Navegação do artigo' : lang === 'nl' ? 'Artikelnavigatie' : 'Article navigation'
   }">
   <a href="${NAV_HOME[lang]}" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.png" alt="Adler & Rochefort" class="nav-logo-img" decoding="async" width="1000" height="354" loading="eager">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler & Rochefort" class="nav-logo-img" decoding="async" width="1648" height="403" loading="eager">
   </a>
   <div class="nav-right">
     <a href="${backHref || BACK_HREF[lang]}" class="nav-back">${backLabel || BACK_LABEL[lang]}</a>

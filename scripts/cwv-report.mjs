@@ -57,8 +57,8 @@ for (const page of pages) {
   const doc = Buffer.byteLength(html);
   const imgs = [...html.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
 
-  const logoTag = imgs.find((t) => t.includes('logo-adler-rochefort.png'));
-  const logo = logoTag ? await bytes((chosen(html, logoTag) || '/images/logo-adler-rochefort.png').slice(1)) : 0;
+  const logoTag = imgs.find((t) => t.includes('logo-adler-rochefort.svg'));
+  const logo = logoTag ? await bytes((chosen(html, logoTag) || '/images/logo-adler-rochefort.svg').slice(1)) : 0;
 
   // The LCP candidate: the featured image on an article, otherwise the first
   // non-logo image that is not lazy-loaded.

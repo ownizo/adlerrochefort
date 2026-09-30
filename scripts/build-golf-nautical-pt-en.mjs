@@ -351,7 +351,7 @@ function ptHead(a) {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: title, description: desc, image: PT_OG,
     datePublished: PUBLISHED, dateModified: PUBLISHED, inLanguage: 'pt-PT',
     author: { '@type': 'Person', name: 'Hugo Gonçalves', jobTitle: 'Fundador & Especialista em Gestão de Risco', url: `${ORIGIN}/#equipa`, worksFor: { '@type': 'Organization', name: 'Adler & Rochefort' } },
-    publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort.png` } },
+    publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort.svg` } },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     keywords: a.keywords, wordCount: a.wordCount,
   };

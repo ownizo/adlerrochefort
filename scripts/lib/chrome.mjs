@@ -362,7 +362,7 @@ export const ORGANIZATION = {
   name: 'Adler & Rochefort',
   alternateName: 'Ownizo, Unipessoal Lda.',
   url: `${ORIGIN}/`,
-  logo: `${ORIGIN}/images/logo-adler-rochefort.png`,
+  logo: `${ORIGIN}/images/logo-adler-rochefort.svg`,
   image: `${ORIGIN}/images/og-adlerrochefort-pt.png`,
   telephone: '+351928226570',
   email: 'insurance@adlerrochefort.com',
