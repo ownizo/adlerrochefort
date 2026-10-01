@@ -173,7 +173,7 @@ ${pcItems}
     </div>
   </div>
   <a href="${logoHref}" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.svg" alt="${logoAlt}" class="nav-logo-img" decoding="async" width="1648" height="403" loading="eager">
+    <img src="/images/logo-adler-rochefort.svg" alt="${logoAlt}" class="nav-logo-img" decoding="async" width="1717" height="403" loading="eager">
   </a>
   <div class="nav-links-right">
 ${insightsLink}${whyBlock}    <a href="${cta.href}" class="nav-cta">${cta.label}</a>

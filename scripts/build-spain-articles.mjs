@@ -56,7 +56,7 @@ const NAV = `
 <div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal's ASF, no. 425591790/3, and serves Spain on a cross-border basis. <a href="/en/expat-insurance-spain/">Insurance for expats in Spain</a></div>
 <nav class="site-nav" role="navigation" aria-label="Article navigation">
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1648" height="403" loading="eager">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1717" height="403" loading="eager">
   </a>
   <div class="nav-right">
     <a href="/en/blog/" class="nav-back">Back to Insights</a>
@@ -256,7 +256,7 @@ ${faqLd(a.faq, url)}
 <script type="application/ld+json">
 ${breadcrumbLd(a, url)}
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 ${STYLE}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>

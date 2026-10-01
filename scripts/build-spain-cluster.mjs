@@ -439,7 +439,7 @@ function render(page) {
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 ${serviceLd(page)}

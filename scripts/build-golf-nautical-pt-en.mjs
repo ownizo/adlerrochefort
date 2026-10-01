@@ -327,7 +327,7 @@ const PT_MONTHS = 'janeiro fevereiro março abril maio junho julho agosto setemb
 
 // Styles the private-clients template lacks: H2 in the body, ordered lists, the FAQ block.
 const PT_EXTRA_CSS = `<style>
-  .article-body h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; font-weight: 400; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
+  .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 500; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
   .article-body h3 { font-size: 20px; margin: 30px 0 14px; }
   .article-body a { color: var(--primary); font-weight: 600; }
   .article-faq { max-width: 780px; margin: 0 auto; padding: 0 80px 60px; }

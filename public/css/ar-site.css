@@ -268,9 +268,9 @@
   }
 
   .hero-title {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: clamp(48px, 5vw, 72px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.05;
     color: var(--white);
     margin-bottom: 28px;
@@ -373,7 +373,7 @@
   }
 
   .hero-card-title {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 26px;
     font-weight: 600;
     color: #292929;
@@ -519,9 +519,9 @@
   }
 
   .section-title {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: clamp(36px, 4vw, 56px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
     margin-bottom: 20px;
   }
@@ -968,9 +968,9 @@
     line-height: 1;
   }
   .universe-title {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: clamp(26px, 2.6vw, 34px);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--ink);
     margin-bottom: 14px;
   }
