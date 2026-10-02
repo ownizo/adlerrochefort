@@ -125,6 +125,18 @@ export const ES_GUIDE_PAGE = {
         <h3><a href="/es/comprar-casa-en-espana-seguro/">Comprar casa en España</a></h3>
         <p>Arras, notario, registro y los seguros que el banco le pondrá sobre la mesa.</p>
       </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-madrid/">Madrid</a></h3>
+        <p>La finca antigua, la casa vacía en agosto, salud y zona de bajas emisiones.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-barcelona/">Barcelona</a></h3>
+        <p>El Eixample, el robo fuera de casa y el alquiler turístico con fecha de caducidad.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-valencia/">Valencia</a></h3>
+        <p>La lección de la DANA: el Consorcio, los garajes y la póliza en vigor.</p>
+      </li>
     </ul>
   </div>
 </section>

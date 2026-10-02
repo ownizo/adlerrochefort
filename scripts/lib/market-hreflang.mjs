@@ -83,6 +83,7 @@ export const ES_CLUSTER_EXTERNAL = {
     '/de/berufshaftpflicht-freiberufler-portugal/': 'de',
   },
   'pt-rental': { '/seguros/alojamento-local/': 'pt-PT', '/nl/alojamento-local-verzekering-portugal/': 'nl' },
+  'city-madeira': { '/de/versicherung-madeira/': 'de' },
   'pt-unlicensed': {
     '/blog/seguro-habitacao-legalizacao/': 'pt-PT',
     '/en/blog/home-insurance-legalization/': 'en-GB',

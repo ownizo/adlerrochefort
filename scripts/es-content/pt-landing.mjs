@@ -122,6 +122,14 @@ export const PT_LANDING_PAGE = {
         <h3><a href="/es/seguro-vida-portugal/">Seguro de vida en Portugal</a></h3>
         <p>Para la hipoteca y para la familia: lo que exige el banco y lo que puede elegir usted.</p>
       </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-lisboa/">Lisboa y Cascais</a></h3>
+        <p>Terremoto y edificios antiguos, inundaciones, Alojamento Local y la villa familiar.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-madeira/">Madeira</a></h3>
+        <p>Para venezolanos y lusovenezolanos: aluviones e incendios, SESARAM y padres mayores.</p>
+      </li>
     </ul>
   </div>
 </section>

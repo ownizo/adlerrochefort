@@ -71,6 +71,14 @@ import { ES_LIFE_PAGE } from './es-content/es-life.mjs';
 import { ES_MORTGAGE_PAGE } from './es-content/es-mortgage.mjs';
 import { ES_LANDLORD_PAGE } from './es-content/es-landlord.mjs';
 import { ES_MOVING_PAGE } from './es-content/es-moving.mjs';
+// City pages (October 2026) — only where Latin American demand is documented:
+// Madrid, Barcelona and Valencia (INE / municipal registers), Madeira
+// (Venezuelans are the island's largest foreign nationality) and Lisbon.
+import { CITY_MADRID_PAGE } from './es-content/city-madrid.mjs';
+import { CITY_BARCELONA_PAGE } from './es-content/city-barcelona.mjs';
+import { CITY_VALENCIA_PAGE } from './es-content/city-valencia.mjs';
+import { CITY_LISBOA_PAGE } from './es-content/city-lisboa.mjs';
+import { CITY_MADEIRA_PAGE } from './es-content/city-madeira.mjs';
 
 export { LANG_POLICY_ES, BREADCRUMB_ROOT } from './es-content/shared.mjs';
 
@@ -108,6 +116,11 @@ export const PAGES = [
   ES_MORTGAGE_PAGE,
   ES_LANDLORD_PAGE,
   ES_MOVING_PAGE,
+  CITY_MADRID_PAGE,
+  CITY_BARCELONA_PAGE,
+  CITY_VALENCIA_PAGE,
+  CITY_LISBOA_PAGE,
+  CITY_MADEIRA_PAGE,
   // Specialist lines (Portugal and Spain), placed through specialist markets
   // and co-brokerage partners. Cluster keys niche-* pair them with the
   // /it/ and /pl/ counterparts in scripts/lib/market-hreflang.mjs.
