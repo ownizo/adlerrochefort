@@ -9,8 +9,9 @@
  *
  * Local angles: the Eixample building (old installations, water damage, the
  * comunidad), street theft and what a home policy does and does not cover
- * outside the home, the city's announced end of tourist-flat licences
- * (hedged: announced for November 2028, check the current position), and
+ * outside the home, the end of tourist-flat licences in November 2028
+ * (backed by the Constitutional Court in 2025) and the three-fifths
+ * owners' vote required since April 2025, and
  * the Catalan specifics a buyer meets. Kept factual and hedged.
  */
 import { BREADCRUMB_SPAIN, withSibling, siblingCallout } from './shared.mjs';
@@ -34,7 +35,7 @@ export const CITY_BARCELONA_PAGE = {
   eyebrow: 'España · Barcelona',
   h1: 'Seguros en Barcelona para familias latinoamericanas',
   standfirst:
-    'Argentinos, colombianos, peruanos y venezolanos encabezan la población nacida fuera de España en Barcelona. Para quien llega con patrimonio, la ciudad tiene tres particularidades de seguro: el edificio del Eixample, el robo fuera de casa y un alquiler turístico con fecha de caducidad anunciada.',
+    'Argentinos, colombianos, peruanos y venezolanos encabezan la población nacida fuera de España en Barcelona. Para quien llega con patrimonio, la ciudad tiene tres particularidades de seguro: el edificio del Eixample, el robo fuera de casa y un alquiler turístico con fecha de caducidad.',
   published: '2026-10-02T09:00:00+00:00',
   modified: '2026-10-02T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_SPAIN, { name: 'Barcelona' }],
@@ -76,8 +77,9 @@ export const CITY_BARCELONA_PAGE = {
 
 <section class="section plain" aria-labelledby="turistico">
   <div class="container narrow article-body">
-    <h2 id="turistico">El alquiler turístico tiene fecha de caducidad anunciada</h2>
-    <p>Muchas familias compran en Barcelona pensando en alquilar a turistas parte del año. Conviene saber que el Ayuntamiento anunció en 2024 que no renovará las licencias de viviendas de uso turístico cuando venzan, con el horizonte de noviembre de 2028. Compruebe la situación vigente antes de comprar con ese plan.</p>
+    <h2 id="turistico">El alquiler turístico tiene fecha de caducidad</h2>
+    <p>Muchas familias compran en Barcelona pensando en alquilar a turistas parte del año. Conviene saber que el Ayuntamiento decidió en 2024 no renovar las licencias de viviendas de uso turístico cuando venzan, en noviembre de 2028, y que el Tribunal Constitucional avaló en 2025 la norma catalana en que se apoya la medida. Además, desde abril de 2025 la ley exige el voto favorable de tres quintas partes de los propietarios de la comunidad para iniciar una nueva actividad de alquiler turístico en un edificio.</p>
+    <p>En la práctica: comprar hoy en Barcelona para alquilar a turistas es una inversión con fecha de caducidad.</p>
     <p>Mientras la licencia exista, la vivienda necesita una póliza que cubra la actividad turística, con la responsabilidad civil que exige la normativa catalana. Para el alquiler de larga duración, la lógica es la del seguro de impago. Véase <a href="/es/seguro-alquiler-espana/">alquilar su vivienda en España</a>.</p>
   </div>
 </section>
@@ -100,7 +102,7 @@ export const CITY_BARCELONA_PAGE = {
     },
     {
       q: '¿Puedo comprar en Barcelona para alquilar a turistas?',
-      a: '<p>Hay que mirarlo con cuidado: el Ayuntamiento anunció que no renovará las licencias de pisos turísticos cuando venzan, con horizonte en noviembre de 2028. Compruebe la situación vigente y la licencia concreta antes de comprar.</p>',
+      a: '<p>Con una fecha límite: el Ayuntamiento no renovará las licencias de pisos turísticos cuando venzan, en noviembre de 2028, y el Tribunal Constitucional avaló en 2025 la norma en que se apoya. Para nuevas actividades, además, hace falta el acuerdo de tres quintas partes de la comunidad de propietarios.</p>',
     },
     {
       q: '¿Qué asegura la comunidad de propietarios?',
