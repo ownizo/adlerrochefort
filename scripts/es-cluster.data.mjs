@@ -32,6 +32,8 @@ import { ES_UI, ES_BRANCHES } from './es-content/ui.mjs';
 import { LANG_POLICY_ES } from './es-content/shared.mjs';
 import { HUB_PAGE } from './es-content/hub.mjs';
 import { HOME_PAGE } from './es-content/home.mjs';
+import { BREADCRUMB_PORTUGAL as REBUILD_CRUMB } from './es-content/shared.mjs';
+import { rebuildValuePage } from './lib/rebuild-value-page.mjs';
 import { HEALTH_PAGE } from './es-content/health.mjs';
 import { MOTOR_PAGE } from './es-content/motor.mjs';
 import { LIABILITY_PAGE } from './es-content/liability.mjs';
@@ -82,12 +84,20 @@ import { CITY_MADEIRA_PAGE } from './es-content/city-madeira.mjs';
 
 export { LANG_POLICY_ES, BREADCRUMB_ROOT } from './es-content/shared.mjs';
 
+// Rebuild value (October 2026): explanation, SCRIM link, the home form.
+// The home page links to it from "related", so the page is reachable from
+// the product it explains.
+const REBUILD_VALUE_PAGE = rebuildValuePage('es', { breadcrumbRoot: REBUILD_CRUMB, homePage: HOME_PAGE, formBranch: 'Español · Hogar' });
+
+HOME_PAGE.related = [...(HOME_PAGE.related || []).filter((r) => r.url !== REBUILD_VALUE_PAGE.url), { url: REBUILD_VALUE_PAGE.url, label: REBUILD_VALUE_PAGE.breadcrumb.at(-1).name }];
+
 export const PAGES = [
   HUB_PAGE,
   // Portugal — the original eight-page shape (cluster keys home, health, …,
   // paired with the Portugal pages of every generated market) plus the
   // October 2026 additions with pt-* keys.
   HOME_PAGE,
+  REBUILD_VALUE_PAGE,
   HEALTH_PAGE,
   MOTOR_PAGE,
   LIABILITY_PAGE,

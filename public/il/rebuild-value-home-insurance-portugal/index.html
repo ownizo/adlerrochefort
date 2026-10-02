@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#292929">
+<title>ערך שחזור: על כמה לבטח בית בפורטוגל | Adler &amp; Rochefort</title>
+<meta name="description" content="מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ואילו פוליסות יכולות לשלם מעבר לו באובדן מוחלט.">
+<meta name="keywords" content="ערך שחזור פורטוגל, סכום ביטוח בית פורטוגל, כלל היחסיות, ביטוח חסר, סימולטור SCRIM, ביטוח דירה פורטוגל">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Hugo Gonçalves">
+<link rel="canonical" href="https://adlerrochefort.com/il/rebuild-value-home-insurance-portugal/">
+  <link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/seguros/habitacao/valor-reconstrucao/">
+  <link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/rebuild-value-home-insurance-portugal/">
+  <link rel="alternate" hreflang="de" href="https://adlerrochefort.com/de/wiederaufbauwert-hausversicherung-portugal/">
+  <link rel="alternate" hreflang="nl" href="https://adlerrochefort.com/nl/herbouwwaarde-woonverzekering-portugal/">
+  <link rel="alternate" hreflang="fr" href="https://adlerrochefort.com/fr/valeur-reconstruction-assurance-habitation-portugal/">
+  <link rel="alternate" hreflang="pl-PL" href="https://adlerrochefort.com/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/">
+  <link rel="alternate" hreflang="sv-SE" href="https://adlerrochefort.com/se/ateruppbyggnadsvarde-hemforsakring-portugal/">
+  <link rel="alternate" hreflang="da-DK" href="https://adlerrochefort.com/dk/genopforelsesvaerdi-husforsikring-portugal/">
+  <link rel="alternate" hreflang="zh-CN" href="https://adlerrochefort.com/zh/rebuild-value-home-insurance-portugal/">
+  <link rel="alternate" hreflang="es" href="https://adlerrochefort.com/es/valor-reconstruccion-seguro-hogar/">
+  <link rel="alternate" hreflang="it-IT" href="https://adlerrochefort.com/it/valore-ricostruzione-assicurazione-casa-portogallo/">
+  <link rel="alternate" hreflang="he-IL" href="https://adlerrochefort.com/il/rebuild-value-home-insurance-portugal/">
+  <link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/rebuild-value-home-insurance-portugal/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adlerrochefort.com/il/rebuild-value-home-insurance-portugal/">
+<meta property="og:title" content="ערך שחזור: על כמה לבטח בית בפורטוגל | Adler &amp; Rochefort">
+<meta property="og:description" content="מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ואילו פוליסות יכולות לשלם מעבר לו באובדן מוחלט.">
+<meta property="og:image" content="https://adlerrochefort.com/images/og-adlerrochefort-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="Adler &amp; Rochefort">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ערך שחזור: על כמה לבטח בית בפורטוגל | Adler &amp; Rochefort">
+<meta name="twitter:description" content="מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ואילו פוליסות יכולות לשלם מעבר לו באובדן מוחלט.">
+<meta name="twitter:image" content="https://adlerrochefort.com/images/og-adlerrochefort-en.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "InsuranceAgency",
+      "@id": "https://adlerrochefort.com/#organization",
+      "name": "Adler & Rochefort",
+      "legalName": "Ownizo, Unipessoal Lda.",
+      "alternateName": "Ownizo, Unipessoal Lda.",
+      "telephone": "+351928226570",
+      "email": "insurance@adlerrochefort.com",
+      "url": "https://adlerrochefort.com",
+      "logo": "https://adlerrochefort.com/images/logo-adler-rochefort.svg",
+      "foundingDate": "2014",
+      "knowsLanguage": [
+        "en",
+        "pt"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Portugal"
+        },
+        {
+          "@type": "Country",
+          "name": "Spain"
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. do Atlântico 16, Esc. 5.07",
+          "addressLocality": "Lisboa",
+          "postalCode": "1990-019",
+          "addressCountry": "PT"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Varandas de São João 4",
+          "addressLocality": "Lagos",
+          "postalCode": "8600-324",
+          "addressCountry": "PT"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/adlerrochefort",
+        "https://www.instagram.com/adlerrochefort/",
+        "https://www.linkedin.com/company/adler-rochefort"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "ASF registration",
+        "value": "425591790/3"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ביטוח בפורטוגל",
+          "item": "https://adlerrochefort.com/il/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ערך שחזור",
+          "item": "https://adlerrochefort.com/il/rebuild-value-home-insurance-portugal/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "האם ערך השחזור זהה לשווי השוק?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "לא. שווי השוק כולל קרקע, מיקום וביקוש; ערך השחזור — רק את עלות הבנייה מחדש. הם יכולים להיות שונים מאוד, לשני הכיוונים."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם אני חייב להשתמש במספר של SCRIM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "לא. SCRIM הוא נקודת ייחוס בלבד, והסכום הוא החלטה שלכם. אבל בפוליסה רגילה, סכום נמוך מערך השחזור מוביל לכלל היחסיות בכל נזק."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם אפשר לקבל יותר מערך השחזור?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "לא בפוליסה רגילה. במוצרים לבתים בעלי ערך גבוה שאנו משווקים, באובדן מוחלט ובהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע לסכום הביטוח המרבי."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "באיזו תדירות לבדוק את הסכום?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "לפחות פעם בשנה ותמיד לאחר שיפוץ. הצמדה אוטומטית עוקבת אחר האינפלציה, אך אינה מתקנת נקודת מוצא שגויה."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "ערך השחזור: המספר שקובע את הפיצוי",
+      "name": "ערך שחזור: על כמה לבטח בית בפורטוגל | Adler & Rochefort",
+      "description": "מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ואילו פוליסות יכולות לשלם מעבר לו באובדן מוחלט.",
+      "inLanguage": "he",
+      "datePublished": "2026-10-02T09:00:00+00:00",
+      "dateModified": "2026-10-02T09:00:00+00:00",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://adlerrochefort.com/il/rebuild-value-home-insurance-portugal/"
+      },
+      "image": "https://adlerrochefort.com/images/og-adlerrochefort-en.png",
+      "publisher": {
+        "@id": "https://adlerrochefort.com/#organization"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Hugo Gonçalves",
+        "jobTitle": "Agente de seguros (ASF 425591790/3)",
+        "worksFor": {
+          "@id": "https://adlerrochefort.com/#organization"
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="/css/ar-cluster.css">
+<link rel="stylesheet" href="/css/ar-chrome.css">
+<link rel="stylesheet" href="/css/ar-livro.css">
+<link rel="stylesheet" href="/css/ar-property.css">
+<link rel="stylesheet" href="/css/ar-quote-wizard.css">
+<link rel="stylesheet" href="/css/ar-langsel.css">
+<!-- Google tag (gtag.js) - Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18361722533');
+</script>
+<link rel="stylesheet" href="/css/ar-theme.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">דילוג לתוכן הראשי</a>
+
+<div class="asf-top-bar on-dark">ביטוח ללקוחות פרטיים בפורטוגל ובספרד — רישום ⁦ASF 425591790/3⁩ · ליסבון · לאגוש</div>
+
+<header class="site-header">
+<nav class="site-nav" role="navigation" aria-label="ניווט ראשי">
+  <div class="nav-links-left">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPT" aria-expanded="false" aria-controls="navPanelPT">
+        ביטוח בפורטוגל
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelPT" role="menu" aria-label="תפריט פורטוגל" hidden>
+        <div class="nav-panel-cols">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">סקירה</div>
+            <a href="/il/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> ביטוח בפורטוגל</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">ביטוח אישי</div>
+            <a href="/il/home-insurance-portugal/" role="menuitem">ביטוח בתים בעלי ערך גבוה</a>
+            <a href="/il/health-insurance-portugal/" role="menuitem">ביטוח בריאות פרטי</a>
+            <a href="/il/car-insurance-portugal/" role="menuitem">ביטוח רכב</a>
+            <a href="/il/liability-insurance-portugal/" role="menuitem">אחריות אזרחית משפחתית</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">מעבר ונכס</div>
+            <a href="/il/moving-to-portugal/" role="menuitem">מעבר לפורטוגל</a>
+            <a href="/il/buying-property-portugal/" role="menuitem">קניית דירה בפורטוגל</a>
+            <a href="/il/insurance-guide-portugal/" role="menuitem">מדריך הביטוח בפורטוגל</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerES" aria-expanded="false" aria-controls="navPanelES">
+        ביטוח בספרד
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel" id="navPanelES" role="menu" aria-label="תפריט ספרד" hidden>
+        <div class="nav-panel-cols nav-panel-cols--4">
+          <div class="nav-panel-col nav-panel-col--overview nav-panel-overview">
+            <div class="nav-panel-col-title">סקירה</div>
+            <a href="/il/insurance-guide-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> ביטוח בספרד</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">אישי</div>
+            <a href="/il/home-insurance-spain/" role="menuitem">ביטוח בתים בספרד</a>
+            <a href="/il/health-insurance-spain/" role="menuitem">ביטוח בריאות בספרד</a>
+            <a href="/il/car-insurance-spain/" role="menuitem">ביטוח רכב בספרד</a>
+            <a href="/il/liability-insurance-spain/" role="menuitem">אחריות אזרחית בספרד</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">נכס</div>
+            <a href="/il/buying-property-spain/" role="menuitem">קניית נכס בספרד</a>
+          </div>
+          <div class="nav-panel-col">
+            <div class="nav-panel-col-title">Private Clients</div>
+            <a href="/il/home-insurance-spain/" role="menuitem">ביטוח Private Client</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerPC" aria-expanded="false" aria-controls="navPanelPC">
+        Private Clients
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelPC" role="menu" aria-label="תפריט Private Clients" hidden>
+        <a href="/il/home-insurance-portugal/" role="menuitem"><span class="nav-panel-flag">🇵🇹</span> Private Clients — פורטוגל</a>
+        <a href="/il/home-insurance-spain/" role="menuitem"><span class="nav-panel-flag">🇪🇸</span> Private Clients — ספרד</a>
+      </div>
+    </div>
+  </div>
+  <a href="/il/" class="nav-logo">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler & Rochefort" class="nav-logo-img" decoding="async" width="1717" height="403" loading="eager">
+  </a>
+  <div class="nav-links-right">
+    <div class="nav-item">
+      <button type="button" class="nav-trigger" id="navTriggerWhy" aria-expanded="false" aria-controls="navPanelWhy">
+        למה אנחנו
+        <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-panel nav-panel--sm" id="navPanelWhy" role="menu" aria-label="תפריט למה אנחנו" hidden>
+        <a href="/il/#audience-title" role="menuitem">עלינו</a>
+        <a href="/il/#eich-anachnu-ovdim" role="menuitem">איך אנחנו עובדים</a>
+        <a href="/il/#insurers-title" role="menuitem">למה סוכן</a>
+        <a href="/il/insurance-guide-portugal/" role="menuitem">תביעות</a>
+      </div>
+    </div>
+    <a href="#hatzaa" class="nav-cta">בקשת חוות דעת</a>
+    <div class="lang-switcher">
+      <div class="ar-langsel" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselBtn" aria-expanded="false" aria-controls="arLangselMenu" aria-label="שפה: עברית. בחירת שפה אחרת."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">עברית</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselMenu" aria-labelledby="arLangselBtn" hidden>
+          <li><a href="/seguros/habitacao/valor-reconstrucao/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span></a></li>
+          <li><a href="/en/rebuild-value-home-insurance-portugal/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span></a></li>
+          <li><a href="/nl/herbouwwaarde-woonverzekering-portugal/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span></a></li>
+          <li><a href="/fr/valeur-reconstruction-assurance-habitation-portugal/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span></a></li>
+          <li><a href="/de/wiederaufbauwert-hausversicherung-portugal/" lang="de" dir="ltr" hreflang="de"><span>Deutsch</span></a></li>
+          <li><a href="/es/valor-reconstruccion-seguro-hogar/" lang="es" dir="ltr" hreflang="es"><span>Español</span></a></li>
+          <li><a href="/it/valore-ricostruzione-assicurazione-casa-portogallo/" lang="it" dir="ltr" hreflang="it-IT"><span>Italiano</span></a></li>
+          <li><a href="/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span></a></li>
+          <li><a href="/se/ateruppbyggnadsvarde-hemforsakring-portugal/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span></a></li>
+          <li><a href="/dk/genopforelsesvaerdi-husforsikring-portugal/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span></a></li>
+          <li><a href="/zh/rebuild-value-home-insurance-portugal/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span></a></li>
+          <li><a href="/il/rebuild-value-home-insurance-portugal/" lang="he" dir="rtl" hreflang="he-IL" aria-current="true"><span>עברית</span></a></li>
+        </ul>
+      </div>
+      </div>
+  </div>
+  <button class="nav-burger" aria-label="תפריט" aria-controls="mobileNav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPT">
+      🇵🇹 ביטוח בפורטוגל
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPT" hidden>
+      <a href="/il/">🇵🇹 ביטוח בפורטוגל</a>
+      <a href="/il/home-insurance-portugal/">ביטוח בתים בעלי ערך גבוה</a>
+      <a href="/il/health-insurance-portugal/">ביטוח בריאות פרטי</a>
+      <a href="/il/car-insurance-portugal/">ביטוח רכב</a>
+      <a href="/il/liability-insurance-portugal/">אחריות אזרחית משפחתית</a>
+      <a href="/il/moving-to-portugal/">מעבר לפורטוגל</a>
+      <a href="/il/buying-property-portugal/">קניית דירה בפורטוגל</a>
+      <a href="/il/insurance-guide-portugal/">מדריך הביטוח בפורטוגל</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccES">
+      🇪🇸 ביטוח בספרד
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccES" hidden>
+      <a href="/il/insurance-guide-spain/">🇪🇸 ביטוח בספרד</a>
+      <a href="/il/home-insurance-spain/">ביטוח בתים בספרד</a>
+      <a href="/il/health-insurance-spain/">ביטוח בריאות בספרד</a>
+      <a href="/il/car-insurance-spain/">ביטוח רכב בספרד</a>
+      <a href="/il/liability-insurance-spain/">אחריות אזרחית בספרד</a>
+      <a href="/il/buying-property-spain/">קניית נכס בספרד</a>
+      <a href="/il/home-insurance-spain/">ביטוח Private Client</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccPC">
+      Private Clients
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccPC" hidden>
+      <a href="/il/home-insurance-portugal/">🇵🇹 Private Clients — פורטוגל</a>
+      <a href="/il/home-insurance-spain/">🇪🇸 Private Clients — ספרד</a>
+    </div>
+  </div>
+  <div class="mobile-accordion-item">
+    <button type="button" class="mobile-accordion-trigger" aria-expanded="false" aria-controls="mobAccWhy">
+      למה אנחנו
+      <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mobile-accordion-panel" id="mobAccWhy" hidden>
+      <a href="/il/#audience-title">עלינו</a>
+      <a href="/il/#eich-anachnu-ovdim">איך אנחנו עובדים</a>
+      <a href="/il/#insurers-title">למה סוכן</a>
+      <a href="/il/insurance-guide-portugal/">תביעות</a>
+    </div>
+  </div>
+  <a href="#hatzaa">בקשת חוות דעת</a>
+  <div class="mobile-lang-switcher">
+    <div class="ar-langsel ar-langsel-mobile" data-ar-langsel>
+      <button type="button" class="ar-langsel-btn" id="arLangselMobileBtn" aria-expanded="false" aria-controls="arLangselMobileMenu" aria-label="שפה: עברית. בחירת שפה אחרת."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">עברית</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+      <ul class="ar-langsel-menu" id="arLangselMobileMenu" aria-labelledby="arLangselMobileBtn" hidden>
+        <li><a href="/seguros/habitacao/valor-reconstrucao/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span></a></li>
+        <li><a href="/en/rebuild-value-home-insurance-portugal/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span></a></li>
+        <li><a href="/nl/herbouwwaarde-woonverzekering-portugal/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span></a></li>
+        <li><a href="/fr/valeur-reconstruction-assurance-habitation-portugal/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span></a></li>
+        <li><a href="/de/wiederaufbauwert-hausversicherung-portugal/" lang="de" dir="ltr" hreflang="de"><span>Deutsch</span></a></li>
+        <li><a href="/es/valor-reconstruccion-seguro-hogar/" lang="es" dir="ltr" hreflang="es"><span>Español</span></a></li>
+        <li><a href="/it/valore-ricostruzione-assicurazione-casa-portogallo/" lang="it" dir="ltr" hreflang="it-IT"><span>Italiano</span></a></li>
+        <li><a href="/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span></a></li>
+        <li><a href="/se/ateruppbyggnadsvarde-hemforsakring-portugal/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span></a></li>
+        <li><a href="/dk/genopforelsesvaerdi-husforsikring-portugal/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span></a></li>
+        <li><a href="/zh/rebuild-value-home-insurance-portugal/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span></a></li>
+        <li><a href="/il/rebuild-value-home-insurance-portugal/" lang="he" dir="rtl" hreflang="he-IL" aria-current="true"><span>עברית</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="breadcrumb" aria-label="מסלול הניווט">
+    <ol>
+      <li><a href="/il/">ביטוח בפורטוגל</a></li>
+      <li><span aria-current="page">ערך שחזור</span></li>
+    </ol>
+  </nav>
+
+<main id="main">
+
+<article>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <span class="eyebrow">ביטוח דירה · פורטוגל</span>
+    <h1 id="hero-title">ערך השחזור: המספר שקובע את הפיצוי</h1>
+    <p class="hero-subtitle">סכום הביטוח של המבנה אינו המחיר ששילמתם על הבית ואינו שמאות הבנק. זו עלות הבנייה מחדש — וממנה נגזר כמה תקבלו אחרי נזק.</p>
+    <p class="hero-meta">סוכנות ביטוח רשומה · ⁦ASF 425591790/3⁩ · משרדים בליסבון ובלאגוש · פורטוגל וספרד</p>
+    <a href="#hatzaa" class="btn-cta">לבקשת חוות דעת בכתב <svg viewBox="0 0 24 24"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
+  </div>
+</section>
+
+<div class="lang-policy-band">
+  <aside class="lang-policy" aria-labelledby="sfat-avoda">
+    <h2 id="sfat-avoda">על השפה: האתר בעברית, שפת העבודה אנגלית</h2>
+      <p>העמודים האלה כתובים בעברית, כי מי ששואל את השאלות האלה חושב עליהן בעברית. אבל העבודה עצמה לא מתנהלת בעברית: הצעות מחיר, הסבר של תנאי הפוליסה, ההתכתבות והליווי בתביעה נעשים בכתב באנגלית, וגם התשובה שתקבלו תהיה באנגלית. אנחנו כותבים את זה בכל עמוד ולא מחכים שתגלו את זה באמצע תביעה — שם זה מתגלה בתזמון הגרוע ביותר.</p>
+      <p>מבטחים בפורטוגל מנפיקים פוליסות בפורטוגזית, ומבטחים בספרד — בספרדית; זה לא משתנה כשהלקוח הוא זר. מה שאנחנו כן עושים: לפני החתימה, להעביר לכם בכתב באנגלית את מה שכתוב בפוליסה — סכומי הביטוח, ההשתתפות העצמית, החריגים ולוחות הזמנים לדיווח על נזק, וגם מה שאתם מניחים שמכוסה ובפועל אינו מכוסה. אם נוח לכם שבן משפחה, חבר או יועץ שקורא אנגלית יעבור על המסמכים איתכם, זו בקשה סבירה לגמרי ואנחנו נערכים לפיה.</p>
+  </aside>
+</div>
+
+
+<section class="section plain" aria-labelledby="what-it-is">
+  <div class="container narrow article-body">
+    <h2 id="what-it-is">מהו ערך השחזור</h2>
+    <p>זו העלות לבנות מחדש את אותו מבנה, באותו מקום, במאפיינים ובגימור שווי ערך, במחירי היום. היא כוללת:</p>
+<ul>
+<li>הריסה ופינוי פסולת;</li>
+<li>תכנון, היתרים ושכר טרחה מקצועי;</li>
+<li>בנייה בגימור שווה ערך;</li>
+<li>מע"מ.</li>
+</ul>
+<p>היא אינה כוללת את הקרקע, המיקום, הנוף והשוק — שום דבר מאלה לא נשרף. לכן זה אינו מחיר הרכישה, אינו הערך לצורכי מס (VPT) ואינו שמאות הבנק.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="proportional">
+  <div class="container narrow article-body">
+    <h2 id="proportional">מדוע הוא קובע את הפיצוי: כלל היחסיות</h2>
+    <p>בפוליסה מקיפה רגילה בפורטוגל, אם סכום הביטוח של המבנה נמוך מערך השחזור, המבטח מפעיל את <strong>כלל היחסיות</strong> (<em>regra proporcional</em>): הוא משלם באותו יחס שבו הבית מבוטח — גם בנזקים קטנים.</p>
+<p><strong>דוגמה:</strong> ערך שחזור 800,000 €, סכום ביטוח 500,000 € (62.5%). בנזק של 40,000 € הפיצוי הוא 25,000 €.</p>
+<p>גם הטעות ההפוכה עולה כסף: סכום מופרז הוא פרמיה ללא תמורה, כי בפוליסה רגילה הפיצוי לעולם אינו עולה על הנזק בפועל.</p>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="scrim">
+  <div class="container narrow article-body">
+    <h2 id="scrim">חשבו אותו מחדש בסימולטור SCRIM</h2>
+    <p>איגוד חברות הביטוח בפורטוגל (APS) מציע בחינם את <strong>SCRIM</strong> — סימולטור לעלות שחזור נכסים בפורטוגל, המבוסס על שיטה של FUNDEC מ-Instituto Superior Técnico. מזינים שטח, רמת גימור, מיקום ומאפיינים ומקבלים הערכה. הסימולטור בפורטוגזית.</p>
+<p class="scrim-cta"><a href="https://scrim.segurnet.pt/" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;border-radius:999px;background:#292929;color:#fff;font-weight:600;text-decoration:none;">פתיחת סימולטור SCRIM של APS &rarr;</a></p>
+<ul>
+<li>השתמשו ב<strong>שטח הבנוי ברוטו</strong>, לא בשטח השימושי.</li>
+<li>הוסיפו את מה שסימולטור מתקשה לכלול: חומות וקירות תמך, בריכה, מבני עזר, בית אירוח, פיתוח חצר. לכן אנחנו תמיד מעגלים כלפי מעלה.</li>
+<li>התוצאה אינדיקטיבית. בבתים בעלי ערך גבוה, בדיקת המבטח בשטח קובעת את הסכום יחד איתכם.</li>
+</ul>
+<p>SCRIM אינו חל על נכסים בספרד; שם שמאות הבנק מציינת בדרך כלל „valor de seguro“ כנקודת מוצא.</p>
+  </div>
+</section>
+
+<section class="section tint" aria-labelledby="beyond">
+  <div class="container narrow article-body">
+    <h2 id="beyond">מעבר לחברות הביטוח הכלליות</h2>
+    <p>אנו משווקים מוצרים שהולכים מעבר לפוליסות המקיפות המסורתיות של חברות הביטוח הכלליות בפורטוגל, ומיועדים לבתים בעלי ערך גבוה:</p>
+<ul>
+<li><strong>בדיקה בשטח ללא עלות</strong> לקביעת ערך השחזור וסכומי התכולה ופריטי הערך.</li>
+<li><strong>ללא כלל היחסיות</strong> כאשר מתקבלים הסכומים המומלצים: נזק חלקי משולם במלואו.</li>
+<li><strong>מעבר לערך השחזור:</strong> באובדן מוחלט, בהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע עד לסכום הביטוח המרבי של המבנה — מעל ערך השחזור.</li>
+<li><strong>חומות, בריכות, מבני עזר וגינות</strong> עם סכומים משלהם, לא סכום סמלי.</li>
+</ul>
+<p style="font-size:14px;">התנאים תלויים במבטח ובסיכון ומאושרים רק בתנאי הפוליסה שהונפקה.</p>
+  </div>
+</section>
+
+
+
+<section class="section" aria-labelledby="faq-title" id="shelot-nefotzot">
+  <div class="container narrow">
+    <span class="eyebrow">שאלות נפוצות</span>
+    <h2 id="faq-title">ערך השחזור</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>האם ערך השחזור זהה לשווי השוק?</h3>
+        <div class="faq-answer"><p>לא. שווי השוק כולל קרקע, מיקום וביקוש; ערך השחזור — רק את עלות הבנייה מחדש. הם יכולים להיות שונים מאוד, לשני הכיוונים.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3>האם אני חייב להשתמש במספר של SCRIM?</h3>
+        <div class="faq-answer"><p>לא. SCRIM הוא נקודת ייחוס בלבד, והסכום הוא החלטה שלכם. אבל בפוליסה רגילה, סכום נמוך מערך השחזור מוביל לכלל היחסיות בכל נזק.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3>האם אפשר לקבל יותר מערך השחזור?</h3>
+        <div class="faq-answer"><p>לא בפוליסה רגילה. במוצרים לבתים בעלי ערך גבוה שאנו משווקים, באובדן מוחלט ובהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע לסכום הביטוח המרבי.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3>באיזו תדירות לבדוק את הסכום?</h3>
+        <div class="faq-answer"><p>לפחות פעם בשנה ותמיד לאחר שיפוץ. הצמדה אוטומטית עוקבת אחר האינפלציה, אך אינה מתקנת נקודת מוצא שגויה.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section plain" aria-labelledby="related-title">
+  <div class="container narrow">
+    <h2 id="related-title">עמודים קשורים</h2>
+    <ul class="related">
+      <li><a class="text-link" href="/il/home-insurance-portugal/">ביטוח בתים בעלי ערך גבוה</a></li>
+      <li><a class="text-link" href="/il/">ביטוח בפורטוגל</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section form-section" aria-labelledby="hatzaa-title" id="hatzaa">
+  <div class="form-shell lp-form-card">
+    <h2 id="hatzaa-title">בקשו מאיתנו לבדוק את סכום הביטוח של ביתכם</h2>
+    <p class="form-intro">נא למלא את הפרטים החשובים. נשיב בתוך 24 שעות עבודה.</p>
+
+    <form name="il-home-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/il/#hatzaa">
+      <input type="hidden" name="form-name" value="il-home-insurance-wizard">
+      <input type="hidden" name="ramo" value="Home insurance">
+      <input type="hidden" name="source_url" id="il-hab-source" value="">
+      <input type="hidden" name="dados_dinamicos" value="">
+      <p class="contact-form-honeypot"><label>נא לא למלא את השדה הזה <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. פרטים אישיים</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. פרטי הנכס</span></li>
+        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. אישור</span></li>
+      </ol>
+
+      <div data-wizard-step>
+        <div class="contact-form-field"><label for="il-hab-nome">שם מלא *</label><input type="text" id="il-hab-nome" name="nome" autocomplete="name" required></div>
+        <div class="contact-form-field"><label for="il-hab-nif">⁦NIF/NIE⁩ *</label><input type="text" id="il-hab-nif" name="nif" placeholder="NIF / NIE" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-hab-nascimento">תאריך לידה *</label><input type="date" id="il-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
+        <div class="contact-form-field"><label for="il-hab-morada">כתובת מלאה *</label><input type="text" id="il-hab-morada" name="morada" autocomplete="street-address" required></div>
+        <div class="contact-form-field"><label for="il-hab-localidade">עיר או יישוב *</label><input type="text" id="il-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
+        <div class="contact-form-field"><label for="il-hab-cp">מיקוד *</label><input type="text" id="il-hab-cp" name="codigo_postal" autocomplete="postal-code" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-hab-telefone">מספר טלפון *</label><input type="tel" id="il-hab-telefone" name="telefone" autocomplete="tel" required dir="ltr"></div>
+        <div class="contact-form-field"><label for="il-hab-email">כתובת ⁦דוא״ל⁩ *</label><input type="email" id="il-hab-email" name="email" autocomplete="email" required dir="ltr"></div>
+        <div class="contact-form-field">
+          <label for="il-hab-nacionalidade">אזרחות *</label>
+          <input type="text" id="il-hab-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="il-hab-nacionalidade-code" autocomplete="off" required>
+          <input type="hidden" name="nacionalidade" id="il-hab-nacionalidade-code">
+        </div>
+        <div class="contact-form-field">
+          <label for="il-hab-residente-fiscal">האם אתם תושבי מס בפורטוגל? *</label>
+          <select id="il-hab-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
+            <option value="">בחרו אפשרות</option>
+            <option value="sim">כן</option>
+            <option value="nao">לא</option>
+          </select>
+        </div>
+        <p class="wizard-helper" id="il-hab-residente-fiscal-info" hidden>עדיין צריך למלא כתובת. ללא תושבות מס בפורטוגל, ייתכן שבמקרים מסוימים לא ניתן יהיה להנפיק את הפוליסה — בכל זאת נבדוק את המצב הספציפי שלכם.</p>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+        <div class="contact-form-field">
+          <label for="il-hab-regime">אופן השימוש בנכס *</label>
+          <select id="il-hab-regime" name="regime_ocupacao" data-branch-select required>
+            <option value="">בחרו אפשרות</option>
+            <option value="permanente">מגורי קבע</option>
+            <option value="holiday_home">בית שני / בית חופשה</option>
+            <option value="alojamento_local"><bdi>Alojamento Local</bdi> (השכרה לטווח קצר)</option>
+          </select>
+        </div>
+        <div data-branch="alojamento_local" hidden>
+          <div class="contact-form-field">
+            <label for="il-hab-al-regime">סוג ההשכרה לטווח קצר *</label>
+            <select id="il-hab-al-regime" name="al_regime" required disabled>
+              <option value="">בחרו אפשרות</option>
+              <option value="tempo_inteiro">מלא</option>
+              <option value="parcial">חלקי (שימוש משותף בדירה)</option>
+            </select>
+          </div>
+        </div>
+        <div class="contact-form-field"><label for="il-hab-ano-construcao">שנת בנייה *</label><input type="number" id="il-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
+        <div class="contact-form-field"><label for="il-hab-area">שטח ברוטו (מ״ר) *</label><input type="number" id="il-hab-area" name="area_bruta" min="1" required></div>
+        <div class="contact-form-field"><label for="il-hab-wc">מספר חדרי רחצה *</label><input type="number" id="il-hab-wc" name="casas_banho" min="0" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="il-hab-obras-check"><input type="checkbox" id="il-hab-obras-check" data-field-toggle="il-hab-obras-group"> בוצע שיפוץ בשנים האחרונות?</label>
+        </div>
+        <div id="il-hab-obras-group" hidden>
+          <div class="contact-form-field"><label for="il-hab-obras-ano">שנת השיפוץ *</label><input type="number" id="il-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
+          <div class="contact-form-field"><label for="il-hab-obras-desc">נא לתאר את העבודות שבוצעו *</label><textarea id="il-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
+        </div>
+        <div class="contact-form-field"><label for="il-hab-capital-edificio">סכום ביטוח המבנה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
+        <div class="contact-form-field"><label for="il-hab-capital-conteudo">סכום ביטוח התכולה (<bdi>€</bdi>) *</label><input type="number" id="il-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
+      </div>
+
+      <div data-wizard-step hidden>
+        <div class="contact-form-field"><label for="il-hab-inicio">מועד תחילה מבוקש *</label><input type="date" id="il-hab-inicio" name="data_inicio" data-validate="start-date" required></div>
+        <div class="contact-form-field">
+          <label class="contact-form-checkbox" for="il-hab-rgpd"><input type="checkbox" id="il-hab-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> אני מאשר/ת שהפרטים שמסרתי ישמשו להכנת ההצעה הזו, בהתאם לתקנה האירופית להגנת מידע (⁦GDPR⁩). *</label>
+        </div>
+        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="submit" class="contact-form-submit">שליחת הבקשה ←</button></div>
+      </div>
+
+      <p class="lp-form-micro">נשיב בתוך 24 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.</p>
+    </form>
+    <div class="contact-form-success" id="il-habSuccess">
+      <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+      <h3>תודה!</h3>
+      <p>הבקשה שלכם התקבלה. אנחנו מטפלים בה ונשיב בתוך 24 שעות עבודה.</p>
+    </div>
+    <datalist id="nationality-list"><option value="אוגנדה" data-code="UG"></option><option value="אוזבקיסטן" data-code="UZ"></option><option value="אוסטריה" data-code="AT"></option><option value="אוסטרליה" data-code="AU"></option><option value="אוקראינה" data-code="UA"></option><option value="אורוגוואי" data-code="UY"></option><option value="אזרבייג׳ן" data-code="AZ"></option><option value="אי חג המולד" data-code="CX"></option><option value="איחוד האמירויות הערביות" data-code="AE"></option><option value="איטליה" data-code="IT"></option><option value="איי אולנד" data-code="AX"></option><option value="איי בהאמה" data-code="BS"></option><option value="איי הבתולה הבריטיים" data-code="VG"></option><option value="איי הבתולה של ארצות הברית" data-code="VI"></option><option value="איי הרד ומקדונלד" data-code="HM"></option><option value="איי ווליס ופוטונה" data-code="WF"></option><option value="איי טרקס וקייקוס" data-code="TC"></option><option value="איי מריאנה הצפוניים" data-code="MP"></option><option value="איי מרשל" data-code="MH"></option><option value="איי סיישל" data-code="SC"></option><option value="איי פארו" data-code="FO"></option><option value="איי פוקלנד" data-code="FK"></option><option value="איי פיטקרן" data-code="PN"></option><option value="איי קוק" data-code="CK"></option><option value="איי קוקוס (קילינג)" data-code="CC"></option><option value="איי קיימן" data-code="KY"></option><option value="איי שלמה" data-code="SB"></option><option value="אינדונזיה" data-code="ID"></option><option value="איסלנד" data-code="IS"></option><option value="איראן" data-code="IR"></option><option value="אירלנד" data-code="IE"></option><option value="אל סלבדור" data-code="SV"></option><option value="אלבניה" data-code="AL"></option><option value="אלג׳יריה" data-code="DZ"></option><option value="אנגווילה" data-code="AI"></option><option value="אנגולה" data-code="AO"></option><option value="אנדורה" data-code="AD"></option><option value="אנטארקטיקה" data-code="AQ"></option><option value="אנטיגואה וברבודה" data-code="AG"></option><option value="אסוואטיני" data-code="SZ"></option><option value="אסטוניה" data-code="EE"></option><option value="אפגניסטן" data-code="AF"></option><option value="אקוודור" data-code="EC"></option><option value="ארגנטינה" data-code="AR"></option><option value="ארובה" data-code="AW"></option><option value="אריתריאה" data-code="ER"></option><option value="ארמניה" data-code="AM"></option><option value="ארצות הברית" data-code="US"></option><option value="אתיופיה" data-code="ET"></option><option value="בהוטן" data-code="BT"></option><option value="בוטסואנה" data-code="BW"></option><option value="בולגריה" data-code="BG"></option><option value="בוליביה" data-code="BO"></option><option value="בוסניה והרצגובינה" data-code="BA"></option><option value="בורונדי" data-code="BI"></option><option value="בורקינה פאסו" data-code="BF"></option><option value="בחריין" data-code="BH"></option><option value="בלארוס" data-code="BY"></option><option value="בלגיה" data-code="BE"></option><option value="בליז" data-code="BZ"></option><option value="בנגלדש" data-code="BD"></option><option value="בנין" data-code="BJ"></option><option value="ברבדוס" data-code="BB"></option><option value="ברוניי" data-code="BN"></option><option value="ברזיל" data-code="BR"></option><option value="בריטניה" data-code="GB"></option><option value="ברמודה" data-code="BM"></option><option value="גאורגיה" data-code="GE"></option><option value="גאנה" data-code="GH"></option><option value="גבון" data-code="GA"></option><option value="גואטמלה" data-code="GT"></option><option value="גואם" data-code="GU"></option><option value="גוואדלופ" data-code="GP"></option><option value="גיאנה" data-code="GY"></option><option value="גיאנה הצרפתית" data-code="GF"></option><option value="גיברלטר" data-code="GI"></option><option value="גינאה" data-code="GN"></option><option value="גינאה המשוונית" data-code="GQ"></option><option value="גינאה-ביסאו" data-code="GW"></option><option value="גמביה" data-code="GM"></option><option value="גרינלנד" data-code="GL"></option><option value="גרמניה" data-code="DE"></option><option value="גרנדה" data-code="GD"></option><option value="גרנזי" data-code="GG"></option><option value="ג׳ורג׳יה הדרומית ואיי סנדוויץ׳ הדרומיים" data-code="GS"></option><option value="ג׳יבוטי" data-code="DJ"></option><option value="ג׳מייקה" data-code="JM"></option><option value="ג׳רזי" data-code="JE"></option><option value="דומיניקה" data-code="DM"></option><option value="דנמרק" data-code="DK"></option><option value="דרום אפריקה" data-code="ZA"></option><option value="דרום סודן" data-code="SS"></option><option value="האי בובה" data-code="BV"></option><option value="האי מאן" data-code="IM"></option><option value="האי נורפוק" data-code="NF"></option><option value="האיטי" data-code="HT"></option><option value="האיים המלדיביים" data-code="MV"></option><option value="האיים המרוחקים הקטנים של ארה״ב" data-code="UM"></option><option value="האיים הקריביים ההולנדיים" data-code="BQ"></option><option value="הודו" data-code="IN"></option><option value="הוותיקן" data-code="VA"></option><option value="הולנד" data-code="NL"></option><option value="הונג קונג (אזור מנהלי מיוחד של סין)" data-code="HK"></option><option value="הונגריה" data-code="HU"></option><option value="הונדורס" data-code="HN"></option><option value="הטריטוריה הבריטית באוקיינוס ההודי" data-code="IO"></option><option value="הטריטוריות הדרומיות של צרפת" data-code="TF"></option><option value="הפיליפינים" data-code="PH"></option><option value="הרפובליקה הדומיניקנית" data-code="DO"></option><option value="הרפובליקה המרכז-אפריקאית" data-code="CF"></option><option value="השטחים הפלסטיניים" data-code="PS"></option><option value="וייטנאם" data-code="VN"></option><option value="ונואטו" data-code="VU"></option><option value="ונצואלה" data-code="VE"></option><option value="זימבבואה" data-code="ZW"></option><option value="זמביה" data-code="ZM"></option><option value="חוף השנהב" data-code="CI"></option><option value="טג׳יקיסטן" data-code="TJ"></option><option value="טובאלו" data-code="TV"></option><option value="טוגו" data-code="TG"></option><option value="טונגה" data-code="TO"></option><option value="טוקלאו" data-code="TK"></option><option value="טורקיה" data-code="TR"></option><option value="טורקמניסטן" data-code="TM"></option><option value="טייוואן" data-code="TW"></option><option value="טימור-לסטה" data-code="TL"></option><option value="טנזניה" data-code="TZ"></option><option value="טרינידד וטובגו" data-code="TT"></option><option value="יוון" data-code="GR"></option><option value="יפן" data-code="JP"></option><option value="ירדן" data-code="JO"></option><option value="ישראל" data-code="IL"></option><option value="כווית" data-code="KW"></option><option value="כף ורדה" data-code="CV"></option><option value="לאוס" data-code="LA"></option><option value="לבנון" data-code="LB"></option><option value="לוב" data-code="LY"></option><option value="לוקסמבורג" data-code="LU"></option><option value="לטביה" data-code="LV"></option><option value="ליבריה" data-code="LR"></option><option value="ליטא" data-code="LT"></option><option value="ליכטנשטיין" data-code="LI"></option><option value="לסוטו" data-code="LS"></option><option value="מאוריטניה" data-code="MR"></option><option value="מאוריציוס" data-code="MU"></option><option value="מאיוט" data-code="YT"></option><option value="מאלי" data-code="ML"></option><option value="מדגסקר" data-code="MG"></option><option value="מוזמביק" data-code="MZ"></option><option value="מולדובה" data-code="MD"></option><option value="מונגוליה" data-code="MN"></option><option value="מונטנגרו" data-code="ME"></option><option value="מונסראט" data-code="MS"></option><option value="מונקו" data-code="MC"></option><option value="מיאנמר (בורמה)" data-code="MM"></option><option value="מיקרונזיה" data-code="FM"></option><option value="מלאווי" data-code="MW"></option><option value="מלזיה" data-code="MY"></option><option value="מלטה" data-code="MT"></option><option value="מצרים" data-code="EG"></option><option value="מקאו (אזור מנהלי מיוחד של סין)" data-code="MO"></option><option value="מקדוניה הצפונית" data-code="MK"></option><option value="מקסיקו" data-code="MX"></option><option value="מרוקו" data-code="MA"></option><option value="מרטיניק" data-code="MQ"></option><option value="נאורו" data-code="NR"></option><option value="נורווגיה" data-code="NO"></option><option value="ניגריה" data-code="NG"></option><option value="ניו זילנד" data-code="NZ"></option><option value="ניווה" data-code="NU"></option><option value="ניז׳ר" data-code="NE"></option><option value="ניקרגואה" data-code="NI"></option><option value="נמיביה" data-code="NA"></option><option value="נפאל" data-code="NP"></option><option value="סאו טומה ופרינסיפה" data-code="ST"></option><option value="סבאלברד ויאן מאיין" data-code="SJ"></option><option value="סהרה המערבית" data-code="EH"></option><option value="סודן" data-code="SD"></option><option value="סומליה" data-code="SO"></option><option value="סוריה" data-code="SY"></option><option value="סורינאם" data-code="SR"></option><option value="סיירה לאון" data-code="SL"></option><option value="סין" data-code="CN"></option><option value="סינגפור" data-code="SG"></option><option value="סלובניה" data-code="SI"></option><option value="סלובקיה" data-code="SK"></option><option value="סמואה" data-code="WS"></option><option value="סמואה האמריקנית" data-code="AS"></option><option value="סן מרטן" data-code="MF"></option><option value="סן מרינו" data-code="SM"></option><option value="סנגל" data-code="SN"></option><option value="סנט ברתולומיאו" data-code="BL"></option><option value="סנט הלנה" data-code="SH"></option><option value="סנט וינסנט והגרנדינים" data-code="VC"></option><option value="סנט לוסיה" data-code="LC"></option><option value="סנט מארטן" data-code="SX"></option><option value="סנט פייר ומיקלון" data-code="PM"></option><option value="סנט קיטס ונוויס" data-code="KN"></option><option value="ספרד" data-code="ES"></option><option value="סרביה" data-code="RS"></option><option value="סרי לנקה" data-code="LK"></option><option value="עומאן" data-code="OM"></option><option value="עיראק" data-code="IQ"></option><option value="ערב הסעודית" data-code="SA"></option><option value="פוארטו ריקו" data-code="PR"></option><option value="פולין" data-code="PL"></option><option value="פולינזיה הצרפתית" data-code="PF"></option><option value="פורטוגל" data-code="PT"></option><option value="פיג׳י" data-code="FJ"></option><option value="פינלנד" data-code="FI"></option><option value="פלאו" data-code="PW"></option><option value="פנמה" data-code="PA"></option><option value="פפואה גינאה החדשה" data-code="PG"></option><option value="פקיסטן" data-code="PK"></option><option value="פרגוואי" data-code="PY"></option><option value="פרו" data-code="PE"></option><option value="צרפת" data-code="FR"></option><option value="צ׳אד" data-code="TD"></option><option value="צ׳ילה" data-code="CL"></option><option value="צ׳כיה" data-code="CZ"></option><option value="קובה" data-code="CU"></option><option value="קולומביה" data-code="CO"></option><option value="קומורו" data-code="KM"></option><option value="קונגו - ברזאויל" data-code="CG"></option><option value="קונגו - קינשאסה" data-code="CD"></option><option value="קוסטה ריקה" data-code="CR"></option><option value="קוראסאו" data-code="CW"></option><option value="קוריאה הדרומית" data-code="KR"></option><option value="קוריאה הצפונית" data-code="KP"></option><option value="קזחסטן" data-code="KZ"></option><option value="קטאר" data-code="QA"></option><option value="קירגיזסטן" data-code="KG"></option><option value="קיריבאטי" data-code="KI"></option><option value="קלדוניה החדשה" data-code="NC"></option><option value="קמבודיה" data-code="KH"></option><option value="קמרון" data-code="CM"></option><option value="קנדה" data-code="CA"></option><option value="קניה" data-code="KE"></option><option value="קפריסין" data-code="CY"></option><option value="קרואטיה" data-code="HR"></option><option value="ראוניון" data-code="RE"></option><option value="רואנדה" data-code="RW"></option><option value="רומניה" data-code="RO"></option><option value="רוסיה" data-code="RU"></option><option value="שוודיה" data-code="SE"></option><option value="שווייץ" data-code="CH"></option><option value="תאילנד" data-code="TH"></option><option value="תוניסיה" data-code="TN"></option><option value="תימן" data-code="YE"></option></datalist>
+  </div>
+</section>
+</article>
+
+</main>
+
+<footer class="on-dark">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name"><bdi>Adler &amp; Rochefort</bdi></div>
+      <p class="footer-brand-desc">תיווך ביטוח ללקוחות פרטיים ולמשפחות בעלות הון משמעותי בפורטוגל ובספרד, עם משרדים בליסבון ובלאגוש. חיתום פרטני, חוות דעת בכתב ויועץ אחד — מהפנייה הראשונה ועד התביעה.</p>
+      <div class="footer-badge">
+        <span class="footer-badge-dot" aria-hidden="true"></span>
+        סוכנות ביטוח רשומה בפורטוגל — רישום ⁦ASF 425591790/3⁩
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">סוגי ביטוח</div>
+      <ul class="footer-col-links">
+        <li><a href="/il/home-insurance-portugal/">ביטוח בתים בעלי ערך גבוה</a></li>
+        <li><a href="/il/health-insurance-portugal/">ביטוח בריאות בין־לאומי</a></li>
+        <li><a href="/il/car-insurance-portugal/">ביטוח רכב</a></li>
+        <li><a href="/il/liability-insurance-portugal/">אחריות אזרחית משפחתית</a></li>
+        <li><a href="/il/insurance-guide-portugal/">מדריך הביטוח בפורטוגל</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">שפות</div>
+      <div class="ar-langsel ar-langsel-footer" data-ar-langsel>
+        <button type="button" class="ar-langsel-btn" id="arLangselFooterBtn" aria-expanded="false" aria-controls="arLangselFooterMenu" aria-label="שפה: עברית. בחירת שפה אחרת."><svg class="ar-langsel-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3.2 9h17.6M3.2 15h17.6M12 3c-2.6 2.6-2.6 15.4 0 18M12 3c2.6 2.6 2.6 15.4 0 18"/></svg><span class="ar-langsel-label">עברית</span><svg class="ar-langsel-chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true" focusable="false"><path d="M1 1.2 5 4.8 9 1.2"/></svg></button>
+        <ul class="ar-langsel-menu" id="arLangselFooterMenu" aria-labelledby="arLangselFooterBtn" hidden>
+          <li><a href="/seguros/habitacao/valor-reconstrucao/" lang="pt-PT" dir="ltr" hreflang="pt-PT"><span>Português</span></a></li>
+          <li><a href="/en/rebuild-value-home-insurance-portugal/" lang="en" dir="ltr" hreflang="en-GB"><span>English</span></a></li>
+          <li><a href="/nl/herbouwwaarde-woonverzekering-portugal/" lang="nl" dir="ltr" hreflang="nl"><span>Nederlands</span></a></li>
+          <li><a href="/fr/valeur-reconstruction-assurance-habitation-portugal/" lang="fr" dir="ltr" hreflang="fr"><span>Français</span></a></li>
+          <li><a href="/de/wiederaufbauwert-hausversicherung-portugal/" lang="de" dir="ltr" hreflang="de"><span>Deutsch</span></a></li>
+          <li><a href="/es/valor-reconstruccion-seguro-hogar/" lang="es" dir="ltr" hreflang="es"><span>Español</span></a></li>
+          <li><a href="/it/valore-ricostruzione-assicurazione-casa-portogallo/" lang="it" dir="ltr" hreflang="it-IT"><span>Italiano</span></a></li>
+          <li><a href="/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/" lang="pl" dir="ltr" hreflang="pl-PL"><span>Polski</span></a></li>
+          <li><a href="/se/ateruppbyggnadsvarde-hemforsakring-portugal/" lang="sv" dir="ltr" hreflang="sv-SE"><span>Svenska</span></a></li>
+          <li><a href="/dk/genopforelsesvaerdi-husforsikring-portugal/" lang="da" dir="ltr" hreflang="da-DK"><span>Dansk</span></a></li>
+          <li><a href="/zh/rebuild-value-home-insurance-portugal/" lang="zh-CN" dir="ltr" hreflang="zh-CN"><span>简体中文</span></a></li>
+          <li><a href="/il/rebuild-value-home-insurance-portugal/" lang="he" dir="rtl" hreflang="he-IL" aria-current="true"><span>עברית</span></a></li>
+        </ul>
+      </div>
+      <noscript>
+        <ul class="footer-col-links footer-langs ar-langsel-fallback">
+          <li><a href="/seguros/habitacao/valor-reconstrucao/" lang="pt-PT" dir="ltr">Português</a></li>
+          <li><a href="/en/rebuild-value-home-insurance-portugal/" lang="en" dir="ltr">English</a></li>
+          <li><a href="/nl/herbouwwaarde-woonverzekering-portugal/" lang="nl" dir="ltr">Nederlands</a></li>
+          <li><a href="/fr/valeur-reconstruction-assurance-habitation-portugal/" lang="fr" dir="ltr">Français</a></li>
+          <li><a href="/de/wiederaufbauwert-hausversicherung-portugal/" lang="de" dir="ltr">Deutsch</a></li>
+          <li><a href="/es/valor-reconstruccion-seguro-hogar/" lang="es" dir="ltr">Español</a></li>
+          <li><a href="/it/valore-ricostruzione-assicurazione-casa-portogallo/" lang="it" dir="ltr">Italiano</a></li>
+          <li><a href="/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/" lang="pl" dir="ltr">Polski</a></li>
+          <li><a href="/se/ateruppbyggnadsvarde-hemforsakring-portugal/" lang="sv" dir="ltr">Svenska</a></li>
+          <li><a href="/dk/genopforelsesvaerdi-husforsikring-portugal/" lang="da" dir="ltr">Dansk</a></li>
+          <li><a href="/zh/rebuild-value-home-insurance-portugal/" lang="zh-CN" dir="ltr">简体中文</a></li>
+          <li><a href="/il/rebuild-value-home-insurance-portugal/" lang="he" dir="rtl" aria-current="true">עברית</a></li>
+        </ul>
+      </noscript>
+    </div>
+    <div>
+      <div class="footer-col-title">יצירת קשר</div>
+      <ul class="footer-col-links">
+        <li><a href="mailto:insurance@adlerrochefort.com"><bdi>insurance@adlerrochefort.com</bdi></a></li>
+        <li><a href="tel:+351928226570"><bdi>+351 928 226 570</bdi></a></li>
+        <li><span><bdi>Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal</bdi></span></li>
+        <li><span><bdi>Varandas de São João 4<br>8600-324 Lagos, Portugal</bdi></span></li>
+        <li><a href="#hatzaa">בקשת חוות דעת</a></li>
+        <li>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/adlerrochefort" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+            </a>
+            <a href="https://www.instagram.com/adlerrochefort/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/adler-rochefort" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy"><bdi>&copy; 2026 Adler &amp; Rochefort</bdi> · כל הזכויות שמורות</div>
+    <div class="footer-platforms">
+      <a href="https://mycovervault.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">מעבר ל־MyCoverVault</a>
+    </div>
+    <div class="footer-legal">
+      <a href="/en/privacy-policy" hreflang="en">מדיניות פרטיות</a>
+      <a href="/en/terms-and-conditions" hreflang="en">תנאי שימוש</a>
+      <span class="footer-livro">
+      <a href="https://www.livroreclamacoes.pt/Inicio/" class="footer-livro-link" target="_blank" rel="noopener noreferrer" aria-haspopup="true" aria-expanded="false">ספר הפניות (Livro de Reclamações)</a>
+      <span class="footer-livro-card" role="tooltip">
+        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">
+          <img src="/images/livro-reclamacoes.png" width="960" height="303" alt="Livro de Reclamações eletrónico — Ownizo Unipessoal Lda., NIPC 517169029">
+        </a>
+      </span>
+    </span>
+      <a href="https://www.asf.com.pt/canal-de-den%C3%BAncias" target="_blank" rel="noopener noreferrer">ערוץ הדיווח של ASF</a>
+    </div>
+  </div>
+  <div class="footer-regulatory">
+    <p>Adler &amp; Rochefort הוא השם המסחרי של ⁦Ownizo, Unipessoal Lda.⁩</p>
+    <p>⁦Ownizo, Unipessoal Lda.⁩ רשומה כסוכנות ביטוח אצל רשות הפיקוח על הביטוח וקרנות הפנסיה בפורטוגל (ASF), מספר רישום 425591790/3, ופועלת בספרד במסגרת חופש מתן השירותים באיחוד האירופי. אנחנו מייעצים בתוך מגוון המבטחים שאנחנו עובדים איתם.</p>
+    <p>התוכן בעמוד הזה הוא הסבר כללי, ואינו ייעוץ ביטוחי או משפטי המותאם למצב אישי. הכיסוי בפועל תלוי בנסיבות שלכם ובתנאי הפוליסה שנבחרה.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#hatzaa">בקשת חוות דעת</a>
+</div>
+
+<script defer src="/js/lead-branch-fields.js"></script>
+<script defer src="/js/quote-validators.js"></script>
+<script defer src="/js/ar-quote-form.js"></script>
+<script defer src="/js/quote-nationality.js"></script>
+<script defer src="/js/quote-wizard.js"></script>
+<script defer src="/js/quote-field-toggle.js"></script>
+<script defer src="/js/ar-analytics-tracker.js"></script>
+<script defer src="/js/ar-nav.js"></script>
+<script defer src="/js/ar-livro.js"></script>
+<script defer src="/js/ar-langsel.js"></script>
+<script defer src="/js/insurance-chat-widget.js" data-lang="he"></script>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-content">
+    <div class="cookie-banner-text">
+      <strong>על קובצי Cookie</strong>
+      <p>אנחנו משתמשים בקובצי Cookie רק כדי למדוד ביצועי פרסום ותנועה לאתר. קובצי Cookie אנליטיים לא נטענים לפני שנתתם הסכמה.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-reject" onclick="respondCookies(false)">דחייה</button>
+      <button class="cookie-btn cookie-btn-accept" onclick="respondCookies(true)">אישור</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var b = document.getElementById('cookieBanner');
+    if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
+  })();
+  function respondCookies(accepted) {
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+</script>
+</body>
+</html>

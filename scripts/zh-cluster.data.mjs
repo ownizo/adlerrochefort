@@ -32,6 +32,8 @@ import { ZH_UI, ZH_BRANCHES } from './zh-content/ui.mjs';
 import { LANG_POLICY_ZH } from './zh-content/shared.mjs';
 import { HUB_PAGE } from './zh-content/hub.mjs';
 import { HOME_PAGE } from './zh-content/home.mjs';
+import { BREADCRUMB_ROOT as REBUILD_CRUMB } from './zh-content/shared.mjs';
+import { rebuildValuePage } from './lib/rebuild-value-page.mjs';
 import { HEALTH_PAGE } from './zh-content/health.mjs';
 import { MOTOR_PAGE } from './zh-content/motor.mjs';
 import { LIABILITY_PAGE } from './zh-content/liability.mjs';
@@ -54,9 +56,17 @@ import { NAUTICAL_PAGE } from './zh-content/nautical.mjs';
 
 export { LANG_POLICY_ZH, BREADCRUMB_ROOT } from './zh-content/shared.mjs';
 
+// Rebuild value (October 2026): explanation, SCRIM link, the home form.
+// The home page links to it from "related", so the page is reachable from
+// the product it explains.
+const REBUILD_VALUE_PAGE = rebuildValuePage('zh', { breadcrumbRoot: REBUILD_CRUMB, homePage: HOME_PAGE });
+
+HOME_PAGE.related = [...(HOME_PAGE.related || []).filter((r) => r.url !== REBUILD_VALUE_PAGE.url), { url: REBUILD_VALUE_PAGE.url, label: REBUILD_VALUE_PAGE.breadcrumb.at(-1).name }];
+
 export const PAGES = [
   HUB_PAGE,
   HOME_PAGE,
+  REBUILD_VALUE_PAGE,
   HEALTH_PAGE,
   MOTOR_PAGE,
   LIABILITY_PAGE,
