@@ -1650,6 +1650,28 @@ export const HANDLED_FORMS = {
     page: "/en/insurance-for-south-africans-portugal/",
     branch: "Insurance for South Africans",
   },
+  // Audience hubs for Americans, Canadians and Irish residents (EN).
+  "us-hub-review": {
+    quote: true,
+    en: true,
+    heading: "New insurance review request — Americans in Portugal",
+    page: "/en/insurance-for-americans-in-portugal/",
+    branch: "Insurance for Americans",
+  },
+  "canadian-hub-review": {
+    quote: true,
+    en: true,
+    heading: "New insurance review request — Canadians in Portugal",
+    page: "/en/insurance-for-canadians-portugal/",
+    branch: "Insurance for Canadians",
+  },
+  "irish-hub-review": {
+    quote: true,
+    en: true,
+    heading: "New insurance review request — Irish residents in Portugal",
+    page: "/en/insurance-for-irish-residents-portugal/",
+    branch: "Insurance for Irish residents",
+  },
   "international-insurance-review": {
     quote: true,
     en: true,
