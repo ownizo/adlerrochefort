@@ -490,6 +490,9 @@ const FORM_CLASSIFICATION = {
   // ── Mercado determinado por submissão: o mesmo formulário serve PT e ES,
   // consoante o campo `country` (Portugal | Spain) escolhido pelo visitante
   // antes de mais nada. Sem campo de empresa — sempre individual. ───────
+  // Audience hubs (October 2026), scripts/build-audience-hubs.mjs.
+  'brasileiros-hub-pedido': { entityType: 'individual', market: 'PT', product: 'general', language: 'PT' },
+  'south-african-hub-review': { entityType: 'individual', market: 'PT', product: 'general', language: 'EN' },
   'international-insurance-review': {
     entityType: 'individual',
     market: deriveMarketFromCountryField,

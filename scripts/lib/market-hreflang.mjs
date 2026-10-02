@@ -73,6 +73,15 @@ export const SPAIN_EXTERNAL = {
  * written from /es/ can be reciprocated by scripts/add-market-to-corpus.mjs.
  */
 export const ES_CLUSTER_EXTERNAL = {
+  // Rebuild value (October 2026): the hand-authored members, written by
+  // scripts/build-rebuild-value-pages.mjs with the full twelve-language block.
+  'rebuild-value': {
+    '/seguros/habitacao/valor-reconstrucao/': 'pt-PT',
+    '/en/rebuild-value-home-insurance-portugal/': 'en-GB',
+    '/de/wiederaufbauwert-hausversicherung-portugal/': 'de',
+    '/nl/herbouwwaarde-woonverzekering-portugal/': 'nl',
+    '/fr/valeur-reconstruction-assurance-habitation-portugal/': 'fr',
+  },
   'es-life': { '/de/lebensversicherung-spanien/': 'de' },
   'es-mortgage': { '/de/hypothekenschutz-spanien/': 'de' },
   'es-landlord': { '/de/vermieterversicherung-spanien/': 'de' },

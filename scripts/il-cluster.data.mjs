@@ -45,6 +45,8 @@ import { IL_UI, IL_BRANCHES } from './il-content/ui.mjs';
 import { LANG_POLICY_IL } from './il-content/shared.mjs';
 import { HUB_PAGE } from './il-content/hub.mjs';
 import { HOME_PAGE } from './il-content/home.mjs';
+import { BREADCRUMB_ROOT as REBUILD_CRUMB } from './il-content/shared.mjs';
+import { rebuildValuePage } from './lib/rebuild-value-page.mjs';
 import { HEALTH_PAGE } from './il-content/health.mjs';
 import { MOTOR_PAGE } from './il-content/motor.mjs';
 import { LIABILITY_PAGE } from './il-content/liability.mjs';
@@ -65,9 +67,17 @@ import { NAUTICAL_PAGE } from './il-content/nautical.mjs';
 
 export { LANG_POLICY_IL, BREADCRUMB_ROOT } from './il-content/shared.mjs';
 
+// Rebuild value (October 2026): explanation, SCRIM link, the home form.
+// The home page links to it from "related", so the page is reachable from
+// the product it explains.
+const REBUILD_VALUE_PAGE = rebuildValuePage('il', { breadcrumbRoot: REBUILD_CRUMB, homePage: HOME_PAGE });
+
+HOME_PAGE.related = [...(HOME_PAGE.related || []).filter((r) => r.url !== REBUILD_VALUE_PAGE.url), { url: REBUILD_VALUE_PAGE.url, label: REBUILD_VALUE_PAGE.breadcrumb.at(-1).name }];
+
 export const PAGES = [
   HUB_PAGE,
   HOME_PAGE,
+  REBUILD_VALUE_PAGE,
   HEALTH_PAGE,
   MOTOR_PAGE,
   LIABILITY_PAGE,

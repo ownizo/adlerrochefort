@@ -986,6 +986,7 @@ ${COOKIE_BANNER}
 ${NAV_SCRIPT}
 ${LIVRO_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
+<script defer src="/js/insurance-chat-widget.js" data-lang="de"></script>
 </body>
 </html>
 `;

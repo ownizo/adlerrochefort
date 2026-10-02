@@ -1635,6 +1635,21 @@ export const HANDLED_FORMS = {
   // so quoteSubject() picks it up as the first-priority branch field with no
   // change needed here. "Multi-product" below is only the last-resort
   // fallback if that field somehow arrives empty.
+  // Audience hubs (October 2026): Brazilians in Portugal (PT) and South
+  // Africans in Portugal (EN), built by scripts/build-audience-hubs.mjs.
+  "brasileiros-hub-pedido": {
+    quote: true,
+    heading: "Novo pedido de análise — brasileiros em Portugal",
+    page: "/seguros/brasileiros-em-portugal/",
+    branch: "Seguros para brasileiros",
+  },
+  "south-african-hub-review": {
+    quote: true,
+    en: true,
+    heading: "New insurance review request — South Africans in Portugal",
+    page: "/en/insurance-for-south-africans-portugal/",
+    branch: "Insurance for South Africans",
+  },
   "international-insurance-review": {
     quote: true,
     en: true,
