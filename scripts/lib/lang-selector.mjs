@@ -77,7 +77,7 @@ const CATALOG = [
   { key: 'nl', label: 'Nederlands', html: 'nl', hreflang: 'nl', home: '/nl/' },
   { key: 'fr', label: 'Français', html: 'fr', hreflang: 'fr', home: '/fr/' },
   { key: 'de', label: 'Deutsch', html: 'de', hreflang: 'de', home: '/de/' },
-  { key: 'es', label: 'Español', html: 'es', hreflang: 'es-ES', home: '/es/' },
+  { key: 'es', label: 'Español', html: 'es', hreflang: 'es', home: '/es/' },
   { key: 'it', label: 'Italiano', html: 'it', hreflang: 'it-IT', home: '/it/' },
   { key: 'pl', label: 'Polski', html: 'pl', hreflang: 'pl-PL', home: '/pl/' },
   { key: 'se', label: 'Svenska', html: 'sv', hreflang: 'sv-SE', home: '/se/' },

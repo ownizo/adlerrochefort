@@ -346,16 +346,21 @@ export function clusterMegaNav(market, { switcher, mobileSwitcher, ctaHref }) {
   return renderMegaNav({
     navAria: ui.navAria,
     logoHref: `/${market.key}/`,
-    portugal: {
-      trigger: m.portugal,
-      menuAria: m.portugalMenu,
-      overviewTitle: m.overview,
-      overview: [link('hub', '🇵🇹')].filter(Boolean),
-      personalTitle: m.personal,
-      personal: ['home', 'health', 'motor', 'liability'].map((c) => link(c)).filter(Boolean),
-      movingTitle: m.moving,
-      moving: ['moving', 'property', 'guide'].map((c) => link(c)).filter(Boolean),
-    },
+    // A market may spell out its Portugal menu (Spanish does, since its
+    // Portugal half has its own landing page and more than four products);
+    // otherwise it is derived from the page clusters as before.
+    portugal: market.portugalNav
+      ? { trigger: m.portugal, menuAria: m.portugalMenu, ...market.portugalNav }
+      : {
+          trigger: m.portugal,
+          menuAria: m.portugalMenu,
+          overviewTitle: m.overview,
+          overview: [link('hub', '🇵🇹')].filter(Boolean),
+          personalTitle: m.personal,
+          personal: ['home', 'health', 'motor', 'liability'].map((c) => link(c)).filter(Boolean),
+          movingTitle: m.moving,
+          moving: ['moving', 'property', 'guide'].map((c) => link(c)).filter(Boolean),
+        },
     spain: market.spainNav ? { trigger: m.spain, menuAria: m.spainMenu, ...market.spainNav } : spainSpec(m, (c, flag) => link(c, flag)),
     privateClients: {
       trigger: m.privateClients,

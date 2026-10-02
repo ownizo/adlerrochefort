@@ -1,18 +1,22 @@
 /**
  * /es/ — the Spanish market homepage, which is also the cluster hub.
  *
- * Audience: Spanish owners with homes in Spain and/or Portugal, Spaniards
- * buying in Lisbon, Porto or on the Portuguese coast, and Latin American
- * families (Mexico, Venezuela, Argentina, Colombia) living between Madrid,
- * Marbella and Lisbon.
+ * Audience (October 2026 rewrite): Latin American families — Mexico,
+ * Colombia, Venezuela, Argentina, Chile, Peru and the rest of the continent —
+ * with significant assets, who live, are about to live, or own property in
+ * Portugal and/or Spain. The private-client positioning is the same as on
+ * /en/, /de/ and /nl/; the angle is theirs.
  *
- * The angle that makes this page Spanish rather than translated: a Spanish
- * reader already knows the multirriesgo hogar, the continente/contenido split
- * and — without thinking about it — the Consorcio de Compensación de Seguros,
- * which covers earthquake and flood inside every Spanish property policy.
- * Portugal has no such pool: seismic cover is an optional extra that has to be
- * chosen. And family liability, habitually bundled into the Spanish home
- * policy, is an option in Portugal. Those two reversals are the page.
+ * What makes the page Latin American rather than translated: the reader is a
+ * third-country national, so the move starts at a consulate and the health
+ * policy is part of the visa file (with different rules in each country);
+ * the reader knows earthquakes, and finds Spain carries them by law
+ * (Consorcio) while Portugal leaves them optional; the reader's vocabulary
+ * (deducible, coaseguro, periodo de espera) is neither Spanish nor
+ * Portuguese; and the family's life — children's universities, a flat in
+ * Miami, parents back home — keeps running on the other side of the
+ * Atlantic. The two clusters below mirror the Portugal and Spain halves of
+ * /de/ and /nl/.
  */
 export const HUB_PAGE = {
   slug: 'es',
@@ -21,18 +25,18 @@ export const HUB_PAGE = {
   isHub: true,
   title: 'Seguros para grandes patrimonios | Adler & Rochefort',
   description:
-    'Seguros para patrimonios relevantes en España y Portugal: hogar de alto valor, arte, responsabilidad civil millonaria y salud internacional. En español.',
-  ogTitle: 'Seguros para grandes patrimonios — España y Portugal',
+    'Seguros para familias latinoamericanas con patrimonio en Portugal y España: salud y visado, hogar de alto valor, arte y responsabilidad civil. En español.',
+  ogTitle: 'Seguros para grandes patrimonios — Portugal y España',
   ogDescription:
-    'Residencias, arte y colecciones, responsabilidad civil y protección de la familia, en España y Portugal. Suscripción individual, asesoramiento por escrito y un único interlocutor.',
+    'Para familias latinoamericanas que viven o invierten en Portugal y España: residencias, arte, responsabilidad civil, salud y protección de la familia. Por escrito, en español y con un único interlocutor.',
   keywords:
-    'seguros grandes patrimonios, seguro hogar alto valor, seguro arte y colecciones, seguros Portugal, seguros España y Portugal, seguro vivienda Lisboa, seguro casa Portugal españoles, mediador de seguros Portugal, private client seguros',
-  eyebrow: 'Private clients · España y Portugal',
+    'seguros para latinoamericanos en Portugal, seguros para latinoamericanos en España, seguros grandes patrimonios, seguro médico visa Portugal España, seguro hogar alto valor, seguro arte y colecciones, mediador de seguros Portugal España, seguros mexicanos en España, seguros venezolanos en Portugal, private client seguros',
+  eyebrow: 'Private clients · Portugal y España',
   h1: 'Seguros para<br><em>grandes patrimonios.</em>',
   standfirst:
-    'Residencias, arte y colecciones, responsabilidad civil y protección de la familia, en España y Portugal. Suscripción individual, asesoramiento por escrito y un único interlocutor — del primer contacto al siniestro.',
+    'Para familias latinoamericanas que viven, invierten o pasan parte del año en Portugal y España: residencias, arte y colecciones, responsabilidad civil, salud y protección de la familia. Suscripción individual, asesoramiento por escrito y un único interlocutor — en español, del primer contacto al siniestro.',
   published: '2026-09-26T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
+  modified: '2026-10-02T09:00:00+00:00',
   breadcrumb: [{ name: 'Inicio', url: '/es/' }],
   pullquote:
     'Una póliza no se juzga el día en que se firma, sino el día en que tiene que pagar.',
@@ -44,19 +48,19 @@ export const HUB_PAGE = {
   formIntro:
     'Cuéntenos qué hay que asegurar o envíenos sus pólizas actuales. Le respondemos por escrito con lo que cubren, dónde están las lagunas y qué le recomendaríamos.',
   formPlaceholder:
-    'Por ejemplo: casa en Marbella y piso en Lisboa, una pequeña colección de pintura, dos hijos estudiando fuera — queremos revisar las pólizas.',
+    'Por ejemplo: nos mudamos de Ciudad de México a Lisboa, compramos casa en Cascais y un piso en Madrid para los hijos; hay una colección de pintura y un apartamento en Miami.',
   sections: `
 <section class="section plain" aria-labelledby="quienes">
   <div class="container narrow article-body">
-    <h2 id="quienes">Un mediador para clientes privados en España y Portugal</h2>
+    <h2 id="quienes">Un mediador para familias latinoamericanas en Portugal y España</h2>
     <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en el supervisor ASF con el n.º 425591790/3, con oficinas en <strong>Lisboa y Lagos</strong>. Trabajamos para familias con patrimonios relevantes en todo Portugal y — en régimen de libre prestación de servicios de la Unión Europea — en España.</p>
-    <p>Nuestro trabajo se concentra en los riesgos en los que una póliza estándar se queda corta:</p>
+    <p>Cada vez más, esas familias llegan de Ciudad de México, Caracas, Bogotá, Buenos Aires, Santiago o Lima. Nuestro trabajo se concentra en los riesgos en los que una póliza estándar se queda corta:</p>
     <ul>
-      <li><strong>Viviendas de alto valor</strong> — villas, casas de ciudad y fincas con piscina, anexos y casa de invitados, aseguradas por su coste real de reconstrucción.</li>
-      <li><strong>Arte, joyas, relojes y colecciones</strong> — a valor convenido y sin franquicia.</li>
-      <li><strong>Responsabilidad civil de la familia</strong> — con límites de varios millones de euros, en todo el mundo, y los gastos de defensa por encima del límite.</li>
-      <li><strong>Salud internacional</strong> para familias que viven y viajan entre varios países.</li>
-      <li><strong>Automóviles</strong>, incluidos vehículos recientes y de mayor valor.</li>
+      <li><strong>Salud</strong> — la póliza que exige el visado y la que la familia usará de verdad, también para seguir atendiéndose en su país.</li>
+      <li><strong>Viviendas de alto valor</strong> — villas, casas de ciudad y fincas, aseguradas por su coste real de reconstrucción, con una decisión consciente sobre el terremoto.</li>
+      <li><strong>Arte, joyas, relojes y colecciones</strong> — a valor convenido, sin franquicia y cubiertos también cuando viajan a América.</li>
+      <li><strong>Responsabilidad civil de la familia</strong> — con límites de varios millones de euros, en todo el mundo, Estados Unidos incluido si se pide.</li>
+      <li><strong>Automóviles</strong>, con un permiso latinoamericano que cambia de reglas el día en que usted pasa a ser residente.</li>
     </ul>
     <p>Cada riesgo se suscribe de forma individual, el asesoramiento se da por escrito y usted tiene el mismo interlocutor desde el primer contacto hasta un eventual siniestro — en español.</p>
   </div>
@@ -64,117 +68,170 @@ export const HUB_PAGE = {
 
 <section class="section tint" aria-labelledby="dos-paises">
   <div class="container narrow article-body">
-    <h2 id="dos-paises">Dos países vecinos, dos lógicas de seguro</h2>
-    <p>Quien tiene casa en Madrid o en Marbella da por supuestas cosas que en Portugal no lo son. El seguro de hogar español lleva dentro, sin que nadie lo pida, dos protecciones que el portugués deja fuera o convierte en opción:</p>
-    <ul>
-      <li><strong>Los riesgos extraordinarios.</strong> En España, el Consorcio de Compensación de Seguros cubre terremotos, inundaciones extraordinarias y otros fenómenos dentro de cualquier póliza de daños, a cambio de un recargo incluido en la prima. En Portugal no existe un organismo equivalente: la cobertura de fenómenos sísmicos es una garantía opcional y, si no se contrata, el terremoto no está cubierto.</li>
-      <li><strong>La responsabilidad civil familiar.</strong> En España suele venir incluida en el multirriesgo hogar, aunque con límites modestos. En Portugal la <em>multirriscos habitação</em> se centra en el edificio y el contenido; la responsabilidad civil es una opción, a menudo limitada a la propia vivienda.</li>
-    </ul>
+    <h2 id="dos-paises">Portugal o España: lo que cambia para una familia que llega de América</h2>
+    <p>Muchas familias deciden entre los dos países, o acaban con un pie en cada uno. En lo que se refiere a seguros, las diferencias son más grandes de lo que la cercanía hace pensar:</p>
     <div class="compare-wrap">
       <table class="compare-table">
-        <caption class="visually-hidden">Diferencias entre el seguro de hogar en España y en Portugal</caption>
+        <caption class="visually-hidden">Diferencias de seguros entre Portugal y España para una familia latinoamericana</caption>
         <thead>
-          <tr><th scope="col"></th><th scope="col">En España</th><th scope="col">En Portugal</th></tr>
+          <tr><th scope="col"></th><th scope="col">En Portugal</th><th scope="col">En España</th></tr>
         </thead>
         <tbody>
-          <tr><td>Póliza de hogar</td><td>Multirriesgo hogar: continente y contenido</td><td><em>Multirriscos habitação</em>: <em>edifício</em> y <em>recheio</em></td></tr>
-          <tr><td>Terremoto e inundación</td><td>Consorcio de Compensación de Seguros, incluido</td><td>Garantía opcional (<em>fenómenos sísmicos</em>); hay que elegirla</td></tr>
-          <tr><td>Responsabilidad civil</td><td>Habitualmente incluida, con límites moderados</td><td>Opcional, a menudo ligada solo a la vivienda</td></tr>
-          <tr><td>Infraseguro</td><td>Regla proporcional</td><td><em>Regra proporcional</em> — misma lógica</td></tr>
-          <tr><td>Idioma de la póliza</td><td>Español</td><td>Por regla general, portugués</td></tr>
-          <tr><td>Supervisor</td><td>DGSFP</td><td>ASF</td></tr>
+          <tr><td>Seguro para el visado</td><td>Seguro de viaje con gastos médicos y repatriación; la póliza de salud llega con el domicilio</td><td>Póliza de salud sin copagos ni carencias, con aseguradora autorizada en España</td></tr>
+          <tr><td>Póliza de salud</td><td>Con domicilio en Portugal y NIF de cada asegurado</td><td>Se contrata desde fuera para el visado</td></tr>
+          <tr><td>Terremoto e inundación</td><td>Opcional: hay que contratar los <em>fenómenos sísmicos</em></td><td>Incluido por ley a través del Consorcio de Compensación de Seguros</td></tr>
+          <tr><td>Responsabilidad civil familiar</td><td>Opcional en la póliza de hogar</td><td>Incluida en la póliza de hogar, con límites modestos</td></tr>
+          <tr><td>Permiso de conducir</td><td>Reconocido con condiciones para algunos países (Chile, Brasil); canje en el IMT para la mayoría</td><td>Válido seis meses desde la residencia; después, canje si hay convenio o examen</td></tr>
+          <tr><td>Idioma de la póliza</td><td>Por regla general, portugués</td><td>Español</td></tr>
+          <tr><td>Supervisor</td><td>ASF</td><td>DGSFP</td></tr>
         </tbody>
       </table>
     </div>
-    <p>La consecuencia para quien compra en Portugal "lo mismo que en España": el edificio y el contenido quedan cubiertos, pero el terremoto y la responsabilidad civil — las dos coberturas que en casa llegaban solas — pueden no estar. Es exactamente la sorpresa contraria a la que se espera.</p>
+    <p>Lo explicamos con detalle en <a href="/es/seguros-portugal/">seguros en Portugal</a>, <a href="/es/seguros-espana/">seguros en España</a> y la <a href="/es/guia-seguros-portugal-espana/">guía de seguros para latinoamericanos</a>, con el vocabulario de su país al lado del de cada uno.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="vocabulario">
-  <div class="container narrow article-body">
-    <h2 id="vocabulario">El portugués de su póliza, en siete palabras</h2>
-    <p>El portugués se parece al español lo bastante como para leerse con confianza — y lo bastante poco como para malinterpretar una cláusula. Estas son las palabras que deciden la indemnización:</p>
-    <div class="compare-wrap">
-      <table class="compare-table">
-        <caption class="visually-hidden">Términos de seguros en portugués y su equivalente en español</caption>
-        <thead>
-          <tr><th scope="col">Portugués</th><th scope="col">Español</th><th scope="col">Por qué importa</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><em>Apólice</em></td><td>Póliza</td><td>Condiciones generales, especiales y particulares: tres documentos, no uno.</td></tr>
-          <tr><td><em>Prémio</em></td><td>Prima</td><td>Lo que usted paga. No es un premio, aunque lo parezca.</td></tr>
-          <tr><td><em>Franquia</em></td><td>Franquicia</td><td>A menudo un porcentaje de la suma asegurada, no un importe fijo.</td></tr>
-          <tr><td><em>Capital seguro</em></td><td>Suma asegurada</td><td>La cifra más importante del contrato; véase el coste de reconstrucción.</td></tr>
-          <tr><td><em>Recheio</em></td><td>Contenido</td><td>No es "relleno": es todo lo que hay dentro de la casa.</td></tr>
-          <tr><td><em>Sinistro</em></td><td>Siniestro</td><td>El plazo para comunicarlo está en las condiciones y suele ser corto.</td></tr>
-          <tr><td><em>Exclusões</em></td><td>Exclusiones</td><td>Se leen antes de firmar: es el único momento en que se pueden negociar.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="section tint" aria-labelledby="paises">
+<section class="section plain" aria-labelledby="paises">
   <div class="container narrow article-body">
     <h2 id="paises">Portugal y España</h2>
-    <p>Las mismas personas, las mismas condiciones escritas, dos mercados con reglas distintas. Elija el país de la vivienda o del riesgo.</p>
-    <h3 id="portugal">Portugal</h3>
+    <p>Las mismas personas, las mismas condiciones escritas, dos mercados con reglas distintas. Elija el país de la vivienda o de la residencia.</p>
+    <h3 id="portugal"><a href="/es/seguros-portugal/">Portugal</a></h3>
     <ul class="hub-list">
       <li class="hub-item">
-        <h3><a href="/es/seguro-hogar-alto-valor/#condominio">Vivienda en Portugal</a></h3>
-        <p>El <em>condomínio</em>, el terremoto como cobertura opcional y las condiciones de una vivienda de alto valor en Portugal.</p>
+        <h3><a href="/es/seguro-medico-visado-portugal/">Seguro médico para el visado</a></h3>
+        <p>D7, D8, D2: lo que pide el consulado y por qué la póliza portuguesa llega después.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/seguro-salud-internacional/#sns">Salud en Portugal</a></h3>
-        <p>El SNS portugués, el formulario S1 y cómo encaja una póliza internacional.</p>
+        <h3><a href="/es/seguro-salud-internacional/">Salud en Portugal</a></h3>
+        <p>El SNS, la póliza portuguesa, la internacional y cómo seguir atendiéndose en su país.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/seguro-coche-portugal/">Coche en Portugal</a></h3>
-        <p>Matrícula portuguesa, importación y ISV, historial sin siniestros y vehículos de mayor valor.</p>
+        <h3><a href="/es/seguro-salud-preexistencias-portugal/">Enfermedades previas y padres mayores</a></h3>
+        <p>Pólizas con y sin cuestionario médico, carencias y el SNS como respaldo.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/mudarse-a-portugal-seguros/">Mudarse a Portugal</a></h3>
-        <p>Qué resolver antes de salir y qué solo puede hacerse con el NIF portugués.</p>
+        <h3><a href="/es/seguro-hogar-alto-valor/">Vivienda de alto valor en Portugal</a></h3>
+        <p>Coste de reconstrucción, el <em>condomínio</em>, la casa vacía mientras está en América y el arte a valor convenido.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/comprar-casa-en-portugal-seguro/">Comprar casa en Portugal</a></h3>
-        <p>Del CPCV a la <em>escritura</em>: qué exige el banco y desde qué día responde usted de la vivienda.</p>
-      </li>
-    </ul>
-    <h3 id="espana">España</h3>
-    <ul class="hub-list">
-      <li class="hub-item">
-        <h3><a href="/es/seguro-hogar-alto-valor/#frontera">Vivienda de alto valor en España</a></h3>
-        <p>El Consorcio de Compensación de Seguros, la comunidad de propietarios y las condiciones private client en España.</p>
+        <h3><a href="/es/seguro-terremoto-portugal/">El terremoto en Portugal</a></h3>
+        <p>Una cobertura que hay que elegir, con su franquicia en porcentaje.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/seguro-salud-internacional/#tarjeta">Salud en España</a></h3>
-        <p>Tarjeta sanitaria europea, S1 y familias no comunitarias; la póliza internacional frente a la sanidad pública.</p>
+        <h3><a href="/es/seguro-coche-portugal/">Auto en Portugal</a></h3>
+        <p>Su permiso latinoamericano, el canje en el IMT y su historial como conductor.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/es/seguro-responsabilidad-civil-familiar/">Responsabilidad civil familiar</a></h3>
-        <p>Límites de varios millones, en todo el mundo, y el hueco entre dos pólizas de hogar con límites pequeños.</p>
+        <p>Límites de varios millones, con Estados Unidos dentro si la familia vive o estudia allí.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/es/guia-seguros-portugal-espana/">Guía de seguros en España y Portugal</a></h3>
-        <p>Quién es quién, las partes de la póliza, el siniestro, la renovación y la anulación en los dos mercados.</p>
+        <h3><a href="/es/seguro-responsabilidad-profesional-portugal/">Responsabilidad profesional y visado D8</a></h3>
+        <p>Trabajar desde Portugal para clientes en América: ámbito, jurisdicción y retroactividad.</p>
       </li>
       <li class="hub-item">
-        <h3><a href="/en/private-clients-spain/">Arte, colecciones y el patrimonio completo en España (en inglés)</a></h3>
-        <p>El programa private client en España: varias residencias, arte, joyas y la familia en una sola cobertura.</p>
+        <h3><a href="/es/seguro-vida-portugal/">Seguro de vida en Portugal</a></h3>
+        <p>Lo que exige el banco, su derecho a elegir la aseguradora y la protección de la familia.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-alquiler-portugal/">Alquilar su vivienda en Portugal</a></h3>
+        <p>El seguro obligatorio del Alojamento Local y el alquiler de larga duración.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/comprar-casa-en-portugal-seguro/">Comprar casa en Portugal</a></h3>
+        <p>Del CPCV a la <em>escritura</em>, lo que exige el banco y la transferencia desde América.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/vivienda-no-legalizada-portugal-seguro/">Vivienda no legalizada</a></h3>
+        <p>Anexos, piscinas y casas sin licencia: qué se asegura y qué pasa en el siniestro.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/mudarse-a-portugal-seguros/">Mudarse a Portugal</a></h3>
+        <p>Visado, NIF y domicilio: el orden en que se resuelve cada seguro.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/siniestros-portugal/">Siniestros en Portugal</a></h3>
+        <p>Plazos, el perito y qué hacer si no está de acuerdo — aunque esté al otro lado del Atlántico.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-lisboa/">Lisboa y Cascais</a></h3>
+        <p>Terremoto y edificios antiguos, inundaciones, Alojamento Local y la villa familiar.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-madeira/">Madeira</a></h3>
+        <p>Para venezolanos y lusovenezolanos: aluviones e incendios, SESARAM y padres mayores.</p>
+      </li>
+    </ul>
+    <h3 id="espana"><a href="/es/seguros-espana/">España</a></h3>
+    <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/es/seguro-medico-visado-espana/">Seguro médico para el visado</a></h3>
+        <p>Residencia no lucrativa, nómada digital, estudiante: sin copagos, sin carencias y con certificado correcto.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-salud-espana/">Salud en España</a></h3>
+        <p>Sanidad pública y privada, cuadro médico o reembolso, y atenderse también en su país.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-salud-preexistencias-espana/">Enfermedades previas en España</a></h3>
+        <p>Cuestionario, exclusiones, moratoria y lo que el visado permite y no permite.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-hogar-espana/">Vivienda en España</a></h3>
+        <p>Continente y contenido, el Consorcio, la comunidad de propietarios y la casa vacía por temporadas.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-coche-espana/">Auto en España</a></h3>
+        <p>Seis meses con su permiso, el canje en la DGT y su historial sin siniestros.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-responsabilidad-civil-espana/">Responsabilidad civil familiar en España</a></h3>
+        <p>Perros, personal doméstico, embarcaciones y Estados Unidos.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-vida-espana/">Seguro de vida en España</a></h3>
+        <p>Liquidez para una familia con patrimonio en dos continentes y la cláusula de beneficiarios.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-hipoteca-espana/">Los seguros de la hipoteca</a></h3>
+        <p>Lo obligatorio, lo bonificado y lo que puede elegir usted.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguro-alquiler-espana/">Alquilar su vivienda en España</a></h3>
+        <p>Impago de rentas, alquiler vacacional y gestión a distancia.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/comprar-casa-en-espana-seguro/">Comprar casa en España</a></h3>
+        <p>Arras, escritura, obra nueva con aval y decenal, y la transferencia desde América.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/mudarse-a-espana-seguros/">Mudarse a España</a></h3>
+        <p>Visado, NIE, contenedor y los primeros meses, en el orden correcto.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-madrid/">Madrid</a></h3>
+        <p>La finca antigua, la casa vacía en agosto, salud y zona de bajas emisiones.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-barcelona/">Barcelona</a></h3>
+        <p>El Eixample, el robo fuera de casa y el alquiler turístico con fecha de caducidad.</p>
+      </li>
+      <li class="hub-item">
+        <h3><a href="/es/seguros-valencia/">Valencia</a></h3>
+        <p>La lección de la DANA: el Consorcio, los garajes y la póliza en vigor.</p>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="especializadas">
+<section class="section tint" aria-labelledby="especializadas">
   <div class="container narrow article-body">
     <h2 id="especializadas">Coberturas especializadas</h2>
-    <p>Algunos riesgos no se colocan en el mercado minorista. Los presentamos, a través de mercados especializados y de nuestros socios de mediación, con el mismo método: análisis por escrito y un único interlocutor. Cada guía trata las diferencias entre España y Portugal.</p>
+    <p>Algunos riesgos no se colocan en el mercado minorista. Los presentamos, a través de mercados especializados y de nuestros socios de mediación, con el mismo método: análisis por escrito y un único interlocutor. Cada guía trata las diferencias entre Portugal y España.</p>
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/es/seguro-secuestro-extorsion/">Secuestro, rescate y extorsión</a></h3>
-        <p>Consultoría de crisis 24/7, reembolso de rescates y extorsiones y total confidencialidad, para la familia y el personal, en todo el mundo.</p>
+        <p>Consultoría de crisis 24/7, reembolso de rescates y extorsiones y total confidencialidad, para la familia y el personal — también en los viajes a América.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/es/seguro-finca-vinedo/">Fincas, bodegas y viñedos</a></h3>
@@ -212,59 +269,60 @@ export const HUB_PAGE = {
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="dos-casas">
+<section class="section plain" aria-labelledby="dos-casas">
   <div class="container narrow article-body">
-    <h2 id="dos-casas">Una familia, dos países, un solo programa</h2>
-    <p>Muchas de las familias con las que trabajamos tienen casa en los dos lados de la frontera: la residencia principal en Madrid o en Ciudad de México y una segunda vivienda en Lisboa, Cascais o la Comporta; o al revés, la vida en Lisboa y la casa de verano en la Costa del Sol. Lo habitual es que cada vivienda tenga su propia póliza, contratada en momentos distintos, con criterios distintos y con límites que nadie ha comparado.</p>
-    <p>Lo que proponemos es ordenar ese conjunto:</p>
+    <h2 id="dos-casas">Una familia, dos continentes, un solo programa</h2>
+    <p>Las familias con las que trabajamos rara vez viven en un solo lugar: la residencia en Lisboa o en Madrid, la casa de siempre en Bogotá o en Monterrey, un apartamento en Miami, los hijos estudiando en Boston o en Londres. Lo habitual es que cada pieza tenga su propia póliza, contratada en momentos distintos, con criterios distintos y con límites que nadie ha comparado.</p>
+    <p>Lo que proponemos es ordenar ese conjunto desde Europa:</p>
     <ul>
       <li><strong>Criterios comunes</strong> para las sumas aseguradas — coste de reconstrucción, valor de reposición del contenido, tasación de las obras de arte — en todas las viviendas.</li>
-      <li><strong>Una responsabilidad civil familiar</strong> con límite suficiente, válida en todo el mundo, en lugar de varias pequeñas que se solapan o dejan huecos.</li>
-      <li><strong>Los objetos de valor</strong> listados una sola vez, cubiertos donde estén: en casa, de viaje o en la otra residencia.</li>
-      <li><strong>Un único interlocutor</strong> que conoce todas las pólizas y gestiona el siniestro, sea cual sea el país.</li>
+      <li><strong>Una responsabilidad civil familiar</strong> con límite suficiente y un ámbito mundial que incluya, si hace falta, Estados Unidos y su país de origen.</li>
+      <li><strong>Los objetos de valor</strong> relacionados una sola vez, cubiertos donde estén: en casa, de viaje o en la otra residencia.</li>
+      <li><strong>Una salud que cruce el Atlántico</strong>: la póliza que exige el visado europeo y la cobertura que permite seguir tratándose en su país.</li>
+      <li><strong>Un único interlocutor</strong> que conoce todas las pólizas europeas y gestiona el siniestro, sea cual sea el país.</li>
     </ul>
     <p>Las viviendas vacías buena parte del año merecen además una mención: los periodos de desocupación están definidos en las condiciones y pueden limitar las coberturas de robo y de daños por agua. Hay que declarar el uso real desde el principio.</p>
   </div>
 </section>
 
-<section class="section plain" aria-labelledby="como">
+<section class="section tint" aria-labelledby="como">
   <div class="container narrow article-body">
     <h2 id="como">Cómo trabajamos</h2>
     <ol class="process-steps">
-      <li><div><strong>Empezamos por la situación, no por el producto.</strong><span> Dónde vive, cuánto tiempo, qué posee, a quién hay que cubrir y a qué se dedica. El producto se deriva de las respuestas.</span></div></li>
+      <li><div><strong>Empezamos por la situación, no por el producto.</strong><span> Dónde vive y dónde vivirá, con qué visado, qué posee, a quién hay que cubrir y a qué se dedica. El producto se deriva de las respuestas.</span></div></li>
       <li><div><strong>Fijamos las sumas antes de hablar de prima.</strong><span> Coste de reconstrucción del edificio, valor de reposición del contenido, tasaciones del arte y las joyas. Una suma equivocada hace insuficiente cualquier póliza.</span></div></li>
       <li><div><strong>Leemos las exclusiones en voz alta.</strong><span> Por escrito y en español, antes de la firma: las exclusiones relevantes de esa póliza concreta.</span></div></li>
       <li><div><strong>Consultamos dentro de nuestra cartera de aseguradoras</strong><span> y le explicamos por escrito en qué se diferencian las coberturas.</span></div></li>
-      <li><div><strong>Gestionamos el siniestro por usted.</strong><span> Ante la aseguradora y el perito, en portugués o en español, hasta el cierre del expediente.</span></div></li>
+      <li><div><strong>Gestionamos el siniestro por usted.</strong><span> Ante la aseguradora y el perito, en portugués o en español, hasta el cierre del expediente — también si usted está en América.</span></div></li>
       <li><div><strong>Revisamos las pólizas una vez al año.</strong><span> La casa, la colección y la familia rara vez se quedan como estaban.</span></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="errores">
+<section class="section plain" aria-labelledby="errores">
   <div class="container narrow article-body">
-    <h2 id="errores">Cinco errores que vemos una y otra vez</h2>
+    <h2 id="errores">Cinco errores que vemos en familias que llegan de América</h2>
     <ul>
+      <li><strong>Contratar la póliza de salud solo para el sello del consulado.</strong> Cumple el trámite; luego, el día que hace falta un especialista, se descubre lo que se compró.</li>
       <li><strong>Dar por hecho que el terremoto está cubierto en Portugal.</strong> En España lo cubre el Consorcio. En Portugal hay que contratarlo.</li>
+      <li><strong>Seguir conduciendo con el permiso de origen cuando ya no vale.</strong> En España, seis meses desde la residencia; en Portugal, depende del país. Un accidente sin permiso válido es un problema serio con la aseguradora.</li>
       <li><strong>Asegurar la vivienda por el precio de compra.</strong> El precio incluye el suelo, la ubicación y las vistas, y nada de eso se quema. La suma debe ser el coste de reconstrucción.</li>
-      <li><strong>Firmar la póliza del banco sin leerla.</strong> El banco tiene un interés legítimo en que la casa esté asegurada; no ha comprobado si la cobertura le conviene a usted.</li>
-      <li><strong>Dejar las joyas y el arte dentro del contenido general.</strong> Sin relación individual a valor convenido, la indemnización se discute pieza a pieza — con límites por objeto que casi nunca bastan.</li>
-      <li><strong>Mantener la responsabilidad civil de la póliza de hogar como única protección.</strong> Un límite de unos cientos de miles de euros no responde a una reclamación grave por lesiones.</li>
+      <li><strong>Cancelar las pólizas de su país antes de tener las europeas en vigor.</strong> Una semana sin seguro de salud durante un traslado es exactamente la semana en que algo pasa.</li>
     </ul>
   </div>
 </section>`,
   audience: {
     heading: 'Para quién <em>trabajamos</em>',
     body:
-      'Trabajamos para familias con patrimonios relevantes en España y Portugal — propietarios con varias residencias, coleccionistas, empresarios y familias latinoamericanas que han trasladado toda o parte de su vida a la Península. Desde nuestras oficinas en Lisboa y Lagos nos ocupamos de todo el seguro: asesoramiento, suscripción individual, servicio continuado y gestión de siniestros, con el mismo interlocutor en todo momento y en español.',
-    alt: 'Asesor de seguros para clientes privados con patrimonios relevantes en España y Portugal',
+      'Trabajamos para familias latinoamericanas con patrimonios relevantes que han trasladado toda o parte de su vida a Portugal o a España — empresarios, profesionales, inversores, coleccionistas y sus padres e hijos. Desde nuestras oficinas en Lisboa y Lagos nos ocupamos de todo el seguro: asesoramiento, suscripción individual, servicio continuado y gestión de siniestros, con el mismo interlocutor en todo momento y en español.',
+    alt: 'Asesor de seguros para familias latinoamericanas con patrimonios relevantes en Portugal y España',
   },
   insurers: {
     heading: 'Aseguradoras y socios de coaseguro <em>con los que trabajamos</em>',
     lead:
       'No estamos vinculados a una sola compañía. Asesoramos dentro de nuestra cartera de aseguradoras y recomendamos por escrito la cobertura adecuada para la familia y su patrimonio.',
   },
-  faqTitle: 'Seguros en España y Portugal — preguntas frecuentes',
+  faqTitle: 'Seguros en Portugal y España — preguntas frecuentes',
   faq: [
     {
       q: '¿Me atienden en español?',
@@ -272,33 +330,37 @@ export const HUB_PAGE = {
     },
     {
       q: '¿Para quién trabajan?',
-      a: '<p>Para familias con patrimonios relevantes en España y Portugal: viviendas de alto valor, arte y colecciones, responsabilidad civil familiar con límites millonarios, salud internacional y automóviles. Cada riesgo se suscribe individualmente, el asesoramiento se da por escrito y usted tiene un único interlocutor del primer contacto al siniestro.</p>',
+      a: '<p>Para familias con patrimonios relevantes en Portugal y España — cada vez más, familias latinoamericanas: salud para el visado y para la vida diaria, viviendas de alto valor, arte y colecciones, responsabilidad civil familiar con límites millonarios y automóviles. Cada riesgo se suscribe individualmente, el asesoramiento se da por escrito y usted tiene un único interlocutor del primer contacto al siniestro.</p>',
+    },
+    {
+      q: 'Todavía vivo en mi país. ¿Pueden ayudarme a preparar el traslado?',
+      a: '<p>Sí, y es el mejor momento. Le explicamos por escrito qué seguro exige el visado del país que elija, qué conviene resolver antes de salir y qué solo puede contratarse una vez allí — por ejemplo, la póliza de salud portuguesa, que necesita domicilio en Portugal. Véanse <a href="/es/mudarse-a-portugal-seguros/">mudarse a Portugal</a> y <a href="/es/mudarse-a-espana-seguros/">mudarse a España</a>.</p>',
     },
     {
       q: '¿Pueden asegurar riesgos situados en España?',
       a: '<p>Sí. Estamos inscritos en Portugal ante la ASF con el n.º 425591790/3 y ejercemos en España en régimen de libre prestación de servicios de la Unión Europea. Muchos de nuestros clientes tienen vivienda en los dos países, y tener ambas con el mismo asesor es una ventaja real.</p>',
     },
     {
-      q: '¿Puedo asegurar mi casa de Portugal con mi aseguradora española?',
-      a: '<p>Normalmente no. Los seguros de daños se contratan, por lo general, con una aseguradora autorizada para operar donde está el inmueble, y la gestión de siniestros requiere presencia local. Pida una respuesta por escrito a su compañía antes de dar por hecho que algo le cubre en Portugal.</p>',
+      q: '¿Me sirve mi seguro de gastos médicos mayores de mi país?',
+      a: '<p>A veces durante un tiempo, pero rara vez como solución. Muchas pólizas latinoamericanas limitan la cobertura en el extranjero o la condicionan a la residencia, y no suelen cumplir los requisitos de los visados europeos. Pida por escrito a su aseguradora qué cubre si deja de residir en su país, y no la cancele hasta tener la nueva en vigor.</p>',
     },
     {
       q: '¿Cuánto cuesta trabajar con un mediador?',
       a: '<p>Nada más allá de la prima. La remuneración del mediador está incluida en la prima y la paga la aseguradora, contrate usted directamente o a través de nosotros. La diferencia es que alguien lee las condiciones, fija las sumas con usted y lleva el siniestro.</p>',
     },
     {
-      q: '¿Está cubierto el terremoto en una póliza de hogar portuguesa?',
-      a: '<p>Solo si se ha contratado la garantía de <em>fenómenos sísmicos</em>, que en Portugal es opcional. A diferencia de España, donde el Consorcio de Compensación de Seguros cubre los riesgos extraordinarios dentro de la póliza, en Portugal no hay un organismo equivalente. Le indicamos el coste adicional para que decida con una cifra delante.</p>',
+      q: '¿Está cubierto el terremoto?',
+      a: '<p>En España, sí: el Consorcio de Compensación de Seguros cubre los riesgos extraordinarios dentro de cualquier póliza de daños. En Portugal, solo si se ha contratado la garantía de <em>fenómenos sísmicos</em>, que hoy es opcional. Le indicamos el coste adicional para que decida con una cifra delante.</p>',
     },
     {
-      q: 'Usamos la casa de Portugal unos meses al año. ¿Cambia algo?',
-      a: '<p>Sí, bastante. Los periodos de desocupación están definidos en las condiciones portuguesas y pueden limitar las coberturas de robo y daños por agua, a veces con exigencias de vigilancia o de cerrar la llave de paso. Declare el uso real desde el principio en lugar de describir la vivienda como residencia habitual.</p>',
+      q: 'Pasamos parte del año en nuestro país. ¿Cambia algo en la póliza de la casa europea?',
+      a: '<p>Sí, bastante. Los periodos de desocupación están definidos en las condiciones y pueden limitar las coberturas de robo y daños por agua, a veces con exigencias de vigilancia o de cerrar la llave de paso. Declare el uso real desde el principio en lugar de describir la vivienda como residencia habitual.</p>',
     },
   ],
   related: [
-    { url: '/es/comprar-casa-en-portugal-seguro/', label: 'Comprar casa en Portugal: el seguro paso a paso' },
+    { url: '/es/seguros-portugal/', label: 'Seguros en Portugal para latinoamericanos' },
+    { url: '/es/seguros-espana/', label: 'Seguros en España para latinoamericanos' },
     { url: '/es/guia-seguros-portugal-espana/', label: 'Guía de seguros en Portugal y España' },
     { url: '/es/golf-viviendas-lujo-portugal-espana/', label: 'Golf y viviendas de lujo en Portugal y España' },
-    { url: '/es/puertos-deportivos-yates-portugal-espana/', label: 'Puertos deportivos y yates en Portugal y España' },
   ],
 };
