@@ -65,6 +65,31 @@ export const SPAIN_EXTERNAL = {
   'es-property': { '/en/blog/insurance-buying-property-spain/': 'en-GB', '/de/immobilienkauf-spanien-versicherung/': 'de', '/nl/huis-kopen-spanje-verzekering/': 'nl' },
 };
 
+/**
+ * Spanish cluster additions (October 2026): hand-authored members of the
+ * Spain groups that only /es/ has a counterpart for (life, mortgage
+ * protection, landlord), and of the new Portugal groups (pt-*). Only pages
+ * that already carry an hreflang block are listed, so every declaration
+ * written from /es/ can be reciprocated by scripts/add-market-to-corpus.mjs.
+ */
+export const ES_CLUSTER_EXTERNAL = {
+  'es-life': { '/de/lebensversicherung-spanien/': 'de' },
+  'es-mortgage': { '/de/hypothekenschutz-spanien/': 'de' },
+  'es-landlord': { '/de/vermieterversicherung-spanien/': 'de' },
+  'pt-landing': { '/de/versicherung-portugal/': 'de', '/nl/verzekeringen-portugal/': 'nl' },
+  'pt-professional': {
+    '/seguros/responsabilidade-civil-profissional/': 'pt-PT',
+    '/en/professional-liability-insurance-portugal/': 'en-GB',
+    '/de/berufshaftpflicht-freiberufler-portugal/': 'de',
+  },
+  'pt-rental': { '/seguros/alojamento-local/': 'pt-PT', '/nl/alojamento-local-verzekering-portugal/': 'nl' },
+  'pt-unlicensed': {
+    '/blog/seguro-habitacao-legalizacao/': 'pt-PT',
+    '/en/blog/home-insurance-legalization/': 'en-GB',
+    '/nl/niet-gelegaliseerde-woning-verzekeren-portugal/': 'nl',
+  },
+};
+
 /** Golf and nautical pillars (September 2026): hand-authored PT/EN/DE/FR/NL members. */
 export const GOLF_NAUTICAL_EXTERNAL = {
   golf: {
@@ -85,7 +110,9 @@ export const GOLF_NAUTICAL_EXTERNAL = {
 
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL }).map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))]),
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL })
+    .map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))])
+    .filter(([, v]) => v),
 );
 
 /** clusterKey -> { path: hreflangValue }, derived from the page objects. */
@@ -100,7 +127,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL })) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');

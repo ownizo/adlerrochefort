@@ -1,20 +1,24 @@
 /**
- * /es/seguro-hogar-alto-valor/
+ * /es/seguro-hogar-alto-valor/ — high-value home insurance in Portugal.
  *
- * Search intent: "seguro hogar alto valor", "seguro casa Portugal" — a
- * Spanish or Latin American owner insuring a high-value home in Portugal,
- * in Spain, or in both.
+ * Search intent: "seguro hogar alto valor Portugal", "seguro casa Portugal",
+ * "seguro villa Cascais" — a Latin American owner insuring a high-value home
+ * in Portugal: a villa in Cascais or Quinta do Lago, a townhouse in Lisbon,
+ * a quinta in the Douro or the Alentejo.
  *
- * Spanish-specific angles: the reader thinks in continente/contenido and
- * expects the Consorcio de Compensación de Seguros to carry earthquake and
- * flood; Portugal has no Consorcio and sells seismic cover as an option. The
- * Spanish comunidad de propietarios usually buys a broad building policy; the
- * Portuguese condomínio is often at the legal minimum (fire). Family
- * liability, habitually bundled into the Spanish multirriesgo, is an option in
- * Portugal. The coverage framework itself is insurer-neutral and price-free,
- * translated from the COV reference used on the PT/EN/DE pages.
+ * October 2026 rewrite for the Latin American reader (the URL is kept; the
+ * page is the Portugal member of the `home` cluster). The Spain side lives on
+ * /es/seguro-hogar-espana/.
+ *
+ * Latin American angles: earthquake cover is a conscious decision at home
+ * (Chile, Mexico, Peru) and is one in Portugal too — but many Portuguese
+ * homes were bought without anyone raising it. The reader's security
+ * reflexes become policy conditions for jewellery and theft. The family
+ * spends part of the year in America, so unoccupancy clauses matter. The
+ * coverage framework itself is insurer-neutral and price-free, translated
+ * from the COV reference used on the PT/EN/DE pages.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_PORTUGAL, toSpain } from './shared.mjs';
 
 const card = (h, p) => `      <div class="feature-card">
         <h3>${h}</h3>
@@ -74,18 +78,18 @@ export const HOME_PAGE = {
   slug: 'seguro-hogar-alto-valor',
   url: '/es/seguro-hogar-alto-valor/',
   cluster: 'home',
-  title: 'Seguro de hogar de alto valor | Adler & Rochefort',
+  title: 'Seguro de hogar de alto valor en Portugal | Adler & Rochefort',
   description:
-    'Villas y viviendas de alto valor en España y Portugal: inspección, sin regla proporcional, reconstrucción garantizada y arte a valor convenido.',
+    'Villas y viviendas de alto valor en Portugal: inspección, sin regla proporcional, reconstrucción garantizada, terremoto y arte a valor convenido.',
   keywords:
-    'seguro hogar alto valor, seguro vivienda alto valor, seguro casa Portugal, seguro villa Portugal, seguro arte y joyas, multirriscos habitação, coste de reconstrucción, seguro casa Lisboa, seguro casa Marbella, terremoto Portugal seguro',
-  eyebrow: 'Viviendas de alto valor',
-  h1: 'Seguro de hogar de alto valor en España y Portugal',
+    'seguro hogar alto valor Portugal, seguro casa Portugal, seguro villa Portugal, seguro casa Lisboa, seguro villa Cascais, seguro arte y joyas Portugal, multirriscos habitação, coste de reconstrucción, terremoto Portugal seguro, seguro casa Portugal latinoamericanos',
+  eyebrow: 'Portugal · Viviendas de alto valor',
+  h1: 'Seguro de hogar de alto valor en Portugal',
   standfirst:
-    'Una villa o una casa de ciudad de alto valor debe asegurarse con condiciones escritas para ese tipo de vivienda: inspección, reconstrucción sin tope, contenido y arte a valor convenido y responsabilidad civil millonaria. Esto es lo que exigimos a una póliza — y lo que cambia al cruzar la frontera.',
+    'Una villa en Cascais, una casa señorial en Lisboa o una quinta en el Douro deben asegurarse con condiciones escritas para ese tipo de vivienda: inspección, reconstrucción sin tope, contenido y arte a valor convenido, responsabilidad civil millonaria — y una decisión consciente sobre el terremoto. Esto es lo que exigimos a una póliza.',
   published: '2026-09-26T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
-  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Seguro de hogar' }],
+  modified: '2026-10-02T09:00:00+00:00',
+  breadcrumb: [...BREADCRUMB_PORTUGAL, { name: 'Seguro de hogar' }],
   pullquote: 'La suma asegurada decide la indemnización. Por eso se fija primero — y por escrito.',
   schemaType: 'Article',
   formHeading: 'Solicite un análisis por escrito de su vivienda',
@@ -95,7 +99,7 @@ export const HOME_PAGE = {
   formIntro:
     'Cuéntenos dónde está la vivienda y qué contiene, o envíenos su póliza actual. Le respondemos por escrito con lo que cubre, dónde se queda corta y qué le recomendaríamos.',
   formPlaceholder:
-    'Por ejemplo: villa de 1990 en Cascais, 450 m², piscina y casa de invitados, algo de pintura contemporánea; la póliza actual es la del banco.',
+    'Por ejemplo: villa de 1990 en Cascais, 450 m², piscina y casa de invitados, algo de pintura contemporánea; pasamos el invierno en Ciudad de México y la póliza actual es la del banco.',
   sections: `
 <section class="section plain" aria-labelledby="condiciones">
   <div class="container">
@@ -112,16 +116,17 @@ ${group('La familia', COV.family)}
   </div>
 </section>
 
-<section class="section tint" aria-labelledby="frontera">
+<section class="section tint" aria-labelledby="diferente">
   <div class="container narrow article-body">
-    <h2 id="frontera">La misma casa, a cada lado de la frontera</h2>
-    <p>El seguro de hogar portugués se llama <em>multirriscos habitação</em> y se parece mucho al multirriesgo español: el <em>edifício</em> es el continente y el <em>recheio</em> es el contenido, y se contratan juntos o por separado. Las diferencias no están en la estructura, sino en lo que viene incluido sin pedirlo:</p>
+    <h2 id="diferente">Lo que funciona distinto en Portugal</h2>
+    <p>El seguro de hogar portugués se llama <em>multirriscos habitação</em> y separa el <em>edifício</em> (el edificio) del <em>recheio</em> (el contenido). Hasta ahí, nada nuevo para quien ha asegurado una casa en Santiago, en Bogotá o en Ciudad de México. Las diferencias están en lo que no viene incluido:</p>
     <ul>
-      <li><strong>Riesgos extraordinarios.</strong> En España, el terremoto, la inundación extraordinaria y otros fenómenos los cubre el Consorcio de Compensación de Seguros a través de un recargo incluido en cualquier póliza de daños. Portugal no tiene Consorcio: la garantía de <em>fenómenos sísmicos</em> se contrata aparte y tiene su propia franquicia, normalmente un porcentaje de la suma asegurada.</li>
-      <li><strong>Responsabilidad civil.</strong> El multirriesgo español suele incluirla; la póliza portuguesa, a menudo solo como opción o limitada a la responsabilidad del propietario del inmueble.</li>
-      <li><strong>Protección jurídica y asistencia.</strong> Lo que en España llega casi siempre en el paquete, en Portugal se elige garantía por garantía.</li>
+      <li><strong>El terremoto.</strong> La garantía de <em>fenómenos sísmicos</em> es opcional y se contrata aparte, con una franquicia que suele ser un porcentaje del capital. Quien viene de un país sísmico sabe que es una decisión; en Portugal, muchas viviendas se compraron sin que nadie la planteara. Véase <a href="/es/seguro-terremoto-portugal/">el terremoto en Portugal</a>.</li>
+      <li><strong>La responsabilidad civil.</strong> En la póliza portuguesa corriente es una opción, a menudo limitada a la responsabilidad del propietario del inmueble.</li>
+      <li><strong>La asistencia y la defensa jurídica</strong> se eligen garantía por garantía.</li>
     </ul>
-    <p>En las pólizas private client que colocamos para viviendas de alto valor, en cambio, la responsabilidad civil familiar forma parte del programa: límites de varios millones de euros, en todo el mundo, con los gastos de defensa por encima del límite.</p>
+    <p>En las pólizas private client que colocamos para viviendas de alto valor, la responsabilidad civil familiar forma parte del programa — límites de varios millones de euros, en todo el mundo, con los gastos de defensa por encima del límite — y el terremoto se plantea siempre, con la cifra delante.</p>
+${toSpain.home}
   </div>
 </section>
 
@@ -140,23 +145,23 @@ ${group('La familia', COV.family)}
 
 <section class="section tint" aria-labelledby="condominio">
   <div class="container narrow article-body">
-    <h2 id="condominio">Un piso en Portugal: el <em>condomínio</em> no es su comunidad de propietarios</h2>
-    <p>Quien compra un piso en Lisboa o en Oporto adquiere una <em>fração autónoma</em> y una cuota en los elementos comunes. Se parece a la propiedad horizontal española, y por eso las diferencias pasan desapercibidas.</p>
+    <h2 id="condominio">Un departamento en Portugal: lo que asegura el <em>condomínio</em></h2>
+    <p>Quien compra un piso — un departamento — en Lisboa o en Oporto adquiere una <em>fração autónoma</em> y una cuota en los elementos comunes. Es el régimen de condominio que usted conoce, con una particularidad portuguesa: la ley solo obliga a asegurar el edificio contra incendio, y muchos condominios se quedan en ese mínimo.</p>
     <div class="compare-wrap">
       <table class="compare-table">
-        <caption class="visually-hidden">Comunidad de propietarios en España frente al condomínio en Portugal</caption>
+        <caption class="visually-hidden">Qué cubre la póliza del condomínio y qué debe cubrir la suya</caption>
         <thead>
-          <tr><th scope="col"></th><th scope="col">Comunidad en España</th><th scope="col"><em>Condomínio</em> en Portugal</th></tr>
+          <tr><th scope="col"></th><th scope="col">Lo que se suele dar por hecho</th><th scope="col">Lo que pasa a menudo en Portugal</th></tr>
         </thead>
         <tbody>
-          <tr><td>Seguro del edificio</td><td>Póliza de comunidad, habitualmente amplia</td><td>Obligatorio solo el seguro de incendio; muchas comunidades se quedan en ese mínimo</td></tr>
-          <tr><td>Daños por agua en elementos comunes</td><td>Normalmente cubiertos por la póliza comunitaria</td><td>Depende de lo que haya contratado la comunidad</td></tr>
-          <tr><td>Lo que necesita usted</td><td>Multirriesgo de su vivienda: contenido y responsabilidad civil</td><td><em>Multirriscos</em> de su fracción, incluida la parte construida, más contenido y responsabilidad civil</td></tr>
-          <tr><td>Órganos</td><td>Junta de propietarios y administrador</td><td><em>Assembleia de condóminos</em> y <em>administrador</em></td></tr>
+          <tr><td>Seguro del edificio</td><td>El condominio tiene una póliza amplia</td><td>Solo el incendio obligatorio, o poco más</td></tr>
+          <tr><td>Daños por agua en elementos comunes</td><td>Cubiertos por la póliza común</td><td>Depende de lo que haya contratado el condominio</td></tr>
+          <tr><td>Terremoto</td><td>Incluido o decidido por el condominio</td><td>Normalmente no incluido</td></tr>
+          <tr><td>Lo que necesita usted</td><td>Contenido y responsabilidad civil</td><td><em>Multirriscos</em> de su fracción, incluida la parte construida, más contenido y responsabilidad civil</td></tr>
         </tbody>
       </table>
     </div>
-    <p>La consecuencia práctica: pida las condiciones de la póliza del <em>condomínio</em> antes de contratar la suya. Sin ellas, adivina qué está cubierto. En muchos edificios la póliza común es más estrecha de lo que un propietario español espera, y la frontera entre lo común y lo privativo pasa justo por las instalaciones que más daños por agua provocan.</p>
+    <p>La consecuencia práctica: pida al <em>administrador</em> las condiciones de la póliza del <em>condomínio</em> antes de contratar la suya. Sin ellas, adivina qué está cubierto — y la frontera entre lo común y lo privativo pasa justo por las instalaciones que más daños por agua provocan.</p>
   </div>
 </section>
 
@@ -173,20 +178,21 @@ ${group('La familia', COV.family)}
       <li><strong>Los daños al vecino</strong> — eso es responsabilidad civil, no daños propios.</li>
     </ul>
     <h3>Terremoto (<em>fenómenos sísmicos</em>)</h3>
-    <p>Portugal tiene actividad sísmica, y la región de Lisboa y el Algarve están entre las zonas donde el riesgo ha estado presente históricamente. La cobertura es <strong>una garantía opcional</strong>: si no se ha contratado, el daño no está cubierto — no hay Consorcio que responda. Su franquicia suele ser un porcentaje de la suma asegurada del edificio.</p>
+    <p>Portugal tiene actividad sísmica, y la región de Lisboa y el Algarve están entre las zonas donde el riesgo ha estado presente históricamente. La cobertura es <strong>una garantía opcional</strong>: si no se ha contratado, el daño no está cubierto — no hay, a día de hoy, un fondo público que responda. Su franquicia suele ser un porcentaje de la suma asegurada del edificio.</p>
     <p>Que convenga para su edificio depende de la ubicación, el año y el tipo de construcción, y de si podría reconstruir con fondos propios. Le indicamos el coste adicional para que decida con una cifra delante, no con una impresión. Si hay hipoteca, algunos bancos exigen incluirla.</p>
   </div>
 </section>
 
 <section class="section tint" aria-labelledby="temporada">
   <div class="container narrow article-body">
-    <h2 id="temporada">Segunda residencia y periodos de desocupación</h2>
-    <p>Una casa que se usa unos meses al año es un riesgo distinto de una residencia habitual, y las condiciones portuguesas lo tratan aparte.</p>
+    <h2 id="temporada">Vivir entre Portugal y América: la casa vacía</h2>
+    <p>Muchas familias latinoamericanas pasan en Portugal una parte del año y el resto en su país. Una casa vacía varios meses es un riesgo distinto de una residencia habitual, y las condiciones portuguesas lo tratan aparte.</p>
     <ul>
       <li><strong>El límite de desocupación continuada</strong> figura en las condiciones como un número de días. Si se supera, pueden limitarse o decaer coberturas — típicamente robo y daños por agua.</li>
       <li><strong>Exigencias de vigilancia</strong> o de cerrar la llave de paso aparecen a veces, y se convierten en condición para cobrar.</li>
       <li><strong>Las medidas de seguridad</strong> — cerraduras, persianas, alarma conectada — cuentan en la valoración del robo.</li>
-      <li><strong>El alquiler, aunque sea unas semanas</strong>, debe declararse. Véase <a href="/es/seguro-responsabilidad-civil-familiar/">responsabilidad civil</a> sobre el <em>alojamento local</em>.</li>
+      <li><strong>Las medidas de seguridad declaradas son condiciones del contrato.</strong> Caja fuerte anclada, alarma conectada a central: si están en la póliza, deben funcionar el día del robo.</li>
+      <li><strong>El alquiler, aunque sea unas semanas</strong>, debe declararse. Véase <a href="/es/seguro-alquiler-portugal/">alquilar su vivienda en Portugal</a>.</li>
     </ul>
   </div>
 </section>
@@ -194,8 +200,8 @@ ${group('La familia', COV.family)}
 <section class="section plain" aria-labelledby="banco">
   <div class="container narrow article-body">
     <h2 id="banco">La póliza del banco</h2>
-    <p>Con hipoteca en un banco portugués o español, el banco exige un seguro de hogar con él como beneficiario por el importe del préstamo. Es razonable: la vivienda es la garantía.</p>
-    <p>Lo que se exige es que exista un seguro — no que se contrate con el banco. En ambos países puede presentar una póliza de otra aseguradora siempre que cumpla las coberturas exigidas. La póliza que se firma en la misma reunión que el préstamo se eligió porque encaja en el proceso del banco; nadie la ha contrastado con su casa: si el coste de reconstrucción está bien fijado, si incluye el terremoto, cómo trata la desocupación y si hay responsabilidad civil.</p>
+    <p>Con hipoteca en un banco portugués, el banco exige un seguro de hogar con él como beneficiario por el importe del préstamo. Es razonable: la vivienda es la garantía.</p>
+    <p>Lo que se exige es que exista un seguro — no que se contrate con el banco. Puede presentar una póliza de otra aseguradora siempre que cumpla las coberturas exigidas. La póliza que se firma en la misma reunión que el préstamo se eligió porque encaja en el proceso del banco; nadie la ha contrastado con su casa: si el coste de reconstrucción está bien fijado, si incluye el terremoto, cómo trata la desocupación y si hay responsabilidad civil.</p>
     <p>Preparamos con gusto una póliza que cumpla los requisitos del banco y que, al mismo tiempo, esté hecha a la medida de la vivienda.</p>
   </div>
 </section>
@@ -208,7 +214,7 @@ ${group('La familia', COV.family)}
       <li><div><strong>La suma de contenido</strong><span> se ha hecho habitación por habitación, no a ojo.</span></div></li>
       <li><div><strong>Arte, joyas y relojes</strong><span> están relacionados uno a uno, a valor convenido, con una tasación reciente.</span></div></li>
       <li><div><strong>La responsabilidad civil</strong><span> está contratada y conoce el límite.</span></div></li>
-      <li><div><strong>El terremoto</strong><span>, en Portugal, está contratado o descartado conscientemente, con el coste adicional delante.</span></div></li>
+      <li><div><strong>El terremoto</strong><span> está contratado o descartado conscientemente, con el coste adicional delante.</span></div></li>
       <li><div><strong>La cláusula de daños por agua</strong><span> está leída, incluidos los límites de antigüedad y la localización de la avería.</span></div></li>
       <li><div><strong>Los periodos de desocupación</strong><span> están declarados según el uso real de la vivienda.</span></div></li>
       <li><div><strong>La póliza del condomínio</strong><span>, si es un piso, está en su poder, para no pagar dos veces ni dejar un hueco.</span></div></li>
@@ -216,7 +222,7 @@ ${group('La familia', COV.family)}
     </ol>
   </div>
 </section>`,
-  faqTitle: 'Seguro de hogar de alto valor — preguntas',
+  faqTitle: 'Seguro de hogar de alto valor en Portugal — preguntas',
   faq: [
     {
       q: '¿Es obligatorio el seguro de hogar en Portugal?',
@@ -231,20 +237,21 @@ ${group('La familia', COV.family)}
       a: '<p>Por el coste de reconstrucción — lo que costaría volver a construirlo a precios actuales —, no por el precio de compra ni por la tasación. Una suma insuficiente lleva a la regla proporcional en cualquier siniestro; una excesiva, a pagar prima sin contrapartida.</p>',
     },
     {
-      q: '¿Cubre el terremoto mi póliza portuguesa, como en España?',
-      a: '<p>Solo si se ha contratado la garantía de <em>fenómenos sísmicos</em>. En Portugal no existe un organismo equivalente al Consorcio de Compensación de Seguros, así que la cobertura es opcional y tiene su propia franquicia. Le indicamos el coste adicional para que decida con una cifra delante.</p>',
+      q: '¿Cubre el terremoto mi póliza portuguesa?',
+      a: '<p>Solo si se ha contratado la garantía de <em>fenómenos sísmicos</em>. En Portugal no funciona hoy un organismo como el Consorcio español, así que la cobertura es opcional y tiene su propia franquicia, normalmente un porcentaje del capital. Le indicamos el coste adicional para que decida con una cifra delante.</p>',
     },
     {
       q: '¿Pueden asegurar mis joyas y obras de arte también cuando viajo?',
-      a: '<p>Sí. En las pólizas private client que colocamos, los objetos de valor relacionados a valor convenido quedan cubiertos a todo riesgo en todo el mundo — en casa, de viaje o en la otra residencia —, sin franquicia. Cada pieza de valor relevante se relaciona con una tasación reciente.</p>',
+      a: '<p>Sí. En las pólizas private client que colocamos, los objetos de valor relacionados a valor convenido quedan cubiertos a todo riesgo en todo el mundo — en casa, de viaje a su país o en la otra residencia —, sin franquicia. Cada pieza de valor relevante se relaciona con una tasación reciente.</p>',
     },
     {
-      q: 'Vivimos en Madrid y usamos la casa de Portugal en verano. ¿Hay algo especial?',
+      q: 'Pasamos parte del año en nuestro país. ¿Hay algo especial?',
       a: '<p>Sí. Los periodos de desocupación están definidos en las condiciones y, si se supera el límite, las coberturas de robo y de daños por agua pueden quedar limitadas. Algunas aseguradoras exigen vigilancia o cerrar la llave de paso. Declare el uso real desde el principio; de lo contrario, la discrepancia aparece en el siniestro.</p>',
     },
   ],
   related: [
+    { url: '/es/seguro-terremoto-portugal/', label: 'El terremoto en Portugal' },
     { url: '/es/comprar-casa-en-portugal-seguro/', label: 'Comprar casa en Portugal: el seguro paso a paso' },
-    { url: '/es/seguro-responsabilidad-civil-familiar/', label: 'Responsabilidad civil familiar' },
+    { url: '/es/seguro-responsabilidad-civil-familiar/', label: 'Responsabilidad civil familiar en Portugal' },
   ],
 };

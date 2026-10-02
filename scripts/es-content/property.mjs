@@ -1,18 +1,24 @@
 /**
- * /es/comprar-casa-en-portugal-seguro/
+ * /es/comprar-casa-en-portugal-seguro/ — buying a home in Portugal.
  *
- * Search intent: "comprar casa en Portugal", "comprar piso en Lisboa
- * españoles" — Spaniards buying in Lisbon, Porto or on the coast, and Latin
- * American families buying a Portuguese base.
+ * Search intent: "comprar casa en Portugal extranjero", "comprar
+ * departamento en Lisboa latinoamericanos", "seguro hipoteca Portugal" — a
+ * Latin American family buying in Lisbon, Cascais, Porto or the Algarve,
+ * often from abroad and often with funds sent across the Atlantic.
  *
- * Spanish-specific angles: the reader knows arras, notario and the bank's
- * pressure to sign its own policies; the Portuguese steps map onto them but
- * with different names (CPCV and sinal, escritura, IMT the tax — not to be
- * confused with IMT the vehicle authority). The three figures for the same
- * property (price, VPT, rebuild cost) and renovation risk in historic centres
- * carry the insurance argument.
+ * October 2026 rewrite for the Latin American reader (the URL is kept; the
+ * page is the Portugal member of the `property` cluster). The Spain side
+ * lives on /es/comprar-casa-en-espana-seguro/.
+ *
+ * Angles: the Portuguese purchase steps mapped onto the reader's own
+ * (promesa de compraventa, escritura pública, registro público, avalúo
+ * catastral); the moment the risk passes; what the bank may and may not
+ * impose; the three figures for one property (price, VPT, rebuild cost);
+ * renovation in historic centres; the golden visa no longer reachable
+ * through property since 2023; and the transatlantic transfer, the moment
+ * payment fraud targets.
  */
-import { BREADCRUMB_ROOT } from './shared.mjs';
+import { BREADCRUMB_PORTUGAL, withSibling, toSpain } from './shared.mjs';
 
 export const PROPERTY_PAGE = {
   slug: 'comprar-casa-en-portugal-seguro',
@@ -20,16 +26,16 @@ export const PROPERTY_PAGE = {
   cluster: 'property',
   title: 'Comprar casa en Portugal: el seguro | Adler & Rochefort',
   description:
-    'Comprar vivienda en Portugal: del CPCV a la escritura, qué seguros pide el banco, desde cuándo responde de la casa y qué suma asegurar.',
+    'Comprar casa en Portugal desde América Latina: del CPCV a la escritura, los seguros que pide el banco, la suma correcta y la transferencia de fondos.',
   keywords:
-    'comprar casa en Portugal, comprar piso en Lisboa, comprar vivienda Portugal españoles, CPCV Portugal, escritura Portugal, seguro hipoteca Portugal, IMT impuesto Portugal, reforma casa Lisboa seguro',
-  eyebrow: 'Guía',
+    'comprar casa en Portugal extranjero, comprar departamento Lisboa, comprar vivienda Portugal latinoamericanos, CPCV Portugal, escritura Portugal, seguro hipoteca Portugal, comprar casa Portugal mexicanos, comprar casa Portugal venezolanos, reforma casa Lisboa seguro',
+  eyebrow: 'Portugal · Compra de vivienda',
   h1: 'Comprar casa en Portugal: el seguro, paso a paso',
   standfirst:
-    'Del contrato de promesa a la escritura, y de la escritura a la primera reforma: en qué momento la casa pasa a ser su riesgo, qué pedirá el banco y qué cifra debe figurar en la póliza.',
+    'Del contrato de promesa a la escritura, y de la escritura a la primera reforma: en qué momento la casa pasa a ser su riesgo, qué pedirá el banco, qué cifra debe figurar en la póliza — y cómo proteger el dinero que cruza el Atlántico para pagarla.',
   published: '2026-09-26T09:00:00+00:00',
-  modified: '2026-09-26T09:00:00+00:00',
-  breadcrumb: [...BREADCRUMB_ROOT, { name: 'Comprar casa en Portugal' }],
+  modified: '2026-10-02T09:00:00+00:00',
+  breadcrumb: [...BREADCRUMB_PORTUGAL, { name: 'Comprar casa' }],
   pullquote: 'El banco tiene un interés legítimo en que la casa esté asegurada. Qué aseguradora emite la póliza es otra cuestión.',
   schemaType: 'Article',
   formHeading: 'El seguro de su compra',
@@ -39,28 +45,29 @@ export const PROPERTY_PAGE = {
   formIntro:
     'Cuéntenos qué compra, dónde y para cuándo está prevista la escritura. Le respondemos por escrito con lo que conviene tener contratado ese día y lo que exigirá el banco.',
   formPlaceholder:
-    'Por ejemplo: compramos un piso rehabilitado en Príncipe Real, escritura en noviembre, hipoteca con un banco portugués; pensamos alquilarlo parte del año.',
-  sections: `
+    'Por ejemplo: compramos un departamento rehabilitado en Príncipe Real desde Caracas, escritura en noviembre con poder notarial, hipoteca con un banco portugués; pensamos alquilarlo parte del año.',
+  sections: withSibling(`
 <section class="section plain" aria-labelledby="pasos">
   <div class="container narrow article-body">
     <h2 id="pasos">Los pasos de la compra, con sus nombres portugueses</h2>
-    <p>El proceso portugués se parece al español más de lo que su vocabulario sugiere. Estas son las equivalencias que importan:</p>
+    <p>El proceso portugués se parece al que usted conoce más de lo que su vocabulario sugiere. Estas son las equivalencias que importan:</p>
     <div class="compare-wrap">
       <table class="compare-table">
-        <caption class="visually-hidden">Pasos de la compra de vivienda en España y en Portugal</caption>
+        <caption class="visually-hidden">Pasos de la compra de vivienda en América Latina y en Portugal</caption>
         <thead>
-          <tr><th scope="col">En España</th><th scope="col">En Portugal</th><th scope="col">Lo que conviene saber</th></tr>
+          <tr><th scope="col">En buena parte de América Latina</th><th scope="col">En Portugal</th><th scope="col">Lo que conviene saber</th></tr>
         </thead>
         <tbody>
-          <tr><td>NIE / NIF</td><td><em>NIF</em> portugués</td><td>Imprescindible antes de firmar nada; también para contratar seguros.</td></tr>
-          <tr><td>Contrato de arras</td><td><em>CPCV</em> (contrato-promessa) con <em>sinal</em></td><td>Quien incumple pierde la señal, o la devuelve doblada — lógica parecida a las arras penitenciales.</td></tr>
-          <tr><td>Escritura ante notario</td><td><em>Escritura</em> o documento autenticado</td><td>Desde ese día la casa es suya y su riesgo.</td></tr>
-          <tr><td>ITP / IVA</td><td><em>IMT</em> e <em>Imposto do Selo</em></td><td>Aquí IMT es un impuesto; no confundirlo con el IMT de tráfico.</td></tr>
-          <tr><td>Registro de la Propiedad</td><td><em>Conservatória do Registo Predial</em></td><td>Misma función.</td></tr>
-          <tr><td>Valor catastral</td><td><em>VPT</em> (valor patrimonial tributário)</td><td>Una base fiscal, no una suma asegurada.</td></tr>
+          <tr><td>RFC, RUT, cédula, CUIT</td><td><em>NIF</em> portugués</td><td>Imprescindible antes de firmar nada; también para contratar seguros.</td></tr>
+          <tr><td>Promesa de compraventa con arras o enganche</td><td><em>CPCV</em> (contrato-promessa) con <em>sinal</em></td><td>Quien incumple pierde la señal, o la devuelve doblada.</td></tr>
+          <tr><td>Escritura pública ante notario</td><td><em>Escritura</em> o documento autenticado</td><td>Desde ese día la casa es suya y su riesgo.</td></tr>
+          <tr><td>Impuesto de adquisición</td><td><em>IMT</em> e <em>Imposto do Selo</em></td><td>Aquí IMT es un impuesto; no confundirlo con el IMT de tráfico.</td></tr>
+          <tr><td>Registro público de la propiedad</td><td><em>Conservatória do Registo Predial</em></td><td>Misma función.</td></tr>
+          <tr><td>Avalúo catastral</td><td><em>VPT</em> (valor patrimonial tributário)</td><td>Una base fiscal, no una suma asegurada.</td></tr>
         </tbody>
       </table>
     </div>
+    <p>Desde 2023, la compra de vivienda ya no da acceso a la autorización de residencia por inversión (<em>golden visa</em>) en Portugal. Si piensa vivir en la casa, la residencia se tramita por otra vía — y con ella llega el <a href="/es/seguro-medico-visado-portugal/">seguro del visado</a>.</p>
   </div>
 </section>
 
@@ -82,9 +89,9 @@ export const PROPERTY_PAGE = {
     <p>Con una hipoteca portuguesa, el banco exige habitualmente dos seguros:</p>
     <ul>
       <li><strong>Seguro de hogar</strong> (<em>multirriscos</em>) sobre el edificio, con el banco como beneficiario hasta el importe del préstamo. A veces exige además la cobertura de terremoto.</li>
-      <li><strong>Seguro de vida</strong> vinculado al préstamo, sobre los titulares.</li>
+      <li><strong>Seguro de vida</strong> vinculado al préstamo, sobre los titulares. Véase <a href="/es/seguro-vida-portugal/">seguro de vida en Portugal</a>.</li>
     </ul>
-    <p>Lo que el banco exige es que los seguros existan con determinadas coberturas; en Portugal, como en España, usted puede presentar pólizas de otra aseguradora que cumplan esos requisitos. La póliza que se ofrece en la misma reunión que el préstamo está pensada para el proceso del banco — no se ha contrastado con su casa ni con su familia.</p>
+    <p>Lo que el banco exige es que los seguros existan con determinadas coberturas; usted puede presentar pólizas de otra aseguradora que cumplan esos requisitos. La póliza que se ofrece en la misma reunión que el préstamo está pensada para el proceso del banco — no se ha contrastado con su casa ni con su familia.</p>
     <p>Preparamos con gusto pólizas que cumplan los requisitos del banco y que, a la vez, estén hechas a la medida de la vivienda: coste de reconstrucción bien fijado, terremoto contratado o descartado con cifras, contenido y objetos de valor y responsabilidad civil suficiente.</p>
   </div>
 </section>
@@ -104,7 +111,7 @@ export const PROPERTY_PAGE = {
 <section class="section plain" aria-labelledby="reforma">
   <div class="container narrow article-body">
     <h2 id="reforma">La primera reforma</h2>
-    <p>Muchos compradores españoles reforman nada más comprar, sobre todo en los centros históricos. Durante la obra, la casa es un riesgo distinto: andamios, cubiertas abiertas, instalaciones desconectadas, vivienda deshabitada. Las pólizas de hogar suelen limitar o excluir las coberturas mientras dura una obra importante.</p>
+    <p>Muchos compradores latinoamericanos reforman nada más comprar, sobre todo en los centros históricos de Lisboa y Oporto, y a menudo dirigen la obra a distancia. Durante la obra, la casa es un riesgo distinto: andamios, cubiertas abiertas, instalaciones desconectadas, vivienda deshabitada. Las pólizas de hogar suelen limitar o excluir las coberturas mientras dura una obra importante.</p>
     <ul>
       <li><strong>Declare la obra</strong> a su aseguradora antes de empezar, con el alcance y la duración.</li>
       <li><strong>Pida al constructor</strong> su póliza de responsabilidad civil y, en obras de envergadura, la de todo riesgo construcción. Compruébelas; no las suponga.</li>
@@ -116,9 +123,21 @@ export const PROPERTY_PAGE = {
 <section class="section tint" aria-labelledby="alquiler">
   <div class="container narrow article-body">
     <h2 id="alquiler">Si piensa alquilarla</h2>
-    <p>Alquilar a turistas en Portugal exige un registro de <em>alojamento local</em> y, a efectos de seguro, una póliza pensada para esa actividad: una póliza de hogar corriente no cubre el alquiler turístico sin declararlo, y las exclusiones por periodos de alquiler son una causa recurrente de rechazo. El alquiler de larga duración es otro riesgo, con sus propias coberturas — impago, daños del inquilino. Díganos desde el principio qué uso tendrá la casa.</p>
+    <p>Alquilar a turistas en Portugal exige un registro de <em>alojamento local</em> y un seguro obligatorio pensado para esa actividad: una póliza de hogar corriente no cubre el alquiler turístico sin declararlo. El alquiler de larga duración es otro riesgo, con sus propias coberturas. Díganos desde el principio qué uso tendrá la casa. Véase <a href="/es/seguro-alquiler-portugal/">alquilar su vivienda en Portugal</a>.</p>
   </div>
-</section>`,
+</section>
+
+<section class="section plain" aria-labelledby="fondos">
+  <div class="container narrow article-body">
+    <h2 id="fondos">La transferencia desde América: el momento más vulnerable</h2>
+    <p>El fraude más frecuente en las compraventas internacionales no es sofisticado: un correo que parece del abogado, de la inmobiliaria o del vendedor anuncia un «cambio de cuenta» días antes de la escritura. La transferencia sale hacia la cuenta del estafador y, cuando se descubre, el dinero ya no está.</p>
+    <ul>
+      <li>Confirme siempre los datos bancarios por un canal distinto al del correo que los envía.</li>
+      <li>Desconfíe de cualquier cambio de cuenta de última hora, venga de quien venga.</li>
+      <li>Existen coberturas específicas para este riesgo. Véase <a href="/es/seguro-ciber-fraude-familiar/">ciberriesgo y fraude de la familia</a>.</li>
+    </ul>
+  </div>
+</section>`, toSpain.property),
   faqTitle: 'Comprar casa en Portugal — preguntas sobre el seguro',
   faq: [
     {
@@ -126,12 +145,16 @@ export const PROPERTY_PAGE = {
       a: '<p>Desde el día de la <em>escritura</em>, que es cuando la casa pasa a ser suya y su riesgo. Contrate la póliza con antelación y fecha de efecto ese mismo día; si hay hipoteca, el banco la pedirá antes de firmar.</p>',
     },
     {
-      q: '¿Estoy obligado a contratar los seguros con el banco?',
+      q: '¿Tengo que contratar los seguros con el banco?',
       a: '<p>No. El banco puede exigir que existan un seguro de hogar y, habitualmente, un seguro de vida con determinadas coberturas, pero usted puede presentar pólizas de otra aseguradora que cumplan esos requisitos.</p>',
     },
     {
       q: '¿Por qué importe aseguro la vivienda que compro?',
       a: '<p>Por el coste de reconstrucción, no por el precio de compra ni por el VPT. El precio incluye el suelo y la ubicación, que no se destruyen; el VPT es una base fiscal. En viviendas de mayor valor, la aseguradora hace una inspección para fijar la cifra con usted.</p>',
+    },
+    {
+      q: 'Compro desde mi país con poder notarial. ¿Cambia algo para el seguro?',
+      a: '<p>No en lo esencial: la póliza puede contratarse a su nombre, con NIF portugués, y con efecto en la fecha de la escritura. Asegúrese de que alguien de confianza recibe las llaves ese día y de que la póliza contempla que la casa puede quedar vacía al principio.</p>',
     },
     {
       q: 'Vamos a reformar antes de mudarnos. ¿Qué cambia en el seguro?',
@@ -143,7 +166,8 @@ export const PROPERTY_PAGE = {
     },
   ],
   related: [
-    { url: '/es/seguro-hogar-alto-valor/', label: 'Seguro de hogar de alto valor' },
-    { url: '/es/mudarse-a-portugal-seguros/', label: 'Mudarse a Portugal: los seguros en el orden correcto' },
+    { url: '/es/seguro-hogar-alto-valor/', label: 'Seguro de hogar en Portugal' },
+    { url: '/es/vivienda-no-legalizada-portugal-seguro/', label: 'Asegurar una vivienda no legalizada en Portugal' },
+    { url: '/es/seguro-vida-portugal/', label: 'Seguro de vida en Portugal' },
   ],
 };

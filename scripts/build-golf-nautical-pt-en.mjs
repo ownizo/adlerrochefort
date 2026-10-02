@@ -35,7 +35,7 @@ const GROUPS = {
     de: '/de/blog/golf-immobilien-portugal-spanien/',
     fr: '/fr/golf-residences-portugal-espagne/',
     nl: '/nl/golf-woningen-portugal-spanje/',
-    'es-ES': '/es/golf-viviendas-lujo-portugal-espana/',
+    'es': '/es/golf-viviendas-lujo-portugal-espana/',
     'it-IT': '/it/golf-ville-lusso-portogallo-spagna/',
     'pl-PL': '/pl/golf-rezydencje-portugalia-hiszpania/',
     'da-DK': '/dk/golf-boliger-portugal-spanien/',
@@ -49,7 +49,7 @@ const GROUPS = {
     de: '/de/blog/marinas-yachten-portugal-spanien/',
     fr: '/fr/ports-plaisance-yachts-portugal-espagne/',
     nl: '/nl/jachthavens-jachten-portugal-spanje/',
-    'es-ES': '/es/puertos-deportivos-yates-portugal-espana/',
+    'es': '/es/puertos-deportivos-yates-portugal-espana/',
     'it-IT': '/it/marine-yacht-portogallo-spagna/',
     'pl-PL': '/pl/mariny-jachty-portugalia-hiszpania/',
     'da-DK': '/dk/lystbaadehavne-yachter-portugal-spanien/',
@@ -59,7 +59,7 @@ const GROUPS = {
   },
 };
 // language-selector `lang` attribute -> hreflang code
-const SEL_LANG = { 'pt-PT': 'pt-PT', en: 'en-GB', nl: 'nl', fr: 'fr', de: 'de', es: 'es-ES', it: 'it-IT', pl: 'pl-PL', sv: 'sv-SE', da: 'da-DK', 'zh-CN': 'zh-CN', he: 'he-IL' };
+const SEL_LANG = { 'pt-PT': 'pt-PT', en: 'en-GB', nl: 'nl', fr: 'fr', de: 'de', es: 'es', it: 'it-IT', pl: 'pl-PL', sv: 'sv-SE', da: 'da-DK', 'zh-CN': 'zh-CN', he: 'he-IL' };
 
 const ENTITIES = {
   amp: '&', mdash: '—', ndash: '–', euro: '€', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”',
