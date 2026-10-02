@@ -32,6 +32,7 @@ import { fileURLToPath } from 'node:url';
 import {
   LANGSEL_CSS_LINK,
   LANGSEL_SCRIPT_TAG,
+  THEME_CSS_LINK,
   footerSelectorHtml,
   langSelectorHtml,
   selectorTargets,
@@ -1045,6 +1046,7 @@ ${page.wizard ? '<link rel="stylesheet" href="/css/ar-property.css">\n<link rel=
   gtag('js', new Date());
   gtag('config', 'AW-18361722533');
 </script>
+${THEME_CSS_LINK}
 </head>
 <body>
 

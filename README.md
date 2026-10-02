@@ -9,6 +9,7 @@ Lagos, Algarve.
 | Path | What it is |
 | --- | --- |
 | `public/` | The published site. Plain hand-authored HTML, one `index.html` per route, with the page's CSS inlined in `<head>`. This is the Netlify `publish` directory. |
+| `public/css/ar-theme.css` | The interface layer (October 2026): floating navigation, rounded section blocks, pill buttons, footer and cookie notice. Linked last in `<head>` on every page by `scripts/apply-ui-theme.mjs`; restyles the UI only, never page content. |
 | `netlify/functions/` | Netlify Functions (`.mjs`), including `submission-created.mjs`, which emails the team when an intake form is submitted. |
 | `netlify/edge-functions/` | Edge functions, including the language router. |
 | `netlify.toml` | Build, headers and redirect configuration. |
