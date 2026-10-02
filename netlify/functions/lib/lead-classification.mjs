@@ -165,6 +165,8 @@ const BRANCH_CLASSIFICATION = {
   'Health': { entityType: 'individual', product: 'health' },
   'Car': { entityType: 'individual', product: 'auto' },
   'Company fleet': { entityType: 'business', product: 'fleet' },
+  // DE homepage (/de/) uses the EN option values except for this one.
+  'Firmenflotte': { entityType: 'business', product: 'fleet' },
   'Home': { entityType: 'individual', product: 'home' },
   'Holiday let (Alojamento Local)': { entityType: 'individual', product: 'short-term-rental' },
   'Condominium': { entityType: 'condominium', product: 'condominium' },
@@ -493,6 +495,22 @@ const FORM_CLASSIFICATION = {
   // Audience hubs (October 2026), scripts/build-audience-hubs.mjs.
   'brasileiros-hub-pedido': { entityType: 'individual', market: 'PT', product: 'general', language: 'PT' },
   'south-african-hub-review': { entityType: 'individual', market: 'PT', product: 'general', language: 'EN' },
+  'us-hub-review': { entityType: 'individual', market: 'PT', product: 'general', language: 'EN' },
+  'canadian-hub-review': { entityType: 'individual', market: 'PT', product: 'general', language: 'EN' },
+  'irish-hub-review': { entityType: 'individual', market: 'PT', product: 'general', language: 'EN' },
+  // German homepage (/de/): the analysis form carries a country field
+  // (Portugal | Spain | Unsicher) and the shared insurance_type select.
+  'de-free-analysis': { branch: true, market: deriveMarketFromCountryField, language: 'DE' },
+  'de-contact': { entityType: 'individual', market: 'PT', language: 'DE', product: 'contact' },
+  // German Spain cluster (/de/*-spanien/).
+  'de-versicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'general' },
+  'de-krankenversicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'health' },
+  'de-hausversicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'home' },
+  'de-autoversicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'auto' },
+  'de-lebensversicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'life' },
+  'de-vermieterversicherung-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'landlord' },
+  'de-hypothekenschutz-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'mortgage-protection' },
+  'de-private-clients-spanien': { entityType: 'individual', market: 'ES', language: 'DE', product: 'private-clients' },
   'international-insurance-review': {
     entityType: 'individual',
     market: deriveMarketFromCountryField,
