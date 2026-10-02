@@ -4,7 +4,12 @@
   if (document.getElementById("ar-whatsapp")) return;
 
   var scriptEl = document.currentScript;
-  var lang = ((scriptEl && scriptEl.dataset.lang) || "pt").toLowerCase();
+  // data-lang when the page sets it; otherwise the page's own <html lang>.
+  var lang = (
+    (scriptEl && scriptEl.dataset.lang) ||
+    document.documentElement.getAttribute("lang") ||
+    "pt"
+  ).toLowerCase().slice(0, 2);
   var labels = {
     pt: "Falar no WhatsApp",
     en: "Chat on WhatsApp",
@@ -13,6 +18,11 @@
     de: "Per WhatsApp schreiben",
     nl: "App via WhatsApp",
     pl: "Napisz na WhatsApp",
+    it: "Scrivici su WhatsApp",
+    sv: "Skriv på WhatsApp",
+    da: "Skriv på WhatsApp",
+    zh: "通过 WhatsApp 联系我们",
+    he: "כתבו לנו בוואטסאפ",
   };
   var label = labels[lang] || labels.pt;
 

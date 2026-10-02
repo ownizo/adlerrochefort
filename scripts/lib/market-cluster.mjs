@@ -1101,6 +1101,7 @@ ${page.wizard ? wizardScript(page) : `${formScript(market)}${market.shortForm ? 
 ${NAV_SCRIPT}
 ${LIVRO_SCRIPT}
 ${LANGSEL_SCRIPT_TAG}
+<script defer src="/js/insurance-chat-widget.js" data-lang="${market.htmlLang.slice(0, 2)}"></script>
 ${cookieBanner(market)}
 </body>
 </html>
