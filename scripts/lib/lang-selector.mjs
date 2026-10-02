@@ -132,6 +132,11 @@ export const LANGSEL_SCRIPT = '/js/ar-langsel.js';
 export const LANGSEL_CSS_LINK = `<link rel="stylesheet" href="${LANGSEL_STYLESHEET}">`;
 export const LANGSEL_SCRIPT_TAG = `<script defer src="${LANGSEL_SCRIPT}"></script>`;
 
+/** The October 2026 interface layer (see public/css/ar-theme.css). Linked last
+ *  in <head> on every page so it wins over each page's own inline styles. */
+export const THEME_STYLESHEET = '/css/ar-theme.css';
+export const THEME_CSS_LINK = `<link rel="stylesheet" href="${THEME_STYLESHEET}">`;
+
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 

@@ -66,6 +66,8 @@ import {
   LANGSEL_SCRIPT_TAG,
   LANGSEL_STYLESHEET,
   LANGSEL_SCRIPT,
+  THEME_STYLESHEET,
+  THEME_CSS_LINK,
   LANGS,
   footerSelectorHtml,
   langSelectorHtml,
@@ -279,6 +281,12 @@ for (const rel of files) {
   if (!html.includes(LANGSEL_STYLESHEET) && html.includes('</head>')) {
     html = html.replace('</head>', `${LANGSEL_CSS_LINK}\n</head>`);
     report.cssInjected += 1;
+    assetsAdded = true;
+  }
+  // The interface layer goes after the selector's stylesheet so it stays the
+  // last stylesheet in <head>.
+  if (!html.includes(THEME_STYLESHEET) && html.includes('</head>')) {
+    html = html.replace('</head>', `${THEME_CSS_LINK}\n</head>`);
     assetsAdded = true;
   }
   if (!html.includes(LANGSEL_SCRIPT) && html.includes('</body>')) {

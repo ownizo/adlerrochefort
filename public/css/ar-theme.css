@@ -1,0 +1,521 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   AR THEME — October 2026 interface layer
+   ---------------------------------------------------------------------------
+   One stylesheet, linked last in <head> on every page, that restyles the
+   interface without touching any page's markup or copy:
+
+     • floating pill navigation on a light page background
+     • page sections rendered as rounded blocks with a 16px gutter
+     • pill buttons, rounded fields, cards and images
+     • one sans typeface (Inter) for every heading, tight tracking
+     • the footer and cookie notice as rounded charcoal blocks
+
+   Brand colours are unchanged: charcoal #292929 and orange #FF6300.
+
+   Why a separate layer instead of editing ar-chrome.css / ar-site.css: those
+   two files are generated (scripts/unify-chrome.mjs, check-generator-
+   freshness.mjs) and ~500 pages also carry their own inline <style> block.
+   A single last-loaded file wins over all of them, so no generated file and
+   no page body has to be rewritten. Selectors are prefixed with `html body`
+   to outrank the single-class rules in those inline blocks; !important is
+   used only where an inline rule sets the same property with equal or higher
+   specificity (sticky/fixed positioning, heading font families).
+
+   Injected by scripts/apply-ui-theme.mjs (idempotent) and kept on future
+   pages by scripts/lang-switcher.mjs and scripts/lib/market-cluster.mjs.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ar-page: #ECEBE9;
+  --ar-block: #FFFFFF;
+  --ar-charcoal: #292929;
+  --ar-black: #161616;
+  --ar-orange: #FF6300;
+  --ar-orange-hi: #FF8A3D;
+  --ar-ink: #161616;
+  --ar-ink-2: rgba(22, 22, 22, 0.64);
+  --ar-line: rgba(0, 0, 0, 0.08);
+  --ar-r-xl: 40px;
+  --ar-r-lg: 28px;
+  --ar-r-md: 20px;
+  --ar-r-sm: 14px;
+  --ar-gutter: 16px;
+  --ar-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ar-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+@media (max-width: 640px) {
+  :root { --ar-r-xl: 28px; --ar-r-lg: 22px; --ar-gutter: 10px; }
+}
+
+/* ── base ──────────────────────────────────────────────────────────────── */
+
+html body {
+  background: var(--ar-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+html { scroll-padding-top: 112px; }
+
+html body :is(h1, h2, h3, h4) {
+  font-family: var(--ar-sans) !important;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+html body :is(h1, h2) { letter-spacing: -0.04em; line-height: 1.04; }
+/* display classes that are not heading elements but were set in a serif */
+html body :is(.hero-title, .hero-card-title, .section-title, .universe-title) {
+  font-family: var(--ar-sans) !important;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+html body :is(.hero-title, .section-title) em,
+html body :is(h1, h2) em {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+}
+
+::selection { background: rgba(255, 99, 0, 0.22); }
+
+/* ── ASF top bar: a quiet line on the page, not a band ─────────────────── */
+
+html body .asf-top-bar,
+html body > .topbar {
+  position: relative !important;
+  top: auto !important;
+  background: transparent !important;
+  color: var(--ar-ink-2) !important;
+  font-size: 12px;
+  letter-spacing: 0;
+  padding: 12px 24px 0;
+  border: 0;
+}
+html body .asf-top-bar a, html body > .topbar a { color: #E05600 !important; }
+
+/* ── floating navigation ───────────────────────────────────────────────── */
+
+html body header.site-header {
+  position: sticky !important;
+  top: 12px !important;
+  z-index: 100;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 12px var(--ar-gutter) 0 !important;
+  height: auto !important;
+}
+
+html body .site-nav {
+  position: sticky !important;
+  top: 12px !important;
+  z-index: 100;
+  margin: 12px var(--ar-gutter) 0 !important;
+  height: 72px !important;
+  padding: 0 10px 0 26px !important;
+  border-radius: 999px !important;
+  background: rgba(250, 250, 249, 0.74) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  gap: 16px;
+}
+html body header.site-header > .site-nav {
+  position: relative !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
+
+html body .site-nav .nav-logo-img {
+  height: 40px !important;
+  width: auto;
+  filter: brightness(0);
+  opacity: 0.92;
+}
+html body .site-nav .nav-logo-text { color: var(--ar-ink); }
+
+html body .site-nav :is(.nav-links, .nav-links-left, .nav-links-right) { gap: 2px; }
+
+html body .site-nav :is(.nav-links, .nav-links-left, .nav-links-right) > a,
+html body .site-nav :is(.nav-links, .nav-links-left, .nav-links-right) > li > a,
+html body .site-nav .nav-item > a,
+html body .site-nav .nav-trigger,
+html body .site-nav .nav-back {
+  font-family: var(--ar-sans);
+  font-size: 14px !important;
+  font-weight: 500;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  color: rgba(22, 22, 22, 0.7) !important;
+  padding: 10px 14px !important;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+html body .site-nav :is(.nav-links, .nav-links-left, .nav-links-right) > a:hover,
+html body .site-nav .nav-item > a:hover,
+html body .site-nav .nav-trigger:hover,
+html body .site-nav .nav-trigger[aria-expanded="true"],
+html body .site-nav .nav-back:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--ar-ink) !important;
+}
+
+html body .site-nav .nav-cta,
+html body .site-nav a.nav-cta {
+  background: var(--ar-black) !important;
+  border: 1px solid var(--ar-black) !important;
+  color: #FFFFFF !important;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 22px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  white-space: nowrap;
+}
+html body .site-nav .nav-cta:hover { background: #000 !important; color: #fff !important; }
+html body .site-nav .nav-cta.nav-cta-mediador,
+html body .site-nav a.nav-cta-mediador {
+  background: transparent !important;
+  color: var(--ar-ink) !important;
+  border: 1px solid rgba(22, 22, 22, 0.18) !important;
+}
+html body .site-nav .nav-cta.nav-cta-mediador:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: var(--ar-ink) !important;
+}
+html body .site-nav .nav-vault-link {
+  border-radius: 999px !important;
+  color: #C24A00 !important;
+  border-color: rgba(255, 99, 0, 0.45) !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+  font-size: 14px !important;
+}
+
+/* the one page with a bare <header> instead of the site navigation */
+html body > header:not([class]):not(:has(.site-nav)) {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  margin: 12px var(--ar-gutter) 0;
+  height: 72px;
+  padding: 0 10px 0 26px !important;
+  border-radius: 999px;
+  background: rgba(250, 250, 249, 0.74) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+html body > header:not([class]):not(:has(.site-nav)) img { height: 40px !important; width: auto; filter: brightness(0); opacity: 0.92; }
+html body > header:not([class]):not(:has(.site-nav)) > a:last-child:not(:first-child) {
+  display: inline-flex; align-items: center; height: 50px; padding: 0 22px;
+  border-radius: 999px; background: var(--ar-black); color: #fff !important;
+  font-size: 14px !important; font-weight: 600; letter-spacing: -0.01em !important; text-transform: none !important;
+}
+
+/* market toggle (Portugal | España) on the Spain cluster */
+html body .site-nav .market-switch { color: var(--ar-ink-2); }
+html body .site-nav .market-switch a { color: var(--ar-ink-2) !important; }
+html body .site-nav .market-switch .market-current { color: var(--ar-ink) !important; }
+html body .site-nav .lang-switcher-sep { color: rgba(0, 0, 0, 0.2) !important; }
+
+/* burger: a black circle, like the reference */
+html body .site-nav .nav-burger {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: var(--ar-black) !important;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto;
+}
+html body .site-nav .nav-burger span { background: #FFFFFF !important; width: 18px !important; }
+
+/* mega menu panels */
+html body .site-nav .nav-panel {
+  border-radius: 24px !important;
+  padding: 10px !important;
+  top: calc(100% + 18px) !important;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+}
+html body .site-nav .nav-panel a { border-radius: 14px !important; }
+
+/* language selector inside the light navigation */
+html body .site-nav .ar-langsel .ar-langsel-btn {
+  height: 50px;
+  padding: 0 16px 0 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(22, 22, 22, 0.16);
+  color: var(--ar-ink);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+html body .site-nav .ar-langsel .ar-langsel-btn:hover,
+html body .site-nav .ar-langsel .ar-langsel-btn[aria-expanded="true"] {
+  color: var(--ar-ink);
+  border-color: rgba(22, 22, 22, 0.3);
+  background: rgba(0, 0, 0, 0.04);
+}
+html body .ar-langsel .ar-langsel-menu {
+  border-radius: 20px;
+  padding: 8px;
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.35);
+}
+html body .site-nav .ar-langsel .ar-langsel-menu { top: calc(100% + 14px); }
+html body .ar-langsel .ar-langsel-menu a { border-radius: 12px; }
+html body .ar-langsel .ar-langsel-menu a[aria-current="true"] { background: #F0EFEC; }
+
+/* The full bar needs ~1300px once the language selector and both CTAs sit on
+   it; below that the drawer takes over, which every page already ships. */
+@media (max-width: 1320px) {
+  html body .site-nav :is(.nav-links, .nav-links-left, .nav-links-right) { display: none !important; }
+  html body .site-nav .nav-burger { display: flex !important; }
+  html body .site-nav { justify-content: space-between !important; }
+}
+@media (max-width: 768px) {
+  html body .site-nav { height: 62px !important; padding: 0 6px 0 18px !important; margin-top: 10px !important; top: 10px !important; }
+  html body header.site-header { top: 10px !important; margin-top: 10px !important; }
+  html body .site-nav .nav-logo-img { height: 30px !important; }
+  html body .site-nav .nav-burger { width: 48px !important; height: 48px !important; }
+  html body .asf-top-bar { font-size: 11px; padding: 10px 18px 0; }
+}
+
+/* mobile drawer: a charcoal sheet under the floating bar */
+html body .mobile-nav {
+  background: var(--ar-black) !important;
+  padding-top: 112px !important;
+}
+html body .mobile-nav a,
+html body .mobile-nav .mobile-accordion-trigger {
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+/* ── pages as blocks ───────────────────────────────────────────────────── */
+
+html :is(body, main, main#main > article, body > div > main) > :is(
+  section,
+  header.hero,
+  header.page-head,
+  div.marquee-strip,
+  div.ar-langpolicy-band,
+  div.lang-policy-band,
+  div.spain-subnav
+) {
+  margin-top: var(--ar-gutter) !important;
+  margin-left: var(--ar-gutter) !important;
+  margin-right: var(--ar-gutter) !important;
+  margin-bottom: 0 !important;
+  border-radius: var(--ar-r-xl) !important;
+  overflow: clip;
+  max-width: none;
+  width: auto !important;
+}
+
+/* Sections that are deliberately narrow, centred columns keep their own
+   width; only the gutter and the corners change. */
+html :is(body, main) > section.related-section,
+html :is(body, main) > section.article-faq,
+html :is(body, main) > section.lp-crosssell {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(1100px, calc(100% - 2 * var(--ar-gutter)));
+}
+
+/* grid items inside a block may not push it wider than the viewport */
+html :is(body, main, main#main > article) > :is(section, header.hero) > * { min-width: 0; }
+
+/* dark blocks get a faint grid and a soft orange glow — the reference's
+   signature — layered under their own content */
+html :is(body, main, main#main > article) > :is(section.hero, section.lp-hero, header.hero, section.final-cta, section.closing, section.cta-strip) {
+  position: relative;
+  isolation: isolate;
+}
+html :is(body, main, main#main > article) > :is(section.hero, header.hero)::after,
+html :is(main, main#main > article) > section.lp-hero::after,
+html :is(body, main) > :is(section.cta-strip, section.final-cta, section.closing)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(640px 420px at 82% -8%, rgba(255, 99, 0, 0.22), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 140px, calc(100% / 12) 100%;
+  -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent);
+  mask-image: linear-gradient(180deg, #000 30%, transparent);
+}
+
+/* breadcrumbs sit on the page, not on a band */
+html body :is(nav, div).breadcrumb { background: transparent !important; }
+html body div.lp-crumb { background: transparent !important; }
+
+/* the article column becomes a white sheet */
+html body > article.article-container {
+  background: var(--ar-block);
+  border-radius: var(--ar-r-xl);
+  margin-top: var(--ar-gutter) !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+@media (min-width: 900px) {
+  html body > article.article-container { max-width: 900px !important; }
+}
+html body > div.article-hero { margin-top: var(--ar-gutter) !important; }
+html body .article-hero-img { border-radius: var(--ar-r-lg) !important; }
+
+/* ── buttons ───────────────────────────────────────────────────────────── */
+
+html body :is(
+  .btn, .btn-cta, .btn-primary, .btn-secondary, .btn-ghost, .btn-outline,
+  .ar-btn, .cta-btn, .cta-meio-btn, .lp-btn, .hero-cta, .hero-btn,
+  .cookie-btn, .blog-toggle-btn,
+  a[class^="btn-"], a[class*=" btn-"], button[class^="btn-"], button[class*=" btn-"],
+  a[class*="-btn"]:not([class*="langsel"]),
+  button[class*="-btn"]:not([class*="langsel"]),
+  button[type="submit"], input[type="submit"],
+  .article-cta a, .blog-cta a, .cta-topo a, .ar-cta-inline-actions a
+) {
+  border-radius: 999px !important;
+  text-transform: none !important;
+  letter-spacing: -0.005em !important;
+  font-weight: 600;
+}
+
+/* on charcoal blocks the primary action is orange, the secondary is glass */
+html body :is(.hero, .lp-hero, header.hero, .cta-strip, .final-cta, .closing, .lead-band, .managers-band, .tech-section--pro) :is(.btn-primary, .btn-cta, .cta-btn, .lp-btn-primary, .hero-cta:not(.ghost)) {
+  background: var(--ar-orange) !important;
+  border-color: var(--ar-orange) !important;
+  color: #140A03 !important;
+}
+html body :is(.hero, .lp-hero, header.hero, .cta-strip, .final-cta, .closing, .lead-band, .managers-band, .tech-section--pro) :is(.btn-primary, .btn-cta, .cta-btn, .lp-btn-primary, .hero-cta:not(.ghost)):hover {
+  background: var(--ar-orange-hi) !important;
+}
+html body :is(.hero, .lp-hero, header.hero, .cta-strip, .final-cta, .closing, .lead-band, .managers-band, .tech-section--pro) :is(.btn-ghost, .btn-secondary, .lp-btn-ghost, .lp-btn-secondary, .hero-cta.ghost) {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #FFFFFF !important;
+  padding: 16px 26px !important;
+}
+
+/* the light platform block's secondary link was white on light grey */
+html body .tech-section--one :is(.btn-ghost, .btn-secondary) {
+  color: var(--ar-ink) !important;
+  border: 1px solid rgba(22, 22, 22, 0.18) !important;
+  padding: 16px 26px !important;
+}
+
+/* form buttons that carry no button class (wizard steps, submit) */
+html body form button:not([class*="langsel"]):not([role="tab"]):not([type="reset"]),
+html body .quote-wizard button:not([class*="langsel"]) {
+  border-radius: 999px !important;
+  text-transform: none !important;
+  letter-spacing: -0.005em !important;
+}
+
+/* eyebrow labels that are drawn as boxes become pills */
+html body :is(.eyebrow, .hero-eyebrow, .lp-eyebrow, .section-eyebrow, [class$="-eyebrow"]) { border-radius: 999px; }
+
+/* ── fields and form cards ─────────────────────────────────────────────── */
+
+html body :is(input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="range"]), select, textarea) {
+  border-radius: var(--ar-r-sm) !important;
+}
+html body :is(.hero-card, .hero-right > form, .hero-card-form, .lp-form, .ar-cta-form-wrap, .form-card, .quote-form, .lp-form-card, .cta-topo, .cta-meio, .article-cta, .blog-cta, .ar-cta-inline, .article-author, .callout, .article-toc, .about-us) {
+  border-radius: var(--ar-r-lg) !important;
+}
+html body .hero-right { border-radius: var(--ar-r-lg); }
+/* a square-cornered accent bar no longer fits a rounded card */
+html body .hero-card::before { display: none !important; }
+
+/* ── cards, chips, media ───────────────────────────────────────────────── */
+
+html body :is(.card, [class$="-card"], [class*="-card "], .related-card, .blog-card, .country-card, .insights-cluster) {
+  border-radius: var(--ar-r-lg) !important;
+}
+html body :is(.blog-card, .related-card) { overflow: hidden; }
+html body :is(.form-shell, .compare-wrap, .article-contact, .next-steps, .testimonial, .tech-feature, .tech-metric, .method-item, .hub-item, .hero-form-note, .form-lang-note, aside.lang-policy, aside.ar-langpolicy, blockquote) {
+  border-radius: var(--ar-r-md) !important;
+}
+html body .method-grid { border-radius: var(--ar-r-lg) !important; overflow: hidden; }
+html body .form-shell { overflow: hidden; }
+html body :is(.cta-contact-icon) { border-radius: var(--ar-r-sm) !important; }
+html body :is(.brand-chip, .tech-badge, .contact-link) { border-radius: 999px !important; }
+html body :is(.article-tag, .hero-badge, .section-eyebrow-pill, .footer-badge, .footer-platform-link, .footer-langs a, .category-nav a, .pagination a, .pagination span) {
+  border-radius: 999px !important;
+}
+html body :is(.article-body, .lp-section, .section) img:not([width="16"]):not([class*="icon"]):not([class*="logo"]) {
+  border-radius: var(--ar-r-md);
+}
+html body .ar-table-wrap { border-radius: var(--ar-r-md); }
+html body details { border-radius: var(--ar-r-md); }
+
+/* ── sticky CTAs ───────────────────────────────────────────────────────── */
+
+html body .ar-sticky-cta {
+  border-radius: 999px !important;
+  left: var(--ar-gutter) !important;
+  right: var(--ar-gutter) !important;
+  bottom: var(--ar-gutter) !important;
+  box-shadow: 0 18px 50px -12px rgba(0, 0, 0, 0.45);
+}
+html body .mobile-cta {
+  border-radius: 999px;
+}
+
+/* ── footer: a charcoal block ──────────────────────────────────────────── */
+
+html body footer {
+  margin: var(--ar-gutter) !important;
+  border-radius: var(--ar-r-xl) !important;
+  border-top: 0 !important;
+  overflow: clip;
+}
+
+/* ── cookie notice: a floating card ────────────────────────────────────── */
+
+html body .cookie-banner {
+  left: var(--ar-gutter) !important;
+  right: var(--ar-gutter) !important;
+  bottom: var(--ar-gutter) !important;
+  border-radius: var(--ar-r-lg) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(22, 22, 22, 0.94) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.5);
+}
+html body .cookie-btn-accept {
+  background: #FFFFFF !important;
+  color: var(--ar-ink) !important;
+}
+html body .cookie-btn-reject { border-color: rgba(255, 255, 255, 0.25) !important; }
+
+/* ── accessibility and motion ──────────────────────────────────────────── */
+
+html body :is(a, button, summary, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ar-orange);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body * { scroll-behavior: auto !important; }
+}
+
+@media print {
+  html body { background: #fff; }
+  html body .site-nav, html body header.site-header { position: static !important; box-shadow: none !important; }
+  html :is(body, main) > section, html body footer { margin: 0 !important; border-radius: 0 !important; }
+}
