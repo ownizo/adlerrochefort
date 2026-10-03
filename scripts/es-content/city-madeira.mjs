@@ -29,7 +29,7 @@ export const CITY_MADEIRA_PAGE = {
   slug: 'seguros-madeira',
   url: '/es/seguros-madeira/',
   cluster: 'city-madeira',
-  title: 'Seguros en Madeira para venezolanos y lusovenezolanos | Adler & Rochefort',
+  title: 'Seguros en Madeira para venezolanos y lusovenezolanos',
   description:
     'Seguros en Madeira para familias venezolanas y lusovenezolanas: aluviones e incendios en la póliza de hogar, salud con el SESARAM, auto y alquiler local.',
   keywords:

@@ -15,7 +15,7 @@ export const MOVING_PAGE = {
   slug: 'flytta-till-portugal-forsakring',
   url: '/se/flytta-till-portugal-forsakring/',
   cluster: 'moving',
-  title: 'Flytta till Portugal: försäkringarna i ordning | Adler & Rochefort',
+  title: 'Flytta till Portugal: försäkringarna i ordning',
   description:
     'Vad som händer med svenska försäkringar vid utflyttning, de tre glappen under flytten och i vilken ordning sjukvård, hem, värdeföremål och bil ordnas.',
   keywords:

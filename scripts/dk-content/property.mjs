@@ -18,7 +18,7 @@ export const PROPERTY_PAGE = {
   cluster: 'property',
   title: 'Boligkøb i Portugal: forsikring trin for trin | Adler & Rochefort',
   description:
-    'Forsikring ved boligkøb i Portugal: hvad banken kræver, hvad der gælder fra escritura, de tre tal der ikke er det samme, og hvorfor ejerskifteforsikring mangler.',
+    'Forsikring ved boligkøb i Portugal: hvad banken kræver, hvad der gælder fra escritura, tre tal der ikke er det samme, og hvorfor ejerskifteforsikring mangler.',
   keywords:
     'købe bolig i Portugal forsikring, ejendomskøb Portugal, boliglån Portugal forsikring, condomínio Portugal, escritura Portugal, feriebolig Portugal forsikring',
   eyebrow: 'Guide',

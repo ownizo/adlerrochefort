@@ -291,7 +291,7 @@ const FROTA = {
   category: 'seguros-auto-tvde',
   metaTitle: 'Seguro de Frota para Empresas | Adler & Rochefort',
   metaDescription:
-    'Seguro de frota automóvel para empresas em Portugal: apólice única, vencimento único e negociação sobre a sinistralidade agregada. Ligeiros, pesados, TVDE e viaturas de serviço.',
+    'Seguro de frota para empresas em Portugal: apólice e vencimento únicos, negociação sobre a sinistralidade agregada. Ligeiros, pesados e TVDE.',
   h1: 'Seguro de frota <em>para empresas</em>',
   heroSub:
     'A partir de três viaturas, gerir apólices individuais custa mais do que o prémio. Uma apólice de frota concentra vencimento, sinistralidade e negociação num único contrato.',
@@ -460,9 +460,9 @@ const AL = {
   url: '/seguros/alojamento-local/',
   slug: 'alojamento-local',
   category: 'hotelaria-turismo',
-  metaTitle: 'Seguro de Alojamento Local obrigatório e o DL 76/2024 | Adler & Rochefort',
+  metaTitle: 'Seguro de Alojamento Local obrigatório e o DL 76/2024',
   metaDescription:
-    'Seguro de alojamento local obrigatório: responsabilidade civil, multirriscos e perda de exploração. O que o Decreto-Lei n.º 76/2024 exige e porque o seguro do condomínio não chega.',
+    'Seguro obrigatório de Alojamento Local: responsabilidade civil, multirriscos e perda de exploração. O que exige o DL 76/2024 e porque o condomínio não chega.',
   h1: 'Seguro de <em>Alojamento Local</em>',
   heroSub:
     'O seguro de responsabilidade civil é condição do registo de AL. O seguro de incêndio do condomínio não o substitui, e uma moradia segurada como habitação própria não está coberta enquanto explorada turisticamente.',
@@ -831,7 +831,7 @@ const EMPRESARIAL = {
   category: 'seguros-empresariais',
   metaTitle: 'Seguro Multirriscos Empresarial | Adler & Rochefort',
   metaDescription:
-    'Multirriscos empresarial em Portugal: edifício, equipamento, existências, responsabilidade civil de exploração e perda de lucros. Revemos capitais e comparamos o mercado.',
+    'Multirriscos empresarial em Portugal: edifício, equipamento, existências, RC de exploração e perda de lucros. Revemos capitais e comparamos o mercado.',
   h1: 'Multirriscos <em>empresarial</em>',
   heroSub:
     'Uma apólice que agrega o património, a responsabilidade civil e a continuidade do negócio. A discussão relevante raramente é o prémio — é o capital seguro e o que fica de fora.',
@@ -1015,9 +1015,9 @@ const TVDE_EN = {
   lang: 'en',
   url: '/en/insurance/tvde/',
   slug: 'tvde',
-  metaTitle: 'TVDE Insurance in Portugal | Uber, Bolt & Free Now | Adler & Rochefort',
+  metaTitle: 'TVDE Insurance in Portugal | Uber, Bolt & Free Now',
   metaDescription:
-    'TVDE insurance for Uber, Bolt and Free Now drivers and operators in Portugal. Motor liability with professional use, passenger accident cover and fleet policies. Quote within one working day.',
+    'TVDE insurance for Uber, Bolt and Free Now drivers and operators in Portugal: motor liability for professional use, passenger accident cover and fleets.',
   h1: 'TVDE insurance in Portugal — <em>Uber, Bolt and Free Now</em>',
   heroSub:
     'A private motor policy does not cover carrying passengers for payment. We compare the insurers that underwrite TVDE and come back with like-for-like quotes within one working day — for one car or for a fleet.',
@@ -1271,9 +1271,9 @@ const AUTO = {
   url: '/seguros/auto/',
   slug: 'auto',
   category: 'seguros-auto-tvde',
-  metaTitle: 'Seguro Automóvel em Portugal | Cotação Comparada | Adler & Rochefort',
+  metaTitle: 'Seguro Automóvel em Portugal | Cotação Comparada',
   metaDescription:
-    'Seguro automóvel em Portugal: responsabilidade civil obrigatória, terceiros completo e danos próprios. Comparamos as seguradoras com que trabalhamos, incluindo veículos importados e condutores estrangeiros.',
+    'Seguro automóvel em Portugal: responsabilidade civil obrigatória, terceiros e danos próprios. Comparamos o mercado, incluindo carros importados e estrangeiros.',
   h1: 'Seguro <em>automóvel</em>',
   heroSub:
     'A responsabilidade civil automóvel é obrigatória; tudo o que vem a seguir é uma escolha. Comparamos as seguradoras com que trabalhamos sobre o mesmo veículo e o mesmo condutor, e mostramos as exclusões antes de assinar.',
@@ -1568,9 +1568,9 @@ const HUB_CARDS = [
 ];
 
 const hubHead = metaHead({
-  title: 'Seguros para empresas e particulares em Portugal | Adler & Rochefort',
+  title: 'Seguros para empresas e particulares em Portugal',
   description:
-    'Todas as áreas em que trabalhamos: TVDE, frota, alojamento local, habitação, multirriscos empresarial, automóvel e condomínios. Mediador de seguros registado na ASF.',
+    'As áreas em que trabalhamos: TVDE, frota, alojamento local, habitação, multirriscos empresarial, automóvel e condomínios. Mediador de seguros registado na ASF.',
   canonical: '/seguros/',
   robots: 'index, follow',
   hreflang: [

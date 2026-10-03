@@ -27,7 +27,7 @@ export const PT_UNLICENSED_PAGE = {
   slug: 'vivienda-no-legalizada-portugal-seguro',
   url: '/es/vivienda-no-legalizada-portugal-seguro/',
   cluster: 'pt-unlicensed',
-  title: 'Asegurar una vivienda no legalizada en Portugal | Adler & Rochefort',
+  title: 'Asegurar una vivienda no legalizada en Portugal',
   description:
     'Casas, anexos y piscinas sin legalizar en Portugal: qué se puede asegurar, qué pasa en el siniestro y qué documentos revisar antes de comprar.',
   keywords:

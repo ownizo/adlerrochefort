@@ -21,7 +21,7 @@ export const ES_MOTOR_PAGE = {
   slug: 'seguro-coche-espana',
   url: '/es/seguro-coche-espana/',
   cluster: 'es-motor',
-  title: 'Seguro de auto en España para latinoamericanos | Adler & Rochefort',
+  title: 'Seguro de auto en España para latinoamericanos',
   description:
     'Seguro de auto en España para latinoamericanos: el plazo de seis meses del permiso extranjero, el canje en la DGT, su historial de conductor y las coberturas.',
   keywords:

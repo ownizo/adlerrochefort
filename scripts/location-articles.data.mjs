@@ -21,9 +21,9 @@ export const ARTICLES = [
     readingTime: 11,
     title: 'Home insurance in Comporta and Melides: thatch, timber and what insurers ask first',
     metaTitle:
-      'Home Insurance in Comporta &amp; Melides: Thatch, Timber and Rebuild Cost | Adler &amp; Rochefort',
+      'Home Insurance in Comporta &amp; Melides: Thatch and Timber',
     description:
-      'Thatched roofs, timber structure and extensive glazing put Comporta and Melides outside a standard Portuguese multi-risk wording. What is declined, what is placed with conditions, and how rebuild cost is set.',
+      'Thatched roofs, timber and extensive glazing put Comporta and Melides outside standard wordings. What is declined, what is placed and how rebuild is set.',
     excerpt:
       'Thatch, timber and glazing put this coast outside a standard multi-risk wording. What insurers decline, what they place with warranties, and why rebuild cost here ignores national averages.',
     keywords:
@@ -208,7 +208,7 @@ export const ARTICLES = [
     readingTime: 11,
     title: 'Home insurance in Quinta do Lago, Vale do Lobo and Vilamoura: what the sum insured leaves out',
     metaTitle:
-      'Home Insurance in Quinta do Lago, Vale do Lobo &amp; Vilamoura | Adler &amp; Rochefort',
+      'Home Insurance in Quinta do Lago, Vale do Lobo &amp; Vilamoura',
     description:
       'Pools, annexes, staff quarters, courts and boundary walls are routinely outside the sum insured on a Golden Triangle villa. What is missing, what letting changes, and the workers&rsquo; compensation nobody arranges.',
     excerpt:
@@ -298,9 +298,9 @@ export const ARTICLES = [
     readingTime: 10,
     title: 'Home insurance in Sagres, Vila do Bispo, Salema and Burgau: the wind coast',
     metaTitle:
-      'Home Insurance in Sagres, Vila do Bispo, Salema &amp; Burgau | Adler &amp; Rochefort',
+      'Home Insurance in Sagres, Vila do Bispo, Salema &amp; Burgau',
     description:
-      'The most wind-exposed prime location on the Portuguese mainland. Sustained Atlantic wind, salt corrosion as a gradual rather than sudden cause of loss, isolation, and off-grid systems that must be declared.',
+      'The most wind-exposed prime location on mainland Portugal: Atlantic wind, gradual salt corrosion, isolation and off-grid systems that must be declared.',
     excerpt:
       'Sustained wind and salt air damage roofs, shutters, metalwork and plant continuously — and continuous is exactly what a policy excludes. Where the line falls, and what to declare.',
     keywords:
@@ -391,7 +391,7 @@ export const ARTICLES = [
     metaTitle:
       'Home Insurance for Villas &amp; Quintas in Sintra: Linh&oacute;, Beloura, Penha Longa | Adler &amp; Rochefort',
     description:
-      'Rural fire and the legal fuel-management obligation, a microclimate that produces infiltration rather than burst pipes, and old quintas where reinstatement costs far more than a rebuild.',
+      'Rural fire and fuel-management duties, a microclimate of infiltration rather than burst pipes, and old quintas where reinstatement costs far more than rebuild.',
     excerpt:
       'The serra brings a legal land-clearing obligation that can be raised at claim stage, a humidity problem the policy calls maintenance, and quintas where reinstatement is not rebuilding.',
     keywords:

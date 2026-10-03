@@ -21,7 +21,7 @@ export const ES_HEALTH_PAGE = {
   slug: 'seguro-salud-espana',
   url: '/es/seguro-salud-espana/',
   cluster: 'es-health',
-  title: 'Seguro de salud en España para latinoamericanos | Adler & Rochefort',
+  title: 'Seguro de salud en España para latinoamericanos',
   description:
     'Seguro de salud en España para familias latinoamericanas: sanidad pública, cuadro médico o reembolso, cobertura en su país de origen y enfermedades previas.',
   keywords:

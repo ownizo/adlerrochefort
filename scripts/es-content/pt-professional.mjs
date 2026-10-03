@@ -125,6 +125,11 @@ export const PT_PROFESSIONAL_PAGE = {
     },
   ],
   related: [
+    { url: '/es/seguro-responsabilidad-civil-abogados/', label: 'Abogados' },
+    { url: '/es/seguro-responsabilidad-civil-medicos-dentistas/', label: 'Médicos y dentistas' },
+    { url: '/es/seguro-responsabilidad-civil-arquitectos-ingenieros/', label: 'Arquitectos e ingenieros' },
+    { url: '/es/seguro-responsabilidad-civil-asesores-financieros/', label: 'Asesores financieros' },
+    { url: '/es/seguro-responsabilidad-civil-agentes-inmobiliarios/', label: 'Agentes inmobiliarios' },
     { url: '/es/seguro-medico-visado-portugal/', label: 'Seguro médico para el visado portugués' },
     { url: '/es/seguro-ciber-fraude-familiar/', label: 'Ciberriesgo, fraude e identidad de la familia' },
     { url: '/es/seguros-portugal/', label: 'Seguros en Portugal: visión general' },

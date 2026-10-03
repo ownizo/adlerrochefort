@@ -22,7 +22,7 @@ export const PT_PREEXISTING_PAGE = {
   slug: 'seguro-salud-preexistencias-portugal',
   url: '/es/seguro-salud-preexistencias-portugal/',
   cluster: 'pt-preexisting',
-  title: 'Seguro de salud con preexistencias en Portugal | Adler & Rochefort',
+  title: 'Seguro de salud con preexistencias en Portugal',
   description:
     'Enfermedades previas y seguro de salud en Portugal: con y sin cuestionario médico, carencias, padres mayores y el SNS como respaldo.',
   keywords:

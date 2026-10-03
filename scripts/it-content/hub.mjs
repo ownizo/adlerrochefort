@@ -20,10 +20,10 @@ export const HUB_PAGE = {
   url: '/it/',
   cluster: 'hub',
   isHub: true,
-  title: 'Grandi patrimoni in Portogallo: assicurazioni | Adler & Rochefort',
+  title: 'Assicurazioni private client ed expat · Portogallo e Spagna',
   description:
-    'Assicurazioni per famiglie italiane con patrimoni importanti in Portogallo e Spagna: casa, arte, RC milionaria e salute. Uffici a Lisbona e Lagos.',
-  ogTitle: 'Assicurazioni per grandi patrimoni — Portogallo e Spagna',
+    'Per famiglie italiane ed expat con patrimoni in Portogallo e Spagna: casa di pregio, arte, RC milionaria e salute internazionale. Uffici a Lisbona e Lagos.',
+  ogTitle: 'Assicurazioni private client ed expat — Portogallo e Spagna',
   ogDescription:
     'Residenze, arte e collezioni, responsabilità civile e tutela della famiglia in Portogallo e Spagna. Sottoscrizione individuale e consulenza scritta.',
   keywords:
@@ -172,6 +172,10 @@ export const HUB_PAGE = {
     <h2 id="specialistiche">Coperture specialistiche</h2>
     <p>Alcuni rischi di una famiglia con un patrimonio importante non rientrano in nessuna polizza standard. Li collochiamo attraverso mercati specializzati e partner di co-brokerage, in Portogallo e in Spagna, con lo stesso metodo: valutazione scritta, un unico consulente, assistenza nel sinistro.</p>
     <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/it/assicurazione-family-office/">Family office</a></h3>
+        <p>D&amp;O della holding, trustee, case e yacht, frodi, K&amp;R e successione, in un programma pensato come un insieme.</p>
+      </li>
       <li class="hub-item">
         <h3><a href="/it/assicurazione-rapimento-estorsione/">Rapimento, riscatto ed estorsione (K&amp;R)</a></h3>
         <p>Consulenti di crisi 24 ore su 24, rimborso di riscatti ed estorsioni, famiglia, personale e ospiti — con la riservatezza che questa copertura richiede.</p>

@@ -40,7 +40,7 @@ const ALGARVE_PAGE = {
   url: '/de/versicherung-algarve/',
   title: 'Versicherung an der Algarve | Adler & Rochefort',
   description:
-    'Hausversicherung, Krankenversicherung und Autoversicherung für deutsche Eigentümer und Expats an der Algarve — Küstenlage, Ferienimmobilien, Pools und das private Klinik-Netzwerk vor Ort.',
+    'Haus-, Kranken- und Autoversicherung für deutsche Eigentümer und Expats an der Algarve: Küstenlage, Ferienimmobilien, Pools und private Kliniken vor Ort.',
   keywords: 'Versicherung Algarve, Hausversicherung Algarve, Krankenversicherung Algarve, Ferienhaus Versicherung Algarve, Versicherungsmakler Algarve Deutsche',
   eyebrow: 'Regional · Algarve',
   h1: 'Versicherung an der Algarve',
@@ -128,7 +128,7 @@ const LAGOS_PAGE = {
   url: '/de/versicherung-lagos/',
   title: 'Versicherung in Lagos | Adler & Rochefort',
   description:
-    'Hausversicherung, Krankenversicherung und Autoversicherung in Lagos, Algarve — Altstadtwohnungen in propriedade horizontal, Marina und Boote, und eines unserer beiden Büros vor Ort.',
+    'Haus-, Kranken- und Autoversicherung in Lagos, Algarve: Altstadtwohnungen in propriedade horizontal, Marina und Boote — und eines unserer Büros vor Ort.',
   keywords: 'Versicherung Lagos, Hausversicherung Lagos Algarve, Versicherungsmakler Lagos, Wohnungsversicherung Lagos Altstadt',
   eyebrow: 'Regional · Lagos',
   h1: 'Versicherung in Lagos',
@@ -200,7 +200,7 @@ const LISSABON_PAGE = {
   url: '/de/versicherung-lissabon/',
   title: 'Versicherung in Lissabon | Adler & Rochefort',
   description:
-    'Hausversicherung für Eigentumswohnungen in Lissabon: wo die Police der Eigentümergemeinschaft endet und Ihre eigene beginnt, plus Kranken- und Autoversicherung für deutsche Residenten.',
+    'Hausversicherung für Eigentumswohnungen in Lissabon: wo die Police der Eigentümergemeinschaft endet und Ihre beginnt, dazu Kranken- und Autoversicherung.',
   keywords: 'Versicherung Lissabon, Hausversicherung Lissabon, Eigentumswohnung Versicherung Lissabon, Versicherungsmakler Lissabon Deutsche',
   eyebrow: 'Regional · Lissabon',
   h1: 'Versicherung in Lissabon',
@@ -259,7 +259,7 @@ const CASCAIS_PAGE = {
   url: '/de/versicherung-cascais/',
   title: 'Versicherung in Cascais | Adler & Rochefort',
   description:
-    'Hausversicherung für Villen und Eigentumswohnungen in Cascais, Erdbebendeckung an der Costa do Estoril, sowie Kranken- und Autoversicherung für deutsche Residenten.',
+    'Hausversicherung für Villen und Eigentumswohnungen in Cascais, Erdbebendeckung an der Costa do Estoril, Kranken- und Autoversicherung für Residenten.',
   keywords: 'Versicherung Cascais, Hausversicherung Cascais, Versicherungsmakler Cascais Deutsche, Erdbebenversicherung Cascais',
   eyebrow: 'Regional · Cascais',
   h1: 'Versicherung in Cascais',
@@ -316,7 +316,7 @@ const PORTIMAO_PAGE = {
   url: '/de/versicherung-portimao/',
   title: 'Versicherung in Portimão | Adler & Rochefort',
   description:
-    'Hausversicherung in Portimão: warum das Baujahr über die Erdbebendeckung entscheidet, wo die Police der Eigentümergemeinschaft endet, und was bei Vermietung zu beachten ist.',
+    'Hausversicherung in Portimão: warum das Baujahr über die Erdbebendeckung entscheidet, wo die Police der Gemeinschaft endet und was bei Vermietung gilt.',
   keywords: 'Versicherung Portimão, Hausversicherung Portimão, Erdbebenversicherung Algarve, Versicherungsmakler Portimão Deutsche, Eigentumswohnung Versicherung Portimão',
   eyebrow: 'Regional · Portimão',
   h1: 'Versicherung in Portimão',
@@ -381,7 +381,7 @@ const CARVOEIRO_PAGE = {
   url: '/de/versicherung-carvoeiro/',
   title: 'Versicherung in Carvoeiro | Adler & Rochefort',
   description:
-    'Hausversicherung in Carvoeiro: der Leerstand über den Winter, die Klippenlage am Barlavento-Küstenabschnitt, und was Ferienanlagen mit Eigentümergemeinschaft abdecken.',
+    'Hausversicherung in Carvoeiro: Leerstand im Winter, Klippenlage am Barlavento und was Ferienanlagen mit Eigentümergemeinschaft tatsächlich abdecken.',
   keywords: 'Versicherung Carvoeiro, Hausversicherung Carvoeiro, Klippenversicherung Algarve, Ferienhaus Versicherung Carvoeiro, Versicherungsmakler Carvoeiro Deutsche',
   eyebrow: 'Regional · Carvoeiro',
   h1: 'Versicherung in Carvoeiro',
@@ -453,7 +453,7 @@ const VILAMOURA_PAGE = {
   url: '/de/versicherung-vilamoura/',
   title: 'Versicherung in Vilamoura | Adler & Rochefort',
   description:
-    'Hausversicherung und Bootsversicherung in Vilamoura: was der Liegeplatzvertrag der Marina verlangt, wo die Police der Ferienanlage endet, und was saisonale Nutzung bedeutet.',
+    'Haus- und Bootsversicherung in Vilamoura: was der Liegeplatzvertrag verlangt, wo die Police der Ferienanlage endet und was saisonale Nutzung bedeutet.',
   keywords: 'Versicherung Vilamoura, Hausversicherung Vilamoura, Bootsversicherung Vilamoura Marina, Versicherungsmakler Vilamoura Deutsche, Eigentumswohnung Versicherung Vilamoura',
   eyebrow: 'Regional · Vilamoura',
   h1: 'Versicherung in Vilamoura',
@@ -518,7 +518,7 @@ const QUINTA_DO_LAGO_PAGE = {
   url: '/de/versicherung-quinta-do-lago/',
   title: 'Versicherung in Quinta do Lago | Adler & Rochefort',
   description:
-    'Hausversicherung in Quinta do Lago: was typischerweise nicht in der Versicherungssumme steckt, warum Hausangestellte eine eigene Police brauchen, und wo Private Clients ansetzt.',
+    'Hausversicherung in Quinta do Lago: was oft nicht in der Versicherungssumme steckt, warum Hausangestellte eine eigene Police brauchen.',
   keywords: 'Versicherung Quinta do Lago, Hausversicherung Quinta do Lago, Hausangestellte Versicherung Portugal, Versicherungsmakler Quinta do Lago Deutsche',
   eyebrow: 'Regional · Quinta do Lago',
   h1: 'Versicherung in Quinta do Lago',
@@ -589,7 +589,7 @@ const COMPORTA_PAGE = {
   url: '/de/versicherung-comporta/',
   title: 'Versicherung in Comporta | Adler & Rochefort',
   description:
-    'Hausversicherung in Comporta: warum Reetdach und Holzbauweise über die Platzierung entscheiden, die Anfahrtszeit der Feuerwehr, und eine der höchsten seismischen Zonen des Festlands.',
+    'Hausversicherung in Comporta: warum Reetdach und Holzbau über die Platzierung entscheiden, Feuerwehr-Anfahrtszeit und eine hohe seismische Zone.',
   keywords: 'Versicherung Comporta, Hausversicherung Comporta, Reetdach Versicherung Portugal, Erdbebenversicherung Comporta, Versicherungsmakler Comporta Deutsche',
   eyebrow: 'Regional · Comporta',
   h1: 'Versicherung in Comporta',

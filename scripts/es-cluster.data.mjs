@@ -47,6 +47,8 @@ import { NICHE_VILLALET_PAGE } from './es-content/niche-villalet.mjs';
 import { NICHE_EQUINE_PAGE } from './es-content/niche-equine.mjs';
 import { NICHE_AVIATION_PAGE } from './es-content/niche-aviation.mjs';
 import { NICHE_CYBER_PAGE } from './es-content/niche-cyber.mjs';
+import { NICHE_FAMILY_OFFICE_PAGE } from './es-content/niche-family-office.mjs';
+import { PROFESSIONAL_PAGES } from './es-content/professionals.mjs';
 import { GOLF_PAGE } from './es-content/golf.mjs';
 import { NAUTICAL_PAGE } from './es-content/nautical.mjs';
 // Portugal cluster additions (October 2026).
@@ -141,6 +143,11 @@ export const PAGES = [
   NICHE_EQUINE_PAGE,
   NICHE_AVIATION_PAGE,
   NICHE_CYBER_PAGE,
+  // Family offices (October 2026): pillar of the family-office cluster.
+  NICHE_FAMILY_OFFICE_PAGE,
+  // High-income professions (October 2026): professional liability, Spain and
+  // Portugal. Cluster keys prof-* pair them with /seguros/ and /en/ pages.
+  ...PROFESSIONAL_PAGES,
   // Pillar articles (September 2026): golf and the sea in Portugal and Spain.
   // Cluster keys 'golf' / 'nautical' pair them with every other language.
   GOLF_PAGE,
@@ -196,7 +203,10 @@ export const ES_MARKET = {
       { href: '/es/mudarse-a-espana-seguros/', label: 'Mudarse a España' },
     ],
     privateTitle: 'Private Clients',
-    privateClients: [{ href: '/es/#especializadas', label: 'Coberturas especializadas' }],
+    privateClients: [
+      { href: '/es/#especializadas', label: 'Coberturas especializadas' },
+      { href: '/es/seguro-family-office/', label: 'Family offices' },
+    ],
   },
   pcSpainHref: '/es/seguro-hogar-espana/',
   name: 'España',

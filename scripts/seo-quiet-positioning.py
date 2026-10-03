@@ -192,13 +192,13 @@ add(
 )
 add(
     "en/private-clients/index.html",
-    "Private Client Insurance in Portugal | Adler & Rochefort",
+    "Private Client & Expat Insurance in Portugal | Adler & Rochefort",
     "Homes, art, jewellery, collections, collector cars and boats reviewed together — not as disconnected retail policies. Agreed value where the risk needs it.",
     "private client insurance Portugal, art insurance Portugal, jewellery insurance Portugal, collections insurance Portugal, boat insurance Portugal, agreed value insurance Portugal, high value home insurance Portugal",
 )
 add(
     "en/private-clients-spain/index.html",
-    "Private Client Insurance in Spain | Adler & Rochefort",
+    "Private Client & Expat Insurance in Spain | Adler & Rochefort",
     "A coordinated review for households with more than one property, vehicle or policy in Spain — Mallorca, Costa del Sol and second homes included.",
     "private client insurance Spain, insurance Mallorca, insurance Costa del Sol, second home insurance Spain, international households Spain",
 )
@@ -314,19 +314,19 @@ add(
 )
 add(
     "de/private-clients/index.html",
-    "Private Clients in Portugal und Spanien | Adler & Rochefort",
+    "Private Clients & Expats · Portugal & Spanien | Adler & Rochefort",
     "Koordinierte Prüfung für Haushalte mit Wohnsitzen, Immobilien, Fahrzeugen und Sammlungen in Portugal und Spanien. Wir beginnen mit dem Risiko, nicht mit dem Preis.",
     "Private Clients Versicherung Portugal, Private Clients Spanien, Kunstversicherung Portugal, Sammlungen Versicherung, Bootsversicherung Algarve, Zweitwohnsitz Versicherung",
 )
 add(
     "de/private-clients-portugal/index.html",
-    "Private Clients in Portugal | Adler & Rochefort",
+    "Private Clients & Expats in Portugal | Adler & Rochefort",
     "Immobilien, Kunst, Schmuck, Sammlungen, Oldtimer und Boote gemeinsam geprüft — nicht als einzelne Retail-Policen. Taxierte Werte, wo das Risiko es braucht.",
     "Private Clients Versicherung Portugal, Kunstversicherung Portugal, Schmuckversicherung Portugal, Oldtimer Versicherung Portugal, Bootsversicherung Portugal",
 )
 add(
     "de/private-clients-spanien/index.html",
-    "Private Clients in Spanien | Adler & Rochefort",
+    "Private Clients & Expats in Spanien | Adler & Rochefort",
     "Eine abgestimmte Prüfung für Haushalte mit mehr als einer Immobilie, einem Fahrzeug oder einer Police in Spanien — Mallorca, Costa del Sol, Zweitwohnsitze.",
     "Private Clients Spanien, Versicherung Mallorca, Versicherung Costa del Sol, Zweitwohnsitz Spanien, internationale Mandanten Spanien",
 )
@@ -524,7 +524,7 @@ def patch_sources() -> None:
         (
             "scripts/de-content/private-clients.mjs",
             "Private Clients Portugal: Versicherung für komplexe Risiken | Adler & Rochefort",
-            "Private Clients in Portugal | Adler & Rochefort",
+            "Private Clients & Expats in Portugal | Adler & Rochefort",
         ),
         (
             "scripts/de-content/private-clients.mjs",

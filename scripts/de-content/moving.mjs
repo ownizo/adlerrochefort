@@ -20,9 +20,9 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
 export const MOVING_PAGE = {
   slug: 'umzug-deutschland-portugal-versicherung',
   url: '/de/umzug-deutschland-portugal-versicherung/',
-  title: 'Umzug von Deutschland nach Portugal: Diese Versicherungen müssen Sie regeln | Adler & Rochefort',
+  title: 'Umzug nach Portugal: welche Versicherungen Sie regeln müssen',
   description:
-    'Abmeldung, GKV oder PKV, Anwartschaftsversicherung, S1-Formular für Rentner und Schadenfreiheitsklasse: die Reihenfolge und die Fristen für Versicherungen beim Umzug von Deutschland nach Portugal.',
+    'Abmeldung, GKV oder PKV, Anwartschaft, S1-Formular und Schadenfreiheitsklasse: Reihenfolge und Fristen für Versicherungen beim Umzug nach Portugal.',
   keywords:
     'Umzug Portugal Versicherung, Auswanderung Portugal Krankenversicherung, GKV Ausland abmelden, PKV Auswanderung Anwartschaft, S1 Formular Rentner Portugal, Schadenfreiheitsklasse Portugal, Versicherung Portugal Deutsche',
   eyebrow: 'Umzug Deutschland → Portugal',

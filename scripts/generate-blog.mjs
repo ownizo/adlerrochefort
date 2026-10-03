@@ -101,7 +101,7 @@ const CATEGORY_META = {
       'Análises sobre seguro automóvel, TVDE e frotas em Portugal: obrigações legais, coberturas facultativas e exclusões que só aparecem no sinistro.',
   },
   'hotelaria-turismo': {
-    title: 'Hotelaria, Turismo e Alojamento Local | Insights | Adler & Rochefort',
+    title: 'Hotelaria, Turismo e Alojamento Local | Insights',
     description:
       'Seguros obrigatórios no alojamento local e na hotelaria em Portugal, responsabilidade civil de exploração, perda de exploração e sinistros típicos.',
   },
@@ -216,6 +216,16 @@ const itemListLd = (items, name) => ({
   })),
 });
 
+// Keeps listing <title>s within 65 characters (October 2026 SEO pass): the
+// brand suffix goes first, then the " | Insights" label, before any wording.
+const TITLE_MAX = 65;
+function fitTitle(t) {
+  let out = t;
+  if (out.length > TITLE_MAX) out = out.replace(/ \| Adler & Rochefort$/, '');
+  if (out.length > TITLE_MAX) out = out.replace(' | Insights', '');
+  return out;
+}
+
 async function buildListing({
   articles,
   basePath,
@@ -240,7 +250,7 @@ async function buildListing({
     const path = n === 1 ? basePath : pageHref(n);
     const suffix = n === 1 ? '' : lang === 'en' ? ` — page ${n}` : ` — página ${n}`;
     const head = metaHead({
-      title: n === 1 ? meta.title : meta.title.replace(' | ', `${suffix} | `),
+      title: fitTitle(n === 1 ? meta.title : meta.title.replace(' | ', `${suffix} | `)),
       description: meta.description,
       canonical: path,
       prev: n === 2 ? basePath : n > 2 ? pageHref(n - 1) : undefined,
@@ -314,9 +324,9 @@ const ptPages = await buildListing({
   h1: 'Risco explicado.<br><em>Antes de se tornar um problema.</em>',
   intro: BLOG_INTRO,
   meta: {
-    title: 'Insights — Risco, coberturas e responsabilidade explicados | Adler & Rochefort',
+    title: 'Insights — Risco, coberturas e responsabilidade explicados',
     description:
-      'Análises sobre risco, património e seguros em Portugal: coberturas, exclusões, capitais e responsabilidade — para Private Clients, Riscos Profissionais e Empresas.',
+      'Análises sobre risco, património e seguros em Portugal: coberturas, exclusões, capitais e responsabilidade — para private clients, profissionais e empresas.',
   },
   crumbs: [
     { name: 'Início', url: '/' },
@@ -524,12 +534,12 @@ const EN_CATEGORY_META = {
   'health-insurance': {
     title: 'Health Insurance in Portugal | Insights | Adler & Rochefort',
     description:
-      'English-language analysis of health insurance in Portugal: the SNS alongside private cover, pre-existing conditions, waiting periods, visa proof and evacuation cover.',
+      'Health insurance in Portugal: the SNS alongside private cover, pre-existing conditions, waiting periods, visa proof and evacuation cover.',
   },
   'home-property': {
-    title: 'Home & Property Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Home & Property Insurance in Portugal | Insights',
     description:
-      'Home insurance in Portugal for foreign owners: rebuild value, unoccupancy clauses, earthquake and coastal risk, pools and annexes, and property held through a company.',
+      'Home insurance in Portugal for foreign owners: rebuild value, unoccupancy, earthquake and coastal risk, pools and annexes, and company-owned property.',
   },
   'valuables-collections': {
     title: 'Valuables & Collections Insurance | Insights | Adler & Rochefort',
@@ -537,22 +547,22 @@ const EN_CATEGORY_META = {
       'Insuring art, jewellery, watches, instruments, wine and collections in Portugal: sublimits, specified items, agreed value, valuations and worldwide cover.',
   },
   'business-liability': {
-    title: 'Business & Liability Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Business & Liability Insurance in Portugal | Insights',
     description:
-      'Compulsory business insurance in Portugal plus professional indemnity, D&O, cyber and construction cover — written for foreign-owned companies and their directors.',
+      'Compulsory business insurance in Portugal, professional indemnity, D&O, cyber and construction cover — for foreign-owned companies and their directors.',
   },
   motor: {
     title: 'Motor Insurance in Portugal | Insights | Adler & Rochefort',
     description:
-      'Car insurance in Portugal for foreign residents: compulsory third-party liability, foreign no-claims history, classic and high-value cars, fleets, track days and TVDE.',
+      'Car insurance in Portugal for foreign residents: compulsory liability, foreign no-claims history, classic and high-value cars, fleets and TVDE.',
   },
   'personal-family': {
-    title: 'Personal & Family Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Personal & Family Insurance in Portugal | Insights',
     description:
       'Family liability, water damage claims, employing domestic staff, legal expenses and fraud cover in Portugal — the household covers that are missed most often.',
   },
   'holiday-lets-hospitality': {
-    title: 'Holiday Lets & Hospitality Insurance | Insights | Adler & Rochefort',
+    title: 'Holiday Lets & Hospitality Insurance | Insights',
     description:
       'Alojamento Local and hospitality insurance in Portugal: why standard home cover fails on a let property, AL liability requirements and restaurant claims.',
   },
@@ -562,14 +572,14 @@ const EN_CATEGORY_META = {
       'Getting insured while moving to Portugal: NIF, fiscal representation, cover before residency, and how to run a claim when you do not speak Portuguese.',
   },
   marine: {
-    title: 'Marine & Yacht Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Marine & Yacht Insurance in Portugal | Insights',
     description:
       'Boat and yacht insurance in Portugal: importing and registering a vessel, private use versus charter, winter lay-up and berthing in the Algarve marinas.',
   },
   'spain-health': {
     title: 'Health Insurance in Spain | Insights | Adler & Rochefort',
     description:
-      'Private health insurance in Spain for expats: how it sits alongside the public system, pre-existing conditions, and what to check before a visa or residence application.',
+      'Private health insurance in Spain for expats: how it sits beside the public system, pre-existing conditions, and what to check before a visa application.',
   },
   'spain-property': {
     title: 'Property Insurance in Spain | Insights | Adler & Rochefort',
@@ -613,7 +623,7 @@ const enPages = await buildListing({
   meta: {
     title: 'Insights — Insurance in Portugal, explained | Adler & Rochefort',
     description:
-      'English-language analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered broker.',
+      'Analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered broker.',
   },
   crumbs: [
     { name: 'Home', url: '/en/' },

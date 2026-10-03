@@ -17,7 +17,7 @@ export const HOME_PAGE = {
   slug: 'husforsikring-portugal',
   url: '/dk/husforsikring-portugal/',
   cluster: 'home',
-  title: 'Husforsikring i Portugal: boliger af høj værdi | Adler & Rochefort',
+  title: 'Husforsikring i Portugal: boliger af høj værdi',
   description:
     'Villaer og boliger af høj værdi i Portugal: besigtigelse, ingen underforsikring, garanteret genopførelse, indbo verden over og kunst til aftalt værdi.',
   keywords:

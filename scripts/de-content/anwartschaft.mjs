@@ -18,9 +18,9 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
 export const ANWARTSCHAFT_PAGE = {
   slug: 'anwartschaftsversicherung-portugal',
   url: '/de/anwartschaftsversicherung-portugal/',
-  title: 'Anwartschaftsversicherung beim Umzug nach Portugal | Adler & Rochefort',
+  title: 'Anwartschaftsversicherung beim Umzug nach Portugal',
   description:
-    'Was eine Anwartschaftsversicherung sichert, der Unterschied zwischen kleiner und großer Anwartschaft, was eine einfache Kündigung der PKV riskiert, und wie das mit einer portugiesischen Krankenversicherung zusammenspielt.',
+    'Kleine oder große Anwartschaft, was eine PKV-Kündigung riskiert und wie die Anwartschaft mit einer portugiesischen Krankenversicherung zusammenspielt.',
   keywords:
     'Anwartschaftsversicherung Portugal, PKV Auswanderung Anwartschaft, kleine große Anwartschaft, PKV kündigen Auswanderung, private Krankenversicherung ruhend stellen Portugal',
   eyebrow: 'PKV & Auswanderung',

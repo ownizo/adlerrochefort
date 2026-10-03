@@ -28,9 +28,9 @@ export const ZA_ARTICLES = [
     tag: 'For South Africans',
     category: 'moving-to-portugal',
     title: 'South African medical aid and health insurance in Portugal',
-    metaTitle: 'South African Medical Aid and Health Insurance in Portugal | Adler & Rochefort',
+    metaTitle: 'South African Medical Aid and Health Insurance in Portugal',
     description:
-      'Your medical aid scheme stops at the border once you live in Portugal. How the SNS, Portuguese health insurance and international cover fit together for South Africans.',
+      'Medical aid stops at the border once you live in Portugal. How the SNS, Portuguese health insurance and international cover fit for South Africans.',
     keywords: 'South African medical aid Portugal, health insurance Portugal South Africans, SNS South Africans, international health insurance Portugal, D7 visa health insurance South Africa',
     image: '/images/blog/topics/1613490493576-7fde63acd811.jpg',
     readingTime: 6,
@@ -67,7 +67,7 @@ export const ZA_ARTICLES = [
     tag: 'For South Africans',
     category: 'motor',
     title: 'South African driving licence and car insurance in Portugal',
-    metaTitle: 'South African Driving Licence and Car Insurance in Portugal | Adler & Rochefort',
+    metaTitle: 'South African Driving Licence and Car Insurance in Portugal',
     description:
       'What happens to a South African licence once you are resident in Portugal, how Portuguese motor cover is structured, and whether your no-claims record counts.',
     keywords: 'South African driving licence Portugal, exchange South African licence IMT, car insurance Portugal South Africans, no claims South Africa Portugal, motor insurance Portugal expats',
@@ -105,9 +105,9 @@ export const ZA_ARTICLES = [
     tag: 'For South Africans',
     category: 'home-property',
     title: 'Insuring a home in Portugal as a South African',
-    metaTitle: 'Insuring a Home in Portugal as a South African | Adler & Rochefort',
+    metaTitle: 'Insuring a Home in Portugal as a South African',
     description:
-      'Rebuild value in euros, earthquake as an option, security conditions and long absences: what South African owners in Cascais, Lisbon and the Algarve need to know.',
+      'Rebuild value in euros, optional earthquake, security conditions and long absences: what South African owners in Cascais and the Algarve need to know.',
     keywords: 'home insurance Portugal South Africans, South African property Portugal insurance, rebuild value Portugal, earthquake insurance Portugal, Algarve villa insurance South African',
     image: '/images/blog/topics/1613977257363-707ba9348227.jpg',
     readingTime: 6,
@@ -144,7 +144,7 @@ export const ZA_HUB = {
   slug: 'insurance-for-south-africans-portugal',
   metaTitle: 'Insurance for South Africans in Portugal | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for South Africans buying property, relocating to, or living in Portugal: what medical aid leaves behind, your licence and claims record, and insuring a home in euros.',
+    'Insurance for South Africans buying property, relocating to or living in Portugal: what medical aid leaves behind, your claims record and a home in euros.',
   h1: 'Insurance for South Africans in Portugal',
   heroSub:
     'Relocating, retiring or investing in Portugal from South Africa? Several things you rely on at home do not carry over: medical aid stops at the border, there is no S1 or EHIC route, your licence and no-claims record need checking, and your home is insured in euros at its rebuild value. We explain it in writing, in English.',

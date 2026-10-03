@@ -29,9 +29,9 @@ export const BR_ARTICLES = [
     slug: 'plano-de-saude-portugal-brasileiros',
     tag: 'Para brasileiros',
     title: 'Plano de saúde em Portugal para brasileiros: o que muda',
-    metaTitle: 'Plano de saúde em Portugal para brasileiros: o que muda | Adler & Rochefort',
+    metaTitle: 'Plano de saúde em Portugal para brasileiros: o que muda',
     description:
-      'O plano de saúde brasileiro não acompanha a mudança. Como funcionam o SNS, o PB4, o seguro de saúde português e o internacional — e em que ordem tratar de cada um.',
+      'O plano de saúde brasileiro não acompanha a mudança. Como funcionam o SNS, o PB4, o seguro de saúde português e o internacional — e por que ordem tratar.',
     keywords: 'plano de saúde Portugal brasileiros, seguro de saúde Portugal brasileiro, PB4 Portugal, SNS brasileiros, seguro de saúde internacional Portugal, carência seguro saúde Portugal',
     image: '/images/blog/topics/1613490493576-7fde63acd811.jpg',
     readingTime: 7,
@@ -78,9 +78,9 @@ export const BR_ARTICLES = [
     slug: 'seguro-casa-portugal-brasileiros',
     tag: 'Para brasileiros',
     title: 'Seguro residencial em Portugal: o guia para brasileiros',
-    metaTitle: 'Seguro residencial em Portugal: guia para brasileiros | Adler & Rochefort',
+    metaTitle: 'Seguro residencial em Portugal: guia para brasileiros',
     description:
-      'O seguro residencial chama-se multirriscos em Portugal: valor de reconstrução, condomínio, sismo opcional e as diferenças que mais surpreendem quem vem do Brasil.',
+      'Em Portugal, o seguro residencial chama-se multirriscos: valor de reconstrução, condomínio, sismo opcional e as diferenças que surpreendem quem vem do Brasil.',
     keywords: 'seguro residencial Portugal brasileiros, seguro casa Portugal, multirriscos habitação, valor de reconstrução, seguro apartamento Lisboa brasileiros, seguro sismo Portugal',
     image: '/images/blog/topics/1613977257363-707ba9348227.jpg',
     readingTime: 7,
@@ -123,7 +123,7 @@ export const BR_ARTICLES = [
     slug: 'cnh-carta-conducao-portugal-seguro-auto-brasileiros',
     tag: 'Para brasileiros',
     title: 'CNH em Portugal: carta de condução e seguro automóvel para brasileiros',
-    metaTitle: 'CNH em Portugal: carta e seguro automóvel para brasileiros | Adler & Rochefort',
+    metaTitle: 'CNH em Portugal: carta e seguro automóvel para brasileiros',
     description:
       'A CNH é reconhecida em Portugal com condições. O que muda quando passa a residir, como funciona o seguro automóvel português e o que acontece ao seu bônus.',
     keywords: 'CNH Portugal, carteira de motorista brasileira Portugal, troca CNH Portugal IMT, seguro auto Portugal brasileiros, bônus seguro auto Portugal, seguro automóvel Portugal',
@@ -163,7 +163,7 @@ export const BR_ARTICLES = [
     slug: 'comprar-imovel-portugal-brasileiros-seguros',
     tag: 'Para brasileiros',
     title: 'Comprar imóvel em Portugal sendo brasileiro: os seguros, passo a passo',
-    metaTitle: 'Comprar imóvel em Portugal sendo brasileiro: os seguros | Adler & Rochefort',
+    metaTitle: 'Comprar imóvel em Portugal sendo brasileiro: os seguros',
     description:
       'Do CPCV à escritura, o que o banco exige (e o que não pode impor), o seguro de vida do crédito, o arrendamento e a transferência de dinheiro do Brasil.',
     keywords: 'comprar imóvel Portugal brasileiro, comprar apartamento Lisboa brasileiros, crédito habitação brasileiro Portugal seguro de vida, seguro imóvel Portugal brasileiros, alojamento local brasileiros, investir imóvel Portugal',
@@ -208,7 +208,7 @@ export const BR_HUB = {
   slug: 'brasileiros-em-portugal',
   metaTitle: 'Seguros para brasileiros em Portugal | Adler &amp; Rochefort',
   metaDescription:
-    'Seguros para brasileiros que compram casa, se mudam ou já vivem em Portugal: seguro de saúde, casa, carro e vida, explicados com o vocabulário que conhece do Brasil.',
+    'Seguros para brasileiros que compram casa, se mudam ou vivem em Portugal: saúde, casa, carro e vida, explicados com o vocabulário que conhece do Brasil.',
   h1: 'Seguros para brasileiros em Portugal',
   heroSub:
     'A língua é a mesma; o vocabulário dos seguros, não. Em Portugal o plano de saúde chama-se seguro de saúde, o seguro residencial chama-se multirriscos, o seu bônus não viaja e o banco não pode impor-lhe a seguradora. Explicamos tudo por escrito, antes de assinar.',

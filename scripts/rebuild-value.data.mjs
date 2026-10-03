@@ -110,7 +110,7 @@ ${scrim('Abrir o simulador SCRIM da APS')}
   },
 
   en: {
-    title: 'Rebuild value: how much to insure your home for | Adler & Rochefort',
+    title: 'Rebuild value: how much to insure your home for',
     description:
       'What the rebuild value is, why it decides your claim, how to recalculate it with the SCRIM simulator, and the policies that can pay above it after a total loss.',
     keywords: 'rebuild value Portugal, rebuild cost home insurance Portugal, sum insured building Portugal, SCRIM simulator, average clause Portugal, underinsurance home Portugal',
@@ -174,9 +174,9 @@ ${scrim('Open the APS SCRIM simulator')}
   },
 
   de: {
-    title: 'Wiederaufbauwert: richtig versichern in Portugal | Adler & Rochefort',
+    title: 'Wiederaufbauwert: richtig versichern in Portugal',
     description:
-      'Was der Wiederaufbauwert ist, warum er die Entschädigung bestimmt, wie Sie ihn mit dem SCRIM-Rechner prüfen — und Policen, die bei Totalschaden darüber hinaus leisten.',
+      'Was der Wiederaufbauwert ist, warum er die Entschädigung bestimmt, wie Sie ihn mit dem SCRIM-Rechner prüfen und welche Policen bei Totalschaden mehr leisten.',
     keywords: 'Wiederaufbauwert Portugal, Versicherungssumme Haus Portugal, Unterversicherung Portugal, regra proporcional, SCRIM Rechner, Hausversicherung Portugal Versicherungssumme',
     eyebrow: 'Hausversicherung · Portugal',
     crumb: 'Wiederaufbauwert',
@@ -240,7 +240,7 @@ ${scrim('SCRIM-Rechner der APS öffnen')}
   nl: {
     title: 'Herbouwwaarde: hoeveel verzekeren in Portugal | Adler & Rochefort',
     description:
-      'Wat de herbouwwaarde is, waarom die de uitkering bepaalt, hoe u haar narekent met de SCRIM-calculator en welke polissen bij totaal verlies erboven kunnen uitkeren.',
+      'Wat de herbouwwaarde is, waarom die de uitkering bepaalt, hoe u haar narekent met de SCRIM-calculator en welke polissen bij totaal verlies meer uitkeren.',
     keywords: 'herbouwwaarde Portugal, verzekerd bedrag woning Portugal, onderverzekering Portugal, evenredigheidsregel, SCRIM calculator, woonverzekering Portugal herbouwwaarde',
     eyebrow: 'Woonverzekering · Portugal',
     crumb: 'Herbouwwaarde',
@@ -302,9 +302,9 @@ ${scrim('Open de SCRIM-calculator van de APS')}
   },
 
   fr: {
-    title: 'Valeur de reconstruction au Portugal : combien assurer | Adler & Rochefort',
+    title: 'Valeur de reconstruction au Portugal : combien assurer',
     description:
-      'Ce qu’est la valeur de reconstruction, pourquoi elle décide de l’indemnité, comment la recalculer avec le simulateur SCRIM, et les polices qui peuvent payer au-delà en cas de perte totale.',
+      'La valeur de reconstruction : pourquoi elle décide de l’indemnité, comment la recalculer avec le simulateur SCRIM et quelles polices paient au-delà.',
     keywords: 'valeur de reconstruction Portugal, capital assuré habitation Portugal, règle proportionnelle, sous-assurance Portugal, simulateur SCRIM, assurance habitation Portugal',
     eyebrow: 'Assurance habitation · Portugal',
     crumb: 'Valeur de reconstruction',
@@ -366,9 +366,9 @@ ${scrim('Ouvrir le simulateur SCRIM de l’APS')}
   },
 
   es: {
-    title: 'Valor de reconstrucción: cuánto asegurar su casa | Adler & Rochefort',
+    title: 'Valor de reconstrucción: cuánto asegurar su casa',
     description:
-      'Qué es el valor de reconstrucción, por qué decide la indemnización, cómo recalcularlo con el simulador SCRIM y las pólizas que, en pérdida total, pueden pagar por encima.',
+      'Qué es el valor de reconstrucción, por qué decide la indemnización, cómo recalcularlo con el simulador SCRIM y qué pólizas pagan más en pérdida total.',
     keywords: 'valor de reconstrucción, suma asegurada vivienda Portugal, simulador SCRIM, regla proporcional, infraseguro, coste de reconstrucción Portugal, seguro hogar Portugal latinoamericanos',
     eyebrow: 'Portugal · Seguro de hogar',
     crumb: 'Valor de reconstrucción',
@@ -430,9 +430,9 @@ ${scrim('Abrir el simulador SCRIM de la APS')}
   },
 
   it: {
-    title: 'Valore di ricostruzione: quanto assicurare la casa | Adler & Rochefort',
+    title: 'Valore di ricostruzione: quanto assicurare la casa',
     description:
-      'Cos’è il valore di ricostruzione, perché decide l’indennizzo, come ricalcolarlo con il simulatore SCRIM e le polizze che, in caso di perdita totale, possono pagare oltre.',
+      'Cos’è il valore di ricostruzione, perché decide l’indennizzo, come ricalcolarlo con il simulatore SCRIM e quali polizze pagano oltre in caso di perdita totale.',
     keywords: 'valore di ricostruzione Portogallo, somma assicurata casa Portogallo, regola proporzionale, sottoassicurazione, simulatore SCRIM, assicurazione casa Portogallo',
     eyebrow: 'Assicurazione casa · Portogallo',
     crumb: 'Valore di ricostruzione',
@@ -496,7 +496,7 @@ ${scrim('Aprire il simulatore SCRIM dell’APS')}
   pl: {
     title: 'Wartość odtworzeniowa domu w Portugalii | Adler & Rochefort',
     description:
-      'Czym jest wartość odtworzeniowa, dlaczego decyduje o odszkodowaniu, jak przeliczyć ją w symulatorze SCRIM i które polisy przy szkodzie całkowitej mogą wypłacić więcej.',
+      'Czym jest wartość odtworzeniowa, dlaczego decyduje o odszkodowaniu, jak przeliczyć ją w symulatorze SCRIM i które polisy przy szkodzie całkowitej płacą więcej.',
     keywords: 'wartość odtworzeniowa Portugalia, suma ubezpieczenia domu Portugalia, zasada proporcji, niedoubezpieczenie, symulator SCRIM, ubezpieczenie domu Portugalia',
     eyebrow: 'Ubezpieczenie domu · Portugalia',
     crumb: 'Wartość odtworzeniowa',
@@ -558,7 +558,7 @@ ${scrim('Otwórz symulator SCRIM (APS)')}
   },
 
   se: {
-    title: 'Återuppbyggnadsvärde: hur mycket försäkra i Portugal | Adler & Rochefort',
+    title: 'Återuppbyggnadsvärde: hur mycket försäkra i Portugal',
     description:
       'Vad återuppbyggnadsvärdet är, varför det avgör ersättningen, hur du räknar om det i SCRIM-simulatorn och vilka försäkringar som vid totalskada kan betala mer.',
     keywords: 'återuppbyggnadsvärde Portugal, försäkringsbelopp hus Portugal, proportionalitetsregeln, underförsäkring, SCRIM simulator, hemförsäkring Portugal',
@@ -622,9 +622,9 @@ ${scrim('Öppna APS SCRIM-simulator')}
   },
 
   dk: {
-    title: 'Genopførelsesværdi: hvor meget skal huset forsikres for | Adler & Rochefort',
+    title: 'Genopførelsesværdi: hvor meget skal huset forsikres for',
     description:
-      'Hvad genopførelsesværdien er, hvorfor den afgør erstatningen, hvordan du regner den om i SCRIM-simulatoren, og hvilke policer der ved totalskade kan betale mere.',
+      'Hvad genopførelsesværdien er, hvorfor den afgør erstatningen, hvordan du regner den i SCRIM-simulatoren, og hvilke policer der ved totalskade betaler mere.',
     keywords: 'genopførelsesværdi Portugal, forsikringssum hus Portugal, proportionalitetsreglen, underforsikring, SCRIM simulator, husforsikring Portugal',
     eyebrow: 'Husforsikring · Portugal',
     crumb: 'Genopførelsesværdi',

@@ -23,10 +23,10 @@ export const HUB_PAGE = {
   url: '/es/',
   cluster: 'hub',
   isHub: true,
-  title: 'Seguros para grandes patrimonios | Adler & Rochefort',
+  title: 'Seguros private client y expatriados · España y Portugal',
   description:
-    'Seguros para familias latinoamericanas con patrimonio en Portugal y España: salud y visado, hogar de alto valor, arte y responsabilidad civil. En español.',
-  ogTitle: 'Seguros para grandes patrimonios — Portugal y España',
+    'Seguros para familias latinoamericanas y expatriados con patrimonio en España y Portugal: salud y visado, hogar de alto valor, arte y responsabilidad civil.',
+  ogTitle: 'Seguros private client y expatriados — España y Portugal',
   ogDescription:
     'Para familias latinoamericanas que viven o invierten en Portugal y España: residencias, arte, responsabilidad civil, salud y protección de la familia. Por escrito, en español y con un único interlocutor.',
   keywords:
@@ -229,6 +229,10 @@ export const HUB_PAGE = {
     <h2 id="especializadas">Coberturas especializadas</h2>
     <p>Algunos riesgos no se colocan en el mercado minorista. Los presentamos, a través de mercados especializados y de nuestros socios de mediación, con el mismo método: análisis por escrito y un único interlocutor. Cada guía trata las diferencias entre Portugal y España.</p>
     <ul class="hub-list">
+      <li class="hub-item">
+        <h3><a href="/es/seguro-family-office/">Family offices</a></h3>
+        <p>D&amp;O de la holding, trustees, viviendas y yate, fraude, secuestro y sucesión, en un programa pensado como un todo.</p>
+      </li>
       <li class="hub-item">
         <h3><a href="/es/seguro-secuestro-extorsion/">Secuestro, rescate y extorsión</a></h3>
         <p>Consultoría de crisis 24/7, reembolso de rescates y extorsiones y total confidencialidad, para la familia y el personal — también en los viajes a América.</p>

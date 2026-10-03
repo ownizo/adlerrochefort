@@ -23,7 +23,7 @@ export const PT_LIFE_PAGE = {
   slug: 'seguro-vida-portugal',
   url: '/es/seguro-vida-portugal/',
   cluster: 'pt-life',
-  title: 'Seguro de vida en Portugal: hipoteca y familia | Adler & Rochefort',
+  title: 'Seguro de vida en Portugal: hipoteca y familia',
   description:
     'Seguro de vida en Portugal: lo que exige el banco en el crédito a la vivienda, su derecho a elegir aseguradora y la protección de la familia.',
   keywords:

@@ -21,10 +21,10 @@ export const HUB_PAGE = {
   url: '/se/',
   cluster: 'hub',
   isHub: true,
-  title: 'Private client-försäkring i Portugal & Spanien | Adler & Rochefort',
+  title: 'Försäkring för svenskar i Portugal & Spanien · Private client',
   description:
-    'Värdefulla hem, konst och samlingar, familjeansvar och internationell sjukvård i Portugal och Spanien. Skriftlig rådgivning. Kontor i Lissabon och Lagos.',
-  ogTitle: 'Försäkring för stora privata förmögenheter — Portugal och Spanien',
+    'Private client-försäkring för svenskar i Portugal och Spanien: värdefulla hem, konst och samlingar, familjeansvar och internationell sjukvård.',
+  ogTitle: 'Försäkring för svenskar i Portugal och Spanien — private client',
   keywords:
     'försäkring Portugal, private client försäkring, hemförsäkring värdefull bostad Portugal, konstförsäkring Portugal, ansvarsförsäkring familj, internationell sjukvårdsförsäkring, försäkring Spanien, svenskar i Portugal försäkring',
   eyebrow: 'Private clients · Portugal och Spanien',

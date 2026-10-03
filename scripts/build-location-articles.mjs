@@ -26,7 +26,7 @@ const DATE_LABEL = 'Published 13 August 2026';
 
 // Strings copied verbatim out of the template so the replacements are exact.
 const T_TITLE_TAG =
-  'Home Insurance in Lagos, Algarve: What Local Property Actually Needs | Adler &amp; Rochefort';
+  'Home Insurance in Lagos, Algarve: What Local Property Needs';
 const T_HEADLINE = 'Home insurance in Lagos: what local property actually needs';
 const T_OG_TITLE = 'Home insurance in Lagos, Algarve: what local property actually needs';
 const T_DESC =

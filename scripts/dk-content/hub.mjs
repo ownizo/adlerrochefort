@@ -17,10 +17,10 @@ export const HUB_PAGE = {
   url: '/dk/',
   cluster: 'hub',
   isHub: true,
-  title: 'Forsikring for store privatformuer i Portugal | Adler & Rochefort',
+  title: 'Forsikring for danskere i Portugal og Spanien · Private client',
   description:
-    'Forsikring for danske husstande med betydelig formue i Portugal og Spanien: bolig, kunst, ansvar i millionklassen og sundhed. Kontorer i Lissabon og Lagos.',
-  ogTitle: 'Forsikring for store privatformuer — Portugal og Spanien',
+    'Private client-forsikring for danskere i Portugal og Spanien: bolig, kunst, ansvar i millionklassen og international sundhed. Kontorer i Lissabon og Lagos.',
+  ogTitle: 'Forsikring for danskere i Portugal og Spanien — private client',
   ogDescription:
     'Boliger, kunst og samlinger, ansvar og familiebeskyttelse i Portugal og Spanien. Individuelt tegnet, skriftligt rådgivet og én rådgiver fra første kontakt til skade.',
   keywords:

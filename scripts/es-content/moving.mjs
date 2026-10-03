@@ -22,7 +22,7 @@ export const MOVING_PAGE = {
   slug: 'mudarse-a-portugal-seguros',
   url: '/es/mudarse-a-portugal-seguros/',
   cluster: 'moving',
-  title: 'Mudarse a Portugal desde Latinoamérica: seguros | Adler & Rochefort',
+  title: 'Mudarse a Portugal desde Latinoamérica: seguros',
   description:
     'Mudarse a Portugal desde México, Venezuela, Colombia o Argentina: visado, NIF, salud, hogar, auto y la mudanza internacional, en el orden que funciona.',
   keywords:

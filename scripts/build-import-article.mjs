@@ -309,7 +309,7 @@ const decode = (s) =>
   });
 
 const T = {
-  title: 'Track days and performance driving: the exclusion hiding in your motor policy | Adler &amp; Rochefort',
+  title: 'Track Days: the Exclusion Hiding in Your Motor Policy',
   headline: 'Track days and performance driving: the exclusion hiding in your motor policy',
   desc: 'Why track days, timed events and performance driving can fall outside ordinary motor insurance, even when the car is fully comprehensive.',
   keywords: 'private staff insurance Portugal, travelling nanny insurance, domestic staff abroad insurance, household staff travel cover Portugal, work accident insurance abroad Portugal',
