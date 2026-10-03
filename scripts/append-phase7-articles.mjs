@@ -24,11 +24,11 @@ const NEW = [
     category: 'home-property',
     tag: 'Buying property',
     title: 'Buying Property in Portugal: What Insurance Should You Consider?',
-    metaTitle: 'Insurance to Consider When Buying Property in Portugal | Adler &amp; Rochefort',
+    metaTitle: 'Insurance to Consider When Buying Property in Portugal',
     description:
-      'What insurance actually comes up when buying property in Portugal — buildings cover from completion, condominium, mortgage protection, landlord insurance if you plan to let it, and what to check first.',
+      'Insurance when buying property in Portugal: buildings cover from completion, condominium, mortgage protection, landlord cover and what to check first.',
     excerpt:
-      'What insurance actually comes up when buying property in Portugal — buildings cover from completion, condominium, mortgage protection, landlord insurance if you plan to let it, and what to check first.',
+      'Insurance when buying property in Portugal: buildings cover from completion, condominium, mortgage protection, landlord cover and what to check first.',
     image: null,
     imageGradient: null,
     imageAlt: 'Buying Property in Portugal: What Insurance Should You Consider?',
@@ -47,7 +47,7 @@ const NEW = [
     category: 'moving-to-portugal',
     tag: 'Family',
     title: 'Moving to Portugal with Your Family: Insurance to Consider',
-    metaTitle: 'Moving to Portugal with Your Family: Insurance to Consider | Adler &amp; Rochefort',
+    metaTitle: 'Moving to Portugal with Your Family: Insurance to Consider',
     description:
       'What insurance actually comes up for a family moving to Portugal — health, home, car, life and family protection — and how each one connects to the others.',
     excerpt:
@@ -70,11 +70,11 @@ const NEW = [
     category: 'spain-health',
     tag: 'Family',
     title: 'Insurance for Families Living in Spain: What Should You Review?',
-    metaTitle: 'Insurance for Families Living in Spain | What International Residents Should Review',
+    metaTitle: 'Insurance for Families Living in Spain: What to Review',
     description:
-      'What insurance actually comes up for a family living in Spain — health, home, car and life — and how to work out which of them apply to your situation rather than assuming you need all four.',
+      'Health, home, car and life for a family living in Spain — and how to work out which apply to your situation rather than assuming you need all four.',
     excerpt:
-      'What insurance actually comes up for a family living in Spain — health, home, car and life — and how to work out which of them apply to your situation rather than assuming you need all four.',
+      'Health, home, car and life for a family living in Spain — and how to work out which apply to your situation rather than assuming you need all four.',
     image: null,
     imageGradient: null,
     imageAlt: 'Insurance for Families Living in Spain: What Should You Review?',

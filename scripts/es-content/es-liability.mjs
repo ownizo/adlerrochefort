@@ -25,7 +25,7 @@ export const ES_LIABILITY_PAGE = {
   cluster: 'es-liability',
   title: 'Responsabilidad civil familiar en España | Adler & Rochefort',
   description:
-    'Responsabilidad civil familiar en España para patrimonios relevantes: límites de varios millones, Estados Unidos incluido, perros, personal doméstico y embarcaciones.',
+    'Responsabilidad civil familiar en España para patrimonios relevantes: límites de varios millones, EE. UU. incluido, perros, personal doméstico y embarcaciones.',
   keywords:
     'seguro responsabilidad civil familiar España, responsabilidad civil privada España, seguro RC perro España, Ley 7/2023 seguro perros, responsabilidad civil empleada de hogar, seguro RC embarcación España, responsabilidad civil Estados Unidos, seguro RC alto límite',
   eyebrow: 'España · Responsabilidad civil',

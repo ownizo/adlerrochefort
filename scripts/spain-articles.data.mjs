@@ -31,9 +31,9 @@ const HEALTH_GUIDE = {
   slug: 'private-health-insurance-spain-expats',
   category: 'spain-health',
   tag: 'Health insurance',
-  title: 'Private Health Insurance in Spain: A Guide for Expats | Adler & Rochefort',
+  title: 'Private Health Insurance in Spain: A Guide for Expats',
   description:
-    'How private health insurance fits alongside Spain’s public healthcare system, what it typically covers, and the practical questions to ask before you buy — written for expats and international residents.',
+    'How private health insurance fits alongside Spain’s public system, what it typically covers, and the questions to ask before you buy.',
   h1: 'Private Health Insurance in Spain: A Guide for Expats',
   standfirst:
     'Spain’s public healthcare system is broad and well regarded. Private insurance sits alongside it rather than replacing it — this guide explains where the two actually differ, and what to check before choosing a policy.',
@@ -118,9 +118,9 @@ const HEALTH_MOVING = {
   slug: 'health-insurance-moving-to-spain',
   category: 'spain-health',
   tag: 'Moving to Spain',
-  title: 'Health Insurance When Moving to Spain: What International Residents Should Check | Adler & Rochefort',
+  title: 'Health Insurance When Moving to Spain: What to Check',
   description:
-    'What to sort out on the health insurance side before and after moving to Spain — timing, documentation, family considerations, and the questions worth asking before you choose cover.',
+    'Health insurance before and after moving to Spain: timing, documents, family considerations and the questions worth asking before you choose cover.',
   h1: 'Health Insurance When Moving to Spain: What International Residents Should Check',
   standfirst:
     'The insurance side of a move to Spain is rarely complicated once the timeline is clear. Here is what to check, roughly in the order it comes up.',
@@ -194,9 +194,9 @@ const HEALTH_VISA = {
   slug: 'spain-health-insurance-visa-residency',
   category: 'spain-health',
   tag: 'Visa & residency',
-  title: 'Health Insurance for Spanish Visas and Residency: What to Check Before You Apply | Adler & Rochefort',
+  title: 'Health Insurance for Spanish Visas and Residency: Check First',
   description:
-    'What to verify about health insurance requirements before a Spanish visa or residence application — and why "visa insurance" on a product page is not the same as confirmation from the authority handling your case.',
+    'What to verify about health insurance before a Spanish visa or residence application, and why “visa insurance” on a product page is not confirmation.',
   h1: 'Health Insurance for Spanish Visas and Residency: What to Check Before You Apply',
   standfirst:
     'This page deliberately does not state a single rule for every visa or residence route. Requirements depend on the route, your circumstances and the authority handling the application — here is how to check properly, and what to be wary of.',
@@ -269,7 +269,7 @@ const PROP_COMMUNITY = {
   slug: 'community-insurance-apartment-owners-spain',
   category: 'spain-property',
   tag: 'Property',
-  title: 'Community Insurance and Apartment Ownership in Spain: What Owners Need to Know | Adler & Rochefort',
+  title: 'Community Insurance for Apartment Owners in Spain',
   description:
     'How a comunidad de propietarios building policy interacts with your own apartment cover in Spain, and what actually stays your responsibility to insure.',
   h1: 'Community Insurance and Apartment Ownership in Spain: What Owners Need to Know',
@@ -341,9 +341,9 @@ const PROP_NON_RESIDENT = {
   situation: 'non_resident_owner',
   category: 'spain-property',
   tag: 'Non-resident',
-  title: 'Property Insurance in Spain for Non-Resident Owners | Adler & Rochefort',
+  title: 'Property Insurance in Spain for Non-Resident Owners',
   description:
-    'Owning property in Spain without living there is common and normally insurable. What an insurer actually needs to know, and the details that most affect the outcome.',
+    'Owning property in Spain without living there is common and insurable. What an insurer needs to know, and the details that most affect the outcome.',
   h1: 'Property Insurance in Spain for Non-Resident Owners',
   standfirst:
     'You do not need to live in Spain to insure a Spanish property properly. Here is what actually matters to an insurer when the owner lives elsewhere.',
@@ -414,9 +414,9 @@ const PROP_SECOND_HOME = {
   situation: 'second_home',
   category: 'spain-property',
   tag: 'Second home',
-  title: 'Second Home Insurance in Spain: What to Check Before You Buy Cover | Adler & Rochefort',
+  title: 'Second Home Insurance in Spain: What to Check First',
   description:
-    'A second home in Spain is used differently to a permanent residence, and the insurance needs to reflect that. What to check before buying cover for a holiday home.',
+    'A second home in Spain is used differently from a main residence, and the insurance must reflect that. What to check before buying cover.',
   h1: 'Second Home Insurance in Spain: What to Check Before You Buy Cover',
   standfirst:
     'A home used for six weeks a year is a different risk to insure than one lived in daily — not worse, just different. Here is what changes.',
@@ -487,7 +487,7 @@ const PROP_RENTING_OUT = {
   situation: 'landlord',
   category: 'spain-property',
   tag: 'Renting out',
-  title: 'Renting Out Property in Spain: Why Your Home Policy May Not Cover It | Adler & Rochefort',
+  title: 'Renting Out Property in Spain: Is Your Home Policy Enough?',
   description:
     'The moment you let a Spanish property to paying guests or tenants, standard home insurance is usually the wrong contract. What changes, and what to check.',
   h1: 'Renting Out Property in Spain: Why Your Home Policy May Not Cover It',
@@ -562,9 +562,9 @@ const CAR_GUIDE = {
   slug: 'car-insurance-spain-expats',
   category: 'spain-car',
   tag: 'Car insurance',
-  title: 'Car Insurance in Spain for Expats: Complete Guide | Adler &amp; Rochefort',
+  title: 'Car Insurance in Spain for Expats: Complete Guide',
   description:
-    'A complete guide to car insurance in Spain for expats and international residents: the legal baseline, cover types, foreign licences, foreign vehicles, documents and how to get a quote.',
+    'Car insurance in Spain for expats and international residents: the legal baseline, cover types, foreign licences and vehicles, documents and quotes.',
   h1: 'Car Insurance in Spain for Expats: Complete Guide',
   standfirst:
     'Everything an international driver needs to work through before asking for a quote — the legal minimum, what sits above it, and the situations that come up most often for people arriving from abroad.',
@@ -653,9 +653,9 @@ const CAR_LICENCE = {
   slug: 'foreign-driving-licence-car-insurance-spain',
   category: 'spain-car',
   tag: 'Licences',
-  title: 'Car Insurance in Spain with a Foreign Driving Licence | Adler &amp; Rochefort',
+  title: 'Car Insurance in Spain with a Foreign Driving Licence',
   description:
-    'Can you get Spanish car insurance with a foreign driving licence? EU/EEA, UK and other licences explained, and the difference between licence validity and insurer underwriting.',
+    'Spanish car insurance with a foreign licence: EU/EEA, UK and other licences, and the difference between licence validity and insurer underwriting.',
   h1: 'Car Insurance in Spain with a Foreign Driving Licence',
   standfirst:
     'Whether you can drive on it and whether an insurer is comfortable underwriting against it are two different questions. Here is how they actually differ, by licence type.',
@@ -727,7 +727,7 @@ const CAR_FOREIGN_REG = {
   tag: 'Foreign-registered',
   title: 'Insuring a Foreign-Registered Car in Spain | Adler &amp; Rochefort',
   description:
-    'Insuring a vehicle that is still registered abroad but kept in Spain is more complex than insuring a Spanish-registered car. What actually matters, and what we need to assess a specific case.',
+    'Insuring a car still registered abroad but kept in Spain is more complex than a Spanish-plated one. What matters and what we need to assess it.',
   h1: 'Insuring a Foreign-Registered Car in Spain',
   standfirst:
     'A vehicle on foreign plates kept in Spain is a genuinely different question from a Spanish-registered car — not impossible, but not something we can promise in general terms either.',
@@ -796,9 +796,9 @@ const CAR_IMPORTING = {
   slug: 'importing-car-to-spain-insurance',
   category: 'spain-car',
   tag: 'Importing',
-  title: 'Importing a Car to Spain: When Do You Need Insurance? | Adler &amp; Rochefort',
+  title: 'Importing a Car to Spain: When Do You Need Insurance?',
   description:
-    'How insurance fits into the process of importing and registering a car in Spain — the ITV, Agencia Tributaria and DGT sequence, and where cover needs to be in place.',
+    'How insurance fits into importing and registering a car in Spain: the ITV, Agencia Tributaria and DGT sequence, and when cover must be in place.',
   h1: 'Importing a Car to Spain: When Do You Need Insurance?',
   standfirst:
     'Registering an imported car in Spain runs through three separate authorities. This is about the one part of that process that is genuinely an insurance question — not a replacement for import or tax advice.',
@@ -871,9 +871,9 @@ const CAR_NO_CLAIMS = {
   slug: 'no-claims-history-car-insurance-spain',
   category: 'spain-car',
   tag: 'No-claims',
-  title: 'Using Foreign No-Claims History for Car Insurance in Spain | Adler &amp; Rochefort',
+  title: 'Using Foreign No-Claims History for Car Insurance in Spain',
   description:
-    'How foreign no-claims and claims history can be used when insuring a car in Spain, what evidence insurers actually look for, and why acceptance depends on the individual insurer.',
+    'How foreign no-claims history can be used when insuring a car in Spain, what evidence insurers look for and why acceptance varies by insurer.',
   h1: 'Using Foreign No-Claims History for Car Insurance in Spain',
   standfirst:
     'A clean driving record earned abroad does not travel automatically, but documented properly, it is worth presenting. Here is what that evidence needs to look like.',
@@ -951,9 +951,9 @@ const LIFE_GUIDE = {
   slug: 'life-insurance-spain-expats',
   category: 'spain-life',
   tag: 'Life insurance',
-  title: 'Life Insurance in Spain for Expats: What to Consider | Adler &amp; Rochefort',
+  title: 'Life Insurance in Spain for Expats: What to Consider',
   description:
-    'Practical considerations for expats thinking about life insurance in Spain — term cover, sum insured, underwriting, existing foreign policies and how a mortgage fits in.',
+    'Life insurance in Spain for expats: term cover, sum insured, underwriting, existing foreign policies and how a mortgage fits in.',
   h1: 'Life Insurance in Spain for Expats: What to Consider',
   standfirst:
     'Not everyone needs life insurance, and this guide does not assume you do. Here is how to think through whether it is relevant to your situation, and what to check if it is.',
@@ -1035,9 +1035,9 @@ const MORTGAGE_ARTICLE = {
   slug: 'mortgage-life-insurance-spain',
   category: 'spain-life',
   tag: 'Mortgage',
-  title: 'Do You Need Life Insurance for a Mortgage in Spain? | Adler &amp; Rochefort',
+  title: 'Do You Need Life Insurance for a Mortgage in Spain?',
   description:
-    'A properly sourced answer, not bank marketing: what a Spanish mortgage lender actually requires by law, what it commonly requests, and your right to choose your own provider.',
+    'What a Spanish mortgage lender requires by law, what it commonly requests, and your right to choose your own life insurance provider.',
   h1: 'Do You Need Life Insurance for a Mortgage in Spain?',
   standfirst:
     'The honest answer is not a simple yes or no. Here is the actual legal position, checked against Banco de España\'s own guidance and Spanish mortgage-lending law — not against what a bank\'s brochure implies.',
@@ -1112,9 +1112,9 @@ const BUYING_PROPERTY = {
   situation: 'buying_property',
   category: 'spain-property',
   tag: 'Buying property',
-  title: 'Insurance to Consider When Buying Property in Spain | Adler &amp; Rochefort',
+  title: 'Insurance to Consider When Buying Property in Spain',
   description:
-    'A practical checklist of the insurance questions that come up when buying property in Spain — buildings, contents, mortgage protection, life cover and landlord insurance if you plan to let it.',
+    'A checklist of insurance questions when buying property in Spain: buildings, contents, mortgage protection, life cover and landlord insurance.',
   h1: 'Insurance to Consider When Buying Property in Spain',
   standfirst:
     'Buying property in Spain raises several separate insurance questions at once. Here is the practical order to think about them in — not a property-law guide, an insurance one.',
@@ -1272,9 +1272,9 @@ const INSURANCE_REVIEW = {
   slug: 'insurance-review-expats-spain',
   category: 'spain-private-clients',
   tag: 'Private clients',
-  title: 'Why Expats in Spain Should Review Their Insurance as a Whole | Adler &amp; Rochefort',
+  title: 'Why Expats in Spain Should Review Their Insurance as a Whole',
   description:
-    'How separate policies arranged at different times can quietly create gaps, overlaps and outdated information — and why a coordinated review across all of them tends to catch what a single renewal never would.',
+    'Policies arranged at different times create gaps, overlaps and outdated details. Why a coordinated review catches what a single renewal never would.',
   h1: 'Why Expats in Spain Should Review Their Insurance as a Whole',
   standfirst:
     'Most people\'s insurance was never designed as a system — it accumulated, one policy at a time. Here is what that tends to produce, and why looking at it together is worth doing at least once.',
@@ -1352,9 +1352,9 @@ const FAMILY_SPAIN = {
   situation: 'family',
   category: 'spain-health',
   tag: 'Family',
-  title: 'Insurance for Families Living in Spain | What International Residents Should Review',
+  title: 'Insurance for Families Living in Spain: What to Review',
   description:
-    'What insurance actually comes up for a family living in Spain — health, home, car and life — and how to work out which of them apply to your situation rather than assuming you need all four.',
+    'Health, home, car and life for a family living in Spain — and how to work out which apply to your situation rather than assuming you need all four.',
   h1: 'Insurance for Families Living in Spain: What Should You Review?',
   standfirst:
     'Not every family needs every product. Here is how the four that come up most often — health, home, car and life — tend to connect for a family actually living in Spain, so you can work out which apply to you.',

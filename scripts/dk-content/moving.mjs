@@ -16,7 +16,7 @@ export const MOVING_PAGE = {
   slug: 'flytte-til-portugal-forsikring',
   url: '/dk/flytte-til-portugal-forsikring/',
   cluster: 'moving',
-  title: 'Flytte til Portugal: forsikringer i rækkefølge | Adler & Rochefort',
+  title: 'Flytte til Portugal: forsikringer i rækkefølge',
   description:
     'Hvad der sker med danske forsikringer ved udrejse, de tre huller under flytningen, og i hvilken rækkefølge sundhed, bolig og bil bør ordnes i Portugal.',
   keywords:

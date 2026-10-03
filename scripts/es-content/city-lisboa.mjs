@@ -27,7 +27,7 @@ export const CITY_LISBOA_PAGE = {
   slug: 'seguros-lisboa',
   url: '/es/seguros-lisboa/',
   cluster: 'city-lisboa',
-  title: 'Seguros en Lisboa y Cascais para latinoamericanos | Adler & Rochefort',
+  title: 'Seguros en Lisboa y Cascais para latinoamericanos',
   description:
     'Seguros en Lisboa y Cascais para familias latinoamericanas: terremoto y edificios antiguos, inundaciones, Alojamento Local, salud para el visado D7 y D8.',
   keywords:

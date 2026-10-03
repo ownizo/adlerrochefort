@@ -23,9 +23,9 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
 const VORERKRANKUNGEN_PAGE = {
   slug: 'vorerkrankungen-krankenversicherung-portugal',
   url: '/de/vorerkrankungen-krankenversicherung-portugal/',
-  title: 'Krankenversicherung mit Vorerkrankungen in Portugal | Adler & Rochefort',
+  title: 'Krankenversicherung mit Vorerkrankungen in Portugal',
   description:
-    'Was eine Vorerkrankung für Ihre portugiesische Krankenversicherung bedeutet: die Gesundheitsprüfung, wann eine Vorerkrankung ausgeschlossen statt abgelehnt wird, und die mutualistische Alternative, wenn die reguläre Aufnahme nicht gelingt.',
+    'Vorerkrankung und portugiesische Krankenversicherung: Gesundheitsprüfung, Ausschluss statt Ablehnung und die mutualistische Alternative.',
   keywords:
     'Krankenversicherung Vorerkrankungen Portugal, Gesundheitsprüfung Krankenversicherung Portugal, Vorerkrankung ausgeschlossen Portugal, MGEN Vorerkrankung, private Krankenversicherung Vorerkrankung Portugal',
   eyebrow: 'Krankenversicherung',
@@ -114,9 +114,9 @@ const VORERKRANKUNGEN_PAGE = {
 const S1_PAGE = {
   slug: 's1-formular-rentner-portugal',
   url: '/de/s1-formular-rentner-portugal/',
-  title: 'Das S1-Formular für Rentner in Portugal: Was es gibt, und was nicht | Adler & Rochefort',
+  title: 'Das S1-Formular für Rentner in Portugal: was es abdeckt',
   description:
-    'Mit deutscher Rente in Portugal: wie das S1-Formular und die Koordination über die DVKA funktionieren, was der Zugang zum SNS konkret bedeutet, was er nicht abdeckt, und warum er eine private Police ergänzt statt ersetzt.',
+    'Mit deutscher Rente in Portugal: wie S1-Formular und DVKA funktionieren, was der SNS-Zugang abdeckt und warum er eine private Police ergänzt, nicht ersetzt.',
   keywords:
     'S1 Formular Portugal, DVKA Rentner Portugal, deutsche Rente Krankenversicherung Portugal, SNS Zugang Rentner, gesetzliche Krankenkasse Portugal Rentner',
   eyebrow: 'S1 & Rentner',
@@ -229,9 +229,9 @@ const S1_PAGE = {
 const NICHT_LEGALISIERT_PAGE = {
   slug: 'nicht-legalisierte-immobilie-versichern-portugal',
   url: '/de/nicht-legalisierte-immobilie-versichern-portugal/',
-  title: 'Eine nicht legalisierte Immobilie in Portugal versichern | Adler & Rochefort',
+  title: 'Eine nicht legalisierte Immobilie in Portugal versichern',
   description:
-    'Rústico mit bestehender Bebauung kaufen: was versicherbar ist und was nicht, was im Schadenfall passiert, welche Dokumente Sie vor der escritura prüfen, und was die Bank bei einer Finanzierung verlangt.',
+    'Rústico mit Bebauung kaufen: was versicherbar ist, was im Schadenfall passiert, welche Dokumente Sie vor der escritura prüfen und was die Bank verlangt.',
   keywords:
     'nicht legalisierte Immobilie Portugal versichern, caderneta predial, licença de utilização, rústico Bebauung Portugal, Hausversicherung Legalisierung Portugal',
   eyebrow: 'Legalisierung',
@@ -359,9 +359,9 @@ const NICHT_LEGALISIERT_PAGE = {
 const ISV_PAGE = {
   slug: 'isv-befreiung-fahrzeugimport-portugal',
   url: '/de/isv-befreiung-fahrzeugimport-portugal/',
-  title: 'ISV-Befreiung beim Fahrzeugimport nach Portugal | Adler & Rochefort',
+  title: 'ISV-Befreiung beim Fahrzeugimport nach Portugal',
   description:
-    'Die Befreiung von der portugiesischen Kfz-Zulassungssteuer (ISV) bei Wohnsitzverlegung nach Portugal: die Voraussetzungen, die Fristen, und warum wer zuerst fährt und später fragt, zu spät ist.',
+    'Befreiung von der Kfz-Zulassungssteuer (ISV) bei Wohnsitzverlegung nach Portugal: Voraussetzungen, Fristen und warum man vor der Einfuhr fragen sollte.',
   keywords:
     'ISV Befreiung Portugal, Kfz Steuer Befreiung Umzug Portugal, Fahrzeugimport Portugal Steuer, ISV Wohnsitzverlegung, Auto mitbringen Portugal Steuer',
   eyebrow: 'Autoversicherung',

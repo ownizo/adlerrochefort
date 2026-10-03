@@ -23,9 +23,9 @@ export const PT_VISA_PAGE = {
   slug: 'seguro-medico-visado-portugal',
   url: '/es/seguro-medico-visado-portugal/',
   cluster: 'pt-visa',
-  title: 'Seguro médico para el visado portugués D7 y D8 | Adler & Rochefort',
+  title: 'Seguro médico para el visado portugués D7 y D8',
   description:
-    'Seguro para el visado D7, D8 o D2 de Portugal: lo que pide el consulado, por qué al principio es un seguro de viaje y cuándo llega la póliza de salud portuguesa.',
+    'Seguro para el visado D7, D8 o D2 de Portugal: qué pide el consulado, por qué al principio es un seguro de viaje y cuándo llega la póliza de salud portuguesa.',
   keywords:
     'seguro médico visa D7 Portugal, seguro visa nómada digital Portugal, seguro D8 Portugal, seguro de viaje visado Portugal, seguro médico visa Portugal colombianos, seguro visa Portugal mexicanos, seguro salud residencia Portugal, visto D7 seguro',
   eyebrow: 'Portugal · Visados',

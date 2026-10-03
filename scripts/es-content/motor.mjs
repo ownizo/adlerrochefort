@@ -27,7 +27,7 @@ export const MOTOR_PAGE = {
   slug: 'seguro-coche-portugal',
   url: '/es/seguro-coche-portugal/',
   cluster: 'motor',
-  title: 'Seguro de auto en Portugal para latinoamericanos | Adler & Rochefort',
+  title: 'Seguro de auto en Portugal para latinoamericanos',
   description:
     'Seguro de auto en Portugal para latinoamericanos: su permiso y el canje en el IMT, las coberturas portuguesas, su historial y la importación.',
   keywords:

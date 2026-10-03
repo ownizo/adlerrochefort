@@ -19,10 +19,10 @@ export const HUB_PAGE = {
   url: '/pl/',
   cluster: 'hub',
   isHub: true,
-  title: 'Ubezpieczenia majątku · Portugalia i Hiszpania | Adler & Rochefort',
+  title: 'Polacy w Portugalii i Hiszpanii: ubezpieczenia private client',
   description:
-    'Domy o wysokiej wartości, sztuka i kolekcje, OC rodziny i międzynarodowe ubezpieczenie zdrowotne w Portugalii i Hiszpanii. Indywidualnie, na piśmie.',
-  ogTitle: 'Ubezpieczenia majątków o wysokiej wartości w Portugalii i Hiszpanii',
+    'Ubezpieczenia private client dla Polaków w Portugalii i Hiszpanii: domy o wysokiej wartości, sztuka, OC rodziny i międzynarodowe ubezpieczenie zdrowotne.',
+  ogTitle: 'Polacy w Portugalii i Hiszpanii — ubezpieczenia private client',
   keywords:
     'ubezpieczenie Portugalia, ubezpieczenie majątku Portugalia, ubezpieczenie domu o wysokiej wartości Portugalia, ubezpieczenie dzieł sztuki Portugalia, odpowiedzialność cywilna rodziny Portugalia, ubezpieczenia Hiszpania, ubezpieczenia dla Polaków w Portugalii',
   eyebrow: 'Klienci prywatni · Portugalia i Hiszpania',

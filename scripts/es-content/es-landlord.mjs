@@ -20,7 +20,7 @@ export const ES_LANDLORD_PAGE = {
   slug: 'seguro-alquiler-espana',
   url: '/es/seguro-alquiler-espana/',
   cluster: 'es-landlord',
-  title: 'Seguro para propietarios que alquilan en España | Adler & Rochefort',
+  title: 'Seguro para propietarios que alquilan en España',
   description:
     'Alquilar su vivienda en España desde América Latina: seguro de impago, defensa jurídica, alquiler vacacional y la póliza de hogar de una vivienda alquilada.',
   keywords:

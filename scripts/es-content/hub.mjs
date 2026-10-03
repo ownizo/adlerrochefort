@@ -23,10 +23,10 @@ export const HUB_PAGE = {
   url: '/es/',
   cluster: 'hub',
   isHub: true,
-  title: 'Seguros para grandes patrimonios | Adler & Rochefort',
+  title: 'Seguros private client y expatriados · España y Portugal',
   description:
-    'Seguros para familias latinoamericanas con patrimonio en Portugal y España: salud y visado, hogar de alto valor, arte y responsabilidad civil. En español.',
-  ogTitle: 'Seguros para grandes patrimonios — Portugal y España',
+    'Seguros para familias latinoamericanas y expatriados con patrimonio en España y Portugal: salud y visado, hogar de alto valor, arte y responsabilidad civil.',
+  ogTitle: 'Seguros private client y expatriados — España y Portugal',
   ogDescription:
     'Para familias latinoamericanas que viven o invierten en Portugal y España: residencias, arte, responsabilidad civil, salud y protección de la familia. Por escrito, en español y con un único interlocutor.',
   keywords:

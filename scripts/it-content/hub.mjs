@@ -20,10 +20,10 @@ export const HUB_PAGE = {
   url: '/it/',
   cluster: 'hub',
   isHub: true,
-  title: 'Grandi patrimoni in Portogallo: assicurazioni | Adler & Rochefort',
+  title: 'Assicurazioni private client ed expat · Portogallo e Spagna',
   description:
-    'Assicurazioni per famiglie italiane con patrimoni importanti in Portogallo e Spagna: casa, arte, RC milionaria e salute. Uffici a Lisbona e Lagos.',
-  ogTitle: 'Assicurazioni per grandi patrimoni — Portogallo e Spagna',
+    'Per famiglie italiane ed expat con patrimoni in Portogallo e Spagna: casa di pregio, arte, RC milionaria e salute internazionale. Uffici a Lisbona e Lagos.',
+  ogTitle: 'Assicurazioni private client ed expat — Portogallo e Spagna',
   ogDescription:
     'Residenze, arte e collezioni, responsabilità civile e tutela della famiglia in Portogallo e Spagna. Sottoscrizione individuale e consulenza scritta.',
   keywords:

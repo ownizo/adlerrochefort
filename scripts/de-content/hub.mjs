@@ -17,7 +17,7 @@ export const HUB_PAGE = {
   url: '/de/versicherung-portugal/',
   title: 'Versicherung in Portugal | Adler & Rochefort',
   description:
-    'Nicht einfach versichert, richtig versichert: Versicherungsberatung für deutsche Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Kranken-, Haus-, Auto- und Lebensversicherung — wir beginnen mit dem Risiko, nicht mit dem Preis.',
+    'Versicherungsberatung für deutsche Privatkunden, Familien, Eigentümer und Unternehmer in Portugal: Kranken-, Haus-, Auto- und Lebensversicherung.',
   keywords:
     'Versicherung Portugal, Versicherungsmakler Portugal, Versicherung Portugal Deutsche, Krankenversicherung Portugal, Hausversicherung Portugal, Autoversicherung Portugal, Versicherung Algarve',
   eyebrow: 'Versicherungsmakler · Algarve, Portugal',

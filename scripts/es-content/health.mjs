@@ -24,7 +24,7 @@ export const HEALTH_PAGE = {
   slug: 'seguro-salud-internacional',
   url: '/es/seguro-salud-internacional/',
   cluster: 'health',
-  title: 'Seguro de salud en Portugal para latinoamericanos | Adler & Rochefort',
+  title: 'Seguro de salud en Portugal para latinoamericanos',
   description:
     'Seguro de salud en Portugal para familias latinoamericanas: el SNS, la póliza portuguesa, la póliza internacional y cómo seguir atendiéndose en su país.',
   keywords:

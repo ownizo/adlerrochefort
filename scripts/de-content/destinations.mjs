@@ -341,7 +341,7 @@ export const MALLORCA_PAGE = {
   url: '/de/versicherung-mallorca/',
   title: 'Versicherung auf Mallorca, Spanien | Adler & Rochefort',
   description:
-    'Haus-, Kranken- und Autoversicherung auf Mallorca für internationale Mandanten. Zweitwohnsitz, saisonaler Leerstand, Boot — vom Sitz in Portugal im Dienstleistungsverkehr, schriftlich auf Deutsch.',
+    'Haus-, Kranken- und Autoversicherung auf Mallorca: Zweitwohnsitz, saisonaler Leerstand, Boot — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
   keywords:
     'Versicherung Mallorca, Hausversicherung Mallorca, Zweitwohnsitz Mallorca Versicherung, Versicherungsmakler Mallorca Deutsche',
   eyebrow: 'Spanien · Mallorca',
@@ -515,7 +515,7 @@ export const COSTA_DEL_SOL_PAGE = {
   url: '/de/versicherung-costa-del-sol/',
   title: 'Versicherung an der Costa del Sol, Spanien | Adler & Rochefort',
   description:
-    'Haus-, Kranken- und Autoversicherung an der Costa del Sol für internationale Mandanten. Villa, Zweitwohnsitz, Fahrzeug zwischen den Besuchen — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
+    'Haus-, Kranken- und Autoversicherung an der Costa del Sol: Villa, Zweitwohnsitz, Fahrzeug zwischen den Besuchen — im Dienstleistungsverkehr, auf Deutsch.',
   keywords:
     'Versicherung Costa del Sol, Hausversicherung Marbella, Zweitwohnsitz Costa del Sol, Versicherungsmakler Costa del Sol Deutsche',
   eyebrow: 'Spanien · Costa del Sol',
@@ -600,7 +600,7 @@ export const COSTA_BLANCA_PAGE = {
   url: '/de/versicherung-costa-blanca/',
   title: 'Versicherung an der Costa Blanca, Spanien | Adler & Rochefort',
   description:
-    'Hausversicherung an der Costa Blanca für nicht-residente Eigentümer. Comunidad, Zweitwohnsitz und Leerstand — Alicante ist das Beispiel unserer eigenen Formulare. Schriftlich auf Deutsch.',
+    'Hausversicherung an der Costa Blanca für nicht-residente Eigentümer: Comunidad, Zweitwohnsitz und Leerstand — schriftlich auf Deutsch.',
   keywords:
     'Versicherung Costa Blanca, Hausversicherung Alicante, Zweitwohnsitz Costa Blanca, Comunidad Versicherung Alicante, Versicherungsmakler Costa Blanca',
   eyebrow: 'Spanien · Costa Blanca',
@@ -684,7 +684,7 @@ export const KANAREN_PAGE = {
   url: '/de/versicherung-kanaren/',
   title: 'Versicherung auf den Kanarischen Inseln | Adler & Rochefort',
   description:
-    'Hausversicherung auf den Kanaren für internationale Mandanten. Die Insel nennen, Zweitwohnsitz und Leerstand — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
+    'Hausversicherung auf den Kanaren für internationale Mandanten: Insel, Zweitwohnsitz und Leerstand — im Dienstleistungsverkehr, schriftlich auf Deutsch.',
   keywords:
     'Versicherung Kanaren, Hausversicherung Teneriffa, Versicherung Gran Canaria, Zweitwohnsitz Lanzarote, Versicherung La Palma',
   eyebrow: 'Spanien · Kanarische Inseln',
@@ -768,7 +768,7 @@ export const KATALONIEN_PAGE = {
   url: '/de/versicherung-katalonien/',
   title: 'Versicherung in Katalonien, Spanien | Adler & Rochefort',
   description:
-    'Hausversicherung in Katalonien: Wohnung in Barcelona, Haus an der Costa Brava, Apartment an der Costa Daurada. Zweitwohnsitz und Comunidad — schriftlich auf Deutsch.',
+    'Hausversicherung in Katalonien: Wohnung in Barcelona, Haus an der Costa Brava oder Costa Daurada. Zweitwohnsitz und Comunidad — schriftlich auf Deutsch.',
   keywords:
     'Versicherung Katalonien, Hausversicherung Barcelona, Versicherung Costa Brava, Zweitwohnsitz Costa Daurada, Versicherungsmakler Katalonien Deutsche',
   eyebrow: 'Spanien · Katalonien',

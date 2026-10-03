@@ -18,7 +18,7 @@ export const LIABILITY_PAGE = {
   cluster: 'liability',
   title: 'Ansvarsforsikring for familien i Portugal | Adler & Rochefort',
   description:
-    'Familiens ansvarsforsikring i Portugal og Spanien: summer i millionklassen, verden over, med forsvarsomkostninger ud over summen. Erhvervsansvar tegnes særskilt.',
+    'Familiens ansvarsforsikring i Portugal og Spanien: summer i millionklassen, verden over, med forsvarsomkostninger ud over summen.',
   keywords:
     'ansvarsforsikring Portugal, familieansvar Portugal, responsabilidade civil familiar, privatansvar Portugal, ansvarsforsikring Spanien, erhvervsansvarsforsikring Portugal, konsulent forsikring Portugal, professionelt ansvar Portugal',
   eyebrow: 'Familiens ansvar',
