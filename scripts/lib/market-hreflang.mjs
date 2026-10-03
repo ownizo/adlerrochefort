@@ -125,9 +125,23 @@ export const GOLF_NAUTICAL_EXTERNAL = {
   },
 };
 
+/**
+ * High-income professions (October 2026): professional liability for lawyers,
+ * doctors and dentists, architects and engineers, financial advisers and real
+ * estate agents. Hand-authored PT (/seguros/) and EN members; the Spanish
+ * pages are generated from scripts/es-content/professionals.mjs.
+ */
+export const PROF_EXTERNAL = {
+  'prof-lawyers': { '/seguros/rc-advogados/': 'pt-PT', '/en/lawyers-professional-liability-insurance/': 'en-GB' },
+  'prof-medical': { '/seguros/rc-medicos-dentistas/': 'pt-PT', '/en/medical-malpractice-insurance-doctors-dentists/': 'en-GB' },
+  'prof-architects': { '/seguros/rc-arquitetos-engenheiros/': 'pt-PT', '/en/architects-engineers-professional-indemnity/': 'en-GB' },
+  'prof-financial': { '/seguros/rc-consultores-financeiros/': 'pt-PT', '/en/financial-advisers-professional-indemnity/': 'en-GB' },
+  'prof-realestate': { '/seguros/rc-mediadores-imobiliarios/': 'pt-PT', '/en/real-estate-agents-professional-liability/': 'en-GB' },
+};
+
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL })
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL })
     .map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))])
     .filter(([, v]) => v),
 );
@@ -144,7 +158,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL })) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');
