@@ -15,7 +15,7 @@ js = ("import('./scripts/lib/market-hreflang.mjs').then(m=>{const o={};"
       "for (const [k,v] of m.clusterGroups()) if(k.startsWith('es-')||k.startsWith('niche-')||k==='golf'||k==='nautical') o[k]=v;"
       "process.stdout.write(JSON.stringify({groups:o,xd:m.CLUSTER_X_DEFAULT}))})")
 data = json.loads(subprocess.check_output(['node', '-e', js], cwd=ROOT))
-HAND = ('/en/', '/de/', '/nl/', '/fr/', '/blog/')
+HAND = ('/en/', '/de/', '/nl/', '/fr/', '/blog/', '/private-clients/', '/seguros/')
 changed = 0
 for key, group in data['groups'].items():
     xd = data['xd'].get(key)

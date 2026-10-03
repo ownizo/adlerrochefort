@@ -230,6 +230,10 @@ export const HUB_PAGE = {
     <p>Algunos riesgos no se colocan en el mercado minorista. Los presentamos, a través de mercados especializados y de nuestros socios de mediación, con el mismo método: análisis por escrito y un único interlocutor. Cada guía trata las diferencias entre Portugal y España.</p>
     <ul class="hub-list">
       <li class="hub-item">
+        <h3><a href="/es/seguro-family-office/">Family offices</a></h3>
+        <p>D&amp;O de la holding, trustees, viviendas y yate, fraude, secuestro y sucesión, en un programa pensado como un todo.</p>
+      </li>
+      <li class="hub-item">
         <h3><a href="/es/seguro-secuestro-extorsion/">Secuestro, rescate y extorsión</a></h3>
         <p>Consultoría de crisis 24/7, reembolso de rescates y extorsiones y total confidencialidad, para la familia y el personal — también en los viajes a América.</p>
       </li>

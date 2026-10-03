@@ -173,6 +173,10 @@ export const HUB_PAGE = {
     <p>Alcuni rischi di una famiglia con un patrimonio importante non rientrano in nessuna polizza standard. Li collochiamo attraverso mercati specializzati e partner di co-brokerage, in Portogallo e in Spagna, con lo stesso metodo: valutazione scritta, un unico consulente, assistenza nel sinistro.</p>
     <ul class="hub-list">
       <li class="hub-item">
+        <h3><a href="/it/assicurazione-family-office/">Family office</a></h3>
+        <p>D&amp;O della holding, trustee, case e yacht, frodi, K&amp;R e successione, in un programma pensato come un insieme.</p>
+      </li>
+      <li class="hub-item">
         <h3><a href="/it/assicurazione-rapimento-estorsione/">Rapimento, riscatto ed estorsione (K&amp;R)</a></h3>
         <p>Consulenti di crisi 24 ore su 24, rimborso di riscatti ed estorsioni, famiglia, personale e ospiti — con la riservatezza che questa copertura richiede.</p>
       </li>

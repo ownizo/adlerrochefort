@@ -53,6 +53,13 @@ export const NICHE_EXTERNAL = {
   'niche-equine': { '/en/equine-horse-insurance/': 'en-GB', '/de/pferdeversicherung/': 'de' },
   'niche-aviation': { '/en/private-aviation-insurance/': 'en-GB', '/de/privatflugzeug-versicherung/': 'de' },
   'niche-cyber': { '/en/family-cyber-fraud-insurance/': 'en-GB', '/de/cyber-betrug-versicherung-familie/': 'de' },
+  // Family offices (October 2026): hand-authored PT/EN/DE/FR members of the pillar.
+  'niche-familyoffice': {
+    '/private-clients/family-offices/': 'pt-PT',
+    '/en/family-office-insurance/': 'en-GB',
+    '/de/family-office-versicherung/': 'de',
+    '/fr/assurance-family-office/': 'fr',
+  },
 };
 
 /** Spain cluster (September 2026): hand-authored EN/DE/NL members of the es-* groups. */

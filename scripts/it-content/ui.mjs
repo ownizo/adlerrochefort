@@ -65,6 +65,7 @@ export const IT_BRANCHES = [
   { value: 'IT · Cavalli', label: 'Cavalli e scuderie', legend: 'I cavalli', fields: [] },
   { value: 'IT · Aviazione privata', label: 'Aviazione privata e droni', legend: 'L’aeromobile', fields: [] },
   { value: 'IT · Cyber e frodi (famiglia)', label: 'Cyber, frodi e furto d’identità', legend: 'La protezione digitale', fields: [] },
+  { value: 'IT · Family office', label: 'Family office: D&O, trustee, patrimonio e successione', legend: 'Il family office', fields: [] },
   // Pillar articles: golf communities and the sea (yacht + waterfront home).
   { value: 'IT · Villa in un resort di golf', label: 'Villa in un resort di golf', legend: 'La villa sul golf', fields: [] },
   { value: 'IT · Yacht e casa sul mare', label: 'Yacht, barca e casa sul mare', legend: 'Lo yacht e la casa sul mare', fields: [] },

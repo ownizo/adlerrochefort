@@ -43,6 +43,7 @@ import { VILLALET_PAGE } from './it-content/niche-villalet.mjs';
 import { EQUINE_PAGE } from './it-content/niche-equine.mjs';
 import { AVIATION_PAGE } from './it-content/niche-aviation.mjs';
 import { CYBER_PAGE } from './it-content/niche-cyber.mjs';
+import { FAMILY_OFFICE_PAGE } from './it-content/niche-family-office.mjs';
 import { GOLF_PAGE } from './it-content/golf.mjs';
 import { NAUTICAL_PAGE } from './it-content/nautical.mjs';
 
@@ -75,6 +76,8 @@ export const PAGES = [
   EQUINE_PAGE,
   AVIATION_PAGE,
   CYBER_PAGE,
+  // Family offices (October 2026): pillar of the family-office cluster.
+  FAMILY_OFFICE_PAGE,
   // Pillar articles (September 2026): golf and the sea in Portugal and Spain.
   // Cluster keys 'golf' / 'nautical' pair them with every other language.
   GOLF_PAGE,

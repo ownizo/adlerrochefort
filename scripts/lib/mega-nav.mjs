@@ -370,7 +370,9 @@ export function clusterMegaNav(market, { switcher, mobileSwitcher, ctaHref }) {
         (byCluster['es-home'] && { href: byCluster['es-home'].url, label: m.pcSpain, flag: '🇪🇸' })
           || (market.pcSpainHref && { href: market.pcSpainHref, label: m.pcSpain, flag: '🇪🇸' })
           || { href: PC_HREFS.spain, label: m.pcSpain, flag: '🇪🇸' },
-      ],
+        // Family offices (October 2026): only markets that have their own page.
+        byCluster['niche-familyoffice'] && { href: byCluster['niche-familyoffice'].url, label: byCluster['niche-familyoffice'].breadcrumb.at(-1).name },
+      ].filter(Boolean),
     },
     whyUs: MARKET_WHY[market.key]
       ? {
