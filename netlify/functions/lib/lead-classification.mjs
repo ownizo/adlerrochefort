@@ -116,6 +116,26 @@ function classifyRcEventos(data) {
   return 'individual';
 }
 
+// Mercado a partir da página de origem — para os formulários partilhados de
+// cada língua (es-solicitud, pl/se/dk/zh/il/it, lead-nl, expat-health-quote,
+// home-insurance-quote, valuables-review), que servem tanto as páginas de
+// Portugal como as de Espanha com o mesmo form-name. Antes, todos estavam
+// fixos em 'PT', pelo que um pedido vindo de /es/seguro-salud-espana/ ou de
+// /dk/husforsikring-spanien/ entrava no CRM como lead de Portugal.
+// Só devolve 'ES' quando o slug fala de Espanha e NÃO de Portugal — as
+// páginas que cobrem os dois países (…-portugal-spain, …-portugal-espana)
+// continuam 'PT', tal como antes, por não haver forma de decidir.
+const SPAIN_SLUG = /spain|espana|españa|spanien|spanje|hiszpan|espagne|spagna/i;
+const PORTUGAL_SLUG = /portugal|portugalia|portogallo/i;
+export function deriveMarketFromSourceUrl(data, fallback = 'PT') {
+  const raw = String((data && (data.source_url || data.landing_page || data.source)) || '');
+  let path = raw;
+  try { path = decodeURIComponent(new URL(raw, 'https://adlerrochefort.com').pathname); } catch {}
+  if (SPAIN_SLUG.test(path) && !PORTUGAL_SLUG.test(path)) return 'ES';
+  return fallback;
+}
+const marketBySource = (d) => deriveMarketFromSourceUrl(d);
+
 // Determina o mercado a partir do campo `country` (Portugal | Spain) — usado
 // só por international-insurance-review, o único formulário onde o mesmo
 // form-name pode representar os dois mercados. Devolve undefined (não 'PT'
@@ -279,9 +299,9 @@ const FORM_CLASSIFICATION = {
   // Mesmo produto que private-clients-review (PT) — ambos são o cluster de
   // património/coleções/valores para clientes privados, só muda o formulário
   // de entrada; ver secção 8 do pedido.
-  'valuables-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'private-clients' },
+  'valuables-review': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'private-clients' },
   'quote-tvde-en': { entityType: 'individual', market: 'PT', language: 'EN', product: 'tvde' },
-  'expat-health-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'expat-health-quote': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'health' },
   // "health-insurance-quote-wizard" is the /en/health-insurance-quote/
   // page's own, exclusive form-name (Especificação v2, Fase 2 C4 — same
   // pattern as "home-insurance-quote-wizard"/"car-insurance-quote-wizard"
@@ -309,7 +329,7 @@ const FORM_CLASSIFICATION = {
   // form-name stays shared with the many generated secondary pages and
   // blog CTAs that always used it, unaffected by this.
   'home-insurance-quote-wizard': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
-  'home-insurance-quote': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'home-insurance-quote': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'home' },
   'contact-en': { entityType: 'individual', market: 'PT', language: 'EN', product: 'contact' },
   'condominium-audit': { entityType: 'condominium', market: 'PT', language: 'EN', product: 'condominium' },
   // Sem campo de empresa; "senhorio" aqui é sempre um proprietário individual
@@ -450,7 +470,7 @@ const FORM_CLASSIFICATION = {
   // ── PT, outras línguas (o próprio formulário já submete `lang`) ───────
   'nl-offerte-aanvraag': { entityType: 'individual', market: 'PT', product: 'general' },
   // Spain pages under /nl/ (…-spanje/) send their leads through the hub form.
-  'lead-nl': { entityType: 'individual', market: (d) => (/spanje/.test(String((d && (d.source_url || d.source)) || '')) ? 'ES' : 'PT'), product: 'general' },
+  'lead-nl': { entityType: 'individual', market: marketBySource, product: 'general' },
   'lead-fr': { entityType: 'individual', market: 'PT', product: 'general' },
   // de-angebot-anfrage (scripts/generate-de-cluster.mjs) submits `language`,
   // not `lang` — see the comment above this block. Fixed here instead, same
@@ -464,18 +484,18 @@ const FORM_CLASSIFICATION = {
   // vendem seguros portugueses a residentes em Portugal, e o país de origem
   // do lead viaja no campo `market` submetido (poland | sweden | denmark),
   // que chega ao e-mail de notificação como "Source market".
-  'pl-zapytanie-ofertowe': { entityType: 'individual', market: 'PT', product: 'general', language: 'PL' },
-  'se-offertforfragan': { entityType: 'individual', market: 'PT', product: 'general', language: 'SV' },
-  'dk-forespoergsel': { entityType: 'individual', market: 'PT', product: 'general', language: 'DA' },
+  'pl-zapytanie-ofertowe': { entityType: 'individual', market: marketBySource, product: 'general', language: 'PL' },
+  'se-offertforfragan': { entityType: 'individual', market: marketBySource, product: 'general', language: 'SV' },
+  'dk-forespoergsel': { entityType: 'individual', market: marketBySource, product: 'general', language: 'DA' },
   // O cluster chinês (/zh/*) segue exactamente o mesmo padrão. O código de
   // língua é 'ZH' — chinês simplificado; 'CN' seria o país, não a língua. O
   // país de origem do lead viaja no campo `market` submetido ('china').
-  'zh-baojia-shenqing': { entityType: 'individual', market: 'PT', product: 'general', language: 'ZH' },
+  'zh-baojia-shenqing': { entityType: 'individual', market: marketBySource, product: 'general', language: 'ZH' },
   // O cluster hebraico (/il/*) segue o mesmo padrão. O código de língua é 'HE'
   // — hebraico; 'IL' seria o país, não a língua, e é precisamente essa
   // distinção que o campo `market` submetido ('israel') já carrega. O `market`
   // aqui continua 'PT': o negócio é português, seja o lead de onde for.
-  'il-bakashat-hatzaa': { entityType: 'individual', market: 'PT', product: 'general', language: 'HE' },
+  'il-bakashat-hatzaa': { entityType: 'individual', market: marketBySource, product: 'general', language: 'HE' },
 
   // ── Espanha — mesmo CRM, market: 'ES'. Confirmado por leitura de cada
   // página: todas têm `<input type="hidden" name="country" value="Spain">`
@@ -520,11 +540,41 @@ const FORM_CLASSIFICATION = {
   // Spanish (/es/) — registered by scripts/add-market-to-corpus.mjs.
   // `market` stays 'PT' like every other language cluster: the business is
   // Portuguese; the lead's own market travels in the submitted `market` field.
-  'es-solicitud': { entityType: 'individual', market: 'PT', product: 'general', language: 'ES' },
+  'es-solicitud': { entityType: 'individual', market: marketBySource, product: 'general', language: 'ES' },
   // Italian (/it/) — registered by scripts/add-market-to-corpus.mjs.
   // `market` stays 'PT' like every other language cluster: the business is
   // Portuguese; the lead's own market travels in the submitted `market` field.
-  'it-richiesta': { entityType: 'individual', market: 'PT', product: 'general', language: 'IT' },
+  'it-richiesta': { entityType: 'individual', market: marketBySource, product: 'general', language: 'IT' },
+  // EN blog inline CTA forms with their own form-name (see the matching
+  // block in submission-created.mjs's HANDLED_FORMS). All Portugal pages.
+  'canadian-motor-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
+  'canadian-property-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'canadian-health-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'declined-health-cover': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'claim-dispute': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'health-cover-70-75': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'waiting-periods': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'us-visa-cover-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'irish-motor-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
+  'irish-holiday-home-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'lei71-therapies': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'us-claims-process-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'general' },
+  'massage-liability-enquiry': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'mgen-health-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'acceptance-comparison': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'mortgage-cover-check': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'pilates-taichi-liability-enquiry': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'indemnity-reference': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'psych-nutri-liability': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'chronic-condition-move': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'retreat-organiser': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
+  'rebuild-value-review': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'total-loss-settlement': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
+  'us-driving-record-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'auto' },
+  'us-liability-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'general' },
+  'irish-health-enquiry': { entityType: 'individual', market: 'PT', language: 'EN', product: 'health' },
+  'waiver-of-average': { entityType: 'individual', market: 'PT', language: 'EN', product: 'home' },
+  'yoga-liability-enquiry': { entityType: 'contextual', market: 'PT', language: 'EN', product: 'professional-liability', classify: classifyRcProfissionalDedicated },
 };
 
 /**

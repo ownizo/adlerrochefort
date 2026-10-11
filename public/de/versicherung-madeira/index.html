@@ -994,7 +994,7 @@
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: data,
-      }).then(function () {
+      }).then(function (response) { if (!response.ok) throw new Error("HTTP " + response.status);
         form.style.display = "none";
         var success = document.getElementById("angebotSuccess");
         if (success) success.classList.add("show");

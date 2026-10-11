@@ -66,7 +66,7 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString()
-      }).then(function () {
+      }).then(function (response) { if (!response.ok) throw new Error("HTTP " + response.status);
         var wrap = form.closest('.ar-cta-form-wrap') || form.parentNode;
         form.style.display = 'none';
         var sp = wrap.querySelector('.ar-form-smallprint');
