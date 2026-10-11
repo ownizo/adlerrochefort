@@ -37,6 +37,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/blog/arte-joias-alem-do-valor-acordado/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/blog/checklist-revisao-rc-profissional/</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -141,6 +147,12 @@
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/programa-seguros-consolidado-residencias-iates/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/consolidated-insurance-programme-homes-yachts/" />
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/protecao-familiar-seguro-habitacao/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -264,6 +276,18 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/blog/seguro-carros-classicos-alto-valor-portugal-espanha/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-casa-elevado-valor-condicoes/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/blog/seguro-casa-elevado-valor-o-que-declarar/</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -527,6 +551,12 @@
   <url>
     <loc>https://adlerrochefort.com/en/blog/art-collection-household-policy-portugal/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/art-jewellery-cover-beyond-agreed-value/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -795,6 +825,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/family-protection-cover-home-policy/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/fiduciary-family-office-liability-portugal/</loc>
     <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/blog/responsabilidade-trustees-protetores/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/blog/fiduciary-family-office-liability-portugal/" />
@@ -918,8 +954,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/blog/high-value-home-insurance-conditions-clause-by-clause/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/high-value-home-insurance-spain/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/blog/high-value-home-policy-what-to-declare/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

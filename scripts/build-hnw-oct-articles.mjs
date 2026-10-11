@@ -27,6 +27,8 @@ import { fileURLToPath } from 'node:url';
 import { EN } from './hnw-oct-en.data.mjs';
 import { PT } from './hnw-oct-pt.data.mjs';
 import { DE, NL } from './hnw-oct-de-nl.data.mjs';
+import { EN_HOME } from './hnw-home-en.data.mjs';
+import { PT_HOME } from './hnw-home-pt.data.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://adlerrochefort.com';
@@ -60,6 +62,11 @@ export const GROUPS = {
     'zh-CN': '/zh/classic-car-insurance-portugal-spain/',
   },
 };
+// High-value home conditions (October 2026): PT/EN pairs only.
+for (const en of EN_HOME) {
+  const pt = PT_HOME.find((x) => x.key === en.key);
+  GROUPS[en.group] = { 'pt-PT': `/blog/${pt.slug}/`, 'en-GB': `/en/blog/${en.slug}/` };
+}
 // language-selector `lang` attribute -> hreflang code; FR has no member.
 const SEL_LANG = { 'pt-PT': 'pt-PT', en: 'en-GB', nl: 'nl', fr: 'fr', de: 'de', es: 'es', it: 'it-IT', pl: 'pl-PL', sv: 'sv-SE', da: 'da-DK', 'zh-CN': 'zh-CN', he: 'he-IL' };
 const LANG_HOME = { 'pt-PT': '/', 'en-GB': '/en/', nl: '/nl/', fr: '/fr/', de: '/de/', es: '/es/', 'it-IT': '/it/', 'pl-PL': '/pl/', 'sv-SE': '/se/', 'da-DK': '/dk/', 'zh-CN': '/zh/', 'he-IL': '/il/' };
@@ -245,7 +252,9 @@ function enForm(a) {
   }
   let html = EN_FORM_VALUABLES.split(EN_LUX_SLUG).join(a.slug);
   html = common(html);
-  html = swap(html, '<label><input type="checkbox" name="review" value="Collector or high-value car"> Collector or high-value car</label>', '<label><input type="checkbox" name="review" value="Collector or high-value car" checked> Collector or high-value car</label>');
+  const review = a.review || 'Collector or high-value car';
+  html = html.replace(new RegExp(`<label><input type="checkbox" name="review" value="${review}"( data-required-group="review")?> ${review}</label>`), (m, g = '') => `<label><input type="checkbox" name="review" value="${review}"${g} checked> ${review}</label>`);
+  if (!html.includes(`value="${review}"`)) throw new Error(`review option not found: ${review}`);
   html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
   html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
   html = html.replace('placeholder="Optional &mdash; town, or marina"', 'placeholder="Optional &mdash; town and type of garage"');
@@ -682,8 +691,8 @@ const write = (rel, html) => {
   writeFileSync(join(dir, 'index.html'), html);
   console.log(`wrote public/${rel}/index.html`);
 };
-for (const a of EN) { write(`en/blog/${a.slug}`, buildEn(a)); out.push({ lang: 'en', a }); }
-for (const a of PT) { write(`blog/${a.slug}`, buildPt(a)); out.push({ lang: 'pt', a }); }
+for (const a of [...EN, ...EN_HOME]) { write(`en/blog/${a.slug}`, buildEn(a)); out.push({ lang: 'en', a }); }
+for (const a of [...PT, ...PT_HOME]) { write(`blog/${a.slug}`, buildPt(a)); out.push({ lang: 'pt', a }); }
 for (const p of DE) write(p.url.replace(/^\/|\/$/g, ''), buildDe(p));
 for (const p of NL) write(p.url.replace(/^\/|\/$/g, ''), buildNl(p));
 
