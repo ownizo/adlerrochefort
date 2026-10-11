@@ -47,6 +47,7 @@ import { FAMILY_OFFICE_PAGE } from './it-content/niche-family-office.mjs';
 import { GOLF_PAGE } from './it-content/golf.mjs';
 import { NAUTICAL_PAGE } from './it-content/nautical.mjs';
 import { IPMI_PAGE, CLASSIC_CARS_PAGE } from './it-content/hnw-oct.mjs';
+import { HOME_PAGES } from './it-content/hnw-home.mjs';
 
 export { LANG_POLICY_IT, BREADCRUMB_ROOT } from './it-content/shared.mjs';
 
@@ -86,6 +87,9 @@ export const PAGES = [
   // HNW articles (October 2026): cluster keys ipmi / classic-cars.
   IPMI_PAGE,
   CLASSIC_CARS_PAGE,
+  // High-value home conditions (October 2026): four pages, clusters
+  // home-conditions / art-beyond / family-protection / home-declare.
+  ...HOME_PAGES,
 ];
 
 export const IT_MARKET = {

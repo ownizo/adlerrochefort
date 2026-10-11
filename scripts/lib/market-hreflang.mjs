@@ -21,6 +21,7 @@
  */
 import { MARKETS } from './market-registry.mjs';
 import { LANGS } from './lang-selector.mjs';
+import { HOME_EXTERNAL } from './hnw-home-urls.mjs';
 
 /**
  * The homepages that already existed before these three markets. The hub
@@ -162,7 +163,7 @@ export const HNW_OCT_EXTERNAL = {
 
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL })
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL, ...HOME_EXTERNAL })
     .map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))])
     .filter(([, v]) => v),
 );
@@ -179,7 +180,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL })) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL, ...HOME_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');
