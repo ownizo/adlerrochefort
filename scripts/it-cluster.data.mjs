@@ -46,6 +46,7 @@ import { CYBER_PAGE } from './it-content/niche-cyber.mjs';
 import { FAMILY_OFFICE_PAGE } from './it-content/niche-family-office.mjs';
 import { GOLF_PAGE } from './it-content/golf.mjs';
 import { NAUTICAL_PAGE } from './it-content/nautical.mjs';
+import { IPMI_PAGE, CLASSIC_CARS_PAGE } from './it-content/hnw-oct.mjs';
 
 export { LANG_POLICY_IT, BREADCRUMB_ROOT } from './it-content/shared.mjs';
 
@@ -82,6 +83,9 @@ export const PAGES = [
   // Cluster keys 'golf' / 'nautical' pair them with every other language.
   GOLF_PAGE,
   NAUTICAL_PAGE,
+  // HNW articles (October 2026): cluster keys ipmi / classic-cars.
+  IPMI_PAGE,
+  CLASSIC_CARS_PAGE,
 ];
 
 export const IT_MARKET = {

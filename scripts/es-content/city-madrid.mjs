@@ -118,5 +118,6 @@ export const CITY_MADRID_PAGE = {
     { url: '/es/seguro-hogar-espana/', label: 'Seguro de hogar en España' },
     { url: '/es/seguro-medico-visado-espana/', label: 'Seguro médico para el visado español' },
     { url: '/es/comprar-casa-en-espana-seguro/', label: 'Comprar casa en España' },
+    { url: '/es/familias-alto-patrimonio-madrid-seguros/', label: 'Familias de alto patrimonio en Madrid' },
   ],
 };

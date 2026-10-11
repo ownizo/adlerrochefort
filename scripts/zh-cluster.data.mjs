@@ -53,6 +53,7 @@ import { PROPERTY_ES_PAGE } from './zh-content/property-spain.mjs';
 // 'golf' / 'nautical', paired by key with the other markets.
 import { GOLF_PAGE } from './zh-content/golf.mjs';
 import { NAUTICAL_PAGE } from './zh-content/nautical.mjs';
+import { IPMI_PAGE, CLASSIC_CARS_PAGE } from './zh-content/hnw-oct.mjs';
 
 export { LANG_POLICY_ZH, BREADCRUMB_ROOT } from './zh-content/shared.mjs';
 
@@ -81,6 +82,9 @@ export const PAGES = [
   PROPERTY_ES_PAGE,
   GOLF_PAGE,
   NAUTICAL_PAGE,
+  // HNW articles (October 2026): cluster keys ipmi / classic-cars.
+  IPMI_PAGE,
+  CLASSIC_CARS_PAGE,
 ];
 
 export const ZH_MARKET = {

@@ -139,9 +139,30 @@ export const PROF_EXTERNAL = {
   'prof-realestate': { '/seguros/rc-mediadores-imobiliarios/': 'pt-PT', '/en/real-estate-agents-professional-liability/': 'en-GB' },
 };
 
+
+/**
+ * HNW articles (October 2026): hand-authored PT/EN/DE/NL members, built by
+ * scripts/build-hnw-oct-articles.mjs. The EN member of classic-cars is the
+ * existing Portugal-and-Spain luxury car article. No FR member.
+ */
+export const HNW_OCT_EXTERNAL = {
+  ipmi: {
+    '/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/': 'pt-PT',
+    '/en/blog/allianz-care-vs-cigna-global-portugal-spain/': 'en-GB',
+    '/de/blog/allianz-care-vs-cigna-global-portugal-spanien/': 'de',
+    '/nl/allianz-care-vs-cigna-global-portugal-spanje/': 'nl',
+  },
+  'classic-cars': {
+    '/blog/seguro-carros-classicos-alto-valor-portugal-espanha/': 'pt-PT',
+    '/en/blog/luxury-car-insurance-portugal/': 'en-GB',
+    '/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/': 'de',
+    '/nl/klassieke-auto-verzekering-portugal-spanje/': 'nl',
+  },
+};
+
 /** cluster key -> x-default path, for groups whose default is not the PT homepage. */
 export const CLUSTER_X_DEFAULT = Object.fromEntries(
-  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL })
+  Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL })
     .map(([k, g]) => [k, Object.keys(g).find((u) => u.startsWith('/en/'))])
     .filter(([, v]) => v),
 );
@@ -158,7 +179,7 @@ export function clusterGroups() {
       groups.set(page.cluster, group);
     }
   }
-  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL })) {
+  for (const [key, extra] of Object.entries({ ...NICHE_EXTERNAL, ...SPAIN_EXTERNAL, ...GOLF_NAUTICAL_EXTERNAL, ...ES_CLUSTER_EXTERNAL, ...PROF_EXTERNAL, ...HNW_OCT_EXTERNAL })) {
     if (groups.has(key)) groups.set(key, { ...extra, ...groups.get(key) });
   }
   const hub = groups.get('hub');

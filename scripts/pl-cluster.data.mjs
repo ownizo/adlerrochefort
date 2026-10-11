@@ -48,6 +48,7 @@ import { ES_PROPERTY_PAGE } from './pl-content/es-property.mjs';
 // nautical), each covering Portugal and Spain.
 import { GOLF_PAGE } from './pl-content/golf.mjs';
 import { NAUTICAL_PAGE } from './pl-content/nautical.mjs';
+import { IPMI_PAGE, CLASSIC_CARS_PAGE } from './pl-content/hnw-oct.mjs';
 
 export { LANG_POLICY_PL, BREADCRUMB_ROOT } from './pl-content/shared.mjs';
 
@@ -83,6 +84,9 @@ export const PAGES = [
   ES_PROPERTY_PAGE,
   GOLF_PAGE,
   NAUTICAL_PAGE,
+  // HNW articles (October 2026): cluster keys ipmi / classic-cars.
+  IPMI_PAGE,
+  CLASSIC_CARS_PAGE,
 ];
 
 export const PL_MARKET = {

@@ -83,6 +83,8 @@ import { CITY_BARCELONA_PAGE } from './es-content/city-barcelona.mjs';
 import { CITY_VALENCIA_PAGE } from './es-content/city-valencia.mjs';
 import { CITY_LISBOA_PAGE } from './es-content/city-lisboa.mjs';
 import { CITY_MADEIRA_PAGE } from './es-content/city-madeira.mjs';
+// HNW articles (October 2026): IPMI comparison, classic cars, Madrid HNW families.
+import { IPMI_PAGE, CLASSIC_CARS_PAGE, MADRID_HNW_PAGE } from './es-content/hnw-oct.mjs';
 
 export { LANG_POLICY_ES, BREADCRUMB_ROOT } from './es-content/shared.mjs';
 
@@ -152,6 +154,11 @@ export const PAGES = [
   // Cluster keys 'golf' / 'nautical' pair them with every other language.
   GOLF_PAGE,
   NAUTICAL_PAGE,
+  // HNW articles (October 2026). Cluster keys ipmi / classic-cars pair them
+  // with every other language; es-madrid-hnw is Spanish only.
+  IPMI_PAGE,
+  CLASSIC_CARS_PAGE,
+  MADRID_HNW_PAGE,
 ];
 
 export const ES_MARKET = {

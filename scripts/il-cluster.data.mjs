@@ -64,6 +64,7 @@ import { ES_PROPERTY_PAGE } from './il-content/es-property.mjs';
 // 'golf' / 'nautical', paired by key with the other markets.
 import { GOLF_PAGE } from './il-content/golf.mjs';
 import { NAUTICAL_PAGE } from './il-content/nautical.mjs';
+import { IPMI_PAGE, CLASSIC_CARS_PAGE } from './il-content/hnw-oct.mjs';
 
 export { LANG_POLICY_IL, BREADCRUMB_ROOT } from './il-content/shared.mjs';
 
@@ -94,6 +95,9 @@ export const PAGES = [
   ES_PROPERTY_PAGE,
   GOLF_PAGE,
   NAUTICAL_PAGE,
+  // HNW articles (October 2026): cluster keys ipmi / classic-cars.
+  IPMI_PAGE,
+  CLASSIC_CARS_PAGE,
 ];
 
 export const IL_MARKET = {
