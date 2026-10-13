@@ -335,6 +335,9 @@ const QUOTE_LABELS = {
   date_of_birth: "Date of birth",
   nationality: "Nationality",
   tax_resident_pt: "Tax resident in Portugal",
+  // Global IPMI hub (/en/international-health-insurance/), EN-only names.
+  destination_country: "Country where the client will live",
+  us_state: "US state of residence (US nationals)",
 
   // Especificação v2 — Passo 2 (Habitação, Fase 2). `town` is genuinely
   // EN-only (the EN page does not reuse `localidade`), so it stays here
@@ -1088,6 +1091,33 @@ export const HANDLED_FORMS = {
   // wizard"/"car-insurance-quote-wizard" below. "expat-health-quote" above
   // stays untouched, still shared with the 30+ blog CTAs that already used
   // it.
+  // Global IPMI hub, /en/international-health-insurance/ — its own
+  // form-name because its field set (nationality + country where the client
+  // will live + US state for US nationals) differs from every other health
+  // form, and these leads are not Portugal residents.
+  "international-health-quote": {
+    quote: true,
+    en: true,
+    heading: "New international health (IPMI) quote request",
+    page: "/en/international-health-insurance/",
+    branch: "Health",
+  },
+  // ES and DE versions of the global IPMI hub. Same field set as the EN
+  // hub; the notification stays in English so every IPMI lead reads alike.
+  "es-international-health-quote": {
+    quote: true,
+    en: true,
+    heading: "New international health (IPMI) quote request — Spanish",
+    page: "/es/seguro-medico-internacional/",
+    branch: "Health · IPMI (ES)",
+  },
+  "de-international-health-quote": {
+    quote: true,
+    en: true,
+    heading: "New international health (IPMI) quote request — German",
+    page: "/de/internationale-krankenversicherung/",
+    branch: "Health · IPMI (DE)",
+  },
   "health-insurance-quote-wizard": {
     quote: true,
     en: true,
