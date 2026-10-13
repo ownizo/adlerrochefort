@@ -1102,6 +1102,22 @@ export const HANDLED_FORMS = {
     page: "/en/international-health-insurance/",
     branch: "Health",
   },
+  // ES and DE versions of the global IPMI hub. Same field set as the EN
+  // hub; the notification stays in English so every IPMI lead reads alike.
+  "es-international-health-quote": {
+    quote: true,
+    en: true,
+    heading: "New international health (IPMI) quote request — Spanish",
+    page: "/es/seguro-medico-internacional/",
+    branch: "Health · IPMI (ES)",
+  },
+  "de-international-health-quote": {
+    quote: true,
+    en: true,
+    heading: "New international health (IPMI) quote request — German",
+    page: "/de/internationale-krankenversicherung/",
+    branch: "Health · IPMI (DE)",
+  },
   "health-insurance-quote-wizard": {
     quote: true,
     en: true,

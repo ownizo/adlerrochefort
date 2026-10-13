@@ -312,6 +312,8 @@ const FORM_CLASSIFICATION = {
   // Global IPMI hub: clients anywhere in the world, so the market follows
   // the source URL like expat-health-quote rather than being fixed to PT.
   'international-health-quote': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'health' },
+  'es-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'ES', product: 'health' },
+  'de-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'DE', product: 'health' },
   // "professional-liability-quote-wizard" is the /en/professional-liability-
   // insurance-portugal/ page's own, exclusive form-name (Especificação v2,
   // Fase 2 C2). Its field set mirrors the PT wizard's — no `empresa`/
