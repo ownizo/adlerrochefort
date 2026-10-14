@@ -191,3 +191,45 @@ def person_ld():
         "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Hertfordshire"},
         "knowsAbout": ["International private medical insurance", "Expatriate health insurance", "Allianz Care", "Cigna Global"],
     }
+
+
+KEY_FACTS = {
+    "en": ("Key facts", [
+        "Insurers: Allianz Care and Cigna Global, compared on the same terms.",
+        "US citizens living abroad: Cigna Global (Allianz Care does not accept US citizens).",
+        "Eligibility: you live outside your country of nationality; the policy follows your main country of residence.",
+        "To quote: full name, date of birth, nationality and country where you will live (plus US state for US nationals).",
+        "Real 2026 premiums: from €5,241 a year (64, Europe, hospital only) to €39,634 (family of five, worldwide excl. USA, top level).",
+        "No fee to you; written reply within one working day; EU-regulated broker, ASF no. 425591790/3.",
+    ]),
+    "es": ("Datos clave", [
+        "Aseguradoras: Allianz Care y Cigna Global, comparadas en las mismas condiciones.",
+        "Ciudadanos de EE. UU. en el extranjero: Cigna Global (Allianz Care no acepta ciudadanos estadounidenses).",
+        "Elegibilidad: vive fuera de su país de nacionalidad; la póliza sigue a su país principal de residencia.",
+        "Para cotizar: nombre, fecha de nacimiento, nacionalidad y país donde va a vivir (y estado, si es estadounidense).",
+        "Primas reales de 2026: desde 5.241 € al año (64 años, Europa, solo hospitalización) hasta 39.634 € (familia de cinco, mundial sin EE. UU., nivel superior).",
+        "Sin coste para usted; respuesta por escrito en un día hábil; corredor regulado en la UE, ASF n.º 425591790/3.",
+    ]),
+    "de": ("Das Wichtigste in Kürze", [
+        "Versicherer: Allianz Care und Cigna Global, zu gleichen Bedingungen verglichen.",
+        "US-Bürger im Ausland: Cigna Global (Allianz Care nimmt keine US-Bürger auf).",
+        "Voraussetzung: Wohnsitz außerhalb des Heimatlandes; maßgeblich ist das Hauptwohnsitzland.",
+        "Für ein Angebot: Name, Geburtsdatum, Staatsangehörigkeit und künftiges Wohnsitzland (bei US-Bürgern der Bundesstaat).",
+        "Echte Beiträge 2026: ab 5.241 € pro Jahr (64, Europa, nur stationär) bis 39.634 € (Familie mit fünf Personen, weltweit ohne USA, Top-Tarif).",
+        "Für Sie kostenlos; schriftliche Antwort innerhalb eines Werktags; EU-regulierter Makler, ASF Nr. 425591790/3.",
+    ]),
+}
+
+
+def key_facts(lang):
+    h2, items = KEY_FACTS[lang]
+    lis = "\n".join(f"    <li>{i}</li>" for i in items)
+    return f"""
+<!-- IPMI-KEYFACTS -->
+<section class="lp-section" id="key-facts">
+  <h2>{h2}</h2>
+  <ul class="lp-list">
+{lis}
+  </ul>
+</section>
+"""
