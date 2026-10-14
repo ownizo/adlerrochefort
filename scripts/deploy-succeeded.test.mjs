@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
-import { recentUrls, INDEXNOW_KEY } from "./deploy-succeeded.mjs";
+import { recentUrls, INDEXNOW_KEY } from "../netlify/functions/deploy-succeeded.mjs";
 
 test("recentUrls keeps only pages modified within the window", () => {
   const xml = `<urlset>
@@ -14,7 +14,7 @@ test("recentUrls keeps only pages modified within the window", () => {
 });
 
 test("IndexNow key file is published with the key as its only content", () => {
-  const path = new URL(`../../public/${INDEXNOW_KEY}.txt`, import.meta.url);
+  const path = new URL(`../public/${INDEXNOW_KEY}.txt`, import.meta.url);
   assert.ok(existsSync(path));
   assert.equal(readFileSync(path, "utf8"), INDEXNOW_KEY);
 });
