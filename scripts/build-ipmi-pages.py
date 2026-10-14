@@ -80,6 +80,10 @@ def enhance_hub(lang, dest_pages):
         i = s.index('<section class="lp-hero">')
         j = s.index("</section>", i) + len("</section>")
         s = s[:j] + "\n" + B.author(lang) + s[j:]
+    if "<!-- IPMI-KEYFACTS -->" not in s:
+        i = s.index("<!-- IPMI-AUTHOR -->")
+        j = s.index("</div>\n</div>\n", i) + len("</div>\n</div>\n")
+        s = s[:j] + B.key_facts(lang) + s[j:]
     why = f'<section class="lp-section" style="background:var(--cream2);max-width:none;" id="{h["why_id"]}">'
     s = insert_before(s, why, B.destinations(lang, dest_pages), "<!-- IPMI-DESTINATIONS -->")
     process = f'<section class="lp-section" id="{h["process_id"]}">'
