@@ -59,6 +59,27 @@
 <link rel="stylesheet" href="/css/ar-livro.css">
 <link rel="stylesheet" href="/css/ar-conversion.css">
 <link rel="stylesheet" href="/css/ar-theme.css">
+<style id="ipmi-extras">
+.ipmi-author{max-width:1100px;margin:28px auto 0;padding:0 24px}
+.ipmi-author-inner{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:16px 20px}
+.ipmi-author img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 56px}
+.ipmi-author-text{font-size:13.5px;line-height:1.6;color:#333332}
+.ipmi-author-text strong{color:#292929}
+.ipmi-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.ipmi-review{background:#fff;border:1px solid #EBE9E8;border-radius:12px;padding:22px;margin:0}
+.ipmi-review .stars{color:#00B67A;letter-spacing:2px;font-size:17px;margin-bottom:10px}
+.ipmi-review blockquote{margin:0;font-size:14.5px;line-height:1.65;color:#292929}
+.ipmi-review figcaption{margin-top:12px;font-size:13px;color:#6B6763}
+.ipmi-score{font-size:15px;color:#333332}
+.ipmi-score a{color:#292929;font-weight:700}
+.ipmi-dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:20px}
+.ipmi-dest{display:block;background:#fff;border:1px solid #EBE9E8;border-radius:14px;padding:20px;text-decoration:none;color:#292929}
+.ipmi-dest:hover{border-color:#FF6300}
+.ipmi-dest strong{display:block;font-size:16px;margin-bottom:6px}
+.ipmi-dest span{font-size:13.5px;line-height:1.55;color:#6B6763}
+@media(max-width:760px){.ipmi-author-inner{align-items:flex-start}.ipmi-author-text{font-size:13px}}
+.ipmi-note{font-size:13px;line-height:1.7;color:#6B6763;margin-top:12px}
+</style>
 </head>
 <body>
 
@@ -281,6 +302,15 @@
   </div>
 </section>
 
+<!-- IPMI-AUTHOR -->
+<div class="ipmi-author">
+  <div class="ipmi-author-inner">
+    <picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="56" height="56" loading="lazy" decoding="async"></picture>
+    <div class="ipmi-author-text"><strong>Written and reviewed by Hugo Gonçalves</strong>, Founder &amp; Risk Management Specialist at Adler &amp; Rochefort. Degree in Business Management (University of Hertfordshire) and ongoing training at the Chartered Insurance Institute (CII), London. Hugo places Allianz Care and Cigna Global international plans personally. Last reviewed 14 October 2026.</div>
+  </div>
+</div>
+
+
 <section class="lp-section" id="what-is-ipmi">
   <h2>What international health insurance is</h2>
   <p><strong>International health insurance is private medical cover for people who live outside their country of nationality.</strong> Instead of a single national hospital network, you choose a geographic area — Europe, worldwide excluding the United States, or worldwide including it — and you can be treated at recognised hospitals and doctors anywhere inside it. Planned hospital treatment is normally pre-authorised and paid directly by the insurer, and the policy stays with you when you move country again.</p>
@@ -355,6 +385,20 @@
   </div>
 </section>
 
+<!-- IPMI-DESTINATIONS -->
+<section class="lp-section" id="destinations">
+  <h2>Destinations and profiles</h2>
+  <p>Guides for the situations we quote most often.</p>
+  <div class="ipmi-dest-grid">
+    <a class="ipmi-dest" href="/en/international-health-insurance/us-citizens-abroad/"><strong>US citizens abroad</strong><span>Cigna Global for Americans living outside the US, with or without US cover.</span></a>
+    <a class="ipmi-dest" href="/en/international-health-insurance/thailand/"><strong>Thailand</strong><span>Expats and retirees, including the O-A retirement visa insurance rule.</span></a>
+    <a class="ipmi-dest" href="/en/international-health-insurance/mexico/"><strong>Mexico</strong><span>Americans, Canadians and Europeans living in Mexico.</span></a>
+    <a class="ipmi-dest" href="/en/international-health-insurance/philippines/"><strong>Philippines</strong><span>Professionals, families and retirees moving to the Philippines.</span></a>
+    <a class="ipmi-dest" href="/en/international-health-insurance/digital-nomads/"><strong>Digital nomads</strong><span>Remote workers living abroad: annual cover, not travel insurance.</span></a>
+    <a class="ipmi-dest" href="/en/international-health-insurance/retirees-abroad/"><strong>Retirees abroad</strong><span>Real premiums at 64, pre-existing conditions and retirement visas.</span></a>
+  </div>
+</section>
+
 <section class="lp-section" style="background:var(--cream2);max-width:none;" id="why-adler-rochefort">
   <div style="max-width:1100px;margin:0 auto;">
     <h2>Why arrange it through us</h2>
@@ -367,6 +411,39 @@
       <div class="lp-card"><h3>On your side at claim time</h3><p>Pre-authorisations, direct billing with hospitals, refused or delayed claims: we deal with the insurer for you and keep you informed.</p></div>
       <div class="lp-card"><h3>No fee to you</h3><p>We are paid by the insurer. There is no charge for the quotation, the comparison, the application or the help with claims.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- IPMI-REVIEWS -->
+<section class="lp-section" id="reviews">
+  <h2>What our clients say</h2>
+  <p class="ipmi-score"><a href="https://www.trustpilot.com/review/adlerrochefort.com" rel="noopener" target="_blank">TrustScore 4.3/5 on Trustpilot</a> · 8 reviews, October 2026. Reviews of our service across all lines of insurance, as published.</p>
+  <div class="ipmi-reviews-grid">
+      <figure class="ipmi-review" lang="en"><div class="stars" aria-label="5/5">★★★★★</div><blockquote><p><strong>Great for this US expat with ‘vacation’ property awaiting my relocation</strong></p><p>I was drawn to Adler &amp; Rochefort because they were comfortable with English communication … and worked with second/vacation home owners. It was reassuring that I was asked for specific information about the property and my needs, with follow-up, before a quote was obtained. … Coverage is a clear match for my needs.</p></blockquote><figcaption>Jim Gilkeson · US · 14.09.2026</figcaption></figure>
+      <figure class="ipmi-review" lang="en"><div class="stars" aria-label="5/5">★★★★★</div><blockquote><p><strong>Hugo provided excellent detailed and…</strong></p><p>Hugo provided excellent detailed and thorough service in the transition from our old policy to a new and better policy that served our needs. We highly recommend him and Adler &amp; Rochefort for their professionalism and attentiveness.</p></blockquote><figcaption>J M · US · 09.09.2026</figcaption></figure>
+      <figure class="ipmi-review" lang="en"><div class="stars" aria-label="5/5">★★★★★</div><blockquote><p><strong>Amazing service - highly recommend</strong></p><p>Amazing service. Hugo was hugely knowledgeable and gave us quotes incredibly fast. He was always at the end of the phone answering questions and was very diligent in getting the right insurance for us. Highly recommend.</p></blockquote><figcaption>Georgie · GB · 17.09.2026</figcaption></figure>
+  </div>
+</section>
+
+<!-- IPMI-PRICES -->
+<section class="lp-section" style="background:var(--cream2);max-width:none;" id="prices">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2>What international health insurance costs: real quotes</h2>
+    <p>The premium depends on age, area of cover, plan level, options and medical underwriting, so there is no useful average. These are real quotes we obtained for clients in September and October 2026, anonymised. All have no deductible and are indicative until the insurer has underwritten the application.</p>
+    <div class="ar-table-wrap">
+      <table class="ar-table">
+        <thead><tr><th>Profile</th><th>Area of cover</th><th>Insurer</th><th>Annual premium, entry to top level</th></tr></thead>
+        <tbody>
+          <tr><td>One person, 64, living in Portugal</td><td>Europe</td><td>Allianz Care</td><td>€5,241 (Base, hospital only) to €14,027 (Signature, with out-patient)</td></tr>
+          <tr><td>One person, 43, living in Portugal</td><td>Worldwide</td><td>Allianz Care</td><td>€8,818 (Base) to €16,641 (Signature), with out-patient and dental</td></tr>
+          <tr><td>Couple, 55 and 59, living in Portugal</td><td>Worldwide excl. USA</td><td>Cigna Global</td><td>€15,951 (Silver) to €31,904 (Platinum), all modules, monthly payment</td></tr>
+          <tr><td>Family of five: two adults around 40, three children under 8</td><td>Worldwide excl. USA</td><td>Cigna Global</td><td>€19,769 (Silver) to €39,634 (Platinum), all modules</td></tr>
+          <tr><td>US couple, 67 and 68, moving to Portugal</td><td>Worldwide excl. USA</td><td>Cigna Global</td><td>US$24,597 (Silver) to US$47,963 (Platinum)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>How to bring the premium down.</strong> Leave the United States out of the area of cover, which is the single biggest saving. Add a deductible: Cigna Global offers hospital deductibles from €275 to €7,400 and out-patient deductibles from €110 to €1,100. Choose hospital-only cover, or a Europe-only area with Allianz Care. Pay annually: Cigna Global gives 10% off compared with monthly payment.</p>
+    <p class="ipmi-note">Examples only. Your premium is set by the insurer on your own details, after medical underwriting, and is confirmed in writing before you commit.</p>
   </div>
 </section>
 
@@ -1194,7 +1271,9 @@
       "sameAs": [
         "https://www.facebook.com/adlerrochefort",
         "https://www.instagram.com/adlerrochefort/",
-        "https://www.linkedin.com/company/adler-rochefort"
+        "https://www.linkedin.com/company/adler-rochefort",
+        "https://www.ncaportugal.pt/post/adler-rochefort",
+        "https://www.trustpilot.com/review/adlerrochefort.com"
       ]
     },
     {
@@ -1212,7 +1291,13 @@
       "about": {
         "@id": "https://adlerrochefort.com/en/international-health-insurance/#service"
       },
-      "dateModified": "2026-10-13"
+      "dateModified": "2026-10-14",
+      "author": {
+        "@id": "https://adlerrochefort.com/#hugo-goncalves"
+      },
+      "reviewedBy": {
+        "@id": "https://adlerrochefort.com/#hugo-goncalves"
+      }
     },
     {
       "@type": "Service",
@@ -1363,6 +1448,26 @@
             "text": "Adler & Rochefort is the brand of Ownizo, Unipessoal Lda., an insurance intermediary registered with Portugal's Autoridade de Supervisão de Seguros e Fundos de Pensões (ASF) under no. 425591790/3, with offices in Lisbon and Lagos. We are appointed by Allianz Care and Cigna Global for international health insurance and are not a tied agent of any insurer."
           }
         }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://adlerrochefort.com/#hugo-goncalves",
+      "name": "Hugo Gonçalves",
+      "jobTitle": "Founder & Risk Management Specialist",
+      "worksFor": {
+        "@id": "https://adlerrochefort.com/#organization"
+      },
+      "image": "https://adlerrochefort.com/images/hugo-goncalves-640.jpg",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Hertfordshire"
+      },
+      "knowsAbout": [
+        "International private medical insurance",
+        "Expatriate health insurance",
+        "Allianz Care",
+        "Cigna Global"
       ]
     }
   ]
