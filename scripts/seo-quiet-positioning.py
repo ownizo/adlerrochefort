@@ -117,8 +117,8 @@ add(
 )
 add(
     "en/health-insurance-spain/index.html",
-    "Private Health Insurance in Spain | Adler & Rochefort",
-    "Private medical cover in Spain for international residents. How it sits beside the public system, waiting periods, and what a visa file actually needs.",
+    "Expat Health Insurance in Spain | Adler & Rochefort",
+    "Health cover in Spain for international residents, compared across insurers in writing: visa requirements, waiting periods and pre-existing conditions.",
 )
 add(
     "en/home-insurance-quote/index.html",
