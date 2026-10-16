@@ -33,12 +33,17 @@
 <link rel="stylesheet" href="/css/ar-chrome.css">
 <link rel="stylesheet" href="/css/ar-livro.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
-<!-- Google tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
+  gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
 <link rel="stylesheet" href="/css/ar-site.css">
@@ -363,7 +368,7 @@
   <h2>Solicite su cotización de seguro médico internacional</h2>
   <p class="ar-cta-form-lead">Cuatro datos bastan para empezar. Le respondemos por escrito en un día hábil con Allianz Care y Cigna Global configurados para usted.</p>
   <form class="ar-cta-form" name="es-international-health-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/es/seguro-medico-internacional/mexicanos-en-el-extranjero/" data-form-label="es_international_health_quote">
-    <input type="hidden" name="form-name" value="es-international-health-quote">
+    <input type="hidden" name="form-name" value="es-international-health-quote"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
     <input type="hidden" name="source_url" value="">
     <input type="hidden" name="source" value="page:mexicanos-en-el-extranjero">
     <input type="hidden" name="language" value="es">
@@ -1256,7 +1261,7 @@
     if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
   })();
   function respondCookies(accepted) {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected'); if (typeof gtag === 'function') { var arV = accepted ? 'granted' : 'denied'; gtag('consent', 'update', {ad_storage: arV, ad_user_data: arV, ad_personalization: arV, analytics_storage: arV}); }
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
@@ -1425,5 +1430,6 @@
   })();
 </script>
 <script defer src="/js/ar-conversion.js"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body>
 </html>

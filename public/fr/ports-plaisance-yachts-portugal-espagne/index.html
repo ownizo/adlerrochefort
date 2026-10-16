@@ -45,12 +45,17 @@
 <link rel="stylesheet" href="/css/ar-livro.css">
 <link rel="stylesheet" href="/css/ar-landing.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
-<!-- Google tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
+  gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
 <script type="application/ld+json">
@@ -403,5 +408,6 @@
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="fr"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body>
 </html>

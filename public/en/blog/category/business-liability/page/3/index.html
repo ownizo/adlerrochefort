@@ -26,10 +26,15 @@
 <link rel="manifest" href="/site.webmanifest">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/ar-site.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
@@ -441,7 +446,7 @@
     }
   })();
   function respondCookies(accepted) {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected'); if (typeof gtag === 'function') { var arV = accepted ? 'granted' : 'denied'; gtag('consent', 'update', {ad_storage: arV, ad_user_data: arV, ad_personalization: arV, analytics_storage: arV}); }
     document.getElementById('cookieBanner').classList.remove('show');
   }
   (function () {
@@ -551,5 +556,6 @@
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body>
 </html>

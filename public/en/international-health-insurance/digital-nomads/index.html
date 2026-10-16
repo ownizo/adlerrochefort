@@ -46,10 +46,15 @@
   .ar-cta-form input[type="date"] { width: 100%; }
   #ihq-us-note, #ihq-same-country { margin: 4px 0 14px; }
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
@@ -344,7 +349,7 @@
   <h2>Get your international health insurance quote</h2>
   <p class="ar-cta-form-lead">Four details are enough to start. We reply in writing within one working day with Allianz Care and Cigna Global configured for you.</p>
   <form class="ar-cta-form" name="international-health-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/en/international-health-insurance/digital-nomads/" data-form-label="international_health_quote">
-    <input type="hidden" name="form-name" value="international-health-quote">
+    <input type="hidden" name="form-name" value="international-health-quote"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
     <input type="hidden" name="source_url" value="">
     <input type="hidden" name="source" value="page:digital-nomads">
     <p style="display:none"><label>Don&rsquo;t fill this in: <input name="bot-field"></label></p>
@@ -1092,7 +1097,7 @@
     }
   })();
   function respondCookies(accepted) {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected'); if (typeof gtag === 'function') { var arV = accepted ? 'granted' : 'denied'; gtag('consent', 'update', {ad_storage: arV, ad_user_data: arV, ad_personalization: arV, analytics_storage: arV}); }
     document.getElementById('cookieBanner').classList.remove('show');
   }
   (function () {
@@ -1264,5 +1269,6 @@
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body>
 </html>

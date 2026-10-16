@@ -427,7 +427,7 @@ function formHtml(market, page) {
       action="/${market.key}/#${ui.formId}"
       novalidate>
 
-      <input type="hidden" name="form-name" value="${market.formName}">
+      <input type="hidden" name="form-name" value="${market.formName}"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
       <input type="hidden" name="source" value="${esc(page.slug || market.key)}">
       <input type="hidden" name="source_url" value="">
       <input type="hidden" name="landing_page" value="">
@@ -595,7 +595,7 @@ function wizardFormHtml(market, page) {
     <p class="form-intro">${esc(w.intro)}</p>
 
     <form name="${w.formName}" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/${market.key}/#${ui.formId}">
-      <input type="hidden" name="form-name" value="${w.formName}">
+      <input type="hidden" name="form-name" value="${w.formName}"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
       <input type="hidden" name="ramo" value="${esc(w.ramo)}">
       <input type="hidden" name="source_url" id="${idp}-source" value="">
       <input type="hidden" name="dados_dinamicos" value="">
@@ -854,7 +854,7 @@ function cookieBanner(market) {
     if (b && !localStorage.getItem('cookie_consent')) b.classList.add('show');
   })();
   function respondCookies(accepted) {
-    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected');
+    localStorage.setItem('cookie_consent', accepted ? 'accepted' : 'rejected'); if (typeof gtag === 'function') { var arV = accepted ? 'granted' : 'denied'; gtag('consent', 'update', {ad_storage: arV, ad_user_data: arV, ad_personalization: arV, analytics_storage: arV}); }
     document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>`;
@@ -1038,12 +1038,17 @@ ${jsonLd(market, page)}
 <link rel="stylesheet" href="/css/ar-chrome.css">
 ${LIVRO_CSS}
 ${page.wizard ? '<link rel="stylesheet" href="/css/ar-property.css">\n<link rel="stylesheet" href="/css/ar-quote-wizard.css">\n' : ''}${LANGSEL_CSS_LINK}
-<!-- Google tag (gtag.js) - Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361722533"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
+  gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
 </script>
 ${THEME_CSS_LINK}
