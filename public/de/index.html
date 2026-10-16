@@ -2521,10 +2521,15 @@
 }
 </script>
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
@@ -2946,7 +2951,7 @@
       <div class="hero-card-eyebrow">Schriftliche Einschätzung · unverbindlich</div>
       <div class="hero-card-title">Senden Sie uns, was Sie haben. Wir sagen Ihnen, wo der Schutz endet.</div>
       <form class="hero-card-form" name="de-free-analysis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="de-free-analysis">
+        <input type="hidden" name="form-name" value="de-free-analysis"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <input type="hidden" name="language" value="de">
         <input type="hidden" name="source_url" value="">
         <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
@@ -3945,7 +3950,7 @@
     </div>
     <div class="contact-modal-body">
       <form class="contact-form" id="contactForm" method="POST" name="de-contact" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="de-contact">
+        <input type="hidden" name="form-name" value="de-contact"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
         <div class="contact-form-field">
           <label for="contact-name">Name *</label>
@@ -4105,4 +4110,5 @@
 <script defer src="/js/ar-langsel.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body></html>

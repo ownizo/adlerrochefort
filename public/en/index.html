@@ -2521,10 +2521,15 @@
 }
 </script>
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<!-- ar-analytics: consent-mode v2 -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500});
+  try { if (localStorage.getItem('cookie_consent') === 'accepted') gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31W0QJ9WH"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-Y31W0QJ9WH');
   gtag('config', 'AW-18361722533');
@@ -2947,7 +2952,7 @@
       <div class="hero-card-eyebrow">Written opinion · No obligation</div>
       <div class="hero-card-title">Send us what you hold. We tell you where it stops.</div>
       <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="free-analysis">
+        <input type="hidden" name="form-name" value="free-analysis"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <input type="hidden" name="source_url" value="">
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-field">
@@ -4057,7 +4062,7 @@
     </div>
     <div class="contact-modal-body">
       <form class="contact-form" id="contactForm" method="POST" name="contact-en" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact-en">
+        <input type="hidden" name="form-name" value="contact-en"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <p style="display:none"><label>Do not fill in: <input name="bot-field"></label></p>
         <div class="contact-form-field">
           <label for="contact-name">Name *</label>
@@ -4217,4 +4222,5 @@
 <script defer src="/js/ar-langsel.js"></script>
 <script defer src="/js/ar-nav.js"></script>
 <script defer src="/js/ar-livro.js"></script>
+<script defer src="/js/ar-attribution.js"></script>
 </body></html>
