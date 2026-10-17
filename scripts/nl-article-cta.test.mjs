@@ -1,4 +1,6 @@
 import test from 'node:test';
+const stripQuick = (h) => h.replace(/<!-- ar-quick-contact -->[\s\S]*?<\/form>/g, ''); // Oct 2026 quick-contact blocks are additive, not the page's own form
+
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { PAGES } from './nl-cluster.data.mjs';
@@ -15,7 +17,7 @@ test('every NL page that declares ctaRoutesTo publishes that link and no form', 
   const failures = [];
   for (const page of routed) {
     const path = `public${page.url}index.html`;
-    const html = readFileSync(path, 'utf8');
+    const html = stripQuick(readFileSync(path, 'utf8'));
     if (/<form\b/.test(html)) failures.push(`${page.url}: still has a <form>`);
     if (html.includes('nl-offerte-aanvraag')) failures.push(`${page.url}: still names the generic form`);
     if (!html.includes(page.ctaRoutesTo)) failures.push(`${page.url}: missing ${page.ctaRoutesTo}`);

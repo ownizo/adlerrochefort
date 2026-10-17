@@ -58,6 +58,31 @@
 </script>
 <link rel="stylesheet" href="/css/ar-theme.css">
 <style id="ar-author-style">.ar-author{max-width:1100px;margin:24px auto 0;padding:0 24px}.ar-author-inner{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:14px 18px}.ar-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px}.ar-author-text{font-size:13px;line-height:1.6;color:#333332;margin:0}.ar-author-text strong{color:#292929}@media(max-width:760px){.ar-author-inner{align-items:flex-start}}</style>
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
+<style id="ar-quick-contact-style">
+.arsf.arqc{margin:0 0 18px;padding:18px;background:#FAF9F7}
+.arsf.arqc h3{font-size:17px}
+.arqc-or{display:flex;align-items:center;gap:10px;margin:14px 0 4px;font-size:12.5px;color:#777;text-transform:uppercase;letter-spacing:.04em}
+.arqc-or:before,.arqc-or:after{content:"";flex:1;height:1px;background:#E2DFDC}
+.arsf-done{font-size:15px;line-height:1.5;margin:6px 0 0}
+.arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
+.arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
+</style>
 </head>
 <body>
 <div class="asf-top-bar">Adler &amp; Rochefort ist bei der ASF Portugals registriert, Nr. 425591790/3, und in Spanien im Dienstleistungsverkehr tätig — <a href="/de/#contact">Versicherungsanalyse anfragen</a></div>
@@ -271,7 +296,27 @@
 
 <section class="lp-sections"><div class="lp-sections-inner">
 <div class="lp-card"><h2>Zuerst Hausrat, dann die Aufstellung</h2><p>Die meisten portugiesischen und spanischen Hauspolicen begrenzen nicht einzeln genannte Wertsachen. Darüber ist das Stück unterversichert oder gar nicht gedeckt. Ein vereinbarter Wert auf Basis eines Gutachtens ist ein anderer Vertrag als „Hausrat bis zu einer Untergrenze“.</p><p>Die fachliche Fassung auf Englisch: <a href="/en/blog/art-collection-household-policy-portugal/">wenn die Sammlung aus der Hausratpolice wächst</a> und <a href="/en/blog/insuring-art-portugal/">wie ein Kunstschaden reguliert wird</a>.</p></div>
-<div class="lp-card"><h2>Ein Stück, das reist, ist ein anderes Risiko</h2><p>Der Transport zwischen einer Wohnung in Lissabon und einem Haus in Marbella ist eine Lücke, wenn der Wortlaut ihn nie erwähnt. Lager während Bauarbeiten, eine Leihgabe, ein Monat auf einer Yacht: jeder Ort, den die Hausratpolice nicht kennt. Sagen Sie, wo jedes Stück steht und ob es sich bewegt.</p></div>
+<div class="lp-card"><!-- ar-quick-contact -->
+<div class="arsf" data-arqc="content_page" data-thanks="Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten innerhalb von 24 Arbeitsstunden." data-err="Senden fehlgeschlagen. Bitte erneut versuchen oder per WhatsApp schreiben: +351 928 226 570.">
+  <h3>Angebot anfragen – in unter einer Minute</h3>
+  <p class="arsf-sub">Nur das Wesentliche. Wir antworten schriftlich innerhalb von 24 Arbeitsstunden.</p>
+  <form name="de-angebot-anfrage" method="POST" action="/de/#angebot" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="de-angebot-anfrage"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="de"><input type="hidden" name="market" value="germany"><input type="hidden" name="subject" value="Neue Anfrage (DE) — Kurzkontakt"><input type="hidden" name="versicherungsart" value="Private Clients">
+    <input type="hidden" name="source" value="page:de/blog/kunstversicherung-portugal-spanien">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/de/blog/kunstversicherung-portugal-spanien/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arqc-n-de-blog-kunstversicherung-portugal-spanien-">Name *</label><input id="arqc-n-de-blog-kunstversicherung-portugal-spanien-" type="text" name="name" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arqc-e-de-blog-kunstversicherung-portugal-spanien-">E-Mail *</label><input id="arqc-e-de-blog-kunstversicherung-portugal-spanien-" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arqc-p-de-blog-kunstversicherung-portugal-spanien-">Telefon / WhatsApp</label><input id="arqc-p-de-blog-kunstversicherung-portugal-spanien-" type="tel" name="telefon" autocomplete="tel"></div>
+      <div class="arsf-f full"><label for="arqc-m-de-blog-kunstversicherung-portugal-spanien-">Worum geht es? (optional)</label><textarea id="arqc-m-de-blog-kunstversicherung-portugal-spanien-" name="nachricht"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, dass meine Angaben zur Erstellung dieses Angebots verwendet werden (DSGVO). *</label>
+    <button type="submit">Kontakt anfordern →</button>
+  </form>
+  
+</div>
+<h2>Ein Stück, das reist, ist ein anderes Risiko</h2><p>Der Transport zwischen einer Wohnung in Lissabon und einem Haus in Marbella ist eine Lücke, wenn der Wortlaut ihn nie erwähnt. Lager während Bauarbeiten, eine Leihgabe, ein Monat auf einer Yacht: jeder Ort, den die Hausratpolice nicht kennt. Sagen Sie, wo jedes Stück steht und ob es sich bewegt.</p></div>
 <div class="lp-card"><h2>Warum Unabhängigkeit bei Sammlungen zählt</h2><p>Ein gebundener Vermittler platziert, was sein Versicherer nimmt. Sammlungen werden dort oft abgelehnt oder eingeschränkt. Als unabhängiger Makler gehen wir zu Märkten, die Kunst zeichnen — einschließlich Spezialisten wie Hiscox — und müssen das Stück nicht in einen Allianz- oder Zurich-Hausratwortlaut zwingen, der dafür nie gebaut wurde. Diese Namen sind nicht immer die Antwort. Das Risiko entscheidet.</p></div>
 <div class="lp-card"><h2>Die Nutzung liegt unter der Sammlung</h2><p>Wird das Haus auch vermietet oder monatelang leer gelassen, ändert sich der Hauswortlaut unter der Sammlung. Ein abgelehnter Hausschaden wird nicht zum bezahlten Kunstschaden, nur weil das Bild obenauf genannt war und die Police die Nutzung schon falsch hatte. Sagen Sie uns beides.</p><p><a href="/de/private-clients-spanien/">Private Clients, Spanien</a> · <a href="/de/#contact">Prüfung anfragen</a></p></div>
 </div></section>
@@ -379,4 +424,22 @@
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="de" data-topics="casa_luxo,casa_geral"></script>
 <script defer src="/js/ar-attribution.js"></script>
+<script id="ar-quick-contact-js">
+(function(){
+  document.addEventListener('submit', function(e){
+    var f = e.target; if (!f || !f.closest || !f.closest('.arsf[data-arqc]')) return;
+    if (!window.fetch || !window.URLSearchParams) return; // native POST fallback
+    e.preventDefault();
+    var box = f.closest('.arsf'), btn = f.querySelector('button'); if (btn) btn.disabled = true;
+    if (window.ArAttribution) window.ArAttribution.fill(f);
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() })
+      .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status);
+        var p = document.createElement('p'); p.className = 'arsf-done'; p.setAttribute('role','status'); p.textContent = box.getAttribute('data-thanks');
+        f.replaceWith(p);
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: f.getAttribute('name'), form_location: box.getAttribute('data-arqc') });
+      })
+      .catch(function(){ if (btn) btn.disabled = false; alert(box.getAttribute('data-err')); });
+  }, false);
+})();
+</script>
 </body></html>

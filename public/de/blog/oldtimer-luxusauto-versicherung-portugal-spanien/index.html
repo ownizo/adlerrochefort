@@ -154,6 +154,31 @@
   .article-body tbody td:first-child, .lp-card tbody td:first-child { font-weight: 600; }
 </style>
 <style id="ar-author-style">.ar-author{max-width:1100px;margin:24px auto 0;padding:0 24px}.ar-author-inner{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:14px 18px}.ar-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px}.ar-author-text{font-size:13px;line-height:1.6;color:#333332;margin:0}.ar-author-text strong{color:#292929}@media(max-width:760px){.ar-author-inner{align-items:flex-start}}</style>
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
+<style id="ar-quick-contact-style">
+.arsf.arqc{margin:0 0 18px;padding:18px;background:#FAF9F7}
+.arsf.arqc h3{font-size:17px}
+.arqc-or{display:flex;align-items:center;gap:10px;margin:14px 0 4px;font-size:12.5px;color:#777;text-transform:uppercase;letter-spacing:.04em}
+.arqc-or:before,.arqc-or:after{content:"";flex:1;height:1px;background:#E2DFDC}
+.arsf-done{font-size:15px;line-height:1.5;margin:6px 0 0}
+.arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
+.arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
+</style>
 </head>
 <body>
 <div class="asf-top-bar">Adler &amp; Rochefort ist bei der ASF Portugals registriert, Nr. 425591790/3, mit Büros in Lissabon und Lagos — <a href="/de/autoversicherung-portugal/#angebot">Einschätzung anfragen</a></div>
@@ -367,7 +392,27 @@
 
 <section class="lp-sections"><div class="lp-sections-inner">
 <div class="lp-card"><h2 id="portugal">Portugal: Fahrzeuge von historischem Interesse</h2><p>In Portugal kann ein Auto, das mindestens dreißig Jahre alt, nicht mehr in Produktion, gut erhalten und weitgehend original ist, als <strong>veículo de interesse histórico</strong> zertifiziert werden. Die Zertifizierung erfolgt durch anerkannte Stellen — darunter ACP Clássicos, der Clube Português de Automóveis Antigos und das Museu do Caramulo — und ist befristet gültig. Zertifizierte Fahrzeuge über dreißig Jahre sind seit 2018 von der regelmäßigen Hauptuntersuchung befreit; unter bestimmten Voraussetzungen kommt eine Befreiung von der Kfz-Steuer (IUC) in Betracht, die im Einzelfall mit der Steuerbehörde zu klären ist. Für die Versicherung ist das Zertifikat vor allem ein Nachweis von Originalität und Zustand.</p></div>
-<div class="lp-card"><h2 id="spanien">Spanien: das neue Reglement für historische Fahrzeuge</h2><p>Seit dem 1. Oktober 2024 gilt in Spanien ein neues <strong>Reglamento de Vehículos Históricos</strong>:</p><ul class="lp-list"><li>Historisch kann ein Fahrzeug sein, das vor mindestens dreißig Jahren gebaut oder erstmals zugelassen wurde, nicht mehr produziert wird und original erhalten ist.</li><li>Viele Autos behalten ihr normales Kennzeichen und tragen eine gelbe Plakette mit schwarzem „H“; andere werden nach einem technischen Gutachten bei der Jefatura de Tráfico als historisch registriert.</li><li>Die ITV wird seltener: alle zwei Jahre zwischen 30 und 40 Jahren, alle drei zwischen 40 und 45, alle vier über 45; über 60 Jahre entfällt sie.</li><li>Nicht originale Änderungen muss ein Club oder eine Organisation für historische Fahrzeuge bestätigen.</li></ul></div>
+<div class="lp-card"><!-- ar-quick-contact -->
+<div class="arsf" data-arqc="content_page" data-thanks="Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten innerhalb von 24 Arbeitsstunden." data-err="Senden fehlgeschlagen. Bitte erneut versuchen oder per WhatsApp schreiben: +351 928 226 570.">
+  <h3>Angebot anfragen – in unter einer Minute</h3>
+  <p class="arsf-sub">Nur das Wesentliche. Wir antworten schriftlich innerhalb von 24 Arbeitsstunden.</p>
+  <form name="de-angebot-anfrage" method="POST" action="/de/#angebot" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="de-angebot-anfrage"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="de"><input type="hidden" name="market" value="germany"><input type="hidden" name="subject" value="Neue Anfrage (DE) — Kurzkontakt"><input type="hidden" name="versicherungsart" value="Private Clients">
+    <input type="hidden" name="source" value="page:de/blog/oldtimer-luxusauto-versicherung-portugal-spanien">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arqc-n-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-">Name *</label><input id="arqc-n-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-" type="text" name="name" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arqc-e-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-">E-Mail *</label><input id="arqc-e-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arqc-p-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-">Telefon / WhatsApp</label><input id="arqc-p-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-" type="tel" name="telefon" autocomplete="tel"></div>
+      <div class="arsf-f full"><label for="arqc-m-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-">Worum geht es? (optional)</label><textarea id="arqc-m-de-blog-oldtimer-luxusauto-versicherung-portugal-spanien-" name="nachricht"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, dass meine Angaben zur Erstellung dieses Angebots verwendet werden (DSGVO). *</label>
+    <button type="submit">Kontakt anfordern →</button>
+  </form>
+  
+</div>
+<h2 id="spanien">Spanien: das neue Reglement für historische Fahrzeuge</h2><p>Seit dem 1. Oktober 2024 gilt in Spanien ein neues <strong>Reglamento de Vehículos Históricos</strong>:</p><ul class="lp-list"><li>Historisch kann ein Fahrzeug sein, das vor mindestens dreißig Jahren gebaut oder erstmals zugelassen wurde, nicht mehr produziert wird und original erhalten ist.</li><li>Viele Autos behalten ihr normales Kennzeichen und tragen eine gelbe Plakette mit schwarzem „H“; andere werden nach einem technischen Gutachten bei der Jefatura de Tráfico als historisch registriert.</li><li>Die ITV wird seltener: alle zwei Jahre zwischen 30 und 40 Jahren, alle drei zwischen 40 und 45, alle vier über 45; über 60 Jahre entfällt sie.</li><li>Nicht originale Änderungen muss ein Club oder eine Organisation für historische Fahrzeuge bestätigen.</li></ul></div>
 <div class="lp-card"><h2 id="wert">Vereinbarter Wert statt Zeitwert</h2><p>Die wichtigste Klausel einer Police für einen Klassiker oder ein hochwertiges Auto ist die Entschädigungsgrundlage. Eine gewöhnliche Police zahlt nach einem Totalschaden den <strong>Zeitwert</strong> — vom Versicherer nach dem Schaden bestimmt und für einen Oldtimer fast immer zu niedrig. Der <strong>vereinbarte Wert</strong> wird zu Vertragsbeginn auf Grundlage eines Gutachtens, von Fotos und Unterlagen festgelegt und im Totalschadenfall gezahlt. Da sich die Werte guter Klassiker stark bewegt haben, gehört er alle paar Jahre und nach jeder Restaurierung überprüft. Bei modernen Supersportwagen lauten die Fragen anders: Neuwertentschädigung in den ersten Jahren, Behandlung von Sonderausstattung und Individualisierung, Originalteile und Markenwerkstatt.</p></div>
 <div class="lp-card"><h2 id="sammlung">Eine Sammlung, keine Liste von Autos</h2><p>Wer sammelt, hat selten nur ein Auto. Eine Garage in Quinta do Lago oder auf Mallorca kann einen Vorkriegs-Tourer, zwei Sportwagen der Sechziger, ein aktuelles Hypercar und den Familien-SUV beherbergen. Eine Sammlungspolice behandelt die Garage als Ganzes: ein Vertrag, ein Verzeichnis mit vereinbarten Werten, stillgelegte und in Restaurierung befindliche Fahrzeuge gegen Feuer, Diebstahl und Beschädigung versichert, benannte Fahrer, Transport auf dem Anhänger oder per Spezialspedition — und das Gebäude selbst mit Brandschutz und Sicherung als Teil des Risikos. Manche Produkte für Luxusautos werden zudem nur zusammen mit der Hausversicherung gezeichnet.</p></div>
 <div class="lp-card"><h2 id="nutzung">Wie das Auto genutzt wird</h2><ul class="lp-list"><li><strong>Kilometer und Zweck:</strong> Klassikerpolicen setzen meist begrenzte Jahreskilometer und Freizeitnutzung voraus.</li><li><strong>Rallyes, Concours, Ausfahrten:</strong> Gleichmäßigkeitsfahrten und Clubveranstaltungen auf öffentlichen Straßen sind in der Regel versicherbar; Zeitfahren und Rennstrecke nicht.</li><li><strong>Trackdays</strong> — Autódromo do Algarve, Estoril, Ascari — sind von fast jeder Straßenpolice ausgeschlossen und brauchen eine eigene Deckung.</li><li><strong>Keyless-Diebstahl:</strong> Versicherer fragen nach Garage, Ortungssystem und Aufbewahrung der Schlüssel.</li></ul></div>
@@ -482,4 +527,22 @@
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="de" data-topics="casa_luxo,casa_geral"></script>
 <script defer src="/js/ar-attribution.js"></script>
+<script id="ar-quick-contact-js">
+(function(){
+  document.addEventListener('submit', function(e){
+    var f = e.target; if (!f || !f.closest || !f.closest('.arsf[data-arqc]')) return;
+    if (!window.fetch || !window.URLSearchParams) return; // native POST fallback
+    e.preventDefault();
+    var box = f.closest('.arsf'), btn = f.querySelector('button'); if (btn) btn.disabled = true;
+    if (window.ArAttribution) window.ArAttribution.fill(f);
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(f)).toString() })
+      .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status);
+        var p = document.createElement('p'); p.className = 'arsf-done'; p.setAttribute('role','status'); p.textContent = box.getAttribute('data-thanks');
+        f.replaceWith(p);
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: f.getAttribute('name'), form_location: box.getAttribute('data-arqc') });
+      })
+      .catch(function(){ if (btn) btn.disabled = false; alert(box.getAttribute('data-err')); });
+  }, false);
+})();
+</script>
 </body></html>
