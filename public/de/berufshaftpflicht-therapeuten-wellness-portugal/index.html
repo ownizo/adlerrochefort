@@ -210,6 +210,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body>
 
@@ -570,7 +578,7 @@
 
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten innerhalb von 48–72 Arbeitsstunden." data-err="Senden fehlgeschlagen. Bitte erneut versuchen oder per WhatsApp schreiben: +351 928 226 570.">
-  <h3>Schnellkontakt</h3>
+  <h3>Angebot anfragen – in unter einer Minute</h3>
   <p class="arsf-sub">Nur das Wesentliche – wir antworten innerhalb von 48–72 Arbeitsstunden und fragen den Rest per E-Mail nach.</p>
   <form name="de-angebot-anfrage" method="POST" action="/de/#angebot" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="de-angebot-anfrage"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="de"><input type="hidden" name="market" value="germany"><input type="hidden" name="subject" value="Neue Anfrage (DE) — Kurzkontakt"><input type="hidden" name="versicherungsart" value="Berufshaftpflicht">
@@ -586,122 +594,14 @@
     <label class="arsf-ok"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, dass meine Angaben zur Erstellung dieses Angebots verwendet werden (DSGVO). *</label>
     <button type="submit">Kontakt anfordern →</button>
   </form>
-  <div class="arqc-or">oder gleich die vollständige Anfrage senden</div>
 </div>
-<form name="de-berufshaftpflicht-therapeuten-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/de/#angebot">
-      <input type="hidden" name="form-name" value="de-berufshaftpflicht-therapeuten-wizard"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="ramo" value="Berufshaftpflicht Therapeuten &amp; Wellness">
-      <input type="hidden" name="source_url" id="de-tw-source" value="">
-      <input type="hidden" name="dados_dinamicos" value="">
-      <p class="contact-form-honeypot"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Angaben zur Person</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. Ihre Tätigkeit</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Bestätigung</span></li>
-      </ol>
-
-      <div data-wizard-step>
-        <div class="contact-form-field"><label for="de-tw-nome">Vollständiger Name *</label><input type="text" id="de-tw-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="de-tw-nif">NIF/NIE *</label><input type="text" id="de-tw-nif" name="nif" placeholder="NIF / NIE" required></div>
-        <div class="contact-form-field"><label for="de-tw-nascimento">Geburtsdatum *</label><input type="date" id="de-tw-nascimento" name="data_nascimento" data-validate="birth-date-adult" required></div>
-        <div class="contact-form-field"><label for="de-tw-morada">Vollständige Anschrift *</label><input type="text" id="de-tw-morada" name="morada" autocomplete="street-address" required></div>
-        <div class="contact-form-field"><label for="de-tw-localidade">Ort *</label><input type="text" id="de-tw-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="de-tw-cp">Postleitzahl *</label><input type="text" id="de-tw-cp" name="codigo_postal" autocomplete="postal-code" required></div>
-        <div class="contact-form-field"><label for="de-tw-telefone">Telefon / WhatsApp *</label><input type="tel" id="de-tw-telefone" name="telefone" autocomplete="tel" required></div>
-        <div class="contact-form-field"><label for="de-tw-email">E-Mail *</label><input type="email" id="de-tw-email" name="email" autocomplete="email" required></div>
-        <div class="contact-form-field">
-          <label for="de-tw-nacionalidade">Staatsangehörigkeit *</label>
-          <input type="text" id="de-tw-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="de-tw-nacionalidade-code" autocomplete="off" required>
-          <input type="hidden" name="nacionalidade" id="de-tw-nacionalidade-code">
-        </div>
-        <div class="contact-form-field">
-          <label for="de-tw-residente-fiscal">Sind Sie in Portugal steuerlich ansässig? *</label>
-          <select id="de-tw-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-            <option value="">Auswählen</option>
-            <option value="sim">Ja</option>
-            <option value="nao">Nein</option>
-          </select>
-        </div>
-        <p class="wizard-helper" id="de-tw-residente-fiscal-info" hidden>Die Anschrift wird weiterhin benötigt. Ohne steuerlichen Wohnsitz in Portugal ist die Ausstellung der Police möglicherweise nicht in allen Fällen möglich — wir prüfen Ihre konkrete Situation trotzdem.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Weiter →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field">
-          <label for="de-tw-atividade">Haupttätigkeit *</label>
-          <select id="de-tw-atividade" name="tw_atividade" required>
-            <option value="">Auswählen</option>
-            <option value="Akupunktur">Akupunktur</option>
-            <option value="Phytotherapie">Phytotherapie</option>
-            <option value="Homöopathie">Homöopathie</option>
-            <option value="Traditionelle Chinesische Medizin">Traditionelle Chinesische Medizin</option>
-            <option value="Naturheilkunde">Naturheilkunde</option>
-            <option value="Osteopathie">Osteopathie</option>
-            <option value="Chiropraktik">Chiropraktik</option>
-            <option value="Yoga">Yoga</option>
-            <option value="Pilates">Pilates</option>
-            <option value="Tai Chi">Tai Chi</option>
-            <option value="Qigong">Qigong</option>
-            <option value="Meditation">Meditation</option>
-            <option value="Massage">Massage</option>
-            <option value="Andere">Andere</option>
-          </select>
-        </div>
-        <div class="contact-form-field"><label for="de-tw-outra">Wenn „Andere“, welche?</label><input type="text" id="de-tw-outra" name="tw_outra" placeholder="Beschreiben Sie Ihre Tätigkeit"></div>
-        <div class="contact-form-field">
-          <label for="de-tw-cedula">Besitzen Sie eine ACSS-Zulassung (cédula profissional)? *</label>
-          <select id="de-tw-cedula" name="tw_cedula" required>
-            <option value="">Auswählen</option>
-            <option value="Ja">Ja</option>
-            <option value="Nein">Nein</option>
-            <option value="In Beantragung">In Beantragung</option>
-            <option value="Nicht zutreffend">Nicht zutreffend — keine der sieben regulierten Therapien</option>
-          </select>
-        </div>
-        <p class="wizard-helper">Die sieben gesetzlich anerkannten Therapien nach Lei 71/2013 — Akupunktur, Phytotherapie, Homöopathie, Traditionelle Chinesische Medizin, Naturheilkunde, Osteopathie und Chiropraktik — setzen eine ACSS-Zulassung voraus und unterliegen einer gesetzlichen Versicherungspflicht. Für Yoga, Pilates und vergleichbare Wellness-Tätigkeiten gilt das nicht; die Deckung ist dort freiwillig, aber von Studios und Retreats häufig vertraglich verlangt.</p>
-        <div class="contact-form-field">
-          <label for="de-tw-local">Wo üben Sie die Tätigkeit aus?</label>
-          <select id="de-tw-local" name="tw_local">
-            <option value="">Auswählen</option>
-            <option value="Eigene Praxis oder eigenes Studio">Eigene Praxis oder eigenes Studio</option>
-            <option value="Studio Dritter, als Selbstständige/r">Studio Dritter, als Selbstständige/r</option>
-            <option value="Bei Kunden zu Hause oder im Freien">Bei Kunden zu Hause oder im Freien</option>
-            <option value="Retreats und Fortbildungen, auch im Ausland">Retreats und Fortbildungen, auch im Ausland</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="de-tw-faturacao">Jahresumsatz *</label>
-          <select id="de-tw-faturacao" name="faturacao_anual" required>
-            <option value="">Auswählen</option>
-            <option value="Bis 15.000 €">Bis 15.000 €</option>
-            <option value="15.000 € – 30.000 €">15.000 € – 30.000 €</option>
-            <option value="30.000 € – 50.000 €">30.000 € – 50.000 €</option>
-            <option value="Über 50.000 €">Über 50.000 €</option>
-          </select>
-        </div>
-        <div class="contact-form-field">
-          <label for="de-tw-situacao">Situation</label>
-          <select id="de-tw-situacao" name="tw_situacao">
-            <option value="">Auswählen</option>
-            <option value="Erstabschluss">Erstabschluss</option>
-            <option value="Verlängerung">Verlängerung</option>
-            <option value="Überprüfung der bestehenden Deckung">Überprüfung der bestehenden Deckung</option>
-          </select>
-        </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Zurück</button><button type="button" class="wizard-nav-next" data-wizard-next>Weiter →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="de-tw-inicio">Gewünschtes Startdatum *</label><input type="date" id="de-tw-inicio" name="data_inicio" data-validate="start-date" required></div>
-        <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="de-tw-rgpd"><input type="checkbox" id="de-tw-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> Ich stimme zu, dass meine Angaben zur Vorbereitung dieses Angebots verwendet werden, gemäß der DSGVO. *</label>
-        </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Zurück</button><button type="submit" class="contact-form-submit">Angebot anfragen →</button></div>
-      </div>
-
-      <p class="lp-form-micro">Antwort innerhalb von 48 bis 72 Arbeitsstunden. Ihre Daten werden ausschließlich zur Vorbereitung des Angebots verwendet und gemäß der DSGVO behandelt — siehe die <a href="/en/privacy-policy" hreflang="en">Datenschutzerklärung</a>.</p>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>Welche Angaben wir für Ihr Angebot benötigen</h3>
+  <p>Nach dem ersten Kontakt fragen wir diese Angaben per E-Mail an. Wenn Sie sie zur Hand haben, können Sie sie gleich an <a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a> senden.</p>
+  
+  <ul><li>Vollständiger Name</li><li>Vollständige Adresse</li><li>Portugiesische Steuernummer (NIF)</li><li>Ausgeübte Tätigkeit</li><li>Jahresumsatz</li></ul>
+</div>
     <div class="contact-form-success" id="deTwSuccess">
       <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       <h3>Vielen Dank!</h3>

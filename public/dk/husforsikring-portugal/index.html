@@ -246,6 +246,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body>
 
@@ -805,7 +813,7 @@
 
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="Tak. Vi har modtaget din forespørgsel og svarer inden for 24 arbejdstimer." data-err="Afsendelsen mislykkedes. Prøv igen eller skriv på WhatsApp: +351 928 226 570.">
-  <h3>Hurtig kontakt</h3>
+  <h3>Bed om et tilbud – på under et minut</h3>
   <p class="arsf-sub">Kun det vigtigste – vi svarer inden for 24 arbejdstimer og beder om resten pr. e-mail.</p>
   <form name="dk-forespoergsel" method="POST" action="/dk/#tilbud" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="dk-forespoergsel"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="da"><input type="hidden" name="market" value="denmark"><input type="hidden" name="subject" value="Ny forespørgsel (DK) — hurtig kontakt"><input type="hidden" name="product_interest" value="DK · Andet"><input type="hidden" name="insurance_type" value="DK · Andet">
@@ -821,92 +829,14 @@
     <label class="arsf-ok"><input type="checkbox" name="consent" value="yes" required> Jeg accepterer, at mine oplysninger bruges til at udarbejde tilbuddet (GDPR). *</label>
     <button type="submit">Bliv kontaktet →</button>
   </form>
-  <div class="arqc-or">eller send hele forespørgslen nu</div>
 </div>
-<form name="dk-husforsikring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/dk/#tilbud">
-      <input type="hidden" name="form-name" value="dk-husforsikring-wizard"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="ramo" value="Husforsikring">
-      <input type="hidden" name="source_url" id="dk-hab-source" value="">
-      <input type="hidden" name="dados_dinamicos" value="">
-      <p class="contact-form-honeypot"><label>Udfyld ikke dette felt <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Personoplysninger</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. Boligen</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Bekræftelse</span></li>
-      </ol>
-
-      <div data-wizard-step>
-        <div class="contact-form-field"><label for="dk-hab-nome">Fulde navn *</label><input type="text" id="dk-hab-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="dk-hab-nif">NIF/NIE *</label><input type="text" id="dk-hab-nif" name="nif" placeholder="NIF / NIE" required></div>
-        <div class="contact-form-field"><label for="dk-hab-nascimento">Fødselsdato *</label><input type="date" id="dk-hab-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="dk-hab-morada">Fuld adresse *</label><input type="text" id="dk-hab-morada" name="morada" autocomplete="street-address" required></div>
-        <div class="contact-form-field"><label for="dk-hab-localidade">By *</label><input type="text" id="dk-hab-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="dk-hab-cp">Postnummer *</label><input type="text" id="dk-hab-cp" name="codigo_postal" autocomplete="postal-code" required></div>
-        <div class="contact-form-field"><label for="dk-hab-telefone">Telefonnummer *</label><input type="tel" id="dk-hab-telefone" name="telefone" autocomplete="tel" required></div>
-        <div class="contact-form-field"><label for="dk-hab-email">E-mailadresse *</label><input type="email" id="dk-hab-email" name="email" autocomplete="email" required></div>
-        <div class="contact-form-field">
-          <label for="dk-hab-nacionalidade">Nationalitet *</label>
-          <input type="text" id="dk-hab-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="dk-hab-nacionalidade-code" autocomplete="off" required>
-          <input type="hidden" name="nacionalidade" id="dk-hab-nacionalidade-code">
-        </div>
-        <div class="contact-form-field">
-          <label for="dk-hab-residente-fiscal">Er du skattemæssigt hjemmehørende i Portugal? *</label>
-          <select id="dk-hab-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-            <option value="">Vælg</option>
-            <option value="sim">Ja</option>
-            <option value="nao">Nej</option>
-          </select>
-        </div>
-        <p class="wizard-helper" id="dk-hab-residente-fiscal-info" hidden>Adressen er stadig nødvendig. Uden skattemæssigt hjemsted i Portugal er det muligvis ikke i alle tilfælde muligt at udstede policen — vi vurderer alligevel din konkrete situation.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Næste →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field">
-          <label for="dk-hab-regime">Boligens anvendelse *</label>
-          <select id="dk-hab-regime" name="regime_ocupacao" data-branch-select required>
-            <option value="">Vælg</option>
-            <option value="permanente">Fast bopæl</option>
-            <option value="holiday_home">Fritidsbolig / anden bolig</option>
-            <option value="alojamento_local">Alojamento Local (korttidsudlejning)</option>
-          </select>
-        </div>
-        <div data-branch="alojamento_local" hidden>
-          <div class="contact-form-field">
-            <label for="dk-hab-al-regime">Type korttidsudlejning *</label>
-            <select id="dk-hab-al-regime" name="al_regime" required disabled>
-              <option value="">Vælg</option>
-              <option value="tempo_inteiro">Fuld tid</option>
-              <option value="parcial">Delvis (delt brug af boligen)</option>
-            </select>
-          </div>
-        </div>
-        <div class="contact-form-field"><label for="dk-hab-ano-construcao">Byggeår *</label><input type="number" id="dk-hab-ano-construcao" name="ano_construcao" min="1800" required></div>
-        <div class="contact-form-field"><label for="dk-hab-area">Bruttoareal (m²) *</label><input type="number" id="dk-hab-area" name="area_bruta" min="1" required></div>
-        <div class="contact-form-field"><label for="dk-hab-wc">Antal badeværelser *</label><input type="number" id="dk-hab-wc" name="casas_banho" min="0" required></div>
-        <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="dk-hab-obras-check"><input type="checkbox" id="dk-hab-obras-check" data-field-toggle="dk-hab-obras-group"> Har I renoveret inden for de seneste år?</label>
-        </div>
-        <div id="dk-hab-obras-group" hidden>
-          <div class="contact-form-field"><label for="dk-hab-obras-ano">Renoveringsår *</label><input type="number" id="dk-hab-obras-ano" name="obras_ano" data-validate="renovation-year" data-validate-ref="ano_construcao" required disabled></div>
-          <div class="contact-form-field"><label for="dk-hab-obras-desc">Beskriv det udførte arbejde *</label><textarea id="dk-hab-obras-desc" name="obras_descricao" minlength="10" required disabled></textarea></div>
-        </div>
-        <div class="contact-form-field"><label for="dk-hab-capital-edificio">Forsikringssum bygning (€) *</label><input type="number" id="dk-hab-capital-edificio" name="capital_edificio" min="0" step="1000" required></div>
-        <div class="contact-form-field"><label for="dk-hab-capital-conteudo">Forsikringssum indbo (€) *</label><input type="number" id="dk-hab-capital-conteudo" name="capital_conteudo" min="0" step="500" required></div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tilbage</button><button type="button" class="wizard-nav-next" data-wizard-next>Næste →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="dk-hab-inicio">Ønsket startdato *</label><input type="date" id="dk-hab-inicio" name="data_inicio" data-validate="start-date" required></div>
-        <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="dk-hab-rgpd"><input type="checkbox" id="dk-hab-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> Jeg accepterer, at mine oplysninger bruges til at forberede dette tilbud, i overensstemmelse med databeskyttelsesforordningen. *</label>
-        </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tilbage</button><button type="submit" class="contact-form-submit">Send forespørgsel →</button></div>
-      </div>
-
-      <p class="lp-form-micro">Svar inden for 24 arbejdstimer. Dine oplysninger bruges udelukkende til at forberede tilbuddet og behandles i overensstemmelse med databeskyttelsesforordningen — se <a href="/en/privacy-policy" hreflang="en">privatlivspolitikken</a>.</p>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>Hvilke oplysninger vi skal bruge til tilbuddet</h3>
+  <p>Efter den første kontakt beder vi om disse oplysninger pr. e-mail. Har du dem ved hånden, kan du sende dem med det samme til <a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a>.</p>
+  
+  <ul><li>Fulde navn</li><li>Fuld adresse på boligen</li><li>Portugisisk skattenummer (NIF)</li><li>Bruttoetageareal</li><li>Byggeår</li><li>Helårs- eller fritidsbolig</li><li>Erhverv</li><li>Alder</li><li>Forsikringssum bygning</li><li>Forsikringssum indbo</li><li>Forsikringssum værdigenstande</li></ul>
+</div>
     <div class="contact-form-success" id="dk-habSuccess">
       <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       <h3>Tak!</h3>

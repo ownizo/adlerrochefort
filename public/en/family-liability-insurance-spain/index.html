@@ -227,6 +227,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body data-market="spain" data-page-type="commercial_product" data-product="family_liability">
 
@@ -540,7 +548,7 @@
     <p class="lp-form-sub">Tell us where the household lives and what it does. We reply in writing with the limit and wording we recommend, and what your current cover leaves out.</p>
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="Thank you. We have your request and will reply within 48–72 working hours." data-err="Sending failed. Please try again or message us on WhatsApp: +351 928 226 570.">
-  <h3>Quick contact</h3>
+  <h3>Ask for a quote — it takes under a minute</h3>
   <p class="arsf-sub">Leave just the essentials and we reply within 48–72 working hours. We ask for the rest by email.</p>
   <form name="quote-blog" method="POST" action="/en/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="quote-blog"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="tipo-seguro" value="Professional indemnity">
@@ -556,91 +564,14 @@
     <label class="arsf-ok"><input type="checkbox" name="rgpd" value="yes" required> I agree to my details being used to prepare this quote, under the GDPR. *</label>
     <button type="submit">Request a call-back →</button>
   </form>
-  <div class="arqc-or">or send the full request now</div>
 </div>
-<form class="contact-form" id="quoteForm" method="POST" name="private-client-review-spain" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="property_ownership">
-      <input type="hidden" name="form-name" value="private-client-review-spain"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="source" value="landing:family-liability-insurance-spain">
-      <input type="hidden" name="country" value="Spain">
-      <input type="hidden" name="insurance_type" value="ES · Family Liability">
-      <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Don't fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-name">Full name *</label>
-        <input type="text" id="q-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-email">Email *</label>
-        <input type="email" id="q-email" name="email" placeholder="you@example.com" autocomplete="email" required>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-phone">Phone / WhatsApp *</label>
-        <input type="tel" id="q-phone" name="phone" placeholder="+44 000 000 000" autocomplete="tel" inputmode="tel" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-current_country">Country of residence *</label>
-        <input type="text" id="q-current_country" name="current_country" placeholder="e.g. United Kingdom" required>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-spain_location">Where in Spain? *</label>
-        <input type="text" id="q-spain_location" name="spain_location" placeholder="e.g. Marbella, or the town where the house is" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-property_ownership">Property ownership *</label>
-        <select id="q-property_ownership" name="property_ownership" required>
-          <option value="">Select one</option>
-          <option value="One property in Spain">One property in Spain</option>
-          <option value="More than one property in Spain">More than one property in Spain</option>
-          <option value="Property in Spain and elsewhere">Property in Spain and elsewhere</option>
-          <option value="Renting in Spain">Renting in Spain</option>
-          <option value="Not yet, planning to buy">Not yet, planning to buy</option>
-        </select>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-interests">What should the review look at?</label>
-        <select id="q-interests" name="interests">
-          <option value="Family liability — limit and wording" selected>Family liability — limit and wording</option>
-          <option value="Family liability with household staff">Family liability with household staff</option>
-          <option value="Pool, dogs, horses or boat">Pool, dogs, horses or boat</option>
-          <option value="Liability alongside a US umbrella or other policy">Liability alongside a US umbrella or other policy</option>
-          <option value="The whole household reviewed together">The whole household reviewed together</option>
-        </select>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-preferred_contact">Preferred contact method</label>
-        <select id="q-preferred_contact" name="preferred_contact">
-          <option value="">Select one</option>
-          <option value="Email">Email</option>
-          <option value="Phone">Phone</option>
-          <option value="WhatsApp">WhatsApp</option>
-        </select>
-      </div>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-message">Anything we should know?</label>
-        <textarea id="q-message" name="message" placeholder="Current insurer and liability limit if you know it, staff employed, countries where the family spends time — no sensitive details needed at this stage."></textarea>
-      </div>
-      <fieldset class="contact-form-crosssell">
-        <legend>Also need help with anything else?</legend>
-        <div class="contact-form-checkbox-grid">
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Home Insurance"> Home Insurance</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Health Insurance"> Health Insurance</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Car Insurance"> Car Insurance</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Landlord Insurance"> Landlord Insurance</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Life Insurance"> Life Insurance</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Private Client Review"> Private Client Review</label>
-        </div>
-      </fieldset>
-      <button type="submit" class="contact-form-submit">Request my review &rarr;</button>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>What we will ask for your quote</h3>
+  <p>After the first contact we ask for these details by email. If you have them to hand, you can send them now to <a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a>.</p>
+  
+  <ul><li>Full name</li><li>Full address of the property</li><li>Portuguese tax number (NIF)</li><li>Gross construction area</li><li>Year of construction</li><li>Main or second home</li><li>Occupation</li><li>Age</li><li>Buildings sum insured</li><li>Contents sum insured</li><li>Valuables sum insured</li><li>List of the items to insure (art, jewellery, watches, cars), with values and any valuations</li></ul>
+</div>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your quote, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.</p>
     <p class="lp-smallprint">No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.</p>
     <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>Advised in English, in writing</span><span>One adviser from first contact to claim</span><span>Written opinion within 24–72 working hours</span></div>
