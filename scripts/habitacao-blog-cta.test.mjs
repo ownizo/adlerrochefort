@@ -16,13 +16,16 @@ const HABITACAO_ARTICLE_PATHS = [
   'public/blog/seguro-rc-multirriscos-alojamento-local/index.html',
 ];
 
-test('PT habitação blog CTAs link straight to the pillar wizard, with no embedded form, the positioning box mirrored from the pillar, and the correct 24h SLA', () => {
+test('PT habitação blog CTAs link straight to the pillar wizard, with the short article form, the positioning box mirrored from the pillar, and the correct 24h SLA', () => {
   const failures = [];
   const pillarBox = readFileSync('public/seguros/habitacao/index.html', 'utf8').match(/<h3>Antes de preencher<\/h3>\s*(?:<p>.*?<\/p>\s*)+<\/div>/s)?.[0];
   const pillarParas = [...(pillarBox || '').matchAll(/<p>(.*?)<\/p>/g)].map(m => m[1]);
   for (const path of HABITACAO_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
-    if (html.includes('name="cotacao-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+    // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="cotacao-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->')) failures.push(`${path}: missing the short article lead form`);
     if (!/href="\/seguros\/habitacao\/\?source=blog%3A[a-z0-9-]+#pedido"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the habitação pillar wizard`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);
     if (!html.includes('Resposta em 24h úteis')) failures.push(`${path}: cta-topo-micro missing "Resposta em 24h úteis"`);

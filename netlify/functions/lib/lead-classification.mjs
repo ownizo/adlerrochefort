@@ -164,6 +164,9 @@ function deriveMarketFromCountryField(data) {
 const BRANCH_CLASSIFICATION = {
   // PT
   'Saúde': { entityType: 'individual', product: 'health' },
+  // Formulário curto dos artigos (scripts/apply-short-blog-forms.mjs, out. 2026).
+  'Saúde internacional (expatriados)': { entityType: 'individual', product: 'health' },
+  'Private Clients (casa de elevado valor, arte, automóveis)': { entityType: 'individual', product: 'private-clients' },
   'Automóvel': { entityType: 'individual', product: 'auto' },
   'TVDE (Uber, Bolt, Free Now)': { entityType: 'individual', product: 'tvde' },
   'Frota de empresa': { entityType: 'business', product: 'fleet' },
@@ -183,6 +186,9 @@ const BRANCH_CLASSIFICATION = {
   'Outro': { entityType: 'ambiguous', product: 'other' },
   // EN
   'Health': { entityType: 'individual', product: 'health' },
+  // Short article form (scripts/apply-short-blog-forms.mjs, Oct 2026).
+  'International health insurance (IPMI)': { entityType: 'individual', product: 'health' },
+  'Private client (high-value home, art, cars)': { entityType: 'individual', product: 'private-clients' },
   'Car': { entityType: 'individual', product: 'auto' },
   'Company fleet': { entityType: 'business', product: 'fleet' },
   // DE homepage (/de/) uses the EN option values except for this one.

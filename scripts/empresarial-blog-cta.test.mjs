@@ -29,7 +29,10 @@ test('PT empresarial blog CTAs link straight to the pillar form, with the positi
   const pillarParas = [...(pillarBox || '').matchAll(/<p>(.*?)<\/p>/g)].map(m => m[1]);
   for (const path of EMPRESARIAL_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
-    if (html.includes('name="cotacao-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+    // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="cotacao-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->')) failures.push(`${path}: missing the short article lead form`);
     if (!/href="\/seguros\/empresarial\/\?source=blog%3A[a-z0-9-]+#pedido"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the empresarial pillar form`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);
     if (!html.includes('Pedir análise')) failures.push(`${path}: CTA button text should mirror the pillar's own "Pedir análise" language`);

@@ -9,7 +9,7 @@ const SHORT_FORM_ARTICLE_PATHS = [
   'public/blog/seguro-titulo-imovel-portugal/index.html',
 ];
 
-test('PT catch-all blog CTAs link straight to the homepage\'s generic "analise-gratuita" form, with no embedded form and the correct 24h SLA', () => {
+test('PT catch-all blog CTAs link straight to the homepage\'s generic "analise-gratuita" form, with the short article form and the correct 24h SLA', () => {
   const failures = [];
   const homeHtml = readFileSync('public/index.html', 'utf8');
   const homeBox = homeHtml.match(/<div class="hero-form-note">\s*<h3>Antes de preencher<\/h3>[\s\S]*?<\/div>/)?.[0];
@@ -18,7 +18,10 @@ test('PT catch-all blog CTAs link straight to the homepage\'s generic "analise-g
 
   for (const path of SHORT_FORM_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
-    if (html.includes('name="cotacao-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+    // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="cotacao-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->')) failures.push(`${path}: missing the short article lead form`);
     if (!/href="\/\?source=blog%3A[a-z0-9-]+#inicio"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the homepage's generic form`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);
     if (!html.includes('Solicitar Análise Gratuita')) failures.push(`${path}: CTA button text should mirror the homepage form's own "Solicitar Análise Gratuita" language`);

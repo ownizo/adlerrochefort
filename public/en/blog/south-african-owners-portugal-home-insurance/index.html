@@ -378,6 +378,22 @@
   ]
 }
 </script>
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -611,7 +627,28 @@
     <h2>Insure the rebuild value, in euros</h2>
     <p>The building sum insured should be the cost of rebuilding the house, not the price you paid and not a figure converted from rand at the time of purchase. If it is too low, Portuguese policies apply the <strong>proportional rule</strong>: a house insured for 60% of its rebuild value is paid 60% of every claim, however small. See <a href="/en/rebuild-value-home-insurance-portugal/">how to work out the rebuild value</a>, with the free SCRIM simulator.</p>
 
-    <h2>Earthquake is an option, not a given</h2>
+    <!-- ar-short-form -->
+<div class="arsf" id="pedido-rapido">
+  <h3>Ask for a quote — it takes under a minute</h3>
+  <p class="arsf-sub">Tell us the essentials. We reply in writing within 24 working hours and only ask for more if we need it.</p>
+  <form name="quote-blog" method="POST" action="/en/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="quote-blog"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
+    <input type="hidden" name="source" value="blog:south-african-owners-portugal-home-insurance">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/en/blog/south-african-owners-portugal-home-insurance/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arsf-n-south-african-owners-portugal-home-insurance">Full name *</label><input id="arsf-n-south-african-owners-portugal-home-insurance" type="text" name="name" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arsf-e-south-african-owners-portugal-home-insurance">Email *</label><input id="arsf-e-south-african-owners-portugal-home-insurance" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arsf-p-south-african-owners-portugal-home-insurance">Phone / WhatsApp</label><input id="arsf-p-south-african-owners-portugal-home-insurance" type="tel" name="phone" autocomplete="tel"></div>
+      <div class="arsf-f"><label for="arsf-t-south-african-owners-portugal-home-insurance">Type of insurance *</label><select id="arsf-t-south-african-owners-portugal-home-insurance" name="tipo-seguro" required><option value="International health insurance (IPMI)">International health insurance (IPMI)</option><option value="Health">Health</option><option value="Private client (high-value home, art, cars)">Private client (high-value home, art, cars)</option><option value="Home" selected>Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Car">Car</option><option value="Professional indemnity">Professional indemnity</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Other">Other</option></select></div>
+      <div class="arsf-f full"><label for="arsf-m-south-african-owners-portugal-home-insurance">What do you need? (optional)</label><textarea id="arsf-m-south-african-owners-portugal-home-insurance" name="message" placeholder="E.g. villa in the Algarve, family of four, moving to Portugal in January…"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="rgpd" value="sim" required> I agree to my details being used to prepare this quote, under the GDPR. *</label>
+    <button type="submit">Request my quote →</button>
+  </form>
+  
+</div>
+<h2>Earthquake is an option, not a given</h2>
     <p>The Lisbon region and the Algarve are mainland Portugal’s highest seismic-risk areas, and earthquake cover (<em>fenómenos sísmicos</em>) is an optional extra with a percentage excess. If it is not chosen, it is not covered.</p>
 
     <h2>Security: declared, working, and a condition of cover</h2>
