@@ -31,13 +31,16 @@ const RAMO_MAP = {
 
 const SLA_48_72 = new Set(['professional-liability-insurance-portugal']);
 
-test('EN blog CTAs link straight to their EN pillar wizard, with no embedded form', () => {
+test('EN blog CTAs link straight to their EN pillar wizard, with the short article form', () => {
   const failures = [];
   for (const [page, slugs] of Object.entries(RAMO_MAP)) {
     for (const slug of slugs) {
       const path = `public/en/blog/${slug}/index.html`;
       const html = readFileSync(path, 'utf8');
-      if (html.includes('name="quote-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+      // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="quote-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->') && !html.includes('class="ar-cta-form"') && !/tvde/.test(path)) failures.push(`${path}: missing a short article lead form`);
       const linkRe = new RegExp(`href="/en/${page}/\\?source=blog%3A${slug}#quote-form"`);
       if (!linkRe.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to /en/${page}/`);
       if (html.includes('Get 3 quotes within 24 hours')) failures.push(`${path}: still has the generic "Get 3 quotes within 24 hours" title`);

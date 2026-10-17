@@ -17,7 +17,10 @@ test('PT auto blog CTAs link straight to the pillar wizard, with the positioning
   const pillarParas = [...(pillarBox || '').matchAll(/<p>(.*?)<\/p>/g)].map(m => m[1]);
   for (const path of AUTO_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
-    if (html.includes('name="cotacao-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+    // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="cotacao-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->')) failures.push(`${path}: missing the short article lead form`);
     if (!/href="\/seguros\/auto\/\?source=blog%3A[a-z0-9-]+#pedido"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the auto pillar wizard`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);
     if (!html.includes('Resposta em 24h úteis')) failures.push(`${path}: cta-topo-micro missing "Resposta em 24h úteis"`);
@@ -30,7 +33,7 @@ test('PT auto blog CTAs link straight to the pillar wizard, with the positioning
 
 test('the frota (fleet) article links to its own B2B pillar, not /seguros/auto/, and has no positioning box (the pillar has none)', () => {
   const html = readFileSync(FROTA_ARTICLE_PATH, 'utf8');
-  assert.ok(!html.includes('name="cotacao-blog"'), 'still has the raw embedded generic form');
+  assert.ok(html.includes('<!-- ar-short-form -->'), 'missing the short article lead form');
   assert.match(html, /href="\/seguros\/frota\/\?source=blog%3Aseguro-frota-erros-comuns#pedido"/);
   assert.ok(!html.includes('quotation-before-fill'), 'frota pillar has no positioning box to mirror');
   assert.ok(html.includes('Resposta em 24h úteis'));

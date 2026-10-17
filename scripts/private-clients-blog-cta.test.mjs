@@ -12,11 +12,14 @@ const PRIVATE_CLIENTS_ARTICLE_PATHS = [
   'public/blog/subseguro-portugal/index.html',
 ];
 
-test('PT private-clients blog CTAs link straight to the pillar form, with no embedded form and the correct 24h SLA', () => {
+test('PT private-clients blog CTAs link straight to the pillar form, with the short article form and the correct 24h SLA', () => {
   const failures = [];
   for (const path of PRIVATE_CLIENTS_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
-    if (html.includes('name="cotacao-blog"')) failures.push(`${path}: still has the raw embedded generic form`);
+    // Oct 2026: the short article form (scripts/apply-short-blog-forms.mjs) is back by
+    // decision of the owner; the old long generic form must not return.
+    if (html.includes('name="cotacao-blog"') && !html.includes('<!-- ar-short-form -->')) failures.push(`${path}: still has the raw embedded generic form`);
+    if (!html.includes('<!-- ar-short-form -->')) failures.push(`${path}: missing the short article lead form`);
     if (!/href="\/private-clients\/\?source=blog%3A[a-z0-9-]+#pedido"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the private-clients pillar form`);
     if (!html.includes('Pedir análise →')) failures.push(`${path}: CTA button text should mirror the pillar's own "Pedir análise" language, not the generic "cotação" wording`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);

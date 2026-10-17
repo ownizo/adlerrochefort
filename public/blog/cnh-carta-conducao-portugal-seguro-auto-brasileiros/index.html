@@ -608,6 +608,22 @@
   ]
 }
 </script>
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -776,7 +792,27 @@
   <div class="cta-topo">
     <div class="cta-topo-title">Peça uma análise do seu património</div>
     <div class="cta-topo-subtitle">Análise gratuita por mediador de seguros registado na ASF. Sem compromisso.</div>
-    <a class="cta-btn" href="/seguros/brasileiros-em-portugal/#pedido">Pedir análise →</a>
+    <!-- ar-short-form -->
+<div class="arsf" id="pedido-rapido">
+  <h3>Peça uma proposta — leva menos de um minuto</h3>
+  <p class="arsf-sub">Diga-nos o essencial. Respondemos por escrito em 24 horas úteis e pedimos o resto só se for preciso.</p>
+  <form name="cotacao-blog" method="POST" action="/obrigado/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="cotacao-blog"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
+    <input type="hidden" name="source" value="blog:cnh-carta-conducao-portugal-seguro-auto-brasileiros">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/blog/cnh-carta-conducao-portugal-seguro-auto-brasileiros/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arsf-n-cnh-carta-conducao-portugal-seguro-auto-brasileiros">Nome *</label><input id="arsf-n-cnh-carta-conducao-portugal-seguro-auto-brasileiros" type="text" name="nome" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arsf-e-cnh-carta-conducao-portugal-seguro-auto-brasileiros">Email *</label><input id="arsf-e-cnh-carta-conducao-portugal-seguro-auto-brasileiros" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arsf-p-cnh-carta-conducao-portugal-seguro-auto-brasileiros">Telefone / WhatsApp</label><input id="arsf-p-cnh-carta-conducao-portugal-seguro-auto-brasileiros" type="tel" name="telefone" autocomplete="tel"></div>
+      <div class="arsf-f"><label for="arsf-t-cnh-carta-conducao-portugal-seguro-auto-brasileiros">Tipo de seguro *</label><select id="arsf-t-cnh-carta-conducao-portugal-seguro-auto-brasileiros" name="tipo-seguro" required><option value="Saúde internacional (expatriados)">Saúde internacional (expatriados)</option><option value="Saúde">Saúde</option><option value="Private Clients (casa de elevado valor, arte, automóveis)">Private Clients (casa de elevado valor, arte, automóveis)</option><option value="Habitação">Habitação</option><option value="Alojamento Local">Alojamento Local</option><option value="Condomínio">Condomínio</option><option value="Automóvel" selected>Automóvel</option><option value="Responsabilidade Civil Profissional">Responsabilidade Civil Profissional</option><option value="Hotelaria e Restauração">Hotelaria e Restauração</option><option value="Multirriscos Empresarial">Multirriscos Empresarial</option><option value="Vida e Crédito Habitação">Vida e Crédito Habitação</option><option value="Outro">Outro</option></select></div>
+      <div class="arsf-f full"><label for="arsf-m-cnh-carta-conducao-portugal-seguro-auto-brasileiros">O que precisa? (opcional)</label><textarea id="arsf-m-cnh-carta-conducao-portugal-seguro-auto-brasileiros" name="mensagem" placeholder="Ex.: casa no Algarve, família de 4, mudança para Portugal em janeiro…"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="rgpd" value="sim" required> Aceito que os meus dados sejam usados para preparar esta proposta, ao abrigo do RGPD. *</label>
+    <button type="submit">Pedir proposta →</button>
+  </form>
+  <a class="arsf-alt" href="/seguros/brasileiros-em-portugal/#pedido">Prefere enviar já todos os dados? Pedir análise →</a>
+</div>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
 

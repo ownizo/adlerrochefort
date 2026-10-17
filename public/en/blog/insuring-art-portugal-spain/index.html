@@ -58,6 +58,22 @@
 </script>
 <link rel="stylesheet" href="/css/ar-theme.css">
 <style id="ar-author-style">.ar-author{max-width:1100px;margin:24px auto 0;padding:0 24px}.ar-author-inner{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:14px 18px}.ar-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px}.ar-author-text{font-size:13px;line-height:1.6;color:#333332;margin:0}.ar-author-text strong{color:#292929}@media(max-width:760px){.ar-author-inner{align-items:flex-start}}</style>
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal's ASF, no. 425591790/3, and serves Spain on a cross-border basis — <a href="/en/insurance-review/">Get an Insurance Review</a></div>
@@ -273,7 +289,28 @@
 
 <section class="lp-sections"><div class="lp-sections-inner">
 <div class="lp-card"><h2>Household first, then schedule</h2><p>Most Portuguese and Spanish home policies cap unspecified valuables. Above that cap the piece is underinsured or simply not covered. Agreed value, against a valuation, is a different contract from “contents up to a sub-limit”.</p><p>The technical note for Portugal is <a href="/en/blog/art-collection-household-policy-portugal/">when a collection outgrows a household policy</a> and <a href="/en/blog/insuring-art-portugal/">how an art claim is settled</a> — restoration, loss in value, transit. This page is the cross-border version: same products, two legal systems.</p></div>
-<div class="lp-card"><h2>A piece that moves is a different risk</h2><p>Transit between a Lisbon apartment and a house in Marbella is a gap if the wording never mentioned it. Storage during works, a loan to a gallery, a month on a yacht: each is a location the household policy may never have been told about. Say where each piece lives, and whether it moves.</p></div>
+<div class="lp-card"><!-- ar-short-form -->
+<div class="arsf" id="pedido-rapido">
+  <h3>Ask for a quote — it takes under a minute</h3>
+  <p class="arsf-sub">Tell us the essentials. We reply in writing within 24 working hours and only ask for more if we need it.</p>
+  <form name="quote-blog" method="POST" action="/en/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="quote-blog"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
+    <input type="hidden" name="source" value="blog:insuring-art-portugal-spain">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/en/blog/insuring-art-portugal-spain/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arsf-n-insuring-art-portugal-spain">Full name *</label><input id="arsf-n-insuring-art-portugal-spain" type="text" name="name" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arsf-e-insuring-art-portugal-spain">Email *</label><input id="arsf-e-insuring-art-portugal-spain" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arsf-p-insuring-art-portugal-spain">Phone / WhatsApp</label><input id="arsf-p-insuring-art-portugal-spain" type="tel" name="phone" autocomplete="tel"></div>
+      <div class="arsf-f"><label for="arsf-t-insuring-art-portugal-spain">Type of insurance *</label><select id="arsf-t-insuring-art-portugal-spain" name="tipo-seguro" required><option value="International health insurance (IPMI)">International health insurance (IPMI)</option><option value="Health">Health</option><option value="Private client (high-value home, art, cars)" selected>Private client (high-value home, art, cars)</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Car">Car</option><option value="Professional indemnity">Professional indemnity</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Other">Other</option></select></div>
+      <div class="arsf-f full"><label for="arsf-m-insuring-art-portugal-spain">What do you need? (optional)</label><textarea id="arsf-m-insuring-art-portugal-spain" name="message" placeholder="E.g. villa in the Algarve, family of four, moving to Portugal in January…"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="rgpd" value="sim" required> I agree to my details being used to prepare this quote, under the GDPR. *</label>
+    <button type="submit">Request my quote →</button>
+  </form>
+  
+</div>
+<h2>A piece that moves is a different risk</h2><p>Transit between a Lisbon apartment and a house in Marbella is a gap if the wording never mentioned it. Storage during works, a loan to a gallery, a month on a yacht: each is a location the household policy may never have been told about. Say where each piece lives, and whether it moves.</p></div>
 <div class="lp-card"><h2>Why independence matters on collections</h2><p>A tied agent places what their insurer will take. Collections are often declined or restricted there. As an independent broker we go to markets that write art — including specialists such as Hiscox — and we do not have to force the piece onto an Allianz or Zurich household wording that was never built for it. We also do not pretend those names are always the answer. The risk decides.</p></div>
 <div class="lp-card"><h2>Occupancy sits underneath the collection</h2><p>If the house is also let, or left empty for months, the home wording under the collection changes. A refused household claim does not become a paid art claim because the painting was scheduled on top of a policy that was already wrong about how the house is used. Tell us both.</p><p><a href="/en/private-clients/">Private clients, Portugal</a> · <a href="/en/private-clients-spain/">Private clients, Spain</a> · <a href="/en/insurance-review/">Request a review</a></p></div>
 </div></section>

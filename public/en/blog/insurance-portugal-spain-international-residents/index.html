@@ -104,6 +104,22 @@
 <link rel="stylesheet" href="/css/ar-livro.css">
 <link rel="stylesheet" href="/css/ar-langsel.css">
 <link rel="stylesheet" href="/css/ar-theme.css">
+<style id="ar-short-form-style">
+.arsf{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:22px 22px 18px;margin:24px 0;text-align:left;color:#292929}
+.arsf h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.arsf p.arsf-sub{margin:0 0 14px;font-size:14px;color:#555}
+.arsf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}
+.arsf-f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.arsf-f.full{grid-column:1/-1}
+.arsf label{font-size:12.5px;font-weight:600;color:#333}
+.arsf input,.arsf select,.arsf textarea{font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D9D6D3;border-radius:10px;background:#fff;color:#292929;width:100%;box-sizing:border-box}
+.arsf textarea{min-height:70px;resize:vertical}
+.arsf .arsf-ok{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#444;margin-top:4px}
+.arsf .arsf-ok input{width:auto;margin-top:2px}
+.arsf button{margin-top:12px;border:0;border-radius:999px;padding:12px 22px;font:inherit;font-weight:600;font-size:15px;background:#292929;color:#fff;cursor:pointer}
+.arsf .arsf-alt{display:block;margin-top:10px;font-size:13px;color:#555}
+@media(max-width:640px){.arsf-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -365,7 +381,28 @@
     <p>Two things drive most of the confusion we see. The first is <strong>which passport you hold</strong>, because that decides whether any public entitlement travels with you. The second is <strong>how you entered the system</strong> — as an EU citizen exercising free movement, as a pensioner whose home country still pays for their healthcare, as a visa applicant who had to buy a policy before arriving, or as someone who bought a house first and thought about the rest later. Two neighbours on the same street can have completely different correct answers.</p>
     <p>What follows is what actually happens, including the awkward parts. It is general information rather than advice on your situation, and where something genuinely varies by insurer, by consulate or by case, we say so instead of inventing a number.</p>
 
-    <h2 id="foundations">The foundations that apply to everyone</h2>
+    <!-- ar-short-form -->
+<div class="arsf" id="pedido-rapido">
+  <h3>Ask for a quote — it takes under a minute</h3>
+  <p class="arsf-sub">Tell us the essentials. We reply in writing within 24 working hours and only ask for more if we need it.</p>
+  <form name="quote-blog" method="POST" action="/en/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="quote-blog"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
+    <input type="hidden" name="source" value="blog:insurance-portugal-spain-international-residents">
+    <input type="hidden" name="source_url" value="https://adlerrochefort.com/en/blog/insurance-portugal-spain-international-residents/">
+    <p style="display:none"><label>Bot: <input name="bot-field"></label></p>
+    <div class="arsf-grid">
+      <div class="arsf-f"><label for="arsf-n-insurance-portugal-spain-international-residents">Full name *</label><input id="arsf-n-insurance-portugal-spain-international-residents" type="text" name="name" autocomplete="name" required></div>
+      <div class="arsf-f"><label for="arsf-e-insurance-portugal-spain-international-residents">Email *</label><input id="arsf-e-insurance-portugal-spain-international-residents" type="email" name="email" autocomplete="email" required></div>
+      <div class="arsf-f"><label for="arsf-p-insurance-portugal-spain-international-residents">Phone / WhatsApp</label><input id="arsf-p-insurance-portugal-spain-international-residents" type="tel" name="phone" autocomplete="tel"></div>
+      <div class="arsf-f"><label for="arsf-t-insurance-portugal-spain-international-residents">Type of insurance *</label><select id="arsf-t-insurance-portugal-spain-international-residents" name="tipo-seguro" required><option value="International health insurance (IPMI)" selected>International health insurance (IPMI)</option><option value="Health">Health</option><option value="Private client (high-value home, art, cars)">Private client (high-value home, art, cars)</option><option value="Home">Home</option><option value="Holiday let (Alojamento Local)">Holiday let (Alojamento Local)</option><option value="Car">Car</option><option value="Professional indemnity">Professional indemnity</option><option value="Business combined (multirriscos)">Business combined (multirriscos)</option><option value="Life &amp; mortgage protection">Life &amp; mortgage protection</option><option value="Other">Other</option></select></div>
+      <div class="arsf-f full"><label for="arsf-m-insurance-portugal-spain-international-residents">What do you need? (optional)</label><textarea id="arsf-m-insurance-portugal-spain-international-residents" name="message" placeholder="E.g. villa in the Algarve, family of four, moving to Portugal in January…"></textarea></div>
+    </div>
+    <label class="arsf-ok"><input type="checkbox" name="rgpd" value="sim" required> I agree to my details being used to prepare this quote, under the GDPR. *</label>
+    <button type="submit">Request my quote →</button>
+  </form>
+  
+</div>
+<h2 id="foundations">The foundations that apply to everyone</h2>
 
     <h3 id="public-vs-private">Public system versus private cover — and why most people end up with both</h3>
     <p>Portugal's <span lang="pt">Serviço Nacional de Saúde</span> (SNS) and Spain's public health system are both broad, tax-funded systems that legal residents can use once they are properly registered. They are not the poor relation of a private policy. For emergencies, serious illness, surgery and long-term treatment, the public hospital is frequently where you want to be.</p>
