@@ -215,6 +215,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body data-market="spain" data-page-type="commercial_product" data-product="private_clients">
 
@@ -523,7 +531,7 @@
     <p class="lp-form-sub">Sagen Sie uns, was Sie heute versichert haben und bei wem. Wir antworten schriftlich — was gemeinsam geprüft werden sollte und was wir empfehlen.</p>
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="Vielen Dank. Wir haben Ihre Anfrage erhalten und antworten innerhalb von 24 Arbeitsstunden." data-err="Senden fehlgeschlagen. Bitte erneut versuchen oder per WhatsApp schreiben: +351 928 226 570.">
-  <h3>Schnellkontakt</h3>
+  <h3>Angebot anfragen – in unter einer Minute</h3>
   <p class="arsf-sub">Nur das Wesentliche – wir antworten innerhalb von 24 Arbeitsstunden und fragen den Rest per E-Mail nach.</p>
   <form name="de-angebot-anfrage" method="POST" action="/de/#angebot" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="de-angebot-anfrage"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="de"><input type="hidden" name="market" value="germany"><input type="hidden" name="subject" value="Neue Anfrage (DE) — Kurzkontakt"><input type="hidden" name="versicherungsart" value="Private Clients">
@@ -539,93 +547,14 @@
     <label class="arsf-ok"><input type="checkbox" name="einwilligung" value="ja" required> Ich bin einverstanden, dass meine Angaben zur Erstellung dieses Angebots verwendet werden (DSGVO). *</label>
     <button type="submit">Kontakt anfordern →</button>
   </form>
-  <div class="arqc-or">oder gleich die vollständige Anfrage senden</div>
 </div>
-<form class="contact-form" id="quoteForm" method="POST" name="de-private-clients-spanien" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-ga-field="property_ownership">
-      <input type="hidden" name="form-name" value="de-private-clients-spanien"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="source_url" value="">
-      <input type="hidden" name="landing_page" value="">
-      <input type="hidden" name="source" value="landing:private-clients-spain">
-      <input type="hidden" name="country" value="Spain">
-      <p class="contact-form-honeypot" style="display:none" aria-hidden="true"><label>Nicht ausfüllen: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-name">Vollständiger Name *</label>
-        <input type="text" id="q-name" name="name" placeholder="Max Mustermann" autocomplete="name" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-email">E-Mail *</label>
-        <input type="email" id="q-email" name="email" placeholder="ihr.name@email.de" autocomplete="email" required>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-phone">Telefon / WhatsApp *</label>
-        <input type="tel" id="q-phone" name="phone" placeholder="+44 000 000 000" autocomplete="tel" inputmode="tel" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-current_country">Wohnsitzland *</label>
-        <input type="text" id="q-current_country" name="current_country" placeholder="z. B. Deutschland" required>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-spain_location">Wo in Spanien? *</label>
-        <input type="text" id="q-spain_location" name="spain_location" placeholder="z. B. Madrid, oder der Ort des Hauses" required>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-property_ownership">Immobilienbesitz *</label>
-        <select id="q-property_ownership" name="property_ownership" required>
-          <option value="">Bitte wählen</option>
-          <option value="Eine Immobilie in Spanien">Eine Immobilie in Spanien</option>
-          <option value="Mehrere Immobilien in Spanien">Mehrere Immobilien in Spanien</option>
-          <option value="Immobilie in Spanien und anderswo">Immobilie in Spanien und anderswo</option>
-          <option value="Noch nicht, Kauf geplant">Noch nicht, Kauf geplant</option>
-        </select>
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-property_count">Anzahl der Immobilien (Spanien)</label>
-        <input type="text" id="q-property_count" name="property_count" placeholder="e.g. 2">
-      </div>
-      <div class="contact-form-field">
-        <label for="q-vehicles">Fahrzeuge</label>
-        <input type="text" id="q-vehicles" name="vehicles" placeholder="e.g. 2 cars">
-      </div>
-      </div>
-      <div class="lp-form-row">
-      <div class="contact-form-field">
-        <label for="q-interests">Welche Risiken sollen geprüft werden?</label>
-        <input type="checkboxes" id="q-interests" name="interests" placeholder="">
-      </div>
-      <div class="contact-form-field">
-        <label for="q-preferred_contact">Bevorzugter Kontaktweg</label>
-        <select id="q-preferred_contact" name="preferred_contact">
-          <option value="">Bitte wählen</option>
-          <option value="Email">E-Mail</option>
-          <option value="Phone">Telefon</option>
-          <option value="WhatsApp">WhatsApp</option>
-        </select>
-      </div>
-      </div>
-      <div class="contact-form-field">
-        <label for="q-message">Weitere Risiken oder Anmerkungen</label>
-        <textarea id="q-message" name="message" placeholder="Alles, was für die Prüfung wichtig ist — Bewertungen oder sensible Details brauchen wir in diesem Schritt nicht."></textarea>
-      </div>
-      <fieldset class="contact-form-crosssell">
-        <legend>Noch Hilfe bei einer anderen Sparte?</legend>
-        <div class="contact-form-checkbox-grid">
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Krankenversicherung"> Krankenversicherung</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Hausversicherung"> Hausversicherung</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Autoversicherung"> Autoversicherung</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Lebensversicherung"> Lebensversicherung</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Vermieterversicherung"> Vermieterversicherung</label>
-          <label class="contact-form-checkbox"><input type="checkbox" name="additional_insurance_needs" value="Hypothekenschutz"> Hypothekenschutz</label>
-        </div>
-      </fieldset>
-      <button type="submit" class="contact-form-submit">Request my review &rarr;</button>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>Welche Angaben wir für Ihr Angebot benötigen</h3>
+  <p>Nach dem ersten Kontakt fragen wir diese Angaben per E-Mail an. Wenn Sie sie zur Hand haben, können Sie sie gleich an <a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a> senden.</p>
+  
+  <ul><li>Vollständiger Name</li><li>Vollständige Adresse der Immobilie</li><li>Portugiesische Steuernummer (NIF)</li><li>Bruttogeschossfläche</li><li>Baujahr</li><li>Haupt- oder Zweitwohnsitz</li><li>Beruf</li><li>Alter</li><li>Versicherungssumme Gebäude</li><li>Versicherungssumme Hausrat</li><li>Versicherungssumme Wertsachen</li><li>Liste der zu versichernden Werte (Kunst, Schmuck, Uhren, Fahrzeuge) mit Werten und ggf. Gutachten</li></ul>
+</div>
     <p class="lp-smallprint">Mit dem Absenden erklären Sie sich einverstanden, dass wir Ihre Angaben zur Vorbereitung des Angebots verwenden, gemäß unserer <a href="/en/privacy-policy/">Datenschutzerklärung</a>. Wir verkaufen Ihre Daten nicht. Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., bei der ASF unter Nr. 425591790/3 registriert.</p>
     <p class="lp-smallprint">Unverbindlich. Wir können vor der Einholung von Konditionen Rückfragen stellen; Annahme und Preis bleiben der Risikoprüfung des Versicherers vorbehalten.</p>
     <div class="lp-form-trust"><span>Bei der ASF Portugals registriert</span><span>Deutschsprachige Korrespondenz</span><span>Eine klare Antwort, was sich vermitteln lässt</span><span>Antwort innerhalb weniger Werktage</span></div>

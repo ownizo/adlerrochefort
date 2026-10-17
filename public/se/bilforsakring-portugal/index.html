@@ -238,6 +238,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body>
 
@@ -614,7 +622,7 @@
 
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="Tack. Vi har tagit emot din förfrågan och svarar inom 24 arbetstimmar." data-err="Det gick inte att skicka. Försök igen eller skriv på WhatsApp: +351 928 226 570.">
-  <h3>Snabbkontakt</h3>
+  <h3>Begär offert – på under en minut</h3>
   <p class="arsf-sub">Bara det viktigaste – vi svarar inom 24 arbetstimmar och frågar efter resten via e-post.</p>
   <form name="se-offertforfragan" method="POST" action="/se/#offert" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="se-offertforfragan"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="sv"><input type="hidden" name="market" value="sweden"><input type="hidden" name="subject" value="Ny förfrågan (SE) — snabbkontakt"><input type="hidden" name="product_interest" value="SE · Bil"><input type="hidden" name="insurance_type" value="SE · Bil">
@@ -630,64 +638,14 @@
     <label class="arsf-ok"><input type="checkbox" name="consent" value="yes" required> Jag godkänner att mina uppgifter används för att ta fram offerten (GDPR). *</label>
     <button type="submit">Bli kontaktad →</button>
   </form>
-  <div class="arqc-or">eller skicka hela förfrågan direkt</div>
 </div>
-<form name="se-bilforsakring-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/se/#offert">
-      <input type="hidden" name="form-name" value="se-bilforsakring-wizard"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="ramo" value="Bilförsäkring">
-      <input type="hidden" name="source_url" id="se-auto-source" value="">
-      <input type="hidden" name="dados_dinamicos" value="">
-      <p class="contact-form-honeypot"><label>Fyll inte i detta fält <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. Personuppgifter</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. Fordonet</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. Bekräftelse</span></li>
-      </ol>
-
-      <div data-wizard-step>
-        <div class="contact-form-field"><label for="se-auto-nome">Fullständigt namn *</label><input type="text" id="se-auto-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="se-auto-nif">NIF/NIE *</label><input type="text" id="se-auto-nif" name="nif" placeholder="NIF / NIE" required></div>
-        <div class="contact-form-field"><label for="se-auto-nascimento">Födelsedatum *</label><input type="date" id="se-auto-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="se-auto-morada">Fullständig adress *</label><input type="text" id="se-auto-morada" name="morada" autocomplete="street-address" required></div>
-        <div class="contact-form-field"><label for="se-auto-localidade">Ort *</label><input type="text" id="se-auto-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="se-auto-cp">Postnummer *</label><input type="text" id="se-auto-cp" name="codigo_postal" autocomplete="postal-code" required></div>
-        <div class="contact-form-field"><label for="se-auto-telefone">Telefonnummer *</label><input type="tel" id="se-auto-telefone" name="telefone" autocomplete="tel" required></div>
-        <div class="contact-form-field"><label for="se-auto-email">E-postadress *</label><input type="email" id="se-auto-email" name="email" autocomplete="email" required></div>
-        <div class="contact-form-field">
-          <label for="se-auto-nacionalidade">Nationalitet *</label>
-          <input type="text" id="se-auto-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="se-auto-nacionalidade-code" autocomplete="off" required>
-          <input type="hidden" name="nacionalidade" id="se-auto-nacionalidade-code">
-        </div>
-        <div class="contact-form-field">
-          <label for="se-auto-residente-fiscal">Är du skattemässigt bosatt i Portugal? *</label>
-          <select id="se-auto-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-            <option value="">Välj</option>
-            <option value="sim">Ja</option>
-            <option value="nao">Nej</option>
-          </select>
-        </div>
-        <p class="wizard-helper" id="se-auto-residente-fiscal-info" hidden>Adressen behövs fortfarande. Utan skattemässig hemvist i Portugal kan det i vissa fall inte vara möjligt att utfärda försäkringen — vi granskar ändå din specifika situation.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="se-auto-matricula">Registreringsnummer *</label><input type="text" id="se-auto-matricula" name="matricula" required></div>
-        <div class="contact-form-field"><label for="se-auto-carta">Datum för körkortets utfärdande *</label><input type="date" id="se-auto-carta" name="data_carta" data-validate="licence-date" data-validate-ref="data_nascimento" required></div>
-        <p class="wizard-helper" id="se-auto-carta-idade-info" hidden>Det är före försäkringstagarens 16-årsdag — vi accepterar det ändå, men kontrollera gärna att datumet stämmer.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="button" class="wizard-nav-next" data-wizard-next>Nästa →</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="se-auto-inicio">Önskat startdatum *</label><input type="date" id="se-auto-inicio" name="data_inicio" data-validate="start-date" required></div>
-        <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="se-auto-rgpd"><input type="checkbox" id="se-auto-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> Jag samtycker till att mina uppgifter används för att förbereda denna offert, i enlighet med GDPR. *</label>
-        </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>← Tillbaka</button><button type="submit" class="contact-form-submit">Begär offert →</button></div>
-      </div>
-
-      <p class="lp-form-micro">Svar inom 24 arbetstimmar. Dina uppgifter används endast för att förbereda offerten och behandlas i enlighet med GDPR — se <a href="/en/privacy-policy" hreflang="en">integritetspolicyn</a>.</p>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>Vilka uppgifter vi behöver för offerten</h3>
+  <p>Efter den första kontakten ber vi om dessa uppgifter via e-post. Har du dem till hands kan du skicka dem direkt till <a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a>.</p>
+  
+  <ul><li>Namn</li><li>Födelsedatum</li><li>Fullständig adress</li><li>Datum för körkort</li><li>Registreringsnummer</li></ul>
+</div>
     <div class="contact-form-success" id="se-autoSuccess">
       <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       <h3>Tack!</h3>

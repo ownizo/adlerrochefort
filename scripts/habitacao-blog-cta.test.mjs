@@ -39,5 +39,7 @@ test('PT habitação blog CTAs link straight to the pillar wizard, with the shor
 
 test('habitação pillar wizard has no clinical-data fields', () => {
   const html = readFileSync('public/seguros/habitacao/index.html', 'utf8');
-  assert.ok(html.includes('data-wizard'));
+  // Oct 2026: the wizard was replaced by an information section (apply-quote-info.mjs).
+  assert.ok(html.includes('data-wizard') || html.includes('<!-- ar-quote-info -->'));
+  assert.doesNotMatch(html, /name="[a-z_]*(doenca|diagnost|medicament)[a-z_]*"/i);
 });

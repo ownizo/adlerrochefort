@@ -270,6 +270,14 @@
 .arsf.arsf label{text-transform:none;letter-spacing:0;font-size:12.5px;font-weight:600}
 .arsf.arsf .arsf-ok{text-transform:none;letter-spacing:0;font-weight:400}
 </style>
+<style id="ar-quote-info-style">
+.arqi{background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:20px 22px;margin:4px 0 0;color:#292929;text-align:left}
+.arqi h3{margin:0 0 6px;font-size:17px;line-height:1.3;text-transform:none;letter-spacing:0}
+.arqi p{margin:0 0 10px;font-size:14px;color:#555;text-transform:none;letter-spacing:0}
+.arqi ul{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px;line-height:1.7}
+.arqi li{break-inside:avoid}
+@media(max-width:640px){.arqi ul{columns:1}}
+</style>
 </head>
 <body>
 
@@ -739,7 +747,7 @@
 
     <!-- ar-quick-contact -->
 <div class="arsf arqc" data-arqc="quick_contact" data-thanks="תודה. קיבלנו את הבקשה ונשיב תוך 48–72 שעות עבודה." data-err="השליחה נכשלה. נסו שוב או כתבו לנו ב-WhatsApp: ‎+351 928 226 570.">
-  <h3>יצירת קשר מהירה</h3>
+  <h3>בקשו הצעה – בפחות מדקה</h3>
   <p class="arsf-sub">רק את העיקר – נחזור אליכם תוך 48–72 שעות עבודה ונבקש את השאר במייל.</p>
   <form name="il-bakashat-hatzaa" method="POST" action="/il/#hatzaa" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="il-bakashat-hatzaa"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="language" value="he"><input type="hidden" name="market" value="israel"><input type="hidden" name="subject" value="פנייה חדשה (IL) — יצירת קשר מהירה"><input type="hidden" name="product_interest" value="IL · Liability"><input type="hidden" name="insurance_type" value="IL · Liability">
@@ -755,63 +763,14 @@
     <label class="arsf-ok"><input type="checkbox" name="consent" value="yes" required> אני מסכים/ה לשימוש בפרטיי לצורך הכנת ההצעה (GDPR). *</label>
     <button type="submit">בקשו שיחזרו אליכם ←</button>
   </form>
-  <div class="arqc-or">או שלחו עכשיו את הבקשה המלאה</div>
 </div>
-<form name="il-liability-insurance-wizard" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-quote-form data-wizard action="/il/#hatzaa">
-      <input type="hidden" name="form-name" value="il-liability-insurance-wizard"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
-      <input type="hidden" name="ramo" value="Liability">
-      <input type="hidden" name="source_url" id="il-rcp-source" value="">
-      <input type="hidden" name="dados_dinamicos" value="">
-      <p class="contact-form-honeypot"><label>נא לא למלא את השדה הזה <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-      <ol class="wizard-progress" data-wizard-progress aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">1. פרטים אישיים</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">2. פעילות עסקית</span></li>
-        <li class="wizard-progress-item" data-wizard-progress-item><div class="wizard-progress-item-bar"></div><span class="wizard-progress-item-label">3. אישור</span></li>
-      </ol>
-
-      <div data-wizard-step>
-        <div class="contact-form-field"><label for="il-rcp-nome">שם מלא *</label><input type="text" id="il-rcp-nome" name="nome" autocomplete="name" required></div>
-        <div class="contact-form-field"><label for="il-rcp-nif">⁦NIF/NIE⁩ *</label><input type="text" id="il-rcp-nif" name="nif" placeholder="NIF / NIE" required dir="ltr"></div>
-        <div class="contact-form-field"><label for="il-rcp-nascimento">תאריך לידה *</label><input type="date" id="il-rcp-nascimento" name="data_nascimento" data-validate="birth-date" required></div>
-        <div class="contact-form-field"><label for="il-rcp-morada">כתובת מלאה *</label><input type="text" id="il-rcp-morada" name="morada" autocomplete="street-address" required></div>
-        <div class="contact-form-field"><label for="il-rcp-localidade">עיר או יישוב *</label><input type="text" id="il-rcp-localidade" name="localidade" autocomplete="address-level2" required></div>
-        <div class="contact-form-field"><label for="il-rcp-cp">מיקוד *</label><input type="text" id="il-rcp-cp" name="codigo_postal" autocomplete="postal-code" required dir="ltr"></div>
-        <div class="contact-form-field"><label for="il-rcp-telefone">מספר טלפון *</label><input type="tel" id="il-rcp-telefone" name="telefone" autocomplete="tel" required dir="ltr"></div>
-        <div class="contact-form-field"><label for="il-rcp-email">כתובת ⁦דוא״ל⁩ *</label><input type="email" id="il-rcp-email" name="email" autocomplete="email" required dir="ltr"></div>
-        <div class="contact-form-field">
-          <label for="il-rcp-nacionalidade">אזרחות *</label>
-          <input type="text" id="il-rcp-nacionalidade" name="nacionalidade_nome" list="nationality-list" data-code-target="il-rcp-nacionalidade-code" autocomplete="off" required>
-          <input type="hidden" name="nacionalidade" id="il-rcp-nacionalidade-code">
-        </div>
-        <div class="contact-form-field">
-          <label for="il-rcp-residente-fiscal">האם אתם תושבי מס בפורטוגל? *</label>
-          <select id="il-rcp-residente-fiscal" name="residente_fiscal" data-required-copy="residenteFiscal" required>
-            <option value="">בחרו אפשרות</option>
-            <option value="sim">כן</option>
-            <option value="nao">לא</option>
-          </select>
-        </div>
-        <p class="wizard-helper" id="il-rcp-residente-fiscal-info" hidden>עדיין צריך למלא כתובת. ללא תושבות מס בפורטוגל, ייתכן שבמקרים מסוימים לא ניתן יהיה להנפיק את הפוליסה — בכל זאת נבדוק את המצב הספציפי שלכם.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="il-rcp-faturacao">מחזור שנתי *</label><input type="number" id="il-rcp-faturacao" name="faturacao_anual" placeholder="לדוגמה: 85000" required></div>
-        <p class="wizard-helper">סוג הפעילות, גובה הכיסוי המבוקש, והאם הפוליסה נדרשת על פי חוזה או התאחדות מקצועית — נבין את כל זה בהמשך, בפנייה חוזרת.</p>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="button" class="wizard-nav-next" data-wizard-next>הבא ←</button></div>
-      </div>
-
-      <div data-wizard-step hidden>
-        <div class="contact-form-field"><label for="il-rcp-inicio">מועד תחילה מבוקש *</label><input type="date" id="il-rcp-inicio" name="data_inicio" data-validate="start-date" required></div>
-        <div class="contact-form-field">
-          <label class="contact-form-checkbox" for="il-rcp-rgpd"><input type="checkbox" id="il-rcp-rgpd" name="rgpd" value="sim" data-required-copy="rgpd" required> אני מאשר/ת שהפרטים שמסרתי ישמשו להכנת ההצעה הזו, בהתאם לתקנה האירופית להגנת מידע (⁦GDPR⁩). *</label>
-        </div>
-        <div class="wizard-nav"><button type="button" class="wizard-nav-back" data-wizard-back>→ הקודם</button><button type="submit" class="contact-form-submit">שליחת הבקשה ←</button></div>
-      </div>
-
-      <p class="lp-form-micro">נשיב בתוך 48 עד 72 שעות עבודה. הפרטים משמשים אך ורק להכנת ההצעה הזו ומעובדים בהתאם לתקנה האירופית להגנת מידע (<bdi>GDPR</bdi>) — ראו <a href="/en/privacy-policy" hreflang="en">מדיניות הפרטיות</a>.</p>
-    </form>
+<!-- ar-quote-info -->
+<div class="arqi">
+  <h3>אילו פרטים נבקש לצורך ההצעה</h3>
+  <p>לאחר הפנייה הראשונה נבקש את הפרטים האלה במייל. אם הם בהישג יד, אפשר לשלוח אותם כבר עכשיו ל-<a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a>.</p>
+  
+  <ul><li>שם</li><li>תאריך לידה</li><li>כתובת מלאה</li><li>תאריך הוצאת רישיון נהיגה</li><li>מספר רישוי</li></ul>
+</div>
     <div class="contact-form-success" id="il-rcpSuccess">
       <div class="contact-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
       <h3>תודה!</h3>
