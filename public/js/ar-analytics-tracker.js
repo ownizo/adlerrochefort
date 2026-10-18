@@ -5,7 +5,12 @@
   if (path.startsWith("/vault/")) return;
   if (path.startsWith("/.netlify/") || path.startsWith("/api/")) return;
 
+  // The owner's own browsing should not count: opening any page once with
+  // ?nao-contar=1 switches this browser off for good (?contar=1 undoes it).
   try {
+    var q = window.location.search || "";
+    if (/[?&]nao-contar=1\b/.test(q)) window.localStorage.setItem("ar_analytics_optout", "1");
+    if (/[?&]contar=1\b/.test(q)) window.localStorage.removeItem("ar_analytics_optout");
     if (window.localStorage && window.localStorage.getItem("ar_analytics_optout") === "1") return;
   } catch (_) {}
 
