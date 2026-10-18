@@ -386,6 +386,21 @@ def set_switcher(s, kind, lang):
         return tag
 
     s = re.sub(r'<a href="([^"]*)" lang="[^"]*"(?: dir="(?:ltr|rtl)")? hreflang="([^"]+)"[^>]*>', rep, s)
+    # the <noscript> fallback list carries only lang="", no hreflang
+    lang_map = {"pt": path_of("pt", kind), "en": path_of("en", kind), "de": path_of("de", kind), "es": path_of("es", kind),
+                "nl": path_of("nl", kind), "fr": path_of("fr", kind), "it": path_of("it", kind), "pl": path_of("pl", kind),
+                "sv": path_of("se", kind), "da": path_of("dk", kind), "he": path_of("il", kind), "zh": path_of("zh", kind)}
+
+    def fb(block):
+        def one(m):
+            target = lang_map.get(m.group(2).split("-")[0])
+            if not target:
+                return m.group(0)
+            cur = ' aria-current="true"' if target == path_of(lang, kind) else ""
+            return f'<a href="{target}" lang="{m.group(2)}"{m.group(3) or ""}{cur}>'
+        return re.sub(r'<a href="([^"]*)" lang="([^"]+)"( dir="(?:ltr|rtl)")?(?: aria-current="true")?>', one, block.group(0))
+
+    s = re.sub(r'<ul class="[^"]*ar-langsel-fallback[^"]*">.*?</ul>', fb, s, flags=re.S)
     # the "home page" note marked entries that fell back to a homepage; every entry now has a counterpart
     return re.sub(r'(<li><a href="[^"]*" lang="[^"]*"(?: dir="(?:ltr|rtl)")? hreflang="[^"]+"[^>]*><span>[^<]*</span>)<span class="ar-langsel-note">[^<]*</span>', r"\1", s)
 
