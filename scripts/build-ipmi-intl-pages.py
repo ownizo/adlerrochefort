@@ -425,8 +425,10 @@ def build(lang, kind):
     s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', s, count=1)
     s = re.sub(r'[ \t]*<link rel="alternate" hreflang="[^"]+" href="[^"]*">\n?', "", s)
     s = s.replace(f'<link rel="canonical" href="{url}">', f'<link rel="canonical" href="{url}">\n' + hreflang_block(kind).rstrip("\n"), 1)
+    # the template's structured data (head and body) describes the template page, not this one
+    s = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", s, flags=re.S)
     head_end = s.index("</head>")
-    head = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", s[:head_end], flags=re.S)
+    head = s[:head_end]
     head = re.sub(r'<style id="ar-ipmi-intl-style">.*?</style>\n?', "", head, flags=re.S)
     if "/css/ar-conversion.css" not in head:
         head += '<link rel="stylesheet" href="/css/ar-conversion.css">\n'
