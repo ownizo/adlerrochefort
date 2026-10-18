@@ -29,6 +29,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Cancer cover in health insurance, all twelve languages, October 2026 (scripts/build-cancer-cover-pages.py).
+  { pt: '/seguros/saude/cobertura-cancro/', en: '/en/cancer-cover-health-insurance-portugal/', de: '/de/krebs-krankenversicherung-portugal/', es: '/es/cancer-seguro-medico-portugal-espana/', nl: '/nl/kanker-zorgverzekering-portugal/', fr: '/fr/cancer-assurance-sante-portugal/', it: '/it/cancro-assicurazione-sanitaria-portogallo/', pl: '/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/', se: '/se/cancer-sjukvardsforsakring-portugal/', dk: '/dk/kraeft-sundhedsforsikring-portugal/', il: '/il/cancer-health-insurance-portugal/', zh: '/zh/cancer-health-insurance-portugal/' },
   // International health insurance (IPMI) in all twelve languages, October 2026
   // (scripts/build-ipmi-intl-pages.py): the hub, then the Allianz Care and Cigna Global pages.
   { pt: '/seguros/saude-internacional/', en: '/en/international-health-insurance/', de: '/de/internationale-krankenversicherung/', es: '/es/seguro-medico-internacional/', nl: '/nl/internationale-zorgverzekering/', fr: '/fr/assurance-sante-internationale/', it: '/it/assicurazione-medica-internazionale/', pl: '/pl/miedzynarodowe-ubezpieczenie-zdrowotne/', se: '/se/internationell-sjukvardsforsakring/', dk: '/dk/international-sundhedsforsikring/', il: '/il/international-health-insurance/', zh: '/zh/international-health-insurance/' },

@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "只需四项信息。我们将在一个工作日内书面回复，提供为您配置的 Allianz Care 和 Cigna Global 方案。",
     "related": [("{HUB}allianz-care/", "Allianz Care 国际医疗保险"), ("{HUB}cigna-global/", "Cigna Global 国际医疗保险"),
                 ("/zh/allianz-care-vs-cigna-global/", "Allianz Care 与 Cigna Global 比较"),
-                ("/zh/health-insurance-portugal/", "葡萄牙医疗保险")],
+                ("/zh/health-insurance-portugal/", "葡萄牙医疗保险"), ("/zh/cancer-health-insurance-portugal/", "癌症与健康保险")],
 }
 
 ALLIANZ = {
@@ -159,7 +159,7 @@ ALLIANZ = {
     "form_h2": "索取 Allianz Care 报价",
     "form_lead": "只需四项信息。我们将在一个工作日内书面回复，提供为您配置的 Allianz Care，必要时附上相同条件下的 Cigna Global。",
     "related": [("{HUB}", "面向海外人士的国际医疗保险"), ("{HUB}cigna-global/", "Cigna Global 国际医疗保险"),
-                ("/zh/allianz-care-vs-cigna-global/", "Allianz Care 与 Cigna Global 比较")],
+                ("/zh/allianz-care-vs-cigna-global/", "Allianz Care 与 Cigna Global 比较"), ("/zh/cancer-health-insurance-portugal/", "癌症与健康保险")],
 }
 
 CIGNA = {
@@ -215,5 +215,5 @@ CIGNA = {
     "form_h2": "索取 Cigna Global 报价",
     "form_lead": "只需四项信息。我们将在一个工作日内书面回复，提供为您配置的 Cigna Global，如符合条件，另附相同条件下的 Allianz Care。",
     "related": [("{HUB}", "面向海外人士的国际医疗保险"), ("{HUB}allianz-care/", "Allianz Care 国际医疗保险"),
-                ("/zh/allianz-care-vs-cigna-global/", "Allianz Care 与 Cigna Global 比较")],
+                ("/zh/allianz-care-vs-cigna-global/", "Allianz Care 与 Cigna Global 比较"), ("/zh/cancer-health-insurance-portugal/", "癌症与健康保险")],
 }

@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Vier gegevens volstaan. Wij antwoorden binnen één werkdag schriftelijk, met Allianz Care en Cigna Global voor u samengesteld.",
     "related": [("{HUB}allianz-care/", "Allianz Care: internationale zorgverzekering"), ("{HUB}cigna-global/", "Cigna Global: internationale zorgverzekering"),
                 ("/nl/allianz-care-vs-cigna-global-portugal-spanje/", "Allianz Care of Cigna Global in Portugal en Spanje"),
-                ("/nl/zorgverzekering-portugal/", "Zorgverzekering in Portugal"), ("/nl/zorgverzekering-bestaande-aandoening-portugal/", "Zorgverzekering met een bestaande aandoening")],
+                ("/nl/zorgverzekering-portugal/", "Zorgverzekering in Portugal"), ("/nl/zorgverzekering-bestaande-aandoening-portugal/", "Zorgverzekering met een bestaande aandoening"), ("/nl/kanker-zorgverzekering-portugal/", "Kanker en zorgverzekering")],
 }
 
 ALLIANZ = {
@@ -160,7 +160,7 @@ ALLIANZ = {
     "form_h2": "Vraag uw offerte voor Allianz Care aan",
     "form_lead": "Vier gegevens volstaan. Wij antwoorden binnen één werkdag schriftelijk, met Allianz Care voor u samengesteld en, waar het helpt, Cigna Global op dezelfde voorwaarden.",
     "related": [("{HUB}", "Internationale zorgverzekering voor expats"), ("{HUB}cigna-global/", "Cigna Global: internationale zorgverzekering"),
-                ("/nl/allianz-care-vs-cigna-global-portugal-spanje/", "Allianz Care of Cigna Global in Portugal en Spanje"), ("/nl/zorgverzekering-portugal/", "Zorgverzekering in Portugal")],
+                ("/nl/allianz-care-vs-cigna-global-portugal-spanje/", "Allianz Care of Cigna Global in Portugal en Spanje"), ("/nl/zorgverzekering-portugal/", "Zorgverzekering in Portugal"), ("/nl/kanker-zorgverzekering-portugal/", "Kanker en zorgverzekering")],
 }
 
 CIGNA = {
@@ -216,5 +216,5 @@ CIGNA = {
     "form_h2": "Vraag uw offerte voor Cigna Global aan",
     "form_lead": "Vier gegevens volstaan. Wij antwoorden binnen één werkdag schriftelijk, met Cigna Global voor u samengesteld en, als u in aanmerking komt, Allianz Care op dezelfde voorwaarden.",
     "related": [("{HUB}", "Internationale zorgverzekering voor expats"), ("{HUB}allianz-care/", "Allianz Care: internationale zorgverzekering"),
-                ("/nl/allianz-care-vs-cigna-global-portugal-spanje/", "Allianz Care of Cigna Global in Portugal en Spanje"), ("/nl/zorgverzekering-bestaande-aandoening-portugal/", "Zorgverzekering met een bestaande aandoening")],
+                ("/nl/allianz-care-vs-cigna-global-portugal-spanje/", "Allianz Care of Cigna Global in Portugal en Spanje"), ("/nl/zorgverzekering-bestaande-aandoening-portugal/", "Zorgverzekering met een bestaande aandoening"), ("/nl/kanker-zorgverzekering-portugal/", "Kanker en zorgverzekering")],
 }

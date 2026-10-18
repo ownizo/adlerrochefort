@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Fire oplysninger er nok. Vi svarer skriftligt inden for én arbejdsdag, med Allianz Care og Cigna Global tilpasset dig.",
     "related": [("{HUB}allianz-care/", "Allianz Care: international sundhedsforsikring"), ("{HUB}cigna-global/", "Cigna Global: international sundhedsforsikring"),
                 ("/dk/allianz-care-vs-cigna-global-sundhedsforsikring/", "Allianz Care eller Cigna Global: sammenligning"),
-                ("/dk/sundhedsforsikring-portugal/", "Sundhedsforsikring i Portugal")],
+                ("/dk/sundhedsforsikring-portugal/", "Sundhedsforsikring i Portugal"), ("/dk/kraeft-sundhedsforsikring-portugal/", "Kræft og sundhedsforsikring")],
 }
 
 ALLIANZ = {
@@ -159,7 +159,7 @@ ALLIANZ = {
     "form_h2": "Få tilbud på Allianz Care",
     "form_lead": "Fire oplysninger er nok. Vi svarer skriftligt inden for én arbejdsdag, med Allianz Care tilpasset dig og, når det hjælper, Cigna Global på samme vilkår.",
     "related": [("{HUB}", "International sundhedsforsikring for udlandsboende"), ("{HUB}cigna-global/", "Cigna Global: international sundhedsforsikring"),
-                ("/dk/allianz-care-vs-cigna-global-sundhedsforsikring/", "Allianz Care eller Cigna Global: sammenligning")],
+                ("/dk/allianz-care-vs-cigna-global-sundhedsforsikring/", "Allianz Care eller Cigna Global: sammenligning"), ("/dk/kraeft-sundhedsforsikring-portugal/", "Kræft og sundhedsforsikring")],
 }
 
 CIGNA = {
@@ -215,5 +215,5 @@ CIGNA = {
     "form_h2": "Få tilbud på Cigna Global",
     "form_lead": "Fire oplysninger er nok. Vi svarer skriftligt inden for én arbejdsdag, med Cigna Global tilpasset dig og, hvis du kan tegne den, Allianz Care på samme vilkår.",
     "related": [("{HUB}", "International sundhedsforsikring for udlandsboende"), ("{HUB}allianz-care/", "Allianz Care: international sundhedsforsikring"),
-                ("/dk/allianz-care-vs-cigna-global-sundhedsforsikring/", "Allianz Care eller Cigna Global: sammenligning")],
+                ("/dk/allianz-care-vs-cigna-global-sundhedsforsikring/", "Allianz Care eller Cigna Global: sammenligning"), ("/dk/kraeft-sundhedsforsikring-portugal/", "Kræft og sundhedsforsikring")],
 }

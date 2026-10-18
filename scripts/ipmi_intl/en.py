@@ -91,7 +91,7 @@ ALLIANZ = {
     "form_h2": "Get your Allianz Care quote",
     "form_lead": "Four details are enough to start. We reply in writing within one working day, with Allianz Care configured for you and, where it helps, Cigna Global on the same terms.",
     "related": [("/en/international-health-insurance/", "International health insurance for expats"), ("{HUB}cigna-global/", "Cigna Global international health insurance"),
-                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global"), ("/en/international-health-insurance/retirees-abroad/", "Retirees living abroad")],
+                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global"), ("/en/international-health-insurance/retirees-abroad/", "Retirees living abroad"), ("/en/cancer-cover-health-insurance-portugal/", "Cancer cover in health insurance")],
 }
 
 CIGNA = {
@@ -147,5 +147,5 @@ CIGNA = {
     "form_h2": "Get your Cigna Global quote",
     "form_lead": "Four details are enough to start. We reply in writing within one working day, with Cigna Global configured for you and, where you are eligible, Allianz Care on the same terms.",
     "related": [("/en/international-health-insurance/", "International health insurance for expats"), ("{HUB}allianz-care/", "Allianz Care international health insurance"),
-                ("/en/international-health-insurance/us-citizens-abroad/", "US citizens living abroad"), ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global")],
+                ("/en/international-health-insurance/us-citizens-abroad/", "US citizens living abroad"), ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global"), ("/en/cancer-cover-health-insurance-portugal/", "Cancer cover in health insurance")],
 }

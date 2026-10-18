@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Fyra uppgifter räcker. Vi svarar skriftligt inom en arbetsdag, med Allianz Care och Cigna Global anpassade för dig.",
     "related": [("{HUB}allianz-care/", "Allianz Care: internationell sjukvårdsförsäkring"), ("{HUB}cigna-global/", "Cigna Global: internationell sjukvårdsförsäkring"),
                 ("/se/allianz-care-vs-cigna-global-sjukvardsforsakring/", "Allianz Care eller Cigna Global: jämförelse"),
-                ("/se/sjukvardsforsakring-portugal/", "Sjukvårdsförsäkring i Portugal")],
+                ("/se/sjukvardsforsakring-portugal/", "Sjukvårdsförsäkring i Portugal"), ("/se/cancer-sjukvardsforsakring-portugal/", "Cancer och sjukvårdsförsäkring")],
 }
 
 ALLIANZ = {
@@ -159,7 +159,7 @@ ALLIANZ = {
     "form_h2": "Begär offert på Allianz Care",
     "form_lead": "Fyra uppgifter räcker. Vi svarar skriftligt inom en arbetsdag, med Allianz Care anpassad för dig och, när det hjälper, Cigna Global på samma villkor.",
     "related": [("{HUB}", "Internationell sjukvårdsförsäkring för utlandsboende"), ("{HUB}cigna-global/", "Cigna Global: internationell sjukvårdsförsäkring"),
-                ("/se/allianz-care-vs-cigna-global-sjukvardsforsakring/", "Allianz Care eller Cigna Global: jämförelse")],
+                ("/se/allianz-care-vs-cigna-global-sjukvardsforsakring/", "Allianz Care eller Cigna Global: jämförelse"), ("/se/cancer-sjukvardsforsakring-portugal/", "Cancer och sjukvårdsförsäkring")],
 }
 
 CIGNA = {
@@ -215,5 +215,5 @@ CIGNA = {
     "form_h2": "Begär offert på Cigna Global",
     "form_lead": "Fyra uppgifter räcker. Vi svarar skriftligt inom en arbetsdag, med Cigna Global anpassad för dig och, om du är berättigad, Allianz Care på samma villkor.",
     "related": [("{HUB}", "Internationell sjukvårdsförsäkring för utlandsboende"), ("{HUB}allianz-care/", "Allianz Care: internationell sjukvårdsförsäkring"),
-                ("/se/allianz-care-vs-cigna-global-sjukvardsforsakring/", "Allianz Care eller Cigna Global: jämförelse")],
+                ("/se/allianz-care-vs-cigna-global-sjukvardsforsakring/", "Allianz Care eller Cigna Global: jämförelse"), ("/se/cancer-sjukvardsforsakring-portugal/", "Cancer och sjukvårdsförsäkring")],
 }

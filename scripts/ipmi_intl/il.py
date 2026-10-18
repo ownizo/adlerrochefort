@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "ארבעה פרטים מספיקים. נשיב בכתב תוך יום עבודה אחד, עם Allianz Care ו־Cigna Global מותאמות לכם.",
     "related": [("{HUB}allianz-care/", "Allianz Care: ביטוח בריאות בינלאומי"), ("{HUB}cigna-global/", "Cigna Global: ביטוח בריאות בינלאומי"),
                 ("/il/allianz-care-vs-cigna-global/", "Allianz Care או Cigna Global: השוואה"),
-                ("/il/health-insurance-portugal/", "ביטוח בריאות בפורטוגל")],
+                ("/il/health-insurance-portugal/", "ביטוח בריאות בפורטוגל"), ("/il/cancer-health-insurance-portugal/", "סרטן וביטוח בריאות")],
 }
 
 ALLIANZ = {
@@ -160,7 +160,7 @@ ALLIANZ = {
     "form_h2": "בקשו הצעה ל־Allianz Care",
     "form_lead": "ארבעה פרטים מספיקים. נשיב בכתב תוך יום עבודה אחד, עם Allianz Care מותאמת לכם, וכשזה עוזר, גם Cigna Global באותם תנאים.",
     "related": [("{HUB}", "ביטוח בריאות בינלאומי למי שעובר לחו״ל"), ("{HUB}cigna-global/", "Cigna Global: ביטוח בריאות בינלאומי"),
-                ("/il/allianz-care-vs-cigna-global/", "Allianz Care או Cigna Global: השוואה")],
+                ("/il/allianz-care-vs-cigna-global/", "Allianz Care או Cigna Global: השוואה"), ("/il/cancer-health-insurance-portugal/", "סרטן וביטוח בריאות")],
 }
 
 CIGNA = {
@@ -216,5 +216,5 @@ CIGNA = {
     "form_h2": "בקשו הצעה ל־Cigna Global",
     "form_lead": "ארבעה פרטים מספיקים. נשיב בכתב תוך יום עבודה אחד, עם Cigna Global מותאמת לכם, ואם אתם זכאים, גם Allianz Care באותם תנאים.",
     "related": [("{HUB}", "ביטוח בריאות בינלאומי למי שעובר לחו״ל"), ("{HUB}allianz-care/", "Allianz Care: ביטוח בריאות בינלאומי"),
-                ("/il/allianz-care-vs-cigna-global/", "Allianz Care או Cigna Global: השוואה")],
+                ("/il/allianz-care-vs-cigna-global/", "Allianz Care או Cigna Global: השוואה"), ("/il/cancer-health-insurance-portugal/", "סרטן וביטוח בריאות")],
 }

@@ -87,7 +87,7 @@ ALLIANZ = {
     "form_h2": "Ihr Angebot für Allianz Care",
     "form_lead": "Vier Angaben genügen. Wir antworten schriftlich innerhalb eines Werktages, mit Allianz Care für Sie zusammengestellt und, wo es hilft, Cigna Global zu gleichen Bedingungen.",
     "related": [("{HUB}", "Internationale Krankenversicherung für Expats"), ("{HUB}cigna-global/", "Cigna Global: internationale Krankenversicherung"),
-                ("/de/blog/allianz-care-vs-cigna-global-portugal-spanien/", "Allianz Care oder Cigna Global: der Vergleich"), ("{HUB}rentner-im-ausland/", "Rentner im Ausland")],
+                ("/de/blog/allianz-care-vs-cigna-global-portugal-spanien/", "Allianz Care oder Cigna Global: der Vergleich"), ("{HUB}rentner-im-ausland/", "Rentner im Ausland"), ("/de/krebs-krankenversicherung-portugal/", "Krebs und Krankenversicherung")],
 }
 
 CIGNA = {
@@ -143,5 +143,5 @@ CIGNA = {
     "form_h2": "Ihr Angebot für Cigna Global",
     "form_lead": "Vier Angaben genügen. Wir antworten schriftlich innerhalb eines Werktages, mit Cigna Global für Sie zusammengestellt und, wenn Sie berechtigt sind, Allianz Care zu gleichen Bedingungen.",
     "related": [("{HUB}", "Internationale Krankenversicherung für Expats"), ("{HUB}allianz-care/", "Allianz Care: internationale Krankenversicherung"),
-                ("/de/blog/allianz-care-vs-cigna-global-portugal-spanien/", "Allianz Care oder Cigna Global: der Vergleich"), ("/de/vorerkrankungen-krankenversicherung-portugal/", "Krankenversicherung mit Vorerkrankungen in Portugal")],
+                ("/de/blog/allianz-care-vs-cigna-global-portugal-spanien/", "Allianz Care oder Cigna Global: der Vergleich"), ("/de/vorerkrankungen-krankenversicherung-portugal/", "Krankenversicherung mit Vorerkrankungen in Portugal"), ("/de/krebs-krankenversicherung-portugal/", "Krebs und Krankenversicherung")],
 }
