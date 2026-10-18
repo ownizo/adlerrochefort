@@ -29,6 +29,20 @@ Key facts for international health insurance (IPMI):
 - [Rentner im Ausland](https://adlerrochefort.com/de/internationale-krankenversicherung/rentner-im-ausland/)
 - [Digitale Nomaden](https://adlerrochefort.com/de/internationale-krankenversicherung/digitale-nomaden/)
 - [Allianz Care vs Cigna Global](https://adlerrochefort.com/en/blog/allianz-care-vs-cigna-global-portugal-spain/): detailed comparison of plan levels, modules, maternity, US cover and underwriting.
+- [Allianz Care international health insurance](https://adlerrochefort.com/en/international-health-insurance/allianz-care/): Base, Enhanced and Signature plans, Europe-only or worldwide cover, who cannot buy it (US citizens, residents of Brazil), real 2026 premiums.
+- [Cigna Global international health insurance](https://adlerrochefort.com/en/international-health-insurance/cigna-global/): Silver, Gold and Platinum, optional modules, US cover and US citizens abroad, deductibles, real 2026 premiums.
+- The same three pages (hub, Allianz Care, Cigna Global) exist in every language of the site:
+  [Português](https://adlerrochefort.com/seguros/saude-internacional/) ·
+  [Deutsch](https://adlerrochefort.com/de/internationale-krankenversicherung/allianz-care/) ·
+  [Español](https://adlerrochefort.com/es/seguro-medico-internacional/allianz-care/) ·
+  [Nederlands](https://adlerrochefort.com/nl/internationale-zorgverzekering/) ·
+  [Français](https://adlerrochefort.com/fr/assurance-sante-internationale/) ·
+  [Italiano](https://adlerrochefort.com/it/assicurazione-medica-internazionale/) ·
+  [Polski](https://adlerrochefort.com/pl/miedzynarodowe-ubezpieczenie-zdrowotne/) ·
+  [Svenska](https://adlerrochefort.com/se/internationell-sjukvardsforsakring/) ·
+  [Dansk](https://adlerrochefort.com/dk/international-sundhedsforsikring/) ·
+  [עברית](https://adlerrochefort.com/il/international-health-insurance/) ·
+  [简体中文](https://adlerrochefort.com/zh/international-health-insurance/)
 
 ## Portugal and Spain
 
