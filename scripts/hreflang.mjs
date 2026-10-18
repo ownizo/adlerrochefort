@@ -160,6 +160,23 @@ const PAGE_CLUSTERS = [
   { '/seguros/auto/': 'pt-PT', '/en/car-insurance-portugal/': 'en-GB', '/de/autoversicherung-portugal/': 'de' },
   { '/politica-de-privacidade/': 'pt-PT', '/en/privacy-policy/': 'en-GB' },
   { '/termos-e-condicoes/': 'pt-PT', '/en/terms-and-conditions/': 'en-GB' },
+  // Cancer cover in health insurance, all twelve languages, October 2026
+  // (scripts/build-cancer-cover-pages.py).
+  {
+    '/seguros/saude/cobertura-cancro/': 'pt-PT',
+    '/en/cancer-cover-health-insurance-portugal/': 'en-GB',
+    '/de/krebs-krankenversicherung-portugal/': 'de',
+    '/es/cancer-seguro-medico-portugal-espana/': 'es',
+    '/nl/kanker-zorgverzekering-portugal/': 'nl',
+    '/fr/cancer-assurance-sante-portugal/': 'fr',
+    '/it/cancro-assicurazione-sanitaria-portogallo/': 'it-IT',
+    '/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/': 'pl-PL',
+    '/se/cancer-sjukvardsforsakring-portugal/': 'sv-SE',
+    '/dk/kraeft-sundhedsforsikring-portugal/': 'da-DK',
+    '/il/cancer-health-insurance-portugal/': 'he-IL',
+    '/zh/cancer-health-insurance-portugal/': 'zh-CN',
+    xDefault: '/en/cancer-cover-health-insurance-portugal/',
+  },
   // International health insurance (IPMI) in all twelve languages, October 2026
   // (scripts/build-ipmi-intl-pages.py): the hub, then the Allianz Care and Cigna Global pages.
   {

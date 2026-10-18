@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Bastano quattro dati. Rispondiamo per iscritto entro un giorno lavorativo, con Allianz Care e Cigna Global configurati per lei.",
     "related": [("{HUB}allianz-care/", "Allianz Care: assicurazione sanitaria internazionale"), ("{HUB}cigna-global/", "Cigna Global: assicurazione sanitaria internazionale"),
                 ("/it/allianz-care-vs-cigna-global-assicurazione-sanitaria-internazionale/", "Allianz Care o Cigna Global: il confronto"),
-                ("/it/assicurazione-sanitaria-internazionale/", "Assicurazione sanitaria per famiglie in Portogallo")],
+                ("/it/assicurazione-sanitaria-internazionale/", "Assicurazione sanitaria per famiglie in Portogallo"), ("/it/cancro-assicurazione-sanitaria-portogallo/", "Cancro e assicurazione sanitaria")],
 }
 
 ALLIANZ = {
@@ -159,7 +159,7 @@ ALLIANZ = {
     "form_h2": "Richieda il preventivo Allianz Care",
     "form_lead": "Bastano quattro dati. Rispondiamo per iscritto entro un giorno lavorativo, con Allianz Care configurato per lei e, se utile, Cigna Global alle stesse condizioni.",
     "related": [("{HUB}", "Assicurazione sanitaria internazionale per espatriati"), ("{HUB}cigna-global/", "Cigna Global: assicurazione sanitaria internazionale"),
-                ("/it/allianz-care-vs-cigna-global-assicurazione-sanitaria-internazionale/", "Allianz Care o Cigna Global: il confronto")],
+                ("/it/allianz-care-vs-cigna-global-assicurazione-sanitaria-internazionale/", "Allianz Care o Cigna Global: il confronto"), ("/it/cancro-assicurazione-sanitaria-portogallo/", "Cancro e assicurazione sanitaria")],
 }
 
 CIGNA = {
@@ -215,5 +215,5 @@ CIGNA = {
     "form_h2": "Richieda il preventivo Cigna Global",
     "form_lead": "Bastano quattro dati. Rispondiamo per iscritto entro un giorno lavorativo, con Cigna Global configurato per lei e, se idoneo, Allianz Care alle stesse condizioni.",
     "related": [("{HUB}", "Assicurazione sanitaria internazionale per espatriati"), ("{HUB}allianz-care/", "Allianz Care: assicurazione sanitaria internazionale"),
-                ("/it/allianz-care-vs-cigna-global-assicurazione-sanitaria-internazionale/", "Allianz Care o Cigna Global: il confronto")],
+                ("/it/allianz-care-vs-cigna-global-assicurazione-sanitaria-internazionale/", "Allianz Care o Cigna Global: il confronto"), ("/it/cancro-assicurazione-sanitaria-portogallo/", "Cancro e assicurazione sanitaria")],
 }

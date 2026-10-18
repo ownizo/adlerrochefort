@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Quatro dados chegam para começar. Respondemos por escrito num dia útil, com a Allianz Care e a Cigna Global configuradas para si.",
     "related": [("{HUB}allianz-care/", "Allianz Care: seguro de saúde internacional"), ("{HUB}cigna-global/", "Cigna Global: seguro de saúde internacional"),
                 ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"),
-                ("/seguros/saude/", "Seguro de saúde em Portugal"), ("/blog/plano-de-saude-portugal-brasileiros/", "Plano de saúde em Portugal para brasileiros")],
+                ("/seguros/saude/", "Seguro de saúde em Portugal"), ("/blog/plano-de-saude-portugal-brasileiros/", "Plano de saúde em Portugal para brasileiros"), ("/seguros/saude/cobertura-cancro/", "Cancro e seguro de saúde")],
 }
 
 ALLIANZ = {
@@ -160,7 +160,7 @@ ALLIANZ = {
     "form_h2": "Peça a sua proposta Allianz Care",
     "form_lead": "Quatro dados chegam para começar. Respondemos por escrito num dia útil, com a Allianz Care configurada para si e, quando ajudar, a Cigna Global nas mesmas condições.",
     "related": [("{HUB}", "Seguro de saúde internacional para expatriados"), ("{HUB}cigna-global/", "Cigna Global: seguro de saúde internacional"),
-                ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"), ("/seguros/saude/", "Seguro de saúde em Portugal")],
+                ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"), ("/seguros/saude/", "Seguro de saúde em Portugal"), ("/seguros/saude/cobertura-cancro/", "Cancro e seguro de saúde")],
 }
 
 CIGNA = {
@@ -216,5 +216,5 @@ CIGNA = {
     "form_h2": "Peça a sua proposta Cigna Global",
     "form_lead": "Quatro dados chegam para começar. Respondemos por escrito num dia útil, com a Cigna Global configurada para si e, se for elegível, a Allianz Care nas mesmas condições.",
     "related": [("{HUB}", "Seguro de saúde internacional para expatriados"), ("{HUB}allianz-care/", "Allianz Care: seguro de saúde internacional"),
-                ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"), ("/blog/plano-de-saude-portugal-brasileiros/", "Plano de saúde em Portugal para brasileiros")],
+                ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"), ("/blog/plano-de-saude-portugal-brasileiros/", "Plano de saúde em Portugal para brasileiros"), ("/seguros/saude/cobertura-cancro/", "Cancro e seguro de saúde")],
 }

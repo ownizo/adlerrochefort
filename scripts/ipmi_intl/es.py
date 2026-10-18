@@ -87,7 +87,7 @@ ALLIANZ = {
     "form_h2": "Pida su propuesta de Allianz Care",
     "form_lead": "Cuatro datos bastan para empezar. Respondemos por escrito en un día hábil, con Allianz Care configurada para usted y, cuando ayude, Cigna Global en las mismas condiciones.",
     "related": [("{HUB}", "Seguro médico internacional para expatriados"), ("{HUB}cigna-global/", "Cigna Global: seguro médico internacional"),
-                ("/es/allianz-care-vs-cigna-global-seguro-salud-internacional/", "Allianz Care o Cigna Global: comparación"), ("{HUB}espana/", "Latinoamericanos que se mudan a España")],
+                ("/es/allianz-care-vs-cigna-global-seguro-salud-internacional/", "Allianz Care o Cigna Global: comparación"), ("{HUB}espana/", "Latinoamericanos que se mudan a España"), ("/es/cancer-seguro-medico-portugal-espana/", "Cáncer y seguro médico")],
 }
 
 CIGNA = {
@@ -143,5 +143,5 @@ CIGNA = {
     "form_h2": "Pida su propuesta de Cigna Global",
     "form_lead": "Cuatro datos bastan para empezar. Respondemos por escrito en un día hábil, con Cigna Global configurada para usted y, si es elegible, Allianz Care en las mismas condiciones.",
     "related": [("{HUB}", "Seguro médico internacional para expatriados"), ("{HUB}allianz-care/", "Allianz Care: seguro médico internacional"),
-                ("/es/allianz-care-vs-cigna-global-seguro-salud-internacional/", "Allianz Care o Cigna Global: comparación"), ("{HUB}mexicanos-en-el-extranjero/", "Mexicanos en el extranjero")],
+                ("/es/allianz-care-vs-cigna-global-seguro-salud-internacional/", "Allianz Care o Cigna Global: comparación"), ("{HUB}mexicanos-en-el-extranjero/", "Mexicanos en el extranjero"), ("/es/cancer-seguro-medico-portugal-espana/", "Cáncer y seguro médico")],
 }

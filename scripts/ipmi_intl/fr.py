@@ -100,7 +100,7 @@ HUB = {
     "form_h2": "Demandez votre proposition d’assurance santé internationale",
     "form_lead": "Quatre informations suffisent. Nous répondons par écrit sous un jour ouvré, avec Allianz Care et Cigna Global configurés pour vous.",
     "related": [("{HUB}allianz-care/", "Allianz Care : assurance santé internationale"), ("{HUB}cigna-global/", "Cigna Global : assurance santé internationale"),
-                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)")],
+                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)"), ("/fr/cancer-assurance-sante-portugal/", "Cancer et assurance santé")],
 }
 
 ALLIANZ = {
@@ -158,7 +158,7 @@ ALLIANZ = {
     "form_h2": "Demandez votre proposition Allianz Care",
     "form_lead": "Quatre informations suffisent. Nous répondons par écrit sous un jour ouvré, avec Allianz Care configuré pour vous et, si utile, Cigna Global aux mêmes conditions.",
     "related": [("{HUB}", "Assurance santé internationale pour expatriés"), ("{HUB}cigna-global/", "Cigna Global : assurance santé internationale"),
-                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)")],
+                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)"), ("/fr/cancer-assurance-sante-portugal/", "Cancer et assurance santé")],
 }
 
 CIGNA = {
@@ -214,5 +214,5 @@ CIGNA = {
     "form_h2": "Demandez votre proposition Cigna Global",
     "form_lead": "Quatre informations suffisent. Nous répondons par écrit sous un jour ouvré, avec Cigna Global configuré pour vous et, si vous êtes éligible, Allianz Care aux mêmes conditions.",
     "related": [("{HUB}", "Assurance santé internationale pour expatriés"), ("{HUB}allianz-care/", "Allianz Care : assurance santé internationale"),
-                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)")],
+                ("/en/blog/allianz-care-vs-cigna-global-portugal-spain/", "Allianz Care vs Cigna Global (en anglais)"), ("/fr/cancer-assurance-sante-portugal/", "Cancer et assurance santé")],
 }

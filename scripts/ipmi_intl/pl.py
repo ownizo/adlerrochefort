@@ -101,7 +101,7 @@ HUB = {
     "form_lead": "Wystarczą cztery dane. Odpowiemy na piśmie w ciągu jednego dnia roboczego, z Allianz Care i Cigna Global dobranymi dla Ciebie.",
     "related": [("{HUB}allianz-care/", "Allianz Care: międzynarodowe ubezpieczenie zdrowotne"), ("{HUB}cigna-global/", "Cigna Global: międzynarodowe ubezpieczenie zdrowotne"),
                 ("/pl/allianz-care-vs-cigna-global-ubezpieczenie-zdrowotne/", "Allianz Care czy Cigna Global: porównanie"),
-                ("/pl/ubezpieczenie-zdrowotne-portugalia/", "Ubezpieczenie zdrowotne w Portugalii")],
+                ("/pl/ubezpieczenie-zdrowotne-portugalia/", "Ubezpieczenie zdrowotne w Portugalii"), ("/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/", "Nowotwór a ubezpieczenie zdrowotne")],
 }
 
 ALLIANZ = {
@@ -159,7 +159,7 @@ ALLIANZ = {
     "form_h2": "Poproś o ofertę Allianz Care",
     "form_lead": "Wystarczą cztery dane. Odpowiemy na piśmie w ciągu jednego dnia roboczego, z Allianz Care dobranym dla Ciebie i, gdy to pomoże, Cigna Global na tych samych warunkach.",
     "related": [("{HUB}", "Międzynarodowe ubezpieczenie zdrowotne dla ekspatów"), ("{HUB}cigna-global/", "Cigna Global: międzynarodowe ubezpieczenie zdrowotne"),
-                ("/pl/allianz-care-vs-cigna-global-ubezpieczenie-zdrowotne/", "Allianz Care czy Cigna Global: porównanie")],
+                ("/pl/allianz-care-vs-cigna-global-ubezpieczenie-zdrowotne/", "Allianz Care czy Cigna Global: porównanie"), ("/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/", "Nowotwór a ubezpieczenie zdrowotne")],
 }
 
 CIGNA = {
@@ -215,5 +215,5 @@ CIGNA = {
     "form_h2": "Poproś o ofertę Cigna Global",
     "form_lead": "Wystarczą cztery dane. Odpowiemy na piśmie w ciągu jednego dnia roboczego, z Cigna Global dobranym dla Ciebie i, jeśli spełniasz warunki, Allianz Care na tych samych warunkach.",
     "related": [("{HUB}", "Międzynarodowe ubezpieczenie zdrowotne dla ekspatów"), ("{HUB}allianz-care/", "Allianz Care: międzynarodowe ubezpieczenie zdrowotne"),
-                ("/pl/allianz-care-vs-cigna-global-ubezpieczenie-zdrowotne/", "Allianz Care czy Cigna Global: porównanie")],
+                ("/pl/allianz-care-vs-cigna-global-ubezpieczenie-zdrowotne/", "Allianz Care czy Cigna Global: porównanie"), ("/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/", "Nowotwór a ubezpieczenie zdrowotne")],
 }
