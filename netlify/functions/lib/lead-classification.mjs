@@ -320,6 +320,15 @@ const FORM_CLASSIFICATION = {
   'international-health-quote': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'health' },
   'es-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'ES', product: 'health' },
   'de-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'DE', product: 'health' },
+  'pt-international-health-quote': { entityType: 'individual', market: marketBySource, product: 'health' },
+  'nl-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'NL', product: 'health' },
+  'fr-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'FR', product: 'health' },
+  'it-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'IT', product: 'health' },
+  'pl-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'PL', product: 'health' },
+  'se-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'SV', product: 'health' },
+  'dk-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'DA', product: 'health' },
+  'il-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'HE', product: 'health' },
+  'zh-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'ZH', product: 'health' },
   // "professional-liability-quote-wizard" is the /en/professional-liability-
   // insurance-portugal/ page's own, exclusive form-name (Especificação v2,
   // Fase 2 C2). Its field set mirrors the PT wizard's — no `empresa`/
