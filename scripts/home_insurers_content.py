@@ -31,7 +31,7 @@ Sources: the insurers' wordings, schedules and proposals analysed for clients.
   EUR 25,000 (Plus); Portuguese law; furnished-for-normal-living exclusion;
   paid letting declared, occasional, signed agreement; AL operation needs its
   own liability policy.
-Chubb is deliberately not named on home pages.
+Chubb Masterpiece Signature is named on the high-value home section (CHUBB below) since October 2026.
 """
 
 SECOND_HOME = {
@@ -452,5 +452,130 @@ HIGHVALUE = {
  ],
  "note": "条件根据各保险公司文件及我们安排的报价概括；以实际签发的保单及其特别条款为准，承保须经保险公司接受。",
  "link2": "第二住所：我们的度假屋保障（英文）",
+},
+}
+
+# Chubb Masterpiece Signature (wording PT-EN0373, limits summary, IPID and the
+# proposals placed), added to the high-value home section in October 2026.
+CHUBB = {
+"en": {
+ "title": "High-value homes: Hiscox, Liberty and Chubb",
+ "intro": "For a main residence of real value, we place cover with Hiscox, Liberty Mutual and Chubb. All three settle on rebuild cost rather than a cadastral figure; they differ on minimum sums, on alarm conditions and on how far beyond the sum insured they will go.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "For homes with a building sum insured from €1,000,000: house, contents, valuables, family liability and family protection in one policy.",
+ "c": [
+  "<strong>After a total loss, the rebuild is paid even above the sum insured</strong>, as long as the appraised sums have been kept.",
+  "All risks of physical loss, with no exclusion tied to construction materials; outbuildings not attached to the house covered up to 20% of the house sum insured, at replacement cost.",
+  "Contents with no category sub-limits and replacement cost up to 25% above the sum insured; contents and valuables covered worldwide.",
+  "Alternative accommodation with no monetary limit while the house cannot be lived in; lock replacement and leak detection with no limit.",
+  "Liability up to €10,000,000 worldwide, and family protection after events such as a violent home intrusion or a carjacking.",
+  "€1,000 deductible, waived on claims above €10,000; cash settlement or repair by a provider you choose.",
+ ],
+ "c_watch": "Acceptance can depend on security conditions set for each home, such as a safe certified to EN 1143-1, an alarm connected to a monitoring centre and smoke detectors. Earthquake carries its own deductible of 2.5% of the sum insured.",
+},
+"pt": {
+ "title": "Casas de elevado valor: Hiscox, Liberty e Chubb",
+ "intro": "Para uma residência principal de valor, colocamos a cobertura na Hiscox, na Liberty Mutual e na Chubb. As três indemnizam pelo custo de reconstrução e não por um valor matricial; diferem nos capitais mínimos, nas condições de alarme e em até onde vão para lá do capital seguro.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "Para casas com capital de edifício a partir de 1.000.000 €: casa, recheio, objetos de valor, responsabilidade civil e proteção familiar numa só apólice.",
+ "c": [
+  "<strong>Em caso de perda total, a reconstrução é paga mesmo acima do capital seguro</strong>, desde que se mantenham os capitais avaliados.",
+  "Todos os riscos de perda física, sem exclusões ligadas ao material de construção; construções no terreno não anexas à casa cobertas até 20% do capital da casa, em valor de substituição.",
+  "Recheio sem sublimites por categoria e com custo de substituição até 25% acima do capital seguro; recheio e objetos de valor cobertos em todo o mundo.",
+  "Realojamento sem limite de valor enquanto a casa não puder ser habitada; substituição de fechaduras e pesquisa de fugas sem limite.",
+  "Responsabilidade civil até 10.000.000 € em todo o mundo, e proteção familiar em situações como intrusão violenta em casa ou roubo de viatura com violência.",
+  "Franquia de 1.000 €, eliminada em sinistros acima de 10.000 €; indemnização em dinheiro ou reparação por um prestador à sua escolha.",
+ ],
+ "c_watch": "A aceitação pode depender de condições de segurança fixadas para cada casa, como cofre certificado EN 1143-1, alarme ligado a central e detetores de fumo. O sismo tem franquia própria de 2,5% do capital seguro.",
+},
+"de": {
+ "title": "Hochwertige Häuser: Hiscox, Liberty und Chubb",
+ "intro": "Für einen hochwertigen Hauptwohnsitz platzieren wir den Schutz bei Hiscox, Liberty Mutual und Chubb. Alle drei entschädigen zum Wiederaufbauwert statt zu einem Katasterwert; sie unterscheiden sich bei den Mindestsummen, bei den Alarmauflagen und darin, wie weit sie über die Versicherungssumme hinausgehen.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "Für Häuser mit einer Gebäudeversicherungssumme ab 1.000.000 €: Haus, Hausrat, Wertsachen, Haftpflicht und Familienschutz in einer Police.",
+ "c": [
+  "<strong>Nach einem Totalschaden wird der Wiederaufbau auch über der Versicherungssumme bezahlt</strong>, sofern die geschätzten Summen beibehalten wurden.",
+  "Allgefahren für Sachschäden, ohne Ausschlüsse nach Baumaterial; nicht angebaute Nebengebäude bis 20 % der Gebäudesumme zum Neuwert versichert.",
+  "Hausrat ohne Unterlimits je Kategorie und Neuwert bis 25 % über der Versicherungssumme; Hausrat und Wertsachen weltweit versichert.",
+  "Ersatzunterkunft ohne Betragsgrenze, solange das Haus unbewohnbar ist; Schlossaustausch und Leckortung ohne Grenze.",
+  "Haftpflicht bis 10.000.000 € weltweit und Familienschutz nach Ereignissen wie einem gewaltsamen Eindringen ins Haus oder einem Carjacking.",
+  "Selbstbehalt 1.000 €, entfällt bei Schäden über 10.000 €; Geldentschädigung oder Reparatur durch einen Dienstleister Ihrer Wahl.",
+ ],
+ "c_watch": "Die Annahme kann von Sicherheitsauflagen für das jeweilige Haus abhängen, etwa einem nach EN 1143-1 zertifizierten Tresor, einer aufgeschalteten Alarmanlage und Rauchmeldern. Für Erdbeben gilt ein eigener Selbstbehalt von 2,5 % der Versicherungssumme.",
+},
+"es": {
+ "title": "Viviendas de alto valor: Hiscox, Liberty y Chubb",
+ "intro": "Para una residencia principal de valor, colocamos la cobertura en Hiscox, Liberty Mutual y Chubb. Las tres indemnizan por el coste de reconstrucción y no por un valor catastral; difieren en los capitales mínimos, en las condiciones de alarma y en hasta dónde llegan por encima de la suma asegurada.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "Para viviendas con un capital de continente desde 1.000.000 €: casa, contenido, objetos de valor, responsabilidad civil y protección familiar en una sola póliza.",
+ "c": [
+  "<strong>Tras una pérdida total, la reconstrucción se paga incluso por encima de la suma asegurada</strong>, siempre que se mantengan los capitales tasados.",
+  "Todo riesgo de pérdida material, sin exclusiones ligadas al material de construcción; construcciones no adosadas a la casa cubiertas hasta el 20% del capital de la casa, a valor de reposición.",
+  "Contenido sin sublímites por categoría y coste de reposición hasta un 25% por encima de la suma asegurada; contenido y objetos de valor cubiertos en todo el mundo.",
+  "Alojamiento alternativo sin límite de importe mientras la casa no se pueda habitar; cambio de cerraduras y búsqueda de fugas sin límite.",
+  "Responsabilidad civil hasta 10.000.000 € en todo el mundo, y protección familiar ante hechos como una intrusión violenta en casa o un robo de coche con violencia.",
+  "Franquicia de 1.000 €, eliminada en siniestros de más de 10.000 €; indemnización en dinero o reparación por un proveedor de su elección.",
+ ],
+ "c_watch": "La aceptación puede depender de condiciones de seguridad fijadas para cada vivienda, como una caja fuerte certificada EN 1143-1, una alarma conectada a central y detectores de humo. El terremoto tiene una franquicia propia del 2,5% de la suma asegurada.",
+},
+"it": {
+ "title": "Case di alto valore: Hiscox, Liberty e Chubb",
+ "intro": "Per un'abitazione principale di valore collochiamo la copertura presso Hiscox, Liberty Mutual e Chubb. Tutte e tre indennizzano al costo di ricostruzione e non a un valore catastale; differiscono per somme minime, condizioni di allarme e quanto vanno oltre la somma assicurata.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "Per abitazioni con una somma assicurata del fabbricato a partire da 1.000.000 €: casa, contenuto, oggetti di valore, responsabilità civile e protezione della famiglia in un'unica polizza.",
+ "c": [
+  "<strong>Dopo una perdita totale, la ricostruzione è pagata anche oltre la somma assicurata</strong>, purché siano mantenute le somme stimate.",
+  "All risks per danni materiali, senza esclusioni legate al materiale di costruzione; costruzioni non attigue alla casa coperte fino al 20% della somma della casa, a valore di rimpiazzo.",
+  "Contenuto senza sottolimiti per categoria e costo di rimpiazzo fino al 25% oltre la somma assicurata; contenuto e oggetti di valore coperti in tutto il mondo.",
+  "Alloggio alternativo senza limite di importo finché la casa non è abitabile; sostituzione serrature e ricerca perdite senza limite.",
+  "Responsabilità civile fino a 10.000.000 € in tutto il mondo, e protezione della famiglia dopo eventi come un'intrusione violenta in casa o una rapina dell'auto.",
+  "Franchigia di 1.000 €, eliminata per sinistri oltre 10.000 €; indennizzo in denaro o riparazione tramite un fornitore di sua scelta.",
+ ],
+ "c_watch": "L'accettazione può dipendere da condizioni di sicurezza fissate per ogni casa, come una cassaforte certificata EN 1143-1, un allarme collegato a una centrale e rilevatori di fumo. Il terremoto ha una franchigia propria del 2,5% della somma assicurata.",
+},
+"nl": {
+ "title": "Hoogwaardige woningen: Hiscox, Liberty en Chubb",
+ "intro": "Voor een waardevol hoofdverblijf plaatsen wij de dekking bij Hiscox, Liberty Mutual en Chubb. Alle drie keren uit op herbouwwaarde en niet op een kadastrale waarde; ze verschillen in minimumbedragen, alarmeisen en hoe ver ze boven het verzekerd bedrag gaan.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "Voor woningen met een verzekerd opstalbedrag vanaf € 1.000.000: huis, inboedel, kostbaarheden, aansprakelijkheid en gezinsbescherming in één polis.",
+ "c": [
+  "<strong>Na een totaal verlies wordt de herbouw betaald, ook boven het verzekerd bedrag</strong>, zolang de getaxeerde bedragen zijn aangehouden.",
+  "All risks voor materiële schade, zonder uitsluitingen op bouwmateriaal; niet-aangebouwde bijgebouwen gedekt tot 20% van het bedrag van het huis, op nieuwwaarde.",
+  "Inboedel zonder sublimieten per categorie en nieuwwaarde tot 25% boven het verzekerd bedrag; inboedel en kostbaarheden wereldwijd gedekt.",
+  "Vervangende woonruimte zonder bedraggrens zolang het huis onbewoonbaar is; vervanging van sloten en lekdetectie zonder limiet.",
+  "Aansprakelijkheid tot € 10.000.000 wereldwijd, en gezinsbescherming na gebeurtenissen zoals een gewelddadige inbraak of een carjacking.",
+  "Eigen risico € 1.000, vervalt bij schades boven € 10.000; uitkering in geld of herstel door een leverancier naar keuze.",
+ ],
+ "c_watch": "Acceptatie kan afhangen van beveiligingsvoorwaarden per woning, zoals een kluis gecertificeerd volgens EN 1143-1, een alarm aangesloten op een meldkamer en rookmelders. Aardbeving heeft een eigen eigen risico van 2,5% van het verzekerd bedrag.",
+},
+"he": {
+ "title": "בתים בעלי ערך גבוה: Hiscox, Liberty ו-Chubb",
+ "intro": "למגורי קבע בעלי ערך אנו מבטחים אצל Hiscox, Liberty Mutual ו-Chubb. שלושתן מפצות לפי עלות בנייה מחדש ולא לפי שווי רשום; הן נבדלות בסכומי המינימום, בתנאי האזעקה ובמידה שבה הן הולכות מעבר לסכום הביטוח.",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "לבתים עם סכום ביטוח מבנה מ-1,000,000 אירו: בית, תכולה, חפצי ערך, ביטוח חבות והגנה משפחתית בפוליסה אחת.",
+ "c": [
+  "<strong>לאחר אובדן מוחלט, הבנייה מחדש משולמת גם מעל סכום הביטוח</strong>, כל עוד נשמרו הסכומים שהוערכו.",
+  "כל הסיכונים לנזק פיזי, ללא החרגות לפי חומר הבנייה; מבנים שאינם צמודים לבית מכוסים עד 20% מסכום ביטוח הבית, לפי ערך חדש.",
+  "תכולה ללא תתי-גבולות לפי קטגוריה ועלות החלפה עד 25% מעל סכום הביטוח; תכולה וחפצי ערך מבוטחים בכל העולם.",
+  "דיור חלופי ללא הגבלת סכום כל עוד לא ניתן לגור בבית; החלפת מנעולים ואיתור נזילות ללא הגבלה.",
+  "ביטוח חבות עד 10,000,000 אירו בכל העולם, והגנה משפחתית לאחר אירועים כמו פריצה אלימה לבית או חטיפת רכב.",
+  "השתתפות עצמית של 1,000 אירו, מבוטלת בנזקים מעל 10,000 אירו; פיצוי כספי או תיקון אצל ספק לבחירתכם.",
+ ],
+ "c_watch": "הקבלה עשויה להיות מותנית בתנאי אבטחה לכל בית, כמו כספת בתקן EN 1143-1, אזעקה מחוברת למוקד וגלאי עשן. לרעידת אדמה השתתפות עצמית נפרדת של 2.5% מסכום הביטוח.",
+},
+"zh": {
+ "title": "高价值住宅：Hiscox、Liberty 与 Chubb",
+ "intro": "对于价值较高的主要住所，我们安排 Hiscox、Liberty Mutual 和 Chubb 承保。三家都按重建成本而非登记价值赔付；区别在于最低保额、报警条件，以及能在保额之外赔付到什么程度。",
+ "c_t": "Chubb — Masterpiece Signature",
+ "c_by": "适用于建筑保额100万欧元起的住宅：房屋、室内财产、贵重物品、第三者责任和家庭保障合于一份保单。",
+ "c": [
+  "<strong>全损时，即使重建费用超过保额也照付</strong>，前提是维持评估确定的保额。",
+  "实物损失一切险，不因建筑材料设除外责任；未与主屋相连的附属建筑按重置价值承保，最高为房屋保额的20%。",
+  "室内财产不设分类子限额，重置成本最高可超出保额25%；室内财产和贵重物品全球承保。",
+  "房屋无法居住期间的临时住所不设金额上限；更换门锁和查找漏水不设上限。",
+  "第三者责任全球最高1000万欧元，并在暴力入室或劫车等事件后提供家庭保障。",
+  "免赔额1000欧元，单次损失超过1万欧元免除；可选择现金赔付或由您选择的服务商修复。",
+ ],
+ "c_watch": "承保可能以每处住宅的安保条件为前提，例如符合 EN 1143-1 认证的保险柜、连接监控中心的报警系统和烟雾探测器。地震另设免赔额，为保额的2.5%。",
 },
 }

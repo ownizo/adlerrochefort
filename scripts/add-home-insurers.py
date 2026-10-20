@@ -5,9 +5,9 @@ Two sections, copy in scripts/home_insurers_content.py:
 - "Holiday homes: Hiscox and Liberty" on second-home, unoccupied-home and
   holiday-home pages (PT, EN, DE, ES). Hiscox Holiday Homes and Liberty Mutual
   Home Insurance are the products the firm places most for second homes.
-- "High-value homes: Hiscox and Liberty" on high-value home, rebuild-value and
+- "High-value homes: Hiscox, Liberty and Chubb" on high-value home, rebuild-value and
   what-to-declare pages (PT, EN, DE, ES, IT, NL, HE, ZH).
-Chubb is not named on home pages (firm's rule).
+Chubb Masterpiece Signature is the third insurer on the high-value section.
 
 Also removes Fidelidade from the "not one insurer's panel" line (the firm does
 not place with Fidelidade), and bumps dateModified, sitemap lastmod and
@@ -23,7 +23,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from home_insurers_content import HOLIDAY, HIGHVALUE, SECOND_HOME, HIGH_VALUE  # noqa: E402
+from home_insurers_content import HOLIDAY, HIGHVALUE, CHUBB, SECOND_HOME, HIGH_VALUE  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
@@ -103,7 +103,7 @@ STYLE = (
     '.ar-hins .ar-hins-inner ul{list-style:disc;margin:0 0 4px;padding-inline-start:20px}'
     '.ar-hins .ar-hins-inner li{display:list-item;padding:0;border:0;gap:0;font-size:14.5px;line-height:1.65;color:#333332;margin:0 0 6px}'
     '.ar-hins .ar-hins-inner li:before{content:none;display:none}'
-    '.ar-hins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:16px 0 20px}'
+    '.ar-hins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0 20px}'
     '.ar-hins-card{background:#FAF8F6;border:1px solid #EBE9E8;border-radius:12px;padding:18px 18px 12px}'
     '.ar-hins-by{font-size:13.5px;color:#5c5b5a}'
     '.ar-hins-watch{font-size:13.5px;background:#FFF4EC;border-radius:8px;padding:10px 12px;margin:8px 0 6px}'
@@ -125,7 +125,9 @@ def card(c, k):
 
 
 def section(kind, lang, route):
-    c = (HOLIDAY if kind == "holiday" else HIGHVALUE)[lang]
+    c = dict((HOLIDAY if kind == "holiday" else HIGHVALUE)[lang])
+    if kind != "holiday":
+        c.update(CHUBB[lang])
     mark = "AR-HOLIDAY-INSURERS" if kind == "holiday" else "AR-HOME-INSURERS"
     sid = "ar-holiday-insurers" if kind == "holiday" else "ar-home-insurers"
     rtl = ' dir="rtl"' if lang == "he" else ""
@@ -136,7 +138,7 @@ def section(kind, lang, route):
     link = "" if target.strip("/") == route else f'<p><a class="ar-hins-link" href="{target}">{label} →</a></p>'
     return (f'<!-- {mark} -->\n<section class="ar-hins" id="{sid}"{rtl}><div class="ar-hins-inner">'
             f'<h2>{html.escape(c["title"])}</h2><p>{c["intro"]}</p>'
-            f'<div class="ar-hins-grid">{card(c, "a")}{card(c, "b")}</div>'
+            f'<div class="ar-hins-grid">{card(c, "a")}{card(c, "b")}{card(c, "c") if "c" in c else ""}</div>'
             f'<h3>{c["need_t"]}</h3>{ul(c["need"])}<p class="ar-hins-note">{c["note"]}</p>{link}'
             f'</div></section>\n<!-- /{mark} -->\n')
 
