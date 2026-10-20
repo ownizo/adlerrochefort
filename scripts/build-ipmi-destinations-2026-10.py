@@ -51,10 +51,19 @@ for p in NEW_PAGES:
     built.append(p["path"])
 
 # ---------------------------------------------------------------- EN / ES hub grids
-for lang in ("en", "es"):
+# Portugal and Spain have their own (non-IPMI-template) guides; list them in the grids too.
+EXTRA = {
+    "en": [("/en/international-health-insurance-portugal/", "Portugal", "When an international plan is worth it in Portugal, and when a Portuguese plan is better."),
+           ("/en/health-insurance-spain/", "Spain", "Expat health insurance in Spain, including visa-compliant cover.")],
+    "es": [("/es/seguro-medico-visado-portugal/", "Portugal", "Seguro médico para los visados D7 y D8 y para vivir en Portugal."),
+           ("/es/seguro-salud-espana/", "Seguro de salud en España", "Planes españoles para quien vive en España, comparados con un plan internacional.")],
+    "de": [("/de/krankenversicherung-portugal/", "Portugal", "Private Krankenversicherung für Residenten in Portugal."),
+           ("/de/krankenversicherung-spanien/", "Spanien", "Private Krankenversicherung für Residenten in Spanien.")],
+}
+for lang in ("en", "es", "de"):
     f = EN.hub_file(lang)
     s = f.read_text(encoding="utf-8")
-    dests = [(p["path"], p["card"][0], p["card"][1]) for p in C.PAGES if p["lang"] == lang]
+    dests = [(p["path"], p["card"][0], p["card"][1]) for p in C.PAGES if p["lang"] == lang] + EXTRA[lang]
     block = B.destinations(lang, dests).strip("\n")
     i = s.index("<!-- IPMI-DESTINATIONS -->")
     j = s.index("</section>", i) + len("</section>")
