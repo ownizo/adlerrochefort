@@ -107,7 +107,6 @@ const nav = (page) => `
     <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
   </a>
   <div class="nav-links-right">
-    <a href="/en/#adler-one">Individuals</a>
     <a href="/en/#blog">Insights</a>
     <a href="#quote-form" class="nav-cta">Free Quote</a>
     <div class="lang-switcher">
@@ -131,7 +130,6 @@ const nav = (page) => `
 <div class="mobile-nav" id="mobileNav">
   <a href="/en/#services">Services</a>
   <a href="${PILLAR}">Car insurance</a>
-  <a href="/en/#adler-one">Individuals</a>
   <a href="/en/#blog">Insights</a>
   <a href="#quote-form">Free Quote</a>
   <div class="mobile-lang-switcher">

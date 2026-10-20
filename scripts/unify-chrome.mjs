@@ -71,10 +71,8 @@ const LANDING_LINKS_EN = {
   left: [
     { href: '/en/#services', label: 'Services' },
     { href: '/en/#why-us', label: 'Why us' },
-    { href: '/en/#adler-pro', label: 'Businesses' },
   ],
   right: [
-    { href: '/en/#adler-one', label: 'Individuals' },
     { href: '/en/#blog', label: 'Insights' },
   ],
   cta: { href: '#quote-form', label: 'Free Quote' },

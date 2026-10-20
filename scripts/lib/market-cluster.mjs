@@ -930,9 +930,6 @@ ${footerLangs(market, page)}
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">${iso(market, '&copy; 2026 Adler &amp; Rochefort')} · ${ft.copy}</div>
-    <div class="footer-platforms">
-      <a href="https://mycovervault.com" class="footer-platform-link" target="_blank" rel="noopener noreferrer">${ft.vault}</a>
-    </div>
     <div class="footer-legal">
       <a href="/en/privacy-policy" hreflang="en">${ft.privacy}</a>
       <a href="/en/terms-and-conditions" hreflang="en">${ft.terms}</a>

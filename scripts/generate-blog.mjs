@@ -89,7 +89,7 @@ const CATEGORY_INTROS = {
 <p>Nesta categoria analisamos planos de saúde individuais e de grupo, doenças pré-existentes, carências, rede convencionada e a articulação com o SNS.</p>`,
 
   'tecnologia-parcerias': `<p>A mediação de seguros mudou menos na cobertura do que na gestão. O que antes era uma pasta de apólices em papel é hoje um problema de dados: saber que apólices tem uma empresa, quando renovam, que capitais estão desatualizados, que atividade está declarada em cada uma e onde há duplicação de coberturas entre contratos assinados em anos diferentes.</p>
-<p>É esse o campo desta categoria. Escrevemos sobre a tecnologia que usamos para gerir carteiras — a plataforma Os Meus Seguros e o trabalho de consolidação documental que a alimenta —, sobre a forma como a informação estruturada altera a conversa de renovação, e sobre o que a inteligência artificial faz e não faz de útil na análise de condições gerais.</p>
+<p>É esse o campo desta categoria. Escrevemos sobre a tecnologia que usamos para gerir carteiras e o trabalho de consolidação documental por trás dela, sobre a forma como a informação estruturada altera a conversa de renovação, e sobre o que a inteligência artificial faz e não faz de útil na análise de condições gerais.</p>
 <p>Reunimos também aqui os artigos sobre parcerias e canais de referência. A Adler &amp; Rochefort trabalha com mediadores imobiliários, gestores de alojamento local, escritórios de contabilidade e empresas de relocation, e a mecânica dessas relações — quem apresenta o cliente, quem faz a análise técnica, como se estrutura a comissão e o que a regulação da ASF permite — é matéria que interessa a quem pondera trabalhar connosco.</p>
 <p>Por fim, incluímos as peças mais institucionais: percurso, formação, seguradoras parceiras e a experiência acumulada no setor do turismo que deu origem à especialização em hotelaria.</p>`,
 };
@@ -128,7 +128,7 @@ const CATEGORY_META = {
   'tecnologia-parcerias': {
     title: 'Tecnologia e Parcerias | Insights | Adler & Rochefort',
     description:
-      'Gestão digital de apólices, a plataforma Os Meus Seguros, parcerias de referência e o percurso da Adler & Rochefort na mediação de seguros.',
+      'Gestão digital de apólices, parcerias de referência e o percurso da Adler & Rochefort na mediação de seguros.',
   },
 };
 
