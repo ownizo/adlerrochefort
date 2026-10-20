@@ -215,13 +215,13 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/de/blog/kunst-schmuck-versicherung-ueber-vereinbarten-wert/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://adlerrochefort.com/de/blog/kunstversicherung-portugal-spanien/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -467,7 +467,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/de/schmuck-uhren-versicherung-portugal-spanien/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -779,7 +779,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/dk/kunst-smykker-forsikring-ud-over-aftalt-vaerdi/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1181,6 +1181,15 @@
   <url>
     <loc>https://adlerrochefort.com/en/family-liability-insurance-spain/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/art-jewellery-watches-insurance/</loc>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/private-clients/arte-joias-relogios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1598,7 +1607,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/es/seguro-arte-joyas-mas-alla-valor-convenido/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1682,7 +1691,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/es/seguro-joyas-relojes-limite-por-objeto/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1970,7 +1979,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/il/art-jewellery-beyond-agreed-value/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2138,7 +2147,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/it/assicurazione-arte-gioielli-oltre-valore-concordato/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2417,7 +2426,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/nl/kunst-sieraden-verzekering-boven-getaxeerde-waarde/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2687,7 +2696,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/pl/ubezpieczenie-sztuki-bizuterii-ponad-wartosc-uzgodniona/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2747,7 +2756,10 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/private-clients/arte-joias-relogios/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/private-clients/arte-joias-relogios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2885,7 +2897,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/se/konst-smycken-forsakring-utover-avtalat-varde/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -3116,7 +3128,7 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/zh/art-jewellery-beyond-agreed-value/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -36,7 +36,7 @@ UI = {
 STYLE = ('<style id="hnw-extras">.hnw-dest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:20px}'
          '.hnw-dest{display:block;background:#fff;border:1px solid #EBE9E8;border-radius:14px;padding:20px;text-decoration:none;color:#292929}'
          '.hnw-dest:hover{border-color:#FF6300}.hnw-more{font-weight:600}'
-         '.lp-section h3{font-size:17px;margin:18px 0 6px}main .lp-section{padding-top:22px;padding-bottom:22px}main .lp-section h2{margin-bottom:10px}</style>')
+         '.lp-section h3{font-size:17px;margin:18px 0 6px}main .lp-section{padding-top:22px;padding-bottom:22px}main .lp-section h2{margin-bottom:10px}main section.lp-section>p>a.btn-primary{color:#fff}</style>')
 
 QA_LINK = {
     "en": ("/en/private-client-insurance-questions/", "More answers: private client insurance, questions answered →",
