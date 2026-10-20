@@ -147,3 +147,14 @@
 
 /seguros-empresas-lagos        /seguros/empresarial/   301!
 /seguros-empresas-lagos/*      /seguros/empresarial/   301!
+
+# ---------------------------------------------------------------------------
+# Os Meus Seguros / Adler Pro / MyCoverVault discontinued, October 2026.
+# The SaaS articles point at the blog indexes; the old platform anchors and
+# vault paths fall back to the homepages.
+# ---------------------------------------------------------------------------
+
+/blog/adler-pro-plataforma-saas          /blog/                                  301!
+/blog/adler-pro-plataforma-saas/*        /blog/                                  301!
+/en/blog/adler-pro-saas-platform         /en/blog/                               301!
+/en/blog/adler-pro-saas-platform/*       /en/blog/                               301!

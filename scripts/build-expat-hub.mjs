@@ -91,7 +91,6 @@ const nav = (page) => `
     <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
   </a>
   <div class="nav-links-right">
-    <a href="/en/#adler-one">Individuals</a>
     <a href="/en/#blog">Insights</a>
     <a href="#quote-form" class="nav-cta">Free Review</a>
     <div class="lang-switcher">
@@ -116,7 +115,6 @@ const nav = (page) => `
   <a href="/en/#services">Services</a>
   <a href="/en/health-insurance-quote/">Health insurance</a>
   <a href="/en/home-insurance-quote/">Home insurance</a>
-  <a href="/en/#adler-one">Individuals</a>
   <a href="/en/#blog">Insights</a>
   <a href="#quote-form">Free Review</a>
   <div class="mobile-lang-switcher">

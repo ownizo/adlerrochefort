@@ -2,23 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-// The 2 "no quote CTA" blog pages (PT + EN), each with its own dedicated
+// The "no quote CTA" blog pages (PT + EN), each with its own dedicated
 // contact form instead of the generic quote-request CTA.
 const PAGES = [
-  {
-    path: 'public/blog/adler-pro-plataforma-saas/index.html',
-    formName: 'adler-pro-interesse',
-    fields: ['nome', 'email', 'empresa', 'mensagem'],
-  },
   {
     path: 'public/blog/parcerias-imobiliarias-comissoes/index.html',
     formName: 'parcerias-imobiliarias',
     fields: ['nome', 'agencia', 'email', 'telefone'],
-  },
-  {
-    path: 'public/en/blog/adler-pro-saas-platform/index.html',
-    formName: 'adler-pro-interest',
-    fields: ['name', 'email', 'company', 'message'],
   },
   {
     path: 'public/en/blog/real-estate-partnerships-commissions/index.html',

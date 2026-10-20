@@ -936,7 +936,7 @@
       {
         "slug": "adler-pro-plataforma-saas",
         "lang": "pt",
-        "status": "published",
+        "status": "merged",
         "url": "/blog/adler-pro-plataforma-saas/",
         "category": "tecnologia-parcerias",
         "tag": "Tecnologia & Inovação",
@@ -952,8 +952,8 @@
         "dateLabel": "Abril 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "adler-pro-saas-platform",
-        "cluster": "guias-de-seguros"
+        "cluster": "guias-de-seguros",
+        "mergedInto": "/blog/"
       },
       {
         "slug": "seguro-habitacao-legalizacao",
@@ -4526,7 +4526,7 @@
       {
         "slug": "adler-pro-saas-platform",
         "lang": "en",
-        "status": "published",
+        "status": "merged",
         "url": "/en/blog/adler-pro-saas-platform/",
         "category": "business-liability",
         "tag": "Technology & Innovation",
@@ -4542,7 +4542,7 @@
         "dateLabel": "April 2026",
         "readingTime": 14,
         "featured": false,
-        "translationOf": "adler-pro-plataforma-saas"
+        "mergedInto": "/en/blog/"
       },
       {
         "slug": "bars-restaurants-insurance-claims",

@@ -433,6 +433,9 @@ const FEATURED_EN = [
 const MERGED = {
   'seguro-individual-automovel': '/blog/seguro-automovel-guia-completo/',
   'seguro-habitacao-proteger-casa': '/blog/multirriscos-habitacao/',
+  // Os Meus Seguros / Adler Pro was discontinued in October 2026.
+  'adler-pro-plataforma-saas': '/blog/',
+  'adler-pro-saas-platform': '/en/blog/',
 };
 
 // Slugs reserved for planned articles. Not published, not in the sitemap —
