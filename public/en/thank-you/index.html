@@ -287,7 +287,12 @@
 <script>
   (function () {
     try { if (sessionStorage.getItem('ar_lead_thankyou')) return; sessionStorage.setItem('ar_lead_thankyou', '1'); } catch (e) {}
-    if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_location: 'thank_you_page' });
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', { form_location: 'thank_you_page' });
+      // Google Ads conversion for native form posts that land here (e.g. the
+      // "quote-blog" forms), matching ar-quote-form.js / ar-conversion.js.
+      gtag('event', 'conversion', { send_to: 'AW-18361722533/HxH6CKqa1uEcEKXNxrNE', value: 1.0, currency: 'EUR' });
+    }
   })();
 </script>
 </body>
