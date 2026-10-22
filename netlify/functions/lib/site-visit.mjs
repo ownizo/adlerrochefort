@@ -11,8 +11,12 @@ const BOT_UA = /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|gtmetrix|pi
 
 const SEARCH = ['google.', 'bing.', 'duckduckgo.', 'yahoo.', 'ecosia.', 'qwant.', 'yandex.', 'baidu.', 'search.brave.'];
 const AI = {
-  'chatgpt.com': 'chatgpt.com', 'chat.openai.com': 'chatgpt.com', 'perplexity.ai': 'perplexity',
-  'gemini.google.com': 'gemini', 'claude.ai': 'claude', 'copilot.microsoft.com': 'copilot',
+  'chatgpt.com': 'chatgpt.com', 'chat.openai.com': 'chatgpt.com', 'openai.com': 'chatgpt.com', chatgpt: 'chatgpt.com',
+  'perplexity.ai': 'perplexity', perplexity: 'perplexity',
+  'gemini.google.com': 'gemini', gemini: 'gemini',
+  'claude.ai': 'claude', claude: 'claude',
+  'copilot.microsoft.com': 'copilot', 'copilot.com': 'copilot', copilot: 'copilot',
+  'chat.deepseek.com': 'deepseek', 'chat.mistral.ai': 'mistral', 'grok.com': 'grok', 'meta.ai': 'meta-ai',
 };
 const SOCIAL = ['facebook.', 'instagram.', 'linkedin.', 'lnkd.in', 't.co', 'x.com', 'twitter.', 'pinterest.', 'youtube.', 'reddit.', 'whatsapp.'];
 const LANGS = new Set(['en', 'de', 'es', 'nl', 'fr', 'it', 'pl', 'se', 'dk', 'il', 'zh']);
@@ -55,6 +59,13 @@ export function classify(pageUrl, referrer) {
   if (params.get('utm_source')) {
     out.source = params.get('utm_source').slice(0, 80);
     out.medium = (params.get('utm_medium') || '').slice(0, 80) || null;
+    // ChatGPT (and others) add ?utm_source=chatgpt.com with no utm_medium:
+    // without this the visit was stored with medium null and never counted as AI.
+    const ai = AI[out.source.toLowerCase().replace(/^www\./, '')];
+    if (ai && (!out.medium || out.medium === 'referral')) {
+      out.source = ai;
+      out.medium = 'ai-assistant';
+    }
     out.campaign = (params.get('utm_campaign') || '').slice(0, 120) || null;
     return out;
   }

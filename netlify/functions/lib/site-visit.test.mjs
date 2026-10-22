@@ -16,6 +16,14 @@ test('sources are classified like the client-side attribution', () => {
   assert.equal(classify('https://adlerrochefort.com/en/', 'https://www.google.com/').medium, 'organic');
   assert.equal(classify('https://adlerrochefort.com/en/', 'https://chatgpt.com/').medium, 'ai-assistant');
   assert.equal(classify('https://adlerrochefort.com/en/?gclid=x', '').medium, 'cpc');
+  // ChatGPT links carry ?utm_source=chatgpt.com and no utm_medium
+  const gpt = classify('https://adlerrochefort.com/en/?utm_source=chatgpt.com', '');
+  assert.equal(gpt.source, 'chatgpt.com');
+  assert.equal(gpt.medium, 'ai-assistant');
+  assert.equal(classify('https://adlerrochefort.com/?utm_source=perplexity', '').medium, 'ai-assistant');
+  // an explicit campaign medium is kept
+  assert.equal(classify('https://adlerrochefort.com/?utm_source=chatgpt.com&utm_medium=cpc', '').medium, 'cpc');
+  assert.equal(classify('https://adlerrochefort.com/?utm_source=newsletter', '').medium, null);
   assert.equal(classify('https://adlerrochefort.com/en/', '').source, '(direct)');
   const internal = classify('https://adlerrochefort.com/en/', 'https://adlerrochefort.com/');
   assert.equal(internal.is_landing, false);

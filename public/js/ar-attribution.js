@@ -30,8 +30,10 @@
   var FIELDS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
   var SEARCH = ['google.', 'bing.', 'duckduckgo.', 'yahoo.', 'ecosia.', 'qwant.', 'yandex.', 'baidu.', 'search.brave.'];
-  var AI = { 'chatgpt.com': 'chatgpt.com', 'chat.openai.com': 'chatgpt.com', 'perplexity.ai': 'perplexity',
-             'gemini.google.com': 'gemini', 'claude.ai': 'claude', 'copilot.microsoft.com': 'copilot' };
+  var AI = { 'chatgpt.com': 'chatgpt.com', 'chat.openai.com': 'chatgpt.com', 'openai.com': 'chatgpt.com', 'chatgpt': 'chatgpt.com',
+             'perplexity.ai': 'perplexity', 'perplexity': 'perplexity', 'gemini.google.com': 'gemini', 'gemini': 'gemini',
+             'claude.ai': 'claude', 'claude': 'claude', 'copilot.microsoft.com': 'copilot', 'copilot.com': 'copilot', 'copilot': 'copilot',
+             'chat.deepseek.com': 'deepseek', 'chat.mistral.ai': 'mistral', 'grok.com': 'grok', 'meta.ai': 'meta-ai' };
   var SOCIAL = ['facebook.', 'instagram.', 'linkedin.', 'lnkd.in', 't.co', 'x.com', 'twitter.', 'pinterest.', 'youtube.', 'reddit.', 'whatsapp.'];
 
   function hostOf(url) {
@@ -48,6 +50,9 @@
     var out = {};
     if (q.get('utm_source')) {
       FIELDS.forEach(function (f) { if (q.get(f)) out[f] = q.get(f).slice(0, 120); });
+      // ChatGPT adds ?utm_source=chatgpt.com with no utm_medium: still an AI assistant.
+      var ai = AI[out.utm_source.toLowerCase().replace(/^www\./, '')];
+      if (ai && (!out.utm_medium || out.utm_medium === 'referral')) { out.utm_source = ai; out.utm_medium = 'ai-assistant'; }
       return out;
     }
     if (q.get('gclid') || q.get('gbraid') || q.get('wbraid')) return { utm_source: 'google', utm_medium: 'cpc' };
