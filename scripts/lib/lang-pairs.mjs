@@ -29,6 +29,10 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Private Office — the general value proposition, October 2026 (scripts/build-private-office.mjs).
+  // A pt-BR version also exists at /br/private-office/; it carries its own hreflang tags and is not
+  // a pt-PT counterpart, so it is deliberately not listed under `pt`.
+  { en: '/en/private-office/', de: '/de/private-office/', es: '/es/private-office/', zh: '/zh/private-office/', il: '/il/private-office/' },
   // Cancer cover in health insurance, all twelve languages, October 2026 (scripts/build-cancer-cover-pages.py).
   { pt: '/seguros/saude/cobertura-cancro/', en: '/en/cancer-cover-health-insurance-portugal/', de: '/de/krebs-krankenversicherung-portugal/', es: '/es/cancer-seguro-medico-portugal-espana/', nl: '/nl/kanker-zorgverzekering-portugal/', fr: '/fr/cancer-assurance-sante-portugal/', it: '/it/cancro-assicurazione-sanitaria-portogallo/', pl: '/pl/nowotwor-ubezpieczenie-zdrowotne-portugalia/', se: '/se/cancer-sjukvardsforsakring-portugal/', dk: '/dk/kraeft-sundhedsforsikring-portugal/', il: '/il/cancer-health-insurance-portugal/', zh: '/zh/cancer-health-insurance-portugal/' },
   // International health insurance (IPMI) in all twelve languages, October 2026

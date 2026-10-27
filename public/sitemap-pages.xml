@@ -136,6 +136,12 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/br/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/de/</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -438,6 +444,12 @@
   <url>
     <loc>https://adlerrochefort.com/de/private-clients/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/de/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -835,6 +847,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/art-jewellery-watches-insurance/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/blog/</loc>
     <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -1185,15 +1203,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://adlerrochefort.com/en/art-jewellery-watches-insurance/</loc>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/private-clients/arte-joias-relogios/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://adlerrochefort.com/en/family-office-insurance/</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -1312,14 +1321,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/international-health-insurance/colombia/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/international-health-insurance/digital-nomads/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/international-health-insurance/malaysia/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/international-health-insurance/mexico/</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/international-health-insurance/panama/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1336,6 +1363,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/en/international-health-insurance/singapore/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/en/international-health-insurance/thailand/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -1344,6 +1377,12 @@
   <url>
     <loc>https://adlerrochefort.com/en/international-health-insurance/us-citizens-abroad/</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/international-health-insurance/vietnam/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1440,6 +1479,12 @@
   <url>
     <loc>https://adlerrochefort.com/en/private-clients/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/en/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1560,6 +1605,12 @@
   <url>
     <loc>https://adlerrochefort.com/es/mudarse-a-portugal-seguros/</loc>
     <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/es/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1714,6 +1765,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/es/seguro-medico-internacional/colombia/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/es/seguro-medico-internacional/espana/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -1728,6 +1785,12 @@
   <url>
     <loc>https://adlerrochefort.com/es/seguro-medico-internacional/nomadas-digitales/</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/es/seguro-medico-internacional/panama/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2118,6 +2181,12 @@
   <url>
     <loc>https://adlerrochefort.com/il/moving-to-portugal/</loc>
     <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adlerrochefort.com/il/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2756,9 +2825,6 @@
   </url>
   <url>
     <loc>https://adlerrochefort.com/private-clients/arte-joias-relogios/</loc>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://adlerrochefort.com/private-clients/arte-joias-relogios/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adlerrochefort.com/en/art-jewellery-watches-insurance/" />
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -3085,6 +3151,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/seguros/saude-internacional/brasileiros-no-exterior/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/seguros/saude-internacional/cigna-global/</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -3271,55 +3343,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://adlerrochefort.com/zh/private-office/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://adlerrochefort.com/zh/rebuild-value-home-insurance-portugal/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/international-health-insurance/panama/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/international-health-insurance/colombia/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/international-health-insurance/malaysia/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/international-health-insurance/singapore/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/en/international-health-insurance/vietnam/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/es/seguro-medico-internacional/panama/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/es/seguro-medico-internacional/colombia/</loc>
-    <lastmod>2026-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adlerrochefort.com/seguros/saude-internacional/brasileiros-no-exterior/</loc>
     <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
