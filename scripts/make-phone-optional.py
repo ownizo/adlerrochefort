@@ -26,6 +26,9 @@ FORMS = {
     "life-insurance-review-spain", "mortgage-protection-review-spain",
     "de-versicherung-spanien", "de-vermieterversicherung-spanien",
     "de-lebensversicherung-spanien", "de-hypothekenschutz-spanien",
+    # EN Portugal forms, added the same day at Hugo's request
+    "home-insurance-quote", "expat-insurance-review", "international-insurance-review",
+    "relocation-services",
 }
 FIELD_IDS = ("f-phone", "f-telefon", "q-phone")
 
@@ -58,7 +61,10 @@ def patch(h):
             changed = True
     # inline validation rules: { id: "f-phone", ... validate: function (value) { if (!value) return "..."; ...
     for fid in FIELD_IDS:
-        pat = re.compile(r'(\{\s*id:\s*"%s".*?validate:\s*function\s*\((\w+)\)\s*\{\s*)if \(!\2\) return (?:"[^"]*"|\'[^\']*\');' % fid, re.S)
+        pat = re.compile(r'(\{\s*id:\s*"%s"[^{}]*?validate:\s*function\s*\((\w+)\)\s*\{\s*)if \(!\2\) return (?:"[^"]*"|\'[^\']*\');' % fid)
+        # [^{}] keeps the match inside this field's own rule: once the phone
+        # rule says "return null", a looser pattern would run on into the
+        # next rule and blank out a different field's required check.
         h2 = pat.sub(lambda m: m.group(1) + "if (!%s) return null;" % m.group(2), h)
         if h2 != h:
             h, changed = h2, True
