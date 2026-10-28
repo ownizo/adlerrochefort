@@ -506,3 +506,4 @@ footer { background: var(--footer-bg); padding: 76px 48px 44px; }
   }
   .btn-cta:hover { transform: none; }
 }
+.nav-logo-img { aspect-ratio: 1074 / 312; }

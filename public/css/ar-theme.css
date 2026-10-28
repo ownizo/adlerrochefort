@@ -519,3 +519,4 @@ html body :is(a, button, summary, input, select, textarea):focus-visible {
   html body .site-nav, html body header.site-header { position: static !important; box-shadow: none !important; }
   html :is(body, main) > section, html body footer { margin: 0 !important; border-radius: 0 !important; }
 }
+.nav-logo-img { aspect-ratio: 1074 / 312; }
