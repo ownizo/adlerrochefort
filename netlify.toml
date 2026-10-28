@@ -13,6 +13,18 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# llms.txt / llms-full.txt carry Chinese and Hebrew page titles: declare UTF-8
+# so a crawler does not decode them as Latin-1.
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
 [[headers]]
   for = "/vault/*"
   [headers.values]
