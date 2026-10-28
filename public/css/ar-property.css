@@ -216,7 +216,7 @@
   }
 
   .hero-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: clamp(48px, 5vw, 72px);
     font-weight: 500;
     line-height: 1.05;
@@ -319,7 +319,7 @@
   }
 
   .hero-card-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 26px;
     font-weight: 600;
     color: var(--white);
@@ -440,7 +440,7 @@
   }
 
   .section-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 500;
     line-height: 1.1;
