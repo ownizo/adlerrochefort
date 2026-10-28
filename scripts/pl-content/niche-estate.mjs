@@ -115,7 +115,7 @@ export const NICHE_ESTATE_PAGE = {
 <section class="section tint" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Dom i kolekcje lokujemy w naszym portfelu ubezpieczycieli, a ryzyka winiarskie, rolne i turystyczne — tam, gdzie to potrzebne — <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Dom i kolekcje lokujemy w naszym portfelu ubezpieczycieli, a ryzyka winiarskie, rolne i turystyczne — tam, gdzie to potrzebne — <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
     <ol class="process-steps">
       <li><div><strong>Pisemna ocena.</strong><span> Mapa ryzyk posiadłości: co jest objęte, gdzie polisy się dublują, a gdzie zostawiają luki.</span></div></li>
       <li><div><strong>Oględziny tam, gdzie to potrzebne.</strong><span> Przy dużych posiadłościach underwriter zwykle chce zobaczyć zabezpieczenia przeciwpożarowe i winiarnię.</span></div></li>

@@ -82,7 +82,7 @@ export const PT_HOME = [
       'A franquia é dispensada nos grandes sinistros e pode escolher entre dinheiro e os seus próprios artesãos?',
       'Joias, relógios, pratas e vinho estão especificados como objetos de valor ou ficaram dentro dos limites do recheio?',
     ],
-    closing: `<p>A Adler &amp; Rochefort é agente de seguros registado na ASF, com escritórios em Lisboa e em Lagos, e coloca seguros de habitação Private Clients para casas em Portugal e em Espanha. Lemos a sua apólice atual à luz desta lista e respondemos por escrito, cláusula a cláusula. Veja também <a href="/blog/seguro-casa-elevado-valor-o-que-declarar/">o que tem de comunicar à seguradora</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
+    closing: `<p>A Adler &amp; Rochefort é agente de seguros registado na ASF, com sede em Lisboa, e coloca seguros de habitação Private Clients para casas em Portugal e em Espanha. Lemos a sua apólice atual à luz desta lista e respondemos por escrito, cláusula a cláusula. Veja também <a href="/blog/seguro-casa-elevado-valor-o-que-declarar/">o que tem de comunicar à seguradora</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
     faq: [
       ['O que é a reconstrução garantida?', 'A garantia de que, após uma perda total, a casa é reconstruída mesmo que o custo ultrapasse o capital do edifício. Aplica-se quando os capitais recomendados pela vistoria da seguradora foram aceites.'],
       ['A regra proporcional aplica-se a um seguro de casa de elevado valor?', 'Não nas condições Private Clients que colocamos: a regra do subseguro do artigo 134.º da Lei do Contrato de Seguro é expressamente afastada, e um sinistro parcial é pago por inteiro.'],

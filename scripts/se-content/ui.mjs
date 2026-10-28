@@ -60,7 +60,7 @@ export const SE_BRANCHES = [
 
 export const SE_UI = {
   skipLink: 'Gå till innehållet',
-  asfBar: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3 · Lissabon och Lagos · Portugal och Spanien',
+  asfBar: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3 · Lissabon · Portugal och Spanien',
   navAria: 'Huvudnavigering',
   navCta: 'Begär genomgång',
 
@@ -170,7 +170,7 @@ export const SE_UI = {
   },
 
   footer: {
-    desc: 'Försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar i Portugal och Spanien. Kontor i Lissabon och Lagos. Individuell riskbedömning och skriftlig rådgivning.',
+    desc: 'Försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar i Portugal och Spanien. Huvudkontor i Lissabon. Individuell riskbedömning och skriftlig rådgivning.',
     badge: 'Registrerad försäkringsförmedlare — ASF nr 425591790/3',
     coverTitle: 'Försäkringar',
     coverLinks: [

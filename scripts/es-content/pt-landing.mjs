@@ -47,7 +47,7 @@ export const PT_LANDING_PAGE = {
 <section class="section plain" aria-labelledby="quienes">
   <div class="container narrow article-body">
     <h2 id="quienes">Quiénes somos en Portugal</h2>
-    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en la <em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em> (ASF) con el n.º 425591790/3, con oficinas en Lisboa y Lagos. Portugal es nuestro mercado de origen: conocemos sus aseguradoras, sus condiciones y sus peritos, y gestionamos los siniestros en portugués ante la compañía.</p>
+    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en la <em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em> (ASF) con el n.º 425591790/3, con sede en Lisboa. Portugal es nuestro mercado de origen: conocemos sus aseguradoras, sus condiciones y sus peritos, y gestionamos los siniestros en portugués ante la compañía.</p>
     <p>Con usted trabajamos en español y por escrito:</p>
     <ul>
       <li><strong>Le explicamos cada póliza en español</strong> antes de firmar — coberturas, capitales, franquicias y exclusiones —, aunque la póliza esté, como es habitual, en portugués.</li>

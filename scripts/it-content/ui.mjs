@@ -73,7 +73,7 @@ export const IT_BRANCHES = [
 
 export const IT_UI = {
   skipLink: 'Vai al contenuto',
-  asfBar: 'Intermediario assicurativo registrato — ASF n. 425591790/3 · Portogallo e Spagna · Lisbona e Lagos',
+  asfBar: 'Intermediario assicurativo registrato — ASF n. 425591790/3 · Portogallo e Spagna · Lisbona',
   navAria: 'Navigazione principale',
   navCta: 'Valutazione scritta',
 
@@ -110,7 +110,7 @@ export const IT_UI = {
   },
   mobileCta: 'Valutazione scritta',
   breadcrumbAria: 'Percorso di navigazione',
-  heroMeta: 'Intermediario assicurativo registrato · ASF n. 425591790/3 · Lisbona e Lagos',
+  heroMeta: 'Intermediario assicurativo registrato · ASF n. 425591790/3 · Lisbona',
   heroCta: 'Richieda una valutazione scritta',
   relatedTitle: 'Pagine correlate',
   pullquoteAria: 'Citazione',
@@ -184,7 +184,7 @@ export const IT_UI = {
   },
 
   footer: {
-    desc: 'Intermediario assicurativo per clienti privati con patrimoni importanti in Portogallo e in Spagna, con uffici a Lisbona e Lagos. Sottoscrizione individuale, consulenza per iscritto e un unico consulente dal primo contatto al sinistro.',
+    desc: 'Intermediario assicurativo per clienti privati con patrimoni importanti in Portogallo e in Spagna, con sede a Lisbona. Sottoscrizione individuale, consulenza per iscritto e un unico consulente dal primo contatto al sinistro.',
     badge: 'Intermediario assicurativo registrato — ASF n. 425591790/3',
     coverTitle: 'Assicurazioni',
     coverLinks: [

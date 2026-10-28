@@ -108,7 +108,7 @@ export const CITY_LISBOA_PAGE = {
     },
     {
       q: '¿Tienen oficina en Lisboa?',
-      a: '<p>Sí, nuestra sede está en Lisboa, además de la oficina de Lagos. Trabajamos por escrito y en español, esté usted en Lisboa o todavía en su país.</p>',
+      a: '<p>Sí, nuestra sede está en Lisboa. Trabajamos por escrito y en español, esté usted en Lisboa o todavía en su país.</p>',
     },
   ],
   related: [

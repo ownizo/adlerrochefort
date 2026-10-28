@@ -217,7 +217,7 @@ export const BR_HUB = {
   whatsapp: wa('Olá, sou brasileiro e gostaria de ajuda com seguros em Portugal.'),
   trust: [
     'Mediador de seguros registado na ASF &middot; n.º 425591790/3',
-    'Lisboa e Lagos &middot; Portugal e Espanha',
+    'Lisboa &middot; Portugal e Espanha',
     'Análise por escrito em 24–72h úteis',
   ],
   serviceName: 'Seguros para brasileiros que compram casa, se mudam ou vivem em Portugal',

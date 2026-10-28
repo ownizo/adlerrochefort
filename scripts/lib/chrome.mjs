@@ -379,13 +379,6 @@ export const ORGANIZATION = {
       addressLocality: 'Lisboa',
       addressCountry: 'PT',
     },
-    {
-      '@type': 'PostalAddress',
-      streetAddress: 'Varandas de São João 4',
-      postalCode: '8600-324',
-      addressLocality: 'Lagos',
-      addressCountry: 'PT',
-    },
   ],
   areaServed: { '@type': 'Country', name: 'Portugal' },
   identifier: {

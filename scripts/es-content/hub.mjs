@@ -53,7 +53,7 @@ export const HUB_PAGE = {
 <section class="section plain" aria-labelledby="quienes">
   <div class="container narrow article-body">
     <h2 id="quienes">Un mediador para familias latinoamericanas en Portugal y España</h2>
-    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en el supervisor ASF con el n.º 425591790/3, con oficinas en <strong>Lisboa y Lagos</strong>. Trabajamos para familias con patrimonios relevantes en todo Portugal y — en régimen de libre prestación de servicios de la Unión Europea — en España.</p>
+    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en el supervisor ASF con el n.º 425591790/3, con sede en <strong>Lisboa</strong>. Trabajamos para familias con patrimonios relevantes en todo Portugal y — en régimen de libre prestación de servicios de la Unión Europea — en España.</p>
     <p>Cada vez más, esas familias llegan de Ciudad de México, Caracas, Bogotá, Buenos Aires, Santiago o Lima. Nuestro trabajo se concentra en los riesgos en los que una póliza estándar se queda corta:</p>
     <ul>
       <li><strong>Salud</strong> — la póliza que exige el visado y la que la familia usará de verdad, también para seguir atendiéndose en su país.</li>
@@ -318,7 +318,7 @@ export const HUB_PAGE = {
   audience: {
     heading: 'Para quién <em>trabajamos</em>',
     body:
-      'Trabajamos para familias latinoamericanas con patrimonios relevantes que han trasladado toda o parte de su vida a Portugal o a España — empresarios, profesionales, inversores, coleccionistas y sus padres e hijos. Desde nuestras oficinas en Lisboa y Lagos nos ocupamos de todo el seguro: asesoramiento, suscripción individual, servicio continuado y gestión de siniestros, con el mismo interlocutor en todo momento y en español.',
+      'Trabajamos para familias latinoamericanas con patrimonios relevantes que han trasladado toda o parte de su vida a Portugal o a España — empresarios, profesionales, inversores, coleccionistas y sus padres e hijos. Desde nuestra sede en Lisboa nos ocupamos de todo el seguro: asesoramiento, suscripción individual, servicio continuado y gestión de siniestros, con el mismo interlocutor en todo momento y en español.',
     alt: 'Asesor de seguros para familias latinoamericanas con patrimonios relevantes en Portugal y España',
   },
   insurers: {

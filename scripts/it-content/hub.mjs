@@ -22,7 +22,7 @@ export const HUB_PAGE = {
   isHub: true,
   title: 'Assicurazioni private client ed expat · Portogallo e Spagna',
   description:
-    'Per famiglie italiane ed expat con patrimoni in Portogallo e Spagna: casa di pregio, arte, RC milionaria e salute internazionale. Uffici a Lisbona e Lagos.',
+    'Per famiglie italiane ed expat con patrimoni in Portogallo e Spagna: casa di pregio, arte, RC milionaria e salute internazionale. Sede a Lisbona.',
   ogTitle: 'Assicurazioni private client ed expat — Portogallo e Spagna',
   ogDescription:
     'Residenze, arte e collezioni, responsabilità civile e tutela della famiglia in Portogallo e Spagna. Sottoscrizione individuale e consulenza scritta.',
@@ -50,7 +50,7 @@ export const HUB_PAGE = {
 <section class="section plain" aria-labelledby="chi">
   <div class="container narrow article-body">
     <h2 id="chi">Un intermediario per clienti privati in Portogallo e in Spagna</h2>
-    <p>Adler &amp; Rochefort è un intermediario assicurativo portoghese, registrato presso l’autorità di vigilanza ASF con il n. 425591790/3, con uffici a <strong>Lisbona e Lagos</strong>. Lavoriamo per famiglie con patrimoni importanti in tutto il Portogallo e — in regime di libera prestazione di servizi nell’Unione europea — in Spagna.</p>
+    <p>Adler &amp; Rochefort è un intermediario assicurativo portoghese, registrato presso l’autorità di vigilanza ASF con il n. 425591790/3, con sede a <strong>Lisbona</strong>. Lavoriamo per famiglie con patrimoni importanti in tutto il Portogallo e — in regime di libera prestazione di servizi nell’Unione europea — in Spagna.</p>
     <p>Il nostro lavoro si concentra sui rischi per i quali una polizza standard non basta:</p>
     <ul>
       <li><strong>Residenze di alto valore</strong> — ville, palazzi storici e proprietà con piscina, dépendance e foresteria, assicurate al reale costo di ricostruzione.</li>
@@ -262,7 +262,7 @@ export const HUB_PAGE = {
   audience: {
     heading: 'Per chi <em>lavoriamo</em>',
     body:
-      'Lavoriamo per famiglie private con patrimoni importanti in Portogallo e in Spagna — famiglie con più residenze, collezionisti, imprenditori e pensionati che hanno portato a sud tutta o parte della propria vita. Dagli uffici di Lisbona e Lagos ci occupiamo dell’intero lato assicurativo: consulenza, sottoscrizione individuale, assistenza continuativa e supporto in caso di sinistro, con lo stesso consulente dall’inizio alla fine.',
+      'Lavoriamo per famiglie private con patrimoni importanti in Portogallo e in Spagna — famiglie con più residenze, collezionisti, imprenditori e pensionati che hanno portato a sud tutta o parte della propria vita. Dalla sede di Lisbona ci occupiamo dell’intero lato assicurativo: consulenza, sottoscrizione individuale, assistenza continuativa e supporto in caso di sinistro, con lo stesso consulente dall’inizio alla fine.',
     alt: 'Consulente assicurativo per clienti privati con patrimoni importanti in Portogallo e in Spagna',
   },
   insurers: {
@@ -274,7 +274,7 @@ export const HUB_PAGE = {
   faq: [
     {
       q: 'Parlate italiano?',
-      a: '<p>La nostra lingua di lavoro ufficiale è l’inglese. Per iscritto comunichiamo con Lei in italiano, con l’aiuto della traduzione assistita dall’intelligenza artificiale: preventivi, spiegazione delle condizioni e corrispondenza Le arrivano in italiano. Le conversazioni, al telefono o di persona, si svolgono in inglese o in portoghese. Con le compagnie trattiamo in portoghese o in spagnolo. Siamo un intermediario portoghese con uffici a Lisbona e Lagos e clienti in tutto il Portogallo e in Spagna.</p>',
+      a: '<p>La nostra lingua di lavoro ufficiale è l’inglese. Per iscritto comunichiamo con Lei in italiano, con l’aiuto della traduzione assistita dall’intelligenza artificiale: preventivi, spiegazione delle condizioni e corrispondenza Le arrivano in italiano. Le conversazioni, al telefono o di persona, si svolgono in inglese o in portoghese. Con le compagnie trattiamo in portoghese o in spagnolo. Siamo un intermediario portoghese con sede a Lisbona e clienti in tutto il Portogallo e in Spagna.</p>',
     },
     {
       q: 'Per chi lavorate?',

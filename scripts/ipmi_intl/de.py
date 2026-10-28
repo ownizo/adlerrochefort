@@ -2,7 +2,7 @@
 UI = {
     "home": "Startseite",
     "hub": "Internationale Krankenversicherung",
-    "meta": "EU-regulierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Geprüft am 18. Oktober 2026",
+    "meta": "EU-regulierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Geprüft am 18. Oktober 2026",
     "author": "Verfasst und geprüft von <strong>Hugo Gonçalves</strong>, Gründer und Risikomanagement-Spezialist von Adler &amp; Rochefort. Studium der Betriebswirtschaft (University of Hertfordshire), laufende Weiterbildung am Chartered Insurance Institute (CII), London.",
     "lang_policy": None,
     "facts_h2": "Das Wichtigste in Kürze",

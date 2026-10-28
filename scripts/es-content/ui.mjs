@@ -91,7 +91,7 @@ export const ES_BRANCHES = [
 
 export const ES_UI = {
   skipLink: 'Ir al contenido',
-  asfBar: 'Mediador de seguros registrado — ASF n.º 425591790/3 · España y Portugal · Lisboa y Lagos',
+  asfBar: 'Mediador de seguros registrado — ASF n.º 425591790/3 · España y Portugal · Lisboa',
   navAria: 'Navegación principal',
   navCta: 'Análisis por escrito',
 
@@ -128,7 +128,7 @@ export const ES_UI = {
   },
   mobileCta: 'Análisis por escrito',
   breadcrumbAria: 'Ruta de navegación',
-  heroMeta: 'Mediador de seguros registrado · ASF n.º 425591790/3 · Lisboa y Lagos',
+  heroMeta: 'Mediador de seguros registrado · ASF n.º 425591790/3 · Lisboa',
   heroCta: 'Solicitar un análisis por escrito',
   relatedTitle: 'Páginas relacionadas',
   pullquoteAria: 'Cita',
@@ -202,7 +202,7 @@ export const ES_UI = {
   },
 
   footer: {
-    desc: 'Mediador de seguros para familias latinoamericanas con patrimonios relevantes en Portugal y España, con oficinas en Lisboa y Lagos. Suscripción individual, asesoramiento por escrito y un único interlocutor del primer contacto al siniestro, en español.',
+    desc: 'Mediador de seguros para familias latinoamericanas con patrimonios relevantes en Portugal y España, con sede en Lisboa. Suscripción individual, asesoramiento por escrito y un único interlocutor del primer contacto al siniestro, en español.',
     badge: 'Mediador de seguros registrado — ASF n.º 425591790/3',
     coverTitle: 'Seguros',
     coverLinks: [

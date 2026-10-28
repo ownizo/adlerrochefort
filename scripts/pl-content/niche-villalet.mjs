@@ -113,7 +113,7 @@ export const NICHE_VILLALET_PAGE = {
 <section class="section tint" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Polisy dla wynajmowanych willi lokujemy w naszym portfelu ubezpieczycieli, a tam, gdzie profil wynajmu tego wymaga, <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Polisy dla wynajmowanych willi lokujemy w naszym portfelu ubezpieczycieli, a tam, gdzie profil wynajmu tego wymaga, <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
     <ol class="process-steps">
       <li><div><strong>Pisemna ocena.</strong><span> Co obejmuje obecna polisa w okresach wynajmu, czego wymaga region i gdzie są luki.</span></div></li>
       <li><div><strong>Propozycja.</strong><span> Jedna polisa dla domu używanego prywatnie i wynajmowanego, z jasno opisanymi warunkami dla obu okresów.</span></div></li>

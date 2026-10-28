@@ -69,13 +69,6 @@ const ORG_LD = {
       postalCode: '1990-019',
       addressCountry: 'PT',
     },
-    {
-      '@type': 'PostalAddress',
-      streetAddress: 'Varandas de São João 4',
-      addressLocality: 'Lagos',
-      postalCode: '8600-324',
-      addressCountry: 'PT',
-    },
   ],
   identifier: { '@type': 'PropertyValue', name: 'ASF registration', value: '425591790/3' },
 };
@@ -427,7 +420,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">Verzekeringen voor private clients in Portugal en Spanje, met kantoren in Lissabon en Lagos. Advies altijd schriftelijk.</p>
+      <p class="footer-brand-desc">Verzekeringen voor private clients in Portugal en Spanje, met hoofdkantoor in Lissabon. Advies altijd schriftelijk.</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Geregistreerd verzekeringsagent — ASF nr. 425591790/3
@@ -439,7 +432,7 @@ const FOOTER = (page) => `<footer class="on-dark">
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
         <li><span>Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal</span></li>
-        <li><span>Varandas de São João 4<br>8600-324 Lagos, Portugal</span></li>
+        <li><span>Hoofdkantoor · geen baliebezoek, alleen op afspraak</span></li>
         <li><a href="#offerte">Vraag een offerte aan</a></li>
         <li>
           <div class="footer-social">
@@ -612,7 +605,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
     ? `<section class="pullquote-band" aria-label="Citaat">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>Adler &amp; Rochefort · Lisboa · Lagos</cite>
+    <cite>Adler &amp; Rochefort · Lisboa</cite>
   </blockquote>
 </section>`
     : '';

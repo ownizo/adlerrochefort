@@ -115,7 +115,7 @@ export const NICHE_EQUINE_PAGE = {
 <section class="section tint" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ubezpieczenia koni lokujemy <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>, a posiadłość, dom i OC rodziny — w naszym portfelu, tak żeby wszystko do siebie pasowało.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ubezpieczenia koni lokujemy <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>, a posiadłość, dom i OC rodziny — w naszym portfelu, tak żeby wszystko do siebie pasowało.</p>
     <ol class="process-steps">
       <li><div><strong>Pisemna ocena.</strong><span> Konie, stajnia, OC — co jest objęte, a czego brakuje.</span></div></li>
       <li><div><strong>Rynek specjalistyczny.</strong><span> Warunki od ubezpieczycieli, którzy znają konie sportowe i hodowlane.</span></div></li>

@@ -191,7 +191,7 @@ const ctaContacts = (phoneLabel, locationLabel) => `  <div class="cta-strip-acti
       <div class="cta-contact-icon">${PIN_ICON}</div>
       <div>
         <div class="cta-contact-label">${locationLabel}</div>
-        <div class="cta-contact-value">Lisboa &amp; Lagos, Portugal</div>
+        <div class="cta-contact-value">Lisboa, Portugal</div>
       </div>
     </div>
   </div>`;

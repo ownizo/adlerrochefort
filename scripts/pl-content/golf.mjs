@@ -136,7 +136,7 @@ export const GOLF_PAGE = {
 <section class="section plain" aria-labelledby="ocena">
   <div class="container narrow article-body">
     <h2 id="ocena">Pisemna ocena</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Każde ryzyko oceniamy indywidualnie, rady dajemy na piśmie, a jeden doradca prowadzi Państwa od pierwszego kontaktu do likwidacji szkody.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Każde ryzyko oceniamy indywidualnie, rady dajemy na piśmie, a jeden doradca prowadzi Państwa od pierwszego kontaktu do likwidacji szkody.</p>
     <p>Proszę przesłać obecną polisę domu i — jeśli ją Państwo mają — polisę wspólnoty. Odpowiemy pisemnie, co jest objęte ochroną, czego brakuje i co warto zmienić.</p>
     <p><a href="#oferta" class="btn-cta">Poproś o pisemną ocenę</a></p>
     <p class="legal-note">Ta strona ma charakter informacyjny. Ochrona zależy od oceny ryzyka dokonanej przez ubezpieczyciela oraz od warunków polisy faktycznie wystawionej.</p>

@@ -115,7 +115,7 @@ export const CITY_MADEIRA_PAGE = {
       a: '<p>Mientras tramitan su residencia, una póliza de salud privada es su cobertura. Hay pólizas portuguesas sin edad máxima de adhesión; necesitarán NIF y domicilio en Portugal.</p>',
     },
     {
-      q: '¿Atienden en Madeira aunque sus oficinas estén en Lisboa y Lagos?',
+      q: '¿Atienden en Madeira aunque su sede esté en Lisboa?',
       a: '<p>Sí. Trabajamos por escrito y en español en todo Portugal, incluidas las islas, y gestionamos los siniestros con la aseguradora y el perito en portugués.</p>',
     },
   ],

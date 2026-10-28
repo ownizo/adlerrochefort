@@ -5,7 +5,7 @@ Estatuto nas páginas em português: "agente de seguros" (decisão do Hugo).
 UI = {
     "home": "Início",
     "hub": "Seguro de saúde internacional",
-    "meta": "Agente de seguros registado na ASF n.º 425591790/3 · Lisboa · Lagos · Revisto a 18 de outubro de 2026",
+    "meta": "Agente de seguros registado na ASF n.º 425591790/3 · Lisboa · Revisto a 18 de outubro de 2026",
     "author": "Escrito e revisto por <strong>Hugo Gonçalves</strong>, fundador e especialista em gestão de risco da Adler &amp; Rochefort. Licenciado em Gestão de Empresas (University of Hertfordshire) e em formação contínua no Chartered Insurance Institute (CII), Londres.",
     "lang_policy": None,
     "facts_h2": "Em resumo",

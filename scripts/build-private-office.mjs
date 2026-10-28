@@ -240,7 +240,6 @@ function schema(p) {
     email: 'insurance@adlerrochefort.com',
     address: [
       { '@type': 'PostalAddress', streetAddress: 'Av. do Atlântico 16, Esc. 5.07', postalCode: '1990-019', addressLocality: 'Lisboa', addressCountry: 'PT' },
-      { '@type': 'PostalAddress', streetAddress: 'Varandas de São João 4', postalCode: '8600-324', addressLocality: 'Lagos', addressCountry: 'PT' },
     ],
     areaServed: [{ '@type': 'Country', name: 'Portugal' }, { '@type': 'Country', name: 'Spain' }],
     knowsLanguage: ['en', 'pt', 'es', 'de'],

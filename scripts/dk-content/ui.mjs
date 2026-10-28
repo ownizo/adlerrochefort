@@ -60,7 +60,7 @@ export const DK_BRANCHES = [
 
 export const DK_UI = {
   skipLink: 'Gå til indholdet',
-  asfBar: 'Registreret forsikringsformidler — ASF nr. 425591790/3 · Portugal og Spanien · Lissabon og Lagos',
+  asfBar: 'Registreret forsikringsformidler — ASF nr. 425591790/3 · Portugal og Spanien · Lissabon',
   navAria: 'Hovednavigation',
   navCta: 'Skriftlig vurdering',
 
@@ -97,7 +97,7 @@ export const DK_UI = {
   },
   mobileCta: 'Skriftlig vurdering',
   breadcrumbAria: 'Brødkrummer',
-  heroMeta: 'Registreret forsikringsformidler · ASF nr. 425591790/3 · Lissabon og Lagos',
+  heroMeta: 'Registreret forsikringsformidler · ASF nr. 425591790/3 · Lissabon',
   heroCta: 'Bed om en skriftlig vurdering',
   relatedTitle: 'Relaterede sider',
   pullquoteAria: 'Citat',
@@ -170,7 +170,7 @@ export const DK_UI = {
   },
 
   footer: {
-    desc: 'Forsikringsformidler for private kunder med betydelige formuer i Portugal og Spanien, med kontorer i Lissabon og Lagos. Individuel tegning, skriftlig rådgivning og én rådgiver fra første kontakt til skade.',
+    desc: 'Forsikringsformidler for private kunder med betydelige formuer i Portugal og Spanien, med hovedkontor i Lissabon. Individuel tegning, skriftlig rådgivning og én rådgiver fra første kontakt til skade.',
     badge: 'Registreret forsikringsformidler — ASF nr. 425591790/3',
     coverTitle: 'Forsikringer',
     coverLinks: [

@@ -41,14 +41,6 @@ const NAP = {
       postalCode: '1990-019',
       addressCountry: 'PT',
     },
-    lagos: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Varandas de São João 4',
-      addressLocality: 'Lagos',
-      addressRegion: 'Algarve',
-      postalCode: '8600-324',
-      addressCountry: 'PT',
-    },
   },
 };
 
@@ -56,7 +48,7 @@ const NAP = {
 function checkAddress(a, where, issues) {
   const office = /Atlântico/.test(a.streetAddress || '') ? 'lisboa' : /Varandas/.test(a.streetAddress || '') ? 'lagos' : null;
   if (!office) {
-    issues.push({ ...where, field: 'streetAddress', found: a.streetAddress, expected: 'one of the two offices' });
+    issues.push({ ...where, field: 'streetAddress', found: a.streetAddress, expected: 'the Lisbon head office' });
     return;
   }
   for (const [k, v] of Object.entries(NAP.offices[office])) {

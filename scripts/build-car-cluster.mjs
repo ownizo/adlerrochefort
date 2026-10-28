@@ -178,7 +178,7 @@ const FOOTER = `
         <li><a href="https://wa.me/351928226570" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
         <li>Av. do Atl&acirc;ntico 16, Esc. 5.07, 1990-019 Lisboa</li>
-        <li>Varandas de S&atilde;o Jo&atilde;o 4, 8600-324 Lagos</li>
+        <li>Head office · no walk-in service, meetings by appointment only</li>
       </ul>
     </div>
     <div>
@@ -355,10 +355,9 @@ const PROVIDER = {
   telephone: '+351928226570',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Varandas de São João 4',
-    postalCode: '8600-324',
-    addressLocality: 'Lagos',
-    addressRegion: 'Algarve',
+    streetAddress: 'Av. do Atlântico 16, Esc. 5.07',
+    postalCode: '1990-019',
+    addressLocality: 'Lisboa',
     addressCountry: 'PT',
   },
 };

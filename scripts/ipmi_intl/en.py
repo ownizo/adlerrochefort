@@ -6,7 +6,7 @@ already published on the site or stated by the owner.
 UI = {
     "home": "Home",
     "hub": "International health insurance",
-    "meta": "EU-regulated insurance broker · ASF no. 425591790/3 · Lisbon · Lagos · Reviewed 18 October 2026",
+    "meta": "EU-regulated insurance broker · ASF no. 425591790/3 · Lisbon · Reviewed 18 October 2026",
     "author": "Written and reviewed by <strong>Hugo Gonçalves</strong>, Founder &amp; Risk Management Specialist at Adler &amp; Rochefort. Degree in Business Management (University of Hertfordshire) and ongoing training at the Chartered Insurance Institute (CII), London.",
     "lang_policy": None,
     "facts_h2": "Key facts",

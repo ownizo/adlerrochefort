@@ -159,13 +159,6 @@ const ORG_LD = {
       postalCode: '1990-019',
       addressCountry: 'PT',
     },
-    {
-      '@type': 'PostalAddress',
-      streetAddress: 'Varandas de São João 4',
-      addressLocality: 'Lagos',
-      postalCode: '8600-324',
-      addressCountry: 'PT',
-    },
   ],
   sameAs: [
     'https://www.facebook.com/adlerrochefort',
@@ -920,7 +913,7 @@ ${footerLangs(market, page)}
         <li><a href="mailto:insurance@adlerrochefort.com">${iso(market, 'insurance@adlerrochefort.com')}</a></li>
         <li><a href="tel:+351928226570">${iso(market, '+351 928 226 570')}</a></li>
         <li><span>${iso(market, 'Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal')}</span></li>
-        <li><span>${iso(market, 'Varandas de São João 4<br>8600-324 Lagos, Portugal')}</span></li>
+        <li><span>${iso(market, 'Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lagos, Portugal')}</span></li>
         <li><a href="#${market.ui.formId}">${ft.contactCta}</a></li>
         <li>
           ${SOCIAL_SVGS}
@@ -990,7 +983,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}">$
     ? `<section class="pullquote-band" aria-label="${esc(ui.pullquoteAria)}">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>${iso(market, 'Adler &amp; Rochefort · Lisboa · Lagos')}</cite>
+    <cite>${iso(market, 'Adler &amp; Rochefort · Lisboa')}</cite>
   </blockquote>
 </section>`
     : '';

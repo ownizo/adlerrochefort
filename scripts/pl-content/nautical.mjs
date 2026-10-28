@@ -132,7 +132,7 @@ export const NAUTICAL_PAGE = {
 <section class="section plain" aria-labelledby="ocena">
   <div class="container narrow article-body">
     <h2 id="ocena">Pisemna ocena</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Jacht i dom nad wodą rozpatrujemy razem, z jednym doradcą od pierwszego kontaktu do likwidacji szkody. Przy jednostkach nietypowych korzystamy z rynków specjalistycznych i partnerów co-brokerage.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Jacht i dom nad wodą rozpatrujemy razem, z jednym doradcą od pierwszego kontaktu do likwidacji szkody. Przy jednostkach nietypowych korzystamy z rynków specjalistycznych i partnerów co-brokerage.</p>
     <p>Proszę przesłać obecną polisę jachtu i domu. Odpowiemy pisemnie, co obejmują, gdzie są luki i co warto zmienić przed sezonem.</p>
     <p><a href="#oferta" class="btn-cta">Poproś o pisemną ocenę</a></p>
     <p class="legal-note">Ta strona ma charakter informacyjny i nie stanowi porady prawnej co do rejestracji jednostek, koncesji ani zatrudnienia załogi. Ochrona zależy od oceny ryzyka dokonanej przez ubezpieczyciela oraz od warunków polisy faktycznie wystawionej.</p>

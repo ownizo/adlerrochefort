@@ -1563,7 +1563,7 @@ const HUB_CARDS = [
   {
     url: '/seguros-empresas-lagos/',
     title: 'Seguros para empresas em Lagos',
-    text: 'Apoio presencial no Algarve a empresas de turismo, restauração e serviços, a partir do escritório de Lagos.',
+    text: 'Apoio presencial no Algarve a empresas de turismo, restauração e serviços, a partir da nossa sede em Lisboa.',
   },
 ];
 

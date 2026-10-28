@@ -13,7 +13,7 @@
  *
  * Positioning (aligned with the PT/EN/DE hubs): a national and Iberian
  * private-client intermediary for households with significant assets —
- * offices in Lisbon and Lagos, clients across Portugal and Spain. The page
+ * head office in Lisbon, clients across Portugal and Spain. The page
  * never describes the firm as a Lagos/Algarve broker.
  */
 export const HUB_PAGE = {
@@ -237,7 +237,7 @@ export const HUB_PAGE = {
 <section class="section tint" aria-labelledby="sa-arbetar-vi">
   <div class="container narrow article-body">
     <h2 id="sa-arbetar-vi">Vilka vi är och hur vi arbetar</h2>
-    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med kontor i Lissabon och Lagos och kunder i hela Portugal och i Spanien. Vi är registrerade hos den portugisiska tillsynsmyndigheten ASF (nr 425591790/3) och arbetar i Spanien med stöd av EU:s frihet att tillhandahålla tjänster.</p>
+    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med huvudkontor i Lissabon och kunder i hela Portugal och i Spanien. Vi är registrerade hos den portugisiska tillsynsmyndigheten ASF (nr 425591790/3) och arbetar i Spanien med stöd av EU:s frihet att tillhandahålla tjänster.</p>
     <p>Arbetet handlar inte om att hitta den lägsta premien. Det handlar om att varje risk prövas individuellt, att rådet lämnas skriftligt och att samma rådgivare följer dig från första kontakt till skadereglering — någon som kan ditt ärende den dag det verkligen behövs.</p>
     <ol class="process-steps">
       <li><div><strong>Genomgång av situationen.</strong><span> Bostäder, värdeföremål, bilar, vilka som ingår i hushållet, var ni bor och hur. Skicka gärna de försäkringar ni har i dag.</span></div></li>
@@ -277,7 +277,7 @@ export const HUB_PAGE = {
     },
     {
       q: 'Var finns ni, och arbetar ni även i Spanien?',
-      a: '<p>Vi har kontor i Lissabon och Lagos och kunder i hela Portugal. I Spanien arbetar vi med stöd av EU:s frihet att tillhandahålla tjänster, under samma registrering hos ASF (nr 425591790/3). För familjer med bostäder i båda länderna innebär det en rådgivare och en genomgång för hela hushållet.</p>',
+      a: '<p>Vi har huvudkontor i Lissabon och kunder i hela Portugal. I Spanien arbetar vi med stöd av EU:s frihet att tillhandahålla tjänster, under samma registrering hos ASF (nr 425591790/3). För familjer med bostäder i båda länderna innebär det en rådgivare och en genomgång för hela hushållet.</p>',
     },
     {
       q: 'Vilka kunder arbetar ni med?',

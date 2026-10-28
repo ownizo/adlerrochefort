@@ -33,7 +33,7 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
  * motor, professional liability) are rendered by generate-de-cluster.mjs.
  */
 
-const META = 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien';
+const META = 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Spanien';
 const PUBLISHED = '2026-09-22T12:00:00+00:00';
 
 export const LUZ_PAGE = {
@@ -41,13 +41,13 @@ export const LUZ_PAGE = {
   url: '/de/versicherung-luz/',
   title: 'Versicherung in Praia da Luz | Adler & Rochefort',
   description:
-    'Haus-, Kranken- und Autoversicherung in Praia da Luz. Villen und Zweitwohnsitze an der Bucht, Leerstand und Pool — aus unserem Büro in Lagos betreut.',
+    'Haus-, Kranken- und Autoversicherung in Praia da Luz. Villen und Zweitwohnsitze an der Bucht, Leerstand und Pool — von unserem Hauptsitz in Lissabon aus betreut.',
   keywords:
     'Versicherung Praia da Luz, Hausversicherung Luz Algarve, Versicherungsmakler Luz, Ferienhaus Versicherung Luz',
   eyebrow: 'Regional · Praia da Luz',
   h1: 'Versicherung in Praia da Luz',
   standfirst:
-    'Praia da Luz liegt in derselben Gemeinde wie unser Büro in Lagos. Die Fragen hier sind andere als in der Altstadt: Villen und Zweitwohnsitze an der Bucht, saisonaler Leerstand, Pool und der Weg zum Strand.',
+    'Praia da Luz gehört zum Kreis Lagos. Die Fragen hier sind andere als in der Altstadt: Villen und Zweitwohnsitze an der Bucht, saisonaler Leerstand, Pool und der Weg zum Strand.',
   heroMeta: META,
   heroCta: 'Angebot anfragen',
   hreflang: {},
@@ -62,14 +62,14 @@ export const LUZ_PAGE = {
   formSubject: 'Versicherung Praia da Luz',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns, worum es geht — Villa, Zweitwohnsitz, Pool, Fahrzeug oder Krankenversicherung. Unser Büro in Lagos liegt wenige Minuten entfernt.',
+    'Sagen Sie uns, worum es geht — Villa, Zweitwohnsitz, Pool, Fahrzeug oder Krankenversicherung.',
   formPlaceholder: 'Zum Beispiel: Villa oder Wohnung, Haupt- oder Zweitwohnsitz, Pool vorhanden, Leerstand über den Winter.',
   geo: { region: 'PT-08', placename: 'Praia da Luz, Lagos, Algarve' },
   sections: `
 <section class="section plain" aria-labelledby="lage">
   <div class="container narrow article-body">
     <h2 id="lage">Dieselbe Gemeinde wie Lagos — ein anderes Risikoprofil</h2>
-    <p>Praia da Luz gehört zum Kreis Lagos. Unser Sitz in der Stadt ist keine Marketingaussage, sondern die registrierte Geschäftsadresse, zehn Minuten die Küste entlang. Was sich ändert, ist die Bebauung: statt Altstadtwohnungen in <em>propriedade horizontal</em> überwiegen Villen, Reihenhäuser und Zweitwohnsitze an der Bucht. Die Police muss zur tatsächlichen Nutzung passen, nicht zum Ortsnamen auf dem Briefkopf. Den Überblick für die Stadt selbst gibt <a href="/de/versicherung-lagos/">Versicherung in Lagos</a>.</p>
+    <p>Praia da Luz gehört zum Kreis Lagos. Was sich ändert, ist die Bebauung: statt Altstadtwohnungen in <em>propriedade horizontal</em> überwiegen Villen, Reihenhäuser und Zweitwohnsitze an der Bucht. Die Police muss zur tatsächlichen Nutzung passen, nicht zum Ortsnamen auf dem Briefkopf. Den Überblick für die Stadt selbst gibt <a href="/de/versicherung-lagos/">Versicherung in Lagos</a>.</p>
   </div>
 </section>
 
@@ -97,7 +97,7 @@ export const LUZ_PAGE = {
   faq: [
     {
       q: 'Ist Ihr Büro wirklich in der Nähe von Luz?',
-      a: '<p>Ja. Eines unserer beiden Büros ist in Lagos, wenige Minuten die Küste entlang; das andere in Lissabon.</p>',
+      a: '<p>Unser Hauptsitz ist in Lissabon; Termine in der Region vereinbaren wir gern.</p>',
     },
     {
       q: 'Ist ein Ferienhaus in Luz anders zu versichern als ein Hauptwohnsitz?',
@@ -121,13 +121,13 @@ export const BURGAU_PAGE = {
   url: '/de/versicherung-burgau/',
   title: 'Versicherung in Burgau | Adler & Rochefort',
   description:
-    'Hausversicherung in Burgau an der Windküste. Atlantikwind, Salzluft und Leerstand — aus unserem Büro in Lagos betreut.',
+    'Hausversicherung in Burgau an der Windküste. Atlantikwind, Salzluft und Leerstand — von unserem Hauptsitz in Lissabon aus betreut.',
   keywords:
     'Versicherung Burgau, Hausversicherung Burgau Algarve, Ferienhaus Versicherung Burgau, Versicherungsmakler westliche Algarve',
   eyebrow: 'Regional · Burgau',
   h1: 'Versicherung in Burgau',
   standfirst:
-    'Burgau sitzt an der windoffensten Küste des portugiesischen Festlands. Unser Büro ist in Lagos, eine halbe Stunde entfernt. Die Frage hier ist nicht, ob Sturm gedeckt ist — sondern was der gewöhnliche Atlantikwind mit Dach, Beschlägen und Technik macht.',
+    'Burgau sitzt an der windoffensten Küste des portugiesischen Festlands. Die Frage hier ist nicht, ob Sturm gedeckt ist — sondern was der gewöhnliche Atlantikwind mit Dach, Beschlägen und Technik macht.',
   heroMeta: META,
   heroCta: 'Angebot anfragen',
   hreflang: { en: '/en/blog/home-insurance-sagres-vila-do-bispo/' },
@@ -142,7 +142,7 @@ export const BURGAU_PAGE = {
   formSubject: 'Versicherung Burgau',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns, worum es geht — Wohnung, Villa, Zweitwohnsitz oder Vermietung. Wir schreiben diese Küste regelmäßig, aus unserem Büro in Lagos.',
+    'Sagen Sie uns, worum es geht — Wohnung, Villa, Zweitwohnsitz oder Vermietung. Wir schreiben diese Küste regelmäßig.',
   formPlaceholder: 'Zum Beispiel: Wohnung oder Villa, Haupt- oder Zweitwohnsitz, Abstand zur Küste, Pool vorhanden.',
   geo: { region: 'PT-08', placename: 'Burgau, Vila do Bispo, Algarve' },
   sections: `
@@ -178,7 +178,7 @@ export const BURGAU_PAGE = {
     },
     {
       q: 'Wie weit ist Ihr Büro von Burgau entfernt?',
-      a: '<p>Unser Büro in Lagos liegt rund eine halbe Stunde entfernt. Die südwestlichen Concelhos schreiben wir regelmäßig.</p>',
+      a: '<p>Die südwestlichen Concelhos schreiben wir regelmäßig.</p>',
     },
   ],
   related: [
@@ -195,7 +195,7 @@ export const VILA_DO_BISPO_PAGE = {
   url: '/de/versicherung-vila-do-bispo/',
   title: 'Versicherung in Vila do Bispo | Adler & Rochefort',
   description:
-    'Hausversicherung in Vila do Bispo: Abgeschiedenheit, Assistance, Off-Grid-Anlagen und Wiederaufbau westlich von Lagos. Schriftlich, aus Lissabon und Lagos.',
+    'Hausversicherung in Vila do Bispo: Abgeschiedenheit, Assistance, Off-Grid-Anlagen und Wiederaufbau westlich von Lagos. Schriftlich, aus Lissabon.',
   keywords:
     'Versicherung Vila do Bispo, Hausversicherung Vila do Bispo, Off-Grid Versicherung Algarve, Ferienhaus Versicherung westliche Algarve',
   eyebrow: 'Regional · Vila do Bispo',
@@ -216,7 +216,7 @@ export const VILA_DO_BISPO_PAGE = {
   formSubject: 'Versicherung Vila do Bispo',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns Lage, Bauweise und ob die Immobilie am Netz hängt. Unser Büro in Lagos kennt die westlichen Concelhos aus der Praxis, nicht nur von der Karte.',
+    'Sagen Sie uns Lage, Bauweise und ob die Immobilie am Netz hängt. Wir kennen die westlichen Concelhos aus der Praxis, nicht nur von der Karte.',
   formPlaceholder: 'Zum Beispiel: Villa oder Quinta, Photovoltaik oder Batterie vorhanden, Bohrung, Leerstand, Schlüsselhalter vor Ort.',
   geo: { region: 'PT-08', placename: 'Vila do Bispo, Algarve' },
   sections: `
@@ -268,13 +268,13 @@ export const SAGRES_PAGE = {
   url: '/de/versicherung-sagres/',
   title: 'Versicherung in Sagres | Adler & Rochefort',
   description:
-    'Hausversicherung in Sagres: Atlantikwind gegen Sturmklausel, Salzluft, Isolation. Schriftlich erklärt, aus unserem Büro in Lagos.',
+    'Hausversicherung in Sagres: Atlantikwind gegen Sturmklausel, Salzluft, Isolation. Schriftlich erklärt, von unserem Hauptsitz in Lissabon aus.',
   keywords:
     'Versicherung Sagres, Hausversicherung Sagres Algarve, Ferienhaus Versicherung Sagres, Versicherungsmakler Sagres',
   eyebrow: 'Regional · Sagres',
   h1: 'Versicherung in Sagres',
   standfirst:
-    'Sagres ist die windoffenste Wohnlage auf dem portugiesischen Festland. Unser Büro liegt in Lagos, eine halbe Stunde die Küste entlang. Die Versicherungsfrage hier ist nüchtern: der vorherrschende Schaden ist fortlaufend — und fortlaufend ist genau das, was eine Gebäudepolice nicht deckt.',
+    'Sagres ist die windoffenste Wohnlage auf dem portugiesischen Festland. Die Versicherungsfrage hier ist nüchtern: der vorherrschende Schaden ist fortlaufend — und fortlaufend ist genau das, was eine Gebäudepolice nicht deckt.',
   heroMeta: META,
   heroCta: 'Angebot anfragen',
   hreflang: { en: '/en/blog/home-insurance-sagres-vila-do-bispo/' },
@@ -289,14 +289,14 @@ export const SAGRES_PAGE = {
   formSubject: 'Versicherung Sagres',
   formCta: 'Angebot anfragen',
   formIntro:
-    'Sagen Sie uns Lage, Bauweise und Nutzung. Diese Küste schreiben wir regelmäßig aus unserem Büro in Lagos — Dach, Salz und Leerstand inklusive.',
+    'Sagen Sie uns Lage, Bauweise und Nutzung. Diese Küste schreiben wir regelmäßig — Dach, Salz und Leerstand inklusive.',
   formPlaceholder: 'Zum Beispiel: Villa oder Wohnung, Abstand zur Klippe, Photovoltaik, Haupt- oder Zweitwohnsitz.',
   geo: { region: 'PT-08', placename: 'Sagres, Vila do Bispo, Algarve' },
   sections: `
 <section class="section plain" aria-labelledby="kueste">
   <div class="container narrow article-body">
     <h2 id="kueste">Die Windküste, von Lagos aus</h2>
-    <p>Die Südwestecke — Sagres, Vila do Bispo, Raposeira, Salema und Burgau — ist die windoffenste gefragte Wohnlage auf dem Festland. Diese Küste schreiben wir regelmäßig aus unserem Büro in Lagos. Die Police hier kauft man für Feuer, Sturm, Wasser, Diebstahl und Haftpflicht — nicht in der Erwartung, dass der jährliche Salz- und Windverschleiß versichert sei. Den englischen Leitfaden zu genau dieser Küste: <a href="/en/blog/home-insurance-sagres-vila-do-bispo/" hreflang="en">Home insurance in Sagres, Vila do Bispo, Salema and Burgau</a>.</p>
+    <p>Die Südwestecke — Sagres, Vila do Bispo, Raposeira, Salema und Burgau — ist die windoffenste gefragte Wohnlage auf dem Festland. Diese Küste schreiben wir regelmäßig. Die Police hier kauft man für Feuer, Sturm, Wasser, Diebstahl und Haftpflicht — nicht in der Erwartung, dass der jährliche Salz- und Windverschleiß versichert sei. Den englischen Leitfaden zu genau dieser Küste: <a href="/en/blog/home-insurance-sagres-vila-do-bispo/" hreflang="en">Home insurance in Sagres, Vila do Bispo, Salema and Burgau</a>.</p>
   </div>
 </section>
 
@@ -321,7 +321,7 @@ export const SAGRES_PAGE = {
     },
     {
       q: 'Haben Sie ein Büro in Sagres?',
-      a: '<p>Nein. Unser Büro in Lagos liegt eine halbe Stunde entfernt, das zweite ist in Lissabon. Die südwestlichen Concelhos schreiben wir regelmäßig — nah genug, ein Dach zu sehen, statt nur darüber zu lesen.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Die südwestlichen Concelhos schreiben wir regelmäßig — nah genug, ein Dach zu sehen, statt nur darüber zu lesen.</p>',
     },
     {
       q: 'Was muss ich außer dem Haus angeben?',
@@ -400,7 +400,7 @@ export const MALLORCA_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro auf Mallorca?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Versichern Sie jedes Haus auf der Insel?',
@@ -428,7 +428,7 @@ export const MADEIRA_PAGE = {
   url: '/de/versicherung-madeira/',
   title: 'Hausversicherung auf Madeira | Adler & Rochefort',
   description:
-    'Hausversicherung auf Madeira: Ribeiras, Aluvião, Sturm gegen Erdrutsch, Porto Santo als andere Insel. Aus Lissabon und Lagos betreut, schriftlich, ohne erfundene Prämien.',
+    'Hausversicherung auf Madeira: Ribeiras, Aluvião, Sturm gegen Erdrutsch, Porto Santo als andere Insel. Von Lissabon aus betreut, schriftlich, ohne erfundene Prämien.',
   keywords:
     'Hausversicherung Madeira, Versicherung Funchal, Versicherung Ribeira Brava, Porto Santo Versicherung, Aluvião Versicherung',
   eyebrow: 'Regional · Madeira',
@@ -472,7 +472,7 @@ export const MADEIRA_PAGE = {
 <section class="section plain" aria-labelledby="insel">
   <div class="container narrow article-body">
     <h2 id="insel">Die Insel benennen — und die Ribeira</h2>
-    <p>Funchal, Câmara de Lobos, Ribeira Brava, Santa Cruz und Machico sind keine austauschbaren Postleitzahlen. Was zählt, ist die Lage zur Wasserrinne und zum Hang. <strong>Porto Santo ist nicht dieselbe Insel.</strong> Sie ist flacher, sandiger, ohne dieselben steilen Einzugsgebiete. Eine Police, die beide als ein Risiko behandelt, ist die falsche Police. Unser Sitz bleibt Lagos, Varandas de São João 4. Wir haben kein Büro in Funchal und behaupten keinen Bestand auf der Insel, den wir nicht haben. Die Police selbst ist eine portugiesische Police, schriftlich von dieser Registrierung aus.</p>
+    <p>Funchal, Câmara de Lobos, Ribeira Brava, Santa Cruz und Machico sind keine austauschbaren Postleitzahlen. Was zählt, ist die Lage zur Wasserrinne und zum Hang. <strong>Porto Santo ist nicht dieselbe Insel.</strong> Sie ist flacher, sandiger, ohne dieselben steilen Einzugsgebiete. Eine Police, die beide als ein Risiko behandelt, ist die falsche Police. Unser Hauptsitz ist in Lissabon. Wir haben kein Büro in Funchal und behaupten keinen Bestand auf der Insel, den wir nicht haben. Die Police selbst ist eine portugiesische Police, schriftlich von Lissabon aus.</p>
   </div>
 </section>
 
@@ -487,7 +487,7 @@ export const MADEIRA_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro in Funchal?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Madeira ist ein portugiesisches Risiko und wird von dort aus schriftlich betreut — mit Besichtigung vor Ort, wenn der Versicherer sie verlangt.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Madeira ist ein portugiesisches Risiko und wird von dort aus schriftlich betreut — mit Besichtigung vor Ort, wenn der Versicherer sie verlangt.</p>',
     },
     {
       q: 'Deckt eine normale Überschwemmungsklausel einen Aluvião wie 2010?',
@@ -506,7 +506,7 @@ export const MADEIRA_PAGE = {
     { url: '/en/blog/home-insurance-madeira/', label: 'Home insurance in Madeira', hreflang: 'en' },
     { url: '/de/hausversicherung-portugal/', label: 'Hausversicherung in Portugal' },
     { url: '/de/versicherung-portugal/', label: 'Versicherung in Portugal' },
-    { url: '/de/versicherung-lagos/', label: 'Büros in Lissabon und Lagos' },
+    { url: '/de/versicherung-lagos/', label: 'Hauptsitz in Lissabon' },
   ],
 };
 
@@ -574,7 +574,7 @@ export const COSTA_DEL_SOL_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro in Marbella?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Versichern Sie jede Villa an der Küste?',
@@ -659,7 +659,7 @@ export const COSTA_BLANCA_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro in Alicante?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Reicht die Versicherung der Comunidad?',
@@ -743,7 +743,7 @@ export const KANAREN_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro auf Teneriffa?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus. Das gilt für jede Insel.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Spanien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus. Das gilt für jede Insel.</p>',
     },
     {
       q: 'Ist La Palma dasselbe Risiko wie Teneriffa?',
@@ -827,7 +827,7 @@ export const KATALONIEN_PAGE = {
   faq: [
     {
       q: 'Haben Sie ein Büro in Barcelona?',
-      a: '<p>Nein. Unsere Büros sind in Lissabon und Lagos. Katalonien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
+      a: '<p>Nein. Unser Hauptsitz ist in Lissabon. Katalonien betreuen wir im europäischen Dienstleistungsverkehr von der portugiesischen ASF-Registrierung aus.</p>',
     },
     {
       q: 'Reicht die Versicherung der Gemeinschaft in Barcelona?',

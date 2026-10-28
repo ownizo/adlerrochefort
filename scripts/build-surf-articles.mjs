@@ -81,7 +81,7 @@ function bodyTop(a) {
   html = swap(
     html,
     '<div class="asf-top-bar">ASF-registered insurance broker n.&ordm; 425591790/3 &mdash; <a href="/en/home-insurance-quote/">Free home insurance quote in 24h</a></div>',
-    '<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with offices in Lisbon and Lagos &mdash; <a href="/en/home-insurance-quote/">Request a written assessment</a></div>'
+    '<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with its head office in Lisbon &mdash; <a href="/en/home-insurance-quote/">Request a written assessment</a></div>'
   );
   return html;
 }
@@ -102,7 +102,7 @@ function form(a) {
     'to prepare and discuss your assessment,'
   );
   html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
-  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
+  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
   html = swap(html, '<span class="ar-trust-item">Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual</span>', '<span class="ar-trust-item">Advice given in writing</span>');
   html = swap(html, '<span class="ar-trust-item">We handle the claim for you</span>', '<span class="ar-trust-item">One adviser, from first contact to claim</span>');
   html = html.split(WA_OLD).join(WA_NEW);
@@ -114,7 +114,7 @@ function tail(a) {
   html = swap(
     html,
     `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>`,
-    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with offices in Lisbon and Lagos, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`
+    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`
   );
   html = swap(
     html,

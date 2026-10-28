@@ -19,7 +19,7 @@ export const HUB_PAGE = {
   isHub: true,
   title: 'Forsikring for danskere i Portugal og Spanien · Private client',
   description:
-    'Private client-forsikring for danskere i Portugal og Spanien: bolig, kunst, ansvar i millionklassen og international sundhed. Kontorer i Lissabon og Lagos.',
+    'Private client-forsikring for danskere i Portugal og Spanien: bolig, kunst, ansvar i millionklassen og international sundhed. Hovedkontor i Lissabon.',
   ogTitle: 'Forsikring for danskere i Portugal og Spanien — private client',
   ogDescription:
     'Boliger, kunst og samlinger, ansvar og familiebeskyttelse i Portugal og Spanien. Individuelt tegnet, skriftligt rådgivet og én rådgiver fra første kontakt til skade.',
@@ -47,7 +47,7 @@ export const HUB_PAGE = {
 <section class="section plain" aria-labelledby="hvem">
   <div class="container narrow article-body">
     <h2 id="hvem">En forsikringsformidler for private kunder i Portugal og Spanien</h2>
-    <p>Adler &amp; Rochefort er en portugisisk forsikringsformidler, registreret hos tilsynsmyndigheden ASF under nr. 425591790/3, med kontorer i <strong>Lissabon og Lagos</strong>. Vi arbejder for husstande med betydelige formuer i hele Portugal og — i henhold til EU’s frie udveksling af tjenesteydelser — i Spanien.</p>
+    <p>Adler &amp; Rochefort er en portugisisk forsikringsformidler, registreret hos tilsynsmyndigheden ASF under nr. 425591790/3, med hovedkontor i <strong>Lissabon</strong>. Vi arbejder for husstande med betydelige formuer i hele Portugal og — i henhold til EU’s frie udveksling af tjenesteydelser — i Spanien.</p>
     <p>Arbejdet samler sig om de risici, hvor en standardpolice ikke rækker:</p>
     <ul>
       <li><strong>Boliger af høj værdi</strong> — villaer, byhuse og ejendomme med pool, anneks og gæstehus, forsikret til den reelle genopførelsespris.</li>
@@ -250,7 +250,7 @@ export const HUB_PAGE = {
   audience: {
     heading: 'Hvem vi <em>er her for</em>',
     body:
-      'Vi arbejder for private husstande med betydelige formuer i Portugal og Spanien — familier med flere boliger, samlere, iværksættere og pensionister, der har flyttet hele eller dele af livet sydpå. Fra kontorerne i Lissabon og Lagos tager vi hele forsikringssiden: rådgivning, individuel tegning, løbende service og hjælp ved skade, hos den samme rådgiver hele vejen.',
+      'Vi arbejder for private husstande med betydelige formuer i Portugal og Spanien — familier med flere boliger, samlere, iværksættere og pensionister, der har flyttet hele eller dele af livet sydpå. Fra hovedkontoret i Lissabon tager vi hele forsikringssiden: rådgivning, individuel tegning, løbende service og hjælp ved skade, hos den samme rådgiver hele vejen.',
     alt: 'Forsikringsrådgiver for private kunder med betydelige formuer i Portugal og Spanien',
   },
   insurers: {
@@ -262,7 +262,7 @@ export const HUB_PAGE = {
   faq: [
     {
       q: 'Taler I dansk?',
-      a: '<p>Nej. Vi arbejder på engelsk, skriftligt, og læser og forhandler betingelserne på portugisisk over for selskaberne. Denne side er på dansk, fordi emnet er dansk — men vi har ikke dansktalende medarbejdere og intet kontor i Danmark. Vi er en portugisisk forsikringsformidler med kontorer i Lissabon og Lagos og kunder i hele Portugal og Spanien.</p>',
+      a: '<p>Nej. Vi arbejder på engelsk, skriftligt, og læser og forhandler betingelserne på portugisisk over for selskaberne. Denne side er på dansk, fordi emnet er dansk — men vi har ikke dansktalende medarbejdere og intet kontor i Danmark. Vi er en portugisisk forsikringsformidler med hovedkontor i Lissabon og kunder i hele Portugal og Spanien.</p>',
     },
     {
       q: 'Hvem arbejder I for?',

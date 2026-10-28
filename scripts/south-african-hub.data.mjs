@@ -154,7 +154,7 @@ export const ZA_HUB = {
   trust: [
     'ASF-registered broker &middot; no. 425591790/3',
     'English throughout, in writing',
-    'Lisbon and Lagos &middot; Portugal and Spain',
+    'Lisbon &middot; Portugal and Spain',
   ],
   serviceName: 'Insurance guidance for South Africans buying, relocating to, or living in Portugal',
   serviceType: 'Insurance intermediation',

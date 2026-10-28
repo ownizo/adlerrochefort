@@ -14,14 +14,6 @@
         "addressLocality": "Lisboa",
         "postalCode": "1990-019",
         "addressCountry": "PT"
-      },
-      "lagos": {
-        "@type": "PostalAddress",
-        "streetAddress": "Varandas de São João 4",
-        "addressLocality": "Lagos",
-        "addressRegion": "Algarve",
-        "postalCode": "8600-324",
-        "addressCountry": "PT"
       }
     }
   },

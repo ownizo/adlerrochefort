@@ -2,7 +2,7 @@
 UI = {
     "home": "Home",
     "hub": "Assicurazione sanitaria internazionale",
-    "meta": "Broker assicurativo regolamentato nell’UE · ASF n. 425591790/3 · Lisbona · Lagos · Rivisto il 18 ottobre 2026",
+    "meta": "Broker assicurativo regolamentato nell’UE · ASF n. 425591790/3 · Lisbona · Rivisto il 18 ottobre 2026",
     "author": "Scritto e rivisto da <strong>Hugo Gonçalves</strong>, fondatore e specialista in gestione del rischio di Adler &amp; Rochefort. Laurea in Economia aziendale (University of Hertfordshire), formazione continua presso il Chartered Insurance Institute (CII), Londra.",
     "lang_policy": ("In che lingua lavoriamo", [
         "Questa pagina è in italiano per aiutarla a capire bene le opzioni.",

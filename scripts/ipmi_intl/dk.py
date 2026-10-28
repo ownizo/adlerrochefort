@@ -2,7 +2,7 @@
 UI = {
     "home": "Forside",
     "hub": "International sundhedsforsikring",
-    "meta": "EU-reguleret forsikringsmægler · ASF nr. 425591790/3 · Lissabon · Lagos · Gennemgået 18. oktober 2026",
+    "meta": "EU-reguleret forsikringsmægler · ASF nr. 425591790/3 · Lissabon · Gennemgået 18. oktober 2026",
     "author": "Skrevet og gennemgået af <strong>Hugo Gonçalves</strong>, stifter og specialist i risikostyring hos Adler &amp; Rochefort. Uddannet i erhvervsøkonomi (University of Hertfordshire), løbende uddannelse ved Chartered Insurance Institute (CII), London.",
     "lang_policy": ("Vi arbejder på engelsk", [
         "Denne side er på dansk, så du kan forstå mulighederne.",

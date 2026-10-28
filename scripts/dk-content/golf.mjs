@@ -136,7 +136,7 @@ export const GOLF_PAGE = {
 <section class="section plain" aria-labelledby="gennemgang">
   <div class="container narrow article-body">
     <h2 id="gennemgang">Skriftlig gennemgang</h2>
-    <p>Adler &amp; Rochefort er en forsikringsformidler for private kunder og familier med betydelige formuer, med kontorer i Lissabon og Lagos, registreret hos ASF (nr. 425591790/3) og aktiv i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Hver risiko vurderes individuelt, rådgivningen gives skriftligt, og den samme rådgiver følger dig fra første kontakt til skadesopgørelse.</p>
+    <p>Adler &amp; Rochefort er en forsikringsformidler for private kunder og familier med betydelige formuer, med hovedkontor i Lissabon, registreret hos ASF (nr. 425591790/3) og aktiv i Spanien i henhold til EU’s frie udveksling af tjenesteydelser. Hver risiko vurderes individuelt, rådgivningen gives skriftligt, og den samme rådgiver følger dig fra første kontakt til skadesopgørelse.</p>
     <p>Send husets nuværende police og — hvis du har den — områdets. Du får skriftligt svar på, hvad der er dækket, hvad der mangler, og hvad der er værd at ændre.</p>
     <p><a href="#tilbud" class="btn-cta">Bed om en skriftlig gennemgang</a></p>
     <p class="legal-note">Siden er generel information. Hvilken dækning der gælder, afhænger af forsikringsselskabets risikovurdering og af betingelserne i den police, der faktisk udstedes.</p>

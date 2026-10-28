@@ -187,7 +187,7 @@ export const PL_UI = {
   },
 
   footer: {
-    desc: 'Pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku w Portugalii i Hiszpanii. Biura w Lizbonie i Lagos, indywidualna ocena ryzyka i rekomendacja na piśmie.',
+    desc: 'Pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku w Portugalii i Hiszpanii. Siedziba w Lizbonie, indywidualna ocena ryzyka i rekomendacja na piśmie.',
     badge: 'Zarejestrowany agent ubezpieczeniowy — ASF nr 425591790/3',
     coverTitle: 'Ubezpieczenia',
     coverLinks: [

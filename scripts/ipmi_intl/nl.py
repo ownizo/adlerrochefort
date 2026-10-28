@@ -2,7 +2,7 @@
 UI = {
     "home": "Home",
     "hub": "Internationale zorgverzekering",
-    "meta": "EU-gereguleerde verzekeringsmakelaar · ASF nr. 425591790/3 · Lissabon · Lagos · Gecontroleerd op 18 oktober 2026",
+    "meta": "EU-gereguleerde verzekeringsmakelaar · ASF nr. 425591790/3 · Lissabon · Gecontroleerd op 18 oktober 2026",
     "author": "Geschreven en gecontroleerd door <strong>Hugo Gonçalves</strong>, oprichter en risicomanagementspecialist van Adler &amp; Rochefort · Bachelor Bedrijfskunde (University of Hertfordshire) · Doorlopende opleiding bij het Chartered Insurance Institute (CII), Londen.",
     "lang_policy": ("Onze werktaal is Engels", [
         "Deze pagina staat in het Nederlands zodat u de mogelijkheden goed begrijpt.",

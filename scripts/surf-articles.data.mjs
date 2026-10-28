@@ -87,7 +87,7 @@ export const ARTICLES = [
       'Tell your insurer about any letting, retreat or commercial use, however occasional.',
     ],
     spain: `<p>Much of what applies in Portugal applies across the border. Spain&rsquo;s north coast is one of Europe&rsquo;s great surf regions: the Basque coast with the famous river-mouth left at <strong>Mundaka</strong> and the beaches of Zarautz, the beach breaks of <strong>Cantabria</strong> around Santander and Somo, and the wild coves of <strong>Asturias</strong>. In the Atlantic, <strong>Fuerteventura</strong> and Lanzarote offer volcanic reefs and winter warmth, and at <strong>Tarifa</strong>, on the Strait of Gibraltar, the wind makes it Europe&rsquo;s kitesurfing capital. We advise clients on homes in Spain under the EU freedom to provide services &mdash; see <a href="/en/home-insurance-spain/">home insurance in Spain</a>.</p>`,
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and Lagos, advising private clients across Portugal and Spain. For a surf house we start from the property, the way you use it and the people who use it, and give you our view in writing &mdash; one adviser from the first conversation to any claim. For larger or unusual risks we work with specialist markets and co-brokerage partners. See our <a href="/en/private-clients/">private client service</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. For a surf house we start from the property, the way you use it and the people who use it, and give you our view in writing &mdash; one adviser from the first conversation to any claim. For larger or unusual risks we work with specialist markets and co-brokerage partners. See our <a href="/en/private-clients/">private client service</a>.</p>`,
     faq: [
       [
         'When is the best time to surf in Portugal?',
@@ -193,7 +193,7 @@ export const ARTICLES = [
       'Agree who visits the house when it is empty, and how often.',
       'Tell your insurer if the house will be let, even occasionally.',
     ],
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and Lagos, advising private clients across Portugal and Spain. For a house in Ericeira we start from the property, the way you use it and the people who use it, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. For a house in Ericeira we start from the property, the way you use it and the people who use it, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
     faq: [
       [
         'When is the best time to surf in Ericeira?',
@@ -287,7 +287,7 @@ export const ARTICLES = [
       'Photograph and value cameras, boards and other kit; confirm cover away from home.',
       'Tell your insurer about any letting, even for a single big-wave week.',
     ],
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and Lagos, advising private clients across Portugal and Spain. For a home in Nazar&eacute; we look at the house, the contents and the people together, and give you our view in writing &mdash; one adviser from the first conversation to any claim, with specialist markets where the risk requires it. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. For a home in Nazar&eacute; we look at the house, the contents and the people together, and give you our view in writing &mdash; one adviser from the first conversation to any claim, with specialist markets where the risk requires it. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
     faq: [
       [
         'When is the big-wave season in Nazaré?',
@@ -387,7 +387,7 @@ export const ARTICLES = [
       'Declare solar, batteries, boreholes and outbuildings.',
       'Confirm that boards, foils and cameras are covered in the car and abroad.',
     ],
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and Lagos &mdash; half an hour from Sagres &mdash; advising private clients across Portugal and Spain. We start from the property, the way you use it and the people who use it, and give you our view in writing, with one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. We start from the property, the way you use it and the people who use it, and give you our view in writing, with one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
     faq: [
       [
         'Can you surf in Sagres all year?',
@@ -488,7 +488,7 @@ export const ARTICLES = [
       'Arrange regular visits while the house is empty.',
       'Tell your insurer about any letting or retreat, however occasional.',
     ],
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and Lagos, advising private clients across Portugal and Spain. For a monte near Aljezur we look at the house, the land, the contents and the people together, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. For a monte near Aljezur we look at the house, the land, the contents and the people together, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
     faq: [
       [
         'Which beach near Aljezur is best for beginners?',
@@ -539,11 +539,11 @@ export const ARTICLES = [
       'surfing Lagos Portugal, Meia Praia surf, Porto de Mós, Praia da Luz surf, surf Lagos Algarve, Lagos second home, luxury villa Lagos, home insurance Lagos',
     chatTopics: 'casa_luxo,casa_geral,lagos',
     cta: {
-      title: 'A home in Lagos? Our office is here.',
+      title: 'A home in Lagos? Talk to us.',
       sub: 'Send us the details and we will come back with a written assessment &mdash; the house, letting, the boat and the kit.',
     },
     intro: `<p>Lagos is not, strictly speaking, a surf town. It sits on the south coast of the Algarve, sheltered from most of the Atlantic&rsquo;s swells, around a historic centre, a river and a marina. But it may be the best base in Portugal for a surfing family: its own beaches wake up on winter swells, and the whole wild west coast &mdash; Arrifana, Amado, Castelejo, Sagres &mdash; is half an hour away.</p>
-<p>Add a year-round town, international schooling within reach and Faro airport an hour away, and it is easy to see why so many people who come for the surf end up living here. Adler &amp; Rochefort has one of its two offices in Lagos, so this is a coast we know well.</p>`,
+<p>Add a year-round town, international schooling within reach and Faro airport an hour away, and it is easy to see why so many people who come for the surf end up living here. This is a coast Adler &amp; Rochefort knows well.</p>`,
     body: [
       [
         'Surfing in Lagos itself',
@@ -587,7 +587,7 @@ export const ARTICLES = [
       'List boards, foils and cameras and confirm cover in the car and abroad.',
       'Review the building sum insured against today&rsquo;s rebuild cost.',
     ],
-    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with offices in Lisbon and in Lagos, at Varandas de S&atilde;o Jo&atilde;o, advising private clients across Portugal and Spain. For a home in Lagos we look at the house, the letting, the boat and the family together, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
+    closing: `<p>Adler &amp; Rochefort is an ASF-registered insurance intermediary with its head office in Lisbon, advising private clients across Portugal and Spain. For a home in Lagos we look at the house, the letting, the boat and the family together, and give you our view in writing &mdash; one adviser from the first conversation to any claim. The wider picture is in our guide to <a href="/en/blog/surfing-portugal-second-homes/">surfing Portugal and the second homes it attracts</a>.</p>`,
     faq: [
       [
         'Can you surf in Lagos itself?',
@@ -607,7 +607,7 @@ export const ARTICLES = [
       ],
       [
         'Do you have an office in Lagos?',
-        'Yes. Adler & Rochefort has offices in Lagos, at Varandas de São João, and in Lisbon, and advises private clients across Portugal and Spain.',
+        'Our head office is in Lisbon and has no walk-in service. We advise clients in Lagos and across Portugal and Spain in writing, by phone, WhatsApp or video call, and meet in person by appointment.',
       ],
     ],
     related: [

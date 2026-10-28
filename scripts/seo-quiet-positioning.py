@@ -81,7 +81,7 @@ add(
 add(
     "en/expat-insurance-lagos-portugal/index.html",
     "Insurance in Lagos, Algarve | Adler & Rochefort",
-    "Insurance for international residents and property owners in Lagos. Health, home, car and life, arranged from our registered office in the town.",
+    "Insurance for international residents and property owners in Lagos. Health, home, car and life, arranged in writing from our head office in Lisbon.",
 )
 add(
     "en/expat-insurance-portugal/index.html",
@@ -348,7 +348,7 @@ add(
 add(
     "de/versicherung-algarve/index.html",
     "Versicherung an der Algarve | Adler & Rochefort",
-    "Haus, Kranken und Auto für internationale Eigentümer an der Algarve. Küste, Leerstand, Pools und das private Kliniknetz — von unserem Büros in Lissabon und Lagos.",
+    "Haus, Kranken und Auto für internationale Eigentümer an der Algarve. Küste, Leerstand, Pools und das private Kliniknetz — von unserem Hauptsitz in Lissabon aus.",
 )
 add(
     "de/versicherung-carvoeiro/index.html",
@@ -368,7 +368,7 @@ add(
 add(
     "de/versicherung-lagos/index.html",
     "Versicherung in Lagos | Adler & Rochefort",
-    "Haus, Kranken und Auto in Lagos, Algarve. Altstadtwohnungen, propriedad horizontal und unser registrierter Sitz in der Stadt.",
+    "Haus, Kranken und Auto in Lagos, Algarve. Altstadtwohnungen, propriedad horizontal und Boote.",
 )
 add(
     "de/versicherung-lissabon/index.html",

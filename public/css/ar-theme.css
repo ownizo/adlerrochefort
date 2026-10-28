@@ -484,6 +484,13 @@ html body footer {
   border-top: 0 !important;
   overflow: clip;
 }
+/* plain-text items (address, head-office note) take the same tone as links */
+html body footer .footer-col-links li,
+html body footer .footer-col-links li > span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
 
 /* ── cookie notice: a floating card ────────────────────────────────────── */
 

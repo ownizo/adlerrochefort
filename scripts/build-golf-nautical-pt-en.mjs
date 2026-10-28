@@ -202,7 +202,7 @@ function enBodyTop(a) {
   html = swap(
     html,
     '<div class="asf-top-bar">ASF-registered insurance broker n.&ordm; 425591790/3 &mdash; <a href="/en/home-insurance-quote/">Free home insurance quote in 24h</a></div>',
-    '<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with offices in Lisbon and Lagos &mdash; <a href="/en/private-clients/">Request a written assessment</a></div>'
+    '<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with its head office in Lisbon &mdash; <a href="/en/private-clients/">Request a written assessment</a></div>'
   );
   // breadcrumb names this article
   html = html.replace(/(<div class="breadcrumb">[\s\S]*?<a href="\/en\/blog\/">Insights<\/a><span>&rsaquo;<\/span>\n)\s*[^<\n]+\n/, `$1  ${a.tag}\n`);
@@ -218,7 +218,7 @@ function enForm(a) {
       '<p class="ar-cta-form-lead">Tell us about the yacht, where it is berthed and the house by the water. We reply in writing within 24 hours &mdash; no call is required at any stage.</p>');
     html = swap(html, '<label><input type="checkbox" name="review" value="Boat"> Boat</label>', '<label><input type="checkbox" name="review" value="Boat" checked> Boat</label>');
     html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
-    html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
+    html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
     html = swap(html, '<span class="ar-trust-item">We handle the claim</span>', '<span class="ar-trust-item">One adviser, from first contact to claim</span>');
     return html.split(WA_Y_OLD).join(wa);
   }
@@ -231,7 +231,7 @@ function enForm(a) {
   html = swap(html, '<button type="submit" class="ar-btn ar-btn-primary">Request my free quote</button>', '<button type="submit" class="ar-btn ar-btn-primary">Request my assessment</button>');
   html = swap(html, 'to prepare and discuss your quote,', 'to prepare and discuss your assessment,');
   html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
-  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
+  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
   html = swap(html, '<span class="ar-trust-item">Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual</span>', '<span class="ar-trust-item">Advice given in writing</span>');
   html = swap(html, '<span class="ar-trust-item">We handle the claim for you</span>', '<span class="ar-trust-item">One adviser, from first contact to claim</span>');
   return html.split(WA_OLD).join(wa);
@@ -241,7 +241,7 @@ function enTail(a) {
   let html = langSelect(EN_TAIL, a.key);
   html = swap(html,
     `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>`,
-    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with offices in Lisbon and Lagos, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`);
+    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`);
   html = swap(html,
     '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking, ASF-registered insurance broker</small></div>',
     '<div class="ar-sticky-cta-label">Written assessment<small>ASF-registered private-client intermediary</small></div>');
@@ -435,7 +435,7 @@ function ptBody(a) {
 
   <div class="cta-topo">
     <div class="cta-topo-title">Peça um parecer por escrito sobre a proteção do seu património</div>
-    <div class="cta-topo-subtitle">Análise por um mediador de seguros registado na ASF, com escritórios em Lisboa e Lagos. Sem compromisso.</div>
+    <div class="cta-topo-subtitle">Análise por um mediador de seguros registado na ASF, com sede em Lisboa. Sem compromisso.</div>
     <a class="cta-btn" href="${src}">Pedir análise →</a>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>

@@ -225,7 +225,7 @@ function enBodyTop(a) {
   html = swap(
     html,
     '<div class="asf-top-bar">ASF-registered insurance broker n.&ordm; 425591790/3 &mdash; <a href="/en/home-insurance-quote/">Free home insurance quote in 24h</a></div>',
-    `<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with offices in Lisbon and Lagos &mdash; <a href="#ar-quote-form">${a.form === 'health' ? 'Request a written comparison' : 'Request a written review'}</a></div>`
+    `<div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal&rsquo;s ASF, no. 425591790/3, with its head office in Lisbon &mdash; <a href="#ar-quote-form">${a.form === 'health' ? 'Request a written comparison' : 'Request a written review'}</a></div>`
   );
   html = html.replace(/(<div class="breadcrumb">[\s\S]*?<a href="\/en\/blog\/">Insights<\/a><span>&rsaquo;<\/span>\n)\s*[^<\n]+\n/, `$1  ${a.tag}\n`);
   return html;
@@ -244,7 +244,7 @@ function enForm(a) {
     html = swap(html, 'Not tied to one insurer — Allianz, Médis, APRIL &amp; AdvanceCare', 'We place both Allianz Care and Cigna Global');
     html = swap(html, '<span class="ar-trust-item">We guide you through the NIF and paperwork</span>', '<span class="ar-trust-item">Advice given in writing</span>');
     html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
-    html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
+    html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
     html = swap(html, '<button type="submit" class="ar-btn ar-btn-primary">Request my free quote</button>', '<button type="submit" class="ar-btn ar-btn-primary">Request my comparison</button>');
     html = html.replace('<option value="Insuring my family">Insuring my family</option>', '<option value="Insuring my family">Insuring my family</option>\n<option value="International cover (Allianz Care / Cigna Global)" selected>International cover (Allianz Care / Cigna Global)</option>');
     return html;
@@ -255,7 +255,7 @@ function enForm(a) {
   html = html.replace(new RegExp(`<label><input type="checkbox" name="review" value="${review}"( data-required-group="review")?> ${review}</label>`), (m, g = '') => `<label><input type="checkbox" name="review" value="${review}"${g} checked> ${review}</label>`);
   if (!html.includes(`value="${review}"`)) throw new Error(`review option not found: ${review}`);
   html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
-  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Offices in Lisbon and Lagos</span>');
+  html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
   html = html.replace('placeholder="Optional &mdash; town, or marina"', 'placeholder="Optional &mdash; town and type of garage"');
   return html;
 }
@@ -265,7 +265,7 @@ function enTail(a) {
   let html = a.group ? langSelect(EN_TAIL, a.group) : langSelectHomes(EN_TAIL, 'en-GB', url).replace(/<span class="ar-langsel-note">[^<]*<\/span>/g, '');
   html = swap(html,
     `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>`,
-    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with offices in Lisbon and Lagos, advising households in Portugal and Spain &mdash; health, high-value homes, cars, art and collections, liability and family protection.</p>`);
+    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon, advising households in Portugal and Spain &mdash; health, high-value homes, cars, art and collections, liability and family protection.</p>`);
   html = swap(html,
     '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking, ASF-registered insurance broker</small></div>',
     `<div class="ar-sticky-cta-label">${a.form === 'health' ? 'Written comparison' : 'Written review'}<small>ASF-registered private-client intermediary</small></div>`);
@@ -455,7 +455,7 @@ function ptBody(a) {
 
   <div class="cta-topo">
     <div class="cta-topo-title">${a.ctaTop}</div>
-    <div class="cta-topo-subtitle">Análise por um agente de seguros registado na ASF, com escritórios em Lisboa e Lagos. Sem compromisso.</div>
+    <div class="cta-topo-subtitle">Análise por um agente de seguros registado na ASF, com sede em Lisboa. Sem compromisso.</div>
     <a class="cta-btn" href="${src}">Pedir análise →</a>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
@@ -569,7 +569,7 @@ function buildDe(p) {
   let html = replaceHeadCommon(DE_T, { ...p, groupKey: p.key });
   html = replaceLd(html, articleLd(p, 'de', 'Start', '/de/'));
   html = langSelect(html, p.key);
-  html = html.replace(/<div class="asf-top-bar">[\s\S]*?<\/div>/, `<div class="asf-top-bar">Adler &amp; Rochefort ist bei der ASF Portugals registriert, Nr. 425591790/3, mit Büros in Lissabon und Lagos — <a href="${p.ctaHref}">${p.ctaLabel}</a></div>`);
+  html = html.replace(/<div class="asf-top-bar">[\s\S]*?<\/div>/, `<div class="asf-top-bar">Adler &amp; Rochefort ist bei der ASF Portugals registriert, Nr. 425591790/3, mit Hauptsitz in Lissabon — <a href="${p.ctaHref}">${p.ctaLabel}</a></div>`);
   const cards = p.sections.map(([id, h2, body]) => `<div class="lp-card"><h2 id="${id}">${h2}</h2>${body}</div>`).join('\n');
   const main = `<main class="lp-main">
 <div class="lp-crumb"><a href="/de/">Start</a><span>/</span>${p.crumb}</div>
@@ -620,7 +620,7 @@ function buildNl(p) {
     <span class="eyebrow">${p.eyebrow}</span>
     <h1 id="hero-title">${p.h1}</h1>
     <p class="hero-subtitle">${p.sub}</p>
-    <p class="hero-meta">Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Gepubliceerd: 11 oktober 2026</p>
+    <p class="hero-meta">Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Gepubliceerd: 11 oktober 2026</p>
     <a href="#offerte-cta" class="btn-cta">Schriftelijke beoordeling aanvragen <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
   </div>
 </section>

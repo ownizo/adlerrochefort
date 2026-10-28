@@ -107,7 +107,7 @@ export const ES_GUIDE_PAGE = {
 <section class="section tint" aria-labelledby="jak-w-hiszpanii">
   <div class="container narrow article-body">
     <h2 id="jak-w-hiszpanii">Jak pracujemy w Hiszpanii</h2>
-    <p>Adler &amp; Rochefort (Ownizo, Unipessoal Lda.) jest agentem ubezpieczeniowym zarejestrowanym w portugalskim nadzorze ASF pod nr 425591790/3, z biurami w Lizbonie i Lagos. W Hiszpanii działamy w ramach unijnej swobody świadczenia usług — pod tym samym wpisem — z ubezpieczycielami uprawnionymi do działania na hiszpańskim rynku.</p>
+    <p>Adler &amp; Rochefort (Ownizo, Unipessoal Lda.) jest agentem ubezpieczeniowym zarejestrowanym w portugalskim nadzorze ASF pod nr 425591790/3, z siedzibą w Lizbonie. W Hiszpanii działamy w ramach unijnej swobody świadczenia usług — pod tym samym wpisem — z ubezpieczycielami uprawnionymi do działania na hiszpańskim rynku.</p>
     <ul>
       <li><strong>Polisy hiszpańskie, po hiszpańsku.</strong> Umowę zawiera się z ubezpieczycielem działającym w Hiszpanii, a dokumenty są zwykle wystawiane po hiszpańsku.</li>
       <li><strong>Wyjaśnienie na piśmie, po angielsku.</strong> Zanim cokolwiek zostanie podpisane, otrzymują Państwo pisemne omówienie sum, franszyz (<em>franquicias</em>), wyłączeń (<em>exclusiones</em>) i terminów. Nie prowadzimy obsługi po polsku — mówimy to wprost.</li>

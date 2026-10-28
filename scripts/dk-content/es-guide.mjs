@@ -46,7 +46,7 @@ export const ES_GUIDE_PAGE = {
 <section class="section plain" aria-labelledby="hvordan">
   <div class="container narrow article-body">
     <h2 id="hvordan">Hvordan vi arbejder i Spanien</h2>
-    <p>Adler &amp; Rochefort er en portugisisk forsikringsformidler, registreret hos tilsynsmyndigheden ASF under nr. 425591790/3, med kontorer i Lissabon og Lagos. I Spanien formidler vi i henhold til EU’s frie udveksling af tjenesteydelser — den samme ordning, der lader en dansk bank eller et dansk selskab arbejde i et andet EU-land uden at etablere sig der.</p>
+    <p>Adler &amp; Rochefort er en portugisisk forsikringsformidler, registreret hos tilsynsmyndigheden ASF under nr. 425591790/3, med hovedkontor i Lissabon. I Spanien formidler vi i henhold til EU’s frie udveksling af tjenesteydelser — den samme ordning, der lader en dansk bank eller et dansk selskab arbejde i et andet EU-land uden at etablere sig der.</p>
     <p>I praksis betyder det:</p>
     <ul>
       <li><strong>Spanske risici forsikres hos selskaber, der tegner i Spanien.</strong> Boligen i Estepona eller på Mallorca forsikres på spanske betingelser, med spansk skadebehandling og med adgang til <em>Consorcio de Compensación de Seguros</em>.</li>

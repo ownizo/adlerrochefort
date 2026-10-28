@@ -11,7 +11,7 @@ export const HUB_PAGE = {
   url: '/nl/verzekeringen-portugal/',
   title: 'Verzekeringen in Portugal: de juiste volgorde | Adler & Rochefort',
   description:
-    'Naar Portugal verhuizen: zorg, woning en auto in de juiste volgorde — BRP-uitschrijving, royementsverklaring, S1. Schriftelijk advies vanuit Lissabon en Lagos.',
+    'Naar Portugal verhuizen: zorg, woning en auto in de juiste volgorde — BRP-uitschrijving, royementsverklaring, S1. Schriftelijk advies vanuit Lissabon.',
   keywords:
     'verzekeringen Portugal Nederlanders, zorgverzekering Portugal, woonverzekering Portugal, autoverzekering Portugal, private client verzekering Portugal, emigreren Portugal verzekeringen',
   eyebrow: 'Verzekeringen in Portugal',
@@ -19,7 +19,7 @@ export const HUB_PAGE = {
   standfirst:
     'Verhuizen naar Portugal betekent dat elke verzekering die u had opnieuw moet worden ingericht — en dat een paar ervan op een ander moment ingaan dan u denkt. Hieronder staat per onderwerp wat er verandert, met op elke pagina het detail dat er werkelijk toe doet.',
   heroMeta:
-    'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Lagos · Laatst bijgewerkt: augustus 2026',
+    'Verzekeringsagent voor particuliere cliënten · ASF nr. 425591790/3 · Lissabon · Laatst bijgewerkt: augustus 2026',
   hreflang: { en: '/en/expat-insurance-lagos-portugal/' },
   breadcrumb: [
     { name: 'Home', url: '/nl/' },
@@ -95,7 +95,7 @@ export const HUB_PAGE = {
 <section class="section tint" aria-labelledby="wie-wij-zijn">
   <div class="container narrow article-body">
     <h2 id="wie-wij-zijn">Wie wij zijn</h2>
-    <p>Adler &amp; Rochefort is een verzekeringsagent voor particuliere cliënten met een aanzienlijk vermogen, met kantoren in Lissabon en Lagos en cliënten in heel Portugal en Spanje. Wij zijn ingeschreven bij de ASF onder nummer 425591790/3, zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Hoogwaardige woningen, kunst en collecties, gezinsaansprakelijkheid en internationale zorg worden individueel geaccepteerd; het advies krijgt u schriftelijk, en één adviseur blijft uw aanspreekpunt tot en met de schade. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
+    <p>Adler &amp; Rochefort is een verzekeringsagent voor particuliere cliënten met een aanzienlijk vermogen, met hoofdkantoor in Lissabon en cliënten in heel Portugal en Spanje. Wij zijn ingeschreven bij de ASF onder nummer 425591790/3, zijn niet gebonden aan één maatschappij en leggen hetzelfde dossier voor aan meerdere verzekeraars. Hoogwaardige woningen, kunst en collecties, gezinsaansprakelijkheid en internationale zorg worden individueel geaccepteerd; het advies krijgt u schriftelijk, en één adviseur blijft uw aanspreekpunt tot en met de schade. Op een aantal van de onderwerpen hierboven — erkenning van schadevrije jaren, acceptatie van woningen in bosgebied, panden zonder gebruiksvergunning — is dat het verschil tussen een aanbod en geen aanbod.</p>
     <p>Wat wij niet doen: fiscaal advies, juridisch advies en de legalisatietrajecten zelf. Daarvoor werkt u met een <em>contabilista</em>, een advocaat of een architect. Wat wij wél doen begint zodra die structuur er is.</p>
   </div>
 </section>`,
@@ -119,7 +119,7 @@ export const HUB_PAGE = {
     },
     {
       q: 'Werken jullie in heel Portugal, en ook in Spanje?',
-      a: '<p>Ja. Wij hebben kantoren in Lissabon en Lagos en werken voor cliënten op het hele Portugese vasteland, op Madeira en in Spanje — in Spanje op grond van het Europese vrij verrichten van diensten, onder dezelfde ASF-registratie. Lokale kennis blijft bij zorg en woning veel waard: welke ziekenhuizen gecontracteerd zijn, hoe de câmaras werken, welke gebieden bij brandrisico lastig te verzekeren zijn.</p>',
+      a: '<p>Ja. Wij hebben hoofdkantoor in Lissabon en werken voor cliënten op het hele Portugese vasteland, op Madeira en in Spanje — in Spanje op grond van het Europese vrij verrichten van diensten, onder dezelfde ASF-registratie. Lokale kennis blijft bij zorg en woning veel waard: welke ziekenhuizen gecontracteerd zijn, hoe de câmaras werken, welke gebieden bij brandrisico lastig te verzekeren zijn.</p>',
     },
   ],
   related: [

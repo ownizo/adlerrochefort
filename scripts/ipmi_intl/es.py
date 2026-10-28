@@ -2,7 +2,7 @@
 UI = {
     "home": "Inicio",
     "hub": "Seguro médico internacional",
-    "meta": "Corredor de seguros regulado en la UE · ASF n.º 425591790/3 · Lisboa · Lagos · Revisado el 18 de octubre de 2026",
+    "meta": "Corredor de seguros regulado en la UE · ASF n.º 425591790/3 · Lisboa · Revisado el 18 de octubre de 2026",
     "author": "Escrito y revisado por <strong>Hugo Gonçalves</strong>, fundador y especialista en gestión de riesgos de Adler &amp; Rochefort. Licenciado en Administración de Empresas (University of Hertfordshire) y en formación continua en el Chartered Insurance Institute (CII), Londres.",
     "lang_policy": None,
     "facts_h2": "Datos clave",

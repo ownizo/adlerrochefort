@@ -114,7 +114,7 @@ export const NICHE_BUILD_PAGE = {
 <section class="section tint" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ubezpieczenia budowy i ryzyka inżynieryjne lokujemy, tam gdzie to potrzebne, <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3, działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ubezpieczenia budowy i ryzyka inżynieryjne lokujemy, tam gdzie to potrzebne, <strong>na rynkach specjalistycznych i przez partnerów co-brokerage</strong>.</p>
     <ol class="process-steps">
       <li><div><strong>Pisemna ocena.</strong><span> Kto co ubezpiecza, gdzie są luki, jakie zapisy o ubezpieczeniach warto wprowadzić do umowy z wykonawcą.</span></div></li>
       <li><div><strong>Rynek specjalistyczny.</strong><span> Warunki CAR i OC inwestora od ubezpieczycieli, którzy znają budownictwo mieszkaniowe o wysokiej wartości.</span></div></li>

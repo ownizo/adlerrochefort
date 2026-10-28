@@ -163,7 +163,7 @@ export const ES_GUIDE_PAGE = {
 <section class="section tint" aria-labelledby="sa-arbetar-vi-es">
   <div class="container narrow article-body">
     <h2 id="sa-arbetar-vi-es">Hur vi arbetar i Spanien</h2>
-    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med kontor i Lissabon och Lagos. Vi är registrerade hos den portugisiska tillsynsmyndigheten ASF (nr 425591790/3) och arbetar i Spanien med stöd av EU:s frihet att tillhandahålla tjänster — samma registrering, samma ansvar och samma rådgivare som för familjens bostad i Portugal.</p>
+    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med huvudkontor i Lissabon. Vi är registrerade hos den portugisiska tillsynsmyndigheten ASF (nr 425591790/3) och arbetar i Spanien med stöd av EU:s frihet att tillhandahålla tjänster — samma registrering, samma ansvar och samma rådgivare som för familjens bostad i Portugal.</p>
     <ul>
       <li><strong>Spanska försäkringsbolag.</strong> Riskerna placeras hos bolag som är verksamma i Spanien och har kapacitet för den aktuella risken, med spansk skadehantering och spanska hantverkare.</li>
       <li><strong>Försäkringsbrev på spanska.</strong> Det är lagens huvudregel. Vi förklarar villkoren skriftligt på engelska — belopp, självrisker, undantag och frister — innan du skriver under.</li>

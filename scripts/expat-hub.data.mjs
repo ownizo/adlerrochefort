@@ -411,7 +411,7 @@ export const PAGE = {
       blocks: [
         {
           kind: 'p',
-          html: 'We are an insurance broker registered with the Portuguese supervisory authority (ASF) under no. 425591790/3, with offices in Lisbon and Lagos and working with private clients across Portugal and Spain. English is our working language.',
+          html: 'We are an insurance broker registered with the Portuguese supervisory authority (ASF) under no. 425591790/3, with its head office in Lisbon and working with private clients across Portugal and Spain. English is our working language.',
         },
         {
           kind: 'covers',
@@ -551,7 +551,7 @@ export const PAGE = {
     },
     {
       q: 'Do you only work in the Algarve?',
-      a: 'We work from offices in Lisbon and Lagos and arrange insurance for clients across Portugal and Spain. If you are local to the western Algarve, <a href="/en/expat-insurance-lagos-portugal/">our Lagos page</a> has the detail for the area.',
+      a: 'We work from our head office in Lisbon and arrange insurance for clients across Portugal and Spain. If you are local to the western Algarve, <a href="/en/expat-insurance-lagos-portugal/">our Lagos page</a> has the detail for the area.',
     },
     {
       q: 'What does the free insurance review cost?',

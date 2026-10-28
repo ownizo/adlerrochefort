@@ -131,7 +131,7 @@ export const NAUTICAL_PAGE = {
 <section class="section plain" aria-labelledby="genomgang">
   <div class="container narrow article-body">
     <h2 id="genomgang">Skriftlig genomgång</h2>
-    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med kontor i Lissabon och Lagos, registrerad hos ASF (nr 425591790/3) och verksam i Spanien med stöd av EU:s frihet att tillhandahålla tjänster. Båt och hus vid vattnet ser vi på tillsammans, med samma rådgivare från första kontakt till skadereglering. För ovanliga båtar arbetar vi med specialistmarknader och samarbetande förmedlare.</p>
+    <p>Adler &amp; Rochefort är en försäkringsförmedlare för privatpersoner och familjer med betydande tillgångar, med huvudkontor i Lissabon, registrerad hos ASF (nr 425591790/3) och verksam i Spanien med stöd av EU:s frihet att tillhandahålla tjänster. Båt och hus vid vattnet ser vi på tillsammans, med samma rådgivare från första kontakt till skadereglering. För ovanliga båtar arbetar vi med specialistmarknader och samarbetande förmedlare.</p>
     <p>Skicka båtens och husets försäkringar i dag. Du får skriftligt svar på vad de täcker, var luckorna finns och vad som är värt att ändra före säsongen.</p>
     <p><a href="#offert" class="btn-cta">Be om en skriftlig genomgång</a></p>
     <p class="legal-note">Sidan är allmän information och inte juridisk rådgivning om båtregistrering, koncessioner eller anställning av besättning. Vilket skydd som gäller beror på försäkringsbolagets riskbedömning och på villkoren i den försäkring som faktiskt utfärdas.</p>

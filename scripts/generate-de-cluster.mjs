@@ -83,10 +83,9 @@ const ORG_LD = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Varandas de São João 4',
-    addressLocality: 'Lagos',
-    addressRegion: 'Algarve',
-    postalCode: '8600-324',
+    streetAddress: 'Av. do Atlântico 16, Esc. 5.07',
+    addressLocality: 'Lisboa',
+    postalCode: '1990-019',
     addressCountry: 'PT',
   },
   sameAs: [
@@ -245,7 +244,7 @@ function teamHtml(page) {
   <div class="container narrow">
     <span class="eyebrow">Ihr Ansprechpartner</span>
     <h2 id="team-title">Hugo Gonçalves</h2>
-    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Spezialist für Risikomanagement · ASF 425591790/3 · Lissabon · Lagos</p>
+    <p class="hero-meta" style="margin:0 0 20px;color:var(--muted)">Gründer &amp; Spezialist für Risikomanagement · ASF 425591790/3 · Lissabon</p>
     <div class="de-team-grid">
       <picture>
         <source type="image/webp" srcset="/images/hugo-goncalves-640.webp">
@@ -605,7 +604,7 @@ const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler &amp; Rochefort</div>
-      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Büros in Lissabon und Lagos." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
+      <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Hauptsitz in Lissabon." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
         Registrierter Versicherungsmakler — ASF Nr. 425591790/3
@@ -660,7 +659,7 @@ ${footerLangs(page)}
         <li><a href="mailto:insurance@adlerrochefort.com">insurance@adlerrochefort.com</a></li>
         <li><a href="tel:+351928226570">+351 928 226 570</a></li>
         <li><span>Av. do Atlântico 16, Esc. 5.07<br>1990-019 Lisboa, Portugal</span></li>
-        <li><span>Varandas de São João 4<br>8600-324 Lagos, Portugal</span></li>
+        <li><span>Hauptsitz · kein Publikumsverkehr, Termine nur nach Vereinbarung</span></li>
         <li><a href="#angebot">Angebot anfragen</a></li>
         <li>
           <div class="footer-social">
@@ -870,7 +869,7 @@ ${page.related.map((r) => `      <li><a class="text-link" href="${esc(r.url)}"${
     ? `<section class="pullquote-band" aria-label="Zitat">
   <blockquote class="pullquote">
     ${page.pullquote}
-    <cite>Adler &amp; Rochefort · Lisboa · Lagos</cite>
+    <cite>Adler &amp; Rochefort · Lisboa</cite>
   </blockquote>
 </section>`
     : '';

@@ -132,7 +132,7 @@ export const NICHE_KR_PAGE = {
 <section class="section plain" aria-labelledby="jak-pracujemy">
   <div class="container narrow article-body">
     <h2 id="jak-pracujemy">Jak pracujemy</h2>
-    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z biurami w Lizbonie i Lagos, zarejestrowany w ASF pod numerem 425591790/3 i działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ochronę K&amp;R lokujemy <strong>na rynkach specjalistycznych i za pośrednictwem partnerów co-brokerage</strong>, którzy ten rodzaj ryzyka obsługują na co dzień.</p>
+    <p>Adler &amp; Rochefort to pośrednik ubezpieczeniowy dla klientów prywatnych o znacznym majątku, z siedzibą w Lizbonie, zarejestrowany w ASF pod numerem 425591790/3 i działający w Hiszpanii w ramach unijnej swobody świadczenia usług. Ochronę K&amp;R lokujemy <strong>na rynkach specjalistycznych i za pośrednictwem partnerów co-brokerage</strong>, którzy ten rodzaj ryzyka obsługują na co dzień.</p>
     <ol class="process-steps">
       <li><div><strong>Pisemna ocena.</strong><span> Po rozmowie opisujemy, jakiego zakresu i limitu Państwo potrzebują i dlaczego.</span></div></li>
       <li><div><strong>Rynek specjalistyczny.</strong><span> Przedstawiamy ryzyko wyspecjalizowanym ubezpieczycielom, porównujemy warunki — w tym to, która firma doradztwa kryzysowego jest przypisana do polisy.</span></div></li>

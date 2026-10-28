@@ -24,7 +24,7 @@ export const HUB_PAGE = {
   h1: 'Nicht einfach versichert. <em>Richtig versichert.</em>',
   standfirst:
     'Versicherungsberatung für Privatkunden, Familien, Eigentümer und Unternehmer in Portugal. Wir vergleichen nicht nur Preise. Wir vergleichen, wie gut Sie wirklich geschützt sind.',
-  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Lagos · Spanien',
+  heroMeta: 'Registrierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Spanien',
   heroCta: 'Versicherung anfragen',
   heroCtaSecondary: 'Beratung anfragen',
   // Die Startseiten-Gruppe umfasst inzwischen zehn Sprachen (siehe
@@ -174,7 +174,7 @@ ${insurerPanel({
       </li>
       <li>
         <span class="check">&#10003;</span>
-        <div><strong>Vor Ort in Portugal.</strong> <span>Büros in Lissabon und Lagos, Mandanten in Portugal und Spanien.</span></div>
+        <div><strong>Vor Ort in Portugal.</strong> <span>Hauptsitz in Lissabon, Mandanten in Portugal und Spanien.</span></div>
       </li>
       <li>
         <span class="check">&#10003;</span>
@@ -207,7 +207,7 @@ ${insurerPanel({
     },
     {
       q: 'Arbeiten Sie in ganz Portugal oder nur an der Algarve?',
-      a: '<p>In ganz Portugal und in Spanien. Wir haben Büros in Lissabon und Lagos; Spanien betreuen wir im europäischen Dienstleistungsverkehr von unserer ASF-Registrierung aus.</p>',
+      a: '<p>In ganz Portugal und in Spanien. Unser Hauptsitz ist in Lissabon; Spanien betreuen wir im europäischen Dienstleistungsverkehr von unserer ASF-Registrierung aus.</p>',
     },
     {
       q: 'Wo sollte ich als Erstes ansetzen?',

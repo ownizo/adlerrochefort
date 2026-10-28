@@ -48,7 +48,7 @@ export const ES_GUIDE_PAGE = {
 <section class="section plain" aria-labelledby="como-trabajamos">
   <div class="container narrow article-body">
     <h2 id="como-trabajamos">Cómo trabajamos en España</h2>
-    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en el supervisor ASF con el n.º 425591790/3, con oficinas en Lisboa y Lagos. En España ejercemos en régimen de libre prestación de servicios de la Unión Europea: el mismo mecanismo que permite a un banco o a una aseguradora de un país de la Unión trabajar en otro sin abrir allí una sucursal.</p>
+    <p>Adler &amp; Rochefort es un mediador de seguros portugués, inscrito en el supervisor ASF con el n.º 425591790/3, con sede en Lisboa. En España ejercemos en régimen de libre prestación de servicios de la Unión Europea: el mismo mecanismo que permite a un banco o a una aseguradora de un país de la Unión trabajar en otro sin abrir allí una sucursal.</p>
     <p>En la práctica, para usted significa tres cosas:</p>
     <ul>
       <li><strong>Los riesgos situados en España se aseguran con aseguradoras autorizadas para operar en España.</strong> La vivienda de Madrid o de Estepona se asegura con condiciones españolas, con peritos españoles y con acceso al <em>Consorcio de Compensación de Seguros</em>. Y la póliza de salud que pide el consulado para el visado se contrata con una entidad autorizada en España, que es lo que exige la normativa.</li>

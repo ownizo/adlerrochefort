@@ -2,7 +2,7 @@
 UI = {
     "home": "Accueil",
     "hub": "Assurance santé internationale",
-    "meta": "Courtier en assurance réglementé dans l’UE · ASF n° 425591790/3 · Lisbonne · Lagos · Revu le 18 octobre 2026",
+    "meta": "Courtier en assurance réglementé dans l’UE · ASF n° 425591790/3 · Lisbonne · Revu le 18 octobre 2026",
     "author": "Rédigé et revu par <strong>Hugo Gonçalves</strong>, fondateur et spécialiste de la gestion des risques d’Adler &amp; Rochefort. Diplômé en gestion d’entreprise (University of Hertfordshire), formation continue au Chartered Insurance Institute (CII), Londres.",
     "lang_policy": ("Notre langue de travail est l’anglais", [
         "Cette page est en français pour que vous compreniez bien les options.",
