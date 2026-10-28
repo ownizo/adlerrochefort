@@ -56,7 +56,7 @@ const NAV = `
 <div class="asf-top-bar">Adler &amp; Rochefort is registered with Portugal's ASF, no. 425591790/3, and serves Spain on a cross-border basis. <a href="/en/expat-insurance-spain/">Insurance for expats in Spain</a></div>
 <nav class="site-nav" role="navigation" aria-label="Article navigation">
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1672" height="264" loading="eager">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="617" height="144" loading="eager">
   </a>
   <div class="nav-right">
     <a href="/en/blog/" class="nav-back">Back to Insights</a>

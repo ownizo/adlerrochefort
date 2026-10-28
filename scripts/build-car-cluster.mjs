@@ -103,7 +103,7 @@ const nav = (page) => `
     <a href="${PILLAR}">Car insurance</a>
   </div>
   <a href="/en/" class="nav-logo">
-    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="1672" height="264" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
+    <img src="/images/logo-adler-rochefort.svg" alt="Adler &amp; Rochefort" class="nav-logo-img" decoding="async" width="617" height="144" loading="eager" onerror="this.remove();this.parentNode.classList.add('logo-fallback')">
     <span class="nav-logo-mark" aria-hidden="true">A&amp;R</span>
   </a>
   <div class="nav-links-right">
