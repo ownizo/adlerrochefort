@@ -1237,7 +1237,7 @@
           if (!EMAIL_RE.test(value)) return "כתובת הדוא״ל נראית חסרה.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "נא למלא מספר טלפון.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "נא לכתוב מספר עם קידומת בין־לאומית, למשל ⁦+351 912 345 678⁩.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

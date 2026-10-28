@@ -644,11 +644,10 @@
       </div>
 
       <div class="field">
-        <label for="f-phone">Teléfono <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">Teléfono</label>
         <p class="field-help" id="help-phone">Indique el número con el prefijo internacional, p. ej., +52 55 1234 5678 o +351 912 345 678.</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -854,7 +853,7 @@
           if (!EMAIL_RE.test(value)) return "La dirección de correo parece incompleta.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Indique su número de teléfono.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "Indique el número con el prefijo internacional, p. ej., +52 55 1234 5678 o +351 912 345 678.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

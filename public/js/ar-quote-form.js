@@ -228,6 +228,63 @@
       tooShort: 'נא לכתוב לפחות {min} תווים.',
       requiredGroup: 'יש לבחור לפחות אפשרות אחת.',
     },
+    // October 2026 — ES/IT/FR. Few pages in these languages use this file
+    // yet (the ES/IT clusters validate inline), but a page that does must
+    // not fall back to English messages.
+    es: {
+      required: 'Complete este campo.',
+      email: 'Introduzca un correo electrónico válido, por ejemplo nombre@email.com.',
+      sending: 'Enviando…',
+      failed:
+        'No se ha podido enviar su solicitud. Compruebe la conexión e inténtelo de nuevo — ' +
+        'no ha perdido nada de lo que escribió.',
+      startDate: 'La fecha de inicio no puede ser anterior a hoy.',
+      licenceDate: 'La fecha del permiso no puede ser anterior a la fecha de nacimiento del tomador ni posterior a hoy.',
+      licenceBeforeAge16: 'Es anterior al 16.º cumpleaños del tomador — la aceptamos igualmente, pero compruebe que la fecha es correcta.',
+      renovationYear: 'El año de la reforma no puede ser anterior a la construcción ni posterior al año actual.',
+      residenteFiscal: 'Indique si es residente fiscal en Portugal.',
+      rgpd: 'Debe aceptar para que podamos preparar la cotización.',
+      birthDate: 'La fecha de nacimiento no puede ser futura.',
+      birthDateAdult: 'El tomador debe tener al menos 18 años.',
+      tooShort: 'Escriba al menos {min} caracteres.',
+      requiredGroup: 'Seleccione al menos una opción.',
+    },
+    it: {
+      required: 'Compili questo campo.',
+      email: 'Inserisca un indirizzo email valido, per esempio nome@email.com.',
+      sending: 'Invio in corso…',
+      failed:
+        'Non è stato possibile inviare la richiesta. Controlli la connessione e riprovi — ' +
+        'non ha perso nulla di quanto ha scritto.',
+      startDate: 'La data di inizio non può essere precedente a oggi.',
+      licenceDate: 'La data della patente non può essere precedente alla data di nascita del contraente né futura.',
+      licenceBeforeAge16: 'È precedente al 16° compleanno del contraente — la accettiamo comunque, ma verifichi che la data sia corretta.',
+      renovationYear: "L'anno della ristrutturazione non può essere precedente alla costruzione né successivo all'anno in corso.",
+      residenteFiscal: 'Indichi se è residente fiscale in Portogallo.',
+      rgpd: 'Deve acconsentire perché possiamo preparare il preventivo.',
+      birthDate: 'La data di nascita non può essere futura.',
+      birthDateAdult: 'Il contraente deve avere almeno 18 anni.',
+      tooShort: 'Scriva almeno {min} caratteri.',
+      requiredGroup: 'Selezioni almeno un\'opzione.',
+    },
+    fr: {
+      required: 'Veuillez remplir ce champ.',
+      email: 'Saisissez une adresse e-mail valide, par exemple nom@email.com.',
+      sending: 'Envoi en cours…',
+      failed:
+        "Votre demande n'a pas pu être envoyée. Vérifiez votre connexion et réessayez — " +
+        "rien de ce que vous avez saisi n'a été perdu.",
+      startDate: "La date de début ne peut pas être antérieure à aujourd'hui.",
+      licenceDate: 'La date du permis ne peut pas être antérieure à la date de naissance du souscripteur, ni dans le futur.',
+      licenceBeforeAge16: "C'est avant le 16e anniversaire du souscripteur — nous l'acceptons quand même, mais vérifiez que la date est correcte.",
+      renovationYear: "L'année des travaux ne peut pas être antérieure à la construction ni postérieure à l'année en cours.",
+      residenteFiscal: 'Indiquez si vous êtes résident fiscal au Portugal.',
+      rgpd: 'Vous devez donner votre accord pour que nous puissions préparer le devis.',
+      birthDate: 'La date de naissance ne peut pas être dans le futur.',
+      birthDateAdult: 'Le souscripteur doit avoir au moins 18 ans.',
+      tooShort: 'Écrivez au moins {min} caractères.',
+      requiredGroup: 'Sélectionnez au moins une option.',
+    },
   };
 
   var lang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2);

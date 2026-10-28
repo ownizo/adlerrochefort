@@ -1226,7 +1226,7 @@
           if (!EMAIL_RE.test(value)) return "这个邮箱地址看起来不完整。";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "请填写您的电话号码。";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "请填写含国际区号的号码，例如 +351 912 345 678。";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

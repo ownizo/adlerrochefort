@@ -561,6 +561,7 @@
   <div class="container narrow">
     <h2 id="related-title">Powiązane strony</h2>
     <ul class="related">
+      <li><a class="text-link" href="/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/">Ubezpieczenie biżuterii i zegarków w Hiszpanii</a></li>
       <li><a class="text-link" href="/pl/zakup-nieruchomosci-w-hiszpanii-ubezpieczenie/">Zakup nieruchomości w Hiszpanii: ubezpieczenie</a></li>
       <li><a class="text-link" href="/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/">Odpowiedzialność cywilna rodziny w Hiszpanii</a></li>
       <li><a class="text-link" href="/pl/ubezpieczenia-hiszpania-przewodnik/">Przewodnik po ubezpieczeniach w Hiszpanii</a></li>
@@ -609,11 +610,10 @@
       </div>
 
       <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">Telefon</label>
         <p class="field-help" id="help-phone">Proszę podać numer z prefiksem kraju, np. +48 601 234 567.</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -812,7 +812,7 @@
           if (!EMAIL_RE.test(value)) return "Ten adres e-mail wygląda na niepełny.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Proszę podać numer telefonu.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "Proszę podać numer z prefiksem kraju, np. +48 601 234 567.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

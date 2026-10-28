@@ -29,6 +29,8 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PUBLIC = join(ROOT, 'public');
 
 export const PAGE_CLUSTERS = [
+  // Jewellery and watches, Portugal and Spain, October 2026 (scripts/build-jewellery-spain-pages.py).
+  { pt: '/private-clients/arte-joias-relogios/', en: '/en/art-jewellery-watches-insurance/', de: '/de/schmuck-uhren-versicherung-portugal-spanien/', es: '/es/seguro-joyas-relojes-limite-por-objeto/', nl: '/nl/sieraden-horloges-verzekering-spanje/', it: '/it/assicurazione-gioielli-orologi-spagna/', pl: '/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/', se: '/se/smycken-klockor-forsakring-spanien/', dk: '/dk/smykker-ure-forsikring-spanien/', zh: '/zh/jewellery-watch-insurance-spain/', il: '/il/jewellery-watch-insurance-spain/' },
   // Private Office — the general value proposition, October 2026 (scripts/build-private-office.mjs).
   // A pt-BR version also exists at /br/private-office/; it carries its own hreflang tags and is not
   // a pt-PT counterpart, so it is deliberately not listed under `pt`.

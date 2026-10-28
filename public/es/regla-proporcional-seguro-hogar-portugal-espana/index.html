@@ -541,7 +541,7 @@
           if (!EMAIL_RE.test(value)) return "La dirección de correo parece incompleta.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Indique su número de teléfono.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "Indique el número con el prefijo internacional, p. ej., +52 55 1234 5678 o +351 912 345 678.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

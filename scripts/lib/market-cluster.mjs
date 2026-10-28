@@ -445,11 +445,10 @@ function formHtml(market, page) {
       </div>
 
       <div class="field">
-        <label for="f-phone">${f.phone} <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">${f.phone}</label>
         <p class="field-help" id="help-phone">${f.phoneHelp}</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"${ltrInput(market)}
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -713,7 +712,7 @@ function formScript(market) {
           if (!EMAIL_RE.test(value)) return ${JSON.stringify(v.emailBad)};
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return ${JSON.stringify(v.phone)};
+          if (!value) return null; // optional since Oct 2026 — asked for later by email
           if (!PHONE_RE.test(value)) return ${JSON.stringify(v.phoneBad)};
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

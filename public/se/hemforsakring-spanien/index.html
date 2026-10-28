@@ -625,6 +625,7 @@
   <div class="container narrow">
     <h2 id="related-title">Relaterade sidor</h2>
     <ul class="related">
+      <li><a class="text-link" href="/se/smycken-klockor-forsakring-spanien/">Försäkra smycken och klockor i Spanien</a></li>
       <li><a class="text-link" href="/se/hemforsakring-portugal/">Hemförsäkring i Portugal</a></li>
       <li><a class="text-link" href="/se/ansvarsforsakring-spanien/">Ansvarsförsäkring för familjen i Spanien</a></li>
       <li><a class="text-link" href="/se/forsakring-spanien/">Försäkring i Spanien — översikt</a></li>
@@ -673,11 +674,10 @@
       </div>
 
       <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">Telefon</label>
         <p class="field-help" id="help-phone">Ange numret med landsnummer, t.ex. +46 70 123 45 67.</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -870,7 +870,7 @@
           if (!EMAIL_RE.test(value)) return "E-postadressen ser ofullständig ut.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Ange ditt telefonnummer.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "Ange numret med landsnummer, t.ex. +46 70 123 45 67.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

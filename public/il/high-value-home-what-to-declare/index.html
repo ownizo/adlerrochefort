@@ -527,11 +527,10 @@
       </div>
 
       <div class="field">
-        <label for="f-phone">טלפון <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">טלפון</label>
         <p class="field-help" id="help-phone">נא לכתוב את המספר עם קידומת בין־לאומית, למשל ⁦+972 50 123 4567⁩ או ⁦+351 912 345 678⁩.</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" dir="ltr"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -723,7 +722,7 @@
           if (!EMAIL_RE.test(value)) return "כתובת הדוא״ל נראית חסרה.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "נא למלא מספר טלפון.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "נא לכתוב מספר עם קידומת בין־לאומית, למשל ⁦+351 912 345 678⁩.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

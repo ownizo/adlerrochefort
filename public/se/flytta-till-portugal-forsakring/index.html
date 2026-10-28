@@ -584,11 +584,10 @@
       </div>
 
       <div class="field">
-        <label for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-phone">Telefon</label>
         <p class="field-help" id="help-phone">Ange numret med landsnummer, t.ex. +46 70 123 45 67.</p>
         <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-phone err-phone">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-phone err-phone">
         <span class="field-error" id="err-phone" aria-live="polite"></span>
       </div>
 
@@ -781,7 +780,7 @@
           if (!EMAIL_RE.test(value)) return "E-postadressen ser ofullständig ut.";
           return null; } },
       { id: "f-phone", error: "err-phone", validate: function (value) {
-          if (!value) return "Ange ditt telefonnummer.";
+          if (!value) return null;
           if (!PHONE_RE.test(value)) return "Ange numret med landsnummer, t.ex. +46 70 123 45 67.";
           return null; } },
       { id: "f-type", error: "err-type", validate: function (value) {

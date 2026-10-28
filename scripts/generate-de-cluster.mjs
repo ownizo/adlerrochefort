@@ -546,11 +546,10 @@ function formHtml(page) {
       </div>
 
       <div class="field">
-        <label for="f-telefon">Telefonnummer <span class="req" aria-hidden="true">*</span></label>
+        <label for="f-telefon">Telefonnummer</label>
         <p class="field-help" id="help-telefon">Wir melden uns schriftlich. Die Telefonnummer benötigt der Versicherer bei der Ausstellung der Police.</p>
         <input type="tel" id="f-telefon" name="telefon" autocomplete="tel" inputmode="tel"
-               pattern="[0-9+ ()-]{6,}"
-               required aria-required="true" aria-describedby="help-telefon err-telefon">
+               pattern="[0-9+ ()-]{6,}" aria-describedby="help-telefon err-telefon">
         <span class="field-error" id="err-telefon" aria-live="polite"></span>
       </div>
 
@@ -721,7 +720,7 @@ const FORM_SCRIPT = `<script>
           if (!EMAIL_RE.test(v)) return "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.";
           return null; } },
       { id: "f-telefon", error: "err-telefon", validate: function (v) {
-          if (!v) return "Bitte geben Sie Ihre Telefonnummer ein.";
+          if (!v) return null; // optional since Oct 2026 — asked for later by email
           if (!PHONE_RE.test(v)) return "Bitte geben Sie eine gültige Telefonnummer ein. Ziffern, Leerzeichen und ein + am Anfang sind erlaubt.";
           return null; } },
       { id: "f-typ", error: "err-typ", validate: function (v) {
