@@ -74,7 +74,7 @@ nav.breadcrumb.po-crumb span{margin:0 8px}
 main.po>section.po-hero{background:var(--ar-charcoal,#292929)!important;color:#fff!important;padding-top:clamp(48px,8vw,112px);padding-bottom:clamp(48px,8vw,104px)}
 .po-hero .po-kicker{color:var(--ar-orange-hi,#FF8A3D)}
 main.po .po-hero h1{font-size:clamp(40px,7vw,84px)!important;line-height:.98!important;letter-spacing:-.035em!important;font-weight:600!important;color:#fff!important;max-width:900px}
-main.po .po-hero p.po-lead{font-family:'Playfair Display','Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(21px,2.8vw,30px);line-height:1.3;color:rgba(255,255,255,.9)!important;margin:22px 0 0!important;max-width:780px}
+main.po .po-hero p.po-lead{font-family:'Playfair Display','Ubuntu',Georgia,serif;font-style:italic;font-size:clamp(21px,2.8vw,30px);line-height:1.3;color:rgba(255,255,255,.9)!important;margin:22px 0 0!important;max-width:780px}
 main.po .po-hero:lang(zh) p.po-lead,main.po .po-hero:lang(he) p.po-lead{font-family:var(--ar-sans,'Inter',sans-serif);font-style:normal;font-weight:400}
 .po-intro{margin-top:30px;display:grid;gap:16px;max-width:780px}
 main.po .po-hero .po-intro p{font-size:17px;line-height:1.75;color:rgba(255,255,255,.8)!important;max-width:none;margin:0!important}

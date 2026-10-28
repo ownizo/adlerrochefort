@@ -348,7 +348,7 @@ const PT_BODY_TOP = between(PT_T, '<body>', '<div class="breadcrumb">');
 const PT_TAIL = PT_T.slice(PT_T.indexOf('<footer>'));
 const PT_WA_SVG = between(PT_T, '<svg viewBox="0 0 24 24"><path d="M17.472', '</svg>', { includeEnd: true });
 const PT_EXTRA_CSS = `<style>
-  .article-body h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 500; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
+  .article-body h2 { font-family: 'Ubuntu', sans-serif; font-size: 28px; font-weight: 500; color: var(--ink); line-height: 1.25; margin: 44px 0 18px; }
   .article-body h3 { font-size: 20px; margin: 30px 0 14px; }
   .article-body a { color: var(--primary); font-weight: 600; }
   .article-faq { max-width: 780px; margin: 0 auto; padding: 0 80px 60px; }
