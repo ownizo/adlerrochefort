@@ -92,14 +92,14 @@ HUB = {
     ],
     "faq": [
         ("Preciso de morada em Portugal para ter um seguro internacional?", "Não. Para cotar pedimos apenas nome completo, data de nascimento, nacionalidade e o país onde vai viver. A apólice é baseada no seu país de residência principal, onde quer que seja."),
-        ("Sou brasileiro e vou viver na Europa. Posso ter um seguro internacional?", "Sim, se for viver fora do Brasil. O que não é possível é ter um plano internacional como residente no Brasil, porque o país exige seguro de uma seguradora local."),
+        ("Sou brasileiro e vou viver na Europa. Posso ter um seguro internacional?", "Sim, se for viver fora do Brasil. O que não é possível é ter um plano internacional como residente no Brasil, porque o país exige seguro de uma seguradora local. Veja o guia para <a href=\"/seguros/saude-internacional/brasileiros-no-exterior/\">brasileiros no exterior</a>."),
         ("O seguro internacional cobre doenças pré-existentes?", "Depende da análise clínica. A seguradora pode cobrir, excluir ou cobrir com agravamento. Ao contrário dos seguros domésticos portugueses, que em regra as excluem, há margem para negociar."),
         ("Qual é a diferença para um seguro de viagem?", "O seguro de viagem cobre urgências durante uma viagem e termina quando regressa. O seguro internacional é o seu seguro de saúde principal durante todo o ano, incluindo tratamentos programados."),
         ("Quanto custa o vosso serviço?", "Nada. Somos remunerados pela seguradora. A proposta, a comparação, a adesão e o apoio nos sinistros não têm custos para si."),
     ],
     "form_h2": "Peça a sua proposta de seguro de saúde internacional",
     "form_lead": "Quatro dados chegam para começar. Respondemos por escrito num dia útil, com a Allianz Care e a Cigna Global configuradas para si.",
-    "related": [("{HUB}allianz-care/", "Allianz Care: seguro de saúde internacional"), ("{HUB}cigna-global/", "Cigna Global: seguro de saúde internacional"),
+    "related": [("{HUB}brasileiros-no-exterior/", "Brasileiros a viver fora do Brasil"), ("{HUB}allianz-care/", "Allianz Care: seguro de saúde internacional"), ("{HUB}cigna-global/", "Cigna Global: seguro de saúde internacional"),
                 ("/blog/allianz-care-vs-cigna-global-seguro-saude-internacional/", "Allianz Care ou Cigna Global: comparação"),
                 ("/seguros/saude/", "Seguro de saúde em Portugal"), ("/blog/plano-de-saude-portugal-brasileiros/", "Plano de saúde em Portugal para brasileiros"), ("/seguros/saude/cobertura-cancro/", "Cancro e seguro de saúde")],
 }

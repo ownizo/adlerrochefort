@@ -53,7 +53,7 @@ LANGS = {
     "zh": ("zh-CN", "zh_Hans", "/zh/international-health-insurance/", "/zh/allianz-care-vs-cigna-global/", "zh-international-health-quote", False),
 }
 ORDER = ["pt", "en", "de", "es", "nl", "fr", "it", "pl", "se", "dk", "il", "zh"]
-KINDS = {"hub": "", "allianz": "allianz-care/", "cigna": "cigna-global/"}
+KINDS = {"hub": "", "allianz": "allianz-care/", "cigna": "cigna-global/", "april": "april-international/"}
 OG_LOCALE = {"pt": "pt_PT", "en": "en_GB", "de": "de_DE", "es": "es_ES", "nl": "nl_NL", "fr": "fr_FR", "it": "it_IT",
              "pl": "pl_PL", "se": "sv_SE", "dk": "da_DK", "il": "he_IL", "zh": "zh_CN"}
 HOME = {"pt": "/", "en": "/en/", "de": "/de/", "es": "/es/", "nl": "/nl/", "fr": "/fr/", "it": "/it/", "pl": "/pl/",
@@ -82,7 +82,7 @@ CSS = """<style id="ar-ipmi-intl-style">
 .ipmi-x .ipmi-wrap{max-width:860px;margin:0 auto;padding:0 20px}
 .ipmi-x .ipmi-hero{padding:48px 0 28px;text-align:start}
 .ipmi-x .ipmi-eyebrow{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.ipmi-x h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(32px,5vw,46px);line-height:1.12;margin:0 0 16px}
+.ipmi-x h1{font-family:'Ubuntu',Georgia,serif;font-weight:500;font-size:clamp(32px,5vw,46px);line-height:1.12;margin:0 0 16px}
 .ipmi-x .ipmi-lead{font-size:18px;line-height:1.65;margin:0 0 14px;color:#333}
 .ipmi-x .ipmi-meta{font-size:13px;color:var(--muted);margin:0 0 20px}
 .ipmi-x .ipmi-btn{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none}
@@ -97,7 +97,7 @@ CSS = """<style id="ar-ipmi-intl-style">
 .ipmi-x .ipmi-facts ul{margin:0;padding-inline-start:20px}
 .ipmi-x .ipmi-facts li{margin:0 0 6px;line-height:1.55;font-size:15.5px}
 .ipmi-x .ipmi-sec{padding:20px 0;border-top:1px solid var(--line)}
-.ipmi-x .ipmi-sec h2,.ipmi-x .ipmi-faq h2,.ipmi-x .ipmi-related h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(26px,3.6vw,32px);line-height:1.2;margin:8px 0 14px}
+.ipmi-x .ipmi-sec h2,.ipmi-x .ipmi-faq h2,.ipmi-x .ipmi-related h2{font-family:'Ubuntu',Georgia,serif;font-weight:500;font-size:clamp(26px,3.6vw,32px);line-height:1.2;margin:8px 0 14px}
 .ipmi-x .ipmi-sec p,.ipmi-x .ipmi-sec li{font-size:16.5px;line-height:1.7}
 .ipmi-x .ipmi-sec ul,.ipmi-x .ipmi-sec ol{padding-inline-start:22px}
 .ipmi-x .ipmi-sec li{margin-bottom:8px}
@@ -121,7 +121,7 @@ CSS = """<style id="ar-ipmi-intl-style">
 .ipmi-bc a{color:inherit}
 .ipmi-bc span{margin:0 6px}
 .ipmi-x .ar-cta-form-wrap{text-align:start}
-.ipmi-x .ar-cta-form-wrap h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+.ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>"""
 
 FORM_JS = """<script id="ar-ipmi-intl-js">
@@ -196,7 +196,21 @@ def fill(s, lang):
 
 
 def page_data(mod, kind):
-    return {"hub": mod.HUB, "allianz": mod.ALLIANZ, "cigna": mod.CIGNA}[kind]
+    return {"hub": mod.HUB, "allianz": mod.ALLIANZ, "cigna": mod.CIGNA, "april": mod.APRIL}[kind]
+
+
+def load(lang):
+    """Language module with APRIL International (scripts/ipmi_intl/april.py) folded in."""
+    import types
+    from ipmi_intl import april
+    base = importlib.import_module(f"ipmi_intl.{lang}")
+    mod = types.SimpleNamespace(**{k: getattr(base, k) for k in dir(base) if not k.startswith("__")})
+    mod.UI = april.patch_ui(lang, base.UI)
+    mod.HUB = april.patch_page(lang, "hub", base.HUB, base.CIGNA["related"])
+    mod.ALLIANZ = april.patch_page(lang, "allianz", base.ALLIANZ, base.CIGNA["related"])
+    mod.CIGNA = april.patch_page(lang, "cigna", base.CIGNA, base.CIGNA["related"])
+    mod.APRIL = april.APRIL[lang]
+    return mod
 
 
 def form_html(lang, mod, kind, page):
@@ -206,7 +220,7 @@ def form_html(lang, mod, kind, page):
     loc = LANGS[lang][1]
     utm = "".join(f'<input type="hidden" name="{n}" value="">' for n in ("utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"))
     states = "\n        ".join([f'<option value="">{esc(ui["state_ph"])}</option>'] + [f'<option value="{esc(s)}">{esc(s)}</option>' for s in US_STATES])
-    src = {"hub": "hub:ipmi", "allianz": "page:allianz-care", "cigna": "page:cigna-global"}[kind]
+    src = {"hub": "hub:ipmi", "allianz": "page:allianz-care", "cigna": "page:cigna-global", "april": "page:april-international"}[kind]
     trust = "\n    ".join(f'<span class="ar-trust-item">{t}</span>' for t in ui["trust"])
     return f"""<div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
   <h2>{page['form_h2']}</h2>
@@ -288,7 +302,7 @@ def main_html(lang, mod, kind, page):
     secs = []
     for n, (h2, body) in enumerate(page["sections"]):
         secs.append(f'  <section class="ipmi-sec" aria-labelledby="ipmi-s{n}">\n    <h2 id="ipmi-s{n}">{h2}</h2>\n    {fill(body, lang)}\n  </section>')
-        if "ipmi-table" in body and ("€" in body or "US$" in body):
+        if "ipmi-table" in body and "ipmi-benefits" not in body and ("€" in body or "US$" in body):
             secs[-1] = secs[-1].replace("\n  </section>", f'\n    <p class="ipmi-small">{ui["table_note"]}</p>\n  </section>')
     faq = "\n".join(f"      <details><summary>{q}</summary><p>{fill(a, lang)}</p></details>" for q, a in page["faq"])
     rel = []
@@ -406,7 +420,7 @@ def set_switcher(s, kind, lang):
 
 
 def build(lang, kind):
-    mod = importlib.import_module(f"ipmi_intl.{lang}")
+    mod = load(lang)
     page = page_data(mod, kind)
     if page is None:
         return None

@@ -27,3 +27,12 @@ else may be added without a source.
 
 Service language: English for NL, FR, IT, PL, SE, DK, IL and ZH pages (same
 statement as the existing pages in those languages).
+
+## APRIL International (October 2026)
+
+`april.py` holds the APRIL International (MyHealth International) page for every
+language and the patches that add APRIL International to the hubs, the trust
+strip and the related links. Source: APRIL International MyHealth International
+documents 2026-2027 supplied by the owner on 29 October 2026 (brochure, benefits
+schedule, IPID, terms and conditions, member guide). The EN, DE and ES hubs are
+hand-built and were updated by `scripts/add-april-to-ipmi-hubs.py`.
