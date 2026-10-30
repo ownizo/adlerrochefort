@@ -28,7 +28,7 @@ from home_insurers_content import HOLIDAY, HIGHVALUE, CHUBB, SECOND_HOME, HIGH_V
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 BASE = "https://adlerrochefort.com"
-DATE = "2026-10-20"
+DATE = "2026-10-30"
 
 HOLIDAY_PAGES = {
     "seguros/casa-desocupada": "pt",
@@ -172,7 +172,7 @@ def bump_dates(doc):
     doc = re.sub(r'("dateModified"\s*:\s*")[^"]*(")', lambda m: m.group(1) + DATE + m.group(2), doc)
     doc = re.sub(r'(<meta property="article:modified_time" content=")[^"]*(")', r"\g<1>" + DATE + r"\g<2>", doc)
     doc = re.sub(r'<time datetime="\d{4}-\d{2}-\d{2}">Updated [^<]+</time>',
-                 f'<time datetime="{DATE}">Updated 20 October 2026</time>', doc)
+                 f'<time datetime="{DATE}">Updated 30 October 2026</time>', doc)
     return doc
 
 
