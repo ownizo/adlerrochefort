@@ -51,18 +51,18 @@ export const BR_ARTICLES = [
     <h2>Seguro de saúde português ou internacional</h2>
     <p>Em Portugal diz-se «seguro de saúde», não «plano». A lógica é parecida com a de um plano com rede credenciada: dentro da rede (<em>rede convencionada</em>) paga um <strong>copagamento</strong> — a vossa coparticipação — por consulta ou exame; fora da rede, há reembolso parcial.</p>
     <ul>
-      <li><strong>Seguro português:</strong> cobre em Portugal; no estrangeiro, normalmente só urgências. As seguradoras emitem-no a quem tem <strong>morada de residência em Portugal</strong> e pedem o <strong>NIF de cada pessoa segura</strong>, crianças incluídas.</li>
-      <li><strong>Seguro internacional:</strong> cobre em vários países, incluindo o Brasil se o âmbito o previr, com livre escolha de médico. É a solução para quem quer continuar a tratar-se com o médico de sempre em São Paulo ou no Rio.</li>
+      <li><strong><a href="/seguros/saude/">Seguro português</a>:</strong> cobre em Portugal; no estrangeiro, normalmente só urgências. As seguradoras emitem-no a quem tem <strong>morada de residência em Portugal</strong> e pedem o <strong>NIF de cada pessoa segura</strong>, crianças incluídas.</li>
+      <li><strong><a href="/seguros/saude-internacional/brasileiros-no-exterior/">Seguro internacional</a>:</strong> cobre em vários países, incluindo o Brasil se o âmbito o previr, com livre escolha de médico. É a solução para quem quer continuar a tratar-se com o médico de sempre em São Paulo ou no Rio.</li>
     </ul>
 
     <h2>Carências e doenças pré-existentes</h2>
-    <p>A palavra é a mesma — carência — e a lógica também: períodos em que certas coberturas ainda não funcionam, mais longos para parto e cirurgias programadas. As doenças que já existem antes da contratação ficam normalmente excluídas ou sujeitas a carência. Há seguros portugueses sem questionário clínico e sem idade máxima de adesão, úteis para pais mais velhos que acompanham a família. Os dados de saúde são entregues diretamente à seguradora, nunca num formulário de site.</p>
+    <p>A palavra é a mesma — carência — e a lógica também: períodos em que certas coberturas ainda não funcionam, mais longos para parto e cirurgias programadas. As doenças que já existem antes da contratação ficam normalmente excluídas ou sujeitas a carência — veja <a href="/blog/seguro-saude-doencas-preexistentes-portugal/">como os seguros tratam as doenças pré-existentes</a>. Há seguros portugueses sem questionário clínico e sem idade máxima de adesão, úteis para pais mais velhos que acompanham a família. Os dados de saúde são entregues diretamente à seguradora, nunca num formulário de site.</p>
 
     <h2>A ordem que funciona</h2>
     <ol>
       <li>NIF para toda a família, incluindo os menores.</li>
       <li>Para o visto, um seguro de viagem com despesas médicas e repatriamento.</li>
-      <li>Morada em Portugal — e, com ela, o seguro de saúde português ou internacional.</li>
+      <li>Morada em Portugal — e, com ela, o seguro de saúde português ou internacional. Se for comprar casa, veja também <a href="/blog/comprar-imovel-portugal-brasileiros-seguros/">os seguros da compra, passo a passo</a>.</li>
       <li>Inscrição no SNS assim que tiver a documentação de residência.</li>
       <li>Só então, cancelar o plano brasileiro, se fizer sentido.</li>
     </ol>
@@ -88,13 +88,13 @@ export const BR_ARTICLES = [
     <p>No Brasil fala-se em «seguro residencial»; em Portugal, em <em>multirriscos habitação</em>. A estrutura é familiar — o imóvel e o conteúdo, a que aqui se chama <em>recheio</em> — mas há três diferenças que mudam a indemnização e que quase ninguém explica a quem chega do Brasil.</p>
 
     <h2>1. O capital é o valor de reconstrução</h2>
-    <p>O valor seguro do edifício deve ser o custo de o reconstruir, não o preço que pagou nem o valor da avaliação do banco. Em Cascais ou em Lisboa, o preço reflete sobretudo a localização; o que se segura é o que custaria voltar a construir. Se o capital ficar abaixo, aplica-se a <strong>regra proporcional</strong>: a seguradora paga na mesma proporção, mesmo num sinistro pequeno. Veja <a href="/seguros/habitacao/valor-reconstrucao/">como calcular o valor de reconstrução</a>, com o simulador SCRIM.</p>
+    <p>O valor seguro do edifício deve ser o custo de o reconstruir, não o preço que pagou nem o valor da avaliação do banco. Em Cascais ou em Lisboa, o preço reflete sobretudo a localização; o que se segura é o que custaria voltar a construir. Se o capital ficar abaixo, aplica-se a <strong><a href="/blog/subseguro-portugal/">regra proporcional</a></strong>: a seguradora paga na mesma proporção, mesmo num sinistro pequeno. Veja <a href="/seguros/habitacao/valor-reconstrucao/">como calcular o valor de reconstrução</a>, com o simulador SCRIM.</p>
 
     <h2>2. O sismo é opcional</h2>
     <p>Para quem vem do Brasil, o terramoto é uma hipótese distante. Em Portugal não é: a região de Lisboa e o Algarve são as zonas de maior risco sísmico do continente. A cobertura de <em>fenómenos sísmicos</em> contrata-se à parte e tem uma franquia em percentagem do capital. Se não for contratada, o sismo não está coberto.</p>
 
     <h2>3. O condomínio só segura o mínimo</h2>
-    <p>Num apartamento, o condomínio é obrigado por lei a ter seguro de incêndio — e muitos ficam por aí. Danos por água entre frações, sismo, a parte construída da sua fração e o seu recheio têm de estar na sua apólice. Peça a apólice do condomínio ao administrador antes de contratar a sua.</p>
+    <p>Num apartamento, o condomínio é obrigado por lei a ter seguro de incêndio — e muitos ficam por aí. Danos por água entre frações, sismo, a parte construída da sua fração e o seu recheio têm de estar na sua apólice. Peça a apólice do condomínio ao administrador antes de contratar a sua — e veja <a href="/blog/seguro-condominio-obrigatorio-guia/">o que o seguro de condomínio obrigatório cobre</a>.</p>
 
     <h2>Vocabulário que vale a pena conhecer</h2>
     <ul>
@@ -107,10 +107,10 @@ export const BR_ARTICLES = [
     </ul>
 
     <h2>Casas de valor elevado</h2>
-    <p>Para moradias em Cascais, na Quinta da Marinha ou no Algarve, colocamos apólices que vão além das seguradoras generalistas: vistoria sem custo, sem regra proporcional quando se aceitam os capitais recomendados e, em perda total, mediante acordo entre seguradora e segurado, indemnização até ao capital máximo contratado, acima do valor de reconstrução. Arte, joias e relógios em valor acordado, cobertos também quando viajam ao Brasil.</p>
+    <p>Para moradias em Cascais, na Quinta da Marinha ou no Algarve, colocamos apólices que vão além das seguradoras generalistas: vistoria sem custo, sem regra proporcional quando se aceitam os capitais recomendados e, em perda total, mediante acordo entre seguradora e segurado, indemnização até ao capital máximo contratado, acima do valor de reconstrução. Veja <a href="/seguros/habitacao/">o seguro de habitação para residências de elevado valor</a> e <a href="/private-clients/">Private Clients</a>. Arte, joias e relógios em valor acordado, cobertos também quando viajam ao Brasil.</p>
 
     <h2>Casa vazia parte do ano</h2>
-    <p>Muitas famílias passam temporadas no Brasil. As apólices têm uma cláusula de desocupação: a partir de um número de dias seguidos sem ninguém em casa, o furto e os danos por água podem ficar limitados. Declare o uso real desde o início.</p>
+    <p>Muitas famílias passam temporadas no Brasil. As apólices têm uma cláusula de desocupação: a partir de um número de dias seguidos sem ninguém em casa, o furto e os danos por água podem ficar limitados. Declare o uso real desde o início. Veja <a href="/seguros/casa-desocupada/">seguro de casa desocupada</a>.</p>
 `,
     faq: [
       { q: 'O seguro de casa é obrigatório em Portugal?', a: 'Só o seguro de incêndio nos edifícios em propriedade horizontal, normalmente contratado pelo condomínio. Com crédito habitação, o banco exige também seguro do imóvel. Para o resto, é uma decisão sua.' },
@@ -137,6 +137,7 @@ export const BR_ARTICLES = [
     <p>As condições mudam e cada caso tem pormenores: confirme a sua situação no IMT antes de deixar a carta caducar ou de precisar de a renovar.</p>
 
     <h2>As coberturas, com os nomes portugueses</h2>
+    <p>Pode ver o detalhe em <a href="/seguros/auto/">seguro automóvel</a>; o essencial, com o vocabulário do Brasil:</p>
     <ul>
       <li><strong>Responsabilidade civil</strong> — obrigatória: danos causados a terceiros. Equivale à parte de terceiros do seguro brasileiro.</li>
       <li><strong>Danos próprios</strong> — o equivalente ao «compreensivo»: danos no seu carro, com franquia normalmente em percentagem do valor.</li>
@@ -144,7 +145,7 @@ export const BR_ARTICLES = [
     </ul>
 
     <h2>O seu bônus não vem automaticamente</h2>
-    <p>No Brasil, as classes de bônus baixam o prêmio ano após ano. As seguradoras portuguesas não têm acesso a esse histórico, e as regras europeias que obrigam a reconhecer certificados de outros países da União não se aplicam ao Brasil. Peça à sua seguradora brasileira, antes de cancelar, uma declaração com os anos de seguro, a classe de bônus e os sinistros. Algumas seguradoras portuguesas valorizam-na; outras não. É uma das razões para comparar.</p>
+    <p>No Brasil, as classes de bônus baixam o prêmio ano após ano. As seguradoras portuguesas não têm acesso a esse histórico, e as regras europeias que obrigam a reconhecer certificados de outros países da União não se aplicam ao Brasil. Peça à sua seguradora brasileira, antes de cancelar, uma declaração com os anos de seguro, a classe de bônus e os sinistros. Algumas seguradoras portuguesas valorizam-na; outras não. É uma das razões para comparar. Se está a tratar ao mesmo tempo da casa, veja <a href="/blog/seguro-casa-portugal-brasileiros/">o seguro residencial em Portugal para brasileiros</a>.</p>
 
     <h2>Trazer o carro do Brasil?</h2>
     <p>Quase nunca compensa: a homologação europeia, o desalfandegamento e o ISV — o imposto português sobre veículos, calculado sobre a cilindrada e as emissões — tornam o processo caro e lento. Existe uma isenção por transferência de residência, com condições estritas, mas o normal é comprar em Portugal.</p>
@@ -179,19 +180,19 @@ export const BR_ARTICLES = [
       <li><strong>Escritura</strong> — a partir desse dia, a casa é sua e o risco também. O seguro deve começar nesse mesmo dia.</li>
       <li><strong>IMT e imposto do selo</strong> — os impostos da compra (atenção: aqui o IMT é um imposto, não o instituto dos transportes).</li>
     </ul>
-    <p>Desde 2023, comprar imóvel deixou de dar acesso à autorização de residência para investimento (o «golden visa»). Muitos brasileiros chegam por outras vias — o estatuto de igualdade, a autorização de residência CPLP, os vistos D7 ou D8 — e o seguro de saúde segue regras próprias em cada caso.</p>
+    <p>Desde 2023, comprar imóvel deixou de dar acesso à autorização de residência para investimento (o «golden visa»). Muitos brasileiros chegam por outras vias — o estatuto de igualdade, a autorização de residência CPLP, os vistos D7 ou D8 — e o seguro de saúde segue regras próprias em cada caso: veja <a href="/blog/plano-de-saude-portugal-brasileiros/">plano de saúde em Portugal para brasileiros</a>.</p>
 
     <h2>O que o banco exige — e o que não pode impor</h2>
-    <p>No financiamento imobiliário brasileiro conhece o MIP e o DFI. Em Portugal, o <em>crédito habitação</em> exige normalmente dois seguros: o <strong>multirriscos</strong> do imóvel e o <strong>seguro de vida</strong> dos titulares, com o banco como beneficiário. A diferença importante: <strong>pode escolher a seguradora</strong>. O banco pode reduzir o spread se contratar com ele, mas tem de aceitar apólices de outra seguradora que cumpram as coberturas exigidas. Faça a conta completa. Veja <a href="/seguros/habitacao/valor-reconstrucao/">o valor de reconstrução</a>.</p>
+    <p>No financiamento imobiliário brasileiro conhece o MIP e o DFI. Em Portugal, o <em>crédito habitação</em> exige normalmente dois seguros: o <strong><a href="/blog/seguro-casa-portugal-brasileiros/">multirriscos</a></strong> do imóvel e o <strong>seguro de vida</strong> dos titulares, com o banco como beneficiário. A diferença importante: <strong>pode escolher a seguradora</strong>. O banco pode reduzir o spread se contratar com ele, mas tem de aceitar apólices de outra seguradora que cumpram as coberturas exigidas. Faça a conta completa. Veja <a href="/seguros/habitacao/valor-reconstrucao/">o valor de reconstrução</a>.</p>
 
     <h2>Se vai arrendar</h2>
-    <p>Arrendar a turistas exige registo de Alojamento Local e um seguro de responsabilidade civil obrigatório; o seguro de casa normal não cobre a atividade. Em Lisboa, novos registos estão limitados em muitas freguesias — confirme antes de comprar. Para arrendamento de longa duração, a apólice do senhorio tem de dizer que a casa está arrendada.</p>
+    <p>Arrendar a turistas exige registo de Alojamento Local e um <a href="/seguros/alojamento-local/">seguro de responsabilidade civil obrigatório</a>; o seguro de casa normal não cobre a atividade. Em Lisboa, novos registos estão limitados em muitas freguesias — confirme antes de comprar. Para arrendamento de longa duração, a apólice do senhorio tem de dizer que a casa está arrendada.</p>
 
     <h2>A transferência do Brasil: o momento mais vulnerável</h2>
     <p>A fraude mais comum nas compras internacionais é simples: um email que parece do advogado ou da imobiliária anuncia uma «mudança de conta» dias antes da escritura. Confirme sempre os dados bancários por outro canal e desconfie de qualquer alteração de última hora.</p>
 
     <h2>Moradias de valor elevado</h2>
-    <p>Em Cascais, no Estoril ou no Algarve, o seguro certo tem vistoria, não aplica a regra proporcional quando aceita os capitais recomendados e, em perda total, mediante acordo entre seguradora e segurado, pode indemnizar até ao capital máximo contratado, acima do valor de reconstrução.</p>
+    <p>Em Cascais, no Estoril ou no Algarve, o seguro certo tem vistoria, não aplica a regra proporcional quando aceita os capitais recomendados e, em perda total, mediante acordo entre seguradora e segurado, pode indemnizar até ao capital máximo contratado, acima do valor de reconstrução. Veja <a href="/seguros/habitacao/">o seguro de habitação para residências de elevado valor</a> e <a href="/private-clients/">Private Clients</a>.</p>
 `,
     faq: [
       { q: 'Sou obrigado a fazer os seguros no banco?', a: 'Não. O banco pode exigir seguro do imóvel e seguro de vida com determinadas coberturas, mas tem de aceitar apólices de outra seguradora que as cumpram. Pode perder uma bonificação do spread.' },
