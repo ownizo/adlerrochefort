@@ -2,39 +2,11 @@
   "categories": {
     "pt": [
       {
-        "slug": "seguros-auto-tvde",
-        "title": "Seguros Automóvel e TVDE",
-        "short": "Automóvel e TVDE",
-        "landing": "/seguros/tvde/",
-        "landingLabel": "Seguro TVDE"
-      },
-      {
-        "slug": "hotelaria-turismo",
-        "title": "Hotelaria, Turismo e Alojamento Local",
-        "short": "Hotelaria e AL",
-        "landing": "/seguros/alojamento-local/",
-        "landingLabel": "Seguro de Alojamento Local"
-      },
-      {
         "slug": "seguros-empresariais",
         "title": "Seguros Empresariais",
         "short": "Empresas",
         "landing": "/seguros/empresarial/",
         "landingLabel": "Multirriscos Empresarial"
-      },
-      {
-        "slug": "habitacao-particulares",
-        "title": "Habitação e Particulares",
-        "short": "Habitação",
-        "landing": "/seguros/habitacao/",
-        "landingLabel": "Seguro de Habitação"
-      },
-      {
-        "slug": "condominios",
-        "title": "Seguros de Condomínio",
-        "short": "Condomínios",
-        "landing": "/seguros/condominios/",
-        "landingLabel": "Seguro de Condomínio"
       },
       {
         "slug": "seguros-saude",
@@ -135,13 +107,6 @@
         "short": "Spain Car",
         "landing": "/en/car-insurance-spain/",
         "landingLabel": "Car insurance in Spain"
-      },
-      {
-        "slug": "spain-life",
-        "title": "Spain — Life Insurance",
-        "short": "Spain Life",
-        "landing": "/en/life-insurance-spain/",
-        "landingLabel": "Life insurance in Spain"
       },
       {
         "slug": "spain-private-clients",
@@ -342,7 +307,7 @@
       {
         "slug": "responsabilidade-civil-num-evento-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/responsabilidade-civil-num-evento-portugal/",
         "category": null,
         "cluster": "riscos-profissionais",
@@ -452,7 +417,7 @@
       {
         "slug": "seguro-titulo-imovel-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-titulo-imovel-portugal/",
         "category": "habitacao-particulares",
         "tag": "Imobiliário · Titularidade",
@@ -474,7 +439,7 @@
       {
         "slug": "seguro-ciberseguranca-empresas-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-ciberseguranca-empresas-portugal/",
         "category": "seguros-empresariais",
         "tag": "Riscos Cibernéticos",
@@ -496,7 +461,7 @@
       {
         "slug": "obrigacoes-administrador-condominio-seguro",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/obrigacoes-administrador-condominio-seguro/",
         "category": "condominios",
         "tag": "Condomínios",
@@ -518,7 +483,7 @@
       {
         "slug": "seguro-condominio-capitais-desatualizados",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-condominio-capitais-desatualizados/",
         "category": "condominios",
         "tag": "Condomínios",
@@ -540,7 +505,7 @@
       {
         "slug": "seguro-condominio-obrigatorio-guia",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-condominio-obrigatorio-guia/",
         "category": "condominios",
         "tag": "Condomínios",
@@ -584,7 +549,7 @@
       {
         "slug": "alojamento-local-propriedade-horizontal-condominio",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/alojamento-local-propriedade-horizontal-condominio/",
         "category": "hotelaria-turismo",
         "tag": "Alojamento Local",
@@ -606,7 +571,7 @@
       {
         "slug": "comparar-propostas-seguro-hotel-erros-comuns",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/comparar-propostas-seguro-hotel-erros-comuns/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -628,7 +593,7 @@
       {
         "slug": "hotel-fenomenos-climaticos-extremos",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/hotel-fenomenos-climaticos-extremos/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -650,7 +615,7 @@
       {
         "slug": "quanto-custa-seguro-alojamento-local",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/quanto-custa-seguro-alojamento-local/",
         "category": "hotelaria-turismo",
         "tag": "Alojamento Local",
@@ -672,7 +637,7 @@
       {
         "slug": "rc-exploracao-unidades-turisticas",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/rc-exploracao-unidades-turisticas/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -694,7 +659,7 @@
       {
         "slug": "seguro-acidentes-pessoais-trabalhadores-hotelaria",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-acidentes-pessoais-trabalhadores-hotelaria/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -716,7 +681,7 @@
       {
         "slug": "seguro-alojamento-local-decreto-lei-76-2024",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-alojamento-local-decreto-lei-76-2024/",
         "category": "hotelaria-turismo",
         "tag": "Alojamento Local",
@@ -738,7 +703,7 @@
       {
         "slug": "seguro-multiriscos-hotel-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-multiriscos-hotel-portugal/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -760,7 +725,7 @@
       {
         "slug": "seguro-rc-multirriscos-alojamento-local",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-rc-multirriscos-alojamento-local/",
         "category": "hotelaria-turismo",
         "tag": "Alojamento Local",
@@ -782,7 +747,7 @@
       {
         "slug": "seguros-turismo-rural-hoteis-boutique",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguros-turismo-rural-hoteis-boutique/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -804,7 +769,7 @@
       {
         "slug": "allianz-april-medis-seguro-saude-portugal-2026",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/allianz-april-medis-seguro-saude-portugal-2026/",
         "category": "seguros-saude",
         "tag": "Seguros de Saúde",
@@ -826,7 +791,7 @@
       {
         "slug": "20-anos-turismo-seguros-hotelaria",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/20-anos-turismo-seguros-hotelaria/",
         "category": "tecnologia-parcerias",
         "tag": "Hotelaria & Turismo",
@@ -848,7 +813,7 @@
       {
         "slug": "seguro-saude-expatriados-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-saude-expatriados-portugal/",
         "category": "seguros-saude",
         "tag": "Seguros de Saúde · Expatriados",
@@ -892,7 +857,7 @@
       {
         "slug": "seguro-auto-expatriados",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-auto-expatriados/",
         "category": "seguros-auto-tvde",
         "tag": "Seguros Automóvel",
@@ -914,7 +879,7 @@
       {
         "slug": "seguro-tvde-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-tvde-portugal/",
         "category": "seguros-auto-tvde",
         "tag": "Seguros TVDE",
@@ -958,7 +923,7 @@
       {
         "slug": "seguro-habitacao-legalizacao",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-habitacao-legalizacao/",
         "category": "habitacao-particulares",
         "tag": "Seguros Habitação",
@@ -980,7 +945,7 @@
       {
         "slug": "seguros-bares-restaurantes-sinistros",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguros-bares-restaurantes-sinistros/",
         "category": "hotelaria-turismo",
         "tag": "Restauração & Hotelaria",
@@ -1002,7 +967,7 @@
       {
         "slug": "seguro-automovel-guia-completo",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-automovel-guia-completo/",
         "category": "seguros-auto-tvde",
         "tag": "Seguros Automóvel",
@@ -1046,7 +1011,7 @@
       {
         "slug": "seguro-saude-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-saude-portugal/",
         "category": "seguros-saude",
         "tag": "Seguros de Saúde",
@@ -1068,7 +1033,7 @@
       {
         "slug": "seguros-obrigatorios-empresas-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguros-obrigatorios-empresas-portugal/",
         "category": "seguros-empresariais",
         "tag": "Guia Legal & Compliance",
@@ -1112,7 +1077,7 @@
       {
         "slug": "seguros-empresas-distribuicao",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguros-empresas-distribuicao/",
         "category": "seguros-empresariais",
         "tag": "Distribuição & Logística",
@@ -1134,7 +1099,7 @@
       {
         "slug": "seguros-obrigatorios-hotelaria-turismo",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguros-obrigatorios-hotelaria-turismo/",
         "category": "hotelaria-turismo",
         "tag": "Hotelaria & Turismo",
@@ -1156,7 +1121,7 @@
       {
         "slug": "multirriscos-habitacao",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/multirriscos-habitacao/",
         "category": "habitacao-particulares",
         "tag": "Seguros Individuais",
@@ -1178,7 +1143,7 @@
       {
         "slug": "revisao-apolice-empresarial",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/revisao-apolice-empresarial/",
         "category": "seguros-empresariais",
         "tag": "Gestão de Seguros",
@@ -1244,7 +1209,7 @@
       {
         "slug": "ransomware-portugal-riscos-ciberneticos",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/ransomware-portugal-riscos-ciberneticos/",
         "category": "seguros-empresariais",
         "tag": "Riscos Cibernéticos",
@@ -1288,7 +1253,7 @@
       {
         "slug": "seguro-frota-erros-comuns",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-frota-erros-comuns/",
         "category": "seguros-auto-tvde",
         "tag": "Frotas & Transportes",
@@ -1310,7 +1275,7 @@
       {
         "slug": "responsabilidade-administradores-seguro-do",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/responsabilidade-administradores-seguro-do/",
         "category": "seguros-empresariais",
         "tag": "D&O / Administradores",
@@ -1332,7 +1297,7 @@
       {
         "slug": "seguro-obra-construcao",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-obra-construcao/",
         "category": "seguros-empresariais",
         "tag": "Obras & Construção",
@@ -1776,7 +1741,7 @@
       {
         "slug": "plano-de-saude-portugal-brasileiros",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/plano-de-saude-portugal-brasileiros/",
         "category": null,
         "cluster": "guias-de-seguros",
@@ -1798,7 +1763,7 @@
       {
         "slug": "seguro-casa-portugal-brasileiros",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-casa-portugal-brasileiros/",
         "category": null,
         "cluster": "guias-de-seguros",
@@ -1820,7 +1785,7 @@
       {
         "slug": "cnh-carta-conducao-portugal-seguro-auto-brasileiros",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/cnh-carta-conducao-portugal-seguro-auto-brasileiros/",
         "category": null,
         "cluster": "guias-de-seguros",
@@ -1842,7 +1807,7 @@
       {
         "slug": "comprar-imovel-portugal-brasileiros-seguros",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/comprar-imovel-portugal-brasileiros-seguros/",
         "category": null,
         "cluster": "guias-de-seguros",
@@ -1974,7 +1939,7 @@
       {
         "slug": "seguro-vida-sucessao-espanha-portugal",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/seguro-vida-sucessao-espanha-portugal/",
         "category": null,
         "tag": "Vida e sucessão",
@@ -2172,7 +2137,7 @@
       {
         "slug": "importing-a-car-to-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/importing-a-car-to-portugal/",
         "category": "motor",
         "tag": "Motor Insurance",
@@ -2214,7 +2179,7 @@
       {
         "slug": "health-insurance-requirements-portuguese-residence-visas",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-requirements-portuguese-residence-visas/",
         "category": "health-insurance",
         "tag": "Visas & Residency",
@@ -2235,7 +2200,7 @@
       {
         "slug": "allianz-home-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/allianz-home-insurance-portugal/",
         "category": "home-property",
         "tag": "Insurer Guide",
@@ -2256,7 +2221,7 @@
       {
         "slug": "alojamento-local-insurance-requirements",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/alojamento-local-insurance-requirements/",
         "category": "holiday-lets-hospitality",
         "tag": "Alojamento Local",
@@ -2319,7 +2284,7 @@
       {
         "slug": "change-bank-home-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/change-bank-home-insurance-portugal/",
         "category": "home-property",
         "tag": "Switching",
@@ -2424,7 +2389,7 @@
       {
         "slug": "home-insurance-lagoa-carvoeiro",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-lagoa-carvoeiro/",
         "category": "home-property",
         "tag": "Lagoa",
@@ -2445,7 +2410,7 @@
       {
         "slug": "home-insurance-lagos",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-lagos/",
         "category": "home-property",
         "tag": "Lagos",
@@ -2487,7 +2452,7 @@
       {
         "slug": "home-insurance-tavira",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-tavira/",
         "category": "home-property",
         "tag": "Tavira",
@@ -2930,7 +2895,7 @@
       {
         "slug": "us-buyers-property-cover-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/us-buyers-property-cover-portugal/",
         "category": "home-property",
         "tag": "Household",
@@ -3056,7 +3021,7 @@
       {
         "slug": "zurich-home-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/zurich-home-insurance-portugal/",
         "category": "home-property",
         "tag": "Insurer Guide",
@@ -3119,7 +3084,7 @@
       {
         "slug": "fiscal-representation-portugal-explained",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/fiscal-representation-portugal-explained/",
         "category": "moving-to-portugal",
         "tag": "Fiscal Representation",
@@ -3140,7 +3105,7 @@
       {
         "slug": "health-insurance-portugal-residency-visa",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-portugal-residency-visa/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -3161,7 +3126,7 @@
       {
         "slug": "how-to-get-nif-portugal-non-resident",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/how-to-get-nif-portugal-non-resident/",
         "category": "moving-to-portugal",
         "tag": "Relocation",
@@ -3182,7 +3147,7 @@
       {
         "slug": "setting-up-company-portugal-foreigners",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/setting-up-company-portugal-foreigners/",
         "category": "business-liability",
         "tag": "Company Setup",
@@ -3224,7 +3189,7 @@
       {
         "slug": "health-insurance-portugal-americans",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-portugal-americans/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -3266,7 +3231,7 @@
       {
         "slug": "pre-existing-conditions-health-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/pre-existing-conditions-health-insurance-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -3287,7 +3252,7 @@
       {
         "slug": "destination-wedding-cancellation-insurance-algarve",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/destination-wedding-cancellation-insurance-algarve/",
         "category": "holiday-lets-hospitality",
         "tag": "Event & Wedding Cover",
@@ -3350,7 +3315,7 @@
       {
         "slug": "prize-indemnity-hole-in-one-insurance-algarve",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/prize-indemnity-hole-in-one-insurance-algarve/",
         "category": "holiday-lets-hospitality",
         "tag": "Events & Promotions",
@@ -3371,7 +3336,7 @@
       {
         "slug": "property-title-risk-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/property-title-risk-portugal/",
         "category": "home-property",
         "tag": "Buying Property",
@@ -3392,7 +3357,7 @@
       {
         "slug": "algarve-home-earns-income-personal-use-vs-al-cover",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/algarve-home-earns-income-personal-use-vs-al-cover/",
         "category": "holiday-lets-hospitality",
         "tag": "AL Insurance",
@@ -3413,7 +3378,7 @@
       {
         "slug": "building-home-portugal-promoter-insurance-seguro-decenal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/building-home-portugal-promoter-insurance-seguro-decenal/",
         "category": "home-property",
         "tag": "Construction",
@@ -3476,7 +3441,7 @@
       {
         "slug": "long-term-care-planning-foreign-residents-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/long-term-care-planning-foreign-residents-portugal/",
         "category": "health-insurance",
         "tag": "Long-Term Care",
@@ -3518,7 +3483,7 @@
       {
         "slug": "moving-to-portugal-pre-existing-condition-health-cover",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/moving-to-portugal-pre-existing-condition-health-cover/",
         "category": "health-insurance",
         "tag": "Health · Relocation",
@@ -3749,7 +3714,7 @@
       {
         "slug": "key-person-insurance-businesses-abroad",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/key-person-insurance-businesses-abroad/",
         "category": "business-liability",
         "tag": "Business Insurance",
@@ -3812,7 +3777,7 @@
       {
         "slug": "track-days-performance-driving-motor-policy-exclusion",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/track-days-performance-driving-motor-policy-exclusion/",
         "category": "motor",
         "tag": "Motor Insurance",
@@ -3896,7 +3861,7 @@
       {
         "slug": "health-insurance-portugal-usa",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-portugal-usa/",
         "category": "health-insurance",
         "tag": "Americans in Portugal",
@@ -3959,7 +3924,7 @@
       {
         "slug": "allianz-health-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/allianz-health-insurance-portugal/",
         "category": "health-insurance",
         "tag": "Allianz · Health Insurance",
@@ -4001,7 +3966,7 @@
       {
         "slug": "car-insurance-cost-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/car-insurance-cost-portugal/",
         "category": "motor",
         "tag": "Car Insurance",
@@ -4043,7 +4008,7 @@
       {
         "slug": "medis-health-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/medis-health-insurance-portugal/",
         "category": "health-insurance",
         "tag": "Médis · Health Insurance",
@@ -4064,7 +4029,7 @@
       {
         "slug": "travel-insurance-expats-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/travel-insurance-expats-portugal/",
         "category": "health-insurance",
         "tag": "Travel Insurance",
@@ -4085,7 +4050,7 @@
       {
         "slug": "british-expats-brexit-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/british-expats-brexit-insurance-portugal/",
         "category": "moving-to-portugal",
         "tag": "British Expats",
@@ -4106,7 +4071,7 @@
       {
         "slug": "condominium-insurance-doesnt-cover-contents",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/condominium-insurance-doesnt-cover-contents/",
         "category": "home-property",
         "tag": "Condominium",
@@ -4127,7 +4092,7 @@
       {
         "slug": "d7-visa-health-insurance-valid-proof",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/d7-visa-health-insurance-valid-proof/",
         "category": "health-insurance",
         "tag": "D7 Visa",
@@ -4148,7 +4113,7 @@
       {
         "slug": "getting-insurance-portugal-before-nif-residency",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/getting-insurance-portugal-before-nif-residency/",
         "category": "moving-to-portugal",
         "tag": "Expat Relocation",
@@ -4169,7 +4134,7 @@
       {
         "slug": "health-insurance-cost-portugal-2026",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-cost-portugal-2026/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -4190,7 +4155,7 @@
       {
         "slug": "home-insurance-cost-algarve-price-drivers",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-cost-algarve-price-drivers/",
         "category": "home-property",
         "tag": "Home Insurance",
@@ -4232,7 +4197,7 @@
       {
         "slug": "insurance-guide-americans-moving-to-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/insurance-guide-americans-moving-to-portugal/",
         "category": "moving-to-portugal",
         "tag": "Americans",
@@ -4253,7 +4218,7 @@
       {
         "slug": "mortgage-life-insurance-foreign-buyers-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mortgage-life-insurance-foreign-buyers-portugal/",
         "category": "home-property",
         "tag": "Mortgage Life",
@@ -4274,7 +4239,7 @@
       {
         "slug": "private-health-insurance-pre-existing-condition-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/private-health-insurance-pre-existing-condition-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -4295,7 +4260,7 @@
       {
         "slug": "retiring-algarve-health-cover-65-plus",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/retiring-algarve-health-cover-65-plus/",
         "category": "health-insurance",
         "tag": "Retirement",
@@ -4337,7 +4302,7 @@
       {
         "slug": "sns-vs-private-insurance-expats-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/sns-vs-private-insurance-expats-portugal/",
         "category": "health-insurance",
         "tag": "SNS vs Private",
@@ -4358,7 +4323,7 @@
       {
         "slug": "cyber-insurance-businesses-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/cyber-insurance-businesses-portugal/",
         "category": "business-liability",
         "tag": "Cyber Risks",
@@ -4379,7 +4344,7 @@
       {
         "slug": "holiday-home-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/holiday-home-insurance-portugal/",
         "category": "home-property",
         "tag": "Holiday Home Insurance",
@@ -4400,7 +4365,7 @@
       {
         "slug": "allianz-april-medis-health-insurance-portugal-2026",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/allianz-april-medis-health-insurance-portugal-2026/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -4421,7 +4386,7 @@
       {
         "slug": "20-years-tourism-hospitality-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/20-years-tourism-hospitality-insurance/",
         "category": "holiday-lets-hospitality",
         "tag": "Hospitality & Tourism",
@@ -4484,7 +4449,7 @@
       {
         "slug": "car-insurance-expatriates",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/car-insurance-expatriates/",
         "category": "motor",
         "tag": "Car Insurance",
@@ -4505,7 +4470,7 @@
       {
         "slug": "tvde-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/tvde-insurance-portugal/",
         "category": "motor",
         "tag": "TVDE Insurance",
@@ -4568,7 +4533,7 @@
       {
         "slug": "home-insurance-legalization",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-legalization/",
         "category": "home-property",
         "tag": "Home Insurance",
@@ -4589,7 +4554,7 @@
       {
         "slug": "car-insurance-complete-guide",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/car-insurance-complete-guide/",
         "category": "motor",
         "tag": "Car Insurance",
@@ -4610,7 +4575,7 @@
       {
         "slug": "health-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -4631,7 +4596,7 @@
       {
         "slug": "home-insurance-protect-property",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-protect-property/",
         "category": "home-property",
         "tag": "Home Insurance",
@@ -4652,7 +4617,7 @@
       {
         "slug": "mandatory-insurance-companies-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mandatory-insurance-companies-portugal/",
         "category": "business-liability",
         "tag": "Legal Guide & Compliance",
@@ -4673,7 +4638,7 @@
       {
         "slug": "distribution-companies-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/distribution-companies-insurance/",
         "category": "business-liability",
         "tag": "Distribution & Logistics",
@@ -4694,7 +4659,7 @@
       {
         "slug": "mandatory-insurance-hospitality-tourism",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mandatory-insurance-hospitality-tourism/",
         "category": "holiday-lets-hospitality",
         "tag": "Hospitality & Tourism",
@@ -4736,7 +4701,7 @@
       {
         "slug": "business-insurance-policy-review",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/business-insurance-policy-review/",
         "category": "business-liability",
         "tag": "Insurance Management",
@@ -4757,7 +4722,7 @@
       {
         "slug": "home-insurance-multi-risk",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-multi-risk/",
         "category": "home-property",
         "tag": "Home Insurance",
@@ -4778,7 +4743,7 @@
       {
         "slug": "individual-car-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/individual-car-insurance/",
         "category": "motor",
         "tag": "Individual Insurance",
@@ -4820,7 +4785,7 @@
       {
         "slug": "ransomware-portugal-cyber-risks",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/ransomware-portugal-cyber-risks/",
         "category": "business-liability",
         "tag": "Cyber Risks",
@@ -4841,7 +4806,7 @@
       {
         "slug": "fleet-insurance-common-mistakes",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/fleet-insurance-common-mistakes/",
         "category": "motor",
         "tag": "Fleets & Transport",
@@ -4862,7 +4827,7 @@
       {
         "slug": "directors-and-officers-insurance-d-o",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/directors-and-officers-insurance-d-o/",
         "category": "business-liability",
         "tag": "D&O / Directors",
@@ -4883,7 +4848,7 @@
       {
         "slug": "construction-works-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/construction-works-insurance/",
         "category": "business-liability",
         "tag": "Construction & Projects",
@@ -4925,7 +4890,7 @@
       {
         "slug": "home-insurance-troia-setubal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-troia-setubal/",
         "category": "home-property",
         "tag": "Tróia",
@@ -4967,7 +4932,7 @@
       {
         "slug": "home-insurance-sagres-vila-do-bispo",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/home-insurance-sagres-vila-do-bispo/",
         "category": "home-property",
         "tag": "Sagres",
@@ -5009,7 +4974,7 @@
       {
         "slug": "insurance-portugal-spain-international-residents",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/insurance-portugal-spain-international-residents/",
         "category": null,
         "tag": "Guide",
@@ -5030,7 +4995,7 @@
       {
         "slug": "private-health-insurance-spain-expats",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/private-health-insurance-spain-expats/",
         "category": "spain-health",
         "tag": "Health insurance",
@@ -5051,7 +5016,7 @@
       {
         "slug": "health-insurance-moving-to-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-moving-to-spain/",
         "category": "spain-health",
         "tag": "Moving to Spain",
@@ -5072,7 +5037,7 @@
       {
         "slug": "spain-health-insurance-visa-residency",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/spain-health-insurance-visa-residency/",
         "category": "spain-health",
         "tag": "Visa & residency",
@@ -5093,7 +5058,7 @@
       {
         "slug": "community-insurance-apartment-owners-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/community-insurance-apartment-owners-spain/",
         "category": "spain-property",
         "tag": "Property",
@@ -5114,7 +5079,7 @@
       {
         "slug": "non-resident-property-insurance-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/non-resident-property-insurance-spain/",
         "category": "spain-property",
         "tag": "Non-resident",
@@ -5156,7 +5121,7 @@
       {
         "slug": "renting-out-property-in-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/renting-out-property-in-spain/",
         "category": "spain-property",
         "tag": "Renting out",
@@ -5177,7 +5142,7 @@
       {
         "slug": "car-insurance-spain-expats",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/car-insurance-spain-expats/",
         "category": "spain-car",
         "tag": "Car insurance",
@@ -5198,7 +5163,7 @@
       {
         "slug": "foreign-driving-licence-car-insurance-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/foreign-driving-licence-car-insurance-spain/",
         "category": "spain-car",
         "tag": "Licences",
@@ -5219,7 +5184,7 @@
       {
         "slug": "foreign-registered-car-insurance-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/foreign-registered-car-insurance-spain/",
         "category": "spain-car",
         "tag": "Foreign-registered",
@@ -5240,7 +5205,7 @@
       {
         "slug": "importing-car-to-spain-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/importing-car-to-spain-insurance/",
         "category": "spain-car",
         "tag": "Importing",
@@ -5261,7 +5226,7 @@
       {
         "slug": "no-claims-history-car-insurance-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/no-claims-history-car-insurance-spain/",
         "category": "spain-car",
         "tag": "No-claims",
@@ -5282,7 +5247,7 @@
       {
         "slug": "life-insurance-spain-expats",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/life-insurance-spain-expats/",
         "category": "spain-life",
         "tag": "Life insurance",
@@ -5303,7 +5268,7 @@
       {
         "slug": "mortgage-life-insurance-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mortgage-life-insurance-spain/",
         "category": "spain-life",
         "tag": "Mortgage",
@@ -5324,7 +5289,7 @@
       {
         "slug": "insurance-buying-property-spain",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/insurance-buying-property-spain/",
         "category": "spain-property",
         "tag": "Buying property",
@@ -5387,7 +5352,7 @@
       {
         "slug": "insurance-buying-property-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/insurance-buying-property-portugal/",
         "category": "home-property",
         "tag": "Buying property",
@@ -5408,7 +5373,7 @@
       {
         "slug": "family-moving-to-portugal-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/family-moving-to-portugal-insurance/",
         "category": "moving-to-portugal",
         "tag": "Family",
@@ -5492,7 +5457,7 @@
       {
         "slug": "mgen-health-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mgen-health-insurance-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5534,7 +5499,7 @@
       {
         "slug": "us-driving-record-car-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/us-driving-record-car-insurance-portugal/",
         "category": "motor",
         "tag": "For Americans",
@@ -5576,7 +5541,7 @@
       {
         "slug": "insurance-before-residency-d7-d8-golden-visa",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/insurance-before-residency-d7-d8-golden-visa/",
         "category": "moving-to-portugal",
         "tag": "For Americans",
@@ -5723,7 +5688,7 @@
       {
         "slug": "declined-health-cover-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/declined-health-cover-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5744,7 +5709,7 @@
       {
         "slug": "health-cover-70-75-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-cover-70-75-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5765,7 +5730,7 @@
       {
         "slug": "mgen-medis-allianz-april-acceptance-comparison",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/mgen-medis-allianz-april-acceptance-comparison/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5786,7 +5751,7 @@
       {
         "slug": "health-insurance-waiting-periods-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/health-insurance-waiting-periods-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5807,7 +5772,7 @@
       {
         "slug": "relocating-with-chronic-condition-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/relocating-with-chronic-condition-portugal/",
         "category": "health-insurance",
         "tag": "Health Insurance",
@@ -5912,7 +5877,7 @@
       {
         "slug": "vhi-laya-irish-life-portugal-health-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/vhi-laya-irish-life-portugal-health-insurance/",
         "category": "health-insurance",
         "tag": "For Irish Residents",
@@ -5933,7 +5898,7 @@
       {
         "slug": "irish-no-claims-bonus-car-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/irish-no-claims-bonus-car-insurance-portugal/",
         "category": "motor",
         "tag": "For Irish Residents",
@@ -5975,7 +5940,7 @@
       {
         "slug": "canadian-provincial-health-coverage-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/canadian-provincial-health-coverage-portugal/",
         "category": "health-insurance",
         "tag": "For Canadian Residents",
@@ -5996,7 +5961,7 @@
       {
         "slug": "canadian-driving-record-car-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/canadian-driving-record-car-insurance-portugal/",
         "category": "motor",
         "tag": "For Canadian Residents",
@@ -6017,7 +5982,7 @@
       {
         "slug": "canadian-non-resident-property-insurance-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/canadian-non-resident-property-insurance-portugal/",
         "category": "home-property",
         "tag": "For Canadian Residents",
@@ -6227,7 +6192,7 @@
       {
         "slug": "south-african-medical-aid-portugal-health-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/south-african-medical-aid-portugal-health-insurance/",
         "category": "moving-to-portugal",
         "tag": "For South Africans",
@@ -6248,7 +6213,7 @@
       {
         "slug": "south-african-driving-licence-portugal-car-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/south-african-driving-licence-portugal-car-insurance/",
         "category": "motor",
         "tag": "For South Africans",
@@ -6269,7 +6234,7 @@
       {
         "slug": "south-african-owners-portugal-home-insurance",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/south-african-owners-portugal-home-insurance/",
         "category": "home-property",
         "tag": "For South Africans",
@@ -6374,7 +6339,7 @@
       {
         "slug": "life-insurance-succession-spain-portugal",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/life-insurance-succession-spain-portugal/",
         "category": "personal-family",
         "tag": "Life & succession",
@@ -6523,7 +6488,7 @@
       {
         "slug": "uitschrijven-nederland-zorgverzekering-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/uitschrijven-nederland-zorgverzekering-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Zorg",
@@ -6545,7 +6510,7 @@
       {
         "slug": "zorgverzekering-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/zorgverzekering-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Zorg",
@@ -6569,7 +6534,7 @@
       {
         "slug": "s1-formulier-cak-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/s1-formulier-cak-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Zorg",
@@ -6591,7 +6556,7 @@
       {
         "slug": "auto-importeren-portugal-verzekering",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/auto-importeren-portugal-verzekering/",
         "category": "nl-verzekeringen",
         "tag": "Auto",
@@ -6613,7 +6578,7 @@
       {
         "slug": "schadevrije-jaren-meenemen-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/schadevrije-jaren-meenemen-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Auto",
@@ -6682,7 +6647,7 @@
       {
         "slug": "niet-gelegaliseerde-woning-verzekeren-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/niet-gelegaliseerde-woning-verzekeren-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Wonen",
@@ -6706,7 +6671,7 @@
       {
         "slug": "alojamento-local-verzekering-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/alojamento-local-verzekering-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Ondernemen",
@@ -6752,7 +6717,7 @@
       {
         "slug": "verzekeringen-portugal",
         "lang": "nl",
-        "status": "published",
+        "status": "retired",
         "url": "/nl/verzekeringen-portugal/",
         "category": "nl-verzekeringen",
         "tag": "Overzicht",

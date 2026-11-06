@@ -152,7 +152,7 @@
 
 [[redirects]]
   from = "/go/ig-saude"
-  to = "/blog/seguro-saude-expatriados-portugal/?utm_source=instagram&utm_medium=social&utm_campaign=saude-expat"
+  to = "/seguros/saude-internacional/?utm_source=instagram&utm_medium=social&utm_campaign=saude-expat"
   status = 302
   force = true
 
@@ -164,7 +164,7 @@
 
 [[redirects]]
   from = "/go/li-al"
-  to = "/blog/seguros-obrigatorios-hotelaria-turismo/?utm_source=linkedin&utm_medium=social&utm_campaign=al-hotelaria"
+  to = "/?utm_source=linkedin&utm_medium=social&utm_campaign=al-hotelaria"
   status = 302
   force = true
 
