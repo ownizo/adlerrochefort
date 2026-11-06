@@ -24,7 +24,7 @@ export const PT_HOME = [
     ctaTop: 'Peça uma análise por escrito da apólice da sua casa',
     ctaMeio: {
       title: 'A sua apólice atual tem estas cláusulas?',
-      desc: 'Envie-a a um agente de seguros pelo WhatsApp. Respondemos por escrito.',
+      desc: 'Envie-a a um mediador de seguros pelo WhatsApp. Respondemos por escrito.',
     },
     ctaFinal: {
       title: 'Compare a sua apólice com esta lista',
@@ -82,7 +82,7 @@ export const PT_HOME = [
       'A franquia é dispensada nos grandes sinistros e pode escolher entre dinheiro e os seus próprios artesãos?',
       'Joias, relógios, pratas e vinho estão especificados como objetos de valor ou ficaram dentro dos limites do recheio?',
     ],
-    closing: `<p>A Adler &amp; Rochefort é agente de seguros registado na ASF, com sede em Lisboa, e coloca seguros de habitação Private Clients para casas em Portugal e em Espanha. Lemos a sua apólice atual à luz desta lista e respondemos por escrito, cláusula a cláusula. Veja também <a href="/blog/seguro-casa-elevado-valor-o-que-declarar/">o que tem de comunicar à seguradora</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
+    closing: `<p>A Adler &amp; Rochefort é mediador de seguros registado na ASF, com sede em Lisboa, e coloca seguros de habitação Private Clients para casas em Portugal e em Espanha. Lemos a sua apólice atual à luz desta lista e respondemos por escrito, cláusula a cláusula. Veja também <a href="/blog/seguro-casa-elevado-valor-o-que-declarar/">o que tem de comunicar à seguradora</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
     faq: [
       ['O que é a reconstrução garantida?', 'A garantia de que, após uma perda total, a casa é reconstruída mesmo que o custo ultrapasse o capital do edifício. Aplica-se quando os capitais recomendados pela vistoria da seguradora foram aceites.'],
       ['A regra proporcional aplica-se a um seguro de casa de elevado valor?', 'Não nas condições Private Clients que colocamos: a regra do subseguro do artigo 134.º da Lei do Contrato de Seguro é expressamente afastada, e um sinistro parcial é pago por inteiro.'],
@@ -175,7 +175,7 @@ export const PT_HOME = [
     ctaTop: 'Peça uma análise por escrito da proteção da sua família',
     ctaMeio: {
       title: 'A sua família está segura, ou só a sua casa?',
-      desc: 'Fale com um agente de seguros pelo WhatsApp, com total discrição.',
+      desc: 'Fale com um mediador de seguros pelo WhatsApp, com total discrição.',
     },
     ctaFinal: {
       title: 'Uma análise discreta, por escrito',

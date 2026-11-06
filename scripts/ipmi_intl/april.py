@@ -152,7 +152,7 @@ APRIL["pt"] = page("pt", {
     "eyebrow": "Seguro de saúde internacional · APRIL International",
     "crumb": "APRIL International",
     "h1": "APRIL International: seguro de saúde internacional para expatriados",
-    "lead": "O MyHealth International é o plano de saúde internacional da APRIL International, pensado para quem vive no estrangeiro mais de doze meses. Somos agente de seguros registado na ASF e parceiro da APRIL International: configuramos o plano para o país onde vive, acompanhamos a proposta clínica e estamos consigo quando houver um sinistro. Quatro dados chegam para começar.",
+    "lead": "O MyHealth International é o plano de saúde internacional da APRIL International, pensado para quem vive no estrangeiro mais de doze meses. Somos mediador de seguros registado na ASF e parceiro da APRIL International: configuramos o plano para o país onde vive, acompanhamos a proposta clínica e estamos consigo quando houver um sinistro. Quatro dados chegam para começar.",
     "facts": [
         "Quatro planos: Explore, Essential, Extensive e Elite, todos com internamento, tratamento oncológico e evacuação e repatriação médica incluídos.",
         "Limite anual por pessoa: 500.000 €/US$ no Explore, 1.500.000 €/US$ no Essential, ilimitado no Extensive e no Elite.",

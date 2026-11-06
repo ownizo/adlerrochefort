@@ -455,7 +455,7 @@ function ptBody(a) {
 
   <div class="cta-topo">
     <div class="cta-topo-title">${a.ctaTop}</div>
-    <div class="cta-topo-subtitle">Análise por um agente de seguros registado na ASF, com sede em Lisboa. Sem compromisso.</div>
+    <div class="cta-topo-subtitle">Análise por um mediador de seguros registado na ASF, com sede em Lisboa. Sem compromisso.</div>
     <a class="cta-btn" href="${src}">Pedir análise →</a>
     <div class="cta-topo-micro">Resposta em 24h úteis. Os seus dados são tratados ao abrigo do RGPD.</div>
   </div>
@@ -479,7 +479,7 @@ ${a.checklist.map((c) => `<li>${c}</li>`).join('\n')}
 </ul>
 <h2>Fale connosco</h2>
 ${a.closing}
-<p><em>A Adler &amp; Rochefort é uma marca comercial da Ownizo, Unipessoal Lda., registada na ASF com o n.º 425591790/3. Informação geral prestada por um agente de seguros, que não substitui aconselhamento personalizado; o âmbito de cada apólice depende das respetivas condições e da aceitação do risco pela seguradora.</em></p>
+<p><em>A Adler &amp; Rochefort é uma marca comercial da Ownizo, Unipessoal Lda., registada na ASF com o n.º 425591790/3. Informação geral prestada por um mediador de seguros, que não substitui aconselhamento personalizado; o âmbito de cada apólice depende das respetivas condições e da aceitação do risco pela seguradora.</em></p>
   </div>
 
   <div class="blog-cta" style="margin:48px 0 0;background:#F7F6F5;border:1px solid #EBE9E8;border-left:4px solid #FF6300;border-radius:12px;padding:32px 36px;text-align:center;">

@@ -11,7 +11,9 @@
     "check:freshness": "node scripts/check-generator-freshness.mjs",
     "check:i18n": "node scripts/check-i18n-parity.mjs",
     "check:clinical-data": "node scripts/check-clinical-data-guard.mjs",
-    "check:text-integrity": "node scripts/check-rendered-text-integrity.mjs"
+    "check:text-integrity": "node scripts/check-rendered-text-integrity.mjs",
+    "check:retired": "node scripts/enforce-retired.mjs --check",
+    "enforce-retired": "node scripts/enforce-retired.mjs"
   },
   "keywords": [],
   "author": "",

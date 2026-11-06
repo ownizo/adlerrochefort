@@ -31,7 +31,7 @@ TEMPLATE = PUBLIC / "private-clients/family-offices/index.html"
 DATE = "2026-10-16"
 WA = "https://wa.me/351928226570?text="
 DISCLAIMER = ("A Adler &amp; Rochefort é uma marca comercial da Ownizo, Unipessoal Lda., registada na ASF com o "
-              "n.º 425591790/3. Informação geral prestada por um agente de seguros, que não substitui aconselhamento "
+              "n.º 425591790/3. Informação geral prestada por um mediador de seguros, que não substitui aconselhamento "
               "personalizado; o âmbito de cada apólice depende das respetivas condições e da aceitação do risco pela seguradora.")
 
 PAGES = [
@@ -43,14 +43,14 @@ PAGES = [
         "de": "/de/blog/kunstversicherung-portugal-spanien/",
         "ramo": "Private Clients",
         "title": "Seguro de Arte, Joias e Relógios · Portugal e Espanha",
-        "desc": "Arte, joias e relógios especificados por valor acordado, com cobertura todos os riscos, em casa e em viagem. Parecer por escrito de um agente de seguros registado na ASF.",
+        "desc": "Arte, joias e relógios especificados por valor acordado, com cobertura todos os riscos, em casa e em viagem. Parecer por escrito de um mediador de seguros registado na ASF.",
         "crumbs": [("Início", "/"), ("Private Clients", "/private-clients/"), ("Arte, joias e relógios", None)],
         "h1": "Arte, joias <em>e relógios</em>",
         "h1_plain": "Seguro de arte, joias e relógios",
         "lead": "Seguro para coleções de arte, joias e relógios em Portugal e em Espanha. O seguro de recheio corrente limita o que paga por objeto e por categoria; acima desses limites, a peça simplesmente não está segura. Especificamos as peças que importam por valor acordado, numa apólice todos os riscos, e dizemos por escrito o que pagaria hoje.",
         "wa": "Olá, gostaria de falar sobre o seguro de arte, joias ou relógios.",
         "form_title": "Falar sobre a sua coleção",
-        "options": ["Obras de arte", "Joias", "Relógios", "Peças usadas em viagem", "Empréstimos a museus ou exposições", "Ainda não sei — quero falar com um agente de seguros"],
+        "options": ["Obras de arte", "Joias", "Relógios", "Peças usadas em viagem", "Empréstimos a museus ou exposições", "Ainda não sei — quero falar com um mediador de seguros"],
         "sections": [
             ("O limite por objeto decide tudo", """<p>Um multirriscos habitação indica um capital total de recheio e, nas condições particulares, limita o que paga por cada objeto. Esse limite situa-se muitas vezes entre <strong>1.500 € e 5.000 €</strong>. Acima dele, o excesso não está seguro, por maior que seja o capital do recheio.</p>
   <p>Há ainda um segundo limite: os objetos de valor no seu conjunto ficam muitas vezes restritos a <strong>20% a 25% do capital do recheio</strong>. Os dois limites aplicam-se ao mesmo tempo, e vale o mais baixo. A única forma de sair deles é especificar a peça, com descrição e valor próprios.</p>"""),
@@ -110,14 +110,14 @@ PAGES = [
         "de": "/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/",
         "ramo": "Private Clients",
         "title": "Seguro de Automóveis Clássicos e de Coleção em Portugal",
-        "desc": "Automóveis clássicos e de coleção com valor acordado, RC automóvel até 50 milhões de euros e danos próprios no mercado Lloyd's. Agente de seguros registado na ASF.",
+        "desc": "Automóveis clássicos e de coleção com valor acordado, RC automóvel até 50 milhões de euros e danos próprios no mercado Lloyd's. Mediador de seguros registado na ASF.",
         "crumbs": [("Início", "/"), ("Private Clients", "/private-clients/"), ("Automóveis clássicos", None)],
         "h1": "Automóveis <em>clássicos e de coleção</em>",
         "h1_plain": "Seguro de automóveis clássicos e de coleção",
         "lead": "Seguro para automóveis clássicos e de coleção em Portugal. Uma apólice automóvel corrente paga o valor venal depois de uma perda total e pressupõe uma utilização diária. Um clássico precisa de valor acordado, de uma utilização limitada bem definida e de reparadores especializados.",
         "wa": "Olá, gostaria de falar sobre o seguro de um automóvel clássico ou de coleção.",
         "form_title": "Falar sobre os seus automóveis",
-        "options": ["Um automóvel clássico", "Uma coleção de automóveis", "Automóvel moderno de elevado valor", "Automóvel ainda com matrícula estrangeira", "Ainda não sei — quero falar com um agente de seguros"],
+        "options": ["Um automóvel clássico", "Uma coleção de automóveis", "Automóvel moderno de elevado valor", "Automóvel ainda com matrícula estrangeira", "Ainda não sei — quero falar com um mediador de seguros"],
         "sections": [
             ("Como funciona a solução que colocamos", """<p>Para automóveis clássicos e de coleção, colocamos uma solução em duas partes:</p>
   <ul class="lp-list">

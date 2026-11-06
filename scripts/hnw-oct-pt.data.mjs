@@ -3,7 +3,7 @@
  *   - ipmi:         Allianz Care vs Cigna Global (Portugal e Espanha)
  *   - classic-cars: automóveis clássicos e de elevado valor em Portugal e Espanha
  * Rendered by scripts/build-hnw-oct-articles.mjs. HTML strings; entities allowed.
- * Em português, a Adler & Rochefort é sempre "agente de seguros". Sem preços.
+ * Em português, a Adler & Rochefort é sempre "mediador de seguros". Sem preços.
  */
 
 export const PT = [
@@ -22,7 +22,7 @@ export const PT = [
     ctaTop: 'Peça uma comparação por escrito entre a Allianz Care e a Cigna Global',
     ctaMeio: {
       title: 'Vive entre países ou quer cobertura nos Estados Unidos?',
-      desc: 'Fale diretamente com um agente de seguros pelo WhatsApp.',
+      desc: 'Fale diretamente com um mediador de seguros pelo WhatsApp.',
     },
     ctaFinal: {
       title: 'Os dois planos configurados para a sua família',
@@ -75,7 +75,7 @@ export const PT = [
 <li><strong>Uma família com um pé nos Estados Unidos</strong> — casa em Miami, filhos na universidade em Boston, preferência por um hospital americano — precisa de cobertura mundial com EUA, e é nesse custo que os dois planos mais diferem para o mesmo perfil. Vale a pena cotar ambos.</li>
 <li><strong>Quem quer proteção apenas para o grande sinistro</strong> e paga os cuidados correntes do seu bolso vai olhar com atenção para as franquias e o copagamento da Cigna Global.</li>
 <li><strong>Uma família que planeia ter um filho</strong> tem de escolher o nível certo cedo: em ambos os planos a maternidade está reservada aos níveis superiores e começa ao fim de doze meses.</li>
-<li><strong>Uma família com historial clínico</strong> — ambas as seguradoras avaliam um questionário médico e podem excluir ou agravar uma doença pré-existente. As condições propostas para o mesmo historial podem ser diferentes, o que é mais uma razão para apresentar a proposta às duas através de um agente de seguros.</li>
+<li><strong>Uma família com historial clínico</strong> — ambas as seguradoras avaliam um questionário médico e podem excluir ou agravar uma doença pré-existente. As condições propostas para o mesmo historial podem ser diferentes, o que é mais uma razão para apresentar a proposta às duas através de um mediador de seguros.</li>
 </ul>`],
       ['Vistos, residência e os dois países', `<p>O seguro internacional é muitas vezes contratado no momento da mudança, e o processo de visto faz parte da decisão.</p>
 <ul>
@@ -92,7 +92,7 @@ export const PT = [
       'Declare o historial clínico por completo e pergunte como cada seguradora o trataria antes de escolher.',
       'Se o plano for para um visto espanhol, configure-o para os requisitos do consulado antes de contratar.',
     ],
-    closing: `<p>A Adler &amp; Rochefort é agente de seguros registado na ASF, com sede em Lisboa, e acompanha famílias em Portugal e em Espanha. Colocamos a Allianz Care e a Cigna Global, configuramos cada uma para a vida real da família — onde vive, por onde viaja, onde quereria ser tratada — e apresentamos as duas propostas por escrito, com as tabelas de garantias, para que a escolha se faça pelo conteúdo. Um único interlocutor acompanha a família da adesão ao sinistro. Veja também a nossa página de <a href="/seguros/saude/">seguros de saúde</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
+    closing: `<p>A Adler &amp; Rochefort é mediador de seguros registado na ASF, com sede em Lisboa, e acompanha famílias em Portugal e em Espanha. Colocamos a Allianz Care e a Cigna Global, configuramos cada uma para a vida real da família — onde vive, por onde viaja, onde quereria ser tratada — e apresentamos as duas propostas por escrito, com as tabelas de garantias, para que a escolha se faça pelo conteúdo. Um único interlocutor acompanha a família da adesão ao sinistro. Veja também a nossa página de <a href="/seguros/saude/">seguros de saúde</a> e a página de <a href="/private-clients/">Private Clients</a>.</p>`,
     faq: [
       ['A Allianz Care é melhor do que a Cigna Global?', 'Nenhuma é melhor em abstrato. A Allianz Care inclui internamento e repatriamento médico em todos os planos e oferece uma área só Europa; a Cigna Global é modular, com franquias e copagamentos flexíveis e a escolha entre cobertura com ou sem EUA. A escolha certa depende de onde a família vive, viaja e quer ser tratada, e das condições que cada seguradora propõe para o seu historial clínico.'],
       ['Preciso de cobertura nos Estados Unidos?', 'Só se prevê ser tratado nos Estados Unidos fora de uma urgência em viagem. A área com EUA é a mais cara em ambos os planos, por isso só compensa quando há uma razão concreta: casa nos EUA, filhos a estudar lá ou preferência por um hospital americano.'],
@@ -122,7 +122,7 @@ export const PT = [
     ctaTop: 'Peça um parecer por escrito sobre o seguro dos seus automóveis',
     ctaMeio: {
       title: 'Tem um clássico ou uma coleção e não sabe quanto pagaria a sua apólice numa perda total?',
-      desc: 'Fale diretamente com um agente de seguros pelo WhatsApp.',
+      desc: 'Fale diretamente com um mediador de seguros pelo WhatsApp.',
     },
     ctaFinal: {
       title: 'Os seus automóveis merecem um parecer por escrito',

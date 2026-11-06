@@ -1,4 +1,4 @@
-"""Português (PT-PT). Factos: scripts/cancer_cover/README.md. Estatuto: «agente de seguros»."""
+"""Português (PT-PT). Factos: scripts/cancer_cover/README.md. Estatuto: «mediador de seguros»."""
 TABLE = (
     '<div class="ipmi-table cc-table"><table><thead><tr><th></th><th>MGEN</th><th>Médis</th><th>Internacional (IPMI)</th></tr></thead><tbody>'
     "<tr><td>Indicado para</td><td>Clientes com historial clínico e clientes com mais de 65 anos</td><td>Clientes saudáveis com menos de 65 anos que querem capital elevado</td><td>Clientes que querem tratamento em mais de um país</td></tr>"
@@ -64,10 +64,10 @@ PAGE = {
          "<li>Como são tratadas as minhas doenças atuais e o meu historial clínico?</li>"
          "<li>Posso ser tratado fora de Portugal, e em que condições?</li>"
          "<li>A medicação oncológica, os exames de seguimento e as terapêuticas em ambulatório têm a mesma cobertura que o internamento?</li></ol>"
-         "<p>As respostas estão nas condições da apólice, não no prémio. É aí que um agente de seguros faz a diferença.</p>"),
+         "<p>As respostas estão nas condições da apólice, não no prémio. É aí que um mediador de seguros faz a diferença.</p>"),
         ("Como a Adler &amp; Rochefort ajuda",
          "<p>Selecionamos as propostas pelas coberturas, pelos capitais e pela gestão de sinistros, nunca pelo prémio mais baixo. Quando o risco é o cancro, esta escolha determina a qualidade da sua proteção.</p>"
-         "<p>Como agente de seguros registado na ASF, trabalhamos com várias seguradoras domésticas e internacionais. Comparamos as condições para a sua idade, historial e planos, e explicamos as diferenças por escrito.</p>"),
+         "<p>Como mediador de seguros registado na ASF, trabalhamos com várias seguradoras domésticas e internacionais. Comparamos as condições para a sua idade, historial e planos, e explicamos as diferenças por escrito.</p>"),
     ],
     "faq": [
         ("O seguro de saúde em Portugal cobre o cancro?", "Sim. As apólices domésticas e internacionais cobrem o tratamento oncológico, dentro dos respetivos capitais, carências e exclusões."),

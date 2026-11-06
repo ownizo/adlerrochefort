@@ -1,5 +1,9 @@
 [build]
   publish = "public"
+  # Retired pages never come back: removes any retired page a generator may
+  # have written back into public/, and cleans the sitemaps and llms files.
+  # See scripts/enforce-retired.mjs. It never fails the deploy.
+  command = "node scripts/enforce-retired.mjs"
 
 
 [functions]

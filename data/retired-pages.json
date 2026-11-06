@@ -1,5 +1,5 @@
 {
-  "note": "Pages retired in the November 2026 focus cleanup. Each path 301-redirects to the target in public/_redirects. Generators under scripts/ still carry data for some of these pages: do not re-run a generator without removing them first, or the retired pages come back.",
+  "note": "Pages retired from the site. Each path 301- or 410-redirects in public/_redirects. Retired pages cannot come back: scripts/enforce-retired.mjs runs as the Netlify build command and removes any retired page a generator writes back into public/, plus its sitemap and llms entries. npm run check:retired reports without changing anything.",
   "retired": {
     "/blog/20-anos-turismo-seguros-hotelaria/": "/",
     "/blog/allianz-april-medis-seguro-saude-portugal-2026/": "/seguros/saude-internacional/",

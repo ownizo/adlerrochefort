@@ -1,11 +1,11 @@
 """Português (PT-PT): página principal de saúde internacional + Allianz Care + Cigna Global.
 
-Estatuto nas páginas em português: "agente de seguros" (decisão do Hugo).
+Estatuto nas páginas em português: "mediador de seguros" (decisão do Hugo, nov. 2026).
 """
 UI = {
     "home": "Início",
     "hub": "Seguro de saúde internacional",
-    "meta": "Agente de seguros registado na ASF n.º 425591790/3 · Lisboa · Revisto a 18 de outubro de 2026",
+    "meta": "Mediador de seguros registado na ASF n.º 425591790/3 · Lisboa · Revisto a 18 de outubro de 2026",
     "author": "Escrito e revisto por <strong>Hugo Gonçalves</strong>, fundador e especialista em gestão de risco da Adler &amp; Rochefort. Licenciado em Gestão de Empresas (University of Hertfordshire) e em formação contínua no Chartered Insurance Institute (CII), Londres.",
     "lang_policy": None,
     "facts_h2": "Em resumo",
@@ -27,7 +27,7 @@ UI = {
         "small": "Os seus dados servem apenas para preparar a proposta, nos termos do RGPD. Consulte a nossa <a href=\"/politica-de-privacidade/\">política de privacidade</a>.",
         "success_h": "Obrigado",
         "success_p": "Respondemos por escrito no prazo de um dia útil.",
-        "trust": ["Agente de seguros registado na ASF", "Parceiro da Allianz Care e da Cigna Global", "Aconselhamento por escrito", "Sem custos para si"],
+        "trust": ["Mediador de seguros registado na ASF", "Parceiro da Allianz Care e da Cigna Global", "Aconselhamento por escrito", "Sem custos para si"],
     },
     "table_note": "Prémios indicativos, antes da análise clínica. O prémio final é fixado pela seguradora com os seus dados e confirmado por escrito antes de decidir.",
 }
@@ -38,7 +38,7 @@ HUB = {
     "eyebrow": "Seguro de saúde internacional · em qualquer país",
     "crumb": None,
     "h1": "Seguro de saúde internacional para expatriados, em qualquer país",
-    "lead": "Mudar-se do Brasil para Lisboa ou para Singapura, de Lisboa para o Dubai, de Israel ou dos Estados Unidos para a Europa? Um seguro de saúde internacional (IPMI) acompanha a pessoa, não a morada. Somos agente de seguros registado na ASF e parceiro da Allianz Care e da Cigna Global. Com quatro dados respondemos por escrito com os dois planos configurados para si.",
+    "lead": "Mudar-se do Brasil para Lisboa ou para Singapura, de Lisboa para o Dubai, de Israel ou dos Estados Unidos para a Europa? Um seguro de saúde internacional (IPMI) acompanha a pessoa, não a morada. Somos mediador de seguros registado na ASF e parceiro da Allianz Care e da Cigna Global. Com quatro dados respondemos por escrito com os dois planos configurados para si.",
     "facts": [
         "Seguradoras: Allianz Care e Cigna Global, comparadas nas mesmas condições.",
         "Cidadãos norte-americanos: Cigna Global (a Allianz Care não os aceita).",
@@ -110,7 +110,7 @@ ALLIANZ = {
     "eyebrow": "Seguro de saúde internacional · Allianz Care",
     "crumb": "Allianz Care",
     "h1": "Allianz Care: seguro de saúde internacional para expatriados",
-    "lead": "A Allianz Care é a marca de saúde internacional da Allianz Partners. Somos agente de seguros registado na ASF e parceiro da Allianz Care: configuramos o plano para o país onde vive, acompanhamos a proposta clínica e estamos consigo quando houver um sinistro. Quatro dados chegam para começar.",
+    "lead": "A Allianz Care é a marca de saúde internacional da Allianz Partners. Somos mediador de seguros registado na ASF e parceiro da Allianz Care: configuramos o plano para o país onde vive, acompanhamos a proposta clínica e estamos consigo quando houver um sinistro. Quatro dados chegam para começar.",
     "facts": [
         "Planos: Base, Enhanced e Signature, todos com internamento, quarto particular e repatriação médica incluídos.",
         "Para pessoas e famílias que vivem fora do país da sua nacionalidade, durante pelo menos doze meses.",
@@ -169,7 +169,7 @@ CIGNA = {
     "eyebrow": "Seguro de saúde internacional · Cigna Global",
     "crumb": "Cigna Global",
     "h1": "Cigna Global: seguro de saúde internacional para expatriados",
-    "lead": "A Cigna Global é o plano internacional individual da Cigna Healthcare, construído módulo a módulo. É também o plano para cidadãos norte-americanos que vivem fora dos Estados Unidos. Somos agente de seguros registado na ASF e parceiro da Cigna Global: montamos o plano consigo, acompanhamos a proposta e estamos consigo nos sinistros.",
+    "lead": "A Cigna Global é o plano internacional individual da Cigna Healthcare, construído módulo a módulo. É também o plano para cidadãos norte-americanos que vivem fora dos Estados Unidos. Somos mediador de seguros registado na ASF e parceiro da Cigna Global: montamos o plano consigo, acompanhamos a proposta e estamos consigo nos sinistros.",
     "facts": [
         "Níveis: Silver, Gold e Platinum, com módulos opcionais acrescentados um a um.",
         "Área de cobertura: mundo exceto Estados Unidos, ou mundo incluindo Estados Unidos.",

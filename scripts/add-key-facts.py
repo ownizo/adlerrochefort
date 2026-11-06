@@ -41,7 +41,7 @@ HNW = {
         "Arte, joalharia, relógios e coleções em <strong>valor acordado</strong>, com cobertura «todos os riscos» em todo o mundo para objetos pessoais.",
         "Subscrição individual com capacidade especializada — Hiscox, Liberty, Zurich e Allianz — com as condições acordadas por escrito antes de qualquer sinistro.",
         "Portugal e Espanha com um único interlocutor; quando a seguradora subscreve os dois países, na mesma apólice.",
-        "Parecer por escrito em 24–72 horas úteis. Agente de seguros registado na ASF com o n.º 425591790/3. Nunca pedimos o valor total do seu património.",
+        "Parecer por escrito em 24–72 horas úteis. Mediador de seguros registado na ASF com o n.º 425591790/3. Nunca pedimos o valor total do seu património.",
     ]),
     "es": ("Datos clave", [
         "<strong>Para quién:</strong> viviendas con contenido y objetos de valor desde 150.000 €, el mínimo que piden nuestras aseguradoras especializadas para una residencia habitual. Por debajo, una buena póliza estándar suele ser la mejor respuesta, y se lo decimos por escrito.",
