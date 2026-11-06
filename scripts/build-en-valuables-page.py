@@ -11,7 +11,7 @@ cite service pages, so the topic gets one, with the insurers named.
 Reuses the chrome and builder of scripts/build-hnw-pages.py (English IPMI hub
 as template). Then run, in order:
   python3 scripts/add-author-box.py
-  python3 scripts/add-valuables-insurers.py
+  python3 scripts/apply-property-criteria.py
 Idempotent: an existing page carrying the author box is left untouched.
 """
 import importlib.util
@@ -34,9 +34,9 @@ PAGE = {
     "path": "/en/art-jewellery-watches-insurance/",
     "crumbs": [("Home", "/en/"), ("Private clients", "/en/private-clients/"), ("Art, jewellery and watches", None)],
     "title": "Art, Jewellery & Watch Insurance in Portugal and Spain",
-    "desc": "Art, jewellery and watches insured on agreed value, all risks and worldwide, with Chubb, Hiscox or Liberty. Written opinion from an ASF-registered broker.",
+    "desc": "Art, jewellery and watches insured on agreed value with specialist insurers, on terms confirmed in writing. Written opinion from an ASF-registered broker.",
     "h1": "Art, jewellery and watch insurance in Portugal and Spain",
-    "lead": "Art, jewellery and watches insured on agreed value, on an all-risks basis and anywhere in the world, with Chubb, Hiscox or Liberty, for homes in Portugal and Spain. A standard contents policy caps what it pays for any one piece; above that cap the piece is simply not insured. We schedule the pieces that matter and tell you in writing what your current policy would pay today.",
+    "lead": "Art, jewellery and watches insured on agreed value with specialist insurers, for homes in Portugal and Spain, on terms confirmed in writing. A standard contents policy caps what it pays for any one piece; above that cap the piece is simply not insured. We schedule the pieces that matter and tell you in writing what your current policy would pay today.",
     "cta": ("Ask for a written review of your collection", "/en/private-clients/#ar-quote-form"),
     "cta2": ("Private client insurance", "/en/private-clients/"),
     "sections": [
@@ -71,9 +71,9 @@ PAGE = {
         ("How often should a collection be revalued?",
          "Art at least every five years, jewellery and watches every two. Under the wordings we place, the date of the last valuation decides whether a rise in the market is covered."),
         ("Can pieces in Portugal and in Spain be on one policy?",
-         "Often, yes. Chubb and Hiscox write both countries, so pieces kept in either can be insured with the same adviser and aligned conditions."),
+         "Often, yes. Some specialist insurers write both countries, so pieces kept in either can often be insured with the same adviser and aligned conditions."),
         ("Are valuables in a holiday home covered?",
-         "Not always. Hiscox's holiday-home policy, for example, does not cover jewellery and watches at all, so valuables kept in a second home need to be arranged separately."),
+         "Not always. Some holiday-home policies, for example, do not cover jewellery and watches at all, so valuables kept in a second home may need to be arranged separately."),
     ],
     "related": [
         ("/en/blog/insuring-jewellery-watches-portugal/", "Jewellery and watches: the single-article limit"),

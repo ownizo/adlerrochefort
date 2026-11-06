@@ -1,0 +1,1829 @@
+[
+ {
+  "file": "scripts/add-home-insurers.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "on3 \"\"\"Retired (November 2026). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by bran"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "etired (November 2026). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by brand-indepe"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "26). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by brand-independent analysis bloc"
+   }
+  ]
+ },
+ {
+  "file": "scripts/add-motor-product-structure.py",
+  "hits": [
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 11,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "licy (up to EUR 50m); own damage comes from Lloyd's (classic and collector, Portuguese plates, 3,000 km a year) or from Liberty (modern high-value cars, only with a Liberty home policy). Copy lives in scripts/motor_structure_content.py. Idempotent (marker: <!-- AR-MOTOR-STRUCTUR"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 11,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "loyd's (classic and collector, Portuguese plates, 3,000 km a year) or from Liberty (modern high-value cars, only with a Liberty home policy). Copy lives in scripts/motor_structure_content.py. Idempotent (marker: <!-- AR-MOTOR-STRUCTURE -->): re-running replaces the section. Also"
+   }
+  ]
+ },
+ {
+  "file": "scripts/add-valuables-insurers.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "on3 \"\"\"Retired (November 2026). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by bran"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "etired (November 2026). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by brand-indepe"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 5,
+    "cls": "PERMITIDA",
+    "reason": "gerador retirado: stub que termina sem escrever nada",
+    "ctx": "26). This script inserted sections presenting the individual home and valuables products of Hiscox, Liberty Mutual and Chubb on property pages. Property pages no longer describe or compare individual insurer products; the sections were replaced by brand-independent analysis bloc"
+   }
+  ]
+ },
+ {
+  "file": "scripts/apply-partner-list.mjs",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "lista institucional de parceiros (logótipos), fonte única aprovada",
+    "ctx": "tners.json'), 'utf8')); // Files confirmed (by direct grep, 2026-09-11) to carry the OLD generator // block verbatim — Hiscox / Allianz / Zurich / Asisa / Innovarisk, one // `<div class=\"partner-logo\"><span class=\"partner-logo-text\">NAME</span></div>` // per line — with no per-e"
+   }
+  ]
+ },
+ {
+  "file": "scripts/apply-property-criteria.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 6,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "ers and partners\" section. Supersedes scripts/add-home-insurers.py and scripts/add-valuables-insurers.py (Nov 2026: no Hiscox / Liberty Mutual / Chubb product presentations on property pages). Copy in scripts/property_criteria_content.py. Idempotent. Markers: <!-- AR-PROPERTY"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 6,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "artners\" section. Supersedes scripts/add-home-insurers.py and scripts/add-valuables-insurers.py (Nov 2026: no Hiscox / Liberty Mutual / Chubb product presentations on property pages). Copy in scripts/property_criteria_content.py. Idempotent. Markers: <!-- AR-PROPERTY-CRITERIA"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 6,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": " Supersedes scripts/add-home-insurers.py and scripts/add-valuables-insurers.py (Nov 2026: no Hiscox / Liberty Mutual / Chubb product presentations on property pages). Copy in scripts/property_criteria_content.py. Idempotent. Markers: <!-- AR-PROPERTY-CRITERIA:<kind> --> ... <"
+   }
+  ]
+ },
+ {
+  "file": "scripts/build-hiscox-spain-pages.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 1,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "\"\"\"Build the Hiscox Spain product pages (EN, DE, ES) from existing Spain pages used as shells. Run from the repo root: python3 scripts/build-hiscox-spain-pages.py Content l"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 60,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "Country\", \"name\": \"Spain\"}, \"provider\": {\"@id\": SITE + \"/#organization\"}, \"brand\": {\"@type\": \"Brand\", \"name\": \"Hiscox\"}}, {\"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": strip_tags(q), \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": st"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 201,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "o-subtitle\">{c['sub']}</p> <p class=\"hero-meta\">Mediador de seguros registrado · ASF n.º 425591790/3 · Colocado con Hiscox en España</p> <a href=\"#solicitud\" class=\"btn-cta\">{t['cta']} <svg viewBox=\"0 0 24 24\"><path d=\"M16.01 11H4v2h12.01v3L20 12l-3.99-4z\"/></svg></a> <"
+   }
+  ]
+ },
+ {
+  "file": "scripts/destinations/home_build.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 100,
+    "cls": "PERMITIDA",
+    "reason": "lista de nomes próprios que o gerador de homepages não traduz",
+    "ctx": "l>|<noscript>.*?</noscript>') KEEP = re.compile(r'^[\\d\\s+·.,:/€%()–—\\-★→←]+$|^[\\w.+-]+@[\\w.-]+$|^(Adler &amp; Rochefort|Hiscox|Chubb|MGEN|Asisa|Cigna|Hispania|Innovarisk|Liberty|Allianz Care|APRIL International|PT·ES|ASF|A&amp;R|Hugo Gonçalves|WhatsApp|Trustpilot|Portugal|España|"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 100,
+    "cls": "PERMITIDA",
+    "reason": "lista de nomes próprios que o gerador de homepages não traduz",
+    "ctx": "cript>.*?</noscript>') KEEP = re.compile(r'^[\\d\\s+·.,:/€%()–—\\-★→←]+$|^[\\w.+-]+@[\\w.-]+$|^(Adler &amp; Rochefort|Hiscox|Chubb|MGEN|Asisa|Cigna|Hispania|Innovarisk|Liberty|Allianz Care|APRIL International|PT·ES|ASF|A&amp;R|Hugo Gonçalves|WhatsApp|Trustpilot|Portugal|España|IPMI|Al"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 100,
+    "cls": "PERMITIDA",
+    "reason": "lista de nomes próprios que o gerador de homepages não traduz",
+    "ctx": "^[\\d\\s+·.,:/€%()–—\\-★→←]+$|^[\\w.+-]+@[\\w.-]+$|^(Adler &amp; Rochefort|Hiscox|Chubb|MGEN|Asisa|Cigna|Hispania|Innovarisk|Liberty|Allianz Care|APRIL International|PT·ES|ASF|A&amp;R|Hugo Gonçalves|WhatsApp|Trustpilot|Portugal|España|IPMI|Allianz Care · Cigna Global · APRIL Internati"
+   }
+  ]
+ },
+ {
+  "file": "scripts/destinations/topics_a.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 54,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "itional Chinese medicine — and yoga, Pilates, tai chi and other wellbeing practices.'), ('Portugal and Spain','Hiscox writes this cover in both Portugal and Spain, so a therapist or teacher who works on both sides of the border can have one adviser and a coherent program"
+   }
+  ]
+ },
+ {
+  "file": "scripts/destinations/topics_b.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 59,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": " chinesische Medizin — sowie Yoga, Pilates, Tai Chi und andere Wellness-Praktiken.'), ('Portugal und Spanien','Hiscox zeichnet diesen Schutz in Portugal und in Spanien. Wer auf beiden Seiten der Grenze arbeitet, hat einen Ansprechpartner und ein stimmiges Programm.'), "
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 121,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": " traditionnelle chinoise — yoga, Pilates, tai-chi et autres pratiques de bien-être.'), ('Portugal et Espagne','Hiscox souscrit cette garantie dans les deux pays : un seul interlocuteur pour qui travaille des deux côtés de la frontière.'), ('L’activité déclarée',"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 183,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "edicina tradizionale cinese — yoga, pilates, tai chi e altre pratiche di benessere.'), ('Portogallo e Spagna','Hiscox sottoscrive questa copertura in entrambi i Paesi: un solo interlocutore per chi lavora sui due lati del confine.'), ('L’attività dichiarata','La"
+   }
+  ]
+ },
+ {
+  "file": "scripts/destinations/topics_c.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 57,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "ionele Chinese geneeskunde — en yoga, pilates, tai chi en andere welzijnspraktijken.'), ('Portugal en Spanje','Hiscox verzekert dit in beide landen: één aanspreekpunt voor wie aan weerszijden van de grens werkt.'), ('De gemelde activiteit','De polis dekt wat eri"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 119,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "ycyjna medycyna chińska — oraz joga, pilates, tai chi i inne praktyki wellbeing.'), ('Portugalia i Hiszpania','Hiscox oferuje tę ochronę w obu krajach: jeden doradca dla osób pracujących po obu stronach granicy.'), ('Zgłoszona działalność','Polisa obejmuje opisa"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 181,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "ditionell kinesisk medicin — samt yoga, pilates, tai chi och andra hälsopraktiker.'), ('Portugal och Spanien','Hiscox tecknar detta skydd i båda länderna: en rådgivare för den som arbetar på båda sidor gränsen.'), ('Den anmälda verksamheten','Försäkringen gäller"
+   }
+  ]
+ },
+ {
+  "file": "scripts/destinations/topics_d.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 57,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "itionel kinesisk medicin — samt yoga, pilates, tai chi og andre wellnesspraksisser.'), ('Portugal og Spanien','Hiscox tegner denne dækning i begge lande: én rådgiver for den, der arbejder på begge sider af grænsen.'), ('Den anmeldte aktivitet','Policen dækker de"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 119,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "פיה, כירופרקטיקה ורפואה סינית מסורתית — וכן יוגה, פילאטיס, טאי צ׳י ופרקטיקות רווחה אחרות.'), ('פורטוגל וספרד','Hiscox חותמת על הכיסוי הזה בשתי המדינות: יועץ אחד למי שעובד משני צדי הגבול.'), ('הפעילות המוצהרת','הפוליסה מכסה את מה שמתואר בה; טכניקה חדשה, ריטריט בח"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 181,
+    "cls": "PERMITIDA",
+    "reason": "RC profissional / ciber empresarial — fora do âmbito habitação",
+    "ctx": "注的要点', points=[('我们承保的活动','按摩、葡萄牙认可的非传统疗法——针灸、顺势疗法、整骨、自然疗法、植物疗法、脊骨神经医学和中医——以及瑜伽、普拉提、太极等身心健康实践。'), ('葡萄牙与西班牙','Hiscox 在两国均承保此类风险：在边境两侧工作的人只需一位顾问。'), ('申报的活动','保单只保障其中所描述的活动；新技术、海外静修或线上课程须申报。'), ('保额与承保基础','每次索赔 25 万欧元起，按索赔发生制承保——保单之间的连续性很重要。')], faq=[("
+   }
+  ]
+ },
+ {
+  "file": "scripts/dk-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "garanteret genopf",
+    "kind": "condition",
+    "line": 22,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "g: vilkårene | Adler & Rochefort', description: 'Hvad en private client-husforsikring i Portugal og Spanien ændrer: garanteret genopførelse, ingen underforsikring, ingen selvrisiko ved store skader.', keywords: 'husforsikring villa Portugal, luksusbolig forsikring Spanien"
+   },
+   {
+    "term": "garanteret genopf",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "ved store skader.', keywords: 'husforsikring villa Portugal, luksusbolig forsikring Spanien, ingen underforsikring, garanteret genopførelse, erstatningsbolig, private client forsikring', eyebrow: 'Private Clients · Bolig', h1: 'Husforsikring til en eksklusiv bolig i P"
+   },
+   {
+    "term": "garanteret genopf",
+    "kind": "condition",
+    "line": 33,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "anken, kunst og ure uden specifikation.', sections: [ sec('plain', 'sum', 'Forsikringssummen: besigtigelse og garanteret genopførelse', ul([ '<strong>Gratis besigtigelse</strong> ved selskabets risikokonsulent: genopførelsesværdi, summer for indbo og værdigensta"
+   },
+   {
+    "term": "Garanteret genopf",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "elskabets risikokonsulent: genopførelsesværdi, summer for indbo og værdigenstande, forebyggende råd.', '<strong>Garanteret genopførelse:</strong> følges anbefalingerne, genopføres huset efter totalskade, også hvis prisen overstiger summen.', '<strong>Ingen underfo"
+   }
+  ]
+ },
+ {
+  "file": "scripts/es-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "reconstrucción garantizada",
+    "kind": "condition",
+    "line": 29,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "| Adler & Rochefort', description: 'Lo que cambia un seguro de hogar para grandes patrimonios en España y Portugal: reconstrucción garantizada, sin regla proporcional, sin franquicia en los grandes siniestros.', keywords: 'seguro hogar alto valor condiciones, seguro villa"
+   },
+   {
+    "term": "sin regla proporcional",
+    "kind": "condition",
+    "line": 29,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "scription: 'Lo que cambia un seguro de hogar para grandes patrimonios en España y Portugal: reconstrucción garantizada, sin regla proporcional, sin franquicia en los grandes siniestros.', keywords: 'seguro hogar alto valor condiciones, seguro villa lujo España, sin regla prop"
+   },
+   {
+    "term": "sin regla proporcional",
+    "kind": "condition",
+    "line": 30,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "n franquicia en los grandes siniestros.', keywords: 'seguro hogar alto valor condiciones, seguro villa lujo España, sin regla proporcional, reconstrucción garantizada, alojamiento alternativo, búsqueda de fugas, seguro hogar grandes patrimonios', eyebrow: 'Private Clients"
+   },
+   {
+    "term": "reconstrucción garantizada",
+    "kind": "condition",
+    "line": 30,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "des siniestros.', keywords: 'seguro hogar alto valor condiciones, seguro villa lujo España, sin regla proporcional, reconstrucción garantizada, alojamiento alternativo, búsqueda de fugas, seguro hogar grandes patrimonios', eyebrow: 'Private Clients · Hogar', h1: 'Segu"
+   },
+   {
+    "term": "reconstrucción garantizada",
+    "kind": "condition",
+    "line": 40,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " banco; obra de arte y relojes sin especificar.', sections: [ sec('plain', 'capital', 'El capital: tasación y reconstrucción garantizada', ul([ '<strong>Tasación sin coste</strong> por un técnico de la aseguradora: coste de reconstrucción, capitales de contenido"
+   },
+   {
+    "term": "Reconstrucción garantizada",
+    "kind": "condition",
+    "line": 42,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "coste de reconstrucción, capitales de contenido y objetos de valor, y recomendaciones de prevención.', '<strong>Reconstrucción garantizada:</strong> si se aceptan las recomendaciones, la casa se reconstruye tras una pérdida total aunque el coste supere el capital.', "
+   },
+   {
+    "term": "Sin regla proporcional",
+    "kind": "condition",
+    "line": 43,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "as recomendaciones, la casa se reconstruye tras una pérdida total aunque el coste supere el capital.', '<strong>Sin regla proporcional:</strong> un siniestro parcial se paga entero, sin reducción por infraseguro.', '<strong>Coste real de reconstrucción:</strong> m"
+   }
+  ]
+ },
+ {
+  "file": "scripts/expat-hub.data.mjs",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 45,
+    "cls": "PERMITIDA",
+    "reason": "declaração institucional dos acordos de distribuição",
+    "ctx": " [ '<strong>A broker, not one insurer.</strong> We hold distribution agreements with Allianz, Zurich, M&eacute;dis, Hiscox, MGEN, Asisa and Allianz Partners, and compare them for you.', '<strong>Everything in English.</strong> The questions, the comparison, the renewal an"
+   }
+  ]
+ },
+ {
+  "file": "scripts/hiscox-spain.data.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 6,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "it.mjs). Only the # classic-car product (motor, outside the property scope) remains here. # Only facts confirmed in the Hiscox product descriptions are stated; everything # else is framed as what we ask or check, never as a policy term. WA = \"https://wa.me/351928226570?text=\" P"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 19,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "n\", \"title\": \"Classic Car Insurance in Spain | Adler &amp; Rochefort\", \"desc\": \"Classic car insurance in Spain with Hiscox Vehículos Clásicos: one car or a whole collection, arranged in English by an EU-regulated broker.\", \"kw\": \"classic car insurance spain, classic car ins"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 24,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "umb\": \"Classic car insurance\", \"eyebrow\": \"Spain · Classic cars\", \"h1\": \"Classic car insurance in Spain\", \"sub\": \"Hiscox Vehículos Clásicos is designed for owners of classic vehicles in Spain &mdash; whether you own a single car or a collection. We arrange it in English and"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 26,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "would like a quote for classic car insurance in Spain.\", \"trust\": \"<strong>ASF no. 425591790/3</strong> · Placed with Hiscox in Spain · Reply within 24 working hours\", \"sections\": [ (\"One car or a collection\", \"<p>Hiscox Vehículos Clásicos is a product built for the ow"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 29,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " · Placed with Hiscox in Spain · Reply within 24 working hours\", \"sections\": [ (\"One car or a collection\", \"<p>Hiscox Vehículos Clásicos is a product built for the owners of classic vehicles. It works for a single car and for a collection, because both have the same thin"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 43,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "sed and roughly how many km a year\",\"Named drivers\"], \"faq\": [ (\"Can I insure a whole collection on one policy?\", \"Hiscox Vehículos Clásicos is designed both for a single vehicle and for a collection. We describe each car individually in the proposal.\"), (\"Does my car nee"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 46,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "help?\", \"Yes. For cars registered in Portugal we place classic and collector cover there; for cars registered in Spain, Hiscox Vehículos Clásicos. Tell us where the car is registered and kept.\"), (\"How long does a quote take?\", \"We reply within 24 working hours and send a writ"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 53,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": ": \"Tell us about the car or the collection, where it is kept and how it is used.\", \"note\": \"We place this policy with Hiscox, which underwrites in Spain. Every proposal names the insurer and the conditions in writing.\", \"tipo\": \"Classic car Spain\", }, \"de\": { \"slug\": \"old"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 59,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "\", \"title\": \"Oldtimerversicherung in Spanien | Adler &amp; Rochefort\", \"desc\": \"Oldtimerversicherung in Spanien mit Hiscox Vehículos Clásicos: ein Fahrzeug oder eine ganze Sammlung, auf Deutsch erklärt von einem EU-regulierten Makler.\", \"kw\": \"Oldtimerversicherung Spanien, "
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 60,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "erten Makler.\", \"kw\": \"Oldtimerversicherung Spanien, Oldtimer Versicherung Spanien, Classic Car Versicherung Spanien, Hiscox Oldtimer Spanien, Fahrzeugsammlung versichern Spanien\", \"crumb\": \"Oldtimerversicherung\", \"eyebrow\": \"Spanien · Oldtimer\", \"h1\": \"Oldtimerversicheru"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 64,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "crumb\": \"Oldtimerversicherung\", \"eyebrow\": \"Spanien · Oldtimer\", \"h1\": \"Oldtimerversicherung in Spanien\", \"sub\": \"Hiscox Vehículos Clásicos ist für Eigentümer klassischer Fahrzeuge in Spanien gemacht &mdash; ob ein einzelnes Auto oder eine Sammlung. Wir erklären die Bedingu"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 66,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "h möchte ein Angebot für eine Oldtimerversicherung in Spanien.\", \"trust\": \"<strong>ASF Nr. 425591790/3</strong> · Bei Hiscox in Spanien platziert · Antwort innerhalb von 24 Arbeitsstunden\", \"sections\": [ (\"Ein Fahrzeug oder eine Sammlung\", \"<p>Hiscox Vehículos Clásicos"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 69,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "en platziert · Antwort innerhalb von 24 Arbeitsstunden\", \"sections\": [ (\"Ein Fahrzeug oder eine Sammlung\", \"<p>Hiscox Vehículos Clásicos ist ein Produkt für Eigentümer klassischer Fahrzeuge. Es passt für ein einzelnes Auto ebenso wie für eine Sammlung, denn beide haben e"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 83,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "skilometer je Fahrzeug\",\"Benannte Fahrer\"], \"faq\": [ (\"Kann ich eine ganze Sammlung in einer Police versichern?\", \"Hiscox Vehículos Clásicos ist sowohl für ein einzelnes Fahrzeug als auch für eine Sammlung gedacht. Im Angebot beschreiben wir jedes Auto einzeln.\"), (\"Muss "
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 92,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "dern Sie uns das Fahrzeug oder die Sammlung, den Standort und die Nutzung.\", \"note\": \"Wir platzieren diese Police bei Hiscox, die in Spanien zeichnet. Versicherer und Bedingungen nennen wir schriftlich im Angebot.\", }, \"es\": { \"slug\": \"seguro-vehiculos-clasicos-espana\", \""
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 97,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "\"Seguro de vehículos clásicos en España | Adler &amp; Rochefort\", \"desc\": \"Seguro de vehículos clásicos en España con Hiscox: un solo coche o una colección, explicado por escrito y en español por un mediador regulado en la UE.\", \"kw\": \"seguro vehiculos clasicos españa, seguro"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 102,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "ulos clásicos\", \"eyebrow\": \"España · Vehículos clásicos\", \"h1\": \"Seguro de vehículos clásicos en España\", \"sub\": \"Hiscox Vehículos Clásicos está pensado para los propietarios de vehículos clásicos en España, ya sea un solo coche o una colección. Le explicamos las condicione"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 106,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "na propuesta de seguro para un vehículo clásico en España.\", \"sections\": [ (\"Un vehículo o una colección\", \"<p>Hiscox Vehículos Clásicos es un producto diseñado para cubrir las necesidades de los propietarios de vehículos clásicos. Sirve tanto para un solo coche como par"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 117,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "oslo: cambia el orden de los trámites.</p>\"), ], \"faq\": [ (\"¿Puedo asegurar toda una colección en una póliza?\", \"Hiscox Vehículos Clásicos está pensado tanto para un solo vehículo como para una colección. En la propuesta describimos cada coche por separado.\"), (\"¿Mi coc"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 123,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": ", dónde los guarda y cómo los usa. Le respondemos por escrito con una propuesta.\", \"note\": \"Colocamos esta póliza con Hiscox, que suscribe riesgos en España. En la propuesta indicamos por escrito la aseguradora y las condiciones.\", \"option\": \"Español · Coche\", \"placeholder\""
+   }
+  ]
+ },
+ {
+  "file": "scripts/hnw-home-de-nl.data.mjs",
+  "hits": [
+   {
+    "term": "garantierter Wiederaufbau",
+    "kind": "condition",
+    "line": 18,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "en | Adler &amp; Rochefort', description: 'Was eine Private-Client-Hausversicherung in Portugal und Spanien ändert: garantierter Wiederaufbau, keine Unterversicherung, Selbstbehalt entfällt bei großen Schäden.', keywords: 'Hausversicherung Luxusimmobilie Portugal, Villa V"
+   },
+   {
+    "term": "garantierter Wiederaufbau",
+    "kind": "condition",
+    "line": 27,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "oCta: 'Zu den Bedingungen', firstId: 'summe', sections: [ ['summe', 'Versicherungssumme: Besichtigung und garantierter Wiederaufbau', L([ '<strong>Besichtigung ohne Kosten:</strong> Bei höherwertigen Häusern ermittelt ein Risikoberater des Versicherers die W"
+   },
+   {
+    "term": "Garantierter Wiederaufbau",
+    "kind": "condition",
+    "line": 29,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "berater des Versicherers die Wiederaufbaukosten und empfiehlt die Summen für Hausrat und Wertsachen.', '<strong>Garantierter Wiederaufbau:</strong> Werden die Empfehlungen übernommen, wird das Haus nach einem Totalschaden auch dann wieder aufgebaut, wenn die Kosten die Ve"
+   },
+   {
+    "term": "gegarandeerde herbouw",
+    "kind": "condition",
+    "line": 204,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "den | Adler &amp; Rochefort', description: 'Wat een private-client woonverzekering in Portugal en Spanje verandert: gegarandeerde herbouw, geen onderverzekering, geen eigen risico bij grote schades.', keywords: 'woonverzekering villa Portugal, opstalverzekering Spanje lux"
+   },
+   {
+    "term": "herbouwgarantie",
+    "kind": "condition",
+    "line": 205,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " schades.', keywords: 'woonverzekering villa Portugal, opstalverzekering Spanje luxe woning, geen onderverzekering, herbouwgarantie, vervangende woonruimte, private client verzekering', eyebrow: 'Private Clients · Woning · Portugal &amp; Spanje', h1: 'Een hoogwaardige"
+   },
+   {
+    "term": "gegarandeerde herbouw",
+    "kind": "condition",
+    "line": 211,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "n zijn anders opgebouwd.', langPolicyLead: nlPolicy, sections: [ ['bedrag', 'Verzekerd bedrag: taxatie en gegarandeerde herbouw', U(['<strong>Gratis taxatie ter plaatse</strong> door een risicoadviseur van de verzekeraar: herbouwkosten, bedragen voor inboedel en kos"
+   },
+   {
+    "term": "Gegarandeerde herbouw",
+    "kind": "condition",
+    "line": 211,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " risicoadviseur van de verzekeraar: herbouwkosten, bedragen voor inboedel en kostbaarheden, preventieadvies.', '<strong>Gegarandeerde herbouw:</strong> worden de aanbevelingen overgenomen, dan wordt de woning na totaal verlies herbouwd, ook boven het verzekerde bedrag.', '<strong"
+   },
+   {
+    "term": "herbouwd, ook boven het verzekerde",
+    "kind": "condition",
+    "line": 211,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": ".', '<strong>Gegarandeerde herbouw:</strong> worden de aanbevelingen overgenomen, dan wordt de woning na totaal verlies herbouwd, ook boven het verzekerde bedrag.', '<strong>Geen onderverzekering:</strong> de evenredigheidsregel van de Portugese wet op de verzekeringsovereenkomst"
+   }
+  ]
+ },
+ {
+  "file": "scripts/hnw-home-en.data.mjs",
+  "hits": [
+   {
+    "term": "guaranteed rebuild",
+    "kind": "condition",
+    "line": 25,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "he Conditions That Matter', description: 'What a private-client home policy in Portugal and Spain actually changes: guaranteed rebuild, no proportional rule, excess waived on large losses, and more.', excerpt: 'The clauses that separate a private-client household policy f"
+   },
+   {
+    "term": "no proportional rule",
+    "kind": "condition",
+    "line": 25,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "atter', description: 'What a private-client home policy in Portugal and Spain actually changes: guaranteed rebuild, no proportional rule, excess waived on large losses, and more.', excerpt: 'The clauses that separate a private-client household policy from the standard mul"
+   },
+   {
+    "term": "extended replacement cost",
+    "kind": "condition",
+    "line": 27,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "m.', keywords: 'high value home insurance portugal, high value home insurance spain, private client home insurance, extended replacement cost, no proportional rule, alternative accommodation, trace and access, luxury villa insurance conditions', chatTopics: 'casa_luxo,cas"
+   },
+   {
+    "term": "no proportional rule",
+    "kind": "condition",
+    "line": 27,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "lue home insurance portugal, high value home insurance spain, private client home insurance, extended replacement cost, no proportional rule, alternative accommodation, trace and access, luxury villa insurance conditions', chatTopics: 'casa_luxo,casa_geral', whatsappText:"
+   },
+   {
+    "term": "guaranteed rebuild",
+    "kind": "condition",
+    "line": 39,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "; so that you can compare them with the policy you have today.</p>`, body: [ ['The sum insured: appraisal and guaranteed rebuild', `<ul> <li><strong>An appraisal at no cost.</strong> For higher-value homes the insurer sends its own risk consultant to establish the rebui"
+   },
+   {
+    "term": "Extended replacement cost",
+    "kind": "condition",
+    "line": 41,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "build cost, advise on the contents and valuables sums insured, and recommend risk-management measures.</li> <li><strong>Extended replacement cost.</strong> If the appraisal&rsquo;s recommendations are accepted, the house is rebuilt after a total loss even if the cost exceeds the "
+   },
+   {
+    "term": "No proportional rule",
+    "kind": "condition",
+    "line": 42,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " accepted, the house is rebuilt after a total loss even if the cost exceeds the buildings sum insured.</li> <li><strong>No proportional rule.</strong> The underinsurance rule of the Portuguese Insurance Contract Law (article 134) is expressly disapplied. A partial loss is paid in"
+   },
+   {
+    "term": "extended replacement cost",
+    "kind": "condition",
+    "line": 90,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "waiver of average</a> and our <a href=\"/en/private-clients/\">Private Clients</a> page.</p>`, faq: [ ['What is extended replacement cost?', 'A guarantee that, after a total loss, the house is rebuilt even if the cost exceeds the buildings sum insured. It applies when the"
+   }
+  ]
+ },
+ {
+  "file": "scripts/hnw-home-pt.data.mjs",
+  "hits": [
+   {
+    "term": "reconstrução garantida",
+    "kind": "condition",
+    "line": 19,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " casa de elevado valor: as condições que contam', description: 'O que muda num seguro de habitação Private Clients: reconstrução garantida, sem regra proporcional, franquia dispensada nos grandes sinistros, alojamento alternativo e mais.', excerpt: 'As cláusulas que separ"
+   },
+   {
+    "term": "sem regra proporcional",
+    "kind": "condition",
+    "line": 19,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "as condições que contam', description: 'O que muda num seguro de habitação Private Clients: reconstrução garantida, sem regra proporcional, franquia dispensada nos grandes sinistros, alojamento alternativo e mais.', excerpt: 'As cláusulas que separam um seguro de habitaçã"
+   },
+   {
+    "term": "sem regra proporcional",
+    "kind": "condition",
+    "line": 21,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "dia do sinistro.', keywords: 'seguro casa de luxo, seguro habitação elevado valor, seguro moradia de luxo portugal, sem regra proporcional, reconstrução garantida, alojamento alternativo, pesquisa de avarias, seguro private clients habitação', whatsapp: 'Olá, li o vosso a"
+   },
+   {
+    "term": "reconstrução garantida",
+    "kind": "condition",
+    "line": 21,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "eywords: 'seguro casa de luxo, seguro habitação elevado valor, seguro moradia de luxo portugal, sem regra proporcional, reconstrução garantida, alojamento alternativo, pesquisa de avarias, seguro private clients habitação', whatsapp: 'Olá, li o vosso artigo sobre as condições"
+   },
+   {
+    "term": "reconstrução garantida",
+    "kind": "condition",
+    "line": 36,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "óprio sinistro — para que as possa comparar com a apólice que tem hoje.</p>`, body: [ ['O capital: vistoria e reconstrução garantida', `<ul> <li><strong>Vistoria sem custo.</strong> Nas casas de valor mais elevado, a seguradora envia o seu próprio técnico para determina"
+   },
+   {
+    "term": "Reconstrução garantida",
+    "kind": "condition",
+    "line": 38,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "construção, aconselhar os capitais de recheio e de objetos de valor e recomendar medidas de prevenção.</li> <li><strong>Reconstrução garantida.</strong> Se as recomendações da vistoria forem aceites, a casa é reconstruída após uma perda total mesmo que o custo ultrapasse o capita"
+   },
+   {
+    "term": "Sem regra proporcional",
+    "kind": "condition",
+    "line": 39,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "ceites, a casa é reconstruída após uma perda total mesmo que o custo ultrapasse o capital do edifício.</li> <li><strong>Sem regra proporcional.</strong> A regra do subseguro do artigo 134.º da Lei do Contrato de Seguro é expressamente afastada: um sinistro parcial é pago por inte"
+   },
+   {
+    "term": "reconstrução garantida",
+    "kind": "condition",
+    "line": 87,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "icar à seguradora</a> e a página de <a href=\"/private-clients/\">Private Clients</a>.</p>`, faq: [ ['O que é a reconstrução garantida?', 'A garantia de que, após uma perda total, a casa é reconstruída mesmo que o custo ultrapasse o capital do edifício. Aplica-se quando o"
+   }
+  ]
+ },
+ {
+  "file": "scripts/il-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "בנייה מחדש מובטחת",
+    "kind": "condition",
+    "line": 22,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "בית יוקרה בפורטוגל ובספרד: התנאים | Adler & Rochefort', description: 'מה משנה ביטוח דירה לבעלי הון בפורטוגל ובספרד: בנייה מחדש מובטחת, ללא כלל יחסי, ללא השתתפות עצמית בנזקים גדולים, מגורים חלופיים ועוד.', keywords: 'ביטוח וילה פורטוגל, ביטוח בית יוקרה ספרד, ללא ביטוח חסר,"
+   },
+   {
+    "term": "בנייה מחדש מובטחת",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "פות עצמית בנזקים גדולים, מגורים חלופיים ועוד.', keywords: 'ביטוח וילה פורטוגל, ביטוח בית יוקרה ספרד, ללא ביטוח חסר, בנייה מחדש מובטחת, מגורים חלופיים, ביטוח private client', eyebrow: 'Private Clients · בית', h1: 'ביטוח בית יוקרה בפורטוגל ובספרד: התנאים, סעיף אחר סעיף'"
+   },
+   {
+    "term": "בנייה מחדש מובטחת",
+    "kind": "condition",
+    "line": 33,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " אירוח ובריכה, פוליסה דרך הבנק, אמנות ושעונים שלא פורטו.', sections: [ sec('plain', 'sum', 'סכום הביטוח: סקר ובנייה מחדש מובטחת', ul([ '<strong>סקר ללא עלות</strong> של יועץ הסיכונים של המבטח: עלות בנייה מחדש, סכומי תכולה ופריטי ערך, והמלצות למניעת נזקים.', "
+   },
+   {
+    "term": "בנייה מחדש מובטחת",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "ת</strong> של יועץ הסיכונים של המבטח: עלות בנייה מחדש, סכומי תכולה ופריטי ערך, והמלצות למניעת נזקים.', '<strong>בנייה מחדש מובטחת:</strong> אם ההמלצות מתקבלות, הבית ייבנה מחדש לאחר אובדן מוחלט גם אם העלות עולה על סכום הביטוח.', '<strong>ללא כלל יחסי:</strong> נזק "
+   }
+  ]
+ },
+ {
+  "file": "scripts/ipmi_intl/april.py",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 110,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "yment of 0%, 10%, 20% or 30%.\", \"Health cover insured by Groupama Gan Vie; assistance and personal liability by Chubb European Group SE. No fee to you.\", ], \"sections\": [ (\"The four MyHealth International plans\", \"<p>You start with hospital cover "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 138,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "nternational?\", \"The health cover is insured by Groupama Gan Vie, and the assistance and personal liability benefits by Chubb European Group SE. APRIL International Care France designs and manages the plan.\"), (\"Are pre-existing conditions covered?\", \"Not automatically. Y"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 162,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "io de 0%, 10%, 20% ou 30%.\", \"Saúde seguradora pela Groupama Gan Vie; assistência e responsabilidade civil pela Chubb European Group SE. Sem custos para si.\", ], \"sections\": [ (\"Os quatro planos MyHealth International\", \"<p>Começa pela cobertura h"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 190,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "International?\", \"A cobertura de saúde é segurada pela Groupama Gan Vie e a assistência e a responsabilidade civil pela Chubb European Group SE. A APRIL International Care France concebe e gere o plano.\"), (\"As doenças pré-existentes estão cobertas?\", \"Não automaticamente"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 214,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": " ambulant 0 %, 10 %, 20 % oder 30 %.\", \"Krankenversicherer: Groupama Gan Vie; Assistance und Privathaftpflicht: Chubb European Group SE. Für Sie kostenlos.\", ], \"sections\": [ (\"Die vier MyHealth-International-Pläne\", \"<p>Sie beginnen mit der stati"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 242,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "rer von MyHealth International?\", \"Die Krankenversicherung trägt Groupama Gan Vie, Assistance und Privathaftpflicht die Chubb European Group SE. APRIL International Care France konzipiert und verwaltet den Plan.\"), (\"Sind Vorerkrankungen versichert?\", \"Nicht automatisch. "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 266,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "rio del 0 %, 10 %, 20 % o 30 %.\", \"Salud asegurada por Groupama Gan Vie; asistencia y responsabilidad civil por Chubb European Group SE. Sin coste para usted.\", ], \"sections\": [ (\"Los cuatro planes MyHealth International\", \"<p>Empieza por la cober"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 294,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "Health International?\", \"La cobertura de salud la asegura Groupama Gan Vie, y la asistencia y la responsabilidad civil, Chubb European Group SE. APRIL International Care France diseña y gestiona el plan.\"), (\"¿Cubre enfermedades preexistentes?\", \"No de forma automática. R"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 318,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "klinisch van 0%, 10%, 20% of 30%.\", \"Zorg verzekerd door Groupama Gan Vie; assistance en aansprakelijkheid door Chubb European Group SE. Voor u kosteloos.\", ], \"sections\": [ (\"De vier MyHealth International-plannen\", \"<p>U begint met ziekenhuisdek"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 346,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "ar van MyHealth International?\", \"De zorgdekking is verzekerd bij Groupama Gan Vie, assistance en aansprakelijkheid bij Chubb European Group SE. APRIL International Care France ontwikkelt en beheert het plan.\"), (\"Zijn bestaande aandoeningen gedekt?\", \"Niet automatisch. U"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 370,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "nts de 0 %, 10 %, 20 % ou 30 %.\", \"Santé assurée par Groupama Gan Vie ; assistance et responsabilité civile par Chubb European Group SE. Sans frais pour vous.\", ], \"sections\": [ (\"Les quatre formules MyHealth International\", \"<p>Vous partez de la "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 398,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "ure MyHealth International ?\", \"La santé est assurée par Groupama Gan Vie, l’assistance et la responsabilité civile par Chubb European Group SE. APRIL International Care France conçoit et gère le contrat.\"), (\"Les maladies antérieures sont-elles couvertes ?\", \"Pas automat"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 422,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "riale dello 0%, 10%, 20% o 30%.\", \"Salute assicurata da Groupama Gan Vie; assistenza e responsabilità civile da Chubb European Group SE. Nessun costo per lei.\", ], \"sections\": [ (\"I quattro piani MyHealth International\", \"<p>Si parte dalla copertu"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 450,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "h International?\", \"La copertura sanitaria è assicurata da Groupama Gan Vie, l’assistenza e la responsabilità civile da Chubb European Group SE. APRIL International Care France progetta e gestisce il piano.\"), (\"Le patologie preesistenti sono coperte?\", \"Non automaticamen"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 474,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "półpłacenie ambulatoryjne 0%, 10%, 20% lub 30%.\", \"Ubezpieczyciel zdrowotny: Groupama Gan Vie; assistance i OC: Chubb European Group SE. Bez kosztów dla Ciebie.\", ], \"sections\": [ (\"Cztery plany MyHealth International\", \"<p>Zaczynasz od ochrony sz"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 502,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "(\"Kto jest ubezpieczycielem MyHealth International?\", \"Ochronę zdrowotną zapewnia Groupama Gan Vie, a assistance i OC – Chubb European Group SE. APRIL International Care France projektuje plan i nim zarządza.\"), (\"Czy choroby istniejące wcześniej są objęte?\", \"Nie automat"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 526,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "genandel i öppenvård 0, 10, 20 eller 30 %.\", \"Sjukvården försäkras av Groupama Gan Vie; assistans och ansvar av Chubb European Group SE. Kostnadsfritt för dig.\", ], \"sections\": [ (\"De fyra MyHealth International-planerna\", \"<p>Du börjar med sjukhu"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 554,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": " [ (\"Vem försäkrar MyHealth International?\", \"Sjukvården försäkras av Groupama Gan Vie, assistans och ansvar av Chubb European Group SE. APRIL International Care France utformar och administrerar planen.\"), (\"Täcks tidigare sjukdomar?\", \"Inte automatiskt. Du fylle"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 578,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "; egenbetaling ambulant 0, 10, 20 eller 30 %.\", \"Sundhed forsikret af Groupama Gan Vie; assistance og ansvar af Chubb European Group SE. Gratis for dig.\", ], \"sections\": [ (\"De fire MyHealth International-planer\", \"<p>Du starter med hospitalsdækni"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 606,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "(\"Hvem forsikrer MyHealth International?\", \"Sundhedsdækningen er forsikret af Groupama Gan Vie, assistance og ansvar af Chubb European Group SE. APRIL International Care France udformer og administrerer planen.\"), (\"Er eksisterende sygdomme dækket?\", \"Ikke automatisk. Du "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 630,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "00; השתתפות באחוזים באמבולטורי: 0%, 10%, 20% או 30%.\", \"הבריאות מבוטחת ב־Groupama Gan Vie; סיוע ואחריות אישית ב־Chubb European Group SE. ללא עלות עבורכם.\", ], \"sections\": [ (\"ארבע תוכניות MyHealth International\", \"<p>מתחילים בכיסוי אשפוז ובוחרים א"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 658,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "\": [ (\"מי המבטחת של MyHealth International?\", \"כיסוי הבריאות מבוטח ב־Groupama Gan Vie, והסיוע והאחריות האישית ב־Chubb European Group SE. ‏APRIL International Care France מתכננת ומנהלת את התוכנית.\"), (\"האם מצבים רפואיים קודמים מכוסים?\", \"לא אוטומטית. ממלאים שאלון ב"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 682,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "。\", \"免赔额：无，或 €/US$ 500、1,000、2,500、5,000；门诊共付比例 0%、10%、20% 或 30%。\", \"医疗保障由 Groupama Gan Vie 承保；援助与个人责任由 Chubb European Group SE 承保。对您免费。\", ], \"sections\": [ (\"MyHealth International 四档计划\", \"<p>先选择住院保障，再按居住国的医疗费用水平选择档次。门诊、牙科与眼科、生育保障仅在需要时添加。<"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 710,
+    "cls": "PERMITIDA",
+    "reason": "saúde internacional — modelo editorial próprio, fora do âmbito",
+    "ctx": "lianz Care</a>。</p>\"), ], \"faq\": [ (\"MyHealth International 由谁承保？\", \"医疗保障由 Groupama Gan Vie 承保，援助与个人责任由 Chubb European Group SE 承保。APRIL International Care France 负责设计与管理该计划。\"), (\"既往病症是否承保？\", \"不自动承保。您需填写健康问卷，由 APRIL International 确定条件：标准承保、附特别条件或拒保。投保时被除外的"
+   }
+  ]
+ },
+ {
+  "file": "scripts/it-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "ricostruzione garantita",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " | Adler & Rochefort', description: 'Cosa cambia un’assicurazione casa per grandi patrimoni in Portogallo e Spagna: ricostruzione garantita, nessuna regola proporzionale, franchigia esclusa nei grandi sinistri.', keywords: 'assicurazione casa di lusso Portogallo, assicura"
+   },
+   {
+    "term": "ricostruzione garantita",
+    "kind": "condition",
+    "line": 24,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "tri.', keywords: 'assicurazione casa di lusso Portogallo, assicurazione villa Spagna, nessuna regola proporzionale, ricostruzione garantita, alloggio alternativo, ricerca guasti, assicurazione casa grandi patrimoni', eyebrow: 'Private Clients · Casa', h1: 'Assicurazio"
+   },
+   {
+    "term": "ricostruzione garantita",
+    "kind": "condition",
+    "line": 34,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "banca, opere d’arte e orologi non specificati.', sections: [ sec('plain', 'capitale', 'Il capitale: perizia e ricostruzione garantita', ul([ '<strong>Perizia gratuita</strong> di un tecnico della compagnia: costo di ricostruzione, capitali per contenuto e oggett"
+   },
+   {
+    "term": "Ricostruzione garantita",
+    "kind": "condition",
+    "line": 36,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " costo di ricostruzione, capitali per contenuto e oggetti di valore, raccomandazioni di prevenzione.', '<strong>Ricostruzione garantita:</strong> accettate le raccomandazioni, dopo un danno totale la casa viene ricostruita anche se il costo supera il capitale.', '"
+   }
+  ]
+ },
+ {
+  "file": "scripts/lib/site-sections.mjs",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 40,
+    "cls": "PERMITIDA",
+    "reason": "lista institucional de parceiros (logótipos), fonte única aprovada",
+    "ctx": "wedish, Danish and Chinese. Only the heading and the lead above the * row are localised. */ export const INSURERS = ['Hiscox', 'Allianz', 'Zurich', 'MGEN', 'Asisa', 'APRIL', 'Chubb', 'Hispania', 'Innovarisk']; /** * Render the insurer panel. * * @param {string} heading L"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 40,
+    "cls": "PERMITIDA",
+    "reason": "lista institucional de parceiros (logótipos), fonte única aprovada",
+    "ctx": " above the * row are localised. */ export const INSURERS = ['Hiscox', 'Allianz', 'Zurich', 'MGEN', 'Asisa', 'APRIL', 'Chubb', 'Hispania', 'Innovarisk']; /** * Render the insurer panel. * * @param {string} heading Localised heading. May contain <em> for the accent. * @pa"
+   }
+  ]
+ },
+ {
+  "file": "scripts/lib/terminology-rules.mjs",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 254,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "nsurer &mdash; Allianz, M&eacute;dis, APRIL &amp; AdvanceCare', ], [ 'Independent — we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich,"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 254,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "; Allianz, M&eacute;dis, APRIL &amp; AdvanceCare', ], [ 'Independent — we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich, Allianz, His"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 255,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "Independent — we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Z"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 255,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": " we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Zurich, Allian"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 258,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": " insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ '<span class=\"ar-trust-item\">Inde"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 258,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "rich, Allianz, Hiscox &amp; Liberty Mutual', ], [ 'Independent &mdash; we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ '<span class=\"ar-trust-item\">Independent — we "
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 259,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "&mdash; we compare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ '<span class=\"ar-trust-item\">Independent — we compare the market</span>', '<span class=\"ar-trust-item\">Not tied t"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 259,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "mpare Zurich, Allianz, Hiscox &amp; Liberty Mutual', 'Not tied to one insurer &mdash; Zurich, Allianz, Hiscox &amp; Liberty Mutual', ], [ '<span class=\"ar-trust-item\">Independent — we compare the market</span>', '<span class=\"ar-trust-item\">Not tied to a single in"
+   }
+  ]
+ },
+ {
+  "file": "scripts/motor_structure_content.py",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 8,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "ese registration required, up to 3,000 km a year per vehicle. - Modern high-value cars: Seguro de Automóveis de Luxo, Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Own damage only, no third-party liability, only together with a Libe"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 9,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "000 km a year per vehicle. - Modern high-value cars: Seguro de Automóveis de Luxo, Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Own damage only, no third-party liability, only together with a Liberty home policy. - Third-party li"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 10,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "iberty Specialty Markets), placed through Innovarisk. Own damage only, no third-party liability, only together with a Liberty home policy. - Third-party liability is sold separately as the base motor policy, with a limit of up to EUR 50 million. No prices, no deductibles ot"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 40,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "kdown and depreciation.\", ], \"lux_title\": \"2b. Modern high-value cars\", \"lux_by\": \"Luxury Car Insurance from <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), placed through Innovarisk.\", \"lux_cover\": [ \"Loss of or physical damage to the car up t"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 40,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": ": \"2b. Modern high-value cars\", \"lux_by\": \"Luxury Car Insurance from <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), placed through Innovarisk.\", \"lux_cover\": [ \"Loss of or physical damage to the car up to the sum insured, at the risk address and"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 84,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "ão.\", ], \"lux_title\": \"2b. Automóveis modernos de elevado valor\", \"lux_by\": \"Seguro de Automóveis de Luxo da <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), colocado através da Innovarisk.\", \"lux_cover\": [ \"Perda ou dano material do automóvel a"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 84,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "dernos de elevado valor\", \"lux_by\": \"Seguro de Automóveis de Luxo da <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), colocado através da Innovarisk.\", \"lux_cover\": [ \"Perda ou dano material do automóvel até ao capital seguro, no local de risco e "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 128,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "eciación.\", ], \"lux_title\": \"2b. Coches modernos de alto valor\", \"lux_by\": \"Seguro de Automóviles de Lujo de <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), colocado a través de Innovarisk.\", \"lux_cover\": [ \"Pérdida o daño material del coche ha"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 128,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "modernos de alto valor\", \"lux_by\": \"Seguro de Automóviles de Lujo de <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), colocado a través de Innovarisk.\", \"lux_cover\": [ \"Pérdida o daño material del coche hasta la suma asegurada, en el lugar de ries"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 172,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "te und Wertverlust.\", ], \"lux_title\": \"2b. Moderne hochwertige Autos\", \"lux_by\": \"Luxusauto-Versicherung von <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), platziert über Innovarisk.\", \"lux_cover\": [ \"Verlust oder Sachschaden am Auto bis zur V"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 172,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "b. Moderne hochwertige Autos\", \"lux_by\": \"Luxusauto-Versicherung von <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), platziert über Innovarisk.\", \"lux_cover\": [ \"Verlust oder Sachschaden am Auto bis zur Versicherungssumme, am Risikoort und im Str"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 216,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "ermindering.\", ], \"lux_title\": \"2b. Moderne auto's met een hoge waarde\", \"lux_by\": \"Luxe-autoverzekering van <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), geplaatst via Innovarisk.\", \"lux_cover\": [ \"Verlies van of materiële schade aan de auto"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 216,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "rne auto's met een hoge waarde\", \"lux_by\": \"Luxe-autoverzekering van <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), geplaatst via Innovarisk.\", \"lux_cover\": [ \"Verlies van of materiële schade aan de auto tot het verzekerd bedrag, op het risicoad"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 260,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "svalutazione.\", ], \"lux_title\": \"2b. Auto moderne di alto valore\", \"lux_by\": \"Assicurazione Auto di Lusso di <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), collocata tramite Innovarisk.\", \"lux_cover\": [ \"Perdita o danno materiale all'auto fino"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 260,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "o moderne di alto valore\", \"lux_by\": \"Assicurazione Auto di Lusso di <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), collocata tramite Innovarisk.\", \"lux_cover\": [ \"Perdita o danno materiale all'auto fino alla somma assicurata, nel luogo di risch"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 304,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " \"lux_title\": \"2b. Nowoczesne samochody o wysokiej wartości\", \"lux_by\": \"Ubezpieczenie samochodów luksusowych <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), zawierane za pośrednictwem Innovarisk.\", \"lux_cover\": [ \"Utrata lub szkoda materialna s"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 304,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " wysokiej wartości\", \"lux_by\": \"Ubezpieczenie samochodów luksusowych <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), zawierane za pośrednictwem Innovarisk.\", \"lux_cover\": [ \"Utrata lub szkoda materialna samochodu do sumy ubezpieczenia, w miejscu "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 348,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " og værdiforringelse.\", ], \"lux_title\": \"2b. Moderne biler af høj værdi\", \"lux_by\": \"Luksusbilforsikring fra <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), formidlet gennem Innovarisk.\", \"lux_cover\": [ \"Tab af eller fysisk skade på bilen op ti"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 348,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "\"2b. Moderne biler af høj værdi\", \"lux_by\": \"Luksusbilforsikring fra <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), formidlet gennem Innovarisk.\", \"lux_cover\": [ \"Tab af eller fysisk skade på bilen op til forsikringssummen, på risikoadressen og "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 392,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " och värdeminskning.\", ], \"lux_title\": \"2b. Moderna bilar med högt värde\", \"lux_by\": \"Lyxbilsförsäkring från <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), förmedlad via Innovarisk.\", \"lux_cover\": [ \"Förlust av eller fysisk skada på bilen upp "
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 392,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "2b. Moderna bilar med högt värde\", \"lux_by\": \"Lyxbilsförsäkring från <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), förmedlad via Innovarisk.\", \"lux_cover\": [ \"Förlust av eller fysisk skada på bilen upp till försäkringsbeloppet, på riskadressen "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 436,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "קלות מכניות וירידת ערך.\", ], \"lux_title\": \"2ב. רכבים מודרניים בעלי ערך גבוה\", \"lux_by\": \"ביטוח רכבי יוקרה של <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), באמצעות Innovarisk.\", \"lux_cover\": [ \"אובדן או נזק פיזי לרכב עד סכום הביטוח, בכתובת הסי"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 436,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": ": \"2ב. רכבים מודרניים בעלי ערך גבוה\", \"lux_by\": \"ביטוח רכבי יוקרה של <strong>Liberty Mutual Insurance Europe</strong> (Liberty Specialty Markets), באמצעות Innovarisk.\", \"lux_cover\": [ \"אובדן או נזק פיזי לרכב עד סכום הביטוח, בכתובת הסיכון ובנסיעה בטריטוריות המפורטות בפוליסה.\","
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 480,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "保单列明的驾驶人驾驶。\", \"除外责任：赛车、赛道日、速度测试、拉力赛及越野驾驶；出租或商业用途；磨损、锈蚀、机械故障及贬值。\", ], \"lux_title\": \"2b. 高价值现代车\", \"lux_by\": \"<strong>Liberty Mutual Insurance Europe</strong>（Liberty Specialty Markets）的豪华车保险，通过 Innovarisk 安排。\", \"lux_cover\": [ \"车辆在风险地址及在保单所列地区行驶期间的灭失或实物损坏，以保险金额为限。\", \"全损按保单"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 480,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "驶；出租或商业用途；磨损、锈蚀、机械故障及贬值。\", ], \"lux_title\": \"2b. 高价值现代车\", \"lux_by\": \"<strong>Liberty Mutual Insurance Europe</strong>（Liberty Specialty Markets）的豪华车保险，通过 Innovarisk 安排。\", \"lux_cover\": [ \"车辆在风险地址及在保单所列地区行驶期间的灭失或实物损坏，以保险金额为限。\", \"全损按保单约定，以<strong>约定价值或市场价值</strong>赔付；部分损失按合理维"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 489,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": "未找回即视为被盗。\", \"钥匙、点火卡或遥控器遗失或被盗后更换门锁，免赔额1000欧元。\", \"不适用比例赔偿原则；全损时，赔款会考虑结清车辆贷款所需的金额。\", ], \"lux_cond\": [ \"<strong>只能与 Liberty 家庭财产保险一并投保</strong>；常住住宅的室内财产保额须不低于15万欧元。\", \"保单列明驾驶人及年度行驶里程上限。\", \"除外责任：赛车、赛道、速度测试及越野驾驶；出租或商业用途；磨损、机械故障及贬值。\", ], \"need_title\": \"报价所需资料\", \"need\": ["
+   },
+   {
+    "term": "Sem regra proporcional",
+    "kind": "condition",
+    "line": 90,
+    "cls": "PERMITIDA",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "ctx": " de fechaduras após perda, furto ou roubo das chaves, do cartão de ignição ou do comando, com franquia de 1.000 €.\", \"Sem regra proporcional; em caso de perda total, a indemnização tem em conta o montante necessário para liquidar o financiamento do automóvel.\", ], \"lux_cond\":"
+   }
+  ]
+ },
+ {
+  "file": "scripts/pl-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "gwarantowana odbudowa",
+    "kind": "condition",
+    "line": 22,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": " | Adler & Rochefort', description: 'Co zmienia ubezpieczenie domu dla zamożnych klientów w Portugalii i Hiszpanii: gwarantowana odbudowa, brak zasady proporcji, brak udziału własnego przy dużych szkodach.', keywords: 'ubezpieczenie willi Portugalia, ubezpieczenie domu lu"
+   },
+   {
+    "term": "gwarantowana odbudowa",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "dach.', keywords: 'ubezpieczenie willi Portugalia, ubezpieczenie domu luksusowego Hiszpania, brak zasady proporcji, gwarantowana odbudowa, zakwaterowanie zastępcze, ubezpieczenie private client', eyebrow: 'Private Clients · Dom', h1: 'Ubezpieczenie domu wysokiej warto"
+   },
+   {
+    "term": "gwarantowana odbudowa",
+    "kind": "condition",
+    "line": 33,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "banku, nieskatalogowane obrazy i zegarki.', sections: [ sec('plain', 'suma', 'Suma ubezpieczenia: inspekcja i gwarantowana odbudowa', ul([ '<strong>Bezpłatna inspekcja</strong> doradcy ubezpieczyciela: koszt odbudowy, sumy dla mienia ruchomego i przedmiotów wart"
+   },
+   {
+    "term": "Gwarantowana odbudowa",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "ciela: koszt odbudowy, sumy dla mienia ruchomego i przedmiotów wartościowych, zalecenia prewencyjne.', '<strong>Gwarantowana odbudowa:</strong> po przyjęciu zaleceń dom zostaje odbudowany po szkodzie całkowitej, nawet jeśli koszt przekroczy sumę.', '<strong>Brak z"
+   }
+  ]
+ },
+ {
+  "file": "scripts/property_criteria_content.py",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 3,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "\"\"\"Brand-independent copy for property pages (Nov 2026). Replaces the insurer/product sections (Hiscox, Liberty Mutual, Chubb) that add-home-insurers.py and add-valuables-insurers.py used to insert. These blocks explain what Adler & Rochefort analyses, nev"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 3,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "\"\"\"Brand-independent copy for property pages (Nov 2026). Replaces the insurer/product sections (Hiscox, Liberty Mutual, Chubb) that add-home-insurers.py and add-valuables-insurers.py used to insert. These blocks explain what Adler & Rochefort analyses, never what "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 3,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "\"\"Brand-independent copy for property pages (Nov 2026). Replaces the insurer/product sections (Hiscox, Liberty Mutual, Chubb) that add-home-insurers.py and add-valuables-insurers.py used to insert. These blocks explain what Adler & Rochefort analyses, never what a given insurer'"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 53,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": " 'text': 'Adler & Rochefort works with insurers and specialist partners in the protection of private wealth, including Hiscox, Chubb, Liberty Mutual, Hispania and Innovarisk. The choice of solution depends on the characteristics of the property, the sums insured, its use and the"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 53,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": ": 'Adler & Rochefort works with insurers and specialist partners in the protection of private wealth, including Hiscox, Chubb, Liberty Mutual, Hispania and Innovarisk. The choice of solution depends on the characteristics of the property, the sums insured, its use and the underwr"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 53,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "r & Rochefort works with insurers and specialist partners in the protection of private wealth, including Hiscox, Chubb, Liberty Mutual, Hispania and Innovarisk. The choice of solution depends on the characteristics of the property, the sums insured, its use and the underwriting c"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 93,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "r & Rochefort trabalha com seguradoras e parceiros especializados na proteção de patrimónios privados, entre os quais a Hiscox, a Chubb, a Liberty Mutual, a Hispania e a Innovarisk. A seleção da solução depende das características da propriedade, dos capitais, da utilização e das"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 93,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "ort trabalha com seguradoras e parceiros especializados na proteção de patrimónios privados, entre os quais a Hiscox, a Chubb, a Liberty Mutual, a Hispania e a Innovarisk. A seleção da solução depende das características da propriedade, dos capitais, da utilização e das condições"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 93,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "lha com seguradoras e parceiros especializados na proteção de patrimónios privados, entre os quais a Hiscox, a Chubb, a Liberty Mutual, a Hispania e a Innovarisk. A seleção da solução depende das características da propriedade, dos capitais, da utilização e das condições de subsc"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 131,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "dler & Rochefort trabaja con aseguradoras y socios especializados en la protección de patrimonios privados, entre ellos Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La elección de la solución depende de las características de la propiedad, de los capitales, de su uso y d"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 131,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "ochefort trabaja con aseguradoras y socios especializados en la protección de patrimonios privados, entre ellos Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La elección de la solución depende de las características de la propiedad, de los capitales, de su uso y de las co"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 131,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "t trabaja con aseguradoras y socios especializados en la protección de patrimonios privados, entre ellos Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La elección de la solución depende de las características de la propiedad, de los capitales, de su uso y de las condicion"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 169,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "': 'Adler & Rochefort arbeitet mit Versicherern und spezialisierten Partnern für den Schutz privater Vermögen, darunter Hiscox, Chubb, Liberty Mutual, Hispania und Innovarisk. Die Wahl der Lösung hängt von den Merkmalen der Immobilie, den Summen, der Nutzung und den verfügbaren Z"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 169,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "r & Rochefort arbeitet mit Versicherern und spezialisierten Partnern für den Schutz privater Vermögen, darunter Hiscox, Chubb, Liberty Mutual, Hispania und Innovarisk. Die Wahl der Lösung hängt von den Merkmalen der Immobilie, den Summen, der Nutzung und den verfügbaren Zeichnung"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 169,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "hefort arbeitet mit Versicherern und spezialisierten Partnern für den Schutz privater Vermögen, darunter Hiscox, Chubb, Liberty Mutual, Hispania und Innovarisk. Die Wahl der Lösung hängt von den Merkmalen der Immobilie, den Summen, der Nutzung und den verfügbaren Zeichnungsbeding"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 207,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "& Rochefort travaille avec des assureurs et des partenaires spécialisés dans la protection des patrimoines privés, dont Hiscox, Chubb, Liberty Mutual, Hispania et Innovarisk. Le choix de la solution dépend des caractéristiques du bien, des capitaux, de son usage et des conditions"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 207,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "ort travaille avec des assureurs et des partenaires spécialisés dans la protection des patrimoines privés, dont Hiscox, Chubb, Liberty Mutual, Hispania et Innovarisk. Le choix de la solution dépend des caractéristiques du bien, des capitaux, de son usage et des conditions de sous"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 207,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "vaille avec des assureurs et des partenaires spécialisés dans la protection des patrimoines privés, dont Hiscox, Chubb, Liberty Mutual, Hispania et Innovarisk. Le choix de la solution dépend des caractéristiques du bien, des capitaux, de son usage et des conditions de souscriptio"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 245,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "'text': 'Adler & Rochefort lavora con compagnie e partner specializzati nella protezione dei patrimoni privati, tra cui Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La scelta della soluzione dipende dalle caratteristiche dell’immobile, dai capitali, dall’utilizzo e dalle"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 245,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "'Adler & Rochefort lavora con compagnie e partner specializzati nella protezione dei patrimoni privati, tra cui Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La scelta della soluzione dipende dalle caratteristiche dell’immobile, dai capitali, dall’utilizzo e dalle condizi"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 245,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "& Rochefort lavora con compagnie e partner specializzati nella protezione dei patrimoni privati, tra cui Hiscox, Chubb, Liberty Mutual, Hispania e Innovarisk. La scelta della soluzione dipende dalle caratteristiche dell’immobile, dai capitali, dall’utilizzo e dalle condizioni di "
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 283,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": ": 'Adler & Rochefort werkt met verzekeraars en gespecialiseerde partners in de bescherming van privévermogen, waaronder Hiscox, Chubb, Liberty Mutual, Hispania en Innovarisk. De keuze van de oplossing hangt af van de kenmerken van de woning, de bedragen, het gebruik en de beschik"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 283,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": " & Rochefort werkt met verzekeraars en gespecialiseerde partners in de bescherming van privévermogen, waaronder Hiscox, Chubb, Liberty Mutual, Hispania en Innovarisk. De keuze van de oplossing hangt af van de kenmerken van de woning, de bedragen, het gebruik en de beschikbare acc"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 283,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "efort werkt met verzekeraars en gespecialiseerde partners in de bescherming van privévermogen, waaronder Hiscox, Chubb, Liberty Mutual, Hispania en Innovarisk. De keuze van de oplossing hangt af van de kenmerken van de woning, de bedragen, het gebruik en de beschikbare acceptatie"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 321,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "chefort współpracuje z ubezpieczycielami i wyspecjalizowanymi partnerami w zakresie ochrony majątku prywatnego, m.in. z Hiscox, Chubb, Liberty Mutual, Hispania i Innovarisk. Wybór rozwiązania zależy od cech nieruchomości, sum ubezpieczenia, sposobu użytkowania i dostępnych warunk"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 321,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "współpracuje z ubezpieczycielami i wyspecjalizowanymi partnerami w zakresie ochrony majątku prywatnego, m.in. z Hiscox, Chubb, Liberty Mutual, Hispania i Innovarisk. Wybór rozwiązania zależy od cech nieruchomości, sum ubezpieczenia, sposobu użytkowania i dostępnych warunków. Każd"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 321,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "acuje z ubezpieczycielami i wyspecjalizowanymi partnerami w zakresie ochrony majątku prywatnego, m.in. z Hiscox, Chubb, Liberty Mutual, Hispania i Innovarisk. Wybór rozwiązania zależy od cech nieruchomości, sum ubezpieczenia, sposobu użytkowania i dostępnych warunków. Każda ochro"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 359,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "r & Rochefort arbetar med försäkringsgivare och specialiserade partner inom skydd av privata förmögenheter, bland andra Hiscox, Chubb, Liberty Mutual, Hispania och Innovarisk. Valet av lösning beror på fastighetens egenskaper, beloppen, användningen och de villkor som finns tillg"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 359,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "efort arbetar med försäkringsgivare och specialiserade partner inom skydd av privata förmögenheter, bland andra Hiscox, Chubb, Liberty Mutual, Hispania och Innovarisk. Valet av lösning beror på fastighetens egenskaper, beloppen, användningen och de villkor som finns tillgängliga."
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 359,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "rbetar med försäkringsgivare och specialiserade partner inom skydd av privata förmögenheter, bland andra Hiscox, Chubb, Liberty Mutual, Hispania och Innovarisk. Valet av lösning beror på fastighetens egenskaper, beloppen, användningen och de villkor som finns tillgängliga. Allt s"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 397,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "fort samarbejder med forsikringsselskaber og specialiserede partnere inden for beskyttelse af private formuer, herunder Hiscox, Chubb, Liberty Mutual, Hispania og Innovarisk. Valget af løsning afhænger af ejendommens karakteristika, summerne, brugen og de tilgængelige tegningsvil"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 397,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "arbejder med forsikringsselskaber og specialiserede partnere inden for beskyttelse af private formuer, herunder Hiscox, Chubb, Liberty Mutual, Hispania og Innovarisk. Valget af løsning afhænger af ejendommens karakteristika, summerne, brugen og de tilgængelige tegningsvilkår. Al "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 397,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "r med forsikringsselskaber og specialiserede partnere inden for beskyttelse af private formuer, herunder Hiscox, Chubb, Liberty Mutual, Hispania og Innovarisk. Valget af løsning afhænger af ejendommens karakteristika, summerne, brugen og de tilgængelige tegningsvilkår. Al dækning"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 435,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "title': 'מבטחים ושותפים מתמחים', 'text': 'Adler & Rochefort עובדת עם מבטחים ושותפים המתמחים בהגנה על הון פרטי, ביניהם Hiscox‏, Chubb‏, Liberty Mutual‏, Hispania ו־Innovarisk. בחירת הפתרון תלויה במאפייני הנכס, בסכומים, באופן השימוש ובתנאי החיתום הזמינים. כל כיסוי כפוף לקבלת הסיכ"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 435,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "מבטחים ושותפים מתמחים', 'text': 'Adler & Rochefort עובדת עם מבטחים ושותפים המתמחים בהגנה על הון פרטי, ביניהם Hiscox‏, Chubb‏, Liberty Mutual‏, Hispania ו־Innovarisk. בחירת הפתרון תלויה במאפייני הנכס, בסכומים, באופן השימוש ובתנאי החיתום הזמינים. כל כיסוי כפוף לקבלת הסיכון ולתנאי"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 435,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "שותפים מתמחים', 'text': 'Adler & Rochefort עובדת עם מבטחים ושותפים המתמחים בהגנה על הון פרטי, ביניהם Hiscox‏, Chubb‏, Liberty Mutual‏, Hispania ו־Innovarisk. בחירת הפתרון תלויה במאפייני הנכס, בסכומים, באופן השימוש ובתנאי החיתום הזמינים. כל כיסוי כפוף לקבלת הסיכון ולתנאי הפוליסה"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 473,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "保障。所有保障均以保险公司接受风险及保单条款为准。'}, 'inst': {'title': '保险公司与专业合作伙伴', 'text': 'Adler & Rochefort 与专注于私人财富保障的保险公司和专业合作伙伴合作，包括 Hiscox、Chubb、Liberty Mutual、Hispania 和 Innovarisk。方案的选择取决于物业特征、保额、用途以及可获得的承保条件。所有保障均以接受风险及保单条款为准。'}, } C['br'] = C['pt'] "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 473,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "均以保险公司接受风险及保单条款为准。'}, 'inst': {'title': '保险公司与专业合作伙伴', 'text': 'Adler & Rochefort 与专注于私人财富保障的保险公司和专业合作伙伴合作，包括 Hiscox、Chubb、Liberty Mutual、Hispania 和 Innovarisk。方案的选择取决于物业特征、保额、用途以及可获得的承保条件。所有保障均以接受风险及保单条款为准。'}, } C['br'] = C['pt'] "
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "line": 473,
+    "cls": "PERMITIDA",
+    "reason": "texto da secção institucional «Seguradoras e parceiros especializados»",
+    "ctx": "接受风险及保单条款为准。'}, 'inst': {'title': '保险公司与专业合作伙伴', 'text': 'Adler & Rochefort 与专注于私人财富保障的保险公司和专业合作伙伴合作，包括 Hiscox、Chubb、Liberty Mutual、Hispania 和 Innovarisk。方案的选择取决于物业特征、保额、用途以及可获得的承保条件。所有保障均以接受风险及保单条款为准。'}, } C['br'] = C['pt'] "
+   }
+  ]
+ },
+ {
+  "file": "scripts/se-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "garanterad återuppbyggnad",
+    "kind": "condition",
+    "line": 22,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "d: villkoren | Adler & Rochefort', description: 'Vad en private client-hemförsäkring i Portugal och Spanien ändrar: garanterad återuppbyggnad, ingen underförsäkring, ingen självrisk vid stora skador.', keywords: 'hemförsäkring villa Portugal, villaförsäkring Spanien lyx, "
+   },
+   {
+    "term": "garanterad återuppbyggnad",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "sk vid stora skador.', keywords: 'hemförsäkring villa Portugal, villaförsäkring Spanien lyx, ingen underförsäkring, garanterad återuppbyggnad, ersättningsbostad, private client försäkring', eyebrow: 'Private Clients · Bostad', h1: 'Hemförsäkring för en exklusiv bostad"
+   },
+   {
+    "term": "garanterad återuppbyggnad",
+    "kind": "condition",
+    "line": 33,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "nst och klockor utan specifikation.', sections: [ sec('plain', 'belopp', 'Försäkringsbeloppet: besiktning och garanterad återuppbyggnad', ul([ '<strong>Kostnadsfri besiktning</strong> av försäkringsgivarens riskkonsult: återuppbyggnadskostnad, belopp för lösöre "
+   },
+   {
+    "term": "Garanterad återuppbyggnad",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "sgivarens riskkonsult: återuppbyggnadskostnad, belopp för lösöre och värdeföremål, förebyggande råd.', '<strong>Garanterad återuppbyggnad:</strong> följs rekommendationerna byggs huset upp igen efter totalskada även om kostnaden överstiger beloppet.', '<strong>Ing"
+   }
+  ]
+ },
+ {
+  "file": "scripts/zh-content/hnw-home.mjs",
+  "hits": [
+   {
+    "term": "保证重建",
+    "kind": "condition",
+    "line": 22,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "ditions', '高价值住宅：保单条件'), title: '葡萄牙与西班牙高价值住宅保险：保单条件 | Adler & Rochefort', description: '高净值家庭住宅保险在葡萄牙和西班牙带来的不同：保证重建、不适用比例赔付、大额损失免除免赔额、替代住所等。', keywords: '葡萄牙 豪宅保险, 西班牙 别墅保险, 高净值 住宅保险, 不适用比例赔付, 保证重建, 替代住所', eyebrow: 'Private Clients · 住宅', h1: '葡萄牙与西班牙高价值住宅保险："
+   },
+   {
+    "term": "保证重建",
+    "kind": "condition",
+    "line": 23,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "cription: '高净值家庭住宅保险在葡萄牙和西班牙带来的不同：保证重建、不适用比例赔付、大额损失免除免赔额、替代住所等。', keywords: '葡萄牙 豪宅保险, 西班牙 别墅保险, 高净值 住宅保险, 不适用比例赔付, 保证重建, 替代住所', eyebrow: 'Private Clients · 住宅', h1: '葡萄牙与西班牙高价值住宅保险：逐条解读保单条件', standfirst: '普通住宅保险是为一般房屋设计的。对于阿尔加维或马贝拉的别墅，它恰恰在损失重大时暴露出局限。我们代理的 Private"
+   },
+   {
+    "term": "保证重建",
+    "kind": "condition",
+    "line": 33,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "什么。', formPlaceholder: '例如：阿尔加维的别墅，带客房和泳池，银行附送的保单，艺术品和手表未单独列明。', sections: [ sec('plain', 'sum', '保额：现场评估与保证重建', ul([ '<strong>免费现场评估：</strong>保险公司的风险顾问确定重建成本，建议家财和贵重物品保额，并提出防损建议。', '<strong>保证重建：</strong>接受评估建议后，即使重建费用超过保额，全损后房屋也会重建。', '<str"
+   },
+   {
+    "term": "保证重建",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": "', 'sum', '保额：现场评估与保证重建', ul([ '<strong>免费现场评估：</strong>保险公司的风险顾问确定重建成本，建议家财和贵重物品保额，并提出防损建议。', '<strong>保证重建：</strong>接受评估建议后，即使重建费用超过保额，全损后房屋也会重建。', '<strong>不适用比例赔付：</strong>部分损失全额赔付，不因不足额投保而打折。', '<strong>真实重建成本：</strong>相同设计与材料品质、专业费用、新的建筑法规要求、"
+   },
+   {
+    "term": "重建费用超过保额",
+    "kind": "condition",
+    "line": 35,
+    "cls": "PERMITIDA",
+    "reason": "ocorrências apenas nas entradas de páginas retiradas (301) — enforce-retired.mjs remove-as a cada deploy",
+    "ctx": ", ul([ '<strong>免费现场评估：</strong>保险公司的风险顾问确定重建成本，建议家财和贵重物品保额，并提出防损建议。', '<strong>保证重建：</strong>接受评估建议后，即使重建费用超过保额，全损后房屋也会重建。', '<strong>不适用比例赔付：</strong>部分损失全额赔付，不因不足额投保而打折。', '<strong>真实重建成本：</strong>相同设计与材料品质、专业费用、新的建筑法规要求、清理残骸，并每年自动指数调整。', "
+   }
+  ]
+ },
+ {
+  "file": "data/compliance-audit.json",
+  "hits": [
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 356,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "/index.html :: ialist managing general agent and is available only through intermediaries. If you are renewing a former Liberty Seguros home policy,\", \"en/blog/liberty-mutual-home-insurance-portugal/index.html :: ing general agent &mdash; in practice, Innovarisk. It is an int"
+   }
+  ]
+ },
+ {
+  "file": "data/partners.json",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "line": 4,
+    "cls": "PERMITIDA",
+    "reason": "lista institucional de parceiros (logótipos), fonte única aprovada",
+    "ctx": "ugal/) — those stay untouched even for a name that is no longer a partner.\", \"updated\": \"2026-09-11\", \"partners\": [\"Hiscox\", \"Allianz\", \"Zurich\", \"MGEN\", \"Asisa\", \"April\", \"Chubb\", \"Hispania\", \"Innovarisk\"] } "
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "line": 4,
+    "cls": "PERMITIDA",
+    "reason": "lista institucional de parceiros (logótipos), fonte única aprovada",
+    "ctx": "longer a partner.\", \"updated\": \"2026-09-11\", \"partners\": [\"Hiscox\", \"Allianz\", \"Zurich\", \"MGEN\", \"Asisa\", \"April\", \"Chubb\", \"Hispania\", \"Innovarisk\"] } "
+   }
+  ]
+ },
+ {
+  "file": "data/phase2-terminology-audit.json",
+  "hits": [
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "line": 266,
+    "cls": "PERMITIDA",
+    "reason": "regras e registos de auditoria de terminologia (não geram conteúdo publicado)",
+    "ctx": "/index.html :: ialist managing general agent and is available only through intermediaries. If you are renewing a former Liberty Seguros home policy,\", \"en/blog/liberty-mutual-home-insurance-portugal/index.html :: ing general agent &mdash; in practice, Innovarisk. It is an int"
+   }
+  ]
+ }
+]

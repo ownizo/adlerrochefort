@@ -116,7 +116,7 @@ export const HUB_PAGE = {
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/dk/husforsikring-portugal/">Boliger af høj værdi</a></h3>
-        <p>Besigtigelse og genopførelsespris, ingen underforsikringsregel, garanteret genopførelse, indbo verden over og værdigenstande til aftalt værdi — samt det portugisiske grundlag: <em>condomínio</em>, vandskade, jordskælv og feriebolig.</p>
+        <p>Genopførelsespris, reglen om underforsikring, erstatning ved totalskade, indbo og værdigenstande til aftalt værdi — gennemgået skriftligt — samt det portugisiske grundlag: <em>condomínio</em>, vandskade, jordskælv og feriebolig.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/en/private-clients/" hreflang="en">Kunst, samlinger og hele husstanden (engelsk)</a></h3>

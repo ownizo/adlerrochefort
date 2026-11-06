@@ -232,7 +232,7 @@ function enForm(a) {
   html = swap(html, 'to prepare and discuss your quote,', 'to prepare and discuss your assessment,');
   html = swap(html, '<span class="ar-trust-item">ASF-registered insurance broker</span>', '<span class="ar-trust-item">ASF-registered insurance intermediary</span>');
   html = swap(html, '<span class="ar-trust-item">English-speaking team</span>', '<span class="ar-trust-item">Head office in Lisbon</span>');
-  html = swap(html, '<span class="ar-trust-item">Not tied to one insurer — Zurich, Allianz, Hiscox &amp; Liberty Mutual</span>', '<span class="ar-trust-item">Advice given in writing</span>');
+  html = swap(html, '<span class="ar-trust-item">Not tied to any insurer</span>', '<span class="ar-trust-item">Advice given in writing</span>');
   html = swap(html, '<span class="ar-trust-item">We handle the claim for you</span>', '<span class="ar-trust-item">One adviser, from first contact to claim</span>');
   return html.split(WA_OLD).join(wa);
 }

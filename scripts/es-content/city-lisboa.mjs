@@ -77,7 +77,7 @@ export const CITY_LISBOA_PAGE = {
 <section class="section plain" aria-labelledby="cascais">
   <div class="container narrow article-body">
     <h2 id="cascais">La villa familiar en Cascais y Estoril</h2>
-    <p>Muchas familias con hijos eligen la costa por los colegios internacionales y el espacio. Una villa con piscina y jardín en Cascais, Estoril o la Quinta da Marinha se asegura con la lógica de las viviendas de alto valor: inspección y coste de reconstrucción, sin regla proporcional, arte y joyas a valor convenido, alojamiento alternativo equivalente y responsabilidad civil familiar con límites de varios millones. Véase <a href="/es/seguro-hogar-alto-valor/">seguro de hogar de alto valor en Portugal</a>.</p>
+    <p>Muchas familias con hijos eligen la costa por los colegios internacionales y el espacio. Una villa con piscina y jardín en Cascais, Estoril o la Quinta da Marinha se asegura con la lógica de las viviendas de alto valor: coste de reconstrucción, regla proporcional revisada en cada condicionado, arte y joyas a valor convenido, alojamiento alternativo y responsabilidad civil familiar dimensionada según la familia. Véase <a href="/es/seguro-hogar-alto-valor/">seguro de hogar de alto valor en Portugal</a>.</p>
     <p>La piscina es la principal fuente de responsabilidad en una casa con invitados y niños; vallado, cubierta y vigilancia cuentan para la aseguradora.</p>
   </div>
 </section>

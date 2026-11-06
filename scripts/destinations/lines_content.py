@@ -136,38 +136,38 @@ P[('fo','zh')] = dict(slug='zh/family-office-insurance', h1='葡萄牙与西班�
 
 # ---------------- homes in Spain ----------------
 P[('homes_es','pt')] = dict(slug='seguros/habitacao-espanha', h1='Seguro de residências de elevado valor em Espanha',
- intro="Para moradias, apartamentos e casas de férias em Espanha, colocamos a proteção na Hiscox e na Chubb. A apólice parte do custo de reconstrução da casa, com o recheio, a arte e os objetos de valor bem declarados — e lê-se em conjunto com o Consorcio.",
+ intro="Para moradias, apartamentos e casas de férias em Espanha, colocamos a proteção junto de seguradoras especializadas em clientes particulares. A apólice parte do custo de reconstrução da casa, com o recheio, a arte e os objetos de valor bem declarados — e lê-se em conjunto com o Consorcio.",
  points=[("Custo de reconstrução, não valor de mercado","O capital do edifício deve refletir o custo de reconstruir a casa, incluindo piscina, muros e anexos — não o preço de compra nem o valor de mercado."),
          ("O Consorcio de Compensación de Seguros","Em Espanha, os riscos extraordinários — inundações, sismos e tempestades acima de certa intensidade — são cobertos pelo Consorcio. A apólice privada cobre o resto."),
          ("Casas de férias e arrendamento","Os períodos sem ninguém em casa e o arrendamento turístico têm de ser declarados; em várias regiões o arrendamento exige licença."),
          ("Objetos de valor","Joias, relógios e coleções são especificados em valor acordado. Em Espanha podem também ser seguros numa apólice própria, separada da casa.")],
  faq=[("Trabalham em Espanha?","Sim. A Adler & Rochefort está registada na ASF (n.º 425591790/3) e trabalha em Espanha ao abrigo da livre prestação de serviços na União Europeia."),
-      ("Existe um valor mínimo?","Para habitação permanente, as nossas seguradoras especializadas pedem recheio e objetos de valor a partir de 150.000 €. Abaixo disso, dizemos-lhe por escrito se uma boa apólice de mercado é a melhor resposta.")])
+      ("Existe um valor mínimo?","Cada seguradora especializada fixa o seu próprio patamar de entrada, em função do custo de reconstrução, do recheio e dos objetos de valor. Abaixo disso, dizemos-lhe por escrito se uma boa apólice de mercado é a melhor resposta.")])
 P[('homes_es','it')] = dict(slug='it/assicurazione-casa-alto-valore-spagna', h1='Assicurazione casa di pregio in Spagna',
- intro="Per ville, appartamenti e case vacanza in Spagna collochiamo la copertura presso Hiscox e Chubb. La polizza parte dal costo di ricostruzione della casa, con contenuto, arte e oggetti di valore dichiarati correttamente — e va letta insieme al Consorcio.",
+ intro="Per ville, appartamenti e case vacanza in Spagna collochiamo la copertura presso assicuratori specializzati nella clientela privata. La polizza parte dal costo di ricostruzione della casa, con contenuto, arte e oggetti di valore dichiarati correttamente — e va letta insieme al Consorcio.",
  points=[("Costo di ricostruzione, non valore di mercato","La somma per il fabbricato deve riflettere il costo di ricostruire la casa, piscina, muri e dépendance inclusi — non il prezzo d'acquisto."),
          ("Il Consorcio de Compensación de Seguros","In Spagna i rischi straordinari — alluvioni, terremoti e tempeste oltre una certa intensità — sono coperti dal Consorcio. La polizza privata copre il resto."),
          ("Case vacanza e affitti","I periodi di inabitazione e l'affitto turistico vanno dichiarati; in diverse regioni l'affitto richiede una licenza."),
          ("Oggetti di valore","Gioielli, orologi e collezioni sono elencati a valore concordato. In Spagna possono anche essere assicurati con una polizza propria, separata dalla casa.")],
  faq=[("Lavorate in Spagna?","Sì. Adler & Rochefort è registrato presso l'ASF (n. 425591790/3) e opera in Spagna in libera prestazione di servizi nell'Unione europea."),
-      ("Esiste un valore minimo?","Per una residenza principale, i nostri assicuratori specializzati chiedono contenuto e oggetti di valore da 150.000 €. Al di sotto, Le diciamo per iscritto se una buona polizza standard è la risposta migliore.")])
+      ("Esiste un valore minimo?","Ogni assicuratore specializzato fissa la propria soglia di accesso, in base al costo di ricostruzione, al contenuto e agli oggetti di valore. Al di sotto, Le diciamo per iscritto se una buona polizza standard è la risposta migliore.")])
 P[('homes_es','fr')] = dict(slug='fr/assurance-residence-grande-valeur-espagne', h1='Assurance des résidences de grande valeur en Espagne',
- intro="Pour les villas, appartements et maisons de vacances en Espagne, nous plaçons la protection chez Hiscox et Chubb. Le contrat part du coût de reconstruction de la maison, avec le mobilier, les œuvres et les objets de valeur correctement déclarés — et se lit avec le Consorcio.",
+ intro="Pour les villas, appartements et maisons de vacances en Espagne, nous plaçons la protection auprès d’assureurs spécialisés dans la clientèle privée. Le contrat part du coût de reconstruction de la maison, avec le mobilier, les œuvres et les objets de valeur correctement déclarés — et se lit avec le Consorcio.",
  points=[("Coût de reconstruction, pas valeur de marché","Le capital bâtiment doit refléter le coût de reconstruction de la maison, piscine, murs et dépendances compris — pas le prix d'achat."),
          ("Le Consorcio de Compensación de Seguros","En Espagne, les risques extraordinaires — inondations, séismes et tempêtes au-delà d'une certaine intensité — relèvent du Consorcio. Le contrat privé couvre le reste."),
          ("Maisons de vacances et location","Les périodes d'inoccupation et la location touristique doivent être déclarées ; dans plusieurs régions, la location exige une licence."),
          ("Objets de valeur","Bijoux, montres et collections sont déclarés en valeur agréée. En Espagne, ils peuvent aussi être assurés par un contrat distinct de la maison.")],
  faq=[("Intervenez-vous en Espagne ?","Oui. Adler & Rochefort est enregistré auprès de l'ASF (n° 425591790/3) et intervient en Espagne en libre prestation de services au sein de l'Union européenne."),
-      ("Existe-t-il une valeur minimale ?","Pour une résidence principale, nos assureurs spécialisés demandent un mobilier et des objets de valeur à partir de 150 000 €. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse.")])
+      ("Existe-t-il une valeur minimale ?","Chaque assureur spécialisé fixe son propre seuil d’entrée, selon le coût de reconstruction, le mobilier et les objets de valeur. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse.")])
 
 # ---------------- homes in Portugal (FR) ----------------
 P[('homes_pt','fr')] = dict(slug='fr/assurance-residence-grande-valeur-portugal', h1='Assurance des résidences de grande valeur au Portugal',
- intro="Pour les villas, quintas et appartements de prestige au Portugal, nous plaçons la protection chez Hiscox, Liberty et Chubb. Le point de départ est toujours le coût de reconstruction, pas le prix d'achat.",
+ intro="Pour les villas, quintas et appartements de prestige au Portugal, nous plaçons la protection auprès d’assureurs spécialisés dans la clientèle privée. Le point de départ est toujours le coût de reconstruction, pas le prix d'achat.",
  points=[("Coût de reconstruction","Le capital bâtiment doit refléter le coût de reconstruction, murs, piscine et dépendances compris. Un capital trop bas expose à la règle proportionnelle."),
          ("Séisme","Au Portugal, la garantie séisme n'est pas automatique : elle s'ajoute au contrat, en général avec sa propre franchise."),
          ("Appartements en copropriété","La copropriété assure la structure et les parties communes ; l'intérieur, le mobilier, les œuvres et votre responsabilité d'occupant demandent un contrat à part."),
          ("Maisons inoccupées","Une résidence secondaire vide une partie de l'année doit avoir des conditions d'inoccupation qui correspondent à son usage réel.")],
- faq=[("Existe-t-il une valeur minimale ?","Pour une résidence principale, nos assureurs spécialisés demandent un mobilier et des objets de valeur à partir de 150 000 €. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse."),
+ faq=[("Existe-t-il une valeur minimale ?","Chaque assureur spécialisé fixe son propre seuil d’entrée, selon le coût de reconstruction, le mobilier et les objets de valeur. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse."),
       ("Dans quelle langue travaillez-vous ?","Notre langue de travail est l'anglais : propositions, explication des conditions, correspondance et sinistres se font en anglais, par écrit.")])
 
 # ---------------- art, jewellery & watches (FR) ----------------

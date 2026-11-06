@@ -28,7 +28,7 @@ export const HOME_PAGE = {
   cluster: 'home',
   title: 'Assicurazione casa di pregio in Portogallo | Adler & Rochefort',
   description:
-    'Ville e case di alto valore in Portogallo e Spagna: sopralluogo, niente regola proporzionale, ricostruzione garantita e arte a valore concordato.',
+    'Ville e case di alto valore in Portogallo e Spagna: costo di ricostruzione, uso, contenuto e arte analizzati prima di scegliere le condizioni, confermate per iscritto.',
   keywords:
     'assicurazione casa Portogallo, assicurazione villa Portogallo, assicurazione casa alto valore, assicurazione casa Spagna, assicurazione opere d’arte Portogallo, multirriscos habitação, costo di ricostruzione, condominio Portogallo assicurazione, seconda casa Portogallo assicurazione, terremoto Portogallo assicurazione',
   eyebrow: 'Residenze di alto valore',
@@ -79,8 +79,8 @@ export const HOME_PAGE = {
         <p>Accettate le somme raccomandate, la compagnia rinuncia alla riduzione proporzionale: un danno parziale viene pagato per intero, anche se nel frattempo i costi di costruzione sono aumentati.</p>
       </div>
       <div class="feature-card">
-        <h3>Ricostruzione garantita</h3>
-        <p>Dopo un sinistro totale la casa viene ricostruita anche se il costo supera la somma assicurata sul fabbricato — a condizione che siano state accettate le somme raccomandate dal sopralluogo.</p>
+        <h3>Sinistro totale</h3>
+        <p>Come ogni polizza liquida un sinistro totale e quali limiti si applicano — verificato e confermato per iscritto.</p>
       </div>
       <div class="feature-card">
         <h3>Alloggio alternativo equivalente</h3>
@@ -319,7 +319,7 @@ export const HOME_PAGE = {
     },
     {
       q: 'Che cosa distingue una polizza per una casa di alto valore da una polizza casa ordinaria?',
-      a: '<p>Le condizioni. La compagnia effettua un sopralluogo e stabilisce il costo di ricostruzione, rinuncia alla regola proporzionale se sono accettate le somme raccomandate e garantisce la ricostruzione dopo un sinistro totale. Il contenuto è coperto contro tutti i rischi in tutto il mondo, arte e gioielli a valore concordato senza franchigia, e la responsabilità civile della famiglia con massimali di diversi milioni di euro. Il contenuto preciso dipende dalla compagnia e dal rischio ed è confermato solo nella polizza emessa.</p>',
+      a: '<p>Le condizioni. Le somme si fissano a partire dal costo di ricostruzione e verifichiamo come ogni polizza applica la regola proporzionale e come liquida un sinistro totale. Contenuto, arte e gioielli, e responsabilità civile della famiglia si dimensionano in base alla casa e alla famiglia. Il contenuto preciso dipende dalla compagnia e dal rischio ed è confermato solo nella polizza emessa.</p>',
     },
     {
       q: 'Per quale somma va assicurato l’edificio?',

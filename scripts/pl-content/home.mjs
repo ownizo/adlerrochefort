@@ -21,7 +21,7 @@ export const HOME_PAGE = {
   cluster: 'home',
   title: 'Ubezpieczenie domu i rezydencji w Portugalii | Adler & Rochefort',
   description:
-    'Domy o wysokiej wartości w Portugalii: oględziny, bez zasady proporcji, gwarantowana odbudowa, sztuka i kolekcje według wartości uzgodnionej. Na piśmie.',
+    'Domy o wysokiej wartości w Portugalii: koszt odbudowy, sposób użytkowania, ruchomości i kolekcje analizowane przed wyborem warunków, potwierdzonych na piśmie.',
   keywords:
     'ubezpieczenie domu Portugalia, ubezpieczenie domu o wysokiej wartości Portugalia, ubezpieczenie rezydencji Portugalia, ubezpieczenie dzieł sztuki Portugalia, multirriscos habitação, wartość odbudowy Portugalia, ubezpieczenie domu wakacyjnego Portugalia',
   eyebrow: 'Domy o wysokiej wartości',
@@ -89,7 +89,7 @@ export const HOME_PAGE = {
     <ul class="hub-list">
       <li class="hub-item"><h3>Oględziny i koszt odbudowy</h3><p>Przy nieruchomościach o wyższej wartości ubezpieczyciel przeprowadza bezpłatne oględziny na miejscu, aby potwierdzić koszt odbudowy, doradzić w sprawie sum ubezpieczenia ruchomości i przedmiotów wartościowych oraz zarekomendować środki zapobiegawcze.</p></li>
       <li class="hub-item"><h3>Bez zasady proporcji</h3><p>Po przyjęciu rekomendowanych sum ubezpieczyciel rezygnuje ze stosowania zasady proporcji: szkoda częściowa jest wypłacana w całości, nawet jeśli koszty budowy w międzyczasie wzrosły.</p></li>
-      <li class="hub-item"><h3>Gwarantowana odbudowa</h3><p>Po szkodzie całkowitej dom zostaje odbudowany, nawet jeśli koszt przekroczy sumę ubezpieczenia budynku — pod warunkiem przyjęcia sum zarekomendowanych po oględzinach.</p></li>
+      <li class="hub-item"><h3>Szkoda całkowita</h3><p>Jak dana polisa likwiduje szkodę całkowitą i jakie limity obowiązują — sprawdzamy i potwierdzamy na piśmie.</p></li>
       <li class="hub-item"><h3>Zakwaterowanie o porównywalnym standardzie</h3><p>Zakwaterowanie zastępcze o porównywalnym standardzie, również dla zwierząt domowych i koni, przez cały czas, gdy dom nie nadaje się do zamieszkania — bez limitu kilku miesięcy typowego dla rynku masowego.</p></li>
       <li class="hub-item"><h3>Ogród, mury i budynki gospodarcze</h3><p>Drzewa, krzewy i trawniki, ogrodzenia i mury oporowe, baseny, budynki gospodarcze i domy gościnne z własnymi sumami ubezpieczenia — a nie z symbolicznym limitem.</p></li>
       <li class="hub-item"><h3>Woda, gaz i lokalizacja awarii</h3><p>Zlokalizowanie i naprawa wycieków wody, gazu lub oleju opałowego bez odrębnego podlimitu, wraz z utraconą wodą lub paliwem.</p></li>

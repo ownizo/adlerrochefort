@@ -25,7 +25,7 @@ COPY = {
  "classic_cover": [
   "Loss of or physical damage to the car up to the sum insured, at the garaging address and on the road within the territories in the schedule.",
   "<strong>Agreed value:</strong> after a total loss the insurer pays the value stated in the schedule; a partial loss is paid at the reasonable cost of repair.",
-  "No proportional rule (average) applied to a claim.",
+  "How the proportional rule (average) applies is set out in the wording.",
   "Several cars on one policy, each with its own agreed value.",
   "If a car is recovered after a total-loss settlement, you can buy it back within 60 days.",
  ],
@@ -46,7 +46,7 @@ COPY = {
   "Proportional rule waived; after a total loss, the settlement takes account of the amount needed to repay any finance on the car.",
  ],
  "lux_cond": [
-  "<strong>Only available together with a Liberty home insurance policy</strong>, which for a permanent residence requires contents of at least €150,000.",
+  "<strong>Only available together with a home insurance policy with the same insurer</strong>, subject to that insurer’s own requirements for the home policy.",
   "Named drivers and an annual mileage limit stated in the schedule.",
   "Excluded: racing, circuits, speed tests and off-road use; hire or commercial use; wear, mechanical breakdown and depreciation.",
  ],
@@ -90,7 +90,7 @@ COPY = {
   "Sem regra proporcional; em caso de perda total, a indemnização tem em conta o montante necessário para liquidar o financiamento do automóvel.",
  ],
  "lux_cond": [
-  "<strong>Só é subscrito em conjunto com um seguro multirriscos habitação da Liberty</strong>, que para habitação permanente exige um capital de recheio de pelo menos 150.000 €.",
+  "<strong>Só é subscrito em conjunto com um seguro multirriscos habitação da mesma seguradora</strong>, sujeito às exigências próprias dessa seguradora para o seguro da casa.",
   "Condutores identificados e limite de quilometragem anual indicados nas Condições Particulares.",
   "Excluídos: corridas, circuitos, testes de velocidade e todo-o-terreno; aluguer ou utilização comercial; desgaste, avarias mecânicas e desvalorização.",
  ],
@@ -131,10 +131,10 @@ COPY = {
   "Pérdida total indemnizada a <strong>valor convenido o a valor de mercado</strong>, según las condiciones particulares; pérdidas parciales por el coste razonable de reparación, con reparaciones aprobadas previamente por la aseguradora.",
   "Robo: el coche se considera robado si no aparece en un plazo de 60 días.",
   "Sustitución de cerraduras tras la pérdida o el robo de las llaves, la tarjeta de encendido o el mando, con una franquicia de 1.000 €.",
-  "Sin regla proporcional; tras una pérdida total, la indemnización tiene en cuenta el importe necesario para cancelar la financiación del coche.",
+  "Regla proporcional según el condicionado; tras una pérdida total, la indemnización tiene en cuenta el importe necesario para cancelar la financiación del coche.",
  ],
  "lux_cond": [
-  "<strong>Solo se contrata junto con un seguro de hogar de Liberty</strong>, que para una residencia habitual exige un contenido de al menos 150.000 €.",
+  "<strong>Solo se contrata junto con un seguro de hogar de la misma aseguradora</strong>, sujeto a los requisitos propios de esa aseguradora para el seguro de hogar.",
   "Conductores designados y límite de kilometraje anual indicados en las condiciones particulares.",
   "Excluidos: carreras, circuitos, pruebas de velocidad y uso todoterreno; alquiler o uso comercial; desgaste, averías mecánicas y depreciación.",
  ],
@@ -178,7 +178,7 @@ COPY = {
   "Keine Unterversicherungskürzung; bei Totalschaden berücksichtigt die Entschädigung den Betrag, der zur Ablösung einer Finanzierung nötig ist.",
  ],
  "lux_cond": [
-  "<strong>Nur zusammen mit einer Liberty-Hausversicherung abschließbar</strong>, die für einen Hauptwohnsitz einen Hausrat von mindestens 150.000 € verlangt.",
+  "<strong>Nur zusammen mit einer Hausversicherung desselben Versicherers abschließbar</strong>, nach den eigenen Anforderungen dieses Versicherers an die Hausversicherung.",
   "Benannte Fahrer und jährliches Kilometerlimit laut Police.",
   "Ausgeschlossen: Rennen, Rundstrecken, Geschwindigkeitstests und Geländefahrten; Vermietung oder gewerbliche Nutzung; Verschleiß, mechanische Defekte und Wertverlust.",
  ],
@@ -222,7 +222,7 @@ COPY = {
   "Geen onderverzekeringsregel; bij totaal verlies houdt de uitkering rekening met het bedrag dat nodig is om een financiering af te lossen.",
  ],
  "lux_cond": [
-  "<strong>Alleen af te sluiten samen met een woonhuisverzekering van Liberty</strong>, die voor een hoofdverblijf een inboedel van minstens € 150.000 vereist.",
+  "<strong>Alleen af te sluiten samen met een woonhuisverzekering van dezelfde verzekeraar</strong>, onder de eigen voorwaarden van die verzekeraar voor de woonverzekering.",
   "Genoemde bestuurders en een jaarlijkse kilometergrens volgens de polis.",
   "Uitgesloten: races, circuits, snelheidstests en terreinrijden; verhuur of commercieel gebruik; slijtage, mechanische pech en waardevermindering.",
  ],
@@ -266,7 +266,7 @@ COPY = {
   "Nessuna regola proporzionale; in caso di perdita totale, l'indennizzo tiene conto dell'importo necessario per estinguere il finanziamento dell'auto.",
  ],
  "lux_cond": [
-  "<strong>Si stipula solo insieme a una polizza casa Liberty</strong>, che per un'abitazione principale richiede un contenuto di almeno 150.000 €.",
+  "<strong>Si stipula solo insieme a una polizza casa della stessa compagnia</strong>, nel rispetto dei requisiti propri di quella compagnia per la polizza casa.",
   "Conducenti indicati e limite di chilometraggio annuo secondo le condizioni particolari.",
   "Esclusi: gare, circuiti, prove di velocità e fuoristrada; noleggio o uso commerciale; usura, guasti meccanici e svalutazione.",
  ],
@@ -310,7 +310,7 @@ COPY = {
   "Bez zasady proporcjonalności; przy szkodzie całkowitej odszkodowanie uwzględnia kwotę potrzebną do spłaty finansowania samochodu.",
  ],
  "lux_cond": [
-  "<strong>Dostępne tylko łącznie z ubezpieczeniem domu Liberty</strong>, które dla stałego miejsca zamieszkania wymaga sumy ubezpieczenia mienia ruchomego co najmniej 150 000 €.",
+  "<strong>Dostępne tylko łącznie z ubezpieczeniem domu tego samego ubezpieczyciela</strong>, na warunkach tego ubezpieczyciela dla ubezpieczenia domu.",
   "Wskazani kierowcy i roczny limit kilometrów zgodnie z polisą.",
   "Wyłączone: wyścigi, tory, próby prędkości i jazda terenowa; wynajem lub użytek komercyjny; zużycie, awarie mechaniczne i utrata wartości.",
  ],
@@ -354,7 +354,7 @@ COPY = {
   "Ingen underforsikringsregel; ved totalskade tager erstatningen hensyn til det beløb, der skal til for at indfri finansieringen af bilen.",
  ],
  "lux_cond": [
-  "<strong>Kan kun tegnes sammen med en husforsikring fra Liberty</strong>, som for en helårsbolig kræver en indboforsikringssum på mindst 150.000 €.",
+  "<strong>Kan kun tegnes sammen med en husforsikring fra samme selskab</strong>, på det selskabs egne krav til husforsikringen.",
   "Navngivne førere og en årlig kilometergrænse efter policen.",
   "Undtaget: væddeløb, baner, hastighedstest og terrænkørsel; udlejning eller erhvervsmæssig brug; slid, mekaniske fejl og værdiforringelse.",
  ],
@@ -398,7 +398,7 @@ COPY = {
   "Ingen underförsäkringsregel; vid totalskada tar ersättningen hänsyn till det belopp som krävs för att lösa bilens finansiering.",
  ],
  "lux_cond": [
-  "<strong>Kan bara tecknas tillsammans med en hemförsäkring från Liberty</strong>, som för en permanent bostad kräver ett lösöresbelopp på minst 150 000 €.",
+  "<strong>Kan bara tecknas tillsammans med en hemförsäkring från samma försäkringsbolag</strong>, med det försäkringsbolagets egna krav för hemförsäkringen.",
   "Namngivna förare och en årlig körsträckegräns enligt försäkringsbrevet.",
   "Undantaget: tävling, banor, hastighetstester och terrängkörning; uthyrning eller kommersiell användning; slitage, mekaniska fel och värdeminskning.",
  ],
@@ -442,7 +442,7 @@ COPY = {
   "ללא כלל יחסי; באובדן מוחלט הפיצוי מתחשב בסכום הדרוש לסילוק המימון של הרכב.",
  ],
  "lux_cond": [
-  "<strong>ניתן לרכישה רק יחד עם ביטוח דירה של Liberty</strong>, הדורש עבור מגורי קבע סכום ביטוח תכולה של 150,000 אירו לפחות.",
+  "<strong>ניתן לרכישה רק יחד עם ביטוח דירה של אותו מבטח</strong>, בכפוף לדרישות של אותו מבטח לביטוח הבית.",
   "נהגים נקובים ומגבלת קילומטראז' שנתית לפי הפוליסה.",
   "חריגים: מרוצים, מסלולים, מבחני מהירות ונהיגת שטח; השכרה או שימוש מסחרי; בלאי, תקלות מכניות וירידת ערך.",
  ],

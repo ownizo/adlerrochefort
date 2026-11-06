@@ -200,7 +200,7 @@ function buildBody(a) {
       <div class="article-author-role">Founder &amp; Risk Management Specialist &middot; Adler &amp; Rochefort</div>
     </div>
   </div><!-- /article-author --><div class="article-body">
-<p style="background:#EBE9E8;border-left:4px solid #292929;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#333332;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across Zurich, Allianz, Hiscox and Liberty Mutual, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>
+<p style="background:#EBE9E8;border-left:4px solid #292929;padding:14px 18px;margin-bottom:28px;font-size:14px;line-height:1.6;color:#333332;border-radius:0 6px 6px 0;">Part of our complete guide to <a href="/en/blog/home-insurance-protect-property/">home insurance in Portugal for property owners</a>. For a free comparison across the insurers we work with, <a href="/en/home-insurance-quote/">request a quote in 24 hours</a>.</p>
 ${a.intro}
 ${sections.join('\n')}
 <h2>${tableHeading}</h2>

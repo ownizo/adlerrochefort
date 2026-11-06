@@ -36,13 +36,13 @@ PAGES = {
              "<ul>"
              "<li><strong>International health insurance</strong> with Allianz Care and Cigna Global, for expats in Portugal, Spain or anywhere else: <a href=\"/en/international-health-insurance/\">international health insurance</a>.</li>"
              "<li><strong>Private health insurance</strong> in <a href=\"/en/health-insurance-quote/\">Portugal</a> and <a href=\"/en/health-insurance-spain/\">Spain</a>, including the cover needed for residence visas.</li>"
-             "<li><strong>High-value homes</strong> in <a href=\"/en/home-insurance-quote/\">Portugal</a> and <a href=\"/en/home-insurance-spain/\">Spain</a>, with Chubb, Hiscox and Liberty, and <a href=\"/en/second-home-insurance-portugal/\">second homes</a> that stand empty part of the year.</li>"
+             "<li><strong>High-value homes</strong> in <a href=\"/en/home-insurance-quote/\">Portugal</a> and <a href=\"/en/home-insurance-spain/\">Spain</a>, placed with specialist private-client insurers, and <a href=\"/en/second-home-insurance-portugal/\">second homes</a> that stand empty part of the year.</li>"
              "<li><strong>Art, jewellery and watches</strong> on agreed value: <a href=\"/en/art-jewellery-watches-insurance/\">art, jewellery and watch insurance</a>.</li>"
              "<li><strong>Family liability</strong>, <strong>car</strong> and <strong>life and mortgage protection</strong>: <a href=\"/en/family-liability-insurance-spain/\">family liability in Spain</a>, <a href=\"/en/car-insurance-portugal/\">car insurance in Portugal</a>, <a href=\"/en/mortgage-protection-spain/\">mortgage protection in Spain</a>.</li>"
              "<li><strong>Landlords</strong> letting long-term or to holidaymakers: <a href=\"/en/landlord-insurance-portugal/\">Portugal</a>, <a href=\"/en/landlord-insurance-spain/\">Spain</a>.</li>"
              "</ul>"),
             ("both", "Portugal and Spain together", None,
-             "<p>Many of our clients have a home, a family member or a business on both sides of the border. Chubb and Hiscox write both countries, so homes and valuables in Portugal and in Spain can often be insured with the same adviser and aligned conditions, instead of two unrelated policies in two languages.</p>"
+             "<p>Many of our clients have a home, a family member or a business on both sides of the border. Some specialist insurers write both countries, so homes and valuables in Portugal and in Spain can often be insured with the same adviser and aligned conditions, instead of two unrelated policies in two languages.</p>"
              "<p>We work online and in writing, so it makes no difference where in Portugal or Spain you live: Lisbon, Cascais, the Algarve, the Costa del Sol, the Balearics, the Costa Blanca, Madrid or Barcelona.</p>"),
         ],
         "faq_title": "Frequently asked questions",
@@ -52,7 +52,7 @@ PAGES = {
             ("Are you registered to arrange insurance in Portugal and Spain?",
              "Yes. Adler & Rochefort (Ownizo, Unipessoal Lda.) is registered with Portugal's ASF under no. 425591790/3 and places Spanish risks under the EU freedom to provide services."),
             ("Are you tied to one insurer?",
-             "No. We compare within the insurer relationships we hold, such as Allianz Care, Cigna Global, Chubb, Hiscox and Liberty, and say plainly when something falls outside them."),
+             "No. We compare within the insurer relationships we hold — Allianz Care, Cigna Global and APRIL International for international health, specialist private-client insurers for homes and valuables — and say plainly when something falls outside them."),
             ("Does using a broker cost extra?",
              "A broker is normally paid by the insurer through commission built into the premium, not a separate fee charged to you. We confirm this for your case before anything is arranged."),
             ("Do I need to meet you or call you?",
@@ -84,14 +84,14 @@ PAGES = {
             ("was", "Was wir versichern", "Sparten",
              "<ul>"
              "<li><strong>Internationale Krankenversicherung</strong> mit Allianz Care und Cigna Global: <a href=\"/de/internationale-krankenversicherung/\">internationale Krankenversicherung</a>; private Krankenversicherung in <a href=\"/de/krankenversicherung-portugal/\">Portugal</a> und <a href=\"/de/krankenversicherung-spanien/\">Spanien</a>.</li>"
-             "<li><strong>Hochwertige Häuser</strong> in <a href=\"/de/hausversicherung-portugal/\">Portugal</a> und <a href=\"/de/hausversicherung-spanien/\">Spanien</a>, mit Chubb, Hiscox und Liberty.</li>"
+             "<li><strong>Hochwertige Häuser</strong> in <a href=\"/de/hausversicherung-portugal/\">Portugal</a> und <a href=\"/de/hausversicherung-spanien/\">Spanien</a>, platziert bei spezialisierten Privatkundenversicherern.</li>"
              "<li><strong>Ferienimmobilien</strong>, die einen Teil des Jahres leer stehen: <a href=\"/de/leerstand-ferienhaus-versicherung-portugal-spanien/\">Ferienhaus in Portugal oder Spanien: die Leerstandsklausel</a>.</li>"
              "<li><strong>Schmuck, Uhren und Kunst</strong> zu einem vereinbarten Wert: <a href=\"/de/schmuck-uhren-versicherung-portugal-spanien/\">Schmuck und Uhren versichern</a>.</li>"
              "<li><strong>Privathaftpflicht</strong>, <strong>Auto</strong> sowie <strong>Leben und Hypothekenschutz</strong>: <a href=\"/de/privathaftpflicht-spanien/\">Privathaftpflicht in Spanien</a>, <a href=\"/de/autoversicherung-portugal/\">Autoversicherung in Portugal</a>, <a href=\"/de/hypothekenschutz-spanien/\">Hypothekenschutz in Spanien</a>.</li>"
              "<li><strong>Umzug aus Deutschland</strong>: <a href=\"/de/umzug-deutschland-portugal-versicherung/\">nach Portugal</a>, <a href=\"/de/umzug-deutschland-spanien-versicherung/\">nach Spanien</a>.</li>"
              "</ul>"),
             ("beide", "Portugal und Spanien zusammen", None,
-             "<p>Viele unserer Kunden haben ein Haus, Familie oder ein Unternehmen auf beiden Seiten der Grenze. Chubb und Hiscox versichern in beiden Ländern, sodass Häuser und Wertsachen in Portugal und Spanien oft bei demselben Berater und mit abgestimmten Bedingungen versichert werden können, statt mit zwei unabhängigen Policen in zwei Sprachen.</p>"
+             "<p>Viele unserer Kunden haben ein Haus, Familie oder ein Unternehmen auf beiden Seiten der Grenze. Manche Spezialversicherer zeichnen in beiden Ländern, sodass Häuser und Wertsachen in Portugal und Spanien oft bei demselben Berater und mit abgestimmten Bedingungen versichert werden können, statt mit zwei unabhängigen Policen in zwei Sprachen.</p>"
              "<p>Wir arbeiten online und schriftlich; es spielt also keine Rolle, wo in Portugal oder Spanien Sie wohnen: Lissabon, Cascais, die Algarve, die Costa del Sol, Mallorca, die Costa Blanca oder die Kanaren.</p>"),
         ],
         "faq_title": "Häufige Fragen",
@@ -101,7 +101,7 @@ PAGES = {
             ("Dürfen Sie in Portugal und Spanien vermitteln?",
              "Ja. Adler & Rochefort (Ownizo, Unipessoal Lda.) ist bei der portugiesischen ASF unter der Nr. 425591790/3 registriert und vermittelt spanische Risiken im Rahmen der EU-Dienstleistungsfreiheit."),
             ("Sind Sie an einen Versicherer gebunden?",
-             "Nein. Wir vergleichen innerhalb der Versicherer, mit denen wir zusammenarbeiten, etwa Allianz Care, Cigna Global, Chubb, Hiscox und Liberty, und sagen offen, wenn etwas außerhalb davon liegt."),
+             "Nein. Wir vergleichen innerhalb der Versicherer, mit denen wir zusammenarbeiten — Allianz Care, Cigna Global und APRIL International für internationale Krankenversicherung, spezialisierte Privatkundenversicherer für Häuser und Wertsachen — und sagen offen, wenn etwas außerhalb davon liegt."),
             ("Kostet ein Makler extra?",
              "Ein Makler wird in der Regel vom Versicherer über eine in der Prämie enthaltene Provision bezahlt, nicht über ein gesondertes Honorar. Das bestätigen wir Ihnen für Ihren Fall, bevor etwas abgeschlossen wird."),
             ("Hilft Ihr Büro auch bei einer Ferienimmobilie?",

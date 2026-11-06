@@ -85,8 +85,8 @@ export const ES_HOME_PAGE = {
     <h2 id="alto-valor">Viviendas de alto valor, arte y joyas</h2>
     <p>Una villa en La Zagaleta o un piso señorial en Chamberí no se aseguran bien con un multirriesgo estándar. Las pólizas para patrimonios de alto valor trabajan con otra lógica:</p>
     <ul>
-      <li><strong>Inspección</strong> de la vivienda para fijar el coste de reconstrucción y, aceptadas las sumas, renuncia a la regla proporcional.</li>
-      <li><strong>Reconstrucción garantizada</strong> aunque el coste supere la suma, dentro de lo pactado.</li>
+      <li><strong>Coste de reconstrucción</strong> fijado con método — inspección, tasación o cálculo — y revisión de cómo aplica cada póliza la regla proporcional.</li>
+      <li><strong>Pérdida total</strong>: cómo se liquida y con qué límites, según cada condicionado, confirmado por escrito.</li>
       <li><strong>Arte, joyas y relojes a valor convenido</strong>, relacionados con tasación, sin franquicia y cubiertos también cuando viajan con usted — a América incluida.</li>
       <li><strong>Alojamiento alternativo de nivel equivalente</strong> mientras la casa no pueda habitarse, sin el límite de pocos meses del mercado minorista.</li>
     </ul>

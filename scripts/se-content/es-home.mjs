@@ -102,8 +102,8 @@ export const ES_HOME_PAGE = {
     <div class="feature-grid">
       <div class="feature-card">
         <span class="fc-tag">Huset</span>
-        <h3>Besiktning och garanterad återuppbyggnad</h3>
-        <p>Återuppbyggnadskostnaden fastställs vid besiktning utan kostnad för dig. Accepteras de rekommenderade beloppen avstår bolaget från underförsäkringsregeln, och vid totalskada byggs huset upp igen även om kostnaden överstiger beloppet. Likvärdigt ersättningsboende, trädgård, murar, pool och annex med egna belopp.</p>
+        <h3>Återuppbyggnadskostnad och totalskada</h3>
+        <p>Hur återuppbyggnadskostnaden fastställs, hur underförsäkringsregeln tillämpas och hur en totalskada regleras — kontrolleras skriftligt i varje villkor. Likaså ersättningsboende, trädgård, murar, pool och annex.</p>
       </div>
       <div class="feature-card">
         <span class="fc-tag">Lösöret</span>

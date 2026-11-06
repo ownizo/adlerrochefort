@@ -6,13 +6,13 @@ Two goals:
 - give AI assistants and search engines short, self-contained, verifiable
   statements they can quote;
 - qualify private-client visitors: the first fact states who specialist
-  home cover is written for (contents and valuables from EUR 150,000, the
-  minimum the specialist insurers ask for a permanent residence), so
+  home cover is written for (homes whose rebuild cost, contents or valuables go
+  beyond a standard policy; each specialist insurer sets its own entry level), so
   smaller risks self-select out and high-net-worth households recognise
   themselves.
 
 Facts come from insurer terms the broker works with and from the pages
-themselves. No insurer prices on private-client pages; Chubb is not named.
+themselves. No insurer prices on private-client pages; no insurer is named (Nov 2026 housing audit).
 Idempotent (marker: <!-- AR-KEYFACTS -->). Run: python3 scripts/add-key-facts.py
 """
 from pathlib import Path
@@ -28,42 +28,42 @@ STYLE = ('<style id="ar-keyfacts-style">.ar-keyfacts{max-width:1100px;margin:20p
 
 HNW = {
     "en": ("Key facts", [
-        "<strong>Who it is for:</strong> homes with contents and valuables from €150,000, the minimum our specialist insurers ask for a permanent residence. Below that, a well-built standard policy is usually the better answer, and we say so in writing.",
+        "<strong>Who it is for:</strong> homes whose rebuild cost, contents or valuables go beyond what a standard policy was designed for; each specialist insurer sets its own entry level. Below that, a well-built standard policy is usually the better answer, and we say so in writing.",
         "<strong>No proportional reduction</strong> once the recommended sums are accepted; after a total loss the house is rebuilt even above the buildings sum insured.",
         "Art, jewellery, watches and collections on <strong>agreed value</strong>, with worldwide all-risks cover for personal possessions.",
-        "Individually underwritten with specialist capacity — Hiscox, Liberty, Zurich and Allianz — with the conditions agreed in writing before any claim.",
+        "Individually underwritten with specialist capacity, with the conditions agreed in writing before any claim.",
         "Portugal and Spain with one adviser; where the insurer writes both countries, on one policy.",
         "Written opinion in 24–72 working hours. ASF-registered broker no. 425591790/3, not tied to any insurer. We never ask for your total net worth.",
     ]),
     "pt": ("Factos essenciais", [
-        "<strong>Para quem:</strong> residências com recheio e objetos de valor a partir de 150.000 €, o capital mínimo que as nossas seguradoras especializadas pedem para habitação permanente. Abaixo disso, uma boa apólice de mercado costuma ser a melhor resposta — e dizemo-lo por escrito.",
-        "<strong>Sem regra proporcional</strong> aceites os capitais recomendados; em caso de perda total, a casa é reconstruída mesmo acima do capital seguro do edifício.",
+        "<strong>Para quem:</strong> residências cujo custo de reconstrução, recheio ou objetos de valor ultrapassam aquilo para que uma apólice-tipo foi pensada; cada seguradora especializada fixa o seu próprio patamar de entrada. Abaixo disso, uma boa apólice de mercado costuma ser a melhor resposta — e dizemo-lo por escrito.",
+        "<strong>Regra proporcional</strong>: verificamos por escrito como cada apólice a aplica e como indemniza uma perda total.",
         "Arte, joalharia, relógios e coleções em <strong>valor acordado</strong>, com cobertura «todos os riscos» em todo o mundo para objetos pessoais.",
-        "Subscrição individual com capacidade especializada — Hiscox, Liberty, Zurich e Allianz — com as condições acordadas por escrito antes de qualquer sinistro.",
+        "Subscrição individual com capacidade especializada, com as condições acordadas por escrito antes de qualquer sinistro.",
         "Portugal e Espanha com um único interlocutor; quando a seguradora subscreve os dois países, na mesma apólice.",
         "Parecer por escrito em 24–72 horas úteis. Mediador de seguros registado na ASF com o n.º 425591790/3. Nunca pedimos o valor total do seu património.",
     ]),
     "es": ("Datos clave", [
-        "<strong>Para quién:</strong> viviendas con contenido y objetos de valor desde 150.000 €, el mínimo que piden nuestras aseguradoras especializadas para una residencia habitual. Por debajo, una buena póliza estándar suele ser la mejor respuesta, y se lo decimos por escrito.",
-        "<strong>Sin regla proporcional</strong> una vez aceptadas las sumas recomendadas; tras una pérdida total, la casa se reconstruye aunque supere la suma asegurada del continente.",
+        "<strong>Para quién:</strong> viviendas cuyo coste de reconstrucción, contenido u objetos de valor superan lo que una póliza estándar puede cubrir; cada aseguradora especializada fija su propio umbral. Por debajo, una buena póliza estándar suele ser la mejor respuesta, y se lo decimos por escrito.",
+        "<strong>Regla proporcional</strong>: revisamos por escrito cómo la aplica cada condicionado y cómo liquida una pérdida total.",
         "Arte, joyas, relojes y colecciones a <strong>valor convenido</strong>, con cobertura a todo riesgo en todo el mundo para los objetos personales.",
-        "Suscripción individual con capacidad especializada — Hiscox, Liberty, Zurich y Allianz — con las condiciones acordadas por escrito antes de cualquier siniestro.",
+        "Suscripción individual con capacidad especializada, con las condiciones acordadas por escrito antes de cualquier siniestro.",
         "Portugal y España con un solo asesor; cuando la aseguradora suscribe ambos países, en una sola póliza.",
         "Opinión por escrito en 24–72 horas hábiles. Corredor inscrito en la ASF con el n.º 425591790/3, sin vínculo con ninguna aseguradora. Nunca le pedimos el valor total de su patrimonio.",
     ]),
     "de": ("Das Wichtigste in Kürze", [
-        "<strong>Für wen:</strong> Häuser mit Hausrat und Wertsachen ab 150.000 € — das Minimum, das unsere Spezialversicherer für einen Hauptwohnsitz verlangen. Darunter ist eine gut gebaute Standardpolice meist die bessere Lösung, und das sagen wir Ihnen schriftlich.",
+        "<strong>Für wen:</strong> Häuser, deren Wiederaufbaukosten, Hausrat oder Wertsachen über das hinausgehen, wofür eine Standardpolice gebaut ist; jeder Spezialversicherer setzt seine eigene Einstiegsschwelle. Darunter ist eine gut gebaute Standardpolice meist die bessere Lösung, und das sagen wir Ihnen schriftlich.",
         "<strong>Keine Unterversicherungskürzung</strong>, sobald die empfohlenen Summen angenommen sind; nach einem Totalschaden wird das Haus auch über der Gebäudeversicherungssumme wieder aufgebaut.",
         "Kunst, Schmuck, Uhren und Sammlungen zum <strong>vereinbarten Wert</strong>, mit weltweitem Allgefahrenschutz für persönliche Gegenstände.",
-        "Individuell gezeichnet mit spezialisierter Kapazität — Hiscox, Liberty, Zurich und Allianz — mit schriftlich vereinbarten Bedingungen vor jedem Schaden.",
+        "Individuell gezeichnet mit spezialisierter Kapazität, mit schriftlich vereinbarten Bedingungen vor jedem Schaden.",
         "Portugal und Spanien mit einem Berater; wenn der Versicherer beide Länder zeichnet, in einer Police.",
         "Schriftliche Einschätzung in 24–72 Arbeitsstunden. Bei der ASF unter Nr. 425591790/3 registrierter Makler, an keinen Versicherer gebunden. Wir fragen nie nach Ihrem Gesamtvermögen.",
     ]),
     "nl": ("In het kort", [
-        "<strong>Voor wie:</strong> woningen met inboedel en kostbaarheden vanaf € 150.000, het minimum dat onze gespecialiseerde verzekeraars voor een hoofdverblijf vragen. Daaronder is een goede standaardpolis meestal het betere antwoord, en dat zeggen we u schriftelijk.",
-        "<strong>Geen onderverzekeringskorting</strong> zodra de aanbevolen bedragen zijn aanvaard; na totaal verlies wordt de woning herbouwd, ook boven het verzekerde bedrag voor de opstal.",
+        "<strong>Voor wie:</strong> woningen waarvan herbouwwaarde, inboedel of kostbaarheden verder gaan dan een standaardpolis; elke gespecialiseerde verzekeraar hanteert een eigen instapniveau. Daaronder is een goede standaardpolis meestal het betere antwoord, en dat zeggen we u schriftelijk.",
+        "<strong>Evenredigheidsregel</strong>: wij controleren schriftelijk hoe elke polis die toepast en hoe een totaal verlies wordt afgewikkeld.",
         "Kunst, sieraden, horloges en collecties tegen <strong>getaxeerde waarde</strong>, met wereldwijde all-risksdekking voor persoonlijke bezittingen.",
-        "Individueel geaccepteerd met gespecialiseerde capaciteit — Hiscox, Liberty, Zurich en Allianz — met de voorwaarden schriftelijk vastgelegd vóór een schade.",
+        "Individueel geaccepteerd met gespecialiseerde capaciteit, met de voorwaarden schriftelijk vastgelegd vóór een schade.",
         "Portugal en Spanje met één adviseur; als de verzekeraar beide landen dekt, in één polis.",
         "Schriftelijk advies binnen 24–72 werkuren. Bij de ASF geregistreerde makelaar nr. 425591790/3, aan geen enkele verzekeraar gebonden. We vragen nooit naar uw totale vermogen.",
     ]),
@@ -72,21 +72,21 @@ HNW = {
 FAMILY_OFFICE = {
     "en": ("Key facts", [
         "One programme for the family, its holding and its people: D&amp;O for the holding, trustee and fiduciary liability, homes and yachts, fraud and cyber, kidnap and extortion, life and succession.",
-        "Homes and collections on private-client terms: <strong>no proportional reduction</strong> once the recommended sums are accepted, and collections on <strong>agreed value</strong>.",
+        "Homes and collections on private-client terms: sums insured set from the rebuild cost, the <strong>proportional rule</strong> checked in each wording, and collections on <strong>agreed value</strong>.",
         "Portugal and Spain with one adviser, who reads every policy the family holds and is there when a claim is made.",
         "Confidential by design: we never ask for total net worth, only what each risk needs to be underwritten.",
         "Written assessment. ASF-registered broker no. 425591790/3, not tied to any insurer.",
     ]),
     "es": ("Datos clave", [
         "Un solo programa para la familia, su sociedad patrimonial y sus personas: D&amp;O de la holding, responsabilidad de administradores y fiduciarios, viviendas y yates, fraude y ciberriesgo, secuestro y extorsión, vida y sucesión.",
-        "Viviendas y colecciones en condiciones private client: <strong>sin regla proporcional</strong> una vez aceptadas las sumas recomendadas, y colecciones a <strong>valor convenido</strong>.",
+        "Viviendas y colecciones en condiciones private client: sumas fijadas a partir del coste de reconstrucción, con la <strong>regla proporcional</strong> revisada en cada condicionado, y colecciones a <strong>valor convenido</strong>.",
         "España y Portugal con un solo asesor, que lee cada póliza de la familia y está presente en el siniestro.",
         "Confidencialidad: nunca pedimos el patrimonio total, solo lo que cada riesgo necesita para suscribirse.",
         "Análisis por escrito. Corredor inscrito en la ASF con el n.º 425591790/3, sin vínculo con ninguna aseguradora.",
     ]),
     "de": ("Das Wichtigste in Kürze", [
         "Ein Programm für die Familie, ihre Holding und ihre Menschen: D&amp;O der Holding, Treuhänder- und Organhaftung, Häuser und Yachten, Betrug und Cyber, Entführung und Erpressung, Leben und Nachfolge.",
-        "Häuser und Sammlungen zu Private-Client-Bedingungen: <strong>keine Unterversicherungskürzung</strong> nach Annahme der empfohlenen Summen, Sammlungen zum <strong>vereinbarten Wert</strong>.",
+        "Häuser und Sammlungen zu Private-Client-Bedingungen: Summen nach den Wiederaufbaukosten, die <strong>Proportionalregel</strong> in jedem Bedingungswerk geprüft, Sammlungen zum <strong>vereinbarten Wert</strong>.",
         "Portugal und Spanien mit einem Berater, der jede Police der Familie kennt und im Schadenfall da ist.",
         "Diskret: Wir fragen nie nach dem Gesamtvermögen, nur nach dem, was jedes Risiko für die Zeichnung braucht.",
         "Schriftliche Einschätzung. Bei der ASF unter Nr. 425591790/3 registrierter Makler, an keinen Versicherer gebunden.",

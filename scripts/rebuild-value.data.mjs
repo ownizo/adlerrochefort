@@ -4,9 +4,12 @@
  * Brief (Hugo, 2 Oct 2026): a page that explains what the rebuild value is,
  * links to the APS SCRIM simulator so the client can recalculate it, says that
  * we place products that go beyond the traditional Portuguese generalist
- * insurers — in a total loss, by agreement between insurer and insured, the
- * settlement can reach the maximum sum insured, above the rebuild value — and
- * carries the home-insurance form. All languages.
+ * insurers, and carries the home-insurance form. All languages.
+ *
+ * Revised Nov 2026 (housing audit): the "beyond the generalist insurers"
+ * section and the matching FAQ are written as points we check in each wording
+ * (rebuild value, proportional rule, total-loss settlement, walls and pools),
+ * never as a condition the client will get.
  *
  * Consumers:
  *   * scripts/build-rebuild-value-pages.mjs — PT, EN, DE, NL, FR (hand-authored
@@ -48,7 +51,7 @@ export const REBUILD = {
   pt: {
     title: 'Valor de reconstrução da casa: quanto segurar | Adler & Rochefort',
     description:
-      'O que é o valor de reconstrução, porque decide a indemnização, como recalculá-lo no simulador SCRIM e as apólices que, em perda total, podem pagar acima dele.',
+      'O que é o valor de reconstrução, porque decide a indemnização, como recalculá-lo no simulador SCRIM e o que verificar numa apólice para habitações de valor elevado.',
     keywords: 'valor de reconstrução, capital seguro habitação, simulador SCRIM, regra proporcional, subseguro casa, multirriscos habitação capital, custo de reconstrução Portugal',
     eyebrow: 'Seguro de habitação',
     crumb: 'Valor de reconstrução',
@@ -90,12 +93,12 @@ ${scrim('Abrir o simulador SCRIM da APS')}
       {
         id: 'alem',
         h2: 'Para além das seguradoras generalistas',
-        html: `<p>Dispomos de produtos que vão além das apólices multirriscos tradicionais das seguradoras generalistas portuguesas, pensados para habitações de valor elevado:</p>
+        html: `<p>Para habitações de valor elevado existem apólices que vão além dos multirriscos tradicionais das seguradoras generalistas portuguesas. Não são equivalentes entre si, por isso, antes de recomendar uma, verificamos por escrito:</p>
 <ul>
-<li><strong>Vistoria sem custo</strong> para fixar o valor de reconstrução e os capitais de recheio e objetos de valor.</li>
-<li><strong>Sem regra proporcional</strong> quando são aceites os capitais recomendados: um sinistro parcial é pago por inteiro.</li>
-<li><strong>Acima do valor de reconstrução:</strong> em caso de perda total, mediante acordo entre a seguradora e o segurado, a indemnização pode chegar ao capital máximo contratado para o edifício, acima do valor de reconstrução.</li>
-<li><strong>Muros, piscinas, anexos e jardins</strong> com capitais próprios, não reduzidos a um valor simbólico.</li>
+<li><strong>Como é fixado o valor de reconstrução</strong> — por vistoria da seguradora, por avaliação profissional ou com o simulador SCRIM — e como se dimensionam os capitais de recheio e de objetos de valor.</li>
+<li><strong>Como se aplica a regra proporcional</strong> se um capital vier a revelar-se insuficiente.</li>
+<li><strong>Como se indemniza uma perda total:</strong> se a indemnização fica limitada ao valor de reconstrução ou pode chegar ao capital do edifício, e em que termos.</li>
+<li><strong>Muros, piscinas, anexos e jardins:</strong> se têm capitais próprios ou um sublimite.</li>
 </ul>
 <p style="font-size:14px;">As condições dependem da seguradora e do risco e só ficam confirmadas nas condições da apólice emitida.</p>`,
       },
@@ -103,7 +106,7 @@ ${scrim('Abrir o simulador SCRIM da APS')}
     faq: [
       { q: 'O valor de reconstrução é o mesmo que o valor de mercado?', a: 'Não. O valor de mercado inclui o terreno, a localização e a procura; o valor de reconstrução é apenas o custo de voltar a construir o edifício. Podem ser muito diferentes, nos dois sentidos.' },
       { q: 'Sou obrigado a usar o valor do SCRIM?', a: 'Não. O SCRIM é uma referência indicativa e o capital é decidido por si. Mas, numa apólice corrente, um capital abaixo do valor de reconstrução leva à regra proporcional em qualquer sinistro.' },
-      { q: 'Posso receber mais do que o valor de reconstrução?', a: 'Numa apólice corrente, não. Nos produtos que colocamos para habitações de valor elevado, em caso de perda total e mediante acordo entre a seguradora e o segurado, a indemnização pode chegar ao capital máximo contratado, acima do valor de reconstrução.' },
+      { q: 'Posso receber mais do que o valor de reconstrução?', a: 'Numa apólice corrente, não. Algumas apólices para habitações de valor elevado preveem que, em caso de perda total e mediante acordo entre a seguradora e o segurado, a indemnização possa chegar ao capital contratado para o edifício; se isso se aplica depende da seguradora e é confirmado por escrito antes de contar com isso.' },
       { q: 'De quanto em quanto tempo devo rever o capital?', a: 'Pelo menos uma vez por ano e sempre depois de obras. A atualização automática dos capitais acompanha a inflação, mas não corrige um valor de partida errado.' },
     ],
     formHeading: 'Peça-nos a revisão do capital da sua casa',
@@ -112,7 +115,7 @@ ${scrim('Abrir o simulador SCRIM da APS')}
   en: {
     title: 'Rebuild value: how much to insure your home for',
     description:
-      'What the rebuild value is, why it decides your claim, how to recalculate it with the SCRIM simulator, and the policies that can pay above it after a total loss.',
+      'What the rebuild value is, why it decides your claim, how to recalculate it with the SCRIM simulator, and what to check in a high-value wording.',
     keywords: 'rebuild value Portugal, rebuild cost home insurance Portugal, sum insured building Portugal, SCRIM simulator, average clause Portugal, underinsurance home Portugal',
     eyebrow: 'Home insurance · Portugal',
     crumb: 'Rebuild value',
@@ -154,12 +157,12 @@ ${scrim('Open the APS SCRIM simulator')}
       {
         id: 'beyond',
         h2: 'Beyond the generalist insurers',
-        html: `<p>We place products that go beyond the traditional multi-risk policies of Portugal’s generalist insurers, designed for high-value homes:</p>
+        html: `<p>For high-value homes there are wordings that go further than the traditional multi-risk policies of Portugal’s generalist insurers. They are not interchangeable, so before recommending one we check, in writing:</p>
 <ul>
-<li><strong>On-site survey at no cost</strong> to set the rebuild value and the contents and valuables sums insured.</li>
-<li><strong>No proportional rule</strong> once the recommended sums are accepted: a partial loss is paid in full.</li>
-<li><strong>Above the rebuild value:</strong> after a total loss, by agreement between insurer and insured, the settlement can reach the maximum building sum insured, above the rebuild value.</li>
-<li><strong>Walls, pools, outbuildings and gardens</strong> with their own sums insured, not reduced to a token amount.</li>
+<li><strong>How the rebuild value is set</strong> — by an insurer’s survey, a professional valuation or the SCRIM simulator — and how contents and valuables are sized.</li>
+<li><strong>How the proportional rule applies</strong> if a sum insured turns out to be short.</li>
+<li><strong>How a total loss is settled:</strong> whether the settlement is limited to the rebuild value or can reach the building sum insured, and on what terms.</li>
+<li><strong>Walls, pools, outbuildings and gardens:</strong> whether they carry their own sums insured or a sub-limit.</li>
 </ul>
 <p style="font-size:14px;">Conditions depend on the insurer and the risk and are only confirmed in the wording of the policy issued.</p>`,
       },
@@ -167,7 +170,7 @@ ${scrim('Open the APS SCRIM simulator')}
     faq: [
       { q: 'Is the rebuild value the same as market value?', a: 'No. Market value includes the land, the location and demand; rebuild value is only the cost of reconstructing the building. The two can differ a lot, in either direction.' },
       { q: 'Do I have to use the SCRIM figure?', a: 'No. SCRIM is an indicative reference and the sum insured is your decision. But under a standard policy, a sum below the rebuild value triggers the proportional rule on every claim.' },
-      { q: 'Can I be paid more than the rebuild value?', a: 'Not under a standard policy. Under the high-value products we place, after a total loss and by agreement between insurer and insured, the settlement can reach the maximum sum insured, above the rebuild value.' },
+      { q: 'Can I be paid more than the rebuild value?', a: 'Not under a standard policy. Some high-value wordings provide that, after a total loss and by agreement between insurer and insured, the settlement can reach the building sum insured; whether that applies depends on the insurer and is confirmed in writing before you rely on it.' },
       { q: 'How often should I review the sum insured?', a: 'At least once a year and always after works. Automatic indexation follows inflation but does not fix a starting figure that was wrong.' },
     ],
     formHeading: 'Ask us to review the sum insured on your home',
@@ -176,7 +179,7 @@ ${scrim('Open the APS SCRIM simulator')}
   de: {
     title: 'Wiederaufbauwert: richtig versichern in Portugal',
     description:
-      'Was der Wiederaufbauwert ist, warum er die Entschädigung bestimmt, wie Sie ihn mit dem SCRIM-Rechner prüfen und welche Policen bei Totalschaden mehr leisten.',
+      'Was der Wiederaufbauwert ist, warum er die Entschädigung bestimmt, wie Sie ihn mit dem SCRIM-Rechner prüfen und worauf es bei einer Police für hochwertige Häuser ankommt.',
     keywords: 'Wiederaufbauwert Portugal, Versicherungssumme Haus Portugal, Unterversicherung Portugal, regra proporcional, SCRIM Rechner, Hausversicherung Portugal Versicherungssumme',
     eyebrow: 'Hausversicherung · Portugal',
     crumb: 'Wiederaufbauwert',
@@ -218,12 +221,12 @@ ${scrim('SCRIM-Rechner der APS öffnen')}
       {
         id: 'mehr-als-standard',
         h2: 'Mehr als die Standardversicherer',
-        html: `<p>Wir platzieren Produkte, die über die üblichen Multirisiko-Policen der portugiesischen Standardversicherer hinausgehen — für hochwertige Immobilien:</p>
+        html: `<p>Für hochwertige Immobilien gibt es Bedingungswerke, die über die klassischen Multirisiko-Policen der portugiesischen Standardversicherer hinausgehen. Sie sind nicht austauschbar; bevor wir eines empfehlen, prüfen wir schriftlich:</p>
 <ul>
-<li><strong>Kostenlose Besichtigung</strong>, um Wiederaufbauwert sowie Hausrat- und Wertsachensummen festzulegen.</li>
-<li><strong>Keine regra proporcional</strong>, wenn die empfohlenen Summen übernommen werden: Ein Teilschaden wird voll bezahlt.</li>
-<li><strong>Über den Wiederaufbauwert hinaus:</strong> Bei Totalschaden kann die Entschädigung nach Vereinbarung zwischen Versicherer und Versichertem bis zur vereinbarten Höchstsumme des Gebäudes reichen — über dem Wiederaufbauwert.</li>
-<li><strong>Mauern, Pools, Nebengebäude und Gärten</strong> mit eigenen Summen statt symbolischer Beträge.</li>
+<li><strong>Wie der Wiederaufbauwert festgelegt wird</strong> — durch Besichtigung des Versicherers, ein Gutachten oder den SCRIM-Rechner — und wie die Summen für Hausrat und Wertsachen bemessen werden.</li>
+<li><strong>Wie die Proportionalregel greift</strong>, wenn sich eine Summe als zu niedrig erweist.</li>
+<li><strong>Wie ein Totalschaden reguliert wird:</strong> ob die Leistung auf den Wiederaufbauwert begrenzt ist oder bis zur Gebäudesumme reichen kann, und zu welchen Bedingungen.</li>
+<li><strong>Mauern, Pools, Nebengebäude und Gärten:</strong> ob sie eigene Summen haben oder einem Sublimit unterliegen.</li>
 </ul>
 <p style="font-size:14px;">Die Bedingungen hängen von Versicherer und Risiko ab und gelten erst mit der ausgestellten Police.</p>`,
       },
@@ -231,7 +234,7 @@ ${scrim('SCRIM-Rechner der APS öffnen')}
     faq: [
       { q: 'Ist der Wiederaufbauwert dasselbe wie der Marktwert?', a: 'Nein. Der Marktwert umfasst Grundstück, Lage und Nachfrage; der Wiederaufbauwert nur die Kosten des Neubaus. Beide können stark voneinander abweichen — in beide Richtungen.' },
       { q: 'Muss ich den SCRIM-Wert verwenden?', a: 'Nein. SCRIM ist ein Richtwert, die Summe entscheiden Sie. In einer üblichen Police führt eine Summe unter dem Wiederaufbauwert aber bei jedem Schaden zur regra proporcional.' },
-      { q: 'Kann ich mehr als den Wiederaufbauwert erhalten?', a: 'In einer üblichen Police nicht. In den Produkten für hochwertige Immobilien, die wir platzieren, kann die Entschädigung bei Totalschaden nach Vereinbarung zwischen Versicherer und Versichertem bis zur vereinbarten Höchstsumme reichen.' },
+      { q: 'Kann ich mehr als den Wiederaufbauwert erhalten?', a: 'In einer üblichen Police nicht. Manche Bedingungswerke für hochwertige Immobilien sehen vor, dass die Entschädigung bei Totalschaden nach Vereinbarung zwischen Versicherer und Versichertem bis zur Gebäudesumme reichen kann; ob das gilt, hängt vom Versicherer ab und wird schriftlich bestätigt, bevor Sie sich darauf verlassen.' },
       { q: 'Wie oft sollte ich die Summe prüfen?', a: 'Mindestens einmal jährlich und immer nach Bauarbeiten. Die automatische Anpassung folgt der Inflation, korrigiert aber keinen falschen Ausgangswert.' },
     ],
     formHeading: 'Lassen Sie die Versicherungssumme Ihres Hauses prüfen',
@@ -240,7 +243,7 @@ ${scrim('SCRIM-Rechner der APS öffnen')}
   nl: {
     title: 'Herbouwwaarde: hoeveel verzekeren in Portugal | Adler & Rochefort',
     description:
-      'Wat de herbouwwaarde is, waarom die de uitkering bepaalt, hoe u haar narekent met de SCRIM-calculator en welke polissen bij totaal verlies meer uitkeren.',
+      'Wat de herbouwwaarde is, waarom die de uitkering bepaalt, hoe u haar narekent met de SCRIM-calculator en waar u op let bij een polis voor een hoogwaardige woning.',
     keywords: 'herbouwwaarde Portugal, verzekerd bedrag woning Portugal, onderverzekering Portugal, evenredigheidsregel, SCRIM calculator, woonverzekering Portugal herbouwwaarde',
     eyebrow: 'Woonverzekering · Portugal',
     crumb: 'Herbouwwaarde',
@@ -282,12 +285,12 @@ ${scrim('Open de SCRIM-calculator van de APS')}
       {
         id: 'meer-dan-standaard',
         h2: 'Meer dan de standaardverzekeraars',
-        html: `<p>Wij plaatsen producten die verder gaan dan de gebruikelijke multirisicopolissen van de Portugese algemene verzekeraars, ontworpen voor woningen van hoge waarde:</p>
+        html: `<p>Voor woningen van hoge waarde bestaan er voorwaarden die verder gaan dan de traditionele multirriscos-polissen van de Portugese algemene verzekeraars. Ze zijn niet uitwisselbaar; voordat wij er een aanbevelen, controleren wij schriftelijk:</p>
 <ul>
-<li><strong>Kosteloze inspectie</strong> om de herbouwwaarde en de bedragen voor inboedel en kostbaarheden vast te stellen.</li>
-<li><strong>Geen evenredigheidsregel</strong> als de aanbevolen bedragen worden aanvaard: een gedeeltelijke schade wordt volledig vergoed.</li>
-<li><strong>Boven de herbouwwaarde:</strong> bij totaal verlies kan de uitkering, in overleg tussen verzekeraar en verzekerde, oplopen tot het maximaal verzekerde bedrag van het gebouw — boven de herbouwwaarde.</li>
-<li><strong>Muren, zwembaden, bijgebouwen en tuinen</strong> met eigen bedragen, niet teruggebracht tot een symbolisch bedrag.</li>
+<li><strong>Hoe de herbouwwaarde wordt vastgesteld</strong> — door een inspectie van de verzekeraar, een taxatie of de SCRIM-calculator — en hoe de bedragen voor inboedel en kostbaarheden worden bepaald.</li>
+<li><strong>Hoe de evenredigheidsregel werkt</strong> als een verzekerd bedrag te laag blijkt.</li>
+<li><strong>Hoe een totaal verlies wordt afgewikkeld:</strong> of de uitkering beperkt blijft tot de herbouwwaarde of kan oplopen tot het verzekerde bedrag van het gebouw, en onder welke voorwaarden.</li>
+<li><strong>Muren, zwembaden, bijgebouwen en tuinen:</strong> of zij een eigen verzekerd bedrag hebben of een sublimiet.</li>
 </ul>
 <p style="font-size:14px;">De voorwaarden hangen af van de verzekeraar en het risico en staan pas vast in de afgegeven polis.</p>`,
       },
@@ -295,7 +298,7 @@ ${scrim('Open de SCRIM-calculator van de APS')}
     faq: [
       { q: 'Is de herbouwwaarde hetzelfde als de marktwaarde?', a: 'Nee. De marktwaarde omvat grond, ligging en vraag; de herbouwwaarde alleen de kosten van herbouw. Ze kunnen sterk verschillen, in beide richtingen.' },
       { q: 'Moet ik het SCRIM-bedrag gebruiken?', a: 'Nee. SCRIM is indicatief en het verzekerd bedrag kiest u zelf. Maar in een gewone polis leidt een bedrag onder de herbouwwaarde bij elke schade tot de evenredigheidsregel.' },
-      { q: 'Kan ik meer dan de herbouwwaarde ontvangen?', a: 'In een gewone polis niet. In de producten voor woningen van hoge waarde die wij plaatsen, kan de uitkering bij totaal verlies, in overleg tussen verzekeraar en verzekerde, oplopen tot het maximaal verzekerde bedrag.' },
+      { q: 'Kan ik meer dan de herbouwwaarde ontvangen?', a: 'In een gewone polis niet. Sommige voorwaarden voor woningen van hoge waarde bepalen dat de uitkering bij totaal verlies, in overleg tussen verzekeraar en verzekerde, kan oplopen tot het verzekerde bedrag van het gebouw; of dat geldt, hangt af van de verzekeraar en wordt schriftelijk bevestigd voordat u erop rekent.' },
       { q: 'Hoe vaak moet ik het bedrag laten nakijken?', a: 'Minstens één keer per jaar en altijd na een verbouwing. Automatische indexering volgt de inflatie, maar corrigeert geen verkeerd startbedrag.' },
     ],
     formHeading: 'Laat het verzekerd bedrag van uw woning nakijken',
@@ -304,7 +307,7 @@ ${scrim('Open de SCRIM-calculator van de APS')}
   fr: {
     title: 'Valeur de reconstruction au Portugal : combien assurer',
     description:
-      'La valeur de reconstruction : pourquoi elle décide de l’indemnité, comment la recalculer avec le simulateur SCRIM et quelles polices paient au-delà.',
+      'La valeur de reconstruction : pourquoi elle décide de l’indemnité, comment la recalculer avec le simulateur SCRIM et ce qu’il faut vérifier dans un contrat haut de gamme.',
     keywords: 'valeur de reconstruction Portugal, capital assuré habitation Portugal, règle proportionnelle, sous-assurance Portugal, simulateur SCRIM, assurance habitation Portugal',
     eyebrow: 'Assurance habitation · Portugal',
     crumb: 'Valeur de reconstruction',
@@ -346,12 +349,12 @@ ${scrim('Ouvrir le simulateur SCRIM de l’APS')}
       {
         id: 'au-dela',
         h2: 'Au-delà des assureurs généralistes',
-        html: `<p>Nous plaçons des produits qui vont au-delà des polices multirisques traditionnelles des assureurs généralistes portugais, conçus pour les résidences de grande valeur :</p>
+        html: `<p>Pour les résidences de grande valeur, il existe des contrats qui vont au-delà des multirisques traditionnelles des assureurs généralistes portugais. Ils ne sont pas interchangeables ; avant d’en recommander un, nous vérifions par écrit :</p>
 <ul>
-<li><strong>Visite sans frais</strong> pour fixer la valeur de reconstruction et les capitaux du contenu et des objets de valeur.</li>
-<li><strong>Pas de règle proportionnelle</strong> lorsque les capitaux recommandés sont acceptés : un sinistre partiel est payé intégralement.</li>
-<li><strong>Au-delà de la valeur de reconstruction :</strong> en cas de perte totale, d’un commun accord entre l’assureur et l’assuré, l’indemnité peut atteindre le capital maximal souscrit pour le bâtiment, au-delà de la valeur de reconstruction.</li>
-<li><strong>Murs, piscines, dépendances et jardins</strong> avec leurs propres capitaux, et non réduits à un montant symbolique.</li>
+<li><strong>Comment la valeur de reconstruction est fixée</strong> — par une visite de l’assureur, une expertise ou le simulateur SCRIM — et comment sont dimensionnés les capitaux du contenu et des objets de valeur.</li>
+<li><strong>Comment s’applique la règle proportionnelle</strong> si un capital se révèle insuffisant.</li>
+<li><strong>Comment une perte totale est indemnisée :</strong> si l’indemnité est limitée à la valeur de reconstruction ou peut atteindre le capital du bâtiment, et à quelles conditions.</li>
+<li><strong>Murs, piscines, dépendances et jardins :</strong> s’ils disposent de capitaux propres ou d’une sous-limite.</li>
 </ul>
 <p style="font-size:14px;">Les conditions dépendent de l’assureur et du risque et ne sont confirmées que dans les conditions de la police émise.</p>`,
       },
@@ -359,7 +362,7 @@ ${scrim('Ouvrir le simulateur SCRIM de l’APS')}
     faq: [
       { q: 'La valeur de reconstruction est-elle la valeur de marché ?', a: 'Non. La valeur de marché inclut le terrain, l’emplacement et la demande ; la valeur de reconstruction, seulement le coût pour rebâtir. Les deux peuvent beaucoup différer, dans un sens comme dans l’autre.' },
       { q: 'Dois-je utiliser le chiffre de SCRIM ?', a: 'Non. SCRIM est une référence indicative et le capital est votre décision. Mais dans une police classique, un capital inférieur à la valeur de reconstruction entraîne la règle proportionnelle à chaque sinistre.' },
-      { q: 'Puis-je recevoir plus que la valeur de reconstruction ?', a: 'Pas avec une police classique. Avec les produits pour résidences de grande valeur que nous plaçons, en cas de perte totale et d’un commun accord entre l’assureur et l’assuré, l’indemnité peut atteindre le capital maximal souscrit.' },
+      { q: 'Puis-je recevoir plus que la valeur de reconstruction ?', a: 'Pas avec une police classique. Certains contrats pour résidences de grande valeur prévoient qu’en cas de perte totale, d’un commun accord entre l’assureur et l’assuré, l’indemnité puisse atteindre le capital assuré du bâtiment ; cela dépend de l’assureur et se confirme par écrit avant d’en tenir compte.' },
       { q: 'À quelle fréquence revoir le capital ?', a: 'Au moins une fois par an et toujours après des travaux. L’indexation automatique suit l’inflation, mais ne corrige pas un chiffre de départ erroné.' },
     ],
     formHeading: 'Faites revoir le capital de votre maison',
@@ -368,7 +371,7 @@ ${scrim('Ouvrir le simulateur SCRIM de l’APS')}
   es: {
     title: 'Valor de reconstrucción: cuánto asegurar su casa',
     description:
-      'Qué es el valor de reconstrucción, por qué decide la indemnización, cómo recalcularlo con el simulador SCRIM y qué pólizas pagan más en pérdida total.',
+      'Qué es el valor de reconstrucción, por qué decide la indemnización, cómo recalcularlo con el simulador SCRIM y qué revisar en una póliza para viviendas de alto valor.',
     keywords: 'valor de reconstrucción, suma asegurada vivienda Portugal, simulador SCRIM, regla proporcional, infraseguro, coste de reconstrucción Portugal, seguro hogar Portugal latinoamericanos',
     eyebrow: 'Portugal · Seguro de hogar',
     crumb: 'Valor de reconstrucción',
@@ -410,12 +413,12 @@ ${scrim('Abrir el simulador SCRIM de la APS')}
       {
         id: 'mas-alla',
         h2: 'Más allá de las aseguradoras generalistas',
-        html: `<p>Disponemos de productos que van más allá de las pólizas multirriesgo tradicionales de las aseguradoras generalistas portuguesas, pensados para viviendas de alto valor:</p>
+        html: `<p>Para viviendas de alto valor existen pólizas que van más allá de los multirriesgos tradicionales de las aseguradoras generalistas portuguesas. No son intercambiables; antes de recomendar una, comprobamos por escrito:</p>
 <ul>
-<li><strong>Inspección sin coste</strong> para fijar el valor de reconstrucción y las sumas de contenido y objetos de valor.</li>
-<li><strong>Sin regla proporcional</strong> cuando se aceptan las sumas recomendadas: un siniestro parcial se paga íntegro.</li>
-<li><strong>Por encima del valor de reconstrucción:</strong> en caso de pérdida total, mediante acuerdo entre la aseguradora y el asegurado, la indemnización puede llegar a la suma máxima contratada para el edificio, por encima del valor de reconstrucción.</li>
-<li><strong>Muros, piscinas, anexos y jardines</strong> con sumas propias, no reducidos a un importe simbólico.</li>
+<li><strong>Cómo se fija el valor de reconstrucción</strong> — por inspección de la aseguradora, por tasación o con el simulador SCRIM — y cómo se dimensionan las sumas de contenido y de objetos de valor.</li>
+<li><strong>Cómo se aplica la regla proporcional</strong> si una suma resulta insuficiente.</li>
+<li><strong>Cómo se indemniza una pérdida total:</strong> si la indemnización queda limitada al valor de reconstrucción o puede llegar a la suma del continente, y en qué términos.</li>
+<li><strong>Muros, piscinas, anexos y jardines:</strong> si tienen sumas propias o un sublímite.</li>
 </ul>
 <p style="font-size:14px;">Las condiciones dependen de la aseguradora y del riesgo y solo quedan confirmadas en las condiciones de la póliza emitida.</p>`,
       },
@@ -423,7 +426,7 @@ ${scrim('Abrir el simulador SCRIM de la APS')}
     faq: [
       { q: '¿El valor de reconstrucción es lo mismo que el valor de mercado?', a: 'No. El valor de mercado incluye el terreno, la ubicación y la demanda; el de reconstrucción, solo el coste de volver a construir. Pueden ser muy distintos, en los dos sentidos.' },
       { q: '¿Estoy obligado a usar la cifra del SCRIM?', a: 'No. El SCRIM es una referencia indicativa y la suma la decide usted. Pero en una póliza corriente, una suma inferior al valor de reconstrucción lleva a la regla proporcional en cualquier siniestro.' },
-      { q: '¿Puedo cobrar más que el valor de reconstrucción?', a: 'En una póliza corriente, no. En los productos para viviendas de alto valor que colocamos, en caso de pérdida total y mediante acuerdo entre la aseguradora y el asegurado, la indemnización puede llegar a la suma máxima contratada.' },
+      { q: '¿Puedo cobrar más que el valor de reconstrucción?', a: 'En una póliza corriente, no. Algunos condicionados para viviendas de alto valor prevén que, en caso de pérdida total y mediante acuerdo entre la aseguradora y el asegurado, la indemnización pueda llegar a la suma asegurada del continente; si se aplica depende de la aseguradora y se confirma por escrito antes de contar con ello.' },
       { q: '¿Cada cuánto debo revisar la suma?', a: 'Al menos una vez al año y siempre después de obras. La actualización automática sigue a la inflación, pero no corrige una cifra de partida equivocada.' },
     ],
     formHeading: 'Pídanos la revisión de la suma asegurada de su casa',
@@ -432,7 +435,7 @@ ${scrim('Abrir el simulador SCRIM de la APS')}
   it: {
     title: 'Valore di ricostruzione: quanto assicurare la casa',
     description:
-      'Cos’è il valore di ricostruzione, perché decide l’indennizzo, come ricalcolarlo con il simulatore SCRIM e quali polizze pagano oltre in caso di perdita totale.',
+      'Cos’è il valore di ricostruzione, perché decide l’indennizzo, come ricalcolarlo con il simulatore SCRIM e che cosa verificare in una polizza per abitazioni di alto valore.',
     keywords: 'valore di ricostruzione Portogallo, somma assicurata casa Portogallo, regola proporzionale, sottoassicurazione, simulatore SCRIM, assicurazione casa Portogallo',
     eyebrow: 'Assicurazione casa · Portogallo',
     crumb: 'Valore di ricostruzione',
@@ -474,12 +477,12 @@ ${scrim('Aprire il simulatore SCRIM dell’APS')}
       {
         id: 'oltre',
         h2: 'Oltre gli assicuratori generalisti',
-        html: `<p>Collochiamo prodotti che vanno oltre le polizze multirischio tradizionali degli assicuratori generalisti portoghesi, pensati per abitazioni di alto valore:</p>
+        html: `<p>Per le abitazioni di alto valore esistono polizze che vanno oltre le multirischio tradizionali degli assicuratori generalisti portoghesi. Non sono intercambiabili; prima di raccomandarne una verifichiamo per iscritto:</p>
 <ul>
-<li><strong>Sopralluogo gratuito</strong> per fissare il valore di ricostruzione e le somme per contenuto e oggetti di valore.</li>
-<li><strong>Nessuna regola proporzionale</strong> se si accettano le somme raccomandate: un sinistro parziale è pagato per intero.</li>
-<li><strong>Oltre il valore di ricostruzione:</strong> in caso di perdita totale, previo accordo tra assicuratore e assicurato, l’indennizzo può arrivare alla somma massima assicurata per l’edificio, oltre il valore di ricostruzione.</li>
-<li><strong>Muri, piscine, dependance e giardini</strong> con somme proprie, non ridotte a un importo simbolico.</li>
+<li><strong>Come viene fissato il valore di ricostruzione</strong> — con il sopralluogo dell’assicuratore, una perizia o il simulatore SCRIM — e come si dimensionano le somme per contenuto e oggetti di valore.</li>
+<li><strong>Come si applica la regola proporzionale</strong> se una somma si rivela insufficiente.</li>
+<li><strong>Come viene liquidata una perdita totale:</strong> se l’indennizzo resta limitato al valore di ricostruzione o può arrivare alla somma del fabbricato, e a quali condizioni.</li>
+<li><strong>Muri, piscine, dependance e giardini:</strong> se hanno somme proprie o un sottolimite.</li>
 </ul>
 <p style="font-size:14px;">Le condizioni dipendono dall’assicuratore e dal rischio e sono confermate solo nelle condizioni della polizza emessa.</p>`,
       },
@@ -487,7 +490,7 @@ ${scrim('Aprire il simulatore SCRIM dell’APS')}
     faq: [
       { q: 'Il valore di ricostruzione è il valore di mercato?', a: 'No. Il valore di mercato include terreno, posizione e domanda; quello di ricostruzione solo il costo per ricostruire. Possono differire molto, in entrambe le direzioni.' },
       { q: 'Devo usare la cifra di SCRIM?', a: 'No. SCRIM è un riferimento indicativo e la somma la decidete voi. Ma in una polizza ordinaria una somma inferiore al valore di ricostruzione comporta la regola proporzionale in ogni sinistro.' },
-      { q: 'Posso ricevere più del valore di ricostruzione?', a: 'Non con una polizza ordinaria. Con i prodotti per abitazioni di alto valore che collochiamo, in caso di perdita totale e previo accordo tra assicuratore e assicurato, l’indennizzo può arrivare alla somma massima assicurata.' },
+      { q: 'Posso ricevere più del valore di ricostruzione?', a: 'Non con una polizza ordinaria. Alcune condizioni per abitazioni di alto valore prevedono che, in caso di perdita totale e previo accordo tra assicuratore e assicurato, l’indennizzo possa arrivare alla somma assicurata del fabbricato; se si applica dipende dall’assicuratore e viene confermato per iscritto prima di farvi affidamento.' },
       { q: 'Ogni quanto rivedere la somma?', a: 'Almeno una volta l’anno e sempre dopo lavori. L’indicizzazione automatica segue l’inflazione, ma non corregge una cifra di partenza sbagliata.' },
     ],
     formHeading: 'Fate verificare la somma assicurata della vostra casa',
@@ -496,7 +499,7 @@ ${scrim('Aprire il simulatore SCRIM dell’APS')}
   pl: {
     title: 'Wartość odtworzeniowa domu w Portugalii | Adler & Rochefort',
     description:
-      'Czym jest wartość odtworzeniowa, dlaczego decyduje o odszkodowaniu, jak przeliczyć ją w symulatorze SCRIM i które polisy przy szkodzie całkowitej płacą więcej.',
+      'Czym jest wartość odtworzeniowa, dlaczego decyduje o odszkodowaniu, jak przeliczyć ją w symulatorze SCRIM i co sprawdzić w polisie dla domu o wysokiej wartości.',
     keywords: 'wartość odtworzeniowa Portugalia, suma ubezpieczenia domu Portugalia, zasada proporcji, niedoubezpieczenie, symulator SCRIM, ubezpieczenie domu Portugalia',
     eyebrow: 'Ubezpieczenie domu · Portugalia',
     crumb: 'Wartość odtworzeniowa',
@@ -538,12 +541,12 @@ ${scrim('Otwórz symulator SCRIM (APS)')}
       {
         id: 'wiecej',
         h2: 'Więcej niż ubezpieczyciele ogólni',
-        html: `<p>Oferujemy produkty wykraczające poza tradycyjne polisy multirisk portugalskich ubezpieczycieli ogólnych, przeznaczone dla nieruchomości o wysokiej wartości:</p>
+        html: `<p>Dla domów o wysokiej wartości istnieją polisy wykraczające poza tradycyjne polisy multirriscos portugalskich ubezpieczycieli ogólnych. Nie są one wymienne; zanim jakąś zarekomendujemy, sprawdzamy na piśmie:</p>
 <ul>
-<li><strong>Bezpłatne oględziny</strong>, by ustalić wartość odtworzeniową oraz sumy dla wyposażenia i przedmiotów wartościowych.</li>
-<li><strong>Bez zasady proporcji</strong> po przyjęciu zalecanych sum: szkoda częściowa jest wypłacana w całości.</li>
-<li><strong>Powyżej wartości odtworzeniowej:</strong> przy szkodzie całkowitej, w porozumieniu między ubezpieczycielem a ubezpieczonym, odszkodowanie może sięgnąć maksymalnej sumy ubezpieczenia budynku — powyżej wartości odtworzeniowej.</li>
-<li><strong>Mury, baseny, budynki gospodarcze i ogrody</strong> z własnymi sumami, a nie symboliczną kwotą.</li>
+<li><strong>Jak ustalana jest wartość odtworzeniowa</strong> — na podstawie oględzin ubezpieczyciela, wyceny lub symulatora SCRIM — i jak dobiera się sumy dla ruchomości i przedmiotów wartościowych.</li>
+<li><strong>Jak działa zasada proporcji</strong>, jeśli suma ubezpieczenia okaże się zbyt niska.</li>
+<li><strong>Jak likwidowana jest szkoda całkowita:</strong> czy odszkodowanie jest ograniczone do wartości odtworzeniowej, czy może sięgnąć sumy ubezpieczenia budynku, i na jakich warunkach.</li>
+<li><strong>Mury, baseny, budynki gospodarcze i ogrody:</strong> czy mają własne sumy ubezpieczenia, czy podlimit.</li>
 </ul>
 <p style="font-size:14px;">Warunki zależą od ubezpieczyciela i ryzyka i są potwierdzane dopiero w warunkach wystawionej polisy.</p>`,
       },
@@ -551,7 +554,7 @@ ${scrim('Otwórz symulator SCRIM (APS)')}
     faq: [
       { q: 'Czy wartość odtworzeniowa to wartość rynkowa?', a: 'Nie. Wartość rynkowa obejmuje grunt, lokalizację i popyt; odtworzeniowa — tylko koszt odbudowy. Mogą się bardzo różnić, w obie strony.' },
       { q: 'Czy muszę przyjąć wynik SCRIM?', a: 'Nie. SCRIM jest orientacyjny, a sumę wybierają Państwo. W typowej polisie suma niższa od wartości odtworzeniowej oznacza jednak zasadę proporcji przy każdej szkodzie.' },
-      { q: 'Czy można otrzymać więcej niż wartość odtworzeniową?', a: 'W typowej polisie nie. W produktach dla nieruchomości o wysokiej wartości, które oferujemy, przy szkodzie całkowitej i w porozumieniu między ubezpieczycielem a ubezpieczonym odszkodowanie może sięgnąć maksymalnej sumy ubezpieczenia.' },
+      { q: 'Czy można otrzymać więcej niż wartość odtworzeniową?', a: 'W typowej polisie nie. Niektóre warunki dla nieruchomości o wysokiej wartości przewidują, że przy szkodzie całkowitej i w porozumieniu między ubezpieczycielem a ubezpieczonym odszkodowanie może sięgnąć sumy ubezpieczenia budynku; czy tak jest, zależy od ubezpieczyciela i jest potwierdzane na piśmie, zanim można na tym polegać.' },
       { q: 'Jak często weryfikować sumę?', a: 'Co najmniej raz w roku i zawsze po remoncie. Automatyczna indeksacja nadąża za inflacją, ale nie naprawia błędnej kwoty wyjściowej.' },
     ],
     formHeading: 'Prosimy o weryfikację sumy ubezpieczenia domu',
@@ -560,7 +563,7 @@ ${scrim('Otwórz symulator SCRIM (APS)')}
   se: {
     title: 'Återuppbyggnadsvärde: hur mycket försäkra i Portugal',
     description:
-      'Vad återuppbyggnadsvärdet är, varför det avgör ersättningen, hur du räknar om det i SCRIM-simulatorn och vilka försäkringar som vid totalskada kan betala mer.',
+      'Vad återuppbyggnadsvärdet är, varför det avgör ersättningen, hur du räknar om det i SCRIM-simulatorn och vad du ska kontrollera i en försäkring för ett hem med högt värde.',
     keywords: 'återuppbyggnadsvärde Portugal, försäkringsbelopp hus Portugal, proportionalitetsregeln, underförsäkring, SCRIM simulator, hemförsäkring Portugal',
     eyebrow: 'Hemförsäkring · Portugal',
     crumb: 'Återuppbyggnadsvärde',
@@ -602,12 +605,12 @@ ${scrim('Öppna APS SCRIM-simulator')}
       {
         id: 'mer-an-standard',
         h2: 'Mer än de vanliga försäkringsbolagen',
-        html: `<p>Vi förmedlar produkter som går längre än de traditionella allriskförsäkringarna hos Portugals breda försäkringsbolag, utformade för hus med högt värde:</p>
+        html: `<p>För hem med högt värde finns försäkringar som går längre än de traditionella multirriscos-försäkringarna hos Portugals allmänna försäkringsbolag. De är inte utbytbara; innan vi rekommenderar en kontrollerar vi skriftligt:</p>
 <ul>
-<li><strong>Kostnadsfri besiktning</strong> för att fastställa återuppbyggnadsvärdet och beloppen för lösöre och värdeföremål.</li>
-<li><strong>Ingen proportionalitetsregel</strong> när de rekommenderade beloppen accepteras: en delskada ersätts fullt ut.</li>
-<li><strong>Över återuppbyggnadsvärdet:</strong> vid totalskada kan ersättningen, efter överenskommelse mellan försäkringsbolag och försäkringstagare, nå byggnadens högsta försäkringsbelopp — över återuppbyggnadsvärdet.</li>
-<li><strong>Murar, pooler, uthus och trädgårdar</strong> med egna belopp, inte nedskurna till symboliska summor.</li>
+<li><strong>Hur återuppbyggnadsvärdet fastställs</strong> — genom försäkringsbolagets besiktning, en värdering eller SCRIM-simulatorn — och hur beloppen för lösöre och värdeföremål bestäms.</li>
+<li><strong>Hur proportionalitetsregeln tillämpas</strong> om ett belopp visar sig vara för lågt.</li>
+<li><strong>Hur en totalskada regleras:</strong> om ersättningen begränsas till återuppbyggnadsvärdet eller kan nå byggnadens försäkringsbelopp, och på vilka villkor.</li>
+<li><strong>Murar, pooler, uthus och trädgårdar:</strong> om de har egna försäkringsbelopp eller en underbegränsning.</li>
 </ul>
 <p style="font-size:14px;">Villkoren beror på försäkringsbolag och risk och bekräftas först i den utfärdade försäkringens villkor.</p>`,
       },
@@ -615,7 +618,7 @@ ${scrim('Öppna APS SCRIM-simulator')}
     faq: [
       { q: 'Är återuppbyggnadsvärdet samma sak som marknadsvärdet?', a: 'Nej. Marknadsvärdet omfattar mark, läge och efterfrågan; återuppbyggnadsvärdet bara kostnaden för att bygga om. De kan skilja sig mycket, åt båda hållen.' },
       { q: 'Måste jag använda SCRIM-värdet?', a: 'Nej. SCRIM är vägledande och beloppet väljer du. Men i en vanlig försäkring leder ett belopp under återuppbyggnadsvärdet till proportionalitetsregeln vid varje skada.' },
-      { q: 'Kan jag få mer än återuppbyggnadsvärdet?', a: 'Inte i en vanlig försäkring. I produkterna för hus med högt värde som vi förmedlar kan ersättningen vid totalskada, efter överenskommelse mellan försäkringsbolag och försäkringstagare, nå det högsta försäkringsbeloppet.' },
+      { q: 'Kan jag få mer än återuppbyggnadsvärdet?', a: 'Inte i en vanlig försäkring. Vissa villkor för hus med högt värde anger att ersättningen vid totalskada, efter överenskommelse mellan försäkringsbolag och försäkringstagare, kan nå byggnadens försäkringsbelopp; om det gäller beror på försäkringsbolaget och bekräftas skriftligt innan du räknar med det.' },
       { q: 'Hur ofta ska beloppet ses över?', a: 'Minst en gång per år och alltid efter renovering. Automatisk indexering följer inflationen men rättar inte ett felaktigt startvärde.' },
     ],
     formHeading: 'Låt oss se över försäkringsbeloppet för ditt hus',
@@ -624,7 +627,7 @@ ${scrim('Öppna APS SCRIM-simulator')}
   dk: {
     title: 'Genopførelsesværdi: hvor meget skal huset forsikres for',
     description:
-      'Hvad genopførelsesværdien er, hvorfor den afgør erstatningen, hvordan du regner den i SCRIM-simulatoren, og hvilke policer der ved totalskade betaler mere.',
+      'Hvad genopførelsesværdien er, hvorfor den afgør erstatningen, hvordan du regner den i SCRIM-simulatoren, og hvad du skal tjekke i en police til en bolig af høj værdi.',
     keywords: 'genopførelsesværdi Portugal, forsikringssum hus Portugal, proportionalitetsreglen, underforsikring, SCRIM simulator, husforsikring Portugal',
     eyebrow: 'Husforsikring · Portugal',
     crumb: 'Genopførelsesværdi',
@@ -666,12 +669,12 @@ ${scrim('Åbn APS’ SCRIM-simulator')}
       {
         id: 'mere-end-standard',
         h2: 'Mere end de almindelige selskaber',
-        html: `<p>Vi formidler produkter, der går videre end de traditionelle multirisikopolicer hos Portugals brede forsikringsselskaber — udformet til boliger af høj værdi:</p>
+        html: `<p>Til boliger af høj værdi findes der policer, der går videre end de traditionelle multirriscos-policer hos de portugisiske almindelige selskaber. De er ikke indbyrdes udskiftelige; før vi anbefaler en, kontrollerer vi skriftligt:</p>
 <ul>
-<li><strong>Gratis besigtigelse</strong> for at fastsætte genopførelsesværdien og summerne for indbo og værdigenstande.</li>
-<li><strong>Ingen proportionalitetsregel</strong>, når de anbefalede summer accepteres: En delskade erstattes fuldt ud.</li>
-<li><strong>Over genopførelsesværdien:</strong> Ved totalskade kan erstatningen efter aftale mellem selskab og sikrede nå bygningens maksimale forsikringssum — over genopførelsesværdien.</li>
-<li><strong>Mure, pools, udhuse og haver</strong> med egne summer, ikke skåret ned til symbolske beløb.</li>
+<li><strong>Hvordan genopførelsesværdien fastsættes</strong> — ved selskabets besigtigelse, en vurdering eller SCRIM-simulatoren — og hvordan summerne for indbo og værdigenstande bestemmes.</li>
+<li><strong>Hvordan reglen om forholdsmæssig nedsættelse anvendes</strong>, hvis en sum viser sig at være for lav.</li>
+<li><strong>Hvordan en totalskade erstattes:</strong> om erstatningen er begrænset til genopførelsesværdien eller kan nå bygningens forsikringssum, og på hvilke vilkår.</li>
+<li><strong>Mure, pools, udhuse og haver:</strong> om de har egne forsikringssummer eller en underbegrænsning.</li>
 </ul>
 <p style="font-size:14px;">Betingelserne afhænger af selskab og risiko og bekræftes først i den udstedte polices vilkår.</p>`,
       },
@@ -679,7 +682,7 @@ ${scrim('Åbn APS’ SCRIM-simulator')}
     faq: [
       { q: 'Er genopførelsesværdien det samme som markedsværdien?', a: 'Nej. Markedsværdien omfatter grund, beliggenhed og efterspørgsel; genopførelsesværdien kun prisen for at bygge op igen. De kan være meget forskellige, i begge retninger.' },
       { q: 'Skal jeg bruge SCRIM-tallet?', a: 'Nej. SCRIM er vejledende, og summen bestemmer du. Men i en almindelig police fører en sum under genopførelsesværdien til proportionalitetsreglen ved hver skade.' },
-      { q: 'Kan jeg få mere end genopførelsesværdien?', a: 'Ikke i en almindelig police. I de produkter til boliger af høj værdi, vi formidler, kan erstatningen ved totalskade efter aftale mellem selskab og sikrede nå den maksimale forsikringssum.' },
+      { q: 'Kan jeg få mere end genopførelsesværdien?', a: 'Ikke i en almindelig police. Nogle vilkår til boliger af høj værdi fastsætter, at erstatningen ved totalskade efter aftale mellem selskab og sikrede kan nå bygningens forsikringssum; om det gælder, afhænger af selskabet og bekræftes skriftligt, før du regner med det.' },
       { q: 'Hvor ofte skal summen gennemgås?', a: 'Mindst én gang om året og altid efter ombygning. Automatisk indeksering følger inflationen, men retter ikke et forkert udgangspunkt.' },
     ],
     formHeading: 'Få gennemgået forsikringssummen for dit hus',
@@ -688,7 +691,7 @@ ${scrim('Åbn APS’ SCRIM-simulator')}
   zh: {
     title: '重建价值：葡萄牙房屋应投保多少 | Adler & Rochefort',
     description:
-      '什么是重建价值、为何它决定理赔金额、如何用 SCRIM 模拟器重新计算，以及在全损时可赔付超过重建价值的保单。',
+      '什么是重建价值、为何它决定理赔金额、如何用 SCRIM 模拟器重新计算，以及高价值住宅保单需要核查的要点。',
     keywords: '葡萄牙 重建价值, 葡萄牙 房屋保险 保额, 比例赔付原则, 不足额保险, SCRIM 模拟器, 葡萄牙 房屋保险',
     eyebrow: '房屋保险 · 葡萄牙',
     crumb: '重建价值',
@@ -730,12 +733,12 @@ ${scrim('打开 APS 的 SCRIM 模拟器')}
       {
         id: 'beyond',
         h2: '超越普通保险公司',
-        html: `<p>我们提供的产品超越葡萄牙普通综合保险公司的传统综合险保单，专为高价值住宅设计：</p>
+        html: `<p>对于高价值住宅，有些保单的保障范围超出葡萄牙普通保险公司的传统综合险。这些保单并不等同，因此在推荐之前，我们会以书面形式核查：</p>
 <ul>
-<li><strong>免费实地查勘</strong>，确定重建价值以及室内财产和贵重物品的保额。</li>
-<li><strong>接受建议保额即不适用比例赔付原则</strong>：部分损失全额赔付。</li>
-<li><strong>超过重建价值：</strong>发生全损时，经保险公司与被保险人协商同意，赔付可达建筑物的最高约定保额，高于重建价值。</li>
-<li><strong>围墙、泳池、附属建筑和花园</strong>有各自的保额，而非象征性金额。</li>
+<li><strong>重建价值如何确定</strong>——通过保险公司的现场查勘、专业评估或 SCRIM 模拟器——以及室内财物和贵重物品的保额如何确定。</li>
+<li><strong>比例赔付规则如何适用</strong>，如果某项保额被证明不足。</li>
+<li><strong>全损如何理赔：</strong>赔付是以重建价值为限，还是可达建筑物保额，以及适用的条件。</li>
+<li><strong>围墙、泳池、附属建筑和花园：</strong>是否设有单独保额或分项限额。</li>
 </ul>
 <p style="font-size:14px;">具体条件取决于保险公司和风险，仅以正式签发保单的条款为准。</p>`,
       },
@@ -743,7 +746,7 @@ ${scrim('打开 APS 的 SCRIM 模拟器')}
     faq: [
       { q: '重建价值等于市场价值吗？', a: '不等于。市场价值包含土地、地段和供需；重建价值只是重新建造建筑的成本。两者可能相差很大，高低皆有可能。' },
       { q: '我必须使用 SCRIM 的数字吗？', a: '不必。SCRIM 仅供参考，保额由您决定。但在普通保单中，保额低于重建价值会导致每次理赔都适用比例赔付原则。' },
-      { q: '我能获得超过重建价值的赔付吗？', a: '普通保单不能。在我们安排的高价值住宅产品中，发生全损时，经保险公司与被保险人协商同意，赔付可达最高约定保额。' },
+      { q: '我能获得超过重建价值的赔付吗？', a: '普通保单不能。部分高价值住宅保单规定，发生全损时，经保险公司与被保险人协商同意，赔付可达建筑物的约定保额；是否适用取决于保险公司，并会在您依赖之前以书面形式确认。' },
       { q: '多久应复核一次保额？', a: '至少每年一次，装修或改建后务必复核。自动指数调整只跟随通胀，无法纠正一开始就错误的数额。' },
     ],
     formHeading: '请我们复核您房屋的保额',
@@ -752,7 +755,7 @@ ${scrim('打开 APS 的 SCRIM 模拟器')}
   il: {
     title: 'ערך שחזור: על כמה לבטח בית בפורטוגל | Adler & Rochefort',
     description:
-      'מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ואילו פוליסות יכולות לשלם מעבר לו באובדן מוחלט.',
+      'מהו ערך השחזור, מדוע הוא קובע את הפיצוי, איך לחשב אותו מחדש בסימולטור SCRIM, ומה לבדוק בפוליסה לבית בעל ערך גבוה.',
     keywords: 'ערך שחזור פורטוגל, סכום ביטוח בית פורטוגל, כלל היחסיות, ביטוח חסר, סימולטור SCRIM, ביטוח דירה פורטוגל',
     eyebrow: 'ביטוח דירה · פורטוגל',
     crumb: 'ערך שחזור',
@@ -794,12 +797,12 @@ ${scrim('פתיחת סימולטור SCRIM של APS')}
       {
         id: 'beyond',
         h2: 'מעבר לחברות הביטוח הכלליות',
-        html: `<p>אנו משווקים מוצרים שהולכים מעבר לפוליסות המקיפות המסורתיות של חברות הביטוח הכלליות בפורטוגל, ומיועדים לבתים בעלי ערך גבוה:</p>
+        html: `<p>לבתים בעלי ערך גבוה קיימות פוליסות שמרחיקות לכת יותר מפוליסות המולטי־סיכון המסורתיות של חברות הביטוח הכלליות בפורטוגל. הן אינן שקולות זו לזו, ולכן לפני שאנו ממליצים על אחת מהן אנו בודקים בכתב:</p>
 <ul>
-<li><strong>בדיקה בשטח ללא עלות</strong> לקביעת ערך השחזור וסכומי התכולה ופריטי הערך.</li>
-<li><strong>ללא כלל היחסיות</strong> כאשר מתקבלים הסכומים המומלצים: נזק חלקי משולם במלואו.</li>
-<li><strong>מעבר לערך השחזור:</strong> באובדן מוחלט, בהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע עד לסכום הביטוח המרבי של המבנה — מעל ערך השחזור.</li>
-<li><strong>חומות, בריכות, מבני עזר וגינות</strong> עם סכומים משלהם, לא סכום סמלי.</li>
+<li><strong>איך נקבע ערך השחזור</strong> — בסקר של המבטח, בהערכה מקצועית או בסימולטור SCRIM — ואיך נקבעים סכומי התכולה ופריטי הערך.</li>
+<li><strong>איך חל כלל היחסיות</strong> אם סכום ביטוח מתברר כנמוך מדי.</li>
+<li><strong>איך מפוצה אובדן מוחלט:</strong> האם הפיצוי מוגבל לערך השחזור או יכול להגיע לסכום הביטוח של המבנה, ובאילו תנאים.</li>
+<li><strong>חומות, בריכות, מבני עזר וגינות:</strong> האם יש להם סכומי ביטוח משלהם או תת־גבול.</li>
 </ul>
 <p style="font-size:14px;">התנאים תלויים במבטח ובסיכון ומאושרים רק בתנאי הפוליסה שהונפקה.</p>`,
       },
@@ -807,7 +810,7 @@ ${scrim('פתיחת סימולטור SCRIM של APS')}
     faq: [
       { q: 'האם ערך השחזור זהה לשווי השוק?', a: 'לא. שווי השוק כולל קרקע, מיקום וביקוש; ערך השחזור — רק את עלות הבנייה מחדש. הם יכולים להיות שונים מאוד, לשני הכיוונים.' },
       { q: 'האם אני חייב להשתמש במספר של SCRIM?', a: 'לא. SCRIM הוא נקודת ייחוס בלבד, והסכום הוא החלטה שלכם. אבל בפוליסה רגילה, סכום נמוך מערך השחזור מוביל לכלל היחסיות בכל נזק.' },
-      { q: 'האם אפשר לקבל יותר מערך השחזור?', a: 'לא בפוליסה רגילה. במוצרים לבתים בעלי ערך גבוה שאנו משווקים, באובדן מוחלט ובהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע לסכום הביטוח המרבי.' },
+      { q: 'האם אפשר לקבל יותר מערך השחזור?', a: 'לא בפוליסה רגילה. חלק מהפוליסות לבתים בעלי ערך גבוה קובעות שבאובדן מוחלט, ובהסכמה בין המבטח למבוטח, הפיצוי יכול להגיע לסכום הביטוח של המבנה; האם זה חל תלוי במבטח, והדבר מאושר בכתב לפני שמסתמכים עליו.' },
       { q: 'באיזו תדירות לבדוק את הסכום?', a: 'לפחות פעם בשנה ותמיד לאחר שיפוץ. הצמדה אוטומטית עוקבת אחר האינפלציה, אך אינה מתקנת נקודת מוצא שגויה.' },
     ],
     formHeading: 'בקשו מאיתנו לבדוק את סכום הביטוח של ביתכם',

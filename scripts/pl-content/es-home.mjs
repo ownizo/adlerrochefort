@@ -67,7 +67,7 @@ export const ES_HOME_PAGE = {
     <ul class="hub-list">
       <li class="hub-item"><h3>Oględziny i koszt odbudowy</h3><p>Bezpłatne oględziny na miejscu, potwierdzenie kosztu odbudowy i sum ubezpieczenia ruchomości oraz przedmiotów wartościowych.</p></li>
       <li class="hub-item"><h3>Bez zasady proporcji</h3><p>Po przyjęciu rekomendowanych sum ubezpieczyciel rezygnuje z <em>regla proporcional</em> — szkoda częściowa wypłacana w całości.</p></li>
-      <li class="hub-item"><h3>Gwarantowana odbudowa</h3><p>Po szkodzie całkowitej dom zostaje odbudowany, nawet jeśli koszt przekroczy sumę — przy sumach zarekomendowanych po oględzinach.</p></li>
+      <li class="hub-item"><h3>Szkoda całkowita</h3><p>Jak dana polisa likwiduje szkodę całkowitą i jakie limity obowiązują — sprawdzamy i potwierdzamy na piśmie.</p></li>
       <li class="hub-item"><h3>Zakwaterowanie porównywalnego standardu</h3><p>Przez cały czas, gdy dom nie nadaje się do zamieszkania, również dla zwierząt — bez kilkumiesięcznego limitu typowego dla rynku masowego.</p></li>
       <li class="hub-item"><h3>Ogród, mury, basen</h3><p>Ogrodzenia, mury oporowe, baseny, budynki gospodarcze i domy gościnne z własnymi sumami, a nie symbolicznym limitem.</p></li>
       <li class="hub-item"><h3>Sztuka, biżuteria i kolekcje</h3><p>Wartość uzgodniona na podstawie wyceny, bez franszyzy, z ochroną przed niedoszacowaniem i utratą wartości po renowacji.</p></li>
@@ -133,7 +133,7 @@ export const ES_HOME_PAGE = {
     },
     {
       q: 'Jak ubezpieczyć obrazy i biżuterię w domu w Hiszpanii?',
-      a: '<p>Przy znacznej wartości — jako przedmioty wymienione w polisie, według wartości uzgodnionej na podstawie aktualnej wyceny, bez franszyzy. W polisie standardowej przedmioty wartościowe mają zwykle limit na sztukę i limit łączny, które przy kolekcji okazują się symboliczne.</p>',
+      a: '<p>Przy znacznej wartości — jako przedmioty wymienione w polisie, według wartości uzgodnionej na podstawie aktualnej wyceny; franszyza zależy od warunków polisy. W polisie standardowej przedmioty wartościowe mają zwykle limit na sztukę i limit łączny, które przy kolekcji okazują się symboliczne.</p>',
     },
     {
       q: 'Czy polisa obejmuje wynajem turystyczny?',

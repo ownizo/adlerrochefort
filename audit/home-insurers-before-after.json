@@ -1,0 +1,12 @@
+{
+ "initial": {
+  "pages_with_hits": 634,
+  "REVISAO": 274,
+  "PROIBIDA": 4593,
+  "PERMITIDA": 200
+ },
+ "final": {
+  "pages_with_hits": 514,
+  "PERMITIDA": 133
+ }
+}

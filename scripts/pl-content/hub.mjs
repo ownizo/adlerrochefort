@@ -93,7 +93,7 @@ export const HUB_PAGE = {
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="/pl/ubezpieczenie-domu-portugalia/">Domy i rezydencje o wysokiej wartości</a></h3>
-        <p>Oględziny i koszt odbudowy, rezygnacja z zasady proporcji, gwarantowana odbudowa, zakwaterowanie o porównywalnym standardzie — oraz portugalskie realia: <em>condomínio</em>, zalania i ryzyko sejsmiczne.</p>
+        <p>Koszt odbudowy, zasada proporcji, likwidacja szkody całkowitej i zakwaterowanie zastępcze — sprawdzane na piśmie — oraz portugalskie realia: <em>condomínio</em>, zalania i ryzyko sejsmiczne.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/pl/ubezpieczenie-domu-portugalia/#kolekcje">Sztuka, biżuteria i kolekcje</a></h3>

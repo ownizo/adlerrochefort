@@ -1,0 +1,38 @@
+{
+ "public/alterarmediador/index.html#ade9e3ebf8c4": {
+  "file": "public/alterarmediador/index.html",
+  "url": "/alterarmediador/",
+  "term": "Hiscox",
+  "context": "value=\"Zurich\">Zurich Allianz Asisa Hiscox Selecione a seguradora <div c",
+  "decision": "PERMITIDA",
+  "reason": "Formulário de mudança de mediador: lista de seguradoras em que o cliente tem a apólice atual e dados legais da seguradora para a carta de nomeação. Não apresenta nem descreve produtos de habitação.",
+  "reviewedBy": "Claude (auditoria habitação, Nov 2026) — a validar por Hugo Gonçalves"
+ },
+ "public/alterarmediador/index.html#1cf3d7a0b7f0": {
+  "file": "public/alterarmediador/index.html",
+  "url": "/alterarmediador/",
+  "term": "Hiscox",
+  "context": "urich\">Zurich Allianz Asisa Hiscox Selecione a seguradora <div class=\"fi",
+  "decision": "PERMITIDA",
+  "reason": "Formulário de mudança de mediador: lista de seguradoras em que o cliente tem a apólice atual e dados legais da seguradora para a carta de nomeação. Não apresenta nem descreve produtos de habitação.",
+  "reviewedBy": "Claude (auditoria habitação, Nov 2026) — a validar por Hugo Gonçalves"
+ },
+ "public/en/about/index.html#619f2eb42847": {
+  "file": "public/en/about/index.html",
+  "url": "/en/about/",
+  "term": "Hiscox",
+  "context": "2 id=\"agency-agreements\">Agency agreements, not a single insurer We hold distribution agreements with Allianz, Zurich, Médis, Hiscox, MGEN, Asisa and Allianz Partners. Allianz Zurich Médis Hiscox",
+  "decision": "PERMITIDA",
+  "reason": "Página institucional «Sobre nós»: declaração dos acordos de distribuição da empresa (divulgação institucional), sem apresentação de produtos nem condições de habitação.",
+  "reviewedBy": "Claude (auditoria habitação, Nov 2026) — a validar por Hugo Gonçalves"
+ },
+ "public/en/about/index.html#3331135f1875": {
+  "file": "public/en/about/index.html",
+  "url": "/en/about/",
+  "term": "Hiscox",
+  "context": ", Médis, Hiscox, MGEN, Asisa and Allianz Partners. Allianz Zurich Médis Hiscox MGEN Asisa Allianz Partners What independence means in",
+  "decision": "PERMITIDA",
+  "reason": "Página institucional «Sobre nós»: declaração dos acordos de distribuição da empresa (divulgação institucional), sem apresentação de produtos nem condições de habitação.",
+  "reviewedBy": "Claude (auditoria habitação, Nov 2026) — a validar por Hugo Gonçalves"
+ }
+}

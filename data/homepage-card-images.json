@@ -1,164 +1,28 @@
 {
-  "seguro-ciberseguranca-empresas-portugal": {
-    "src": "/images/blog/topics/1550751827-4bd374c3f58b.jpg",
-    "alt": "Seguro de cibersegurança para empresas: o que cobre e porque já não é opcional",
-    "gradient": null
-  },
-  "seguro-condominio-obrigatorio-guia": {
-    "src": "/images/blog/topics/1460317442991-0ec209397118.jpg",
-    "alt": "Seguro de condomínio: o que é obrigatório, o que cobre e o que falta quase sempre",
-    "gradient": null
-  },
-  "obrigacoes-administrador-condominio-seguro": {
-    "src": "/images/blog/topics/1486406146926-c627a92ad1ab.jpg",
-    "alt": "Seguro do condomínio: as obrigações (e os riscos) do administrador",
-    "gradient": null
-  },
-  "seguro-condominio-capitais-desatualizados": {
-    "src": "/images/blog/topics/1486406146926-c627a92ad1ab.jpg",
-    "alt": "O erro que pode cortar a meio a indemnização do seu condomínio",
-    "gradient": null
-  },
   "investimento-americano-luxo-portugal": {
     "src": "/images/blog/topics/1520250497591-112f2f40a3f4.jpg",
     "alt": "Investimento americano no segmento de luxo em Portugal: como a Adler & Rochefort protege quem aposta no premium",
     "gradient": null
   },
-  "comparar-propostas-seguro-hotel-erros-comuns": {
-    "src": "/images/blog/topics/1520250497591-112f2f40a3f4.jpg",
-    "alt": "Como comparar propostas de seguro para o seu estabelecimento hoteleiro sem cometer os erros mais comuns",
-    "gradient": null
-  },
-  "seguro-acidentes-pessoais-trabalhadores-hotelaria": {
-    "src": "/images/blog/topics/1551882547-ff40c63fe5fa.jpg",
-    "alt": "Seguro de acidentes pessoais para trabalhadores de hotelaria: obrigações legais do empregador",
-    "gradient": null
-  },
-  "alojamento-local-propriedade-horizontal-condominio": {
-    "src": "/images/blog/topics/1551882547-ff40c63fe5fa.jpg",
-    "alt": "Alojamento Local em propriedade horizontal: o seguro de incêndio do condomínio não chega — saiba porquê",
-    "gradient": null
-  },
-  "seguro-multiriscos-hotel-portugal": {
-    "src": "/images/blog/topics/1520250497591-112f2f40a3f4.jpg",
-    "alt": "Seguro multirriscos para hotel em Portugal: o que deve cobrir e o que as apólices standard não incluem",
-    "gradient": null
-  },
-  "rc-exploracao-unidades-turisticas": {
-    "src": "/images/blog/topics/1520250497591-112f2f40a3f4.jpg",
-    "alt": "RC Exploração para unidades turísticas: o que acontece quando um hóspede se magoa nas suas instalações?",
-    "gradient": null
-  },
-  "seguros-turismo-rural-hoteis-boutique": {
-    "src": "/images/blog/topics/1566073771259-6a8506099945.jpg",
-    "alt": "Seguros para turismo rural e hotéis boutique: riscos específicos que os gestores costumam ignorar",
-    "gradient": null
-  },
-  "hotel-fenomenos-climaticos-extremos": {
-    "src": "/images/blog/topics/1445019980597-93fa8acb246c.jpg",
-    "alt": "Tempestade, granizo, inundação: o seu hotel está coberto para fenómenos climáticos extremos?",
-    "gradient": null
-  },
-  "seguro-alojamento-local-decreto-lei-76-2024": {
-    "src": "/images/blog/topics/1566073771259-6a8506099945.jpg",
-    "alt": "Seguro obrigatório para Alojamento Local em 2025: o que mudou com o Decreto-Lei n.º 76/2024",
-    "gradient": null
-  },
-  "seguro-rc-multirriscos-alojamento-local": {
-    "src": "/images/blog/topics/1445019980597-93fa8acb246c.jpg",
-    "alt": "Seguro de RC e Multirriscos para AL: são a mesma coisa? (Não — e esta confusão pode custar-lhe caro)",
-    "gradient": null
-  },
-  "quanto-custa-seguro-alojamento-local": {
-    "src": "/images/blog/topics/1520250497591-112f2f40a3f4.jpg",
-    "alt": "Quanto custa o seguro de Alojamento Local? Capitais mínimos, franquias e o que deve exigir à sua seguradora",
-    "gradient": null
-  },
-  "20-anos-turismo-seguros-hotelaria": {
-    "src": "/images/blog/topics/1549317661-bd32c8ce0db2.jpg",
-    "alt": "20 anos de experiência no turismo: como esta vivência transforma a mediação de seguros para hotelaria",
-    "gradient": null
-  },
-  "seguro-automovel-guia-completo": {
-    "src": "/images/blog/seguro-automovel-guia-completo.jpg",
-    "alt": "Imagem do Blog - seguro automovel guia completo"
-  },
-  "seguro-saude-portugal": {
-    "src": "/images/blog/seguro-saude-portugal.jpg",
-    "alt": "Imagem do Blog - seguro saude portugal"
-  },
-  "seguro-saude-expatriados-portugal": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Seguro de saúde para expatriados em Portugal: Allianz, Medis e AdvanceCare",
-    "gradient": null
-  },
-  "allianz-april-medis-seguro-saude-portugal-2026": {
-    "src": "/images/blog/seguro-habitacao-proteger-casa.jpg",
-    "alt": "Imagem do Blog - seguro habitacao proteger casa"
-  },
-  "seguros-obrigatorios-empresas-portugal": {
-    "src": "/images/blog/seguros-obrigatorios-empresas-portugal.jpg",
-    "alt": "Imagem do Blog - seguros obrigatorios empresas portugal"
-  },
-  "seguros-obrigatorios-hotelaria-turismo": {
-    "src": "/images/blog/seguros-obrigatorios-hotelaria-turismo.jpg",
-    "alt": "Imagem do Blog - seguros obrigatorios hotelaria turismo"
-  },
-  "seguros-empresas-distribuicao": {
-    "src": "/images/blog/seguros-empresas-distribuicao.jpg",
-    "alt": "Imagem do Blog - seguros empresas distribuicao"
-  },
   "parcerias-imobiliarias-comissoes": {
     "src": "/images/blog/parcerias-imobiliarias-comissoes.jpg",
     "alt": "Imagem do Blog - parcerias imobiliarias comissoes"
-  },
-  "revisao-apolice-empresarial": {
-    "src": "/images/blog/revisao-apolice-empresarial.jpg",
-    "alt": "Imagem do Blog - revisao apolice empresarial"
   },
   "seguro-individual-automovel": {
     "src": "/images/blog/seguro-individual-automovel.jpg",
     "alt": "Imagem do Blog - seguro individual automovel"
   },
-  "multirriscos-habitacao": {
-    "src": "/images/blog/multirriscos-habitacao.jpg",
-    "alt": "Imagem do Blog - multirriscos habitacao"
-  },
   "responsabilidade-civil-profissional": {
     "src": "/images/blog/responsabilidade-civil-profissional.jpg",
     "alt": "Imagem do Blog - responsabilidade civil profissional"
-  },
-  "ransomware-portugal-riscos-ciberneticos": {
-    "src": "/images/blog/ransomware-portugal-riscos-ciberneticos.jpg",
-    "alt": "Imagem do Blog - ransomware portugal riscos ciberneticos"
   },
   "valores-segurados-desatualizados": {
     "src": "/images/blog/valores-segurados-desatualizados.jpg",
     "alt": "Imagem do Blog - valores segurados desatualizados"
   },
-  "seguro-frota-erros-comuns": {
-    "src": "/images/blog/seguro-frota-erros-comuns.jpg",
-    "alt": "Imagem do Blog - seguro frota erros comuns"
-  },
-  "responsabilidade-administradores-seguro-do": {
-    "src": "/images/blog/responsabilidade-administradores-seguro-do.jpg",
-    "alt": "Imagem do Blog - responsabilidade administradores seguro do"
-  },
-  "seguro-obra-construcao": {
-    "src": "/images/blog/seguro-obra-construcao.jpg",
-    "alt": "Imagem do Blog - seguro obra construcao"
-  },
   "adler-pro-plataforma-saas": {
     "src": "/images/blog/adler-pro-plataforma-saas.jpg",
     "alt": "Imagem do Blog - Os Meus Seguros"
-  },
-  "seguros-bares-restaurantes-sinistros": {
-    "src": "/images/blog/seguros-bares-restaurantes-sinistros.jpg",
-    "alt": "Imagem do Blog - seguros bares restaurantes sinistros"
-  },
-  "seguro-habitacao-legalizacao": {
-    "src": "/images/blog/seguro-habitacao-legalizacao.jpg",
-    "alt": "Imagem do Blog - seguro habitacao legalizacao"
   },
   "seguro-responsabilidade-civil-terapeuticas-nao-convencionais": {
     "src": "/images/blog/topics/1544161515-4ab6ce6db874.jpg",
@@ -265,39 +129,9 @@
     "alt": "Who pays for the dispute: personal legal expenses cover",
     "gradient": null
   },
-  "us-buyers-property-cover-portugal": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "What changes when the buyer is American",
-    "gradient": null
-  },
-  "best-home-insurance-portugal-2026": {
-    "src": "/images/blog/topics/1613977257363-707ba9348227.jpg",
-    "alt": "The best home insurance in Portugal in 2026: Zurich, Allianz, Hiscox and Liberty Mutual compared",
-    "gradient": null
-  },
-  "home-insurance-multi-risk": {
-    "src": null,
-    "alt": "What a Portuguese multi-risk home policy actually covers, clause by clause",
-    "gradient": "linear-gradient(135deg, #2C4A5A 0%, #7A9A6B 100%)"
-  },
-  "home-insurance-cost-algarve-price-drivers": {
-    "src": "/images/blog/topics/1566073771259-6a8506099945.jpg",
-    "alt": "How much does home insurance cost in the Algarve?",
-    "gradient": null
-  },
-  "change-bank-home-insurance-portugal": {
-    "src": "/images/blog/topics/1613977257363-707ba9348227.jpg",
-    "alt": "Your bank sold you the home insurance. Here is how to change it.",
-    "gradient": null
-  },
   "water-damage-claim-portugal": {
     "src": "/images/blog/topics/1511895426328-dc8714191300.jpg",
     "alt": "How to claim for water damage on a Portuguese home policy",
-    "gradient": null
-  },
-  "alojamento-local-insurance-requirements": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "Alojamento Local insurance: what the RNAL registration actually requires",
     "gradient": null
   },
   "domestic-staff-insurance-portugal": {
@@ -310,69 +144,9 @@
     "alt": "What you need to insure a property in Portugal: the document checklist",
     "gradient": null
   },
-  "zurich-home-insurance-portugal": {
-    "src": "/images/blog/topics/1600585154340-be6161a56a0c.jpg",
-    "alt": "Zurich home insurance in Portugal: expat guide 2026",
-    "gradient": null
-  },
-  "allianz-home-insurance-portugal": {
-    "src": "/images/blog/topics/1613977257363-707ba9348227.jpg",
-    "alt": "Allianz home insurance in Portugal: expat guide 2026",
-    "gradient": null
-  },
-  "hiscox-home-insurance-portugal": {
-    "src": "/images/blog/topics/1600596542815-ffad4c1539a9.jpg",
-    "alt": "Hiscox home insurance in Portugal: cover for high-value homes",
-    "gradient": null
-  },
-  "liberty-mutual-home-insurance-portugal": {
-    "src": "/images/blog/topics/1600585154340-be6161a56a0c.jpg",
-    "alt": "Liberty Mutual home insurance in Portugal: the specialist route",
-    "gradient": null
-  },
-  "home-insurance-lagos": {
-    "src": "/images/blog/topics/1471922694854-ff1b63b20054.jpg",
-    "alt": "Home insurance in Lagos: what local property actually needs",
-    "gradient": null
-  },
-  "home-insurance-lagoa-carvoeiro": {
-    "src": "/images/blog/topics/1507525428034-b723cf961d3e.jpg",
-    "alt": "Home insurance in Lagoa and Carvoeiro: a local guide",
-    "gradient": null
-  },
   "home-insurance-loule-almancil": {
     "src": "/images/blog/topics/1564013799919-ab600027ffc6.jpg",
     "alt": "Home insurance in Loulé and Almancil: from the resorts to the serra",
-    "gradient": null
-  },
-  "home-insurance-tavira": {
-    "src": "/images/blog/topics/1613977257363-707ba9348227.jpg",
-    "alt": "Home insurance in Tavira and the eastern Algarve",
-    "gradient": null
-  },
-  "how-to-get-nif-portugal-non-resident": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "How to get a NIF in Portugal as a non-resident",
-    "gradient": null
-  },
-  "fiscal-representation-portugal-explained": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "Fiscal representation in Portugal, explained",
-    "gradient": null
-  },
-  "health-insurance-portugal-residency-visa": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "Health insurance for a Portugal residency visa",
-    "gradient": null
-  },
-  "setting-up-company-portugal-foreigners": {
-    "src": "/images/blog/topics/1507679799987-c73779587ccf.jpg",
-    "alt": "Setting up a company in Portugal as a foreigner",
-    "gradient": null
-  },
-  "destination-wedding-cancellation-insurance-algarve": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Insuring a destination wedding in the Algarve",
     "gradient": null
   },
   "medical-evacuation-repatriation-cover-portugal": {
@@ -385,19 +159,9 @@
     "alt": "Liability cover for trustees, foundation boards and family offices in Portugal",
     "gradient": null
   },
-  "prize-indemnity-hole-in-one-insurance-algarve": {
-    "src": "/images/blog/topics/1503376780353-7e6692767b70.jpg",
-    "alt": "Prize indemnity and hole-in-one insurance for events in the Algarve",
-    "gradient": null
-  },
   "watches-jewellery-travelling-worldwide-all-risks": {
     "src": "/images/blog/topics/1613977257363-707ba9348227.jpg",
     "alt": "Watches and jewellery worn while travelling: the worldwide all-risks extension",
-    "gradient": null
-  },
-  "track-days-performance-driving-motor-policy-exclusion": {
-    "src": "/images/blog/topics/1503376780353-7e6692767b70.jpg",
-    "alt": "Track days and performance driving: the exclusion hiding in your motor policy",
     "gradient": null
   },
   "high-value-bicycles-e-bikes-cover-away-from-home": {
@@ -435,29 +199,9 @@
     "alt": "Solar panels, home batteries and EV chargers: your home is modern, your policy isn't",
     "gradient": null
   },
-  "building-home-portugal-promoter-insurance-seguro-decenal": {
-    "src": "/images/blog/topics/1600596542815-ffad4c1539a9.jpg",
-    "alt": "Building a home in Portugal: promoter insurance and the seguro decenal explained",
-    "gradient": null
-  },
   "swimming-pools-jetties-private-access-liability-nobody-insures": {
     "src": "/images/blog/topics/1573497019940-1c28c88b4f3e.jpg",
     "alt": "Swimming pools, jetties and private access: the liability nobody insures",
-    "gradient": null
-  },
-  "algarve-home-earns-income-personal-use-vs-al-cover": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "When your Algarve home earns income part of the year: personal use vs AL cover",
-    "gradient": null
-  },
-  "moving-to-portugal-pre-existing-condition-health-cover": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Moving to Portugal with a pre-existing condition: what changes in your health cover",
-    "gradient": null
-  },
-  "long-term-care-planning-foreign-residents-portugal": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Long-term care planning for foreign residents in Portugal",
     "gradient": null
   },
   "medical-evacuation-repatriation-cover-residents-travel-constantly": {
@@ -483,11 +227,6 @@
   "insurance-private-staff-travel-household": {
     "src": "/images/blog/topics/1511895426328-dc8714191300.jpg",
     "alt": "Insurance for private staff who travel with the household",
-    "gradient": null
-  },
-  "key-person-insurance-businesses-abroad": {
-    "src": "/images/blog/topics/1573497019940-1c28c88b4f3e.jpg",
-    "alt": "Key person insurance when you still own businesses abroad",
     "gradient": null
   },
   "home-staff-quarters-guest-annexes-outbuildings": {
@@ -530,11 +269,6 @@
     "alt": "Insuring a property portfolio across two jurisdictions",
     "gradient": null
   },
-  "health-insurance-portugal-usa": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Health insurance between Portugal and the United States: what actually covers you",
-    "gradient": null
-  },
   "insurance-domestic-staff-portugal": {
     "src": "/images/blog/topics/1475503572774-15a45e5d60b9.jpg",
     "alt": "Insurance for staff employed at home in Portugal",
@@ -545,64 +279,9 @@
     "alt": "APRIL International Health Insurance in Portugal: expat guide 2026",
     "gradient": null
   },
-  "travel-insurance-expats-portugal": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "Travel insurance for expats living in Portugal (2026 guide)",
-    "gradient": null
-  },
-  "car-insurance-cost-portugal": {
-    "src": "/images/blog/topics/1549317661-bd32c8ce0db2.jpg",
-    "alt": "Average car insurance cost in Portugal 2026 (expat guide)",
-    "gradient": null
-  },
-  "allianz-health-insurance-portugal": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "Allianz health insurance in Portugal: expat guide 2026",
-    "gradient": null
-  },
-  "medis-health-insurance-portugal": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "Médis health insurance in Portugal: expat guide 2026",
-    "gradient": null
-  },
   "earthquake-cover-algarve-buildings": {
     "src": "/images/blog/topics/1460317442991-0ec209397118.jpg",
     "alt": "Earthquake cover for Algarve condominium buildings",
-    "gradient": null
-  },
-  "private-health-insurance-pre-existing-condition-portugal": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "Private Health Insurance With a Pre-Existing Condition in Portugal",
-    "gradient": null
-  },
-  "getting-insurance-portugal-before-nif-residency": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "Getting Insurance in Portugal Before You Have a NIF or Residency",
-    "gradient": null
-  },
-  "health-insurance-cost-portugal-2026": {
-    "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
-    "alt": "How Much Does Health Insurance Cost in Portugal? Real 2026 Prices by Age",
-    "gradient": null
-  },
-  "mortgage-life-insurance-foreign-buyers-portugal": {
-    "src": "/images/blog/topics/1613490493576-7fde63acd811.jpg",
-    "alt": "Mortgage Life Insurance for Foreign Buyers: How to Stop Overpaying Your Bank",
-    "gradient": null
-  },
-  "d7-visa-health-insurance-valid-proof": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "Health Insurance for the D7 Visa: What Counts as Valid Proof",
-    "gradient": null
-  },
-  "retiring-algarve-health-cover-65-plus": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "Retiring to the Algarve: Health Cover That Still Accepts You at 65+",
-    "gradient": null
-  },
-  "sns-vs-private-insurance-expats-portugal": {
-    "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
-    "alt": "SNS vs Private Insurance: Do Expats Really Need Both?",
     "gradient": null
   },
   "insurance-claim-portugal-no-portuguese": {
@@ -610,24 +289,9 @@
     "alt": "Filing an Insurance Claim in Portugal When You Don't Speak Portuguese",
     "gradient": null
   },
-  "insurance-guide-americans-moving-to-portugal": {
-    "src": "/images/blog/topics/1549317661-bd32c8ce0db2.jpg",
-    "alt": "A Complete Insurance Guide for Americans Moving to Portugal",
-    "gradient": null
-  },
-  "british-expats-brexit-insurance-portugal": {
-    "src": "/images/blog/topics/1492144534655-ae79c964c9d7.jpg",
-    "alt": "British Expats After Brexit: What Changed for Your Insurance in Portugal",
-    "gradient": null
-  },
   "second-home-rent-out-holiday-let-standard-home-cover": {
     "src": "/images/blog/topics/1631217868264-e5b90bb7e133.jpg",
     "alt": "Insuring a Second Home You Rent Out: Holiday-Let vs Standard Home Cover",
-    "gradient": null
-  },
-  "condominium-insurance-doesnt-cover-contents": {
-    "src": "/images/blog/topics/1545324418-cc1a3fa10c00.jpg",
-    "alt": "What Your Condominium Insurance Doesn't Cover (and Why You Still Need Contents Cover)",
     "gradient": null
   },
   "luxury-car-insurance-portugal": {
@@ -640,44 +304,9 @@
     "alt": "Above a certain value, a standard home policy stops working",
     "gradient": null
   },
-  "holiday-home-insurance-portugal": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Holiday home insurance in Portugal: cover built for a second residence",
-    "gradient": null
-  },
-  "20-years-tourism-hospitality-insurance": {
-    "src": "/images/blog/topics/1510511459019-5dda7724fd87.jpg",
-    "alt": "20 years of tourism experience: how real-world expertise transforms insurance mediation for hospitality",
-    "gradient": null
-  },
-  "car-insurance-complete-guide": {
-    "src": "/images/blog/car-insurance-complete-guide.jpg",
-    "alt": "Imagem do Blog - car insurance complete guide",
-    "gradient": null
-  },
-  "health-insurance-portugal": {
-    "src": "/images/blog/health-insurance-portugal.jpg",
-    "alt": "Imagem do Blog - health insurance portugal",
-    "gradient": null
-  },
   "health-insurance-expats-portugal": {
     "src": "/images/blog/topics/1576091160399-112ba8d25d1d.jpg",
     "alt": "Health insurance for expats in Portugal: Allianz, Medis & AdvanceCare",
-    "gradient": null
-  },
-  "allianz-april-medis-health-insurance-portugal-2026": {
-    "src": "/images/blog/topics/1579684385127-1ef15d508118.jpg",
-    "alt": "Allianz vs APRIL vs Médis: which is the best health insurance in Portugal in 2026",
-    "gradient": null
-  },
-  "home-insurance-protect-property": {
-    "src": "/images/blog/home-insurance-protect-property.jpg",
-    "alt": "Imagem do Blog - home insurance protect property",
-    "gradient": null
-  },
-  "home-insurance-legalization": {
-    "src": "/images/blog/home-insurance-legalization.jpg",
-    "alt": "Imagem do Blog - home insurance legalization",
     "gradient": null
   },
   "liability-insurance-complementary-therapies": {

@@ -68,7 +68,7 @@ export const ES_LIABILITY_PAGE = {
     <div class="feature-grid">
       <div class="feature-card"><h3>Belopp som motsvarar tillgångarna</h3><p>Privat ansvar för hela familjen med försäkringsbelopp på flera miljoner euro.</p></div>
       <div class="feature-card"><h3>Hela världen</h3><p>Samma skydd i Spanien, i Portugal, i Sverige och på resa — inte bara vid den försäkrade bostaden.</p></div>
-      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Kostnaderna för rättsligt försvar betalas utöver försäkringsbeloppet och dras inte av från det.</p></div>
+      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Om kostnaderna för rättsligt försvar betalas inom eller utöver försäkringsbeloppet beror på villkoren.</p></div>
       <div class="feature-card"><h3>Hela hushållet</h3><p>Makar, barn — även de som studerar på annan ort — gäster och den som tillfälligt tar hand om dina djur.</p></div>
       <div class="feature-card wide"><h3>Alla bostäder</h3><p>Som ägare, hyresgäst eller brukare, var familjen än har ett hem, samlat under en och samma försäkring.</p></div>
     </div>

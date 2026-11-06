@@ -803,7 +803,7 @@ const HOME = {
     },
     {
       q: 'Can you name which Spanish insurers you work with?',
-      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. We ask about the property and the household first, and name the insurer in writing with the proposal.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. We ask about the property and the household first, and name the insurer in writing with the proposal.',
     },
     {
       q: 'Is this the same policy as for a property in Portugal?',
@@ -1060,7 +1060,7 @@ const LANDLORD = {
     },
     {
       q: 'Can you name which Spanish insurers offer landlord cover?',
-      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the property and the household, and is named in writing with the proposal.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the property and the household, and is named in writing with the proposal.',
     },
   ],
 
@@ -1428,7 +1428,7 @@ const HEALTH = {
     },
     {
       q: 'Can you name which Spanish health insurers you work with?',
-      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
     },
     {
       q: 'What is the difference between domestic and international health cover?',
@@ -1846,7 +1846,7 @@ const CAR = {
     },
     {
       q: 'Do you name which Spanish motor insurers you work with?',
-      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
+      a: 'Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal.',
     },
     {
       q: 'What documents do I need to import and register a car in Spain?',

@@ -60,7 +60,7 @@ export const LIABILITY_PAGE = {
     <p>Vanliga portugisiska bostadsförsäkringar har ofta ett ansvarsbelopp som räcker för en vattenskada hos grannen men inte för en allvarlig personskada. För ett hushåll med betydande tillgångar är det också frågan om vad en motpart kan rikta anspråk mot. Därför bygger vi familjeansvaret på fyra principer:</p>
     <div class="feature-grid">
       <div class="feature-card"><h3>Belopp som motsvarar tillgångarna</h3><p>Privat ansvar för hela familjen med försäkringsbelopp på flera miljoner euro, med giltighet i hela världen.</p></div>
-      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Kostnaderna för rättsligt försvar betalas utöver försäkringsbeloppet och dras inte av från det — i en tvistig sak ofta den största posten de första åren.</p></div>
+      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Om kostnaderna för rättsligt försvar betalas inom eller utöver försäkringsbeloppet beror på villkoren — i en tvistig sak ofta den största posten de första åren.</p></div>
       <div class="feature-card"><h3>Vilka som omfattas</h3><p>Hushållet, även barn som studerar på annan ort, och den som tillfälligt tar hand om dina djur; gäster och hushållsanställda i anslutning till bostaden.</p></div>
       <div class="feature-card"><h3>Alla bostäder</h3><p>Som ägare, hyresgäst eller brukare — i Portugal, i Spanien eller var familjen än har ett hem.</p></div>
     </div>

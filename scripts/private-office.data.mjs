@@ -43,7 +43,7 @@ export const PAGES = {
     facts: [
       'Registered with the ASF (no. 425591790/3); operating in Spain under the EU freedom to provide services.',
       'Not tied to any insurer: recommendations are chosen on cover, sums insured and claims handling — never on premium alone.',
-      'Specialist capacity from Chubb, Hiscox, Innovarisk (Lloyd’s) and Hispania; international health with Allianz Care and Cigna Global.',
+      'Specialist private-client and Lloyd’s capacity for homes and valuables; international health with Allianz Care and Cigna Global.',
       'One adviser across both countries; where an insurer writes Portugal and Spain, one policy.',
       'Written opinion within 24–72 working hours. Advice in English, Portuguese, Spanish and German.',
       'Head office in Lisbon (Algarve). We never ask for your total net worth.',
@@ -53,7 +53,7 @@ export const PAGES = {
     principles: [
       ['Discretion', 'We ask only for what an underwriter needs to assess the risk — never for a statement of total wealth. Files, valuations and inventories stay with the people who need them.'],
       ['Independence', 'We are not bound to any insurer. Each recommendation names the insurer, the conditions and the reasons, and we say so when a standard policy is the better answer.'],
-      ['Substance before price', 'We do not take part in price races. A proposal is built on the cover that protects the asset: rebuild value rather than market value, agreed value for collections, no proportional reduction where the market allows it.'],
+      ['Substance before price', 'We do not take part in price races. A proposal is built on the cover that protects the asset: rebuild value rather than market value, agreed value for collections, and the proportional rule checked in each wording.'],
       ['Continuity', 'The same adviser from the first conversation to the renewal and, above all, at a claim. Sums insured are reviewed every year, because values move and an unrevised policy drifts.'],
       ['One view across borders', 'Portugal and Spain are handled together, and international health cover follows the family wherever it lives.'],
     ],
@@ -111,7 +111,7 @@ export const PAGES = {
     facts: [
       'Bei der ASF registriert (Nr. 425591790/3); in Spanien im Rahmen der EU-Dienstleistungsfreiheit tätig.',
       'An keinen Versicherer gebunden: Empfehlungen richten sich nach Deckung, Versicherungssummen und Schadenregulierung — nie allein nach der Prämie.',
-      'Spezialkapazität von Chubb, Hiscox, Innovarisk (Lloyd’s) und Hispania; internationale Krankenversicherung mit Allianz Care und Cigna Global.',
+      'Spezialkapazität für Privatkunden und aus dem Lloyd’s-Markt für Häuser und Wertsachen; internationale Krankenversicherung mit Allianz Care und Cigna Global.',
       'Ein Berater für beide Länder; wo ein Versicherer Portugal und Spanien zeichnet, eine einzige Police.',
       'Schriftliche Einschätzung innerhalb von 24–72 Arbeitsstunden. Beratung auf Deutsch, Englisch, Portugiesisch und Spanisch.',
       'Hauptsitz in Lissabon (Algarve). Wir fragen nie nach Ihrem Gesamtvermögen.',
@@ -121,7 +121,7 @@ export const PAGES = {
     principles: [
       ['Diskretion', 'Wir fragen nur nach dem, was ein Underwriter zur Bewertung des Risikos braucht — nie nach einer Aufstellung des Gesamtvermögens. Unterlagen, Bewertungen und Inventare bleiben bei den Personen, die sie benötigen.'],
       ['Unabhängigkeit', 'Wir sind an keinen Versicherer gebunden. Jede Empfehlung nennt den Versicherer, die Bedingungen und die Gründe — und wir sagen es, wenn eine Standardpolice die bessere Antwort ist.'],
-      ['Substanz vor Preis', 'Wir beteiligen uns nicht an Preiswettläufen. Ein Angebot baut auf dem Schutz auf, der den Wert tatsächlich sichert: Wiederaufbauwert statt Marktwert, vereinbarte Werte für Sammlungen, kein Unterversicherungsabzug, wo der Markt es zulässt.'],
+      ['Substanz vor Preis', 'Wir beteiligen uns nicht an Preiswettläufen. Ein Angebot baut auf dem Schutz auf, der den Wert tatsächlich sichert: Wiederaufbauwert statt Marktwert, vereinbarte Werte für Sammlungen und die Proportionalregel in jedem Bedingungswerk geprüft.'],
       ['Kontinuität', 'Derselbe Berater vom ersten Gespräch bis zur Verlängerung — und vor allem im Schadenfall. Versicherungssummen werden jährlich überprüft, weil Werte sich bewegen und eine nicht überprüfte Police abdriftet.'],
       ['Ein Blick über Grenzen', 'Portugal und Spanien werden gemeinsam betreut, und der internationale Krankenversicherungsschutz folgt der Familie, wo immer sie lebt.'],
     ],
@@ -179,7 +179,7 @@ export const PAGES = {
     facts: [
       'Registrado en la ASF (n.º 425591790/3); opera en España en régimen de libre prestación de servicios de la UE.',
       'Sin vínculo con ninguna aseguradora: las recomendaciones se eligen por coberturas, capitales y gestión de siniestros — nunca solo por la prima.',
-      'Capacidad especializada de Chubb, Hiscox, Innovarisk (Lloyd’s) e Hispania; salud internacional con Allianz Care y Cigna Global.',
+      'Capacidad especializada para clientes privados y del mercado de Lloyd’s para viviendas y objetos de valor; salud internacional con Allianz Care y Cigna Global.',
       'Un solo asesor para los dos países; cuando la aseguradora suscribe Portugal y España, una sola póliza.',
       'Opinión por escrito en 24–72 horas hábiles. Asesoría en español, inglés, portugués y alemán.',
       'Sede en Lisboa, sin atención al público. Nunca le pedimos su patrimonio total.',
@@ -189,7 +189,7 @@ export const PAGES = {
     principles: [
       ['Discreción', 'Pedimos solo lo que un suscriptor necesita para valorar el riesgo — nunca una declaración del patrimonio total. Expedientes, tasaciones e inventarios quedan en manos de quienes los necesitan.'],
       ['Independencia', 'No estamos vinculados a ninguna aseguradora. Cada recomendación indica la aseguradora, las condiciones y las razones, y lo decimos cuando una póliza estándar es la mejor respuesta.'],
-      ['Sustancia antes que precio', 'No participamos en subastas de precio. Una propuesta se construye sobre la cobertura que protege el bien: valor de reconstrucción en lugar de valor de mercado, valor convenido para las colecciones y sin regla proporcional cuando el mercado lo permite.'],
+      ['Sustancia antes que precio', 'No participamos en subastas de precio. Una propuesta se construye sobre la cobertura que protege el bien: valor de reconstrucción en lugar de valor de mercado, valor convenido para las colecciones y una regla proporcional revisada en cada condicionado.'],
       ['Continuidad', 'El mismo asesor desde la primera conversación hasta la renovación y, sobre todo, en un siniestro. Los capitales se revisan cada año, porque los valores cambian y una póliza sin revisar se queda atrás.'],
       ['Una sola visión entre fronteras', 'Portugal y España se gestionan juntos, y la cobertura de salud internacional acompaña a la familia allí donde viva.'],
     ],
@@ -247,7 +247,7 @@ export const PAGES = {
     facts: [
       '在 ASF 注册（注册号 425591790/3）；依据欧盟服务提供自由在西班牙开展业务。',
       '不隶属于任何保险公司：建议依据保障范围、保额和理赔服务选择——从不只看保费。',
-      '专业承保能力来自 Chubb、Hiscox、Innovarisk（劳合社）和 Hispania；国际医疗保险合作方为 Allianz Care 与 Cigna Global。',
+      '住宅与贵重物品的专业承保能力来自面向私人客户的保险公司及劳合社市场；国际医疗保险合作方为 Allianz Care 与 Cigna Global。',
       '两国由同一位顾问负责；若保险公司同时承保葡萄牙和西班牙，可合并为一张保单。',
       '资料齐全后 24–72 个工作小时内提供书面意见。书面建议与往来沟通以英文进行。',
       '总部位于里斯本。我们从不询问您的总资产。',
@@ -257,7 +257,7 @@ export const PAGES = {
     principles: [
       ['保密', '我们只询问核保人评估风险所需的信息——从不要求申报总资产。文件、估值与清单仅限需要的人员接触。'],
       ['独立', '我们不受任何保险公司约束。每项建议都写明保险公司、条件与理由；当标准保单更合适时，我们也会如实说明。'],
-      ['重实质，不比价格', '我们不参与价格竞赛。方案建立在真正保护资产的保障之上：按重建价值而非市场价值承保、收藏品按约定价值承保，并在市场允许时不适用比例赔付规则。'],
+      ['重实质，不比价格', '我们不参与价格竞赛。方案建立在真正保护资产的保障之上：按重建价值而非市场价值承保、收藏品按约定价值承保，并逐份核查比例赔付规则的适用方式。'],
       ['连续性', '从第一次交谈到续保，尤其是在理赔时，始终是同一位顾问。保额每年复核，因为价值会变化，未经复核的保单会逐渐偏离实际。'],
       ['跨境统筹', '葡萄牙与西班牙一并处理，国际医疗保险随家庭所在地而行。'],
     ],
@@ -315,7 +315,7 @@ export const PAGES = {
     facts: [
       'רשומה ב-ASF (מס׳ 425591790/3); פועלת בספרד במסגרת חופש מתן השירותים באיחוד האירופי.',
       'ללא זיקה לחברת ביטוח: ההמלצות נבחרות לפי הכיסוי, סכומי הביטוח והטיפול בתביעות — לעולם לא לפי הפרמיה בלבד.',
-      'יכולת חיתום מתמחה של Chubb, Hiscox, Innovarisk (לוידס) ו-Hispania; ביטוח בריאות בינלאומי עם Allianz Care ו-Cigna Global.',
+      'יכולת חיתום מתמחה ללקוחות פרטיים ומשוק לוידס לבתים ולפריטי ערך; ביטוח בריאות בינלאומי עם Allianz Care ו-Cigna Global.',
       'יועץ אחד לשתי המדינות; כשמבטח מכסה את פורטוגל ואת ספרד — פוליסה אחת.',
       'חוות דעת בכתב תוך 24–72 שעות עבודה. ההמלצות וההתכתבות מתנהלות בכתב באנגלית.',
       'משרד ראשי בליסבון. לעולם איננו שואלים על ההון הכולל שלכם.',
@@ -325,7 +325,7 @@ export const PAGES = {
     principles: [
       ['דיסקרטיות', 'אנו מבקשים רק את מה שחתם צריך כדי להעריך את הסיכון — לעולם לא הצהרה על ההון הכולל. תיקים, הערכות שווי ורשימות מלאי נשמרים אצל מי שזקוק להם בלבד.'],
       ['עצמאות', 'איננו כבולים לאף חברת ביטוח. כל המלצה מציינת את המבטח, את התנאים ואת הנימוקים — ואנו אומרים זאת כאשר פוליסה סטנדרטית היא התשובה הנכונה יותר.'],
-      ['מהות לפני מחיר', 'איננו משתתפים במרוצי מחירים. הצעה נבנית על הכיסוי שמגן על הנכס: ערך בנייה מחדש במקום ערך שוק, ערך מוסכם לאוספים, וללא כלל ביטוח חסר כשהשוק מאפשר זאת.'],
+      ['מהות לפני מחיר', 'איננו משתתפים במרוצי מחירים. הצעה נבנית על הכיסוי שמגן על הנכס: ערך בנייה מחדש במקום ערך שוק, ערך מוסכם לאוספים, ובדיקה של כלל ביטוח החסר בכל פוליסה.'],
       ['רציפות', 'אותו יועץ מהשיחה הראשונה ועד החידוש — ובעיקר בעת תביעה. סכומי הביטוח נבדקים מדי שנה, כי ערכים משתנים ופוליסה שאינה נבדקת מתרחקת מהמציאות.'],
       ['מבט אחד מעבר לגבולות', 'פורטוגל וספרד מטופלות יחד, וכיסוי הבריאות הבינלאומי מלווה את המשפחה בכל מקום שבו היא חיה.'],
     ],
@@ -383,7 +383,7 @@ export const PAGES = {
     facts: [
       'Registrada na ASF (n.º 425591790/3); opera na Espanha em regime de livre prestação de serviços da UE.',
       'Sem vínculo de exclusividade com nenhuma seguradora: as recomendações são escolhidas pelas coberturas, capitais segurados e gestão de sinistros — nunca só pelo prêmio.',
-      'Capacidade especializada da Chubb, Hiscox, Innovarisk (Lloyd’s) e Hispania; saúde internacional com a Allianz Care e a Cigna Global.',
+      'Capacidade especializada para clientes particulares e do mercado Lloyd’s para residências e objetos de valor; saúde internacional com a Allianz Care e a Cigna Global.',
       'Um único consultor para os dois países; quando a seguradora subscreve Portugal e Espanha, uma única apólice.',
       'Parecer por escrito em 24 a 72 horas úteis. Atendimento em português, inglês, espanhol e alemão.',
       'Sede em Lisboa, sem atendimento ao público. Nunca perguntamos o seu patrimônio total.',
@@ -393,7 +393,7 @@ export const PAGES = {
     principles: [
       ['Discrição', 'Pedimos apenas o que o subscritor precisa para avaliar o risco — nunca uma declaração de patrimônio total. Dossiês, avaliações e inventários ficam restritos a quem precisa deles.'],
       ['Independência', 'Não estamos vinculados a nenhuma seguradora. Cada recomendação indica a seguradora, as condições e os motivos — e dizemos quando uma apólice padrão é a melhor resposta.'],
-      ['Substância antes do preço', 'Não participamos de leilões de preço. Uma proposta é construída sobre a cobertura que protege o bem: valor de reconstrução em vez de valor de mercado, valor acordado para coleções e sem regra proporcional quando o mercado permite.'],
+      ['Substância antes do preço', 'Não participamos de leilões de preço. Uma proposta é construída sobre a cobertura que protege o bem: valor de reconstrução em vez de valor de mercado, valor acordado para coleções e a regra proporcional verificada em cada apólice.'],
       ['Continuidade', 'O mesmo consultor da primeira conversa à renovação e, sobretudo, no sinistro. Os capitais são revistos todo ano, porque os valores mudam e uma apólice não revista fica para trás.'],
       ['Uma visão além das fronteiras', 'Portugal e Espanha são tratados em conjunto, e a cobertura de saúde internacional acompanha a família onde quer que ela viva.'],
     ],

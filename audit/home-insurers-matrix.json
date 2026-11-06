@@ -1,0 +1,93 @@
+{
+ "pt": {
+  "identificadas": 53,
+  "analisadas": 90,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "br": {
+  "identificadas": 1,
+  "analisadas": 1,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "de": {
+  "identificadas": 45,
+  "analisadas": 60,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "dk": {
+  "identificadas": 25,
+  "analisadas": 37,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "en": {
+  "identificadas": 120,
+  "analisadas": 192,
+  "comOcorrencias": 1,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "es": {
+  "identificadas": 42,
+  "analisadas": 59,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "fr": {
+  "identificadas": 23,
+  "analisadas": 33,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "il": {
+  "identificadas": 26,
+  "analisadas": 38,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "it": {
+  "identificadas": 29,
+  "analisadas": 39,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "nl": {
+  "identificadas": 27,
+  "analisadas": 41,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "pl": {
+  "identificadas": 28,
+  "analisadas": 39,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "se": {
+  "identificadas": 25,
+  "analisadas": 39,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ },
+ "zh": {
+  "identificadas": 25,
+  "analisadas": 38,
+  "comOcorrencias": 0,
+  "proibidas": 0,
+  "revisao": 0
+ }
+}

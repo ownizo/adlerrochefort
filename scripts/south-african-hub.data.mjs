@@ -127,7 +127,7 @@ export const ZA_ARTICLES = [
     <p>If the house stands empty while you are in South Africa, the unoccupancy clause matters: past a set number of consecutive days, theft and water-damage cover can be restricted. Declare how the house is really used.</p>
 
     <h2>High-value homes</h2>
-    <p>For villas in Cascais, Quinta da Marinha or the Algarve, we place policies beyond the generalist insurers: an on-site survey, no proportional rule once the recommended sums are accepted, and — after a total loss, by agreement between insurer and insured — a settlement up to the maximum sum insured, above the rebuild value.</p>
+    <p>For villas in Cascais, Quinta da Marinha or the Algarve, we place policies beyond the generalist insurers, and check in writing how each sets the rebuild value, applies the proportional rule and settles a total loss.</p>
 `,
     faq: [
       { q: 'What sum should I insure my Portuguese home for?', a: 'The rebuild value in euros, not the purchase price. The APS SCRIM simulator gives an indicative figure; for higher-value homes the insurer’s survey sets it.' },
@@ -183,7 +183,7 @@ export const ZA_HUB = {
   recommendedIntro: 'The questions that come up specifically because the buyer, mover or resident is South African.',
   recommended: [
     { title: 'The rebuild value', text: 'Not the price you paid, and not a rand conversion. See <a href="/en/rebuild-value-home-insurance-portugal/">rebuild value</a> and the SCRIM simulator.' },
-    { title: 'High-value homes and collections', text: 'Survey, no proportional rule and agreed-value art and jewellery. See <a href="/en/private-clients/">Private Clients</a>.' },
+    { title: 'High-value homes and collections', text: 'Rebuild cost, the proportional rule and agreed-value art and jewellery, analysed in writing. See <a href="/en/private-clients/">Private Clients</a>.' },
     { title: 'Visa-stage cover', text: 'What the consulate asks for and when the Portuguese policy follows. See <a href="/en/expat-visa-insurance-portugal/">visa health insurance in Portugal</a>.' },
   ],
 

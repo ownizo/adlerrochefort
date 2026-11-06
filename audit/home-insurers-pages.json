@@ -1,0 +1,4847 @@
+[
+ {
+  "file": "public/alterarmediador/index.html",
+  "lang": "pt",
+  "url": "/alterarmediador/",
+  "scope": "other",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "value=\"Zurich\">Zurich Allianz Asisa Hiscox Selecione a seguradora <div c",
+    "key": "public/alterarmediador/index.html#ade9e3ebf8c4",
+    "reason": "Formulário de mudança de mediador: lista de seguradoras em que o cliente tem a apólice atual e dados legais da seguradora para a carta de nomeação. Não apresenta nem descreve produtos de habitação.",
+    "reviewed": true
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "urich\">Zurich Allianz Asisa Hiscox Selecione a seguradora <div class=\"fi",
+    "key": "public/alterarmediador/index.html#1cf3d7a0b7f0",
+    "reason": "Formulário de mudança de mediador: lista de seguradoras em que o cliente tem a apólice atual e dados legais da seguradora para a carta de nomeação. Não apresenta nem descreve produtos de habitação.",
+    "reviewed": true
+   }
+  ]
+ },
+ {
+  "file": "public/blog/arte-joias-alem-do-valor-acordado/index.html",
+  "lang": "pt",
+  "url": "/blog/arte-joias-alem-do-valor-acordado/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/categoria/private-clients/index.html",
+  "lang": "pt",
+  "url": "/blog/categoria/private-clients/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/categoria/private-clients/pagina/2/index.html",
+  "lang": "pt",
+  "url": "/blog/categoria/private-clients/pagina/2/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/checklist-revisao-rc-profissional/index.html",
+  "lang": "pt",
+  "url": "/blog/checklist-revisao-rc-profissional/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/claims-made-rc-profissional/index.html",
+  "lang": "pt",
+  "url": "/blog/claims-made-rc-profissional/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/family-office-crime-fraude-ciber/index.html",
+  "lang": "pt",
+  "url": "/blog/family-office-crime-fraude-ciber/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/family-office-rapto-extorsao/index.html",
+  "lang": "pt",
+  "url": "/blog/family-office-rapto-extorsao/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/golfe-casas-alto-valor-portugal-espanha/index.html",
+  "lang": "pt",
+  "url": "/blog/golfe-casas-alto-valor-portugal-espanha/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/investimento-americano-luxo-portugal/index.html",
+  "lang": "pt",
+  "url": "/blog/investimento-americano-luxo-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/marinas-iates-portugal-espanha/index.html",
+  "lang": "pt",
+  "url": "/blog/marinas-iates-portugal-espanha/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/pagina/2/index.html",
+  "lang": "pt",
+  "url": "/blog/pagina/2/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/parcerias-imobiliarias-comissoes/index.html",
+  "lang": "pt",
+  "url": "/blog/parcerias-imobiliarias-comissoes/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/programa-seguros-consolidado-residencias-iates/index.html",
+  "lang": "pt",
+  "url": "/blog/programa-seguros-consolidado-residencias-iates/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/rc-profissional-atividade-declarada/index.html",
+  "lang": "pt",
+  "url": "/blog/rc-profissional-atividade-declarada/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/rc-profissional-capital-quanto-contratar/index.html",
+  "lang": "pt",
+  "url": "/blog/rc-profissional-capital-quanto-contratar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/rc-profissional-exclusoes/index.html",
+  "lang": "pt",
+  "url": "/blog/rc-profissional-exclusoes/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/responsabilidade-civil-massagistas/index.html",
+  "lang": "pt",
+  "url": "/blog/responsabilidade-civil-massagistas/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/responsabilidade-civil-profissional/index.html",
+  "lang": "pt",
+  "url": "/blog/responsabilidade-civil-profissional/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/responsabilidade-trustees-protetores/index.html",
+  "lang": "pt",
+  "url": "/blog/responsabilidade-trustees-protetores/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/seguro-carros-classicos-alto-valor-portugal-espanha/index.html",
+  "lang": "pt",
+  "url": "/blog/seguro-carros-classicos-alto-valor-portugal-espanha/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ação. 2b. Automóveis modernos de elevado valor Seguro de Automóveis de Luxo da Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado através da Innovarisk. Perda ou dano material do automóvel até ao capital seguro, no",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/blog/seguro-carros-classicos-alto-valor-portugal-espanha/index.html#d08f55f531d9"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "card\"> 2b. Automóveis modernos de elevado valor Seguro de Automóveis de Luxo da Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado através da Innovarisk. Perda ou dano material do automóvel até ao capital seguro, no local de risco e em circulação nos",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/blog/seguro-carros-classicos-alto-valor-portugal-espanha/index.html#7d1dbc5fd7f9"
+   },
+   {
+    "term": "Sem regra proporcional",
+    "kind": "condition",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "razo de 60 dias. Substituição de fechaduras após perda, furto ou roubo das chaves, do cartão de ignição ou do comando, com franquia de 1.000 €. Sem regra proporcional; em caso de perda total, a indemnização tem em conta o montante necessário para liquidar o financiamento do automóvel. Condições <stro",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/blog/seguro-carros-classicos-alto-valor-portugal-espanha/index.html#37c3b80ccd14"
+   }
+  ]
+ },
+ {
+  "file": "public/blog/seguro-casa-elevado-valor-o-que-declarar/index.html",
+  "lang": "pt",
+  "url": "/blog/seguro-casa-elevado-valor-o-que-declarar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/seguro-do-holding-family-office/index.html",
+  "lang": "pt",
+  "url": "/blog/seguro-do-holding-family-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/seguro-responsabilidade-civil-acupuntores/index.html",
+  "lang": "pt",
+  "url": "/blog/seguro-responsabilidade-civil-acupuntores/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/seguro-responsabilidade-civil-naturopatas/index.html",
+  "lang": "pt",
+  "url": "/blog/seguro-responsabilidade-civil-naturopatas/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/seguros-private-clients-portugal/index.html",
+  "lang": "pt",
+  "url": "/blog/seguros-private-clients-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/blog/subseguro-portugal/index.html",
+  "lang": "pt",
+  "url": "/blog/subseguro-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/br/private-office/index.html",
+  "lang": "br",
+  "url": "/br/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/anwartschaftsversicherung-portugal/index.html",
+  "lang": "de",
+  "url": "/de/anwartschaftsversicherung-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/anwartschaftsversicherung-spanien/index.html",
+  "lang": "de",
+  "url": "/de/anwartschaftsversicherung-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/berufshaftpflicht-freiberufler-portugal/index.html",
+  "lang": "de",
+  "url": "/de/berufshaftpflicht-freiberufler-portugal/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "rs & Officers insurance. Cyberrisiken Ransomware, Betriebsunterbrechung und Datenschutzverletzungen. Für Unternehmen vertreiben wir Hiscox CyberClear 360º in Partnerschaft mit Hiscox — eine von der Berufshaftpflicht eigenständige Deckung, vor allem relevant für alle, die Kundendaten auf digitalem",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/de/berufshaftpflicht-freiberufler-portugal/index.html#65ec63d0c33b"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "errisiken Ransomware, Betriebsunterbrechung und Datenschutzverletzungen. Für Unternehmen vertreiben wir Hiscox CyberClear 360º in Partnerschaft mit Hiscox — eine von der Berufshaftpflicht eigenständige Deckung, vor allem relevant für alle, die Kundendaten auf digitalem Weg verarbeiten. Mehr dazu (Englisch): Cyber",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/de/berufshaftpflicht-freiberufler-portugal/index.html#d9d1fa114e16"
+   }
+  ]
+ },
+ {
+  "file": "public/de/berufshaftpflicht-therapeuten-wellness-portugal/index.html",
+  "lang": "de",
+  "url": "/de/berufshaftpflicht-therapeuten-wellness-portugal/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ", Chiropraktik und traditionelle chinesische Medizin — sowie Yoga, Pilates, Tai Chi und andere Wellness-Praktiken. Portugal und Spanien Hiscox zeichnet diesen Schutz in Portugal und in Spanien. Wer auf beiden Seiten der Grenze arbeitet, hat einen Ansprechpartner und ein stimmiges Programm. <h3",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/de/berufshaftpflicht-therapeuten-wellness-portugal/index.html#9d14fdabbd69"
+   }
+  ]
+ },
+ {
+  "file": "public/de/blog/golf-immobilien-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/blog/golf-immobilien-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/hochwertige-immobilie-versicherung-anzeigepflichten/index.html",
+  "lang": "de",
+  "url": "/de/blog/hochwertige-immobilie-versicherung-anzeigepflichten/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/kunst-schmuck-versicherung-ueber-vereinbarten-wert/index.html",
+  "lang": "de",
+  "url": "/de/blog/kunst-schmuck-versicherung-ueber-vereinbarten-wert/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/kunstversicherung-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/blog/kunstversicherung-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/luxus-wohnanlagen-versicherung-portugal/index.html",
+  "lang": "de",
+  "url": "/de/blog/luxus-wohnanlagen-versicherung-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/marinas-yachten-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/blog/marinas-yachten-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ekte und Wertverlust. 2b. Moderne hochwertige Autos Luxusauto-Versicherung von Liberty Mutual Insurance Europe (Liberty Specialty Markets), platziert über Innovarisk. Verlust oder Sachschaden am Auto bis zur Versicherungssumme, am Ri",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/index.html#1c5bdd46e2bc"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "class=\"ar-motor-card\"> 2b. Moderne hochwertige Autos Luxusauto-Versicherung von Liberty Mutual Insurance Europe (Liberty Specialty Markets), platziert über Innovarisk. Verlust oder Sachschaden am Auto bis zur Versicherungssumme, am Risikoort und im Straßenverkehr in de",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/index.html#eee9e5916588"
+   }
+  ]
+ },
+ {
+  "file": "public/de/blog/surfen-aljezur-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-aljezur-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/surfen-ericeira-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-ericeira-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/surfen-lagos-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-lagos-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/surfen-nazare-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-nazare-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/surfen-portugal-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-portugal-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/blog/surfen-sagres-zweitwohnsitz/index.html",
+  "lang": "de",
+  "url": "/de/blog/surfen-sagres-zweitwohnsitz/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/cyber-betrug-versicherung-familie/index.html",
+  "lang": "de",
+  "url": "/de/cyber-betrug-versicherung-familie/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/barcelona-costa-brava-sitges/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/cascais-sintra/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/comporta-melides/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/ibiza/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/javea-moraira-altea/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/lisboa/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/madeira/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/madrid/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/mallorca/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/marbella-benahavis-sotogrande/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/porto-douro/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/destinationen/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "de",
+  "url": "/de/destinationen/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/deutschsprachiger-versicherungsmakler-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/deutschsprachiger-versicherungsmakler-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/entfuehrung-loesegeld-versicherung/index.html",
+  "lang": "de",
+  "url": "/de/entfuehrung-loesegeld-versicherung/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/family-office-versicherung/index.html",
+  "lang": "de",
+  "url": "/de/family-office-versicherung/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/ferienhausversicherung-portugal/index.html",
+  "lang": "de",
+  "url": "/de/ferienhausversicherung-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/ferienhausversicherung-spanien/index.html",
+  "lang": "de",
+  "url": "/de/ferienhausversicherung-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/hausversicherung-portugal/index.html",
+  "lang": "de",
+  "url": "/de/hausversicherung-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/hausversicherung-spanien/index.html",
+  "lang": "de",
+  "url": "/de/hausversicherung-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/index.html",
+  "lang": "de",
+  "url": "/de/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/internationale-krankenversicherung/april-international/index.html",
+  "lang": "de",
+  "url": "/de/internationale-krankenversicherung/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "tional?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Die Krankenversicherung trägt Groupama Gan Vie, Assistance und Privathaftpflicht die Chubb European Group SE. APRIL International Care France konzipiert und verwaltet den Plan.\" } }, { \"@type\": \"Question\", \"name\": \"Sind Vorerkr",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/de/internationale-krankenversicherung/april-international/index.html#3b8ea018fcdc"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "bzw. 5.000 €/US$; Selbstbeteiligung ambulant 0 %, 10 %, 20 % oder 30 %. Krankenversicherer: Groupama Gan Vie; Assistance und Privathaftpflicht: Chubb European Group SE. Für Sie kostenlos. APRI",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/de/internationale-krankenversicherung/april-international/index.html#ffaa9f22dd69"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "tails> Wer ist Versicherer von MyHealth International? Die Krankenversicherung trägt Groupama Gan Vie, Assistance und Privathaftpflicht die Chubb European Group SE. APRIL International Care France konzipiert und verwaltet den Plan. Sind Vorerkrankungen versichert?</s",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/de/internationale-krankenversicherung/april-international/index.html#fa675b3ee6e3"
+   }
+  ]
+ },
+ {
+  "file": "public/de/leerstand-ferienhaus-versicherung-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/leerstand-ferienhaus-versicherung-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/oldtimerversicherung-spanien/index.html",
+  "lang": "de",
+  "url": "/de/oldtimerversicherung-spanien/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "content=\"#292929\"> Oldtimerversicherung in Spanien | Adler & Rochefort <meta name=\"keywords\" content=\"Oldtimerversic",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#f12220634d2a"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "on einem EU-regulierten Makler.\"> <link rel=\"",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#b4ebcc2c42c8"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "erty=\"og:title\" content=\"Oldtimerversicherung in Spanien | Adler & Rochefort\"> <meta property=\"og:image\" content=\"https://ad",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#00471b3bd16d"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "twitter:title\" content=\"Oldtimerversicherung in Spanien | Adler & Rochefort\"> <meta name=\"twitter:image\" content=\"https://a",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#c43816f5f738"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "://adlerrochefort.com/de/oldtimerversicherung-spanien/#service\", \"name\": \"Oldtimerversicherung in Spanien\", \"description\": \"Oldtimerversicherung in Spanien mit Hiscox Vehículos Clásicos: ein Fahrzeug oder eine ganze Sammlung, auf Deutsch erklärt von einem EU-regulierten Makler.\", \"url\": \"https://adlerrochefort.com/de/oldtime",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#1ec970f72520"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "n/\", \"areaServed\": {\"@type\": \"Country\", \"name\": \"Spain\"}, \"provider\": {\"@id\": \"https://adlerrochefort.com/#organization\"}, \"brand\": {\"@type\": \"Brand\", \"name\": \"Hiscox\"}}, {\"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Kann ich eine ganze Sammlung in einer Police versichern?\", \"acceptedAnswer\": {\"@type\": \"",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#23f781a687ae"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "QPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Kann ich eine ganze Sammlung in einer Police versichern?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Hiscox Vehículos Clásicos ist sowohl für ein einzelnes Fahrzeug als auch für eine Sammlung gedacht. Im Angebot beschreiben wir jedes Auto einzeln.\"}}, {\"@type\": \"Ques",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#ddfdd7b768d0"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ro\"> Spanien · Oldtimer Oldtimerversicherung in Spanien Hiscox Vehículos Clásicos ist für Eigentümer klassischer Fahrzeuge in Spanien gemacht &mdash; ob ein einzelnes Auto oder eine Sammlung. Wir erklären die Bedingungen s",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#1d69f9e21e07"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z\"/> WhatsApp ASF Nr. 425591790/3 · Bei Hiscox in Spanien platziert · Schriftliche Antwort <source srcset=\"/images/hu",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#847e6ee76c61"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div> Ein Fahrzeug oder eine Sammlung Hiscox Vehículos Clásicos ist ein Produkt für Eigentümer klassischer Fahrzeuge. Es passt für ein einzelnes Auto ebenso wie für eine Sammlung, denn beide haben einen W",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#4c1cdbd6e18f"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "lt, die eine eingehende Risikoprüfung erfordern, können die Antwortzeiten variieren. Wir platzieren diese Police bei Hiscox, die in Spanien zeichnet. Versicherer und Bedingungen nennen wir schriftlich im Angebot. <form name=\"de-angebot-anfrage\" method=\"POST\" action=\"/de/#angeb",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#402c6cc348fb"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "Häufige Fragen Kann ich eine ganze Sammlung in einer Police versichern? Hiscox Vehículos Clásicos ist sowohl für ein einzelnes Fahrzeug als auch für eine Sammlung gedacht. Im Angebot beschreiben wir jedes Auto einzeln.",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/de/oldtimerversicherung-spanien/index.html#f1f0d3ad204c"
+   }
+  ]
+ },
+ {
+  "file": "public/de/private-client-versicherung-fragen/index.html",
+  "lang": "de",
+  "url": "/de/private-client-versicherung-fragen/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/private-clients/index.html",
+  "lang": "de",
+  "url": "/de/private-clients/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/private-clients-portugal/index.html",
+  "lang": "de",
+  "url": "/de/private-clients-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/private-clients-spanien/index.html",
+  "lang": "de",
+  "url": "/de/private-clients-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/private-office/index.html",
+  "lang": "de",
+  "url": "/de/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/schmuck-uhren-versicherung-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/schmuck-uhren-versicherung-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/unterversicherung-hausversicherung-portugal-spanien/index.html",
+  "lang": "de",
+  "url": "/de/unterversicherung-hausversicherung-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/de/wiederaufbauwert-hausversicherung-portugal/index.html",
+  "lang": "de",
+  "url": "/de/wiederaufbauwert-hausversicherung-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/barcelona-costa-brava-sitges/index.html",
+  "lang": "pt",
+  "url": "/destinos/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/cascais-sintra/index.html",
+  "lang": "pt",
+  "url": "/destinos/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/comporta-melides/index.html",
+  "lang": "pt",
+  "url": "/destinos/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/ibiza/index.html",
+  "lang": "pt",
+  "url": "/destinos/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/index.html",
+  "lang": "pt",
+  "url": "/destinos/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/javea-moraira-altea/index.html",
+  "lang": "pt",
+  "url": "/destinos/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/lisboa/index.html",
+  "lang": "pt",
+  "url": "/destinos/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/madeira/index.html",
+  "lang": "pt",
+  "url": "/destinos/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/madrid/index.html",
+  "lang": "pt",
+  "url": "/destinos/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/mallorca/index.html",
+  "lang": "pt",
+  "url": "/destinos/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/marbella-benahavis-sotogrande/index.html",
+  "lang": "pt",
+  "url": "/destinos/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/porto-douro/index.html",
+  "lang": "pt",
+  "url": "/destinos/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/destinos/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "pt",
+  "url": "/destinos/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/ansvarsforsikring-terapeuter-yoga-pilates/index.html",
+  "lang": "dk",
+  "url": "/dk/ansvarsforsikring-terapeuter-yoga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "fytoterapi, kiropraktik og traditionel kinesisk medicin — samt yoga, pilates, tai chi og andre wellnesspraksisser. Portugal og Spanien Hiscox tegner denne dækning i begge lande: én rådgiver for den, der arbejder på begge sider af grænsen. Den anmeldte aktivitet Policen dækker",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/dk/ansvarsforsikring-terapeuter-yoga-pilates/index.html#daabb1e6ee91"
+   }
+  ]
+ },
+ {
+  "file": "public/dk/destinationer/barcelona-costa-brava-sitges/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/cascais-sintra/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/comporta-melides/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/ibiza/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/javea-moraira-altea/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/lisboa/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/madeira/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/madrid/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/mallorca/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/marbella-benahavis-sotogrande/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/porto-douro/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/destinationer/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "dk",
+  "url": "/dk/destinationer/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/erhvervsansvarsforsikring/index.html",
+  "lang": "dk",
+  "url": "/dk/erhvervsansvarsforsikring/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/family-office-forsikring/index.html",
+  "lang": "dk",
+  "url": "/dk/family-office-forsikring/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/feriehusforsikring-portugal/index.html",
+  "lang": "dk",
+  "url": "/dk/feriehusforsikring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/feriehusforsikring-spanien/index.html",
+  "lang": "dk",
+  "url": "/dk/feriehusforsikring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/genopforelsesvaerdi-husforsikring-portugal/index.html",
+  "lang": "dk",
+  "url": "/dk/genopforelsesvaerdi-husforsikring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/golf-boliger-portugal-spanien/index.html",
+  "lang": "dk",
+  "url": "/dk/golf-boliger-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/husforsikring-eksklusiv-bolig-oplysningspligt/index.html",
+  "lang": "dk",
+  "url": "/dk/husforsikring-eksklusiv-bolig-oplysningspligt/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/husforsikring-portugal/index.html",
+  "lang": "dk",
+  "url": "/dk/husforsikring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/husforsikring-spanien/index.html",
+  "lang": "dk",
+  "url": "/dk/husforsikring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/index.html",
+  "lang": "dk",
+  "url": "/dk/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/international-sundhedsforsikring/april-international/index.html",
+  "lang": "dk",
+  "url": "/dk/international-sundhedsforsikring/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "h International?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Sundhedsdækningen er forsikret af Groupama Gan Vie, assistance og ansvar af Chubb European Group SE. APRIL International Care France udformer og administrerer planen.\" } }, { \"@type\": \"Question\", \"name\": \"Er eksisteren",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/dk/international-sundhedsforsikring/april-international/index.html#1c8aefd781ad"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "€/US$ 500, 1.000, 2.500 eller 5.000; egenbetaling ambulant 0, 10, 20 eller 30 %. Sundhed forsikret af Groupama Gan Vie; assistance og ansvar af Chubb European Group SE. Gratis for dig. Bed om",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/dk/international-sundhedsforsikring/april-international/index.html#492c3d586c72"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "mål Hvem forsikrer MyHealth International? Sundhedsdækningen er forsikret af Groupama Gan Vie, assistance og ansvar af Chubb European Group SE. APRIL International Care France udformer og administrerer planen. Er eksisterende sygdomme dækket?</su",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/dk/international-sundhedsforsikring/april-international/index.html#41842825ddeb"
+   }
+  ]
+ },
+ {
+  "file": "public/dk/kunst-smykker-forsikring-ud-over-aftalt-vaerdi/index.html",
+  "lang": "dk",
+  "url": "/dk/kunst-smykker-forsikring-ud-over-aftalt-vaerdi/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/smykker-ure-forsikring-spanien/index.html",
+  "lang": "dk",
+  "url": "/dk/smykker-ure-forsikring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/dk/veteranbil-forsikring-portugal-spanien/index.html",
+  "lang": "dk",
+  "url": "/dk/veteranbil-forsikring-portugal-spanien/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "jl og værdiforringelse. 2b. Moderne biler af høj værdi Luksusbilforsikring fra Liberty Mutual Insurance Europe (Liberty Specialty Markets), formidlet gennem Innovarisk. Tab af eller fysisk skade på bilen op til forsikringssummen, på",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/dk/veteranbil-forsikring-portugal-spanien/index.html#ec86da51e8ff"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "v class=\"ar-motor-card\"> 2b. Moderne biler af høj værdi Luksusbilforsikring fra Liberty Mutual Insurance Europe (Liberty Specialty Markets), formidlet gennem Innovarisk. Tab af eller fysisk skade på bilen op til forsikringssummen, på risikoadressen og under kørsel i de",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/dk/veteranbil-forsikring-portugal-spanien/index.html#d12cfbbe3377"
+   }
+  ]
+ },
+ {
+  "file": "public/email-signature-gmail.html",
+  "lang": "pt",
+  "url": "/email-signature-gmail.html",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/email-signature.html",
+  "lang": "pt",
+  "url": "/email-signature.html",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/about/index.html",
+  "lang": "en",
+  "url": "/en/about/",
+  "scope": "property",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "2 id=\"agency-agreements\">Agency agreements, not a single insurer We hold distribution agreements with Allianz, Zurich, Médis, Hiscox, MGEN, Asisa and Allianz Partners. Allianz Zurich Médis Hiscox",
+    "key": "public/en/about/index.html#619f2eb42847",
+    "reason": "Página institucional «Sobre nós»: declaração dos acordos de distribuição da empresa (divulgação institucional), sem apresentação de produtos nem condições de habitação.",
+    "reviewed": true
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ", Médis, Hiscox, MGEN, Asisa and Allianz Partners. Allianz Zurich Médis Hiscox MGEN Asisa Allianz Partners What independence means in",
+    "key": "public/en/about/index.html#3331135f1875",
+    "reason": "Página institucional «Sobre nós»: declaração dos acordos de distribuição da empresa (divulgação institucional), sem apresentação de produtos nem condições de habitação.",
+    "reviewed": true
+   }
+  ]
+ },
+ {
+  "file": "public/en/art-jewellery-watches-insurance/index.html",
+  "lang": "en",
+  "url": "/en/art-jewellery-watches-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/art-collection-household-policy-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/art-collection-household-policy-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/art-jewellery-cover-beyond-agreed-value/index.html",
+  "lang": "en",
+  "url": "/en/blog/art-jewellery-cover-beyond-agreed-value/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/holiday-lets-hospitality/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/holiday-lets-hospitality/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/home-property/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/home-property/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/home-property/page/2/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/home-property/page/2/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/home-property/page/3/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/home-property/page/3/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/spain-private-clients/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/spain-private-clients/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/spain-property/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/spain-property/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/valuables-collections/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/valuables-collections/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/category/valuables-collections/page/2/index.html",
+  "lang": "en",
+  "url": "/en/blog/category/valuables-collections/page/2/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/index.html",
+  "lang": "en",
+  "url": "/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "eakdown and depreciation. 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at th",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/index.html#45674407980e"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"ar-motor-card\"> 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at the risk address and on the road with",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/classic-collector-cars-portugal-matriculation-agreed-value/index.html#94ed0113a8bf"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/classic-high-value-car-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/classic-high-value-car-insurance-spain/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "n class=\"ar-motor\" id=\"ar-motor-structure\"> Car registered in Spain? For classic cars on Spanish plates we place Hiscox Veh&iacute;culos Cl&aacute;sicos &mdash; see classic car insurance in Spain . The policies described below are pl",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/classic-high-value-car-insurance-spain/index.html#7fc8a924fc62"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "eakdown and depreciation. 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at th",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/classic-high-value-car-insurance-spain/index.html#45674407980e"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"ar-motor-card\"> 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at the risk address and on the road with",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/classic-high-value-car-insurance-spain/index.html#94ed0113a8bf"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/index.html",
+  "lang": "en",
+  "url": "/en/blog/coastal-clifftop-properties-algarve-subsidence-erosion-flood/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/consolidated-insurance-programme-homes-yachts/index.html",
+  "lang": "en",
+  "url": "/en/blog/consolidated-insurance-programme-homes-yachts/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/disputing-sum-insured-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/disputing-sum-insured-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/divorce-separation-jointly-held-cover-unravels/index.html",
+  "lang": "en",
+  "url": "/en/blog/divorce-separation-jointly-held-cover-unravels/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/do-exposure-non-executive-directors-abroad/index.html",
+  "lang": "en",
+  "url": "/en/blog/do-exposure-non-executive-directors-abroad/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/documents-to-insure-property-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/documents-to-insure-property-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/domestic-staff-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/domestic-staff-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/earthquake-cover-algarve-buildings/index.html",
+  "lang": "en",
+  "url": "/en/blog/earthquake-cover-algarve-buildings/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/employing-nanny-driver-gardener-home-employer-obligation/index.html",
+  "lang": "en",
+  "url": "/en/blog/employing-nanny-driver-gardener-home-employer-obligation/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/family-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/family-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/family-liability-cover-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/family-liability-cover-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/family-office-crime-fraud-cyber-insurance/index.html",
+  "lang": "en",
+  "url": "/en/blog/family-office-crime-fraud-cyber-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/family-office-holding-d-and-o-insurance/index.html",
+  "lang": "en",
+  "url": "/en/blog/family-office-holding-d-and-o-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/family-office-kidnap-ransom-planning/index.html",
+  "lang": "en",
+  "url": "/en/blog/family-office-kidnap-ransom-planning/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/fiduciary-family-office-liability-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/fiduciary-family-office-liability-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/golf-homes-portugal-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/golf-homes-portugal-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/golf-resort-properties-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/golf-resort-properties-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/high-value-bicycles-e-bikes-cover-away-from-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/high-value-bicycles-e-bikes-cover-away-from-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/high-value-home-policy-what-to-declare/index.html",
+  "lang": "en",
+  "url": "/en/blog/high-value-home-policy-what-to-declare/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-insurance-comporta-melides/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-insurance-comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-insurance-loule-almancil/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-insurance-loule-almancil/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-insurance-madeira/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-insurance-madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-insurance-sintra-cascais-villas/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-insurance-sintra-cascais-villas/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/home-staff-quarters-guest-annexes-outbuildings/index.html",
+  "lang": "en",
+  "url": "/en/blog/home-staff-quarters-guest-annexes-outbuildings/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/how-specialist-risks-are-placed-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/how-specialist-risks-are-placed-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/index.html",
+  "lang": "en",
+  "url": "/en/blog/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insurance-domestic-staff-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insurance-domestic-staff-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insurance-private-staff-travel-household/index.html",
+  "lang": "en",
+  "url": "/en/blog/insurance-private-staff-travel-household/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insurance-review-expats-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/insurance-review-expats-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-a-high-value-apartment-lisbon-cascais/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-a-high-value-apartment-lisbon-cascais/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-antiques-collections-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-antiques-collections-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-art-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-art-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-art-portugal-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-art-portugal-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-car-collection-multiple-vehicles-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-car-collection-multiple-vehicles-portugal/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "eakdown and depreciation. 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at th",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/insuring-car-collection-multiple-vehicles-portugal/index.html#45674407980e"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"ar-motor-card\"> 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at the risk address and on the road with",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/insuring-car-collection-multiple-vehicles-portugal/index.html#94ed0113a8bf"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/insuring-jewellery-watches-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-jewellery-watches-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-musical-instruments-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-musical-instruments-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-property-portfolio-two-jurisdictions/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-property-portfolio-two-jurisdictions/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/insuring-valuables-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/insuring-valuables-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/irish-owners-algarve-holiday-home-insurance/index.html",
+  "lang": "en",
+  "url": "/en/blog/irish-owners-algarve-holiday-home-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/liability-insurance-complementary-therapies/index.html",
+  "lang": "en",
+  "url": "/en/blog/liability-insurance-complementary-therapies/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "F-registered insurance broker English-speaking team Not tied to one insurer — Hiscox, Allianz, Zurich & Chubb We guide you through the NIF and paperwork Writt",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/blog/liability-insurance-complementary-therapies/index.html#5a99346e94d1"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "/span> English-speaking team Not tied to one insurer — Hiscox, Allianz, Zurich & Chubb We guide you through the NIF and paperwork Written reply <d",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/blog/liability-insurance-complementary-therapies/index.html#9f7573cfea03"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/luxury-car-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/luxury-car-insurance-portugal/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "eakdown and depreciation. 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at th",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/luxury-car-insurance-portugal/index.html#45674407980e"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"ar-motor-card\"> 2b. Modern high-value cars Luxury Car Insurance from Liberty Mutual Insurance Europe (Liberty Specialty Markets), placed through Innovarisk. Loss of or physical damage to the car up to the sum insured, at the risk address and on the road with",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/blog/luxury-car-insurance-portugal/index.html#94ed0113a8bf"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/luxury-condo-resort-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/luxury-condo-resort-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/luxury-home-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/luxury-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/making-a-claim-portugal-us-perspective/index.html",
+  "lang": "en",
+  "url": "/en/blog/making-a-claim-portugal-us-perspective/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/mortgage-sum-insured-vs-rebuild-cost-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/outdated-insured-values/index.html",
+  "lang": "en",
+  "url": "/en/blog/outdated-insured-values/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/2/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/2/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/3/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/3/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/4/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/4/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/5/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/5/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/7/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/7/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/page/8/index.html",
+  "lang": "en",
+  "url": "/en/blog/page/8/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/personal-fraud-and-extortion-cover-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/personal-fraud-and-extortion-cover-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/private-use-vs-charter-boat-cover-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/private-use-vs-charter-boat-cover-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/professional-indemnity-insurance/index.html",
+  "lang": "en",
+  "url": "/en/blog/professional-indemnity-insurance/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "F-registered insurance broker English-speaking team Not tied to one insurer — Hiscox, Allianz, Zurich & Chubb We guide you through the NIF and paperwork Writt",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/blog/professional-indemnity-insurance/index.html#5a99346e94d1"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "/span> English-speaking team Not tied to one insurer — Hiscox, Allianz, Zurich & Chubb We guide you through the NIF and paperwork Written reply <d",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/blog/professional-indemnity-insurance/index.html#9f7573cfea03"
+   }
+  ]
+ },
+ {
+  "file": "public/en/blog/property-held-company-structure-insurance/index.html",
+  "lang": "en",
+  "url": "/en/blog/property-held-company-structure-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/real-estate-partnerships-commissions/index.html",
+  "lang": "en",
+  "url": "/en/blog/real-estate-partnerships-commissions/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/renovating-listed-heritage-property-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/renovating-listed-heritage-property-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/safes-alarms-underwriting-requirements-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/safes-alarms-underwriting-requirements-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/second-home-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/blog/second-home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/second-home-rent-out-holiday-let-standard-home-cover/index.html",
+  "lang": "en",
+  "url": "/en/blog/second-home-rent-out-holiday-let-standard-home-cover/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/index.html",
+  "lang": "en",
+  "url": "/en/blog/second-homes-empty-months-unoccupancy-clause-voids-cover/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/setting-rebuild-value-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/setting-rebuild-value-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/shipping-a-collection-to-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/shipping-a-collection-to-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/index.html",
+  "lang": "en",
+  "url": "/en/blog/solar-panels-home-batteries-ev-chargers-policy-modern/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-aljezur-second-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-aljezur-second-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-ericeira-second-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-ericeira-second-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-lagos-second-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-lagos-second-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-nazare-second-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-nazare-second-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-portugal-second-homes/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-portugal-second-homes/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/surfing-sagres-second-home/index.html",
+  "lang": "en",
+  "url": "/en/blog/surfing-sagres-second-home/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/swimming-pools-jetties-private-access-liability-nobody-insures/index.html",
+  "lang": "en",
+  "url": "/en/blog/swimming-pools-jetties-private-access-liability-nobody-insures/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/total-loss-settlement-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/total-loss-settlement-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/valuations-portugal-who-what-how-often/index.html",
+  "lang": "en",
+  "url": "/en/blog/valuations-portugal-who-what-how-often/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/waiver-of-average-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/waiver-of-average-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/watches-jewellery-travelling-worldwide-all-risks/index.html",
+  "lang": "en",
+  "url": "/en/blog/watches-jewellery-travelling-worldwide-all-risks/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/water-damage-claim-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/water-damage-claim-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/wine-cellars-home-storage-valuation-cover/index.html",
+  "lang": "en",
+  "url": "/en/blog/wine-cellars-home-storage-valuation-cover/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/worldwide-cover-personal-possessions-portugal/index.html",
+  "lang": "en",
+  "url": "/en/blog/worldwide-cover-personal-possessions-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/blog/yacht-insurance-algarve-marinas/index.html",
+  "lang": "en",
+  "url": "/en/blog/yacht-insurance-algarve-marinas/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/classic-car-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/classic-car-insurance-spain/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "content=\"#292929\"> Classic Car Insurance in Spain | Adler & Rochefort <meta name=\"keywords\" content=\"classic car insurance spain,",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#46b4bac9611e"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "perty=\"og:title\" content=\"Classic Car Insurance in Spain | Adler & Rochefort\"> <meta property=\"og:image\" content=\"https://adlerrochefort.c",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#5ea72de215af"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "\"twitter:title\" content=\"Classic Car Insurance in Spain | Adler & Rochefort\"> <meta name=\"twitter:image\" content=\"https://adlerrochefort.",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#7d3aa85374db"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "ps://adlerrochefort.com/en/classic-car-insurance-spain/#service\", \"name\": \"Classic car insurance in Spain\", \"description\": \"Classic car insurance in Spain with Hiscox Vehículos Clásicos: one car or a whole collection, arranged in English by an EU-regulated broker.\", \"url\": \"https://adlerrochefort.com/en/classic-car-insurance",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#e9f48fb8057c"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "n/\", \"areaServed\": {\"@type\": \"Country\", \"name\": \"Spain\"}, \"provider\": {\"@id\": \"https://adlerrochefort.com/#organization\"}, \"brand\": {\"@type\": \"Brand\", \"name\": \"Hiscox\"}}, {\"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Can I insure a whole collection on one policy?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#cee66af62e9d"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"Can I insure a whole collection on one policy?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Hiscox Vehículos Clásicos is designed both for a single vehicle and for a collection. We describe each car individually in the proposal.\"}}, {\"@type\": \"Question\", \"na",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#1a8a424da2b0"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": ", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Yes. For cars registered in Portugal we place classic and collector cover there; for cars registered in Spain, Hiscox Vehículos Clásicos. Tell us where the car is registered and kept.\"}}, {\"@type\": \"Question\", \"name\": \"How long does a quote take?\", \"acceptedAnswer\": {\"@type\":",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#f95e9ec0d854"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "o\"> Spain · Classic cars Classic car insurance in Spain Hiscox Vehículos Clásicos is designed for owners of classic vehicles in Spain &mdash; whether you own a single car or a collection. We arrange it in English and set o",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#92c552e32f69"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "1.893-11.893a11.821 11.821 0 00-3.48-8.413z\"/> WhatsApp ASF no. 425591790/3 · Placed with Hiscox in Spain · Reply <source srcset=\"/images/hugo-goncalves-avatar.webp\" t",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#125d4066f3ef"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "side> One car or a collection Hiscox Vehículos Clásicos is a product built for the owners of classic vehicles. It works for a single car and for a collection, because both have the same thing in c",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#8e276815f3a9"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "es a detailed analysis of the risk, response times may vary. We ask for the rest by email. We place this policy with Hiscox, which underwrites in Spain. Every proposal names the insurer and the conditions in writing. <form name=\"quote-blog\" method=\"POST\" action=\"/en/thank-you/",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#011c5af20dd1"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "Frequently asked questions Can I insure a whole collection on one policy? Hiscox Vehículos Clásicos is designed both for a single vehicle and for a collection. We describe each car individually in the proposal. <div class",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#7e13493b87d6"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "n Portuguese plates. Can you help? Yes. For cars registered in Portugal we place classic and collector cover there; for cars registered in Spain, Hiscox Vehículos Clásicos. Tell us where the car is registered and kept. How long does a quote take?",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/en/classic-car-insurance-spain/index.html#71769bc515b2"
+   }
+  ]
+ },
+ {
+  "file": "public/en/destinations/barcelona-costa-brava-sitges/index.html",
+  "lang": "en",
+  "url": "/en/destinations/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/cascais-sintra/index.html",
+  "lang": "en",
+  "url": "/en/destinations/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/comporta-melides/index.html",
+  "lang": "en",
+  "url": "/en/destinations/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/ibiza/index.html",
+  "lang": "en",
+  "url": "/en/destinations/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/index.html",
+  "lang": "en",
+  "url": "/en/destinations/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/javea-moraira-altea/index.html",
+  "lang": "en",
+  "url": "/en/destinations/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/lisboa/index.html",
+  "lang": "en",
+  "url": "/en/destinations/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/madeira/index.html",
+  "lang": "en",
+  "url": "/en/destinations/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/madrid/index.html",
+  "lang": "en",
+  "url": "/en/destinations/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/mallorca/index.html",
+  "lang": "en",
+  "url": "/en/destinations/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/marbella-benahavis-sotogrande/index.html",
+  "lang": "en",
+  "url": "/en/destinations/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/porto-douro/index.html",
+  "lang": "en",
+  "url": "/en/destinations/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/destinations/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "en",
+  "url": "/en/destinations/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/earthquake-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/earthquake-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/english-speaking-insurance-broker-portugal-spain/index.html",
+  "lang": "en",
+  "url": "/en/english-speaking-insurance-broker-portugal-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/family-liability-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/family-liability-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/family-office-insurance/index.html",
+  "lang": "en",
+  "url": "/en/family-office-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/flood-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/flood-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/holiday-home-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/holiday-home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/home-insurance-quote/index.html",
+  "lang": "en",
+  "url": "/en/home-insurance-quote/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/home-insurance-spain/index.html",
+  "lang": "en",
+  "url": "/en/home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/index.html",
+  "lang": "en",
+  "url": "/en/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/insurance-review/index.html",
+  "lang": "en",
+  "url": "/en/insurance-review/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/international-health-insurance/april-international/index.html",
+  "lang": "en",
+  "url": "/en/international-health-insurance/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "ceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"The health cover is insured by Groupama Gan Vie, and the assistance and personal liability benefits by Chubb European Group SE. APRIL International Care France designs and manages the plan.\" } }, { \"@type\": \"Question\", \"name\": \"Are pre-existing",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/en/international-health-insurance/april-international/index.html#428f0c3a855a"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "0, 2,500 or 5,000; out-patient co-payment of 0%, 10%, 20% or 30%. Health cover insured by Groupama Gan Vie; assistance and personal liability by Chubb European Group SE. No fee to you. Request",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/en/international-health-insurance/april-international/index.html#ee4176591a0b"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "APRIL International MyHealth International? The health cover is insured by Groupama Gan Vie, and the assistance and personal liability benefits by Chubb European Group SE. APRIL International Care France designs and manages the plan. Are pre-existing conditions covered?</su",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/en/international-health-insurance/april-international/index.html#783b20a400b9"
+   }
+  ]
+ },
+ {
+  "file": "public/en/private-client-insurance-questions/index.html",
+  "lang": "en",
+  "url": "/en/private-client-insurance-questions/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/private-clients/index.html",
+  "lang": "en",
+  "url": "/en/private-clients/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/private-clients-spain/index.html",
+  "lang": "en",
+  "url": "/en/private-clients-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/private-office/index.html",
+  "lang": "en",
+  "url": "/en/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/professional-liability-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/professional-liability-insurance-portugal/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ">Get my free quote ASF-registered insurance broker · English-speaking team · Capital from &euro;250,000 · Hiscox · Allianz · Zurich · Chubb <source srcset=\"/images/hugo-goncalves",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/professional-liability-insurance-portugal/index.html#d01a22a15a7a"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"lp-trust\"> ASF-registered insurance broker · English-speaking team · Capital from &euro;250,000 · Hiscox · Allianz · Zurich · Chubb <source srcset=\"/images/hugo-goncalves-avatar.webp\" type=\"image/w",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/professional-liability-insurance-portugal/index.html#de3b3bf4c04a"
+   }
+  ]
+ },
+ {
+  "file": "public/en/rebuild-value-home-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/rebuild-value-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/second-home-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/second-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/therapists-yoga-pilates-liability-insurance/index.html",
+  "lang": "en",
+  "url": "/en/therapists-yoga-pilates-liability-insurance/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ditional Chinese medicine — and yoga, Pilates, tai chi and other wellbeing practices. Portugal and Spain Hiscox writes this cover in both Portugal and Spain, so a therapist or teacher who works on both sides of the border can have one adviser and a coherent programme.</p",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/en/therapists-yoga-pilates-liability-insurance/index.html#167048081a2b"
+   }
+  ]
+ },
+ {
+  "file": "public/en/unoccupied-home-insurance-portugal/index.html",
+  "lang": "en",
+  "url": "/en/unoccupied-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/en/why-use-an-insurance-broker/index.html",
+  "lang": "en",
+  "url": "/en/why-use-an-insurance-broker/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/barcelona-costa-brava-sitges/index.html",
+  "lang": "es",
+  "url": "/es/destinos/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/cascais-sintra/index.html",
+  "lang": "es",
+  "url": "/es/destinos/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/comporta-melides/index.html",
+  "lang": "es",
+  "url": "/es/destinos/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/ibiza/index.html",
+  "lang": "es",
+  "url": "/es/destinos/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/index.html",
+  "lang": "es",
+  "url": "/es/destinos/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/javea-moraira-altea/index.html",
+  "lang": "es",
+  "url": "/es/destinos/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/lisboa/index.html",
+  "lang": "es",
+  "url": "/es/destinos/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/madeira/index.html",
+  "lang": "es",
+  "url": "/es/destinos/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/madrid/index.html",
+  "lang": "es",
+  "url": "/es/destinos/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/mallorca/index.html",
+  "lang": "es",
+  "url": "/es/destinos/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/marbella-benahavis-sotogrande/index.html",
+  "lang": "es",
+  "url": "/es/destinos/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/porto-douro/index.html",
+  "lang": "es",
+  "url": "/es/destinos/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/destinos/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "es",
+  "url": "/es/destinos/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/familias-alto-patrimonio-madrid-seguros/index.html",
+  "lang": "es",
+  "url": "/es/familias-alto-patrimonio-madrid-seguros/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/golf-viviendas-lujo-portugal-espana/index.html",
+  "lang": "es",
+  "url": "/es/golf-viviendas-lujo-portugal-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/index.html",
+  "lang": "es",
+  "url": "/es/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/private-office/index.html",
+  "lang": "es",
+  "url": "/es/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/puertos-deportivos-yates-portugal-espana/index.html",
+  "lang": "es",
+  "url": "/es/puertos-deportivos-yates-portugal-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/regla-proporcional-seguro-hogar-portugal-espana/index.html",
+  "lang": "es",
+  "url": "/es/regla-proporcional-seguro-hogar-portugal-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-alto-patrimonio-preguntas/index.html",
+  "lang": "es",
+  "url": "/es/seguro-alto-patrimonio-preguntas/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-arte-joyas-mas-alla-valor-convenido/index.html",
+  "lang": "es",
+  "url": "/es/seguro-arte-joyas-mas-alla-valor-convenido/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-casa-vacaciones-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-casa-vacaciones-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-casa-vacaciones-portugal/index.html",
+  "lang": "es",
+  "url": "/es/seguro-casa-vacaciones-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-ciber-fraude-familiar/index.html",
+  "lang": "es",
+  "url": "/es/seguro-ciber-fraude-familiar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-coches-clasicos-alto-valor-portugal-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-coches-clasicos-alto-valor-portugal-espana/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "preciación. 2b. Coches modernos de alto valor Seguro de Automóviles de Lujo de Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado a través de Innovarisk. Pérdida o daño material del coche hasta la suma asegurada, e",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-coches-clasicos-alto-valor-portugal-espana/index.html#40dd18b195e6"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "motor-card\"> 2b. Coches modernos de alto valor Seguro de Automóviles de Lujo de Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado a través de Innovarisk. Pérdida o daño material del coche hasta la suma asegurada, en el lugar de riesgo y en circulaci",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-coches-clasicos-alto-valor-portugal-espana/index.html#d7b273aa573a"
+   }
+  ]
+ },
+ {
+  "file": "public/es/seguro-family-office/index.html",
+  "lang": "es",
+  "url": "/es/seguro-family-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-hogar-alto-valor/index.html",
+  "lang": "es",
+  "url": "/es/seguro-hogar-alto-valor/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-hogar-alto-valor-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-hogar-alto-valor-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-hogar-alto-valor-que-declarar/index.html",
+  "lang": "es",
+  "url": "/es/seguro-hogar-alto-valor-que-declarar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-joyas-relojes-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-joyas-relojes-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-joyas-relojes-limite-por-objeto/index.html",
+  "lang": "es",
+  "url": "/es/seguro-joyas-relojes-limite-por-objeto/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-medico-internacional/april-international/index.html",
+  "lang": "es",
+  "url": "/es/seguro-medico-internacional/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "\"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"La cobertura de salud la asegura Groupama Gan Vie, y la asistencia y la responsabilidad civil, Chubb European Group SE. APRIL International Care France diseña y gestiona el plan.\" } }, { \"@type\": \"Question\", \"name\": \"¿Cubre enfermedades",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/es/seguro-medico-internacional/april-international/index.html#33a07216776f"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "2.500 o 5.000 €/US$; copago ambulatorio del 0 %, 10 %, 20 % o 30 %. Salud asegurada por Groupama Gan Vie; asistencia y responsabilidad civil por Chubb European Group SE. Sin coste para usted. S",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/es/seguro-medico-internacional/april-international/index.html#5d249dc54ced"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ">¿Quién es la aseguradora de MyHealth International? La cobertura de salud la asegura Groupama Gan Vie, y la asistencia y la responsabilidad civil, Chubb European Group SE. APRIL International Care France diseña y gestiona el plan. ¿Cubre enfermedades preexistentes?</summary",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/es/seguro-medico-internacional/april-international/index.html#d8458fb01317"
+   }
+  ]
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-abogados/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-abogados/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-agentes-inmobiliarios/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-agentes-inmobiliarios/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-arquitectos-ingenieros/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-arquitectos-ingenieros/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-asesores-financieros/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-asesores-financieros/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-espana/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-civil-familiar/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-civil-familiar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-responsabilidad-profesional-portugal/index.html",
+  "lang": "es",
+  "url": "/es/seguro-responsabilidad-profesional-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-secuestro-extorsion/index.html",
+  "lang": "es",
+  "url": "/es/seguro-secuestro-extorsion/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-terremoto-portugal/index.html",
+  "lang": "es",
+  "url": "/es/seguro-terremoto-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/seguro-vehiculos-clasicos-espana/index.html",
+  "lang": "es",
+  "url": "/es/seguro-vehiculos-clasicos-espana/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "29\"> Seguro de vehículos clásicos en España | Adler & Rochefort <meta name=\"keywords\" content=\"seguro vehiculos clasico",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#cecaeacb734c"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "\" content=\"Seguro de vehículos clásicos en España | Adler & Rochefort\"> <meta property=\"og:image\" content=\"https://adlerrochefo",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#47712449b23f"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "content=\"Seguro de vehículos clásicos en España | Adler & Rochefort\"> <meta name=\"twitter:image\" content=\"https://adlerrochef",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#7ef6988f0f66"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "com/es/seguro-vehiculos-clasicos-espana/#service\", \"name\": \"Seguro de vehículos clásicos en España\", \"description\": \"Seguro de vehículos clásicos en España con Hiscox: un solo coche o una colección, explicado por escrito y en español por un mediador regulado en la UE.\", \"url\": \"https://adlerrochefort.com/es/seguro-vehiculos-",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#db2f0767f1a1"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "a/\", \"areaServed\": {\"@type\": \"Country\", \"name\": \"Spain\"}, \"provider\": {\"@id\": \"https://adlerrochefort.com/#organization\"}, \"brand\": {\"@type\": \"Brand\", \"name\": \"Hiscox\"}}, {\"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"¿Puedo asegurar toda una colección en una póliza?\", \"acceptedAnswer\": {\"@type\": \"Answer\"",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#feecced439c2"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "e\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"¿Puedo asegurar toda una colección en una póliza?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Hiscox Vehículos Clásicos está pensado tanto para un solo vehículo como para una colección. En la propuesta describimos cada coche por separado.\"}}, {\"@type\": \"Questi",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#2eeaf3804e6b"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "> España · Vehículos clásicos Seguro de vehículos clásicos en España Hiscox Vehículos Clásicos está pensado para los propietarios de vehículos clásicos en España, ya sea un solo coche o una colección. Le explicamos las condiciones por",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#e91f615e3bd3"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "s las condiciones por escrito y en español antes de contratar. Mediador de seguros registrado · ASF n.º 425591790/3 · Colocado con Hiscox en España Solicitar una propuesta por escrito <path d=\"M16.01 11H4v2h12.01v3L20 12l-3.99-",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#f3f0f34a0690"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "v> Un vehículo o una colección Hiscox Vehículos Clásicos es un producto diseñado para cubrir las necesidades de los propietarios de vehículos clásicos. Sirve tanto para un solo coche como para una",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#5e66f636f488"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "faq",
+    "cls": "PERMITIDA",
+    "ctx": "> ¿Puedo asegurar toda una colección en una póliza? Hiscox Vehículos Clásicos está pensado tanto para un solo vehículo como para una colección. En la propuesta describimos cada coche por separado. </div",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#89eca5e7b67a"
+   },
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "-note\">Le respondemos en español, por escrito, y llevamos todo el expediente en español. Colocamos esta póliza con Hiscox, que suscribe riesgos en España. En la propuesta indicamos por escrito la aseguradora y las condiciones. <form class=\"lead-form\" id=\"leadFo",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/es/seguro-vehiculos-clasicos-espana/index.html#943b5e5de4fd"
+   }
+  ]
+ },
+ {
+  "file": "public/es/siniestros-portugal/index.html",
+  "lang": "es",
+  "url": "/es/siniestros-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/valor-reconstruccion-seguro-hogar/index.html",
+  "lang": "es",
+  "url": "/es/valor-reconstruccion-seguro-hogar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/es/vivienda-vacia-seguro-segunda-residencia/index.html",
+  "lang": "es",
+  "url": "/es/vivienda-vacia-seguro-segunda-residencia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-art-bijoux-montres/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-art-bijoux-montres/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-residence-grande-valeur-espagne/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-residence-grande-valeur-espagne/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-residence-grande-valeur-portugal/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-residence-grande-valeur-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-residence-secondaire-espagne/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-residence-secondaire-espagne/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-residence-secondaire-portugal/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-residence-secondaire-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/assurance-sante-internationale/april-international/index.html",
+  "lang": "fr",
+  "url": "/fr/assurance-sante-internationale/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "al ?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"La santé est assurée par Groupama Gan Vie, l’assistance et la responsabilité civile par Chubb European Group SE. APRIL International Care France conçoit et gère le contrat.\" } }, { \"@type\": \"Question\", \"name\": \"Les maladies antéri",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/fr/assurance-sante-internationale/april-international/index.html#3664fabdc026"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "icket modérateur sur les soins courants de 0 %, 10 %, 20 % ou 30 %. Santé assurée par Groupama Gan Vie ; assistance et responsabilité civile par Chubb European Group SE. Sans frais pour vous. D",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/fr/assurance-sante-internationale/april-international/index.html#e17c3f4457e4"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "Qui assure MyHealth International ? La santé est assurée par Groupama Gan Vie, l’assistance et la responsabilité civile par Chubb European Group SE. APRIL International Care France conçoit et gère le contrat. Les maladies antérieures sont-elles couver",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/fr/assurance-sante-internationale/april-international/index.html#04d1ab4fd6a6"
+   }
+  ]
+ },
+ {
+  "file": "public/fr/destinations/barcelona-costa-brava-sitges/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/cascais-sintra/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/comporta-melides/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/ibiza/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/javea-moraira-altea/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/lisboa/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/madeira/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/madrid/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/mallorca/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/marbella-benahavis-sotogrande/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/porto-douro/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/destinations/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "fr",
+  "url": "/fr/destinations/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/golf-residences-portugal-espagne/index.html",
+  "lang": "fr",
+  "url": "/fr/golf-residences-portugal-espagne/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/index.html",
+  "lang": "fr",
+  "url": "/fr/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/ports-plaisance-yachts-portugal-espagne/index.html",
+  "lang": "fr",
+  "url": "/fr/ports-plaisance-yachts-portugal-espagne/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/rc-therapeutes-yoga-pilates/index.html",
+  "lang": "fr",
+  "url": "/fr/rc-therapeutes-yoga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "e traditionnelle chinoise — yoga, Pilates, tai-chi et autres pratiques de bien-être. Portugal et Espagne Hiscox souscrit cette garantie dans les deux pays : un seul interlocuteur pour qui travaille des deux côtés de la frontière. <div class=\"lp-grid-ite",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/fr/rc-therapeutes-yoga-pilates/index.html#a610a06154f9"
+   }
+  ]
+ },
+ {
+  "file": "public/fr/responsabilite-civile-familiale/index.html",
+  "lang": "fr",
+  "url": "/fr/responsabilite-civile-familiale/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/fr/valeur-reconstruction-assurance-habitation-portugal/index.html",
+  "lang": "fr",
+  "url": "/fr/valeur-reconstruction-assurance-habitation-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/art-jewellery-beyond-agreed-value/index.html",
+  "lang": "il",
+  "url": "/il/art-jewellery-beyond-agreed-value/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/classic-car-insurance-portugal-spain/index.html",
+  "lang": "il",
+  "url": "/il/classic-car-insurance-portugal-spain/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "תקלות מכניות וירידת ערך. 2ב. רכבים מודרניים בעלי ערך גבוה ביטוח רכבי יוקרה של Liberty Mutual Insurance Europe (Liberty Specialty Markets), באמצעות Innovarisk. אובדן או נזק פיזי לרכב עד סכום הביטוח, בכתובת הסיכון ובנסיעה בטריטוריות ה",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/il/classic-car-insurance-portugal-spain/index.html#dc554f811f2f"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "div class=\"ar-motor-card\"> 2ב. רכבים מודרניים בעלי ערך גבוה ביטוח רכבי יוקרה של Liberty Mutual Insurance Europe (Liberty Specialty Markets), באמצעות Innovarisk. אובדן או נזק פיזי לרכב עד סכום הביטוח, בכתובת הסיכון ובנסיעה בטריטוריות המפורטות בפוליסה. אובדן מוחל",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/il/classic-car-insurance-portugal-spain/index.html#5d7524263103"
+   }
+  ]
+ },
+ {
+  "file": "public/il/destinations/barcelona-costa-brava-sitges/index.html",
+  "lang": "il",
+  "url": "/il/destinations/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/cascais-sintra/index.html",
+  "lang": "il",
+  "url": "/il/destinations/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/comporta-melides/index.html",
+  "lang": "il",
+  "url": "/il/destinations/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/ibiza/index.html",
+  "lang": "il",
+  "url": "/il/destinations/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/index.html",
+  "lang": "il",
+  "url": "/il/destinations/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/javea-moraira-altea/index.html",
+  "lang": "il",
+  "url": "/il/destinations/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/lisboa/index.html",
+  "lang": "il",
+  "url": "/il/destinations/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/madeira/index.html",
+  "lang": "il",
+  "url": "/il/destinations/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/madrid/index.html",
+  "lang": "il",
+  "url": "/il/destinations/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/mallorca/index.html",
+  "lang": "il",
+  "url": "/il/destinations/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/marbella-benahavis-sotogrande/index.html",
+  "lang": "il",
+  "url": "/il/destinations/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/porto-douro/index.html",
+  "lang": "il",
+  "url": "/il/destinations/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/destinations/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "il",
+  "url": "/il/destinations/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/family-office-insurance/index.html",
+  "lang": "il",
+  "url": "/il/family-office-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/golf-homes-portugal-spain/index.html",
+  "lang": "il",
+  "url": "/il/golf-homes-portugal-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/high-value-home-what-to-declare/index.html",
+  "lang": "il",
+  "url": "/il/high-value-home-what-to-declare/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/holiday-home-insurance-portugal/index.html",
+  "lang": "il",
+  "url": "/il/holiday-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/holiday-home-insurance-spain/index.html",
+  "lang": "il",
+  "url": "/il/holiday-home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/home-insurance-portugal/index.html",
+  "lang": "il",
+  "url": "/il/home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/home-insurance-spain/index.html",
+  "lang": "il",
+  "url": "/il/home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/index.html",
+  "lang": "il",
+  "url": "/il/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/international-health-insurance/april-international/index.html",
+  "lang": "il",
+  "url": "/il/international-health-insurance/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "של MyHealth International?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"כיסוי הבריאות מבוטח ב־Groupama Gan Vie, והסיוע והאחריות האישית ב־Chubb European Group SE. ‏APRIL International Care France מתכננת ומנהלת את התוכנית.\" } }, { \"@type\": \"Question\", \"name\": \"האם מצבים רפואיים קו",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/il/international-health-insurance/april-international/index.html#6be323b278b3"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ", או ‎€/US$ 500, 1,000, 2,500 או 5,000; השתתפות באחוזים באמבולטורי: 0%, 10%, 20% או 30%. הבריאות מבוטחת ב־Groupama Gan Vie; סיוע ואחריות אישית ב־Chubb European Group SE. ללא עלות עבורכם. בקשו ה",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/il/international-health-insurance/april-international/index.html#29ab023263af"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "aq\">שאלות נפוצות מי המבטחת של MyHealth International? כיסוי הבריאות מבוטח ב־Groupama Gan Vie, והסיוע והאחריות האישית ב־Chubb European Group SE. ‏APRIL International Care France מתכננת ומנהלת את התוכנית. האם מצבים רפואיים קודמים מכוסים? <",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/il/international-health-insurance/april-international/index.html#0ba07ca6203c"
+   }
+  ]
+ },
+ {
+  "file": "public/il/jewellery-watch-insurance-spain/index.html",
+  "lang": "il",
+  "url": "/il/jewellery-watch-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/liability-insurance-portugal/index.html",
+  "lang": "il",
+  "url": "/il/liability-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/private-office/index.html",
+  "lang": "il",
+  "url": "/il/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/rebuild-value-home-insurance-portugal/index.html",
+  "lang": "il",
+  "url": "/il/rebuild-value-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/il/therapists-yoga-pilates-liability-insurance/index.html",
+  "lang": "il",
+  "url": "/il/therapists-yoga-pilates-liability-insurance/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ה, אוסטאופתיה, נטורופתיה, פיטותרפיה, כירופרקטיקה ורפואה סינית מסורתית — וכן יוגה, פילאטיס, טאי צ׳י ופרקטיקות רווחה אחרות. פורטוגל וספרד Hiscox חותמת על הכיסוי הזה בשתי המדינות: יועץ אחד למי שעובד משני צדי הגבול. הפעילות המוצהרת הפוליסה מכסה את מה שמתואר בה; טכניקה חדשה, ריטריט",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/il/therapists-yoga-pilates-liability-insurance/index.html#952a85bf6e27"
+   }
+  ]
+ },
+ {
+  "file": "public/index.html",
+  "lang": "pt",
+  "url": "/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-arte-gioielli-oltre-valore-concordato/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-arte-gioielli-oltre-valore-concordato/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-auto-epoca-alto-valore-portogallo-spagna/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-auto-epoca-alto-valore-portogallo-spagna/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "e svalutazione. 2b. Auto moderne di alto valore Assicurazione Auto di Lusso di Liberty Mutual Insurance Europe (Liberty Specialty Markets), collocata tramite Innovarisk. Perdita o danno materiale all'auto fino alla somma assicurata,",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/it/assicurazione-auto-epoca-alto-valore-portogallo-spagna/index.html#8c9cd43732c6"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "\"ar-motor-card\"> 2b. Auto moderne di alto valore Assicurazione Auto di Lusso di Liberty Mutual Insurance Europe (Liberty Specialty Markets), collocata tramite Innovarisk. Perdita o danno materiale all'auto fino alla somma assicurata, nel luogo di rischio e in circolazi",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/it/assicurazione-auto-epoca-alto-valore-portogallo-spagna/index.html#13bf0ddb4efa"
+   }
+  ]
+ },
+ {
+  "file": "public/it/assicurazione-casa-alto-valore/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-casa-alto-valore/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-casa-alto-valore-cosa-dichiarare/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-casa-alto-valore-cosa-dichiarare/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-casa-alto-valore-spagna/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-casa-alto-valore-spagna/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-casa-vacanze-portogallo/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-casa-vacanze-portogallo/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-casa-vacanze-spagna/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-casa-vacanze-spagna/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-cyber-frode-famiglia/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-cyber-frode-famiglia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-family-office/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-family-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-gioielli-orologi-spagna/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-gioielli-orologi-spagna/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/assicurazione-medica-internazionale/april-international/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-medica-internazionale/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "\"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"La copertura sanitaria è assicurata da Groupama Gan Vie, l’assistenza e la responsabilità civile da Chubb European Group SE. APRIL International Care France progetta e gestisce il piano.\" } }, { \"@type\": \"Question\", \"name\": \"Le patologie pree",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/it/assicurazione-medica-internazionale/april-international/index.html#c0f255c01604"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "500 o 5.000 €/US$; scoperto ambulatoriale dello 0%, 10%, 20% o 30%. Salute assicurata da Groupama Gan Vie; assistenza e responsabilità civile da Chubb European Group SE. Nessun costo per lei. R",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/it/assicurazione-medica-internazionale/april-international/index.html#e136939c6043"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "Chi è l’assicuratore di MyHealth International? La copertura sanitaria è assicurata da Groupama Gan Vie, l’assistenza e la responsabilità civile da Chubb European Group SE. APRIL International Care France progetta e gestisce il piano. Le patologie preesistenti sono coperte?<",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/it/assicurazione-medica-internazionale/april-international/index.html#4d83800fa89c"
+   }
+  ]
+ },
+ {
+  "file": "public/it/assicurazione-rapimento-estorsione/index.html",
+  "lang": "it",
+  "url": "/it/assicurazione-rapimento-estorsione/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/barcelona-costa-brava-sitges/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/cascais-sintra/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/comporta-melides/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/ibiza/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/javea-moraira-altea/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/lisboa/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/madeira/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/madrid/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/mallorca/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/marbella-benahavis-sotogrande/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/porto-douro/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/destinazioni/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "it",
+  "url": "/it/destinazioni/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/golf-ville-lusso-portogallo-spagna/index.html",
+  "lang": "it",
+  "url": "/it/golf-ville-lusso-portogallo-spagna/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/index.html",
+  "lang": "it",
+  "url": "/it/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/marine-yacht-portogallo-spagna/index.html",
+  "lang": "it",
+  "url": "/it/marine-yacht-portogallo-spagna/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/rc-terapisti-yoga-pilates/index.html",
+  "lang": "it",
+  "url": "/it/rc-terapisti-yoga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "a, fitoterapia, chiropratica e medicina tradizionale cinese — yoga, pilates, tai chi e altre pratiche di benessere. Portogallo e Spagna Hiscox sottoscrive questa copertura in entrambi i Paesi: un solo interlocutore per chi lavora sui due lati del confine. L’attività dichiarata",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/it/rc-terapisti-yoga-pilates/index.html#01c38cdee49f"
+   }
+  ]
+ },
+ {
+  "file": "public/it/responsabilita-civile-famiglia/index.html",
+  "lang": "it",
+  "url": "/it/responsabilita-civile-famiglia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/responsabilita-civile-professionale/index.html",
+  "lang": "it",
+  "url": "/it/responsabilita-civile-professionale/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/it/valore-ricostruzione-assicurazione-casa-portogallo/index.html",
+  "lang": "it",
+  "url": "/it/valore-ricostruzione-assicurazione-casa-portogallo/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/aansprakelijkheid-therapeuten-yoga-pilates/index.html",
+  "lang": "nl",
+  "url": "/nl/aansprakelijkheid-therapeuten-yoga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "otherapie, chiropraxie en traditionele Chinese geneeskunde — en yoga, pilates, tai chi en andere welzijnspraktijken. Portugal en Spanje Hiscox verzekert dit in beide landen: één aanspreekpunt voor wie aan weerszijden van de grens werkt. De gemelde activiteit De polis dekt wat e",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/nl/aansprakelijkheid-therapeuten-yoga-pilates/index.html#2cb32b96cca1"
+   }
+  ]
+ },
+ {
+  "file": "public/nl/bestemmingen/barcelona-costa-brava-sitges/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/cascais-sintra/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/comporta-melides/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/ibiza/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/javea-moraira-altea/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/lisboa/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/madeira/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/madrid/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/mallorca/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/marbella-benahavis-sotogrande/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/porto-douro/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bestemmingen/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "nl",
+  "url": "/nl/bestemmingen/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/bosbrandrisico-woonverzekering-portugal/index.html",
+  "lang": "nl",
+  "url": "/nl/bosbrandrisico-woonverzekering-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/evenredigheidsregel-totaal-verlies-portugal/index.html",
+  "lang": "nl",
+  "url": "/nl/evenredigheidsregel-totaal-verlies-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/family-office-verzekering/index.html",
+  "lang": "nl",
+  "url": "/nl/family-office-verzekering/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/golf-woningen-portugal-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/golf-woningen-portugal-spanje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/herbouwwaarde-woonverzekering-portugal/index.html",
+  "lang": "nl",
+  "url": "/nl/herbouwwaarde-woonverzekering-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/index.html",
+  "lang": "nl",
+  "url": "/nl/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/internationale-zorgverzekering/april-international/index.html",
+  "lang": "nl",
+  "url": "/nl/internationale-zorgverzekering/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "ional?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"De zorgdekking is verzekerd bij Groupama Gan Vie, assistance en aansprakelijkheid bij Chubb European Group SE. APRIL International Care France ontwikkelt en beheert het plan.\" } }, { \"@type\": \"Question\", \"name\": \"Zijn bestaande",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/nl/internationale-zorgverzekering/april-international/index.html#43337a0cdb06"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "2.500 of 5.000; eigen bijdrage poliklinisch van 0%, 10%, 20% of 30%. Zorg verzekerd door Groupama Gan Vie; assistance en aansprakelijkheid door Chubb European Group SE. Voor u kosteloos. Vraag",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/nl/internationale-zorgverzekering/april-international/index.html#473c54975b8a"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ls> Wie is de verzekeraar van MyHealth International? De zorgdekking is verzekerd bij Groupama Gan Vie, assistance en aansprakelijkheid bij Chubb European Group SE. APRIL International Care France ontwikkelt en beheert het plan. Zijn bestaande aandoeningen gedekt?</s",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/nl/internationale-zorgverzekering/april-international/index.html#9d56bbaa941b"
+   }
+  ]
+ },
+ {
+  "file": "public/nl/jachthavens-jachten-portugal-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/jachthavens-jachten-portugal-spanje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/klassieke-auto-verzekering-portugal-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/klassieke-auto-verzekering-portugal-spanje/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "evermindering. 2b. Moderne auto's met een hoge waarde Luxe-autoverzekering van Liberty Mutual Insurance Europe (Liberty Specialty Markets), geplaatst via Innovarisk. Verlies van of materiële schade aan de auto tot het verzekerd bedra",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/nl/klassieke-auto-verzekering-portugal-spanje/index.html#d0347842f776"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ar-motor-card\"> 2b. Moderne auto's met een hoge waarde Luxe-autoverzekering van Liberty Mutual Insurance Europe (Liberty Specialty Markets), geplaatst via Innovarisk. Verlies van of materiële schade aan de auto tot het verzekerd bedrag, op het risicoadres en onderweg i",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/nl/klassieke-auto-verzekering-portugal-spanje/index.html#0756a3ab879f"
+   }
+  ]
+ },
+ {
+  "file": "public/nl/kunst-sieraden-verzekering-boven-getaxeerde-waarde/index.html",
+  "lang": "nl",
+  "url": "/nl/kunst-sieraden-verzekering-boven-getaxeerde-waarde/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/sieraden-horloges-verzekering-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/sieraden-horloges-verzekering-spanje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/vakantiewoning-verzekering-portugal/index.html",
+  "lang": "nl",
+  "url": "/nl/vakantiewoning-verzekering-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/vakantiewoning-verzekering-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/vakantiewoning-verzekering-spanje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/woonverzekering-hoogwaardige-woning-meldplicht/index.html",
+  "lang": "nl",
+  "url": "/nl/woonverzekering-hoogwaardige-woning-meldplicht/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/woonverzekering-portugal/index.html",
+  "lang": "nl",
+  "url": "/nl/woonverzekering-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/nl/woonverzekering-spanje/index.html",
+  "lang": "nl",
+  "url": "/nl/woonverzekering-spanje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/barcelona-costa-brava-sitges/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/cascais-sintra/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/comporta-melides/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/ibiza/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/javea-moraira-altea/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/lisboa/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/madeira/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/madrid/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/mallorca/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/marbella-benahavis-sotogrande/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/porto-douro/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/destynacje/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "pl",
+  "url": "/pl/destynacje/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/golf-rezydencje-portugalia-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/golf-rezydencje-portugalia-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/index.html",
+  "lang": "pl",
+  "url": "/pl/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/mariny-jachty-portugalia-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/mariny-jachty-portugalia-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/miedzynarodowe-ubezpieczenie-zdrowotne/april-international/index.html",
+  "lang": "pl",
+  "url": "/pl/miedzynarodowe-ubezpieczenie-zdrowotne/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "lem MyHealth International?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Ochronę zdrowotną zapewnia Groupama Gan Vie, a assistance i OC – Chubb European Group SE. APRIL International Care France projektuje plan i nim zarządza.\" } }, { \"@type\": \"Question\", \"name\": \"Czy choroby ist",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/pl/miedzynarodowe-ubezpieczenie-zdrowotne/april-international/index.html#0ebb1683f88a"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "o 500, 1000, 2500 lub 5000 €/US$; współpłacenie ambulatoryjne 0%, 10%, 20% lub 30%. Ubezpieczyciel zdrowotny: Groupama Gan Vie; assistance i OC: Chubb European Group SE. Bez kosztów dla Ciebie. <h2",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/pl/miedzynarodowe-ubezpieczenie-zdrowotne/april-international/index.html#6a676ccf2316"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "nia Kto jest ubezpieczycielem MyHealth International? Ochronę zdrowotną zapewnia Groupama Gan Vie, a assistance i OC – Chubb European Group SE. APRIL International Care France projektuje plan i nim zarządza. Czy choroby istniejące wcześniej są ob",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/pl/miedzynarodowe-ubezpieczenie-zdrowotne/april-international/index.html#94b05232ac0e"
+   }
+  ]
+ },
+ {
+  "file": "public/pl/oc-terapeutow-joga-pilates/index.html",
+  "lang": "pl",
+  "url": "/pl/oc-terapeutow-joga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "itoterapia, chiropraktyka i tradycyjna medycyna chińska — oraz joga, pilates, tai chi i inne praktyki wellbeing. Portugalia i Hiszpania Hiscox oferuje tę ochronę w obu krajach: jeden doradca dla osób pracujących po obu stronach granicy. Zgłoszona działalność Polisa obejmuje opi",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/pl/oc-terapeutow-joga-pilates/index.html#f2ada37e4c0a"
+   }
+  ]
+ },
+ {
+  "file": "public/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-cyber-oszustwa-rodzina/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-cyber-oszustwa-rodzina/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-domu-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-domu-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-domu-portugalia/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-domu-portugalia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-domu-wakacyjnego-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-domu-wakacyjnego-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-domu-wakacyjnego-portugalia/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-domu-wakacyjnego-portugalia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-domu-wysokiej-wartosci-co-zglosic/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-domu-wysokiej-wartosci-co-zglosic/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-family-office/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-family-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-odpowiedzialnosci-cywilnej-hiszpania/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-porwanie-okup/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-porwanie-okup/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/ubezpieczenie-samochodow-klasycznych-portugalia-hiszpania/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-samochodow-klasycznych-portugalia-hiszpania/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "> 2b. Nowoczesne samochody o wysokiej wartości Ubezpieczenie samochodów luksusowych Liberty Mutual Insurance Europe (Liberty Specialty Markets), zawierane za pośrednictwem Innovarisk. Utrata lub szkoda materialna samochodu do sumy ubezpie",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/pl/ubezpieczenie-samochodow-klasycznych-portugalia-hiszpania/index.html#a680b45c19c9"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ">2b. Nowoczesne samochody o wysokiej wartości Ubezpieczenie samochodów luksusowych Liberty Mutual Insurance Europe (Liberty Specialty Markets), zawierane za pośrednictwem Innovarisk. Utrata lub szkoda materialna samochodu do sumy ubezpieczenia, w miejscu ryzyka i w ruchu",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/pl/ubezpieczenie-samochodow-klasycznych-portugalia-hiszpania/index.html#74543bd7cf09"
+   }
+  ]
+ },
+ {
+  "file": "public/pl/ubezpieczenie-sztuki-bizuterii-ponad-wartosc-uzgodniona/index.html",
+  "lang": "pl",
+  "url": "/pl/ubezpieczenie-sztuki-bizuterii-ponad-wartosc-uzgodniona/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/index.html",
+  "lang": "pl",
+  "url": "/pl/wartosc-odtworzeniowa-ubezpieczenie-domu-portugalia/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/private-clients/arte-joias-relogios/index.html",
+  "lang": "pt",
+  "url": "/private-clients/arte-joias-relogios/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/private-clients/automoveis-classicos/index.html",
+  "lang": "pt",
+  "url": "/private-clients/automoveis-classicos/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "\"Clássicos e de coleção: danos próprios por valor acordado na Lloyd&#x27;s e RC automóvel em apólice separada até 50 milhões de euros. Automóveis de luxo com a Liberty. Mediador de seguros registado na ASF.\"> <link rel=\"canonical\" href=\"https://adlerrochefort.com/private-clients/au",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#4bf45571ed60"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "\"Clássicos e de coleção: danos próprios por valor acordado na Lloyd&#x27;s e RC automóvel em apólice separada até 50 milhões de euros. Automóveis de luxo com a Liberty. Mediador de seguros registado na ASF.\"> <meta property=\"og",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#ff4c587a0a9d"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "meta",
+    "cls": "PERMITIDA",
+    "ctx": "\"Clássicos e de coleção: danos próprios por valor acordado na Lloyd&#x27;s e RC automóvel em apólice separada até 50 milhões de euros. Automóveis de luxo com a Liberty. Mediador de seguros registado na ASF.\"> <link rel=",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#de3745a0b565"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "on\": \"Clássicos e de coleção: danos próprios por valor acordado na Lloyd's e RC automóvel em apólice separada até 50 milhões de euros. Automóveis de luxo com a Liberty. Mediador de seguros registado na ASF.\", \"url\": \"https://adlerrochefort.com/private-clients/automoveis-classicos/\", \"provider\": {\"@id\": \"https://adlerrochefort",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#c148addf29b1"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "on\": \"Clássicos e de coleção: danos próprios por valor acordado na Lloyd's e RC automóvel em apólice separada até 50 milhões de euros. Automóveis de luxo com a Liberty. Mediador de seguros registado na ASF.\", \"inLanguage\": \"pt-PT\", \"dateModified\": \"2026-10-20\", \"author\": {\"@id\": \"https://adlerrochefort.com/#hugo-goncalves\"},",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#95bf96d9fe60"
+   },
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "ação. 2b. Automóveis modernos de elevado valor Seguro de Automóveis de Luxo da Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado através da Innovarisk. Perda ou dano material do automóvel até ao capital seguro, no",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#d08f55f531d9"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "card\"> 2b. Automóveis modernos de elevado valor Seguro de Automóveis de Luxo da Liberty Mutual Insurance Europe (Liberty Specialty Markets), colocado através da Innovarisk. Perda ou dano material do automóvel até ao capital seguro, no local de risco e em circulação nos",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#7d1dbc5fd7f9"
+   },
+   {
+    "term": "Sem regra proporcional",
+    "kind": "condition",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "razo de 60 dias. Substituição de fechaduras após perda, furto ou roubo das chaves, do cartão de ignição ou do comando, com franquia de 1.000 €. Sem regra proporcional; em caso de perda total, a indemnização tem em conta o montante necessário para liquidar o financiamento do automóvel. Condições <stro",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/private-clients/automoveis-classicos/index.html#37c3b80ccd14"
+   }
+  ]
+ },
+ {
+  "file": "public/private-clients/family-offices/index.html",
+  "lang": "pt",
+  "url": "/private-clients/family-offices/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/private-clients/index.html",
+  "lang": "pt",
+  "url": "/private-clients/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/ansvarsforsakring-terapeuter-yoga-pilates/index.html",
+  "lang": "se",
+  "url": "/se/ansvarsforsakring-terapeuter-yoga-pilates/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "fytoterapi, kiropraktik och traditionell kinesisk medicin — samt yoga, pilates, tai chi och andra hälsopraktiker. Portugal och Spanien Hiscox tecknar detta skydd i båda länderna: en rådgivare för den som arbetar på båda sidor gränsen. Den anmälda verksamheten Försäkringen gäll",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/se/ansvarsforsakring-terapeuter-yoga-pilates/index.html#81bca0767679"
+   }
+  ]
+ },
+ {
+  "file": "public/se/ansvarsforsakring-yrkesverksamhet/index.html",
+  "lang": "se",
+  "url": "/se/ansvarsforsakring-yrkesverksamhet/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/ateruppbyggnadsvarde-hemforsakring-portugal/index.html",
+  "lang": "se",
+  "url": "/se/ateruppbyggnadsvarde-hemforsakring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/barcelona-costa-brava-sitges/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/cascais-sintra/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/comporta-melides/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/ibiza/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/javea-moraira-altea/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/lisboa/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/madeira/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/madrid/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/mallorca/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/marbella-benahavis-sotogrande/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/porto-douro/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/destinationer/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "se",
+  "url": "/se/destinationer/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/family-office-forsakring/index.html",
+  "lang": "se",
+  "url": "/se/family-office-forsakring/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/fritidshusforsakring-portugal/index.html",
+  "lang": "se",
+  "url": "/se/fritidshusforsakring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/fritidshusforsakring-spanien/index.html",
+  "lang": "se",
+  "url": "/se/fritidshusforsakring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/golf-bostader-portugal-spanien/index.html",
+  "lang": "se",
+  "url": "/se/golf-bostader-portugal-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/hemforsakring-exklusiv-bostad-anmalningsplikt/index.html",
+  "lang": "se",
+  "url": "/se/hemforsakring-exklusiv-bostad-anmalningsplikt/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/hemforsakring-portugal/index.html",
+  "lang": "se",
+  "url": "/se/hemforsakring-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/hemforsakring-spanien/index.html",
+  "lang": "se",
+  "url": "/se/hemforsakring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/index.html",
+  "lang": "se",
+  "url": "/se/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/internationell-sjukvardsforsakring/april-international/index.html",
+  "lang": "se",
+  "url": "/se/internationell-sjukvardsforsakring/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "ar MyHealth International?\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"Sjukvården försäkras av Groupama Gan Vie, assistans och ansvar av Chubb European Group SE. APRIL International Care France utformar och administrerar planen.\" } }, { \"@type\": \"Question\", \"name\": \"Täcks tidiga",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/se/internationell-sjukvardsforsakring/april-international/index.html#1e296a9eabba"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "US$ 500, 1 000, 2 500 eller 5 000; egenandel i öppenvård 0, 10, 20 eller 30 %. Sjukvården försäkras av Groupama Gan Vie; assistans och ansvar av Chubb European Group SE. Kostnadsfritt för dig.",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/se/internationell-sjukvardsforsakring/april-international/index.html#46b3f2a040b4"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "Vanliga frågor Vem försäkrar MyHealth International? Sjukvården försäkras av Groupama Gan Vie, assistans och ansvar av Chubb European Group SE. APRIL International Care France utformar och administrerar planen. Täcks tidigare sjukdomar?",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/se/internationell-sjukvardsforsakring/april-international/index.html#453e2cda6b12"
+   }
+  ]
+ },
+ {
+  "file": "public/se/konst-smycken-forsakring-utover-avtalat-varde/index.html",
+  "lang": "se",
+  "url": "/se/konst-smycken-forsakring-utover-avtalat-varde/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/smycken-klockor-forsakring-spanien/index.html",
+  "lang": "se",
+  "url": "/se/smycken-klockor-forsakring-spanien/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/se/veteranbil-forsakring-portugal-spanien/index.html",
+  "lang": "se",
+  "url": "/se/veteranbil-forsakring-portugal-spanien/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "el och värdeminskning. 2b. Moderna bilar med högt värde Lyxbilsförsäkring från Liberty Mutual Insurance Europe (Liberty Specialty Markets), förmedlad via Innovarisk. Förlust av eller fysisk skada på bilen upp till försäkringsbeloppet",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/se/veteranbil-forsakring-portugal-spanien/index.html#213b31899461"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "class=\"ar-motor-card\"> 2b. Moderna bilar med högt värde Lyxbilsförsäkring från Liberty Mutual Insurance Europe (Liberty Specialty Markets), förmedlad via Innovarisk. Förlust av eller fysisk skada på bilen upp till försäkringsbeloppet, på riskadressen och i trafik inom",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/se/veteranbil-forsakring-portugal-spanien/index.html#3f1141611ae8"
+   }
+  ]
+ },
+ {
+  "file": "public/seguros/brasileiros-em-portugal/index.html",
+  "lang": "pt",
+  "url": "/seguros/brasileiros-em-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/casa-desocupada/index.html",
+  "lang": "pt",
+  "url": "/seguros/casa-desocupada/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/casa-ferias-espanha/index.html",
+  "lang": "pt",
+  "url": "/seguros/casa-ferias-espanha/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/casa-ferias-portugal/index.html",
+  "lang": "pt",
+  "url": "/seguros/casa-ferias-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/habitacao/index.html",
+  "lang": "pt",
+  "url": "/seguros/habitacao/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/habitacao/valor-reconstrucao/index.html",
+  "lang": "pt",
+  "url": "/seguros/habitacao/valor-reconstrucao/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/habitacao-espanha/index.html",
+  "lang": "pt",
+  "url": "/seguros/habitacao-espanha/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/index.html",
+  "lang": "pt",
+  "url": "/seguros/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/responsabilidade-civil-familiar/index.html",
+  "lang": "pt",
+  "url": "/seguros/responsabilidade-civil-familiar/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/seguros/saude-internacional/april-international/index.html",
+  "lang": "pt",
+  "url": "/seguros/saude-internacional/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "cceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"A cobertura de saúde é segurada pela Groupama Gan Vie e a assistência e a responsabilidade civil pela Chubb European Group SE. A APRIL International Care France concebe e gere o plano.\" } }, { \"@type\": \"Question\", \"name\": \"As doenças pré-existe",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/seguros/saude-internacional/april-international/index.html#5945ac85d0e8"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": ".000 €/US$; copagamento em ambulatório de 0%, 10%, 20% ou 30%. Saúde seguradora pela Groupama Gan Vie; assistência e responsabilidade civil pela Chubb European Group SE. Sem custos para si. Peç",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/seguros/saude-internacional/april-international/index.html#63c7ed121300"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "uem é a seguradora do MyHealth International? A cobertura de saúde é segurada pela Groupama Gan Vie e a assistência e a responsabilidade civil pela Chubb European Group SE. A APRIL International Care France concebe e gere o plano. As doenças pré-existentes estão cobertas?</s",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/seguros/saude-internacional/april-international/index.html#051eb9f0d850"
+   }
+  ]
+ },
+ {
+  "file": "public/zh/art-jewellery-beyond-agreed-value/index.html",
+  "lang": "zh",
+  "url": "/zh/art-jewellery-beyond-agreed-value/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/classic-car-insurance-portugal-spain/index.html",
+  "lang": "zh",
+  "url": "/zh/classic-car-insurance-portugal-spain/",
+  "scope": "motor",
+  "hits": [
+   {
+    "term": "Liberty Mutual",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "单列明的驾驶人驾驶。 除外责任：赛车、赛道日、速度测试、拉力赛及越野驾驶；出租或商业用途；磨损、锈蚀、机械故障及贬值。 2b. 高价值现代车 Liberty Mutual Insurance Europe （Liberty Specialty Markets）的豪华车保险，通过 Innovarisk 安排。 车辆在风险地址及在保单所列地区行驶期间的灭失或实物损坏，以保险金额为限。 全损按保单约定，以 约定价值或市场价值",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/zh/classic-car-insurance-portugal-spain/index.html#61736a09d4c8"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "野驾驶；出租或商业用途；磨损、锈蚀、机械故障及贬值。 2b. 高价值现代车 Liberty Mutual Insurance Europe （Liberty Specialty Markets）的豪华车保险，通过 Innovarisk 安排。 车辆在风险地址及在保单所列地区行驶期间的灭失或实物损坏，以保险金额为限。 全损按保单约定，以 约定价值或市场价值 赔付；部分损失按合理维修费用赔付，维修须事先经保险",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/zh/classic-car-insurance-portugal-spain/index.html#0efa06c8feb0"
+   },
+   {
+    "term": "Liberty",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "须事先经保险公司批准。 盗抢：车辆在60天内未找回即视为被盗。 钥匙、点火卡或遥控器遗失或被盗后更换门锁，免赔额1000欧元。 不适用比例赔偿原则；全损时，赔款会考虑结清车辆贷款所需的金额。 条件 只能与 Liberty 家庭财产保险一并投保 ；常住住宅的室内财产保额须不低于15万欧元。 保单列明驾驶人及年度行驶里程上限。 除外责任：赛车、赛道、速度测试及越野驾驶；出租或商业用途；磨损、机械故障及贬值。 报价所需资料 <l",
+    "reason": "automóvel (clássicos/luxo) — fora do âmbito habitação",
+    "key": "public/zh/classic-car-insurance-portugal-spain/index.html#d7980dec23f0"
+   }
+  ]
+ },
+ {
+  "file": "public/zh/destinations/barcelona-costa-brava-sitges/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/barcelona-costa-brava-sitges/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/cascais-sintra/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/cascais-sintra/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/comporta-melides/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/comporta-melides/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/ibiza/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/ibiza/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/javea-moraira-altea/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/javea-moraira-altea/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/lisboa/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/lisboa/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/madeira/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/madeira/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/madrid/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/madrid/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/mallorca/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/mallorca/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/marbella-benahavis-sotogrande/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/marbella-benahavis-sotogrande/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/porto-douro/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/porto-douro/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/destinations/quinta-do-lago-vale-do-lobo-vilamoura/index.html",
+  "lang": "zh",
+  "url": "/zh/destinations/quinta-do-lago-vale-do-lobo-vilamoura/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/family-office-insurance/index.html",
+  "lang": "zh",
+  "url": "/zh/family-office-insurance/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/golf-homes-portugal-spain/index.html",
+  "lang": "zh",
+  "url": "/zh/golf-homes-portugal-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/high-value-home-what-to-declare/index.html",
+  "lang": "zh",
+  "url": "/zh/high-value-home-what-to-declare/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/holiday-home-insurance-portugal/index.html",
+  "lang": "zh",
+  "url": "/zh/holiday-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/holiday-home-insurance-spain/index.html",
+  "lang": "zh",
+  "url": "/zh/holiday-home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/home-insurance-portugal/index.html",
+  "lang": "zh",
+  "url": "/zh/home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/home-insurance-spain/index.html",
+  "lang": "zh",
+  "url": "/zh/home-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/index.html",
+  "lang": "zh",
+  "url": "/zh/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/international-health-insurance/april-international/index.html",
+  "lang": "zh",
+  "url": "/zh/international-health-insurance/april-international/",
+  "scope": "health",
+  "hits": [
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "jsonld",
+    "cls": "PERMITIDA",
+    "ctx": "\": \"Question\", \"name\": \"MyHealth International 由谁承保？\", \"acceptedAnswer\": { \"@type\": \"Answer\", \"text\": \"医疗保障由 Groupama Gan Vie 承保，援助与个人责任由 Chubb European Group SE 承保。APRIL International Care France 负责设计与管理该计划。\" } }, { \"@type\": \"Question\", \"name\": \"既往病症是否承保？\", \"acceptedAnswer\"",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/zh/international-health-insurance/april-international/index.html#c4a6e1405f93"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "、新加坡、台湾、泰国、阿联酋、英国或美国者为 16 至 60 岁。 免赔额：无，或 €/US$ 500、1,000、2,500、5,000；门诊共付比例 0%、10%、20% 或 30%。 医疗保障由 Groupama Gan Vie 承保；援助与个人责任由 Chubb European Group SE 承保。对您免费。 申请 APRIL Intern",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/zh/international-health-insurance/april-international/index.html#a1b0a45afb15"
+   },
+   {
+    "term": "Chubb",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "aria-labelledby=\"ipmi-faq\"> 常见问题 MyHealth International 由谁承保？ 医疗保障由 Groupama Gan Vie 承保，援助与个人责任由 Chubb European Group SE 承保。APRIL International Care France 负责设计与管理该计划。 既往病症是否承保？ 不自动承保。您需填写健康问卷，由 APRIL Internation",
+    "reason": "seguro de saúde — modelo editorial próprio, fora do âmbito",
+    "key": "public/zh/international-health-insurance/april-international/index.html#33cc7b02c96a"
+   }
+  ]
+ },
+ {
+  "file": "public/zh/jewellery-watch-insurance-spain/index.html",
+  "lang": "zh",
+  "url": "/zh/jewellery-watch-insurance-spain/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/private-office/index.html",
+  "lang": "zh",
+  "url": "/zh/private-office/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/rebuild-value-home-insurance-portugal/index.html",
+  "lang": "zh",
+  "url": "/zh/rebuild-value-home-insurance-portugal/",
+  "scope": "property",
+  "hits": []
+ },
+ {
+  "file": "public/zh/therapists-yoga-pilates-liability-insurance/index.html",
+  "lang": "zh",
+  "url": "/zh/therapists-yoga-pilates-liability-insurance/",
+  "scope": "professional",
+  "hits": [
+   {
+    "term": "Hiscox",
+    "kind": "brand",
+    "where": "body",
+    "cls": "PERMITIDA",
+    "ctx": "我们关注的要点 我们承保的活动 按摩、葡萄牙认可的非传统疗法——针灸、顺势疗法、整骨、自然疗法、植物疗法、脊骨神经医学和中医——以及瑜伽、普拉提、太极等身心健康实践。 葡萄牙与西班牙 Hiscox 在两国均承保此类风险：在边境两侧工作的人只需一位顾问。 申报的活动 保单只保障其中所描述的活动；新技术、海外静修或线上课程须申报。 保额与承保基础 每次索赔 25 万欧元起，按索赔发生制承保——保单之间的连续性很重要。</",
+    "reason": "RC profissional — fora do âmbito habitação",
+    "key": "public/zh/therapists-yoga-pilates-liability-insurance/index.html#ca3f25b00acf"
+   }
+  ]
+ }
+]

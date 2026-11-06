@@ -487,7 +487,7 @@ ${nav(page)}
       <a href="https://wa.me/351928226570?text=${encodeURIComponent(page.whatsapp)}" target="_blank" rel="noopener" class="lp-btn-wa">${WHATSAPP_SVG}WhatsApp</a>
     </div>
     <div class="lp-trust">
-      <strong>ASF-registered insurance broker</strong> &middot; Zurich &middot; Allianz &middot; Hiscox &middot; Liberty Mutual
+      <strong>ASF-registered insurance broker</strong> &middot; Independent of any insurer
     </div>
   </div>
 </section>

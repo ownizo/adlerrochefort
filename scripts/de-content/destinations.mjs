@@ -393,7 +393,7 @@ export const MALLORCA_PAGE = {
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
     <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
-    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Mallorca — häufige Fragen',
@@ -404,7 +404,7 @@ export const MALLORCA_PAGE = {
     },
     {
       q: 'Versichern Sie jedes Haus auf der Insel?',
-      a: '<p>Nicht jedes, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
+      a: '<p>Nicht jedes, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
     },
     {
       q: 'Muss ich Resident auf Mallorca sein?',
@@ -567,7 +567,7 @@ export const COSTA_DEL_SOL_PAGE = {
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
     <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
-    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Costa del Sol — häufige Fragen',
@@ -578,7 +578,7 @@ export const COSTA_DEL_SOL_PAGE = {
     },
     {
       q: 'Versichern Sie jede Villa an der Küste?',
-      a: '<p>Nicht jede, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
+      a: '<p>Nicht jede, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist.</p>',
     },
     {
       q: 'Muss ich in Spanien gemeldet sein?',
@@ -652,7 +652,7 @@ export const COSTA_BLANCA_PAGE = {
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
     <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
-    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Costa Blanca — häufige Fragen',
@@ -736,7 +736,7 @@ export const KANAREN_PAGE = {
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
     <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
-    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Kanaren — häufige Fragen',
@@ -820,7 +820,7 @@ export const KATALONIEN_PAGE = {
 <section class="section tint" aria-labelledby="ehrlichkeit">
   <div class="container narrow article-body">
     <h2 id="ehrlichkeit">Wie wir in Spanien platzieren</h2>
-    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
+    <p>In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Wir stellen kurze Fragen zur Immobilie und zur Lage und antworten schriftlich, auf Deutsch — auch, wenn ein Fall nicht zu den nötigen Bedingungen platzierbar ist. Spanische Policen werden auf Spanisch ausgestellt; wir sorgen dafür, dass Sie Summen, Bedingungen und Ausschlüsse verstehen, bevor Sie unterschreiben.</p>
   </div>
 </section>`,
   faqTitle: 'Versicherung Katalonien — häufige Fragen',

@@ -54,7 +54,7 @@ export const HUB_PAGE = {
       <div class="feature-card">
         <span class="fc-tag">Bostäder</span>
         <h3>Värdefulla hem</h3>
-        <p>Återuppbyggnadskostnaden fastställd vid besiktning, ingen proportionell nedsättning, garanterad återuppbyggnad vid totalskada och likvärdigt ersättningsboende.</p>
+        <p>Återuppbyggnadskostnad, proportionell nedsättning, reglering vid totalskada och ersättningsboende — kontrollerat skriftligt i varje villkor.</p>
         <a class="fc-link" href="/se/hemforsakring-portugal/">Hemförsäkring</a>
       </div>
       <div class="feature-card">

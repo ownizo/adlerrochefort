@@ -91,7 +91,7 @@ export const HOME_PAGE = {
     <div class="feature-grid">
       <div class="feature-card"><h3>Besiktning och återuppbyggnadskostnad</h3><p>För bostäder med högre värde gör försäkringsbolaget en besiktning på plats, utan kostnad för dig, för att fastställa återuppbyggnadskostnaden, föreslå försäkringsbelopp för lösöre och värdeföremål och rekommendera skadeförebyggande åtgärder.</p></div>
       <div class="feature-card"><h3>Ingen proportionell nedsättning</h3><p>När de rekommenderade beloppen accepteras avstår bolaget från underförsäkringsregeln: en delskada ersätts fullt ut, även om byggkostnaderna har stigit sedan dess.</p></div>
-      <div class="feature-card"><h3>Garanterad återuppbyggnad</h3><p>Vid totalskada byggs huset upp igen även om kostnaden överstiger byggnadens försäkringsbelopp — förutsatt att de belopp som rekommenderades vid besiktningen har accepterats.</p></div>
+      <div class="feature-card"><h3>Totalskada</h3><p>Hur varje försäkring reglerar en totalskada och vilka gränser som gäller — kontrolleras och bekräftas skriftligt.</p></div>
       <div class="feature-card"><h3>Likvärdigt ersättningsboende</h3><p>Ersättningsboende av jämförbar standard, även för husdjur och hästar, så länge huset inte går att bo i — inte de få månader som är vanliga på massmarknaden.</p></div>
       <div class="feature-card"><h3>Trädgård, murar och andra byggnader</h3><p>Träd, buskar och gräsmattor, tomt- och stödmurar, pooler, annex och gästhus med egna försäkringsbelopp — inte begränsade till ett symboliskt belopp.</p></div>
       <div class="feature-card"><h3>Vatten, gas och läcksökning</h3><p>Lokalisering och reparation av läckage från vatten-, gas- eller oljeledningar utan särskild beloppsgräns, samt det vatten eller den olja som gått förlorad.</p></div>
@@ -119,7 +119,7 @@ export const HOME_PAGE = {
     <h3>Ansvar</h3>
     <div class="feature-grid">
       <div class="feature-card"><h3>Belopp som motsvarar tillgångarna</h3><p>Privat ansvar för hela familjen med försäkringsbelopp på flera miljoner euro, med giltighet i hela världen.</p></div>
-      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Kostnaderna för rättsligt försvar betalas utöver försäkringsbeloppet och dras inte av från det.</p></div>
+      <div class="feature-card"><h3>Försvarskostnader utöver beloppet</h3><p>Om kostnaderna för rättsligt försvar betalas inom eller utöver försäkringsbeloppet beror på villkoren.</p></div>
       <div class="feature-card"><h3>Vilka som omfattas</h3><p>Hushållet, även barn som studerar på annan ort, och den som tillfälligt tar hand om dina djur; gäster och hushållsanställda i anslutning till bostaden.</p></div>
       <div class="feature-card"><h3>Alla bostäder</h3><p>Som ägare, hyresgäst eller brukare — i Portugal, i Spanien eller var familjen än har ett hem.</p></div>
     </div>
@@ -269,11 +269,11 @@ export const HOME_PAGE = {
     },
     {
       q: 'Hur räknar jag lösörets värde?',
-      a: '<p>Rum för rum: möbler, vitvaror, elektronik, kläder, sportutrustning och cyklar, verktyg. Summan brukar bli högre än man tror. Föremål med högt styckvärde — konst, smycken, klockor, instrument, samlingar — har i en vanlig försäkring ofta ett tak per objekt. I private client-villkoren förtecknas de i stället till ett avtalat värde, mot värdering och utan självrisk.</p>',
+      a: '<p>Rum för rum: möbler, vitvaror, elektronik, kläder, sportutrustning och cyklar, verktyg. Summan brukar bli högre än man tror. Föremål med högt styckvärde — konst, smycken, klockor, instrument, samlingar — har i en vanlig försäkring ofta ett tak per objekt. I private client-villkor kan de i stället förtecknas till ett avtalat värde, mot värdering; självrisken beror på villkoren.</p>',
     },
     {
       q: 'Vad innebär besiktningen, och vad kostar den?',
-      a: '<p>För bostäder med högre värde skickar försäkringsbolaget en besiktningsman till huset, utan kostnad för dig. Besiktningen fastställer återuppbyggnadskostnaden, föreslår belopp för lösöre och värdeföremål och ger råd om skadeförebyggande åtgärder. Accepterar du de rekommenderade beloppen avstår bolaget från proportionell nedsättning vid en delskada.</p>',
+      a: '<p>För bostäder med högre värde gör vissa försäkringsbolag en besiktning av huset. Den fastställer återuppbyggnadskostnaden, föreslår belopp för lösöre och värdeföremål och ger råd om skadeförebyggande åtgärder. Vad besiktningen ändrar i försäkringen beror på villkoren, och det bekräftar vi skriftligt.</p>',
     },
     {
       q: 'Jag bor i huset tre månader om året. Vad ska jag anmäla?',

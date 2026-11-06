@@ -19,7 +19,7 @@ export const HOME_PAGE = {
   cluster: 'home',
   title: 'Husforsikring i Portugal: boliger af høj værdi',
   description:
-    'Villaer og boliger af høj værdi i Portugal: besigtigelse, ingen underforsikring, garanteret genopførelse, indbo verden over og kunst til aftalt værdi.',
+    'Villaer og boliger af høj værdi i Portugal: genopførelsespris, brug, indbo og kunst gennemgået, før betingelserne vælges — bekræftet skriftligt.',
   keywords:
     'husforsikring Portugal, villa forsikring Portugal, forsikring bolig høj værdi Portugal, kunstforsikring Portugal, indboforsikring Portugal, multirriscos habitação, genopførelsespris Portugal, condomínio forsikring, feriebolig Portugal forsikring, jordskælv Portugal forsikring',
   eyebrow: 'Boliger af høj værdi',
@@ -107,8 +107,8 @@ export const HOME_PAGE = {
         <p>Når de anbefalede summer er accepteret, giver selskabet afkald på forholdsmæssig nedsættelse: en delskade betales fuldt ud, også selv om byggepriserne siden er steget.</p>
       </div>
       <div class="feature-card">
-        <h3>Garanteret genopførelse</h3>
-        <p>Efter en totalskade genopføres huset, også hvis udgiften overstiger bygningssummen — forudsat at de summer, besigtigelsen anbefalede, er accepteret.</p>
+        <h3>Totalskade</h3>
+        <p>Hvordan hver police erstatter en totalskade, og hvilke grænser der gælder — kontrolleret og bekræftet skriftligt.</p>
       </div>
       <div class="feature-card">
         <h3>Tilsvarende genhusning</h3>
@@ -347,7 +347,7 @@ export const HOME_PAGE = {
     },
     {
       q: 'Hvad adskiller en police til en bolig af høj værdi fra en almindelig boligpolice?',
-      a: '<p>Betingelserne. Selskabet besigtiger ejendommen og fastlægger genopførelsesprisen, giver afkald på underforsikringsreglen, når de anbefalede summer er accepteret, og garanterer genopførelse efter en totalskade. Indboet er dækket mod alle risici verden over, kunst og smykker til aftalt værdi uden selvrisiko, og familiens ansvar med summer på flere millioner euro. Det præcise indhold afhænger af selskab og risiko og bekræftes først i den udstedte police.</p>',
+      a: '<p>Betingelserne. Summerne fastsættes ud fra genopførelsesprisen, og vi kontrollerer, hvordan hver police anvender reglen om underforsikring, og hvordan en totalskade erstattes. Indbo, kunst og smykker samt familiens ansvar dimensioneres efter boligen og familien. Det præcise indhold afhænger af selskab og risiko og bekræftes først i den udstedte police.</p>',
     },
     {
       q: 'Hvilket beløb skal bygningen forsikres for?',

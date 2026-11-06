@@ -107,7 +107,7 @@ export const BR_ARTICLES = [
     </ul>
 
     <h2>Casas de valor elevado</h2>
-    <p>Para moradias em Cascais, na Quinta da Marinha ou no Algarve, colocamos apólices que vão além das seguradoras generalistas: vistoria sem custo, sem regra proporcional quando se aceitam os capitais recomendados e, em perda total, mediante acordo entre seguradora e segurado, indemnização até ao capital máximo contratado, acima do valor de reconstrução. Veja <a href="/seguros/habitacao/">o seguro de habitação para residências de elevado valor</a> e <a href="/private-clients/">Private Clients</a>. Arte, joias e relógios em valor acordado, cobertos também quando viajam ao Brasil.</p>
+    <p>Para moradias em Cascais, na Quinta da Marinha ou no Algarve, colocamos apólices que vão além das seguradoras generalistas, e verificamos por escrito como cada uma fixa o valor de reconstrução, aplica a regra proporcional e indemniza uma perda total. Veja <a href="/seguros/habitacao/">o seguro de habitação para residências de elevado valor</a> e <a href="/private-clients/">Private Clients</a>. Arte, joias e relógios em valor acordado, cobertos também quando viajam ao Brasil.</p>
 
     <h2>Casa vazia parte do ano</h2>
     <p>Muitas famílias passam temporadas no Brasil. As apólices têm uma cláusula de desocupação: a partir de um número de dias seguidos sem ninguém em casa, o furto e os danos por água podem ficar limitados. Declare o uso real desde o início. Veja <a href="/seguros/casa-desocupada/">seguro de casa desocupada</a>.</p>
@@ -250,7 +250,7 @@ export const BR_HUB = {
   recommended: [
     { title: 'O valor de reconstrução', text: 'O capital da casa não é o preço que pagou. Veja <a href="/seguros/habitacao/valor-reconstrucao/">como calcular o valor de reconstrução</a>, com o simulador SCRIM.' },
     { title: 'Alojamento Local', text: 'Arrendar a turistas exige registo e um seguro de responsabilidade civil obrigatório. Veja <a href="/seguros/alojamento-local/">seguro de Alojamento Local</a>.' },
-    { title: 'Moradias de valor elevado', text: 'Cascais, Estoril, Quinta da Marinha e Algarve: vistoria, sem regra proporcional e arte em valor acordado. Veja <a href="/private-clients/">Private Clients</a>.' },
+    { title: 'Moradias de valor elevado', text: 'Cascais, Estoril, Quinta da Marinha e Algarve: custo de reconstrução, regra proporcional e arte em valor acordado, analisados por escrito. Veja <a href="/private-clients/">Private Clients</a>.' },
   ],
 
   mistakes: [

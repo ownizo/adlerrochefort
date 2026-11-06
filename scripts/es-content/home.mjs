@@ -33,8 +33,8 @@ ${cards.map(([h, p]) => card(h, p)).join('\n')}
 const COV = {
   house: [
     ['Inspección y coste de reconstrucción', 'En las viviendas de mayor valor, la aseguradora realiza una inspección sin coste para usted: confirma el coste de reconstrucción, aconseja las sumas de contenido y de objetos de valor y recomienda medidas de prevención.'],
-    ['Sin regla proporcional', 'Aceptadas las sumas recomendadas, la aseguradora renuncia a la regla proporcional: un siniestro parcial se paga íntegramente, aunque el coste de construcción haya subido desde entonces.'],
-    ['Reconstrucción garantizada', 'En caso de pérdida total, la casa se reconstruye aunque el coste supere la suma asegurada del edificio — siempre que se hayan aceptado las sumas recomendadas en la inspección.'],
+    ['Regla proporcional', 'Revisamos por escrito cómo aplica cada condicionado la regla proporcional si una suma resulta insuficiente.'],
+    ['Pérdida total', 'Cómo liquida cada condicionado una pérdida total y qué límites se aplican a honorarios, desescombro y alojamiento alternativo.'],
     ['Alojamiento equivalente', 'Alojamiento alternativo de nivel comparable, también para animales de compañía y caballos, mientras la casa no pueda habitarse — sin el límite de pocos meses habitual en el mercado minorista.'],
     ['Jardines, muros y otras construcciones', 'Árboles, arbustos y césped, muros de cerramiento y de contención, piscinas, anexos y casas de invitados con sumas propias — no reducidos a un importe simbólico.'],
     ['Agua, gas y localización de averías', 'Localización y reparación de fugas de agua, gas o calefacción sin sublímite propio, y el agua o el combustible perdidos con la fuga.'],
@@ -80,7 +80,7 @@ export const HOME_PAGE = {
   cluster: 'home',
   title: 'Seguro de hogar de alto valor en Portugal | Adler & Rochefort',
   description:
-    'Villas y viviendas de alto valor en Portugal: inspección, sin regla proporcional, reconstrucción garantizada, terremoto y arte a valor convenido.',
+    'Villas y viviendas de alto valor en Portugal: coste de reconstrucción, ocupación, terremoto, contenido y arte analizados antes de elegir el condicionado, confirmado por escrito.',
   keywords:
     'seguro hogar alto valor Portugal, seguro casa Portugal, seguro villa Portugal, seguro casa Lisboa, seguro villa Cascais, seguro arte y joyas Portugal, multirriscos habitação, coste de reconstrucción, terremoto Portugal seguro, seguro casa Portugal latinoamericanos',
   eyebrow: 'Portugal · Viviendas de alto valor',
@@ -230,7 +230,7 @@ ${toSpain.home}
     },
     {
       q: '¿Qué diferencia una póliza para una vivienda de alto valor de una póliza de hogar corriente?',
-      a: '<p>Las condiciones. La aseguradora inspecciona la vivienda y fija el coste de reconstrucción, renuncia a la regla proporcional cuando se aceptan las sumas recomendadas y garantiza la reconstrucción tras una pérdida total. El contenido queda cubierto a todo riesgo en todo el mundo, el arte y las joyas a valor convenido sin franquicia, y la responsabilidad civil familiar con límites de varios millones de euros. El contenido exacto depende de la aseguradora y del riesgo, y solo queda confirmado en la póliza emitida.</p>',
+      a: '<p>Las condiciones. Las sumas se fijan a partir del coste de reconstrucción y revisamos cómo aplica cada condicionado la regla proporcional y cómo liquida una pérdida total. Contenido, arte y joyas, y responsabilidad civil familiar se dimensionan según la vivienda y la familia. El contenido exacto depende de la aseguradora y del riesgo, y solo queda confirmado en la póliza emitida.</p>',
     },
     {
       q: '¿Por qué importe debo asegurar el edificio?',

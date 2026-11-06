@@ -110,8 +110,8 @@ export const ES_HOME_PAGE = {
         <p>Når de anbefalede summer er accepteret, giver selskabet afkald på forholdsmæssig nedsættelse: en delskade betales fuldt ud.</p>
       </div>
       <div class="feature-card">
-        <h3>Garanteret genopførelse</h3>
-        <p>Efter en totalskade genopføres huset, også hvis udgiften overstiger bygningssummen — forudsat at de anbefalede summer er accepteret.</p>
+        <h3>Totalskade</h3>
+        <p>Hvordan hver police erstatter en totalskade, og hvilke grænser der gælder — kontrolleret og bekræftet skriftligt.</p>
       </div>
       <div class="feature-card">
         <h3>Tilsvarende genhusning</h3>

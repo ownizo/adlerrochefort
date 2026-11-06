@@ -92,13 +92,13 @@ R = [
 
     # ---- EN: Spain "still being built" ----------------------------------
     ("Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what we can currently arrange than promise a panel that does not exist yet.",
-     "Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the property and the household, and is named in writing with the proposal."),
+     "Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the property and the household, and is named in writing with the proposal."),
     ("Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than name a panel we do not actually have.",
-     "Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal."),
+     "Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal."),
     ("Not yet, honestly — our Spanish insurer relationships are still being built. We ask about your property and situation and come back with a clear written answer on what can currently be arranged, rather than promise a panel we do not yet have.",
-     "Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. We ask about the property and the household first, and name the insurer in writing with the proposal."),
+     "Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. We ask about the property and the household first, and name the insurer in writing with the proposal."),
     ("Not yet, honestly. Our Spanish insurer relationships are still being built, and we would rather tell you clearly what can currently be arranged than promise a panel that does not exist yet.",
-     "Yes, once we know the risk. In Spain we place with insurers licensed there — Hiscox underwrites in both Portugal and Spain — and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal."),
+     "Yes, once we know the risk. In Spain we place with insurers licensed there and with specialist high-net-worth capacity distributed in Spain. The insurer we propose depends on the risk, and is named in writing with the proposal."),
     ("Insurer relationships and product availability vary by market — the insurers above operate in Portugal. Our Spanish insurer relationships are still being built; tell us what you need and we will confirm honestly what can currently be arranged in Spain.",
      "Insurer relationships and product availability vary by market. In Spain we place with insurers licensed there and with specialist high-net-worth capacity; the insurer proposed is always named in writing with the proposal."),
 
@@ -172,9 +172,9 @@ R = [
 
     # ---- DE: Spain "im Aufbau" ------------------------------------------
     ("Nein. Wir sagen ehrlich, dass die spanischen Versichererbeziehungen noch im Aufbau sind. Schildern Sie die Lage — wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.",
-     "Nicht jedes, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist."),
+     "Nicht jedes, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist."),
     ("Nein. Die spanischen Versichererbeziehungen sind noch im Aufbau. Schildern Sie die Lage — wir antworten schriftlich, auch wenn ein Fall derzeit nicht vermittelbar ist.",
-     "Nicht jede, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern — Hiscox zeichnet in Portugal und Spanien — und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist."),
+     "Nicht jede, und das sagen wir vorher. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken. Schildern Sie Lage, Bauweise und Nutzung; wir antworten schriftlich, auch wenn ein Fall nicht platzierbar ist."),
     ("Versichererbeziehungen und Produktverfügbarkeit unterscheiden sich je nach Markt — die oben genannten Versicherer sind in Portugal tätig. Unsere spanischen Beziehungen bauen wir noch auf; sagen Sie uns, was Sie brauchen, und wir sagen ehrlich, was sich derzeit in Spanien vermitteln lässt.",
      "Versichererbeziehungen und Produktverfügbarkeit unterscheiden sich je nach Markt. In Spanien platzieren wir bei dort zugelassenen Versicherern und über spezialisierte Kapazität für hochwertige Privatrisiken; der vorgeschlagene Versicherer steht immer schriftlich im Angebot."),
 

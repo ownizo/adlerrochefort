@@ -84,7 +84,7 @@ const HOME_FORM = 'home-insurance-quote';
 const LANDLORD_FORM = 'landlord-insurance-quote';
 
 const SMALL_TRUST = [
-  '<strong>We compare the market.</strong> Zurich, Allianz, Fidelidade, Generali Tranquilidade, Liberty, Hiscox and others &mdash; not one insurer&rsquo;s panel.',
+  '<strong>We compare the market.</strong> Generalist and specialist insurers &mdash; not one insurer&rsquo;s panel.',
   '<strong>Everything in English.</strong> The quote, the terms, the renewal and the claim. Policies are issued in Portuguese by law; you will know what they say first.',
   '<strong>We read the exclusions to you.</strong> Before you sign, not after a claim is declined.',
   '<strong>A written comparison in 24 hours.</strong> No cost, no obligation, no call centre.',

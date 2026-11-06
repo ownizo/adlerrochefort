@@ -8,8 +8,8 @@ One entry per language that had no dedicated jewellery page for Spain
 /en/art-jewellery-watches-insurance/.
 
 Every factual statement is taken from the English commercial page and the
-insurer summaries already published on the site (Chubb Masterpiece, Hiscox,
-Liberty/Innovarisk). Nothing here adds a condition the site does not already
+insurer summaries formerly published on the site (insurer names removed,
+Nov 2026 housing audit). Nothing here adds a condition the site does not already
 state. Built by scripts/build-jewellery-spain-pages.py.
 """
 
@@ -37,15 +37,15 @@ PAGES = {
              "<li>Sommige voorwaarden bepalen wanneer sieraden in de kluis moeten liggen, bijvoorbeeld wanneer ze niet gedragen worden of wanneer het huis 's nachts leeg staat. Die voorwaarden worden vóór de ingangsdatum schriftelijk afgesproken.</li>"
              "<li>Het verzekerde bedrag wordt bewust verdeeld over de bankkluis, de woning en de wereld, omdat elke plaats een eigen limiet heeft. Een horloge dat u dagelijks draagt en een ring in een bankkluis staan op verschillende regels.</li></ul>"),
             ("tweede-woning", "Een tweede woning aan de Costa del Sol, op de Balearen of aan de Costa Blanca",
-             "<p>Veel eigenaren bewaren een deel van hun sieraden en horloges in een tweede woning in Marbella, Sotogrande, Mallorca, Ibiza of Jávea. Polissen voor vakantiewoningen behandelen kostbaarheden vaak anders: de vakantiewoningpolis van Hiscox dekt sieraden en horloges helemaal niet.</p>"
+             "<p>Veel eigenaren bewaren een deel van hun sieraden en horloges in een tweede woning in Marbella, Sotogrande, Mallorca, Ibiza of Jávea. Polissen voor vakantiewoningen behandelen kostbaarheden vaak anders: sommige dekken sieraden en horloges helemaal niet.</p>"
              "<p>Kostbaarheden in een tweede woning hebben daarom een eigen regeling nodig, bijvoorbeeld een private-client polis waarbij de stukken wereldwijd gedekt zijn, in en buiten de kluis.</p>"),
             ("getaxeerde-waarde", "Getaxeerde waarde en de datum van de taxatie",
              "<p>Een stuk dat tegen getaxeerde waarde is gespecificeerd, heeft een waarde die bij het begin van het contract is vastgelegd. Na een totaalverlies (diefstal zonder terugvinden, vernietiging) wordt die waarde betaald, zonder discussie over afschrijving.</p>"
-             "<p>Laat sieraden en horloges om de twee jaar opnieuw taxeren. Onder de voorwaarden van Chubb geldt: is een stuk dat in de laatste twee jaar is getaxeerd bij schade meer waard dan het verzekerde bedrag, dan wordt de marktwaarde betaald, tot het totaal van de categorie.</p>"),
+             "<p>Laat sieraden en horloges om de twee jaar opnieuw taxeren. Een recente taxatie houdt het verzekerde bedrag in lijn met de marktwaarde; voorziet de polis in enige marge boven het bedrag, dan bevestigen wij dat schriftelijk.</p>"),
             ("consorcio", "Aardbeving en overstroming: het Consorcio",
              "<p>In Spanje worden aardbeving, buitengewone overstroming en atypische storm vergoed door het <em>Consorcio de Compensación de Seguros</em>, op basis van de bedragen in de polis. Een te laag verzekerd bedrag betekent dus ook een te lage uitkering van het Consorcio.</p>"),
             ("portugal-spanje", "Portugal en Spanje op één polis",
-             "<p>Chubb en Hiscox schrijven beide landen, zodat stukken in een woning in Portugal en een andere in Spanje vaak bij dezelfde adviseur en met op elkaar afgestemde voorwaarden kunnen worden verzekerd.</p>"),
+             "<p>Sommige gespecialiseerde verzekeraars schrijven beide landen, zodat stukken in een woning in Portugal en een andere in Spanje vaak bij dezelfde adviseur en met op elkaar afgestemde voorwaarden kunnen worden verzekerd.</p>"),
             ("checklist", "Wat wij nodig hebben voor een schriftelijk advies",
              "<ul><li>Een lijst van de stukken die ertoe doen: merk, model, referentie en serienummer voor horloges; metaal, stenen en certificaten voor sieraden.</li>"
              "<li>Taxaties en facturen met hun datum, en een foto van elk stuk.</li>"
@@ -60,7 +60,7 @@ PAGES = {
             ("Is een horloge dat uit een hotelkamer wordt gestolen gedekt?",
              "Onder een standaardpolis meestal niet: het gaat om hurto buitenshuis. Een all-risks-sectie voor kostbaarheden met wereldwijde dekking betaalt het wel, binnen de limiet in de polis."),
             ("Zijn kostbaarheden in een vakantiewoning in Spanje gedekt?",
-             "Niet altijd. De vakantiewoningpolis van Hiscox dekt bijvoorbeeld helemaal geen sieraden en horloges, dus kostbaarheden in een tweede woning moeten apart worden geregeld."),
+             "Niet altijd. Sommige vakantiewoningpolissen dekken bijvoorbeeld helemaal geen sieraden en horloges, dus kostbaarheden in een tweede woning moeten mogelijk apart worden geregeld."),
             ("Hoe vaak moeten sieraden en horloges opnieuw worden getaxeerd?",
              "Om de twee jaar. Onder de voorwaarden die wij bemiddelen bepaalt de datum van de laatste taxatie of een stijging van de markt gedekt is."),
         ],
@@ -95,15 +95,15 @@ PAGES = {
              "<li>Niektóre warunki określają, kiedy biżuteria musi być w sejfie, np. gdy nie jest noszona lub gdy dom stoi nocą pusty. Takie warunki uzgadnia się pisemnie przed rozpoczęciem ochrony.</li>"
              "<li>Sumę ubezpieczenia dzieli się świadomie między skrytkę bankową, dom i cały świat, bo każde miejsce ma własny limit. Zegarek noszony codziennie i pierścionek w skrytce bankowej to dwie różne pozycje.</li></ul>"),
             ("drugi-dom", "Drugi dom na Costa del Sol, Balearach lub Costa Blanca",
-             "<p>Wielu właścicieli trzyma część biżuterii i zegarków w drugim domu w Marbelli, Sotogrande, na Majorce, Ibizie lub w Jávei. Polisy dla domów wakacyjnych często traktują przedmioty wartościowe inaczej: polisa Hiscox dla domów wakacyjnych w ogóle nie obejmuje biżuterii i zegarków.</p>"
+             "<p>Wielu właścicieli trzyma część biżuterii i zegarków w drugim domu w Marbelli, Sotogrande, na Majorce, Ibizie lub w Jávei. Polisy dla domów wakacyjnych często traktują przedmioty wartościowe inaczej: niektóre w ogóle nie obejmują biżuterii i zegarków.</p>"
              "<p>Przedmioty wartościowe w drugim domu wymagają więc osobnego rozwiązania, np. polisy private client, w której przedmioty są chronione na całym świecie, w sejfie i poza nim.</p>"),
             ("wartosc", "Wartość uzgodniona i data wyceny",
              "<p>Przedmiot wpisany według wartości uzgodnionej ma wartość ustaloną na początku umowy. Po szkodzie całkowitej (kradzież bez odzyskania, zniszczenie) wypłacana jest ta wartość, bez sporu o amortyzację.</p>"
-             "<p>Biżuterię i zegarki warto wyceniać ponownie co dwa lata. Według warunków Chubb: jeśli przedmiot wyceniony w ostatnich dwóch latach jest w chwili szkody wart więcej niż suma ubezpieczenia, wypłacana jest wartość rynkowa, do sumy dla danej kategorii.</p>"),
+             "<p>Biżuterię i zegarki warto wyceniać ponownie co dwa lata. Aktualna wycena utrzymuje sumę ubezpieczenia na poziomie wartości rynkowej; jeśli polisa przewiduje margines ponad sumę, potwierdzamy to na piśmie.</p>"),
             ("consorcio", "Trzęsienie ziemi i powódź: Consorcio",
              "<p>W Hiszpanii trzęsienie ziemi, nadzwyczajną powódź i nietypową burzę pokrywa <em>Consorcio de Compensación de Seguros</em>, na podstawie sum z polisy. Zbyt niska suma oznacza więc także zbyt niską wypłatę z Consorcio.</p>"),
             ("portugalia-hiszpania", "Portugalia i Hiszpania na jednej polisie",
-             "<p>Chubb i Hiscox ubezpieczają w obu krajach, więc przedmioty w domu w Portugalii i w innym w Hiszpanii często można ubezpieczyć u jednego doradcy, na uzgodnionych warunkach.</p>"),
+             "<p>Niektórzy wyspecjalizowani ubezpieczyciele działają w obu krajach, więc przedmioty w domu w Portugalii i w innym w Hiszpanii często można ubezpieczyć u jednego doradcy, na uzgodnionych warunkach.</p>"),
             ("lista", "Czego potrzebujemy do pisemnej opinii",
              "<ul><li>Listy ważnych przedmiotów: marka, model, referencja i numer seryjny zegarków; metal, kamienie i certyfikaty biżuterii.</li>"
              "<li>Wycen i faktur z datami oraz zdjęcia każdego przedmiotu.</li>"
@@ -118,7 +118,7 @@ PAGES = {
             ("Czy zegarek skradziony z pokoju hotelowego jest objęty ochroną?",
              "W standardowej polisie zwykle nie: to hurto poza domem. Sekcja all-risks dla przedmiotów wartościowych z ochroną na całym świecie obejmuje taką szkodę, w granicach limitu z polisy."),
             ("Czy przedmioty wartościowe w domu wakacyjnym w Hiszpanii są chronione?",
-             "Nie zawsze. Polisa Hiscox dla domów wakacyjnych w ogóle nie obejmuje biżuterii i zegarków, więc przedmioty wartościowe w drugim domu trzeba ubezpieczyć osobno."),
+             "Nie zawsze. Niektóre polisy dla domów wakacyjnych w ogóle nie obejmują biżuterii i zegarków, więc przedmioty wartościowe w drugim domu może być trzeba ubezpieczyć osobno."),
             ("Jak często wyceniać biżuterię i zegarki?",
              "Co dwa lata. W warunkach, które oferujemy, data ostatniej wyceny decyduje o tym, czy wzrost cen rynkowych jest objęty ochroną."),
         ],
@@ -152,15 +152,15 @@ PAGES = {
              "<li>Vissa villkor anger när smycken ska ligga i kassaskåpet, till exempel när de inte bärs eller när huset står tomt på natten. Sådana villkor avtalas skriftligt innan försäkringen börjar gälla.</li>"
              "<li>Försäkringsbeloppet delas medvetet upp mellan bankfack, bostad och hela världen, eftersom varje plats har sin egen gräns. En klocka som bärs dagligen och en ring i ett bankfack står på olika rader.</li></ul>"),
             ("fritidshus", "Fritidshus på Costa del Sol, Balearerna eller Costa Blanca",
-             "<p>Många ägare förvarar en del av sina smycken och klockor i ett fritidshus i Marbella, Sotogrande, på Mallorca, Ibiza eller i Jávea. Fritidshusförsäkringar behandlar ofta värdeföremål annorlunda: Hiscox fritidshusförsäkring täcker inte smycken och klockor alls.</p>"
+             "<p>Många ägare förvarar en del av sina smycken och klockor i ett fritidshus i Marbella, Sotogrande, på Mallorca, Ibiza eller i Jávea. Fritidshusförsäkringar behandlar ofta värdeföremål annorlunda: vissa täcker inte smycken och klockor alls.</p>"
              "<p>Värdeföremål i ett fritidshus behöver därför en egen lösning, till exempel en private client-försäkring där föremålen är försäkrade i hela världen, i och utanför kassaskåpet.</p>"),
             ("avtalat-varde", "Avtalat värde och värderingens datum",
              "<p>Ett föremål som förtecknats till avtalat värde har ett värde som fastställs när avtalet ingås. Efter en totalskada (stöld utan återfinnande, förstörelse) betalas det värdet, utan diskussion om värdeminskning.</p>"
-             "<p>Låt värdera smycken och klockor vartannat år. Enligt Chubbs villkor gäller: om ett föremål som värderats under de senaste två åren är värt mer än försäkringsbeloppet vid skadan betalas marknadsvärdet, upp till kategorins totalbelopp.</p>"),
+             "<p>Låt värdera smycken och klockor vartannat år. En aktuell värdering håller försäkringsbeloppet i linje med marknadsvärdet; ger försäkringen en marginal utöver beloppet bekräftar vi det skriftligt.</p>"),
             ("consorcio", "Jordbävning och översvämning: Consorcio",
              "<p>I Spanien ersätts jordbävning, extraordinär översvämning och atypisk storm av <em>Consorcio de Compensación de Seguros</em>, utifrån beloppen i försäkringen. Ett för lågt försäkringsbelopp innebär alltså också en för låg ersättning från Consorcio.</p>"),
             ("portugal-spanien", "Portugal och Spanien i en försäkring",
-             "<p>Chubb och Hiscox försäkrar i båda länderna, så föremål i en bostad i Portugal och en annan i Spanien kan ofta försäkras hos samma rådgivare och med samordnade villkor.</p>"),
+             "<p>Vissa specialiserade försäkringsbolag försäkrar i båda länderna, så föremål i en bostad i Portugal och en annan i Spanien kan ofta försäkras hos samma rådgivare och med samordnade villkor.</p>"),
             ("checklista", "Vad vi behöver för ett skriftligt utlåtande",
              "<ul><li>En lista över de föremål som betyder något: märke, modell, referens och serienummer för klockor; metall, stenar och certifikat för smycken.</li>"
              "<li>Värderingar och kvitton med datum, och ett foto av varje föremål.</li>"
@@ -175,7 +175,7 @@ PAGES = {
             ("Är en klocka som stjäls från ett hotellrum försäkrad?",
              "Med en vanlig försäkring oftast inte: det är hurto utanför bostaden. Ett allriskmoment för värdeföremål med skydd i hela världen ersätter det, inom gränsen i försäkringen."),
             ("Är värdeföremål i ett fritidshus i Spanien försäkrade?",
-             "Inte alltid. Hiscox fritidshusförsäkring täcker till exempel inte smycken och klockor alls, så värdeföremål i ett fritidshus måste ordnas separat."),
+             "Inte alltid. Vissa fritidshusförsäkringar täcker till exempel inte smycken och klockor alls, så värdeföremål i ett fritidshus kan behöva ordnas separat."),
             ("Hur ofta ska smycken och klockor värderas om?",
              "Vartannat år. Enligt de villkor vi förmedlar avgör datumet för den senaste värderingen om en stigande marknad är täckt."),
         ],
@@ -209,15 +209,15 @@ PAGES = {
              "<li>Nogle vilkår fastsætter, hvornår smykker skal ligge i pengeskabet, for eksempel når de ikke bæres, eller når huset står tomt om natten. Sådanne vilkår aftales skriftligt, før forsikringen træder i kraft.</li>"
              "<li>Forsikringssummen fordeles bevidst mellem bankboks, bolig og hele verden, fordi hvert sted har sin egen grænse. Et ur, der bæres dagligt, og en ring i en bankboks står på forskellige linjer.</li></ul>"),
             ("feriebolig", "En feriebolig på Costa del Sol, De Baleariske Øer eller Costa Blanca",
-             "<p>Mange ejere opbevarer en del af deres smykker og ure i en feriebolig i Marbella, Sotogrande, på Mallorca, Ibiza eller i Jávea. Forsikringer for ferieboliger behandler ofte værdigenstande anderledes: Hiscox' ferieboligforsikring dækker slet ikke smykker og ure.</p>"
+             "<p>Mange ejere opbevarer en del af deres smykker og ure i en feriebolig i Marbella, Sotogrande, på Mallorca, Ibiza eller i Jávea. Forsikringer for ferieboliger behandler ofte værdigenstande anderledes: nogle dækker slet ikke smykker og ure.</p>"
              "<p>Værdigenstande i en feriebolig har derfor brug for en særskilt løsning, for eksempel en private client-forsikring, hvor genstandene er dækket i hele verden, i og uden for pengeskabet.</p>"),
             ("aftalt-vaerdi", "Aftalt værdi og vurderingens dato",
              "<p>En genstand, der er specificeret til aftalt værdi, har en værdi, som fastsættes ved aftalens start. Efter et totaltab (tyveri uden genfinding, ødelæggelse) betales den værdi uden diskussion om værdiforringelse.</p>"
-             "<p>Få smykker og ure vurderet igen hvert andet år. Efter Chubbs vilkår gælder: Er en genstand, der er vurderet inden for de seneste to år, mere værd end forsikringssummen på skadestidspunktet, betales markedsværdien op til kategoriens samlede sum.</p>"),
+             "<p>Få smykker og ure vurderet igen hvert andet år. En aktuel vurdering holder forsikringssummen på linje med markedsværdien; giver policen en margen ud over summen, bekræfter vi det skriftligt.</p>"),
             ("consorcio", "Jordskælv og oversvømmelse: Consorcio",
              "<p>I Spanien dækkes jordskælv, ekstraordinær oversvømmelse og atypisk storm af <em>Consorcio de Compensación de Seguros</em> på grundlag af summerne i forsikringen. En for lav forsikringssum betyder altså også en for lav erstatning fra Consorcio.</p>"),
             ("portugal-spanien", "Portugal og Spanien på én forsikring",
-             "<p>Chubb og Hiscox tegner forsikringer i begge lande, så genstande i en bolig i Portugal og en anden i Spanien ofte kan forsikres hos den samme rådgiver og med afstemte vilkår.</p>"),
+             "<p>Nogle specialiserede selskaber tegner forsikringer i begge lande, så genstande i en bolig i Portugal og en anden i Spanien ofte kan forsikres hos den samme rådgiver og med afstemte vilkår.</p>"),
             ("tjekliste", "Det har vi brug for til en skriftlig vurdering",
              "<ul><li>En liste over de genstande, der betyder noget: mærke, model, reference og serienummer for ure; metal, sten og certifikater for smykker.</li>"
              "<li>Vurderinger og fakturaer med dato samt et foto af hver genstand.</li>"
@@ -232,7 +232,7 @@ PAGES = {
             ("Er et ur, der stjæles fra et hotelværelse, dækket?",
              "Med en almindelig forsikring som regel ikke: det er hurto uden for boligen. En all risks-sektion for værdigenstande med dækning i hele verden betaler det inden for grænsen i forsikringen."),
             ("Er værdigenstande i en feriebolig i Spanien dækket?",
-             "Ikke altid. Hiscox' ferieboligforsikring dækker for eksempel slet ikke smykker og ure, så værdigenstande i en feriebolig skal ordnes særskilt."),
+             "Ikke altid. Nogle ferieboligforsikringer dækker for eksempel slet ikke smykker og ure, så værdigenstande i en feriebolig kan skulle ordnes særskilt."),
             ("Hvor ofte skal smykker og ure vurderes igen?",
              "Hvert andet år. Efter de vilkår, vi formidler, afgør datoen for den seneste vurdering, om en stigning i markedet er dækket."),
         ],
@@ -266,15 +266,15 @@ PAGES = {
              "<li>Alcune condizioni stabiliscono quando i gioielli devono stare in cassaforte, per esempio quando non sono indossati o quando la casa resta vuota di notte. Queste condizioni si concordano per iscritto prima dell'inizio della polizza.</li>"
              "<li>La somma assicurata va ripartita deliberatamente tra cassetta di sicurezza in banca, casa e mondo intero, perché ogni luogo ha il proprio limite. Un orologio portato ogni giorno e un anello in una cassetta in banca stanno su righe diverse.</li></ul>"),
             ("seconda-casa", "Una seconda casa sulla Costa del Sol, alle Baleari o sulla Costa Blanca",
-             "<p>Molti proprietari tengono parte dei gioielli e degli orologi in una seconda casa a Marbella, Sotogrande, Maiorca, Ibiza o Jávea. Le polizze per case vacanza trattano spesso gli oggetti di valore in modo diverso: la polizza Hiscox per case vacanza non copre affatto gioielli e orologi.</p>"
+             "<p>Molti proprietari tengono parte dei gioielli e degli orologi in una seconda casa a Marbella, Sotogrande, Maiorca, Ibiza o Jávea. Le polizze per case vacanza trattano spesso gli oggetti di valore in modo diverso: alcune non coprono affatto gioielli e orologi.</p>"
              "<p>Gli oggetti di valore in una seconda casa richiedono quindi una soluzione propria, per esempio una polizza private client in cui i pezzi sono coperti in tutto il mondo, dentro e fuori la cassaforte.</p>"),
             ("valore-concordato", "Valore concordato e data della stima",
              "<p>Un pezzo elencato a valore concordato ha un valore fissato all'inizio del contratto. Dopo una perdita totale (furto senza ritrovamento, distruzione) si paga quel valore, senza discussioni sul degrado.</p>"
-             "<p>Gioielli e orologi vanno fatti stimare di nuovo ogni due anni. Secondo le condizioni di Chubb, se un pezzo stimato negli ultimi due anni vale al momento del sinistro più della somma assicurata, si paga il valore di mercato, fino al totale della categoria.</p>"),
+             "<p>Gioielli e orologi vanno fatti stimare di nuovo ogni due anni. Una stima aggiornata mantiene la somma assicurata allineata al valore di mercato; se la polizza prevede un margine oltre la somma, lo confermiamo per iscritto.</p>"),
             ("consorcio", "Terremoto e alluvione: il Consorcio",
              "<p>In Spagna terremoto, alluvione straordinaria e tempesta atipica sono indennizzati dal <em>Consorcio de Compensación de Seguros</em>, in base alle somme indicate in polizza. Una somma assicurata troppo bassa significa quindi anche un indennizzo troppo basso dal Consorcio.</p>"),
             ("portogallo-spagna", "Portogallo e Spagna in un'unica polizza",
-             "<p>Chubb e Hiscox assicurano in entrambi i paesi, quindi i pezzi custoditi in una casa in Portogallo e in un'altra in Spagna possono spesso essere assicurati con lo stesso consulente e con condizioni allineate.</p>"),
+             "<p>Alcuni assicuratori specializzati operano in entrambi i paesi, quindi i pezzi custoditi in una casa in Portogallo e in un'altra in Spagna possono spesso essere assicurati con lo stesso consulente e con condizioni allineate.</p>"),
             ("checklist", "Cosa ci serve per un parere scritto",
              "<ul><li>Un elenco dei pezzi che contano: marca, modello, referenza e numero di serie per gli orologi; metallo, pietre e certificati per i gioielli.</li>"
              "<li>Stime e fatture con le relative date, e una fotografia di ogni pezzo.</li>"
@@ -289,7 +289,7 @@ PAGES = {
             ("Un orologio rubato da una camera d'albergo è coperto?",
              "Con una polizza standard di solito no: si tratta di hurto fuori casa. Una sezione all risks per gli oggetti di valore con copertura mondiale lo paga, entro il limite indicato in polizza."),
             ("Gli oggetti di valore in una casa vacanza in Spagna sono coperti?",
-             "Non sempre. La polizza Hiscox per case vacanza, per esempio, non copre affatto gioielli e orologi, quindi gli oggetti di valore in una seconda casa vanno assicurati a parte."),
+             "Non sempre. Alcune polizze per case vacanza, per esempio, non coprono affatto gioielli e orologi, quindi gli oggetti di valore in una seconda casa possono dover essere assicurati a parte."),
             ("Ogni quanto vanno stimati gioielli e orologi?",
              "Ogni due anni. Con le condizioni che intermediamo, la data dell'ultima stima decide se un aumento del mercato è coperto."),
         ],
@@ -323,15 +323,15 @@ PAGES = {
              "<li>部分条款会规定珠宝何时必须放入保险箱，例如未佩戴时，或夜间房屋无人时。这些条件须在保单生效前以书面形式约定。</li>"
              "<li>保额应有意识地在银行保险柜、住宅和全球范围之间分配，因为每个地点都有各自的限额。每天佩戴的腕表和存放在银行保险柜中的戒指，属于不同的承保项目。</li></ul>"),
             ("second-home", "太阳海岸、巴利阿里群岛或白色海岸的度假屋",
-             "<p>许多业主会把部分珠宝和腕表存放在马贝拉、索托格兰德、马略卡、伊维萨或哈韦阿的度假屋中。度假屋保险对贵重物品的处理往往不同：Hiscox 的度假屋保险完全不承保珠宝和腕表。</p>"
+             "<p>许多业主会把部分珠宝和腕表存放在马贝拉、索托格兰德、马略卡、伊维萨或哈韦阿的度假屋中。度假屋保险对贵重物品的处理往往不同：部分度假屋保险完全不承保珠宝和腕表。</p>"
              "<p>因此，度假屋中的贵重物品需要单独安排，例如采用私人客户保单，使物品在全球范围内、保险箱内外均获承保。</p>"),
             ("agreed-value", "约定价值与估值日期",
              "<p>按约定价值列明的物品，其价值在合同开始时即已确定。发生全损（被盗未寻回、损毁）后，按该价值赔付，不会就折旧产生争议。</p>"
-             "<p>珠宝和腕表应每两年重新估值一次。根据 Chubb 的条款：如果在过去两年内估值的物品在出险时价值高于保额，则按市场价值赔付，以该类别总保额为限。</p>"),
+             "<p>珠宝和腕表应每两年重新估值一次。及时更新估值可使保额与市场价值保持一致；如保单允许超出保额的任何赔付空间，我们会以书面形式确认。</p>"),
             ("consorcio", "地震与洪水：Consorcio",
              "<p>在西班牙，地震、特大洪水和异常风暴由 <em>Consorcio de Compensación de Seguros</em> 根据保单中的保额进行赔付。因此，保额不足也意味着从 Consorcio 获得的赔款不足。</p>"),
             ("portugal-spain", "葡萄牙与西班牙合并于一张保单",
-             "<p>Chubb 和 Hiscox 在两国均可承保，因此存放在葡萄牙住宅和西班牙另一处住宅中的物品，通常可以通过同一位顾问、按协调一致的条件投保。</p>"),
+             "<p>部分专业保险公司在两国均可承保，因此存放在葡萄牙住宅和西班牙另一处住宅中的物品，通常可以通过同一位顾问、按协调一致的条件投保。</p>"),
             ("checklist", "出具书面意见所需资料",
              "<ul><li>重要物品清单：腕表的品牌、型号、编号和序列号；珠宝的金属、宝石和证书。</li>"
              "<li>注明日期的估值报告和发票，以及每件物品的照片。</li>"
@@ -346,7 +346,7 @@ PAGES = {
             ("在酒店房间被盗的腕表是否受保？",
              "在标准保单下通常不受保：这属于住宅以外的 hurto。带有全球保障的贵重物品一切险条款会在保单限额内赔付。"),
             ("西班牙度假屋中的贵重物品是否受保？",
-             "不一定。例如 Hiscox 的度假屋保险完全不承保珠宝和腕表，因此度假屋中的贵重物品需要另行安排。"),
+             "不一定。例如部分度假屋保险完全不承保珠宝和腕表，因此度假屋中的贵重物品可能需要另行安排。"),
             ("珠宝和腕表多久需要重新估值？",
              "每两年一次。在我们提供的条款下，最近一次估值的日期决定市场上涨是否获得保障。"),
         ],
@@ -380,15 +380,15 @@ PAGES = {
              "<li>חלק מהתנאים קובעים מתי התכשיטים חייבים להיות בכספת, למשל כשאינם נענדים או כשהבית ריק בלילה. תנאים אלה מוסכמים בכתב לפני תחילת הפוליסה.</li>"
              "<li>סכום הביטוח מחולק במכוון בין כספת בבנק, הבית וכל העולם, משום שלכל מקום תקרה משלו. שעון שנענד מדי יום וטבעת בכספת בנק נרשמים בשורות שונות.</li></ul>"),
             ("second-home", "בית נופש בקוסטה דל סול, באיים הבלאריים או בקוסטה בלנקה",
-             "<p>בעלי נכסים רבים מחזיקים חלק מהתכשיטים והשעונים בבית נופש במרבלה, בסוטוגרנדה, במיורקה, באיביסה או בחאבאה. פוליסות לבתי נופש מתייחסות לעיתים קרובות לפריטי ערך באופן שונה: פוליסת בית הנופש של Hiscox אינה מכסה תכשיטים ושעונים כלל.</p>"
+             "<p>בעלי נכסים רבים מחזיקים חלק מהתכשיטים והשעונים בבית נופש במרבלה, בסוטוגרנדה, במיורקה, באיביסה או בחאבאה. פוליסות לבתי נופש מתייחסות לעיתים קרובות לפריטי ערך באופן שונה: חלקן אינן מכסות תכשיטים ושעונים כלל.</p>"
              "<p>לכן פריטי ערך בבית נופש זקוקים להסדר נפרד, למשל פוליסת private client שבה הפריטים מכוסים בכל העולם, בתוך הכספת ומחוצה לה.</p>"),
             ("agreed-value", "ערך מוסכם ותאריך ההערכה",
              "<p>לפריט המפורט לפי ערך מוסכם נקבע ערך כבר בתחילת החוזה. לאחר אובדן מלא (גניבה ללא השבה, השמדה) משולם ערך זה, ללא ויכוח על פחת.</p>"
-             "<p>מומלץ להעריך מחדש תכשיטים ושעונים כל שנתיים. לפי תנאי Chubb: אם פריט שהוערך בשנתיים האחרונות שווה בעת הנזק יותר מסכום הביטוח, משולם ערך השוק, עד לסכום הכולל של הקטגוריה.</p>"),
+             "<p>מומלץ להעריך מחדש תכשיטים ושעונים כל שנתיים. הערכה עדכנית שומרת על התאמה בין סכום הביטוח לערך השוק; אם הפוליסה מאפשרת מרווח כלשהו מעבר לסכום, אנחנו מאשרים זאת בכתב.</p>"),
             ("consorcio", "רעידת אדמה והצפה: ה-Consorcio",
              "<p>בספרד, רעידת אדמה, הצפה חריגה וסערה לא שגרתית מפוצות על ידי <em>Consorcio de Compensación de Seguros</em>, על בסיס הסכומים שבפוליסה. סכום ביטוח נמוך מדי פירושו גם פיצוי נמוך מדי מה-Consorcio.</p>"),
             ("portugal-spain", "פורטוגל וספרד בפוליסה אחת",
-             "<p>Chubb ו-Hiscox מבטחות בשתי המדינות, כך שפריטים בבית בפורטוגל ובבית אחר בספרד יכולים לעיתים קרובות להיות מבוטחים אצל אותו יועץ ובתנאים מתואמים.</p>"),
+             "<p>חלק מהמבטחים המתמחים מבטחים בשתי המדינות, כך שפריטים בבית בפורטוגל ובבית אחר בספרד יכולים לעיתים קרובות להיות מבוטחים אצל אותו יועץ ובתנאים מתואמים.</p>"),
             ("checklist", "מה אנו צריכים לחוות דעת בכתב",
              "<ul><li>רשימת הפריטים החשובים: מותג, דגם, מק\"ט ומספר סידורי לשעונים; מתכת, אבנים ותעודות לתכשיטים.</li>"
              "<li>הערכות שווי וחשבוניות עם תאריכים, ותמונה של כל פריט.</li>"
@@ -403,7 +403,7 @@ PAGES = {
             ("האם שעון שנגנב מחדר במלון מכוסה?",
              "בפוליסה רגילה בדרך כלל לא: זהו hurto מחוץ לבית. פרק כל הסיכונים לפריטי ערך עם כיסוי עולמי משלם עליו, בגבולות התקרה שבפוליסה."),
             ("האם פריטי ערך בבית נופש בספרד מכוסים?",
-             "לא תמיד. פוליסת בית הנופש של Hiscox, למשל, אינה מכסה תכשיטים ושעונים כלל, ולכן יש להסדיר בנפרד פריטי ערך בבית נופש."),
+             "לא תמיד. חלק מפוליסות בית הנופש, למשל, אינן מכסות תכשיטים ושעונים כלל, ולכן ייתכן שיש להסדיר בנפרד פריטי ערך בבית נופש."),
             ("כל כמה זמן יש להעריך מחדש תכשיטים ושעונים?",
              "כל שנתיים. בתנאים שאנו משווקים, תאריך ההערכה האחרונה קובע אם עליית מחירים בשוק מכוסה."),
         ],

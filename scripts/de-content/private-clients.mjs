@@ -2,8 +2,8 @@ import { BREADCRUMB_ROOT } from './shared.mjs';
 
 /**
  * Private Clients — premium identity, German headings, per Part 6. The
- * underwriting-route facts (Hiscox all-risks/agreed-value household cover,
- * Liberty Mutual through Innovarisk for non-standard property, specialty
+ * underwriting-route facts (specialist all-risks/agreed-value household cover,
+ * non-standard property capacity through Innovarisk, specialty
  * capacity through Innovarisk for bespoke risk) are translated from
  * public/en/private-clients/index.html's own "Who underwrites this cover"
  * section — not invented. Classic cars and yacht/marine cover are included
@@ -99,10 +99,10 @@ export const PRIVATE_CLIENTS_PAGE = {
   <div class="container narrow article-body">
     <h2 id="uw">Wer diese Risiken zeichnet</h2>
     <p>Wir sind Versicherungsmakler und an keinen dieser Zeichner gebunden — wo eine ordentlich aufgebaute Standardpolice denselben Zweck günstiger erfüllt, sagen wir das.</p>
-    <h3>Hiscox</h3>
-    <p>Hausratdeckung auf All-Risk-Basis, mit Kunst, Schmuck, Uhren und Sammlungen zu vereinbarten Werten, Deckung für Besitz außerhalb des Wohnsitzes und weltweit, sowie Familienhaftpflicht.</p>
-    <h3>Liberty Mutual, über Innovarisk</h3>
-    <p>Immobilien, die der Standardmarkt schlecht abdeckt: unkonventionelle Bauweise, gemischte Nutzung, kurzfristige Vermietung und Alojamento Local, sowie Objekte mit vorheriger Schadenhistorie. Innovarisk ist eine Underwriting-Agentur (MGA) und selbst kein Versicherer — sie vermittelt den Zugang zur Zeichnungskapazität von Liberty Mutual für Risiken, die ein Standardprodukt nicht abdeckt.</p>
+    <h3>Spezialisierte Privatkundenversicherer</h3>
+    <p>Hausratdeckung auf All-Risk-Basis, mit Kunst, Schmuck, Uhren und Sammlungen zu vereinbarten Werten, und Familienhaftpflicht — zu den Bedingungen, die das jeweilige Bedingungswerk vorsieht.</p>
+    <h3>Nicht-Standard-Immobilien, über Innovarisk</h3>
+    <p>Immobilien, die der Standardmarkt schlecht abdeckt: unkonventionelle Bauweise, gemischte Nutzung, kurzfristige Vermietung und Alojamento Local, sowie Objekte mit vorheriger Schadenhistorie. Innovarisk ist eine Underwriting-Agentur (MGA) und selbst kein Versicherer — sie vermittelt den Zugang zu Spezialkapazität für Risiken, die ein Standardprodukt nicht abdeckt.</p>
     <h3>Spezialkapazität, über Innovarisk</h3>
     <p>Existiert kein Produkt von der Stange, geht das Risiko an eine spezialisierte Underwriting-Agentur und wird individuell gezeichnet statt tabellarisch bepreist.</p>
   </div>
@@ -126,7 +126,7 @@ export const PRIVATE_CLIENTS_PAGE = {
     },
     {
       q: 'Was ist Innovarisk?',
-      a: '<p>Eine Underwriting-Agentur (MGA), kein Versicherer. Sie vermittelt Zugang zur Zeichnungskapazität von Liberty Mutual und zu weiterer Spezialkapazität für Risiken, die ein Standardprodukt nicht abdeckt.</p>',
+      a: '<p>Eine Underwriting-Agentur (MGA), kein Versicherer. Sie vermittelt Zugang zu Spezialkapazität für Risiken, die ein Standardprodukt nicht abdeckt.</p>',
     },
     {
       q: 'Ist mein Oldtimer eigenständig versicherbar?',

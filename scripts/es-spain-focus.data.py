@@ -109,28 +109,28 @@ PAGES.append({
 PAGES.append({
     "slug": "seguro-joyas-relojes-espana",
     "title": "Seguro de joyas y relojes en España, sin depender del seguro de hogar",
-    "description": "Seguro todo riesgo de joyas y relojes en España con Hiscox, contratado aparte de la póliza de hogar. Para residentes en España. Propuesta por escrito y en español.",
-    "keywords": "seguro joyas España, seguro relojes de lujo, seguro reloj Rolex, seguro todo riesgo joyas, asegurar joyas sin seguro de hogar, seguro joyas y relojes Hiscox, seguro anillo de compromiso, seguro objetos de valor España",
+    "description": "Seguro de joyas y relojes en España contratado aparte de la póliza de hogar, con aseguradoras especializadas. Para residentes en España. Propuesta por escrito y en español.",
+    "keywords": "seguro joyas España, seguro relojes de lujo, seguro reloj Rolex, seguro todo riesgo joyas, asegurar joyas sin seguro de hogar , seguro anillo de compromiso, seguro objetos de valor España",
     "crumb": "Joyas y relojes",
     "eyebrow": "España · Joyas y relojes",
     "h1": "Seguro de joyas y relojes en España, independiente de su seguro de hogar",
-    "subtitle": "Su póliza de hogar paga unos pocos miles de euros por pieza. En España podemos asegurar las joyas y los relojes que importan en una póliza propia de Hiscox, sin tocar el seguro de su casa.",
+    "subtitle": "Su póliza de hogar paga unos pocos miles de euros por pieza. En España podemos asegurar las joyas y los relojes que importan en una póliza propia, sin tocar el seguro de su casa.",
     "pullquote": "Un reloj de 40.000 € en una póliza con un límite de 3.000 € por objeto es un reloj de 37.000 € sin asegurar.",
     "sections": [
         ("limite", "Por qué su seguro de hogar no basta",
          "<p>Una póliza de hogar española fija una suma para el contenido y después limita lo que paga por las joyas y los objetos de valor. El límite por objeto suele estar entre 1.500 € y 5.000 €, y a menudo hay además un máximo para todos los objetos de valor juntos, del 20 % al 25 % de la suma del contenido. Los dos límites se aplican a la vez y manda el más bajo.</p>"
          "<p>Por encima de ese límite, la pieza sencillamente no está asegurada, por alta que sea la suma del contenido. Y la póliza estándar distingue entre <em>robo</em>, con fuerza o violencia, y <em>hurto</em>, sin ellas — el reloj que desaparece del bolso o de la habitación de un hotel. El primero se paga; el segundo, sobre todo fuera de casa, se limita o se excluye.</p>"),
         ("poliza-propia", "Una póliza propia para lo que importa",
-         "<p>En España colocamos el <strong>seguro de joyas y relojes de Hiscox</strong>: una póliza todo riesgo dedicada sólo a estas piezas. Además del robo, contempla la pérdida y el daño accidental, en los términos de sus condiciones.</p>"
+         "<p>En España existen <strong>pólizas de joyas y relojes</strong> dedicadas sólo a estas piezas, contratadas aparte del seguro de hogar. Además del robo, contempla la pérdida y el daño accidental, en los términos de sus condiciones.</p>"
          "<ul>"
-         "<li><strong>Es independiente.</strong> No depende de que tenga el seguro de hogar con Hiscox. Puede mantener su póliza de casa donde está.</li>"
+         "<li><strong>Es independiente.</strong> No depende de con qué aseguradora tenga el seguro de hogar. Puede mantener su póliza de casa donde está.</li>"
          "<li><strong>Cada pieza importante, con nombre y valor.</strong> El reloj, el anillo de compromiso, el collar heredado: relacionados uno a uno, con su descripción.</li>"
          "<li><strong>Para residentes en España.</strong> Está pensada para clientes con residencia habitual en España.</li>"
          "</ul>"
          "<div class=\"callout\"><span class=\"callout-label\">Una diferencia con Portugal</span>"
          "En Portugal, las joyas sólo se pueden asegurar junto con un seguro de hogar. En España, no: la póliza de joyas y relojes se contrata por sí sola.</div>"),
         ("vacaciones", "La casa de vacaciones: el caso que más se olvida",
-         "<p>Muchas familias guardan parte de sus joyas y relojes en una segunda vivienda en Marbella, Sotogrande, Mallorca, Ibiza o Jávea. Las pólizas para casas de vacaciones tratan los objetos de valor de otra manera: la póliza Holiday Home de Hiscox, por ejemplo, no cubre joyas ni relojes.</p>"
+         "<p>Muchas familias guardan parte de sus joyas y relojes en una segunda vivienda en Marbella, Sotogrande, Mallorca, Ibiza o Jávea. Las pólizas para casas de vacaciones tratan los objetos de valor de otra manera: algunas, por ejemplo, no cubren joyas ni relojes.</p>"
          "<p>Si reside en España, la póliza de joyas y relojes resuelve ese hueco. Si no reside en España, la solución pasa por una póliza <em>private client</em> que incluya las piezas; se la planteamos por escrito. Véase también <a href=\"/es/seguro-casa-vacaciones-espana/\">seguro para su casa de vacaciones en España</a>.</p>"),
         ("seguridad", "Caja fuerte, alarma y dónde están las piezas",
          "<p>A partir de ciertos valores, las aseguradoras ponen condiciones de seguridad: una caja fuerte certificada según la norma EN 1143-1, del grado adecuado al valor que guarda y anclada a la estructura, y una alarma conectada a central receptora.</p>"
@@ -149,8 +149,8 @@ PAGES.append({
     ],
     "faq_title": "Seguro de joyas y relojes en España — preguntas",
     "faq": [
-        ("¿Tengo que tener el seguro de hogar con Hiscox?",
-         "No. La póliza de joyas y relojes de Hiscox en España es independiente: puede mantener su seguro de hogar en la aseguradora que tenga."),
+        ("¿Tengo que cambiar mi seguro de hogar?",
+         "No. Una póliza propia de joyas y relojes es independiente: puede mantener su seguro de hogar en la aseguradora que tenga."),
         ("¿Puedo contratarla si no vivo en España?",
          "Está pensada para clientes con residencia habitual en España. Si no reside en España, buscamos la solución en una póliza private client que incluya las joyas y los relojes."),
         ("¿Están mis joyas cubiertas por mi seguro de hogar?",
@@ -180,13 +180,13 @@ PAGES.append({
 # --------------------------------------------------------- HOGAR ALTO VALOR
 PAGES.append({
     "slug": "seguro-hogar-alto-valor-espana",
-    "title": "Seguro de hogar de alto valor en España, con Hiscox y Chubb",
-    "description": "Seguro para viviendas de alto valor en España — villas, áticos y casas de campo — con Hiscox y Chubb: suma de reconstrucción, contenido, arte y joyas, vivienda vacía y Consorcio.",
-    "keywords": "seguro hogar alto valor España, seguro villa Marbella, seguro vivienda de lujo, seguro casa de lujo España, seguro hogar Hiscox, seguro hogar Chubb Masterpiece, seguro hogar patrimonio, seguro chalet alto valor",
+    "title": "Seguro de hogar de alto valor en España, con aseguradoras especializadas",
+    "description": "Seguro para viviendas de alto valor en España — villas, áticos y casas de campo — con aseguradoras especializadas: suma de reconstrucción, contenido, arte y joyas, vivienda vacía y Consorcio.",
+    "keywords": "seguro hogar alto valor España, seguro villa Marbella, seguro vivienda de lujo, seguro casa de lujo España, seguro hogar patrimonio, seguro chalet alto valor",
     "crumb": "Hogar de alto valor",
     "eyebrow": "España · Hogar de alto valor",
     "h1": "Seguro de hogar de alto valor en España",
-    "subtitle": "Una villa en Marbella o en Sotogrande, un piso señorial en el barrio de Salamanca, una casa en Mallorca o en la Costa Blanca. Por encima de cierto valor, la póliza de hogar del banco o del comparador deja huecos que sólo aparecen en el siniestro. Colocamos estas viviendas con Hiscox y Chubb, aseguradoras especializadas en clientes privados.",
+    "subtitle": "Una villa en Marbella o en Sotogrande, un piso señorial en el barrio de Salamanca, una casa en Mallorca o en la Costa Blanca. Por encima de cierto valor, la póliza de hogar del banco o del comparador deja huecos que sólo aparecen en el siniestro. Colocamos estas viviendas con aseguradoras especializadas en clientes privados, elegidas por el condicionado que exige cada casa.",
     "pullquote": "En una vivienda de alto valor, el precio de la póliza es lo último que se mira. Lo primero es qué pagará el día del siniestro.",
     "sections": [
         ("huecos", "Cuándo una póliza estándar se queda corta",
@@ -197,12 +197,8 @@ PAGES.append({
          "<li><strong>La responsabilidad civil.</strong> La que viene incluida en la póliza de hogar tiene límites modestos para una familia con patrimonio.</li>"
          "<li><strong>El infraseguro.</strong> Si la suma asegurada es inferior al valor real, la aseguradora puede aplicar la regla proporcional y pagar sólo una parte de cada siniestro, también de los pequeños.</li>"
          "</ul>"),
-        ("aseguradoras", "Hiscox y Chubb en España",
-         "<p>Para viviendas de alto valor en España trabajamos con <strong>Hiscox</strong> y con <strong>Chubb</strong>. Elegimos una u otra por las coberturas, las sumas y la forma en que gestionan los siniestros — no por el precio más bajo.</p>"
-         "<ul>"
-         "<li><strong>Hiscox</strong> escribe en España pólizas para viviendas de valor elevado y, además, una gama pensada para el cliente privado: <a href=\"/es/seguro-casa-vacaciones-espana/\">Holiday Home</a> para casas de vacaciones, <a href=\"/es/seguro-joyas-relojes-espana/\">joyas y relojes</a> en póliza independiente, <a href=\"/es/seguro-colecciones-espana/\">colecciones</a> y <a href=\"/es/seguro-vehiculos-clasicos-espana/\">vehículos clásicos</a>.</li>"
-         "<li><strong>Chubb</strong> ofrece su programa <em>private client</em> para viviendas de valor muy elevado, con el contenido, el arte y las joyas dentro del mismo programa.</li>"
-         "</ul>"
+        ("aseguradoras", "Cómo elegimos la aseguradora",
+         "<p>Para viviendas de alto valor en España trabajamos con aseguradoras especializadas en clientes privados. Elegimos por las coberturas, las sumas y la forma en que gestionan los siniestros — no por el precio más bajo.</p>"
          "<p>Antes de la firma le explicamos por escrito, en español, qué dice exactamente cada propuesta: coberturas, sumas, franquicias y exclusiones.</p>"),
         ("suma", "La suma asegurada: reconstrucción, no precio de mercado",
          "<p>El precio de compra de una villa incluye el suelo, la ubicación y las vistas; nada de eso se quema. Lo que hay que asegurar es lo que costaría reconstruir la casa tal como está, con sus materiales y acabados, más la demolición, los honorarios técnicos y las licencias.</p>"
@@ -210,7 +206,7 @@ PAGES.append({
         ("uso", "Residencia habitual o casa de vacaciones",
          "<p>Díganos cómo usa la vivienda: si vive en ella todo el año, si pasa allí unos meses, si la alquila a terceros aunque sea de forma ocasional. El uso decide qué póliza es la correcta, y una respuesta exacta es lo que protege un siniestro.</p>"
          "<ul>"
-         "<li>Para una <strong>casa de vacaciones</strong> de propietarios que viven fuera de España, la póliza Holiday Home de Hiscox es un multirriesgo con una redacción clara y sencilla. No cubre joyas ni relojes: si los guarda allí, necesitan su propia póliza.</li>"
+         "<li>Para una <strong>casa de vacaciones</strong> de propietarios que viven fuera de España existen multirriesgos pensados para no residentes. Algunos no cubren joyas ni relojes: si los guarda allí, pueden necesitar su propia póliza.</li>"
          "<li>Para una <strong>residencia principal</strong> de valor elevado, o una casa con arte y colecciones, proponemos una póliza de hogar de alto valor.</li>"
          "<li>Si la <strong>alquila</strong>, véase <a href=\"/es/seguro-alquiler-espana/\">alquilar su vivienda en España</a>.</li>"
          "</ul>"),
@@ -233,13 +229,13 @@ PAGES.append({
         ("¿Incluye terremoto e inundación?",
          "En España, la inundación extraordinaria, la tempestad ciclónica atípica y el terremoto los cubre el Consorcio de Compensación de Seguros, a partir de las sumas que figuran en su póliza. Por eso la suma asegurada importa también para esos riesgos."),
         ("¿Puedo asegurar una vivienda en España si no resido en España?",
-         "Sí. Lo decisivo es describir con exactitud la vivienda y cómo se usa. Para casas de vacaciones de propietarios que viven fuera, Hiscox tiene una póliza específica."),
+         "Sí. Lo decisivo es describir con exactitud la vivienda y cómo se usa. Para casas de vacaciones de propietarios que viven fuera existen pólizas específicas."),
         ("¿Y las joyas y los relojes?",
-         "Dentro de una póliza de hogar están sujetos a límites por objeto. En España, si reside aquí, se pueden asegurar en una póliza propia de Hiscox, independiente del seguro de hogar."),
+         "Dentro de una póliza de hogar están sujetos a límites por objeto. En España pueden asegurarse en una póliza propia de objetos de valor, independiente del seguro de hogar, sujeta a la aceptación de la aseguradora."),
         ("¿Con qué aseguradoras trabajan en España?",
-         "Para viviendas de alto valor, con Hiscox y con Chubb. Elegimos por coberturas, sumas y gestión de siniestros, no por el precio más bajo."),
+         "Para viviendas de alto valor, con aseguradoras especializadas en clientes privados. Elegimos por coberturas, sumas y gestión de siniestros, no por el precio más bajo."),
         ("¿Cuánto tarda la respuesta?",
-         "Le respondemos en un día laborable y le enviamos la propuesta por escrito en cuanto tenemos los datos que se indican en esta página."),
+         "Al tratarse de propuestas específicas que requieren un análisis detallado del riesgo, los plazos de respuesta pueden variar. Le enviamos la propuesta por escrito en cuanto tenemos los datos que se indican en esta página."),
     ],
     "related": [
         ("/es/seguro-hogar-espana/", "Seguro de hogar en España: lo que cubre y lo que no"),

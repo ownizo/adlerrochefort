@@ -225,13 +225,13 @@ CALLOUTS = {
                               "Hogar de alto valor, joyas y relojes en póliza independiente y responsabilidad civil para terapeutas, profesores de yoga y pilates:",
                               "/es/#en-espana", "lo que más nos piden en España"),
     "seguro-hogar-espana": callout("¿Una vivienda de alto valor?",
-                                   "Villas, áticos y casas con arte o joyas, con Hiscox y Chubb:",
+                                   "Villas, áticos y casas con arte o joyas, con aseguradoras especializadas:",
                                    HOGAR, "seguro de hogar de alto valor en España"),
     "seguro-responsabilidad-civil-espana": callout("¿Busca la responsabilidad civil de su profesión?",
                                                    "Terapeutas, profesores de yoga, pilates y tai chi, masajistas y centros:",
                                                    RC, "RC para terapeutas, yoga y pilates"),
     "seguro-joyas-relojes-limite-por-objeto": callout("En España, sin seguro de hogar",
-                                                      "Si reside en España, puede asegurar joyas y relojes en una póliza propia de Hiscox:",
+                                                      "En España puede asegurar joyas y relojes en una póliza propia:",
                                                       JOYAS, "seguro de joyas y relojes en España"),
     "seguro-casa-vacaciones-espana": callout("Joyas y relojes en la casa",
                                              "La póliza Holiday Home no los cubre. Si reside en España, tienen su propia póliza:",
@@ -255,13 +255,13 @@ def add_callout(slug, h):
 
 # ------------------------------------------------------------------- the hub
 HUB_TITLE = "Seguros en España y Portugal · Hogar, joyas y RC profesional | Adler &amp; Rochefort"
-HUB_DESC = ("Mediador de seguros en España y Portugal: hogar de alto valor con Hiscox y Chubb, joyas y relojes, "
+HUB_DESC = ("Mediador de seguros en España y Portugal: hogar de alto valor con aseguradoras especializadas, joyas y relojes, "
             "responsabilidad civil para terapeutas, yoga y pilates, y salud internacional. En español, por escrito.")
 
 HUB_HERO = (
     '<span class="eyebrow">España y Portugal · Mediador de seguros</span>\n'
     '    <h1 id="hero-title">Seguros para su casa,<br><em>sus joyas y su profesión.</em></h1>\n'
-    '    <p class="hero-subtitle">Trabajamos con varias aseguradoras — Hiscox y Chubb, entre otras — y las elegimos por sus coberturas '
+    '    <p class="hero-subtitle">Trabajamos con varias aseguradoras y las elegimos por sus coberturas '
     'y por cómo gestionan los siniestros, no por el precio. Propuestas por escrito, en español, con un único interlocutor.</p>\n'
     '    <p class="hero-meta">Mediador de seguros registrado · ASF n.º 425591790/3 · Lisboa · Opera en España en libre prestación de servicios</p>')
 
@@ -273,19 +273,19 @@ HUB_SPAIN = """
     <ul class="hub-list">
       <li class="hub-item">
         <h3><a href="%(hogar)s">Hogar de alto valor</a></h3>
-        <p>Villas, áticos y casas con arte o joyas, con Hiscox y Chubb: suma de reconstrucción, vivienda vacía y el Consorcio.</p>
+        <p>Villas, áticos y casas con arte o joyas, con aseguradoras especializadas: suma de reconstrucción, vivienda vacía y el Consorcio.</p>
       </li>
       <li class="hub-item">
         <h3><a href="%(joyas)s">Joyas y relojes, sin seguro de hogar</a></h3>
-        <p>Una póliza todo riesgo propia de Hiscox para residentes en España, independiente del seguro de su casa.</p>
+        <p>Una póliza propia de joyas y relojes, independiente del seguro de su casa.</p>
       </li>
       <li class="hub-item">
         <h3><a href="%(rc)s">RC para terapeutas, yoga y pilates</a></h3>
-        <p>Terapias naturales, masaje, yoga, pilates y tai chi: la actividad bien descrita, desde 250.000 €, propuesta en 48–72 h laborables.</p>
+        <p>Terapias naturales, masaje, yoga, pilates y tai chi: la actividad bien descrita, desde 250.000 €.</p>
       </li>
       <li class="hub-item">
         <h3><a href="/es/seguro-casa-vacaciones-espana/">Casa de vacaciones</a></h3>
-        <p>La póliza Holiday Home de Hiscox para propietarios que viven fuera de España.</p>
+        <p>Pólizas para casas de vacaciones de propietarios que viven fuera de España.</p>
       </li>
     </ul>
   </div>
@@ -294,11 +294,11 @@ HUB_SPAIN = """
 
 HUB_CARDS = """      <li class="hub-item">
         <h3><a href="%(hogar)s">Hogar de alto valor en España</a></h3>
-        <p>Hiscox y Chubb: reconstrucción, arte y joyas, casa vacía y Consorcio.</p>
+        <p>Reconstrucción, arte y joyas, casa vacía y Consorcio, con aseguradoras especializadas.</p>
       </li>
       <li class="hub-item">
         <h3><a href="%(joyas)s">Joyas y relojes</a></h3>
-        <p>Póliza todo riesgo de Hiscox, independiente del seguro de hogar, para residentes en España.</p>
+        <p>Póliza propia de joyas y relojes, independiente del seguro de hogar.</p>
       </li>
       <li class="hub-item">
         <h3><a href="%(rc)s">RC terapeutas, yoga y pilates</a></h3>
