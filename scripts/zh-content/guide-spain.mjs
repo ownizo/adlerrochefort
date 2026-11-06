@@ -146,7 +146,7 @@ export const GUIDE_ES_PAGE = {
 <section class="section plain" aria-labelledby="zai-xibanya-zenme-zuo">
   <div class="container narrow article-body">
     <h2 id="zai-xibanya-zenme-zuo">我们在西班牙如何工作</h2>
-    <p>Adler &amp; Rochefort 是 Ownizo, Unipessoal Lda. 的商业名称，在葡萄牙保险与退休基金监理局（ASF）注册为保险代理人，注册号 425591790/3，在里斯本与拉各斯设有办公室。在西班牙，我们依据欧盟服务自由原则（<em>libre prestación de servicios</em>）开展业务：保单由在西班牙获准经营的保险公司出具，适用西班牙的保险法规。</p>
+    <p>Adler &amp; Rochefort 是 Ownizo, Unipessoal Lda. 的商业名称，在葡萄牙保险与退休基金监理局（ASF）注册为保险代理人，注册号 425591790/3，在总部位于里斯本设有办公室。在西班牙，我们依据欧盟服务自由原则（<em>libre prestación de servicios</em>）开展业务：保单由在西班牙获准经营的保险公司出具，适用西班牙的保险法规。</p>
     <ol class="process-steps">
       <li><div><strong>先了解情况。</strong><span>资产在哪个自治区、价值多少、谁在使用、全年住多久、有哪些贵重物品与特殊风险；如有现有保单，请一并发给我们。</span></div></li>
       <li><div><strong>逐一核保。</strong><span>每处房产、每件列明的物品都按实际情况向保险公司申报，而不是套用标准方案。</span></div></li>

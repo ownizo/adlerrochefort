@@ -157,7 +157,7 @@ export const GUIDE_PAGE = {
   <div class="container narrow article-body">
     <h2 id="zhongjie-de-zuoyong">保险中介在葡萄牙是什么角色</h2>
     <p>葡萄牙的保险销售受 ASF（<em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em>，保险与退休基金监理局）监管。中介必须注册并公开注册编号与类别。</p>
-    <p><strong>Adler &amp; Rochefort</strong> 是 Ownizo, Unipessoal Lda. 的商号，在 ASF 注册为保险代理人（<em>agente de seguros</em>），注册编号 <strong>425591790/3</strong>。我们是面向高净值家庭的私人客户保险代理机构，在里斯本和拉各斯设有办公室，客户遍及葡萄牙；在西班牙，我们依据欧盟服务自由原则提供服务。我们在合作的保险公司范围内逐一核保、以书面形式提供建议，并由同一位顾问协助客户处理理赔。</p>
+    <p><strong>Adler &amp; Rochefort</strong> 是 Ownizo, Unipessoal Lda. 的商号，在 ASF 注册为保险代理人（<em>agente de seguros</em>），注册编号 <strong>425591790/3</strong>。我们是面向高净值家庭的私人客户保险代理机构，总部位于里斯本，客户遍及葡萄牙；在西班牙，我们依据欧盟服务自由原则提供服务。我们在合作的保险公司范围内逐一核保、以书面形式提供建议，并由同一位顾问协助客户处理理赔。</p>
     <p>为了避免误解，几点说明：</p>
     <ul>
       <li><strong>我们不是比价网站</strong>，也不承保风险——承保方是保险公司，保单是您与保险公司之间的合同。</li>

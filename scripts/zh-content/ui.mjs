@@ -72,7 +72,7 @@ export const ZH_BRANCHES = [
 
 export const ZH_UI = {
   skipLink: '跳到主要内容',
-  asfBar: '高净值家庭私人客户保险 · 里斯本与拉各斯 · 服务葡萄牙与西班牙 · ASF 注册号 425591790/3',
+  asfBar: '高净值家庭私人客户保险 · 总部位于里斯本 · 服务葡萄牙与西班牙 · ASF 注册号 425591790/3',
   navAria: '主导航',
   navCta: '书面评估',
 
@@ -109,7 +109,7 @@ export const ZH_UI = {
   },
   mobileCta: '申请书面评估',
   breadcrumbAria: '面包屑导航',
-  heroMeta: '葡萄牙注册保险代理人 · ASF 注册号 425591790/3 · 里斯本与拉各斯',
+  heroMeta: '葡萄牙注册保险代理人 · ASF 注册号 425591790/3 · 总部位于里斯本',
   heroCta: '申请书面评估',
   relatedTitle: '相关页面',
   pullquoteAria: '引述',
@@ -184,7 +184,7 @@ export const ZH_UI = {
   },
 
   footer: {
-    desc: '面向高净值家庭的私人客户保险代理机构，办公室设在里斯本与拉各斯，服务葡萄牙与西班牙的客户。逐一核保、书面建议，从首次联系到理赔由同一位顾问负责。',
+    desc: '面向高净值家庭的私人客户保险代理机构，总部位于里斯本，服务葡萄牙与西班牙的客户。逐一核保、书面建议，从首次联系到理赔由同一位顾问负责。',
     badge: '葡萄牙注册保险代理人 — ASF 注册号 425591790/3',
     coverTitle: '保险类别',
     coverLinks: [

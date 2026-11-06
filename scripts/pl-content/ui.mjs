@@ -112,7 +112,7 @@ export const PL_UI = {
   },
   mobileCta: 'Zapytaj o ofertę',
   breadcrumbAria: 'Ścieżka nawigacji',
-  heroMeta: 'Zarejestrowany agent ubezpieczeniowy · ASF nr 425591790/3 · Lizbona i Lagos · Portugalia i Hiszpania',
+  heroMeta: 'Zarejestrowany agent ubezpieczeniowy · ASF nr 425591790/3 · Siedziba w Lizbonie · Portugalia i Hiszpania',
   heroCta: 'Poproś o pisemną ocenę',
   relatedTitle: 'Powiązane strony',
   pullquoteAria: 'Wyróżniony cytat',

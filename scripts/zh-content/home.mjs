@@ -300,7 +300,7 @@ export const HOME_PAGE = {
 <section class="section tint" aria-labelledby="women-de-zuoyong">
   <div class="container narrow article-body">
     <h2 id="women-de-zuoyong">我们在这件事里做什么</h2>
-    <p>Adler &amp; Rochefort 是面向高净值家庭的私人客户保险代理机构（ASF 注册号 425591790/3），在里斯本和拉各斯设有办公室，服务葡萄牙与西班牙的客户。在房屋保险上，从首次联系到理赔由同一位顾问负责，工作分三段：</p>
+    <p>Adler &amp; Rochefort 是面向高净值家庭的私人客户保险代理机构（ASF 注册号 425591790/3），总部位于里斯本，服务葡萄牙与西班牙的客户。在房屋保险上，从首次联系到理赔由同一位顾问负责，工作分三段：</p>
     <ul>
       <li><strong>投保前。</strong>安排现场查勘或估算重建费用、确认室内财物保额、将贵重物品按约定价值列明、确认地震等可选保障、把实际使用方式（自住、第二居所、出租）写进保单，并在签字前用英语书面说明保额、自负额、主要除外责任与报案时限。</li>
       <li><strong>保单期间。</strong>装修、加装泳池或太阳能、使用方式变化、房产出租、续保重估——这些都需要更新保单，否则理赔时的依据仍然是旧信息。</li>
