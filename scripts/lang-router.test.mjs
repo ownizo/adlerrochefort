@@ -39,22 +39,39 @@ test("a visit with no query parameters behaves exactly as before (no regression)
   assert.equal(deRes.headers.get("location"), "https://adlerrochefort.com/de/");
 });
 
-test("explicit nf_lang=en cookie redirects to /en/ with the query string intact, overriding Accept-Language", async () => {
+test("explicit ar_lang=en cookie redirects to /en/ with the query string intact, overriding Accept-Language", async () => {
   const req = request("https://adlerrochefort.com/?source=blog%3Atest", {
     "accept-language": "pt-PT",
-    cookie: "nf_lang=en",
+    cookie: "ar_lang=en",
   });
   const res = await langRouter(req, {});
   assert.equal(res.headers.get("location"), "https://adlerrochefort.com/en/?source=blog%3Atest");
 });
 
-test("explicit nf_lang=pt cookie keeps the visitor on / with the query string intact, overriding Accept-Language", async () => {
+test("explicit ar_lang=pt cookie keeps the visitor on / with the query string intact, overriding Accept-Language", async () => {
   const req = request("https://adlerrochefort.com/?source=blog%3Atest", {
     "accept-language": "en-GB",
-    cookie: "nf_lang=pt",
+    cookie: "ar_lang=pt",
   });
   const res = await langRouter(req, {});
   assert.equal(res, undefined);
+});
+
+test("Spanish (incl. Latin American) and Italian browsers land on /es/ and /it/", async () => {
+  for (const [al, seg] of [["es-ES,es;q=0.9", "es"], ["es-MX", "es"], ["es-AR,es;q=0.8", "es"], ["es-419", "es"], ["ca-ES", "es"], ["it-IT,it;q=0.9", "it"]]) {
+    const res = await langRouter(request("https://adlerrochefort.com/", { "accept-language": al }), {});
+    assert.equal(res.headers.get("location"), `https://adlerrochefort.com/${seg}/`, al);
+  }
+});
+
+test("explicit ar_lang choice for a localized market wins over the browser language", async () => {
+  const res = await langRouter(request("https://adlerrochefort.com/", { "accept-language": "en-GB", cookie: "ar_lang=es" }), {});
+  assert.equal(res.headers.get("location"), "https://adlerrochefort.com/es/");
+});
+
+test("legacy nf_lang cookie no longer pins a Spanish browser to /en/", async () => {
+  const res = await langRouter(request("https://adlerrochefort.com/", { "accept-language": "es-ES", cookie: "nf_lang=en" }), {});
+  assert.equal(res.headers.get("location"), "https://adlerrochefort.com/es/");
 });
 
 // Documents the existing SEO-safety behavior (unchanged by this fix): a

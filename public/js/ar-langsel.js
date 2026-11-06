@@ -145,6 +145,23 @@
     });
   }
 
+
+  // Explicit language choice (any selector, header, mobile or footer) is stored
+  // in the ar_lang cookie, which the homepage router (lang-router.ts) honours
+  // above the browser language. Segments, not language codes: /se/, /dk/, /il/.
+  var SEGS = /^\/(en|de|nl|fr|es|it|pl|se|dk|il|zh)(\/|$|[?#])/;
+  document.addEventListener("click", function (event) {
+    var a = event.target && event.target.closest
+      ? event.target.closest(".ar-langsel-menu a[href], .lang-switcher a[href], .mobile-lang-switcher a[href]")
+      : null;
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    try { href = new URL(href, location.href).pathname; } catch (e) {}
+    var m = href.match(SEGS);
+    var seg = m ? m[1] : "pt";
+    document.cookie = "ar_lang=" + seg + ";path=/;max-age=31536000;SameSite=Lax";
+  }, true);
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {

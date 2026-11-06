@@ -14,7 +14,7 @@ import type { Context, Config } from "@netlify/edge-functions";
  *    to the PT homepage (the x-default version). No cloaking, no bot detection.
  *  - All language redirects are 302 (temporary), never 301.
  *
- * User preference (Bloco C): an explicit `nf_lang` cookie set by the PT|EN
+ * User preference (Bloco C): an explicit `ar_lang` cookie set by the language
  * switcher always wins over the browser-language heuristic.
  */
 // Builds the redirect target, carrying the visitor's query string over
@@ -37,13 +37,16 @@ export default async (request: Request, _context: Context) => {
   if (url.pathname !== "/") return;
 
   // Explicit user choice (PT|EN switcher) always prevails.
+  // ar_lang is written by js/ar-langsel.js on any language-selector click and
+  // holds a site segment (pt, en, es, it, de, ...). The older nf_lang cookie
+  // was also set by default on a first visit to any English page, so it is no
+  // longer read: it pinned Spanish and Italian visitors to /en/.
   const cookie = request.headers.get("cookie") || "";
-  const pref = cookie.match(/(?:^|;\s*)nf_lang=(pt|en)/i);
+  const pref = cookie.match(/(?:^|;\s*)ar_lang=(pt|en|es|it|de|nl|fr|pl|se|dk|il|zh)(?:;|$)/i);
   if (pref) {
-    if (pref[1].toLowerCase() === "en") {
-      return Response.redirect(withQuery("/en/", url), 302);
-    }
-    return; // nf_lang=pt -> stay on the PT homepage.
+    const seg = pref[1].toLowerCase();
+    if (seg === "pt") return; // explicit PT -> stay on the PT homepage.
+    return Response.redirect(withQuery(`/${seg}/`, url), 302);
   }
 
   // Primary browser language. No Accept-Language (e.g. Googlebot) -> stay on PT.
@@ -51,7 +54,7 @@ export default async (request: Request, _context: Context) => {
   const primary = accept.split(",")[0].trim().toLowerCase(); // e.g. "en-gb", "de"
   const lang = primary.split("-")[0]; // e.g. "en", "de"
 
-  // Localized expat landings. A visitor whose browser is in one of the nine
+  // Localized expat landings. A visitor whose browser is in one of the eleven
   // languages the site is actually written in gets that language's homepage;
   // every other non-PT language falls through to English.
   //
@@ -59,6 +62,14 @@ export default async (request: Request, _context: Context) => {
   // "sv" and Danish is "da" even though the pages live at /se/ and /dk/. A key
   // of "se" would match Northern Sami and never match a Stockholm browser.
   const landing: Record<string, string> = {
+    // Spanish, including every Latin American variant (es-MX, es-AR, es-CO,
+    // es-419 ...), and the other languages of Spain, whose speakers read the
+    // Spanish site far more readily than the English one.
+    es: "/es/",
+    ca: "/es/",
+    gl: "/es/",
+    eu: "/es/",
+    it: "/it/",
     de: "/de/",
     nl: "/nl/",
     fr: "/fr/",

@@ -3,10 +3,10 @@
     "pt": [
       {
         "slug": "seguros-empresariais",
-        "title": "Seguros Empresariais",
-        "short": "Empresas",
-        "landing": "/seguros/empresarial/",
-        "landingLabel": "Multirriscos Empresarial"
+        "title": "Responsabilidade Profissional",
+        "short": "Responsabilidade",
+        "landing": "/seguros/responsabilidade-civil-profissional/",
+        "landingLabel": "RC Profissional"
       },
       {
         "slug": "seguros-saude",
@@ -28,15 +28,15 @@
         "slug": "health-insurance",
         "title": "Health Insurance",
         "short": "Health",
-        "landing": "/en/health-insurance-quote/",
-        "landingLabel": "Health insurance"
+        "landing": "/en/health-insurance-portugal-spain/",
+        "landingLabel": "health insurance in Portugal & Spain"
       },
       {
         "slug": "home-property",
-        "title": "Home & Property",
-        "short": "Home & Property",
+        "title": "High-Value Homes",
+        "short": "Homes",
         "landing": "/en/home-insurance-quote/",
-        "landingLabel": "Home insurance"
+        "landingLabel": "high-value home insurance"
       },
       {
         "slug": "valuables-collections",
@@ -47,17 +47,17 @@
       },
       {
         "slug": "business-liability",
-        "title": "Business & Liability",
-        "short": "Business",
-        "landing": "/en/#contact",
-        "landingLabel": "business insurance quote"
+        "title": "Liability & Professional Risks",
+        "short": "Liability",
+        "landing": "/en/professional-liability-insurance-portugal/",
+        "landingLabel": "professional liability"
       },
       {
         "slug": "motor",
-        "title": "Motor",
-        "short": "Motor",
-        "landing": "/en/car-insurance-portugal/",
-        "landingLabel": "Car insurance"
+        "title": "Collector & High-Value Cars",
+        "short": "Cars",
+        "landing": "/en/blog/luxury-car-insurance-portugal/",
+        "landingLabel": "classic & high-value car insurance"
       },
       {
         "slug": "personal-family",
@@ -68,31 +68,31 @@
       },
       {
         "slug": "holiday-lets-hospitality",
-        "title": "Holiday Lets & Hospitality",
-        "short": "Holiday Lets",
-        "landing": "/en/#contact",
-        "landingLabel": "holiday let insurance quote"
+        "title": "Second & Holiday Homes",
+        "short": "Holiday homes",
+        "landing": "/en/second-home-insurance-portugal/",
+        "landingLabel": "holiday home insurance"
       },
       {
         "slug": "moving-to-portugal",
-        "title": "Moving to Portugal",
-        "short": "Moving to Portugal",
+        "title": "Living in Portugal & Spain",
+        "short": "Living in Iberia",
         "landing": null,
         "landingLabel": null
       },
       {
         "slug": "marine",
-        "title": "Marine",
+        "title": "Yachts & Marine",
         "short": "Marine",
-        "landing": "/en/private-clients/",
-        "landingLabel": "Marine insurance"
+        "landing": "/en/blog/marinas-yachts-portugal-spain/",
+        "landingLabel": "yachts & marinas"
       },
       {
         "slug": "spain-health",
         "title": "Spain — Health Insurance",
         "short": "Spain Health",
-        "landing": "/en/health-insurance-spain/",
-        "landingLabel": "Health insurance in Spain"
+        "landing": "/en/health-insurance-portugal-spain/",
+        "landingLabel": "health insurance in Portugal & Spain"
       },
       {
         "slug": "spain-property",
@@ -103,10 +103,10 @@
       },
       {
         "slug": "spain-car",
-        "title": "Spain — Car Insurance",
-        "short": "Spain Car",
-        "landing": "/en/car-insurance-spain/",
-        "landingLabel": "Car insurance in Spain"
+        "title": "Spain — Collector Cars",
+        "short": "Spain Cars",
+        "landing": "/en/classic-car-insurance-spain/",
+        "landingLabel": "classic car insurance in Spain"
       },
       {
         "slug": "spain-private-clients",
@@ -121,8 +121,8 @@
         "slug": "nl-verzekeringen",
         "title": "Verzekeringen Portugal",
         "short": "Verzekeringen",
-        "landing": "/nl/verzekeringen-portugal/",
-        "landingLabel": "Verzekeringen in Portugal"
+        "landing": "/nl/woonverzekering-portugal/",
+        "landingLabel": "Woonverzekering in Portugal"
       }
     ]
   },
@@ -1231,7 +1231,7 @@
       {
         "slug": "valores-segurados-desatualizados",
         "lang": "pt",
-        "status": "published",
+        "status": "retired",
         "url": "/blog/valores-segurados-desatualizados/",
         "category": "seguros-empresariais",
         "tag": "Gestão de Seguros",
@@ -4512,7 +4512,7 @@
       {
         "slug": "bars-restaurants-insurance-claims",
         "lang": "en",
-        "status": "published",
+        "status": "retired",
         "url": "/en/blog/bars-restaurants-insurance-claims/",
         "category": "holiday-lets-hospitality",
         "tag": "Food & Beverage",
@@ -6755,13 +6755,6 @@
         "short": "Riscos Profissionais",
         "landing": "/seguros/responsabilidade-civil-profissional/",
         "landingLabel": "RC Profissional"
-      },
-      {
-        "slug": "empresas",
-        "title": "Empresas",
-        "short": "Empresas",
-        "landing": "/seguros/empresarial/",
-        "landingLabel": "Multirriscos Empresarial"
       },
       {
         "slug": "guias-de-seguros",

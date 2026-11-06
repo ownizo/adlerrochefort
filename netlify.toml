@@ -146,7 +146,7 @@
 
 [[redirects]]
   from = "/go/ig-bio"
-  to = "/en/health-insurance-quote/?utm_source=instagram&utm_medium=bio&utm_campaign=saude-expat"
+  to = "/en/health-insurance-portugal-spain/?utm_source=instagram&utm_medium=bio&utm_campaign=saude-expat"
   status = 302
   force = true
 
@@ -158,7 +158,7 @@
 
 [[redirects]]
   from = "/go/ig-story-saude"
-  to = "/en/health-insurance-quote/?utm_source=instagram&utm_medium=story&utm_campaign=saude-expat"
+  to = "/en/health-insurance-portugal-spain/?utm_source=instagram&utm_medium=story&utm_campaign=saude-expat"
   status = 302
   force = true
 

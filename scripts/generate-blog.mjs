@@ -56,7 +56,7 @@ const chunk = (arr) => {
 // Copy
 // ---------------------------------------------------------------------------
 
-const BLOG_INTRO = `<p>Analisamos coberturas, exclusões, capitais, responsabilidade e situações de sinistro para ajudar particulares, profissionais e empresas a compreender o que uma apólice realmente protege. Sem comparações de preços nem rankings de seguradoras — somos um mediador registado na ASF com o n.º 425591790/3.</p>`;
+const BLOG_INTRO = `<p>Analisamos coberturas, exclusões, capitais, responsabilidade e situações de sinistro para ajudar famílias com património e profissionais a compreender o que uma apólice realmente protege. Sem comparações de preços nem rankings de seguradoras — somos um mediador registado na ASF com o n.º 425591790/3.</p>`;
 
 const CATEGORY_INTROS = {
   'seguros-auto-tvde': `<p>O seguro automóvel é o único seguro obrigatório para quem circula em Portugal, mas a obrigação legal — responsabilidade civil perante terceiros — é também a cobertura mais estreita que existe. Tudo o resto (danos próprios, quebra isolada de vidros, assistência em viagem, veículo de substituição, proteção do condutor) é facultativo e é aí que as apólices se distinguem umas das outras.</p>
@@ -68,10 +68,8 @@ const CATEGORY_INTROS = {
 <p>Há ainda a questão da atividade declarada. Uma moradia registada como alojamento local mas segurada como habitação própria permanente não está coberta enquanto explorada turisticamente. É uma divergência silenciosa, que só se manifesta no momento da participação do sinistro.</p>
 <p>Os artigos desta categoria cobrem o regime legal do alojamento local, os seguros obrigatórios em hotelaria e turismo, sinistros típicos em bares e restaurantes e a articulação entre a apólice do proprietário e a do explorador.</p>`,
 
-  'seguros-empresariais': `<p>Uma empresa em Portugal tem obrigações de seguro que variam com a atividade, mas há um núcleo comum: o seguro de acidentes de trabalho é obrigatório para todos os trabalhadores por conta de outrem, e os trabalhadores independentes têm um regime próprio de proteção. A partir daí, a lei impõe seguros específicos a atividades reguladas — construção, mediação, transporte, saúde, entre outras — e deixa o resto à avaliação de cada empresa.</p>
-<p>O multirriscos empresarial é a apólice que agrega a proteção do património: edifício, recheio, equipamento, mercadoria, e normalmente responsabilidade civil de exploração. A discussão relevante raramente é o prémio; é o capital seguro. Um capital desatualizado ativa a regra proporcional, e uma empresa segurada por metade do valor de reconstrução recebe metade da indemnização mesmo num sinistro parcial.</p>
-<p>Ao lado disso ganharam peso riscos que há dez anos eram marginais. A responsabilidade civil profissional cobre o erro técnico e o conselho errado. A responsabilidade de administradores e gerentes (D&amp;O) responde por decisões de gestão. O seguro de riscos cibernéticos cobre o ransomware, a interrupção de atividade e a notificação à Comissão Nacional de Proteção de Dados após uma violação de dados pessoais — uma obrigação que o RGPD impõe em 72 horas.</p>
-<p>Reunimos aqui as análises sobre seguros obrigatórios, multirriscos, responsabilidade civil, riscos cibernéticos, obras e construção, e a revisão periódica de carteiras empresariais.</p>`,
+  'seguros-empresariais': `<p>A responsabilidade civil profissional protege quem aconselha ou trata: terapeutas, massagistas, instrutores de yoga e pilates, arquitetos, consultores e administradores de estruturas familiares. Uma reclamação por um erro, um conselho ou um tratamento pode ultrapassar em muito os honorários cobrados — e a apólice só responde pela atividade que nela estiver descrita.</p>
+<p>Trabalhamos a partir de 250.000 € por sinistro, em regime de reclamação, em Portugal e em Espanha. Os artigos desta categoria explicam como funcionam estas apólices, o que declarar e o que verificar antes de renovar.</p>`,
 
   'habitacao-particulares': `<p>Em Portugal só um seguro relacionado com a casa é verdadeiramente obrigatório: o seguro de incêndio sobre a fração e sobre as partes comuns, imposto pelo Código Civil e pelo regime da propriedade horizontal. Todo o resto — danos por água, fenómenos sísmicos, roubo, responsabilidade civil familiar, recheio, quebra de vidros — depende do multirriscos habitação que cada proprietário decidir contratar. Quem tem crédito à habitação contrata normalmente a apólice exigida pelo banco, e é aí que começa a maior parte dos problemas: essa apólice protege primeiro a garantia do banco e só depois o património de quem lá vive.</p>
 <p>Os pontos que mais vezes falham são três. O capital do edifício, que deve corresponder ao custo de reconstrução e não ao valor de mercado nem ao valor da escritura. O recheio, quase sempre subestimado, e onde os bens de valor elevado exigem declaração individual. E a cláusula de desocupação, que suspende ou limita coberturas em casas vazias durante períodos prolongados — uma situação comum em segundas habitações.</p>
@@ -106,9 +104,9 @@ const CATEGORY_META = {
       'Seguros obrigatórios no alojamento local e na hotelaria em Portugal, responsabilidade civil de exploração, perda de exploração e sinistros típicos.',
   },
   'seguros-empresariais': {
-    title: 'Seguros Empresariais | Insights | Adler & Rochefort',
+    title: 'Responsabilidade Civil Profissional | Insights | Adler & Rochefort',
     description:
-      'Multirriscos empresarial, responsabilidade civil, D&O, riscos cibernéticos e acidentes de trabalho: o que a lei portuguesa exige e o que fica de fora.',
+      'Responsabilidade civil profissional para terapeutas, consultores e outras profissões em Portugal e Espanha: atividade declarada, capitais e regime de reclamação.',
   },
   'habitacao-particulares': {
     title: 'Habitação e Particulares | Insights | Adler & Rochefort',
@@ -123,7 +121,7 @@ const CATEGORY_META = {
   'seguros-saude': {
     title: 'Seguros de Saúde | Insights | Adler & Rochefort',
     description:
-      'Seguro de saúde em Portugal: doenças pré-existentes, carências, copagamentos, rede convencionada e articulação com o SNS.',
+      'Seguro de saúde para famílias internacionais em Portugal e Espanha: planos internacionais, seguros domésticos, doenças pré-existentes e carências.',
   },
   'tecnologia-parcerias': {
     title: 'Tecnologia e Parcerias | Insights | Adler & Rochefort',
@@ -147,7 +145,7 @@ const CLUSTER_INTROS = {
   empresas: `<p>Proteger uma empresa não é somar seguros até cobrir todas as hipóteses; é identificar onde está a exposição real — património, interrupção de atividade, responsabilidade civil, frota, obra, capital humano — e dimensionar cada cobertura em função dela. Um multirriscos com capital desatualizado ou uma apólice de perda de exploração mal calculada custam mais no sinistro do que qualquer prémio poupado na contratação.</p>
 <p>Nesta área tratamos os riscos que uma empresa portuguesa efetivamente enfrenta: multirriscos e capitais de reconstrução, perda de exploração, responsabilidade civil de exploração, frotas, obra e construção, e a revisão periódica que evita que a apólice fique desatualizada em relação ao negócio.</p>`,
 
-  'guias-de-seguros': `<p>Nem todo o conteúdo do nosso arquivo se enquadra numa das três áreas estratégicas acima — e não devia. Aqui reunimos os guias mais gerais sobre seguro automóvel e TVDE, habitação, condomínios, saúde e alojamento local: conteúdo útil, muitas vezes o ponto de partida antes de perceber onde encaixa uma situação mais complexa.</p>`,
+  'guias-de-seguros': `<p>Guias práticos para famílias com património em Portugal e Espanha: residências de elevado valor e casas de férias, saúde internacional, bens de valor e responsabilidade civil — o ponto de partida antes de uma análise por escrito.</p>`,
 };
 
 const CLUSTER_META = {
@@ -169,7 +167,7 @@ const CLUSTER_META = {
   'guias-de-seguros': {
     title: 'Guias de Seguros | Insights | Adler & Rochefort',
     description:
-      'Guias práticos sobre seguro automóvel e TVDE, habitação, condomínios, saúde e alojamento local em Portugal.',
+      'Guias práticos para famílias com património em Portugal e Espanha: residências de elevado valor, saúde internacional, bens de valor e responsabilidade civil.',
   },
 };
 
@@ -326,7 +324,7 @@ const ptPages = await buildListing({
   meta: {
     title: 'Insights — Risco, coberturas e responsabilidade explicados',
     description:
-      'Análises sobre risco, património e seguros em Portugal: coberturas, exclusões, capitais e responsabilidade — para private clients, profissionais e empresas.',
+      'Análises sobre património e seguros em Portugal e Espanha: residências de elevado valor, bens de valor, saúde internacional e responsabilidade — para famílias e profissionais.',
   },
   crumbs: [
     { name: 'Início', url: '/' },
@@ -490,25 +488,21 @@ const EN_CATEGORY_INTROS = {
 <p>The articles here work through that gap. Agreed value and market value are not the same basis and behave very differently on an appreciating asset — a watch, a classic car, a case of wine, a painting by an artist whose market has moved. Valuations have a shelf life, and insurers differ on how old a valuation they will accept and who they will accept it from. Safes, alarms and their certification are frequently a condition of cover rather than a discount on it, which means an unset alarm is a coverage question, not a discount question.</p>
 <p>We also cover the situations where the object leaves the house: jewellery and watches worn while travelling, high-value bicycles and e-bikes ridden away from home, musical instruments carried to performances, and worldwide all-risks cover for personal possessions generally. And we cover arrival — shipping a collection to Portugal is a transit risk, a customs question and an insurance question at once, and the three are usually handled by three different parties who each assume one of the others has it.</p>`,
 
-  'business-liability': `<p>Running a business in Portugal brings a set of insurance obligations that do not map neatly onto those of any other country, and a foreign-owned company usually meets them in the wrong order — incorporating first, discovering the compulsory covers second. Workers' compensation is the obvious one and it is compulsory from the first employee. Beyond it sit the covers required by a specific professional body, by a public tender, by a landlord, or by the contract with a single large client, none of which appear in any general list.</p>
-<p>This category covers the liability lines a business actually gets asked for. Professional indemnity, where the trigger, the retroactive date and the run-off provision matter more than the limit. Directors' and officers' cover, including the exposure of a non-executive director sitting on a board in a country they do not live in. Cyber, which in practice means ransomware, business interruption and the notification obligations that follow a personal-data breach. Construction and works policies, where the parties insured change as the project moves between phases.</p>
-<p>We also write about how the more unusual risks get placed. Not everything is quoted from a standard rating table: complementary therapy practices, family offices and fiduciary work, key-person cover for a business whose owner lives abroad, and distribution companies with stock in transit all need an underwriter who will look at the file rather than the postcode. Understanding which market a risk belongs in — and what an insurer needs to see before it will price it at all — is a large part of what an intermediary does.</p>`,
+  'business-liability': `<p>Liability is where a family's or a professional's exposure is least visible and most expensive when it arrives. For a household with homes in more than one country, staff, guests and a yacht, the question is whether the limits match the assets that a claim would reach. For a professional — a therapist, an architect, an adviser, a family-office director — it is whether the policy describes the activity actually carried on, and whether cover answers on the claims-made basis these policies use.</p>
+<p>The articles below cover professional liability for advisers and therapists, the non-conventional therapies recognised in Portugal, yoga, Pilates and retreat organisers, directors and fiduciaries of family structures, and how specialist risks are placed in the Portuguese and Spanish markets. We work from €250,000 per claim for professional liability, in Portugal and in Spain.</p>`,
 
-  motor: `<p>Motor insurance is compulsory in Portugal and the compulsory part is narrow: third-party liability, at the statutory minimum limits, for the vehicle rather than the driver. Everything an owner from another country tends to assume is included — own damage, glass, courtesy car, personal accident for the driver — is bought separately here. So is the treatment of a foreign no-claims history, which some insurers will recognise on documentary proof and others will not recognise at all.</p>
-<p>The articles in this category start with the ordinary case: what an expatriate needs to insure a car here, what drives the cost, and what changes when the vehicle is matriculated in Portugal rather than driven on foreign plates. From there they move to the vehicles that a standard motor policy handles badly. A classic or collector car insured at market value is insured for an argument; agreed value exists precisely to avoid that. A car collection is better treated as one risk than as a stack of unrelated policies. High-value and performance cars raise questions about repair networks and parts sourcing that the premium alone does not answer.</p>
-<p>Two exclusions come up often enough to deserve their own treatment. Track days and organised performance driving are excluded by essentially every private motor policy, and the exclusion is absolute rather than negotiable at the roadside. Carrying passengers for payment — TVDE work on Uber, Bolt or Free Now — is likewise excluded from a private policy and needs the risk declared from the outset. We also cover fleet policies, which usually become the better structure from around three vehicles.</p>`,
+  motor: `<p>Collector and high-value cars are insured on a different basis from an ordinary motor policy. The question is not the statutory third-party minimum but the value of the car: agreed rather than market value, restoration and spare parts, transport to shows and between countries, garaging and the limited mileage these cars actually do.</p>
+<p>In Portugal and Spain the damage cover for these cars is usually written separately from the compulsory liability, sometimes in the London market, and the conditions on registration, mileage and storage matter. The articles below explain how a collection is insured, how agreed value works and what to check before moving a car across a border.</p>`,
 
   'personal-family': `<p>The covers in this category are the ones nobody buys deliberately. They arrive attached to a household policy, or they do not arrive at all, and their absence is discovered at the point of claim. Family liability is the clearest example: it responds when a member of the household causes injury or damage to someone else, off the property as well as on it, and it is the cover most likely to be quietly missing from a policy assembled around the building.</p>
 <p>Water damage deserves its own place here because it is the most frequent household claim in Portugal by a wide margin, and the one where the wording does the most work. Whether the escape of water is covered, whether the cost of finding the leak is covered, and whether damage to a neighbour's flat below is covered are three separate questions with three separate answers, and they differ between insurers rather than being fixed by law.</p>
 <p>The rest of the category deals with the household as an employer and as a legal entity. Employing a nanny, a driver, a gardener or a housekeeper in Portugal makes you an employer with statutory obligations, workers' compensation among them, and informality about that is a liability rather than a saving. We also cover personal legal expenses, fraud and extortion cover, and what happens to jointly held policies during a separation or divorce — a moment at which cover routinely lapses because each party assumes the other is maintaining it.</p>`,
 
-  'holiday-lets-hospitality': `<p>The moment a property earns rental income, the household policy covering it usually stops being the right policy. This is the single most common uninsured exposure we see among English-speaking owners in the Algarve: a home insured correctly as a home, then let for part of the year, with the letting never declared. Standard home cover contemplates the owner and their guests, not paying occupants and commercial use, and the insurer is entitled to say so after the event.</p>
-<p>Registering the property under the Alojamento Local regime changes the obligations rather than removing them. The regime carries its own liability requirement, and the operator takes on responsibilities toward guests that a private owner does not have. This category sets out what the AL rules ask for, where the line falls between a second home you occasionally rent and a genuine short-let business, and how mixed personal and commercial use is handled when both are true in the same year.</p>
-<p>The hospitality side covers the same ground at a larger scale. Bars, restaurants and small hotels have a claims profile of their own — public liability, food safety, employee injury, fire and business interruption — and the compulsory covers for tourism and hospitality businesses in Portugal are set out in legislation rather than left to the operator. We also cover the one-off risks the region generates: destination wedding cancellation, and prize indemnity for hole-in-one and similar promotional events on Algarve golf courses.</p>`,
+  'holiday-lets-hospitality': `<p>A second home is a different risk from the house you live in: it stands empty for weeks, it is checked by someone else, and it is sometimes let. The insurers that write holiday homes properly treat it as a distinct risk, and the conditions on unoccupancy, keyholders and letting are where policies differ most.</p>
+<p>We work with holiday homes in Portugal and Spain with a rebuild value from €500,000. The articles below cover what changes when a second home is let, how unoccupancy clauses work, and how valuables kept in a holiday home should be insured.</p>`,
 
-  'moving-to-portugal': `<p>Insurance is rarely the first item on a relocation list, and it is regularly the one that blocks the others. You cannot register a vehicle without a NIF. You cannot complete on a property without cover in place at the moment of transfer. A visa application can require proof of health cover before you have an address to insure. The sequence matters, and getting it wrong costs weeks rather than money.</p>
-<p>This category is about that sequence. It covers how to obtain a NIF as a non-resident, what fiscal representation actually is and when the law requires you to appoint someone, and what can and cannot be insured in the window between arriving and holding residency. That window is longer than most people plan for, and the answer differs by product: some policies can be issued on a NIF alone, others need proof of residence, and a few need neither.</p>
-<p>Two of the articles here are written for specific groups because their questions genuinely differ. British residents have a post-Brexit position on healthcare entitlement and driving documentation that other EU-resident nationals do not. Americans arrive with assumptions from a health system that shares almost no structural features with the Portuguese one, and with reporting obligations that follow them abroad. We also cover something practical and rarely written about: how to run an insurance claim in Portugal when you do not speak Portuguese, and who is entitled to act for you.</p>`,
+  'moving-to-portugal': `<p>Families who move to Portugal or Spain usually arrive with a portfolio, not a single policy: a home or two, valuables, cars, health cover that has to keep working across borders, and liability that should match what they own. The order in which these are arranged matters, and so does the language in which the policies are explained.</p>
+<p>The articles below deal with what international residents meet first — tax numbers, how a claim works when you do not read Portuguese or Spanish, and how cover is coordinated between the two countries.</p>`,
 
   marine: `<p>A boat in Portugal is regulated as a vessel first and insured as one second, and the two sets of rules interact. Registration, flag, the qualifications required of the person at the helm and the permitted use of the vessel all feed into what an underwriter will write and on what terms. An owner arriving with a boat already insured elsewhere frequently finds that the existing policy does not follow the vessel into Portuguese registration, or does not follow it into Portuguese waters for more than a fixed number of weeks.</p>
 <p>This category covers the practical stages of that. Importing and registering a boat here, and what has to be in place before the paperwork will complete. The distinction between private use and charter, which is the single most important declaration on a yacht policy: carrying paying guests is a different risk, a different legal regime and, on most wordings, an outright exclusion unless it has been declared and rated.</p>
@@ -532,14 +526,14 @@ const EN_CATEGORY_INTROS = {
 
 const EN_CATEGORY_META = {
   'health-insurance': {
-    title: 'Health Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Health Insurance in Portugal & Spain | Insights',
     description:
-      'Health insurance in Portugal: the SNS alongside private cover, pre-existing conditions, waiting periods, visa proof and evacuation cover.',
+      'Health cover for international families in Portugal and Spain: international plans first, domestic plans, pre-existing conditions and waiting periods.',
   },
   'home-property': {
-    title: 'Home & Property Insurance in Portugal | Insights',
+    title: 'High-Value Home Insurance in Portugal | Insights',
     description:
-      'Home insurance in Portugal for foreign owners: rebuild value, unoccupancy, earthquake and coastal risk, pools and annexes, and company-owned property.',
+      'Insuring high-value homes in Portugal: rebuild value, unoccupancy, earthquake and coastal risk, pools and annexes, and homes owned through a company.',
   },
   'valuables-collections': {
     title: 'Valuables & Collections Insurance | Insights | Adler & Rochefort',
@@ -547,39 +541,39 @@ const EN_CATEGORY_META = {
       'Insuring art, jewellery, watches, instruments, wine and collections in Portugal: sublimits, specified items, agreed value, valuations and worldwide cover.',
   },
   'business-liability': {
-    title: 'Business & Liability Insurance in Portugal | Insights',
+    title: 'Liability & Professional Risks | Insights | Adler & Rochefort',
     description:
-      'Compulsory business insurance in Portugal, professional indemnity, D&O, cyber and construction cover — for foreign-owned companies and their directors.',
+      'Professional liability for therapists and advisers, family-office and director liability, and how specialist risks are placed in Portugal and Spain.',
   },
   motor: {
-    title: 'Motor Insurance in Portugal | Insights | Adler & Rochefort',
+    title: 'Collector & High-Value Car Insurance | Insights',
     description:
-      'Car insurance in Portugal for foreign residents: compulsory liability, foreign no-claims history, classic and high-value cars, fleets and TVDE.',
+      'Insuring classic, collector and high-value cars in Portugal and Spain: agreed value, collections, registration, mileage and moving cars across borders.',
   },
   'personal-family': {
-    title: 'Personal & Family Insurance in Portugal | Insights',
+    title: 'Family Liability & Household Cover | Insights',
     description:
-      'Family liability, water damage claims, employing domestic staff, legal expenses and fraud cover in Portugal — the household covers that are missed most often.',
+      'Family liability, domestic staff, legal expenses and fraud cover for international households in Portugal and Spain.',
   },
   'holiday-lets-hospitality': {
-    title: 'Holiday Lets & Hospitality Insurance | Insights',
+    title: 'Second & Holiday Home Insurance | Insights | Adler & Rochefort',
     description:
-      'Alojamento Local and hospitality insurance in Portugal: why standard home cover fails on a let property, AL liability requirements and restaurant claims.',
+      'Second and holiday homes in Portugal and Spain from €500,000 of rebuild value: unoccupancy, keyholders, letting and valuables kept in the house.',
   },
   'moving-to-portugal': {
-    title: 'Moving to Portugal — Insurance | Insights | Adler & Rochefort',
+    title: 'Living in Portugal & Spain — Insurance | Insights',
     description:
-      'Getting insured while moving to Portugal: NIF, fiscal representation, cover before residency, and how to run a claim when you do not speak Portuguese.',
+      'What international families meet first when they move to Portugal or Spain: tax numbers, claims in another language and coordinating cover across two countries.',
   },
   marine: {
-    title: 'Marine & Yacht Insurance in Portugal | Insights',
+    title: 'Yacht & Marine Insurance in Portugal & Spain | Insights',
     description:
-      'Boat and yacht insurance in Portugal: importing and registering a vessel, private use versus charter, winter lay-up and berthing in the Algarve marinas.',
+      'Yacht insurance in Portugal and Spain: private use or charter, navigation area, winter lay-up and the requirements of the Iberian marinas.',
   },
   'spain-health': {
     title: 'Health Insurance in Spain | Insights | Adler & Rochefort',
     description:
-      'Private health insurance in Spain for expats: how it sits beside the public system, pre-existing conditions, and what to check before a visa application.',
+      'Health insurance for international families living in Spain: international plans first, how they sit beside the public system, and pre-existing conditions.',
   },
   'spain-property': {
     title: 'Property Insurance in Spain | Insights | Adler & Rochefort',
@@ -587,9 +581,9 @@ const EN_CATEGORY_META = {
       'Property insurance in Spain for international owners: community buildings cover, non-resident ownership, second homes and renting out a property.',
   },
   'spain-car': {
-    title: 'Car Insurance in Spain | Insights | Adler & Rochefort',
+    title: 'Collector Car Insurance in Spain | Insights | Adler & Rochefort',
     description:
-      'Car insurance in Spain for expats: foreign driving licences, foreign-registered vehicles, importing a car and using foreign no-claims history.',
+      'Insuring classic and high-value cars in Spain: agreed value, registration and how collections are covered.',
   },
   'spain-life': {
     title: 'Life Insurance in Spain | Insights | Adler & Rochefort',
@@ -618,12 +612,12 @@ const enPages = await buildListing({
   articles: enArticles,
   basePath: '/en/blog/',
   pageHref: (n) => `/en/blog/page/${n}/`,
-  h1: 'Insights &mdash; <em>Insurance in Portugal, explained</em>',
+  h1: 'Insights &mdash; <em>Insurance in Portugal and Spain, explained</em>',
   intro: EN_INTRO,
   meta: {
-    title: 'Insights — Insurance in Portugal, explained | Adler & Rochefort',
+    title: 'Insights — Insurance in Portugal & Spain, explained',
     description:
-      'Analysis of insurance in Portugal: health cover, homes and holiday lets, valuables, marine, business and liability — by an ASF-registered broker.',
+      'Analysis for international families in Portugal and Spain: high-value and holiday homes, valuables, collector cars, yachts, international health and liability — by an ASF-registered broker.',
   },
   crumbs: [
     { name: 'Home', url: '/en/' },
@@ -710,7 +704,7 @@ await writeFeed(
   rss(enArticles, {
     path: '/en/blog/feed.xml',
     title: 'Adler & Rochefort — Insights',
-    description: 'Insurance in Portugal, explained.',
+    description: 'Insurance in Portugal and Spain, explained.',
     lang: 'en-GB',
   })
 );

@@ -108,3 +108,49 @@ def block_html(lang):
             f'  <div style="max-width:1120px;margin:0 auto">\n    <h2 id="ar-lines-title">{B.e(h)}</h2>\n    <p style="margin:8px 0 28px;opacity:.8">{B.e(sub)}</p>\n'
             f'    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px">{cards}</div>\n'
             f'    <p style="margin-top:24px"><a href="{B.url(lang)}" style="font-weight:600">{B.e(T["hub_title"])} →</a></p>\n  </div>\n</section>\n')
+
+# ---- November 2026: holiday homes (PT/ES), health PT & ES, wellbeing liability ----
+def _extra():
+    import topics as TP
+    X = {}
+    for l in B.L:
+        X[l] = {t: TP.path_of(t, l) for t in ('hol_pt', 'hol_es', 'health', 'wellness')}
+    return X, TP.SHORT
+HOLDESC = {
+ 'en':'Second homes from €500,000 of rebuild value, written for the weeks they stand empty.',
+ 'pt':'Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.',
+ 'es':'Segundas residencias desde 500.000 € de valor de reconstrucción, pensadas para las semanas en que están vacías.',
+ 'de':'Zweitwohnsitze ab 500.000 € Wiederaufbauwert, versichert auch für die Wochen, in denen sie leer stehen.',
+ 'fr':'Résidences secondaires à partir de 500 000 € de valeur de reconstruction, pensées pour les semaines d’inoccupation.',
+ 'it':'Seconde case da 500.000 € di valore di ricostruzione, pensate per le settimane in cui restano vuote.',
+ 'nl':'Tweede woningen vanaf € 500.000 herbouwwaarde, ingericht op de weken dat ze leegstaan.',
+ 'pl':'Drugie domy od 500 000 € wartości odtworzeniowej, z ochroną na tygodnie, gdy stoją puste.',
+ 'se':'Andrahem från 500 000 € i återuppbyggnadsvärde, försäkrade även för veckorna de står tomma.',
+ 'dk':'Sommerboliger fra 500.000 € i genopførelsesværdi, forsikret også i de uger, de står tomme.',
+ 'il':'בתים שניים מ־500,000 € ערך בנייה מחדש, מבוטחים גם בשבועות שבהם הם עומדים ריקים.',
+ 'zh':'重建价值 50 万欧元起的第二居所，空置期间同样获得保障。',
+}
+def nav_spec2(lang):
+    X, S = _extra(); x = X[lang]; s = S[lang]
+    base = nav_spec(lang)
+    nm = lambda t: s[t].split(' — ')[0]
+    out = {}
+    for key, (dl, ml, cols) in base.items():
+        cols = [(h, list(links)) for h, links in cols]
+        if key in ('PT', 'ES'):
+            hk = 'hol_pt' if key == 'PT' else 'hol_es'
+            cols[0][1].append((x[hk], nm(hk)))
+            health = cols[2][1]
+            i = [h for h, _ in health].index(CAT[lang]['ipmi'])
+            health.insert(i + 1, (x['health'], s['health']))
+            health.append((x['wellness'], s['wellness']))
+        out[key] = (dl, ml, cols)
+    return out
+def block_html2(lang):
+    X, S = _extra()
+    h = block_html(lang)
+    card = lambda href, a, b: f'<a href="{href}" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">{B.e(a)}</strong><span style="font-size:14px;line-height:1.55;opacity:.8">{B.e(b)}</span></a>'
+    extra = card(X[lang]['hol_pt'], S[lang]['hol_pt'], HOLDESC[lang]) + card(X[lang]['hol_es'], S[lang]['hol_es'], HOLDESC[lang])
+    anchor = f'<a href="{CAT[lang]["art"]}" style='
+    i = h.find(anchor); assert i > 0
+    return h[:i] + extra + h[i:]
