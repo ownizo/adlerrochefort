@@ -855,14 +855,14 @@ export const HANDLED_FORMS = {
     heading: "New Dutch quote request",
     intro:
       "A new submission was received from the Dutch landing page (/nl/verzekeringen-portugal/). " +
-      "The visitor expects a written reply by email within 24 hours — do not call.",
+      "The visitor expects a written reply by email — do not call.",
     subjectPrefix: "New Dutch quote request",
   },
   "de-angebot-anfrage": {
     heading: "New German quote request",
     intro:
       "A new submission was received from the German cluster (/de/*). " +
-      "The visitor expects a written reply by email within 24 hours — do not call.",
+      "The visitor expects a written reply by email — do not call.",
     subjectPrefix: "New German quote request",
   },
   "de-free-analysis": {
@@ -875,6 +875,132 @@ export const HANDLED_FORMS = {
     lang: "de",
     heading: "New German contact message — homepage",
     page: "/de/",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "es-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Spanish free-analysis request — homepage",
+    page: "/es/",
+  },
+  "es-contact": {
+    quote: true,
+    en: true,
+    heading: "New Spanish contact message — homepage",
+    page: "/es/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "fr-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New French free-analysis request — homepage",
+    page: "/fr/",
+  },
+  "fr-contact": {
+    quote: true,
+    en: true,
+    heading: "New French contact message — homepage",
+    page: "/fr/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "it-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Italian free-analysis request — homepage",
+    page: "/it/",
+  },
+  "it-contact": {
+    quote: true,
+    en: true,
+    heading: "New Italian contact message — homepage",
+    page: "/it/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "nl-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Dutch free-analysis request — homepage",
+    page: "/nl/",
+  },
+  "nl-contact": {
+    quote: true,
+    en: true,
+    heading: "New Dutch contact message — homepage",
+    page: "/nl/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "pl-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Polish free-analysis request — homepage",
+    page: "/pl/",
+  },
+  "pl-contact": {
+    quote: true,
+    en: true,
+    heading: "New Polish contact message — homepage",
+    page: "/pl/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "se-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Swedish free-analysis request — homepage",
+    page: "/se/",
+  },
+  "se-contact": {
+    quote: true,
+    en: true,
+    heading: "New Swedish contact message — homepage",
+    page: "/se/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "dk-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Danish free-analysis request — homepage",
+    page: "/dk/",
+  },
+  "dk-contact": {
+    quote: true,
+    en: true,
+    heading: "New Danish contact message — homepage",
+    page: "/dk/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "il-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Hebrew free-analysis request — homepage",
+    page: "/il/",
+  },
+  "il-contact": {
+    quote: true,
+    en: true,
+    heading: "New Hebrew contact message — homepage",
+    page: "/il/",
+    branch: "Contact",
+  },
+  // Standard homepage (November 2026): same two forms as /en/ and /de/.
+  "zh-free-analysis": {
+    quote: true,
+    en: true,
+    heading: "New Chinese free-analysis request — homepage",
+    page: "/zh/",
+  },
+  "zh-contact": {
+    quote: true,
+    en: true,
+    heading: "New Chinese contact message — homepage",
+    page: "/zh/",
+    branch: "Contact",
   },
   "de-versicherung-spanien": {
     quote: true,
@@ -937,7 +1063,7 @@ export const HANDLED_FORMS = {
     intro:
       "A new submission was received from the Collections &amp; Valuables cluster " +
       "(/en/private-clients/ or one of its articles). The visitor expects a written " +
-      "reply within 24 hours — reply by email or WhatsApp, do not call.",
+      "reply — reply by email or WhatsApp, do not call.",
     subjectPrefix: "New valuables review request",
   },
 
@@ -2265,65 +2391,24 @@ export function quoteSubject(data, fallbackBranch) {
  * email.
  */
 export function quoteIntro(formConfig, from) {
-  // Especificação v2, C2: "professional-liability-quote-wizard" is the first
-  // EN form to carry a real slaHours (48-72h, same as its PT counterpart
-  // "cotacao-rc-profissional") — until now every EN HANDLED_FORMS entry left
-  // slaHours unset, so the branch below never had to honour it and always
-  // said "one working day" (≈24h), which would have been a silent wrong
-  // promise for this form. slaHours is stored PT-style ("48 a 72"); " a " is
-  // translated to " to " for the English sentence, everything else about the
-  // string (the two numbers) carries over unchanged.
-  // Especificação v2, "restantes línguas" Parte A ponto 2 — `lang === 'de'`
-  // checked before `en`, same priority as renderAllFields/displayValue
-  // above: a dedicated German wizard's intake email reads in German, not
-  // the English de-angebot-anfrage/nl-offerte-aanvraag convention.
-  if (formConfig.lang === "de") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " bis ")} Arbeitsstunden` : "24 Arbeitsstunden";
-    return `Gesendet von ${escapeHtml(from)}. Eine Antwort innerhalb von ${slaText} wurde zugesagt.`;
+  // November 2026: the site no longer promises a fixed response time. Every
+  // page and form says instead that proposals are specific, need a detailed
+  // analysis of the risk, and that response times may vary — so the intake
+  // email no longer repeats a promise either. formConfig.slaHours is kept on
+  // the RC entries for reference only. Language priority is unchanged:
+  // a dedicated wizard's intake email reads in the page's own language.
+  const f = escapeHtml(from);
+  switch (formConfig.lang) {
+    case "de": return `Gesendet von ${f}. Keine feste Antwortzeit zugesagt: Die Seite weist darauf hin, dass die Antwortzeit von der Risikoprüfung abhängt.`;
+    case "nl": return `Verzonden vanaf ${f}. Geen vaste reactietijd toegezegd: de pagina meldt dat de reactietijd afhangt van de risicoanalyse.`;
+    case "pl": return `Zgłoszenie wysłane z ${f}. Nie obiecano stałego czasu odpowiedzi: strona informuje, że zależy on od analizy ryzyka.`;
+    case "sv": return `Skickat från ${f}. Ingen fast svarstid har utlovats: sidan anger att svarstiden beror på riskanalysen.`;
+    case "da": return `Sendt fra ${f}. Ingen fast svartid er lovet: siden oplyser, at svartiden afhænger af risikoanalysen.`;
+    case "zh": return `发送自 ${f}。未承诺固定答复时间：页面说明答复时间取决于风险分析。`;
+    case "he": return `נשלח מ־⁦${f}⁩. לא הובטח זמן מענה קבוע: בעמוד מצוין שזמן המענה תלוי בניתוח הסיכון.`;
   }
-  // Especificação v2, Parte 2 continuação — same reasoning and priority as
-  // `lang === 'de'` right above: a dedicated Dutch wizard's intake email
-  // reads in Dutch, not the English nl-offerte-aanvraag convention.
-  if (formConfig.lang === "nl") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " tot ")} werkuren` : "24 uur";
-    return `Verzonden vanaf ${escapeHtml(from)}. Een antwoord binnen ${slaText} werd toegezegd.`;
-  }
-  // Especificação v2, Parte B — PL/SE/DK/ZH, same priority and reasoning as
-  // the branches above: a dedicated wizard's intake email reads in the
-  // page's own language.
-  if (formConfig.lang === "pl") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " do ")} godzin roboczych` : "24 godzin roboczych";
-    return `Zgłoszenie wysłane z ${escapeHtml(from)}. Odpowiedź w ciągu ${slaText} została obiecana.`;
-  }
-  if (formConfig.lang === "sv") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " till ")} arbetstimmar` : "24 arbetstimmar";
-    return `Skickat från ${escapeHtml(from)}. Ett svar inom ${slaText} har utlovats.`;
-  }
-  if (formConfig.lang === "da") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " til ")} arbejdstimer` : "24 arbejdstimer";
-    return `Sendt fra ${escapeHtml(from)}. Et svar inden for ${slaText} er blevet lovet.`;
-  }
-  if (formConfig.lang === "zh") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " 至 ")}个工作小时` : "24个工作小时";
-    return `发送自 ${escapeHtml(from)}。承诺将在${slaText}内回复。`;
-  }
-  // Especificação v2, Parte C — same priority and reasoning as the branches
-  // above: a dedicated Hebrew wizard's intake email reads in Hebrew. `from`
-  // is wrapped in the U+2066/U+2069 isolate pair (see he.json's own
-  // _comment and scripts/il-content/ui.mjs's header) because this string
-  // goes through escapeHtml() into an RTL-rendered HTML email — a URL's
-  // slash-separated segments would otherwise take the paragraph's
-  // right-to-left direction and print in reverse order.
-  if (formConfig.lang === "he") {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " עד ")} שעות עבודה` : "24 שעות עבודה";
-    return `נשלח מ־⁦${escapeHtml(from)}⁩. הובטחה תשובה בתוך ${slaText}.`;
-  }
-  if (formConfig.en) {
-    const slaText = formConfig.slaHours ? `${formConfig.slaHours.replace(" a ", " to ")} business hours` : "one working day";
-    return `Submitted from ${escapeHtml(from)}. A reply within ${slaText} was promised.`;
-  }
-  const slaText = formConfig.slaHours ? `${formConfig.slaHours} horas úteis` : "24 horas úteis";
-  return `Pedido submetido a partir de ${escapeHtml(from)}. Resposta prometida em ${slaText}.`;
+  if (formConfig.en) return `Submitted from ${f}. No fixed response time was promised: the page says response times depend on the risk analysis.`;
+  return `Pedido submetido a partir de ${f}. Não foi prometido um prazo de resposta fixo: a página indica que o prazo depende da análise do risco.`;
 }
 
 // Especificação v2, "restantes línguas" Parte 4: a construção do conteúdo do

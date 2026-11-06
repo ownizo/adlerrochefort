@@ -12,7 +12,7 @@ const PRIVATE_CLIENTS_ARTICLE_PATHS = [
   'public/blog/subseguro-portugal/index.html',
 ];
 
-test('PT private-clients blog CTAs link straight to the pillar form, with the short article form and the correct 24h SLA', () => {
+test('PT private-clients blog CTAs link straight to the pillar form, with the short article form and the response-time note', () => {
   const failures = [];
   for (const path of PRIVATE_CLIENTS_ARTICLE_PATHS) {
     const html = readFileSync(path, 'utf8');
@@ -23,7 +23,7 @@ test('PT private-clients blog CTAs link straight to the pillar form, with the sh
     if (!/href="\/private-clients\/\?source=blog%3A[a-z0-9-]+#pedido"/.test(html)) failures.push(`${path}: missing ?source=blog:<slug> link to the private-clients pillar form`);
     if (!html.includes('Pedir análise →')) failures.push(`${path}: CTA button text should mirror the pillar's own "Pedir análise" language, not the generic "cotação" wording`);
     if (html.includes('Receba 3 cotações')) failures.push(`${path}: still has the generic "Receba 3 cotações" promise`);
-    if (!html.includes('Resposta em 24h úteis')) failures.push(`${path}: cta-topo-micro missing "Resposta em 24h úteis"`);
+    if (!html.includes('os prazos de resposta podem variar')) failures.push(`${path}: cta-topo-micro missing the response-time note`);
     if (html.includes('quotation-before-fill')) failures.push(`${path}: private-clients pillar has no positioning box to mirror — none expected here`);
   }
   assert.deepEqual(failures, []);

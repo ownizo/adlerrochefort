@@ -2509,7 +2509,7 @@
       "name": "How long does it take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A written first opinion on your current cover within 24 to 72 working hours. A household with valuations to hand is normally quoted within a week; larger homes, collections or yachts take longer because the underwriter is pricing that specific risk. Interim cover can often be arranged while the file is completed."
+        "text": "Each proposal is prepared for a specific risk and requires a detailed analysis, so response times vary from case to case. Larger homes, collections and yachts take longer, because the underwriter is pricing that specific risk. Interim cover can often be arranged while the file is completed."
       }
     },
     {
@@ -3014,8 +3014,8 @@
         <div class="hero-stat-label">Adviser, from review to claim</div>
       </div>
       <div>
-        <div class="hero-stat-num">72h</div>
-        <div class="hero-stat-label">Written opinion, within 24–72 working hours</div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">International health insurers compared</div>
       </div>
     </div>
   </div>
@@ -3025,7 +3025,7 @@
       <div class="lang-support-badge">English · Português · written advice</div>
       <div class="hero-card-eyebrow">Written opinion · No obligation</div>
       <div class="hero-card-title">Send us what you hold. We tell you where it stops.</div>
-      <form class="hero-card-form" name="free-analysis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="hero-card-form" data-err="An error occurred while sending. Please try again." name="free-analysis" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="free-analysis"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <input type="hidden" name="source_url" value="">
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -3068,7 +3068,7 @@
         <div class="form-branch-fields" data-branch="Car" hidden>
           <div class="form-field">
             <label for="car_vehicle">Make, model and year</label>
-            <input type="text" id="car_vehicle" name="car_vehicle" placeholder="e.g. Renault Clio 2019" disabled>
+            <input type="text" id="car_vehicle" name="car_vehicle" placeholder="e.g. Porsche 911, 1973" disabled>
           </div>
           <div class="form-field">
             <label for="car_plate">Registration plate</label>
@@ -3082,7 +3082,7 @@
         <div class="form-branch-fields" data-branch="Home" hidden>
           <div class="form-field">
             <label for="home_type">Property type</label>
-            <input type="text" id="home_type" name="home_type" placeholder="Apartment / House" disabled>
+            <input type="text" id="home_type" name="home_type" placeholder="Villa / apartment" disabled>
           </div>
           <div class="form-field">
             <label for="home_postcode">Postcode</label>
@@ -3090,7 +3090,7 @@
           </div>
           <div class="form-field">
             <label for="home_rebuild_value">Estimated rebuild value</label>
-            <input type="text" id="home_rebuild_value" name="home_rebuild_value" placeholder="e.g. €160,000" disabled>
+            <input type="text" id="home_rebuild_value" name="home_rebuild_value" placeholder="e.g. €1,200,000" disabled>
           </div>
         </div>
         <div class="form-branch-fields" data-branch="Professional indemnity" hidden>
@@ -3107,12 +3107,13 @@
             <input type="text" id="pi_required" name="pi_required" placeholder="Yes / No" disabled>
           </div>
         </div>
+        <label class="form-consent" style="display:flex;gap:10px;align-items:flex-start;margin:4px 0 14px;font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.72);text-align:left"><input type="checkbox" name="rgpd" value="yes" required style="margin-top:3px;flex-shrink:0"> <span>I agree to Adler &amp; Rochefort using my details to prepare this review, under the GDPR.</span></label>
         <button type="submit" class="form-submit">Request Free Analysis →</button>
-        <p class="form-gdpr">No obligation, no meeting required. Written reply within 24 to 72 working hours. Your details are used only to prepare the review and are handled under the GDPR — see our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
+        <p class="form-gdpr">No obligation, no meeting required. Each proposal is prepared for a specific risk and requires a detailed analysis, so response times may vary. Your details are used only to prepare the review and are handled under the GDPR — see our <a href="/en/privacy-policy/">Privacy Policy</a>.</p>
       </form>
       <div class="hero-card-success" id="analysisSuccess" style="display:none;text-align:center;padding:24px 0;">
         <p style="color:#fff;font-weight:600;font-size:18px;margin-bottom:8px;">Request received!</p>
-        <p style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.5;">Thank you. Our team will get back to you within 24 hours.</p>
+        <p style="color:rgba(255,255,255,0.75);font-size:14px;line-height:1.5;">Thank you. We will reply in writing. Each proposal is prepared for a specific risk and requires a detailed analysis, so response times may vary.</p>
       </div>
     </div>
   </div>
@@ -3130,22 +3131,20 @@
 .ipmi-band-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FF6300;margin-bottom:10px}
 .ipmi-band h2{font-size:28px;line-height:1.2;font-weight:500;color:#fff;margin:0 0 10px}
 .ipmi-band p{font-size:15px;line-height:1.65;color:rgba(255,255,255,.78);margin:0}
-.ipmi-band-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ipmi-band-logos{margin-top:14px;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.6)}
 .ipmi-band-btn{display:inline-block;background:#FF6300;color:#1C1C1C;font-weight:700;font-size:14px;text-decoration:none;padding:14px 26px;border-radius:999px;white-space:nowrap}
 .ipmi-band-btn:hover{background:#E05600}
-.ipmi-band-langs{font-size:13px;color:rgba(255,255,255,.6)}
-.ipmi-band-langs a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.ipmi-band-inner{padding:28px 24px}.ipmi-band h2{font-size:23px}.ipmi-band-btn{white-space:normal}}
 </style>
   <div class="ipmi-band-inner">
     <div class="ipmi-band-text">
-      <div class="ipmi-band-eyebrow">New · International health insurance</div>
-      <h2>Living abroad, anywhere in the world? Health cover that moves with you.</h2>
-      <p>For expats, remote workers, retirees and families living outside their country of nationality: Allianz Care and Cigna Global compared in writing within one working day, at no cost to you.</p>
+      <div class="ipmi-band-eyebrow">International health insurance</div>
+      <h2>Living abroad, or about to? Health cover that moves with you.</h2>
+      <p>For families, relocated professionals and retirees living outside their country of nationality: Allianz Care, Cigna Global and APRIL International compared in writing, at no cost to you.</p>
+      <div class="ipmi-band-logos">Allianz Care · Cigna Global · APRIL International</div>
     </div>
     <div class="ipmi-band-actions">
-      <a class="ipmi-band-btn" href="/en/international-health-insurance/">Compare Allianz Care and Cigna Global →</a>
-      <div class="ipmi-band-langs">Also in <a href="/es/seguro-medico-internacional/">Español</a> and <a href="/de/internationale-krankenversicherung/">Deutsch</a></div>
+      <a class="ipmi-band-btn" href="/en/international-health-insurance/">Compare the three insurers →</a>
     </div>
   </div>
 </section>
@@ -3170,18 +3169,20 @@
           <div class="country-card-cluster-title">Cover in Portugal</div>
           <ul class="country-card-links">
             <li><a href="/en/home-insurance-quote/">High-value homes</a></li>
+            <li><a href="/en/second-home-insurance-portugal/">Holiday homes</a></li>
+            <li><a href="/en/art-jewellery-watches-insurance/">Art, jewellery &amp; watches</a></li>
             <li><a href="/en/blog/family-liability-cover-portugal/">Family liability</a></li>
-            <li><a href="/en/international-health-insurance-portugal/">International health</a></li>
-            <li><a href="/en/health-insurance-portugal-spain/">Private health &amp; visas</a></li>
+            <li><a href="/en/international-health-insurance/">International health insurance</a></li>
+            <li><a href="/en/health-insurance-portugal-spain/">Health insurance — Portugal &amp; Spain</a></li>
           </ul>
           <div class="country-card-cluster-title">Regional guides</div>
           <ul class="country-card-links">
-            <li><a href="/en/blog/insuring-a-high-value-apartment-lisbon-cascais/">Lisbon &amp; Cascais</a></li>
-            <li><a href="/en/blog/home-insurance-sintra-cascais-villas/">Sintra</a></li>
-            <li><a href="/en/blog/home-insurance-comporta-melides/">Comporta &amp; Melides</a></li>
-            <li><a href="/en/blog/home-insurance-quinta-do-lago-vale-do-lobo/">Algarve</a></li>
-            <li><a href="/en/blog/home-insurance-madeira/">Madeira</a></li>
-            <li><a href="/en/blog/surfing-portugal-second-homes/">The surf coast</a></li>
+            <li><a href="/en/destinations/lisboa/">Lisbon</a></li>
+            <li><a href="/en/destinations/cascais-sintra/">Cascais &amp; Sintra</a></li>
+            <li><a href="/en/destinations/comporta-melides/">Comporta &amp; Melides</a></li>
+            <li><a href="/en/destinations/quinta-do-lago-vale-do-lobo-vilamoura/">Quinta do Lago, Vale do Lobo &amp; Vilamoura</a></li>
+            <li><a href="/en/destinations/porto-douro/">Porto &amp; the Douro</a></li>
+            <li><a href="/en/destinations/madeira/">Madeira</a></li>
           </ul>
         </nav>
         <a href="/en/private-clients/" class="btn-primary">Private clients in Portugal →</a>
@@ -3198,12 +3199,18 @@
           <div class="country-card-cluster-title">Cover in Spain</div>
           <ul class="country-card-links">
             <li><a href="/en/home-insurance-spain/">High-value homes</a></li>
-            <li><a href="/en/family-liability-insurance-spain/">Family liability</a></li>
+            <li><a href="/en/holiday-home-insurance-spain/">Holiday homes</a></li>
+            <li><a href="/en/art-jewellery-watches-insurance/">Art, jewellery &amp; watches</a></li>
+            <li><a href="/en/blog/family-liability-cover-portugal/">Family liability</a></li>
           </ul>
           <div class="country-card-cluster-title">Regional content</div>
           <ul class="country-card-links">
-            <li><a href="/en/private-clients-spain/#where">Madrid, Balearics, Costa del Sol and more</a></li>
-            <li><a href="/en/blog/high-value-home-insurance-spain/">High-value homes, region by region</a></li>
+            <li><a href="/en/destinations/marbella-benahavis-sotogrande/">Marbella, Benahavís &amp; Sotogrande</a></li>
+            <li><a href="/en/destinations/mallorca/">Mallorca</a></li>
+            <li><a href="/en/destinations/ibiza/">Ibiza</a></li>
+            <li><a href="/en/destinations/madrid/">Madrid</a></li>
+            <li><a href="/en/destinations/barcelona-costa-brava-sitges/">Barcelona, Costa Brava &amp; Sitges</a></li>
+            <li><a href="/en/destinations/javea-moraira-altea/">Jávea, Moraira &amp; Altea</a></li>
           </ul>
         </nav>
         <a href="/en/private-clients-spain/" class="btn-primary">Private clients in Spain →</a>
@@ -3397,8 +3404,8 @@
   </div>
   <div class="partners-logos fade-up">
     <div class="partner-logo"><a href="/en/blog/hiscox-home-insurance-portugal/" class="partner-logo-text">Hiscox</a></div>
-    <div class="partner-logo"></div>
-    <div class="partner-logo"></div>
+    <div class="partner-logo"><span class="partner-logo-text">Liberty</span></div>
+    <div class="partner-logo"><span class="partner-logo-text">Allianz Care</span></div>
     <div class="partner-logo"><span class="partner-logo-text">MGEN</span></div>
     <div class="partner-logo"><span class="partner-logo-text">Asisa</span></div>
     <div class="partner-logo"><span class="partner-logo-text">APRIL International</span></div>
@@ -3455,7 +3462,7 @@
       <div class="team-bio">
         <p>Hugo Gonçalves founded Adler &amp; Rochefort to give private clients in Portugal and Spain the kind of insurance advice usually reserved for a family office: one person who reads every policy the household holds, knows where each one stops, and is still there when a claim is made.</p>
         <p>With a degree in Business Management from the University of Hertfordshire and ongoing training at the Chartered Insurance Institute (CII), Hugo works from a technical grounding rather than a sales one. Nearly twenty years at the forefront of global tourism technology at companies such as Hotelbeds (HBX Group) gave him a working knowledge of how international clients hold assets across several countries, and of what that does to a policy written in one of them.</p>
-        <p>Adler &amp; Rochefort holds agency agreements with insurers such as Hiscox, Allianz and Zurich, and access to specialist high-net-worth capacity in Portugal and Spain. That is what allows a high-value home, a collection or a family liability exposure to be underwritten individually rather than rated from a table — and what allows the firm to say plainly when a well-built standard policy is the better answer.</p>
+        <p>Adler &amp; Rochefort works with specialist insurers such as Hiscox, Chubb and Liberty, alongside co-brokers such as Hispania and Innovarisk, with access to specialist high-net-worth capacity in Portugal and Spain. That is what allows a high-value home, a collection or a family liability exposure to be underwritten individually rather than rated from a table — and what allows the firm to say plainly when a well-built standard policy is the better answer.</p>
         <p>His working method is to read the policy before recommending it, and to say plainly where the cover stops. Each client's needs are analysed in detail, cover is built around what they actually own and where it is kept, and everything is done under <strong>ASF</strong> supervision.</p>
       </div>
     </div>
@@ -3586,7 +3593,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">A written first opinion on your current cover within 24 to 72 working hours. A household with valuations to hand is normally quoted within a week; larger homes, collections or yachts take longer because the underwriter is pricing that specific risk. Interim cover can often be arranged while the file is completed.</div>
+          <div class="faq-answer-inner">Each proposal is prepared for a specific risk and requires a detailed analysis, so response times vary from case to case. Larger homes, collections and yachts take longer, because the underwriter is pricing that specific risk. Interim cover can often be arranged while the file is completed.</div>
         </div>
       </div>
 
@@ -3618,7 +3625,7 @@
 <section class="cta-strip" id="contact" aria-label="Contact">
   <div class="cta-strip-text">
     <h2 class="cta-strip-title">The policy you hold<br><em>already shows what is missing.</em></h2>
-    <p class="cta-strip-sub">Send it to us. We reply in writing within 24 to 72 working hours — what it covers, where it stops, and what we would change. No meeting required, no obligation.</p>
+    <p class="cta-strip-sub">Send it to us. We reply in writing — what it covers, where it stops, and what we would change. No meeting required, no obligation. Each proposal is prepared for a specific risk and requires a detailed analysis, so response times may vary.</p>
     <div style="margin-top:36px;">
       <a href="#" class="btn-primary" onclick="event.preventDefault();openContactForm()">Send a message</a>
     </div>
@@ -3682,22 +3689,24 @@
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>
+      <p class="footer-brand-desc">Insurance broker for international families, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; high-value homes, valuables, international health and liability.</p>
     </div>
     <div>
       <div class="footer-col-title">Portugal</div>
       <ul class="footer-col-links">
-        <li><a href="/en/home-insurance-quote/">Home Insurance</a></li>
-        <li><a href="/en/health-insurance-portugal-spain/">Health Insurance</a></li>
-        <li><a href="/en/private-clients/">Collections &amp; Valuables</a></li>
-      </ul>
+        <li><a href="/en/home-insurance-quote/">High-value homes</a></li>
+        <li><a href="/en/second-home-insurance-portugal/">Holiday homes</a></li>
+        <li><a href="/en/art-jewellery-watches-insurance/">Art, jewellery &amp; watches</a></li>
+        <li><a href="/en/health-insurance-portugal-spain/">Health insurance — Portugal &amp; Spain</a></li>
+          </ul>
     </div>
     <div>
       <div class="footer-col-title">Spain</div>
       <ul class="footer-col-links">
-        <li><a href="/en/home-insurance-spain/">Home Insurance</a></li>
-        <li><a href="/en/private-clients-spain/">Private Clients</a></li>
-      </ul>
+        <li><a href="/en/home-insurance-spain/">High-value homes</a></li>
+        <li><a href="/en/holiday-home-insurance-spain/">Holiday homes</a></li>
+        <li><a href="/en/international-health-insurance/">International health insurance</a></li>
+          </ul>
     </div>
     <div>
       <div class="footer-col-title">Company</div>
@@ -3784,10 +3793,10 @@
     <div class="contact-modal-header">
       <button class="contact-modal-close" onclick="closeContactForm()">✕</button>
       <h2 class="contact-modal-title">Send us a message</h2>
-      <p class="contact-modal-subtitle">Fill in the form and we'll get back to you within 24 hours.</p>
+      <p class="contact-modal-subtitle">Fill in the form and we will reply in writing. Each proposal is prepared for a specific risk and requires a detailed analysis, so response times may vary.</p>
     </div>
     <div class="contact-modal-body">
-      <form class="contact-form" id="contactForm" method="POST" name="contact-en" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="contact-form" data-err="An error occurred while sending the message. Please try again." id="contactForm" method="POST" name="contact-en" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact-en"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
         <p style="display:none"><label>Do not fill in: <input name="bot-field"></label></p>
         <div class="contact-form-field">
@@ -3807,6 +3816,7 @@
           <textarea id="contact-message" name="message" placeholder="Briefly describe how we can help..." maxlength="300" required="" oninput="updateCharCount()"></textarea>
           <div class="contact-form-charcount"><span id="charCount">0</span> / 300 characters</div>
         </div>
+        <label class="form-consent" style="display:flex;gap:10px;align-items:flex-start;margin:4px 0 16px;font-size:13px;line-height:1.5;text-align:left"><input type="checkbox" name="rgpd" value="yes" required style="margin-top:3px;flex-shrink:0"> <span>I agree to Adler &amp; Rochefort using my details to prepare this review, under the GDPR.</span></label>
         <button type="submit" class="contact-form-submit">Send message</button>
       </form>
       <div class="contact-form-success" id="contactSuccess">
@@ -3814,7 +3824,7 @@
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </div>
         <h3>Message sent!</h3>
-        <p>Thank you for getting in touch. Our team will respond within 24 hours.</p>
+        <p>Thank you for getting in touch. We will reply in writing. Each proposal is prepared for a specific risk and requires a detailed analysis, so response times may vary.</p>
       </div>
     </div>
   </div>
@@ -3846,44 +3856,38 @@
     document.getElementById('charCount').textContent = textarea.value.length;
   }
 
-  // Handle Netlify form submission via fetch
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var form = e.target;
-    var formData = new FormData(form);
-    fetch('/en/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
-    }).then(function() {
-      form.style.display = 'none';
-      document.getElementById('contactSuccess').classList.add('show');
-      if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'contact_modal' });
-    }).catch(function() {
-      alert('An error occurred while sending the message. Please try again.');
-    });
-  });
-
-  // Homepage hero "Free Analysis" form — AJAX submit + GA4 lead event
-  var analysisForm = document.querySelector('form[name="free-analysis"]');
-  if (analysisForm) {
-    analysisForm.addEventListener('submit', function(e) {
+  // Netlify form submissions via fetch. source_url is stamped from the page
+  // URL before FormData is read, and success is shown only once the response
+  // is checked: fetch() only rejects on a network error.
+  function arAjaxForm(form, onSuccess, leadName) {
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      var formData = new FormData(analysisForm);
-      fetch('/en/', {
+      var source = form.querySelector('input[name="source_url"]');
+      if (source) source.value = window.location.href;
+      var formData = new FormData(form);
+      fetch(window.location.pathname, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString()
-      }).then(function() {
-        analysisForm.style.display = 'none';
-        var s = document.getElementById('analysisSuccess');
-        if (s) s.style.display = '';
-        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'homepage_en' });
+      }).then(function(response) {
+        if (!response.ok) throw new Error('Form submission failed: ' + response.status);
+        onSuccess(form);
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: leadName });
       }).catch(function() {
-        alert('An error occurred while sending. Please try again.');
+        alert(form.getAttribute('data-err') || 'An error occurred while sending. Please try again.');
       });
     });
   }
+  arAjaxForm(document.getElementById('contactForm'), function(form) {
+    form.style.display = 'none';
+    document.getElementById('contactSuccess').classList.add('show');
+  }, 'contact_modal');
+  arAjaxForm(document.querySelector('form.hero-card-form'), function(form) {
+    form.style.display = 'none';
+    var s = document.getElementById('analysisSuccess');
+    if (s) s.style.display = '';
+  }, 'homepage_' + (document.documentElement.lang || 'en'));
 
   // Service card toggle
   function toggleService(btn) {

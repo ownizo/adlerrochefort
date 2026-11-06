@@ -100,7 +100,7 @@ const SINGLE_PAGE_FORM_PATHS = ['public/de/private-clients/index.html'];
 
 test('the /de/private-clients/ page collects the five specified fields on its own single-page form', () => {
   const html = readFileSync('public/de/private-clients/index.html', 'utf8');
-  if (replaced(html)) { assert.match(html, /24 Arbeitsstunden/); return; }
+  if (replaced(html)) { assert.match(html, /Antwortzeiten variieren/); return; }
   assert.match(html, /<form name="de-private-clients"/, 'must carry its own exclusive form-name');
   assert.doesNotMatch(html, /data-wizard\b/, 'specified as a single-page form, not a three-step wizard');
   for (const [name, label] of [['nome', 'name'], ['nif', 'NIF'], ['telefone', 'phone'], ['morada', 'address'], ['localidade', 'town'], ['codigo_postal', 'postal code'], ['email', 'email']]) {
@@ -109,7 +109,7 @@ test('the /de/private-clients/ page collects the five specified fields on its ow
   // Every CTA on the page pointed at #kontakt while that anchor held only a
   // mailto and a WhatsApp link — the reason this form exists at all.
   assert.match(html, /id="kontakt"/, 'the CTAs\' target anchor must still exist');
-  assert.match(html, /24 Arbeitsstunden/, 'must promise the specified 24 working hours');
+  assert.match(html, /Antwortzeiten variieren/, 'must carry the response-time note (no fixed promise since Nov 2026)');
 });
 
 test('the German cluster collects no clinical/health data on any form — health questions are deferred to the insurer directly', () => {
@@ -146,10 +146,10 @@ test('every DE form\'s consent checkbox uses a field name the backend recognizes
 // sharing "de-angebot-anfrage" cannot promise anything other than that form's
 // default 24h. The page promised 24h while its three PT counterparts for the
 // same ramo promised 48-72h, and the notification email said 24h too.
-test('the DE Therapeuten & Wellness page promises the same 48-72h SLA as its PT counterparts, on the page and in the backend', () => {
+test('the DE Therapeuten & Wellness page makes no fixed response-time promise and carries the risk-analysis note', () => {
   const html = readFileSync('public/de/berufshaftpflicht-therapeuten-wellness-portugal/index.html', 'utf8');
-  assert.match(html, /48 bis 72 Arbeitsstunden/, 'the page must promise 48-72 working hours');
-  assert.doesNotMatch(html, /24 Stunden/, 'no 24h promise may survive anywhere on the page');
+  assert.match(html, /Antwortzeiten variieren/, 'the page must carry the response-time note');
+  assert.doesNotMatch(html, /\b(24|48 bis 72) (Arbeits)?[Ss]tunden/, 'no fixed response-time promise may survive on the page');
 
   const backend = readFileSync('netlify/functions/submission-created.mjs', 'utf8');
   const block = backend.match(/"de-berufshaftpflicht-therapeuten-wizard":\s*\{[\s\S]*?\n  \},/);

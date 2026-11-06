@@ -2528,7 +2528,7 @@
       "name": "Quanto tempo demora?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Um primeiro parecer por escrito sobre as apólices atuais em 24 a 72 horas úteis. Um património com avaliações disponíveis tem normalmente proposta numa semana; casas de maior valor, coleções ou embarcações demoram mais, porque o subscritor está a tarifar aquele risco em concreto. Muitas vezes é possível garantir cobertura provisória enquanto o processo é completado."
+        "text": "Um primeiro parecer por escrito sobre as apólices atuais. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar. Um património com avaliações disponíveis tem normalmente proposta numa semana; casas de maior valor, coleções ou embarcações demoram mais, porque o subscritor está a tarifar aquele risco em concreto. Muitas vezes é possível garantir cobertura provisória enquanto o processo é completado."
       }
     },
     {
@@ -2616,6 +2616,40 @@
 <link rel="stylesheet" href="/css/ar-theme.css">
 <style id="ar-author-style">.ar-author{max-width:1100px;margin:24px auto 0;padding:0 24px}.ar-author-inner{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:14px 18px}.ar-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:0 0 48px}.ar-author-text{font-size:13px;line-height:1.6;color:#333332;margin:0}.ar-author-text strong{color:#292929}@media(max-width:760px){.ar-author-inner{align-items:flex-start}}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://adlerrochefort.com/#hugo-goncalves", "name": "Hugo Gonçalves", "jobTitle": "Founder & Risk Management Specialist", "worksFor": {"@id": "https://adlerrochefort.com/#organization"}, "image": "https://adlerrochefort.com/images/hugo-goncalves-640.jpg", "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Hertfordshire"}}, {"@type": "WebPage", "@id": "https://adlerrochefort.com/", "url": "https://adlerrochefort.com/", "reviewedBy": {"@id": "https://adlerrochefort.com/#hugo-goncalves"}, "dateModified": "2026-10-14"}]}</script>
+<style>
+/* Country router — same block as the other homepages */
+/* ═══════════════ COUNTRY ROUTER — above the fold ═══════════════ */
+  .country-router { padding: 0 48px 64px; }
+.country-router-inner { max-width: 1180px; margin: 0 auto; }
+.country-router-head { text-align: center; max-width: 620px; margin: 0 auto 32px; }
+.country-router-head .section-eyebrow { justify-content: center; }
+.country-router-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.country-card {
+    background: var(--white); border: 1px solid var(--border); border-radius: 16px;
+    padding: 32px; display: flex; flex-direction: column; gap: 16px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+.country-card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -20px rgba(17,25,39,.25); }
+.country-card-flag { font-size: 34px; line-height: 1; }
+.country-card-title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; color: var(--ink); }
+.country-card-desc { font-size: 15px; line-height: 1.6; color: var(--ink2); margin: 0; }
+.country-card-products { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0; }
+.country-card-products span {
+    font-size: 12px; font-weight: 600; color: var(--ink2); background: var(--cream2);
+    padding: 5px 12px; border-radius: 20px;
+  }
+.country-card .btn-primary { align-self: flex-start; margin-top: 4px; }
+.country-card-secondary { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ink2); text-decoration: none; margin-top: -4px; }
+.country-card-secondary:hover { color: var(--primary); }
+.country-card-cluster { border-top: 1px solid var(--border); padding-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.country-card-cluster-title { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink2); margin-top: 6px; }
+.country-card-links { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 18px; }
+.country-card-links li { margin: 0; }
+.country-card-links a { display: inline-block; padding: 3px 0; font-size: 14px; line-height: 1.45; font-weight: 600; color: var(--primary); text-decoration: none; }
+.country-card-links a:hover { text-decoration: underline; }
+@media (max-width: 420px) { .country-card-links { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .country-router-grid { grid-template-columns: 1fr; } .country-router { padding: 0 20px 48px; } }
+</style>
 </head>
 <body>
 
@@ -2776,8 +2810,8 @@
         <div class="hero-stat-label">Interlocutor. O mesmo nome no parecer e no sinistro.</div>
       </div>
       <div>
-        <div class="hero-stat-num">72h</div>
-        <div class="hero-stat-label">Parecer por escrito em 24–72 horas úteis</div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Seguradoras de saúde internacional comparadas</div>
       </div>
     </div>
   </div>
@@ -2869,11 +2903,11 @@
           </div>
         </div>
         <button type="submit" class="form-submit">Solicitar Análise Gratuita →</button>
-        <p class="form-gdpr">Resposta em 24 horas úteis. Os seus dados são usados apenas para preparar a análise e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+        <p class="form-gdpr">Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar. Os seus dados são usados apenas para preparar a análise e tratados ao abrigo do RGPD — consulte a <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
       </form>
       <div class="hero-card-success" id="analiseSuccess" style="display:none;text-align:center;padding:24px 0;">
         <p style="color:#292929;font-weight:600;font-size:18px;margin-bottom:8px;">Pedido recebido!</p>
-        <p style="color:#333332;font-size:14px;line-height:1.5;">Obrigado. A nossa equipa entrará em contacto consigo em 24 horas.</p>
+        <p style="color:#333332;font-size:14px;line-height:1.5;">Obrigado. A nossa equipa entrará em contacto consigo. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar.</p>
       </div>
     </div>
   </div>
@@ -2891,25 +2925,109 @@
 .ipmi-band-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#FF6300;margin-bottom:10px}
 .ipmi-band h2{font-size:28px;line-height:1.2;font-weight:500;color:#fff;margin:0 0 10px}
 .ipmi-band p{font-size:15px;line-height:1.65;color:rgba(255,255,255,.78);margin:0}
-.ipmi-band-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ipmi-band-logos{margin-top:14px;font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.6)}
 .ipmi-band-btn{display:inline-block;background:#FF6300;color:#1C1C1C;font-weight:700;font-size:14px;text-decoration:none;padding:14px 26px;border-radius:999px;white-space:nowrap}
 .ipmi-band-btn:hover{background:#E05600}
-.ipmi-band-langs{font-size:13px;color:rgba(255,255,255,.6)}
-.ipmi-band-langs a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.ipmi-band-inner{padding:28px 24px}.ipmi-band h2{font-size:23px}.ipmi-band-btn{white-space:normal}}
 </style>
   <div class="ipmi-band-inner">
     <div class="ipmi-band-text">
-      <div class="ipmi-band-eyebrow">Novo · Seguro de saúde internacional</div>
-      <h2>Vai viver para fora do seu país? Seguro de saúde em qualquer parte do mundo.</h2>
-      <p>Para expatriados, nómadas digitais, reformados e famílias que vivem fora do país de nacionalidade: Allianz Care e Cigna Global comparados por escrito, num dia útil, sem custos.</p>
+      <div class="ipmi-band-eyebrow">Seguro de saúde internacional</div>
+      <h2>Vive, ou vai viver, fora do seu país? Um seguro de saúde que o acompanha.</h2>
+      <p>Para famílias, profissionais deslocados e reformados que vivem fora do país da sua nacionalidade: comparamos por escrito a Allianz Care, a Cigna Global e a APRIL International, sem custos para si.</p>
+      <div class="ipmi-band-logos">Allianz Care · Cigna Global · APRIL International</div>
     </div>
     <div class="ipmi-band-actions">
-      <a class="ipmi-band-btn" href="/en/international-health-insurance/">Pedir proposta (página em inglês) →</a>
-      <div class="ipmi-band-langs">Também em <a href="/es/seguro-medico-internacional/">español</a> e <a href="/de/internationale-krankenversicherung/">Deutsch</a></div>
+      <a class="ipmi-band-btn" href="/seguros/saude-internacional/">Comparar as três seguradoras →</a>
     </div>
   </div>
 </section>
+
+<section class="country-router" id="country-router" aria-label="Portugal e Espanha">
+  <div class="country-router-inner">
+    <div class="country-router-head fade-up">
+      <div class="section-eyebrow">Portugal e Espanha</div>
+      <h2 class="section-title">O mesmo critério,<br><em>dos dois lados da fronteira.</em></h2>
+    </div>
+    <div class="country-router-grid">
+      <div class="country-card fade-up">
+        <div class="country-card-flag">🇵🇹</div>
+        <div class="country-card-title">Portugal</div>
+        <p class="country-card-desc">Lisboa, Cascais e Sintra, Comporta e Melides, o Algarve, o Porto e o Douro, a Madeira. Residências principais, casas de férias e propriedades — com as coleções, os automóveis e as pessoas que nelas vivem — analisadas como um único património familiar.</p>
+        <div class="country-card-products">
+          <span>Residências de elevado valor</span><span>Arte e coleções</span><span>Responsabilidade civil familiar</span><span>Saúde internacional</span><span>Automóveis de coleção</span>
+        </div>
+        <nav class="country-card-cluster" aria-label="Portugal">
+          <div class="country-card-cluster-title">Coberturas em Portugal</div>
+          <ul class="country-card-links">
+            <li><a href="/seguros/habitacao/">Residências de elevado valor</a></li>
+            <li><a href="/seguros/casa-ferias-portugal/">Casas de férias</a></li>
+            <li><a href="/private-clients/arte-joias-relogios/">Arte, joias e relógios</a></li>
+            <li><a href="/seguros/responsabilidade-civil-familiar/">Responsabilidade civil familiar</a></li>
+            <li><a href="/seguros/saude-internacional/">Seguro de saúde internacional</a></li>
+            <li><a href="/seguros/saude-portugal-espanha/">Saúde — Portugal e Espanha</a></li>
+          </ul>
+          <div class="country-card-cluster-title">Guias regionais</div>
+          <ul class="country-card-links">
+            <li><a href="/destinos/lisboa/">Lisboa</a></li>
+            <li><a href="/destinos/cascais-sintra/">Cascais e Sintra</a></li>
+            <li><a href="/destinos/comporta-melides/">Comporta e Melides</a></li>
+            <li><a href="/destinos/quinta-do-lago-vale-do-lobo-vilamoura/">Quinta do Lago, Vale do Lobo e Vilamoura</a></li>
+            <li><a href="/destinos/porto-douro/">Porto e Douro</a></li>
+            <li><a href="/destinos/madeira/">Madeira</a></li>
+          </ul>
+        </nav>
+        <a href="/private-clients/" class="btn-primary">Private Clients em Portugal →</a>
+        
+      </div>
+      <div class="country-card fade-up">
+        <div class="country-card-flag">🇪🇸</div>
+        <div class="country-card-title">Espanha</div>
+        <p class="country-card-desc">O mesmo critério Private Clients em Espanha, com seguradoras autorizadas no mercado espanhol e capacidade especializada para grandes patrimónios — ao abrigo do registo na ASF, que cobre os dois mercados, com um único interlocutor para famílias que vivem entre os dois países.</p>
+        <div class="country-card-products">
+          <span>Residências de elevado valor</span><span>Arte e coleções</span><span>Responsabilidade civil familiar</span><span>Saúde internacional</span><span>Automóveis de coleção</span>
+        </div>
+        <nav class="country-card-cluster" aria-label="Espanha">
+          <div class="country-card-cluster-title">Coberturas em Espanha</div>
+          <ul class="country-card-links">
+            <li><a href="/seguros/habitacao-espanha/">Residências de elevado valor</a></li>
+            <li><a href="/seguros/casa-ferias-espanha/">Casas de férias</a></li>
+            <li><a href="/private-clients/arte-joias-relogios/">Arte, joias e relógios</a></li>
+            <li><a href="/seguros/responsabilidade-civil-familiar/">Responsabilidade civil familiar</a></li>
+          </ul>
+          <div class="country-card-cluster-title">Destinos em Espanha</div>
+          <ul class="country-card-links">
+            <li><a href="/destinos/marbella-benahavis-sotogrande/">Marbella, Benahavís e Sotogrande</a></li>
+            <li><a href="/destinos/mallorca/">Maiorca</a></li>
+            <li><a href="/destinos/ibiza/">Ibiza</a></li>
+            <li><a href="/destinos/madrid/">Madrid</a></li>
+            <li><a href="/destinos/barcelona-costa-brava-sitges/">Barcelona, Costa Brava e Sitges</a></li>
+            <li><a href="/destinos/javea-moraira-altea/">Jávea, Moraira e Altea</a></li>
+          </ul>
+        </nav>
+        <a href="/seguros/habitacao-espanha/" class="btn-primary">Private Clients em Espanha →</a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ar-langpolicy-band">
+  <aside class="ar-langpolicy" aria-labelledby="ar-language-policy">
+    <h2 id="ar-language-policy">Trabalhamos em português, inglês e espanhol</h2>
+    <p>Aconselhamos em português, inglês e espanhol. As apólices são emitidas em português pelas seguradoras portuguesas e em espanhol pelas espanholas; o nosso trabalho é garantir que percebe exatamente o que dizem — capitais, condições e exclusões — antes de assinar, e que todas as respostas que recebe de nós são dadas por escrito.</p>
+  </aside>
+</div>
+
+<section class="ar-lines" id="ar-lines" aria-labelledby="ar-lines-title" style="padding:72px 24px">
+  <div style="max-width:1120px;margin:0 auto">
+    <h2 id="ar-lines-title">O que seguramos</h2>
+    <p style="margin:8px 0 28px;opacity:.8">Para clientes privados e as suas famílias, em Portugal e Espanha.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px"><a href="/seguros/habitacao/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Residências de elevado valor — Portugal</strong><span style="font-size:14px;line-height:1.55;opacity:.8">A casa, o recheio e os objetos de valor, com o capital baseado no custo de reconstrução.</span></a><a href="/seguros/habitacao-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Residências de elevado valor — Espanha</strong><span style="font-size:14px;line-height:1.55;opacity:.8">A casa, o recheio e os objetos de valor, com o capital baseado no custo de reconstrução.</span></a><a href="/seguros/casa-ferias-portugal/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Casas de férias — Portugal</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.</span></a><a href="/seguros/casa-ferias-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Casas de férias — Espanha</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.</span></a><a href="/private-clients/arte-joias-relogios/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Arte, joias e relógios</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Peças especificadas em valor acordado, em casa e em viagem.</span></a><a href="/private-clients/automoveis-classicos/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Automóveis clássicos e de valor</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Automóveis de coleção e de valor elevado, seguros pelo seu valor real.</span></a><a href="/blog/marinas-iates-portugal-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Embarcações e iates</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Casco, responsabilidade civil e área de navegação, para uso privado ou charter.</span></a><a href="/seguros/responsabilidade-civil-familiar/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Responsabilidade civil familiar</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Capitais à medida do património — para convidados, pessoal e todas as casas.</span></a><a href="/seguros/saude-internacional/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Seguro de saúde internacional</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Saúde para famílias que vivem e viajam entre países.</span></a><a href="/seguros/responsabilidade-civil-profissional/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Responsabilidade civil profissional</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Para quem aconselha ou trata, a partir de 250.000 €, em regime de reclamação.</span></a><a href="/private-clients/family-offices/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Family offices</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Responsabilidade fiduciária, ciber, fraude e rapto e extorsão para famílias e as suas estruturas.</span></a></div>
+    <p style="margin-top:24px"><a href="/destinos/" style="font-weight:600">Destinos de luxo em Portugal e Espanha →</a></p>
+  </div>
+</section>
+
 
 
 <!-- MARQUEE -->
@@ -3110,16 +3228,6 @@
 </section>
 
 <!-- ESPECIALIDADES -->
-<section class="ar-lines" id="ar-lines" aria-labelledby="ar-lines-title" style="padding:72px 24px">
-  <div style="max-width:1120px;margin:0 auto">
-    <h2 id="ar-lines-title">O que seguramos</h2>
-    <p style="margin:8px 0 28px;opacity:.8">Para clientes privados e as suas famílias, em Portugal e Espanha.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px"><a href="/seguros/habitacao/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Residências de elevado valor — Portugal</strong><span style="font-size:14px;line-height:1.55;opacity:.8">A casa, o recheio e os objetos de valor, com o capital baseado no custo de reconstrução.</span></a><a href="/seguros/habitacao-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Residências de elevado valor — Espanha</strong><span style="font-size:14px;line-height:1.55;opacity:.8">A casa, o recheio e os objetos de valor, com o capital baseado no custo de reconstrução.</span></a><a href="/seguros/casa-ferias-portugal/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Casas de férias — Portugal</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.</span></a><a href="/seguros/casa-ferias-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Casas de férias — Espanha</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.</span></a><a href="/private-clients/arte-joias-relogios/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Arte, joias e relógios</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Peças especificadas em valor acordado, em casa e em viagem.</span></a><a href="/private-clients/automoveis-classicos/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Automóveis clássicos e de valor</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Automóveis de coleção e de valor elevado, seguros pelo seu valor real.</span></a><a href="/blog/marinas-iates-portugal-espanha/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Embarcações e iates</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Casco, responsabilidade civil e área de navegação, para uso privado ou charter.</span></a><a href="/seguros/responsabilidade-civil-familiar/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Responsabilidade civil familiar</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Capitais à medida do património — para convidados, pessoal e todas as casas.</span></a><a href="/seguros/saude-internacional/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Seguro de saúde internacional</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Saúde para famílias que vivem e viajam entre países.</span></a><a href="/seguros/responsabilidade-civil-profissional/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Responsabilidade civil profissional</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Para quem aconselha ou trata, a partir de 250.000 €, em regime de reclamação.</span></a><a href="/private-clients/family-offices/" style="display:block;border:1px solid #E5E1DA;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;background:#fff"><strong style="display:block;font-size:16px;margin-bottom:6px">Family offices</strong><span style="font-size:14px;line-height:1.55;opacity:.8">Responsabilidade fiduciária, ciber, fraude e rapto e extorsão para famílias e as suas estruturas.</span></a></div>
-    <p style="margin-top:24px"><a href="/destinos/" style="font-weight:600">Destinos de luxo em Portugal e Espanha →</a></p>
-  </div>
-</section>
-
-
 <!-- SEGURADORAS PARCEIRAS -->
 <!-- trustpilot:start -->
 <section class="tp-reviews" aria-labelledby="tp-title-pt">
@@ -3355,7 +3463,7 @@
           <span class="faq-question-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Um primeiro parecer por escrito sobre as apólices atuais em 24 a 72 horas úteis. Um património com avaliações disponíveis tem normalmente proposta numa semana; casas de maior valor, coleções ou embarcações demoram mais, porque o subscritor está a tarifar aquele risco em concreto. Muitas vezes é possível garantir cobertura provisória enquanto o processo é completado.</div>
+          <div class="faq-answer-inner">Um primeiro parecer por escrito sobre as apólices atuais. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar. Um património com avaliações disponíveis tem normalmente proposta numa semana; casas de maior valor, coleções ou embarcações demoram mais, porque o subscritor está a tarifar aquele risco em concreto. Muitas vezes é possível garantir cobertura provisória enquanto o processo é completado.</div>
         </div>
       </div>
 
@@ -3387,7 +3495,7 @@
 <section class="cta-strip" id="contacto" aria-label="Contacto">
   <div class="cta-strip-text">
     <h2 class="cta-strip-title">A apólice que tem<br><em>já diz o que falta.</em></h2>
-    <p class="cta-strip-sub">Envie-a. Respondemos por escrito em 24 a 72 horas úteis. Sem reunião obrigatória. Sem compromisso.</p>
+    <p class="cta-strip-sub">Envie-a. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar. Sem reunião obrigatória. Sem compromisso.</p>
     <div style="margin-top:36px;">
       <a href="#" class="btn-primary" onclick="event.preventDefault();openContactForm()">Pedir parecer por escrito</a>
     </div>
@@ -3589,7 +3697,7 @@
     <div class="contact-modal-header">
       <button class="contact-modal-close" onclick="closeContactForm()">✕</button>
       <h2 class="contact-modal-title">Envie-nos uma mensagem</h2>
-      <p class="contact-modal-subtitle">Preencha o formulário e entraremos em contacto em 24 horas.</p>
+      <p class="contact-modal-subtitle">Preencha o formulário e entraremos em contacto. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar.</p>
     </div>
     <div class="contact-modal-body">
       <form class="contact-form" id="contactForm" method="POST" name="contacto" data-netlify="true" netlify-honeypot="bot-field">
@@ -3619,7 +3727,7 @@
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </div>
         <h3>Mensagem enviada!</h3>
-        <p>Obrigado pelo seu contacto. A nossa equipa irá responder-lhe em 24 horas.</p>
+        <p>Obrigado pelo seu contacto. A nossa equipa irá responder-lhe. Por se tratar de propostas específicas, que exigem uma análise detalhada do risco, os prazos de resposta podem variar.</p>
       </div>
     </div>
   </div>

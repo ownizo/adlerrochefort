@@ -173,7 +173,7 @@ test("renderAllFields never throws and shows nothing extra when dados_dinamicos 
 // leaking onto ramos that never asked for it.
 test("quoteIntro promises 24h for a form with no slaHours (every ramo but RC)", () => {
   const text = quoteIntro({ page: "/seguros/auto/" }, "https://adlerrochefort.com/seguros/auto/");
-  assert.match(text, /24 horas úteis/);
+  assert.match(text, /Não foi prometido um prazo de resposta fixo/);
   assert.doesNotMatch(text, /48/);
 });
 
@@ -182,27 +182,27 @@ test("quoteIntro promises 48-72h for a form with slaHours set (the 6 RC forms)",
     { page: "/seguros/rc-yoga-pilates-bem-estar/", slaHours: "48 a 72" },
     "https://adlerrochefort.com/seguros/rc-yoga-pilates-bem-estar/"
   );
-  assert.match(text, /48 a 72 horas úteis/);
+  assert.match(text, /Não foi prometido um prazo de resposta fixo/);
   assert.doesNotMatch(text, /\b24 horas\b/);
 });
 
 test("HANDLED_FORMS['cotacao-empresarial'] promises 48-72h, matching the pillar rebuild's own copy", () => {
   assert.equal(HANDLED_FORMS["cotacao-empresarial"].slaHours, "48 a 72");
   const text = quoteIntro(HANDLED_FORMS["cotacao-empresarial"], "https://adlerrochefort.com/seguros/empresarial/");
-  assert.match(text, /48 a 72 horas úteis/);
+  assert.match(text, /Não foi prometido um prazo de resposta fixo/);
   assert.doesNotMatch(text, /\b24 horas\b/);
 });
 
 test("HANDLED_FORMS['business-insurance-quote'] (EN) promises 48-72 business hours, matching its PT counterpart", () => {
   assert.equal(HANDLED_FORMS["business-insurance-quote"].slaHours, "48 a 72");
   const text = quoteIntro(HANDLED_FORMS["business-insurance-quote"], "https://adlerrochefort.com/en/business-insurance-portugal/");
-  assert.match(text, /48 to 72 business hours/);
+  assert.match(text, /No fixed response time was promised/);
   assert.doesNotMatch(text, /\b24 hours\b/);
 });
 
 test("quoteIntro defaults to 'one working day' for an EN form with no slaHours", () => {
   const text = quoteIntro({ page: "/en/car-insurance-portugal/", en: true }, "https://adlerrochefort.com/en/car-insurance-portugal/");
-  assert.match(text, /A reply within one working day was promised/);
+  assert.match(text, /No fixed response time was promised/);
 });
 
 // Especificação v2, C2: "professional-liability-quote-wizard" (/en/
@@ -215,7 +215,7 @@ test("quoteIntro honours slaHours on an EN form too, translating the PT-style '4
     { page: "/en/professional-liability-insurance-portugal/", en: true, slaHours: "48 a 72" },
     "https://adlerrochefort.com/en/professional-liability-insurance-portugal/"
   );
-  assert.match(text, /A reply within 48 to 72 business hours was promised/);
+  assert.match(text, /No fixed response time was promised/);
   assert.doesNotMatch(text, /one working day/);
 });
 
@@ -230,7 +230,7 @@ test("buildIntakeEmail builds the same subject/html shape for a quote form regar
   const { subject, html } = buildIntakeEmail(formConfig, data, { created_at: "2026-09-15T10:00:00Z" });
   assert.match(subject, /Hugo Teste/);
   assert.match(html, /Novo pedido de análise/);
-  assert.match(html, /48 a 72 horas úteis/);
+  assert.match(html, /Não foi prometido um prazo de resposta fixo/);
   assert.match(html, /Hugo Teste/);
 });
 
@@ -381,9 +381,9 @@ test("a German wizard form (formConfig.lang === 'de') renders German labels, not
 
 test("quoteIntro promises 24 Arbeitsstunden in German for a lang: 'de' form with no slaHours", () => {
   const text = quoteIntro({ page: "/de/autoversicherung-portugal/", lang: "de", en: true }, "https://adlerrochefort.com/de/autoversicherung-portugal/");
-  assert.match(text, /24 Arbeitsstunden/);
+  assert.match(text, /Keine feste Antwortzeit zugesagt/);
   assert.doesNotMatch(text, /one working day/);
-  assert.doesNotMatch(text, /24 horas úteis/);
+  assert.doesNotMatch(text, /Não foi prometido um prazo de resposta fixo/);
 });
 
 test("test-mode submission on the DE Auto wizard writes German labels into payload_teste.email", async () => {
@@ -427,9 +427,9 @@ test("a Dutch wizard form (formConfig.lang === 'nl') renders Dutch labels, not E
 
 test("quoteIntro promises 24 uur in Dutch for a lang: 'nl' form with no slaHours", () => {
   const text = quoteIntro({ page: "/nl/woonverzekering-portugal/", lang: "nl" }, "https://adlerrochefort.com/nl/woonverzekering-portugal/");
-  assert.match(text, /24 uur/);
+  assert.match(text, /Geen vaste reactietijd toegezegd/);
   assert.doesNotMatch(text, /one working day/);
-  assert.doesNotMatch(text, /24 Arbeitsstunden/);
+  assert.doesNotMatch(text, /Keine feste Antwortzeit zugesagt/);
 });
 
 test("test-mode submission on the NL Habitação wizard writes Dutch labels into payload_teste.email", async () => {
@@ -482,9 +482,9 @@ test("quoteIntro promises 48 tot 72 werkuren in Dutch for a lang: 'nl' form with
   assert.equal(formConfig.lang, "nl");
   assert.equal(formConfig.slaHours, "48 a 72");
   const text = quoteIntro(formConfig, "https://adlerrochefort.com/nl/zzp-beroepsaansprakelijkheid-portugal/");
-  assert.match(text, /48 tot 72 werkuren/);
-  assert.doesNotMatch(text, /24 uur/);
-  assert.doesNotMatch(text, /48 bis 72 Arbeitsstunden/);
+  assert.match(text, /Geen vaste reactietijd toegezegd/);
+  assert.doesNotMatch(text, /\b24 uur\b/);
+  assert.doesNotMatch(text, /Keine feste Antwortzeit zugesagt/);
 });
 
 test("test-mode submission on the NL RC Profissional wizard writes Dutch labels into payload_teste.email", async () => {
@@ -504,7 +504,7 @@ test("test-mode submission on the NL RC Profissional wizard writes Dutch labels 
   const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
   assert.ok(htmlLine);
   assert.match(htmlLine, /Jaaromzet/);
-  assert.match(htmlLine, /48 tot 72 werkuren/);
+  assert.match(htmlLine, /Geen vaste reactietijd toegezegd/);
   assert.doesNotMatch(htmlLine, /Annual turnover/);
 });
 
@@ -533,7 +533,7 @@ test("test-mode submission on the NL Bedrijfsverzekering wizard writes Dutch lab
   assert.match(htmlLine, /Bedrijfsnaam/);
   assert.match(htmlLine, /NIF van het bedrijf/);
   assert.match(htmlLine, /Multirisicoverzekering/);
-  assert.match(htmlLine, /48 tot 72 werkuren/);
+  assert.match(htmlLine, /Geen vaste reactietijd toegezegd/);
 });
 
 // Especificação v2, Parte D1 — Lebensversicherung DE, built from the
@@ -580,7 +580,7 @@ test("test-mode submission on the DE Private Clients wizard writes German labels
   const { lines } = await captureLogs(() => handler(req));
   const htmlLine = lines.find((l) => l.startsWith("[submission-created] TEST_EMAIL_HTML"));
   assert.ok(htmlLine);
-  assert.match(htmlLine, /24 Arbeitsstunden/);
+  assert.match(htmlLine, /Keine feste Antwortzeit zugesagt/);
   assert.match(htmlLine, /DSGVO-Einwilligung/);
 });
 
@@ -640,19 +640,19 @@ test("a Chinese wizard form (formConfig.lang === 'zh') renders Chinese labels", 
 test("quoteIntro renders the 24h SLA in Polish, Swedish, Danish and Chinese for lang forms with no slaHours", () => {
   assert.match(
     quoteIntro({ page: "/pl/ubezpieczenie-domu-portugalia/", lang: "pl" }, "https://adlerrochefort.com/pl/ubezpieczenie-domu-portugalia/"),
-    /24 godzin roboczych/
+    /Nie obiecano stałego czasu odpowiedzi/
   );
   assert.match(
     quoteIntro({ page: "/se/hemforsakring-portugal/", lang: "sv" }, "https://adlerrochefort.com/se/hemforsakring-portugal/"),
-    /24 arbetstimmar/
+    /Ingen fast svarstid har utlovats/
   );
   assert.match(
     quoteIntro({ page: "/dk/husforsikring-portugal/", lang: "da" }, "https://adlerrochefort.com/dk/husforsikring-portugal/"),
-    /24 arbejdstimer/
+    /Ingen fast svartid er lovet/
   );
   assert.match(
     quoteIntro({ page: "/zh/home-insurance-portugal/", lang: "zh" }, "https://adlerrochefort.com/zh/home-insurance-portugal/"),
-    /24个工作小时/
+    /未承诺固定答复时间/
   );
 });
 
@@ -710,11 +710,11 @@ test("PL/SE/DK/ZH Auto wizards render matricula/data_carta labels in their own l
 // counterparts.
 test("PL/SE/DK/ZH Liability wizards promise 48-72h in their own language, not the default 24h", () => {
   const cases = [
-    { form: "pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard", sla: /48 do 72 godzin roboczych/ },
-    { form: "se-ansvarsforsakring-wizard", sla: /48 till 72 arbetstimmar/ },
-    { form: "dk-ansvarsforsikring-wizard", sla: /48 til 72 arbejdstimer/ },
-    { form: "zh-liability-insurance-wizard", sla: /48 至 72个工作小时/ },
-    { form: "il-liability-insurance-wizard", sla: /48 עד 72 שעות עבודה/ },
+    { form: "pl-ubezpieczenie-odpowiedzialnosci-cywilnej-wizard", sla: /Nie obiecano stałego czasu odpowiedzi/ },
+    { form: "se-ansvarsforsakring-wizard", sla: /Ingen fast svarstid har utlovats/ },
+    { form: "dk-ansvarsforsikring-wizard", sla: /Ingen fast svartid er lovet/ },
+    { form: "zh-liability-insurance-wizard", sla: /未承诺固定答复时间/ },
+    { form: "il-liability-insurance-wizard", sla: /לא הובטח זמן מענה קבוע/ },
   ];
   for (const c of cases) {
     const formConfig = HANDLED_FORMS[c.form];
@@ -744,6 +744,6 @@ test("quoteIntro renders the 24h SLA in Hebrew for the Home wizard, with the fro
     { page: "/il/home-insurance-portugal/", lang: "he" },
     "https://adlerrochefort.com/il/home-insurance-portugal/"
   );
-  assert.match(text, /24 שעות עבודה/);
+  assert.match(text, /לא הובטח זמן מענה קבוע/);
   assert.match(text, /⁦https:\/\/adlerrochefort\.com\/il\/home-insurance-portugal\/⁩/);
 });
