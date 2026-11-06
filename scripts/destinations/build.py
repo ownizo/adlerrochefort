@@ -38,6 +38,14 @@ LINK = {
  'il': dict(homes_PT='/il/home-insurance-portugal/', homes_ES='/il/home-insurance-spain/', art='/il/art-jewellery-beyond-agreed-value/', cars='/il/classic-car-insurance-portugal-spain/', yachts='/il/marinas-yachts-portugal-spain/', liability='/il/liability-insurance-portugal/', ipmi='/il/international-health-insurance/', rental='/en/luxury-villa-rental-insurance/', construction='/en/luxury-home-construction-insurance/', vineyard='/en/rural-estate-vineyard-insurance/', horses='/en/equine-horse-insurance/', familyoffice='/en/family-office-insurance/'),
  'zh': dict(homes_PT='/zh/home-insurance-portugal/', homes_ES='/zh/home-insurance-spain/', art='/zh/art-jewellery-beyond-agreed-value/', cars='/zh/classic-car-insurance-portugal-spain/', yachts='/zh/marinas-yachts-portugal-spain/', liability='/zh/liability-insurance-portugal/', ipmi='/zh/international-health-insurance/', rental='/en/luxury-villa-rental-insurance/', construction='/en/luxury-home-construction-insurance/', vineyard='/en/rural-estate-vineyard-insurance/', horses='/en/equine-horse-insurance/', familyoffice='/en/family-office-insurance/'),
 }
+import importlib as _il
+try:
+    import catalog_paths as _cp
+    for _l, _m in _cp.CAT.items():
+        LINK[_l].update(homes_PT=_m['homes_pt'], homes_ES=_m['homes_es'], art=_m['art'], cars=_m['cars'], yachts=_m['yachts'], liability=_m['liability'], ipmi=_m['ipmi'], familyoffice=_m['fo'])
+    for _d in LINES: LINES[_d] = [x for x in LINES[_d] if x not in ('rental','construction','vineyard','horses')]
+except ImportError:
+    pass
 for l, m in LINK.items():
     for k, v in m.items():
         assert os.path.exists(PUB + v.strip('/') + '/index.html'), (l, k, v)
