@@ -23,7 +23,7 @@ NODE = {
     "alternateName": "Ownizo, Unipessoal Lda.",
     "url": "https://adlerrochefort.com",
     "logo": "https://adlerrochefort.com/images/logo-adler-rochefort.svg",
-    "description": "Private-client insurance broker for high-net-worth households in Portugal and Spain: high-value homes, art, jewellery and watches, family liability, international health and collector cars. Registered with Portugal's ASF (no. 425591790/3), head office in Lisbon, operating in Spain under the EU freedom to provide services.",
+    "description": "Private-client insurance broker for high-net-worth households in Portugal and Spain: high-value homes, art, jewellery and watches, family liability, international health and collector cars. Registered in Portugal with the ASF (no. 425591790/3) and in Spain with the DGSFP (LPS). Head office in Lisbon.",
     "telephone": "+351928226570",
     "email": "insurance@adlerrochefort.com",
     "foundingDate": "2014",

@@ -523,7 +523,7 @@ const HUB = {
   faq: [
     {
       q: 'Is Adler &amp; Rochefort licensed in Spain?',
-      a: 'We are registered with Portugal’s insurance supervisor, the ASF, under no. 425591790/3, and we operate in Spain on a cross-border basis from that registration, under the EU framework that lets an insurance intermediary authorised in one member state offer services in another. We do not hold a separate Spanish licence and we do not have a Spanish office.',
+      a: 'We are registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). We do not have a Spanish office.',
     },
     {
       q: 'Can you insure any property in Spain?',

@@ -421,7 +421,7 @@ export const FR_ASF_PAIRING = [
   ],
   [
     'Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal. Un conseil clair en français, aux normes internationales.',
-    "Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal — enregistré auprès de l'ASF sous le nº 425591790/3. Un conseil clair en français, aux normes internationales.",
+    "Courtier en assurances pour les expatriés et les entreprises en Algarve, Portugal — enregistré au Portugal auprès de l'ASF sous le nº 425591790/3 et en Espagne auprès de la DGSFP en libre prestation de services (LPS). Un conseil clair en français, aux normes internationales.",
   ],
 ];
 
@@ -449,7 +449,7 @@ export const DE_INDEPENDENCE = [
   // cover /de/, lands on the corrected form rather than reintroducing the gap.
   [
     'Versicherungsmakler für Privatmandanten in Portugal und Spanien, mit Hauptsitz in Lissabon.',
-    'Versicherungsmakler für Privatmandanten in Portugal und Spanien — bei der ASF registriert unter Nr. 425591790/3, Hauptsitz in Lissabon.',
+    'Versicherungsmakler für Privatmandanten in Portugal und Spanien — in Portugal bei der ASF unter Nr. 425591790/3 und in Spanien bei der DGSFP (LPS) registriert. Hauptsitz in Lissabon.',
   ],
 ];
 

@@ -40,10 +40,10 @@ R = [
      "Relocation &amp; insurance support in Portugal and Spain — registered with the ASF nº 425591790/3."),
     ("English-speaking fiscal representation &amp; insurance help in Lagos, Algarve, Portugal — registered with the ASF nº 425591790/3.",
      "Fiscal representation &amp; insurance support across Portugal — registered with the ASF nº 425591790/3."),
-    ("English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis — home, health, car, life and private-client cover.",
+    ("English-speaking insurance broker for international clients, registered in Portugal with the ASF, no. 425591790/3, and in Spain with the DGSFP (LPS) — home, health, car, life and private-client cover.",
      "Private-client insurance broker for Portugal and Spain, registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon — high-value homes, collections, liability, health and cars."),
     ("English-speaking insurance broker for international clients in Portugal and Spain. Personal insurance for health, home, car, life and private clients, registered with Portugal's ASF and operating in Spain on a cross-border basis.",
-     "Private-client insurance broker for high-net-worth households in Portugal and Spain: high-value homes, art and collections, family liability, international health and collector cars. Registered with Portugal's ASF (no. 425591790/3), head office in Lisbon, operating in Spain under the EU freedom to provide services."),
+     "Private-client insurance broker for high-net-worth households in Portugal and Spain: high-value homes, art and collections, family liability, international health and collector cars. Registered in Portugal with the ASF (no. 425591790/3) and in Spain with the DGSFP (LPS). Head office in Lisbon."),
 
     # ---- EN body --------------------------------------------------------
     ("<strong>English-speaking and not tied to a single insurer</strong>, based in Lagos, Algarve.",
@@ -106,7 +106,7 @@ R = [
     ("Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lagos, Algarve",
      "Adler &amp; Rochefort — registrierter Versicherungsmakler bei der ASF Nr. 425591790/3 · Lissabon · Spanien"),
     ("Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio.",
-     "Versicherungsmakler für Privatmandanten in Portugal und Spanien — bei der ASF registriert unter Nr. 425591790/3, Hauptsitz in Lissabon."),
+     "Versicherungsmakler für Privatmandanten in Portugal und Spanien — in Portugal bei der ASF unter Nr. 425591790/3 und in Spanien bei der DGSFP (LPS) registriert. Hauptsitz in Lissabon."),
     ("Versicherungsmakler für Expats und Unternehmen an der Algarve, Portugal. Klare Beratung, in unserem Versichererportfolio.",
      "Versicherungsmakler für Privatmandanten in Portugal und Spanien, mit Hauptsitz in Lissabon."),
 

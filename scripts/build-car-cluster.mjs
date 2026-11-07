@@ -146,7 +146,7 @@ const FOOTER = `
   <div class="footer-top">
     <div>
       <div class="footer-brand-name">Adler <em>&amp;</em> Rochefort</div>
-      <p class="footer-brand-desc">ASF-registered private-client insurance broker in Portugal and Spain. We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
+      <p class="footer-brand-desc">Private-client insurance broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS). We compare the market for international residents in Portugal &mdash; home, health, car and condominium cover.</p>
     </div>
     <div>
       <div class="footer-col-title">Home &amp; Property</div>

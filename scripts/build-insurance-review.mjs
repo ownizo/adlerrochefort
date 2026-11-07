@@ -363,7 +363,7 @@ ${needsFieldset('Spain')}
     </form>
     <p class="lp-smallprint">By sending this form you agree to us using your details to prepare and discuss your review, in line with our <a href="/en/privacy-policy/">privacy policy</a>. We never sell your data. Adler &amp; Rochefort is a trading name of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS).</p>
     <p class="lp-smallprint">No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.</p>
-    <div class="lp-form-trust"><span>Registered with Portugal's ASF</span><span>English-speaking team</span><span>One submission, one broker</span><span>We reply within a few working days</span></div>
+    <div class="lp-form-trust"><span>ASF (Portugal) · DGSFP (LPS)</span><span>English-speaking team</span><span>One submission, one broker</span><span>We reply within a few working days</span></div>
     <div class="lp-next-steps">
       <div class="lp-next-steps-title">What happens next?</div>
       <ol>
@@ -399,7 +399,7 @@ ${FAQ.map(
 
 <!-- REGULATORY DISCLAIMER -->
 <section class="lp-disclaimer">
-  <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with Portugal's ASF under no. 425591790/3, operating in Spain on a cross-border basis from that registration. This page is a conversion utility for reaching the right product, not a statement of what any specific policy covers, and not legal, tax or immigration advice.</p>
+  <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). This page is a conversion utility for reaching the right product, not a statement of what any specific policy covers, and not legal, tax or immigration advice.</p>
 </section>
 
 </main>

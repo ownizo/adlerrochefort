@@ -113,8 +113,8 @@ function tail(a) {
   let html = langSwitch(T_TAIL, a);
   html = swap(
     html,
-    `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>`,
-    `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`
+    `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered in Portugal with the ASF, no. 425591790/3, and in Spain with the DGSFP (LPS) &mdash; home, health, car, life and private-client cover.</p>`,
+    `<p class="footer-brand-desc">Private-client insurance broker registered in Portugal with the ASF, no. 425591790/3, and in Spain with the DGSFP (LPS), with its head office in Lisbon, advising households in Portugal and Spain &mdash; high-value homes, art and collections, liability and family protection.</p>`
   );
   html = swap(
     html,

@@ -18,7 +18,7 @@ L = {
         "faq": "Frequently asked questions", "guides": "Guides worth reading", "related": "Related cover",
         "ask_h": "What we will ask for your quote",
         "ask_p": "After the first contact we ask for these details by email. If you have them to hand, you can send them now to <a href=\"mailto:insurance@adlerrochefort.com\">insurance@adlerrochefort.com</a>.",
-        "disc": "Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with Portugal's ASF under no. 425591790/3, operating in Spain on a cross-border basis from that registration. This page is general guidance, not a statement of what any specific policy covers. Cover, limits, excesses and exclusions are set by the insurer's policy wording, which we explain in writing before you commit."},
+        "disc": "Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). This page is general guidance, not a statement of what any specific policy covers. Cover, limits, excesses and exclusions are set by the insurer's policy wording, which we explain in writing before you commit."},
  "de": {"home": "Startseite", "hub": ("/de/versicherung-spanien/", "Versicherungen für Expats in Spanien"), "cta": "Schriftliches Angebot anfragen",
         "faq": "Häufige Fragen", "guides": "Weiterlesen", "related": "Passende weitere Deckung",
         "ask_h": "Welche Angaben wir für Ihr Angebot benötigen",
