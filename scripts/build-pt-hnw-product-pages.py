@@ -110,7 +110,7 @@ PAGES = [
         "de": "/de/blog/oldtimer-luxusauto-versicherung-portugal-spanien/",
         "ramo": "Private Clients",
         "title": "Seguro de Automóveis Clássicos e de Coleção em Portugal",
-        "desc": "Automóveis clássicos e de coleção com valor acordado, RC automóvel até 50 milhões de euros e danos próprios no mercado Lloyd's. Mediador de seguros registado na ASF.",
+        "desc": "Automóveis clássicos e de coleção com valor acordado, RC automóvel até 50 milhões de euros e danos próprios no mercado Lloyd's. Mediador de seguros registado em Portugal na ASF e em Espanha na DGSFP (LPS).",
         "crumbs": [("Início", "/"), ("Private Clients", "/private-clients/"), ("Automóveis clássicos", None)],
         "h1": "Automóveis <em>clássicos e de coleção</em>",
         "h1_plain": "Seguro de automóveis clássicos e de coleção",

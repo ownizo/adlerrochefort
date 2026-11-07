@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-irish-residents-portugal',
   metaTitle: 'Insurance for Irish Residents in Portugal | VHI, Laya &amp; S1 | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for Irish citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What VHI, Laya and Irish Life cover leaves behind, how the S1 route differs from the UK one, and what to arrange in what order.',
+    'Insurance for Irish citizens buying property, relocating to, or already living in Portugal, explained in English by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS). What VHI, Laya and Irish Life cover leaves behind, how the S1 route differs from the UK one, and what to arrange in what order.',
   h1: 'Insurance for Irish Residents in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as an Irish citizen? Several assumptions that hold in Ireland do not carry over here: VHI, Laya and Irish Life cover does not extend to a Portuguese property, car or liability exposure, community rating and lifetime community rating loading follow you in ways that are easy to overlook when you leave, and the S1 route works differently than it does for a UK national. We set out what actually applies to your situation, in English, and arrange it.',

@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-americans-in-portugal',
   metaTitle: 'Insurance for Americans in Portugal | US Buyers &amp; Residents | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for US citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What is genuinely different from the US system, and what to arrange in what order.',
+    'Insurance for US citizens buying property, relocating to, or already living in Portugal, explained in English by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS). What is genuinely different from the US system, and what to arrange in what order.',
   h1: 'Insurance for Americans in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as a US citizen? Several assumptions that hold in the United States do not carry over here: there is no US-style title insurance market, no umbrella policy that extends to a Portuguese property or car, and the visa and health-insurance timelines do not run on a US clock. We set out what actually applies to your situation, in English, and arrange it.',

@@ -205,7 +205,7 @@ export const ZH_UI = {
     asfChannel: 'ASF 举报渠道',
     regulatory: [
       'Adler &amp; Rochefort 是 Ownizo, Unipessoal Lda. 的商业名称。',
-      'Ownizo, Unipessoal Lda. 在葡萄牙保险与退休基金监理局（ASF）注册为保险代理人，注册号 425591790/3。我们在合作的保险公司范围内提供建议。',
+      'Ownizo, Unipessoal Lda. 在葡萄牙保险与退休基金监理局（ASF）注册为保险代理人，注册号 425591790/3，并在西班牙保险与养老金总局（DGSFP）以服务自由制度（LPS）登记。我们在合作的保险公司范围内提供建议。',
       '本页内容为一般性说明，不构成针对个人情况的保险建议或法律意见。实际保障范围取决于您的具体情况与所选保单的条款。',
     ],
   },

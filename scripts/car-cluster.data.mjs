@@ -55,7 +55,7 @@ export const PAGE = {
   crumb: 'Car insurance',
   title: 'Car Insurance in Portugal | Cover for Expats &amp; Foreign Drivers',
   description:
-    'Car insurance in Portugal arranged by an ASF-registered broker. Third-party liability, extended and own-damage cover explained in English, for expats, foreign licences and imported vehicles. Free quote.',
+    'Car insurance in Portugal arranged by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS). Third-party liability, extended and own-damage cover explained in English, for expats, foreign licences and imported vehicles. Free quote.',
   keywords:
     'car insurance portugal, car insurance in portugal, portuguese car insurance, car insurance for expats portugal, expat car insurance portugal, car insurance for foreigners in portugal, car insurance broker portugal, car insurance quote portugal, insure a car in portugal',
   eyebrow: 'Motor &middot; Portugal',

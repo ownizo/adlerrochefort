@@ -217,7 +217,7 @@ export const CTA_EN = `<section class="cta-strip" aria-label="Contact">
     <div style="margin-top:36px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
       <a href="/en/#contact" class="btn-primary">Request a free review</a>
       <a href="https://wa.me/351928226570?text=${encodeURIComponent(
-        "Hi, I'd like to talk about insurance in Portugal with an ASF-registered broker."
+        "Hi, I'd like to talk about insurance in Portugal with a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS)."
       )}" class="btn-ghost" rel="noopener" target="_blank">Message on WhatsApp</a>
     </div>
   </div>

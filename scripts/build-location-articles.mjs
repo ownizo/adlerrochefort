@@ -210,7 +210,7 @@ ${tableNote}
 ${a.closing}
 <p>If you would rather start from the property than from the article, our <a href="/en/home-insurance-quote/">home insurance comparison for owners in Portugal</a> takes the address, the rebuild figure and how the property is used, and comes back with the market priced side by side.</p>
 <p style="font-size:13px;color:#6B6763;margin-top:34px;">Other locations: ${other}</p>
-<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General guidance only; conditions, premiums and cover vary by insurer and profile.</em></p>
+<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). General guidance only; conditions, premiums and cover vary by insurer and profile.</em></p>
 </div>
 `;
 }

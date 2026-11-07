@@ -1,7 +1,7 @@
 # adlerrochefort.com
 
 Static marketing site for **Adler &amp; Rochefort**, the commercial brand of Ownizo,
-Unipessoal, Lda. — an ASF-registered insurance mediator (reg. 425591790/3) based in
+Unipessoal, Lda. — an insurance mediator registered in Portugal with the ASF (reg. 425591790/3) and in Spain with the DGSFP under LPS based in
 Lagos, Algarve.
 
 ## Layout

@@ -267,7 +267,7 @@ function enTail(a) {
     `<p class="footer-brand-desc">English-speaking insurance broker for international clients, registered with Portugal's ASF, no. 425591790/3, and serving Spain on a cross-border basis &mdash; home, health, car, life and private-client cover.</p>`,
     `<p class="footer-brand-desc">Private-client insurance intermediary registered with Portugal's ASF, no. 425591790/3, with its head office in Lisbon, advising households in Portugal and Spain &mdash; health, high-value homes, cars, art and collections, liability and family protection.</p>`);
   html = swap(html,
-    '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking, ASF-registered insurance broker</small></div>',
+    '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking · ASF (Portugal) · DGSFP (Spain, LPS)</small></div>',
     `<div class="ar-sticky-cta-label">${a.form === 'health' ? 'Written comparison' : 'Written review'}<small>ASF-registered private-client intermediary</small></div>`);
   html = swap(html, '<a href="#ar-quote-form" class="ar-btn ar-btn-primary">Free quote</a>', `<a href="#ar-quote-form" class="ar-btn ar-btn-primary">${a.form === 'health' ? 'Compare plans' : 'Request review'}</a>`);
   html = swap(html, 'data-topics="casa_geral,lagos"', `data-topics="${a.chatTopics}"`);
@@ -306,7 +306,7 @@ ${a.checklist.map((c) => `<li>${c}</li>`).join('\n')}
 </ul>
 <h2>Talk to us</h2>
 ${a.closing}
-<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General information from an insurance intermediary, not personalised advice; what a policy covers depends on its wording and on the insurer&rsquo;s acceptance of the risk.</em></p>
+<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). General information from an insurance intermediary, not personalised advice; what a policy covers depends on its wording and on the insurer&rsquo;s acceptance of the risk.</em></p>
 </div>
 `;
   const faq = `<section class="ar-cv ar-faq">

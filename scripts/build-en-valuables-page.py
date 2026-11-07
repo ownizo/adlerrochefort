@@ -34,7 +34,7 @@ PAGE = {
     "path": "/en/art-jewellery-watches-insurance/",
     "crumbs": [("Home", "/en/"), ("Private clients", "/en/private-clients/"), ("Art, jewellery and watches", None)],
     "title": "Art, Jewellery & Watch Insurance in Portugal and Spain",
-    "desc": "Art, jewellery and watches insured on agreed value with specialist insurers, on terms confirmed in writing. Written opinion from an ASF-registered broker.",
+    "desc": "Art, jewellery and watches insured on agreed value with specialist insurers, on terms confirmed in writing. Written opinion from a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS).",
     "h1": "Art, jewellery and watch insurance in Portugal and Spain",
     "lead": "Art, jewellery and watches insured on agreed value with specialist insurers, for homes in Portugal and Spain, on terms confirmed in writing. A standard contents policy caps what it pays for any one piece; above that cap the piece is simply not insured. We schedule the pieces that matter and tell you in writing what your current policy would pay today.",
     "cta": ("Ask for a written review of your collection", "/en/private-clients/#ar-quote-form"),

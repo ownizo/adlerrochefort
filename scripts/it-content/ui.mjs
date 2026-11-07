@@ -205,7 +205,7 @@ export const IT_UI = {
     asfChannel: 'Canale di segnalazione dell’ASF',
     regulatory: [
       'Adler &amp; Rochefort è un marchio di Ownizo, Unipessoal Lda.',
-      'Ownizo, Unipessoal Lda. è registrata presso l’autorità portoghese di vigilanza sulle assicurazioni e i fondi pensione (ASF) come agente assicurativo con il numero 425591790/3 e opera in Spagna in regime di libera prestazione di servizi nell’Unione europea. Prestiamo consulenza nell’ambito del nostro portafoglio di compagnie assicurative.',
+      'Ownizo, Unipessoal Lda. è registrata in Portogallo presso l’autorità di vigilanza sulle assicurazioni e i fondi pensione (ASF) come agente assicurativo con il numero 425591790/3 e in Spagna presso la Dirección General de Seguros y Fondos de Pensiones (DGSFP) in regime di libera prestazione di servizi (LPS). Prestiamo consulenza nell’ambito del nostro portafoglio di compagnie assicurative.',
       'Questa pagina contiene informazioni di carattere generale e non costituisce consulenza assicurativa individuale né consulenza legale. La copertura adeguata dipende dalla Sua situazione e dalle condizioni della polizza scelta.',
     ],
   },

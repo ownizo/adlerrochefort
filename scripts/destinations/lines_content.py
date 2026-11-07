@@ -141,7 +141,7 @@ P[('homes_es','pt')] = dict(slug='seguros/habitacao-espanha', h1='Seguro de resi
          ("O Consorcio de Compensación de Seguros","Em Espanha, os riscos extraordinários — inundações, sismos e tempestades acima de certa intensidade — são cobertos pelo Consorcio. A apólice privada cobre o resto."),
          ("Casas de férias e arrendamento","Os períodos sem ninguém em casa e o arrendamento turístico têm de ser declarados; em várias regiões o arrendamento exige licença."),
          ("Objetos de valor","Joias, relógios e coleções são especificados em valor acordado. Em Espanha podem também ser seguros numa apólice própria, separada da casa.")],
- faq=[("Trabalham em Espanha?","Sim. A Adler & Rochefort está registada na ASF (n.º 425591790/3) e trabalha em Espanha ao abrigo da livre prestação de serviços na União Europeia."),
+ faq=[("Trabalham em Espanha?","Sim. A Adler & Rochefort está registada em Portugal na ASF (n.º 425591790/3) e em Espanha na DGSFP em regime de livre prestação de serviços (LPS)."),
       ("Existe um valor mínimo?","Cada seguradora especializada fixa o seu próprio patamar de entrada, em função do custo de reconstrução, do recheio e dos objetos de valor. Abaixo disso, dizemos-lhe por escrito se uma boa apólice de mercado é a melhor resposta.")])
 P[('homes_es','it')] = dict(slug='it/assicurazione-casa-alto-valore-spagna', h1='Assicurazione casa di pregio in Spagna',
  intro="Per ville, appartamenti e case vacanza in Spagna collochiamo la copertura presso assicuratori specializzati nella clientela privata. La polizza parte dal costo di ricostruzione della casa, con contenuto, arte e oggetti di valore dichiarati correttamente — e va letta insieme al Consorcio.",
@@ -149,7 +149,7 @@ P[('homes_es','it')] = dict(slug='it/assicurazione-casa-alto-valore-spagna', h1=
          ("Il Consorcio de Compensación de Seguros","In Spagna i rischi straordinari — alluvioni, terremoti e tempeste oltre una certa intensità — sono coperti dal Consorcio. La polizza privata copre il resto."),
          ("Case vacanza e affitti","I periodi di inabitazione e l'affitto turistico vanno dichiarati; in diverse regioni l'affitto richiede una licenza."),
          ("Oggetti di valore","Gioielli, orologi e collezioni sono elencati a valore concordato. In Spagna possono anche essere assicurati con una polizza propria, separata dalla casa.")],
- faq=[("Lavorate in Spagna?","Sì. Adler & Rochefort è registrato presso l'ASF (n. 425591790/3) e opera in Spagna in libera prestazione di servizi nell'Unione europea."),
+ faq=[("Lavorate in Spagna?","Sì. Adler & Rochefort è registrato in Portogallo presso l'ASF (n. 425591790/3) e in Spagna presso la DGSFP in regime di libera prestazione di servizi (LPS)."),
       ("Esiste un valore minimo?","Ogni assicuratore specializzato fissa la propria soglia di accesso, in base al costo di ricostruzione, al contenuto e agli oggetti di valore. Al di sotto, Le diciamo per iscritto se una buona polizza standard è la risposta migliore.")])
 P[('homes_es','fr')] = dict(slug='fr/assurance-residence-grande-valeur-espagne', h1='Assurance des résidences de grande valeur en Espagne',
  intro="Pour les villas, appartements et maisons de vacances en Espagne, nous plaçons la protection auprès d’assureurs spécialisés dans la clientèle privée. Le contrat part du coût de reconstruction de la maison, avec le mobilier, les œuvres et les objets de valeur correctement déclarés — et se lit avec le Consorcio.",

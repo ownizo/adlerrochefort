@@ -31,7 +31,7 @@ def T():
      "Versicherungsmakler, bei der ASF Portugals registriert. Wir helfen internationalen Mandanten und Eigentümern in Portugal und Spanien, den passenden Schutz zu klären — Korrespondenz auf Deutsch."),
     ("By sending this form you agree to us using your details to prepare and discuss your quote, in line with our",
      "Mit dem Absenden erklären Sie sich einverstanden, dass wir Ihre Angaben zur Vorbereitung des Angebots verwenden, gemäß unserer"),
-    ("We never sell your data. Adler " + A + " Rochefort is a trading name of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3.",
+    ("We never sell your data. Adler " + A + " Rochefort is a trading name of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS).",
      "Wir verkaufen Ihre Daten nicht. Adler " + A + " Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda., bei der ASF unter Nr. 425591790/3 registriert."),
     ("No obligation to proceed. We may contact you for additional information before obtaining terms, and insurer acceptance and pricing remain subject to underwriting.",
      "Unverbindlich. Wir können vor der Einholung von Konditionen Rückfragen stellen; Annahme und Preis bleiben der Risikoprüfung des Versicherers vorbehalten."),

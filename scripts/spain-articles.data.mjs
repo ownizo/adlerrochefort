@@ -7,7 +7,8 @@
  * beyond what the corresponding commercial page already states.
  *
  * Same compliance rules as spain-cluster.data.mjs: no Spanish insurer named,
- * no DGSFP registration, no invented statutory citation, no PT fact (ASF as
+ * no invented DGSFP number (the Spain register is stated as DGSFP under LPS;
+ * the only number is ASF 425591790/3), no invented statutory citation, no PT fact (ASF as
  * Spain's regulator, IMT, Decreto-Lei, bónus-malus, Cartão de Cidadão)
  * anywhere in the body. build-spain-articles.mjs's validate() step enforces
  * this the same way build-spain-cluster.mjs's does.

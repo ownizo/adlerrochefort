@@ -107,7 +107,7 @@ export const EN_BROKER = [
 
   // Firm self-designation.
   ['ASF-registered, English-speaking insurance intermediary', 'ASF-registered, English-speaking insurance broker'],
-  ['English-speaking, ASF-registered insurance intermediary', 'English-speaking, ASF-registered insurance broker'],
+  ['English-speaking, ASF-registered insurance intermediary', 'English-speaking insurance broker, registered in Portugal with the ASF and in Spain with the DGSFP (LPS)'],
   ['ASF-registered Portuguese insurance intermediary', 'ASF-registered Portuguese insurance broker'],
   ['Insurance intermediary registered with the ASF', 'Insurance broker registered with the ASF'],
   ['insurance intermediary registered with the ASF', 'insurance broker registered with the ASF'],

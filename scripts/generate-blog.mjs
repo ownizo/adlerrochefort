@@ -617,7 +617,7 @@ const enPages = await buildListing({
   meta: {
     title: 'Insights — Insurance in Portugal & Spain, explained',
     description:
-      'Analysis for international families in Portugal and Spain: high-value and holiday homes, valuables, collector cars, yachts, international health and liability — by an ASF-registered broker.',
+      'Analysis for international families in Portugal and Spain: high-value and holiday homes, valuables, collector cars, yachts, international health and liability — by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS).',
   },
   crumbs: [
     { name: 'Home', url: '/en/' },

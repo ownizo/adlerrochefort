@@ -52,7 +52,7 @@ const HUB = {
   slug: 'insurance-for-canadians-portugal',
   metaTitle: 'Insurance for Canadians in Portugal | Buyers &amp; Residents | Adler &amp; Rochefort',
   metaDescription:
-    'Insurance for Canadian citizens buying property, relocating to, or already living in Portugal, explained in English by an ASF-registered broker. What provincial health coverage does and does not do once you leave, and what to arrange in what order.',
+    'Insurance for Canadian citizens buying property, relocating to, or already living in Portugal, explained in English by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS). What provincial health coverage does and does not do once you leave, and what to arrange in what order.',
   h1: 'Insurance for Canadians in Portugal',
   heroSub:
     'Buying property, relocating, or already settled in Portugal as a Canadian citizen? Several assumptions that hold in Canada do not carry over here: provincial health coverage is provincial, not federal, and the residency rules and grace periods that govern what happens to it when you leave differ by province — there is no single national answer. Owning property here before you actually move, and insuring it correctly during that gap, is its own separate question. We set out what actually applies to your situation, in English, and arrange it.',

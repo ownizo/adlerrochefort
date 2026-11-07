@@ -118,7 +118,7 @@ function tail(a) {
   );
   html = swap(
     html,
-    '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking, ASF-registered insurance broker</small></div>',
+    '<div class="ar-sticky-cta-label">Free quote in 24h<small>English-speaking · ASF (Portugal) · DGSFP (Spain, LPS)</small></div>',
     '<div class="ar-sticky-cta-label">Written assessment<small>ASF-registered private-client intermediary</small></div>'
   );
   html = swap(html, '<a href="#ar-quote-form" class="ar-btn ar-btn-primary">Free quote</a>', '<a href="#ar-quote-form" class="ar-btn ar-btn-primary">Request assessment</a>');
@@ -260,7 +260,7 @@ ${spain}
 <h2>Talk to us</h2>
 ${a.closing}
 <p style="font-size:13px;color:#6B6763;margin-top:34px;">More from the surf coast: ${otherLine(a)}</p>
-<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered with the ASF under no. 425591790/3. General information from an insurance intermediary, not personalised advice; what a policy covers depends on its wording.</em></p>
+<p><em>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda., registered in Portugal with the ASF under no. 425591790/3 and in Spain with the DGSFP under the freedom to provide services (LPS). General information from an insurance intermediary, not personalised advice; what a policy covers depends on its wording.</em></p>
 </div>
 `;
 }

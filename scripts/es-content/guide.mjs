@@ -143,7 +143,7 @@ export const GUIDE_PAGE = {
   faq: [
     {
       q: '¿Quién supervisa a las aseguradoras y a los mediadores?',
-      a: '<p>En Portugal, la ASF — <em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em>; en España, la DGSFP. Cumplen la función de la CNSF mexicana, la Superintendencia Financiera de Colombia o la CMF chilena. Puede comprobar nuestra inscripción en la ASF con el n.º 425591790/3.</p>',
+      a: '<p>En Portugal, la ASF — <em>Autoridade de Supervisão de Seguros e Fundos de Pensões</em>; en España, la DGSFP. Cumplen la función de la CNSF mexicana, la Superintendencia Financiera de Colombia o la CMF chilena. Puede comprobar nuestra inscripción en Portugal en la ASF con el n.º 425591790/3 y en España en la DGSFP en régimen de libre prestación de servicios (LPS).</p>',
     },
     {
       q: '¿En qué idioma trabajan?',

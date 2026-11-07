@@ -465,7 +465,7 @@ ${footerLangs(page)}
   </div>
   <div class="footer-regulatory">
     <p>Adler &amp; Rochefort is de handelsnaam van Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. is geregistreerd bij de Portugese toezichthouder voor verzekeringen en pensioenfondsen (ASF) als agente de seguros onder nr. 425591790/3.</p>
+    <p>Ownizo, Unipessoal Lda. is in Portugal geregistreerd bij de toezichthouder voor verzekeringen en pensioenfondsen (ASF) als verzekeringsagent onder nr. 425591790/3, en in Spanje bij de Dirección General de Seguros y Fondos de Pensiones (DGSFP) in het regime van vrije dienstverrichting (LPS).</p>
     <p>Deze pagina is algemene informatie, geen persoonlijk advies. Welke dekking voor u passend is, hangt af van uw situatie en van de voorwaarden van de betreffende polis.</p>
   </div>
 </footer>`;

@@ -687,7 +687,7 @@ ${footerLangs(page)}
   </div>
   <div class="footer-regulatory">
     <p>Adler &amp; Rochefort ist die Handelsmarke der Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. ist bei der portugiesischen Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als Versicherungsmakler unter Nr. 425591790/3 registriert. Wir beraten innerhalb unseres Versichererportfolios.</p>
+    <p>Ownizo, Unipessoal Lda. ist in Portugal bei der Aufsichtsbehörde für Versicherungen und Pensionsfonds (ASF) als Versicherungsmakler unter Nr. 425591790/3 registriert und in Spanien bei der Dirección General de Seguros y Fondos de Pensiones (DGSFP) im freien Dienstleistungsverkehr (LPS) eingetragen. Wir beraten innerhalb unseres Versichererportfolios.</p>
     <p>Diese Seite ist eine allgemeine Information, keine individuelle Beratung. Welche Deckung für Sie geeignet ist, hängt von Ihrer Situation und den Bedingungen der jeweiligen Police ab.</p>
   </div>
 </footer>`;

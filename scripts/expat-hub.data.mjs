@@ -26,7 +26,7 @@ export const PAGE = {
 
   title: 'Insurance for Expats in Portugal | English-Speaking Broker',
   description:
-    'Insurance for expats in Portugal, explained in English. Work out what health, home, landlord, car or life cover you actually need, and get a free written review from an ASF-registered broker.',
+    'Insurance for expats in Portugal, explained in English. Work out what health, home, landlord, car or life cover you actually need, and get a free written review from a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS).',
   keywords:
     'insurance for expats in Portugal, expat insurance Portugal, insurance in Portugal for expats, expat insurance broker Portugal, insurance for foreigners in Portugal, insurance for foreign residents Portugal, insurance for international residents Portugal, English-speaking insurance broker Portugal',
 
@@ -592,7 +592,7 @@ export const PAGE = {
     name: 'Insurance brokerage for expats and international residents in Portugal',
     type: 'Insurance brokerage',
     description:
-      'English-speaking, ASF-registered insurance brokerage for expats, foreign residents and non-resident property owners in Portugal: health, home, landlord, motor, life and specialist cover compared across insurers and explained in English.',
+      'English-speaking insurance brokerage for expats, foreign residents and non-resident property owners in Portugal, registered with the ASF in Portugal and the DGSFP in Spain (LPS): health, home, landlord, motor, life and specialist cover compared across insurers and explained in English.',
     audience: 'Expats, foreign residents and international property owners in Portugal',
   },
 };

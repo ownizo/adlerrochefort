@@ -116,7 +116,7 @@ const footer = () => `
   </div>
   <div class="footer-regulatory">
     <p>Adler &amp; Rochefort is a commercial brand of Ownizo, Unipessoal Lda.</p>
-    <p>Ownizo, Unipessoal Lda. is registered with the Portuguese Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3, and operates in Spain on a cross-border basis from that registration.</p>
+    <p>Ownizo, Unipessoal Lda. is registered in Portugal with the Insurance and Pension Funds Supervisory Authority (ASF) under no. 425591790/3, and in Spain with the Dirección General de Seguros y Fondos de Pensiones (DGSFP) under the freedom to provide services (LPS).</p>
   </div>
 </footer>`;
 
@@ -353,7 +353,7 @@ const resolves = (path, pending) => {
   );
 };
 
-const FORBIDDEN = ['Decreto-Lei', 'DGSFP', 'IMT', 'bónus-malus', 'Cartão de Cidadão', 'AIMA', 'D7 visa', 'D8 visa'];
+const FORBIDDEN = ['Decreto-Lei', 'IMT', 'bónus-malus', 'Cartão de Cidadão', 'AIMA', 'D7 visa', 'D8 visa'];
 
 function validate(a, html, pending) {
   const errs = [];

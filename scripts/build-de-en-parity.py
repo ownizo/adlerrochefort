@@ -115,7 +115,7 @@ def translations() -> list[tuple[str, str]]:
          "Versicherungsmakler für Portugal und Spanien"),
         ("English-speaking insurance broker for international clients in Portugal and Spain. Health, home, car, life and private-client cover, explained in English and compared across insurers.",
          "Versicherungsmakler für internationale Mandanten in Portugal und Spanien. Kranken-, Haus-, Auto-, Lebens- und Private-Client-Deckung — auf Deutsch erklärt, über Versicherer hinweg verglichen."),
-        ("Health, home, car, life and private-client insurance for international residents in Portugal and Spain, explained in English by an ASF-registered broker.",
+        ("Health, home, car, life and private-client insurance for international residents in Portugal and Spain, explained in English by a broker registered in Portugal with the ASF and in Spain with the DGSFP (LPS).",
          "Kranken-, Haus-, Auto-, Lebens- und Private-Client-Versicherung für internationale Mandanten in Portugal und Spanien, erklärt auf Deutsch von einem bei der ASF registrierten Makler."),
         ("insurance broker Portugal, insurance broker Spain, expat insurance Portugal, expat insurance Spain, health insurance Portugal, home insurance Portugal, car insurance Portugal, health insurance Spain, home insurance Spain, car insurance Spain, English speaking insurance broker, Adler Rochefort",
          "Versicherungsmakler Portugal, Versicherungsmakler Spanien, Versicherung Portugal Deutsche, Krankenversicherung Portugal, Hausversicherung Portugal, Autoversicherung Portugal, Krankenversicherung Spanien, Hausversicherung Spanien, Autoversicherung Spanien, Adler Rochefort"),

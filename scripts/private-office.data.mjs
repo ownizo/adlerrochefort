@@ -30,7 +30,7 @@ export const PAGES = {
     template: 'en/private-clients/index.html',
     home: '/en/', homeLabel: 'Home',
     title: 'Adler & Rochefort Private Office — Portugal & Spain',
-    description: 'One adviser for the residences, collections, health and protection of international families in Portugal and Spain. ASF-registered, not tied to any insurer.',
+    description: 'One adviser for the residences, collections, health and protection of international families in Portugal and Spain. Registered in Portugal with the ASF and in Spain with the DGSFP (LPS), not tied to any insurer.',
     eyebrow: 'Private Office · Portugal & Spain',
     lead: 'Insurance advisory for families, residences and collections across Portugal and Spain.',
     intro: [
@@ -98,7 +98,7 @@ export const PAGES = {
     template: 'de/private-clients/index.html',
     home: '/de/', homeLabel: 'Startseite',
     title: 'Adler & Rochefort Private Office — Portugal & Spanien',
-    description: 'Ein Berater für Immobilien, Sammlungen, Gesundheit und Schutz internationaler Familien in Portugal und Spanien. ASF-registriert, an keinen Versicherer gebunden.',
+    description: 'Ein Berater für Immobilien, Sammlungen, Gesundheit und Schutz internationaler Familien in Portugal und Spanien. In Portugal bei der ASF und in Spanien bei der DGSFP (LPS) registriert, an keinen Versicherer gebunden.',
     eyebrow: 'Private Office · Portugal & Spanien',
     lead: 'Versicherungsberatung für Familien, Residenzen und Sammlungen in Portugal und Spanien.',
     intro: [
@@ -166,7 +166,7 @@ export const PAGES = {
     template: 'es/seguro-family-office/index.html',
     home: '/es/', homeLabel: 'Inicio',
     title: 'Adler & Rochefort Private Office — Portugal y España',
-    description: 'Un solo asesor para las residencias, colecciones, salud y protección de familias internacionales en Portugal y España. Registrado en la ASF y sin vínculo con aseguradoras.',
+    description: 'Un solo asesor para las residencias, colecciones, salud y protección de familias internacionales en Portugal y España. Registrado en Portugal en la ASF y en España en la DGSFP (LPS), sin vínculo con aseguradoras.',
     eyebrow: 'Private Office · Portugal y España',
     lead: 'Asesoría de seguros para familias, residencias y colecciones en Portugal y España.',
     intro: [
@@ -177,7 +177,7 @@ export const PAGES = {
     waText: 'Hola, me gustaría concertar una conversación privada con el Private Office de Adler & Rochefort.',
     factsTitle: 'En síntesis',
     facts: [
-      'Registrado en la ASF (n.º 425591790/3); opera en España en régimen de libre prestación de servicios de la UE.',
+      'Registrado en Portugal en la ASF (n.º 425591790/3) y en España en la DGSFP en régimen de libre prestación de servicios (LPS).',
       'Sin vínculo con ninguna aseguradora: las recomendaciones se eligen por coberturas, capitales y gestión de siniestros — nunca solo por la prima.',
       'Capacidad especializada para clientes privados y del mercado de Lloyd’s para viviendas y objetos de valor; salud internacional con Allianz Care y Cigna Global.',
       'Un solo asesor para los dos países; cuando la aseguradora suscribe Portugal y España, una sola póliza.',
@@ -381,7 +381,7 @@ export const PAGES = {
     waText: 'Olá, gostaria de agendar uma conversa reservada com o Private Office da Adler & Rochefort.',
     factsTitle: 'Em resumo',
     facts: [
-      'Registrada na ASF (n.º 425591790/3); opera na Espanha em regime de livre prestação de serviços da UE.',
+      'Registrada em Portugal na ASF (n.º 425591790/3) e na Espanha na DGSFP em regime de livre prestação de serviços (LPS).',
       'Sem vínculo de exclusividade com nenhuma seguradora: as recomendações são escolhidas pelas coberturas, capitais segurados e gestão de sinistros — nunca só pelo prêmio.',
       'Capacidade especializada para clientes particulares e do mercado Lloyd’s para residências e objetos de valor; saúde internacional com a Allianz Care e a Cigna Global.',
       'Um único consultor para os dois países; quando a seguradora subscreve Portugal e Espanha, uma única apólice.',

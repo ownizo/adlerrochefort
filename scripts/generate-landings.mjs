@@ -1570,7 +1570,7 @@ const HUB_CARDS = [
 const hubHead = metaHead({
   title: 'Seguros para empresas e particulares em Portugal',
   description:
-    'As áreas em que trabalhamos: TVDE, frota, alojamento local, habitação, multirriscos empresarial, automóvel e condomínios. Mediador de seguros registado na ASF.',
+    'As áreas em que trabalhamos: TVDE, frota, alojamento local, habitação, multirriscos empresarial, automóvel e condomínios. Mediador de seguros registado em Portugal na ASF e em Espanha na DGSFP (LPS).',
   canonical: '/seguros/',
   robots: 'index, follow',
   hreflang: [

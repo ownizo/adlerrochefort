@@ -16,13 +16,13 @@
  *    "comparing the market" in Spain, or of any specific number of insurers
  *    appointed there. Zero is confirmed in this repository at the time of
  *    writing, so the copy never implies otherwise.
- *  - No DGSFP registration number, no Spanish office, no Spanish phone number,
- *    no Spanish postal address. The only regulatory identity used is the real
- *    one: Ownizo, Unipessoal Lda., ASF 425591790/3, Lagos, Portugal.
- *  - The cross-border basis is described softly and without a completion
- *    date, because the notification itself has not been confirmed in this
- *    repository. "We are extending our service to Spain" — never "we are
- *    licensed in Spain" and never "DGSFP-registered".
+ *  - No separate Spanish registration number, no Spanish office, no Spanish
+ *    phone number, no Spanish postal address. The regulatory identity is the
+ *    real one: Ownizo, Unipessoal Lda., registered in Portugal with the ASF
+ *    under no. 425591790/3 and in Spain with the DGSFP under freedom to
+ *    provide services (LPS). Do not invent a DGSFP number.
+ *  - State both registers. Do not say "licensed in Spain" as if there were a
+ *    local establishment, and do not invent a Spanish inscription number.
  *  - No Spanish statutory citation is invented. Where Portuguese pages cite a
  *    Decreto-Lei by number, these pages describe common lender/community
  *    practice in general terms and say plainly that the specifics depend on
