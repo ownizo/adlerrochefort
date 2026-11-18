@@ -889,7 +889,7 @@ function footerHtml(market, page) {
   return `<footer class="on-dark">
   <div class="footer-top">
     <div>
-      <div class="footer-brand-name">${iso(market, 'Adler &amp; Rochefort')}</div>
+      <div class="footer-brand-name"><img src="/images/logo-adler-rochefort-white-2026.png?v=20261118" alt="Adler &amp; Rochefort" class="footer-logo-img" width="1500" height="127" loading="lazy" decoding="async"></div>
       <p class="footer-brand-desc">${ft.desc}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>

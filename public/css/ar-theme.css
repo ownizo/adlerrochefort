@@ -530,3 +530,16 @@ html body :is(a, button, summary, input, select, textarea):focus-visible {
   html :is(body, main) > section, html body footer { margin: 0 !important; border-radius: 0 !important; }
 }
 .nav-logo-img { aspect-ratio: 1500 / 127; }
+
+/* footer wordmark — white logo image replaces the old text wordmark (Nov 2026) */
+html body .footer-brand-name { line-height: 0 !important; margin-bottom: 22px; }
+html body .footer-brand-name .footer-logo-img {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1500 / 127;
+}
+@media (max-width: 768px) {
+  html body .footer-brand-name .footer-logo-img { width: 240px; }
+}

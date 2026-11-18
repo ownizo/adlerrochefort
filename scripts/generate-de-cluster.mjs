@@ -602,7 +602,7 @@ ${branchGroupsHtml(page)}
 const FOOTER = (page) => `<footer class="on-dark">
   <div class="footer-top">
     <div>
-      <div class="footer-brand-name">Adler &amp; Rochefort</div>
+      <div class="footer-brand-name"><img src="/images/logo-adler-rochefort-white-2026.png?v=20261118" alt="Adler &amp; Rochefort" class="footer-logo-img" width="1500" height="127" loading="lazy" decoding="async"></div>
       <p class="footer-brand-desc">${isSpainPage(page) ? "Versicherungsmakler für internationale Mandanten in Spanien — im Dienstleistungsverkehr von der portugiesischen ASF-Registrierung Nr. 425591790/3. Hauptsitz in Lissabon." : "Versicherungsmakler für internationale Mandanten an der Algarve, Portugal — bei der ASF registriert unter Nr. 425591790/3. Klare Beratung, in unserem Versichererportfolio."}</p>
       <div class="footer-badge">
         <span class="footer-badge-dot" aria-hidden="true"></span>
