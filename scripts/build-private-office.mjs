@@ -235,7 +235,7 @@ function schema(p) {
     name: 'Adler & Rochefort',
     legalName: 'Ownizo, Unipessoal Lda.',
     url: `${ORIGIN}/`,
-    logo: `${ORIGIN}/images/logo-adler-rochefort.svg`,
+    logo: `${ORIGIN}/images/logo-adler-rochefort-2026.png`,
     telephone: '+351928226570',
     email: 'insurance@adlerrochefort.com',
     address: [

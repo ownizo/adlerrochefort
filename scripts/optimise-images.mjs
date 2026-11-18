@@ -9,7 +9,7 @@
  *      Every homepage visit downloaded a 2376x3168 portrait to draw it at a
  *      sixth of that.
  *
- *   2. /images/logo-adler-rochefort.svg is 331 KB, 3499px wide, and appears in
+ *   2. /images/logo-adler-rochefort-2026.png is 331 KB, 3499px wide, and appears in
  *      the nav of 218 pages — above the fold, every single time. It renders at
  *      44-60px tall. Re-encoding it as a 1000px palette PNG keeps the same URL
  *      and the same appearance at any plausible pixel density, so no markup
@@ -84,9 +84,9 @@ notes.push(
 );
 
 // --- 2. the nav logo is a white SVG; do not re-encode it --------------------
-const LOGO = '/images/logo-adler-rochefort.svg';
-const LOGO_W = 1648;
-const LOGO_H = 403;
+const LOGO = '/images/logo-adler-rochefort-2026.png';
+const LOGO_W = 1500;
+const LOGO_H = 127;
 before.logo = await size(LOGO);
 after.logo = before.logo;
 

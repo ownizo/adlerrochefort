@@ -372,7 +372,7 @@ function ptHead(a) {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: title, description: desc, image: PT_OG,
     datePublished: PUBLISHED, dateModified: PUBLISHED, inLanguage: 'pt-PT',
     author: { '@type': 'Person', name: 'Hugo Gonçalves', jobTitle: 'Fundador & Especialista em Gestão de Risco', url: `${ORIGIN}/#equipa`, worksFor: { '@type': 'Organization', name: 'Adler & Rochefort' } },
-    publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort.svg` } },
+    publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort-2026.png` } },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     keywords: a.keywords, wordCount: a.wordCount,
   };
@@ -551,7 +551,7 @@ function articleLd(p, lang, homeName, homeUrl) {
       '@context': 'https://schema.org', '@type': 'Article', headline: plain(p.h1), description: plain(p.description), inLanguage: lang,
       datePublished: PUBLISHED, dateModified: PUBLISHED, mainEntityOfPage: { '@type': 'WebPage', '@id': abs },
       author: { '@type': 'Person', name: 'Hugo Gonçalves' },
-      publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort.svg` } },
+      publisher: { '@type': 'Organization', name: 'Adler & Rochefort', logo: { '@type': 'ImageObject', url: `${ORIGIN}/images/logo-adler-rochefort-2026.png` } },
     },
     faqLd(p.faq),
     {
