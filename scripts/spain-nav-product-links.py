@@ -76,6 +76,55 @@ def fix(s, lang):
     return s, n
 
 
+# November 2026, second pass: the other languages.
+RULES.update({
+    'nl': [('/nl/kunst-sieraden-verzekering-boven-getaxeerde-waarde/', 'Kunst, sieraden &amp; horloges', [('/nl/sieraden-horloges-verzekering-spanje/', 'Sieraden &amp; horloges')]),
+           ('/nl/klassieke-auto-verzekering-portugal-spanje/', "Klassieke &amp; waardevolle auto's", [('/nl/klassieke-auto-verzekering-spanje/', "Klassieke auto's"), ('/nl/luxe-auto-verzekering-spanje/', "Luxe auto's")])],
+    'fr': [('/fr/assurance-art-bijoux-montres/', 'Œuvres, bijoux et montres', [('/fr/assurance-bijoux-montres-espagne/', 'Bijoux et montres')]),
+           ('/fr/assurance-voitures-collection-prestige/', 'Voitures de collection et de prestige', [('/fr/assurance-voitures-collection-espagne/', 'Voitures de collection'), ('/fr/assurance-voiture-luxe-espagne/', 'Voitures de luxe')])],
+    'it': [('/it/assicurazione-arte-gioielli-oltre-valore-concordato/', 'Arte, gioielli e orologi', [('/it/assicurazione-gioielli-orologi-spagna/', 'Gioielli e orologi')]),
+           ('/it/assicurazione-auto-epoca-alto-valore-portogallo-spagna/', "Auto d'epoca e di pregio", [('/it/assicurazione-auto-epoca-spagna/', "Auto d'epoca"), ('/it/assicurazione-auto-lusso-spagna/', 'Auto di lusso')])],
+    'pl': [('/pl/ubezpieczenie-sztuki-bizuterii-ponad-wartosc-uzgodniona/', 'Sztuka, biżuteria i zegarki', [('/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/', 'Biżuteria i zegarki')]),
+           ('/pl/ubezpieczenie-samochodow-klasycznych-portugalia-hiszpania/', 'Samochody klasyczne i luksusowe', [('/pl/ubezpieczenie-samochodu-klasycznego-hiszpania/', 'Samochody klasyczne'), ('/pl/ubezpieczenie-samochodu-luksusowego-hiszpania/', 'Samochody luksusowe')])],
+    'se': [('/se/konst-smycken-forsakring-utover-avtalat-varde/', 'Konst, smycken och klockor', [('/se/smycken-klockor-forsakring-spanien/', 'Smycken och klockor')]),
+           ('/se/veteranbil-forsakring-portugal-spanien/', 'Veteran- och lyxbilar', [('/se/veteranbilsforsakring-spanien/', 'Veteranbilar'), ('/se/lyxbilsforsakring-spanien/', 'Lyxbilar')])],
+    'dk': [('/dk/kunst-smykker-forsikring-ud-over-aftalt-vaerdi/', 'Kunst, smykker og ure', [('/dk/smykker-ure-forsikring-spanien/', 'Smykker og ure')]),
+           ('/dk/veteranbil-forsikring-portugal-spanien/', 'Veteran- og luksusbiler', [('/dk/veteranbilforsikring-spanien/', 'Veteranbiler'), ('/dk/luksusbil-forsikring-spanien/', 'Luksusbiler')])],
+    'zh': [('/zh/art-jewellery-beyond-agreed-value/', '艺术品、珠宝与腕表', [('/zh/jewellery-watch-insurance-spain/', '珠宝与腕表')]),
+           ('/zh/classic-car-insurance-portugal-spain/', '经典车与高价值汽车', [('/zh/classic-car-insurance-spain/', '经典车'), ('/zh/luxury-car-insurance-spain/', '豪华车')])],
+    'il': [('/il/art-jewellery-beyond-agreed-value/', 'אמנות, תכשיטים ושעונים', [('/il/jewellery-watch-insurance-spain/', 'תכשיטים ושעונים')]),
+           ('/il/classic-car-insurance-portugal-spain/', 'רכבי אספנות ויוקרה', [('/il/classic-car-insurance-spain/', 'רכבים קלאסיים'), ('/il/luxury-car-insurance-spain/', 'רכבי יוקרה')])],
+})
+
+PT_AFTER = 'href="/private-clients/automoveis-classicos/"'
+PT_NEW = [('/seguros/joias-relogios-espanha/', 'Joias e relógios — Espanha'), ('/seguros/carros-classicos-espanha/', 'Automóveis clássicos — Espanha'),
+          ('/seguros/carros-luxo-espanha/', 'Automóveis de luxo — Espanha')]
+
+
+def fix_pt(s):
+    """PT nav has no Spain panel: add the three Spain lines after the classic-cars line (desktop and mobile)."""
+    if 'href="/seguros/carros-luxo-espanha/"' in s.split('</nav>')[0] and 'id="macc-private"' not in s:
+        return s, 0
+    n = 0
+    def rep(m):
+        nonlocal n
+        line, indent = m.group(0), m.group(1)
+        role = ' role="menuitem"' if 'role="menuitem"' in line else ''
+        n += 1
+        return line + ''.join(f'\n{indent}<a href="{h}"{role}>{l}</a>' for h, l in PT_NEW)
+    for block_id in ('id="nav-panel-private"', 'id="macc-private"'):
+        i = s.find(block_id)
+        if i == -1:
+            continue
+        j = s.find('</div>', i)
+        seg = s[i:j]
+        if 'carros-luxo-espanha' in seg:
+            continue
+        seg2 = re.sub(r'\n([ \t]*)<a href="/private-clients/automoveis-classicos/"[^>]*>[^<]*</a>', rep, seg, count=1)
+        s = s[:i] + seg2 + s[j:]
+    return s, n
+
+
 if __name__ == '__main__':
     total = files = 0
     for lang in RULES:
@@ -86,4 +135,14 @@ if __name__ == '__main__':
                 Path(f).write_text(s2, encoding='utf-8')
                 total += n
                 files += 1
-    print(f'{files} pages, {total} menu links updated')
+    pt_files = 0
+    for f in sorted(glob.glob(str(ROOT / 'public' / '**/index.html'), recursive=True)):
+        rel = f[len(str(ROOT / 'public')) + 1:]
+        if rel.split('/')[0] in ('en', 'de', 'es', 'nl', 'fr', 'it', 'pl', 'se', 'dk', 'zh', 'il', 'br'):
+            continue
+        s = Path(f).read_text(encoding='utf-8')
+        s2, n = fix_pt(s)
+        if n:
+            Path(f).write_text(s2, encoding='utf-8')
+            pt_files += 1
+    print(f'{files} pages, {total} menu links updated; {pt_files} PT pages')

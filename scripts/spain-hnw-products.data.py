@@ -5,11 +5,23 @@
 # out separately; no fixed response times; no calls offered; no insurer wording
 # claims beyond what the insurer's own product description says.
 
-URLS = {
-    "luxury": {"en": "/en/luxury-car-insurance-spain/", "de": "/de/luxusauto-versicherung-spanien/", "es": "/es/seguro-coche-lujo-espana/"},
-    "classic": {"en": "/en/classic-car-insurance-spain/", "de": "/de/oldtimerversicherung-spanien/", "es": "/es/seguro-vehiculos-clasicos-espana/"},
-    "jewellery": {"en": "/en/jewellery-watch-insurance-spain/", "es": "/es/seguro-joyas-relojes-espana/"},
+URLS = {  # full 12-language groups (the other languages are built by scripts/build-spain-i18n.py)
+    "luxury": {"pt": "/seguros/carros-luxo-espanha/", "en": "/en/luxury-car-insurance-spain/", "de": "/de/luxusauto-versicherung-spanien/",
+               "nl": "/nl/luxe-auto-verzekering-spanje/", "fr": "/fr/assurance-voiture-luxe-espagne/", "es": "/es/seguro-coche-lujo-espana/",
+               "it": "/it/assicurazione-auto-lusso-spagna/", "pl": "/pl/ubezpieczenie-samochodu-luksusowego-hiszpania/",
+               "se": "/se/lyxbilsforsakring-spanien/", "dk": "/dk/luksusbil-forsikring-spanien/", "zh": "/zh/luxury-car-insurance-spain/",
+               "il": "/il/luxury-car-insurance-spain/"},
+    "classic": {"pt": "/seguros/carros-classicos-espanha/", "en": "/en/classic-car-insurance-spain/", "de": "/de/oldtimerversicherung-spanien/",
+                "nl": "/nl/klassieke-auto-verzekering-spanje/", "fr": "/fr/assurance-voitures-collection-espagne/", "es": "/es/seguro-vehiculos-clasicos-espana/",
+                "it": "/it/assicurazione-auto-epoca-spagna/", "pl": "/pl/ubezpieczenie-samochodu-klasycznego-hiszpania/",
+                "se": "/se/veteranbilsforsakring-spanien/", "dk": "/dk/veteranbilforsikring-spanien/", "zh": "/zh/classic-car-insurance-spain/",
+                "il": "/il/classic-car-insurance-spain/"},
+    "jewellery": {"pt": "/seguros/joias-relogios-espanha/", "en": "/en/jewellery-watch-insurance-spain/", "nl": "/nl/sieraden-horloges-verzekering-spanje/",
+                  "fr": "/fr/assurance-bijoux-montres-espagne/", "es": "/es/seguro-joyas-relojes-espana/", "it": "/it/assicurazione-gioielli-orologi-spagna/",
+                  "pl": "/pl/ubezpieczenie-bizuterii-zegarkow-hiszpania/", "se": "/se/smycken-klockor-forsakring-spanien/",
+                  "dk": "/dk/smykker-ure-forsikring-spanien/", "zh": "/zh/jewellery-watch-insurance-spain/", "il": "/il/jewellery-watch-insurance-spain/"},
 }
+
 
 # ---------------------------------------------------------------------------
 # LUXURY CARS

@@ -19,7 +19,9 @@ ROOT = Path(__file__).resolve().parent.parent
 D = runpy.run_path(str(ROOT / 'scripts/spain-hnw-products.data.py'))
 URLS = D['URLS']
 SITE = 'https://adlerrochefort.com'
-HREFLANG = {'en': 'en-GB', 'de': 'de', 'es': 'es'}
+HREFLANG = {'pt': 'pt-PT', 'en': 'en-GB', 'de': 'de', 'nl': 'nl', 'fr': 'fr', 'es': 'es', 'it': 'it-IT', 'pl': 'pl-PL',
+            'se': 'sv-SE', 'dk': 'da-DK', 'zh': 'zh-CN', 'il': 'he-IL'}
+SEG = {'pt': 'pt', 'en': 'en', 'de': 'de', 'nl': 'nl', 'fr': 'fr', 'es': 'es', 'it': 'it', 'pl': 'pl', 'sv': 'se', 'da': 'dk', 'zh': 'zh', 'he': 'il'}
 HOME = {'pt': '/', 'en': '/en/', 'nl': '/nl/', 'fr': '/fr/', 'de': '/de/', 'es': '/es/', 'it': '/it/',
         'pl': '/pl/', 'sv': '/se/', 'da': '/dk/', 'zh': '/zh/', 'he': '/il/'}
 NOTE = {'en': 'home page', 'de': 'Startseite', 'es': 'página de inicio'}
@@ -93,9 +95,10 @@ def langsel(s, lang, urls):
 
     def rep(m):
         code = m.group(1).split('-')[0]
-        if code in urls:
-            cur = ' aria-current="true"' if code == lang else ''
-            return f'<li><a href="{urls[code]}" lang="{m.group(1)}" dir="{m.group(2)}" hreflang="{m.group(3)}"{cur}>{m.group(4)}</a></li>'
+        seg = SEG.get(code, code)
+        if seg in urls:
+            cur = ' aria-current="true"' if seg == lang else ''
+            return f'<li><a href="{urls[seg]}" lang="{m.group(1)}" dir="{m.group(2)}" hreflang="{m.group(3)}"{cur}>{m.group(4)}</a></li>'
         return f'<li><a href="{HOME[code]}" lang="{m.group(1)}" dir="{m.group(2)}" hreflang="{m.group(3)}">{m.group(4)}<span class="ar-langsel-note">{NOTE[lang]}</span></a></li>'
     return pat.sub(rep, s)
 
