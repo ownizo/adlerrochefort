@@ -23,6 +23,9 @@
  * form ("Veja os dados que vamos pedir para a cotação") — done once by hand on
  * 17 Oct 2026; re-check it if apply-short-blog-forms.mjs is re-run on new articles.
  *
+ * Nov 2026: the lists below say "Portuguese NIF" for every page. Spain pages
+ * need the NIE instead — run scripts/fix-spain-tax-id.py after this script.
+ *
  * Idempotent (marker <!-- ar-quote-info -->). Run after
  * scripts/apply-quick-contact.mjs.
  */
