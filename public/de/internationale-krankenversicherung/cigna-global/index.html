@@ -255,6 +255,19 @@
 .ipmi-x .ar-cta-form-wrap{text-align:start}
 .ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>
+<style>
+.ipmi-x .ipmi-hero .ipmi-btn{margin:0 10px 10px 0}
+.ipmi-x .ipmi-hero .ipmi-btn-sim{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none;margin:0 0 10px}
+.ipmi-x .ipmi-hero .ipmi-btn-sim:hover,.ipmi-x .ipmi-sim .ipmi-sim-btn:hover{background:#e65800}
+[dir=rtl] .ipmi-x .ipmi-hero .ipmi-btn{margin:0 0 10px 10px}
+.ipmi-x .ipmi-sim{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #FF6300;border-radius:16px;padding:22px 24px;margin:0 0 28px}
+.ipmi-x .ipmi-sim h2{font-size:21px;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ipmi-x .ipmi-sim p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ipmi-x .ipmi-sim ul{margin:0 0 18px;padding-inline-start:20px}
+.ipmi-x .ipmi-sim li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ipmi-x .ipmi-sim .ipmi-sim-btn{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ipmi-x .ipmi-sim .ipmi-sim-small{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+</style>
 </head>
 <body data-market="spain" data-page-type="commercial_product" data-product="health_insurance">
 
@@ -518,6 +531,7 @@
     <p class="ipmi-lead">Cigna Global ist der internationale Einzeltarif von Cigna Healthcare, Baustein für Baustein zusammengesetzt. Er ist auch der Tarif für US-Bürger, die außerhalb der USA leben. Wir sind ein EU-regulierter Makler und Partner von Cigna Global: Wir stellen den Tarif mit Ihnen zusammen, begleiten den Antrag und stehen Ihnen im Leistungsfall zur Seite.</p>
     <p class="ipmi-meta">EU-regulierter Versicherungsmakler · ASF Nr. 425591790/3 · Lissabon · Geprüft am 18. Oktober 2026</p>
     <a class="ipmi-btn" href="#ipmi-pedido">Schriftliches Angebot anfordern</a>
+    <a class="ipmi-btn-sim" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-cigna="hero" aria-label="Jetzt bei Cigna berechnen (öffnet sich in einem neuen Tab)">Jetzt bei Cigna berechnen<span aria-hidden="true"> &#8599;</span></a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Verfasst und geprüft von <strong>Hugo Gonçalves</strong>, Gründer und Risikomanagement-Spezialist von Adler &amp; Rochefort. Studium der Betriebswirtschaft (University of Hertfordshire), laufende Weiterbildung am Chartered Insurance Institute (CII), London.</p></div>
   <section class="ipmi-facts" aria-labelledby="ipmi-facts">
@@ -530,6 +544,14 @@
       <li>Echte Beiträge 2026: Paar, 55 und 59 Jahre, weltweit ohne USA, ab 15.951 € im Jahr.</li>
       <li>Für ein Angebot: Name, Geburtsdatum, Staatsangehörigkeit, künftiges Wohnsitzland und bei US-Bürgern der Bundesstaat. Für Sie kostenlos.</li>
     </ul>
+  </section>
+  <!-- cigna-simulator -->
+  <section class="ipmi-sim" id="simulador-cigna" aria-labelledby="ipmi-sim-h">
+    <h2 id="ipmi-sim-h">Sofortige Online-Berechnung mit Cigna Global</h2>
+    <p>Wenn Sie sofort eine Zahl sehen möchten, zeigt Ihnen der offizielle Tarifrechner von Cigna Global in wenigen Minuten eine Prämie. Er öffnet sich in einem neuen Tab, und Ihre Berechnung wird Adler &amp; Rochefort als Ihrem Makler zugeordnet – ohne Mehrkosten für Sie.</p>
+    <ul><li>Die Zahl ist unverbindlich: Prämie und endgültige Bedingungen hängen von der Annahme durch Cigna nach den Gesundheitsfragen ab.</li><li>Ihre Staatsangehörigkeit und das Land, in dem Sie leben werden, müssen verschieden sein.</li><li>Sie haben bereits eine Zahl? Senden Sie sie uns über das Formular unten: Wir prüfen den Deckungsumfang und vergleichen schriftlich mit Allianz Care und APRIL International, sofern Sie berechtigt sind.</li></ul>
+    <a class="ipmi-sim-btn" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-cigna="card" aria-label="Tarifrechner von Cigna Global öffnen (öffnet sich in einem neuen Tab)">Tarifrechner von Cigna Global öffnen<span aria-hidden="true"> &#8599;</span></a>
+    <p class="ipmi-sim-small">Offizielles Tool von Cigna Global. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), EU-regulierter Versicherungsmakler, ASF Nr. 425591790/3.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
@@ -1309,6 +1331,9 @@
     if (dob) dob.max = new Date().toISOString().slice(0, 10);
     update();
   })();
+</script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-cigna]').forEach(function(a){a.addEventListener('click',function(){if(typeof window.gtag==='function'){window.gtag('event','cigna_quote_click',{placement:a.getAttribute('data-ar-cigna'),language:document.documentElement.lang,page_path:location.pathname});}});});})();
 </script>
 </body>
 </html>

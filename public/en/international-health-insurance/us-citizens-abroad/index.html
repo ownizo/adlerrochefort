@@ -374,6 +374,9 @@
   <div style="max-width:1100px;margin:0 auto;">
   <h2>Why Cigna Global, not Allianz Care</h2>
   <p>We work with both insurers, but only one of them accepts Americans. <strong>Allianz Care does not accept US citizens. Cigna Global does</strong>, provided you live outside the United States. So for American families we configure Cigna Global, at the level that fits: Silver, Gold or Platinum.</p><ul class="lp-list"><li><strong>Worldwide excluding the USA.</strong> Full cover where you live and travel, with emergency hospital treatment in the US included up to €75,000 on Silver and €200,000 on Gold, and paid in full on Platinum.</li><li><strong>Worldwide including the USA.</strong> Planned treatment back home as well. It is the most expensive option, and we price it side by side so you can see what the US element really costs.</li><li><strong>Visits home.</strong> When the US is inside your area of cover, Cigna covers temporary stays in your country of nationality of up to 180 days per policy year.</li></ul>
+  <!-- cigna-simulator -->
+  <p style="margin-top:18px">Prefer to see a figure straight away? Cigna Global&rsquo;s official quote tool shows a premium in a few minutes, and your quote is linked to Adler &amp; Rochefort as your broker. The figure is indicative: the final premium depends on Cigna&rsquo;s acceptance after the medical questions. Send us the result with the form below and we review the cover in writing.</p>
+  <p><a href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-cigna="us-citizens" aria-label="Open the Cigna Global quote tool (opens in a new tab)" style="display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none">Open the Cigna Global quote tool<span aria-hidden="true"> &#8599;</span></a></p>
   </div>
 </section>
 <section class="lp-section">
@@ -1332,5 +1335,8 @@
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en"></script>
 <script defer src="/js/ar-attribution.js"></script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-cigna]').forEach(function(a){a.addEventListener('click',function(){if(typeof window.gtag==='function'){window.gtag('event','cigna_quote_click',{placement:a.getAttribute('data-ar-cigna'),language:document.documentElement.lang,page_path:location.pathname});}});});})();
+</script>
 </body>
 </html>

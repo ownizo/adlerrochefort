@@ -247,6 +247,19 @@
 .ipmi-x .ar-cta-form-wrap{text-align:start}
 .ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>
+<style>
+.ipmi-x .ipmi-hero .ipmi-btn{margin:0 10px 10px 0}
+.ipmi-x .ipmi-hero .ipmi-btn-sim{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none;margin:0 0 10px}
+.ipmi-x .ipmi-hero .ipmi-btn-sim:hover,.ipmi-x .ipmi-sim .ipmi-sim-btn:hover{background:#e65800}
+[dir=rtl] .ipmi-x .ipmi-hero .ipmi-btn{margin:0 0 10px 10px}
+.ipmi-x .ipmi-sim{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #FF6300;border-radius:16px;padding:22px 24px;margin:0 0 28px}
+.ipmi-x .ipmi-sim h2{font-size:21px;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ipmi-x .ipmi-sim p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ipmi-x .ipmi-sim ul{margin:0 0 18px;padding-inline-start:20px}
+.ipmi-x .ipmi-sim li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ipmi-x .ipmi-sim .ipmi-sim-btn{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ipmi-x .ipmi-sim .ipmi-sim-small{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+</style>
 </head>
 <body>
 
@@ -510,6 +523,7 @@
     <p class="ipmi-lead">Cigna Global es el plan internacional individual de Cigna Healthcare, construido módulo a módulo. También es el plan para ciudadanos estadounidenses que viven fuera de EE. UU. Somos un corredor regulado en la UE y socios de Cigna Global: armamos el plan con usted, le acompañamos en la solicitud y en los siniestros.</p>
     <p class="ipmi-meta">Corredor de seguros regulado en la UE · ASF n.º 425591790/3 · Lisboa · Revisado el 18 de octubre de 2026</p>
     <a class="ipmi-btn" href="#ipmi-pedido">Pedir propuesta por escrito</a>
+    <a class="ipmi-btn-sim" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-cigna="hero" aria-label="Simular ahora con Cigna (se abre en una nueva pestaña)">Simular ahora con Cigna<span aria-hidden="true"> &#8599;</span></a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Escrito y revisado por <strong>Hugo Gonçalves</strong>, fundador y especialista en gestión de riesgos de Adler &amp; Rochefort. Licenciado en Administración de Empresas (University of Hertfordshire) y en formación continua en el Chartered Insurance Institute (CII), Londres.</p></div>
   <section class="ipmi-facts" aria-labelledby="ipmi-facts">
@@ -522,6 +536,14 @@
       <li>Primas reales de 2026: pareja de 55 y 59 años, mundial excepto EE. UU., desde 15.951 € al año.</li>
       <li>Para cotizar: nombre completo, fecha de nacimiento, nacionalidad, país donde va a vivir y, para estadounidenses, el estado. Sin coste para usted.</li>
     </ul>
+  </section>
+  <!-- cigna-simulator -->
+  <section class="ipmi-sim" id="simulador-cigna" aria-labelledby="ipmi-sim-h">
+    <h2 id="ipmi-sim-h">Simulación inmediata con Cigna Global</h2>
+    <p>Si prefiere ver una cifra de inmediato, el simulador oficial de Cigna Global le muestra una prima en pocos minutos. Se abre en una nueva pestaña y la simulación queda asociada a Adler &amp; Rochefort como su corredor, sin ningún coste adicional para usted.</p>
+    <ul><li>La cifra es orientativa: la prima y las condiciones finales dependen de la aceptación de Cigna, tras las preguntas médicas.</li><li>Su nacionalidad y el país donde vivirá deben ser distintos.</li><li>¿Ya tiene una cifra? Envíenosla con el formulario de abajo: analizamos las coberturas y las comparamos por escrito con Allianz Care y APRIL International, cuando sea elegible.</li></ul>
+    <a class="ipmi-sim-btn" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-cigna="card" aria-label="Abrir el simulador de Cigna Global (se abre en una nueva pestaña)">Abrir el simulador de Cigna Global<span aria-hidden="true"> &#8599;</span></a>
+    <p class="ipmi-sim-small">Herramienta oficial de Cigna Global. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), corredor de seguros regulado en la UE, ASF n.º 425591790/3.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
@@ -1491,6 +1513,9 @@
     if (dob) dob.max = new Date().toISOString().slice(0, 10);
     update();
   })();
+</script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-cigna]').forEach(function(a){a.addEventListener('click',function(){if(typeof window.gtag==='function'){window.gtag('event','cigna_quote_click',{placement:a.getAttribute('data-ar-cigna'),language:document.documentElement.lang,page_path:location.pathname});}});});})();
 </script>
 </body>
 </html>

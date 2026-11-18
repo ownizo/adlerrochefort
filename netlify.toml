@@ -183,3 +183,12 @@
   to = "/?utm_source=emailsignature&utm_medium=referral&utm_campaign=institucional"
   status = 302
   force = true
+
+# Cigna Global online quote tool (affiliate link: quotes made through it are
+# linked to Adler & Rochefort). Used by the "simulate now" buttons on the Cigna
+# Global pages (scripts/add-cigna-simulator.py). Change the link here only.
+[[redirects]]
+  from = "/go/cigna"
+  to = "https://www.cignaglobal.com/quote/pages/quote/PersonalInformationLiteV3.html?AffinityPartner=1ebc029852b6cd49106d24ef2334361f&utm_source=broker&utm_medium=tlink&utm_campaign=EU10504754"
+  status = 302
+  force = true
