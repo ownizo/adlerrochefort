@@ -213,7 +213,7 @@ ${ctaContacts('Telefone', 'Localização')}
 export const CTA_EN = `<section class="cta-strip" aria-label="Contact">
   <div class="cta-strip-text">
     <h2 class="cta-strip-title">Rather talk<br><em>it through</em></h2>
-    <p class="cta-strip-sub">An ASF-registered insurance broker reviews your situation, compares the market and replies within one working day. No obligation, in English.</p>
+    <p class="cta-strip-sub">An ASF-registered insurance broker reviews your situation, compares the market and replies in writing. As each proposal is specific and requires a detailed analysis of the risk, response times may vary. No obligation, in English.</p>
     <div style="margin-top:36px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
       <a href="/en/#contact" class="btn-primary">Request a free review</a>
       <a href="https://wa.me/351928226570?text=${encodeURIComponent(

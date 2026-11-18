@@ -39,7 +39,7 @@ export const GUIDE_PAGE = {
   formSubject: 'Consulta general — seguros en Portugal y España',
   formCta: 'Enviar la consulta',
   formIntro:
-    'Plantéenos su pregunta, por concreta o general que sea. Le respondemos por escrito y en español, normalmente en un día laborable — esté usted en Europa o en América.',
+    'Plantéenos su pregunta, por concreta o general que sea. Le respondemos por escrito y en español — esté usted en Europa o en América. Al tratarse de propuestas específicas que requieren un análisis detallado del riesgo, los plazos de respuesta pueden variar.',
   formPlaceholder:
     'Por ejemplo: tenemos una póliza portuguesa que se renueva en marzo y no entendemos la franquicia de daños por agua; ¿pueden revisarla?',
   sections: `

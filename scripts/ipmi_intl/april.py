@@ -298,7 +298,7 @@ APRIL["es"] = page("es", {
         ("¿Hasta qué edad puedo contratar?", "Hasta los 74 años en la mayoría de los países y hasta los 60 si vive en Brasil, Chile, China, Costa Rica, Hong Kong, Japón, México, Singapur, Taiwán, Tailandia, Emiratos Árabes Unidos, Reino Unido o EE. UU. Los hijos pueden entrar por debajo de la edad mínima en la póliza de uno de los padres."),
     ],
     "form_h2": "Solicite su propuesta de APRIL International",
-    "form_lead": "Con cuatro datos empezamos. Le respondemos por escrito en un día laborable, con APRIL International configurado para usted y, cuando ayude, Allianz Care y Cigna Global en las mismas condiciones.",
+    "form_lead": "Con cuatro datos empezamos. Le respondemos por escrito, con APRIL International configurado para usted y, cuando ayude, Allianz Care y Cigna Global en las mismas condiciones.",
     "related": [("{HUB}", "Seguro médico internacional para expatriados"), ("{HUB}allianz-care/", "Allianz Care: seguro médico internacional"), ("{HUB}cigna-global/", "Cigna Global: seguro médico internacional")],
 })
 

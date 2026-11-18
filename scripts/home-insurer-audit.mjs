@@ -119,7 +119,7 @@ const SRC_ALLOW = [
   [/^scripts\/(property_criteria_content|apply-property-criteria)\.py$/, 'texto da secção institucional «Seguradoras e parceiros especializados»'],
   [/^(data\/partners\.json|scripts\/apply-partner-list\.mjs|scripts\/lib\/site-sections\.mjs)$/, 'lista institucional de parceiros (logótipos), fonte única aprovada'],
   [/^scripts\/(add-home-insurers|add-valuables-insurers)\.py$/, 'gerador retirado: stub que termina sem escrever nada'],
-  [/^scripts\/(motor_structure_content|add-motor-product-structure|hiscox-spain\.data|build-hiscox-spain-pages)\.py$/, 'automóvel (clássicos/luxo) — fora do âmbito habitação'],
+  [/^scripts\/(motor_structure_content|add-motor-product-structure|hiscox-spain\.data|build-hiscox-spain-pages|spain-hnw-products\.data|build-spain-hnw-products)\.py$/, 'automóvel (clássicos/luxo) — fora do âmbito habitação'],
   [/^scripts\/ipmi_intl\//, 'saúde internacional — modelo editorial próprio, fora do âmbito'],
   [/^(scripts\/lib\/terminology-rules\.mjs|data\/compliance-audit\.json|data\/phase2-terminology-audit\.json)$/, 'regras e registos de auditoria de terminologia (não geram conteúdo publicado)'],
   [/^scripts\/destinations\/home_build\.py$/, 'lista de nomes próprios que o gerador de homepages não traduz'],

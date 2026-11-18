@@ -143,10 +143,10 @@ export const ES_UI = {
   formLangNote: 'Le respondemos en español, por escrito, y llevamos todo el expediente en español.',
   formSubmit: 'Enviar solicitud',
   formSending: 'Enviando…',
-  formFootnote: 'Respondemos en un día laborable. La solicitud no le compromete a nada.',
+  formFootnote: 'Al tratarse de propuestas específicas que requieren un análisis detallado del riesgo, los plazos de respuesta pueden variar. La solicitud no le compromete a nada.',
   honeypot: 'No rellene este campo',
   successHeading: 'Gracias — hemos recibido su solicitud.',
-  successBody: 'Le responderemos en un día laborable, por escrito y en español. Si es urgente, llame al +351 928 226 570.',
+  successBody: 'Le responderemos por escrito y en español. Al tratarse de propuestas específicas que requieren un análisis detallado del riesgo, los plazos de respuesta pueden variar.',
   submitError: 'No se ha podido enviar el formulario. Inténtelo de nuevo o escriba a insurance@adlerrochefort.com.',
 
   f: {
