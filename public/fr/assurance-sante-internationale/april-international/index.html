@@ -214,6 +214,19 @@
 .ipmi-x .ar-cta-form-wrap{text-align:start}
 .ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>
+<style>
+.ipmi-x .ipmi-hero .ipmi-btn{margin:0 10px 10px 0}
+.ipmi-x .ipmi-hero .ipmi-btn-sim{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none;margin:0 0 10px}
+.ipmi-x .ipmi-hero .ipmi-btn-sim:hover,.ipmi-x .ipmi-sim .ipmi-sim-btn:hover{background:#e65800}
+[dir=rtl] .ipmi-x .ipmi-hero .ipmi-btn{margin:0 0 10px 10px}
+.ipmi-x .ipmi-sim{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #FF6300;border-radius:16px;padding:22px 24px;margin:0 0 28px}
+.ipmi-x .ipmi-sim h2{font-size:21px;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ipmi-x .ipmi-sim p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ipmi-x .ipmi-sim ul{margin:0 0 18px;padding-inline-start:20px}
+.ipmi-x .ipmi-sim li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ipmi-x .ipmi-sim .ipmi-sim-btn{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ipmi-x .ipmi-sim .ipmi-sim-small{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+</style>
 </head>
 <body>
 
@@ -458,6 +471,7 @@
     <p class="ipmi-lead">MyHealth International est le contrat santé international d’APRIL International, conçu pour les personnes qui vivent à l’étranger plus de douze mois. Nous sommes un courtier réglementé dans l’UE et partenaire d’APRIL International : nous configurons le contrat pour le pays où vous vivez, accompagnons la formalité médicale et restons à vos côtés en cas de sinistre. Quatre informations suffisent.</p>
     <p class="ipmi-meta">Courtier en assurance réglementé dans l’UE · ASF n° 425591790/3 · Lisbonne · Revu le 18 octobre 2026</p>
     <a class="ipmi-btn" href="#ipmi-pedido">Demander une proposition écrite</a>
+    <a class="ipmi-btn-sim" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:hero" aria-label="Simuler maintenant avec APRIL (s’ouvre dans un nouvel onglet)">Simuler maintenant avec APRIL<span aria-hidden="true"> &#8599;</span></a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Rédigé et revu par <strong>Hugo Gonçalves</strong>, fondateur et spécialiste de la gestion des risques d’Adler &amp; Rochefort. Diplômé en gestion d’entreprise (University of Hertfordshire), formation continue au Chartered Insurance Institute (CII), Londres.</p></div>
   <aside class="ipmi-note" aria-labelledby="ipmi-lang">
@@ -474,6 +488,14 @@
       <li>Franchise : aucune, ou 500, 1 000, 2 500 ou 5 000 €/US$ ; ticket modérateur sur les soins courants de 0 %, 10 %, 20 % ou 30 %.</li>
       <li>Santé assurée par Groupama Gan Vie ; assistance et responsabilité civile par Chubb European Group SE. Sans frais pour vous.</li>
     </ul>
+  </section>
+  <!-- april-simulator -->
+  <section class="ipmi-sim" id="simulador-april" aria-labelledby="ipmi-sim-h">
+    <h2 id="ipmi-sim-h">Simulation immédiate avec APRIL International</h2>
+    <p>Si vous préférez voir un montant tout de suite, le simulateur officiel de APRIL International vous indique une prime en quelques minutes. Il s’ouvre dans un nouvel onglet et votre simulation est rattachée à Adler &amp; Rochefort en tant que courtier, sans aucun coût supplémentaire pour vous.</p>
+    <ul><li>Le montant est indicatif : la prime et les conditions définitives dépendent de l’acceptation de APRIL, après les questions médicales.</li><li>Votre nationalité et le pays où vous allez vivre doivent être différents.</li><li>Vous avez déjà un montant ? Envoyez-le-nous avec le formulaire ci-dessous : nous analysons les garanties et les comparons par écrit avec Allianz Care et Cigna Global, si vous êtes éligible.</li></ul>
+    <a class="ipmi-sim-btn" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:card" aria-label="Ouvrir le simulateur APRIL International (s’ouvre dans un nouvel onglet)">Ouvrir le simulateur APRIL International<span aria-hidden="true"> &#8599;</span></a>
+    <p class="ipmi-sim-small">Outil officiel de APRIL International. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), courtier en assurance réglementé dans l’UE, ASF n° 425591790/3.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
@@ -1248,6 +1270,9 @@
     if (dob) dob.max = new Date().toISOString().slice(0, 10);
     update();
   })();
+</script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
 </script>
 </body>
 </html>

@@ -94,6 +94,20 @@
 .ipmi-note{font-size:13px;line-height:1.7;color:#6B6763;margin-top:12px}
 </style>
 <style id="ar-allianz-badge-style">.ar-allianz-badge{max-width:1100px;margin:12px auto 0;padding:0 24px}.ar-allianz-badge-inner{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:12px 18px}.ar-allianz-badge img{width:84px;height:auto;flex:0 0 84px;display:block}.ar-allianz-badge p{margin:0;font-size:14px;line-height:1.5;color:#292929}.ar-allianz-badge--boxed{max-width:none;padding:0;margin:-12px 0 26px}@media(max-width:560px){.ar-allianz-badge img{width:64px;flex-basis:64px}}</style>
+<style>
+.ar-simhub{max-width:1100px;margin:28px auto;padding:0 20px;box-sizing:border-box}
+.ipmi-wrap .ar-simhub{padding:0;margin:8px 0 28px}
+.ar-simhub-in{background:#fff;border:1px solid #EBE9E8;border-inline-start:4px solid #FF6300;border-radius:16px;padding:24px 26px;color:#292929}
+.ar-simhub h2{font-size:22px;line-height:1.3;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ar-simhub p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ar-simhub ul{margin:0 0 18px;padding-inline-start:20px}
+.ar-simhub li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ar-simhub-btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
+.ar-simhub-btn{display:inline-block;background:#FF6300;color:#fff !important;border-radius:999px;padding:13px 24px;font-weight:600;text-decoration:none}
+.ar-simhub-btn:hover{background:#e65800}
+.ar-simhub-form{display:inline-block;border:1.5px solid #292929;color:#292929 !important;border-radius:999px;padding:12px 22px;font-weight:600;text-decoration:none}
+.ar-simhub-small{font-size:12.5px !important;color:#5b5b5b !important;margin:10px 0 0 !important}
+</style>
 </head>
 <body>
 
@@ -456,6 +470,15 @@
     <p>Para todos los demás con historial médico, o que necesitan Estados Unidos en la zona de cobertura, cotizamos varias: el mismo perfil puede recibir condiciones distintas y primas muy diferentes en cada aseguradora.</p>
   </div>
 </section>
+<!-- ipmi-simulators-hub -->
+<section class="ar-simhub" id="simuladores" aria-labelledby="ar-simhub-h"><div class="ar-simhub-in">
+  <h2 id="ar-simhub-h">¿Prefiere ver una cifra ahora?</h2>
+  <p>Cigna Global y APRIL International tienen simuladores oficiales que muestran una prima en pocos minutos. Se abren en una nueva pestaña y la simulación queda asociada a Adler &amp; Rochefort como su corredor, sin ningún coste adicional para usted. Allianz Care no tiene simulador online: para incluir Allianz Care, pídanos la propuesta por escrito.</p>
+  <ul><li>La cifra es orientativa: la prima y las condiciones finales dependen de la aceptación de la aseguradora, tras las preguntas médicas.</li><li>Su nacionalidad y el país donde vivirá deben ser distintos.</li></ul>
+  <div class="ar-simhub-btns"><a class="ar-simhub-btn" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="cigna:hub" aria-label="Simular con Cigna Global (se abre en una nueva pestaña)">Simular con Cigna Global<span aria-hidden="true"> &#8599;</span></a><a class="ar-simhub-btn" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:hub" aria-label="Simular con APRIL International (se abre en una nueva pestaña)">Simular con APRIL International<span aria-hidden="true"> &#8599;</span></a><a class="ar-simhub-form" href="#ar-quote-form">Pedir propuesta por escrito, con Allianz Care</a></div>
+  <p class="ar-simhub-small">Herramientas oficiales de Cigna Global y APRIL International. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), corredor de seguros regulado en la UE, ASF n.º 425591790/3.</p>
+</div></section>
+
 
 <section class="lp-section" id="elegibilidad">
   <h2>¿Puedo contratarlo en el país donde voy a vivir?</h2>
@@ -1676,5 +1699,8 @@
 </script>
 <script defer src="/js/ar-conversion.js"></script>
 <script defer src="/js/ar-attribution.js"></script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
+</script>
 </body>
 </html>

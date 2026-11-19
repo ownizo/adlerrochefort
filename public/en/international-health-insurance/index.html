@@ -95,6 +95,20 @@
 .ipmi-note{font-size:13px;line-height:1.7;color:#6B6763;margin-top:12px}
 </style>
 <style id="ar-allianz-badge-style">.ar-allianz-badge{max-width:1100px;margin:12px auto 0;padding:0 24px}.ar-allianz-badge-inner{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid #EBE9E8;border-radius:16px;padding:12px 18px}.ar-allianz-badge img{width:84px;height:auto;flex:0 0 84px;display:block}.ar-allianz-badge p{margin:0;font-size:14px;line-height:1.5;color:#292929}.ar-allianz-badge--boxed{max-width:none;padding:0;margin:-12px 0 26px}@media(max-width:560px){.ar-allianz-badge img{width:64px;flex-basis:64px}}</style>
+<style>
+.ar-simhub{max-width:1100px;margin:28px auto;padding:0 20px;box-sizing:border-box}
+.ipmi-wrap .ar-simhub{padding:0;margin:8px 0 28px}
+.ar-simhub-in{background:#fff;border:1px solid #EBE9E8;border-inline-start:4px solid #FF6300;border-radius:16px;padding:24px 26px;color:#292929}
+.ar-simhub h2{font-size:22px;line-height:1.3;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ar-simhub p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ar-simhub ul{margin:0 0 18px;padding-inline-start:20px}
+.ar-simhub li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ar-simhub-btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
+.ar-simhub-btn{display:inline-block;background:#FF6300;color:#fff !important;border-radius:999px;padding:13px 24px;font-weight:600;text-decoration:none}
+.ar-simhub-btn:hover{background:#e65800}
+.ar-simhub-form{display:inline-block;border:1.5px solid #292929;color:#292929 !important;border-radius:999px;padding:12px 22px;font-weight:600;text-decoration:none}
+.ar-simhub-small{font-size:12.5px !important;color:#5b5b5b !important;margin:10px 0 0 !important}
+</style>
 </head>
 <body>
 
@@ -457,6 +471,15 @@
     <p>For everyone else with a medical history, or who needs the United States in the area of cover, we price more than one: the same profile can receive different terms and very different premiums from each insurer.</p>
   </div>
 </section>
+<!-- ipmi-simulators-hub -->
+<section class="ar-simhub" id="simuladores" aria-labelledby="ar-simhub-h"><div class="ar-simhub-in">
+  <h2 id="ar-simhub-h">Would you rather see a figure now?</h2>
+  <p>Cigna Global and APRIL International both have official online quote tools that show a premium in a few minutes. They open in a new tab and your quote is linked to Adler &amp; Rochefort as your broker, at no extra cost to you. Allianz Care has no online quote tool: to include Allianz Care, ask us for a written quote.</p>
+  <ul><li>The figure is indicative: the final premium and terms depend on the insurer&rsquo;s acceptance, after the medical questions.</li><li>Your nationality and the country where you will live must be different.</li></ul>
+  <div class="ar-simhub-btns"><a class="ar-simhub-btn" href="/go/cigna" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="cigna:hub" aria-label="Quote online with Cigna Global (opens in a new tab)">Quote online with Cigna Global<span aria-hidden="true"> &#8599;</span></a><a class="ar-simhub-btn" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:hub" aria-label="Quote online with APRIL International (opens in a new tab)">Quote online with APRIL International<span aria-hidden="true"> &#8599;</span></a><a class="ar-simhub-form" href="#ar-quote-form">Ask for a written quote, including Allianz Care</a></div>
+  <p class="ar-simhub-small">Official tools of Cigna Global and APRIL International. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), EU-regulated insurance broker, ASF no. 425591790/3.</p>
+</div></section>
+
 
 <section class="lp-section" id="eligibility">
   <h2>Can I get international cover where I live?</h2>
@@ -1579,5 +1602,8 @@
 <script defer src="/js/ar-livro.js"></script>
 <script defer src="/js/insurance-chat-widget.js" data-lang="en"></script>
 <script defer src="/js/ar-attribution.js"></script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
+</script>
 </body>
 </html>

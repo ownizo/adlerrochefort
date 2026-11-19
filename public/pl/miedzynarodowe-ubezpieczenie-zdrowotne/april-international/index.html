@@ -218,6 +218,19 @@
 .ipmi-x .ar-cta-form-wrap{text-align:start}
 .ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>
+<style>
+.ipmi-x .ipmi-hero .ipmi-btn{margin:0 10px 10px 0}
+.ipmi-x .ipmi-hero .ipmi-btn-sim{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none;margin:0 0 10px}
+.ipmi-x .ipmi-hero .ipmi-btn-sim:hover,.ipmi-x .ipmi-sim .ipmi-sim-btn:hover{background:#e65800}
+[dir=rtl] .ipmi-x .ipmi-hero .ipmi-btn{margin:0 0 10px 10px}
+.ipmi-x .ipmi-sim{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #FF6300;border-radius:16px;padding:22px 24px;margin:0 0 28px}
+.ipmi-x .ipmi-sim h2{font-size:21px;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ipmi-x .ipmi-sim p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ipmi-x .ipmi-sim ul{margin:0 0 18px;padding-inline-start:20px}
+.ipmi-x .ipmi-sim li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ipmi-x .ipmi-sim .ipmi-sim-btn{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ipmi-x .ipmi-sim .ipmi-sim-small{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+</style>
 </head>
 <body>
 
@@ -487,6 +500,7 @@
     <p class="ipmi-lead">MyHealth International to międzynarodowy plan zdrowotny APRIL International dla osób mieszkających za granicą dłużej niż dwanaście miesięcy. Jesteśmy brokerem nadzorowanym w UE i partnerem APRIL International: dobieramy plan do kraju, w którym faktycznie mieszkasz, prowadzimy wniosek medyczny i jesteśmy przy Tobie przy szkodzie. Wystarczą cztery dane.</p>
     <p class="ipmi-meta">Broker ubezpieczeniowy nadzorowany w UE · ASF nr 425591790/3 · Lizbona · Sprawdzono 18 października 2026</p>
     <a class="ipmi-btn" href="#ipmi-pedido">Poproś o pisemną ofertę</a>
+    <a class="ipmi-btn-sim" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:hero" aria-label="Oblicz teraz z APRIL (otwiera się w nowej karcie)">Oblicz teraz z APRIL<span aria-hidden="true"> &#8599;</span></a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Autor i weryfikacja: <strong>Hugo Gonçalves</strong>, założyciel i specjalista ds. zarządzania ryzykiem w Adler &amp; Rochefort. Studia z zarządzania (University of Hertfordshire), stałe szkolenia w Chartered Insurance Institute (CII) w Londynie.</p></div>
   <aside class="ipmi-note" aria-labelledby="ipmi-lang">
@@ -503,6 +517,14 @@
       <li>Udział własny: brak albo 500, 1000, 2500 lub 5000 €/US$; współpłacenie ambulatoryjne 0%, 10%, 20% lub 30%.</li>
       <li>Ubezpieczyciel zdrowotny: Groupama Gan Vie; assistance i OC: Chubb European Group SE. Bez kosztów dla Ciebie.</li>
     </ul>
+  </section>
+  <!-- april-simulator -->
+  <section class="ipmi-sim" id="simulador-april" aria-labelledby="ipmi-sim-h">
+    <h2 id="ipmi-sim-h">Natychmiastowa kalkulacja online z APRIL International</h2>
+    <p>Jeśli wolą Państwo od razu zobaczyć kwotę, oficjalny kalkulator APRIL International pokaże składkę w kilka minut. Otwiera się w nowej karcie, a kalkulacja zostaje przypisana do Adler &amp; Rochefort jako Państwa brokera, bez dodatkowych kosztów.</p>
+    <ul><li>Kwota jest orientacyjna: ostateczna składka i warunki zależą od akceptacji APRIL po pytaniach medycznych.</li><li>Obywatelstwo i kraj, w którym będą Państwo mieszkać, muszą być różne.</li><li>Mają już Państwo kwotę? Prosimy przesłać ją przez formularz poniżej: przeanalizujemy zakres ochrony i porównamy go na piśmie z Allianz Care i Cigna Global, jeśli spełniają Państwo warunki.</li></ul>
+    <a class="ipmi-sim-btn" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:card" aria-label="Otwórz kalkulator APRIL International (otwiera się w nowej karcie)">Otwórz kalkulator APRIL International<span aria-hidden="true"> &#8599;</span></a>
+    <p class="ipmi-sim-small">Oficjalne narzędzie APRIL International. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), broker ubezpieczeniowy nadzorowany w UE, ASF nr 425591790/3.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
@@ -1440,5 +1462,8 @@
   })();
 </script>
 <script defer src="/js/ar-conversion.js"></script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
+</script>
 </body>
 </html>

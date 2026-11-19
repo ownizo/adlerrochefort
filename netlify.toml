@@ -192,3 +192,12 @@
   to = "https://www.cignaglobal.com/quote/pages/quote/PersonalInformationLiteV3.html?AffinityPartner=1ebc029852b6cd49106d24ef2334361f&utm_source=broker&utm_medium=tlink&utm_campaign=EU10504754"
   status = 302
   force = true
+
+# APRIL International MyHealth International online quote tool (intermediary
+# reference I97537: quotes made through it are linked to Adler & Rochefort).
+# Used by scripts/add-ipmi-simulators.py. Change the link here only.
+[[redirects]]
+  from = "/go/april"
+  to = "https://myhealthinternational-2.april-international.com/en-us/profile/travel-details?intermediary_reference=I97537"
+  status = 302
+  force = true

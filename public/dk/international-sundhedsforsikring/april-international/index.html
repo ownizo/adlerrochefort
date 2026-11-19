@@ -218,6 +218,19 @@
 .ipmi-x .ar-cta-form-wrap{text-align:start}
 .ipmi-x .ar-cta-form-wrap h2{font-family:'Ubuntu',Georgia,serif;font-weight:500}
 </style>
+<style>
+.ipmi-x .ipmi-hero .ipmi-btn{margin:0 10px 10px 0}
+.ipmi-x .ipmi-hero .ipmi-btn-sim{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:12px 24px;font-weight:600;text-decoration:none;margin:0 0 10px}
+.ipmi-x .ipmi-hero .ipmi-btn-sim:hover,.ipmi-x .ipmi-sim .ipmi-sim-btn:hover{background:#e65800}
+[dir=rtl] .ipmi-x .ipmi-hero .ipmi-btn{margin:0 0 10px 10px}
+.ipmi-x .ipmi-sim{background:#fff;border:1px solid var(--line);border-inline-start:4px solid #FF6300;border-radius:16px;padding:22px 24px;margin:0 0 28px}
+.ipmi-x .ipmi-sim h2{font-size:21px;margin:0 0 10px;font-family:Inter,system-ui,sans-serif;font-weight:600}
+.ipmi-x .ipmi-sim p{font-size:15.5px;line-height:1.65;margin:0 0 12px;color:#333}
+.ipmi-x .ipmi-sim ul{margin:0 0 18px;padding-inline-start:20px}
+.ipmi-x .ipmi-sim li{margin:0 0 6px;line-height:1.55;font-size:15px}
+.ipmi-x .ipmi-sim .ipmi-sim-btn{display:inline-block;background:#FF6300;color:#fff;border-radius:999px;padding:13px 26px;font-weight:600;text-decoration:none}
+.ipmi-x .ipmi-sim .ipmi-sim-small{font-size:12.5px;color:var(--muted);margin:14px 0 0}
+</style>
 </head>
 <body>
 
@@ -487,6 +500,7 @@
     <p class="ipmi-lead">MyHealth International er APRIL Internationals internationale sundhedsplan til dig, der bor i udlandet i mere end tolv måneder. Vi er en EU-reguleret mægler og partner af APRIL International: vi tilpasser planen til landet, hvor du faktisk bor, hjælper med helbredserklæringen og står ved din side ved skade. Fire oplysninger er nok.</p>
     <p class="ipmi-meta">EU-reguleret forsikringsmægler · ASF nr. 425591790/3 · Lissabon · Gennemgået 18. oktober 2026</p>
     <a class="ipmi-btn" href="#ipmi-pedido">Få et skriftligt tilbud</a>
+    <a class="ipmi-btn-sim" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:hero" aria-label="Beregn nu hos APRIL (åbner i en ny fane)">Beregn nu hos APRIL<span aria-hidden="true"> &#8599;</span></a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Skrevet og gennemgået af <strong>Hugo Gonçalves</strong>, stifter og specialist i risikostyring hos Adler &amp; Rochefort. Uddannet i erhvervsøkonomi (University of Hertfordshire), løbende uddannelse ved Chartered Insurance Institute (CII), London.</p></div>
   <aside class="ipmi-note" aria-labelledby="ipmi-lang">
@@ -503,6 +517,14 @@
       <li>Selvrisiko: ingen, eller €/US$ 500, 1.000, 2.500 eller 5.000; egenbetaling ambulant 0, 10, 20 eller 30 %.</li>
       <li>Sundhed forsikret af Groupama Gan Vie; assistance og ansvar af Chubb European Group SE. Gratis for dig.</li>
     </ul>
+  </section>
+  <!-- april-simulator -->
+  <section class="ipmi-sim" id="simulador-april" aria-labelledby="ipmi-sim-h">
+    <h2 id="ipmi-sim-h">Øjeblikkelig beregning online med APRIL International</h2>
+    <p>Vil du gerne se et beløb med det samme, viser APRIL Internationals officielle præmieberegner en præmie på få minutter. Den åbner i en ny fane, og din beregning knyttes til Adler &amp; Rochefort som din mægler, uden ekstra omkostninger for dig.</p>
+    <ul><li>Beløbet er vejledende: den endelige præmie og vilkårene afhænger af APRILs accept efter helbredsspørgsmålene.</li><li>Dit statsborgerskab og det land, du skal bo i, skal være forskellige.</li><li>Har du allerede et beløb? Send det til os via formularen nedenfor: vi gennemgår dækningen og sammenligner skriftligt med Allianz Care og Cigna Global, hvis du er berettiget.</li></ul>
+    <a class="ipmi-sim-btn" href="/go/april" target="_blank" rel="sponsored nofollow noopener" data-ar-sim="april:card" aria-label="Åbn APRIL Internationals præmieberegner (åbner i en ny fane)">Åbn APRIL Internationals præmieberegner<span aria-hidden="true"> &#8599;</span></a>
+    <p class="ipmi-sim-small">Officielt værktøj fra APRIL International. Adler &amp; Rochefort (Ownizo, Unipessoal Lda.), EU-reguleret forsikringsmægler, ASF nr. 425591790/3.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
@@ -1440,5 +1462,8 @@
   })();
 </script>
 <script defer src="/js/ar-conversion.js"></script>
+<script>
+(function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
+</script>
 </body>
 </html>
