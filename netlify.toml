@@ -201,3 +201,12 @@
   to = "https://myhealthinternational-2.april-international.com/en-us/profile/travel-details?intermediary_reference=I97537"
   status = 302
   force = true
+
+# APRIL International MyTempoCover tool for stays under 12 months (travel and
+# stays, student / au pair, Working Holiday Visa, professional), intermediary
+# reference I97537. Used by scripts/build-april-short-stay-pages.py.
+[[redirects]]
+  from = "/go/april-temp"
+  to = "https://mytempocover.april-international.com/en-us/profile/travel-reason?intermediary_reference=I97537"
+  status = 302
+  force = true
