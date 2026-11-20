@@ -87,7 +87,7 @@ C["en"] = dict(
         "For questions about the cover, before or after you buy, write to us.",
     ],
     s5_h="Who does what",
-    s5_p="Adler & Rochefort is an insurance mediator registered with the ASF in Portugal (no. 425591790/3) and present the offers on this page. Online pricing, subscription and payment are provided by HelloSafe, our distribution partner, and each policy is underwritten by the insurer named on the offer. We are paid a commission on each policy sold through this page; the price shown is the price charged at payment.",
+    s5_p="Adler & Rochefort is an insurance mediator registered with the ASF in Portugal (no. 425591790/3) and presents the offers on this page. Online pricing, subscription and payment are provided by HelloSafe, our distribution partner, and each policy is underwritten by the insurer named on the offer. We are paid a commission on each policy sold through this page; the price shown is the price charged at payment.",
     faq_h="Frequently asked questions",
     faq=[
         ("Can I buy travel insurance if I live in Portugal or Spain?", "Select your country of residence in the form. The offers shown are the ones available for that residence; if none are returned for your situation, send us the trip details and we will look at it in writing."),
