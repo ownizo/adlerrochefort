@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Inserts the Private Client & Expat "one-stop-shop" block at the top of the
-// Private Client hub pages (EN, DE, PT), above the existing hero. Nothing
+// Inserts the Private Client & Expat "one-stop-shop" block at the top of every
+// language homepage, above the existing hero (menus and all content stay). Nothing
 // existing is removed or rewritten: the block sits between <!-- AR-OSS -->
 // markers and is replaced in place on re-runs. Existing H1s, sections, forms
 // and URLs stay as they are. Spain always comes first.
@@ -15,6 +15,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { T2 } from './one-stop-shop.i18n.mjs';
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ROOT = join(REPO, 'public');
@@ -237,14 +238,52 @@ const L = {
 };
 
 // --------------------------------------------------------------- pages ----
+// Homepages: the block is the first thing under the menu, both countries in
+// the HTML (Spain first), CSS-only switch. Links for most languages are read
+// from that homepage's own mega-menu, so they always point at live pages.
+const HOMES = ['en', 'de', 'es', 'nl', 'fr', 'it', 'pl', 'se', 'dk', 'zh', 'il'];
 const PAGES = [
-  { file: 'en/private-clients-spain/index.html', lang: 'en', mode: 'link', c: 'es', anchor: '#quote-form' },
-  { file: 'en/private-clients/index.html', lang: 'en', mode: 'link', c: 'pt', anchor: '#ar-quote-form' },
-  { file: 'de/private-clients-spanien/index.html', lang: 'de', mode: 'link', c: 'es', anchor: '#quote-form' },
-  { file: 'de/private-clients-portugal/index.html', lang: 'de', mode: 'link', c: 'pt', anchor: '#angebot' },
-  { file: 'de/private-clients/index.html', lang: 'de', mode: 'toggle', anchor: '#kontakt' },
-  { file: 'private-clients/index.html', lang: 'pt', mode: 'toggle', anchor: '#pedido' }
+  { file: 'index.html', lang: 'pt', mode: 'toggle', anchor: '#contacto' },
+  ...HOMES.map((lang) => ({ file: `${lang}/index.html`, lang, mode: 'toggle', anchor: '#contact', fromNav: !L[lang] }))
 ];
+// Earlier placement on the Private Client hubs: removed again (homepage only).
+const REMOVE = ['en/private-clients-spain/index.html', 'en/private-clients/index.html', 'de/private-clients-spanien/index.html', 'de/private-clients-portugal/index.html', 'de/private-clients/index.html', 'private-clients/index.html'];
+
+for (const [k, t] of Object.entries(T2)) {
+  T[k] = { ...t, explore: (title, c) => `${t.more} — ${c}`, cta2: () => t.cta2all };
+}
+
+function navLinks(html) {
+  const i = html.indexOf('<nav class="site-nav"');
+  const nav = html.slice(i, html.indexOf('</nav>', i));
+  const panel = (id) => {
+    const s = nav.indexOf(`id="navPanel${id}"`);
+    const e = nav.indexOf('id="navPanel', s + 10);
+    const chunk = nav.slice(s, e < 0 ? undefined : e);
+    return chunk.split('nav-panel-col-title').slice(1).map((c) => [...c.matchAll(/href="([^"]+)" role="menuitem">([^<]*)</g)].map((m) => [m[1], m[2]]));
+  };
+  return { PT: panel('PT'), ES: panel('ES'), PC: panel('PC') };
+}
+
+function deriveLinks(html, t) {
+  const n = navLinks(html);
+  const hp = n.PT[2], art = n.PT[1][0][0];
+  const label = (x, c) => [x[1].replace(/&amp;/g, '&'), x[0], c];
+  return {
+    pillars: {
+      es: [n.ES[0][0][0], n.ES[1][2][0], hp[2][0], hp[1][0], hp[5][0]],
+      pt: [n.PT[0][0][0], n.PT[1][1][0], hp[0][0], hp[1][0], hp[4][0]]
+    },
+    beyond: {
+      es: [['art', art], ['jewel', n.ES[1][0][0]], ['boat', n.ES[1][3][0]], ['fo', n.PC[1][0][0]], ['fl', hp[3][0]]],
+      pt: [['art', art], ['jewel', art], ['boat', n.PT[1][2][0]], ['fo', n.PC[1][0][0]], ['fl', hp[3][0]]]
+    },
+    guides: {
+      es: [[t.pillars[0][0], `${n.ES[0][1][1].replace(/&amp;/g, '&')} — ${t.country.es}`, n.ES[0][1][0]], [t.pillars[1][0], `${n.ES[1][1][1].replace(/&amp;/g, '&')} — ${t.country.es}`, n.ES[1][1][0]], [t.pillars[2][0], hp[2][1].replace(/&amp;/g, '&'), hp[2][0]]],
+      pt: [[t.pillars[0][0], `${n.PT[0][1][1].replace(/&amp;/g, '&')} — ${t.country.pt}`, n.PT[0][1][0]], [t.pillars[1][0], `${n.PT[1][1][1].replace(/&amp;/g, '&')} — ${t.country.pt}`, n.PT[1][1][0]], [t.pillars[2][0], hp[0][1].replace(/&amp;/g, '&'), hp[0][0]]]
+    }
+  };
+}
 const STATUS = ['av', 'av', 'ih', 'on', 'av'];
 
 function pane(t, l, c, anchor) {
@@ -266,7 +305,7 @@ function pane(t, l, c, anchor) {
 }
 
 function block(p) {
-  const t = T[p.lang], l = L[p.lang];
+  const t = T[p.lang], l = p.links || L[p.lang];
   const order = ['es', 'pt'];
   const toggle = p.mode === 'toggle';
   const sw = toggle
@@ -336,10 +375,21 @@ function insertPoint(html, file) {
   return at;
 }
 
+for (const f of REMOVE) {
+  const path = join(ROOT, f);
+  let html = readFileSync(path, 'utf8');
+  if (!html.includes(START)) continue;
+  html = html.slice(0, html.indexOf(START)) + html.slice(html.indexOf(END) + END.length + 1);
+  html = html.replace(`${CSS}\n`, '');
+  writeFileSync(path, html);
+  console.log(`${f}: block removed`);
+}
+
 for (const p of PAGES) {
   const path = join(ROOT, p.file);
   let html = readFileSync(path, 'utf8');
   const before = html.length;
+  if (p.fromNav) p.links = deriveLinks(html, T[p.lang]);
   if (!html.includes(CSS)) html = html.replace('</head>', `${CSS}\n</head>`);
   const b = block(p);
   if (html.includes(START)) {
