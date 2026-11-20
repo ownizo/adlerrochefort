@@ -21,18 +21,18 @@ CAT = {
 }
 CAT = {l: dict(zip(KEYS, v)) for l, v in CAT.items()}
 TITLES = {
- 'en':('Homes','Valuables & vehicles','Health & liability','Destinations','Private Clients','Families & family offices','Health'),
- 'pt':('Casas','Valores e veículos','Saúde e responsabilidade','Destinos','Private Clients','Famílias e family offices','Saúde'),
- 'de':('Immobilien','Werte & Fahrzeuge','Gesundheit & Haftung','Destinationen','Private Clients','Familien & Family Offices','Gesundheit'),
- 'es':('Viviendas','Bienes de valor y vehículos','Salud y responsabilidad','Destinos','Private Clients','Familias y family offices','Salud'),
- 'nl':('Wonen','Waardevol','Gezondheid & aansprakelijkheid','Bestemmingen','Private Clients','Families & family offices','Gezondheid'),
- 'fr':('Habitation','Biens de valeur et véhicules','Santé et responsabilité','Destinations','Private Clients','Familles et family offices','Santé'),
- 'it':('Casa','Beni di valore e veicoli','Salute e responsabilità','Destinazioni','Private Clients','Famiglie e family office','Salute'),
- 'pl':('Dom','Przedmioty wartościowe i pojazdy','Zdrowie i odpowiedzialność','Destynacje','Private Clients','Rodziny i family office','Zdrowie'),
- 'se':('Hem','Värdeföremål och fordon','Hälsa och ansvar','Destinationer','Private Clients','Familjer och family offices','Hälsa'),
- 'dk':('Bolig','Værdier og køretøjer','Sundhed og ansvar','Destinationer','Private Clients','Familier og family offices','Sundhed'),
- 'il':('בתים','פריטי ערך ורכבים','בריאות ואחריות','יעדים','Private Clients','משפחות ומשרדי משפחה','בריאות'),
- 'zh':('住宅','贵重物品与车辆','健康与责任','目的地','Private Clients','家族与家族办公室','健康'),
+ 'en':('Homes','Valuables & vehicles','Health, travel & liability','Destinations','Private Clients','Families & family offices','Health & travel'),
+ 'pt':('Casas','Valores e veículos','Saúde, viagem e responsabilidade','Destinos','Private Clients','Famílias e family offices','Saúde e viagem'),
+ 'de':('Immobilien','Werte & Fahrzeuge','Gesundheit, Reisen & Haftung','Destinationen','Private Clients','Familien & Family Offices','Gesundheit & Reisen'),
+ 'es':('Viviendas','Bienes de valor y vehículos','Salud, viaje y responsabilidad','Destinos','Private Clients','Familias y family offices','Salud y viaje'),
+ 'nl':('Wonen','Waardevol','Gezondheid, reizen & aansprakelijkheid','Bestemmingen','Private Clients','Families & family offices','Gezondheid & reizen'),
+ 'fr':('Habitation','Biens de valeur et véhicules','Santé, voyage et responsabilité','Destinations','Private Clients','Familles et family offices','Santé et voyage'),
+ 'it':('Casa','Beni di valore e veicoli','Salute, viaggio e responsabilità','Destinazioni','Private Clients','Famiglie e family office','Salute e viaggio'),
+ 'pl':('Dom','Przedmioty wartościowe i pojazdy','Zdrowie, podróże i odpowiedzialność','Destynacje','Private Clients','Rodziny i family office','Zdrowie i podróże'),
+ 'se':('Hem','Värdeföremål och fordon','Hälsa, resor och ansvar','Destinationer','Private Clients','Familjer och family offices','Hälsa och resor'),
+ 'dk':('Bolig','Værdier og køretøjer','Sundhed, rejser og ansvar','Destinationer','Private Clients','Familier og family offices','Sundhed og rejser'),
+ 'il':('בתים','פריטי ערך ורכבים','בריאות, נסיעות ואחריות','יעדים','Private Clients','משפחות ומשרדי משפחה','בריאות ונסיעות'),
+ 'zh':('住宅','贵重物品与车辆','健康、旅行与责任','目的地','Private Clients','家族与家族办公室','健康与旅行'),
 }
 BLOCK = {
  'en':('What we insure','For private clients and their families, in Portugal and Spain.'),
