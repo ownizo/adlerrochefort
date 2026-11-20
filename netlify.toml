@@ -5,6 +5,13 @@
   # See scripts/enforce-retired.mjs. It never fails the deploy.
   command = "node scripts/enforce-retired.mjs"
 
+# ATLAS_PREVIEW_TOKEN only gates sandbox previews of the travel quote tool at
+# runtime; it is never used at build time. A short value can match bytes in
+# netlify/functions/resvg.wasm by chance and fail the secrets scan, so the scan
+# skips this key. The Atlas key and signing secret are still scanned.
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "ATLAS_PREVIEW_TOKEN"
+
 
 [functions]
   directory = "netlify/functions"
