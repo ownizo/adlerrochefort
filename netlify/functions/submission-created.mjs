@@ -1221,6 +1221,14 @@ export const HANDLED_FORMS = {
   // form-name because its field set (nationality + country where the client
   // will live + US state for US nationals) differs from every other health
   // form, and these leads are not Portugal residents.
+  // Online travel insurance pages (November 2026, all languages): the
+  // written-advice fallback next to the HelloSafe quote & buy tool.
+  "travel-insurance-quote": {
+    quote: true,
+    en: true,
+    heading: "New travel insurance request (online travel page)",
+    page: "/en/travel-insurance/",
+  },
   "international-health-quote": {
     quote: true,
     en: true,

@@ -318,6 +318,9 @@ const FORM_CLASSIFICATION = {
   // Global IPMI hub: clients anywhere in the world, so the market follows
   // the source URL like expat-health-quote rather than being fixed to PT.
   'international-health-quote': { entityType: 'individual', market: marketBySource, language: 'EN', product: 'health' },
+  // Online travel insurance pages (Nov. 2026): one form-name for all 12
+  // languages; the page language travels in the hidden "language" field.
+  'travel-insurance-quote': { entityType: 'individual', market: marketBySource, product: 'travel' },
   'es-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'ES', product: 'health' },
   'de-international-health-quote': { entityType: 'individual', market: marketBySource, language: 'DE', product: 'health' },
   'pt-international-health-quote': { entityType: 'individual', market: marketBySource, product: 'health' },
