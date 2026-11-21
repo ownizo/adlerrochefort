@@ -70,7 +70,7 @@
    "name": "Assurance Voyage en Ligne — Comparer les Garanties et Souscrire | Adler & Rochefort",
    "description": "Comparez les assurances voyage de plusieurs assureurs par frais médicaux, rapatriement et annulation, puis souscrivez en ligne. Voyage simple, multivoyage annuel, visa Schengen, nomades numériques.",
    "inLanguage": "fr",
-   "dateModified": "2026-11-20",
+   "dateModified": "2026-11-21",
    "about": {
     "@id": "https://adlerrochefort.com/fr/assurance-voyage/#service"
    },
@@ -90,7 +90,8 @@
    "@type": "Service",
    "@id": "https://adlerrochefort.com/fr/assurance-voyage/#service",
    "name": "Assurance voyage",
-   "serviceType": "Travel insurance",
+   "serviceType": "Travel insurance comparison",
+   "category": "Premium travel insurance comparison",
    "description": "Comparez les assurances voyage de plusieurs assureurs par frais médicaux, rapatriement et annulation, puis souscrivez en ligne. Voyage simple, multivoyage annuel, visa Schengen, nomades numériques.",
    "provider": {
     "@id": "https://adlerrochefort.com/#organization"
@@ -136,7 +137,7 @@
      "name": "Puis-je souscrire une assurance voyage si je vis au Portugal ou en Espagne ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sélectionnez votre pays de résidence dans le formulaire. Les offres affichées sont celles disponibles pour cette résidence ; si aucune n'apparaît pour votre situation, envoyez-nous le voyage et nous l'étudierons par écrit."
+      "text": "Sélectionnez votre pays de résidence dans le formulaire. Les offres affichées sont celles disponibles pour cette résidence."
      }
     },
     {
@@ -181,10 +182,10 @@
     },
     {
      "@type": "Question",
-     "name": "Est-ce que je paie plus cher en passant par Adler & Rochefort ?",
+     "name": "Est-ce que je paie plus en comparant ici ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Le prix affiché sur l'offre est le prix débité au paiement. Nous sommes rémunérés par une commission de notre partenaire de distribution."
+      "text": "Non. Le prix affiché sur chaque offre est le prix facturé par HelloSafe au paiement. Adler & Rochefort perçoit une rémunération de HelloSafe."
      }
     }
    ]
@@ -302,7 +303,7 @@
 <body>
 
 <!-- ASF TOP BAR -->
-<div class="asf-top-bar">Intermédiaire d'assurance enregistré auprès de l'ASF nº 425591790/3 · DGSFP (LPS) · Portugal &amp; Espagne — <a href="/fr/#devis">Analyse écrite de vos contrats actuels</a></div>
+<div class="asf-top-bar"><a href="#tq">Assurance voyage en ligne — comparez et souscrivez en quelques minutes</a></div>
 
 <!-- NAV -->
 <nav class="site-nav" role="navigation" aria-label="Navigation principale">
@@ -543,16 +544,16 @@
     <span class="ipmi-eyebrow">Assurance voyage · Tarif et souscription en ligne</span>
     <h1>Assurance voyage en ligne : comparer les garanties, puis souscrire</h1>
     <p class="ipmi-lead">Décrivez le voyage une seule fois et voyez côte à côte les offres tarifées de plusieurs assureurs, classées selon la protection qui compte à l&#x27;étranger : frais médicaux, rapatriement, annulation et responsabilité civile. Choisissez une formule et terminez la souscription en ligne. Pour un voyage simple, un multivoyage annuel, une demande de visa Schengen, un long séjour ou le travail à distance.</p>
-    <p class="ipmi-meta">Courtier en assurances réglementé dans l’UE · ASF n° 425591790/3 · Lisbonne · Mis à jour le 20 novembre 2026</p>
+    <p class="ipmi-meta">Service de comparaison · Contrats commercialisés par HelloSafe (ORIAS 21008038) · Mis à jour le 21 novembre 2026</p>
     <a class="ipmi-btn-sim" href="#tq">Voir mes tarifs</a>
-    <a class="ipmi-btn" href="#ipmi-pedido">Vous préférez un avis écrit ?</a>
+    <a class="ipmi-btn" href="#ipmi-pedido">Voyage sans offre en ligne ?</a>
   </header>
   <div class="ipmi-author"><picture><source srcset="/images/hugo-goncalves-avatar.webp" type="image/webp"><img src="/images/hugo-goncalves-avatar.jpg" alt="Hugo Gonçalves" width="48" height="48" loading="lazy" decoding="async"></picture><p>Rédigé et revu par <strong>Hugo Gonçalves</strong>, fondateur et spécialiste de la gestion des risques d’Adler &amp; Rochefort. Diplômé en gestion d’entreprise (University of Hertfordshire), formation continue au Chartered Insurance Institute (CII), Londres.</p></div>
   <section class="tq-box" id="tq" aria-labelledby="tq-h">
     <h2 id="tq-h">Comparer les tarifs d&#x27;assurance voyage</h2>
     <p>Tarifs en temps réel, par voyage, pour tous les voyageurs. Les offres sont d&#x27;abord classées par garantie frais médicaux ; vous pouvez passer au prix le plus bas. Le prix affiché est le prix que vous payez.</p>
     <div id="ar-tq" data-lang="fr" data-locale="fr-FR" data-residence="FR"></div>
-    <noscript><p><a href="#ipmi-pedido">Vous préférez un avis écrit ?</a></p></noscript>
+    <noscript><p><a href="#ipmi-pedido">Voyage sans offre en ligne ?</a></p></noscript>
   </section>
   <section class="ipmi-facts" aria-labelledby="ipmi-facts">
     <h2 id="ipmi-facts">L&#x27;essentiel</h2>
@@ -575,17 +576,17 @@
   </section>
   <section class="ipmi-sec" aria-labelledby="tq-s4">
     <h2 id="tq-s4">Comment se passe la souscription en ligne</h2>
-    <ol><li>Indiquez le type de voyage, votre pays de résidence, les destinations, les dates et l&#x27;âge de chaque voyageur.</li><li>Comparez les offres : assureur, prix pour tout le groupe, plafonds frais médicaux, rapatriement, annulation et responsabilité civile, et documents du contrat.</li><li>Choisissez une formule. Vous arrivez sur le formulaire de souscription sécurisé, l&#x27;offre sélectionnée et la prime confirmée.</li><li>Saisissez les informations des voyageurs et payez en ligne. Le contrat est émis à votre nom par l&#x27;assureur.</li><li>Pour toute question sur les garanties, avant ou après la souscription, écrivez-nous.</li></ol>
+    <ol><li>Indiquez le type de voyage, votre pays de résidence, les destinations, les dates et l&#x27;âge de chaque voyageur.</li><li>Comparez les offres : assureur, prix pour tout le groupe, plafonds frais médicaux, rapatriement, annulation et responsabilité civile, et documents du contrat.</li><li>Choisissez une formule. Vous arrivez sur le formulaire de souscription sécurisé, l&#x27;offre sélectionnée et la prime confirmée.</li><li>Saisissez les informations des voyageurs et payez en ligne. Le contrat est émis à votre nom par l&#x27;assureur.</li><li>Pour toute question sur la couverture, la souscription ou un sinistre, contactez HelloSafe ou l&#x27;assureur indiqué sur votre contrat.</li></ol>
     <p><a class="ipmi-btn-sim" href="#tq">Voir mes tarifs</a></p>
   </section>
   <section class="ipmi-sec" aria-labelledby="tq-s5">
     <h2 id="tq-s5">Qui fait quoi</h2>
-    <p>Adler &amp; Rochefort est un intermédiaire en assurance immatriculé auprès de l&#x27;ASF au Portugal (n° 425591790/3) et présente les offres de cette page. La tarification en ligne, la souscription et le paiement sont assurés par HelloSafe, notre partenaire de distribution, et chaque contrat est porté par l&#x27;assureur indiqué sur l&#x27;offre. Nous percevons une commission sur chaque contrat vendu via cette page ; le prix affiché est le prix débité au paiement.</p>
+    <p>Sur cette page, Adler &amp; Rochefort fournit uniquement un service de comparaison et d&#x27;information. Pour ces assurances voyage, Adler &amp; Rochefort n&#x27;agit pas en qualité d&#x27;intermédiaire en assurance : il ne conseille pas, n&#x27;intermédie pas et ne conclut pas de contrats d&#x27;assurance voyage. La tarification, la souscription, le paiement et le service client sont assurés par HelloSafe (HELLO SAFE SAS, ORIAS 21008038), l&#x27;intermédiaire immatriculé qui distribue les contrats ; chaque contrat est porté par l&#x27;assureur indiqué sur l&#x27;offre. Adler &amp; Rochefort perçoit de HelloSafe une rémunération pour chaque contrat souscrit via cette page ; le prix affiché est le prix facturé au paiement.</p>
   </section>
   <div class="ipmi-formbox">
 <div class="ar-cv ar-cta-form-wrap" id="ipmi-pedido">
-  <h2>Vous préférez un avis écrit ?</h2>
-  <p class="ar-cta-form-lead">Pour un voyage complexe, un groupe, un long séjour ou une garantie absente des offres en ligne, envoyez-nous les détails. Nous répondons par écrit. Chaque proposition étant spécifique et nécessitant une analyse détaillée du risque, les délais de réponse peuvent varier.</p>
+  <h2>Votre voyage n&#x27;est pas couvert en ligne ?</h2>
+  <p class="ar-cta-form-lead">Si aucune offre en ligne ne correspond encore à votre voyage, laissez votre e-mail et les détails du voyage : nous vous préviendrons par e-mail dès que des offres seront disponibles. Adler &amp; Rochefort ne conseille pas et n&#x27;intermédie pas d&#x27;assurance voyage — chaque contrat est comparé et souscrit en ligne.</p>
   <form class="ar-cta-form" name="travel-insurance-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-endpoint="/fr/assurance-voyage/" data-form-label="travel_insurance_quote">
     <input type="hidden" name="form-name" value="travel-insurance-quote"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="utm_term" value="">
     <input type="hidden" name="source_url" value="">
@@ -600,25 +601,25 @@
     </div>
     <div class="ar-field"><label for="tqf-msg">Votre voyage *</label><textarea id="tqf-msg" class="tq-form-ta" name="message" required placeholder="Destinations, dates, âge des voyageurs, pays de résidence et points particuliers (sports, annulation, objets de valeur)"></textarea></div>
     <button type="submit" class="ar-btn ar-btn-primary">Demander ma proposition</button>
-    <p class="ar-form-smallprint">Vos données servent uniquement à préparer votre proposition, conformément au RGPD. Voir notre <a href="/en/privacy-policy/">politique de confidentialité</a>.</p>
+    <p class="ar-form-smallprint">Vos données servent uniquement à vous prévenir des offres en ligne pour ce voyage, conformément au RGPD. Voir notre <a href="/en/privacy-policy/">politique de confidentialité</a>.</p>
   </form>
-  <div class="ar-trust-strip"><span class="ar-trust-item">Courtier réglementé dans l’UE</span><span class="ar-trust-item">Plusieurs assureurs comparés</span><span class="ar-trust-item">Documents du contrat avant de payer</span></div>
+  <div class="ar-trust-strip"><span class="ar-trust-item">Classé par niveau de protection</span><span class="ar-trust-item">Plusieurs assureurs comparés</span><span class="ar-trust-item">Documents du contrat avant de payer</span></div>
   <div class="ar-cta-form-success">
     <div class="ar-cta-form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
     <h3>Merci</h3>
-    <p>Nous vous répondons par écrit, en anglais. S’agissant de propositions spécifiques, qui exigent une analyse détaillée du risque, les délais de réponse peuvent varier.</p>
+    <p>Nous avons bien reçu les détails de votre voyage. Nous vous préviendrons par e-mail dès que des offres en ligne seront disponibles.</p>
   </div>
 </div>
   </div>
   <section class="ipmi-faq" aria-labelledby="ipmi-faq">
     <h2 id="ipmi-faq">Questions fréquentes</h2>
-      <details><summary>Puis-je souscrire une assurance voyage si je vis au Portugal ou en Espagne ?</summary><p>Sélectionnez votre pays de résidence dans le formulaire. Les offres affichées sont celles disponibles pour cette résidence ; si aucune n&#x27;apparaît pour votre situation, envoyez-nous le voyage et nous l&#x27;étudierons par écrit.</p></details>
+      <details><summary>Puis-je souscrire une assurance voyage si je vis au Portugal ou en Espagne ?</summary><p>Sélectionnez votre pays de résidence dans le formulaire. Les offres affichées sont celles disponibles pour cette résidence.</p></details>
       <details><summary>Les États-Unis sont-ils couverts ?</summary><p>Ajoutez les États-Unis comme destination et les offres tarifées les incluront. Les frais médicaux y sont élevés : regardez d&#x27;abord le plafond des frais médicaux.</p></details>
       <details><summary>L&#x27;assurance est-elle valable pour une demande de visa Schengen ?</summary><p>Choisissez le type de voyage visa Schengen. Les formules proposées respectent le minimum de 30 000 € de frais médicaux exigé pour la demande. Vérifiez la liste à jour des pièces du consulat avant de déposer.</p></details>
       <details><summary>J&#x27;ai besoin d&#x27;une assurance avec rapatriement pour un visa portugais D7 ou D8. Cela convient-il ?</summary><p>Une assurance voyage avec frais médicaux et rapatriement est ce que présentent de nombreux demandeurs pour le voyage et les premiers mois. Chaque consulat fixe ses exigences, qui peuvent évoluer : vérifiez ce que demande le vôtre. Une fois installé au Portugal, il vous faudra une assurance santé annuelle.</p></details>
       <details><summary>Puis-je couvrir plusieurs voyages dans l&#x27;année ?</summary><p>Oui, avec le multivoyage annuel. La formule fixe une durée maximale par voyage, visible dans l&#x27;offre.</p></details>
       <details><summary>Les maladies préexistantes sont-elles couvertes ?</summary><p>Cela dépend de l&#x27;assureur et de la formule. Lisez les conditions liées à chaque offre et déclarez toute maladie à la souscription.</p></details>
-      <details><summary>Est-ce que je paie plus cher en passant par Adler &amp; Rochefort ?</summary><p>Le prix affiché sur l&#x27;offre est le prix débité au paiement. Nous sommes rémunérés par une commission de notre partenaire de distribution.</p></details>
+      <details><summary>Est-ce que je paie plus en comparant ici ?</summary><p>Non. Le prix affiché sur chaque offre est le prix facturé par HelloSafe au paiement. Adler &amp; Rochefort perçoit une rémunération de HelloSafe.</p></details>
   </section>
   <section class="ipmi-related" aria-labelledby="ipmi-rel">
     <h2 id="ipmi-rel">Pages associées</h2>
@@ -747,7 +748,7 @@
 <script>
 (function(){document.querySelectorAll('a[data-ar-sim]').forEach(function(a){a.addEventListener('click',function(){var v=(a.getAttribute('data-ar-sim')||'').split(':');if(typeof window.gtag==='function'){window.gtag('event',v[0]+'_quote_click',{placement:v[1]||'',language:document.documentElement.lang,page_path:location.pathname});}});});})();
 </script>
-<script type="application/json" id="ar-tq-i18n">{"intents": [["forTourism", "Vacances / voyage simple"], ["annual", "Multivoyage annuel"], ["schengenArea", "Demande de visa Schengen"], ["digitalNomad", "Nomade numérique / télétravail"], ["expat", "Expatriation (1 an)"], ["studyInternship", "Études ou stage"], ["cruise", "Croisière"], ["aupair", "Au pair"], ["whv", "Visa vacances-travail (PVT)"], ["groupTravel", "Voyage de groupe"], ["cancellation", "Annulation seule"]], "f": {"intent": "Type de voyage", "residence": "Pays de résidence", "dest": "Destinations", "destPh": "Tapez un pays puis Entrée", "schengen": "+ Ajouter l'espace Schengen", "start": "Départ", "end": "Retour", "count": "Voyageurs", "ages": "Âge de chaque voyageur", "ageOf": "Âge du voyageur {n}", "agePh": "Âge", "remove": "Retirer", "cancel": "Ajouter la garantie annulation", "tripPrice": "Prix total du voyage (€)", "tripPricePh": "Pour tout le groupe", "sports": "Sports d'hiver ou extrêmes", "submit": "Voir mes tarifs", "loading": "Comparaison des assureurs…", "writeUs": "Nous envoyer votre voyage", "sandbox": "Mode test : données d'exemple, pas de vrais tarifs.", "found": "{n} offres pour votre voyage", "sortBy": "Trier", "sortCover": "Meilleure garantie médicale d'abord", "sortPrice": "Prix le plus bas d'abord", "from": "à partir de", "total": "total, tous voyageurs", "underwritten": "Assureur : {insurer}", "choose": "Choisir cette formule", "opening": "Ouverture du formulaire sécurisé…", "ipid": "Document d'information (IPID)", "terms": "Conditions du contrat", "disclosure": "Vous terminez la souscription et payez sur le formulaire sécurisé de HelloSafe, notre partenaire de distribution. L'assureur indiqué sur chaque offre porte le contrat. Adler & Rochefort, intermédiaire en assurance ASF n° 425591790/3, perçoit une commission."}, "err": {"generic": "Les tarifs ne sont pas disponibles pour le moment. Réessayez dans un instant ou envoyez-nous votre voyage ci-dessous.", "NOT_LIVE": "La tarification en ligne sera disponible ici très prochainement. En attendant, envoyez-nous votre voyage et nous répondrons par écrit avec les options.", "NO_OFFERS": "Aucune offre en ligne ne correspond à ce voyage. Envoyez-nous les détails et nous l'étudierons par écrit.", "NO_DESTINATIONS": "Ajoutez au moins une destination.", "NO_TRAVELLERS": "Indiquez l'âge de chaque voyageur.", "BAD_DATES": "Vérifiez les dates : le retour doit être le jour du départ ou après.", "START_IN_PAST": "La date de départ ne peut pas être passée.", "CANCELLATION_NEEDS_TRIP_PRICE": "Indiquez le prix total du voyage pour ajouter l'annulation.", "QUOTA_EXCEEDED": "La tarification en ligne a atteint sa limite du jour. Envoyez-nous votre voyage, nous répondrons par écrit.", "RATE_LIMITED": "Trop de recherches simultanées. Réessayez dans quelques secondes."}, "st": {"perDay": " / jour", "trip_price": "Jusqu'au prix du voyage", "studies_amount": "Jusqu'aux frais de scolarité", "included": "Inclus", "unlimited": "Illimité", "actual_costs": "Frais réels", "return_ticket": "Billet retour", "many_reasons": "Motifs listés", "any_justified_reason": "Tout motif justifié", "see_conditions": "Voir conditions", "not_available": "Non couvert"}, "g": {"hospitalFeesAbroad": "Frais médicaux à l'étranger", "expatMedicalFees": "Frais médicaux à l'étranger", "expatHospitalFees": "Frais médicaux à l'étranger", "repatriationAssistance": "Rapatriement", "rapatriationAssistance": "Rapatriement", "expatRepatriation": "Rapatriement", "cancelTrip": "Annulation du voyage", "privateRC": "Responsabilité civile", "privateLiability": "Responsabilité civile", "expatCivilLiability": "Responsabilité civile", "suitcaseInsurance": "Bagages", "assistance247": "Assistance 24 h/24"}}</script>
-<script defer src="/js/ar-travel-quote.js?v=20261120"></script>
+<script type="application/json" id="ar-tq-i18n">{"intents": [["forTourism", "Vacances / voyage simple"], ["annual", "Multivoyage annuel"], ["schengenArea", "Demande de visa Schengen"], ["digitalNomad", "Nomade numérique / télétravail"], ["expat", "Expatriation (1 an)"], ["studyInternship", "Études ou stage"], ["cruise", "Croisière"], ["aupair", "Au pair"], ["whv", "Visa vacances-travail (PVT)"], ["groupTravel", "Voyage de groupe"], ["cancellation", "Annulation seule"]], "f": {"intent": "Type de voyage", "residence": "Pays de résidence", "dest": "Destinations", "destPh": "Tapez un pays puis Entrée", "schengen": "+ Ajouter l'espace Schengen", "start": "Départ", "end": "Retour", "count": "Voyageurs", "ages": "Âge de chaque voyageur", "ageOf": "Âge du voyageur {n}", "agePh": "Âge", "remove": "Retirer", "cancel": "Ajouter la garantie annulation", "tripPrice": "Prix total du voyage (€)", "tripPricePh": "Pour tout le groupe", "sports": "Sports d'hiver ou extrêmes", "submit": "Voir mes tarifs", "loading": "Comparaison des assureurs…", "writeUs": "Laisser les détails du voyage", "sandbox": "Mode test : données d'exemple, pas de vrais tarifs.", "found": "{n} offres pour votre voyage", "sortBy": "Trier", "sortCover": "Meilleure garantie médicale d'abord", "sortPrice": "Prix le plus bas d'abord", "from": "à partir de", "total": "total, tous voyageurs", "underwritten": "Assureur : {insurer}", "choose": "Choisir cette formule", "opening": "Ouverture du formulaire sécurisé…", "ipid": "Document d'information (IPID)", "terms": "Conditions du contrat", "disclosure": "Vous finalisez l'achat et payez sur le formulaire sécurisé de HelloSafe (ORIAS 21008038), qui distribue ces contrats. L'assureur indiqué sur chaque offre porte le contrat. Adler & Rochefort fournit uniquement cette comparaison, n'agit pas comme intermédiaire pour ces contrats et perçoit une rémunération de HelloSafe."}, "err": {"generic": "La tarification n'est pas disponible pour le moment. Réessayez dans un instant.", "NOT_LIVE": "Les prix en ligne seront bientôt disponibles ici. Laissez ci-dessous les détails du voyage et nous vous préviendrons par e-mail.", "NO_OFFERS": "Aucune offre en ligne ne correspond encore à ce voyage. Laissez ci-dessous les détails et nous vous préviendrons par e-mail.", "NO_DESTINATIONS": "Ajoutez au moins une destination.", "NO_TRAVELLERS": "Indiquez l'âge de chaque voyageur.", "BAD_DATES": "Vérifiez les dates : le retour doit être le jour du départ ou après.", "START_IN_PAST": "La date de départ ne peut pas être passée.", "CANCELLATION_NEEDS_TRIP_PRICE": "Indiquez le prix total du voyage pour ajouter l'annulation.", "QUOTA_EXCEEDED": "La tarification en ligne a atteint sa limite du jour. Réessayez demain ou laissez ci-dessous les détails du voyage.", "RATE_LIMITED": "Trop de recherches simultanées. Réessayez dans quelques secondes."}, "st": {"perDay": " / jour", "trip_price": "Jusqu'au prix du voyage", "studies_amount": "Jusqu'aux frais de scolarité", "included": "Inclus", "unlimited": "Illimité", "actual_costs": "Frais réels", "return_ticket": "Billet retour", "many_reasons": "Motifs listés", "any_justified_reason": "Tout motif justifié", "see_conditions": "Voir conditions", "not_available": "Non couvert"}, "g": {"hospitalFeesAbroad": "Frais médicaux à l'étranger", "expatMedicalFees": "Frais médicaux à l'étranger", "expatHospitalFees": "Frais médicaux à l'étranger", "repatriationAssistance": "Rapatriement", "rapatriationAssistance": "Rapatriement", "expatRepatriation": "Rapatriement", "cancelTrip": "Annulation du voyage", "privateRC": "Responsabilité civile", "privateLiability": "Responsabilité civile", "expatCivilLiability": "Responsabilité civile", "suitcaseInsurance": "Bagages", "assistance247": "Assistance 24 h/24"}}</script>
+<script defer src="/js/ar-travel-quote.js?v=20261121"></script>
 </body>
 </html>

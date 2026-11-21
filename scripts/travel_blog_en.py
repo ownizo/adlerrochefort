@@ -104,7 +104,7 @@ dict(
 
 <div class="callout">
 <div class="callout-title">Where this leads</div>
-<p><a href="{tq}">Compare Schengen visa insurance online</a>, choose a plan and receive the certificate after payment. For a group or a situation the online offers do not fit, write to us with the details.</p>
+<p><a href="{tq}">Compare Schengen visa insurance online</a>, choose a plan and receive the certificate after payment. A visa minimum is not a target: if you can, compare the plans with higher medical and repatriation limits too.</p>
 </div>
 ''',
     faq=[
@@ -387,7 +387,7 @@ dict(
 
 <div class="callout">
 <div class="callout-title">Where this leads</div>
-<p><a href="{tq}">Compare travel insurance for your golf trip online</a>, with cancellation cover for the green fees. For a group, a tournament or a golf property, write to us with the details.</p>
+<p><a href="{tq}">Compare travel insurance for your golf trip online</a>, with cancellation cover for the green fees; for a golf group, choose the group trip type. For a golf property, write to us with the details.</p>
 </div>
 ''',
     faq=[

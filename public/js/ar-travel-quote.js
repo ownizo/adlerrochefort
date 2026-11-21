@@ -5,7 +5,7 @@
  * and sends the traveller to the HelloSafe subscription form to pay.
  * Copy for each language lives in <script type="application/json" id="ar-tq-i18n">.
  * Without a live key the API answers NOT_LIVE and the page points to the
- * written quote form instead. ?preview=<token> lets the team test the sandbox.
+ * trip-details form instead. data-intent / data-sports preset the form on landing pages. ?preview=<token> lets the team test the sandbox.
  */
 (function () {
   'use strict';
@@ -153,6 +153,10 @@
   renderAges();
   // sensible default destination per page
   (root.getAttribute('data-dest') || '').split(',').filter(Boolean).forEach(addDest);
+  // landing-page presets: trip type and sports option
+  var presetIntent = root.getAttribute('data-intent');
+  if (presetIntent && T.intents.some(function (x) { return x[0] === presetIntent; })) { intentSel.value = presetIntent; syncIntent(); }
+  if (root.getAttribute('data-sports') === '1') sports.checked = true;
 
   function api(path, body) {
     var h = { 'content-type': 'application/json' };

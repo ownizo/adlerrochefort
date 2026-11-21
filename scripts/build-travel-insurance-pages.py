@@ -20,11 +20,13 @@ from travel_content import C as C1, URLS, RESIDENCE  # noqa: E402
 from travel_content_2 import C as C2  # noqa: E402
 from travel_content_3 import C as C3  # noqa: E402
 from april_short_stay_content import CLUSTERS, SLUGS, DOM, HREFLANG  # noqa: E402
+from travel_content_4 import apply as reposition, SMALLPRINT  # noqa: E402
 
-C = {**C1, **C2, **C3}
+# 21 Nov 2026: comparison / marketing role only (no mediation), premium positioning
+C = reposition({**C1, **C2, **C3})
 ROOT = os.path.join(HERE, "..", "public")
 SITE = "https://adlerrochefort.com"
-DATE = "2026-11-20"
+DATE = "2026-11-21"
 LANGS = ["pt", "en", "de", "es", "nl", "fr", "it", "pl", "se", "dk", "il", "zh"]
 LOCALE = {"pt": "pt-PT", "en": "en-GB", "de": "de-DE", "es": "es-ES", "nl": "nl-NL", "fr": "fr-FR", "it": "it-IT",
           "pl": "pl-PL", "se": "sv-SE", "dk": "da-DK", "il": "he-IL", "zh": "zh-CN"}
@@ -129,7 +131,10 @@ def form_block(lang, t, src):
     contact = re.search(r'<div class="ar-row">\s*<div class="ar-field"><label for="ihq-email">.*?</div>\s*</div>', tf, re.S).group(0)
     button = re.search(r'<button type="submit"[^>]*>.*?</button>', tf, re.S).group(0)
     small = re.findall(r'<p class="ar-form-smallprint">.*?</p>', tf, re.S)[-1]
+    old_sp, new_sp = SMALLPRINT[lang]
+    small = small.replace(old_sp, new_sp)
     success = balanced_div(tf, '<div class="ar-cta-form-success">')
+    success = re.sub(r"(</h3>\s*<p>).*?(</p>)", lambda m: m.group(1) + esc(t["ok_msg"]) + m.group(2), success, count=1, flags=re.S)
     honeypot = re.search(r'<p style="display:none">.*?</p>', tf, re.S).group(0)
     trust = "".join(f'<span class="ar-trust-item">{esc(x)}</span>' for x in t["trust"])
     url = URLS[lang]
@@ -192,7 +197,8 @@ def build(lang):
          "author": {"@type": "Person", "name": "Hugo Gonçalves", "jobTitle": "Founder & Risk Management Specialist",
                     "worksFor": {"@id": SITE + "/#organization"}},
          "publisher": {"@id": SITE + "/#organization"}},
-        {"@type": "Service", "@id": url + "#service", "name": t["crumb"], "serviceType": "Travel insurance",
+        {"@type": "Service", "@id": url + "#service", "name": t["crumb"], "serviceType": "Travel insurance comparison",
+         "category": "Premium travel insurance comparison",
          "description": t["desc"], "provider": {"@id": SITE + "/#organization"}, "areaServed": "Worldwide",
          "availableChannel": {"@type": "ServiceChannel", "serviceUrl": url}},
         {"@type": "InsuranceAgency", "@id": SITE + "/#organization", "name": "Adler & Rochefort",
@@ -214,8 +220,9 @@ def build(lang):
         out = out[:nav.start()] + (f'<nav {nav.group(1)}><a href="{esc(home_url.replace(SITE, ""))}">{esc(home_name)}</a>'
                                    f'<span>&rsaquo;</span><a href="{page}">{esc(t["crumb"])}</a></nav>') + out[nav.end():]
     # top bar link
-    out = re.sub(r'(<div class="asf-top-bar">.*?<a href=")#ipmi-pedido(">).*?(</a>)',
-               lambda m: m.group(1) + "#tq" + m.group(2) + esc(t["bar"]) + m.group(3), out, count=1, flags=re.S)
+    # top bar: no mediation claim on the travel pages (comparison service only)
+    out = re.sub(r'<div class="asf-top-bar">.*?</div>',
+               lambda m: f'<div class="asf-top-bar"><a href="#tq">{esc(t["bar"])}</a></div>', out, count=1, flags=re.S)
 
     author = balanced_div(src, '<div class="ipmi-author">')
     f = lambda s: s.format(**L)  # noqa: E731
@@ -295,7 +302,7 @@ def build(lang):
     out = re.sub(r'<style id="ar-travel-css">.*?</style>\n?', "", out, flags=re.S)
     out = out.replace("</head>", CSS, 1)
     js = (f'<script type="application/json" id="ar-tq-i18n">{ui_json(lang, t)}</script>\n'
-          '<script defer src="/js/ar-travel-quote.js?v=20261120"></script>\n</body>')
+          '<script defer src="/js/ar-travel-quote.js?v=20261121"></script>\n</body>')
     out = out.replace("</body>", js, 1)
     write(page + "index.html", out)
 
@@ -336,12 +343,13 @@ def sitemap():
 def llms():
     p = "llms.txt"
     s = read(p)
-    if URLS["en"] in s:
-        return
+    s = re.sub(r"- \[[^\]]*\]\(" + re.escape(SITE + URLS["en"]) + r"\):[^\n]*\n", "", s)
     others = " · ".join(f"[{l.upper()}]({SITE}{URLS[l]})" for l in LANGS if l != "en")
-    line = (f"- [Travel insurance online, compare and buy]({SITE}{URLS['en']}): live prices from several insurers for single trips, "
-            "annual multi-trip, Schengen visa applications, digital nomads, studies, au pair and cruises, ranked by medical cover; "
-            "purchase completed on the secure form of HelloSafe, our distribution partner. Other languages: " + others + "\n")
+    line = (f"- [Premium travel insurance comparison]({SITE}{URLS['en']}): live prices from several insurers for single trips, "
+            "annual multi-trip, USA and long-haul, ski, cruises and long stays, ranked by medical and repatriation cover rather than price. "
+            "Adler & Rochefort provides the comparison only and does not act as insurance mediator for these policies; they are sold by "
+            "HelloSafe (HELLO SAFE SAS, ORIAS 21008038) and underwritten by the insurer named on each offer. "
+            "Landing pages: USA, annual multi-trip, ski, cruise (EN and DE). Other languages: " + others + "\n")
     anchor = "- [Short-term international health insurance, stays under 12 months]"
     i = s.index(anchor)
     j = s.index("\n", i) + 1
