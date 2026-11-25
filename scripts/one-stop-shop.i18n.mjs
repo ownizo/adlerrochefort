@@ -24,7 +24,7 @@ export const T2 = {
     status: { av: 'Disponible', ih: 'Internacional + local', on: 'Contratación online' },
     pillars: [['Hogar', 'Segunda residencia o residencia habitual'], ['Coches de lujo y clásicos', 'Clásicos, de colección o deportivos'], ['Salud', 'Planes internacionales y locales'], ['Viaje', 'Vacaciones y viajes de negocios'], ['RC profesional', 'Para profesionales independientes']],
     points: {
-      es: [['Viviendas de alto valor, desde 1 millón de euros', 'Casas de vacaciones y segundas residencias de propietarios no residentes', 'Joyas y relojes asegurados aparte del hogar'],
+      es: [['Viviendas de alto valor, reconstrucción desde 700.000 €', 'Casas de vacaciones y segundas residencias de propietarios no residentes', 'Joyas y relojes asegurados aparte del hogar'],
         ['Coches de lujo a valor convenido, desde 200.000 €', 'Coches clásicos: uno solo o una colección entera', 'Pensado para funcionar con el seguro del hogar y de las colecciones'],
         ['Salud internacional (IPMI): tratamiento donde esté, en España o en el extranjero', 'Planes de salud locales en España: próximamente', 'Planes pensados para una vida entre España y su país de origen'],
         ['Seguro de viaje por viaje o anual', 'Compare y contrate online en minutos', 'Para vacaciones, viajes en familia y de negocios'],
@@ -59,7 +59,7 @@ export const T2 = {
     status: { av: 'Beschikbaar', ih: 'Internationaal + lokaal', on: 'Online afsluiten' },
     pillars: [['Woning', 'Tweede woning of hoofdverblijf'], ['Luxe en klassieke auto’s', 'Klassiek, verzameling of sport'], ['Gezondheid', 'Internationale en lokale polissen'], ['Reizen', 'Vakantie en zakenreizen'], ['Beroepsaansprakelijkheid', 'Voor zelfstandigen']],
     points: {
-      es: [['Hoogwaardige woningen vanaf 1 miljoen euro', 'Vakantie- en tweede woningen van niet-ingezeten eigenaren', 'Sieraden en horloges los van de woonverzekering verzekerd'],
+      es: [['Hoogwaardige woningen, herbouwwaarde vanaf € 700.000', 'Vakantie- en tweede woningen van niet-ingezeten eigenaren', 'Sieraden en horloges los van de woonverzekering verzekerd'],
         ['Luxe auto’s tegen getaxeerde waarde, vanaf € 200.000', 'Klassieke auto’s: één auto of een hele collectie', 'Afgestemd op uw woon- en collectieverzekering'],
         ['Internationale zorg (IPMI): behandeling waar u ook bent, in Spanje of daarbuiten', 'Lokale zorgverzekeringen in Spanje: binnenkort', 'Voor een leven tussen Spanje en uw land van herkomst'],
         ['Reisverzekering per reis of doorlopend', 'Online vergelijken en binnen enkele minuten afsluiten', 'Voor vakanties, familiereizen en zakenreizen'],
@@ -94,7 +94,7 @@ export const T2 = {
     status: { av: 'Disponible', ih: 'International + local', on: 'Souscription en ligne' },
     pillars: [['Habitation', 'Résidence secondaire ou principale'], ['Voitures de prestige et de collection', 'Collection, classiques ou sportives'], ['Santé', 'Contrats internationaux et locaux'], ['Voyage', 'Vacances et voyages d’affaires'], ['RC professionnelle', 'Pour les indépendants']],
     points: {
-      es: [['Résidences de grande valeur, à partir de 1 million d’euros', 'Résidences secondaires et de vacances de propriétaires non résidents', 'Bijoux et montres assurés à part de l’habitation'],
+      es: [['Résidences de grande valeur, reconstruction dès 700 000 €', 'Résidences secondaires et de vacances de propriétaires non résidents', 'Bijoux et montres assurés à part de l’habitation'],
         ['Voitures de prestige en valeur agréée, à partir de 200 000 €', 'Voitures de collection : une seule ou toute une collection', 'Conçu pour fonctionner avec l’assurance habitation et collections'],
         ['Santé internationale (IPMI) : soins où que vous soyez, en Espagne ou à l’étranger', 'Contrats santé locaux en Espagne : bientôt', 'Des contrats pensés pour une vie entre l’Espagne et votre pays d’origine'],
         ['Assurance voyage au voyage ou annuelle', 'Comparez et souscrivez en ligne en quelques minutes', 'Pour les vacances, les voyages en famille et d’affaires'],
@@ -129,7 +129,7 @@ export const T2 = {
     status: { av: 'Disponibile', ih: 'Internazionale + locale', on: 'Acquisto online' },
     pillars: [['Casa', 'Seconda casa o residenza principale'], ['Auto di lusso e d’epoca', 'D’epoca, da collezione o sportive'], ['Salute', 'Polizze internazionali e locali'], ['Viaggio', 'Vacanze e viaggi d’affari'], ['RC professionale', 'Per i professionisti indipendenti']],
     points: {
-      es: [['Case di alto valore, da 1 milione di euro', 'Case vacanza e seconde case di proprietari non residenti', 'Gioielli e orologi assicurati separatamente dalla casa'],
+      es: [['Case di alto valore, ricostruzione da 700.000 €', 'Case vacanza e seconde case di proprietari non residenti', 'Gioielli e orologi assicurati separatamente dalla casa'],
         ['Auto di lusso a valore concordato, da 200.000 €', 'Auto d’epoca: una sola o un’intera collezione', 'Pensato per funzionare con l’assicurazione casa e collezioni'],
         ['Salute internazionale (IPMI): cure ovunque siate, in Spagna o all’estero', 'Polizze sanitarie locali in Spagna: a breve', 'Polizze pensate per una vita tra la Spagna e il paese d’origine'],
         ['Assicurazione viaggio singolo o annuale', 'Confronta e acquista online in pochi minuti', 'Per vacanze, viaggi in famiglia e d’affari'],
@@ -164,7 +164,7 @@ export const T2 = {
     status: { av: 'Dostępne', ih: 'Międzynarodowe + lokalne', on: 'Zakup online' },
     pillars: [['Dom', 'Drugi dom lub stałe miejsce zamieszkania'], ['Samochody luksusowe i klasyczne', 'Klasyczne, kolekcjonerskie lub sportowe'], ['Zdrowie', 'Polisy międzynarodowe i lokalne'], ['Podróże', 'Wakacje i podróże służbowe'], ['OC zawodowa', 'Dla samozatrudnionych']],
     points: {
-      es: [['Domy o wysokiej wartości, od 1 mln euro', 'Domy wakacyjne i drugie domy właścicieli nierezydentów', 'Biżuteria i zegarki ubezpieczone oddzielnie od domu'],
+      es: [['Domy o wysokiej wartości, odbudowa od 700 000 €', 'Domy wakacyjne i drugie domy właścicieli nierezydentów', 'Biżuteria i zegarki ubezpieczone oddzielnie od domu'],
         ['Samochody luksusowe według uzgodnionej wartości, od 200 000 €', 'Samochody klasyczne: jeden lub cała kolekcja', 'Dopasowane do ubezpieczenia domu i kolekcji'],
         ['Międzynarodowe ubezpieczenie zdrowotne (IPMI): leczenie tam, gdzie jesteś, w Hiszpanii lub za granicą', 'Lokalne ubezpieczenia zdrowotne w Hiszpanii: wkrótce', 'Polisy dla życia między Hiszpanią a krajem pochodzenia'],
         ['Ubezpieczenie podróżne na jedną podróż lub roczne', 'Porównaj i kup online w kilka minut', 'Na wakacje, podróże rodzinne i służbowe'],
@@ -199,7 +199,7 @@ export const T2 = {
     status: { av: 'Tillgänglig', ih: 'Internationell + lokal', on: 'Teckna online' },
     pillars: [['Hem', 'Fritidshus eller permanent bostad'], ['Lyx- och veteranbilar', 'Veteran-, samlar- eller sportbilar'], ['Hälsa', 'Internationella och lokala försäkringar'], ['Resor', 'Semester och affärsresor'], ['Yrkesansvar', 'För egenföretagare']],
     points: {
-      es: [['Bostäder med högt värde, från 1 miljon euro', 'Fritidshus och andra bostäder för icke-bosatta ägare', 'Smycken och klockor försäkrade separat från hemmet'],
+      es: [['Bostäder med högt värde, återuppbyggnadsvärde från 700 000 €', 'Fritidshus och andra bostäder för icke-bosatta ägare', 'Smycken och klockor försäkrade separat från hemmet'],
         ['Lyxbilar till avtalat värde, från 200 000 €', 'Veteranbilar: en bil eller en hel samling', 'Anpassat till hem- och samlingsförsäkringen'],
         ['Internationell sjukvård (IPMI): vård var du än är, i Spanien eller utomlands', 'Lokala sjukvårdsförsäkringar i Spanien: snart', 'För ett liv mellan Spanien och ditt hemland'],
         ['Reseförsäkring per resa eller helår', 'Jämför och teckna online på några minuter', 'För semester, familjeresor och affärsresor'],
@@ -234,7 +234,7 @@ export const T2 = {
     status: { av: 'Tilgængelig', ih: 'International + lokal', on: 'Køb online' },
     pillars: [['Bolig', 'Feriebolig eller fast bopæl'], ['Luksus- og veteranbiler', 'Veteran-, samler- eller sportsvogne'], ['Sundhed', 'Internationale og lokale forsikringer'], ['Rejser', 'Ferie og forretningsrejser'], ['Erhvervsansvar', 'For selvstændige']],
     points: {
-      es: [['Boliger af høj værdi, fra 1 million euro', 'Feriehuse og fritidsboliger for ikke-hjemmehørende ejere', 'Smykker og ure forsikret separat fra boligen'],
+      es: [['Boliger af høj værdi, genopførelsesværdi fra 700.000 €', 'Feriehuse og fritidsboliger for ikke-hjemmehørende ejere', 'Smykker og ure forsikret separat fra boligen'],
         ['Luksusbiler til aftalt værdi, fra 200.000 €', 'Veteranbiler: én bil eller en hel samling', 'Tilpasset bolig- og samlingsforsikringen'],
         ['International sundhed (IPMI): behandling, hvor du end er, i Spanien eller i udlandet', 'Lokale sundhedsforsikringer i Spanien: snart', 'Til et liv mellem Spanien og dit hjemland'],
         ['Rejseforsikring pr. rejse eller årlig', 'Sammenlign og køb online på få minutter', 'Til ferie, familierejser og forretningsrejser'],
@@ -269,7 +269,7 @@ export const T2 = {
     status: { av: '可投保', ih: '国际 + 本地', on: '在线投保' },
     pillars: [['住宅', '第二居所或主要住所'], ['豪华车与经典车', '经典车、收藏车或跑车'], ['健康', '国际与本地方案'], ['旅行', '度假与商务出行'], ['职业责任险', '面向独立执业者']],
     points: {
-      es: [['100万欧元起的高价值住宅', '非居民业主的度假屋与第二居所', '珠宝与腕表可独立于住宅单独投保'],
+      es: [['重建价值70万欧元起的高价值住宅', '非居民业主的度假屋与第二居所', '珠宝与腕表可独立于住宅单独投保'],
         ['豪华车按约定价值投保，20万欧元起', '经典车：一辆或整套收藏', '与住宅及收藏品保险协同设计'],
         ['国际医疗保险（IPMI）：无论身在西班牙还是海外均可就医', '西班牙本地医疗保险：即将推出', '为往返西班牙与原籍国的生活而设计'],
         ['单次或年度旅行保险', '在线比较，几分钟内完成投保', '适用于度假、家庭出行及商务旅行'],
@@ -304,7 +304,7 @@ export const T2 = {
     status: { av: 'זמין', ih: 'בינלאומי + מקומי', on: 'רכישה מקוונת' },
     pillars: [['בית', 'בית שני או מגורי קבע'], ['רכבי יוקרה וקלאסיים', 'קלאסיים, אספנות או ספורט'], ['בריאות', 'פוליסות בינלאומיות ומקומיות'], ['נסיעות', 'חופשות ונסיעות עסקים'], ['אחריות מקצועית', 'לעצמאים']],
     points: {
-      es: [['בתים בעלי ערך גבוה, החל ממיליון אירו', 'בתי נופש ובתים שניים של בעלים שאינם תושבים', 'תכשיטים ושעונים מבוטחים בנפרד מהבית'],
+      es: [['בתים בעלי ערך גבוה, ערך בנייה מחדש מ־700,000 €', 'בתי נופש ובתים שניים של בעלים שאינם תושבים', 'תכשיטים ושעונים מבוטחים בנפרד מהבית'],
         ['רכבי יוקרה בערך מוסכם, החל מ-200,000 אירו', 'רכבים קלאסיים: רכב אחד או אוסף שלם', 'מותאם לביטוח הבית והאוספים'],
         ['ביטוח בריאות בינלאומי (IPMI): טיפול בכל מקום, בספרד או בחו"ל', 'ביטוחי בריאות מקומיים בספרד: בקרוב', 'לחיים בין ספרד לארץ המוצא'],
         ['ביטוח נסיעות לנסיעה בודדת או שנתי', 'השוו ורכשו אונליין בתוך דקות', 'לחופשות, נסיעות משפחתיות ונסיעות עסקים'],

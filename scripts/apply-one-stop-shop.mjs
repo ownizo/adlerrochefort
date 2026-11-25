@@ -60,7 +60,7 @@ const T = {
     ],
     points: {
       es: [
-        ['High-value homes, from €1 million', 'Holiday and second homes for non-resident owners', 'Jewellery and watches insured separately from the home'],
+        ['High-value homes, rebuild value from €700,000', 'Holiday and second homes for non-resident owners', 'Jewellery and watches insured separately from the home'],
         ['Luxury cars on agreed value, from €200,000', 'Classic cars — one car or a whole collection', 'Designed to sit alongside your home and collections cover'],
         ['International health (IPMI): treatment wherever you are, in Spain or abroad', 'Domestic health plans in Spain: coming soon', 'Plans built for life between Spain and your home country'],
         ['Single-trip and annual travel cover', 'Compare and buy online in minutes', 'For holidays, family travel and business trips'],
@@ -112,7 +112,7 @@ const T = {
     ],
     points: {
       es: [
-        ['Casas de valor elevado, a partir de 1 milhão de euros', 'Casas de férias e segundas habitações de proprietários não residentes', 'Joias e relógios seguros à parte da casa'],
+        ['Casas de valor elevado, reconstrução desde 700.000 €', 'Casas de férias e segundas habitações de proprietários não residentes', 'Joias e relógios seguros à parte da casa'],
         ['Automóveis de luxo com valor acordado, a partir de 200.000 €', 'Automóveis clássicos — um só ou uma coleção inteira', 'Pensado para funcionar com o seguro da casa e das coleções'],
         ['Saúde internacional (IPMI): tratamento onde estiver, em Espanha ou no estrangeiro', 'Planos de saúde domésticos em Espanha: brevemente', 'Planos pensados para uma vida entre Espanha e o país de origem'],
         ['Seguro de viagem por viagem ou anual', 'Compare e compre online em minutos', 'Para férias, viagens em família e de negócios'],
@@ -163,7 +163,7 @@ const T = {
     ],
     points: {
       es: [
-        ['Hochwertige Immobilien ab 1 Million Euro', 'Ferien- und Zweitwohnungen für nicht ansässige Eigentümer', 'Schmuck und Uhren separat von der Hausversicherung'],
+        ['Hochwertige Immobilien ab 700.000 € Wiederaufbauwert', 'Ferien- und Zweitwohnungen für nicht ansässige Eigentümer', 'Schmuck und Uhren separat von der Hausversicherung'],
         ['Luxusautos zum vereinbarten Wert, ab 200.000 €', 'Oldtimer – ein Fahrzeug oder eine ganze Sammlung', 'Abgestimmt auf Haus- und Sammlungsversicherung'],
         ['Internationale Krankenversicherung (IPMI): Behandlung, wo immer Sie sind', 'Lokale Krankenversicherung in Spanien: in Kürze', 'Für ein Leben zwischen Spanien und Ihrem Heimatland'],
         ['Einzelreise- und Jahresreiseversicherung', 'Online vergleichen und in wenigen Minuten abschließen', 'Für Urlaub, Familienreisen und Geschäftsreisen'],

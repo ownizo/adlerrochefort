@@ -499,7 +499,7 @@ const EN_CATEGORY_INTROS = {
 <p>The rest of the category deals with the household as an employer and as a legal entity. Employing a nanny, a driver, a gardener or a housekeeper in Portugal makes you an employer with statutory obligations, workers' compensation among them, and informality about that is a liability rather than a saving. We also cover personal legal expenses, fraud and extortion cover, and what happens to jointly held policies during a separation or divorce — a moment at which cover routinely lapses because each party assumes the other is maintaining it.</p>`,
 
   'holiday-lets-hospitality': `<p>A second home is a different risk from the house you live in: it stands empty for weeks, it is checked by someone else, and it is sometimes let. The insurers that write holiday homes properly treat it as a distinct risk, and the conditions on unoccupancy, keyholders and letting are where policies differ most.</p>
-<p>We work with holiday homes in Portugal and Spain with a rebuild value from €500,000. The articles below cover what changes when a second home is let, how unoccupancy clauses work, and how valuables kept in a holiday home should be insured.</p>`,
+<p>We work with holiday homes in Portugal and Spain with a rebuild value from €700,000. The articles below cover what changes when a second home is let, how unoccupancy clauses work, and how valuables kept in a holiday home should be insured.</p>`,
 
   'moving-to-portugal': `<p>Families who move to Portugal or Spain usually arrive with a portfolio, not a single policy: a home or two, valuables, cars, health cover that has to keep working across borders, and liability that should match what they own. The order in which these are arranged matters, and so does the language in which the policies are explained.</p>
 <p>The articles below deal with what international residents meet first — tax numbers, how a claim works when you do not read Portuguese or Spanish, and how cover is coordinated between the two countries.</p>`,
@@ -558,7 +558,7 @@ const EN_CATEGORY_META = {
   'holiday-lets-hospitality': {
     title: 'Second & Holiday Home Insurance | Insights | Adler & Rochefort',
     description:
-      'Second and holiday homes in Portugal and Spain from €500,000 of rebuild value: unoccupancy, keyholders, letting and valuables kept in the house.',
+      'Second and holiday homes in Portugal and Spain from €700,000 of rebuild value: unoccupancy, keyholders, letting and valuables kept in the house.',
   },
   'moving-to-portugal': {
     title: 'Living in Portugal & Spain — Insurance | Insights',

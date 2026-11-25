@@ -61,10 +61,10 @@ JEW_RES = ("Dla kogo: zamieszkanie w Hiszpanii",
 HOL = ("Gdy nikogo nie ma w domu",
        "<p>Większość domów wakacyjnych w Hiszpanii stoi pusta dłużej, niż sądzą właściciele. Te punkty decydują, czy szkoda w zamkniętym domu zostanie wypłacona — przedstawiamy je na piśmie dla każdej proponowanej polisy:</p><ul><li><strong>Miesiące bez mieszkańców:</strong> wiele polis dla domów wakacyjnych stawia warunki przy długim niezamieszkaniu, zwłaszcza dla kradzieży i zalania; liczba dni i to, czy wizyta zarządcy się liczy, zależą od ubezpieczyciela.</li><li><strong>Woda w zamkniętym domu:</strong> niektórzy ubezpieczyciele wymagają zakręcenia wody na liczniku, inni regularnych kontroli.</li><li><strong>Alarm, klucze i zarządca:</strong> alarm podłączony do centrum monitoringu, kto ma klucze i jak często ktoś wchodzi.</li><li><strong>Basen, goście i personel:</strong> dom wakacyjny rodzi odpowiedzialność, także pod Państwa nieobecność.</li><li><strong>Mieszkania we wspólnocie:</strong> wspólnota ubezpiecza budynek; Państwa polisa — wnętrze, wyposażenie i odpowiedzialność.</li><li><strong>Polisa banku:</strong> przy hiszpańskim kredycie hipotecznym bank może wymagać ubezpieczenia budynku, ale zgodnie z Ley 5/2019 musi przyjąć innego ubezpieczyciela z równoważną ochroną.</li></ul>")
 
-HOME = dict(title="Ubezpieczenie luksusowego domu w Hiszpanii · Od 1 mln €",
-            desc="Ubezpieczenie willi, apartamentów i domów w Hiszpanii od 1 mln € u wyspecjalizowanych ubezpieczycieli: koszt odbudowy, użytkowanie, sztuka i kosztowności analizowane na piśmie.",
-            sub_add=" Dla nieruchomości od 1 mln €.",
-            faq=("Czy jest wartość minimalna?", "Tak: nieruchomości w Hiszpanii od 1 mln €. Domy wakacyjne mają własną stronę, od 500 000 € wartości odbudowy."))
+HOME = dict(title="Ubezpieczenie luksusowego domu w Hiszpanii · Odbudowa od 700 000 €",
+            desc="Ubezpieczenie willi, apartamentów i domów w Hiszpanii o wartości odtworzeniowej od 700 000 € u wyspecjalizowanych ubezpieczycieli: koszt odbudowy, użytkowanie, sztuka i kosztowności analizowane na piśmie.",
+            sub_add=" Dla nieruchomości o wartości odtworzeniowej od 700 000 €.",
+            faq=("Czy jest wartość minimalna?", "Tak: nieruchomości w Hiszpanii o wartości odtworzeniowej od 700 000 €. Domy wakacyjne mają własną stronę, z tym samym progiem."))
 
 RC = [dict(page="/pl/oc-terapeutow-joga-pilates/",
            title="OC terapii niekonwencjonalnych, jogi, pilatesu i tai chi · Portugalia i Hiszpania",

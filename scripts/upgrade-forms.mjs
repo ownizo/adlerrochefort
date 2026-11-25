@@ -106,7 +106,7 @@ const BRANCH_FIELDS = {
   'Habitação': [
     ['habitacao_tipo', 'Tipo de imóvel', 'text', 'Apartamento / Moradia'],
     ['habitacao_cp', 'Código postal', 'text', ''],
-    ['habitacao_valor', 'Valor de reconstrução estimado', 'text', 'Ex.: 160 000 €'],
+    ['habitacao_valor', 'Valor de reconstrução estimado (a partir de 700.000 €)', 'text', 'Ex.: 1 200 000 €'],
   ],
   'Alojamento Local': [
     ['al_tipo', 'Tipo de unidade', 'text', 'Apartamento / Moradia / Hostel'],
@@ -229,7 +229,7 @@ const BRANCH_FIELDS_EN = {
   'Home': [
     ['home_type', 'Property type', 'text', 'Apartment / House'],
     ['home_postcode', 'Postcode', 'text', ''],
-    ['home_rebuild_value', 'Estimated rebuild value', 'text', 'e.g. €160,000'],
+    ['home_rebuild_value', 'Estimated rebuild value (from €700,000)', 'text', 'e.g. €1,200,000'],
   ],
   'Holiday let (Alojamento Local)': [
     ['al_unit_type', 'Type of unit', 'text', 'Apartment / House / Hostel'],

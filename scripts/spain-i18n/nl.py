@@ -63,10 +63,10 @@ JEW_RES = ("Voor wie: woonachtig in Spanje",
 HOL = ("Als er niemand in huis is",
        "<p>De meeste vakantiewoningen in Spanje staan langer leeg dan de eigenaars denken. Deze punten bepalen of een schade in een afgesloten huis betaald wordt, en wij zetten ze voor elke voorgestelde polis op papier:</p><ul><li><strong>Maanden leegstand:</strong> veel vakantiewoningpolissen stellen voorwaarden aan lange leegstand, vooral bij diefstal en waterschade; het aantal dagen en of het bezoek van de beheerder telt verschilt per verzekeraar.</li><li><strong>Water in een gesloten huis:</strong> sommige verzekeraars vragen de hoofdkraan dicht te draaien, andere om regelmatige controles.</li><li><strong>Alarm, sleutels en beheerder:</strong> een alarm met meldkamer, wie de sleutels heeft en hoe vaak iemand binnenkomt.</li><li><strong>Zwembad, gasten en personeel:</strong> een vakantiewoning schept aansprakelijkheid, ook als u er niet bent.</li><li><strong>Appartementen in een VvE:</strong> de comunidad verzekert het gebouw; uw polis het interieur, de inboedel en uw aansprakelijkheid.</li><li><strong>De polis van de bank:</strong> bij een Spaanse hypotheek mag de bank een opstalverzekering eisen, maar moet zij volgens Ley 5/2019 een andere verzekeraar met gelijkwaardige dekking aanvaarden.</li></ul>")
 
-HOME = dict(title="Luxe woning verzekeren in Spanje · Vanaf € 1 miljoen",
-            desc="Woonverzekering in Spanje voor villa's, appartementen en landhuizen vanaf € 1 miljoen, bij gespecialiseerde verzekeraars: herbouwwaarde, gebruik, kunst en kostbaarheden schriftelijk beoordeeld.",
-            sub_add=" Voor woningen vanaf € 1 miljoen.",
-            faq=("Is er een minimumwaarde?", "Ja: woningen in Spanje vanaf € 1 miljoen. Vakantiewoningen hebben een eigen pagina, vanaf € 500.000 herbouwwaarde."))
+HOME = dict(title="Luxe woning verzekeren in Spanje · Herbouwwaarde vanaf € 700.000",
+            desc="Woonverzekering in Spanje voor villa's, appartementen en landhuizen met een herbouwwaarde vanaf € 700.000, bij gespecialiseerde verzekeraars: herbouwwaarde, gebruik, kunst en kostbaarheden schriftelijk beoordeeld.",
+            sub_add=" Voor woningen met een herbouwwaarde vanaf € 700.000.",
+            faq=("Is er een minimumwaarde?", "Ja: woningen in Spanje met een herbouwwaarde vanaf € 700.000. Vakantiewoningen hebben een eigen pagina, met dezelfde drempel."))
 
 RC = [dict(page="/nl/aansprakelijkheid-therapeuten-yoga-pilates/",
            title="Aansprakelijkheid complementaire therapieën, yoga, pilates &amp; tai chi · Portugal &amp; Spanje",

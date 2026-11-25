@@ -117,18 +117,18 @@ def _extra():
         X[l] = {t: TP.path_of(t, l) for t in ('hol_pt', 'hol_es', 'health', 'wellness')}
     return X, TP.SHORT
 HOLDESC = {
- 'en':'Second homes from €500,000 of rebuild value, written for the weeks they stand empty.',
- 'pt':'Segundas habitações a partir de 500.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.',
- 'es':'Segundas residencias desde 500.000 € de valor de reconstrucción, pensadas para las semanas en que están vacías.',
- 'de':'Zweitwohnsitze ab 500.000 € Wiederaufbauwert, versichert auch für die Wochen, in denen sie leer stehen.',
- 'fr':'Résidences secondaires à partir de 500 000 € de valeur de reconstruction, pensées pour les semaines d’inoccupation.',
- 'it':'Seconde case da 500.000 € di valore di ricostruzione, pensate per le settimane in cui restano vuote.',
- 'nl':'Tweede woningen vanaf € 500.000 herbouwwaarde, ingericht op de weken dat ze leegstaan.',
- 'pl':'Drugie domy od 500 000 € wartości odtworzeniowej, z ochroną na tygodnie, gdy stoją puste.',
- 'se':'Andrahem från 500 000 € i återuppbyggnadsvärde, försäkrade även för veckorna de står tomma.',
- 'dk':'Sommerboliger fra 500.000 € i genopførelsesværdi, forsikret også i de uger, de står tomme.',
- 'il':'בתים שניים מ־500,000 € ערך בנייה מחדש, מבוטחים גם בשבועות שבהם הם עומדים ריקים.',
- 'zh':'重建价值 50 万欧元起的第二居所，空置期间同样获得保障。',
+ 'en':'Second homes from €700,000 of rebuild value, written for the weeks they stand empty.',
+ 'pt':'Segundas habitações a partir de 700.000 € de valor de reconstrução, pensadas para as semanas em que estão vazias.',
+ 'es':'Segundas residencias desde 700.000 € de valor de reconstrucción, pensadas para las semanas en que están vacías.',
+ 'de':'Zweitwohnsitze ab 700.000 € Wiederaufbauwert, versichert auch für die Wochen, in denen sie leer stehen.',
+ 'fr':'Résidences secondaires à partir de 700 000 € de valeur de reconstruction, pensées pour les semaines d’inoccupation.',
+ 'it':'Seconde case da 700.000 € di valore di ricostruzione, pensate per le settimane in cui restano vuote.',
+ 'nl':'Tweede woningen vanaf € 700.000 herbouwwaarde, ingericht op de weken dat ze leegstaan.',
+ 'pl':'Drugie domy od 700 000 € wartości odtworzeniowej, z ochroną na tygodnie, gdy stoją puste.',
+ 'se':'Andrahem från 700 000 € i återuppbyggnadsvärde, försäkrade även för veckorna de står tomma.',
+ 'dk':'Sommerboliger fra 700.000 € i genopførelsesværdi, forsikret også i de uger, de står tomme.',
+ 'il':'בתים שניים מ־700,000 € ערך בנייה מחדש, מבוטחים גם בשבועות שבהם הם עומדים ריקים.',
+ 'zh':'重建价值 70 万欧元起的第二居所，空置期间同样获得保障。',
 }
 def nav_spec2(lang):
     X, S = _extra(); x = X[lang]; s = S[lang]

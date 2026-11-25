@@ -16,7 +16,7 @@ step with the current navigation, footer, logo and forms:
   DE  public/de/leerstand-ferienhaus-versicherung-portugal-spanien/ (DE article)
 
 Content rules followed (owner decisions): no insurer-specific wording claims,
-no fixed response times, no offer of calls, rebuild value from €500,000.
+no fixed response times, no offer of calls, rebuild value from €700,000.
 
 Run: python3 scripts/build-holiday-home-spain-articles.py
 Re-running overwrites the two pages and refreshes their entry in
@@ -82,7 +82,7 @@ EN_TOC = [
 EN_INTRO = '''<h2 id="why-it-matters">Why the rule changes the insurance</h2>
 <p>Since 1 January 2021, UK nationals who do not hold Spanish residence can stay in the Schengen area for up to 90 days in any rolling 180-day period. The limit is for the whole area, not for Spain alone: a week in France or a long weekend in Italy comes out of the same 90 days. Since the EU Entry/Exit System became fully operational on 10 April 2026, every entry and exit is recorded digitally, so the count is no longer a matter of passport stamps.</p>
 <p>For a family that used to spend May to October in the villa, the practical result is simple: the house is now empty more often, and for longer stretches. That matters because the single most important question an insurer asks about a holiday home is not how many weeks a year it is used, but how long it stands empty at a time — and many owners are still insured on an answer they gave before 2021.</p>
-<p>This article is for owners of villas and second homes in Spain with a rebuild value from €500,000, the market we work in. If that is your situation, see also <a href="/en/holiday-home-insurance-spain/">holiday and second home insurance in Spain</a>.</p>
+<p>This article is for owners of villas and second homes in Spain with a rebuild value from €700,000, the market we work in. If that is your situation, see also <a href="/en/holiday-home-insurance-spain/">holiday and second home insurance in Spain</a>.</p>
 '''
 
 EN_BODY = '''<h2 id="uk-policy">A UK home policy does not travel to Spain</h2>
@@ -129,7 +129,7 @@ EN_FAQ = [
     ('Can a British insurer cover my villa in Spain?',
      'A standard UK household policy covers property in the UK. A house in Spain needs a policy written for a Spanish risk, which also carries the Consorcio surcharge for extraordinary events.'),
     ('Is there a minimum value?',
-     'We work with holiday homes in Spain with a rebuild value from €500,000. For smaller properties we are not the right adviser.'),
+     'We work with holiday homes in Spain with a rebuild value from €700,000. For smaller properties we are not the right adviser.'),
 ]
 
 # ---------------------------------------------------------------------------
@@ -192,7 +192,7 @@ DE_SECTIONS = '''<section class="lp-section">
     <li><strong>Lage prüfen:</strong> Küste, Torrente, Hanglage, Zufahrt.</li>
     <li><strong>Bestehende Policen vorlegen</strong>, auch die der Bank und die der Eigentümergemeinschaft bei Wohnungen.</li>
   </ol>
-  <p>Wir arbeiten mit Ferienhäusern ab 500.000 € Wiederaufbauwert und legen die Punkte oben für jedes vorgeschlagene Bedingungswerk schriftlich dar. Mehr dazu: <a href="/de/ferienhausversicherung-spanien/">Ferienhausversicherung in Spanien</a> und <a href="/de/destinationen/mallorca/">Mallorca</a>.</p>
+  <p>Wir arbeiten mit Ferienhäusern ab 700.000 € Wiederaufbauwert und legen die Punkte oben für jedes vorgeschlagene Bedingungswerk schriftlich dar. Mehr dazu: <a href="/de/ferienhausversicherung-spanien/">Ferienhausversicherung in Spanien</a> und <a href="/de/destinationen/mallorca/">Mallorca</a>.</p>
 </section>
 '''
 
@@ -204,7 +204,7 @@ DE_FAQ = [
     ('Wer zahlt nach einem Unwetter?',
      'Gewöhnliche Sturm- und Regenschäden zahlt der Versicherer im Rahmen der Police. Außergewöhnliche Ereignisse nach gesetzlicher Definition — etwa eine außergewöhnliche Überschwemmung oder ein atypischer Zyklonsturm — zahlt das Consorcio de Compensación de Seguros, auf Basis der Summen Ihrer Police.'),
     ('Gibt es einen Mindestwert?',
-     'Ja: Wiederaufbauwert ab 500.000 €. Für kleinere Objekte sind wir nicht der richtige Makler.'),
+     'Ja: Wiederaufbauwert ab 700.000 €. Für kleinere Objekte sind wir nicht der richtige Makler.'),
 ]
 
 

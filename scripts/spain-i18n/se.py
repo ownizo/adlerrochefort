@@ -63,10 +63,10 @@ JEW_RES = ("För vem: bosatt i Spanien",
 HOL = ("När ingen är hemma",
        "<p>De flesta fritidshus i Spanien står tomma längre än ägarna tror. Det här avgör om en skada i ett stängt hus ersätts, och vi redovisar det skriftligt för varje försäkring vi föreslår:</p><ul><li><strong>Månader utan boende:</strong> många fritidshusförsäkringar ställer villkor vid långa perioder utan boende, främst för stöld och vattenskada; antalet dagar och om förvaltarens besök räknas skiljer sig mellan bolag.</li><li><strong>Vatten i ett stängt hus:</strong> vissa bolag kräver att vattnet stängs av vid huvudkranen, andra regelbundna tillsyner.</li><li><strong>Larm, nycklar och förvaltare:</strong> larm kopplat till larmcentral, vem som har nycklar och hur ofta någon går in.</li><li><strong>Pool, gäster och personal:</strong> ett fritidshus skapar ansvar även när ni inte är där.</li><li><strong>Lägenheter i samfällighet:</strong> samfälligheten försäkrar byggnaden; er försäkring interiören, lösöret och ert ansvar.</li><li><strong>Bankens försäkring:</strong> med ett spanskt bolån kan banken kräva byggnadsförsäkring, men enligt Ley 5/2019 måste den godta ett annat bolag med likvärdigt skydd.</li></ul>")
 
-HOME = dict(title="Försäkring av lyxbostad i Spanien · Från 1 miljon €",
-            desc="Försäkring för villor, lägenheter och hus i Spanien från 1 miljon € hos specialiserade försäkringsbolag: återuppbyggnadskostnad, användning, konst och värdeföremål bedömda skriftligt.",
-            sub_add=" För bostäder från 1 miljon €.",
-            faq=("Finns det ett minimivärde?", "Ja: bostäder i Spanien från 1 miljon €. Fritidshus har en egen sida, från 500 000 € i återuppbyggnadsvärde."))
+HOME = dict(title="Försäkring av lyxbostad i Spanien · Återuppbyggnadsvärde från 700 000 €",
+            desc="Försäkring för villor, lägenheter och hus i Spanien med ett återuppbyggnadsvärde från 700 000 € hos specialiserade försäkringsbolag: återuppbyggnadskostnad, användning, konst och värdeföremål bedömda skriftligt.",
+            sub_add=" För bostäder med ett återuppbyggnadsvärde från 700 000 €.",
+            faq=("Finns det ett minimivärde?", "Ja: bostäder i Spanien med ett återuppbyggnadsvärde från 700 000 €. Fritidshus har en egen sida, med samma tröskel."))
 
 RC = [dict(page="/se/ansvarsforsakring-terapeuter-yoga-pilates/",
            title="Ansvarsförsäkring komplementära terapier, yoga, pilates &amp; tai chi · Portugal &amp; Spanien",

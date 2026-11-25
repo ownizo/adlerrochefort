@@ -198,7 +198,8 @@ def translations() -> list[tuple[str, str]]:
         ("Property type", "Immobilientyp"),
         ("Apartment / House", "Wohnung / Haus"),
         ("Postcode", "Postleitzahl"),
-        ("Estimated rebuild value", "Geschätzter Neuwert"),
+        ("Estimated rebuild value (from €700,000)", "Geschätzter Wiederaufbauwert (ab 700.000 €)"),
+        ("Estimated rebuild value", "Geschätzter Wiederaufbauwert"),
         ("Don't fill this out:", "Nicht ausfüllen:"),
         ("Don't fill this in:", "Nicht ausfüllen:"),
         # Country router

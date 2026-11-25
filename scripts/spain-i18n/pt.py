@@ -88,10 +88,10 @@ JEW = dict(
 HOL = ("Quando ninguém está em casa",
        "<p>A maior parte das casas de férias em Espanha está vazia mais tempo do que os donos pensam. Estes são os pontos que decidem se um sinistro numa casa fechada é pago, e que expomos por escrito para cada apólice que propomos:</p><ul class=\"lp-list\"><li><strong>Meses sem ninguém:</strong> muitas apólices de casa de férias impõem condições a longos períodos de desocupação, sobretudo no roubo e nos danos por água; o número de dias e se a visita do caseiro conta variam de seguradora para seguradora.</li><li><strong>Água numa casa fechada:</strong> há seguradoras que pedem a água fechada no contador, outras inspeções regulares.</li><li><strong>Alarme, chaves e caseiro:</strong> alarme ligado a central, quem tem as chaves e com que frequência alguém entra.</li><li><strong>Piscina, convidados e pessoal:</strong> uma casa de férias gera responsabilidade mesmo quando não está lá.</li><li><strong>Apartamentos em comunidade:</strong> a comunidade de proprietários segura a estrutura; a sua apólice, o interior, o recheio e a responsabilidade.</li><li><strong>A apólice do banco:</strong> com hipoteca espanhola, o banco pode exigir seguro do edifício, mas pela Ley 5/2019 tem de aceitar outra seguradora com cobertura equivalente.</li></ul>")
 
-HOME = dict(title="Seguro de residências de luxo em Espanha · A partir de 1 milhão de euros",
-            desc="Seguro para moradias, apartamentos e casas em Espanha a partir de 1 milhão de euros, com seguradoras especializadas: custo de reconstrução, utilização, arte e objetos de valor analisados por escrito.",
-            sub_add=" Para residências a partir de 1 milhão de euros.",
-            faq=("Há um valor mínimo?", "Sim: residências em Espanha a partir de 1 milhão de euros. As casas de férias têm página própria, a partir de 500.000 € de valor de reconstrução."))
+HOME = dict(title="Seguro de residências de luxo em Espanha · Reconstrução desde 700.000 €",
+            desc="Seguro para moradias, apartamentos e casas em Espanha com valor de reconstrução a partir de 700.000 €, com seguradoras especializadas: custo de reconstrução, utilização, arte e objetos de valor analisados por escrito.",
+            sub_add=" Para residências com valor de reconstrução a partir de 700.000 €.",
+            faq=("Há um valor mínimo?", "Sim: residências em Espanha com valor de reconstrução a partir de 700.000 €. As casas de férias têm página própria, com o mesmo limiar."))
 
 RC = [
     dict(page="/seguros/rc-terapeuticas-nao-convencionais/",

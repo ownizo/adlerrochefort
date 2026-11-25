@@ -83,10 +83,10 @@ JEW = dict(
 HOL = ("Quand personne n’est à la maison",
        "<p>La plupart des résidences secondaires en Espagne restent vides plus longtemps que leurs propriétaires ne le pensent. Voici les points qui décident si un sinistre dans une maison fermée est payé, et que nous exposons par écrit pour chaque contrat proposé :</p><ul><li><strong>Des mois d’inoccupation :</strong> beaucoup de contrats prévoient des conditions en cas de longue inoccupation, surtout pour le vol et les dégâts des eaux ; le nombre de jours et la prise en compte des visites du gardien varient selon l’assureur.</li><li><strong>L’eau dans une maison fermée :</strong> certains assureurs demandent de couper l’eau au compteur, d’autres des visites régulières.</li><li><strong>Alarme, clés et gardien :</strong> alarme reliée à un centre de télésurveillance, qui détient les clés, à quelle fréquence quelqu’un entre.</li><li><strong>Piscine, invités et personnel :</strong> une maison de vacances engage votre responsabilité même en votre absence.</li><li><strong>Appartements en copropriété :</strong> la communauté assure le bâtiment ; votre contrat, l’intérieur, le mobilier et votre responsabilité.</li><li><strong>Le contrat de la banque :</strong> avec un prêt espagnol, la banque peut exiger une assurance du bâtiment, mais selon la Ley 5/2019 elle doit accepter un autre assureur offrant des garanties équivalentes.</li></ul>")
 
-HOME = dict(title="Assurance résidence de luxe en Espagne · À partir de 1 million d’euros",
-            desc="Assurance des villas, appartements et maisons en Espagne à partir de 1 million d’euros, auprès d’assureurs spécialisés : coût de reconstruction, usage, œuvres et objets de valeur analysés par écrit.",
-            sub_add=" Pour les résidences à partir de 1 million d’euros.",
-            faq=("Y a-t-il une valeur minimale ?", "Oui : les résidences en Espagne à partir de 1 million d’euros. Les résidences secondaires ont leur propre page, à partir de 500 000 € de valeur de reconstruction."))
+HOME = dict(title="Assurance résidence de luxe en Espagne · Reconstruction dès 700 000 €",
+            desc="Assurance des villas, appartements et maisons en Espagne d’une valeur de reconstruction à partir de 700 000 €, auprès d’assureurs spécialisés : coût de reconstruction, usage, œuvres et objets de valeur analysés par écrit.",
+            sub_add=" Pour les résidences d’une valeur de reconstruction à partir de 700 000 €.",
+            faq=("Y a-t-il une valeur minimale ?", "Oui : les résidences en Espagne d’une valeur de reconstruction à partir de 700 000 €. Les résidences secondaires ont leur propre page, avec le même seuil."))
 
 RC = [dict(page="/fr/rc-therapeutes-yoga-pilates/",
            title="RC Thérapies non conventionnelles, yoga, Pilates et tai-chi · Portugal et Espagne",

@@ -61,10 +61,10 @@ JEW_RES = ("Per chi: residenza in Spagna",
 HOL = ("Quando in casa non c’è nessuno",
        "<p>La maggior parte delle case vacanze in Spagna resta vuota più a lungo di quanto pensino i proprietari. Questi sono i punti che decidono se un sinistro in una casa chiusa viene pagato, e che esponiamo per iscritto per ogni polizza proposta:</p><ul><li><strong>Mesi di disabitazione:</strong> molte polizze per case vacanze pongono condizioni ai lunghi periodi di disabitazione, soprattutto per furto e danni da acqua; il numero di giorni e se la visita del custode conta variano da assicuratore ad assicuratore.</li><li><strong>Acqua in una casa chiusa:</strong> alcuni assicuratori chiedono di chiudere l’acqua al contatore, altri ispezioni regolari.</li><li><strong>Allarme, chiavi e custode:</strong> allarme collegato a una centrale, chi ha le chiavi e con che frequenza qualcuno entra.</li><li><strong>Piscina, ospiti e personale:</strong> una casa vacanze crea responsabilità anche quando lei non c’è.</li><li><strong>Appartamenti in condominio:</strong> la comunità assicura l’edificio; la sua polizza, gli interni, il contenuto e la sua responsabilità.</li><li><strong>La polizza della banca:</strong> con un mutuo spagnolo la banca può esigere l’assicurazione del fabbricato, ma secondo la Ley 5/2019 deve accettare un altro assicuratore con copertura equivalente.</li></ul>")
 
-HOME = dict(title="Assicurazione casa di lusso in Spagna · Da 1 milione di euro",
-            desc="Assicurazione per ville, appartamenti e case in Spagna da 1 milione di euro, con assicuratori specializzati: costo di ricostruzione, uso, arte e oggetti di valore analizzati per iscritto.",
-            sub_add=" Per abitazioni da 1 milione di euro.",
-            faq=("C’è un valore minimo?", "Sì: abitazioni in Spagna da 1 milione di euro. Le case vacanze hanno una pagina propria, da 500.000 € di valore di ricostruzione."))
+HOME = dict(title="Assicurazione casa di lusso in Spagna · Ricostruzione da 700.000 €",
+            desc="Assicurazione per ville, appartamenti e case in Spagna con valore di ricostruzione da 700.000 €, con assicuratori specializzati: costo di ricostruzione, uso, arte e oggetti di valore analizzati per iscritto.",
+            sub_add=" Per abitazioni con valore di ricostruzione da 700.000 €.",
+            faq=("C’è un valore minimo?", "Sì: abitazioni in Spagna con valore di ricostruzione da 700.000 €. Le case vacanze hanno una pagina propria, con la stessa soglia."))
 
 RC = [dict(page="/it/rc-terapisti-yoga-pilates/",
            title="RC Terapie non convenzionali, yoga, pilates e tai chi · Portogallo e Spagna",

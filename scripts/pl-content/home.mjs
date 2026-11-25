@@ -27,7 +27,7 @@ export const HOME_PAGE = {
   eyebrow: 'Domy o wysokiej wartości',
   h1: 'Ubezpieczenie domu o wysokiej wartości w Portugalii: warunki, które decydują przy szkodzie',
   standfirst:
-    'Przy nieruchomości o wysokiej wartości pytania są inne niż przy typowym mieszkaniu: oględziny i koszt odbudowy, rezygnacja z zasady proporcji, sztuka i kolekcje według wartości uzgodnionej, odpowiedzialność cywilna liczona w milionach. Poniżej opisujemy warunki, które sprawdzamy na piśmie w każdej propozycji — oraz portugalskie realia, które obowiązują niezależnie od wartości domu.',
+    '<strong>Dla nieruchomości o wartości odtworzeniowej powyżej 700 000 €.</strong> Przy nieruchomości o wysokiej wartości pytania są inne niż przy typowym mieszkaniu: oględziny i koszt odbudowy, rezygnacja z zasady proporcji, sztuka i kolekcje według wartości uzgodnionej, odpowiedzialność cywilna liczona w milionach. Poniżej opisujemy warunki, które sprawdzamy na piśmie w każdej propozycji — oraz portugalskie realia, które obowiązują niezależnie od wartości domu.',
   published: '2026-09-12T09:00:00+00:00',
   modified: '2026-09-27T09:00:00+00:00',
   breadcrumb: [...BREADCRUMB_ROOT, { name: 'Ubezpieczenie domu' }],

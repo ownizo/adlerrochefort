@@ -142,7 +142,7 @@ P[('homes_es','pt')] = dict(slug='seguros/habitacao-espanha', h1='Seguro de resi
          ("Casas de férias e arrendamento","Os períodos sem ninguém em casa e o arrendamento turístico têm de ser declarados; em várias regiões o arrendamento exige licença."),
          ("Objetos de valor","Joias, relógios e coleções são especificados em valor acordado. Em Espanha podem também ser seguros numa apólice própria, separada da casa.")],
  faq=[("Trabalham em Espanha?","Sim. A Adler & Rochefort está registada em Portugal na ASF (n.º 425591790/3) e em Espanha na DGSFP em regime de livre prestação de serviços (LPS)."),
-      ("Existe um valor mínimo?","Cada seguradora especializada fixa o seu próprio patamar de entrada, em função do custo de reconstrução, do recheio e dos objetos de valor. Abaixo disso, dizemos-lhe por escrito se uma boa apólice de mercado é a melhor resposta.")])
+      ("Existe um valor mínimo?","Trabalhamos casas com valor de reconstrução acima de 700.000 € — residência permanente ou casa de férias, em Portugal e em Espanha. Abaixo disso, dizemos-lhe por escrito se uma boa apólice de mercado é a melhor resposta.")])
 P[('homes_es','it')] = dict(slug='it/assicurazione-casa-alto-valore-spagna', h1='Assicurazione casa di pregio in Spagna',
  intro="Per ville, appartamenti e case vacanza in Spagna collochiamo la copertura presso assicuratori specializzati nella clientela privata. La polizza parte dal costo di ricostruzione della casa, con contenuto, arte e oggetti di valore dichiarati correttamente — e va letta insieme al Consorcio.",
  points=[("Costo di ricostruzione, non valore di mercato","La somma per il fabbricato deve riflettere il costo di ricostruire la casa, piscina, muri e dépendance inclusi — non il prezzo d'acquisto."),
@@ -150,7 +150,7 @@ P[('homes_es','it')] = dict(slug='it/assicurazione-casa-alto-valore-spagna', h1=
          ("Case vacanza e affitti","I periodi di inabitazione e l'affitto turistico vanno dichiarati; in diverse regioni l'affitto richiede una licenza."),
          ("Oggetti di valore","Gioielli, orologi e collezioni sono elencati a valore concordato. In Spagna possono anche essere assicurati con una polizza propria, separata dalla casa.")],
  faq=[("Lavorate in Spagna?","Sì. Adler & Rochefort è registrato in Portogallo presso l'ASF (n. 425591790/3) e in Spagna presso la DGSFP in regime di libera prestazione di servizi (LPS)."),
-      ("Esiste un valore minimo?","Ogni assicuratore specializzato fissa la propria soglia di accesso, in base al costo di ricostruzione, al contenuto e agli oggetti di valore. Al di sotto, Le diciamo per iscritto se una buona polizza standard è la risposta migliore.")])
+      ("Esiste un valore minimo?","Lavoriamo con immobili con un valore di ricostruzione superiore a 700.000 € — residenza principale o casa vacanze, in Portogallo e in Spagna. Al di sotto, Le diciamo per iscritto se una buona polizza standard è la risposta migliore.")])
 P[('homes_es','fr')] = dict(slug='fr/assurance-residence-grande-valeur-espagne', h1='Assurance des résidences de grande valeur en Espagne',
  intro="Pour les villas, appartements et maisons de vacances en Espagne, nous plaçons la protection auprès d’assureurs spécialisés dans la clientèle privée. Le contrat part du coût de reconstruction de la maison, avec le mobilier, les œuvres et les objets de valeur correctement déclarés — et se lit avec le Consorcio.",
  points=[("Coût de reconstruction, pas valeur de marché","Le capital bâtiment doit refléter le coût de reconstruction de la maison, piscine, murs et dépendances compris — pas le prix d'achat."),
@@ -158,7 +158,7 @@ P[('homes_es','fr')] = dict(slug='fr/assurance-residence-grande-valeur-espagne',
          ("Maisons de vacances et location","Les périodes d'inoccupation et la location touristique doivent être déclarées ; dans plusieurs régions, la location exige une licence."),
          ("Objets de valeur","Bijoux, montres et collections sont déclarés en valeur agréée. En Espagne, ils peuvent aussi être assurés par un contrat distinct de la maison.")],
  faq=[("Intervenez-vous en Espagne ?","Oui. Adler & Rochefort est enregistré auprès de l'ASF (n° 425591790/3) et intervient en Espagne en libre prestation de services au sein de l'Union européenne."),
-      ("Existe-t-il une valeur minimale ?","Chaque assureur spécialisé fixe son propre seuil d’entrée, selon le coût de reconstruction, le mobilier et les objets de valeur. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse.")])
+      ("Existe-t-il une valeur minimale ?","Nous travaillons avec des biens dont la valeur de reconstruction dépasse 700 000 € — résidence principale ou secondaire, au Portugal et en Espagne. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse.")])
 
 # ---------------- homes in Portugal (FR) ----------------
 P[('homes_pt','fr')] = dict(slug='fr/assurance-residence-grande-valeur-portugal', h1='Assurance des résidences de grande valeur au Portugal',
@@ -167,7 +167,7 @@ P[('homes_pt','fr')] = dict(slug='fr/assurance-residence-grande-valeur-portugal'
          ("Séisme","Au Portugal, la garantie séisme n'est pas automatique : elle s'ajoute au contrat, en général avec sa propre franchise."),
          ("Appartements en copropriété","La copropriété assure la structure et les parties communes ; l'intérieur, le mobilier, les œuvres et votre responsabilité d'occupant demandent un contrat à part."),
          ("Maisons inoccupées","Une résidence secondaire vide une partie de l'année doit avoir des conditions d'inoccupation qui correspondent à son usage réel.")],
- faq=[("Existe-t-il une valeur minimale ?","Chaque assureur spécialisé fixe son propre seuil d’entrée, selon le coût de reconstruction, le mobilier et les objets de valeur. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse."),
+ faq=[("Existe-t-il une valeur minimale ?","Nous travaillons avec des biens dont la valeur de reconstruction dépasse 700 000 € — résidence principale ou secondaire, au Portugal et en Espagne. En dessous, nous vous disons par écrit si un bon contrat standard est la meilleure réponse."),
       ("Dans quelle langue travaillez-vous ?","Notre langue de travail est l'anglais : propositions, explication des conditions, correspondance et sinistres se font en anglais, par écrit.")])
 
 # ---------------- art, jewellery & watches (FR) ----------------

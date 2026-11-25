@@ -799,7 +799,7 @@ HABITACAO.form = quoteForm({
       required: true,
       options: ['Proprietário-ocupante', 'Senhorio (arrendado)', 'Inquilino', 'Segunda habitação'],
     },
-    { name: 'valor_reconstrucao', label: 'Valor de reconstrução estimado', placeholder: 'Ex.: 160 000 €' },
+    { name: 'valor_reconstrucao', label: 'Valor de reconstrução estimado (a partir de 700.000 €)', placeholder: 'Ex.: 1 200 000 €' },
     { name: 'valor_recheio', label: 'Valor do recheio', placeholder: 'Ex.: 30 000 €' },
     {
       name: 'seguranca',

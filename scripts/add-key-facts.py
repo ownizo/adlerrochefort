@@ -28,7 +28,7 @@ STYLE = ('<style id="ar-keyfacts-style">.ar-keyfacts{max-width:1100px;margin:20p
 
 HNW = {
     "en": ("Key facts", [
-        "<strong>Who it is for:</strong> homes whose rebuild cost, contents or valuables go beyond what a standard policy was designed for; each specialist insurer sets its own entry level. Below that, a well-built standard policy is usually the better answer, and we say so in writing.",
+        "<strong>Who it is for:</strong> homes with a rebuild value above €700,000 — permanent residences and holiday homes. Below that, a well-built standard policy is usually the better answer, and we say so in writing.",
         "<strong>No proportional reduction</strong> once the recommended sums are accepted; after a total loss the house is rebuilt even above the buildings sum insured.",
         "Art, jewellery, watches and collections on <strong>agreed value</strong>, with worldwide all-risks cover for personal possessions.",
         "Individually underwritten with specialist capacity, with the conditions agreed in writing before any claim.",
@@ -36,7 +36,7 @@ HNW = {
         "Written opinion in 24–72 working hours. ASF-registered broker no. 425591790/3, not tied to any insurer. We never ask for your total net worth.",
     ]),
     "pt": ("Factos essenciais", [
-        "<strong>Para quem:</strong> residências cujo custo de reconstrução, recheio ou objetos de valor ultrapassam aquilo para que uma apólice-tipo foi pensada; cada seguradora especializada fixa o seu próprio patamar de entrada. Abaixo disso, uma boa apólice de mercado costuma ser a melhor resposta — e dizemo-lo por escrito.",
+        "<strong>Para quem:</strong> residências com valor de reconstrução acima de 700.000 € — habitação permanente ou casa de férias. Abaixo disso, uma boa apólice de mercado costuma ser a melhor resposta — e dizemo-lo por escrito.",
         "<strong>Regra proporcional</strong>: verificamos por escrito como cada apólice a aplica e como indemniza uma perda total.",
         "Arte, joalharia, relógios e coleções em <strong>valor acordado</strong>, com cobertura «todos os riscos» em todo o mundo para objetos pessoais.",
         "Subscrição individual com capacidade especializada, com as condições acordadas por escrito antes de qualquer sinistro.",
@@ -44,7 +44,7 @@ HNW = {
         "Parecer por escrito em 24–72 horas úteis. Mediador de seguros registado na ASF com o n.º 425591790/3. Nunca pedimos o valor total do seu património.",
     ]),
     "es": ("Datos clave", [
-        "<strong>Para quién:</strong> viviendas cuyo coste de reconstrucción, contenido u objetos de valor superan lo que una póliza estándar puede cubrir; cada aseguradora especializada fija su propio umbral. Por debajo, una buena póliza estándar suele ser la mejor respuesta, y se lo decimos por escrito.",
+        "<strong>Para quién:</strong> viviendas con un valor de reconstrucción superior a 700.000 € — residencia habitual o casa de vacaciones. Por debajo, una buena póliza estándar suele ser la mejor respuesta, y se lo decimos por escrito.",
         "<strong>Regla proporcional</strong>: revisamos por escrito cómo la aplica cada condicionado y cómo liquida una pérdida total.",
         "Arte, joyas, relojes y colecciones a <strong>valor convenido</strong>, con cobertura a todo riesgo en todo el mundo para los objetos personales.",
         "Suscripción individual con capacidad especializada, con las condiciones acordadas por escrito antes de cualquier siniestro.",
@@ -52,7 +52,7 @@ HNW = {
         "Opinión por escrito en 24–72 horas hábiles. Corredor inscrito en la ASF con el n.º 425591790/3, sin vínculo con ninguna aseguradora. Nunca le pedimos el valor total de su patrimonio.",
     ]),
     "de": ("Das Wichtigste in Kürze", [
-        "<strong>Für wen:</strong> Häuser, deren Wiederaufbaukosten, Hausrat oder Wertsachen über das hinausgehen, wofür eine Standardpolice gebaut ist; jeder Spezialversicherer setzt seine eigene Einstiegsschwelle. Darunter ist eine gut gebaute Standardpolice meist die bessere Lösung, und das sagen wir Ihnen schriftlich.",
+        "<strong>Für wen:</strong> Häuser mit einem Wiederaufbauwert über 700.000 € — Hauptwohnsitz oder Ferienhaus. Darunter ist eine gut gebaute Standardpolice meist die bessere Lösung, und das sagen wir Ihnen schriftlich.",
         "<strong>Keine Unterversicherungskürzung</strong>, sobald die empfohlenen Summen angenommen sind; nach einem Totalschaden wird das Haus auch über der Gebäudeversicherungssumme wieder aufgebaut.",
         "Kunst, Schmuck, Uhren und Sammlungen zum <strong>vereinbarten Wert</strong>, mit weltweitem Allgefahrenschutz für persönliche Gegenstände.",
         "Individuell gezeichnet mit spezialisierter Kapazität, mit schriftlich vereinbarten Bedingungen vor jedem Schaden.",

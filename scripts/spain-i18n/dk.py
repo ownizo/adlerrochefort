@@ -63,10 +63,10 @@ JEW_RES = ("For hvem: bopæl i Spanien",
 HOL = ("Når ingen er hjemme",
        "<p>De fleste feriehuse i Spanien står tomme længere, end ejerne tror. Disse punkter afgør, om en skade i et lukket hus bliver betalt, og vi beskriver dem skriftligt for hver forsikring, vi foreslår:</p><ul><li><strong>Måneder uden beboere:</strong> mange feriehusforsikringer stiller betingelser ved lange perioder uden beboelse, især for tyveri og vandskade; antallet af dage, og om forvalterens besøg tæller, varierer mellem selskaberne.</li><li><strong>Vand i et lukket hus:</strong> nogle selskaber kræver, at vandet lukkes ved hovedhanen, andre regelmæssigt tilsyn.</li><li><strong>Alarm, nøgler og forvalter:</strong> alarm tilsluttet en alarmcentral, hvem der har nøgler, og hvor ofte nogen kommer ind.</li><li><strong>Pool, gæster og personale:</strong> et feriehus skaber ansvar, også når I ikke er der.</li><li><strong>Lejligheder i ejerforening:</strong> foreningen forsikrer bygningen; jeres forsikring interiøret, indboet og jeres ansvar.</li><li><strong>Bankens forsikring:</strong> med et spansk boliglån kan banken kræve bygningsforsikring, men efter Ley 5/2019 skal den acceptere et andet selskab med tilsvarende dækning.</li></ul>")
 
-HOME = dict(title="Forsikring af luksusbolig i Spanien · Fra 1 million €",
-            desc="Forsikring af villaer, lejligheder og huse i Spanien fra 1 million € hos specialiserede selskaber: genopførelsesomkostning, brug, kunst og værdigenstande vurderet skriftligt.",
-            sub_add=" Til boliger fra 1 million €.",
-            faq=("Er der en minimumsværdi?", "Ja: boliger i Spanien fra 1 million €. Feriehuse har deres egen side, fra 500.000 € i genopførelsesværdi."))
+HOME = dict(title="Forsikring af luksusbolig i Spanien · Genopførelsesværdi fra 700.000 €",
+            desc="Forsikring af villaer, lejligheder og huse i Spanien med en genopførelsesværdi fra 700.000 € hos specialiserede selskaber: genopførelsesomkostning, brug, kunst og værdigenstande vurderet skriftligt.",
+            sub_add=" Til boliger med en genopførelsesværdi fra 700.000 €.",
+            faq=("Er der en minimumsværdi?", "Ja: boliger i Spanien med en genopførelsesværdi fra 700.000 €. Feriehuse har deres egen side, med samme tærskel."))
 
 RC = [dict(page="/dk/ansvarsforsikring-terapeuter-yoga-pilates/",
            title="Ansvarsforsikring alternative behandlinger, yoga, pilates &amp; tai chi · Portugal &amp; Spanien",

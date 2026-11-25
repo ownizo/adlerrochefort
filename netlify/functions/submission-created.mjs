@@ -2424,6 +2424,38 @@ export function quoteIntro(formConfig, from) {
 // configurada) como no modo de teste (para ficar registada em log, mesmo sem
 // nunca ser enviada) — extraída para não duplicar a lógica nos dois sítios.
 // Pura: não faz I/O nenhum.
+export const HOME_REBUILD_THRESHOLD = 700000;
+const REBUILD_FIELDS = [
+  "rebuild-value",
+  "home_rebuild_value",
+  "habitacao_valor",
+  "valor_reconstrucao",
+  "rebuild_value",
+];
+
+/**
+ * True when a submission declares a rebuild value below the €700,000 home
+ * threshold: either the "Under €700,000" band of the blog forms, or a free-text
+ * amount that parses to less than the threshold. Anything unparseable
+ * ("Not sure", "1,2 M", empty) is not flagged.
+ */
+export function belowHomeThreshold(data) {
+  for (const key of REBUILD_FIELDS) {
+    const raw = data?.[key];
+    if (raw == null) continue;
+    const value = String(formatValue(raw)).trim();
+    if (!value) continue;
+    if (/^under\s*€?\s*700/i.test(value)) return true;
+    if (/[a-z]/i.test(value.replace(/eur|euros?|€/gi, ""))) continue;
+    const digits = value.replace(/[^\d]/g, "");
+    if (digits.length >= 4) {
+      const amount = Number(digits);
+      if (Number.isFinite(amount) && amount > 0 && amount < HOME_REBUILD_THRESHOLD) return true;
+    }
+  }
+  return false;
+}
+
 export function buildIntakeEmail(formConfig, data, payload) {
   let rows;
   let subject;
@@ -2451,6 +2483,13 @@ export function buildIntakeEmail(formConfig, data, payload) {
     const name = data.full_name || data.naam || data.name || "unknown";
     subject = `${formConfig.subjectPrefix} — ${pkg} — ${name}`;
     intro = formConfig.intro;
+  }
+
+  // Nov. 2026: home insurance is offered only for rebuild values above
+  // €700,000. A lead declaring less is still delivered, but flagged in the
+  // subject so it can be answered with the standard reply, not quoted.
+  if (belowHomeThreshold(data)) {
+    subject = `[ABAIXO DO LIMIAR 700k] ${subject}`;
   }
 
   // Especificação v2, Parte C — the one RTL language this inbox receives.
